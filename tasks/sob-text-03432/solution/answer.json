@@ -1,0 +1,13 @@
+{
+  "event_name": "Payback",
+  "event_year": 2016,
+  "match_details": {
+    "winner": "Roman Reigns",
+    "loser": "AJ Styles",
+    "championship_on_the_line": "WWE World Heavyweight Championship"
+  },
+  "loser_current_status": {
+    "is_current_united_states_champion": true,
+    "current_championship_reign_count": 2
+  }
+}

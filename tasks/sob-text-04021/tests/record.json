@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "record_id": "31dc0717f7e993dc7bbd9cfde52dbff10ef90f67509c33ee9bad1088d1160b42",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5adc4a0555429944faac24c6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Godzilla",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Ghidorah, the Three-Headed Monster: Ghidorah the Three-Headed Monster (三大怪獣　地球最大の決戦 , San Daikaijū: Chikyū Saidai no Kessen ) is a 1964 Japanese science fiction kaiju film featuring Godzilla, produced by and distributed by Toho.  The film is directed by Ishirō Honda, with special effects by Eiji Tsuburaya and stars Yosuke Natsuki, Hiroshi Koizumi, and Akiko Wakabayashi, with Haruo Nakajima as Godzilla, Masanori Shinohara as Rodan, and Shoichi Hirose as King Ghidorah.  It is the fifth film in the \"Godzilla\" franchise and Shōwa series and was the second \"Godzilla\" film produced that year (production began following \"Mothra vs. Godzilla\").\n\nZone Fighter: Zone Fighter, known in Japan as Ryūsei Ningen Zone (流星人間ゾーン , Ryūsei Ningen Zōn , lit.  \"Meteor Human Zone\") , is a tokusatsu science fiction superhero television series.  Produced by Toho Company Ltd., the show aired on Nippon Television from April 2 to September 24, 1973, with a total of 26 episodes.  This was Toho's answer to not only the popular Ultra Series, but the \"Henshin Hero\" phenomenon started by shows like \"Kamen Rider\" and \"Android Kikaider\".  The previous year, Toho had just made their successful first superhero show, \"Rainbowman\".  The series was also notable for its guest appearance by Toho's own Godzilla, as well as two other Toho monsters, King Ghidorah and Gigan.  Supplementary materials published by Toho have confirmed \"Zone Fighter\" to be part of the Showa-era Godzilla series, taking place in between \"Godzilla vs. Megalon\" and \"Godzilla vs. Mechagodzilla\".\n\nGodzilla vs. Gigan: Godzilla vs. Gigan, released in Japan as Chikyū Kōgeki Meirei: Gojira tai Gaigan (地球攻撃命令　ゴジラ対ガイガン , lit.  \"Earth Destruction Directive: Godzilla vs. Gigan\") , is a 1972 Japanese science fiction kaiju film featuring Godzilla, produced and distributed by Toho.  The film is directed by Jun Fukuda with special effects by Teruyoshi Nakano and stars Hiroshi Ishikawa, Yuriko Hishimi, Tomoko Umeda, and Minoru Takashima, with Haruo Nakajima as Godzilla, Kenpachiro Satsuma as Gigan, Koetsu Omiya as Anguirus, and Kanta Ina as King Ghidorah.  It is the 12th film in the \"Godzilla\" franchise and the last film in which Godzilla was portrayed by Haruo Nakajima, who had played the character since the first film in 1954.\n\nGigan: Gigan (Japanese: ガイガン , Hepburn: Gaigan ) is a kaiju from Toho's \"Godzilla\" and \"Zone Fighter\" franchises who first appeared in \"Godzilla vs. Gigan\".  Gigan is a cyborg space monster sporting a buzzsaw weapon in its frontal abdominal region and large metallic hooks for hands.  Gigan is considered one of Godzilla's most brutal and violent opponents, being the first kaiju in the Toho sci-fi series to cause Godzilla to visibly bleed.  WatchMojo.com listed Gigan as #4 on their \"Top 10 Godzilla Villains\" list, while \"Complex\" listed the character as #2 on its \"The 15 Most Badass Kaiju Monsters of All Time\" list.\n\nGodzilla (1954 film): Godzilla (ゴジラ , Gojira ) is a 1954 Japanese kaiju film featuring Godzilla, produced and distributed by Toho.  It is the first film of the \"Godzilla\" franchise and the first film of its Shōwa series.  The film is directed by Ishirō Honda, with special effects by Eiji Tsuburaya and stars Akira Takarada, Momoko Kōchi, Akihiko Hirata, Takashi Shimura, with Haruo Nakajima and Katsumi Tezuka as the performers for Godzilla.  Nakajima would go on to portray the character until his retirement in 1972.\n\nGodzilla: Godzilla (Japanese: ゴジラ , Hepburn: Gojira ) ( ; ] ) is a giant monster originating from a series of tokusatsu films of the same name from Japan.  It first appeared in Ishirō Honda's 1954 film \"Godzilla\".  Since then, Godzilla has gone on to become a worldwide pop culture icon, appearing in numerous media including video games, novels, comic books, television shows, 29 films produced by Toho and three Hollywood films.  The character is commonly alluded by the epithet \"King of the Monsters\"; a phrase first used in \"Godzilla, King of the Monsters! \", the Americanized version of Honda's original 1954 film.\n\nHaruo Nakajima: Haruo Nakajima (中島 春雄 , Nakajima Haruo ) (January 1, 1929 – August 7, 2017) was a Japanese actor, best known for portraying Godzilla in twelve consecutive films, starting from the original \"Godzilla\" (1954) until \"Godzilla vs. Gigan\" (1972).  He also played various other giant monsters in kaiju films, including \"Mothra\" and \"The War of the Gargantuas\", and also appeared in a minor role in the Akira Kurosawa film \"Seven Samurai\".\n\nMothra vs. Godzilla: Mothra vs. Godzilla (モスラ対ゴジラ , Mosura tai Gojira ) is a 1964 Japanese science fiction kaiju film featuring Godzilla and Mothra, produced and distributed by Toho.  It is the fourth film in the \"Godzilla\" franchise and Shōwa series.  The film is directed by Ishiro Honda, with special effects by Eiji Tsuburaya and stars Akira Takarada, Kenji Sahara and Hiroshi Koizumi, with Haruo Nakajima as Godzilla.\n\nGodzilla Raids Again: Godzilla Raids Again (ゴジラの逆襲 ) is a 1955 Japanese science fiction kaiju film featuring Godzilla, produced and distributed by Toho.  It is the second film in the \"Godzilla\" franchise and Shōwa series.  The film is directed by Motoyoshi Oda and stars Hiroshi Koizumi, Setsuko Wakayama, Minoru Chiaki, and Takashi Shimura, with Haruo Nakajima as Godzilla and Katsumi Tezuka as Anguirus.\n\nGodzilla vs. Hedorah: Godzilla vs. Hedorah (ゴジラ対ヘドラ , Gojira tai Hedora ) is a 1971 Japanese science fiction kaiju film featuring Godzilla, produced and distributed by Toho.  The film is directed by Yoshimitsu Banno, with special effects by Teruyoshi Nakano and stars Akira Yamauchi, Toshie Kimura, and Hiroyuki Kawase, with Haruo Nakajima as Godzilla and Kenpachiro Satsuma as Hedorah.  Satsuma would later go on to play Godzilla for the Heisei series.  Is is the 11th film in the \"Godzilla\" franchise and Shōwa series.",
+    "question": "Haruo Nakajima, was a Japanese actor, best known for portraying who, in twelve consecutive films, starting from the original \"Godzilla\" (1954) until \"Godzilla vs. Gigan\" (1972)?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor."
+        },
+        "character_portrayed": {
+          "type": "string",
+          "description": "The name of the character portrayed by the actor."
+        },
+        "portrayal_details": {
+          "type": "object",
+          "properties": {
+            "number_of_films": {
+              "type": "integer",
+              "description": "The total number of films the character was portrayed in by this actor."
+            },
+            "consecutive_films": {
+              "type": "boolean",
+              "description": "Indicates if the portrayal was in consecutive films."
+            },
+            "first_film": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "The title of the first film in which the character was portrayed by this actor."
+                },
+                "year": {
+                  "type": "integer",
+                  "description": "The release year of the first film."
+                }
+              },
+              "required": [
+                "title",
+                "year"
+              ],
+              "additionalProperties": false
+            },
+            "last_film": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "The title of the last film in which the character was portrayed by this actor."
+                },
+                "year": {
+                  "type": "integer",
+                  "description": "The release year of the last film."
+                }
+              },
+              "required": [
+                "title",
+                "year"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "number_of_films",
+            "consecutive_films",
+            "first_film",
+            "last_film"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "actor_name",
+        "character_portrayed",
+        "portrayal_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Haruo Nakajima",
+      "character_portrayed": "Godzilla",
+      "portrayal_details": {
+        "number_of_films": 12,
+        "consecutive_films": true,
+        "first_film": {
+          "title": "Godzilla",
+          "year": 1954
+        },
+        "last_film": {
+          "title": "Godzilla vs. Gigan",
+          "year": 1972
+        }
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

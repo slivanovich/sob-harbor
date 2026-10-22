@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "21e003c6d2c1ff0a88b3823642a1fd3e894e71fd73f24ab4e14bdb90a128e10e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8b2a3355429971feec465c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ankahee",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Miss Panamá 2014: Miss Panamá 2014 is the 47th Annual edition of the Miss Panamá pageant was select representatives from Panama to Miss World, Miss Universe & Miss Intercontinental pageant.  The pageant has been split into two contests this year Miss Panamá Mundo and Miss Panamá Universo.  This is the four edition of the pageant under the management of Marisela Moreno former Miss World Panama, the OMP (Miss Panamá Organization) and broadcast live on Telemetro.  About 16 contestants from all over Panamá will compete for the prestigious crown.  Miss Panamá 2013, Carolina Brid crowned to Yomatzy Maurineth Hazlewood De La Rosa at the end of the event as the new Miss Panamá Universe, also Sara Bello Miss Intercontinental Panamá 2013 crowned to Stephanie Gonzáles as the new Miss Intercontinental Panamá.\n\nAmeesha Patel: Ameesha Patel (] ; born Amisha Amit Patel; 9 June 1975) also simply known as \"Ameesha\" is an Indian actress and model who predominantly appears in Bollywood films.  She has also appeared in a few Telugu and Tamil films.  Making her acting debut in the 2000 romantic thriller film, \"Kaho Naa... Pyaar Hai\", Patel won critical praise for her performance in \"\" (2001), which became one of the biggest hits in the history of Hindi cinema, earning her a Filmfare Special Performance Award.  Her performance in the 2002 film \"Humraaz\" received critical acclaim and it was one of the biggest hits of the year receiving her a nomination for Best Actress .\n\nThelma Rodríguez: Thelma Guisselle Rodríguez Flores (born January 15, 1989 in Chinandega) is a Nicaraguan beauty queen.  Rodríguez was crowned Miss Nicaragua 2008, which was held in the Rubén Darío National Theater in Managua and was crowned by the former Miss Nicaragua and Miss Universe finalist, Xiomara Blandino.  She represented Nicaragua at the Miss Universe 2008 pageant in Vietnam on July 13, 2008.  She failed to place in the final competition.  On November 2008, she made a second attempt for the crown at the Miss Earth 2008 pageant, in the Philippines and was amongst the favorite delegates, but failed to place.\n\nMiss Panamá 2016: Señorita Panama 2016 (former Miss Panama) the 49th Miss Panamá pageant selected to the Miss Universe.  This was the 1st edition of the renewed Miss Panama pageant, after Justine Pasek, Miss Universe 2002, and César Anel Rodríguez be named the new directors of the pageant in Panamá.\n\nJuliana Thiessen-Day: Juliana Renée Thiessen-Day (born 1980 in Regina, Saskatchewan) is a Norwegian-Canadian actress and former Miss Universe Canada and the Canadian representative to the Miss Universe pageant in 1998.\n\nShandi Finnessey: Shandi Ren Finnessey (born June 9, 1978, in Florissant, Missouri) is an American actress, model, TV host and beauty queen.  She is best known for winning the Miss USA title, as Miss Missouri USA.  She previously held the title of Miss Missouri 2002 and competed in Miss America, where she won a preliminary award.  She placed as first runner-up at the Miss Universe 2004 competition.  She is one of three women to have been both Miss Missouri USA and Miss Missouri and the only Missourian to have been Miss USA.  Her first runner-up finish at Miss Universe was the best placement in the 2000s and was the best United States placement between Brook Mahealani Lee's Miss Universe 1997 competition victory and Olivia Culpo's Miss Universe 2012 pageant win.\n\nMiss World Denmark: Miss World Denmark is a beauty pageant that came into existence in 2004 when the Miss Denmark competition split into two separate competitions: Miss World Denmark and Miss Universe Denmark.  The former Miss World 2008 contestant Lisa Lents, became the National Director of the pageant the year after her participation.  When Lisa Lents represented Denmark at the Miss World competition, Unibet guessed that she would place fifth, while NordicBet guessed that she would come in first as the first contestant from Denmark in history.  In the same year that Lents competed in Miss World, she also competed on the Danish National Taekwondo team at the European Taekwondo Championships in Antalya, Turkey.\n\nAnkahee (2006 film): Ankahee (Hindi: अनकही, Urdu: انکہی, English: \"Untold\") is an Indian film directed by Vikram Bhatt and starring Aftab Shivdasani, Ameesha Patel and Esha Deol.  The film was originally titled \"Aakhir\".  This movie was based upon the life of former Miss Universe Sushmita Sen, who was publicly in a relationship with Indian film director Vikram Bhatt.  The director later denied the facts, but the movie evolves around the same story.\n\nLee San-san: Lee San-San (, born 9 October 1977, was the winner of the 1996 Miss Hong Kong Pageant and her territory's representative at Miss Universe 1997.  Lee placed 45th at that pageant like former Miss Hong Kongs, Mok Hoi Yan and Halina Tam.  She also competed at the Miss Chinese International 1997 pageant where she finished 2nd.  She signed with TVB, and starred in various Hong Kong television dramas, before leaving the network.  She is a Hakka of Meixian ancestry.\n\nMiss Panamá 2015: Miss Panamá 2015 the 48th Miss Panamá pageant selected to the Miss Universe & Miss World.  The pageant has been split into two contests this year Miss Panamá Mundo and Miss Panamá Universo.  This is the fifth edition of the pageant under the management of Marisela Moreno former Miss World Panama, the OMP (Miss Panamá Organization) and broadcast on Telemetro.  30 preliminay contestants have been selected from all over Panama and competed for the prestigious crown.  Miss Panamá 2014 Yomatzy Maurineth Hazlewood De La Rosa crown her successor Gladys Del Carmen Brandao Amaya at the end of the event.",
+    "question": "The actress that was nominated for Best Actress for her performance in the film \"Humraaz\"  also starred in what movie based on the life of a former Miss Universe? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actress_name": {
+          "type": "string",
+          "description": "The name of the actress who was nominated for Best Actress."
+        },
+        "film_nominated_for_best_actress": {
+          "type": "string",
+          "description": "The film for which the actress received a Best Actress nomination."
+        },
+        "film_based_on_miss_universe_life": {
+          "type": "string",
+          "description": "The name of the film based on the life of a former Miss Universe, starring the identified actress."
+        },
+        "miss_universe_whose_life_inspired_film": {
+          "type": "string",
+          "description": "The name of the former Miss Universe whose life the film was based upon."
+        },
+        "film_director_associated_with_miss_universe": {
+          "type": "string",
+          "description": "The film director mentioned in relation to the Miss Universe."
+        }
+      },
+      "required": [
+        "actress_name",
+        "film_nominated_for_best_actress",
+        "film_based_on_miss_universe_life",
+        "miss_universe_whose_life_inspired_film",
+        "film_director_associated_with_miss_universe"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actress_name": "Ameesha Patel",
+      "film_nominated_for_best_actress": "Humraaz",
+      "film_based_on_miss_universe_life": "Ankahee",
+      "miss_universe_whose_life_inspired_film": "Sushmita Sen",
+      "film_director_associated_with_miss_universe": "Vikram Bhatt"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

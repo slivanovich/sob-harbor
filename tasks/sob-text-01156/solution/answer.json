@@ -1,0 +1,13 @@
+{
+  "film_title": "A Man Escaped",
+  "director": "Robert Bresson",
+  "release_year": 1956,
+  "source_material": {
+    "type": "memoirs",
+    "author": "André Devigny"
+  },
+  "starring_actor": {
+    "name": "François Leterrier",
+    "role_description": "debut role"
+  }
+}

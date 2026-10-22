@@ -1,0 +1,11 @@
+{
+  "aircraft_model_name": "Boeing C-17 Globemaster III",
+  "aircraft_developer": "McDonnell Douglas",
+  "developed_for_usaf": true,
+  "crash_details": {
+    "crash_year": 2010,
+    "crash_location": "Elmendorf Air Force Base",
+    "fatalities_count": 4,
+    "is_first_fatal_mishap_for_model": true
+  }
+}

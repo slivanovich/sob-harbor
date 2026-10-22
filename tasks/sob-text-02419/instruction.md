@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Peter Burr House: The Peter Burr House was built between 1751 and 1755 near present-day Shenandoah Junction, West Virginia, making it one of the oldest houses in West Virginia.  Burr, whose first cousin was Aaron Burr, was one of the first settlers in the area.  It is the oldest surviving post-and-beam-construction house in West Virginia.  The property remains in the hands of Burr's descendants.
+
+Aaron Burr: Aaron Burr Jr. (February 6, 1756September 14, 1836) was an American politician.  He was the third Vice President of the United States (1801–1805), serving during Thomas Jefferson's first term.
+
+Theodore Burr: Theodore Burr (August 16, 1771 – 1822 [or November, 1824]) was an inventor from Torrington, Connecticut, who was credited with the Burr Arch Truss bridge design and was cousin of vice president Aaron Burr.  Theodore Burr came to Oxford, New York in 1792.  By 1794, he had built a grist mill (once owned by Fletcher & Corbin), and a dam to power the mill.  In 1800 he built the first stringer bridge across the Chenango River in Oxford.  From 1809-1811, he built an impressive Federal style house on the site of an ancient Indian Fort (at 8 Fort Hill Park) for his family.  (Wings were added to both sides of the house at a later and unknown date.)  The building still stands and houses the Oxford Memorial Library.
+
+Theodosia Bartow Prevost: Theodosia Bartow Prevost (November 1746 – May 28, 1794), also known as Theodosia Bartow Burr, was an American patriot.  Raised by a single mother, she married a British Army officer at seventeen.  After the American Revolution began, her own Patriot leanings led her to offer the use of her house, the Hermitage, as a meeting- and resting-place for revolutionaries, including Alexander Hamilton, the Marquis de Lafayette, and Aaron Burr: it was briefly used as the headquarters of George Washington, who counted her amongst his friends.  Burr's visit to the Hermitage began a secret romance that, following the death of Prevost's first husband, led to marriage.
+
+Litchfield Law School: The Litchfield Law School of Litchfield, Connecticut, was the first proprietary law school founded in the United States of America.  The school was founded by Tapping Reeve in 1784 after tutoring students, including his brother-in-law, Aaron Burr, in law in the ten years previously and developing a 14-month course of study to prepare students for the Bar exam.  Reeve, who later became the Chief Justice of the Connecticut Supreme Court, hired former student James Gould to assist him in delivering lectures.  By the time the school closed in 1833, over 1,100 young men from throughout the country had attended, many of whom went on to have significant influence on political, economic, and legal development of the United States during the antebellum period.  Some of the school's most notable students include Burr and John C. Calhoun.
+
+Eunice Dennie Burr: Eunice Dennie Burr (1732-1805) and her husband Thaddeus Burr were considered the "first couple" of Fairfield, Connecticut in pre-revolutionary times.  Eunice married Thaddeus Burr in 1759.  Before the American Revolution, their house hosted John Adams, Samuel Adams, Aaron Burr, John Hancock, and George Washington.  In 1779 their house was burned by British soldiers under General Tryon's command; the soldiers also looted the house and stole Eunice's rings, buckles, and silver buttons, and Eunice hid from them in the marshes behind her house.  The house was rebuilt by Eunice and Thaddeus in 1791.  For its rebuilding, John Hancock presented the frame, as his own house frame was the model after which the Burr mansion (as it is now known) was built, though the Burr mansion has changed since.
+
+Burr–Hamilton duel: The Burr–Hamilton duel was fought between prominent American politicians Aaron Burr, the sitting Vice President of the United States, and Alexander Hamilton, the former Secretary of the Treasury, at Weehawken, New Jersey on July 11, 1804.  The duel was the culmination of a long and bitter rivalry between the two men.  Burr shot and mortally wounded Hamilton, who was carried to the home of William Bayard, where he died the next day.
+
+Theodosia Burr Alston: Theodosia Burr Alston (June 21, 1783 – approximately January 2 or 3, 1813) was the daughter of U.S. Vice President Aaron Burr and Theodosia Bartow Prevost.  Her husband, Joseph Alston, was governor of South Carolina during the War of 1812.  She was lost at sea at age 29.
+
+Jeremiah Rankin: Jeremiah Eames Rankin (January 2, 1828 – November 28, 1904) was an abolitionist, champion of the temperance movement, minister of Washington D.C.'s First Congregational Church, and correspondent with Frederick Douglass.  In 1890 he was appointed sixth president of Howard University in Washington, D.C. Howard University's Andrew Rankin Memorial Chapel was built during Jeremiah Rankin's tenure as president (1890–1903) and named after his brother.  Rankin is best known as author of the hymns "God Be with You 'Til we Meet Again" and "Tell It to Jesus."  In 1903 Rankin published a fictional journal of Esther Burr (Jonathan Edwards's daughter and mother of the third vice president of the United States, Aaron Burr).
+
+One If By Land, Two If By Sea Restaurant: One If By Land, Two If By Sea is a fine dining restaurant located at 17 Barrow Street (between Seventh Avenue South and West 4th Street) in the West Village of the New York City Manhattan borough.  It has been recognized for its classic menu, long history, and beautiful decor.   The restaurant operates inside a historic carriage house built in 1767.  It was subsequently purchased by Aaron Burr in 1794 and rumored to be haunted by his ghost.  In the 1830s, the former residence was converted into a pub and brothel.  In 1910, the building first became a restaurant.  The decor features candlelit tables, two fireplaces, and a baby grand piano.  The classic menu has been noted for its signature dish, Beef Wellington.  It is often cited as the most romantic restaurant in New York City.
+
+Question: When was the first year reports of Aaron Burr's ghost appearing at One If By Land, Two If By Sea could have started?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entity_name": {
+      "type": "string",
+      "description": "The name of the person whose ghost is rumored to appear."
+    },
+    "location_name": {
+      "type": "string",
+      "description": "The name of the location where the ghost is rumored to appear."
+    },
+    "event_type": {
+      "type": "string",
+      "description": "The type of event that enables the ghost rumor, such as death."
+    },
+    "event_year": {
+      "type": "integer",
+      "description": "The year the enabling event occurred."
+    },
+    "earliest_ghost_report_year": {
+      "type": "integer",
+      "description": "The earliest year reports of the ghost could have started."
+    }
+  },
+  "required": [
+    "entity_name",
+    "location_name",
+    "event_type",
+    "event_year",
+    "earliest_ghost_report_year"
+  ],
+  "additionalProperties": false
+}

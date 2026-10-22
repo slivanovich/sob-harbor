@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Martin Dempsey: Martin Edward Dempsey (born March 14, 1952), sometimes known as Marty Dempsey, is a retired United States Army general who served as the 18th Chairman of the Joint Chiefs of Staff from October 1, 2011 until September 25, 2015.  He previously served as the 37th Chief of Staff of the Army from April 11, 2011, to September 7, 2011.  Prior to that, he served as Commanding General, U.S. Army Training and Doctrine Command, from December 8, 2008, to April 11, 2011, as Acting Commander, U.S. Central Command, from March 24, 2008, to October 30, 2008, as Deputy Commander, U.S. Central Command, from August 2007 to March 23, 2008, and as Commanding General, Multi-National Security Transition Command – Iraq (MNSTC-I), from August 2005 to August 2007.  Dempsey assumed his assignment as Chairman of the Joint Chiefs of Staff on October 1, 2011 and stepped down from the Chairmanship on September 25, 2015.  He now serves as a professor at Duke University.
+
+Baldomero Lamela: Baldomero Lamela (1805-1867) was an Argentine soldier, who had participated in the Argentine Civil Wars.  In 1833 participated in the campaign to the desert led by Juan Manuel de Rosas.
+
+Imperial Japanese Army: The Imperial Japanese Army (IJA; 大日本帝國陸軍 "Dai-Nippon Teikoku Rikugun"; "Army of the Greater Japanese Empire") was the official ground-based armed force of the Empire of Japan from 1868 to 1945.  It was controlled by the Imperial Japanese Army General Staff Office and the Ministry of War, both of which were nominally subordinate to the Emperor of Japan as supreme commander of the army and the navy.  Later an Inspectorate General of Aviation became the third agency with oversight of the army.  During wartime or national emergencies, the nominal command functions of the emperor would be centralized in an Imperial General Headquarters (IGHQ), an ad-hoc body consisting of the chief and vice chief of the Army General Staff, the Minister of War, the chief and vice chief of the Naval General Staff, the Inspector General of Aviation, and the Inspector General of Military Training.
+
+Rhett A. Hernandez: Lieutenant General Rhett A. Hernandez is a retired officer in the United States Army and the former commander of the United States Army Cyber Command which is the Army’s service component to U.S. Cyber Command.  Hernandez, as a major general, assumed the position upon its activation (which included the command receiving and perpetuating the lineage and honors of the former Second United States Army) on October 10, 2010, with its headquarters at Fort Belvoir Virginia.  He received a promotion to lieutenant general on March 25, 2011.  As head of US Army Cyber Command, Hernandez was responsible for planning, coordinating, and integrating the network operations and defense of all US Army networks.  Hernandez also was tasked with conducting cyberspace operations in support of Army operations through his command of approximately 21,000 soldiers and civilians.  Hernandez oversaw a command that brought an unprecedented unity of effort and synchronization of all Army forces operating within the cyber domain.  Under Hernandez, the command concentrated its efforts on operationalizing cyberspace and improving Army capabilities in the cyberspace domain.  As a first step, the command established the Army Cyber Operations and Integration Center collocating intelligence, operations, and signal staffs, together with a critical targeting function, and bringing a new synergy to Army cyberspace operations.  To improve the Army’s cyber capabilities the command fielded a World Class Cyber Opposing Force at the National Training Center; developed new doctrinal concepts for Land-Cyber operations; and identified the Army’s capability requirements needed to fully operationalize the cyberspace domain and grow the Army’s cyber force.  He currently serves on the Board of Advisors of the Military Cyber Professionals Association (MCPA).
+
+Charles H. Jacoby Jr.: Charles H. Jacoby Jr. (born June 19, 1954) is a retired United States Army general who served as the fifth Commander of United States Northern Command (USNORTHCOM) and the 22nd Commander of North American Aerospace Defense Command (NORAD).  Jacoby was the first Army officer to assume command of Northern Command.  He previously served as the Director for Strategic Plans and Policy, The Joint Staff.  He assumed the United States Northern Command (USNORTHCOM) and the 22nd Commander of North American Aerospace Defense Command (NORAD) assignment on August 3, 2011, and was succeeded by Admiral William E. Gortney on December 5, 2014.  General Jacoby is notable as the first non-command pilot to serve as commander of either NORAD/USNORTHCOM, as both commands have traditionally been dominated by Air Force officers and NORAD carries a heavy air interdiction mission.
+
+Julio Argentino Roca: Alejo Julio Argentino Roca Paz (July 17, 1843 – October 19, 1914) was an army general who served as 8th President of Argentina from 12 October 1880 to 12 October 1886 and 13th from 12 October 1898 to 12 October 1904.  Roca is best known for directing the "Conquest of the Desert", a series of military campaigns against the indigenous peoples of Patagonia.
+
+Army Staff (Germany): The Army Staff, in the meaning of the Army general staff, of the German Army (German: "Führungsstab des Heeres - Fü H" ) was a department of the Federal Ministry of Defence and one of the five staff headquarters in the military command of the "Bundeswehr".  The "Army Staff" was thus at the same time a ministerial division and the highest level of military command within the German Army.  It was merged with the other high command authorities of the German Army to form the Army Command ("Kommando Heer") in 2012.
+
+Vincent K. Brooks: Vincent Keith Brooks (born October 24, 1958) is a United States Army general who is the current commander of United States Forces Korea, United Nations Command and ROK-U.S. Combined Forces Command.  He previously served as commanding general of the United States Army Pacific and before that as the commanding general of Third Army.  Brooks was the United States Army's Deputy Director of Operations during the War in Iraq, and frequently briefed the media, which raised his public profile.  He also served as the Chief of Army Public Affairs The Pentagon.  He later was commanding general of the 1st Infantry Division.  General Brooks assumed his current assignment on April 30, 2016.
+
+Bombardment of Barcelona (1842): The "'Bombardment of Barcelona' " of December 3, 1842 occurred in Spain during the reign of Isabella II.  It was ordered personally by the general Baldomero Espartero to end an insurgency that started in Barcelona the previous month and had forced the army to take refuge in the Montjuic Castle and Parc de la Ciutadella.  The indiscriminate artillery bombardment of the city was made from Montjuïc under the command of Captain General Antonio Van Halen.
+
+Baldomero Lamela Luengo: Baldomero Lamela (1838-1901) was an Argentine army officer, he served in command of Julio Argentino Roca in the military expeditions in southern Argentina.  He also participates in the War of the Triple Alliance.
+
+Question: When was the army general died under who's command Baldomero Lamela server?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "general_info": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the army general."
+        },
+        "death_date": {
+          "type": "string",
+          "description": "The date of death of the general."
+        },
+        "primary_role": {
+          "type": "string",
+          "description": "The primary military role of the general mentioned in the context."
+        }
+      },
+      "required": [
+        "name",
+        "death_date",
+        "primary_role"
+      ],
+      "additionalProperties": false
+    },
+    "subordinate_info": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the subordinate who served under the general."
+        },
+        "relationship_to_general": {
+          "type": "string",
+          "description": "Description of how the subordinate served under the general."
+        }
+      },
+      "required": [
+        "name",
+        "relationship_to_general"
+      ],
+      "additionalProperties": false
+    },
+    "answer_death_date": {
+      "type": "string",
+      "description": "The specific death date of the general, which is the direct answer to the question."
+    }
+  },
+  "required": [
+    "general_info",
+    "subordinate_info",
+    "answer_death_date"
+  ],
+  "additionalProperties": false
+}

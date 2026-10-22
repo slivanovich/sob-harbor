@@ -1,0 +1,13 @@
+{
+  "team_name": "Equipe Ligier",
+  "founding_year": 1968,
+  "best_known_for_sport": "Formula One",
+  "car_details": {
+    "car_model": "Ligier JS29B",
+    "designers": [
+      "Michel Tétu",
+      "Michel Beaujon"
+    ],
+    "engine_type": "Megatron Straight 4 turbo engine"
+  }
+}

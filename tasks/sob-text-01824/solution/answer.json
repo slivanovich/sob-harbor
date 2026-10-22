@@ -1,0 +1,19 @@
+{
+  "store_name": "Kmart",
+  "store_type": "American big box department store chain",
+  "headquarters_location": {
+    "city": "Hoffman Estates",
+    "state": "Illinois",
+    "country": "United States"
+  },
+  "mall_association": {
+    "mall_name": "New Harbour Mall",
+    "mall_location": {
+      "city": "Fall River",
+      "state": "Massachusetts",
+      "country": "United States"
+    },
+    "role": "rival anchor store",
+    "rival_store_name": "Walmart"
+  }
+}

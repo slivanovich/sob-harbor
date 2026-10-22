@@ -1,0 +1,13 @@
+{
+  "game_name": "Robotron: 2084",
+  "game_types": [
+    "arcade video game",
+    "shoot 'em up"
+  ],
+  "publisher_details": {
+    "publisher_name": "Williams Electronics",
+    "parent_company": "WMS Industries",
+    "parent_company_description": "American electronic gaming and amusement manufacturer",
+    "release_year": 1982
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "operating_system_name": "Bluebottle OS",
+  "developer_university": {
+    "name": "ETH Zurich",
+    "location": "Zürich, Switzerland",
+    "type": "science, technology, engineering and mathematics university"
+  },
+  "memory_management_type": "automatic and garbage collected"
+}

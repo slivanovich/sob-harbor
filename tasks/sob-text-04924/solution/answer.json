@@ -1,0 +1,14 @@
+{
+  "is_both_private": true,
+  "universities_checked": [
+    {
+      "university_name": "University of Bridgeport",
+      "is_private": true
+    },
+    {
+      "university_name": "Rochester Institute of Technology",
+      "is_private": true
+    }
+  ],
+  "reasoning_summary": "The University of Bridgeport is described as a 'private' university. The Rochester Institute of Technology is also described as a 'private doctoral university'. Since both are private, the answer is true."
+}

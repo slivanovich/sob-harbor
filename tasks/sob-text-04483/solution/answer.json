@@ -1,0 +1,11 @@
+{
+  "composer": {
+    "name": "Wolfgang Amadeus Mozart",
+    "birth_date": "1756-01-27"
+  },
+  "performer": {
+    "name": "Dino Borgioli",
+    "association_type": "particularly associated with"
+  },
+  "opera_roles_description": "roles in operas composed by Mozart, Rossini, and Donizetti"
+}

@@ -1,0 +1,14 @@
+{
+  "common_group_name": "team",
+  "involved_entities": [
+    {
+      "entity_name": "Birmingham City F.C.",
+      "entity_role": "is a professional association football club whose playing entity is a team that competes in the EFL Championship"
+    },
+    {
+      "entity_name": "English football league system",
+      "entity_role": "is a system of interconnected leagues for football clubs, which are composed of teams"
+    }
+  ],
+  "system_purpose_context": "The English football league system is a series of interconnected leagues for men's association football clubs in England."
+}

@@ -1,0 +1,16 @@
+{
+  "actor_name": "Corey Reynolds",
+  "known_roles_and_productions": [
+    {
+      "role_name": "Seaweed",
+      "production_name": "Hairspray",
+      "production_type": "Broadway adaptation"
+    },
+    {
+      "role_name": "David Gabriel",
+      "production_name": "The Closer",
+      "production_type": "TNT crime show"
+    }
+  ],
+  "total_known_productions": 2
+}

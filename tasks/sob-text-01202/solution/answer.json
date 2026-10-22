@@ -1,0 +1,12 @@
+{
+  "ship_name": "USCGC \"Taney\"",
+  "ship_type": "United States Coast Guard High Endurance Cutter",
+  "named_for_person": {
+    "name": "Roger B. Taney",
+    "role": "Chief Justice of the Supreme Court",
+    "chief_justice_order": 5,
+    "chief_justice_tenure_start_year": 1836,
+    "chief_justice_tenure_end_year": 1864
+  },
+  "notable_fact": "last ship floating that fought in the attack on Pearl Harbor"
+}

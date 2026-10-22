@@ -1,0 +1,19 @@
+{
+  "philosopher_name": "Leucippus",
+  "atomism_development_role": {
+    "is_earliest_greek_developer": true,
+    "reported_by_ancient_sources": true
+  },
+  "family_and_mythological_connections": {
+    "has_daughters": true,
+    "daughters_names": [
+      "Phoebe",
+      "Hilaeira"
+    ],
+    "daughters_sought_by_castor_murderer": true,
+    "castor_murderer_details": {
+      "name": "Lynceus",
+      "reason_for_seeking_daughters": "they all (along with Polydeuces) sought Phoebe and Hilaeira"
+    }
+  }
+}

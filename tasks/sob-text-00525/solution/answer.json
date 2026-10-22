@@ -1,0 +1,21 @@
+{
+  "sport_name": "ice hockey",
+  "championships_referenced": [
+    {
+      "championship_full_name": "2017 IIHF World Championship Group A",
+      "year_of_championship": 2017,
+      "sport_explicitly_stated": false
+    },
+    {
+      "championship_full_name": "2018 IIHF World Championship Division I",
+      "year_of_championship": 2018,
+      "sport_explicitly_stated": true
+    },
+    {
+      "championship_full_name": "2010 IIHF World Championship Division I",
+      "year_of_championship": 2010,
+      "sport_explicitly_stated": true
+    }
+  ],
+  "governing_body_abbreviation": "IIHF"
+}

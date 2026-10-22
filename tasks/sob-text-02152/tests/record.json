@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "873893aba6eba9c051231b197e6a256dfcd08b229556ad5e61e61ee43e7eb903",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae447645542995ad6573d27",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Rajaton",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Thomas-McJunkin-Love House: Thomas-McJunkin-Love House is a historic home located at Charleston, West Virginia.  It was built for James R. Thomas, president of the Carbon Fuel Company, a coal mining business in the Kanawha Valley.  Known originally as \"The Maples,\" it was built for him and his family around 1921.  It is in the English Tudor style and features half timbering in some of the gables and brick in others, but the exterior is predominantly in stucco.\n\nElgin Schoolhouse State Historic Site: Elgin Schoolhouse State Historic Site is a state park property in Nevada, United States, preserving a historic one-room schoolhouse that operated from 1922 to 1967.  In 1998, the building was restored at private expense to its original appearance.  In July 2005, it became a state historic site.  Later that year, floods damaged Nevada State Route 317, restricting access to the site.  The park features half of the school's original furnishings and other items authentic to the time period.  It is open for tours by appointment.\n\nAll Is Dream: All Is Dream is the fifth studio album by American rock band Mercury Rev.  It was released in the United Kingdom on August 27, 2001, in France on August 28, 2001, and in the United States on September 11, 2001.  The album's front cover features half of the 1991 painting \"Breakthrough Dreaming\" by artist and mystic Jennifer Hathaway.\n\nBelgrade Marathon: The Belgrade Marathon is a marathon race held annually in Belgrade since 1988.  It is typically held in mid-April and also features half marathon and fun run for the public.\n\nNancy Argenta: Nancy Maureen Argenta (born Nancy Maureen Herbison on January 17, 1957) is a Canadian soprano singer, best known for performing music from the pre-classical era.  She has won international acclaim, and is considered by many as the leading Handel soprano of her time.\n\nManuela Kraller: Manuela Kraller (born 1 August 1981) is a German soprano singer from Ainring.  She is best known as the former lead singer of German symphonic metal band Xandria from late 2010, until late 2013.  Manuela was formerly one of the soprano vocalists in German symphonic metal band Haggard.\n\nZulma Bouffar: Zulma Madeleine Boufflar, known as Zulma Bouffar, (24 May 1841 – 20 January 1909), was a French actress and soprano singer, associated with the opéra-bouffe of Paris in the second half of the 19th century who enjoyed a successful career around Europe.\n\nMezzo-soprano: A mezzo-soprano or mezzo ( , ; ] meaning \"half soprano\") is a type of classical female singing voice whose vocal range lies between the soprano and the contralto voice types.  The mezzo-soprano's vocal range usually extends from the A below middle C to the A two octaves above (i.e. A–A in scientific pitch notation, where middle C = C).  In the lower and upper extremes, some mezzo-sopranos may extend down to the F below middle C (F) and as high as \"high C\" (C).\n\nKeys to Ascension: Keys to Ascension is the fourth live and fifteenth studio album by the English rock band Yes.  It was released as a double album in October 1996 on Essential Records.  After guitarist Steve Howe and keyboardist Rick Wakeman returned to the band in mid-1995, the group relocated to Anderson's hometown of San Luis Obispo, California and started writing and rehearsing for a studio new album.  The reunion of this particular line-up was promoted with three shows at the city's Fremont Theater in March 1996, the five's first live performance together since 1979.  The album features half of the live set from the 1996 shows and two studio tracks which marked a return to producing long-form pieces.\n\nVirpi Moskari: Virpi Moskari is a Mezzo-soprano, and a founder member of the Finnish a cappella group, Rajaton.",
+    "question": "What group features half soprano singer Virpi Moskari?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "group_name": {
+          "type": "string",
+          "description": "The name of the group."
+        },
+        "group_type": {
+          "type": "string",
+          "description": "The type or genre of the group."
+        },
+        "singer_information": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the singer."
+            },
+            "vocal_type": {
+              "type": "string",
+              "description": "The classical vocal type of the singer."
+            },
+            "vocal_type_alias": {
+              "type": "string",
+              "description": "The common alias or meaning for the vocal type, as mentioned in the context."
+            },
+            "role_in_group": {
+              "type": "string",
+              "description": "The role of the singer within the group."
+            }
+          },
+          "required": [
+            "name",
+            "vocal_type",
+            "vocal_type_alias",
+            "role_in_group"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "group_name",
+        "group_type",
+        "singer_information"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "group_name": "Rajaton",
+      "group_type": "a cappella group",
+      "singer_information": {
+        "name": "Virpi Moskari",
+        "vocal_type": "Mezzo-soprano",
+        "vocal_type_alias": "half soprano",
+        "role_in_group": "founder member"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

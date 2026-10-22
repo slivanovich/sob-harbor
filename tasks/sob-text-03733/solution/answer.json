@@ -1,0 +1,12 @@
+{
+  "serial_killer_details": {
+    "name": "Harold Shipman",
+    "convicted_murders_count": 15,
+    "conviction_date": "31 January 2000"
+  },
+  "inquiry_details": {
+    "name": "The Shipman Inquiry",
+    "purpose": "report produced by a British governmental investigation into the activities of general practitioner and serial killer Harold Shipman"
+  },
+  "inquiry_subject_killer_name": "Harold Shipman"
+}

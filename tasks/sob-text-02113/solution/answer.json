@@ -1,0 +1,25 @@
+{
+  "comparison_subject_1": {
+    "breed_name": "Australian Stumpy Tail Cattle Dog",
+    "description_keywords": [
+      "naturally bobtailed or tailless",
+      "medium-sized",
+      "Cattle Dog",
+      "developed in Australia",
+      "descends from crosses between European herding dogs and the Australian dingo"
+    ],
+    "is_similar_to_greyhound": false
+  },
+  "comparison_subject_2": {
+    "breed_name": "Borzoi",
+    "description_keywords": [
+      "Russian wolfhound",
+      "domestic dog",
+      "descended from dogs brought to Russia from central Asian countries",
+      "member of the sighthound family"
+    ],
+    "is_similar_to_greyhound": true
+  },
+  "most_similar_breed": "Borzoi",
+  "reasoning": "The context explicitly states that the Borzoi 'is similar in shape to a greyhound', while no such comparison is made for the Australian Stumpy Tail Cattle Dog."
+}

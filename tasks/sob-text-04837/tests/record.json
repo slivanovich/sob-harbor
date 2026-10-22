@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "3caefa312ad64e35bd9210efc40ce51da784b9a296075a011a091dcb31be2d8e",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a76c071554299373536019e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Novo Nordisk",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Vertic: Vertic (Vertic A/S) is a Danish digital marketing and advertising agency founded in Copenhagen, Denmark in 2002.  The company has offices in Copenhagen, New York City, Seattle and Singapore.  Its clients include GE, Microsoft, Novo Nordisk, SAP, AARP and Vestas.  Vertic is a development partner for LinkedIn and twice (2011, 2013) received The Internationalist's Award for Innovative Digital Marketing Solutions for its marketing of the LinkedIn platform.\n\nLuna\\TBWA: Luna\\TBWA is a Slovenian advertising agency based in Ljubljana.  Its clients include Si.mobil, NLB, Krka, Beiersdorf, Mars, Nissan, BMW and Henkel.  In March 2012, Luna\\TBWA was proclaimed the best Slovenian advertising agency of 2011 at the Slovenian Advertising Festival.\n\nLupin Limited: Lupin Limited is a transnational pharmaceutical company based in Mumbai.  It is the seventh-largest company by market capitalization; and the 10th-largest generic pharmaceutical company by revenue globally.  Lupin is the fifth-largest generic pharmaceutical company in the US by prescription-led market share and 3rd largest Indian pharmaceutical company by revenue.  It has the distinction of being the fastest growing generic pharmaceutical player in the US and Japan;, and is the 4th largest and the fastest growing generic pharmaceutical player in South Africa.\n\nSocial Beat: Social Beat, is a Digital Marketing services and product company based in Chennai, Bangalore and Mumbai, India.  Its services include search engine marketing, social media marketing, web design and integrated digital marketing.  Their clients include Dr. Mohan's Diabetes Centre , Dr. Smilez Chain of Dental Clinics, India Home Healthcare, PlanetSuperheroes.com and Magickart.in.\n\nFast Web Media: Fast Web Media is a digital marketing agency with offices in MediaCityUK and London.  The company provides clients with digital marketing services, specialising in search marketing, search engine optimisation, technical development, social media and mobile, and was named Best Agency at the UK Search Awards 2011.\n\nSun Pharmaceutical: Sun Pharmaceutical Industries Limited (, ) is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra that manufactures and sells pharmaceutical formulations and active pharmaceutical ingredients (APIs) primarily in India and the United States.  The company offers formulations in various therapeutic areas, such as cardiology, psychiatry, neurology, gastroenterology and diabetology.  It also provides APIs such as warfarin, carbamazepine, etodolac, and clorazepate, as well as anticancers, steroids, peptides, sex hormones, and controlled substances.\n\nDigital Marketing Institute: The Digital Marketing Institute is a higher education body in the Republic of Ireland offering further education in the field of digital marketing.  The Digital Marketing Institute is the world’s leading digital marketing and selling professional certification body.  Through its growing network of over 80 education partners in 100 countries, the digital specialist offers industry validated professional certifications from associate to master level.\n\nTeva Pharmaceutical Industries: Teva Pharmaceutical Industries Ltd. (Hebrew: טבע תעשיות פרמצבטיות בע\"מ‎ ) is an Israeli multinational pharmaceutical company headquartered in Petah Tikva, Israel.  It specializes primarily in generic drugs, but other business interests include active pharmaceutical ingredients and, to a lesser extent, proprietary pharmaceuticals.  It is the largest generic drug manufacturer in the world and one of the 15 largest pharmaceutical companies worldwide.  Teva's facilities are located in Israel, North America, Europe, and South America.  Teva shares trade on both the New York Stock Exchange (via ADRs) and the Tel Aviv Stock Exchange.  The company is a member of the Pharmaceutical Research and Manufacturers of America (PhRMA).\n\nRanbaxy Laboratories: Ranbaxy Laboratories Limited () is an Indian multinational pharmaceutical company that was incorporated in India in 1961.  The company went public in 1973 and Japanese pharmaceutical company Daiichi Sankyo acquired a controlling share in 2008.  In 2014, Sun Pharma acquired the entire 63.4% share of Ranbaxy making the conglomerate the world’s fifth largest specialty generic pharma company.\n\nNovo Nordisk: Novo Nordisk is a Danish multinational pharmaceutical company headquartered in Bagsværd, Denmark, with production facilities in eight countries, and affiliates or offices in 75 countries.  Novo Nordisk is controlled by majority shareholder Novo Holdings A/S which holds approximately 25% of its shares and a supermajority (75%) of its voting shares.",
+    "question": "Vertic A/S is a Danish digital marketing and advertising agency, clients include which Danish multinational pharmaceutical company?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "agency_name": {
+          "type": "string",
+          "description": "The name of the digital marketing and advertising agency."
+        },
+        "agency_country": {
+          "type": "string",
+          "description": "The country where the agency was founded."
+        },
+        "client_company": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the client company."
+            },
+            "type": {
+              "type": "string",
+              "description": "The industry type of the client company."
+            },
+            "country_of_origin": {
+              "type": "string",
+              "description": "The country where the client company is headquartered."
+            },
+            "is_multinational": {
+              "type": "boolean",
+              "description": "Indicates if the client company is multinational."
+            }
+          },
+          "required": [
+            "name",
+            "type",
+            "country_of_origin",
+            "is_multinational"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "agency_name",
+        "agency_country",
+        "client_company"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "agency_name": "Vertic A/S",
+      "agency_country": "Danish",
+      "client_company": {
+        "name": "Novo Nordisk",
+        "type": "pharmaceutical",
+        "country_of_origin": "Danish",
+        "is_multinational": true
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

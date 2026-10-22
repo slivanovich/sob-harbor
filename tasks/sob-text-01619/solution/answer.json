@@ -1,0 +1,18 @@
+{
+  "common_category": "computer",
+  "shared_characteristics": [
+    "early system",
+    "released in the same year"
+  ],
+  "release_year": 1978,
+  "entities_involved": [
+    {
+      "name": "Exidy Sorcerer",
+      "type": "home computer system"
+    },
+    {
+      "name": "Heathkit H11",
+      "type": "personal computer"
+    }
+  ]
+}

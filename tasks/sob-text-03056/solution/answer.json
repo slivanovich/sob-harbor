@@ -1,0 +1,15 @@
+{
+  "individuals_compared": [
+    {
+      "name": "E. Howard Hunt",
+      "prison_time_months": 33
+    },
+    {
+      "name": "Alfred Bester",
+      "prison_status_note": "No prison time mentioned for the author Alfred Bester in the context."
+    }
+  ],
+  "comparison_outcome": "E. Howard Hunt spent more time in prison than Alfred Bester.",
+  "person_with_more_prison_time": "E. Howard Hunt",
+  "duration_of_more_prison_time_months": 33
+}

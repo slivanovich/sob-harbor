@@ -1,0 +1,9 @@
+{
+  "league_name": "Super Boxing League",
+  "country_of_origin": "India",
+  "founding_details": {
+    "co_founder_name": "Amir Khan",
+    "founding_year": 2017,
+    "founded_after_super_fight_league_season": true
+  }
+}

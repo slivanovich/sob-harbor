@@ -1,0 +1,12 @@
+{
+  "magazine": {
+    "name": "Front",
+    "country_of_origin": "British",
+    "target_demographic": "16- to 25-year-old males"
+  },
+  "featured_person": {
+    "name": "Sam Cooke",
+    "occupation": "glamour model"
+  },
+  "is_lads_mag_genre": true
+}

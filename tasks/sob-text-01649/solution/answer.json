@@ -1,0 +1,9 @@
+{
+  "training_location": "RAF Valley",
+  "training_type": "fast-jet training",
+  "aircraft_details": {
+    "aircraft_name": "BAE Systems Hawk",
+    "aircraft_role": "advanced trainer aircraft",
+    "first_flight_year": 1974
+  }
+}

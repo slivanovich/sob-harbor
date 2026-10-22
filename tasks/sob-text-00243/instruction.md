@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+MS Marina: MS "Marina" is an "Oceania"-class cruise ship, which was constructed at Fincantieri's Sestri Ponente yards in Italy for Oceania Cruises.  The "Marina" is the first in a duo of cruise ships, and was followed by the MS "Riviera" in May 2012, the option for the third ship was declined.  The ship was named in Miami by Mary Hart on February 5, 2011.
+
+Clelands Shipbuilding Company: Clelands Shipbuilding Company was a leading British shipbuilding company.  The Company was based in Wallsend was nationalised by the British Government.
+
+Moore Dry Dock Company: Moore Dry Dock Company was a ship repair and shipbuilding company in Oakland, California.  It was started in San Francisco in 1905 as the Moore & Scott Iron Works, but was soon destroyed by fire resulting from the San Francisco earthquake in 1906.  It was reopened and in 1909 purchased the Boole Shipyard in Oakland.  In 1917, Moore bought out Scott and the name changed to Moore Shipbuilding.  In 1922, the company was renamed again as Moore Dry Dock Company.  It operated primarily as a repair yard.  Its shipbuilding capabilities were expanded in the World War II era, building over 100 ships for the U.S. Navy and merchant marine.  Moore ranked 82nd among United States corporations in the value of World War II military production contracts.  With the end of the war, shipbuilding ceased, but repair operations continued.  Moore Dry Dock Company finally closed in 1961.
+
+Bay Shipbuilding Company: Bay Shipbuilding Company (BSC) is a shipyard and dry dock company in Sturgeon Bay, Door County, Wisconsin.  As of 2015, Bay Ships was a subsidiary of Fincantieri Marine Group and produces articulated tug and barges, OPA-90 compliant double hull tank ships and offshore support vessels.  It also provides repair services to the lake freighter fleet.  In the past the shipyard located in Sturgeon Bay has operated under several different names and traces its history back to 1918.  The company also built 40,000 ton Lake freighters in the 1970s and 1980s.  While capable of producing large freighters, the yard has not built a freighter over 20,000 tons since 1987.  Former names of the shipyards at the 2015 location of Bay Shipbuilding are: Sturgeon Bay Shipbuilding, Leathem D. Smith Shipbuilding Company and Christy Corporation.
+
+Manitowoc Shipbuilding Company: Manitowoc Shipbuilding Company, located in Manitowoc, Wisconsin, was a major shipbuilder for the Great Lakes.  It was founded in 1902, and made mainly steel ferries and ore haulers.  During World War II, it built submarines, tank landing craft (LCTs), and self-propelled fuel barges called "YOs".  Employment peaked during the military years at 7000.  The shipyard closed in 1968, when Manitowoc Company bought Bay Shipbuilding Company and moved their shipbuilding operation to Sturgeon Bay.
+
+Fincantieri: Fincantieri - Cantieri Navali Italiani S.p.A. (] ) is an Italian shipbuilding company based in Trieste, Italy.  It was formed in 1959 and is owned by the Italian state through Fintecna.  Already the largest shipbuilder in Europe, after the acquisition of Vard in 2013 the Fincantieri group doubled in size to become the fourth largest in the world.  The company builds both commercial and military vessels.
+
+USS Artisan (ABSD-1): USS "Artisan" (ABSD-1), later redesignated as (AFDB-1), a ten-section, non-self-propelled, large auxiliary floating drydock, was the only ship of the United States Navy given this name.  She was constructed in sections during 1942 and 1943 by the Everett Shipbuilding Company, in Everett, Washington; the Chicago Bridge & Iron Company, in Eureka, California; the Pollock-Stockton Shipbuilding Company, in Stockton, California; and the Chicago Bridge & Iron Company, in Morgan City, Louisiana.  Her official commissioning ceremony took place at Everett, Washington, on 10 May 1943, Captain Andrew R. Mack in command.
+
+Kaiser Shipyards: The Kaiser Shipyards were seven major shipbuilding yards located on the United States west coast during World War II.  Kaiser ranked 20th among U.S. corporations in the value of wartime production contracts.  The shipyards were owned by the Kaiser Shipbuilding Company, a creation of American industrialist Henry J. Kaiser, (1882-1967), who established the shipbuilding company around 1939 in order to help meet the construction goals set by the United States Maritime Commission for merchant shipping.
+
+London and Glasgow Shipbuilding Company: London and Glasgow Shipbuilding Company, also known as the London and Glasgow Engineering and Iron Shipbuilding Company, was a shipbuilding firm established in 1864 by a consortium of London bankers, including the Glasgow engineer James Rodger.  They acquired the Middleton Yard in Govan in 1864, and soon acquired more land at Ron Bank in Govan which belonged to the Lochhead family.  The old Lochhead land lay between Robert Napier and Sons "Old Yard" and the Middleton Yard allowing expansion to the west.  London & Glasgow Engineering and Iron Shipbuilding Co. Ltd. also bought land at Lancefield on the northern side of the River Clyde and established a boiler workshop there.
+
+Ailsa Shipbuilding Company: Ailsa Shipbuilding Company was a Scottish shipbuilding company based in Troon and Ayr, Ayrshire.
+
+Question: Where is the  shipbuilding company which  MS Marina was constructed at based in 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "ship_name": {
+      "type": "string",
+      "description": "The name of the ship in question."
+    },
+    "constructing_company_name": {
+      "type": "string",
+      "description": "The name of the company that constructed the ship."
+    },
+    "company_headquarters_city": {
+      "type": "string",
+      "description": "The city where the constructing company is based."
+    },
+    "company_headquarters_country": {
+      "type": "string",
+      "description": "The country where the constructing company is based."
+    }
+  },
+  "required": [
+    "ship_name",
+    "constructing_company_name",
+    "company_headquarters_city",
+    "company_headquarters_country"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "forensic_psychiatrist": {
+    "name": "Park Dietz",
+    "role_in_case": "consulted or testified"
+  },
+  "criminal_case_subject": {
+    "name": "Richard Kuklinski",
+    "occupation_type": "American contract killer and serial killer"
+  },
+  "associated_crime_families": [
+    {
+      "family_name": "DeCavalcante crime family",
+      "location": "Newark, New Jersey"
+    },
+    {
+      "family_name": "Five Families",
+      "location": "New York City"
+    }
+  ],
+  "newark_associated_family_name": "DeCavalcante crime family"
+}

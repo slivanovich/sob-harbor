@@ -1,0 +1,14 @@
+{
+  "common_system_name": "Fate system",
+  "system_type": "role-playing game system",
+  "entities_involved": [
+    {
+      "name": "Rob Donoghue",
+      "entity_type": "person"
+    },
+    {
+      "name": "The Dresden Files Roleplaying Game",
+      "entity_type": "game"
+    }
+  ]
+}

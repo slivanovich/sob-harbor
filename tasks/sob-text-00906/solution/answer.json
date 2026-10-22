@@ -1,0 +1,10 @@
+{
+  "brewery_name": "Köstritzer brewery",
+  "founding_year": 1543,
+  "location": {
+    "town": "Bad Köstritz",
+    "district": "Greiz",
+    "state": "Thuringia"
+  },
+  "product_type": "Schwarzbier"
+}

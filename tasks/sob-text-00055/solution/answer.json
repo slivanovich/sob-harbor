@@ -1,0 +1,10 @@
+{
+  "person_name": "Pamela Nicholson",
+  "company_name": "Enterprise Rent-A-Car",
+  "company_type": "car rental company",
+  "headquarters_location": {
+    "city": "Clayton",
+    "state": "Missouri",
+    "country": "United States"
+  }
+}

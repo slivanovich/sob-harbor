@@ -1,0 +1,16 @@
+{
+  "actor_name": "Christopher Lee",
+  "role_in_trilogy": "Saruman",
+  "related_film": {
+    "title": "Horror Express",
+    "year": 1972,
+    "genre": "science fiction-horror",
+    "director": "Eugenio Martín",
+    "other_stars": [
+      "Peter Cushing",
+      "Alberto de Mendoza",
+      "Silvia Tortosa",
+      "Telly Savalas"
+    ]
+  }
+}

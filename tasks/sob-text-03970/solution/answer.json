@@ -1,0 +1,36 @@
+{
+  "film_assassins_details": {
+    "title": "Assassins",
+    "release_year": 1995,
+    "director": "Richard Donner",
+    "genre": "action thriller",
+    "screenwriters": [
+      "Andy Wachowski",
+      "Larry Wachowski",
+      "Brian Helgeland"
+    ]
+  },
+  "wachowskis_biography": {
+    "collective_name": "The Wachowskis",
+    "members": [
+      {
+        "current_name": "Lana Wachowski",
+        "former_name": "Laurence Wachowski"
+      },
+      {
+        "current_name": "Lilly Wachowski",
+        "former_name": "Andrew Wachowski"
+      }
+    ],
+    "roles": [
+      "film directors",
+      "screenwriters",
+      "producers"
+    ],
+    "nationality": "American"
+  },
+  "wachowskis_directorial_debut": {
+    "title": "Bound",
+    "release_year": 1996
+  }
+}

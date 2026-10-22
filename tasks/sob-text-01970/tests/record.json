@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "760633e129596e2fc7b7f858009d3fa8596f6f28526c464d371cf51ba36051ee",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a89d77f554299669944a5c1",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Anno Domini calendar era",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Roman Empire: The Roman Empire (Latin: \"Imperium Rōmānum\" ; ] Koine and Medieval Greek: Βασιλεία τῶν Ῥωμαίων, tr.  \"Basileia tōn Rhōmaiōn\" ) was the post-Roman Republic period of the ancient Roman civilization, characterized by government headed by emperors and large territorial holdings around the Mediterranean Sea in Europe, Africa and Asia.  The city of Rome was the largest city in the world  100 BC  AD 400 , with Constantinople (New Rome) becoming the largest around AD 500, and the Empire's populace grew to an estimated 50 to 90 million inhabitants (roughly 20% of the world's population at the time).  The 500-year-old republic which preceded it was severely destabilized in a series of civil wars and political conflict, during which Julius Caesar was appointed as perpetual dictator and then assassinated in 44 BC.  Civil wars and executions continued, culminating in the victory of Octavian, Caesar's adopted son, over Mark Antony and Cleopatra at the Battle of Actium in 31 BC and the annexation of Egypt.  Octavian's power was then unassailable and in 27 BC the Roman Senate formally granted him overarching power and the new title \"Augustus\", effectively marking the end of the Roman Republic.\n\n300 BC: Year 300 BC was a year of the pre-Julian Roman calendar.  At the time it was known as the Year of the Consulship of Corvus and Pansa (or, less frequently, year 454 \"Ab urbe condita\").  The denomination 300 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.  B.C.E is the abbreviation for before the Common/Current/Christian Era (an alternative to Before Christ, abbreviated BC).\n\n500 BC: The year 500 BC was a year of the pre-Julian Roman calendar.  In the Roman Empire it was known as the Year of the Consulship of Camerinus and Longus (or, less frequently, year 254 \" Ab urbe condita\").  The denomination 500 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.\n\n57 BC: Year 57 BC was a year of the pre-Julian Roman calendar.  Contemporaneously, in the Roman Republic, it was known as the Year of the Consulship of Lentulus and Metellus (or, less frequently, year 697 \"Ab urbe condita\").  The denomination 57 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.\n\n536 BC: The year 536 BC was a year of the pre-Julian Roman calendar.  In the Roman Empire, it was known as year 218 \" Ab urbe condita\".  The denomination 536 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.\n\n538 BC: The year 538 BC was a year of the pre-Julian Roman calendar.  In the Roman Empire, it was known as year 216 \"Ab urbe condita\".  The denomination 538 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.\n\n526: Year 526 (DXXVI) was a common year starting on Thursday (link will display the full calendar) of the Julian calendar.  At the time, it was known as the Year of the Consulship of Olybrius without colleague (or, less frequently, year 1279 \"Ab urbe condita\").  The denomination 526 for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.\n\n228 BC: Year 228 BC was a year of the pre-Julian Roman calendar.  At the time it was known as the Year of the Consulship of Ruga and Verrucosus (or, less frequently, year 526 \"Ab urbe condita\").  The denomination 228 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.\n\n248 BC: Year 248 BC was a year of the pre-Julian Roman calendar.  In the Roman Republic at the time it was known as the Year of the Consulship of Cotta and Geminus (or, less frequently, year 506 \"Ab urbe condita\").  The denomination 248 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.\n\n526 BC: The year 526 BC was a year of the pre-Julian Roman calendar.  In the Roman Empire, it was known as year 244 \"Ab urbe condita\".  The denomination 526 BC for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.",
+    "question": "What became the prevalent method in Europe for naming years in 526 BC by the post-Roman Republic period of the ancient Roman civilization ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "prevalent_naming_method": {
+          "type": "string",
+          "description": "The calendar era that became the prevalent method for naming years in Europe."
+        },
+        "period_method_became_prevalent": {
+          "type": "string",
+          "description": "The historical period when the naming method became prevalent."
+        },
+        "location_of_prevalence": {
+          "type": "string",
+          "description": "The geographical area where the naming method became prevalent."
+        },
+        "year_in_question": {
+          "type": "integer",
+          "description": "The specific year mentioned in the question, in BC."
+        },
+        "original_year_denomination_in_roman_empire": {
+          "type": "string",
+          "description": "How the year in question was known contemporaneously in the Roman Empire (post-Roman Republic period)."
+        }
+      },
+      "required": [
+        "prevalent_naming_method",
+        "period_method_became_prevalent",
+        "location_of_prevalence",
+        "year_in_question",
+        "original_year_denomination_in_roman_empire"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "prevalent_naming_method": "Anno Domini calendar era",
+      "period_method_became_prevalent": "early medieval period",
+      "location_of_prevalence": "Europe",
+      "year_in_question": -526,
+      "original_year_denomination_in_roman_empire": "year 244 \"Ab urbe condita\""
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

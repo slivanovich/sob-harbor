@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "54e77a887d4d4ff604719ba186894be8449db724d94a8273f95ddbef68a33fed",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a7ac09b554299042af8f6a6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "China",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Jiaozhoubei Railway Station: The Jiaozhoubei Railway Station () is a railway station found in the boundary between Jiaodong Subdistrict and Jiaolai Town of Jiaozhou City, Qingdao, China.  It currently lies on the Qingdao–Jinan High-Speed Railway.\n\nYinghai Subdistrict, Jiaozhou: Yinghai Subdistrict () is a subdistrict of Jiaozhou City, Shandong, People's Republic of China, located south of G22 Qingdao–Lanzhou Expressway southeast of downtown.  , it has 47 villages under its administration.\n\nYingkou: Yingkou () is a prefecture-level city of Liaoning province, People's Republic of China.  It is a port city of the Bohai Sea, and is the location of the mouth of the Liao River.\n\nJiaozhou City: Jiaozhou (), formerly Jiaoxian or Jiao County, is a county-level city of Qingdao sub-provincial city, Shandong Province, China.  It gained its current county-level city designation in 1987.  It has an area of 1,313 km and a population at the 2000 Census of 783,478.",
+    "question": "Jiaozhou City and Yingkou, are in which country?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "country_of_location": {
+          "type": "string",
+          "description": "The country where the mentioned cities are located."
+        },
+        "entities_located": {
+          "type": "array",
+          "description": "Details about each entity mentioned in the question and its location.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_name": {
+                "type": "string",
+                "description": "The name of the city or entity."
+              },
+              "entity_type": {
+                "type": "string",
+                "description": "The administrative type of the entity (e.g., county-level city, prefecture-level city)."
+              },
+              "province_or_region": {
+                "type": "string",
+                "description": "The province or region within the country where the entity is located."
+              }
+            },
+            "required": [
+              "entity_name",
+              "entity_type",
+              "province_or_region"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "total_entities_found": {
+          "type": "integer",
+          "description": "The total number of entities whose location was identified."
+        }
+      },
+      "required": [
+        "country_of_location",
+        "entities_located",
+        "total_entities_found"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "country_of_location": "China",
+      "entities_located": [
+        {
+          "entity_name": "Jiaozhou City",
+          "entity_type": "county-level city",
+          "province_or_region": "Shandong Province"
+        },
+        {
+          "entity_name": "Yingkou",
+          "entity_type": "prefecture-level city",
+          "province_or_region": "Liaoning province"
+        }
+      ],
+      "total_entities_found": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

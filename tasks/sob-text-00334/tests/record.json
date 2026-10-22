@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "record_id": "c92926b5314d3aa2fb1771353512d148925e8adc091c9cdbde75fe557c4ffffc",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a848f245542997b5ce3feb8",
+    "source_dataset": "hotpotqa",
+    "source_answer": "genus of perennial plants",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Bessera: Bessera is a genus of Mexican plants in the cluster lily subfamily within the asparagus family.  It is a small genus of 3 known species of mostly herbaceous flowering plants with corms.  They have flowers with petals and petaloid sepals (tepals) with compound pistils.\n\nSesleria: Sesleria is a Eurasian and North African genus of perennial plants in the grass family.\n\nSesleria caerulea: Sesleria caerulea, known as blue moor-grass, is a species of perennial grass in the Poaceae family, native to Europe.\n\nSesleria insularis: Sesleria insularis is a species of perennial grass in the Poaceae family, with culms 30–65 cm long.\n\nSesleria albicans: Sesleria albicans is a species of perennial grass in the Poaceae family which can be found throughout Europe.\n\nSesleria heufleriana: Sesleria heufleriana is a species of perennial grass in the Poaceae family, native to central, southeastern, and eastern Europe and the Caucasus.  Culms are erect, ranging from 30–70 cm long; leaf-blades are conduplicate or convolute, and 20–35 cm long by 2–3 mm wide.\n\nSesleria argentea: Sesleria argentea is a species of perennial grass in the Poaceae family.  It is 35 – long with a 0.5 – long ciliolate membrane.  Its leaves are either conduplicate or convolute, and are 10 – long and 3 – wide.  It also has a linear panicle spiciform which is 3.5 – long and 0.5 – wide.",
+    "question": "Both Bessera and Sesleria are?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "common_classification": {
+          "type": "string",
+          "description": "The common biological classification level for both entities."
+        },
+        "common_plant_type": {
+          "type": "string",
+          "description": "The general type of organism both entities represent."
+        },
+        "genera_information": {
+          "type": "array",
+          "description": "Detailed information about each genus mentioned.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "genus_name": {
+                "type": "string",
+                "description": "The name of the genus."
+              },
+              "family": {
+                "type": "string",
+                "description": "The plant family the genus belongs to."
+              },
+              "origin_regions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Regions where the genus is native."
+              },
+              "is_perennial": {
+                "type": "boolean",
+                "description": "Indicates if the genus consists of perennial plants."
+              },
+              "number_of_known_species": {
+                "type": "integer",
+                "description": "The number of known species within the genus."
+              }
+            },
+            "required": [
+              "genus_name",
+              "family",
+              "origin_regions"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "common_classification",
+        "common_plant_type",
+        "genera_information"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "common_classification": "genus",
+      "common_plant_type": "plants",
+      "genera_information": [
+        {
+          "genus_name": "Bessera",
+          "family": "asparagus family",
+          "origin_regions": [
+            "Mexico"
+          ],
+          "number_of_known_species": 3
+        },
+        {
+          "genus_name": "Sesleria",
+          "family": "grass family",
+          "origin_regions": [
+            "Eurasia",
+            "North Africa"
+          ],
+          "is_perennial": true
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

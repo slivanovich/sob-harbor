@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+College: A college (Latin: "collegium") is an educational institution or a constituent part of one.  A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, or an institution offering vocational education.
+
+Kamlavati Higher Secondary School: Kamlavati Higher Secondary School ( Certified) is an educational institution situated in Sahupuram sector, Arumuganeri town of Thoothukudi district, Tamil Nadu, India.  The school follows CBSE pattern from class 1 to 10 and follows Tamil Nadu State Board syllabus for class 11 and 12. It is a private educational institution originally started in 1972 as part of educational assistance to the children of DCW workers.  Later it opened its admissions to general public.  The school is managed by DCW ltd through Kamlavati Higher Secondary School Trust.
+
+Ron Assouline: Ron Assouline is a film director, screenwriter, creative director, producer, and a lecturer at the Sammy Ofer School of Communications at the Interdisciplinary Center Herzliya (IDC).  Assouline is also the founder and owner of Filmind, a film and advertising firm.  He has directed many films for museums around the world, but mainly in Israel, including "Journey to Jerusalem", a 100 episode series, shown regularly at the Western Wall in Jerusalem and "A Human Sanctuary", a historic drama film presented at the Shrine of the Book at the Israel Museum.  Assouline has also produced and directed many television commercials, including those for Benjamin Netenyahu's 1996 election campaign and Ehud Barak's 1999 campaign.
+
+List of the oldest schools in the Philippines: This is a list of educational institutions in the Philippines arranged according to the dates of their foundation.  It comprises the list of the oldest schools in the Philippines sorted in various categories, and gives an overview of the development of education and higher learning in the Philippines.  To be included in this list, an institution must satisfy a traditional definition of a formal educational institution at the time of its founding.  Chronologically, an educational institution can only be included in the top ten in a certain category only if no other school has been proven, with reliable sources, to be older.  Moreover, an addendum shall be attached in a category where an entry is disputed or defunct; this addendum shall consist of the next undisputed or still operating educational institution.
+
+Learning environment: Learning environment is an educational approach, cultural context, or physical setting in which education occurs.  The term is commonly used as a more definitive alternative to "classroom", but it typically refers to the context of educational philosophy or knowledge experienced by the student and may also encompass a variety of learning cultures—its presiding ethos and characteristics, how individuals interact, governing structures, and philosophy.  In a societal sense, learning environment may refer to the culture of the population it serves and of their location.  Learning environments are highly diverse in use, learning styles, organization, and educational institution.  The culture and context of a place or organization includes such factors as a way of thinking, behaving, or working, also known as organizational culture.  For a learning environment such as an educational institution, it also includes such factors as operational characteristics of the instructors, instructional group, or institution; the learning styles and pedagogies used; and the societal culture of where the learning is occurring.
+
+Interdisciplinary Center Herzliya: The Interdisciplinary Center Herzliya ( "Ha-Merkaz ha-Bentehumi Hertseliyya"; abbreviated IDC Herzliya) is a private, not-for-profit, nonsectarian research college in Herzliya, Israel.  It was founded in 1994 by Uriel Reichman.  It is located at Herzliya, in the Tel Aviv District, and is classified as an independent non-budgeted academic institution.  It grants undergraduate and post-graduate degrees, but not doctorates.
+
+Isabela National High School: Isabela National High School is a public educational institution established in Ilagan, Isabela, Philippines.  It was founded in 1904, making it the oldest public high school in the Cagayan Valley region.  It was named Isabela High School before it was converted into a national high school in 1982.  It is the only educational institution offering the Open High School Program in the entire Cagayan Valley region.
+
+National University Odesa Law Academy: National University "Odesa Law Academy" () is a higher educational institution in Odesa.  The University was founded in 1997 on the basis of Law Institute of Odesa I.I. Mechnikov National University.  Today NU "OLA" is the center of legal education, culture and science of Ukraine, leading higher educational institution of jurisprudence.  According to the State Accreditation Commission of Ministry of Education and Science, Youth and Sports of Ukraine, the University trains specialists in the highest - IV - level of accreditation.
+
+Kyrgyz National University: Kyrgyz National University named after Jusup Balasagyn (Kyrgyz: Жусуп Баласагын атындагы Кыргыз Улуттук Университети ) is a national university of Kyrgyzstan located in the capital city of Bishkek; is state higher educational institution of the Kyrgyz Republic, the oldest and the largest higher educational institution of the republic.  Educational institution was established on October 25, 1925 as the Kyrgyz Institute of Education.  Since 1928 had been transformed into the Kirghiz Central Pedagogical College.  Since 1932 - the Kirghiz Pedagogical Institute.  Since 1951 - the Kyrgyz State University.  Since 1972 - Kirghiz State University of 50th anniversary of the USSR.  Since 1993 - Kyrgyz State National University.  Since 2002 - the modern name.  It was awarded the Order of the Red Banner of Labor (1982).
+
+Shri Damubhai Shukla Shaikshanik Sankul: Shri Damubhai Shukla Educational Campus (Gujarati: શ્રી દામુભાઈ શુક્લ શૈક્ષણિક સંકુલ) is educational institution founded by Shri Damubhai Shukla in 1935.  It is popularly known as Navchetan High School, is an educational institution at Ahmedabad, Gujarat.  Shri Damubhai Shukla was founder of the institution and therefore the name is Shri Damubhai Educational Campus.  Navchetan trust is running the educational institution that is why it is also known as Navchetan High School.  Shri Damubhai Shukla Educational Campus is affiliated with Gujarat Secondary and Higher Secondary Board along with Sikkim Manipal University for Business Administration.  Navchetan High School providing both Gujarati as well as English medium education facilities.  For higher Education Navchetan is also providing education in Commerce as well as Science Streams.  The campus is at Paldi Road, Ahmedabad, Gujarat.  The school serve the education to more than 1700 students per year.
+
+Question: Ron Assouline is a lecturer at an educational institution in Israel that was founded in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "lecturer_name": {
+      "type": "string",
+      "description": "The name of the lecturer."
+    },
+    "institution_name": {
+      "type": "string",
+      "description": "The name of the educational institution where the lecturer works."
+    },
+    "institution_location_country": {
+      "type": "string",
+      "description": "The country where the educational institution is located."
+    },
+    "founding_year": {
+      "type": "integer",
+      "description": "The year the educational institution was founded."
+    }
+  },
+  "required": [
+    "lecturer_name",
+    "institution_name",
+    "institution_location_country",
+    "founding_year"
+  ],
+  "additionalProperties": false
+}

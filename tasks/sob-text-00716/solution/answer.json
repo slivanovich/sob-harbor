@@ -1,0 +1,10 @@
+{
+  "soft_drink_name": "Julmust",
+  "primary_association": "Christmas",
+  "country_of_consumption": "Sweden",
+  "consumption_details": {
+    "monthly_volume_liters": 45000000,
+    "percentage_of_total_soft_drink_volume_in_month": 50,
+    "percentage_of_total_yearly_sales": 75
+  }
+}

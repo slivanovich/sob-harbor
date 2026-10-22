@@ -1,0 +1,32 @@
+{
+  "band_name": "Green Day",
+  "manager_details": {
+    "name": "Bill Schneider",
+    "role": "day to day manager",
+    "management_start_year": 2003,
+    "management_end_year": 2012
+  },
+  "albums_produced_during_management": [
+    {
+      "album_title": "American Idiot",
+      "release_year": 2004,
+      "producer_name": "Rob Cavallo"
+    },
+    {
+      "album_title": "¡Uno!",
+      "release_year": 2012,
+      "producer_name": "Rob Cavallo"
+    },
+    {
+      "album_title": "¡Dos!",
+      "release_year": 2012,
+      "producer_name": "Rob Cavallo"
+    },
+    {
+      "album_title": "¡Tré!",
+      "release_year": 2012,
+      "producer_name": "Rob Cavallo"
+    }
+  ],
+  "final_answer_producer": "Rob Cavallo"
+}

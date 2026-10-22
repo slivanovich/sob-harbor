@@ -1,0 +1,13 @@
+{
+  "actress_name": "Mayrín Villanueva",
+  "profession": [
+    "actress",
+    "model"
+  ],
+  "birth_location": {
+    "city": "Toluca",
+    "state": "México",
+    "country": "Mexico",
+    "is_state_capital": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "artist_details": {
+    "name": "Cosimo Ulivelli",
+    "main_activity_city": "Florence"
+  },
+  "city_population_data": {
+    "city_name": "Florence",
+    "year": 2013,
+    "population": 383083,
+    "population_unit": "inhabitants"
+  },
+  "final_answer": 383083
+}

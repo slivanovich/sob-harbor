@@ -1,0 +1,62 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Fial: Fial ("Fabbrica Italiana Automobili Legnano"), direct translation "Italian Automobile Factory Legnano", was a company that manufactured industrial and marine engines in Legnano.  In 1906 it entered the automobile business and manufactured one car, Legnano Type A 6/8 HP.  The car had a two-cylinder 1135 cc engine.  Two years later in 1908, the company was placed in liquidation after filing for bankruptcy.  In 1909 the company was taken over by Rosa & Ferrario and car production ended.  The 6/8 model was the only model they ever produced.  The Legnano is at display on Museo Nazionale dell'Automobile in Turin.
+
+Pointing breed: A pointing breed is a type of gundog typically used in finding game.  Gundogs are traditionally divided into three classes: retrievers, flushing dogs, and pointing breeds.  The name "pointer" comes from the dog's instinct to "point", by stopping and aiming its muzzle towards game.  This demonstrates to the hunter the location of his or her quarry and allows them to move into gun range.  Pointers were selectively bred from dogs who had abundant pointing and backing instinct.  They typically start to acquire their hunting instincts at about 2 months of age.
+
+Write strategy: In DVD authoring, a write strategy is a set of low-level parameters that enables an optical disc drive to write on a specific type of blank media according to its optimum specifications.  The media type is identified by the manufacturer and media ID, which is often unrelated to the brand of the media due to rebadging.  Write strategies are essential for compatibility with various types of blank media, and are typically stored in the drive's firmware.  If a drive lacks a write strategy for a media type, it will only be able to write using minimum speed.  Drive manufacturers typically include new or improved write strategies as part of a firmware upgrade, in order to extend or improve compatibility with blank media.  In cases where official support for a drive has been discontinued or is deemed unsatisfactory, users have come up with ways to patch the write strategies by modding the drive's firmware.
+
+Instinct (magazine): Instinct (ISSN 1096-0058  ) is a gay men's lifestyle magazine which was published from 1997 to 2015.  The magazine was first published in 1997 by Instinct Publishing and was distributed by Curtis Circulation.  The final issue was dated June–July 2015.
+
+Media type: A media type (also MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.  The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications.  Media types were originally defined in Request for Comments 2045 in November 1996 as a part of "MIME (Multipurpose Internet Mail Extensions)" specification, for denoting type of email message content and attachments; hence the name "MIME type".  Media types are also used by other internet protocols such as HTTP and document file formats such as HTML, for similar purpose.
+
+Samsung SPH-M810: Samsung SPH-M810 (also known as Instinct S30 or the Instinct Mini) was an Internet-enabled phone designed and marketed by Samsung and carried by Sprint Nextel.  It uses a Haptic touchscreen interface, and three touchscreen buttons (from left to right - [back], [home], and [phone]).  The Instinct, in addition to being a mobile phone, also functions as a camera phone, portable media player, text messenger, and a complete web browser and e-mail client.
+
+Killer Instinct Gold: Killer Instinct Gold is a 1996 fighting video game based on the arcade game "Killer Instinct 2".  The game was developed by Rare and released by Nintendo for the Nintendo 64 video game console.  As in other series entries, players control characters who fight on a 2D plane set against a 3D background.  Players press buttons to punch and kick their opponent in chains of successive hits, known as combos.  Large combo successions lead to stronger attacks and brutal, stylistic finisher moves underscored by an announcer.  Characters—including a gargoyle, a ninja, and a femme fatale—fight in settings such as a jungle and a spaceship.  "Killer Instinct Gold" includes the arcade release's characters, combos, and 3D, pre-rendered environments, but excludes its full-motion video sequences and some voiceovers due to restrictions of the cartridge media format.  The "Gold" release adds a training mode, new camera views, and improved audiovisuals.
+
+Samsung SPH-M800: The Samsung Instinct (SPH-M800) was an Internet-enabled smartphone designed and marketed by Samsung Mobile.  It uses a Haptic touchscreen interface, and three touchscreen buttons (pictured at right, from left to right - [back], [home], [phone]).  The Instinct, in addition to being a mobile phone, also functions as a camera phone, portable media player, text messenger, and a complete web browser and e-mail client.  The email client allows for access to only the main inbox of any associated account – not to any subfolder.  The folders for "drafts", "sent", "deleted", and "outbox" represent only messages originating from the phone.
+
+Automobile (magazine): Automobile is an American automobile magazine published by .  A group of former employees of "Car and Driver" led by David E. Davis founded "Automobile" in 1986 with support from Rupert Murdoch's News Corporation—using the credo "No Boring Cars."  "Automobile" distinguishes itself as more of a lifestyle magazine than the other automotive publications, an editorial theme that Davis greatly expanded upon from his tenure as the editor of "Car and Driver", though it is a sister publication to "Motor Trend".
+
+Collie: The collie is a distinctive type of herding dog, including many related landraces and standardised breeds.  The type originated in Scotland and Northern England.  The collie is a medium-sized, fairly lightly built dog, with a pointed snout.  Many types have a distinctive white pattern over the shoulders.  Collies are very active and agile, and most types of collies have a very strong herding instinct.  Collie breeds have spread through many parts of the world (especially Australia and North America) and have diversified into many varieties, sometimes with mixture from other dog types.  Some collie breeds have remained as working dogs, used for herding cattle, sheep and other livestock, while others are kept as pets, show dogs or for dog sports, in which they display great agility, stamina and trainability.  While the AKC has a breed they call "Collie", in fact collie dogs are a distinctive type of herding dog including many related landraces and formal breeds.  There are usually major distinctions between show dogs and those bred for herding trials or dog sports.  They typically display great agility, stamina and trainability and more importantly sagacity.
+
+Question: Instinct and Automobile, are which type of media?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "media_type": {
+      "type": "string",
+      "description": "The common type of media for the listed items."
+    },
+    "media_items": {
+      "type": "array",
+      "description": "A list of the specific media items.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "number_of_items": {
+      "type": "integer",
+      "description": "The count of media items listed."
+    }
+  },
+  "required": [
+    "media_type",
+    "media_items",
+    "number_of_items"
+  ],
+  "additionalProperties": false
+}

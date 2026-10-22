@@ -1,0 +1,12 @@
+{
+  "monument_name": "Tomb of Sheikh Salim Chishti",
+  "architectural_style": "Mughal architecture",
+  "construction_period": "1580 and 1581",
+  "location": {
+    "town": "Fatehpur Sikri",
+    "district": "Agra District",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  "associated_complex": "imperial complex"
+}

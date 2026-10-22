@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "record_id": "d36f64e91305cc46f7607b1639aae4a943a2f57af7b560a232c23812efccb240",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5adbd1be55429944faac236c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "International Bosphorus Cup: The International Bosphorus Cup is a Group 2 flat horse race in Turkey open to horses aged three years or older.  It is run at Veliefendi Race Course over a distance of 2,400 metres (about 1½ mile), and it is scheduled to take place each year in early September.  It is part of Istanbul's International Racing Festival.\n\nNew York Racing Association: The New York Racing Association, Inc. (NYRA; pronounced ) is the not-for-profit corporation that operates the three largest thoroughbred horse-racing tracks in the state of New York.  It runs Aqueduct Racetrack in South Ozone Park, Queens; Belmont Park in Elmont, Long Island (just outside New York City); and Saratoga Race Course in Saratoga Springs (Upstate), New York.  NYRA's corporate offices are headquartered at the Aqueduct Race Track.\n\nInternational Topkapi Trophy: The International Topkapi Trophy is a Group 2 flat horse race in Turkey open to horses aged three years or older.  It is run at Veliefendi Race Course over a distance of 1,600 metres (about 1 mile), and it is scheduled to take place each year in early September.  The race is part of Istanbul's International Racing Festival.\n\nDallas Stewart: Dallas Stewart (born September 15, 1959 in McComb, Mississippi) trains a string of thoroughbred horses in Kentucky from bases at Churchill Downs, Turfway Park, Keeneland Race Course, Fair Grounds Race Course, Arlington Park and Saratoga Race Course.  Before venturing out on his own, he spent 12 years working under the tutelage of leading trainer D. Wayne Lukas.  There, he oversaw such horses as Lady's Secret, Thunder Gulch, Serena's Song, Timber Country, Tabasco Cat, and many other Grade I winners.\n\nVeliefendi Race Course: Veliefendi Race Course (Turkish: \"Veliefendi Hipodromu\" ) is a horse racing track located at Veliefendi neighborhood in Zeytinburnu district of Istanbul, Turkey.\n\nSabirli (horse): Sabirli (in Turkish Sabırlı) (April 9, 2001 – 15 September 2010) was a Turkish racehorse and sire.  Sabirli was noted for his toughness on the turf winning twenty-six of his fifty-one races over seven seasons from 2003 to 2009.  In 2006 he became one of the few Turkish-trained Thoroughbreds to compete successfully abroad when he won a race in Dubai.  In the following season he defeated an international field to win Turkey's most valuable race, the Topkapi Trophy at Veliefendi Race Course in Istanbul.  Over his career he won the equivalent of more than $2,800,000.\n\nRace Course, Vadodara: Race Course is an area in the western side of Vadodara City in the state of Gujarat in India.  It is one of the posh areas of the fastest growing western part of Vadodara.  During the olden days, it was a home to one of the only Race Course in western India owned by Maharajas of Vadodara.  Now, large commercial buildings are doing business in the area.  Race Course also houses Pashabhai Park which is considered as a posh and best residential area of the city.\n\nYasin Pilavcılar: Yasin Pilavcılar (born September 11, 1990, in Istanbul, Turkey) is a horse racing jockey, who is currently riding at Veliefendi Race Course in Istanbul, Turkey.\n\nGazi Race: The Gazi Race (Turkish: \"Gazi Koşusu\" ) is a Turkish thoroughbred horse flat race that is established in honor of the founder of the Turkish Republic Gazi Mustafa Kemal.  It is country's most prestigious horse racing event, which is held uninterruptedly since its establishment in 1927.  Restricted to 22 three-year-old thoroughbred horses, it is raced clockwise at a distance of 2400 m on turf (grass) track at the Veliefendi Race Course in Istanbul.\n\nValens Aqueduct: The Valens Aqueduct (Turkish: \"Valens Su Kemeri\" or Turkish: \"Bozdoğan Kemeri\" , meaning \"Aqueduct of the Grey Falcon\"; Ancient Greek: Ἀγωγὸς τοῦ ὕδατος , \"Agōgós tou hýdatos\", meaning simply \"aqueduct\") is a Roman aqueduct which was the major water-providing system of the Eastern Roman capital of Constantinople (modern Istanbul, Turkey).  Completed by Roman Emperor Valens in the late 4th century AD, it was maintained and used by the Byzantines and later the Ottomans, and remains one of the most important landmarks of the city.",
+    "question": "Are both the Valens Aqueduct and Veliefendi Race Course considered to be important landmarks in Istanbul, Turkey?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the landmarks are located."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the landmarks are located."
+        },
+        "landmarks_assessment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the landmark."
+              },
+              "is_important_landmark": {
+                "type": "boolean",
+                "description": "True if the context states it is an important landmark, false otherwise."
+              }
+            },
+            "required": [
+              "name",
+              "is_important_landmark"
+            ],
+            "additionalProperties": false
+          },
+          "description": "An array assessing each specified location as an important landmark."
+        },
+        "all_are_important_landmarks": {
+          "type": "boolean",
+          "description": "True if all specified locations are considered important landmarks, false otherwise."
+        }
+      },
+      "required": [
+        "city",
+        "country",
+        "landmarks_assessment",
+        "all_are_important_landmarks"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "city": "Istanbul",
+      "country": "Turkey",
+      "landmarks_assessment": [
+        {
+          "name": "Valens Aqueduct",
+          "is_important_landmark": true
+        },
+        {
+          "name": "Veliefendi Race Course",
+          "is_important_landmark": false
+        }
+      ],
+      "all_are_important_landmarks": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

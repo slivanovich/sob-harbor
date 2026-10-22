@@ -1,0 +1,14 @@
+{
+  "company_name": "Bombardier Inc",
+  "division_name": "Bombardier Aerospace",
+  "airport_name": "Downsview Airport",
+  "ownership_details": {
+    "owner_division": "Bombardier Aerospace",
+    "ownership_start_year": 1994
+  },
+  "headquarters_location": {
+    "city": "Dorval",
+    "province_state": "Quebec",
+    "country": "Canada"
+  }
+}

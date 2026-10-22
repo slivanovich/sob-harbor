@@ -1,0 +1,14 @@
+{
+  "main_performer_name": "Sara Jordan Powell",
+  "event_description": "performed for President Jimmy Carter",
+  "event_year": 1979,
+  "co_performer": {
+    "name": "Chuck Berry",
+    "musical_roles": [
+      "singer",
+      "songwriter",
+      "musician"
+    ],
+    "pioneering_genre": "rock and roll music"
+  }
+}

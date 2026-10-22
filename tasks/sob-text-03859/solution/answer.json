@@ -1,0 +1,21 @@
+{
+  "band_name": "Gang of Youths",
+  "genre": "Australian indie rock group",
+  "debut_album": {
+    "title": "The Positions",
+    "chart_peak_position": 5,
+    "chart_name": "ARIA Albums Chart",
+    "release_year": 2015
+  },
+  "debut_extended_play": {
+    "title": "Let Me Be Clear",
+    "number_of_original_tracks": 5,
+    "cover_song_details": {
+      "title": "Both Sides Now",
+      "original_artist": "Joni Mitchell"
+    },
+    "release_date": "29 July 2016",
+    "chart_peak_position": 2,
+    "chart_name": "ARIA Charts"
+  }
+}

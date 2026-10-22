@@ -1,0 +1,15 @@
+{
+  "pavilion_name": "Germany Pavilion at Epcot",
+  "pavilion_theme": "German",
+  "location_details": {
+    "park_name": "Epcot",
+    "world_showcase_area": "World Showcase"
+  },
+  "restaurants_info": {
+    "total_restaurants_in_pavilion": 2,
+    "featured_restaurant": {
+      "name": "Biergarten Restaurant",
+      "style": "buffet-style"
+    }
+  }
+}

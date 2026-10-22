@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+W.A.K.O. World Championships 2005 (Szeged): W.A.K.O. World Championships 2005 in Szeged were the joint fifteenth world championships held by the W.A.K.O. organization and the third ever to be held in Hungary - with the other event having been held a couple of months earlier in Agadir, Morocco.  The championships in Szeged were open to amateur men and women from across the world with around 720 athletes from 48 countries across five continents taking part.
+
+Jody Santos: Jody Santos (born in 1976 in Glocester, Rhode Island) is an award-winning author, journalist and documentary filmmaker.  She has reported for television and print news for the last 20 years, and has been producing and directing documentaries for PBS and cable networks like Discovery Health and the Hallmark Channel since 2000.  She has traveled to more than a dozen countries across five continents, documenting everything from the trafficking of girls in Nepal to the reproductive rights of women in Ghana.  Her book, "Daring to Feel: Violence, the News Media and Their Emotions", was released by Rowman & Littlefield in December 2009, and in paperback by Lexington Books in October 2010.
+
+International Biology Olympiad: The International Biology Olympiad (IBO) is a science olympiad for high school students under the age of 20.  The first academic international Olympiads after the (originally Eastern European-based) International Mathematical Olympiad were launched under the auspices of the United Nations in the 1960s.  The programs have gradually expanded to include more than 70 participating countries across five continents.  The IBO is one of these olympiads.  All participating countries send the four winners of their National Biology Olympiad to the IBO, usually accompanied by two adults who are members of the international jury for the duration of the competition.
+
+Parkrun: Parkrun (styled as parkrun) is the name given to a collection of five-kilometre running events that take place every Saturday morning in fifteen countries across five continents.  Each Parkrun territory has its own sponsors.  Events are run by volunteers, and participation is free of charge.
+
+Crescent Enterprises: Crescent Enterprises is a multinational company headquartered in the United Arab Emirates with diversified businesses that function under three main divisions – Group Companies, Crescent Investments, and CE-Ventures.  It spans several sectors including ports and logistics, power and engineering, business aviation, healthcare, and verticals such as strategic investments, and business incubation.  Crescent Enterprises employs over 5,000 people in 22 countries across five continents.  The company has over US$1.4 billion in total assets and over the last five years, has achieved a 57% compounded annual growth rate in revenues and executed projects and investments of US$1.65 billion.
+
+5K run: The 5K run is a long-distance road running competition over a distance of five kilometres (3.1 miles).  Also referred to as the 5K road race, 5 km, or simply 5K, it is the shortest of the most common road running distances.  It is usually distinguished from the 5000 metres track running event by stating the distance in kilometres, rather than metres.
+
+Centennial Beach: Centennial Beach is a public aquatic park located at 500 W. Jackson Avenue in Naperville, Illinois.  The Beach is within an abandoned, double quarry alongside the DuPage River.  The facility covers almost 6 acres (24,000 m²) of land with a full two acres (8,000 m²) or 6.2 million gallons of open water from lake Michigan, all tested, re-circulated and chlorinated on site.  Among its features is a sand beach next to the shallow end of the pool which offers a zero-depth entry.  At the zero depth area of the pool there are 2 large water play features which pour water from about 10 ft up, and water spouts that shoot up water for children to play in and cool off.  The shallow end of the pool goes from 0 ft to 4 ft , getting deeper as you walk further into the pool.  In the 4 ft area there are 3 lanes for lap swimmer’s, where Centennial Beach’s swim team, The Mudrats, practice each week day morning before open swim hours.  The shallow end also has a slide that was added in 2008.  The shallow end also has an area called the “channel.”  This area is right next to the deep end and the diving boards.  In the channel there is a pool lift for people who cannot use the ladders to get into the pool, they can be let in on the lift.  The deep end of the beach has 2 floating rafts in the middle for swimmers to swim out to.  The deep end also has 4 piers on the sides of the deep end for swimmers to sit and relax on without sitting on the walkway.  The deep end has an NCAA and USS -approved diving complex, which houses two one-meter springboards and one three-meter board.  Centennial beach is Open on all non-school days from Memorial Day to Labor Day.  Centennial Beach’s open swim hours are 11am-8pm Monday through Saturday and 11am-6pm on Sunday.  The Beach opens early on Saturdays and Sundays for “Adult Float” which is a time where adults can come in with any sort of floating devices (not allowed during regular open swim time) and swim with them.  Adult float is every Saturday and Sunday from 9am-10:55am.  Every Saturday morning at 7am the Centennial Beach lifeguards train and do drills for 2 hours before the pool opens.  In the event of inclement weather, poor conditions, low attendance, or insufficient staffing the manager may close the Beach or certain sections of the Beach.  In mid-August the beach begins to close earlier than usual due to early darkness.  Centennial Beach receives about 2,500 visitors on an average warm summer day.  Over the course of a year the beach receives about 155,000.  The beach plays host to various athletic events and is known for its nationally competitive lifeguard team.
+
+Carlos St. James: Carlos St. James (born Chicago, Illinois, US on June 21, 1961) is considered one of the founders of the Latin American renewable energy industry.  He founded Argentina's renewable energy industry association; founded another organization that creates a bridge for investment capital and technology transfer from the Gulf region into Latin America's energy sector; and was the first President of the Latin American & Caribbean Council on Renewable Energy ("LAC-CORE") of Washington, DC, USA.  He is active in the private sector as developer and investor, and as founder and publisher of a Spanish language magazine that communicates and educates the benefits of clean energy use across the continent.  He has spoken at energy conferences in over three dozen countries across five continents to promote investment and visibility to the region, while working with governments to improve energy policies.
+
+Doro (telecoms): Doro is a listed Swedish company focusing on the development, marketing and sales of telecommunication and consumer electronics products and as well as more recently software adapted to old people.  The company's headquarters is in Lund, Sweden.  Doro has over 38 years' experience within the telecoms sector.  Doro products are now widely available in more than 30 countries across five continents.  Doro had revenues of SEK SEK 837.5 million in 2012.  The company is quoted on the OMX Stockholm, Nordic list, Small companies.  The company's CEO is Jérôme Arnaud.
+
+Datamyne: Datamyne is a privately held corporation that provides access to a searchable database of import-export trade of 50 countries across five continents.
+
+Question: How many miles is the running event held every Saturday morning in fifteen countries across five continents?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "event_name": {
+      "type": "string",
+      "description": "The name of the running event."
+    },
+    "distance_km": {
+      "type": "number",
+      "description": "The distance of the event in kilometers."
+    },
+    "distance_miles": {
+      "type": "number",
+      "description": "The distance of the event in miles."
+    },
+    "frequency": {
+      "type": "string",
+      "description": "How often the event takes place."
+    },
+    "countries_involved": {
+      "type": "integer",
+      "description": "The number of countries where the event is held."
+    },
+    "continents_involved": {
+      "type": "integer",
+      "description": "The number of continents where the event is held."
+    }
+  },
+  "required": [
+    "event_name",
+    "distance_km",
+    "distance_miles",
+    "frequency",
+    "countries_involved",
+    "continents_involved"
+  ],
+  "additionalProperties": false
+}

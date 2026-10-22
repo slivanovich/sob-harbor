@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Forrest Landis: Forrest Landis (born August 9, 1994) is an American actor, skateboarder, producer and writer.  He is perhaps best known for his roles of Mark Baker in "Cheaper by the Dozen" and Rhett Loud in "Flightplan".  He has one sister named Lauren Landis.  It is now believed that Landis has retired from acting and has taken up skateboarding.
+
+Much Ado About Nothing (1993 film): Much Ado About Nothing is a 1993 British/American romantic comedy film based on William Shakespeare's play of the same name.  It was adapted for the screen and directed by Kenneth Branagh, who also stars in the film.  The film also stars Branagh's then-wife Emma Thompson, Robert Sean Leonard, Denzel Washington, Michael Keaton, Keanu Reeves, and Kate Beckinsale in her film debut.
+
+Out in Fifty: Out in Fifty is a 1999 independent film directed and written by Bojesse Christopher and Scott Leet, which also stars in this film together with actor Mickey Rourke.  Film also stars Peter Greene, Ed Lauter, Balthazar Getty, James Avery and Christina Applegate as "Lilah".  A central role is developing by Nina Offenböck, the gorgeous Swedish actress, as Gloria.  It is an action packed psychologicial thriller film.
+
+Holmes Osborne: Holmes Osborne (born November 7, 1947) is an American actor, best known for starring in Richard Kelly's films "Donnie Darko" (2001), "Southland Tales" (2007), and "The Box" (2009).  He has also starred in "That Thing You Do! " (1996), "Affliction" (1997), "Bring It On" (2000), "Cheaper by the Dozen" (2003), and "Larry Crowne" (2011).
+
+Jacob Smith (actor): Jonathan Jacob Charles William Smith (born January 21, 1990) is an American actor.  He is perhaps best known for his role in the film "Cheaper by the Dozen" and its 2005 sequel, as well as his role as Brian in the 2000 Disney Channel Original Movie Phantom of the Megaplex.
+
+Poor Paul: Poor Paul is a sex comedy and politically incorrect web series that stars Kevin G. Schmidt, Samantha Droke, Wes Whitworth and Zack Bennett.  It was aired between 2008 and 2011.
+
+Branko Tomović: Branko Tomović (Serbian Cyrillic: "Бранко Томовић"; born June 17, 1980) is a German-Serbian actor.  He was born in Münster, Germany, though his actual origin is from the Carpathians in Serbia.  His parents emigrated in the '70s from the Golubac Fortress area on the Danube and Branko was raised between Germany and Serbia before he studied acting at the prestigious Lee Strasberg Theatre Institute in New York City.  Tomović was first seen on the big screen in the lead role in the American Film Institute/Sundance drama "Remote Control", for which he received the OmU-Award at the Potsdam Film Festival.  Currently settled in London, with his dark, brooding looks he has appeared in striking roles on British Television.  He played the creepy main suspect Antoni Pricha, the Morgue Man, in Jack the Ripper thriller "Whitechapel", the pyromaniac Junky-Henchman Marek Lisowski in the final episodes of "A Touch of Frost" and Polish fighter pilot Miroslaw Feric in the World War II drama "The Untold Battle of Britain".  Tomovic has worked with internationally respected film directors as Ken Loach, Sönke Wortmann and Paul Greengrass.  He was named "One to Watch" by "Moviescope Magazine" in 2008 and recent film credits include The Bourne Ultimatum opposite Matt Damon (Dir.  Paul Greengrass), It's a Free World... (Dir.  Ken Loach), "The Wolf Man" (Dir.  Joe Johnston), "Pope Joan" (Dir.  Sönke Wortmann) and "Interview with a Hitman" (Dir.  Perry Bhandal).  In 2010, he won the 'Best Actor' Award at the San Francisco Short Film Festival and at The Accolade Film Awards for his performance as a Serbian soldier who is tormented by grief and guilt after being a witness of war crimes in the drama Inbetween.  He also stars opposite Debbie Harry in Jimmy Cauty's Road movie Believe the Magic and Steve Stone's ghost thriller Entity with Dervla Kirwan and Charlotte Riley.  Entity won two awards at the London Independent Film Festival 2013 and Best Film at the British Horror Film Festival where Branko was also nominated for Best Actor.  The British Filmmakers Alliance honoured him as Best International Actor for his role and he was also chosen as a Rising Star by Icon Magazine.  He is set to play the title character of Nikola Tesla in the upcoming bio-pic Tesla.  In 2014, he played Jack Bauer's right-hand man, the mysterious and dangerous Belcheck, next to Kiefer Sutherland in 24: Live Another Day.  He was also seen opposite Brad Pitt and Logan Lerman in David Ayer's WWII drama Fury.
+
+John Roche (actor): John Roche (February 6, 1893 – November 10, 1952) was an American actor of the stage and screen.  Born in the small village of Penn Yan, New York on February 6, 1893.  He graduated from the University of Rochester, after which Roche began his acting career touring with stock companies during the 1910s and early 1920s.  In 1922 he would break into the film industry with a featured role in "The Good Provider".  During the 1920s, he acted in both films and the legitimate stage, including several roles in Broadway productions.  He acted steadily in films through 1936, in both featured and supporting roles.  In the mid-1930s he took a break from films, focusing on the legitimate stage, including a directorial stint of the play, "Mackerel Skies", which had a short run at the Playhouse Theatre in 1936.  Roche returned to films in 1941, with a small role in the Norma Shearer vehicle, "We Were Dancing" (1942), based on the Noël Coward play of the same name.  Over the course of his career he was involved in over half a dozen Broadway productions and appeared in over 50 films.  His final screen appearance was in 1946's "The Brute Man".  Roche died on November 10, 1952 in Los Angeles, California.
+
+Kevin Schmidt: Kevin Gerard Schmidt (born August 16, 1988) is an American actor, known best for his role as Henry in "Cheaper by the Dozen" and its sequel and as Noah Newman in "The Young and the Restless".  Schmidt also starred on Cartoon Network's first live-action scripted television series, "Unnatural History".  Schmidt also co-created, starred in, produced, and directed a cult web-series, "Poor Paul".  Schmidt continues to write, direct, and act, and has also participated in humanitarian organizations.  Schmidt is president of the Conscious Human Initiative, a non-profit entity that intends to alleviate malnutrition worldwide.  He played Ryan in .
+
+Jonathan Bennett (actor): Jonathan D. Bennett (born June 10, 1981) is an American actor and model.  He is known for his roles as Aaron Samuels in the 2004 comedy film "Mean Girls", Bud McNulty in 2005's "Cheaper by the Dozen 2" and the title character in the 2009 direct-to-DVD comedy "" and his recurring roles as Casey Gant in the UPN mystery drama "Veronica Mars" and J. R. Chandler in the ABC soap opera "All My Children".  He is also the host of Food Network's show "Cake Wars".
+
+Question: what role did  American actor, who also stars in Poor Paul play in Cheaper by the Dozen
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the American actor who starred in both 'Poor Paul' and 'Cheaper by the Dozen'."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film in which the actor played the specified role."
+    },
+    "role_played": {
+      "type": "string",
+      "description": "The name of the character played by the actor in the specified film."
+    }
+  },
+  "required": [
+    "actor_name",
+    "film_title",
+    "role_played"
+  ],
+  "additionalProperties": false
+}

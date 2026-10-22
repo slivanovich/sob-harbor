@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+T. S. Eliot: Thomas Stearns Eliot, {'1': ", '2': ", '3': ", '4': "} (26 September 1888 – 4 January 1965) was a British essayist, publisher, playwright, literary and social critic, and "one of the twentieth century's major poets".  He moved from his native United States to England in 1914 at the age of 25, settling, working, and marrying there.  He eventually became a British subject in 1927 at the age of 39, renouncing his American citizenship.
+
+Alan Seeger: Alan Seeger (22 June 1888 – 4 July 1916) was an American poet who fought and died in World War I during the Battle of the Somme, serving in the French Foreign Legion.  Seeger was the uncle of American folk singer Pete Seeger, and was a classmate of T.S. Eliot at Harvard.  He is best known for the poem, "I Have a Rendezvous with Death", a favorite of President John F. Kennedy.  A statue representing him is on the monument in the Place des États-Unis, Paris, honoring fallen Americans who volunteered for France during the war.  Seeger is sometimes called the "American Rupert Brooke."
+
+Poetry Book Society: The Poetry Book Society (PBS) was founded in 1953 by T. S. Eliot and friends, including Sir Basil Blackwell, "to propagate the art of poetry".  Eric Walter White was secretary from December 1953 until 1971, and was subsequently the society's chairman.  The PBS was chaired by Philip Larkin in the 1980s.  Each quarter the Society selects one newly published collection of poetry as its "Choice" title for its members and makes four "Recommendations" for optional purchase.  The Society also publishes the quarterly poetry journal, the "PBS Bulletin", and until 2016 administered the annual T. S. Eliot Prize for Poetry.  Following the Poetry Society's instigation of its New Generation Poets promotion in 1994, the Poetry Book Society organised two subsequent "Next Generation Poets" promotions in 2004 and 2014.  In 2016 the former Poetry Book Society charity which had managed the book club from 1953 had to be wound up, with its director Chris Holifield appointed as the new director of the T.S. Eliot Prize, and with its book club and company name taken over by book sales agency Inpress Ltd in Newcastle.
+
+Charles William Eliot: Charles William Eliot (March 20, 1834 – August 22, 1926) was an American academic who was selected as Harvard's president in 1869.  He transformed the provincial college into the preeminent American research university.  Eliot served until 1909, having the longest term as president in the university's history.  He was a cousin of the Nobel Prize-winning poet T.S. Eliot.
+
+Hamlet and His Problems: Hamlet and His Problems is an essay written by T.S. Eliot in 1919 that offers a critical reading of "Hamlet".  The essay first appeared in Eliot's "The Sacred Wood: Essays on Poetry and Criticism" in 1920.  It was later reprinted by Faber & Faber in 1932 in "Selected Essays, 1917-1932".  Eliot's critique gained attention partly due to his claim that "Hamlet" is "most certainly an artistic failure".  Eliot also popularised the concept of the objective correlative—a mechanism used to evoke emotion in an audience—in the essay.  The essay is also an example of Eliot's use of what became known as new criticism.
+
+Famous Last Words (novel): Famous Last Words is a 1981 novel by Canadian author Timothy Findley, in which Hugh Selwyn Mauberley (originally from the Ezra Pound poem of the same name) is the main character.
+
+Rain Song (al-Sayyab): Rain Song (انشودة المطر “Unshūdat almaṭar”) is a famous 1960 poetry collection and Arabic poem by Badr Shakir al-Sayyab One of the "great poems in modern Arabic poetry", it has been compared to T.S. Eliot's "The Waste Land".
+
+Hugh Selwyn Mauberley: Hugh Selwyn Mauberley (1920) is a long poem by Ezra Pound.  It has been regarded as a turning point in Pound's career (by F.R. Leavis and others), and its completion was swiftly followed by his departure from England.  The name "Selwyn" might have been an homage to Rhymers' Club member Selwyn Image.  The name and personality of the titular subject is also reminiscent of T. S. Eliot's main character in "The Love Song of J. Alfred Prufrock".
+
+Charlotte Champe Stearns: Charlotte Champe Stearns Eliot (1843–1929), was a school teacher, poet, and social worker.  She was the daughter-in-law of William Greenleaf Eliot, a leading minister in St. Louis, Missouri and a founder of Washington University in St. Louis, Missouri, mother of T.S. Eliot, a famous poet, editor and literary critic, and spouse of Henry Ware Eliot, who ran the Hydraulic Press Brick Company in St. Louis, Missouri.
+
+Grizabella: Grizabella is the "Glamour Cat" in the musical production "Cats".  She does not appear in T. S. Eliot's work "Old Possum's Book of Practical Cats", but she is a prominent character in the stageplay.  It appears that she is the feline version of the woman mentioned in T.S. Eliot's poem "Rhapsody on a Windy Night".
+
+Question: Hugh Selwyn Mauberly is a poem written by whom, six years after author T.S. Eliot moved to England?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "poem_title": {
+      "type": "string",
+      "description": "The title of the poem."
+    },
+    "author": {
+      "type": "string",
+      "description": "The author of the poem."
+    },
+    "publication_year": {
+      "type": "integer",
+      "description": "The year the poem was published."
+    },
+    "related_person": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the related person mentioned in the context."
+        },
+        "event_description": {
+          "type": "string",
+          "description": "Description of the event related to the person."
+        },
+        "event_year": {
+          "type": "integer",
+          "description": "The year of the event related to the person."
+        },
+        "years_after_event": {
+          "type": "integer",
+          "description": "Number of years between the related person's event and the poem's publication."
+        }
+      },
+      "required": [
+        "name",
+        "event_description",
+        "event_year",
+        "years_after_event"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "poem_title",
+    "author",
+    "publication_year",
+    "related_person"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "53d1918714588b430c6a1a6b8290ced8974140abbb7e3c077e977f52287db172",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a744c5a55429979e28828d7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Scrabble",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Take It Easy (game): Take It Easy is an abstract strategy board game created by Peter Burley.  It can be characterized as a spatial bingo-like game, and has been published by Ravensburger and subsequently by several other publishers since 1983.  Each player gets a board with places for 19 hexagon tiles to place in a hexagon shape.  Additionally, players get identical sets of tiles which have different types of colored/numbered lines crossing in three directions.  One player draws a tile randomly and then tells the others which he drew.  Each player then puts their matching tile on their board in any available spot.  This is repeated until the board is filled.  The object is to complete same colored/numbered lines across your board, for which points are scored according to the numbers on those lines.  The maximum score possible is 307.\n\nScrabble: Scrabble is a word game in which two to four players score points by placing tiles bearing a single letter onto a board divided into a 15×15 grid of squares.  The tiles must form words which, in crossword fashion, read left to right in rows or downwards in columns, and be defined in a standard dictionary or lexicon.\n\nDexterity (video game): Dexterity, known as Funny Field (ファニーフィールド ) in Japan, is a puzzle game by SNK that was released for the Game Boy in 1990.  It is a game that consists of a square floor covered in seven rows and eight columns of tiles (56 tiles in total).  The goal of the game is to flip all of the light tiles into dark tiles.  There are several enemies as the level advances.  The game has a total of 30 rounds.\n\nSuper Scrabble: Super Scrabble is a board game introduced in 2004 and a variant of \"Scrabble\".  In North America \"Super Scrabble\" is made and marketed by Winning Moves Games, but licensed by Hasbro.  In the rest of the world it is manufactured by Tinderbox Games under license from Mattel.  \"Super Scrabble\" is available in English and German.  In February 2007, a \"Deluxe Super Scrabble\" was released with a rotating gameboard and interlocking tiles, just like \"Deluxe Scrabble\".\n\nEquate (game): Equate is a board game made by Conceptual Math Media where players score points by forming equations on a 19x19 game board.  Equations appear across and down in a crossword fashion and must be mathematically correct.  It is similar to \"Scrabble\" except players use digits and mathematical operators instead of letters.\n\nMedieval letter tile: Medieval letter tiles are one-letter ceramic tiles that were employed in monasteries and churches of the late Middle Ages for the creation of Christian inscriptions on floors and walls.  They were created by pressing stamps bearing a reverse image into soft clay, which was then baked hard, and they were used to form words by assembling single-letter tiles in the desired order.\n\nTile tracking: Tile tracking is a technique most commonly associated with the game of Scrabble and similar word games.  It refers to the practice of keeping track of letters played on the game board, typically by crossing letters off a score sheet or tracking grid as the tiles are played.  Tracking tiles can be an important aid to strategy, especially during the endgame when there are no tiles left to draw, where careful tracking allows each player to deduce the remaining unseen letters on the opponent's final rack.  The marking off of each letter from a pre-printed tracking grid as the tiles are played is a standard feature of tournament play.\n\nAnagrams: Anagrams (also known as Pirate Scrabble, Anagram, Snatch, Word Making and Taking and Grabscrab) is a tile-based word game that involves rearranging letter tiles to form words.\n\nFrancophone Scrabble: Francophone Scrabble, or French-language Scrabble, is played by many thousands of amateurs throughout the World and the \"Fédération internationale de Scrabble francophone\" has more than 20,000 members.  Just as in English, points are scored by playing valid words from the lettered tiles.  In French there are 102 tiles - 100 lettered tiles and two blanks known as jokers.  The official word list for Francophone Scrabble is L'Officiel du jeu Scrabble.\n\nEquals (game): The game Equals was a board game similar to Scrabble, but instead of tiles with letters combined to form words, it used tiles with numbers and basic arithmetic operations to form equations.",
+    "question": " What games tiles tiles must form words which, in crossword fashion, read left to right in rows or downwards in columns, and be defined in  a standard dictionary or lexicon, Scrabble or Take It Easy?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "game_identified": {
+          "type": "string",
+          "description": "The name of the game that matches the described tile-forming rules."
+        },
+        "game_characteristics": {
+          "type": "object",
+          "properties": {
+            "tile_objective": {
+              "type": "string",
+              "description": "What the tiles must form (e.g., words, equations, lines)."
+            },
+            "arrangement_style": {
+              "type": "string",
+              "description": "How the formed elements are arranged on the board (e.g., crossword fashion, hexagon shape)."
+            },
+            "lexicon_dependency": {
+              "type": "boolean",
+              "description": "Indicates if a standard dictionary or lexicon is required for validation."
+            }
+          },
+          "required": [
+            "tile_objective",
+            "arrangement_style",
+            "lexicon_dependency"
+          ],
+          "additionalProperties": false
+        },
+        "other_game_considered": {
+          "type": "string",
+          "description": "The name of the other game mentioned in the question that does not match the description."
+        },
+        "other_game_type": {
+          "type": "string",
+          "description": "The general type or characterization of the other game."
+        }
+      },
+      "required": [
+        "game_identified",
+        "game_characteristics",
+        "other_game_considered",
+        "other_game_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "game_identified": "Scrabble",
+      "game_characteristics": {
+        "tile_objective": "words",
+        "arrangement_style": "crossword fashion",
+        "lexicon_dependency": true
+      },
+      "other_game_considered": "Take It Easy",
+      "other_game_type": "abstract strategy board game"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

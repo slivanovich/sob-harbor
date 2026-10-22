@@ -1,0 +1,14 @@
+{
+  "musician_comparison": {
+    "musician_1": {
+      "name": "M. Shadows",
+      "birth_year": 1981
+    },
+    "musician_2": {
+      "name": "Justine Frischmann",
+      "birth_year": 1969
+    }
+  },
+  "older_musician_name": "Justine Frischmann",
+  "age_difference_years": 12
+}

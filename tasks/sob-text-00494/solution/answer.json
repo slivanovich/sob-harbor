@@ -1,0 +1,13 @@
+{
+  "entity_involved": "Isle of Man",
+  "questioned_transfer_direction": {
+    "from_service": "ITV Granada",
+    "to_service": "ITV Border"
+  },
+  "transfer_occurred_as_described": false,
+  "actual_transfer_event": {
+    "date": "15 July 2009",
+    "transferred_from_service": "ITV Border",
+    "transferred_to_service": "ITV Granada"
+  }
+}

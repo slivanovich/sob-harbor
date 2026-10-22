@@ -1,0 +1,10 @@
+{
+  "farmers_market_name": "Portland Farmers Market",
+  "recognition_award": "one of the ten best farmers markets in the United States",
+  "recognition_date": "May 2010",
+  "awarding_publication": {
+    "name": "Travel + Leisure",
+    "reader_count": 4.8,
+    "reader_count_unit": "million"
+  }
+}

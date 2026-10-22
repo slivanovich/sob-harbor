@@ -1,0 +1,11 @@
+{
+  "product_name": "Drambuie",
+  "production_location": {
+    "facility_name": "Morrison Bowmore Distillers facility",
+    "specific_address_detail": "Springburn Bond",
+    "city": "Glasgow"
+  },
+  "production_start_year": 2010,
+  "is_cocktail_ingredient": true,
+  "cocktail_name": "Rusty Nail"
+}

@@ -1,0 +1,16 @@
+{
+  "performer_name": "W. C. Fields",
+  "birth_name": "William Claude Dukenfield",
+  "professions": [
+    "comedian",
+    "actor",
+    "juggler",
+    "writer"
+  ],
+  "comic_persona_description": "A misanthropic and hard-drinking egotist, who remained a sympathetic character despite his snarling contempt for dogs and children.",
+  "juggling_style_connection": {
+    "style_name": "tramp juggling style",
+    "sato_contribution": "helping define",
+    "performer_role": "epitomized"
+  }
+}

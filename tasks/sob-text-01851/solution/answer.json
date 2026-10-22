@@ -1,0 +1,11 @@
+{
+  "roller_coaster_name": "Goliath",
+  "location": "Six Flags Magic Mountain in Valencia, California",
+  "type": "steel hypercoaster",
+  "similar_to_coaster": "Titan",
+  "similar_to_coaster_location": "Six Flags Over Texas in Arlington, Texas",
+  "key_differences": [
+    "lacks the 540-degree upward helix on Titan prior to the mid-course brake run",
+    "is also slightly shorter than Titan"
+  ]
+}

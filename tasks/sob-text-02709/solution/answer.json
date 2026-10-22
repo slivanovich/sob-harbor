@@ -1,0 +1,13 @@
+{
+  "team_information": {
+    "year": 2016,
+    "university": "University of Hawaii at Mānoa",
+    "sport": "football"
+  },
+  "coach_details": {
+    "name": "Nick Rolovich",
+    "tenure_description": "first year",
+    "replaced_coach_name": "Norm Chow"
+  },
+  "final_answer": "Nick Rolovich"
+}

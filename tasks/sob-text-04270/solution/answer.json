@@ -1,0 +1,16 @@
+{
+  "operation_name": "Operation Ruman",
+  "operation_type": [
+    "military",
+    "humanitarian"
+  ],
+  "target_locations": {
+    "territory_type": "British Overseas Territories",
+    "region": "Caribbean"
+  },
+  "natural_disaster": {
+    "name": "Hurricane Irma",
+    "category": "hurricane"
+  },
+  "operation_year": 2017
+}

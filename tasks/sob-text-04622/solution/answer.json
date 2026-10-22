@@ -1,0 +1,15 @@
+{
+  "entity_1_name": "Keep It Natural",
+  "entity_2_name": "Lou Pearlman",
+  "connection_description": "Keep It Natural is the debut album by the boyband Natural, which followed Lou Pearlman's boyband formula and was promoted by him.",
+  "related_band_name": "Natural",
+  "pearlman_role": "Talent manager and record producer known for his boyband formula, who promoted the band Natural.",
+  "album_details": {
+    "album_title": "Keep It Natural",
+    "release_year": 2002,
+    "record_labels": [
+      "Sony BMG",
+      "Transcontinental Records"
+    ]
+  }
+}

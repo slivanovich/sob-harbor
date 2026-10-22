@@ -1,0 +1,16 @@
+{
+  "answer_tv_series_name": "DreamWorks Dragons",
+  "series_origin_and_type": {
+    "country_of_origin": "American",
+    "animation_style": "computer-animated"
+  },
+  "series_source_film": {
+    "film_title": "How to Train Your Dragon",
+    "film_release_year": 2010
+  },
+  "award_winner_info": {
+    "winner_name": "John Paesano",
+    "award_winning_work": "Dragons: Riders of Berk",
+    "award_type": "Annie Award"
+  }
+}

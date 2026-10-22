@@ -1,0 +1,14 @@
+{
+  "person_name": "John R. Baumgardner",
+  "person_profession": "geophysicist",
+  "person_affiliation": "American young earth creationist",
+  "research_project": {
+    "name": "RATE project",
+    "conducting_organizations": [
+      "Creation Research Society",
+      "Institute for Creation Research"
+    ],
+    "start_year": 1997,
+    "end_year": 2005
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "designer": {
+    "name": "Jack Ryan",
+    "notable_for": [
+      "Barbie doll",
+      "Hot Wheels",
+      "Chatty Cathy"
+    ]
+  },
+  "product_brand": {
+    "name": "Hot Wheels",
+    "type": "die-cast toy cars",
+    "introduction_year": 1968
+  },
+  "producing_company": {
+    "name": "Mattel",
+    "origin_country": "American"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "person_name": "John F. Kennedy",
+  "relationship_to_jackie_o": "husband",
+  "event_details": {
+    "event_type": "assassination",
+    "year": 1963
+  },
+  "jackie_o_full_name": "Jacqueline Lee Kennedy Onassis"
+}

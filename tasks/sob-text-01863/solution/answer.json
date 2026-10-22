@@ -1,0 +1,15 @@
+{
+  "director_name": "Garry Marshall",
+  "movie_title": "New Year's Eve",
+  "movie_genre": "romantic comedy",
+  "starring_actors": [
+    {
+      "actor_name": "Jessica Biel",
+      "connection_to_7th_heaven": true
+    },
+    {
+      "actor_name": "Ludacris",
+      "is_ludacris": true
+    }
+  ]
+}

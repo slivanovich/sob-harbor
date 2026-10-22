@@ -1,0 +1,20 @@
+{
+  "person_a": {
+    "name": "Frank Tuttle",
+    "occupations": [
+      "film director",
+      "writer"
+    ]
+  },
+  "person_b": {
+    "name": "John English",
+    "occupations": [
+      "film editor",
+      "film director"
+    ]
+  },
+  "mutual_occupations": [
+    "film director"
+  ],
+  "number_of_mutual_occupations": 1
+}

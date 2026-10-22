@@ -1,0 +1,14 @@
+{
+  "first_event_year": 1913,
+  "events_compared": [
+    {
+      "event_name": "Richard Nixon was born",
+      "event_year": 1913
+    },
+    {
+      "event_name": "The Trial of Henry Kissinger was published",
+      "event_year": 2001
+    }
+  ],
+  "earliest_event_name": "Richard Nixon was born"
+}

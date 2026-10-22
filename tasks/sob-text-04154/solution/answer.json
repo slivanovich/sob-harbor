@@ -1,0 +1,10 @@
+{
+  "entity_1_name": "750 7th Avenue",
+  "entity_2_name": "W. R. Grace Building",
+  "common_attributes": [
+    "skyscraper",
+    "located in New York City"
+  ],
+  "shared_location": "New York City",
+  "shared_building_type": "skyscraper"
+}

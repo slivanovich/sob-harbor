@@ -1,0 +1,10 @@
+{
+  "band_name": "The 440 Alliance",
+  "band_origin": "American",
+  "event_type": "private party",
+  "host_details": {
+    "host_name": "Troy Aikman",
+    "host_profession": "Former NFL Quarterback",
+    "super_bowl_wins": 3
+  }
+}

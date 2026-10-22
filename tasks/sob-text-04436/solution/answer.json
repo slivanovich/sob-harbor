@@ -1,0 +1,14 @@
+{
+  "question_asked": "Are Tim Kurkjian and Ben Bagdikian both baseball analysts?",
+  "both_are_baseball_analysts": false,
+  "person_1": {
+    "name": "Tim Kurkjian",
+    "is_baseball_analyst": true,
+    "profession_description": "Major League Baseball analyst on ESPN's \"Baseball Tonight\" and \"SportsCenter\""
+  },
+  "person_2": {
+    "name": "Ben Bagdikian",
+    "is_baseball_analyst": false,
+    "profession_description": "Armenian-American educator and journalist. He was a significant American media critic and the dean of the University of California, Berkeley Graduate School of Journalism."
+  }
+}

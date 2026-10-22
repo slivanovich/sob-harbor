@@ -1,0 +1,17 @@
+{
+  "question_asked": "Are both the Houston Ship Channel and Carondelet Canal still in operation?",
+  "entities_involved": [
+    {
+      "name": "Houston Ship Channel",
+      "is_operational": true,
+      "operational_status_details": "The Houston Ship Channel... is part of the Port of Houston, one of the US's busiest seaports. The channel is the conduit for ocean-going vessels between Houston-area terminals and the Gulf of Mexico, and it serves an increasing volume of inland barge traffic."
+    },
+    {
+      "name": "Carondelet Canal",
+      "is_operational": false,
+      "operational_status_details": "The Carondelet Canal... ceased to be navigable in 1927 and was filled in 1938."
+    }
+  ],
+  "all_entities_operational": false,
+  "final_answer": false
+}

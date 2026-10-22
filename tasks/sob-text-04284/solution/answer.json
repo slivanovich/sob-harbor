@@ -1,0 +1,10 @@
+{
+  "game_name": "Simon",
+  "launch_year": 1978,
+  "launch_venue": {
+    "name": "Studio 54",
+    "venue_type_at_launch": "nightclub",
+    "current_venue_type": "Broadway theatre",
+    "city": "New York City"
+  }
+}

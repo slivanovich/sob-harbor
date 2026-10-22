@@ -1,0 +1,14 @@
+{
+  "band_comparison": [
+    {
+      "band_name": "Temple of the Dog",
+      "core_member_count": 5
+    },
+    {
+      "band_name": "The Sugarcubes",
+      "core_member_count": 6
+    }
+  ],
+  "band_with_more_members": "The Sugarcubes",
+  "member_count_difference": 1
+}

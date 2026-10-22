@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+AD 82: AD 82 (LXXXII) was a common year starting on Tuesday (link will display the full calendar) of the Julian calendar.  At the time, it was known as the Year of the Consulship of Augustus and Sabinus (or, less frequently, year 835 "Ab urbe condita").  The denomination AD 82 for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years.
+
+Arch of Titus: The Arch of Titus (Italian: "Arco di Tito" ; Latin: "Arcus Titi" ) is a 1st-century AD.  honorific arch, located on the Via Sacra, Rome, just to the south-east of the Roman Forum.  It was constructed in c. AD.  82 by the Emperor Domitian shortly after the death of his older brother Titus to commemorate Titus's victories, including the Siege of Jerusalem (AD 70).  The arch has provided the general model for many triumphal arches erected since the 16th century—perhaps most famously it is the inspiration for the Arc de Triomphe in Paris, France.
+
+Titus Flavius Clemens (consul): Titus Flavius T. f. T. n. Clemens was a nephew of the Roman Emperor Vespasian.  He was the son of Titus Flavius Sabinus, consul in AD 47 and "praefectus urbi" during the reign of Nero, and a brother of Titus Flavius Sabinus, consul in AD 82.  The emperors Titus and Domitian were his cousins.
+
+Shoshone River: The Shoshone River is a 100 mi long river in northern Wyoming in the United States.  Its headwaters are in the Absaroka Range in Shoshone National Forest.  It ends when it runs into the Big Horn River near Lovell, Wyoming.  Cities it runs near or through are Cody, Powell, Byron, and Lovell.  Near Cody, it runs through a volcanically active region of fumaroles known as Colter's Hell.  This contributed to the river being named on old maps of Wyoming as the "Stinking Water River".
+
+M-47 (Michigan highway): M-47 is a north–south state trunkline highway in the US state of Michigan.  It runs near Saginaw and Midland in the Tri-Cities area of the Lower Peninsula.  The highway runs through suburban and agricultural areas to connect the two cities with the airport in the area.  The northernmost section of M-47 runs along a freeway to the terminus at US Highway 10 (US 10).  M-47 runs for 14.328 mi , all of which has been listed as a part of the National Highway System.
+
+Legio I Minervia: Legio I Minervia ("Minerva's First Legion", i.e., "devoted to the goddess Minerva") was a legion of the Imperial Roman army founded in AD 82 by emperor Domitian (r. 81–96), for his campaign against the Germanic tribe of the Chatti.  Its cognomen refers to the goddess Minerva, the legion's protector.  There are still records of the I "Minervia" in the Rhine border region in the middle of the 4th century.  The legion's emblem is an image of goddess Minerva.
+
+Porta Fontinalis: The Porta Fontinalis was a gate in the Servian Wall in ancient Rome.  It was located on the northern slope of the Capitoline Hill, probably the northeast shoulder over the Clivus Argentarius.  The Via Salaria exited through it, as did the Via Flaminia originally, providing a direct link with Picene and Gallic territory.  After the Aurelian Walls were constructed toward the end of the 3rd century AD, the section of the Via Flaminia that ran between the Porta Fontinalis and the new Porta Flaminia was called the Via Lata ("Broadway").
+
+Clivus Palatinus: The Clivus Palatinus is a modern term for a road in ancient Rome between the Roman Forum and the Palatine Hill.  It formed a processional route issues off the Via Sacra near the Arch of Titus and runs up onto the Palatine, where it disappears, though it probably ran as far as the Domus Augustana.  Several stretches of the road's paving remain.
+
+B954 road: The B954 road is a public highway in Angus, Scotland which generally runs north to south, connecting the settlement of Dykends to the northwestern part of the city of Dundee.  The road runs near the Meigle Museum, where a collection of Pictish stones is exhibited, and somewhat to the west of the Eassie Stone, a Pictish stone dating to about 600 AD.  The road has been a subject of public controversy, having undergone debate over its speed limit; in particular, a speed limit of 30 to 40 miles per hour was considered to protect pedestrian safety, particularly for children crossing the highway.  The proposal was not adopted at the 16 September 2008 meeting.
+
+Oak Grove Cemetery (Fall River, Massachusetts): Oak Grove Cemetery is a historic cemetery located at 765 Prospect Street in Fall River, Massachusetts.  It was established in 1855 and greatly improved upon in the years that followed.  It features Gothic Revival elements, including an elaborate entrance arch constructed of locally quarried Fall River granite.  The cemetery originally contained 47 acres, but has since been expanded to roughly 100 acres.  The cemetery is the city's most significant, built in the planned rural-garden style of Mount Auburn Cemetery in Cambridge, Massachusetts.  It was designed and laid out by local architect Josiah Brown, who is also known for his designs of early mills including the Union, Border City, and others.
+
+Question: The Clivus Palatinus runs near which honorific arch constructed in AD 82?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "arch_name": {
+      "type": "string",
+      "description": "The name of the honorific arch."
+    },
+    "arch_type": {
+      "type": "string",
+      "description": "The type of the arch, e.g., honorific or triumphal."
+    },
+    "construction_year": {
+      "type": "integer",
+      "description": "The year the arch was constructed."
+    },
+    "builder_emperor": {
+      "type": "string",
+      "description": "The Roman Emperor who ordered the construction of the arch."
+    },
+    "nearby_road": {
+      "type": "string",
+      "description": "The name of the road or route that runs near the arch."
+    }
+  },
+  "required": [
+    "arch_name",
+    "arch_type",
+    "construction_year",
+    "builder_emperor",
+    "nearby_road"
+  ],
+  "additionalProperties": false
+}

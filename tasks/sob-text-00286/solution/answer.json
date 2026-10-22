@@ -1,0 +1,11 @@
+{
+  "film": {
+    "title": "World War Z",
+    "release_year": 2013,
+    "genre": "action horror"
+  },
+  "director": {
+    "name": "Marc Forster"
+  },
+  "makeup_artist_involved": "Christopher Nelson"
+}

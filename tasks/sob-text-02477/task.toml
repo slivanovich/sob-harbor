@@ -1,0 +1,19 @@
+schema_version = "1.0"
+
+[metadata]
+benchmark = "sob-text"
+category = "structured-output"
+
+[agent]
+timeout_sec = 600.0
+
+[verifier]
+timeout_sec = 180.0
+
+[environment]
+docker_image = "python:3.12-slim-bookworm@sha256:6a0e06f5ba0b373d051aabd3fffb9b873f27f9a2a3a14bcbe37dee6f0e3bbc70"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 1024
+allow_internet = true

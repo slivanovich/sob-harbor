@@ -1,0 +1,16 @@
+{
+  "review_aggregator_name": "Metacritic",
+  "media_product_types": [
+    "music albums",
+    "video games",
+    "films",
+    "TV shows",
+    "books"
+  ],
+  "album_details": {
+    "album_title": "Sunbather",
+    "artist": "Deafheaven",
+    "acclaim_year": 2013,
+    "genre": "blackgaze"
+  }
+}

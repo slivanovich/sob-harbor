@@ -1,0 +1,32 @@
+{
+  "lyrics_writer": {
+    "name": "Mark Saltzman",
+    "role": "lyrics writer"
+  },
+  "associated_works": [
+    {
+      "work_type": "album",
+      "title": "Candles, Snow & Mistletoe",
+      "details": {
+        "release_year": 1993,
+        "artists": [
+          "Sharon",
+          "Lois",
+          "Bram"
+        ]
+      }
+    },
+    {
+      "work_type": "television_series",
+      "title": "Sesame Street",
+      "details": {
+        "premiere_date": "November 10, 1969",
+        "creators": [
+          "Joan Ganz Cooney",
+          "Lloyd Morrisett"
+        ]
+      }
+    }
+  ],
+  "number_of_associated_works": 2
+}

@@ -1,0 +1,15 @@
+{
+  "person_of_interest": {
+    "name": "Clara Lieber",
+    "nationality": "American"
+  },
+  "collaborator": {
+    "name": "Otto Hahn",
+    "nationality": "German",
+    "role": "chemist"
+  },
+  "fields_of_work": [
+    "radioactivity",
+    "radiochemistry"
+  ]
+}

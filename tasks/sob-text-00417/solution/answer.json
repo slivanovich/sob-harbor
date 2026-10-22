@@ -1,0 +1,24 @@
+{
+  "person_names": [
+    "Hal Ashby",
+    "Doris Dörrie"
+  ],
+  "mutual_occupation": "film director",
+  "occupation_details": [
+    {
+      "person_name": "Hal Ashby",
+      "occupations": [
+        "film director",
+        "editor"
+      ]
+    },
+    {
+      "person_name": "Doris Dörrie",
+      "occupations": [
+        "film director",
+        "producer",
+        "author"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "person1": {
+    "name": "Ivan Passer",
+    "profession": "film director and screenwriter",
+    "birth_year": 1933
+  },
+  "person2": {
+    "name": "Li Yang",
+    "profession": "writer-director",
+    "birth_year": 1959
+  },
+  "older_person_name": "Ivan Passer",
+  "age_difference_years": 26
+}

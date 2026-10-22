@@ -1,0 +1,95 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Hunger Games: Mockingjay – Part 2: The Hunger Games: Mockingjay – Part 2 is a 2015 American dystopian science fiction adventure film directed by Francis Lawrence, with a screenplay by Peter Craig and Danny Strong.  It is the fourth and final installment in "The Hunger Games" film series, and the second of two films based on the novel "Mockingjay", the final book in "The Hunger Games" trilogy, by Suzanne Collins.  Produced by Nina Jacobson and Jon Kilik, and distributed by Lionsgate, the film features an ensemble cast that includes Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth, Woody Harrelson, Elizabeth Banks, Julianne Moore, Philip Seymour Hoffman, and Donald Sutherland.  Hoffman died in February 2014, making "Mockingjay – Part 2" his final film role.  Principal photography on both parts of the film began on September 23, 2013 in Atlanta, before moving to Paris for two weeks of back-to-back filming and officially concluding on June 20, 2014, in Berlin and at Babelsberg Studios, Germany.
+
+Roman Brady: Roman Brady is a fictional character from the long running NBC soap opera, "Days of Our Lives".  The role was originated in 1981 by Wayne Northrop who played the role until 1984, was filled by Drake Hogestyn from 1986–1991, again by Northrop from 1991–1994, and is currently being portrayed by series veteran Josh Taylor, who stepped into the role in 1997.
+
+Insurgent (novel): Insurgent is a 2012 science fiction young adult novel by American novelist Veronica Roth and the second book in the "Divergent" trilogy.  As the sequel to the 2011 bestseller "Divergent", it continues the story of Tris Prior and the dystopian post-apocalyptic version of Chicago.  Following the events of the previous novel, a war now looms as conflict between the factions and their ideologies grows.  While trying to save the people that she loves, Tris faces questions of grief, forgiveness, identity, loyalty, politics, and love.
+
+Liam Hemsworth: Liam Hemsworth (born 13 January 1990) is an Australian actor.  He played the role of Josh Taylor in the soap opera "Neighbours" and as Marcus on the children's television series "The Elephant Princess".  In American films, Hemsworth starred in "The Last Song" (2010), as Gale Hawthorne in "The Hunger Games" film series (2012–2015), and as Jake Morrison in "" (2016).
+
+List of Neighbours characters (2007): "Neighbours" is an Australian television soap opera that was first broadcast on 18 March 1985.  The following is a list of characters that first appeared on the show in 2007, by order of first appearance.  All characters were introduced by the show's executive producer Ric Pellizzeri.  The 23rd season of "Neighbours" began airing from 8 January 2007.  That month saw both Ringo Brown and Oliver Barnes introduced as brothers of established characters.  March saw the year's first baby, Holly Hoyland, born.  Con artists Terrence Chesterton and Charlotte Stone arrived the following month, along with Mary Casey.  June saw the debuts of Prue Brown, Adam Rhodes, Kirsten Gannon and Mickey Gannon.  Oliver's mother and brother, Rebecca and Declan Napier, were introduced in July, as were Bridget Parker, Miranda Parker, Steve Parker and Peggy Newton.  Justin Hunter, Richard Aaronow and Riley Parker began appearing from August.  September saw Brad Jordan arrive, while October saw the introductions of Marco Silvani, Josh Taylor, Taylah Jordan and Jessica Wallace.  Both Angus Henderson and Mia Silvani arrived in November.
+
+The Hunger Games: Catching Fire: The Hunger Games: Catching Fire is a 2013 American dystopian science fiction adventure film based on Suzanne Collins' dystopian novel, "Catching Fire" (2009), the second installment in "The Hunger Games" trilogy.  The film is the sequel to "The Hunger Games" (2012) and the second installment in "The Hunger Games" film series, produced by Nina Jacobson and Jon Kilik, and distributed by Lionsgate.  Francis Lawrence directed the film, with a screenplay by Simon Beaufoy and Michael Arndt.  Adding to the existing cast, the supporting cast was filled out with Philip Seymour Hoffman, Jeffrey Wright, Jena Malone, Sam Claflin, Lynn Cohen, Amanda Plummer, Alan Ritchson, and Meta Golding.  Filming began on September 10, 2012, in Atlanta, Georgia, before moving to Hawaii.  The plot of "Catching Fire" takes place a few months after the previous installment; Katniss Everdeen and fellow District 12 tribute Peeta Mellark have returned home safely after winning the 74th Annual Hunger Games.  Throughout the story, Katniss senses that a rebellion against the oppressive Capitol is simmering throughout the districts.
+
+Stefan Dennis: Stefan Dennis (born 30 October 1958) is an Australian actor, best known for playing the role of cold-hearted and ruthless businessman Paul Robinson in the soap opera "Neighbours" from its first episode in March 1985 to the present day.  He departed "Neighbours" in 1993, but returned in 2004 and has played Paul ever since.  During his time away from "Neighbours" he was a cast member of Scottish soap opera "River City".  He is also known for his 1989 hit single "Don't It Make You Feel Good", which reached Number 16 in the Irish and UK Singles Chart.
+
+The Hunger Games (film series): The Hunger Games film series consists of four science fiction dystopian adventure films based on "The Hunger Games" trilogy of novels, by the American author Suzanne Collins.  Distributed by Lionsgate and produced by Nina Jacobson and Jon Kilik, it stars Jennifer Lawrence as Katniss Everdeen, Josh Hutcherson as Peeta Mellark, Woody Harrelson as Haymitch Abernathy, Elizabeth Banks as Effie Trinket, Philip Seymour Hoffman as Plutarch Heavensbee, Stanley Tucci as Caesar Flickerman, Donald Sutherland as President Snow and Liam Hemsworth as Gale Hawthorne.  Gary Ross directed the first film, while Francis Lawrence directed the next three films.
+
+The Hunger Games (film): The Hunger Games is a 2012 American dystopian science fiction adventure film directed by Gary Ross and based on the novel of the same name by Suzanne Collins.  It is the first installment in "The Hunger Games" film series and was produced by Nina Jacobson and Jon Kilik, with a screenplay by Ross, Collins, and Billy Ray.  The film stars Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth, Woody Harrelson, Elizabeth Banks, Lenny Kravitz, Stanley Tucci, and Donald Sutherland.  The story takes place in a dystopian post-apocalyptic future in the nation of Panem, which is divided into 12 districts, where a boy and a girl from each district, between the ages of 12 and 18 must take part in The Hunger Games, a televised annual event in which the "tributes" of each district, are required to fight to the death, until there is only one survivor.  Katniss Everdeen (Jennifer Lawrence) volunteers to take her younger sister's place.  With her district's male tribute, Peeta Mellark (Josh Hutcherson), Katniss travels to the Capitol to train for the Hunger Games under the guidance of former victor Haymitch Abernathy (Woody Harrelson).
+
+Parasite (film): Parasite is a 1982 science fiction horror film produced and directed by Charles Band.  The film is set in a dystopian, post-apocalyptic future in which the United States has been taken over by a criminal organization who unwittingly create an uncontrollable deadly parasite and set it loose on the population.  The film received negative reviews from film critics, who viewed it as a poorly written B-movie with unconvincing special effects.  The film is notable in that it features actress Demi Moore in her first major film role.
+
+Question: Name the Australian actor who played the role of Josh Taylor in the soap opera 'Neighbours' and also stars in the 2012 American science fiction adventure film about a dystopian post-apocalyptic future in the nation of Panem where he plays Gale Hawthorne?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The full name of the actor."
+    },
+    "actor_nationality": {
+      "type": "string",
+      "description": "The nationality of the actor."
+    },
+    "roles": {
+      "type": "array",
+      "description": "A list of roles played by the actor, matching the question's criteria.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "character_name": {
+            "type": "string",
+            "description": "The name of the character played."
+          },
+          "production_title": {
+            "type": "string",
+            "description": "The title of the film or series."
+          },
+          "production_type": {
+            "type": "string",
+            "description": "The type of production (e.g., 'soap opera', 'film')."
+          },
+          "first_appearance_year": {
+            "type": "integer",
+            "description": "The year the character or production first appeared."
+          },
+          "genre": {
+            "type": "string",
+            "description": "The genre of the production, if applicable."
+          },
+          "setting_description": {
+            "type": "string",
+            "description": "A description of the setting for the production, if applicable."
+          }
+        },
+        "required": [
+          "character_name",
+          "production_title",
+          "production_type",
+          "first_appearance_year"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "actor_name",
+    "actor_nationality",
+    "roles"
+  ],
+  "additionalProperties": false
+}

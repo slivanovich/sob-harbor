@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "5a01e12b3cfc1e2a76461331dbe442b914771b369afff0af86d6c99a248fd76d",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a85aca45542997b5ce40021",
+    "source_dataset": "hotpotqa",
+    "source_answer": "John Woo",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Tonight and Every Night: Tonight and Every Night is a 1945 American musical film directed by Victor Saville and starring Rita Hayworth, Lee Bowman and Janet Blair.  The film portrays wartime romance and tragedy in a London musical show, loosely modelled on the Windmill Theatre in Soho, that determined not to miss a single performance during the Blitz.  Hayworth plays an American showgirl who falls in love with an RAF pilot played by Bowman.\n\nWartime Romance: Wartime Romance (Russian: Военно-полевой роман , translit.  Voenno-polevoy roman) is a 1983 Soviet film directed by Pyotr Todorovsky.  It tells the story of a soldier and a nurse separated by World War II and briefly reunited in 1950.\n\nMy Reputation: My Reputation is a 1946 film, directed by Curtis Bernhardt, about a wartime love story.  Barbara Stanwyck portrayed Jessica Drummond, an upper-class widow from Chicago who innocently falls in love with an army officer (George Brent), much to the consternation of her gossipy friends and domineering mother (Lucile Watson).  Her romance also pits her against her two teenage sons (Scotty Beckett and Bobby Cooper).  Screenwriter and novelist Catherine Turney wrote the script, which she adapted from Clare Jaynes' 1942 novel \"Instruct My Sorrows\".  Barbara Stanwyck's costumes were designed by Edith Head.\n\nNatalya Andrejchenko: Natalya Eduardovna Andrejchenko, Honored Artist of the RSFSR (1984) (Russian: Ната́лья Эдуа́рдовна Андре́йченко ; born May 3, 1956) is an actress.  Her most famous roles include the title character in \"Mary Poppins, Goodbye\" and Lyuba in \"Wartime Romance\".\n\nFor the Moment (film): For the Moment is a 1993 film written and directed by Aaron Kim Johnston and starring Russell Crowe and Christianne Hirt.  The plot revolves around airmen training in rural Manitoba, Canada, with the British Commonwealth Air Training Plan during the Second World War.  The main focus of the story is the wartime romance between Russell Crowe's character and a local girl.  Johnston was inspired to write the screenplay based upon the stories of his father who was an instructor and bomber pilot in the war, and his mother's experiences as a young woman on the home front.\n\nTortilla Soup: Tortilla Soup is a 2001 American comedy-drama film directed by María Ripoll.  The screenplay by Tom Musca, Ramón Menéndez and Vera Blasi is based on the film \"Eat Drink Man Woman\", which was written by Hui-Ling Wang, Ang Lee, and James Schamus.\n\nThe Crossing (2014 film): The Crossing (Chinese: 太平轮) is a 2014 Chinese-Hong Kong epic historical romance-war drama (part 1) and disaster film (part 2) directed by John Woo and written by Hui-Ling Wang.  The film stars Zhang Ziyi, Takeshi Kaneshiro, Song Hye-kyo, Huang Xiaoming, Tong Dawei and Masami Nagasawa.  The film is based on the sinking of the steamer \"Taiping\" in 1949.  The incident led to the deaths of over 1,500 passengers and crew.  The film's first part was released in China on December 2, 2014.  Part two was released on July 30, 2015.\n\nApril Rhapsody: April Rhapsody is a 2000 TV series written by Wang Hui-ling, based on the romantic life of Xu Zhimo, one of China's most renowned poets in the 20th century.\n\nThe Legend of Eileen Chang: The Legend of Eileen Chang is a 2004 biographical drama TV series written by Wang Hui-ling and produced by Hsu Li-kong, starring Rene Liu as Eileen Chang, one of China's greatest authors in the 20th century.\n\nWang Hui-ling: Hui-Ling Wang or Wang Hui-Ling is a Taiwanese screenwriter.  In 2001 she was nominated for Academy Award for Best Writing for the Crouching Tiger, Hidden Dragon.  In 2013 she wrote the script for The Crossing directed by John Woo, scheduled to be released in 2014.",
+    "question": "Wang Hui-ling wrote the script for the epic wartime romance The Crossing. Who directed?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "movie_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "director": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the director."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "screenwriter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the screenwriter."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the first part of the film."
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of genres associated with the film."
+        }
+      },
+      "required": [
+        "movie_title",
+        "director",
+        "screenwriter",
+        "release_year",
+        "genres"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "movie_title": "The Crossing",
+      "director": {
+        "name": "John Woo"
+      },
+      "screenwriter": {
+        "name": "Hui-Ling Wang"
+      },
+      "release_year": 2014,
+      "genres": [
+        "epic historical romance-war drama",
+        "disaster film"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

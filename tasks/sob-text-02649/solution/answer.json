@@ -1,0 +1,16 @@
+{
+  "actor_name": "Corey Feldman",
+  "character_voiced": "Young Copper",
+  "character_species": "hound dog",
+  "animated_film": {
+    "title": "The Fox and the Hound",
+    "release_year": 1981,
+    "film_type": "animated drama film",
+    "production_company": "Walt Disney Productions",
+    "directors": [
+      "Ted Berman",
+      "Richard Rich",
+      "Art Stevens"
+    ]
+  }
+}

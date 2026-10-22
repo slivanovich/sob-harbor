@@ -1,0 +1,13 @@
+{
+  "station_name": "Harrah's & The Linq station",
+  "located_between": [
+    "Harrah's Las Vegas",
+    "The Linq"
+  ],
+  "identified_hotel_casino": {
+    "name": "Harrah's Las Vegas",
+    "slot_machines_count": 1200,
+    "owner_operator": "Caesars Entertainment Corporation"
+  },
+  "owner_operator_of_identified_hotel": "Caesars Entertainment Corporation"
+}

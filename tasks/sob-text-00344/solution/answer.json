@@ -1,0 +1,22 @@
+{
+  "song_title": "Chandelier",
+  "primary_artist": "Sia",
+  "release_year": 2014,
+  "collaborator_details": {
+    "name": "Jesse Shatkin",
+    "roles": [
+      "songwriter",
+      "producer"
+    ],
+    "grammy_nominations": [
+      {
+        "year": 2014,
+        "category": "Record of the Year"
+      },
+      {
+        "year": 2014,
+        "category": "Song of the Year"
+      }
+    ]
+  }
+}

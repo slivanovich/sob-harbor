@@ -1,0 +1,15 @@
+{
+  "antihero_name": "John Constantine",
+  "publisher": "DC Comics",
+  "creators": [
+    "Alan Moore",
+    "Steve Bissette",
+    "John Totleben"
+  ],
+  "is_antihero": true,
+  "has_cab_driver_associate": true,
+  "cab_driver_associate_details": {
+    "name": "Chas Chandler",
+    "role": "sidekick and cab driver"
+  }
+}

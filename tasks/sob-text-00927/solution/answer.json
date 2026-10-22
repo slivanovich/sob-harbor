@@ -1,0 +1,14 @@
+{
+  "entity_1": {
+    "name": "King Adora",
+    "type": "music_group",
+    "genre": "rock"
+  },
+  "entity_2": {
+    "name": "Ezra Koenig",
+    "type": "musician",
+    "associated_band_genre": "rock"
+  },
+  "common_attribute_category": "music_genre",
+  "shared_attribute_value": "rock"
+}

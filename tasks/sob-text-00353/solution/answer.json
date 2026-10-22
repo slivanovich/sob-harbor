@@ -1,0 +1,12 @@
+{
+  "device_name": "Apple iPod 4G",
+  "category": "portable media player",
+  "manufacturer": "Apple Inc.",
+  "variants": [
+    {
+      "variant_name": "iPod+HP",
+      "distributor": "HP",
+      "distributor_logo_present": true
+    }
+  ]
+}

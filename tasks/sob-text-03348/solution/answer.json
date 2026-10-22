@@ -1,0 +1,13 @@
+{
+  "mission_name": "Mission San Francisco Solano",
+  "mission_number": 21,
+  "mission_status": {
+    "is_last_mission": true,
+    "is_northernmost_mission": true
+  },
+  "located_within_park": {
+    "park_name": "Sonoma State Historic Park",
+    "park_type": "California State Park",
+    "park_city_location": "Sonoma"
+  }
+}

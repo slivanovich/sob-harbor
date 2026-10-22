@@ -1,0 +1,22 @@
+{
+  "emperor_name": "Honorius",
+  "reign_period": {
+    "start_year": 393,
+    "end_year": 423
+  },
+  "family_relations": {
+    "father": "Theodosius I",
+    "mother": "Aelia Flaccilla",
+    "siblings": [
+      {
+        "name": "Arcadius",
+        "role": "Eastern Emperor"
+      }
+    ]
+  },
+  "dedicated_official": {
+    "name": "Flavius Dexter",
+    "role_under_emperor": "praetorian prefect",
+    "book_dedicated": "De Viris Illustribus (Jerome)"
+  }
+}

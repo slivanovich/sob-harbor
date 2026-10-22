@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Victor Newman: Victor Newman is a fictional character from the American CBS soap opera "The Young and the Restless".  He has been portrayed by Eric Braeden since 1980.  Initially a guest character who was to last for eight to twelve weeks, Victor has evolved into the soap opera's leading male figure.  Created by William J. Bell as a "despicable, contemptible, unfaithful wife abuser", the character was planned to be killed off and never heard of again.  However, after Bell saw Braeden's performance, he decided to sign the actor onto a contract.  Braeden was hesitant to work on a soap opera, but eventually signed a contract, and has remained on the series as a regular cast member for a total of thirty-seven years.  The character is widely described as ruthless, and while loving to those he holds dear, is considered a villain.  Over the years, he has also been the center of several controversial plots and relationships.
+
+Sarah G. Buxton: Sarah Galbraith Buxton (born March 23, 1965) is an American actress.  She has appeared in films such as "Lovelines" (1984), "The Sure Thing" (1985) and "Less Than Zero" (1987), and well as guest starred in a number of television shows in early career.  On television, Buxton is best known for playing villainous Annie Douglas Richards in the NBC soap opera, "Sunset Beach" from 1997 to 1999.  She later played another soap villain, Morgan DeWitt, on "The Bold and the Beautiful" (2000–01, 2005).
+
+Aaron Spelling: Aaron Spelling (April 22, 1923 – June 23, 2006) was an American film and television producer.  Some of his successes include the TV programs "Charlie's Angels" (1976–81), "The Love Boat" (1977–86), "Dynasty" (1981–89), "Beverly Hills, 90210" (1990–2000), "7th Heaven" (1996–2007), and "Charmed" (1998–2006).
+
+David Kennedy (film producer): David Kennedy (1941 or 1942 – June 14, 2015) was an American film producer and talent agent.  His work includes "Saving Milly" and "Dark Shadows", based on the popular gothic soap opera created by Dan Curtis.  Kennedy coincidentally ran Dan Curtis Productions until Curtis' death in March 2006.
+
+Ken Barlow: Kenneth "Ken" Barlow is a fictional character from the British ITV soap opera, "Coronation Street", played by William Roache.  Ken was created by Tony Warren as one of "Coronation Street's" original characters.  He debuted in the soap's first episode on 9 December 1960.  Having appeared continuously since the programme's inception, December 2010 marked Ken's 50th anniversary on-screen.  At this time, Roache officially became the longest-serving actor in a televised soap opera.  Roache was honoured at the 2010 Guinness World Records ceremony for the achievement, when he surpassed actor Don Hastings from the American soap opera "As the World Turns", who previously held this title.  Roache stated in 2010 that he has no plans to leave the role and will remain in "Coronation Street" for as long as they will have him.
+
+Annie Douglas Richards: Annie Douglas Richards is a fictional character from the US NBC soap opera "Sunset Beach", played by Sarah Buxton.  The character's creation was announced in 1996 prior to the serial going on air.  Series creator Aaron Spelling helped create Annie's appearance and style.  Annie has been characterised as a "rich girl" and a "scheming vixen".  The character has also been central to various fantasy sequences through her duration.  These have been favoured by some of the serial's critics.  Buxton has been nominated for one award for her portrayal and Annie has been branded one of the programme's most popular characters.
+
+Until Tomorrow: Until Tomorrow (1975) was an Australian television soap opera created by Reg Watson.  The series was produced in colour by the Reg Grundy Organisation for the Seven Network in 1975.  It was the second soap opera made by the Reg Grundy Organisation, the first having been "Class of '74".  It is notable for having been made in Brisbane as opposed to Sydney or Melbourne, and was one of the few Australian soap operas produced for a daytime slot.
+
+John Black (Days of Our Lives): John Black is a fictional character from "Days of Our Lives", an American soap opera on the NBC network.  He has been played by actor Drake Hogestyn since 1986, with a break in between from January 2009 to September 2011.  John was created by script writers Sheri Anderson, Thom Racina and Leah Laiman as The Pawn in 1985 and introduced by executive producers Betty Corday and Al Rabin.  John becomes one of "Days of Our Lives' " most popular characters when he is revealed to be the presumed dead Roman Brady (Wayne Northrop) with plastic surgery and amnesia.  However, Northrop's return in 1991 led to Hogestyn's Roman being retconned into the entirely separate character of John Black, which also establishes the supercouple pairing of John and Marlena, due to John's affair with Roman's wife, Marlena Evans (Deidre Hall).  During the time in which he believes he is Roman, John picks up the mantle of Roman's feud with the notorious international criminal Stefano DiMera (Joseph Mascolo).  John and Stefano's feud is central to the character's history as Stefano is partly responsible for John's memory loss.  Their lives are further intertwined in 2008 when the two are falsely led to believe they are half brothers—a story that was later disproved.  Hogestyn's portrayal has made him one of daytime's most popular and recognizable stars.  Hogestyn was attributed with helping the series out of its ratings slump in the 1980s.  He was often featured in soap opera magazines such as "Soap Opera Digest" and "Soap Opera Weekly".
+
+Phil Mitchell: Philip James "Phil" Mitchell is a long-standing fictional character from the BBC soap opera "EastEnders", played by Steve McFadden.  Phil was introduced to the soap opera on 20 February 1990, and was followed by his brother, Grant (Ross Kemp), sister Sam (Danniella Westbrook/Kim Medcalf) and mother Peggy (Jo Warne/Barbara Windsor).  Phil is one of the major introductions made by executive producer Michael Ferguson, who wanted to bring in some macho, male leads.  Phil and his brother Grant became popularly known as the Mitchell brothers in the British media with Phil initially portrayed as the more level-headed of the two thugs.  Storylines featuring the Mitchell family dominated the soap opera throughout the 1990s, with Phil becoming a popular and long-running male protagonist into the 2000s and the 2010s.  McFadden temporarily left the series in late 2003 then returned in March 2005 for a short stint, before making a permanent return in October 2005.  McFadden took a hiatus from the series at the end of Phil's liver cirrhosis storyline with the character departing on 6 February 2017.  He returned on 24 July.
+
+The Bold and the Beautiful: The Bold and the Beautiful (often referred to as B&B) is an American television soap opera created by William J. Bell and Lee Phillip Bell for CBS.  It premiered on March 23, 1987 as a sister show to the Bells' other soap opera "The Young and the Restless"; several characters from each of the two shows have crossed over to the other since the early 1990s.  Set in Los Angeles, California, the show centers upon the Forrester family and their fashion house business Forrester Creations.
+
+Question: Annie Douglas Richards is a fictional character on a soap opera created by an American film and television producer whose successes included what TV program that ran from 1990-2000?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "character_name": {
+      "type": "string",
+      "description": "The name of the fictional character."
+    },
+    "soap_opera_name": {
+      "type": "string",
+      "description": "The name of the soap opera the character is from."
+    },
+    "creator_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the producer/creator."
+        },
+        "role": {
+          "type": "string",
+          "description": "The role of the person in relation to the soap opera or TV programs."
+        }
+      },
+      "required": [
+        "name",
+        "role"
+      ],
+      "additionalProperties": false
+    },
+    "related_tv_program": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the TV program that matches the criteria."
+        },
+        "start_year": {
+          "type": "integer",
+          "description": "The start year of the TV program."
+        },
+        "end_year": {
+          "type": "integer",
+          "description": "The end year of the TV program."
+        }
+      },
+      "required": [
+        "title",
+        "start_year",
+        "end_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "character_name",
+    "soap_opera_name",
+    "creator_details",
+    "related_tv_program"
+  ],
+  "additionalProperties": false
+}

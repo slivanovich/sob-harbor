@@ -1,0 +1,14 @@
+{
+  "players": [
+    {
+      "player_name": "Thomaz Koch",
+      "country": "Brazil"
+    },
+    {
+      "player_name": "Marat Safin",
+      "country": "Russia"
+    }
+  ],
+  "are_from_same_country": false,
+  "reasoning": "Thomaz Koch is from Brazil, and Marat Safin is from Russia. Since their countries are different, they are not from the same country."
+}

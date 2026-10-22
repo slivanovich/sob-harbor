@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Zookeeper's Wife: The Zookeeper's Wife is a non-fiction book written by the poet and naturalist Diane Ackerman.  Drawing on the unpublished diary of Antonina Żabiński's, it recounts the true story of how Antonina and her husband, Jan Żabiński, director of the Warsaw Zoo, saved the lives of 300 Jews who had been imprisoned in the Warsaw Ghetto following the German invasion of Poland on September 1, 1939.  The book was first published in 2007 by W. W. Norton.
+
+A Natural History of the Senses: A Natural History of the Senses is a 1990 non-fiction book by American author, poet, and naturalist Diane Ackerman.  In this book, Ackerman examines both the science of how the different senses work, and the varied means by which different cultures have sought to stimulate the senses.  The book was the inspiration for the five-part "Nova" miniseries "Mystery of the Senses" (1995) in which Ackerman appeared as the presenter.
+
+The Zookeeper's Wife (film): The Zookeeper's Wife is a 2017 war drama film directed by Niki Caro and written by Angela Workman, based on the non-fiction book of the same name by Diane Ackerman.  The film tells the true story of how Jan and Antonina Żabiński rescued hundreds of Jews from the Germans by hiding them in their zoo during World War II, and stars Jessica Chastain, Johan Heldenbergh, Michael McElhatton and Daniel Brühl.
+
+Mystery of the Senses: Mystery of the Senses is a five-part "Nova" miniseries, based on the book "A Natural History of the Senses" by Diane Ackerman, who also presents the documentary.  Each episode covers one of the traditional five senses: hearing, sight, smell, taste, and touch.  The series premiered on PBS on February 19, 1995.
+
+The Broken Circle Breakdown: The Broken Circle Breakdown is a 2012 Belgian drama film directed by Felix Van Groeningen.  Based on the play written by Johan Heldenbergh and Mieke Dobbels, its main characters are Didier, played by Heldenbergh, and Elise, played by actress/singer Veerle Baetens.  Young newcomer Nell Cattrysse is their ill daughter Maybelle.
+
+The Misfortunates: The Misfortunates (Dutch: "De helaasheid der dingen" ) is a 2009 Belgian comedy-drama film directed by Felix Van Groeningen.  It is adapted from the (partly autobiographical) book "De Helaasheid der Dingen" by Belgian writer Dimitri Verhulst.  The film stars Koen De Graeve, Johan Heldenbergh, Wouter Hendrickx, Bert Haelvoet, Valentijn Dhaenens, Kenneth Vanbaeden and Gilda De Bal.
+
+Lovers and Other Strangers: Lovers and Other Strangers is a 1970 comedy film based on the play by Renée Taylor and Joseph Bologna.  The cast includes Richard S. Castellano, Gig Young, Cloris Leachman, Anne Jackson, Beatrice Arthur, Bonnie Bedelia, Michael Brandon, Harry Guardino, Anne Meara, Bob Dishy, Marian Hailey, Joseph Hindy, and, in her film debut, Diane Keaton.  Sylvester Stallone was an extra in this movie.  The film was nominated for three Academy Awards (it won the Academy Award for Best Original Song), and was one of the top box office performers of 1970.  It established Richard S. Castellano as a star (receiving an Oscar nomination for his performance) and he, along with Diane Keaton, was subsequently cast in "The Godfather".  The song "For All We Know" was composed by Fred Karlin with lyrics by Robb Royer and Jimmy Griffin.
+
+Steve + Sky: Steve + Sky is a 2004 Belgian comedy-drama film directed and written by Felix Van Groeningen and starring Titus De Voogdt, Delfine Bafort and Johan Heldenbergh.
+
+Johan Heldenbergh: Johan Heldenbergh (born 9 February 1967) is a Belgian actor, playwright, screenwriter, theatre director and film director.  He gained international fame by starring in films such as "A Day in a Life" (2007), "Moscow, Belgium" (2008), "The Misfortunates" (2009) and "The Broken Circle Breakdown" (2012), as well as "The Zookeeper's Wife" (2017).
+
+Andrew Rothenberg: Andrew Rothenberg (born January 26, 1969) is an American stage, television and film actor.  Rothenberg is known for recurring roles in major television series, including Agent Phil Schlatter on "Weeds" and his portrayal of Malcolm on the HBO vampire series "True Blood".  Rothenberg portrayed Jim, a survivor of a zombie apocalypse in the first season of the AMC television series "The Walking Dead" based on the comic book series of the same name.  Rothenberg also voiced and motion captured the character of "Stuart Ackerman" in the video game L.A. Noire.
+
+Question: Which film did Johan Heldenbergh cast in that was based on a book of the same name by Diane Ackerman?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor cast in the film."
+    },
+    "film_release_year": {
+      "type": "integer",
+      "description": "The release year of the film."
+    },
+    "film_director": {
+      "type": "string",
+      "description": "The director of the film."
+    },
+    "source_book": {
+      "type": "object",
+      "properties": {
+        "book_title": {
+          "type": "string",
+          "description": "The title of the book the film is based on."
+        },
+        "author_name": {
+          "type": "string",
+          "description": "The author of the book."
+        },
+        "is_same_name_as_film": {
+          "type": "boolean",
+          "description": "Indicates if the book and film share the same title."
+        }
+      },
+      "required": [
+        "book_title",
+        "author_name",
+        "is_same_name_as_film"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "film_title",
+    "actor_name",
+    "film_release_year",
+    "film_director",
+    "source_book"
+  ],
+  "additionalProperties": false
+}

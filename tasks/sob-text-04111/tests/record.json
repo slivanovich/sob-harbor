@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "f1decb839838ff4a8448c673e2e9174f82d959b625e6b61648d672ad2b214326",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae43a0155429970de88d920",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Don Siegelman",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Alabama gubernatorial election, 1998: The Alabama gubernatorial election of 1998 was held on 3 November 1998 to select the governor of the state of Alabama.  The election saw incumbent Fob James (R) taking on Lieutenant Governor Don Siegelman (D).  The result saw Don Siegelman win a decisive victory over Fob James.  As of 2017, this is the most recent election in which a Democrat was elected Governor of Alabama.\n\nLieutenant Governor of Illinois: The Lieutenant Governor of Illinois is the second highest executive of the State of Illinois.  In Illinois, the lieutenant governor and governor run on a joint ticket, and are directly elected by popular vote.  Candidates for lieutenant governor ran separately in the primary from candidates for governor until 2014, when the system was changed to allow the gubernatorial nominee of a party to select the nominee for lieutenant governor.  When the Governor of Illinois becomes unable to discharge the duties of that office, the lieutenant governor becomes acting governor.  If the Governor dies, resigns or is removed from office, the lieutenant governor becomes governor.  Under the Illinois Constitution, the Attorney General is next in line of succession to the Governor's office after the lieutenant governor, but does not succeed to the Lieutenant Governor's office.  From the impeachment of Rod Blagojevich in 2009 until the inauguration of Sheila Simon in 2011, Attorney General Lisa Madigan would have become Governor if Pat Quinn had vacated the office.  Historically, the lieutenant governor has been from either the Democratic Party or Republican Party.  As of January 12, 2015, the lieutenant governor is Evelyn Sanguinetti.\n\nTroy King: Troy Robin King (born August 22, 1968) is the former attorney general of the state of Alabama, United States.  He previously served as an assistant attorney general and a legal adviser to both Republican governors Bob Riley and Fob James.  King was appointed by Governor Bob Riley in 2004, when William Pryor resigned to accept a federal judgeship.  He then defeated Mobile County District Attorney John Tyson, Jr., in the 2006 election by a 54-46% margin.  He sought a second term but was defeated in the Republican primary, securing 40 percent of the vote to the roughly 60 percent by Luther Strange.\n\nDon Siegelman: Donald Eugene \"Don\" Siegelman (born February 24, 1946) is a former American politician and lawyer who has held numerous offices in the state of Alabama.  He served one term as the 51st Governor of Alabama from 1999 to 2003.  Siegelman was the last member of the Democratic Party, as well as the only Roman Catholic, to hold the office of governor.  He is the only person in the history of Alabama to be elected to serve in all four of the top statewide elected offices: Secretary of State, Attorney General, Lieutenant Governor and Governor.  He served in Alabama politics for 26 years.\n\nAlabama gubernatorial election, 1978: The 1978 Alabama gubernatorial election took place on November 7, 1978, to elect the Governor of Alabama.  Incumbent Democratic Governor George Wallace did not run for re-election.  Fob James, a businessman who had switched from the Republican Party to the Democratic Party and campaigned as a \"born-again Democrat\", won the Democratic primary in an upset over Attorney General Bill Baxley.  He went on to defeat Guy Hunt in a landslide in the general election.\n\nDaniel Greene (artist): Daniel E. Greene PSA, NA, AWS (born 1934) is an American artist who works in the media of pastels and oil painting.  The Encyclopædia Britannica considers Mr. Greene the foremost pastelist in the United States.  His paintings and pastels are in over 700 public and private collections in the United States and abroad.  Highly regarded as a portrait artist, his subjects have included leaders of Government, Banking, Education and Industry.  Some of his sitters include First Lady Eleanor Roosevelt, Ayn Rand, Astronaut Walter Schirra, William Randolph Hearst, “Wendy’s” founder Dave Thomas, Commentator Rush Limbaugh, Composer Alan Menken, Bryant Gumbel and Bob Schieffer of CBS TV.  Governmental Portraits include Secretary of Agriculture Ann Veneman, Governor Paul Laxalt of Nevada, Governor Gerald Baliles of Virginia, Governor Benjamin Cayetano of Hawaii, and Governor Fob James of Alabama.  Business sitters include the chairmen of the boards of Honeywell, Coca-Cola Company, Dupont Corporation, Endo Pharmaceuticals, American Express, The New York Stock Exchange and IBM.  Mr. Greene has also painted the Deans, Presidents and Benefactors of Tufts, Duke, Columbia, North Carolina, West Point, Delaware, Penn State, New York, Princeton, Rutgers, Yale and Harvard Universities.\n\nJoseph S. Johnston: Joseph S. Johnston is a circuit judge of the 13th Judicial Circuit in State of Alabama.  Appointed by Governor Fob James in April, 1997, Johnston became the first Republican to hold a circuit or district judgeship in Mobile County.  He was elected without opposition in 1998, 2000 and 2006.\n\nAlabama gubernatorial election, 1982: The Alabama gubernatorial election of 1982 included the last campaign and final electoral victory of George Wallace.  The election occurred on November 2, 1982.  Incumbent Governor Fob James declined to run for a second term, allowing for an open election in 1982.  In the Democratic primary, Wallace received challenges from Lieutenant Governor George McMillan, Speaker of the State House Joe McCorquodale, Jr., former Governor Jim Folsom, and Reuben McKinley.  Because Wallace did not receive a majority of the votes, he advanced to a run-off with McMillan and then narrowly won the Democratic nomination.  Montgomery Mayor Emory Folmar went unchallenged for the Republican nomination.\n\nAlabama gubernatorial election, 1994: The 1994 Alabama gubernatorial election was held on 8 November 1994 to select the governor of the state of Alabama.  The election saw Republican Fob James defeat Democratic incumbent Governor Jim Folsom, Jr. in an upset.\n\nTim James (politician): Tim James (born March 3, 1962) is an American businessman from Alabama.  The son of former Alabama Governor Fob James, he sought and lost the Republican Party nomination for Governor of Alabama twice, finishing third in the Republican primaries in both 2002 and 2010.",
+    "question": "What Alabama governor ran against Fob James in 1998?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "election_year": {
+          "type": "integer",
+          "description": "The year the gubernatorial election took place."
+        },
+        "incumbent_governor": {
+          "type": "string",
+          "description": "The name of the incumbent governor in the election."
+        },
+        "challenger_candidate": {
+          "type": "string",
+          "description": "The name of the candidate who ran against the incumbent governor."
+        },
+        "challenger_party": {
+          "type": "string",
+          "description": "The political party of the challenger candidate."
+        },
+        "challenger_became_governor": {
+          "type": "boolean",
+          "description": "Indicates whether the challenger candidate later served as governor."
+        },
+        "election_winner": {
+          "type": "string",
+          "description": "The name of the candidate who won the election."
+        }
+      },
+      "required": [
+        "election_year",
+        "incumbent_governor",
+        "challenger_candidate",
+        "challenger_party",
+        "challenger_became_governor",
+        "election_winner"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "election_year": 1998,
+      "incumbent_governor": "Fob James",
+      "challenger_candidate": "Don Siegelman",
+      "challenger_party": "Democratic Party",
+      "challenger_became_governor": true,
+      "election_winner": "Don Siegelman"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

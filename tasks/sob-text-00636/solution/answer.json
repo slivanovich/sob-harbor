@@ -1,0 +1,16 @@
+{
+  "basketball_player": {
+    "name": "John Stockton",
+    "position": "point guard",
+    "nba_team": "Utah Jazz",
+    "nba_career_start_year": 1984,
+    "nba_career_end_year": 2003,
+    "is_hall_of_fame_inductee": true,
+    "hall_of_fame_induction_years": [
+      2009,
+      2010
+    ]
+  },
+  "relationship_type": "grandson",
+  "related_person_name": "John Houston \"Hust\" Stockton"
+}

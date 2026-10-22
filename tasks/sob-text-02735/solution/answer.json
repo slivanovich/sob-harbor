@@ -1,0 +1,13 @@
+{
+  "actress_name": "Rosario Dawson",
+  "birth_year": 1979,
+  "film_debut_details": {
+    "film_title": "Kids",
+    "release_year": 1995,
+    "genre": "teen drama"
+  },
+  "film_in_question_details": {
+    "film_title": "Love in the Time of Money",
+    "release_year": 2002
+  }
+}

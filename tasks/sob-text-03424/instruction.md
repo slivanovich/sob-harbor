@@ -1,0 +1,113 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Captain Slaughterboard Drops Anchor: Captain Slaughterboard Drops Anchor is a darkly humorous children's picture book written and illustrated by the British author Mervyn Peake and published by Country Life in 1939.  It was his first published work.  The story concerns the nautical exploits of the titular captain and his rambunctious crew aboard their ship "The Black Tiger".  After some episodic adventures they capture a small humanoid, referred to only as the Yellow Creature, with whom Slaughterboard develops a strange platonic infatuation.  His loyal crew gradually fall prey to misadventure and the book ends with the Captain and the Yellow Creature forsaking piracy for fishing on the creature's pink island.  The book is notable for Peake's poetic style and his fine illustrations of the many fantastical beasts on the island.
+
+Margaret Laurence: Jean Margaret Laurence, CC (née Wemyss) (18 July 1926 – 5 January 1987) was a Canadian novelist and short story writer, and is one of the major figures in Canadian literature.  She was also a founder of the Writers' Trust of Canada, a non-profit literary organization that seeks to encourage Canada's writing community.
+
+Maeve Gilmore: Maeve Patricia Mary Theresa Gilmore (14 June 1917 – 3 August 1983) was a British painter, sculptor and writer, and the wife of author Mervyn Peake.
+
+Colin Manlove: Colin Nicholas Manlove (born 1942) is a literary critic with a particular interest in fantasy.  "Modern Fantasy: Five Studies" (1975, published as by C. N. Manlove), which considers at length works by Charles Kingsley, George MacDonald, C. S. Lewis, J. R. R. Tolkien and Mervyn Peake, was written at a time when "no serious study of the subject [of fantasy literature] has appeared".  In it he posits a definition of fantasy as:
+
+Gormenghast (series): Gormenghast is a fantasy series by British author Mervyn Peake, about the inhabitants of Castle Gormenghast, a sprawling, decaying, gothic-like structure.  Originally conceived as a single on-going novel, the series was ended by Peake's death and comprises three novels, "Titus Groan" (1946), "Gormenghast" (1950), "Titus Alone" (1959) and a novella, "Boy in Darkness" (1956), whose canonical status is debated.  Peake was writing a fourth novel, "Titus Awakes" at the time of his death, which was later completed and released by Peake's widow in 2009.
+
+Gormenghast (castle): Gormenghast is a fictional castle of titanic proportions that features prominently in a series of fantasy works penned by Mervyn Peake.  It is the setting for the first two books in the Gormenghast series, "Titus Groan" and "Gormenghast".  It incorporates many of the elements of both medieval castles and Regency period stately homes, though in practice it operates like a small city-state.  It has its own government, a Byzantine system of laws and rituals, a rigid class system, and is seemingly self-sufficient.  The castle is home to the ancient House of Groan who have, as the Earls of Groan, ruled for centuries without anything changing.
+
+Dora Dueck: Dora Dueck (born 1950) is a Canadian writer.  She is the author of two novels and a collection of short fiction.  Her novel, "This Hidden Thing", was shortlisted for the Margaret Laurence Award for Fiction and won the McNally Robinson Book of the Year Award at the 2011 Manitoba Book Awards.  "What You Get at Home", a collection of short stories, was shortlisted for the Margaret Laurence Award for Fiction and the Carol Shields Winnipeg Award at the 2013 Manitoba Book Awards.  It won the High Plains Book Award for Short Stories.  The Malahat Review, a Canadian literary magazine, awarded its 2014 Novella Prize to her story "Mask".  Her stories and articles have appeared in a variety of journals and on the CBC.
+
+Mervyn Peake: Mervyn Laurence Peake (9 July 1911 – 17 November 1968) was an English writer, artist, poet, and illustrator.  He is best known for what are usually referred to as the "Gormenghast" books.  The three works were part of what Peake conceived as a lengthy cycle, the completion of which was prevented by his death.  They are sometimes compared to the work of his older contemporary J. R. R. Tolkien, but his surreal fiction was influenced by his early love for Charles Dickens and Robert Louis Stevenson rather than Tolkien's studies of mythology and philology.
+
+Boy in Darkness: Boy in Darkness is a novella written by Mervyn Peake.  It was first published in 1956 by Eyre & Spottiswoode as part of the anthology "Sometime, Never: Three Tales of Imagination" (with other stories by William Golding and John Wyndham).  A corrupt version of "Boy in Darkness" was published both in an anthology, "The Inner Landscape" (1969), and separately in 1976 with an introduction by Peake's widow, Maeve Gilmore.  Referring to the corrupt text, she wrote that "although the Boy in "Boy in Darkness" is assuredly Titus Groan, [Peake] did not call him so by name"; however, adding the name Titus was one of the specific changes that Peake made between writing and publishing his novella.  The correct text has recently become available again in an anthology entitled "Boy in Darkness and Other Stories", with a foreword by Joanne Harris and a preface by Peake's son Sebastian, as well as Maeve Gilmore's uncorrected introduction from 1976.
+
+Ernest Cromwell Peake: Ernest Cromwell Peake (18 August 1874 – 24 December 1950) was an English Missionary of the London Missionary Society who worked in China, from 1899 to 1922.  He was the first medical missionary to work in Hengchow (Hengzhou, modern Hengyang), in Hunan Province, China where he set up a clinic and dispensary.  He was also appointed head of the Mackenzie Memorial Hospital in Tianjin, China in 1912.  Peake was known for teaching Chinese locals about medicine, and for being one of the first missionaries to bring modern medical techniques to China.  He was the father of Mervyn Peake, the writer and poet.
+
+Question: Are Mervyn Peake and Margaret Laurence both writers?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "are_both_writers": {
+      "type": "boolean",
+      "description": "Indicates whether both individuals are writers."
+    },
+    "person_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the first person."
+        },
+        "is_writer": {
+          "type": "boolean",
+          "description": "True if the first person is identified as a writer."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the first person."
+        },
+        "other_professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other professions of the first person mentioned in the context."
+        }
+      },
+      "required": [
+        "name",
+        "is_writer",
+        "nationality",
+        "other_professions"
+      ],
+      "additionalProperties": false
+    },
+    "person_2": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the second person."
+        },
+        "is_writer": {
+          "type": "boolean",
+          "description": "True if the second person is identified as a writer."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the second person."
+        },
+        "writer_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specific types of writing the second person is known for."
+        }
+      },
+      "required": [
+        "name",
+        "is_writer",
+        "nationality",
+        "writer_types"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "are_both_writers",
+    "person_1",
+    "person_2"
+  ],
+  "additionalProperties": false
+}

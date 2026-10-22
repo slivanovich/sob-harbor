@@ -1,0 +1,19 @@
+{
+  "band_name": "Midland",
+  "debut_album_title": "On the Rocks",
+  "lead_vocalist": "Mark Wystrach",
+  "band_members": [
+    {
+      "name": "Mark Wystrach",
+      "role": "lead vocals"
+    },
+    {
+      "name": "Cameron Duddy",
+      "role": "bass guitar, background vocals"
+    },
+    {
+      "name": "Jess Carson",
+      "role": "lead guitar, background vocals"
+    }
+  ]
+}

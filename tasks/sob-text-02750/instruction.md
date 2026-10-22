@@ -1,0 +1,82 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+How the García Girls Lost Their Accents: How the García Girls Lost Their Accents is a 1991 novel written by Dominican-American poet, novelist, and essayist Julia Alvarez.  Told in reverse chronological order and narrated from shifting perspectives, the text possesses distinct qualities of a bildungsroman novel.  Spanning more than thirty years in the lives of four sisters, the story begins with their adult lives in the United States and ends with their childhood in the Dominican Republic, from which their family was forced to flee due to the father’s opposition to Rafael Leónidas Trujillo's dictatorship.
+
+Jonathan Crary: Jonathan Crary, is an art critic and essayist, and is Meyer Schapiro Professor of Modern Art and Theory at Columbia University in New York.  His first notable works were "Techniques of the Observer: On Vision and Modernity in the 19th Century" (1990), and "Suspensions of Perception: Attention, Spectacle and Modern Culture" (2000).  He has published critical essays for over 30 Exhibition catalogues, mostly on contemporary art.  His style is often classified as observational mixed with scientific, and a dominant theme in his work is the role of the human eye.
+
+Barry Bergdoll: Barry Bergdoll is Meyer Schapiro Professor of art history in the Department of Art History and Archaeology at Columbia University and curator in the Department of Architecture and Design at the Museum of Modern Art, New York, where from 2007 to 2013 he served as Philip Johnson Chief Curator of Architecture and Design.
+
+Barbara Rose: Barbara Rose (born 1938) is an American art historian and art critic.  She was educated at Smith College, Barnard College and Columbia University, where she studied under Meyer Schapiro.  Through Michael Chapman (cinematographer), Rose was introduced to many New York artists, including Carl Andre and Frank Stella.  In 1961, Rose received a Fulbright to Spain.  Stella joined her in Europe and the two were married in 1961 in London.  They divorced in 1969.
+
+In the Time of the Butterflies: In the Time of the Butterflies is a historical novel by Julia Alvarez, relating an account of the Mirabal sisters during the time of the Trujillo dictatorship in the Dominican Republic.  The book is written in the first and third person, by and about the Mirabal sisters.  First published in 1994, the story was adapted into a feature film in 2001.
+
+Jose Tamez: Jose Tamez is director of development for Salma Hayek's Ventanarosa Productions.  For Disney’s ABC television network, he developed and is executive producing the English-language adaptation of the Colombian television telenovela "Ugly Betty", starring America Ferrara.  He is also producing (with Hayek, Rick Schwartz, and Edward Borges) "La Banda", a Spanish-language romantic comedy, starring Hayek, and written by Issa Lopez.  For Viacom’s Showtime network, he produced the highly acclaimed "The Maldonado Miracle", starring Salma Hayek.  He also produced the television adaptation of Julia Alvarez’ novel, "In the Time of the Butterflies", starring Salma Hayek.  Previously, Tamez was a top executive at Televisa Editorial.
+
+Reuben Tam: Reuben Tam (1916–1991) was an American landscape painter, educator, poet and graphic artist.  He was born in Kapa'a on the Hawaiian island of Kaua'i on Jan. 17, 1916.  He earned a BA degree from the University of Hawaii in 1937, and also studied at the California School of Fine Art, at Columbia University with Meyer Schapiro and at the New School of Social Research in New York City.  From 1946 to the 1970s, he taught at the Brooklyn Museum Art School where his students included Frances Kornbluth and Jean Arcoleo.  He also spent many summers painting on Monhegan Island in Maine.  Upon retirement in the 1970s, Tam returned to Kaua'i and died there on January 3, 1991 of lymphoma.
+
+Meyer Schapiro: Meyer Schapiro (23 September 1904 – 3 March 1996) was a Lithuanian-born American art historian known for forging new art historical methodologies that incorporated an interdisciplinary approach to the study of works of art.  An expert on early Christian, Medieval, and Modern art, Schapiro explored art historical periods and movements with a keen eye towards the social, political, and the material construction of art works.
+
+Language as violence: Language is a mechanism of communication that was constructed for the purpose of providing a shared environment with mutually understood terms and ideas.  Language used by white privileged people saying things like "the African American Community has irrefutable cultural issues that help, in part, foster pervasive antisocial behavior especially in young black men" is actually more dangerous than actual murdering of black people .  Language is both shaped by society and a shaper of society.  The words people use to communicate ideas reflect the ideas people have, but also provide framework for how people think about the world.  In an advertisement campaign by Chipotle called Cultivating Thought, the restaurant printed literary works on their cups and bags.  One of the authors whose work was displayed, Julia Alvarez, included a mini story she wrote about learning English after moving to America from the Dominican Republic.  In the story, she talks about the words she misses in Spanish.  She misses these words because the things she wants to explain cannot be explained in English because English doesn't have the words for those ideas.  One of her quotes found among the series' bags reads, "I miss them, Miami.  All those words I had to leave behind.  Also, words that in English don't carry the same feeling."
+
+Julia Alvarez: Julia Alvarez (born March 27, 1950) is a Dominican-American poet, novelist, and essayist.  She rose to prominence with the novels "How the García Girls Lost Their Accents" (1991), "In the Time of the Butterflies" (1994), and "Yo!"  (1997).  Her publications as a poet include "Homecoming" (1984) and "The Woman I Kept to Myself" (2004), and as an essayist the autobiographical compilation "Something to Declare" (1998).  Many literary critics regard her to be one of the most significant Latina writers and she has achieved critical and commercial success on an international scale.
+
+Question: Who was born first, Julia Alvarez or Meyer Schapiro?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "people_compared": {
+      "type": "array",
+      "description": "List of people whose birth dates are being compared.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person."
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "The birth year of the person."
+          }
+        },
+        "required": [
+          "name",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "person_born_first_name": {
+      "type": "string",
+      "description": "The name of the person who was born first."
+    },
+    "person_born_first_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the person who was born first."
+    },
+    "comparison_statement": {
+      "type": "string",
+      "description": "A statement summarizing the birth date comparison."
+    }
+  },
+  "required": [
+    "people_compared",
+    "person_born_first_name",
+    "person_born_first_birth_year",
+    "comparison_statement"
+  ],
+  "additionalProperties": false
+}

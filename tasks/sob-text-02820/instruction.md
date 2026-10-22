@@ -1,0 +1,90 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Kingsley Amis: Sir Kingsley William Amis, CBE (16 April 1922 – 22 October 1995) was an English novelist, poet, critic, and teacher.  He wrote more than 20 novels, six volumes of poetry, a memoir, various short stories, radio and television scripts, along with works of social and literary criticism.  According to his biographer, Zachary Leader, Amis was "the finest English comic novelist of the second half of the twentieth century."  He is the father of British novelist Martin Amis.
+
+U and I: A True Story: U and I: A True Story is a non-fiction book by Nicholson Baker that was published in 1991.  The book is a study of how a reader engages with an author's work: partly an appreciation of John Updike, and partly a kind of self-exploration.  Rather than giving a traditional literary analysis, Baker begins the book by stating that he will read no more Updike than he already has up to that point.  All of the Updike quotations used are presented as coming from memory alone, and many are inaccurate, with correct versions and Baker's (later) commentary on the inaccuracy given in brackets.
+
+Lucky Jim: Lucky Jim is a novel by Kingsley Amis, published in 1954 by Victor Gollancz.  It was Amis' first novel and won the 1955 Somerset Maugham Award for fiction.  The novel follows the exploits of the eponymous James (Jim) Dixon, a reluctant lecturer at an unnamed provincial English university.
+
+Too Far to Go: Too Far to Go is a collection of short stories by the American author John Updike published in 1979 in conjunction with the showing of a two-hour television movie on the NBC network with Blythe Danner, Michael Moriarty, Kathryn Walker and Glenn Close.  The linked stories focus upon the marriage and eventual divorce of Richard and Joan Maple and depict a 1960s New York City and New England milieu through the 1970s typical of much of Updike's fiction.  Many of the stories were initially published as occasional stories in "The New Yorker" from the mid-1950s to the mid-1970s.  The story "Your Lover Just Called" was later adapted into a playlet by Updike himself.  It is included in his collection "More Matter" (1999).  Most of these stories were also included in Updike's 2003 collection "", except those published after 1975; namely, "Waiting Up", "The Red-Herring Theory", "Divorcing: A Fragment", and "Here Come the Maples".  In August 2009, Everyman's Library published "The Maples Stories", a new edition of "Too Far to Go", including the final Maples story "Grandparenting".
+
+The James Bond Dossier: The James Bond Dossier (1965), by Kingsley Amis, is a critical analysis of the James Bond novels.  Amis dedicated the book to friend and background collaborator, the poet and historian Robert Conquest.  Later, after Ian Fleming's death, Amis was commissioned as the first continuation novelist for the James Bond novel series, writing "Colonel Sun" (1968) under the pseudonym Robert Markham.  "The James Bond Dossier" was the first, formal, literary study of the James Bond character.  More recent studies of Fleming's secret agent and his world include "The Politics of James Bond: From Fleming’s Novels to the Big Screen" (2001), by the historian Jeremy Black.
+
+Zachary Leader: Zachary Leader (born 1946) is a professor of English Literature at the University of Roehampton.  He was an undergraduate at Northwestern University, and later pursued graduate study at Trinity College, Cambridge and at Harvard University.  Though born in the U.S. and remaining an American citizen, Leader has lived and worked for over forty years in the UK.  His best-known works are probably "The Letters of Kingsley Amis", which he edited and published in 2001, and "The Life of Kingsley Amis" (2006, UK; 2007, US), a finalist for the 2008 Pulitzer Prize in Biography.  The first volume of his two-volume biography of Saul Bellow, "The Life of Saul Bellow: To Fame and Fortune, 1915-1964", was published in May 2015 by Alfred Knopf in the US and Jonathan Cape in the UK.  "On Life-Writing", an edited collection, will be published in September by OUP.  He is General Editor of the Oxford History of Life-Writing, a seven-volume series published by OUP.  A recipient of Guggenheim, Leverhulme and British Academy Fellowships, he is also a Fellow of the Royal Society of Literature.
+
+The Early Stories: 1953–1975: The Early Stories: 1953–1975, published in 2003 by Knopf, is a John Updike book collecting much of his short stories written from the beginning of his writing career, when he was just 21, until 1975.  Only four stories published in this entire time period have been omitted from this collection by John Updike himself: "Intercession" (collected in "The Same Door"), and "The Pro", "One of My Generation", and "God Speaks" (collected in "Museums and Women and Other Stories").  The majority of the stories were originally published in "The New Yorker" magazine.  In 2004, the book received the PEN/Faulkner Award for Fiction.
+
+The Letters of Kingsley Amis: The Letters of Kingsley Amis (2001) was assembled and edited by the American literary critic Zachary Leader.  It is a collection of more than 800 letters from Amis to many different friends and professional acquaintances from 1941 until shortly before his death in 1995.  About one quarter of the letters selected were addressed to Amis's close friend, the poet Philip Larkin.
+
+John Updike: John Hoyer Updike (March 18, 1932 – January 27, 2009) was an American novelist, poet, short story writer, art critic, and literary critic.  One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.
+
+Olinger Stories: Olinger Stories: A selection is a short story collection by John Updike first published in 1964.  This volume contained no stories newly published in book form, but reprinted stories from Updike's earlier collections.  The short stories, set in the fictional town of Olinger, Pennsylvania are in large part autobiographical, about a boy growing up in a small town in Pennsylvania as Updike did.  In an early interview, Updike once said, "they are dear to me, and if I had to give anyone one book of me it would be the Vintage OLINGER STORIES."
+
+Question: John Updike and Kingsley Amis, have which mutual occupations?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "author_one": {
+      "type": "object",
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "description": "The full name of the first author."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the first author."
+        }
+      },
+      "required": [
+        "full_name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "author_two": {
+      "type": "object",
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "description": "The full name of the second author."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the second author."
+        }
+      },
+      "required": [
+        "full_name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "mutual_occupations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of occupations shared by both authors."
+    }
+  },
+  "required": [
+    "author_one",
+    "author_two",
+    "mutual_occupations"
+  ],
+  "additionalProperties": false
+}

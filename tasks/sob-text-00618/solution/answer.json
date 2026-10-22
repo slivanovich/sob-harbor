@@ -1,0 +1,14 @@
+{
+  "hotel_details": {
+    "current_name": "Westgate Las Vegas Resort & Casino",
+    "name_at_event": "Las Vegas Hilton",
+    "total_rooms": 2956,
+    "number_of_suites": 305
+  },
+  "event_details": {
+    "event_type": "Pay-Per-View concert",
+    "performer_name": "Wayne Newton",
+    "event_date": "1989-05-23"
+  },
+  "answer": 2956
+}

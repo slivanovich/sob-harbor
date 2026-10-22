@@ -1,0 +1,14 @@
+{
+  "band_comparison": {
+    "band_a": {
+      "name": "Bodyjar",
+      "album_count": 7
+    },
+    "band_b": {
+      "name": "The Stranglers",
+      "album_count": 17
+    }
+  },
+  "band_with_more_albums": "The Stranglers",
+  "album_difference": 10
+}

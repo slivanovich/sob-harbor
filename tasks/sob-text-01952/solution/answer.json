@@ -1,0 +1,16 @@
+{
+  "novel": {
+    "title": "Empress Bianca",
+    "is_first_novel_by_author": true
+  },
+  "author": {
+    "name": "Lady Colin Campbell",
+    "birth_date": "17 August 1949",
+    "birth_year": 1949,
+    "origin_countries": [
+      "Jamaica",
+      "United Kingdom"
+    ]
+  },
+  "answer_detail": "17 August 1949"
+}

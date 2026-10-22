@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Édouard Roger-Vasselin: Édouard Roger-Vasselin (] ; born 28 November 1983) is a male tennis player from France.  He won the men's doubles title at Roland Garros in 2014, partnering Julien Benneteau.  He is the son of 1983 French Open semifinalist Christophe Roger-Vasselin.
+
+Stade Roland Garros: Stade Roland Garros ("Roland Garros Stadium", ] ) is a tennis venue located in Paris, France, that hosts the French Open—also known as Roland Garros, particularly within Europe—a Grand Slam championship tournament played annually around the end of May and the beginning of June.  It is named for Roland Garros, a pioneer aviator who completed the first solo flight across the Mediterranean Sea, engineer (inventor of the first forward-firing aircraft machine gun), and World War I hero (the first pilot to shoot down five enemy aircraft and to be called an "ace" for doing so).  Garros was killed in aerial combat in 1918.  The facility was constructed in 1928 to host France's first defense of the Davis Cup.
+
+Williams sisters: The Williams sisters are two professional American tennis players: Venus Williams (b. 1980), a seven-time Grand Slam title winner (singles), and Serena Williams (b. 1981), twenty-three-time Grand Slam title winner (singles), both of whom were coached from an early age by their parents Richard Williams and Oracene Price.  There is a noted professional rivalry between them – between the 2001 US Open and the 2017 Australian Open tournaments, they met in nine Grand Slam singles finals.  They became the first two players, female or male, to play in 4 consecutive grand slam singles finals from the 2002 French Open to the 2003 Australian Open; Serena famously won all 4 to complete the first of two "Serena Slams".  Between 2000 and 2016, a 17-year span, they collectively won 12 Wimbledon singles titles (Venus won 5 and Serena won 7).  By winning the 2001 Australian Open women's doubles title, they became the 5th pair to complete the Career Doubles Grand Slam and the only pair to complete the Career Doubles Golden Slam.  At the time, Venus and Serena were only 20 and 19 years old, respectively.  Since then they have gone on to add another two Olympic gold medals in the 2008 Beijing Olympics and the 2012 London Olympics.  Nearly a decade later, the duo would go on to win 4 consecutive grand slam doubles titles from 2009 Wimbledon through 2010 Roland Garros, which would catapult them to co-No.  1 doubles players on 7 June 2010.  Two weeks later, on 21 June 2010, Serena would hold the No. 1 singles ranking and Venus would be right behind her at No. 2 in singles.  Their most recent grand slam doubles titles came at the 2012 Wimbledon & 2016 Wimbledon events.  They remain very close, often watching each other's matches in support, even after one of them has been knocked out of a tournament.
+
+Amélie Mauresmo: Amélie Simone Mauresmo ] (born 5 July 1979) is a French former professional tennis player, and a former world No. 1.  Mauresmo won two Grand Slam singles titles at the Australian Open and at Wimbledon, and also won a Silver Medal at the 2004 Summer Olympics.
+
+Marcello del Bello: Marcello del Bello (born 25 January 1921) is a former Italian tennis player.  He played Davis Cup and often played doubles with Giovanni Cucelli.  Del Bello and his younger brother Rolando were introduced to the game at a young age, as their father worked at a tennis club.  Both became tour players.  Marcello made his Grand Slam debut at Wimbledon in 1947, losing in round one to Enrique Morea.  At Roland Garros (held after Wimbledon for the last time), Del Bello lost in round three to Philippe Washer.  At Roland Garros in 1948, Del Bello reached the quarter finals, where he lost to Budge Patty.  At Wimbledon he lost to Frank Sedgman in round two.  At Wimbledon 1949, Del Bello lost in round three to Nigel Cockburn.  At the U. S. Championships, he lost in round two to James Brink.  At Roland Garros in 1950, Del Bello lost in round three to Ken McGregor.  By 1951 Del Bello's career was beginning to decline and he lost in round one of the French and Wimbledon.  The following year he lost in round two at the French and Wimbledon.  At Roland Garros in 1953, Del Bello lost in round one to Ian Ayre.  In 1955, Del Bello turned professional.
+
+Antoine Gentien: Antoine Gentien (1905–1968) was a French tennis player.  He was the son of Antoinette Gillou and the nephew of Kate Gillou.  Katie was four times French (closed) singles champion.  Antoine was friends with Suzanne Lenglen.  He had a long career lasting from 1921 to 1951.  He won several tournaments in France, but at the French Championships his best result was reaching the quarter finals in 1927.  He made his Wimbledon debut in 1923 and lost in round one.  He made his debut at French Open in 1925 and lost in round two.  He lost in round one at the French in 1926.  In 1927 Gentien had one of the best wins of his career when he beat Jean Borotra at the French championships, making the Bounding Basque run all over the court and lobbing Borotra if he came to the net.  Gentien lost in the quarter finals to Pat Spence.  Gentien lost in round two of Wimbledon.  At the first French Open held at Roland Garros in 1928, Gentien lost in the last 16 to Jack Crawford.  He lost in round one of Wimbledon.  He lost early at Roland Garros and Wimbledon in 1929 and Roland Garros in 1930.  He lost in round three of Roland Garros in 1931 and reached round three of Wimbledon, where Fred Perry beat him.  Perry beat him in an early round at Roland Garros in 1932 and Sidney Wood beat him in round three at Wimbledon.  In 1933, Gentien reached round three at Roland Garros (losing to Daniel Prenn) and Wimbledon (losing to Crawford).  At Roland Garros 1934 Gentien lost in round three to Harry Hopman and at Wimbledon lost in round two to Roderich Menzel.  At Roland Garros in 1935, Gentien lost in round two to Adrian Quist.  At Wimbledon he lost in round three to Enrique Maier.  Gentien lost in round one of Roland Garros in 1936, but in 1937 reached the last 16 (losing to Christian Boussus).  He continued playing at the French championships until 1950.  Gentien had one of the longest spans ever in the French Open men's singles (Bernard Destremau had a 29 year span between 1934 and 1963).
+
+Fausto Gardini: Fausto Gardini (8 March 1930 – 17 September 2008) was an Italian tennis player.  He was an Italian Davis Cup player and later captain.  Gardini had long arms and legs, was renowned for keeping the ball in play and was very determined.  "I could not help but admire Gardini because he always tried" said Ken Rosewall.  This is how William McHale described Gardini "A stringy, expressive, cavorting clown, Gardini uses the crowd as his personal cheering section".  Gardini made his Grand Slam debut at Roland Garros in 1949, where he lost in round three to Eric Sturgess.  At Roland Garros in 1951, Gardini lost in the last 16 to Dick Savitt.  At Wimbledon Gardini beat Gardnar Mulloy before losing to Frank Sedgman in the last 16.  At Roland Garros in 1952, Gardini beat 17 year old Ken Rosewall and Tony Mottram before losing to Jaroslav Drobny in the last 16.  At Wimbledon he lost to Straight Clark in round three.  At the 1953 Australian championships, Gardini lost in round two to Ian Ayre.  At Roland Garros, Gardini reached the quarter finals before losing to Drobny.  At Wimbledon he lost in round one to Istvan Sikorski.  The highlight of Gardini's career was when he won the title at Rome in 1955, beating Herbert Flam, Enrique Morea and Giuseppe Merlo.  The final was a dramatic match.  Merlo led by 2 sets to 1 and had two championship points in the fourth set, but suffered from cramps and was forced to retire at 6-6 in the fourth set.  After that, Gardini played less and concentrated on running his family's bakery business.  By the early 1960s he was playing mainly in Italian tournaments and Davis Cup.
+
+Giovanni Cucelli: Giovanni Cucelli (1916–1977) was an Italian tennis player.  He played Davis Cup for Italy and formed a great doubles partnership with Marcello Del Bello.  Because of World War 2, Cucelli was 30 by the time he made his Grand Slam debut at Wimbledon in 1947, where he lost in the third round to Jack Kramer.  At Roland Garros (held just after Wimbledon) Cucelli beat veteran Jack Crawford and Robert Abdesselam before losing to defending champion Marcel Bernard in five sets in the quarter finals.  At Roland Garros in 1948, Cucelli beat a young Frank Sedgman before losing to Frank Parker in the quarter finals.  At Wimbledon Cucelli beat Jaroslav Drobny before losing to Tony Mottram in round three.  At Roland Garros in 1949, Cucelli reached his third consecutive quarter final, where he lost to Budge Patty.  At Wimbledon he beat Mottram before losing to Eric Sturgess in the last 16.  At 1949 U. S. championships, Cucelli lost in round two to Sam Match.  Cucelli lost in the last 16 of Roland Garros in 1950 to Patty.  After early exits at the French and Wimbledon in 1951, Cucelli reached the last 16 at Roland Garros in 1952, where he lost to Ken McGregor.  He lost early at Wimbledon to Mottram.  Cucelli lost his first match at Roland Garros in 1953 to Rex Hartwig.  In 1955 Cucelli turned professional.  Cucelli won a lot of tournaments during his career: Italian Riviera championships and Alassio in 1939, Napoli and Barcelona Christmas tournament in 1941, St. Moritz, French-Switzerland championships and Milan international in 1946, Swiss championships, Villars, Montana-Vermala, Viareggio and Rapallo in 1947, Milan international, Napoli, Rapallo, Montecatini and Barcelona Christmas tournament in 1948, San Remo in 1949, Lugano, Istanbul, Venice and Lugano Lido tournament in 1950, San Pellegrino and Viareggio in 1951 and Cava De Tirreni in 1952.  He was runner up at Monte Carlo in 1948 to Jozsef Asboth and 1949 to Parker and runner up at Rome in 1951 (where he beat Patty before losing to Drobny).
+
+Gerard Pilet: Gerard Pilet (1933–2011) was a French tennis player.  He played Davis Cup for France and had a long career lasting from 1950 to 1970.  He made his debut at Roland Garros in 1951 and lost in round two to Gil de Kermadec.  He lost early in 1952 and 1953.  In 1953, Pilet made his debut at Wimbledon and lost in round one to Felicisimo Ampon.  Pilet lost early at Roland Garros in 1955, 1957, 1958 and 1959.  In 1960 he lost in the last 16 to Nicola Pietrangeli.  In 1961 Pietrangeli beat him in the quarter finals.  At Wimbledon 1961 Pilet lost in round one.  Pilet lost in round three of Roland Garros in 1962, round two of Wimbledon and round two of U. S. championships.  He lost early at Roland Garros in 1964, 1965 and 1966.  As the open era arrived, Pilet's career was drawing to a close.  He lost in round two of 1968 French Open to Thomas Koch.
+
+Roland Garros Airport: Roland Garros Airport (French: "Aéroport de la Réunion Roland Garros" ) (IATA: RUN, ICAO: FMEE) , formerly known as Gillot Airport, is located in Sainte-Marie on Réunion.  The airport is 7 km east of Saint-Denis; it is named after the French aviator Roland Garros who was born in Saint-Denis.
+
+Question: In between Amélie Mauresmo and Édouard Roger-Vasselin who won the men's doubles title at Roland Garros in 2014?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "winner_name": {
+      "type": "string",
+      "description": "The name of the tennis player who won the title."
+    },
+    "grand_slam_event": {
+      "type": "string",
+      "description": "The name of the Grand Slam tournament."
+    },
+    "year": {
+      "type": "integer",
+      "description": "The year the title was won."
+    },
+    "event_type": {
+      "type": "string",
+      "description": "The specific event type (e.g., men's doubles, singles)."
+    },
+    "partner_name": {
+      "type": "string",
+      "description": "The name of the partner, if the event was doubles."
+    }
+  },
+  "required": [
+    "winner_name",
+    "grand_slam_event",
+    "year",
+    "event_type",
+    "partner_name"
+  ],
+  "additionalProperties": false
+}

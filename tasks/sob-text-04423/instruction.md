@@ -1,0 +1,71 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Tampa Bay Rays: The Tampa Bay Rays are an American professional baseball team based in St. Petersburg, Florida, part of the Tampa Bay Area.  They compete in Major League Baseball (MLB) as a member of the American League (AL) East division.  Since its inception, the team's home venue has been Tropicana Field.
+
+1978 American League East tie-breaker game: The 1978 American League East tie-breaker game was a one-game extension to Major League Baseball's (MLB) 1978 regular season, played between the rival New York Yankees and Boston Red Sox to determine the winner of the American League's (AL) East Division.  The game was played at Fenway Park in Boston, on October 2, 1978.  The tie-breaker was necessitated after the Yankees and Red Sox finished the season tied for first place in the AL East with identical 99–63 records.  The Red Sox were the home team by virtue of a coin toss.  In baseball statistics, the tie-breaker counted as the 163rd regular season game for both teams, with all events in the game added to regular season statistics.
+
+2012 Tampa Bay Rays season: The Tampa Bay Rays 2012 season was the team's 15th season of baseball, and the fifth as the "Rays" (all at Tropicana Field).  The Rays hoped to improve on their 91–71 record from 2011 and make the postseason for a franchise record third straight season.  They finished the season 90–72, third place in the AL East, and third place in the AL Wild Card, missing the postseason for the first time since 2009.
+
+Luis Antonio Rodríguez: Luis Antonio Rodríguez (born March 4, 1985) is an Argentine football defender, currently playing for Swedish club Hammarby.  Rodriguez played for Swedish side Djurgårdens IF during the 2010 fall, however the contract was not extended after the 2010 season.
+
+Detroit Tigers: The Detroit Tigers are an American professional baseball team based in Detroit, Michigan.  The Tigers compete in Major League Baseball (MLB) as a member club of the American League (AL) Central division.  One of the AL's eight charter franchises, the club was founded in Detroit in 1901 .  They are the oldest continuous one-name, one-city franchise in the AL The Tigers have won four World Series championships (, , , and ), 11 AL pennants (1907, 1908, 1909, 1934, 1935, 1940, 1945, 1968, 1984, 2006, 2012), and four AL Central division championships (2011, 2012, 2013, and 2014).  The Tigers also won division titles in 1972, 1984 and 1987 while members of the AL East.  The team currently plays its home games at Comerica Park in Downtown Detroit.
+
+Sean Rodriguez: Sean John Rodriguez (born April 26, 1985) is an American professional baseball utility player for the Pittsburgh Pirates of Major League Baseball (MLB).  He previously played for the Los Angeles Angels of Anaheim, Tampa Bay Rays, and Atlanta Braves.  While primarily a second baseman, Rodriguez has started at every position in his MLB career except for catcher and pitcher.
+
+2004 American League Championship Series: The 2004 American League Championship Series was the Major League Baseball playoff series to decide the American League champion for the 2004 season.  A rematch of the 2003 American League Championship Series, it was played between the Boston Red Sox and New York Yankees, at Fenway Park and the original Yankee Stadium, from October 12 to 20, 2004.  The Red Sox became the first (and so far only) team in MLB history to come back from a 0–3 deficit to win a seven-game series.  The Red Sox, who had won the AL wild card, defeated the Anaheim Angels in the American League Division Series to reach the ALCS, while the Yankees, who had won the AL East with the best record in the AL, defeated the Minnesota Twins.
+
+2005 Tampa Bay Devil Rays season: The 2005 Tampa Bay Devil Rays season was the team's eighth since the franchise was created.  This season, they finished last in the AL East division, and managed to finish the season with the AL's third-worst record of 67-95.  Their manager was Lou Piniella who entered his 3rd and last season with the Devil Rays.
+
+2016 New York Yankees season: The 2016 New York Yankees season was the 114th season in New York City for the Yankees, and the 116th season overall for the franchise.  Throughout the season, the Yankees wore a #8 patch on their left sleeve in memory of Hall of Famer Yogi Berra.  It was the final season for Alex Rodriguez and Mark Teixeira.  For the third time in four years, the Yankees failed to make the playoffs, finishing in 4th place in the AL East with a 84-78 record.  The 2016 season was notable in that it marked the first time since 1989 that the Yankees were sellers at the trade deadline, dealing away valuable pieces to gain minor league prospects for the future.  Rookie catcher Gary Sanchez made headlines by hitting 20 home runs in his first 53 games, representing the Yankees youth movement known as the "Baby Bombers".
+
+2017 Baltimore Orioles season: The 2017 Baltimore Orioles season was the 117th season in franchise history, the 64th in Baltimore, and the 26th at Oriole Park at Camden Yards.  They were attempting to match or improve on their 2016 record of 89–73, when they finished tied for 2nd place in the AL East and lost to the Toronto Blue Jays in the Wild Card Game, but failed with their 74th loss on September 12.  They were eliminated from AL East contention with their September 18 loss to the Boston Red Sox, 13 ⁄ behind the division leading Red Sox.  They were entirely eliminated from post season contentions on September 23, 7 ⁄ behind the Minnestoa Twins for the 2nd AL Wild Card spot.  With their 82nd loss, also on September 23, they ensured a sub-.500 record for the first time under manager Buck Showalter.  They finished the season 75–87 () , their worst finish since 2012.
+
+Question: Sean Rodriguez played for which team that is a part of the AL East?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The full name of the baseball player."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The name of the team that the player previously played for and is a member of the specified division."
+    },
+    "division": {
+      "type": "string",
+      "description": "The division the team belongs to."
+    },
+    "player_role": {
+      "type": "string",
+      "description": "The primary role or position of the player."
+    },
+    "previous_teams": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of all previous teams the player played for."
+    }
+  },
+  "required": [
+    "player_name",
+    "team_name",
+    "division",
+    "previous_teams"
+  ],
+  "additionalProperties": false
+}

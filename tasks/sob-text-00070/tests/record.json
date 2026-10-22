@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "record_id": "11f5f80020d71ca12555e9040b6c92f3b9b2e1be12d290809a57594b7b618040",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac02be6554299294b218f36",
+    "source_dataset": "hotpotqa",
+    "source_answer": "People's Republic of China",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Binzhou: Binzhou, formerly Putai, is a prefecture-level city in northern Shandong Province in the People's Republic of China.  The city proper sits on the northern bank of the Yellow River, while its administrative area straddles both sides of its lower course before its present delta.\n\nXinzhou: Xinzhou () is a prefecture-level city occupying the north-central section of Shanxi province, People's Republic of China.",
+    "question": "What do Xinzhou and Binzhou have in common?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "cities_compared": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Names of the cities being compared."
+        },
+        "common_features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "feature_type": {
+                "type": "string",
+                "description": "The category of the common feature (e.g., 'country', 'administrative_level')."
+              },
+              "feature_value": {
+                "type": "string",
+                "description": "The specific value that is common between the cities."
+              }
+            },
+            "required": [
+              "feature_type",
+              "feature_value"
+            ],
+            "additionalProperties": false
+          },
+          "description": "A list of common attributes shared by the cities."
+        },
+        "number_of_common_features": {
+          "type": "integer",
+          "description": "The total count of common features identified."
+        }
+      },
+      "required": [
+        "cities_compared",
+        "common_features",
+        "number_of_common_features"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "cities_compared": [
+        "Xinzhou",
+        "Binzhou"
+      ],
+      "common_features": [
+        {
+          "feature_type": "country",
+          "feature_value": "People's Republic of China"
+        },
+        {
+          "feature_type": "administrative_level",
+          "feature_value": "prefecture-level city"
+        }
+      ],
+      "number_of_common_features": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "person_name": "Gary Sinise",
+  "awards_received": [
+    "Emmy Award",
+    "Golden Globe Award"
+  ],
+  "movie_details": {
+    "movie_title": "Truman",
+    "role_played": "Harry S. Truman"
+  }
+}

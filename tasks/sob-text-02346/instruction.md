@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Squatter (game): Squatter is a board game that was launched at the Royal Melbourne Show in 1962, invented by Robert Crofton Lloyd.  With more than 500,000 games sold in Australia alone, it became the most successful board game ever developed in Australia.  Superficially, Squatter has the appearance of a "Monopoly"-type game.  However, unlike Monopoly, all players remain in the game until the end.  Players each start the game with their own sheep station and aim to be the first player to improve and irrigate their pastures and then fully stock their sheep station.  Players run their sheep station as a business venture, to earn enough money to pay for the seasonal running expenses and to finance the improvements that are required to win the game.  The Squatter game presents players with a mixture of strategy and luck that reflects the many challenges facing any form of livestock raising.  These challenges include droughts, floods and bushfires, as well as disease, variable livestock prices, and luck.  In 1999, a version became available on PC CD-ROM.  However the PC version was not commercially successful and is no longer available.
+
+Francis Tresham (game designer): Francis Tresham is a United Kingdom-based board game designer who has been producing board games since the early 1970s.  Tresham founded and ran games company Hartland Trefoil (founded 1971), a company well known for its "Civilization" board game, until its sale to MicroProse in 1997.  His "1829" game was the first of the "18xx" board game series and some of his board games have inspired Sid Meier computer games such as "Railroad Tycoon".
+
+Daldøs: Daldøs [dal'dø<nowiki>s</nowiki>] is a running-fight board game only known from a few coastal locations in Scandinavia, where its history can be traced back to around 1800.  The game is notable for its unusual four-sided dice (stick or long dice).  In Denmark it is known as daldøs in Northern and Western Jutland (Mors, Thisted and Fanø), and possibly as daldos on Bornholm.  In Norway it is known under the name of daldøsa from Jæren, where, unlike in Denmark, a continuous tradition of the daldøs game exists.  A rather similar game called sáhkku, using virtually identical dice, is known in a number of variants from the Sea Sami in Northern Norway, Finland and Russia.  Otherwise, the closest relatives of this game appear to be the tâb games from Northern Africa and South-western Asia, possibly apart from one unlabelled diagram in a codex from Southern England.
+
+Awithlaknannai Mosona: Awithlaknannai Mosona is a two-player strategy board game from the Zuni Native American Indian tribe of New Mexico, United States.  It is unknown how old the game is.  The game was described by Stewart Culin in his book "Games of the North American Indians Volume 2: Games of Skill" (1907).  In this book, it was named Awithlaknan Mosona.  Awithlaknannai Mosona resembles another Zuni board game called Kolowis Awithlaknannai (Fighting Serpents) with few minor differences.  The former having a smaller board, and depending upon the variant, it also has less lines joining the intersection points.  The rules are the same.  Awithlaknannai Mosona belongs to the draughts and Alquerque family of games as pieces hop over one another when capturing.  It is actually more related to Alquerque, since the board is made up of intersection points and lines connecting them.  It is thought that the Spanish had brought Alquerque to the American Southwest, and Awithlaknannai Mosona may have been an evolution from Alquerque.  However, in Stewart Culin's 1907 book, the Zunis claim that they had adopted a hunt game from Mexico similar to Catch the Hare and the Fox games of Europe, and transformed it into Awithlaknannai Mosona.  In these games, one player has more pieces over the other, however, the other player's piece has more powers.  The Zuni's equalized the numbers of pieces and their powers, and also may have transformed the board making its length far exceed its width.  Diagonal lines also replaced orthogonal lines altogether.  However, the hunt game from Mexico may have used an Alquerque board even though the game mechanics of their new game, Awithlaknannai Mosona, were completely different.
+
+Time's Up! (game): Time's Up is a charades-based party game designed by Peter Sarrett, and published by R&R Games, Inc., a Tampa, FL based manufacturer of tabletop games and party games.  The first edition of the game was published in 1999, with the most recent edition, "Times' Up!  Deluxe", published in 2008.  It is a game for teams of two or more players, and is played in three rounds.  "Time's Up!"  is based on the classic parlour game known as Celebrity.
+
+Castle Ravenloft Board Game: Castle Ravenloft Board Game is a 2010 board game published by Wizards of the Coast.  It was the first game released in the Dungeons & Dragons Adventure System board game series.
+
+Pasang (game): Pasang is a two-player abstract strategy board game from Brunei.  The game is often referred to as Pasang Emas which is actually a software implementation of the traditional board game.  The object of this game is to acquire the most points by capturing black and white tokens on the board.  Black tokens are worth 1 point, and white tokens are worth 2 points.  The board is initially laid out with all 120 black and white tokens in one of over 30 traditional patterns.  Players choose a piece called a "ka" which is used to capture the tokens on the board.  Each player's "ka" moves around the board capturing as many tokens as possible.  As a note, the "kas" are the only mobile pieces in the game.  The other pieces are stationary, and are captured by the "kas".  Players must capture token(s) during their turn, or lose the game.  When all tokens have been captured from the board, the player with the most points is the winner.  However, if there are any tokens left on the board, and none can be captured on a player's turn, then that player loses the game, and the other player is the winner.
+
+Tâb: Tâb is the Egyptian name of a running-fight board game played in several Muslim (mostly Arab) countries, and a family of similar board games played in North Africa (as "sîg") and Western Asia, from Iran to West Africa and from Turkey to Somalia, where a variant called "deleb" is played.  The rules and boards can vary widely across the region though almost all consist of boards with three or four rows.  A reference to "at-tâb wa-d-dukk" (likely a similar game) occurs in a poem of 1310 CE.
+
+Komikan: Komikan (from the Mapuche kom ikan "to eat all") is a two-player abstract strategy board game of the Mapuches (known by the Spaniards as the Araucanians) from Chile and Argentina.  The same game is also played by the Incas under the name Taptana, Komina, Comina, Cumi, Puma, or Inca Chess.  In modern Quechua, the language of the ethnolinguistic group that are the descendants of the Incas, Taptana means "chess".  It is known by the Aymaras, a neighboring ethnolinguistic group to the Quechuan people, as kumisiña.  Throughout South America the game is known as El león y las ovejas which literally means "the lion and the sheep".  The lion is actually a puma as there are no lions native to the Americas.  The Mapuches also call it El Leoncito.  J. I. Molina, in 1787, described it as ‘"el artificioso juego del ajedrez, al cual dan el nombre de comican"’ which translates to ""the ingenious game of chess to which they (the Mapuche) give the name comican"".  Komikan may actually be the same game as Adugo (Jaguar and Dogs) as played by the Bororó people of Brazil.  in 1898, Stewart Culin, the famed anthropologist, named a game played in Peru as Solitario.  The same name was also used by the game historian, Murray, in 1952.  The game may also be known in Peru as Kukuli.  Komikan is a hunt game, and specifically a tiger hunt game (or tiger game) since it uses an expanded Alquerque board.  Like all hunt games, there are two unequal forces at play.  In Komikan, one player has only a single piece, usually called a "puma" or "jaguar", or ""kom ikelu"" (in Mapuche language "the one which eats all"), or "leon" (Spanish for lion), which can move one space at a time or capture the other player's pieces by hopping over them.  The other player has twelve pieces (usually called a "sheep" or "goat" or "dogs"), or perros or perritos which is Spanish for "dogs" and "little dogs" respectively, that can only move one space at a time, but not capture, and attempts only to surround and immobilize the puma or jaguar.  Pieces must move and/or capture following the pattern on the board.  The expanded Alquerque board consist of an Alquerque board and a triangular patterned board attached on one of its side.
+
+Sher-bakar: Sher-bakar is a two-player abstract strategy board game from Punjab, India.  It is a hunt game.  It uses an Alquerque board, and therefore, Sher-bakar is specifically a tiger hunt game (or tiger game).  There are two tigers attempting to elude and capture as many of the other player's pieces which in other hunt games in this part of the world is often referred to as a goat, cows, lamb, or men.  An interesting and uncommon feature in this game is that the goats, cows, lamb, or men are piled up on four points of the board at the beginning of the game.  Piling up pieces is an unusual feature in hunt games or any board game in general.  The only other hunt game that uses this feature is Bagh bandi, a game closely related to Sher-bakar.  Hereinforth, the white pieces will be referred to as goats.
+
+Question: While Tâb is a board game, what type of game is Time's Up!?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "game_name": {
+      "type": "string",
+      "description": "The name of the game."
+    },
+    "game_category": {
+      "type": "string",
+      "description": "The broad category or type of the game."
+    },
+    "game_mechanic": {
+      "type": "string",
+      "description": "The core mechanic or style of play for the game."
+    },
+    "designer_name": {
+      "type": "string",
+      "description": "The name of the game's designer."
+    }
+  },
+  "required": [
+    "game_name",
+    "game_category",
+    "game_mechanic",
+    "designer_name"
+  ],
+  "additionalProperties": false
+}

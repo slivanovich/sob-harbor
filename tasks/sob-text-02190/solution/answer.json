@@ -1,0 +1,19 @@
+{
+  "person_with_more_non_music_careers": "Bruce Dickinson",
+  "comparison_details": {
+    "bruce_dickinson": {
+      "non_music_career_count": 4,
+      "non_music_careers": [
+        "airline pilot",
+        "entrepreneur",
+        "author",
+        "broadcaster"
+      ]
+    },
+    "robert_pollard": {
+      "non_music_career_count": 0,
+      "non_music_careers": []
+    }
+  },
+  "total_people_compared": 2
+}

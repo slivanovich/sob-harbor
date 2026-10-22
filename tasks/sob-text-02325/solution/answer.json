@@ -1,0 +1,16 @@
+{
+  "village_name": "Ancaster",
+  "county": "Lincolnshire",
+  "district": "South Kesteven",
+  "census_details": {
+    "year": 2011,
+    "population": 1647
+  },
+  "connecting_road_information": {
+    "road_name": "High Dyke",
+    "connected_places": [
+      "Ancaster",
+      "Colsterworth"
+    ]
+  }
+}

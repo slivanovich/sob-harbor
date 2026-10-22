@@ -1,0 +1,14 @@
+{
+  "nationality": "American",
+  "publications": [
+    {
+      "name": "Sports Collectors Digest",
+      "type": "advertising weekly paper"
+    },
+    {
+      "name": "The Family Handyman",
+      "type": "home-improvement magazine"
+    }
+  ],
+  "number_of_publications": 2
+}

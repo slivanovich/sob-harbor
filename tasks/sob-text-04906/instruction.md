@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Bowl Championship Series controversies: The Bowl Championship Series (BCS) was a selection system designed, through polls and computer statistics, to determine a No. 1 and No. 2 ranked team in the NCAA Division I Football Bowl Subdivision (FBS).  After the final polls, the two top teams were chosen to play in the BCS National Championship Game which determined the BCS national champion team, but not the champion team for independent voting systems (most notably the AP Poll).  This format was intended to be "bowl-centered" rather than a traditional playoff system, since numerous FBS Conferences have expressed their unwillingness to participate in a play-off system.  However, due to the unique and often esoteric nature of the BCS format, there had been controversy as to which two teams should play for the national championship and which teams should play in the four other BCS bowl games (Fiesta Bowl, Orange Bowl, Rose Bowl, and Sugar Bowl).  In this selection process, the BCS was often criticized for conference favoritism, its inequality of access for teams in non-Automatic Qualifying (non-AQ) Conferences (most likely due to perceived strength of schedule), and perceived monopolistic, "profit-centered" motives.  In terms of this last concern, Congress has explored the possibility on more than one occasion of holding hearings to determine the legality of the BCS under the terms of the Sherman Anti-Trust Act, and the United States Justice Department has also periodically announced interest in investigating the BCS for similar reasons.
+
+1950 Sugar Bowl: The 1950 edition to the Sugar Bowl featured the second ranked Oklahoma Sooners and the 9th ranked LSU Tigers.
+
+1999 in Armenian football: 1999 in Armenian football was the eighth season of independent football after the split-up from the Soviet Union.  The Armenian Premier League for 1999 existed of 10 teams of which the three lowest ranked teams would relegate to the Armenian First League.  The seventh ranked team would enter the promotion/relegation play-off with the second ranked team of the First League.  Only the winner of that competition was promoted directly.
+
+1956 Sugar Bowl: The 1956 Sugar Bowl featured the 7th ranked Georgia Tech Yellow Jackets, and the 11th ranked Pitt Panthers.  The game was played on January 2, since New Year's Day was a Sunday.  Much controversy preceded the 1956 Sugar Bowl.  There was controversy over whether Bobby Grier from Pitt should be allowed to play because he was black, and whether Georgia Tech should even play at all due to Georgia governor Marvin Griffin's opposition to integration.  This stood in stark contrast to the 1956 Rose Bowl, which featured two of the most racially integrated college football teams of the day with six African American players for the UCLA Bruins and seven for the Michigan State Spartans.  Ultimately, Bobby Grier played making this the first integrated Sugar Bowl and is regarded as the first integrated bowl game in the Deep South.
+
+2000 in Armenian football: 2000 in Armenian football was the ninth season of independent football after the split-up from the Soviet Union.  The Armenian Premier League for 2000 existed of 8 teams of which the lowest ranked teams would relegate to the Armenian First League.  The seventh ranked team would enter the promotion/relegation play-off with the second ranked team of the First League.  However it was decided that none of the Premier League teams would be relegated and four clubs were promoted from the First League, as well as FC Banants that was given a place at the highest level for the 2001 season.  In the last few weeks Ararat, Zvartnots-AAL, Dinamo and Mika all refused to play once or more times as they were demanding fair play and claiming that referees penalised them repeatedly in favour of Araks that eventually won the title due to the awarded 3-0 victories in their favour.
+
+1934–35 NCAA football bowl games: The 1934–35 NCAA football bowl games were the first to feature the Sugar Bowl and the Orange Bowl, which complemented the only previous annual post-season game, the Rose Bowl.  The Orange Bowl was hosted by the local team, the Miami Hurricanes, who faced the invited Bucknell Bison.  Likewise, the Sugar Bowl was also hosted by the in-town team (the Tulane Green Wave), and also invited a Pennsylvania club as their opponents, the Temple Owls.  The Rose Bowl featured two national powerhouses, the Stanford Indians of the West and the Alabama Crimson Tide from the South.  Alabama's victory sealed their undefeated season and ended Stanford's, leaving Minnesota the only other undefeated team in the nation.
+
+1995–96 in Armenian football: 1995–96 in Armenian football was the fourth season of independent football after the split-up from the Soviet Union.  It was the first of two seasons in Armenia that were different from the others.  Including the 1996–97 season these were the only winter competitions, while all other Armenian seasons were summer competitions.  The Armenian Premier League for 1995–96 consisted of 12 teams of which the lowest ranked team would relegate to the Armenian First League.  The eleventh ranked team would face the second ranked team from the First League in a promotion/relegation play-off.
+
+1982 Sugar Bowl: The 1982 Sugar Bowl featured the second ranked Georgia Bulldogs and the eighth ranked Pittsburgh Panthers.  The Panthers won the game, and left ranked fourth in the country, while the losing Bulldogs left the game ranked sixth in the country.  It has often been called one of the greatest bowl games, and bowl upsets, of all time.
+
+2014 Sugar Bowl: The 2014 Sugar Bowl was a college football bowl game played on Thursday, January 2, 2014, at the Mercedes-Benz Superdome in New Orleans, Louisiana.  The 80th annual Sugar Bowl, it featured the #10 (AP ranked), #11 (BCS ranked) Oklahoma Sooners of the Big 12 Conference and the #3-ranked Alabama Crimson Tide of the Southeastern Conference.  The game was broadcast live on ESPN at 8:30 PM EST.  It was one of the 2013–14 bowl games that concluded the 2013 FBS football season.  It was sponsored by the Allstate insurance company and was officially known as the Allstate Sugar Bowl.
+
+Oklahoma Sooners: The Oklahoma Sooners are the athletic teams that represent the University of Oklahoma, located in Norman.  The 19 men's and women's varsity teams are called the "Sooners", a reference to a nickname given to the early participants in the Land Rush of 1889, which initially opened the Unassigned Lands in the future state of Oklahoma to non-native settlement.  The university's athletic teams compete in the National Collegiate Athletic Association (NCAA)'s Division I in the Big 12 Conference.  The university's current athletic director is Joe Castiglione.
+
+Question: The 1950 Sugar Bowl featured the second ranked team, who play in what conference?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "bowl_game_year": {
+      "type": "integer",
+      "description": "The year the bowl game was played."
+    },
+    "bowl_game_name": {
+      "type": "string",
+      "description": "The name of the bowl game."
+    },
+    "team_rank": {
+      "type": "integer",
+      "description": "The ranking of the team in question."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The name of the team."
+    },
+    "team_conference": {
+      "type": "string",
+      "description": "The athletic conference the team competes in."
+    }
+  },
+  "required": [
+    "bowl_game_year",
+    "bowl_game_name",
+    "team_rank",
+    "team_name",
+    "team_conference"
+  ],
+  "additionalProperties": false
+}

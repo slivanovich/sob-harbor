@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+House of Visconti: Visconti is the family name of two important Italian noble dynasties of the Middle Ages.  There are two distinct Visconti families: the first one (chronologically) in the Republic of Pisa in the mid twelfth century who achieved prominence first in Pisa, then in Sardinia, where they became rulers of Gallura.  The second family rose to power in Milan, where they ruled from 1277 to 1447, and where several collateral branches still exist.  Pope Gregory X, who reigned from 1271 to 1276, was a member of the Visconti family of Milan.  The renowned film director Luchino Visconti was a scion of this latter family's Visconti of Modrone branch.
+
+Carlo Alberto Chiesa: Carlo Alberto Chiesa (1922–1960) was an Italian screenwriter, film editor and director.  In 1945 he edited Luchino Visconti's docu-drama "Days of Glory".  He spent much of his later career directing commercials, his one feature film as director was the 1951 comedy "The Two Sergeants" (1951).
+
+Bellissima (film): Bellissima (1951) is an Italian neorealism film by Italian director Luchino Visconti.  The film, which is a satire of the film industry, was shot at the Cinecittà studios.  Alessandro Blasetti, a contemporary film director, appears as himself.  Bellissima is the only feature film in Visconti's oeuvre with a predominantly comic tone.
+
+Eriprando Visconti: Eriprando Visconti di Modrone, Count of Vico Modrone (September 24, 1932 – May 25, 1995) was an Italian film director, screenwriter, and producer.  He was the nephew of the more famous Luchino Visconti.
+
+Luchino Visconti: Luchino Visconti di Modrone, Count of Lonate Pozzolo (2 November 1906 – 17 March 1976), was an Italian theatre, opera and cinema director, as well as a screenwriter.  He is best known for his films "Ossessione" (1943), "Senso" (1954), "Rocco and His Brothers" (1960), "The Leopard" (1963) and "Death in Venice" (1971).
+
+Patti LuPone: Patti Ann LuPone (born April 21, 1949) is an American actress and singer, best known for her work in stage musicals.  She is a two-time Grammy Award winner and a two-time Tony Award winner.  She is also a 2006 American Theater Hall of Fame inductee.
+
+Gene Saks: Gene Saks (November 8, 1921 – March 28, 2015) was an American stage, film director, and actor.  An inductee of the American Theater Hall of Fame, his acting career beginning with a debut on Broadway in 1949.  As a director, he was nominated for seven Tony Awards, winning three for his direction of "I Love My Wife", "Brighton Beach Memoirs" and "Biloxi Blues".  He also directed a number of films during his career.  He was married to Bea Arthur, who died in 2009, from 1950 until 1980, and subsequently to Keren Saks, from 1980 to his death in 2015.
+
+American Theater Hall of Fame: The American Theater Hall of Fame in New York City was founded in 1972.  Earl Blackwell was the first head of the organization's Executive Committee.  In an announcement in 1972, he said that the new "Theater Hall of Fame" would be located in the Uris Theatre (then under construction, now the Gershwin).  James M. Nederlander and Gerard Oestreicher, who leased the theatre, donated the space for the Hall of Fame; Arnold Weissberger was another founder.  Blackwell noted that the names of the first honorees would "be embossed in bronze-gold lettering on the theater's entrance walls flanking its grand staircase and escalator."  The first group of inductees was announced in October 1972.
+
+Giuseppe Rotunno: Giuseppe Rotunno, A.S.C., A.I.C. (born 19 March 1923, in Rome) is an Italian cinematographer.  Sometimes credited as Peppino Rotunno, he was director of photography on eight films by Federico Fellini.  He collaborated with several celebrated Italian directors, including Vittorio de Sica on "Yesterday, Today and Tomorrow" starring Sophia Loren and Marcello Mastroianni, and Luchino Visconti on "Rocco and His Brothers" (1960), "The Leopard" (1963), and "The Stranger" (1967).  Rotunno also served as the director of photography for "Julia and Julia" (1987), the first feature shot using high definition television taping technique and then transferred to 35 mm film.
+
+Henry Hewes: Henry Hewes (April 9, 1917 – July 18, 2006) was the drama critic for the "Saturday Review" weekly literary magazine from 1955 to 1979.  He was the first major critic to regularly review regional and international theater.  His interest in regional theater led him to found the American Theater Critics Association, the Tony Award for regional theater, and the American Theater Wing's design awards, now called the Hewes Awards.  In 2002, he was inducted into the American Theater Hall of Fame.
+
+Question: Which director is an inductee of the American Theater Hall of Fame: Luchino Visconti or Gene Saks?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "inductee_name": {
+      "type": "string",
+      "description": "The name of the director who is an inductee of the American Theater Hall of Fame."
+    },
+    "inductee_profession": {
+      "type": "string",
+      "description": "The primary profession of the inductee as described in the context."
+    },
+    "hall_of_fame_name": {
+      "type": "string",
+      "description": "The full name of the Hall of Fame mentioned."
+    },
+    "other_director_mentioned": {
+      "type": "string",
+      "description": "The name of the other director mentioned in the question who is not an inductee."
+    },
+    "is_inductee": {
+      "type": "boolean",
+      "description": "A boolean indicating whether the identified person is an inductee."
+    }
+  },
+  "required": [
+    "inductee_name",
+    "inductee_profession",
+    "hall_of_fame_name",
+    "other_director_mentioned",
+    "is_inductee"
+  ],
+  "additionalProperties": false
+}

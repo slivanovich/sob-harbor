@@ -1,0 +1,13 @@
+{
+  "comparison_subject_1": {
+    "name": "Utricularia",
+    "species_count": 233
+  },
+  "comparison_subject_2": {
+    "name": "Alphitonia",
+    "species_count": 20
+  },
+  "genus_with_more_species": "Utricularia",
+  "more_species_count": 233,
+  "less_species_count": 20
+}

@@ -1,0 +1,68 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1985 FA Charity Shield: The 1985 FA Charity Shield (also known as the General Motors FA Charity Shield for sponsorship reasons) was the 63rd FA Charity Shield, an annual football match played between the winners of the previous season's First Division and FA Cup competitions.  The match was played on 10 August 1985 at Wembley Stadium and contested by Everton, who had won the 1984–85 First Division, and Manchester United, who had won the 1984–85 FA Cup.  Everton won 2–0 with goals from Trevor Steven and Adrian Heath.  Trevor Steven put Everton into the lead when he swept home from six yards after a cross from the left in the first half.  The second goal came in the second half when Manchester United goalkeeper Gary Bailey dropped a cross from the left to allow Adrian Heath to tip the ball past him into the left corner of the net.
+
+1908 FA Charity Shield: The 1908 FA Charity Shield was the first Charity Shield, a football match contested by the winners of the previous season's Football League and Southern League competitions.  It was intended as a replacement for the Sheriff of London Charity Shield, after The Football Association declined to provide a professional club to the organisers of that event for the annual amateurs vs. professionals match.  The new match was subsequently arranged to take place at Chelsea F.C.'s home ground, Stamford Bridge.  Following the conclusion of the respective leagues, 1907–08 Football League winners Manchester United were scheduled to play against 1907–08 Southern League champions Queens Park Rangers.
+
+1956 FA Charity Shield: The 1956 FA Charity Shield was the 34th FA Charity Shield, an annual football match held between the winners of the previous season's Football League and FA Cup competitions.  The match was contested by Manchester United, who had won the 1955–56 Football League, and Manchester City, who had won the 1955–56 FA Cup, at Maine Road, Manchester, on 24 October 1956.  Manchester United won the match 1–0, Dennis Viollet scoring the winning goal.  Manchester United goalkeeper David Gaskell made his debut for the club during the game, taking the place of injured goalkeeper Ray Wood, and, at the age of 16 years and 19 days, became the youngest player ever to play for the club.
+
+1995 FA Charity Shield: The 1995 FA Charity Shield (also known as the Littlewoods FA Charity Shield for sponsorship reasons) was the 73rd FA Charity Shield, an annual football match played between the winners of the previous season's Premier League and FA Cup competitions.  The match was played on 13 August 1995 at Wembley Stadium and contested by Blackburn Rovers, who had won the Premier League and FA Cup winners Everton.  It was Blackburn's second successive Charity Shield appearance, while Everton were appearing in their eleventh and their first since 1987.  Everton won the match 1–0 with a goal from Vinny Samways when he caught Tim Flowers off his line and lifted the ball over him from the left of the penalty area and into the right corner of the net.  Dave Watson lifted the trophy for Everton.
+
+2012 Trinidad and Tobago Charity Shield: The 2012 Trinidad and Tobago Charity Shield (known as the "Digicel Charity Shield" for sponsorship reasons) was the inaugural edition of the Charity Shield, which was a football match that opened the 2012–13 TT Pro League season.  The match was played at Manny Ramjohn Stadium in Marabella on 8 September 2012, between the winners of the previous season's Pro League and Pro Bowl competitions.  The match was contested by the 2012 Digicel Pro Bowl winners, Defence Force, and the champions of the 2011–12 Pro League, W Connection.  The "Savonetta Boys" won the match 2–0 with goals from Shahdon Winchester and Joevin Jones, who was later named the "Man of the Match".
+
+1907 Sheriff of London Charity Shield: The 1907 Sheriff of London Charity Shield was the tenth and final Sheriff of London Charity Shield.  It was replaced the next season by the FA Charity Shield.  It was, however, revived a few times later in the 20th Century for fundraising purposes.
+
+1967 FA Charity Shield: The 1967 FA Charity Shield was the 45th FA Charity Shield, an annual football match held between the winners of the previous season's Football League and FA Cup competitions.  The match was contested by Manchester United, who had won the 1966–67 Football League, and Tottenham Hotspur, who had won the 1966–67 FA Cup, at Old Trafford, Manchester, on 12 August 1967.  The match was drawn 3–3, which meant that the two clubs shared the Shield, holding it for six months each.  Bobby Charlton scored two goals for United, while Denis Law scored their third.  Jimmy Robertson and Frank Saul scored for Spurs, but the match is most famous for Tottenham's second goal, which was scored by goalkeeper Pat Jennings.  Ball in hand, Jennings punted it downfield, only for it to bounce in front of United goalkeeper Alex Stepney, over his head and into the goal.
+
+1990 FA Charity Shield: The 1990 FA Charity Shield (also known as the Tennent's Charity Shield for sponsorship reasons) was the 68th Charity Shield, a football match contested by the winners of the previous season's Football League and FA Cup competitions.  The match was played on 18 August 1990 between 1989–90 Football League champions Liverpool and 1989–90 FA Cup winners Manchester United.  This would be the last time either team was to share the trophy, as new regulations were brought in two years later that allowed for extra time and subsequently a penalty shootout if a draw occurred in normal time.
+
+1970 FA Charity Shield: The 1970 FA Charity Shield was the 48th FA Charity Shield, the annual football match played between the winners of the previous season's Football League and FA Cup competitions.  It was contested between Everton, the reigning First Division champions, and Chelsea, holders of the FA Cup.  Goals from Alan Whittle and Howard Kendall gave Everton a 2–1 victory; Chelsea's goal was scored by Ian Hutchinson.  The match was staged at Stamford Bridge, Chelsea's home ground.
+
+Howard Kendall: Howard Kendall (22 May 1946 – 17 October 2015) was an English footballer and manager.
+
+Question: Howard Kendall's goal won the 1970 Charity Shield for which club, where the Englishman later became manager?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "charity_shield_year": {
+      "type": "integer",
+      "description": "The year the Charity Shield match took place."
+    },
+    "winning_club_name": {
+      "type": "string",
+      "description": "The name of the club that won the match."
+    },
+    "goal_scorer_details": {
+      "type": "object",
+      "description": "Details about the player who scored the goal mentioned in the question."
+    },
+    "goal_scorer_name": {
+      "type": "string",
+      "description": "The name of the player who scored the goal."
+    },
+    "scored_for_winning_club": {
+      "type": "boolean",
+      "description": "Indicates if the player scored for the winning club."
+    }
+  },
+  "required": [
+    "charity_shield_year",
+    "winning_club_name",
+    "goal_scorer_name",
+    "scored_for_winning_club"
+  ],
+  "additionalProperties": false
+}

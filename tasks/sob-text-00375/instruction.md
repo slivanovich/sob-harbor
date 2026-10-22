@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Enrique Iglesias discography: Spanish singer Enrique Iglesias has released ten studio albums, five compilation albums, forty-six singles, and forty-one music videos. Iglesias started his career in 1995 with his first Spanish album and self-titled album "Enrique Iglesias", which produced five number-ones on the Hot Latin Tracks chart and won a Grammy Award for Best Latin Pop Album in 1997.  In 1999, he released his first English album "Enrique", which included the song "Bailamos" from the film "Wild Wild West".  The album produced two number-one "Billboard" Hot 100 tracks.  In 2001, Enrique released "Escape" which has sold over 12 million copies worldwide.
+
+Say Yay!: "Say Yay!"  is a song performed by Spanish singer Barei and written by herself, Rubén Villanueva and Víctor Púa Vivó.  The song represented Spain in the Eurovision Song Contest 2016 held in Stockholm, Sweden.  It is the first ever Spanish Eurovision entry that features no Spanish lyrics.  The song was released as a digital download on 25 January 2016 through Gran Sol, reaching number-one on Spanish iTunes.  A new version of the song was released on 11 March 2016 via Universal Music Spain.  It was included in the re-issue of Barei's 2015 album "Throw the Dice".
+
+Belinda Peregrín: Belinda Peregrín Schüll (born August 15, 1989), known mononymously as Belinda, is a Spanish singer and actress Mexican naturalized .
+
+Mi Mundo (Marta Sánchez album): Mi Mundo (Spanish for "My World") is the second album by Spanish singer Marta Sánchez.  It was released in 1995 and produced once again by Christian De Walden.  In this album the artist has a little more input, since she did the package design and compose one track (Enamorada Sin Querer).  The first single Dime La Verdad was another smash hit for the artist, peaking at #1 in Mexico and Spain and #9 in the Latin charts in the United States.  The video for this single was directed by Juan Luis Arruga and had a heavy rotation on MTV.  The second single Arena Y Sol was also a #1 hit, with a video directed by Luis del Amo.  "Mi Mundo" was included on the Best Albums of 1995 list by Mexican magazine Eres.  Vive Cada Día, La Belleza and Que Harass Tu Cuando Mueras were also released as singles.  Tu También is a song about AIDS and was dedicated to all the friends of the artist that died of the disease.  "My World" was the English version of this album.
+
+Canta A Juan Gabriel Volumen 6: Canta A Juan Gabriel Volumen 6 (also released as Amor Eterno in Mexico and Jardín de Rosas in Spain) is an album by Spanish singer and actress Rocío Dúrcal, which was released in 1984.  The songs in the album were written by Mexican singer/songwriter Juan Gabriel who also appeared on the album.  "Déjame Vivir" is one of her biggest hits and the video was a huge hit as well with special guest Juan Gabriel.  The album is the sixth best-selling album of all time in Mexico with 5.5 million sales, but it is the highest selling album by a female artist.  The album was nominated for a Grammy Award for Best Mexican-American Performance.  The album inducted into the Latin Grammy Hall of Fame in 2013.
+
+Lantana (singer): Alba Gárate (born December 18, 1980), better known by her stage name, Lantalba, is a Spanish singer, songwriter, musician, producer and actress, previously known as Lantana.  She was born in Barcelona and raised in Fuengirola, Málaga.  She moved to Madrid when she was 19 years old to study acting and pursue her musical career.  She was signed with EMI/Virgin by 2006 and Rubie Music in 2010.  She was nominated to several important Spanish awards, including The 21st Goya Awards, MTV Spain Awards, Televisión Española Awards Album of the Year and The Spanish Music Awards.  She currently lives in Berlin, Germany.
+
+Alguien Más: "Alguien Más" (English: "Someone Else" ) is the fourth single from Belinda's second studio album "Utopía".
+
+Azabache: Azabache (Spanish: "jet (lignite)") is the third studio album by Spanish singer Marta Sánchez.  Was released in 1997.  On this album more producers were involved (Andres Levin, Nile Rodgers, Camus Celli, Robyn Smith and Stephen Budd) along with longtime musical partner Christian De Walden and they created a rock oriented album, instead of the pop music Marta recorded for her first and second album.  Critical reaction was mostly positive.  The first single "Moja Mi Corazón", features guitar player Slash and was produced by Nile Rodgers.  The album yielded five singles: "Negro Azabache", "Algo Tienes", "Ya Ves" and "Amor Perdido".  While promoting this album, Marta recorded along with opera singer Andrea Bocelli the song "Vivo por Ella", which became a worldwide smash hit and was later included on the international pressings of "Azabache".  The majority of the tracks were recorded in English (as usual for any Marta Sanchez album) and were released under the title "One Step Closer".
+
+Beatriz Luengo: Beatriz Luengo González (born 23 December 1982) is a Spanish singer, songwriter, actress, dancer, and entrepreneur.  She gained international recognition by portraying Lola Fernández in the Antena 3 series "One Step Forward" (Spanish: "Un paso adelante") and its spin–off musical group UPA Dance.  Consisting of Luengo, Pablo Puyol, Miguel Ángel Muñoz, Mónica Cruz and Silvia Marty, UPA Dance released one studio album, "UPA Dance", which reached number one at the Spanish Albums Chart and sold over 1.1 million units in Spain and France.
+
+Alexandre Pires discography: The discography of Alexandre Pires, a Brazilian singer-songwriter, consists of eleven studio albums, two live albums, three compilations and other album appearances.  In 2001, Pires released his first solo album to much success.  He has continued to release albums both in Portuguese and in Spanish achieving several hits in Latin charts.  In 2007, he released a tribute album to Spanish singer Julio Iglesias.  Also in 2007 he met and had a duet on the song titled "Junto A Ti" with Kika Edgar from the telenovela Bajo las Riendas del Amor.
+
+Question: What year was the Spanish singer, who released the album "Utopía," born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "singer_name": {
+      "type": "string",
+      "description": "The name of the Spanish singer."
+    },
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album released by the singer."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the singer."
+    },
+    "nationality": {
+      "type": "string",
+      "description": "The nationality of the singer."
+    }
+  },
+  "required": [
+    "singer_name",
+    "album_name",
+    "birth_year",
+    "nationality"
+  ],
+  "additionalProperties": false
+}

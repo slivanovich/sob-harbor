@@ -1,0 +1,22 @@
+{
+  "producer_name": "Oscar Hammerstein II",
+  "producer_role": "theatrical producer",
+  "co_created_works": [
+    "Sunny",
+    "Oklahoma!"
+  ],
+  "work_details": [
+    {
+      "work_title": "Sunny",
+      "collaborator_name": "Jerome Kern",
+      "collaboration_type": "musical play",
+      "producer_contribution_role": "librettist"
+    },
+    {
+      "work_title": "Oklahoma!",
+      "collaborator_name": "Richard Rodgers",
+      "collaboration_type": "musical",
+      "producer_contribution_role": "lyricist and playwright"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "record_id": "0f820830972788222f7ed17546d0d2dab50d040b9150d3c349a02dbb9e781338",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae4db3a55429913cc204528",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Tjololo: Tjololo was a male leopard living in the Mala Mala Game Reserve in Mpumalanga Province, South Africa.  He was the subject of the National Geographic documentary film \"Stalking Leopards\".\n\nMala Mala Airport: Mala Mala Airport (IATA: AAM, ICAO: FAMD) is an airport near Mala Mala, South Africa.\n\nMala Mala Game Reserve: Mala Mala is a game reserve located within the Sabi Sand Game Reserve, Mpumalanga province, South Africa.  It is the largest and the oldest private big five game reserve in South Africa, It covers around 130 km² or 15 000 hectares of land.  In Xitsonga, the name Malamala means Kudu, it was named so because of the abundance of these animals within the game reserve.  The Tsonga people, who occupied the land before the establishment of the game reserve, were forcibly removed from this land during the early 1900s and were dumped at Bushbuckridge.  The Nwandlamhlarhi Community successfully claimed Malamala game reserved and the land was restored to them in 2015 when President Jacob Zuma handed them their land in a Government ceremony.  The Tsonga people were also forcibly removed from neighbouring game reserves such as Skukuza, Satara, Ulusaba, Manyeleti, Protea Hotel Kruger Gate, Hoyo Hoyo Tsonga Lodge and may more in Southern Kruger .  The Tsonga people are still waiting to be given back these lands by the Government after the finalization of their land claim.\n\nAn Inconvenient Truth...Or Convenient Fiction?: An Inconvenient Truth...Or Convenient Fiction?  is an American documentary film by Steven F. Hayward, a resident scholar at the American Enterprise Institute, who set to address what he observed as inconsistencies in the film \"An Inconvenient Truth\".\n\nAn Inconvenient Sequel: Truth to Power: An Inconvenient Sequel: Truth to Power is a 2017 American documentary film directed by Bonni Cohen and Jon Shenk about former United States Vice President Al Gore's continuing mission to battle climate change.  The sequel to \"An Inconvenient Truth\" (2006), the film addresses the progress made to tackle the problem and Gore's global efforts to persuade governmental leaders to invest in renewable energy, culminating in the landmark signing of 2016's Paris Agreement.  The film was released on July 28, 2017, by Paramount Pictures.\n\nMala Mala (film): Mala Mala is a 2014 Puerto Rican documentary film directed by Antonio Santini and Dan Sickles, starring Jason \"April\" Carrión, Samantha Close and Ivana Fred.  This film shows several stories of the transgender community in Puerto Rico, including April Carrion, well-known drag queen who participated in the reality show RuPaul's Drag Race.  Mala Mala also includes the historic victory of the LGBT community with the approval and signature of Law 238-2014 (in Puerto Rico), which prevents discrimination in employment based on sexual orientation and/or gender identity.  Mala Mala has been presented in festivals around the world, including London, Ukraine, Los Angeles, Austin, Costa Rica and Mexico.  In addition to schools such as The Boston Conservatory at Berklee, University of Pennsylvania, New York University and Harvard University.\n\nDavis Guggenheim: Philip Davis Guggenheim (born November 3, 1963) is an American film and television director and producer.  His credits include \"NYPD Blue\", \"ER\", \"24\", \"Alias\", \"The Shield\", \"Deadwood\", and the documentaries \"An Inconvenient Truth\", \"The Road We've Traveled\", \"Waiting for 'Superman'\" and \"He Named Me Malala\".  Since 2006, Guggenheim is the only filmmaker to release three different documentaries that were ranked within the top 100 highest-grossing documentaries of all time (\"An Inconvenient Truth\", \"It Might Get Loud\", and \"Waiting for ′Superman′\").\n\nAn Inconvenient Truth: An Inconvenient Truth is a 2006 American documentary film directed by Davis Guggenheim about former United States Vice President Al Gore's campaign to educate citizens about global warming via a comprehensive slide show that, by his own estimate made in the film, he has given more than a thousand times.  The idea to document his efforts came from producer Laurie David, who saw his presentation at a town-hall meeting on global warming, which coincided with the opening of \"The Day After Tomorrow\".  Laurie David was so inspired by Gore's slide show that she, with producer Lawrence Bender, met with Guggenheim to adapt the presentation into a film.\n\nAn Inconvenient Truth (book): An Inconvenient Truth: The Planetary Emergency of Global Warming and What We Can Do About It is a 2006 book by Al Gore released in conjunction with the film \"An Inconvenient Truth\".  It is published by Rodale Press in Emmaus, Pennsylvania, in the United States.\n\nAn Inconvenient Penguin: An Inconvenient Penguin is a short film, released online in Amazon's UnBox store on August 11, 2008.  The film is a spoof of \"An Inconvenient Truth\" and \"March of the Penguins\".  It was produced by Precipice Productions and stars Lance Reifschneider, Rasika Mathur, Jenny Mollen, and Eric Matikosh.",
+    "question": "Are Mala Mala and An Inconvenient Truth documentaries about the same subject ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "are_subjects_same": {
+          "type": "boolean",
+          "description": "Indicates whether the two documentaries are about the same subject."
+        },
+        "film_comparison": {
+          "type": "object",
+          "properties": {
+            "film_1": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Title of the first film."
+                },
+                "subject": {
+                  "type": "string",
+                  "description": "Main subject of the first film."
+                }
+              },
+              "required": [
+                "title",
+                "subject"
+              ],
+              "additionalProperties": false
+            },
+            "film_2": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Title of the second film."
+                },
+                "subject": {
+                  "type": "string",
+                  "description": "Main subject of the second film."
+                }
+              },
+              "required": [
+                "title",
+                "subject"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "film_1",
+            "film_2"
+          ],
+          "additionalProperties": false
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Explanation for why the subjects are or are not the same."
+        }
+      },
+      "required": [
+        "are_subjects_same",
+        "film_comparison",
+        "reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "are_subjects_same": false,
+      "film_comparison": {
+        "film_1": {
+          "title": "Mala Mala",
+          "subject": "stories of the transgender community in Puerto Rico, including April Carrion, and the historic victory of the LGBT community with the approval and signature of Law 238-2014 (in Puerto Rico), which prevents discrimination in employment based on sexual orientation and/or gender identity"
+        },
+        "film_2": {
+          "title": "An Inconvenient Truth",
+          "subject": "Al Gore's campaign to educate citizens about global warming via a comprehensive slide show"
+        }
+      },
+      "reasoning": "Mala Mala is about the transgender and LGBT community in Puerto Rico and their fight against discrimination, while An Inconvenient Truth is about global warming and climate change education. Their subjects are distinctly different."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

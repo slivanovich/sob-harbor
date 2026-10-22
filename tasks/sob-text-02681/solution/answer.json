@@ -1,0 +1,34 @@
+{
+  "are_both_musicians": true,
+  "musician_count": 2,
+  "individuals_details": [
+    {
+      "name": "Phil Mogg",
+      "is_musician": true,
+      "musical_roles": [
+        "lead singer",
+        "lyricist"
+      ],
+      "bands_involved_with": [
+        "UFO",
+        "Mogg/Way",
+        "$ign of 4"
+      ]
+    },
+    {
+      "name": "Dave Peters",
+      "is_musician": true,
+      "musical_roles": [
+        "guitarist",
+        "vocalist"
+      ],
+      "bands_involved_with": [
+        "Eighteen Visions",
+        "Throwdown",
+        "Soulfly",
+        "Demon Hunter",
+        "Living Sacrifice"
+      ]
+    }
+  ]
+}

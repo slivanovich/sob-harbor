@@ -1,0 +1,14 @@
+{
+  "inventor": {
+    "name": "Kenneth Wilson",
+    "birth_date": "1936-06-08",
+    "profession": "theoretical physicist",
+    "nationality": "American"
+  },
+  "invention": {
+    "name": "Numerical renormalization group",
+    "acronym": "NRG",
+    "type": "technique"
+  },
+  "answer": "1936-06-08"
+}

@@ -1,0 +1,16 @@
+{
+  "person_name": "Deborah Miller",
+  "role": "Secretary of Transportation",
+  "organization": {
+    "name": "Kansas Department of Transportation",
+    "state": "Kansas"
+  },
+  "service_period": {
+    "start_year": 2003,
+    "end_year": 2012
+  },
+  "distinctions": [
+    "Kansas' first female Secretary of Transportation",
+    "Longest-serving Secretary of Transportation"
+  ]
+}

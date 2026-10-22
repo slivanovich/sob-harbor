@@ -1,0 +1,10 @@
+{
+  "person_name": "William S. Barry",
+  "prior_role": "member of the U.S. House of Representatives",
+  "congressional_district": "Mississippi's 2nd congressional district",
+  "district_attributes": {
+    "state": "Mississippi",
+    "is_majority_black": true,
+    "location_description": "covering much of western Mississippi"
+  }
+}

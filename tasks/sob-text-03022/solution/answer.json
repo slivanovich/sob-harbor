@@ -1,0 +1,15 @@
+{
+  "person_1_name": "Stella Gibbons",
+  "person_2_name": "Patrick McCabe",
+  "common_occupation": "writer",
+  "person_1_specific_roles": [
+    "author",
+    "journalist",
+    "poet",
+    "novelist"
+  ],
+  "person_2_specific_roles": [
+    "writer",
+    "novelist"
+  ]
+}

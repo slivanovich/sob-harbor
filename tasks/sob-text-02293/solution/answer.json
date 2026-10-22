@@ -1,0 +1,11 @@
+{
+  "parade_name": "A Christmas Fantasy Parade",
+  "parade_location": "Disneyland Park in the Disneyland Resort in Anaheim, CA",
+  "featured_character_origin": {
+    "character_name": "Tigger",
+    "book_of_introduction": {
+      "title": "The House at Pooh Corner",
+      "author": "A. A. Milne"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "song_title": "Sexy Boy",
+  "artist_name": "Air",
+  "album_details": {
+    "album_name": "Moon Safari",
+    "is_debut_album": true
+  },
+  "featured_in_media": [
+    {
+      "media_type": "film",
+      "media_title": "10 Things I Hate About You"
+    },
+    {
+      "media_type": "television_series",
+      "media_title": "Queer as Folk"
+    }
+  ]
+}

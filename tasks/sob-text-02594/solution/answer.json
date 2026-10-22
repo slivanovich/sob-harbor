@@ -1,0 +1,13 @@
+{
+  "person_name": "Carmelo Anthony",
+  "award_details": {
+    "award_name": "USA Basketball Male Athlete of the Year",
+    "award_year": 2016,
+    "is_co_winner": true,
+    "other_co_winners": [
+      "Kevin Durant"
+    ]
+  },
+  "college_attended": "Syracuse",
+  "sport": "basketball"
+}

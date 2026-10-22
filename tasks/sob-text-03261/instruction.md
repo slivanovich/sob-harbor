@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Fuller ministry (1921): The Fuller ministry (1921) or First Fuller ministry was the 39th ministry of the New South Wales Government, and was led by the 22nd Premier, the Honourable Sir George Fuller KCMG, MLA.  This ministry is the shortest of any ministry in the history of self-government in the state, lasting just seven hours.
+
+Electoral district of Fuller: Fuller was an electoral district of the Legislative Assembly in the Australian state of New South Wales, created in 1968 in the Ryde area and named after George Fuller, Premier of New South Wales, 1922-1925.  It was abolished in 1981 and largely replaced by Gladesville.
+
+George Fuller (British politician): Fuller was born at Baynton, Wiltshire, the eldest surviving son of John Bird Fuller, a partner in Fuller Smith & Turner, brewers, and his wife Sophia Hanning, daughter of John Hanning.  He was educated at Winchester, where he played in the 1st XI cricket for two years, and at Christ Church, Oxford.  During his time at Oxford he represented the Oxford University Cricket Club and played in the Varsity match in 1854 and 1855.  He played nine innings in six first class matches with an average of 10.44 and a top score of 40.  He bowled ten overs and took 6 first-class wickets.
+
+Fuller ministry (1922–25): The Fuller ministry (1922–1925) or Second Fuller ministry was the 41st ministry of the New South Wales Government, and was led by the 22nd Premier, the Honourable Sir George Fuller KCMG, MLA.  This ministry was the second of two occasions where Fuller was Premier.
+
+Herbert Fuller: Herbert George Fuller (4 October 1856 – 2 January 1896) was an English born rugby union forward who played club rugby for Cambridge University and won four international caps for the England national rugby union team between 1882 and 1884.
+
+George Godfrey (journalist): George Fuller Godfrey CBE (5 November 1904 – 16 September 1989) was an English-born Australian journalist and trade unionist.
+
+Fuller's Brewery: Fuller's Brewery (Fuller, Smith & Turner plc) is an independent family regional brewery founded in 1845 in Chiswick, West London.
+
+George Fuller Miller Sr.: George Fuller Miller Sr. (born March 19, 1903 in Indianapolis, Indiana) was a long-time Boy Scouts of America executive, the recipient of the Distinguished Eagle Scout Award and a founding father of the American Humanics Foundation.
+
+White Rats of America: The White Rats was an organization formed by vaudeville performers, led by George Fuller Golden, as a labor union to support the rights of male performers.  It was a Men's Club only.  Women were not allowed to join.  It also attempted to combat the monopolistic practices of the United Booking Office (UBO) and the Vaudeville Managers Association (VMA), groups formed by vaudeville theater managers to keep performers' wages low and control when and where performers were allowed to work.  It was based on the Water Rats, a British entertainment industry charity.  It received a charter from the American Federation of Labor in 1910.  The union staged several strikes but ultimately disbanded.
+
+Henry Keep (American football): Henry Keep (July 19, 1872 – December 1965) was an American football coach.  He served as the first head football coach at Michigan Agricultural College, now known as Michigan State University, from 1897 to 1898, compiling a record of 8–5–1.  He served as the school's football and track coach while also attending the college as an engineering student.  Keep was a student at the University of Michigan during the 1893–94 academic year before transferring to Michigan Agricultural.  As of 1901, he was working for the George Fuller & Co. in New York.  Keep and his wife, Esther Maude Durgin had a daughter, Margaret in 1914 in Bellefonte, Pennsylvania.  He also later worked for the Carnegie Steel Company in Pittsburgh.
+
+Question: George Fuller's father founded a brewery in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "george_fuller_identifier": {
+      "type": "string",
+      "description": "An identifier for the specific George Fuller referenced in the context."
+    },
+    "father_name": {
+      "type": "string",
+      "description": "The name of George Fuller's father."
+    },
+    "brewery_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the brewery."
+        },
+        "founding_year": {
+          "type": "integer",
+          "description": "The year the brewery was founded."
+        },
+        "father_role": {
+          "type": "string",
+          "description": "The role of George Fuller's father in the brewery."
+        }
+      },
+      "required": [
+        "name",
+        "founding_year",
+        "father_role"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "george_fuller_identifier",
+    "father_name",
+    "brewery_details"
+  ],
+  "additionalProperties": false
+}

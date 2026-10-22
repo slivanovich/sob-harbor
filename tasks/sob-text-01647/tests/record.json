@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "record_id": "ee17e86e50205cb2a9b9e6622a32f11810b6af72b632ee57420c40f310cdaaf5",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae607395542996de7b71b02",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Take That",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Progress Live: Progress Live (also known as the 20th Anniversary Tour) was the eighth concert tour by British pop group Take That.  The tour, sponsored by Samsung, supported their sixth studio album, \"Progress\" as they visited major cities in the UK and Europe.  It was the first tour to feature all five original members performing together in 15 years and the final tour to feature Jason Orange and Robbie Williams.  In its infancy, the tour accomplished many accolades including selling 1.34 million tickets in less than 24 hours.  The tour quickly became the biggest tour in the United Kingdom with demand for tickets a reported 30 times higher for Progress Live.\n\nRobbie Williams: Robert Peter Williams (born 13 February 1974) is an English singer, songwriter and actor.  He was a member of the pop group Take That from 1990 to 1995 and again from 2009 to 2012.  He has also had commercial success as a solo artist.\n\nBeautiful World Tour 2007: The Beautiful World Tour 2007 was the sixth concert tour for the British pop group Take That.  The tour ran from 11 October to 31 December 2007, with fifty stops in ten European countries.\n\nGreatest Day (Take That song): \"Greatest Day\" is a song by British pop group Take That.  It was released through Polydor Records on 24 November 2008 as the lead single from their fifth studio album, \"The Circus\" (2008).  The song was written and produced by Take That and co-produced by John Shanks.\n\nHigher Than Higher: \"Higher Than Higher\" is a song by British pop group Take That.  It was released through Polydor Records on 8 June 2015 as the third single from their seventh studio album, \"III\" (2014).  The song was written by Take That, Mattias Larsson, Robin Fredriksson, and Joe Janiak, and produced by Mattman & Robin and features Gary Barlow on lead vocals.\n\nLet in the Sun: \"Let in the Sun\" is a song by British pop group Take That.  It was released through Polydor Records on 2 March 2015 as the second single from their seventh studio album, \"III\" (2014).  The song was written by Take That, Edvard Førre Erfjord, Gary Go, Cass Lowe, and Henrik Barman Michelsen, and produced by Stuart Price and features Gary Barlow on lead vocal.\n\nBeautiful World (Take That album): Beautiful World is the fourth studio album from British pop group Take That.  The album was released in November 2006, and was the band's first studio album in 11 years, and was also the band's first album to be released as a four-piece, without Robbie Williams (who quit the band).  Five singles were released from the album: \"Patience\", \"Shine\", \"I'd Wait for Life\", the European-only single \"Reach Out\", and \"Rule the World\", which appeared on the deluxe tour edition.\n\nRobbie Williams discography: The discography of Robbie Williams, an English singer-songwriter, consists of eleven studio albums, one live album, seven compilation albums, one extended play, ten video albums, fifty-nine singles (including six as a featured artist), six promotional singles and fifty-six music videos (including two as a featured artist).  Williams originally found success in the male pop group Take That, which he joined in 1990 following a successful audition: they released a series of UK number-one singles, including \"Pray\", \"Relight My Fire\", \"Babe\" and \"Back for Good\".  Williams left Take That in 1995 to pursue a solo career; the group disbanded the following year.\n\nLet Me Entertain You Tour: The Let Me Entertain You Tour (also known as the Greatest Hits Tour) was the eleventh concert tour by British recording artist, Robbie Williams.  The tour begin March 2015 in Europe and continued into Asia and Australasia, with over 40 shows.  The tour grossed $27.1 million with 235,100 tickets sold.\n\nHey Boy (Take That song): \"Hey Boy\" is a song by British pop group Take That.  It was released through Polydor Records on 16 October 2015 as the fourth single from their seventh studio album, \"III\" (2014).  The song was written by Take That and produced by Greg Kurstin and features Mark Owen, Gary Barlow and Howard Donald on lead vocals.",
+    "question": "Which came first the let me entertain you tour or the pop group take that?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "entity_1_name": {
+          "type": "string",
+          "description": "The name of the first entity being compared."
+        },
+        "entity_1_event_type": {
+          "type": "string",
+          "description": "The type of event for the first entity (e.g., formation, tour_start)."
+        },
+        "entity_1_year": {
+          "type": "integer",
+          "description": "The year the event for the first entity occurred."
+        },
+        "entity_2_name": {
+          "type": "string",
+          "description": "The name of the second entity being compared."
+        },
+        "entity_2_event_type": {
+          "type": "string",
+          "description": "The type of event for the second entity (e.g., formation, tour_start)."
+        },
+        "entity_2_year": {
+          "type": "integer",
+          "description": "The year the event for the second entity occurred."
+        },
+        "first_event_name": {
+          "type": "string",
+          "description": "The name of the entity whose event occurred first."
+        },
+        "first_event_year": {
+          "type": "integer",
+          "description": "The year the first event occurred."
+        },
+        "comparison_result": {
+          "type": "string",
+          "description": "A statement indicating which entity's event came first."
+        }
+      },
+      "required": [
+        "entity_1_name",
+        "entity_1_event_type",
+        "entity_1_year",
+        "entity_2_name",
+        "entity_2_event_type",
+        "entity_2_year",
+        "first_event_name",
+        "first_event_year",
+        "comparison_result"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "entity_1_name": "Take That",
+      "entity_1_event_type": "formation",
+      "entity_1_year": 1990,
+      "entity_2_name": "Let Me Entertain You Tour",
+      "entity_2_event_type": "tour_start",
+      "entity_2_year": 2015,
+      "first_event_name": "Take That",
+      "first_event_year": 1990,
+      "comparison_result": "Take That came first."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

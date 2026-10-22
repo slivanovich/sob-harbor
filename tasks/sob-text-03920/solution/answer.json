@@ -1,0 +1,20 @@
+{
+  "question_magazine_names": [
+    "The American Jewess",
+    "First for Women"
+  ],
+  "year_in_question": 1895,
+  "magazine_details": [
+    {
+      "name": "The American Jewess",
+      "start_year": 1895,
+      "was_running_in_year_in_question": true
+    },
+    {
+      "name": "First for Women",
+      "start_year": 1989,
+      "was_running_in_year_in_question": false
+    }
+  ],
+  "magazine_not_running_in_year_in_question": "First for Women"
+}

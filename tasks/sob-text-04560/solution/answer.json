@@ -1,0 +1,18 @@
+{
+  "person_1": {
+    "name": "Shingai Shoniwa",
+    "professions": [
+      "singer",
+      "bassist"
+    ]
+  },
+  "person_2": {
+    "name": "Jeffrey Steele",
+    "professions": [
+      "singer",
+      "songwriter",
+      "bassist"
+    ]
+  },
+  "common_profession": "singer"
+}

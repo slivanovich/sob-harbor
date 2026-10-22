@@ -1,0 +1,14 @@
+{
+  "airports": [
+    {
+      "airport_name": "Ralph Wien Memorial Airport",
+      "country": "United States"
+    },
+    {
+      "airport_name": "Columbia Regional Airport",
+      "country": "United States"
+    }
+  ],
+  "are_in_same_country": true,
+  "reasoning": "Both Ralph Wien Memorial Airport and Columbia Regional Airport are located in the United States."
+}

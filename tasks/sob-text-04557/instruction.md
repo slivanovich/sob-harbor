@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Eugene Harvey: Eugene Harvey is an American "" player.  His major successes include four top eights, and five top eights.  Harvey was part of the US national team that won the in 2001, which was Harvey's first Pro Tour.  He also won the .
+
+North Jersey Imperials: The North Jersey Imperials were a soccer club based in Paramus, New Jersey.  They played in the United Soccer Leagues between 1994 and 2001.  The Imperials were the first pro team of US national team goalkeeper Tim Howard.  Sean Kenny was the Head Coach.
+
+Eric Paine: Eric Thomas Paine was a Singapore national football team goalkeeper.  He is widely considered to be one of the best goalkeepers Singapore ever had.  He first played for the national team in 1968.  An injury relegated him to second-choice in 1977.  He subsequently retired from the national team in 1978.
+
+TJ Curry: TJ Curry (born August 10, 1987) is the current US National Team Welterweight and 2013 US National Welterweight Champion, 2010 US National Champion, and 2011 Pan American Games US Team member in taekwondo.  Curry was the 2012 USA Olympic Team Alternate to Steven Lopez in the 80 kg division.  Curry was selected as the US Welterweight fighter for the 2013 SportAccord World Combat Games Team.  Curry is the World Taekwondo Center's Team Captain and is coached by Brian Singer in Oakland, California.
+
+Mark Justice: Mark Justice (born c. 1970) is a former pro player.  He is by many considered the best player of the game in his time.  Justice was the second US National Champion in 1995.  He also led the first Magic US National Team to the first world team victory of the first team portion of the World Championships.
+
+Gordon Fraser (cyclist): Gordon ("Gord") Fraser (born November 19, 1968 in Ottawa) is a former professional road racing cyclist.  As a rider he specialised in sprinting.  Fraser is a three-time Olympian and four-time Commonwealth Games participant and has over 200 career wins including becoming the 2004 Canadian national road race champion.  He also rode in the 1997 Tour de France and won the US National Race Calendar series twice.  He retired from professional cycling at the end of the 2006 season after racing four seasons for the Health Net Pro Cycling Team Presented by Maxxis.  He went on to be a directeur sportif with Team Type 1 in 2009, and in 2010 joined UnitedHealthcare-Maxxis as a directeur sportif.  In 2011 became DS for the US Continental team, Realcyclist.com.  Whilst there he guided Francisco Mancebo to the top of the National Race Calendar individual standings in 2011 and again in 2012 (under the team's new name of Competitive Cyclist Racing Team).  However he left the team when it merged with Kenda-5 Hour Energy ahead of the 2013 season.  Subsequently he was approached by Team Exergy to work for them in 2013, however this fell through when Exergy withdrew its sponsorship of the team.  In 2014 he worked for Team SmartStop at the USA Pro Cycling Challenge, and took the directeur sportif role at the Silber Pro Cycling Team for several races on a part-time basis, before signing a two year deal with the squad in September of that year.  Fraser resides in Tucson, Arizona and has two sons named Angus and Axel.
+
+Outstanding Team ESPY Award: The Outstanding Team ESPY Award, known alternatively as the Best Team ESPY Award, has been presented annually since 1993 to the professional, collegiate, or national team, irrespective of nationality or sport contested, adjudged to be the best in a specified twelve-month period preceding the awards ceremony.  In 2001, the award was bifurcated and the resulting honors were styled as the College Team of the Year and Pro Team of the Year ESPY Awards; the awards were joined once more in 2002.
+
+Marcos Abad: Marcos Abad born in Spain on 12/09/1985, is a Spanish Goalkeeper Coach who works as First Team Goalkeeper Coach at English side Leeds United, after previously holding the role of First Team Goalkeeper Coach at then Premier League side Middlesbrough F.C. and former La Liga side Elche CF.
+
+Tim Howard: Timothy Matthew Howard (born March 6, 1979) is an American soccer player who captains the MLS club Colorado Rapids and plays for the United States national team as a goalkeeper.
+
+Ray Callahan: Kenneth Ray Callahan (April 28, 1933 – September 2, 2017) was an American football player and coach.  He was recruited by Coach Paul Bear Bryant at the University of Kentucky in 1952 under a full scholarship.  Coach Bryant mentored him often taking him fishing and along on other recruiting trips to convince players to come to U.K. to play.  He later coached for his alma mater as an assistant coach from 1963 to 1966.  He then moved to University of Cincinnati as an assistant coach for 2 years before becoming the head football coach from 1969 to 1972, compiling a record of 20–23.  His first pro team was in 1973 with the Baltimore Colts as a linebacker coach under former teammate Howard Schnellenberger.  Callahan then took a chance with the World Football League Florida Blazers with Jack Pardee.  The Blazers made it to the World Bowl losing to the Birmingham Americans by 1 point but with controversy in the officiating.  Coach Callahan then bolted back to the NFL with the Chicago Bears as the offensive line coach in front of Walter Peyton for his first 3 years as a player.  The Washington Redskins was his next stop for 3 years of offensive line coach again with Jack Pardee at the helm.  Callahan then headed south to Texas with the Houston Oilers as the defensive line coach for 2 years.  Joe Walton then called upon Ray Callahan to lead up the defensive line "sack exchange" consisting of Barry Bennett, Marty Lyons, Joe Klecko, Mark Gastineau, of the New York Jets for the next 7 years.  Callahan retired to Bracey, Va on Lake Gaston and enjoyed lake life with his high school sweetheart wife Essie "Lee" Dorsey.  Callahan died on September 2, 2017.
+
+Question: The Imperials were the first pro team of a US national team goalkeeper that was born in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "team": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the soccer club."
+        },
+        "location": {
+          "type": "string",
+          "description": "The base location of the soccer club."
+        }
+      },
+      "required": [
+        "name",
+        "location"
+      ],
+      "additionalProperties": false
+    },
+    "goalkeeper": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the goalkeeper."
+        },
+        "is_us_national_team_member": {
+          "type": "boolean",
+          "description": "Indicates if the goalkeeper is a US national team member."
+        },
+        "first_pro_team_was_this_team": {
+          "type": "boolean",
+          "description": "Indicates if the specified team was the goalkeeper's first pro team."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The birth year of the goalkeeper."
+        }
+      },
+      "required": [
+        "name",
+        "is_us_national_team_member",
+        "first_pro_team_was_this_team",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    },
+    "answer_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the US national team goalkeeper whose first pro team was the Imperials."
+    }
+  },
+  "required": [
+    "team",
+    "goalkeeper",
+    "answer_birth_year"
+  ],
+  "additionalProperties": false
+}

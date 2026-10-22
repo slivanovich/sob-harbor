@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "e6ca95d2783a05fc3d1ee5d0977c9b16043db8b9d01ddda60f624d2402466369",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab9b506554299743d22ebb7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "27 March 1972",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Carlos Hasselbaink: Carlos Hasselbaink (born December 13, 1968 in Paramaribo, Suriname) is a former Dutch football (soccer) player.  He played as a striker for several Dutch clubs, including AZ Alkmaar, Telstar, VVV-Venlo, FC Utrecht and HFC Haarlem, before retiring in 2005.  He is the older brother of former Chelsea and Middlesbrough striker Jimmy Floyd Hasselbaink.\n\nJimmy Floyd Hasselbaink: Jerrel \"Jimmy\" Floyd Hasselbaink (born 27 March 1972) is a Dutch former professional footballer and current manager of EFL League One club Northampton Town.\n\nRobert Verbeek: Robert Verbeek (born 26 July 1961) is a Dutch former soccer player and subsequently a manager.  Verbeek is the younger brother of former Australia manager Pim Verbeek.  As a player, he featured for Sparta Rotterdam, where he retired at the age of 31.\n\nRonald Koeman: Ronald Koeman (] ; born 21 March 1963) is a former Dutch footballer and the current manager of English club Everton.  He is the younger brother of former Feyenoord coach Erwin Koeman and the son of former Dutch international Martin Koeman.  A composed player on the ball, Koeman was capable of being deployed both as a defender and as a midfielder, and he frequently played as a sweeper, due to his vision and his ability on the ball.  Regarded as one of the best and most prolific attacking central defenders of all time, Koeman was renowned for his long-range passing, as well as his shooting accuracy and power from distance, especially on free kicks, and is the top scoring defender in world football; he was also an accurate penalty kick taker.\n\nGarry Thompson (footballer, born 1959): Garry Thompson (born 7 October 1959) is an English former professional footballer and football manager, who played as a striker.  His younger brother, Keith Thompson, was also a professional footballer.\n\nFerruccio Mazzola: Ferruccio Mazzola (1 February 1945 – 7 May 2013) was an Italian former professional footballer and manager, who played as a midfielder.  He was the son of former footballer Valentino Mazzola, and the younger brother of retired footballer Sandro Mazzola.\n\nMike Ford (footballer): Michael Paul \"Mike\" Ford (born 9 February 1966) is an English former professional footballer and current manager of Banbury United.  His father, Tony Ford, was also a professional footballer.\n\nRick Kruys: Rick Kruijs, commonly known as Rick Kruys, (born 9 May 1985 in Utrecht) is a Dutch former professional footballer who played as a midfielder.  His father, Gert Kruys, was a former professional football player as well, currently working as a manager in Dutch football.\n\nCarlos Fabián Leeb: Carlos Fabián \"cat\" Leeb (born July 18, 1968, in Buenos Aires) is a former Argentine football striker and the current manager for Bolivian first division club Sport Boys Warnes.  Carlos is the son of Luis Félix \"cat\" Leeb, a professional footballer who played over 300 games in Argentine football.\n\nMichel Vonk: Michel Vonk (born 28 October 1968) is a Dutch former professional footballer and the current manager of Eerste Divisie side Telstar.",
+    "question": "What is the birthdate of this Dutch former professional footballer and current manager, who is the younger brother of Carlos Hasselbaink?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The full name of the person identified."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the person."
+        },
+        "birth_date": {
+          "type": "string",
+          "description": "The birthdate of the person in 'Day Month Year' format."
+        },
+        "current_role": {
+          "type": "string",
+          "description": "The current professional role of the person."
+        },
+        "former_role": {
+          "type": "string",
+          "description": "The former professional role of the person."
+        },
+        "sibling_relationship": {
+          "type": "object",
+          "properties": {
+            "sibling_name": {
+              "type": "string",
+              "description": "The name of the sibling mentioned in the context."
+            },
+            "relationship_type": {
+              "type": "string",
+              "description": "Describes the relationship of the identified person to their sibling (e.g., 'younger brother')."
+            }
+          },
+          "required": [
+            "sibling_name",
+            "relationship_type"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "person_name",
+        "nationality",
+        "birth_date",
+        "current_role",
+        "former_role",
+        "sibling_relationship"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Jimmy Floyd Hasselbaink",
+      "nationality": "Dutch",
+      "birth_date": "27 March 1972",
+      "current_role": "manager",
+      "former_role": "professional footballer",
+      "sibling_relationship": {
+        "sibling_name": "Carlos Hasselbaink",
+        "relationship_type": "younger brother"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

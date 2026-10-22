@@ -1,0 +1,11 @@
+{
+  "town_name": "Uralla, New South Wales",
+  "intersecting_roads": [
+    "New England Highway",
+    "Thunderbolts Way"
+  ],
+  "highway_of_interest": {
+    "name": "New England Highway",
+    "length_km": 878
+  }
+}

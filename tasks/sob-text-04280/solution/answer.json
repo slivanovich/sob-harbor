@@ -1,0 +1,16 @@
+{
+  "question": "Are Lucia di Lammermoor and The Bartered Bride both comic operas?",
+  "operas_compared": [
+    {
+      "opera_name": "Lucia di Lammermoor",
+      "genre": "dramma tragico",
+      "is_comic_opera": false
+    },
+    {
+      "opera_name": "The Bartered Bride",
+      "genre": "comic opera",
+      "is_comic_opera": true
+    }
+  ],
+  "are_both_comic_operas": false
+}

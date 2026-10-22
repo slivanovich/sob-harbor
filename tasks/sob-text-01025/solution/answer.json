@@ -1,0 +1,10 @@
+{
+  "company_name": "Schlumberger",
+  "employee_count": 100000,
+  "merged_company_details": {
+    "name": "Smith International",
+    "is_fortune_500": true,
+    "headquarters_location": "Greenspoint district and in unincorporated Harris County, Texas"
+  },
+  "company_classification": "world's largest oilfield services company"
+}

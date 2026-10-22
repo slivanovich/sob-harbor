@@ -1,0 +1,14 @@
+{
+  "composer_influenced_by_politics": "Bedřich Smetana",
+  "reasoning": "Bedřich Smetana's musical style was explicitly identified as pioneering a style closely identified with his country's aspirations to independent statehood, and he is regarded as the father of Czech music. His works like 'Má vlast' portray the history, legends, and landscape of his native land, and his opera 'Libuše' was composed for a potential coronation and later opened the National Theatre, linking his work to national events. No such political influence is mentioned for George Gershwin.",
+  "influenced_composer_details": {
+    "name": "Bedřich Smetana",
+    "nationality": "Czech",
+    "political_influence_description": "Pioneered a musical style closely identified with his country's aspirations to independent statehood and is regarded as the father of Czech music. His works portray the history, legends, and landscape of his native land."
+  },
+  "other_composer_details": {
+    "name": "George Gershwin",
+    "nationality": "American",
+    "political_influence_not_mentioned": true
+  }
+}

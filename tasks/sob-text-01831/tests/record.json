@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "record_id": "1a422b58ba351e316199360878fd24a445b1f9baa8b9c436e3fa7f2d9c6b9cdc",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab5c64a554299494045f060",
+    "source_dataset": "hotpotqa",
+    "source_answer": "46.5-foot-tall",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Site No. RH00-062: Site No.  RH00-062 is a survey monument located at the tripoint of Richardson County, Nebraska, and Brown and Doniphan counties in Kansas.  The cast iron monument is 6 ft tall and 16 in square at its base.  The monument marks the starting point of the land survey of the Kansas-Nebraska border along the 40th parallel north, which intersects the top of the Missouri River's western bluff at this spot.  U.S. Deputy Surveyor Charles A. Manners erected the monument in 1855 at the beginning of the survey.  In 1924, the monument was displaced and reset at the wrong location before Leo M. Petersen reset it in a sturdier base.\n\nStatue of Liberty National Monument: The Statue of Liberty National Monument is a United States national monument located in the U.S. states of New Jersey and New York comprising Liberty Island and Ellis Island.  It includes \"Liberty Enlightening the World\", commonly known as the Statue of Liberty, situated on Liberty Island, and the former immigration station at Ellis Island which opened in 1892 and closed in 1954.  The monument is managed by the National Park Service as part of the National Parks of New York Harbor office.\n\nFraser Island: K'gari (Fraser Island) is a heritage-listed island located along the southeastern coast of the state of Queensland, Australia.  It is approximately 250 km north of the state capital, Brisbane.  It is a locality within the Fraser Coast local government in the Wide Bay–Burnett region.  Its length is about 120 km and its width is approximately 24 km .  It was inscribed as a World Heritage Site in 1992.  The island is considered to be the largest sand island in the world at 1,840 km.  It is also Queensland's largest island, Australia's sixth largest island and the largest island on the East Coast of Australia.\n\nSamuel Bell: Samuel Bell (February 9, 1770December 23, 1850) was an American politician and lawyer who served as the 14th Governor of New Hampshire from 1819 to 1823, and as the United States Senator for New Hampshire from 1823 to 1835.  Born in Londonderry in the Province of New Hampshire, Bell became a lawyer in the 1790s, and entered politics by becoming a member of the New Hampshire House of Representatives in 1804.  In 1806, the year he left the House, he became the head of a bank which during his tenure in that position became the only New Hampshire bank to fail between 1792 and 1840.  A member of the New Hampshire Senate from 1807 to 1809, and an associate justice of the New Hampshire Supreme Court from 1816 to 1819, Bell was elected to become the Governor of New Hampshire in 1819 as Democratic-Republican.  Re-elected in 1820, 1821, and 1822 against token opposition, Bell's victory in 1822 was accompanied by the largest share of votes cast for a governor candidate of New Hampshire since John Taylor Gilman's victory in 1795.  Whilst Governor, New Hampshire's crime level fell, and industry within the state prospered.  In 1823, declining to stand again for the governorship, he became a Senator for New Hampshire.  He won re-election in 1829, was the chairman of the United States Senate Committee on Claims, and left the Senate in 1835.  He retired from public life thereafter, and died in Chester, New Hampshire at the age of 80.  He is buried in Chester Village Cemetery, Rockingham, New Hampshire.\n\nStar Island (New Hampshire): Star Island is one of the Isles of Shoals that straddle the border between New Hampshire and Maine, approximately 7 mi from the mainland in the Atlantic Ocean.  At 38 acre , Star Island is the largest of the four islands that are located in New Hampshire and second largest overall, after Appledore Island.  The island was supposedly assigned its name by sailors who imagined the shape of the island as the points of a shining star.  Originally known by the local \"Shoalers\" as the town of Gosport, in 1876 the island was annexed to the town of Rye.\n\nAdmiralty Island National Monument: Admiralty Island National Monument is a United States National Monument located on Admiralty Island in Southeast Alaska, and is managed as part of the Tongass National Forest.  It was created December 1, 1978, and covers 955,747 acres (3,868 km) in Southeast Alaska.  The remoteness of the monument led Congress to pass legislation designating all but 18,351 acres (74 km) of the monument as the Kootznoowoo Wilderness, ensuring that the vast bulk of this monument is permanently protected from development.  The monument is administered by the U.S. Forest Service from offices in Juneau.\n\nSite No. JF00-072: Site No.  JF00-072 is a survey monument located at the quadripoint of Republic and Washington counties in Kansas and Jefferson and Thayer counties in Nebraska.  The monument marks the intersection of the sixth principal meridian and its baseline, the 40th parallel north; it serves as the initial point of all land surveys in Kansas and Nebraska, as well as most of Wyoming and Colorado, and part of South Dakota.  The original sandstone monument was 6 ft tall.  U.S. Deputy Surveyor Charles A. Manners set the monument in 1856.  The monument was later buried under a county roadbed; it was unearthed and reburied twice before being dug up for good in 1986, though its middle section is now missing.\n\nMajor John André Monument: Major John André Monument, also known as the Site of Major John André's Hanging and Burial, is a historic monument located at Tappan in Rockland County, New York.  It is a gray granite monument erected in 1879 and approximately 40 inches square and 58 inches tall.  It is located in a circular plot approximately 31 feet in diameter.  It commemorates the site of the hanging of Major John André on October 2, 1780.\n\nTucke Monument: The Tucke Monument is a 46.5-foot-tall obelisk gravestone monument erected in 1914 to honor Reverend John Tucke (1702 – 1773).  The monument is located on Star Island, New Hampshire, where Rev. Tucke was a minister, judge, educator, and physician.\n\nBattle Monument (West Point): Battle Monument is a large Tuscan column monument located on Trophy Point at the United States Military Academy, West Point, NY.  Designed by Stanford White, it was dedicated on 30 May 1897 by surviving Civil War veterans.  The monument was financed by monthly contributions from the pay of the officers and soldiers of the regular army.  The granite column, standing 46 feet tall and 5 feet in diameter, is reputed to be the largest column of polished granite in the Western Hemisphere.  Inscribed on bronze straps belting the eight monumental \"cannon balls\" circling the column are the names of 2,230 Regular Army officers and soldiers who died for the Union during the Civil War.  Designed by Frederick MacMonnies, a female statue sits atop the monument, representing \"fame\".  The statue that now tops the monument is actually the second version of the statue.  Just months after it was unveiled, MacMonnies agreed to replace the original statue after complaints that it was too large and awkward.  Traditionally, the plebes at West Point made reference to the statue of Fame when giving the following reply to any upperclassman demanding to know \"How are they all?\" : \"They are all fickle but one, sir.\"  \"Who is the one?\"  \"She who stands atop Battle Monument, for she has been on the same shaft since 1897;\" however, this is no longer current practice.",
+    "question": "How tall is the gravestone monument located on the largest island of New Hampshire?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "island_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the island."
+            },
+            "size_acres": {
+              "type": "number",
+              "description": "The size of the island in acres."
+            },
+            "location_state": {
+              "type": "string",
+              "description": "The U.S. state where the island is located."
+            }
+          },
+          "required": [
+            "name",
+            "size_acres",
+            "location_state"
+          ],
+          "additionalProperties": false
+        },
+        "monument_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the monument."
+            },
+            "type": {
+              "type": "string",
+              "description": "The type of the monument (e.g., gravestone, obelisk)."
+            },
+            "height_feet": {
+              "type": "number",
+              "description": "The height of the monument in feet."
+            },
+            "year_erected": {
+              "type": "integer",
+              "description": "The year the monument was erected."
+            },
+            "honored_person": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the person honored by the monument."
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "type",
+            "height_feet",
+            "year_erected",
+            "honored_person"
+          ],
+          "additionalProperties": false
+        },
+        "final_answer_height_feet": {
+          "type": "number",
+          "description": "The height of the gravestone monument on the largest island of New Hampshire in feet."
+        }
+      },
+      "required": [
+        "island_details",
+        "monument_details",
+        "final_answer_height_feet"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "island_details": {
+        "name": "Star Island",
+        "size_acres": 38,
+        "location_state": "New Hampshire"
+      },
+      "monument_details": {
+        "name": "Tucke Monument",
+        "type": "obelisk gravestone monument",
+        "height_feet": 46.5,
+        "year_erected": 1914,
+        "honored_person": {
+          "name": "Reverend John Tucke"
+        }
+      },
+      "final_answer_height_feet": 46.5
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "conflict_name": "Korean War",
+  "start_date": "1950-06-25",
+  "involved_parties": [
+    "North Korea",
+    "South Korea",
+    "United States",
+    "China",
+    "Soviet Union"
+  ],
+  "us_military_involvement": true,
+  "us_officer_details": {
+    "name": "Don C. Faith Jr.",
+    "rank_at_death": "LTC"
+  }
+}

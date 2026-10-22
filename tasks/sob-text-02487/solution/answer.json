@@ -1,0 +1,18 @@
+{
+  "person_a_details": {
+    "name": "Lothar von Richthofen",
+    "birth_year": 1894,
+    "death_year": 1922,
+    "lifespan_years": 27
+  },
+  "person_b_details": {
+    "name": "Wolfram Freiherr von Richthofen",
+    "birth_year": 1895,
+    "death_year": 1945,
+    "lifespan_years": 49
+  },
+  "comparison_result": {
+    "longer_lived_person_name": "Wolfram Freiherr von Richthofen",
+    "difference_in_years": 22
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "first_entity": {
+    "name": "Capital of the Netherlands",
+    "type": "capital city"
+  },
+  "second_entity": {
+    "name": "Amsterdamned",
+    "type": "film"
+  },
+  "shared_culture": "Dutch"
+}

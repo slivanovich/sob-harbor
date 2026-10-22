@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "record_id": "4d95da24693d9730eb539d383cd02a5338adf08b3047c5c69856c24129f01c1f",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abb22645542992ccd8e7f20",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Julie Taymor",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Oedipus rex (opera): Oedipus rex is an \"Opera-oratorio after Sophocles\" by Igor Stravinsky, scored for orchestra, speaker, soloists, and male chorus.  The libretto, based on Sophocles's tragedy, was written by Jean Cocteau in French and then translated by Abbé Jean Daniélou into Latin; the narration, however, is performed in the language of the audience.\n\nKommos (theatre): A kommos (from Greek κομμός, \"kommós\", literally \"striking\", especially \"beating of the head and breast in mourning\") is a lyrical song of lamentation in an Athenian tragedy that the chorus and a dramatic character sing together.  A kommos occurs \"when the tension of the play rises to a climax of grief or horror or joy\".  Examples include the final section (lines 908-1077) of Aeschylus' \"The Persians\" (472 BCE) in which Xerxes laments the defeat of his Persian army, the final appearance of Antigone in Sophocles' \"Antigone\" (c.442 BCE), the interaction between the chorus and Oedipus when he returns having blinded himself in Sophocles' \"Oedipus Rex\" (c.429 BCE), and the exchange between Orestes, Electra and the chorus immediately after Clytemnestra's murder in Euripides' \"Electra\" (c.410 BCE).\n\nSophocles: Sophocles ( ; Greek: Σοφοκλῆς , \"Sophoklēs\", ] ; 497/6 – winter 406/5 BC) is one of three ancient Greek tragedians whose plays have survived.  His first plays were written later than those of Aeschylus, and earlier than or contemporary with those of Euripides.  Sophocles wrote 120 plays during the course of his life, but only seven have survived in a complete form: \"Ajax\", \"Antigone\", \"The Women of Trachis\", \"Oedipus Rex\", \"Electra\", \"Philoctetes\" and \"Oedipus at Colonus\".  For almost 50 years, Sophocles was the most celebrated playwright in the dramatic competitions of the city-state of Athens that took place during the religious festivals of the Lenaea and the Dionysia.  He competed in 30 competitions, won 24, and was never judged lower than second place.  Aeschylus won 13 competitions, and was sometimes defeated by Sophocles, while Euripides won 4 competitions.\n\nOedipus (Voltaire play): Oedipus (French: \"Œdipe\" ) is a tragedy by the French dramatist and philosopher Voltaire that was first performed in 1718.  It was his first play and the first literary work for which he used the pen-name Voltaire (his real name was François-Marie Arouet).  In adapting Sophocles' Athenian tragedy \"Oedipus Rex\", Voltaire attempted to rationalise the plot and motivation of its characters.  In a letter of 1719 he indicated that he found it improbable that the murder of Laius had not been investigated earlier and that Oedipus should take so long to understand the oracle's clear pronouncement.  Voltaire adds a subplot concerning the love of Philoctète for Jocaste.  He also reduces the prominence of the theme of incest.\n\nPolybus of Corinth: Polybus (Greek: Πόλυβος ) is a figure in Greek mythology.  He was the king of Corinth and husband of either Merope or Periboea.  He raised Oedipus as his adopted son, who had been abandoned by his parents Laius and Jocasta of Thebes in Greece.  Polybus was the true father of Alcinoe.  In virtually all accounts of the mythology, when Oedipus reached adolescence, he consulted with the Delphic Oracle, who told him \"You shall kill your father and marry your mother\".  Obviously horrified and disgusted with such a prophecy, Oedipus imposed self-exile upon himself and kept away from Corinth, as he resolved never to murder King Polybus, who had been a kind father to him.  Oedipus was also understandably disgusted the act of murdering Polybus and claiming his wife for himself, as he had no unnatural attraction to Queen Merope.  Many years later, after Oedipus won the kingship of Thebes by defeating the Sphinx, did another plague befall Thebes.  King Oedipus, in his effort to find the cause of plague due to a patricide, revealed that he was told in his teen years that he was destined to murder his father, and sent a spy to Corinth to see who is currently on the throne.  The news of Polybus' death by natural causes was announced by the messenger to Jocasta in Sophocles' \"Oedipus Rex\", in which it is mistakenly taken to mean that Oedipus did not kill his father.  This would mean that the prophecy that Oedipus would murder his father and marry his mother would be false, and Oedipus expresses relief that he did not commit such a heinous act.  Since Polybus was in fact his adoptive father, Oedipus could and did kill his true father, King Laius, and fulfill the prophecy.  Oedipus never knew his true destiny until the final parts of the play.\n\nKayoko Shiraishi: Kayoko Shiraishi (白石 加代子 , Shiraishi Kayoko ) is a Japanese stage actress.  Her first film role was as Oba in \"\".  She is the narrator in the 1992 film of Stravinsky's opera-oratorio \"Oedipus Rex\" directed by Julie Taymor.\n\nOedipus Rex (1967 film): Oedipus Rex (\"Edipo re\") is a 1967 Italian film directed by Pier Paolo Pasolini.  Pasolini adapted the screenplay from the Greek tragedy \"Oedipus Rex\" written by Sophocles in 428 BC.  The film was mainly shot in Morocco.\n\nPhilocles: Philocles (Greek: Φιλοκλῆς ), was an Athenian tragic poet during the 5th century BCE.  Through his mother, Philopatho (Greek: Φιλοπαθώ ), he had three famous uncles: Aeschylus, the famous poet, Cynaegirus, hero of the battle of Marathon, and Ameinias, hero of the battle of Salamis.  Philocles is best known for winning first prize in the competition against Sophocles' \"Oedipus Rex\".  Philocles also wrote a play on the subject of Tereus, which was parodied in Aristophanes' \"The Birds\" along with Sophocles' treatment of the same subject.  A scholiast has noted that Philocles' \"Tereus\" was part of his \"Pandionis\" tetralogy.  An extant fragment shows that Philocles wrote a play covering the story of Hermione, Neoptolemus and Orestes, a story also addressed by Euripides in his play \"Andromache\" and by Sophocles in his \"Hermione\".  In Pholocles' version of the Hermione myth, Hermione is betrothed to Neoptolemus by her father Menelaus while she is pregnant with Orestes' child.  Philocles also wrote plays entitled \"Oedipus\" and \"Philoctetes\".\n\nOedipus Rex: Oedipus Rex, also known by its Greek title, Oedipus Tyrannus (Ancient Greek: Οἰδίπους Τύραννος IPA: [oidípuːs týranːos]), or Oedipus the King, is an Athenian tragedy by Sophocles that was first performed around 429 BC.  Originally, to the ancient Greeks, the title was simply \"Oedipus\" (\"Οἰδίπους\"), as it is referred to by Aristotle in the \"Poetics\".  It is thought to have been renamed \"Oedipus Tyrannus\" to distinguish it from \"Oedipus at Colonus\".  In antiquity, the term “tyrant” referred to a ruler, but it did not necessarily have a negative connotation.\n\nOedipus (Euripides): Oedipus ( or ; Ancient Greek: Οἰδίπους , \"Oidípous\") is a play by the 5th-century BCE Athenian dramatist Euripides.  The play is now lost except for some fragments.  What survives of the play covers similar ground as Sophocles' acclaimed \"Oedipus Rex\", but scholars and historians have found there are significant differences.  In \"Oedipus Rex\", the title character blinds himself upon learning his true parentage, accidentally killing his father and marrying his mother Jocasta.  In Euripides' play, however, it appears Oedipus is blinded by Laius, a servant of his father and Oedipus' predecessor as king of Thebes.  Furthermore, Euripides' play implies Oedipus was blinded before it was known that Laius was his father.  Also, while in Sophocles' play Jocasta kills herself, remaining fragments of Euripides' play depict Jocasta as having survived and accompanied Oedipus into exile.",
+    "question": "Kayoko Shiraishi, is a Japanese stage actress, she's the narrator of Stravinsky's opera-oratorio \"Oedipus Rex\", an Athenian tragedy by Sophocles that was first performed around 429 BC, and directed by who?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "narrator": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "role"
+          ],
+          "additionalProperties": false
+        },
+        "work_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "original_play_author": {
+              "type": "string"
+            },
+            "original_play_performance_year_bc": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "title",
+            "type",
+            "original_play_author",
+            "original_play_performance_year_bc"
+          ],
+          "additionalProperties": false
+        },
+        "film_adaptation": {
+          "type": "object",
+          "properties": {
+            "director_name": {
+              "type": "string"
+            },
+            "release_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "director_name",
+            "release_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "narrator",
+        "work_details",
+        "film_adaptation"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "narrator": {
+        "name": "Kayoko Shiraishi",
+        "role": "narrator"
+      },
+      "work_details": {
+        "title": "Oedipus Rex",
+        "type": "opera-oratorio",
+        "original_play_author": "Sophocles",
+        "original_play_performance_year_bc": 429
+      },
+      "film_adaptation": {
+        "director_name": "Julie Taymor",
+        "release_year": 1992
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

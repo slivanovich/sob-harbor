@@ -1,0 +1,12 @@
+{
+  "rejected_footballer_name": "Terry Cochrane",
+  "rejecting_manager": {
+    "name": "Billy Bingham",
+    "date_of_birth": "5 August 1931",
+    "role_at_time_of_rejection": "Everton F.C. manager"
+  },
+  "rejection_details": {
+    "club_involved": "Everton F.C.",
+    "reason_for_rejection": "not having the right build"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "grand_final_year": 2015,
+  "player_rising_star_nomination": {
+    "player_name": "Adam Saad",
+    "nomination_round": 5
+  },
+  "grand_final_outcome": {
+    "winning_team": "Hawthorn",
+    "losing_team": "West Coast Eagles",
+    "winning_margin_points": 46,
+    "winner_premiership_details": {
+      "total_premierships": 13,
+      "consecutive_premierships": 3
+    },
+    "norm_smith_medalist": "Cyril Rioli",
+    "spectator_count": 98632
+  }
+}

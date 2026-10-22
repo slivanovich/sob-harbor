@@ -1,0 +1,15 @@
+{
+  "manager": {
+    "name": "Martin Jol",
+    "nationality": "Dutch",
+    "birth_year": 1956,
+    "former_playing_position": "midfielder"
+  },
+  "managed_player": {
+    "name": "Lee Young-pyo",
+    "nationality": "South Korean",
+    "status": "retired footballer"
+  },
+  "relationship_description": "Martin Jol was the former manager of Lee Young-pyo.",
+  "final_answer": "Martin Jol"
+}

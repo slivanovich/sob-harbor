@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "3b9d742861a68ae2285ebf7b9a238cd9c8e195dee60ea0e293533e96d2e55964",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae69bd755429908198fa659",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Long Beach Jam",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Tyrone Ellis: Tyrone Ellis (born October 5, 1977) is a retired naturalized Georgian professional basketball player, originally from the United States.  He is 1.93 m (6 ft 4 in) tall and played as a shooting guard.  He is currently the first head coach ever named for the Northern Arizona Suns of the NBA G League.\n\nNorthern Arizona Suns: The Northern Arizona Suns are an NBA G League team based in Prescott Valley, Arizona and the minor league affiliate of the Phoenix Suns.  The franchise began as the Long Beach Jam in 2003 under the revived American Basketball Association and moved to Bakersfield in the D-League in 2006 as the Bakersfield Jam; after 10 years in Bakersfield, California, the franchise was moved to Prescott Valley in 2016 by the Phoenix Suns and were subsequently renamed the Northern Arizona Suns.\n\nQuin Snyder: Quin Price Snyder (born October 30, 1966) is an American basketball coach who is currently the head coach of the Utah Jazz of the National Basketball Association (NBA).  Snyder was an assistant coach for the Atlanta Hawks for the 2013–14 season following his time with Euroleague's PBC CSKA Moscow for the 2012–13 season and the NBA's Los Angeles Lakers during the lockout shortened 2011–2012 season.  Prior to that, he was in charge of player development for the 76ers starting in June 2010 after coaching the NBDL's Austin Toros for three seasons.  Snyder was the head coach of the Toros from 2007–2010, the head coach at the University of Missouri from 1999–2006, an assistant coach at his alma mater Duke under Mike Krzyzewski from 1993–1999, and an assistant coach with the Los Angeles Clippers under Larry Brown from 1992–1993.  On June 6, 2014, Snyder was hired as the Utah Jazz's eighth head coach in franchise history.\n\nClaudio Cuello: Claudio César Cuello (born March 4, 1958) is a former Argentine volleyball player and current coach.  He was head coach of Argentina women's national volleyball team from 1997 to 2002 and in 2003 he became head coach of Argentina men's national volleyball team.  In 2004–2005 he was appointed head coach of the Greek powerhouse Olympiacos and coached the club to the triumph.  In 2005–06 season he worked in CS Petrolul Ploiesti, and led the team to the 2006 Romanian Championship.  From 2006 to 2009 he was head coach of HotVolleys Vienna and coached them to 2 consecutive (2006–07, 2007–08) and 1 (2008–09).  In 2007, after his first season with HotVolleys Vienna, he was appointed head coach of Austria men's national volleyball team as well, coaching the team until 2009.  He then moved to Italy, where he became head coach of Sirio Perugia (2010–2012) and (2012–2013) women's teams in .  In 2013–2014 he coached Lokomotiv Baku women's team in Azerbaijan.\n\nClint Dolezel: Clint Dolezel (born March 25, 1970) is an American football coach and former professional arena football player in the Arena Football League (AFL).  Dolezel was a quarterback in the AFL, and currently the head coach of the AFL's Philadelphia Soul.  He played college football at East Texas State, and was in the AFL for 13 seasons from 1995 to 2008.  Dolezel first became a head coach in 2010 with the San Angelo Stampede Express of the Indoor Football League (IFL).  After just a single season, Dolezel returned to the AFL as the head coach of the Dallas Vigilantes.  After the Vigilantes franchise suspended operations, Dolezel joined the Philadelphia Soul as their offensive coordinator under head coach Doug Plank.  Plank left the Soul following the 2012 season, and the Soul promoted Dolezel to head coach.  As an AFL player, he was originally signed by the Milwaukee Mustangs.  In his career, he has also played for the Texas Terror/Houston Thunderbears, Grand Rapids Rampage, Las Vegas Gladiators, and the Dallas Desperados.  Dolezel is also a scout for the Dallas Cowboys.\n\nJill Ellis: Jillian Anne Ellis (born September 6, 1966) is the head coach of the United States women's national soccer team and a development director of the United States Soccer Federation, overseeing the national youth teams development program.  In 2015, the United States Women's National Football Team won the World Cup Championship under her leadership.  Ellis was appointed head coach on May 16, 2014.  Prior to this appointment, she served as interim head coach following the removal of Tom Sermanni on April 6, 2014, having previously held the position upon Pia Sundhage's early departure in October 2012.  She has also served as head coach for various university and United States national youth teams over the years.\n\nRuffin McNeill: Ruffin Horne McNeill Jr. (born October 8, 1958) is an American football coach and former player.  He is currently the assistant head coach and defensive tackles coach at the University of Oklahoma.  He was previously the assistant head coach and defensive line coach at the University of Virginia.  McNeill also served as the head coach of the East Carolina Pirates from 2010 to 2015.  Before being named head coach of the Pirates, McNeill served the Texas Tech Red Raiders as an interim head coach, assistant head coach, special teams coordinator, and linebackers coach.  On December 28, 2009, he was named interim head coach of the Red Raiders following the suspension and later firing of head coach Mike Leach.  He served in the position until the hiring of Tommy Tuberville, who subsequently released him as defensive coordinator.\n\nDon Friday: Don Friday (born April 17, 1968) is an American college basketball coach, and the former men's basketball head coach at Saint Francis University, being named to the post in April 2008.  He previously served as head coach at Lycoming College (2003–2008), assistant coach at Bucknell University (1994–2003), and assistant coach at Lebanon Valley College (1990–1994).  At Lebanon Valley and Bucknell, he coached under Pat Flannery, and in 1994 he assisted Flannery as Lebanon Valley won the 1994 Division III National Championship.  He was the MAC coach of the year twice as the men's head coach at Lycoming University.  Friday has a true knowledge of the game.  In 2012, he was forced out of his job at Saint Francis and in the following hours after his firing his assistant Rob Krimmel son of athletic director got the job with no nationwide search or interview of any other coaches, this led to a controversy of nepotism in which the hiring of a family member.  After his release at Saint Francis Friday was hired by Head Coach Frank Marcinek at Susquehanna University after that brief stop Friday is now The Head Coach at Penn State Harrisburg and is turning the program around.  This past year Friday captured a win on number 15th ranked Christopher Newport, one of the biggest upsets in program history.  Friday earned Bachelor's degree in Business from Lebanon Valley College.  He currently resides in Annville with his son Donald and wife Amy.  Friday also holds elite clinics and coaches clinics to help coaches and players perform at the best of their ability.\n\n2015 Buffalo Bills season: The 2015 Buffalo Bills season was the franchise’s 56th overall season as a football team, 46th in the National Football League, third under leadership of general manager Doug Whaley and first under new head coach Rex Ryan, who signed a five-year, $27.5 million contract on January 12, 2015 after having previously spent the past six seasons coaching the division-rival New York Jets, leading them to two straight AFC Championship games in 2009 and 2010, becoming the franchise’s 18th head coach and the fifth in the past seven years in the process.  Ryan replaced Doug Marrone, who opted out of his contract on December 31, 2014 to take advantage of a contract loophole, fearing the Pegulas were going to fire him, hence the reason the Bills entered the 2015 season looking for a new head coach.  Despite the bold prediction made by Ryan at his introductory press conference, where he stated, “I’m not going to let our fans down.  I am not going to do that.  I know it’s been 15 years since the Bills made the playoffs.  Well, get ready, man, we’re going.  We are going,” the Bills were unable to make the playoffs in their first season with Ryan as head coach, finishing with a record of 8-8 (the team’s first since 2002), making it the 16th straight season without a playoff appearance, which became the longest active in major professional sports after Major League Baseball’s Toronto Blue Jays broke their 22-year playoff drought on September 25, 2015.  It was also the first full season under the ownership of Terry and Kim Pegula (whom also own the Buffalo Sabres), having purchased the Bills partway through 2014 after the death of longtime owner Ralph Wilson in March at the age of 95.  The Bills began their season with an open competition for the starting quarterback position after Kyle Orton, the starter for most of the 2014 campaign, retired during the offseason, so the team acquired free agent Tyrod Taylor, a former backup quarterback of the Baltimore Ravens, who won the competition over incumbent second-string quarterback EJ Manuel and trade acquisition Matt Cassel, the latter of whom the team later traded along with a seventh-round pick in 2017 to the Dallas Cowboys, in exchange for a fifth-round draft pick in 2017.\n\nList of Denver Broncos head coaches: There have been 15 head coaches for the Broncos franchise.  The franchise's first head coach was Frank Filchock, who coached until .  Mike Shanahan is the franchise's all-time leader for the most regular season games coached (208), the most regular season game wins (130), and the most playoff game wins (8).  Shanahan and Dan Reeves, are tied for the most playoffs games coached (13).  Shanahan was the first Broncos head coach to win a Super Bowl following the 1997 season, and repeated the feat following the 1998 season.  The current head coach, Bruce Harvett, looks for revenge in the AFC West after a tough last season The Broncos next Super Bowl victory was for Super Bowl 50 following the 2015 season under the leadership of coach Gary Kubiak who had previously played for Denver and served as an assistant coach.  Jack Faulkner, John Ralston, Red Miller, and Reeves have been named the United Press International (UPI) NFL Coach of the Year, at least once with the Broncos.  Filchock, Faulkner, Mac Speedie, Jerry Smith, Ralston, and Miller spent their entire coaching careers with the Broncos.  Speedie, Ray Malavasi, Miller, Shanahan, and Kubiak have been assistant coaches with the Broncos before they became head coaches with the Broncos.",
+    "question": "Tyrone Ellis is currently the head coach of a franchise that began as what in 2003?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "coach_name": {
+          "type": "string",
+          "description": "The name of the coach in question."
+        },
+        "current_team_name": {
+          "type": "string",
+          "description": "The name of the team the coach currently leads."
+        },
+        "franchise_origin": {
+          "type": "object",
+          "properties": {
+            "original_name": {
+              "type": "string",
+              "description": "The original name of the franchise."
+            },
+            "founding_year": {
+              "type": "integer",
+              "description": "The year the franchise began under its original name."
+            },
+            "original_league": {
+              "type": "string",
+              "description": "The league the franchise was part of when it began."
+            }
+          },
+          "required": [
+            "original_name",
+            "founding_year",
+            "original_league"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "coach_name",
+        "current_team_name",
+        "franchise_origin"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "coach_name": "Tyrone Ellis",
+      "current_team_name": "Northern Arizona Suns",
+      "franchise_origin": {
+        "original_name": "Long Beach Jam",
+        "founding_year": 2003,
+        "original_league": "American Basketball Association"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

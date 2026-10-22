@@ -1,0 +1,11 @@
+{
+  "month_name": "December",
+  "person_details": {
+    "name": "Dan Bilzerian",
+    "birth_date": "December 7, 1980"
+  },
+  "film_details": {
+    "title": "Extraction",
+    "release_date": "December 18, 2015"
+  }
+}

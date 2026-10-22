@@ -1,0 +1,15 @@
+{
+  "bands_compared": [
+    {
+      "band_name": "Placebo",
+      "formation_year": 1994
+    },
+    {
+      "band_name": "Godsmack",
+      "formation_year": 1995
+    }
+  ],
+  "earliest_debut_band_name": "Placebo",
+  "earliest_debut_year": 1994,
+  "comparison_result": "Placebo debuted first."
+}

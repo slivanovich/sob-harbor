@@ -1,0 +1,12 @@
+{
+  "championship_details": {
+    "championship_number": 4,
+    "championship_year": 1921
+  },
+  "host_location": {
+    "city_or_hamlet": "Inwood",
+    "state": "New York",
+    "country_club": "Inwood Country Club"
+  },
+  "answer_county": "Nassau County"
+}

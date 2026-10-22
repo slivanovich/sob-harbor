@@ -1,0 +1,13 @@
+{
+  "state_capital": {
+    "name": "Phoenix",
+    "population": 1615017,
+    "population_exceeds_one_million": true
+  },
+  "related_cdp": {
+    "name": "Heber-Overgaard",
+    "county": "Navajo County"
+  },
+  "distance_to_cdp_miles": 144,
+  "direction_from_cdp": "south"
+}

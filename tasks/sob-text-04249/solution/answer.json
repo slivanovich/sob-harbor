@@ -1,0 +1,16 @@
+{
+  "fortification_details": {
+    "name": "Fort des Ayvelles",
+    "controlled_elements": [
+      "Meuse",
+      "railway line"
+    ]
+  },
+  "linked_city_details": {
+    "city_name": "Reims",
+    "region": "Grand Est",
+    "distance_from_paris_km": 129,
+    "direction_from_paris": "east-northeast"
+  },
+  "final_answer": "Reims"
+}

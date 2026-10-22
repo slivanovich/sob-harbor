@@ -1,0 +1,14 @@
+{
+  "emperor_details": {
+    "common_name": "Caligula",
+    "birth_name": "Gaius Julius Caesar Germanicus",
+    "reign_start_ad": 37,
+    "reign_end_ad": 41
+  },
+  "praetorian_prefect_details": {
+    "name": "Naevius Sutorius Macro",
+    "service_start_ad": 31,
+    "service_end_ad": 38
+  },
+  "relationship_context": "Naevius Sutorius Macro served as Praetorian prefect under Caligula."
+}

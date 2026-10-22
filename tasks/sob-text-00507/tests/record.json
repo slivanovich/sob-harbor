@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "8bc61758050a3139af7ca18e1ff19b8cd60ece7815c0af25e30fe3dd78748a63",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5aded0a45542993344016b9f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "film director",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Down to Earth (1995 film): Down to Earth (Portuguese: \"Casa de Lava\" ) is a 1995 Portuguese drama film directed by Pedro Costa.  The film is set in Cape Verde Islands, a former Portuguese colony.\n\nColossal Youth (film): Colossal Youth (Portuguese: Juventude em Marcha , literally \"Youth on the March\") is a 2006 docufiction feature film directed by Portuguese director Pedro Costa.  The film was shot on DV in long, static takes and mixes documentary and fiction storytelling.  The third feature by Costa set in Lisbon's Fontainhas neighborhood (after \"In Vanda's Room\" and \"Bones\"), \"Colossal Youth\" is a meditation on the aftermath of the Carnation Revolution and its consequences for Portugal's poverty-stricken Cape Verdean immigrants.  It was part of the Official Competition at the 2006 Cannes Film Festival.\n\nIn Vanda's Room: In Vanda's Room (Portuguese: No Quarto da Vanda, 2000) is a docufiction (a subgenre of cinéma vérité) film by Portuguese director Pedro Costa.\n\nHold-Up! (2012 film): ¡Atraco!  is a 2012 Spanish-Argentine film directed by , filmed in Spain.  The script was written by the director with Pedro Costa.  The film stars Guillermo Francella, Nicolás Cabré, and Amaia Salamanca.\n\nO Sangue: O Sangue (Blood) is the Portuguese filmmaker Pedro Costa's first feature film.  Released in 1989, in black and white, the film depicts the impoverished life of two brothers, Vicente and Nino, after their father dies.  With the help of Clara, Vicente's childhood friend, the trio struggle to survive, caught between their uncle's attempt to abduct/adopt Nino, and mobsters looking to collect the debts Vincente's father left behind.  The film was selected as the Portuguese entry for the Best Foreign Language Film at the 64th Academy Awards, but was not accepted as a nominee.\n\nJack Hill: Jack Hill (born January 28, 1933) is an American film director in the exploitation film genre.  Several of Hill's later films have been characterized as feminist works.\n\nPedro Costa: Pedro Costa (born 30 December 1958) is a Portuguese film director.\n\nJosé Pedro Costa Amorim Cerqueira: José Pedro Costa Amorim Cerqueira (born 8 July 1992) simply known as Zé Pedro, is a Portuguese professional footballer playing for Académico de Viseu as a forward.\n\nOssos: Ossos (English: \"Bones\") is a 1997 Portuguese film directed by Pedro Costa.\n\nChange Nothing: Change Nothing (French: \"Ne change rien\" ) is a 2009 documentary directed by Portuguese filmmaker Pedro Costa.  The documentary focuses on the French singer Jeanne Balibar in rehearsal and concert as seen through Costa's characteristically long, stark takes.",
+    "question": "Jack Hill and Pedro Costa are both what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "common_profession": {
+          "type": "string",
+          "description": "The shared profession of the individuals."
+        },
+        "individuals": {
+          "type": "array",
+          "description": "Details about each individual mentioned.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the individual."
+              },
+              "nationality": {
+                "type": "string",
+                "description": "The nationality of the individual."
+              },
+              "birth_year": {
+                "type": "integer",
+                "description": "The birth year of the individual."
+              }
+            },
+            "required": [
+              "name",
+              "nationality",
+              "birth_year"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "number_of_individuals": {
+          "type": "integer",
+          "description": "The total number of individuals identified."
+        }
+      },
+      "required": [
+        "common_profession",
+        "individuals",
+        "number_of_individuals"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "common_profession": "film director",
+      "individuals": [
+        {
+          "name": "Jack Hill",
+          "nationality": "American",
+          "birth_year": 1933
+        },
+        {
+          "name": "Pedro Costa",
+          "nationality": "Portuguese",
+          "birth_year": 1958
+        }
+      ],
+      "number_of_individuals": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

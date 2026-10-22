@@ -1,0 +1,14 @@
+{
+  "shared_role": "vocalist",
+  "musicians": [
+    {
+      "name": "Stephen Christian",
+      "band": "Anberlin"
+    },
+    {
+      "name": "Jonathan Davis",
+      "band": "Korn"
+    }
+  ],
+  "role_description": "Both musicians serve as the lead singer for their respective bands."
+}

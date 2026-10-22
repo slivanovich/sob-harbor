@@ -1,0 +1,13 @@
+{
+  "question_asked": "Do Michael Ondaatje and Arthur Conan Doyle have the same nationality ?",
+  "person_1": {
+    "name": "Michael Ondaatje",
+    "nationality": "Canadian"
+  },
+  "person_2": {
+    "name": "Arthur Conan Doyle",
+    "nationality": "British"
+  },
+  "same_nationality": false,
+  "reasoning": "Michael Ondaatje is a Sri Lankan-born Canadian, while Arthur Conan Doyle was a British writer. Their nationalities are different."
+}

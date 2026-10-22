@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "33f777e010e7a0e47bd92465277e40c69b9d3abd2cbc342ca46ed4bbf169a17a",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5abea93a5542990832d3a079",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Congress party",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hindustani Awam Morcha (Secular): Hindustani Awam Morcha (translation: \"Indian People's Front\"; abbreviated as HAM) is an Indian political party, formally launched on 8 May 2015 by former Chief Minister of Bihar, Jitan Ram Manjhi, who left the Janata Dal (United) along with 18 others to form the party following the 2015 Bihar political crisis.  The name of the party was later changed to Hindustani Awam Morcha (Secular) (HAM-S).  In July 2015, the Election Commission recognised the HAM-S as a political party.  The election symbol of the party is a telephone.\n\nRich Like Us: Rich Like Us is a historical and political fiction novel by Nayantara Sahgal.  Set in New Delhi during the chaotic time between 1932 and the mid-1970s, it follows the lives of two female protagonists, Rose and Sonali, and their fight to live in a time of political upheaval and social re-organization.\n\nTamil Arasu Kazhagam: Tamil Arasu Kazhagam (Association for Tamil Autonomy) (Tamil: தமிழ் அரசு கழகம் ) was an Indian political party founded by M. P. Sivagnanam (Ma.  Po.  Si) in Tamil Nadu.  It was established as an association in 1946.  Its goals were to pressurize the Indian National Congress Government of the Madras Presidency to increase the use of Tamil in administration and education, to create an autonomous Tamil state out of a composite Madras Presidency and to soften the pro-Hindi stance of the Congress.  The association was allied with the Congress during 1946-54 and worked against the Dravidian Movement.  However, it grew closer to the Dravida Munnetra Kazhagam (DMK) over time.  During 1946-54, Sivagnanam was a member of the Congress.  He left the Congress in 1954 and turned the Tamil Arasu Kazhagam into an independent political party.  During 1957-60, it was involved in various protests over the drawing of state boundaries when Andhra Pradesh split from the composite Madras State.  It eventually became a part of DMK's electoral alliance in the 1967 assembly elections.  It was also involved in the movements to change the name of the state from Madras State to Tamil Nadu and to promote the use of Tamil over Sanskrit for conducting \"Archanai\" (Offerings to God) in Hindu temples.  In the 1967 elections, two candidates of the party (including Sivagnanam) were elected to the assembly contesting under DMK's \"Rising Sun\" Symbol.  The party was also an DMK ally in the 1971 assembly elections.  In 1972, it opposed the DMK chief minister M. Karunanidhi's decision to scrap prohibition laws and switched its allegiance to DMK's splinter group - the M. G. Ramachandran led Anna Dravida Munnetra Kazhagam (ADMK).  The party did not directly contest in elections after 1971 and Sivagnanam was nominated to the Tamil Nadu Legislative Council in 1972.  He remained as the member of the legislative council till its disbandment in 1986.  The party stopped functioning after Sivagnanam's death in 1995.\n\nE. K. Nayanar: Erambala Krishnan Nayanar (9 December 191819 May 2004) was a prominent Indian political leader of the Communist Party of India (Marxist).  He held the post of Chief Minister of Kerala three times - during 1980–81, 1987–91 and 1996–2001.\n\nAnandamohan Bose: Ananda Mohan Bose (Bengali: আনন্দমোহন বসু ) (23 September 1847 – 20 August 1906), a barrister, was one of the earliest Indian political leaders during the British Raj.  He co-founded the Indian National Association, one of the earliest Indian political organizations, and later became a senior leader of the Indian National Congress.  In 1874, he became the first Indian Wrangler (a student who has completed the third year of the Mathematical Tripos with first-class honours) of the Cambridge University.  He was also a prominent religious leader of Brahmoism and with Sivanath Sastri a leading light of Adi Dharm.\n\nCrow Terrace Poetry Trial: The Crow Terrace Poetry Trial (or Crow Terrace Poetry Case, 烏臺詩案) was a trial on charges including treason, or, lèse majesté (Sung Criminal Code, Article 122: \"Denouncing the Imperial Chariot\") that occurred in the year 1079 (during the Song dynasty) era of China (960–1279).  \"Crow Terrace\" refers to the imperial Office of the Censorate (御史臺), which prosecuted the case, a nickname.  The most prominent figure of the numerous accused parties was the official and artist Su Shi (1037 – 1101), whose works of poetry were produced in court as evidence against him.  Of the several tens or dozens accused, the most prominent figure was the remarkable artist and political leader Su Shi, whose works of poetry were produced as a key part of the evidence against him.  The Crow Terrace Poetry Trial was a major landmark in the struggle for free speech, in medieval China; and, as the outcome of the judicial proceedings resulted in Su Shi's conviction and sentence to exile, as well as the conviction and sentencing to various punishments of over 30 other individuals (some or many of whom were let off with fines and reprimands), the Crow Terrace Poetry Trial had the significant effect of dampening subsequent creative expression and set a major negative precedent for freedom of speech, at least for the remainder of Song Dynasty China.  Besides the significance of the Crow Terrace Poetry Trial for Su Shi and poetry, it is also a rather remarkably well-documented instance of a medieval Chinese literary prosecution, with surviving copies of indictments, arguments, case disposition; not to mention numerous of Su Shi's poems, which were entered as evidence.\n\nNayantara Sahgal: Nayantara Sahgal (born 10 May 1927) is an Indian writer who writes in English.  Her fiction deals with India's elite responding to the crises engendered by political change; she was one of the first female Indian writers in English to receive wide recognition.  She is a member of the Nehru–Gandhi family, the second of the three daughters born to Jawaharlal Nehru's sister, Vijaya Lakshmi Pandit.\n\nPrashant Kishor: Prashant Kishor (born 1977) is an Indian political strategist He is a Public Health expert by training and had formerly worked with the United Nations for eight years.  He came to wider public attention when Citizens for Accountable Governance (CAG), an election-campaign group he conceptualized, helped the Narendra Modi-led Bharatiya Janata Party (BJP) win an absolute majority in the 2014 Lok Sabha election.  In 2015, Kishor and some members of CAG regrouped as and started the Indian Political Action Committee (I-PAC) and started working for the 2015 Bihar assembly election.  Working closely with Bihar Chief Minister Nitish Kumar, a longtime rival of Modi, Kishor helped Kumar's \"Grand Alliance\" rout the BJP's alliance 178–58.  On 19 November 2015, a few days after the Bihar victory, the \"Economic Times\" revealed that Kishor was in talk with the Indian National Congress, to run its campaign for the crucial Uttar Pradesh assembly election in 2017.  On 2 March 2016, Huffington Post broke the news \"Fabled Electioneer Prashant Kishor Signs Up For Rahul 2019\".  It went on to reveal that \"quietly, Kishor has become a de facto advisor to Rahul Gandhi.  It is not just one or two states, Kishor is now likely to be designing the Congress campaign strategy in every state election until 2019, except the ones to be held in April–May.  Every state election until 2019, whether the Congress wins or loses them, will be used by Kishor and his team to give the Congress party a fresh new look, that of a resurgent party\".  Simultaneously, Kishor will also be co-authoring a book on elections with journalist Sankarshan Thakur.  On 2 March 2016 Juggernaut announced that in his book, \"Prashant Kishor will dissect what influences Indian voters today, their aspirations and what they now demand of their leaders\".  He is also facing stiff competition from Mr Anjani kumar singh of halchal media who is considered by many as the main curator of the bjp's victory in the UP.  He is said to be the silent face of the Bjp's victory in many other elections\n\nNehru–Gandhi family: The Nehru–Indira Gandhi family is a prominent Indian political dynasty, which primarily consisted of Jawaharlal Nehru, Indira Gandhi and her descendants.  Their political involvement has traditionally revolved around the Indian National Congress.  Members of the family have traditionally led the Congress party and the Republic of India since independence.\n\nVijaya Raje Scindia: Vijaya Raje Scindia (12 October 1919 – 25 January 2001) born Lekha Divyeshwari Devi and known popularly as the Rajmata of Gwalior, was a prominent Indian political personality.  In the days of the British Raj, as consort of the last ruling Maharaja of Gwalior, Jivajirao Scindia, she ranked among the highest royal figures of the land.  In later life, she became a politician of considerable influence and was elected repeatedly to both houses of the Indian parliament.  She was also an active member, for many decades, of the Jana Sangh and the Bharatiya Janata Party.",
+    "question": "To which political party do the prominent Indian political dynasty, which includes the Indian writer Nayantara Sahgal, whose works in English received wide recognition, belong?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "dynasty_name": {
+          "type": "string",
+          "description": "The name of the prominent Indian political dynasty."
+        },
+        "prominent_member_name": {
+          "type": "string",
+          "description": "The name of the Indian writer who is a member of the dynasty."
+        },
+        "member_role": {
+          "type": "string",
+          "description": "The primary role of the prominent member mentioned."
+        },
+        "political_party_name": {
+          "type": "string",
+          "description": "The formal name of the political party the dynasty is affiliated with."
+        },
+        "party_common_name": {
+          "type": "string",
+          "description": "The commonly known name of the political party."
+        },
+        "dynasty_political_affiliation_description": {
+          "type": "string",
+          "description": "A description of the dynasty's political involvement with the party."
+        }
+      },
+      "required": [
+        "dynasty_name",
+        "prominent_member_name",
+        "member_role",
+        "political_party_name",
+        "party_common_name",
+        "dynasty_political_affiliation_description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "dynasty_name": "Nehru–Gandhi family",
+      "prominent_member_name": "Nayantara Sahgal",
+      "member_role": "Indian writer",
+      "political_party_name": "Indian National Congress",
+      "party_common_name": "Congress party",
+      "dynasty_political_affiliation_description": "Their political involvement has traditionally revolved around the Indian National Congress."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

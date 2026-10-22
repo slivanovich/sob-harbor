@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of tallest buildings in Adelaide: This list of tallest buildings in Adelaide ranks the tallest buildings in Adelaide, South Australia by height.  The tallest building in Adelaide is currently the 31–story Westpac House, which rises 132 m and was completed in 1988, as of October 2013 it is Australia's 115th tallest building.  There are numerous projects either underway or planned in Adelaide, if constructed, Frome Central Tower 1 (11-27 Frome Street) would reach 134 m , therefore becoming the city's tallest building.  The tallest approved building in Adelaide is the Sofitel Hotel (104-108 Currie Street), which will be 115 m , it is planned to become the city's second tallest building upon completion.  Height restrictions–enforced since the 1990s–have limited the amount of skyscrapers constructed in the city although they have been eased in recent times.
+
+Capitol Lofts: The Capitol Lofts is a building located at 711 Main Street in downtown Houston, Texas.  Constructed in 1908, the building was originally used for office space and was converted to residential lofts in the 1990s.  The building was the tallest building in Houston and Texas until being surpassed by the Praetorian Building in Dallas, Texas as the tallest building in Texas in 1909.  It remained the tallest in Houston until 1910 when surpassed by the Carter Building.
+
+LIC Building: LIC Building is a 15-storied building in Chennai, India, serving as the southern regional headquarters of the Life Insurance Corporation of India.  It is the first skyscraper built in Chennai and a famous landmark in the city.  Located on the arterial Anna Salai (formerly Mount Road), the building is 177 ft tall.  LIC Building was the tallest building in India when it was inaugurated in 1959 and was surpassed by Mumbai's first skyscraper, the Usha Kiran Building, in 1961, which is about 80 m high.  The building marked the transition from lime-and-brick construction to concrete columns in the region.  The building is known for using pile foundation technique for the first time in the region.  It was the tallest building in Chennai for over 35 years before being surpassed by the Hyatt Regency Building (erstwhile Magunta Oberoi) in Anna Salai and the Arihant Majestic Towers in Koyambedu, both in the mid-1990s.
+
+Chrysler Building: The Chrysler Building is an Art Deco-style skyscraper located on the East Side of Midtown Manhattan, at the intersection of 42nd Street and Lexington Avenue in the Turtle Bay neighborhood.  At 318.9 m , the structure was the world's tallest building for 11 months before it was surpassed by the Empire State Building in 1931.
+
+Commerzbank Tower: Commerzbank Tower is a 56-story, 259 m futurist skyscraper owned by Samsung of Korea since September 2016 in the banking district of Frankfurt, Germany.  An antenna spire with a signal light on top gives the tower a total height of 300.1 m .  It is the tallest building in Frankfurt and the tallest building in Germany.  It had been the tallest building in Europe from its completion in 1997 until 2003 when it was surpassed by the Triumph-Palace in Moscow.  The Commerzbank Tower is only two metres taller than the Messeturm, which is also located in Frankfurt.  The Messeturm had been the tallest building in Europe before the construction of the Commerzbank Tower.
+
+List of tallest buildings in Corpus Christi: This list of tallest buildings in Corpus Christi ranks high-rises in the U.S. city of Corpus Christi, Texas by height.  The tallest building in Corpus Christi is the 28-story One Shoreline Plaza South Tower, which rises 411 feet (125 m) and was completed in 1988.  It also stands as the tallest building in Texas south of San Antonio.  The building is located on a complex which also contains the second tallest building in the city at 375 feet (114 m).  The third tallest building is the Frost Bank Plaza.  It stood as the city's tallest building from 1983 to 1988.
+
+Cloud Club: The Cloud Club was a lunch club that occupied the 66th, 67th, and 68th floors of the Chrysler Building in New York City.  At one time it was the highest lunch club in the world.  It opened in 1930 and closed in 1979.
+
+Hyperion Tower: The Hyperion Tower (Korean: 하이페리온 타워), also known as the Mok-dong Hyperion Towers, is a group of three buildings located in the Yangcheon-gu district of Seoul, South Korea, completed in 2003.  The tallest of which, Tower A, is 69 storeys and 256 metres (840 feet) high, making it the second tallest building in Seoul and the world's 214th tallest building.  The towers are used as residential housing.  Tower A is the world's 19th tallest residential building.  Below the building is the Hyundai Department store, a chain of high end department stores in South Korea.  At the time of its completion, the building was the tallest in the country but was surpassed by Samsung Tower Palace 3 – Tower G in 2004.
+
+Messeturm: The MesseTurm (English: "Trade Fair Tower" ) is a 63-storey, 257 m skyscraper in the Westend-Süd district of Frankfurt, Germany.  It is the second tallest building in Frankfurt, the second tallest building in Germany and the third tallest building in the European Union.  It was the tallest building in Europe from its completion in 1991 until 1997 when it was surpassed by the Commerzbank Tower, which is also located in Frankfurt.
+
+U.S. Bank Tower (Los Angeles): U.S. Bank Tower, formerly Library Tower and First Interstate Bank World Center, is a 1018 ft skyscraper at 633 West Fifth Street in downtown Los Angeles, California.  It is the third tallest building in California, the second tallest building in LA, the fifteenth tallest in the United States, the third tallest west of the Mississippi River after the Salesforce Tower and the Wilshire Grand Center, and the 92nd tallest building in the world, after being surpassed by the Wilshire Grand Center.  Because local building codes required all high-rise buildings to have a helipad, it was known as the tallest building in the world with a roof-top heliport from its completion in 1989 to 2004 when Taipei 101 opened.  It is also the third tallest building in a major active seismic region; its structure was designed to resist an earthquake of 8.3 on the Richter scale.  It consists of 73 stories above ground and two parking levels below ground.  Construction began in 1987 with completion in 1989.  The building was designed by Henry N. Cobb of the architectural firm Pei Cobb Freed & Partners and cost $350 million to build.  It is one of the most recognizable buildings in Los Angeles, and often appears in establishing shots for the city in films and television programs.
+
+Question: What year was the building, which housed the Cloud Club, surpassed for tallest building in the world?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "building_name": {
+      "type": "string",
+      "description": "The name of the building that housed the Cloud Club."
+    },
+    "record_held": {
+      "type": "string",
+      "description": "The record the building held."
+    },
+    "year_surpassed": {
+      "type": "integer",
+      "description": "The year the building was surpassed for the record it held."
+    }
+  },
+  "required": [
+    "building_name",
+    "record_held",
+    "year_surpassed"
+  ],
+  "additionalProperties": false
+}

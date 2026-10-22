@@ -1,0 +1,12 @@
+{
+  "identified_genus": "Humulus",
+  "genus_attributes": {
+    "family_name": "Cannabaceae",
+    "size_description": "small genus"
+  },
+  "is_flowering_plant": true,
+  "other_genus_evaluated": {
+    "name": "Sagina",
+    "family_name": "Caryophyllaceae"
+  }
+}

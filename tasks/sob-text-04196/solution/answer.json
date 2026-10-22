@@ -1,0 +1,28 @@
+{
+  "city_with_most_inhabitants": "Liuzhou",
+  "comparison_year": 2010,
+  "cities_population_data": [
+    {
+      "city_name": "Liuzhou",
+      "population_figures": [
+        {
+          "population_type": "prefecture",
+          "count": 3758700
+        },
+        {
+          "population_type": "built-up area",
+          "count": 1436599
+        }
+      ]
+    },
+    {
+      "city_name": "Liaoyang",
+      "population_figures": [
+        {
+          "population_type": "metro area with Anshan",
+          "count": 2057200
+        }
+      ]
+    }
+  ]
+}

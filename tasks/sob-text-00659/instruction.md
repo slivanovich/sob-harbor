@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lord Banff: Lord Banff is an extinct or dormant title in the Peerage of Scotland.  It was created on 31 August 1642 for Sir George Ogilvy, 1st Baronet.  He had already been created a Baronet, of Forglen in the County of Banff, in the baronetage of Nova Scotia on 30 July 1627.  He was succeeded by his son, the second Lord.  He was a cavalier and member of the Parliament of Scotland.  On his death the title passed to his elder son, the third Lord.  He was a supporter of the Union between England and Scotland.  He was succeeded by his son, the fourth Lord.  Two of his sons, the fifth and sixth Lords, succeeded in the title.  The latter was a captain in the Royal Navy.  He was unmarried and on his early death in 1746 the line of the third Lord failed.  The late Lord Banff was succeeded by his second cousin Sir Alexander Ogilvy, 2nd Baronet, who became the seventh Lord.  He was the grandson of the Hon. Alexander Ogilvy, younger son of the second Lord, who had been created a "baronet", of Forglen in the County of Banff, in the Baronetage of Nova Scotia in 1701.  On the death of his unmarried eldest surviving son, the eighth Lord, in 1803, the lordship and two baronetcies became either extinct or dormant.  The Forglen estate passed to the late Lord Banff's sister the Hon. Jane, wife of Sir George Abercromby, 4th Baronet (see Abercromby baronets).
+
+Lord Napier: Lord Napier, of Merchistoun, is a title in the Peerage of Scotland.  It was created in 1627 for Sir Archibald Napier, 1st Baronet.  Earlier that year, he already held the Napier Baronetcy, of Merchistoun in the County of Midlothian, created in the Baronetage of Nova Scotia.  The titles remained united until 1683, when the Baronetcy became dormant.  It was revived in the early 19th century and is now held by another branch of the Napier family.  Between 1683 and 1686, the Lords of Napier also held the Nicolson Baronetcy, of Carnock in the County of Stirling, and since 1725 the Scott Baronetcy, of Thirlestane in the County of Selkirk, both baronetcies created in the Baronetage of Nova Scotia.  The latter one is held till today.  Additionally, the tenth Lord was created Baron Ettrick in the Peerage of the United Kingdom in 1872.
+
+Strachan baronets: In 1619 James I erected the Baronetage of Ireland and laid plans for a further new Baronetage with the object of assisting the colonisation of Nova Scotia.  However, in 1624 he died before this could be implemented.  In 1625 Charles I took up the previous plans and erected the Baronetage of Scotland and Nova Scotia.  The new baronets were each required to pay 2000 marks or to support six settlers for two years.
+
+Widdrington baronets: There have been three baronetcies created for members of the Widdrington family, one in the Baronetage of Nova Scotia and two in the Baronetage of England.  All three creations are extinct.  The Widdringtons were an ancient Northumbrian family who gave their name to the village, near Morpeth, Northumberland.  In the 17th century the family were strongly Royalist and were rewarded with one baronetcy in the Baronetage of Nova Scotia and two in the Baronetage of England.  William Widdrington was created a baronet, of Widdrington in the County of Northumberland, in the Baronetage of England on 9 July 1642.  For more information on this creation, see Baron Widdrington.  His cousin Edward Widdrington was created a Baronet, of Widdrington in the County of Northumberland, in the Baronetage of Nova Scotia on 26 September 1635, and a Baronet, of Cartington in the County of Northumberland, in the Baronetage of England, on 8 August 1642.  The Nova Scotia baronetcy became either extinct or dormant on his death in 1671 while the English baronetcy became extinct.
+
+Menzies baronets: The Menzies Baronetcy, of Castle Menzies in the County of Perth, was a title in the Baronetage of Nova Scotia.  It was created on 2 September 1665 for Alexander Menzies.  The title became extinct on the death of the eighth Baronet in 1910.  It was unsuccessfully claimed between 1914 and 1917 by David Prentice Menzies, of Plean Castle, Stirlingshire, who claimed to be the nearest lawful heir male of line of Captain James Menzies.
+
+Rayney baronets: The Rayney Baronetcy, of Wrotham in the County of Kent, was a title in both the Baronetage of Nova Scotia and the Baronetage of England.  It was first created in the Baronetage of Nova Scotia on 19 December 1635 for Sir John Rayney of Wrotham Place, Wrotham, Kent.  He was then created a Baronet in the Baronetage of England on 22 January 1642, with the same territorial designation.  Rayney's father John Rayney, of West Malling, was a merchant and Alderman of London who bought Wrotham Place which became the family seat.  The first Baronet had been knighted at the Coronation of Charles I in 1626.  He served as High Sheriff of Kent in 1646.  On the death of the fifth Baronet in 1721 the English baronetcy became extinct while the Scottish baronetcy became dormant.
+
+Nova Scotia Museum of Industry: The Nova Scotia Museum of Industry is a provincial museum located in Stellarton, Nova Scotia, dedicated to the story of Nova Scotia work and workers.  Part of the Nova Scotia Museum system, the museum aims to explain how Nova Scotia was affected by the opportunities and challenges of the Industrial Age.
+
+Maitland, Hants County, Nova Scotia: Maitland, East Hants, Nova Scotia (originally known as Jean Peter's Village) is a village in the East Hants, Nova Scotia municipal district, and home to the historic Lawrence House Museum, part of the Nova Scotia Museum.  The community was part of the Douglas Township until it was named Maitland after Governor General of Nova Scotia Peregrine Maitland (1828–34), when building the Shubenacadie Canal was first attempted (1826–1831).  The Canal was supposed to start at Maitland, Nova Scotia and run through the province to Maitland Street, Dartmouth, the canal being "bookended" by two "Maitland" landmarks.
+
+Nova Scotia College of Early Childhood Education: Nova Scotia College of Early Childhood Education, (NSCECE), formerly known as St. Joseph's College, is a non-profit, private career college located on Quinpool Road in Halifax, Nova Scotia, Canada.  It is associated with the Private College Association of Nova Scotia, National Association of Career Colleges, and the Nova Scotia Child Care Association, accredited by the Nova Scotia Department of Community Services, and registered with the Nova Scotia Department of Education.
+
+Castle Menzies: Castle Menzies in Scotland is the ancestral seat of the Clan Menzies and the Menzies Baronets.  It is located a little to the west of the small village of Weem, near Aberfeldy in the Highlands of Perthshire, close to the former site of Weem Castle, destroyed c. 1502.  The manager is David Henderson.
+
+Question: What is the name of this ancestral seat, located in Scottland, that was a part of the title in the Baronetage of Nova Scotia?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "ancestral_seat_name": {
+      "type": "string",
+      "description": "The name of the ancestral seat."
+    },
+    "location_country": {
+      "type": "string",
+      "description": "The country where the ancestral seat is located."
+    },
+    "baronetage_type": {
+      "type": "string",
+      "description": "The type of Baronetage associated with the ancestral seat."
+    },
+    "associated_baronetcy_title": {
+      "type": "string",
+      "description": "The specific title of the Baronetcy linked to the ancestral seat."
+    },
+    "clan_associated": {
+      "type": "string",
+      "description": "The clan associated with the ancestral seat."
+    }
+  },
+  "required": [
+    "ancestral_seat_name",
+    "location_country",
+    "baronetage_type",
+    "associated_baronetcy_title",
+    "clan_associated"
+  ],
+  "additionalProperties": false
+}

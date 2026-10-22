@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Kusum oil: Kusum oil is a type of oil extracted from the seed of the Kusum tree ("Schleichera oleosa").  The plant, which is also commonly known as Ceylon oak, lac tree, or Macassar oiltree, belongs to the Sapindaceae family.  The schleichera family is named after J. C. Schleicher, a Swiss botanist, and the species name means "oily" or "rich in oil."  The tree is native to India and Pakistan, but is also found in some parts of Southeast Asia.
+
+Shea butter: Shea butter ( , , or ) is a fat extracted from the nut of the African shea tree ("Vitellaria paradoxa").  It is usually yellow in color when raw, with Unrefined, refined, and Ultra-Refined Shea butter being ivory or white in color.  Shea butter is a triglyceride (fat) derived mainly from stearic acid and oleic acid.  It is widely used in cosmetics as a moisturizer, salve or lotion.  Shea butter is edible and is used in food preparation in Africa.  Occasionally, the chocolate industry uses shea butter mixed with other oils as a substitute for cocoa butter, although the taste is noticeably different.
+
+Kokum oil: Kokum oil comes from the seeds of the kokum tree (Garcinia indica).  This fruit-bearing tree is also known as the wild mangosten tree, and also the red mangosten tree.  This tree belongs to the Guttiferae family of the plant kingdom.  Its scientific name is Garcinia indica.  The oil extracted from the seeds is edible, and it can also be used for things other than cooking.
+
+Polenske value: The Polenske value (also known as the Polenske number) is a value determined when examining fat.  The Polenske value is an indicator of how much volatile fatty acid can be extracted from fat through saponification.  It is equal to the number of milliliters of 0.1 normal hydroxide solution necessary for the neutralization of the water-insoluble volatile fatty acids distilled and filtered from 5 grams of a given saponified fat.  (The hydroxide solution used in such a titration is typically made from sodium hydroxide, potassium hydroxide, or barium hydroxide.)
+
+Cananga odorata: Cananga odorata, known as the cananga tree (Indonesian: "kenanga" , Filipino: "ilang-ilang" ), is a tropical tree that originates in Indonesia, which in early 19th century spread to Malaysia and the Philippines.  It is valued for the perfume extracted from its flowers, called ylang-ylang (a name also sometimes used for the tree itself), which is an essential oil used in aromatherapy.  The tree is also called the fragrant cananga, Macassar-oil plant, or perfume tree.  Traditional Polynesian names include Mata‘oi (Cook Islands), Mohokoi (Tonga), Moso‘oi (Samoa), Moto‘oi (Hawai), Mokosoi/Mokasoi/Mokohoi (Fiji).
+
+Illipe: Illipe butter is a vegetable fat from the nut (known as the "false illipe nut") of the "Shorea stenoptera" tree, sometimes used as a cocoa butter substitute.  Borneo tallow nut oil is extracted from this species.  The word Illipe is derived from the Tamil word for the tree Iluppai (இலுப்பை).  The true illipe nut is from the species "Madhuca latifolia", it is used for producing biodiesel and the Mowrah Butter is from "Madhuca longifolia", Family Sapotaceae.
+
+Kirschner value: The Kirschner value (also known as the Kirschner number) is a value determined when examining fat.  The Kirschner value is an indicator of how much volatile fatty acid can be extracted from fat through saponification.  It consists of the number of milliliters of 0.1 normal sodium hydroxide necessary for the neutralization of water-soluble silver salts made from the water-soluble volatile fatty acids distilled from 5 grams of a given fat.
+
+Vitellaria: Vitellaria paradoxa (formerly "Butyrospermum parkii"), commonly known as shea tree, shi tree, or , or vitellaria, is a tree of the Sapotaceae family.  It is the only species in genus Vitellaria, and is indigenous to Africa.  The shea fruit consists of a thin, tart, nutritious pulp that surrounds a relatively large, oil-rich seed from which shea butter is extracted.
+
+Olive pomace oil: Olive pomace oil is olive oil that is extracted from olive pulp after the first press.  Once the mechanical oil extraction of olive oil is complete, approximately 5-8% of the oil remains in the pulp, which then needs to be extracted with the help of solvents, an industrial technique used in the production of most other edible oils including canola, peanut, sunflower, etc.  Although the oil extracted in this manner is still olive oil, at retail it may not simply be called “olive oil”.  This is because the International Olive Council defines olive oil as “the oil obtained solely from the fruit of the olive tree, to the exclusion of oils obtained using solvents or re-esterification processes”
+
+Yongduuni: Yongduuni is a community in Tamale Metropolitan District in the Northern Region of Ghana.  It is a less populated community.  The inhabitants of the community are predominantly farmers and the women are also into Shea butter production.
+
+Question: Women from Yongduuni are known for production of a fat that is extracted from which tree ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "community_name": {
+      "type": "string",
+      "description": "The name of the community where the production takes place."
+    },
+    "producer_group": {
+      "type": "string",
+      "description": "The group of people known for the production."
+    },
+    "product_produced": {
+      "type": "string",
+      "description": "The name of the fat produced."
+    },
+    "source_tree": {
+      "type": "object",
+      "properties": {
+        "common_name": {
+          "type": "string",
+          "description": "The common name of the tree from which the fat is extracted."
+        },
+        "scientific_name": {
+          "type": "string",
+          "description": "The scientific name of the tree."
+        },
+        "family": {
+          "type": "string",
+          "description": "The botanical family of the tree."
+        },
+        "origin": {
+          "type": "string",
+          "description": "The region where the tree is indigenous."
+        }
+      },
+      "required": [
+        "common_name",
+        "scientific_name",
+        "family",
+        "origin"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "community_name",
+    "producer_group",
+    "product_produced",
+    "source_tree"
+  ],
+  "additionalProperties": false
+}

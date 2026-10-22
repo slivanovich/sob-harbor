@@ -1,0 +1,15 @@
+{
+  "are_both_film_directors": true,
+  "person_1": {
+    "name": "Mohammad Bakri",
+    "is_film_director": true
+  },
+  "person_2": {
+    "name": "Peter Billingsley",
+    "is_film_director": true,
+    "notable_directing_work": [
+      "Couples Retreat",
+      "Term Life"
+    ]
+  }
+}

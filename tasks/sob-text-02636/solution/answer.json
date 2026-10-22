@@ -1,0 +1,15 @@
+{
+  "replaced_coach": {
+    "name": "Dom Capers",
+    "role_at_team": "head coach"
+  },
+  "replacing_coach": {
+    "name": "Gary Kubiak",
+    "previous_role": "Denver Broncos offensive coordinator"
+  },
+  "team_details": {
+    "name": "Houston Texans",
+    "season_of_change": 2005,
+    "context_of_season": "worst record in franchise history"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "film_details": {
+    "title": "The Dictator",
+    "release_year": 2012,
+    "genres": [
+      "political satire",
+      "black comedy"
+    ],
+    "nationalities": [
+      "British",
+      "American"
+    ]
+  },
+  "composer_name": "Omar Fadel",
+  "director_name": "Larry Charles"
+}

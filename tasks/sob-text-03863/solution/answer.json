@@ -1,0 +1,26 @@
+{
+  "controversy_details": {
+    "name": "Bogdanov affair",
+    "type": "academic dispute"
+  },
+  "authors": [
+    {
+      "full_name": "Igor Yourievitch Osten-Sacken-Bogdanoff",
+      "nationality": "French",
+      "primary_occupations": [
+        "television producer",
+        "scientific essayist"
+      ]
+    },
+    {
+      "full_name": "Grichka Yourievitch Osten-Sacken-Bogdanoff",
+      "nationality": "French",
+      "primary_occupations": [
+        "television producer",
+        "scientific essayist"
+      ]
+    }
+  ],
+  "papers_culmination_goal": "a proposed theory for describing what occurred at the Big Bang",
+  "historic_event_described": "Big Bang"
+}

@@ -1,0 +1,15 @@
+{
+  "person_1": {
+    "name": "Cheick Oumar Sissoko",
+    "birth_year": 1945
+  },
+  "person_2": {
+    "name": "Robert Rodriguez",
+    "birth_year": 1968
+  },
+  "age_comparison_result": {
+    "older_person_name": "Cheick Oumar Sissoko",
+    "younger_person_name": "Robert Rodriguez",
+    "age_difference_years": 23
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "city_name": "Vienna",
+  "country": "Austria",
+  "population_details": {
+    "city_population": 1800000,
+    "metropolitan_population": 2600000,
+    "population_description": "nearly one third of Austria's population"
+  }
+}

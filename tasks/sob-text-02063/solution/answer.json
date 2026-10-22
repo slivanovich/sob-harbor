@@ -1,0 +1,14 @@
+{
+  "event_name": "Rumble in the Jungle",
+  "fighters_involved": [
+    {
+      "name": "Muhammad Ali",
+      "is_ordained_minister": false
+    },
+    {
+      "name": "George Foreman",
+      "is_ordained_minister": true
+    }
+  ],
+  "ordained_minister_fighter": "George Foreman"
+}

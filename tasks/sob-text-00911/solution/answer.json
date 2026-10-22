@@ -1,0 +1,11 @@
+{
+  "policy_details": {
+    "name": "Federal Indian Policy",
+    "primary_authority_source": "The Constitution"
+  },
+  "policy_phase_details": {
+    "name": "removal and reservations",
+    "start_year": 1829,
+    "end_year": 1886
+  }
+}

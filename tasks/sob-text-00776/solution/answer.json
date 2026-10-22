@@ -1,0 +1,18 @@
+{
+  "state_name": "Pennsylvania",
+  "founder_details": {
+    "name": "William Penn",
+    "origin_country": "England",
+    "roles": [
+      "real estate entrepreneur",
+      "philosopher",
+      "early Quaker",
+      "founder"
+    ]
+  },
+  "commissioner_appointment_details": {
+    "appointed_by": "William Penn",
+    "number_of_commissioners": 5,
+    "appointment_purpose": "settling his colony of Pennsylvania"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "J. G. Farrell",
+    "birth_year": 1935
+  },
+  "person_2": {
+    "name": "Joseph Wambaugh",
+    "birth_year": 1937
+  },
+  "earlier_born_person_name": "James Gordon Farrell",
+  "birth_year_difference_years": 2
+}

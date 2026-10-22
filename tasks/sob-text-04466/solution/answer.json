@@ -1,0 +1,9 @@
+{
+  "magazine_name": "Gallery",
+  "publisher": {
+    "name": "Magna Publishing Group",
+    "headquarters_city": "Paramus",
+    "headquarters_state": "New Jersey"
+  },
+  "answer": "Paramus"
+}

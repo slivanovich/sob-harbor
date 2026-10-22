@@ -1,0 +1,13 @@
+{
+  "is_both_flowering_plant_genera": false,
+  "lesquerella_details": {
+    "is_genus": false,
+    "is_flowering_plant": false,
+    "status_description": "former name of a genus of flowering plants"
+  },
+  "thujopsis_details": {
+    "is_genus": true,
+    "is_flowering_plant": false,
+    "plant_type": "conifer"
+  }
+}

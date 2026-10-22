@@ -1,0 +1,17 @@
+{
+  "question_asked": "Which dog originated in the United Kingdom, Norwich Terrier or Brazilian Terrier?",
+  "dog_breeds_compared": [
+    {
+      "name": "Norwich Terrier",
+      "origin_country": "United Kingdom",
+      "is_uk_origin": true
+    },
+    {
+      "name": "Brazilian Terrier",
+      "origin_country": "Brazil",
+      "is_uk_origin": false
+    }
+  ],
+  "answer_breed_name": "Norwich Terrier",
+  "answer_reasoning": "The Norwich Terrier is a breed of dog originating in the United Kingdom, while the Brazilian Terrier was developed in Brazil."
+}

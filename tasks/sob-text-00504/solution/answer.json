@@ -1,0 +1,13 @@
+{
+  "artist": {
+    "name": "Jack White"
+  },
+  "debut_solo_album": {
+    "title": "Blunderbuss",
+    "release_year": 2012
+  },
+  "first_single": {
+    "title": "Love Interruption",
+    "release_date": "January 30, 2012"
+  }
+}

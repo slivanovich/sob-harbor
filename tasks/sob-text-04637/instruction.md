@@ -1,0 +1,84 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+York Revolution: The York Revolution is an American professional baseball team based in York, Pennsylvania.  It is a member of the Freedom Division of the Atlantic League of Professional Baseball, an independent league not affiliated with Major League Baseball.  From the 2007 season to the present, the Revolution has played its home games at PeoplesBank Park, located in the Arch Street neighborhood.  The team has won the league championship three times, most recently over the Long Island Ducks on September 29, 2017.
+
+Philadelphia Phillies: The Philadelphia Phillies are an American professional baseball team based in Philadelphia, Pennsylvania.  They are the oldest continuous, one-name, one-city franchise in all of professional American sports, dating back to 1883.  The Phillies compete in Major League Baseball (MLB) as a member club of the National League (NL) East division.  Since 2004, the team's home has been Citizens Bank Park, located in South Philadelphia.
+
+Grafton Wanderers: The Grafton Wanderers were a Pennsylvania–West Virginia League baseball team based in Grafton, West Virginia that played in 1908 and 1909.  To begin the 1908 season, they were known as the Scottdale Millers, based in Scottdale, Pennsylvania.  In 1910, an un-nicknamed Grafton team based in Grafton played in the West Virginia League.  The Wanderers were Grafton's first professional baseball team ever.  The 1910 squad was its last to date.
+
+Camden Riversharks: The Camden Riversharks were an American professional baseball team based in Camden, New Jersey.  They were a member of the Liberty Division of the Atlantic League of Professional Baseball, which is not affiliated with Major League Baseball.  From the 2001 season to 2015, the Riversharks played their home games at Campbell's Field, which is situated at the base of the Benjamin Franklin Bridge.  Due to its location on the Delaware River, the ballpark offers a clear view of the Philadelphia skyline.  The "Riversharks" name refers to the location of Camden on the Delaware River, as the primary logo incorporates the Benjamin Franklin Bridge that links Camden to Philadelphia.
+
+June Greene: Julius Foust "June" Greene (June 25, 1899 – March 19, 1974) was a pinch hitter and pitcher in Major League Baseball.  He played for the Philadelphia Phillies in 1928 and 1929.
+
+Newark Bears: The Newark Bears were an American professional baseball team based in Newark, New Jersey.  They were a member of the Atlantic League of Professional Baseball and, later, the Canadian American Association of Professional Baseball.  The Bears played their home games at Bears & Eagles Riverfront Stadium.  The team folded after the 2013 season.
+
+Charleroi Cherios: The Charleroi Cherios, as referred to as the Charleroi Cherubs, were a professional baseball team that played in the Pennsylvania–West Virginia League in 1908.  Based in Charleroi, Pennsylvania, USA.  The team can be traced to an un-nicknamed team that played in the Pennsylvania–Ohio–Maryland League in 1906 and 1907.  During the 1909 season, Charleroi posted a 13-25.  However, on June 30, 1909 the club moved to Parkersburg, West Virginia to become the Parkersburg Parkers.  then was dropped July 10, after Clarksburg disbanded.  In 1914 a team based in Charleroi played in the revived Pennsylvania–West Virginia League, however it did not have a nickname, either.  On May 26, 1914, both Charleroi and the McKeesport Royals disbanded.  The league then folded soon afterwards on June 1, 1914.
+
+Virginia Beach Neptunes: The Virginia Beach Neptunes are a proposed American professional baseball team based in Virginia Beach, Virginia.  They are planned to be a member of the Atlantic League of Professional Baseball, which is not affiliated with Major League Baseball.  They will be the second professional baseball club in the Hampton Roads region after the Norfolk Tides of the International League (AAA).
+
+Homestead Steel Workers: The Homestead Steel Workers were a professional baseball team based Homestead, Pennsylvania.  The club played in the Ohio–Pennsylvania League in 1905 and was managed by Howard Risher.  Lee Fohl, Rube Sellers and Hughie Tate played for the club.  It is the only known professional baseball team to be based in Homestead.
+
+Lancaster Barnstormers: The Lancaster Barnstormers are an American professional baseball team based in Lancaster, Pennsylvania.  They are a member of the Freedom Division of the Atlantic League of Professional Baseball, which is not affiliated with Major League Baseball.  From the 2005 season to the present, the Barnstormers have played their home games at Clipper Magazine Stadium in the city's Northwest Corridor.
+
+Question: Julius Foust "June" Greene played for which American professional baseball team based in Philadelphia, Pennsylvania?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The full name of the baseball player."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The name of the professional baseball team."
+    },
+    "team_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "city",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "league_affiliation": {
+      "type": "string",
+      "description": "The league the team competes in or is affiliated with."
+    },
+    "years_played_for_team": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "description": "The years the player played for this specific team."
+    }
+  },
+  "required": [
+    "player_name",
+    "team_name",
+    "team_location",
+    "league_affiliation",
+    "years_played_for_team"
+  ],
+  "additionalProperties": false
+}

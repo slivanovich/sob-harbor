@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Bowers v. Baystate Technologies, Inc.: Bowers v. Baystate Technologies (320 F.3d 1317) was a U.S. Court of Appeals Federal Circuit case involving Harold L. Bowers (doing business as HLB Technology) and Baystate Technologies over patent infringement, copyright infringement, and breach of contract.  In the case, the court found that Baystate had breached their contract by reverse engineering Bower's program, something expressly prohibited by a shrink wrap license that Baystate entered into upon purchasing a copy of Bower's software.  This case is notable for establishing that license agreements can preempt fair use rights as well as expand the rights of copyright holders beyond those codified in US federal law.
+
+Garner v. Louisiana: Garner v. Louisiana, 368 U.S. 157 (1961), was a pivotal civil rights case argued by Thurgood Marshall before the Supreme Court.  On December 11, 1961, the court unanimously ruled that Louisiana could not convict peaceful sit-in protesters who refused to leave dining establishments under the state's "disturbing the peace" laws.
+
+Lawrence v. Texas: Lawrence v. Texas, 539 U.S. 558 (2003) is a landmark decision by the United States Supreme Court.  The Court struck down the sodomy law in Texas in a 6-3 decision and, by extension, invalidated sodomy laws in 13 other states, making same-sex sexual activity legal in every U.S. state and territory.  The Court, with a five-justice majority, overturned its previous ruling on the same issue in the 1986 case "Bowers v. Hardwick", where it upheld a challenged Georgia statute and did not find a constitutional protection of sexual privacy.
+
+Garner v. Teamsters Local 776: Garner v. Teamsters Local 776, 346 US 485 (1953) is a US labor law case, concerning the scope of federal preemption against state law for labor rights.
+
+Allgeyer v. Louisiana: Allgeyer v. Louisiana, 165 U.S. 578 (1897) , was a landmark United States Supreme Court case in which a unanimous court struck down a Louisiana statute for violating an individual's liberty of contract.  It was the first case in which the Supreme Court interpreted the word "liberty" in the Due Process Clause of the Fourteenth Amendment to mean economic liberty.  The decision marked the beginning of the infamous "Lochner" era, during which the Supreme Court struck many state regulations for infringing on an individual's right to contract.  The "Lochner" era lasted forty years, until "West Coast Hotel Co. v. Parrish" was decided in 1937.
+
+Garner v. Board of Public Works: Garner v. Board of Public Works, 341 U.S. 716 (1951), is a ruling by the United States Supreme Court which held that a municipal loyalty oath which required an oath and affidavit about one's beliefs and actions for the previous five years and which was enacted more than five years previous is not an ex post facto law nor a bill of attainder.
+
+Bowers v. Hardwick: Bowers v. Hardwick, 478 U.S. 186 (1986) , is a United States Supreme Court decision, overturned in 2003, that upheld, in a 5–4 ruling, the constitutionality of a Georgia sodomy law criminalizing oral and anal sex in private between consenting adults, in this case with respect to homosexual sodomy, though the law did not differentiate between homosexual sodomy and heterosexual sodomy.
+
+Baker v. Wade: Baker v. Wade 563 F.Supp 1121 (N.D. Tex. 1982), rev'd 769 F.2nd 289 (5th Cir.  1985) (en banc) cert denied 478 US 1022 (1986) is a federal lawsuit challenging the legality of the sodomy law of the state of Texas.  Plaintiff Donald Baker contended that the law violated his rights to privacy and equal protection.  After a victory at trial, an appellate court reversed the lower court's decision and in the wake of its decision in "Bowers v. Hardwick" the Supreme Court of the United States refused to review it.
+
+Romer v. Evans: Romer v. Evans, 517 U.S. 620 (1996) , is a landmark United States Supreme Court case dealing with sexual orientation and state laws.  It was the first Supreme Court case to address gay rights since "Bowers v. Hardwick" (1986), when the Court had held that laws criminalizing sodomy were constitutional.
+
+Bowers v. Kerbaugh-Empire Co.: Bowers v. Kerbaugh-Empire Co., 271 U.S. 170 (1926) , was a case in which the United States Supreme Court held that no taxable income arose from the repayment in German marks of loans that had originally been made in U.S. dollars, despite the fact that the marks had gone down in value relative to the dollar since the loan had been made.
+
+Question: Which case was decided first, Bowers v. Hardwick or Garner v. Louisiana?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "first_case_name": {
+      "type": "string",
+      "description": "The name of the case that was decided earlier."
+    },
+    "first_case_year": {
+      "type": "integer",
+      "description": "The year the first case was decided."
+    },
+    "second_case_name": {
+      "type": "string",
+      "description": "The name of the case that was decided later."
+    },
+    "second_case_year": {
+      "type": "integer",
+      "description": "The year the second case was decided."
+    },
+    "earlier_case_identified": {
+      "type": "string",
+      "description": "The name of the case that was decided first, as the final answer."
+    }
+  },
+  "required": [
+    "first_case_name",
+    "first_case_year",
+    "second_case_name",
+    "second_case_year",
+    "earlier_case_identified"
+  ],
+  "additionalProperties": false
+}

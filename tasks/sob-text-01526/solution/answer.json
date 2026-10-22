@@ -1,0 +1,23 @@
+{
+  "common_category": "cocktail",
+  "categorized_items": [
+    {
+      "item_name": "Bourbon Lancer",
+      "main_spirit": "Bourbon whiskey"
+    },
+    {
+      "item_name": "Cocktails with cachaça",
+      "main_spirit": "cachaça",
+      "main_spirit_origin_country": "Brazil"
+    }
+  ],
+  "cocktail_categorization_types": [
+    "aromatic",
+    "sour"
+  ],
+  "cocktail_ingredient_categories": [
+    "the base",
+    "modifying agents",
+    "special flavorings and coloring agents"
+  ]
+}

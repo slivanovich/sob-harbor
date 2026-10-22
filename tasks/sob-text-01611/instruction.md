@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Winslow High School (Maine): Winslow High School is a four year public high school located in Winslow, Maine.  It is a part of Maine AOS 92 - Kennebec Valley Consolidated Schools (formerly of Maine School Union 52) along with the city of Waterville, Maine and the town of Vassalboro, Maine, and is one of two high schools in the School Unit (the other being Waterville High School of Waterville).  Winslow serves the community of Winslow and is open to high school students from the towns of Vassalboro, and China, Maine (of Regional School Unit 18) at a tuition cost since there is no public high school in either town.
+
+Regional School Unit 16: Regional School Unit 16, a consolidated school district serving Poland, Mechanic Falls and Minot, Maine, operates three elementary schools (K–6), one middle school (7–8) and one high school (9–12) in Androscoggin County in the U.S. state of Maine.  The district has 154 teachers (FTEs) serving approximately 1,700 students.
+
+Kennebunk High School: Kennebunk High School is a public high school located in Kennebunk, Maine, and provides education for grades 9–12.  It is part of Maine Regional School Unit 21 for the towns Arundel, Kennebunk and Kennebunkport.  The school currently has 692 students enrolled.  In 1982–83 and in 1990–91, Kennebunk High School was named a National Blue Ribbon School.  It is currently a First Amendment School.
+
+Maine School Administrative District 22: The Maine School Administrative District 22 (M.S.A.D. 22) now known as Regional School Unit 22 (R.S.U. 22) as of July 1, 2013, is a school district in Maine, serving residents of the towns of Hampden, Newburgh, Winterport, and Frankfort.
+
+RSU 1: The Bath School Department (RSU 1) in Bath, Maine, consists of seven public schools: Dike-Newell Elementary, Fisher-Mitchell, Phippsburg Elementary School, Woolwich Central School, West Bath School, Bath Middle School, and Morse High School.  It has been consolidated with other area schools (West Bath, Phippsburg and Woolwich) to form Regional School Unit 1 (RSU 1).  The RSU 1 schools are, as of 2016: Dike-Newell School (grades K-2), Phippsburg Elementary (grades Pre-K-5), Woolwich Central School ( Grades Pre-K-8), Fisher-Mitchell School (grades 3-5), West Bath School (grades Kindergarten-5) Bath Middle School (grades 6-8), Morse High School (grades 9-12), and Bath Regional Career and Technical Center.
+
+Sabattus, Maine: Sabattus is a town in Androscoggin County, Maine, United States.  The population was 4,876 at the 2010 census.  It is included in both the Lewiston-Auburn, Maine Metropolitan Statistical Area and the Lewiston-Auburn, Maine Metropolitan New England City and Town Area.  The town was formerly known as Webster, and changed its name to Sabattus in 1971, in honor of a former Anasagunticook Indian chief.
+
+Regional School Unit 4: Regional School Unit 4 (RSU #4) is a school district headquartered in Wales, Maine.  It serves Wales, Litchfield, and Sabattus.
+
+Oak Hill High School (Maine): Oak Hill High School is a high school located in Wales, Maine, United States.  A part of Regional School Unit 4, this regional high school serves students from the towns of Sabattus, Litchfield, and Wales.  The mascot is the Raider, generally represented by a raccoon.
+
+Regional School Unit 57: Regional School Unit 57 (RSU 57), formerly known as Maine School Administrative District 57 (MSAD 57), is a school district in Maine.  The district office is located in Waterboro, Maine next to Massabesic High School.  Its current superintendent is Larry Malone.
+
+Pioneer Valley Regional School District: Pioneer Valley Regional School District is a four town regional school district in eastern and central Franklin County, Massachusetts.  Grade K-6 elementary schools are located in each town, and the single middle/high school for the entire district (Grades 7-12), Pioneer Valley Regional School, is located in Northfield, Massachusetts.  The district was initially formed by the four member towns in 1957 to serve grades 7-12, and became a fully regionalized district K-12 district in 1991.  Its administrative offices are housed in Pioneer Valley Regional School at 97 F. Sumner Turner Road, Northfield, Massachusetts.
+
+Question: What is the name of the town, formerly known as Webster, that currently has the Regional School Unit 4 as the district headquarters?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "town_name": {
+      "type": "string",
+      "description": "The current name of the town."
+    },
+    "former_town_name": {
+      "type": "string",
+      "description": "The name the town was previously known by."
+    },
+    "school_district_info": {
+      "type": "object",
+      "properties": {
+        "district_name": {
+          "type": "string",
+          "description": "The name of the school district associated with the town."
+        },
+        "headquarters_town": {
+          "type": "string",
+          "description": "The town where the school district's headquarters is located."
+        },
+        "serves_town": {
+          "type": "boolean",
+          "description": "Indicates if the school district serves the specified town."
+        }
+      },
+      "required": [
+        "district_name",
+        "headquarters_town",
+        "serves_town"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "town_name",
+    "former_town_name",
+    "school_district_info"
+  ],
+  "additionalProperties": false
+}

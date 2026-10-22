@@ -1,0 +1,28 @@
+{
+  "person_names": [
+    "Jeffrey Walker",
+    "Fat Mike"
+  ],
+  "mutual_occupation": "vocalist",
+  "individual_occupations": [
+    {
+      "name": "Jeffrey Walker",
+      "occupations": [
+        "bass guitarist",
+        "vocalist",
+        "lyricist"
+      ],
+      "primary_band": "Carcass"
+    },
+    {
+      "name": "Fat Mike",
+      "occupations": [
+        "musician",
+        "producer",
+        "bassist",
+        "lead vocalist"
+      ],
+      "primary_band": "NOFX"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "creator_details": {
+    "name": "Stan Lee",
+    "former_role": "editor-in-chief of Marvel Comics"
+  },
+  "character_details": {
+    "name": "Juggernaut",
+    "type": "supervillain",
+    "first_appearance": {
+      "comic_title": "X-Men",
+      "issue_number": 12,
+      "year": 1965
+    }
+  },
+  "relationship_confirmed": true
+}

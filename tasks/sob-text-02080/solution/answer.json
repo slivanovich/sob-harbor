@@ -1,0 +1,34 @@
+{
+  "artist_with_more_albums": "Ian George Brown",
+  "artists_data": [
+    {
+      "artist_name": "The Red Jumpsuit Apparatus",
+      "total_albums_released": 4,
+      "album_breakdown": [
+        {
+          "album_type": "studio",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "artist_name": "Ian George Brown",
+      "total_albums_released": 8,
+      "album_breakdown": [
+        {
+          "album_type": "studio",
+          "count": 6
+        },
+        {
+          "album_type": "greatest_hits_compilation",
+          "count": 1
+        },
+        {
+          "album_type": "remix",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "album_count_difference": 4
+}

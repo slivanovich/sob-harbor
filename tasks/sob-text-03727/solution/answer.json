@@ -1,0 +1,11 @@
+{
+  "band_name": "Aaroh",
+  "band_genre": "alternative rock",
+  "songwriter_name": "Bob Mould",
+  "songwriter_associated_genres": [
+    "alternative rock",
+    "hardcore punk",
+    "folk"
+  ],
+  "matching_song_genre": "alternative rock"
+}

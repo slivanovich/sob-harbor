@@ -1,0 +1,17 @@
+{
+  "campaign_name": "Serbian Campaign of World War I",
+  "campaign_duration": {
+    "start_date": "late July 1914",
+    "end_date": "November 1918"
+  },
+  "primary_belligerents": [
+    "Austria-Hungary",
+    "Kingdom of Serbia"
+  ],
+  "related_battle": {
+    "battle_name": "Battle of Kolubara",
+    "battle_start_month": "November",
+    "battle_end_month": "December",
+    "battle_year": 1914
+  }
+}

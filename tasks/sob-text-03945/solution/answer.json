@@ -1,0 +1,25 @@
+{
+  "person_names": [
+    "Wilhelm Reich",
+    "Jorge Luis Borges"
+  ],
+  "common_occupation": "writer",
+  "individual_occupations": [
+    {
+      "name": "Wilhelm Reich",
+      "occupations": [
+        "psychoanalyst",
+        "author"
+      ]
+    },
+    {
+      "name": "Jorge Luis Borges",
+      "occupations": [
+        "short-story writer",
+        "essayist",
+        "poet",
+        "translator"
+      ]
+    }
+  ]
+}

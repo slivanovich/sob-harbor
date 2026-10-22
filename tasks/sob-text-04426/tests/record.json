@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "84753c50247777f915c1020b5a380daf30153633c3d92a9fa1d65f0ec2f76961",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a866e9c55429960ec39b6a2",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Drunk Parents: Drunk Parents is an upcoming American comedy film directed by Fred Wolf and written by Peter Gaulke and Fred Wolf.  The film stars Alec Baldwin, Salma Hayek, Bridget Moynahan, Joe Manganiello, Natalia Cigliuti, Jim Gaffigan and Ben Platt.\n\nMagic Mike: Magic Mike is a 2012 American comedy-drama film directed by Steven Soderbergh and starring Channing Tatum, Alex Pettyfer, Matt Bomer, Joe Manganiello, and Matthew McConaughey.  The plot revolves around Adam, a 19-year-old who enters the world of male stripping, guided by Mike Lane, who has been in the business for six years.\n\nRampage (2018 film): Rampage is an upcoming American action adventure monster film directed by Brad Peyton and written by Ryan Engle.  It is based on the 1980s arcade video game of the same name.  The film stars Dwayne Johnson, Naomie Harris, Malin Åkerman, Joe Manganiello, Jake Lacy, Marley Shelton, and Jeffrey Dean Morgan.  New Line Cinema will release the film on April 20, 2018 in 3D and IMAX.\n\nJoe Manganiello: Joseph Michael Manganiello ( ; ] ; born December 28, 1976) is an American actor.  He played Flash Thompson in Sam Raimi's \"Spider-Man\" trilogy and had various recurring roles in television on \"ER\", \"How I Met Your Mother\", and \"One Tree Hill\", before landing his breakout role as werewolf Alcide Herveaux on the HBO television series \"True Blood\".  In 2011, he was voted \"Favorite Pop-Culture Werewolf of All Time\" by the readers of \"Entertainment Weekly\", and one of \"Men's Health\"'s \"100 Fittest Men of All Time\".\n\nAdam G. Sevani: Adam G. Sevani (born June 29, 1992) is an American actor and dancer, known for playing Robert Alexander III / \"Moose\" in Step Up (film series).\n\nTumbledown (2015 film): Tumbledown is a 2015 American romantic comedy film directed by Sean Mewshaw and written by Desiree Van Til.  The film stars Jason Sudeikis, Rebecca Hall, Dianna Agron, and Joe Manganiello.  The film was released on February 5, 2016, by Starz Digital.\n\nMagic Mike XXL: Magic Mike XXL is a 2015 American comedy-drama film directed by Gregory Jacobs, written by Reid Carolin and starring Channing Tatum, Matt Bomer, Kevin Nash and Joe Manganiello.  A sequel to 2012's \"Magic Mike\", the film was released on July 1, 2015, received mixed to positive reviews from critics and grossed $122 million.\n\nSmurfs: The Lost Village: Smurfs: The Lost Village is a 2017 American 3D computer-animated comedy-adventure film produced by Sony Pictures Animation and The Kerner Entertainment Company, with animation by Sony Pictures Imageworks, for Columbia Pictures.  Sony, LStar Capital and Wanda Pictures co-financed the film.  It is based on \"The Smurfs\" comic book series created by the Belgian comics artist Peyo, and is a reboot unrelated to Sony's previous live-action/animated films based on the series.  It was written by Stacey Harman and Pamela Ribon and directed by Kelly Asbury, and stars the voices of Demi Lovato, Rainn Wilson, Joe Manganiello, Mandy Patinkin, Jack McBrayer, Danny Pudi, Michelle Rodriguez, Ellie Kemper, Ariel Winter, Meghan Trainor, Jake Johnson and Julia Roberts.  In the film, a mysterious map prompts Smurfette, Brainy, Clumsy and Hefty to find a lost village before Gargamel does.\n\nGuild of Italian American Actors: The Guild of Italian American Actors (GIAA) was founded in 1937 as the Italian Actors Union (IAU) to protect the rights of Italian American actors, and renamed in 1998.  The guild has jurisdiction over Italian language professional theater, and works to preserve and promote awareness of Italian culture and heritage.  GIAA also provides a casting resource to directors and producers seeking Italian American actors.\n\nList of Italian-American actors: To be included in this list, the person must have a Wikipedia article showing they are Italian American actors or must have references showing they are Italian American actors and are notable.  As discussed in the 2005 book \"Hollywood Italians\" by Peter E. Bondanella, as well as numerous other sources, Italian-American actors have made a significant impact.  The Guild of Italian American Actors was founded in 1937.",
+    "question": "Are Joe Manganiello and Adam G. Sevani both American actors?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question posed."
+        },
+        "answer": {
+          "type": "boolean",
+          "description": "True if both individuals are American actors, false otherwise."
+        },
+        "actors_details": {
+          "type": "array",
+          "description": "Details for each actor mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the actor."
+              },
+              "is_american": {
+                "type": "boolean",
+                "description": "Indicates if the actor is American."
+              },
+              "is_actor": {
+                "type": "boolean",
+                "description": "Indicates if the individual is an actor."
+              }
+            },
+            "required": [
+              "name",
+              "is_american",
+              "is_actor"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "conclusion_reasoning": {
+          "type": "string",
+          "description": "Explanation for the final answer based on the details of each actor."
+        }
+      },
+      "required": [
+        "question_asked",
+        "answer",
+        "actors_details",
+        "conclusion_reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Are Joe Manganiello and Adam G. Sevani both American actors?",
+      "answer": true,
+      "actors_details": [
+        {
+          "name": "Joe Manganiello",
+          "is_american": true,
+          "is_actor": true
+        },
+        {
+          "name": "Adam G. Sevani",
+          "is_american": true,
+          "is_actor": true
+        }
+      ],
+      "conclusion_reasoning": "The context explicitly states that Joe Manganiello is an 'American actor' and Adam G. Sevani is an 'American actor and dancer'. Since both are confirmed to be American actors, the answer is true."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "player_name": "Robert Carter",
+  "team_details": {
+    "name": "Georgia Tech Yellow Jackets",
+    "home_venue": "McCamish Pavilion",
+    "sport": "basketball",
+    "league_division": "NCAA Division I"
+  },
+  "player_team_relationship": "played collegiately for"
+}

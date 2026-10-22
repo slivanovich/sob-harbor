@@ -1,0 +1,18 @@
+{
+  "is_both_dog_breeds": true,
+  "breeds_information": [
+    {
+      "breed_name": "Himalayan Sheepdog",
+      "is_confirmed_dog_breed": true,
+      "origin_country": "Nepal",
+      "dog_type": "livestock guardian dog"
+    },
+    {
+      "breed_name": "Australian Terrier",
+      "is_confirmed_dog_breed": true,
+      "origin_country": "Australia",
+      "dog_type": "terrier dog type"
+    }
+  ],
+  "overall_confirmation_statement": "Both Himalayan Sheepdog and Australian Terrier are explicitly identified as dog breeds in the provided context."
+}

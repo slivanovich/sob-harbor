@@ -1,0 +1,16 @@
+{
+  "question_asked": "Was Melody Time and The Strongest Man in the World both released by Disney?",
+  "answer": true,
+  "films_checked": [
+    {
+      "film_title": "Melody Time",
+      "is_disney_film": true,
+      "release_year": 1948
+    },
+    {
+      "film_title": "The Strongest Man in the World",
+      "is_disney_film": true,
+      "release_year": 1975
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "question_asked": "Are the Shamrock and Styphelia both shrubs?",
+  "entity_1_name": "Shamrock",
+  "entity_1_description": "A young sprig of clover, used as a symbol of Ireland.",
+  "entity_1_is_shrub": false,
+  "entity_2_name": "Styphelia",
+  "entity_2_description": "A genus of shrubs in the heather family, Ericaceae.",
+  "entity_2_is_shrub": true,
+  "both_are_shrubs": false
+}

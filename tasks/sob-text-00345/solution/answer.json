@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are George Avakian and Bobby Managoff both record producers?",
+  "answer": false,
+  "individuals": [
+    {
+      "name": "George Avakian",
+      "is_record_producer": true,
+      "profession": "record producer and executive"
+    },
+    {
+      "name": "Bobby Managoff",
+      "is_record_producer": false,
+      "profession": "professional wrestler"
+    }
+  ]
+}

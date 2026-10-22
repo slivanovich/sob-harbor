@@ -1,0 +1,11 @@
+{
+  "aircraft_name": "Nakajima Ki-87",
+  "aircraft_type": "interceptor aircraft",
+  "designed_purpose": {
+    "primary_target": "enemy aircraft",
+    "specific_targets": [
+      "bombers",
+      "reconnaissance aircraft"
+    ]
+  }
+}

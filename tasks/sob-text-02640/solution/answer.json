@@ -1,0 +1,21 @@
+{
+  "college_name": "DeVry University",
+  "college_type": "for-profit college",
+  "associated_academies": [
+    {
+      "academy_identifier": "DeVry Advantage Academy (Texas)",
+      "location": "Houston, Texas",
+      "operation_details": "operated in conjunction with"
+    },
+    {
+      "academy_identifier": "DeVry Advantage Academy (replacement for CLC)",
+      "location": "Houston, Texas",
+      "operation_details": "operated in association with"
+    },
+    {
+      "academy_identifier": "DeVry University Advantage Academy (Illinois)",
+      "location": "Chicago, Illinois",
+      "operation_details": "Operated by partnership with"
+    }
+  ]
+}

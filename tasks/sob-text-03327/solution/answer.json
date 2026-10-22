@@ -1,0 +1,9 @@
+{
+  "person_name": "Peter Mandelson",
+  "relationship_to_trevor_beattie": "friend",
+  "politician_details": {
+    "nationality": "British",
+    "party_affiliation": "Labour",
+    "politician_type_description": "politician"
+  }
+}

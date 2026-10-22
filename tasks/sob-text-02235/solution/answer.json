@@ -1,0 +1,14 @@
+{
+  "directors": [
+    {
+      "name": "Lewis Milestone",
+      "nationality": "American"
+    },
+    {
+      "name": "Aaron Katz",
+      "nationality": "American"
+    }
+  ],
+  "common_nationality": "American",
+  "number_of_directors_found": 2
+}

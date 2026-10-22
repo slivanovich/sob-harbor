@@ -1,0 +1,84 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Sam Hoger: Samuel Earl Hoger ( ; born June 28, 1980) is an American mixed martial artist and an actor, most notable for appearing on the first season of "The Ultimate Fighter", a reality television series produced by the Ultimate Fighting Championship and broadcast on Spike TV Hoger has trained with Miletich Fighting Systems in Bettendorf, Iowa and is belted in the Miletich Fighting Systems.  Hoger is currently teaching and training out of Hoger Mixed Martial Arts in Houston, TX.
+
+Baboo Da Silva: Mauricio "Baboo" Da Silva (born November 28, 1967) is a Brazilian kyokushin kaikan full contact karate practitioner and former professional kickboxer and mixed martial artist.  He is a professional coach and trainer of K-1 and MMA (Mixed Martial Arts), who has trained a number of world class fighters including Francisco Filho (martial artist), Glaube Feitosa, Andrews Nakahara, Ewerton Teixeira, Ray Sefo, Aleksandr Pitchkounov, Takumi Sato, Jan Soukup, Kou Tasei (aka Hong Tae Seong), Jan Nortje, Doug Viney, Mighty Mo (kickboxer) and Akebono Taro.  From 1998 to 2004 he worked as the trainer and sparring partner for Francisco Filho.  He lived in Tokyo, Japan from 2005 to December 2010 and trained fighters from the IKO1 Kyokushin - Team Ichigeki and other fighters from visiting teams at the Ichigeki Plaza.  He fought in the K-1 PREMIUM 2003 Dynamite!!  and also in the Ichigeki events in Japan.
+
+Mohammed &quot;The Hawk&quot; Shahid: Mohammed Shahid (born July 8, 1989) is an entrepreneur and a mixed martial artist from Bahrain.  He is the CEO of KHK MMA and the President of the Bahrain based mixed martial arts organisation, Brave Combat Federation owned and supported by His Highness Sheikh Khalid bin Hamad Al Khalifa.  Mohammed Shahid was the first mixed martial artist from Bahrain to compete in global MMA events.  He was assigned a managerial role to develop mixed martial arts in Bahrain as the CEO of KHK MMA.  Bahrain established a national team alongside bringing global talent to facilitate the growth of MMA in Bahrain.
+
+Sean Sherk: Sean Keith Sherk (born August 5, 1973) is a retired American mixed martial artist and former UFC Lightweight Champion.  Sherk competed in the Ultimate Fighting Championship and was one of the first combatants to have been a championship competitor in multiple weight divisions (having also competed for the UFC Welterweight Championship).  He was the second UFC Lightweight Champion in the organization's history after Jens Pulver vacated his title 5 years earlier.  Sherk also spent time competing in the Japan-based organizations, PRIDE Fighting Championships and Pancrase; going undefeated in both promotions.  He holds one of the longest undefeated streaks in mixed martial arts history, with only four career losses, all to fellow-UFC Champions.  Sherk announced his official retirement from mixed martial arts competition in September 2013 having last fought three years prior.
+
+Pete Sell: Peter 'Drago' Sell, (born August 5, 1982) is an American mixed martial artist specializing in Brazilian Jiu Jitsu.  He is a black belt under teacher and fellow mixed martial artist Matt Serra in East Meadow, New York, and has trained extensively under striking coach Ray Bronx Longo in Garden City, New York.  A member of the Serra-Longo Fight Team, Sell formerly fought at both Middleweight & Welterweight in the UFC.
+
+Miesha Tate: Miesha Theresa Tate ( ; born August 18, 1986) is an American Mixed Martial Arts Pundit and former mixed martial artist who competed in the Ultimate Fighting Championship (UFC) and is a former UFC Women's Bantamweight Champion.  Primarily known for her grappling ability, Tate became a wrestler while attending Franklin Pierce High School in Tacoma, Washington and won a state championship during her senior year in 2005.  She began her professional mixed martial arts (MMA) career in 2007, and won the bantamweight championship of the Freestyle Cage Fighting promotion in 2009.  Tate gained increased recognition in 2011, when she won the Strikeforce Women's Bantamweight Championship.  She has also won a silver medal in the FILA Grappling Championships.
+
+Cortez Coleman: Cortez Coleman (born January 28, 1982) is an American mixed martial artist and has been a professional competitor since 2008.  Coleman is the current Middleweight Champion for Freestyle Cage Fighting.  He has competed for Strikeforce, Bellator and King of the Cage.  He was also in Tuf16 for UFC.  He is currently fighting in smaller organizations and training in boxing as well.  He is working hard at building up his gym "Conquer BJJ Martial Arts Academy" on 621 N. Mississippi in Ada Oklahoma.  He is also affiliated with Marc Matoya & FactoryX in Denver Colorado & Sandro Sampaio out of Moore Oklahoma.
+
+Darrell Horcher: Darrell Horcher (born July 28, 1987) is an American mixed martial artist currently competing in the Lightweight division of the UFC.  A professional mixed martial artist since 2010, he formerly competed for Bellator and the Cage Fury Fighting Championships, where he was the Lightweight Champion.
+
+Matt Hume: Matt Hume (born July 14, 1966) is an American mixed martial artist.  He is the founder and head trainer at AMC Pankration in Kirkland, WA, which is home to UFC flyweight champion Demetrious Johnson, ONE bantamweight champion Bibiano Fernandes and he has trained numerous world class fighters including Josh Barnett, Tim Boetsch Bob Sapp, Chris Leben, Hayato Sakurai, Akira Shoji, Matt Brown, Rich Franklin, Mario Miranda and Caros Fodor.
+
+Tim Boetsch: Timothy A. Boetsch ( ; born January 28, 1981) is an American professional mixed martial artist currently fighting in the Middleweight division of the Ultimate Fighting Championship.  In addition to the UFC, Boetsch has formerly competed as an alternate for the New York Pitbulls in the International Fight League and King of the Cage.  He holds victories over former UFC Champion Johny Hendricks and former bellator middleweight champion Hector Lombard.  As of July 21, 2017, he is ranked #13 in official UFC Middleweight rankings.
+
+Question: What American mixed martial artist, born on January 28, 1981, was trained by Matt Hume?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "mixed_martial_artist": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "birth_date": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "name",
+        "nationality",
+        "birth_date"
+      ],
+      "additionalProperties": false
+    },
+    "trainer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "relationship_description": {
+      "type": "string",
+      "description": "Describes the relationship between the mixed martial artist and the trainer."
+    }
+  },
+  "required": [
+    "mixed_martial_artist",
+    "trainer",
+    "relationship_description"
+  ],
+  "additionalProperties": false
+}

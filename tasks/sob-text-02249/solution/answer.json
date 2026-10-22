@@ -1,0 +1,16 @@
+{
+  "dubbing_actor_name": "Thomas Danneberg",
+  "quaid_brothers_info": [
+    {
+      "name": "Dennis Quaid",
+      "was_dubbed_by_thomas_danneberg": true,
+      "relationship_to_other_quaid": "younger brother"
+    },
+    {
+      "name": "Randy Quaid",
+      "was_dubbed_by_thomas_danneberg": false,
+      "relationship_to_other_quaid": "older brother"
+    }
+  ],
+  "quaid_brother_not_dubbed_by_danneberg": "Randy Quaid"
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "ebd18de7dee24ae1849ebcd6016eb3a3dd0e259c07eb34b41db951f443955ca6",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5a7f60fc5542994857a76711",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Joseph Roth",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Zeisls Hiob: The opera is based on Joseph Roth's novel, \"Job - The Story of a Simple Man\", itself inspired by the biblical \"Book of Job\".  In July 1939, a dramatization of the novel was arranged in Paris in honour of Roth (who had died in May 1939) and Zeisl, who had recently arrived in Paris in flight from Nazi Germany, wrote some incidental music for this production.  This inspired him to create a complete opera based on Roth's work, for which he persuaded his friend Hans Kafka (1902—1974) to write a libretto.  Zeisl composed the first act by 1940, by which time he was now living in New York.  Kafka was not able to produce the libretto for Act II until 1957.  Zeisl completed the composition of this, but died in 1959.\n\nVerlag Die Schmiede: Verlag Die Schmiede was an avant-garde literature publishing house in the 1920s in Berlin.  It published works by Franz Kafka, Alfred Döblin, Joseph Roth, Rudolf Leonhard, and many more.  Most of its dust jackets have been designed by George Salter, the later US citizen.\n\nJacob the Mutant: Jacob the Mutant is a novella by the Mexican writer Mario Bellatin.  The novella takes the form of an exegesis meant to interpret \"The Border\", a lost text by the Austrian novelist Joseph Roth.  Organized as a set of fragmentary manuscripts from \"The Border\", the story initially chronicles events in the life of Jacob Pliniak, an Eastern European rabbi and owner of a roadside tavern.  As he flees a pogrom and resettles in the United States, reality shifts and so does Jacob.  He mutates quite suddenly into a woman, while the novella transforms into another story altogether.\n\nJ. M. Coetzee: John Maxwell \"J. M.\" Coetzee (] , ; ] ; born 9 February 1940) is a South African novelist, essayist, linguist, translator and recipient of the 2003 Nobel Prize in Literature.  He relocated to Australia in 2002 and lives in Adelaide.  He became an Australian citizen in 2006.\n\nPaul McDonald (writer): Paul McDonald (born 1961 in Walsall) is a British academic, comic novelist, and poet.  He teaches English and American Literature at the University of Wolverhampton, where he also runs the Creative and Professional Writing Programme.  He left school at 16 and began work as a saddlemaker, an occupation that provides the backdrop for his first novel, \"Surviving Sting\" (2001).  After a period studying with the Open University, McDonald entered full-time education at Birmingham Polytechnic where he began writing fiction, initially producing stories for the women's romance market under a female pseudonym.  He later won a scholarship to research a PhD, and in 1994 took an academic post teaching American literature at the University of Wolverhampton.  His second novel, \"Kiss Me Softly, Amy Turtle\" (2004) is a comic mystery satirising the Midlands town of Walsall, while his third, \"Do I Love You?\"  (2008), takes Northern Soul as its theme.  His poetry began appearing in the early 1990s and embraces a range of themes and styles.  Again humour is a feature, as is surrealism, but he also writes serious love poetry, and verse about art and travel.  His most recent collections are \"Catch a Falling Tortoise\" (2007) and \"An Artist Goes Bananas\" (2012).  McDonald's poetry has won several prizes, including the 2012 John Clare Prize.  His academic writing includes books on Philip Roth, Joseph Heller, the fiction of The Black Country, and humour.  As a humour specialist he has made several TV appearances, including BBC Breakfast and The One Show, and he is credited with identifying the oldest joke in the world.  He discusses the latter, and some of the ideas contained in his book \"The Philosophy of Humour\" with Michael Grade in the BBC documentary, \"Michael Grade & The World's Oldest Joke\".\n\nRadetzky March (novel): Radetzky March (German: \"Radetzkymarsch\" ) is a 1932 novel by Joseph Roth chronicling the decline and fall of the Austro-Hungarian Empire via the story of the Trotta family.  \"Radetzkymarsch\" is an early example of a story that features the recurring participation of a historical figure, in this case the Emperor Franz Joseph I of Austria (1830–1916).  Roth continues his account of the Trotta family to the time of the Anschluss in his \"The Emperor's Tomb\" (\"Kapuzinergruft\", 1938).  The novel was published in English translation in 1933, and in a new, more literal, translation in 1995.\n\nJoseph Roth: Joseph Roth, born Moses Joseph Roth (2 September 1894 – 27 May 1939), was an Austrian-Jewish journalist and novelist, best known for his family saga \"Radetzky March\" (1932), about the decline and fall of the Austro-Hungarian Empire, his novel of Jewish life, \"Job\" (1930), and his seminal essay \"Juden auf Wanderschaft\" (1927; translated into English in \"The Wandering Jews\"), a fragmented account of the Jewish migrations from eastern to western Europe in the aftermath of World War I and the Russian Revolution.  In the 21st century, publications in English of \"Radetzky March\" and of collections of his journalism from Berlin and Paris created a revival of interest in Roth.\n\nRebecca Wallace-Segall: Rebecca Wallace-Segall (formerly Rebecca Segall) is a journalist and the founding executive director of Writopia Lab ', a national not-for-profit creative writing lab for children ages 4-18, based in New York City.  Wallace-Segall began writing for publications in 1997.  She has contributed opeds about education and writing to the Atlantic Monthly and the Wall Street Journal, and thought pieces to Takepart, the Huffington Post, New York Magazine, and The Nation, along with five cover stories (and other pieces) to the Village Voice.  S .  She also served as Senior Editor at Psychology Today magazine, and won Salon's \"Best People Story of the Year Award\" for \"Love Labor’s Flossed.\"  In 1999, she became a Journalism Fellow at Brandeis University.  In 2003, she entered the world of comedy writing, and began writing and performing sketch comedy around NYC.\n\nBamum (Unicode block): Bamum is a Unicode block containing the characters of stage-G Bamum script, used for modern writing of the Bamum language of western Cameroon.  Characters for writing earlier orthographies (stages A–F) are contained in a Bamum Supplement block.\n\nWhat I Saw: Reports from Berlin, 1920-1933: What I Saw: Reports from Berlin, 1920-1933 is a book of reportage by the Austrian writer Joseph Roth from the era of the Weimar Republic.  The selection of pieces from Roth's large journalistic output was made by Michael Bienert and published in German in 1996.  The English translation with the present title was made by Michael Hofmann and appeared in 2003.",
+    "question": "Which novelist began writing earlier, Joseph Roth or J. M. Coetzee?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "earlier_novelist_name": {
+          "type": "string",
+          "description": "The name of the novelist who began writing earlier."
+        },
+        "earlier_novelist_first_known_writing_year": {
+          "type": "integer",
+          "description": "The year Joseph Roth's journalistic output began, indicating his start in writing."
+        },
+        "later_novelist_name": {
+          "type": "string",
+          "description": "The name of the novelist who began writing later."
+        },
+        "later_novelist_birth_year": {
+          "type": "integer",
+          "description": "The birth year of J. M. Coetzee, which is significantly later than Joseph Roth's writing start."
+        },
+        "comparison_method": {
+          "type": "string",
+          "description": "Describes how the comparison was made (e.g., comparing first known publication/writing year)."
+        }
+      },
+      "required": [
+        "earlier_novelist_name",
+        "earlier_novelist_first_known_writing_year",
+        "later_novelist_name",
+        "later_novelist_birth_year",
+        "comparison_method"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "earlier_novelist_name": "Joseph Roth",
+      "earlier_novelist_first_known_writing_year": 1920,
+      "later_novelist_name": "J. M. Coetzee",
+      "later_novelist_birth_year": 1940,
+      "comparison_method": "Joseph Roth's journalistic output began in 1920, while J. M. Coetzee was born in 1940."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

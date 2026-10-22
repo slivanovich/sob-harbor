@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "record_id": "75bd4d494eee380e38356d1a663ee04bc0ba3354fe1ff565e7867cfc4612a6a7",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac43e385542995c82c4ad0a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "cocktail",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Cocktails with cachaça: There are many cocktails made with cachaça, the national spirit of Brazil.  Caipirinha is by far the most popular and internationally well-known.\n\nRalliSport Challenge: RalliSport Challenge is a 2002 rally racing video game for Microsoft Windows and the Xbox.  It allows a career with up to 29 cars including the Mitsubishi Lancer Evo 6 and the Suzuki Grand Vitara.  Four race types that are included in the game are Rally, Hillclimb, Ice Racing, and Rallycross.  A sequel, \"RalliSport Challenge 2\", was released in 2004 for the Xbox.\n\nThe Fine Art of Mixing Drinks: The Fine Art of Mixing Drinks is a book about cocktails by David A. Embury, first published in 1948.  The book is noteworthy for its witty, highly opinionated and conversational tone, as well as its categorization of cocktails into two main types: aromatic and sour; its categorization of ingredients into three categories: the base, modifying agents, and special flavorings and coloring agents; and its 1:2:8 ratio (1 part sweet, 2 parts sour, 8 parts base) for sour type cocktails.\n\nBatida: Batida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cachaça\".  In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash.  This beverage is made with cachaça, fruit juice (or coconut milk), and sugar.  It is blended or shaken with ice.  In Rio de Janeiro and São Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.\n\nCheryl Charming: Cheryl Charming (born November 19, 1960) is an American bar professional and published author of 16 books on cocktails and bartending.  She currently works as the Bar Director at the Bourbon \"O” Bar in New Orleans, Louisiana, and in 2014 was named the \"New Orleans Magazine\" Mixologist of the Year.\n\nBrooklyn (cocktail): The Brooklyn is one of five cocktails named for the boroughs of New York City, along with the Bronx, the Manhattan, the Queens and the Staten Island Ferry.  It resembles a Manhattan, but with a specific type of bitters (several types of bitters can be used in a Manhattan) and the addition of Maraschino liqueur.  It largely fell into obscurity after the end of Prohibition, but experienced a resurgence in the 1990s.\n\nHand Grenade (cocktail): The specialty cocktail drink known as the Hand Grenade is sold frozen or on-the-rocks exclusively by 721 Bourbon, Inc. through five licensed nightclub bars in the New Orleans French Quarter.  Pam Fortner and Earl Bernhardt, owners of the Tropical Isle bar founded during the 1984 Louisiana World Exposition, created the melon-flavored Hand Grenade as their signature cocktail.  Since 1987, the federally registered trademark \"Hand Grenade\" has been used to uniquely identify the cocktail and its packaging.  Since January 1992, the Hand Grenade has been served in a green, translucent, plastic yard glass container with a bulbous, textured base shaped like an oversized hand grenade.  The grenade has anthropomorphic features, including black oval eyes and an upturned smile.  Printed in bold, black lettering, the legend extends vertically down the neck, with the cocktail name and a reference to its high alcohol content: \"Hand Grenade® New Orleans Most Powerful Drink\".  Consumers purchasing Hand Grenade cocktails in these containers receive discounts on refills at the licensed establishments.  In January 2012, a lower-calorie \"Skinny Hand Grenade\" was announced.\n\nWatershed Distillery: Watershed Distillery is a microdistillery in Columbus, Ohio founded in 2010 by business partners Greg Lehman and Dave Rigo.  The distillery was the second distillery opened in Central Ohio after prohibition, and Watershed brought to market the first legally distilled bourbon whiskey in Central Ohio post-prohibition in 2012.  The distillery offers tours to the public and will also be the first distillery in Ohio to open a restaurant on-site in February 2017, following the passage of Ohio House Bill 351 in 2016.  The distillery offers six spirits, Vodka, two types of American style Gin, Bourbon, Nocino and a bottled Old Fashioned cocktail.\n\nBourbon Lancer: The \"Bourbon lancer\" is a type of cocktail made by mixing Bourbon whiskey with Champagne.  These are mixed with bitters and served on the rocks.\n\nManhattan (cocktail): A Manhattan is a cocktail made with whiskey, sweet vermouth, and bitters.  Commonly used whiskeys include rye (the traditional choice), Canadian whisky, bourbon, blended whiskey, and Tennessee whiskey.  The cocktail is often stirred and strained into a cocktail glass, where it is garnished with a Maraschino cherry with a stem.  A Manhattan can also be served on the rocks in a lowball glass.  The whiskey-based Manhattan is one of five cocktails named for one of New York City's five boroughs, but is perhaps most closely related to the Brooklyn cocktail, a mix utilizing dry vermouth and Maraschino liqueur in place of the Manhattan's sweet vermouth, as well as Amer Picon in place of the Manhattan's traditional bitters.",
+    "question": "Bourbon Lancer and Cocktails with cachaça, are types of what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "common_category": {
+          "type": "string",
+          "description": "The overarching category that the entities belong to."
+        },
+        "categorized_entities": {
+          "type": "array",
+          "description": "A list of the entities that are being categorized.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the entity."
+              },
+              "description_snippet": {
+                "type": "string",
+                "description": "A brief description or characteristic of the entity from the context."
+              }
+            },
+            "required": [
+              "name",
+              "description_snippet"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "category_attributes": {
+          "type": "object",
+          "description": "General attributes or classifications related to the common category.",
+          "properties": {
+            "definition_source": {
+              "type": "string",
+              "description": "The source from which cocktail classifications are derived."
+            },
+            "main_types": {
+              "type": "array",
+              "description": "The main types of cocktails as categorized by the source.",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ingredient_categories": {
+              "type": "array",
+              "description": "The categories of ingredients for cocktails as defined by the source.",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "definition_source",
+            "main_types",
+            "ingredient_categories"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "common_category",
+        "categorized_entities",
+        "category_attributes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "common_category": "cocktail",
+      "categorized_entities": [
+        {
+          "name": "Bourbon Lancer",
+          "description_snippet": "a type of cocktail made by mixing Bourbon whiskey with Champagne."
+        },
+        {
+          "name": "Cocktails with cachaça",
+          "description_snippet": "many cocktails made with cachaça, the national spirit of Brazil."
+        }
+      ],
+      "category_attributes": {
+        "definition_source": "The Fine Art of Mixing Drinks",
+        "main_types": [
+          "aromatic",
+          "sour"
+        ],
+        "ingredient_categories": [
+          "the base",
+          "modifying agents",
+          "special flavorings and coloring agents"
+        ]
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

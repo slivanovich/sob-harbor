@@ -1,0 +1,17 @@
+{
+  "question": "Are the Stephens Cur and Billy scent hounds from the same region?",
+  "are_both_scent_hounds": true,
+  "are_from_same_region": false,
+  "breed_details": [
+    {
+      "name": "Stephens Cur",
+      "type": "scent hound",
+      "origin_region": "southeastern Kentucky"
+    },
+    {
+      "name": "Billy",
+      "type": "scent hound",
+      "origin_region": "central western France"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "person_1": {
+    "name": "Joseph Ferdinand of Bavaria",
+    "relationship_to_person_2": "maternal grandson"
+  },
+  "person_2": {
+    "name": "Leopold I, Holy Roman Emperor",
+    "relationship_to_person_1": "maternal grandfather"
+  },
+  "relationship_summary": "Joseph Ferdinand of Bavaria was the maternal grandson of Leopold I, Holy Roman Emperor, as Joseph Ferdinand's mother, Maria Antonia of Austria, was the daughter of Leopold I."
+}

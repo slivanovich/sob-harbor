@@ -1,0 +1,11 @@
+{
+  "principal_dancer": {
+    "name": "Anna Antonicheva",
+    "role": "principal dancer"
+  },
+  "ballet_company": {
+    "name": "Bolshoi Ballet",
+    "founding_year": 1776
+  },
+  "question_answer": 1776
+}

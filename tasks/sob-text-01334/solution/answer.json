@@ -1,0 +1,19 @@
+{
+  "film_title": "The Thomas Crown Affair",
+  "release_year": 1999,
+  "film_genre": "heist film",
+  "director_name": "John McTiernan",
+  "starring_actors": [
+    "Pierce Brosnan",
+    "Rene Russo",
+    "Denis Leary"
+  ],
+  "other_featured_actor": {
+    "actor_name": "Ben Gazzara",
+    "known_for_films": [
+      "Anatomy of a Murder",
+      "Voyage of the Damned",
+      "The Big Lebowski"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Capitol Center (Columbia, South Carolina): Capitol Center is an office skyscraper in Columbia, South Carolina.  At 106.4 m , it is the tallest building in South Carolina.  The capital center tower has about 1,000 people inside working every week and about 400 offices.  A 26-story skyscraper, it was the tallest structure in South Carolina from its completion in December 1987 to the completion of the Prysmian Copper Wire Tower in Abbeville in 2009.  The tower was built on the site of the former Wade Hampton Hotel which was imploded in July 1985.  This modern building exterior is finished in double-paned tinted glass with horizontal bands of anodized aluminum color panels.  The 25-story tower was completed in 1987 during a Columbia high-rise building boom, as the AT&T Building.  Naming rights have been previously held by Affinity and South Trust Bank.  The current signage on the building is held by BB&T Bank.  During its construction in 1986, gubernatorial candidate Carroll Campbell successfully used the then unfinished structure, whose construction was partially financed by the State of South Carolina, as a symbol for excessive government spending.
+
+Thomas Maclellan, 2nd Lord Kirkcudbright: Thomas Maclellan, 2nd Lord Kirkcudbright was a Scottish nobleman, nephew of Robert Maclellan, 1st Lord Kirkcudbright and the son of William Maclellan and Rosina Agnew.
+
+Fort Stanwix: Fort Stanwix was a colonial fort whose construction commenced on August 26, 1758, under the direction of British General John Stanwix, at the location of present-day Rome, New York, but was not completed until about 1762.  The star fort was built to guard a portage known as the "Oneida Carrying Place" during the French and Indian War.  Fort Stanwix National Monument, a reconstructed structure built by the National Park Service, now occupies the site.
+
+MacLellan's Castle: MacLellan's Castle in the town of Kirkcudbright, southwest Scotland, was built in the late 16th century.  It stands in the centre of Kirkcudbright, on the south side of the River Dee which flows into the Solway Firth.  The L-plan castle was the residence of the MacLellan family from whom it derived its name.  The family sold the castle in 1752, and from 1782 to 1912 it was held by the Earls of Selkirk.  Today, the site is curated by Historic Scotland.
+
+Church of the Jacobins: The Church of the Jacobins is a deconsecrated Roman Catholic church located in Toulouse, France.  It is a large brick building whose construction started in 1230, and whose architecture influenced the development of the "Gothique méridional" (southern Gothic) style.  The relics of Thomas Aquinas are housed there.  In the two centuries following the dissolution of the Dominican Order at the time of the French Revolution it served various different purposes before undergoing major restoration in the 20th century.  In the early 21st century it is a museum.
+
+Site manager: In the construction industry, site managers, often referred to as construction managers, site agents or building managers, are responsible for the day-to-day on site running of a construction project.  Site managers are required to keep within the timescale and budget of a project, and manage any delays or problems encountered on-site during a construction project.  Also involved in the role is the managing of quality control, health and safety checks and the inspection of work carried out.  Many site managers will be involved before site activity takes place, and are responsible for managing communications between all parties involved in the on-site development of the project.  Site managers are often required to deal with inquiries and communication with the public.  Typically a site manager is employed by a construction company, contractor or civil engineering firm but are often employed by local authorities to oversee the refurbishment of council owned properties.
+
+Rhode Island Tool Company building: The Rhode Island Tool Company is a historic industrial property at 146-148 West River Street in Providence, Rhode Island.  It is a 5 acre parcel located between West River Street and the channelized West River, on which stand two historic buildings.  The main building of the complex is a sprawling agglomeration of attached structures, whose construction began in 1853, and whose surviving elements include six parts that predate the American Civil War.  Construction of the complex was begun by the Providence Forge & Nut Company, which purchased the Providence Tool Company, and was the largest employer in Providence in the 1870s.  The complex represents the best-preserved period metal-processing facility in Providence, and was the only drop-forging operation the state when it closed in 2003.
+
+Cantacuzino Castle: Cantacuzino Castle is situated on Zamora Street in Bușteni, Romania.  The building, whose construction was completed in 1911, was conducted by the architect Gregory Cerchez at the request of Prince George Grigore Cantacuzino.  It is built in Neo-Romanian style; the total surface of the estate is over 3,000 square meters.
+
+Thomas Maclellan of Bombie: Sir Thomas Maclellan (died 1597) was Provost of Kirkcudbright and father of Robert Maclellan, 1st Lord Kirkcudbright.  He was responsible for the construction of MacLellan's Castle in the town.
+
+Eugene Sharrer: Eugene Charles Albert Sharrer was a British subject by naturalisation but of German descent, who was a leading entrepreneur in what is now Malawi for around fifteen years between his arrival in 1888 and his departure.  He rapidly built-up commercial operations including wholesale and retail trading, considerable holdings of land, cotton and coffee plantations and a fleet of steamers on the Zambezi and Shire rivers.  Sharrer was prominent in pressure groups that represented the interests of European planters and their businesses to the colonial authorities, and was responsible for the development of the first railway in what had become the British Central Africa Protectorate, whose construction was agreed in 1902.  In 1902, Sharrer consolidate all his business interests into the British Central Africa Company Ltd and became its principal shareholder Shortly after this he left British Central Africa permanently for London, although he retained his financial interests in the territory.  Very little is known of his history before he arrived in Central Africa but he died in London during the First World War.
+
+Question: Who curates the site of the castle for whose construction Thomas Maclellan of Bombie was responsible?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "castle_name": {
+      "type": "string",
+      "description": "The name of the castle."
+    },
+    "person_responsible_for_construction": {
+      "type": "string",
+      "description": "The person responsible for the construction of the castle."
+    },
+    "curator_organization": {
+      "type": "string",
+      "description": "The organization that curates the castle site."
+    },
+    "location": {
+      "type": "string",
+      "description": "The town and country where the castle is located."
+    }
+  },
+  "required": [
+    "castle_name",
+    "person_responsible_for_construction",
+    "curator_organization",
+    "location"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,65 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Fearless (Taylor Swift album): Fearless is the second studio album by the American singer-songwriter Taylor Swift.  The album was released on November 11, 2008, by Big Machine Records.  As with her first album, "Taylor Swift", Swift wrote or co-wrote all thirteen tracks on "Fearless".  Most of the songs were written as the singer promoted her first album as the opening act for numerous country artists.  Due to the unavailability of collaborators on the road, eight songs were written by Swift.  Other songs were co-written with Liz Rose, Hillary Lindsey, Colbie Caillat, and John Rich.  Swift also made her debut as a record producer, co-producing all songs on the album with Nathan Chapman.
+
+White Horse (Taylor Swift song): "White Horse" is a song performed by American singer-songwriter Taylor Swift.  The song was written by Swift and Liz Rose and produced by Nathan Chapman, with Swift's aid.  The song was released on December 7, 2008 by Big Machine Records, as the second single from Swift's second studio album "Fearless" (2008).  Swift and Rose composed the song about one of Swift's ex-boyfriends, when Swift discovered he was not what she had perceived of him.  It focused on the moment where Swift accepted that the relationship was over.  "White Horse" is, musically, a country song and uses sparse production to emphasize vocals.  Lyrically, the track speaks of disillusionment and pain in a relationship, drawing references to fairytales.
+
+Teardrops on My Guitar: "Teardrops on My Guitar" is a song by American singer-songwriter Taylor Swift.  The song was co-written by Swift, alongside Liz Rose and produced by Nathan Chapman with Swift's aid.  "Teardrops on My Guitar" was released on February 19, 2007 by Big Machine Records, as the second single from Swift's eponymous debut album (2006).  The song was later included on the international release of Swift's second studio album, "Fearless" (2008), and released as the second pop single from the album in the United Kingdom.  It was inspired by Swift's experience with Drew Hardwick, a classmate of hers for whom she had feelings.  He was completely unaware and continually spoke about his girlfriend to Swift, something she pretended to be endeared by.  Years afterwards, Hardwick appeared at Swift's house, but Swift rejected him.  Musically, the track is soft and is primarily guided by a gentle acoustic guitar.  Critics have queried the song's classification as country music, with those in agreement (such as Grady Smith of "Rolling Stone") citing the themes and narrative style as country-influenced and those opposed (such as Roger Holland of "PopMatters") indicating the pop music production and instrumentation lack traditional country elements.
+
+Our Song (Taylor Swift song): "Our Song" is a country song performed by American singer-songwriter Taylor Swift.  The song was written by Swift and produced by Nathan Chapman.  It was released on September 9, 2007 by Big Machine Records as the third single from Swift's eponymous debut album, "Taylor Swift" (2006).  Swift solely composed "Our Song" for the talent show of her freshman year in high school, about a boyfriend who she did not have a song with.  It was included on "Taylor Swift" as she recalled its popularity with her classmates.  The uptempo track is musically driven mainly by banjo and lyrically describes a young couple who use the events in their lives in place of a regular song.
+
+State of Grace (Taylor Swift song): "State of Grace" is a song by American singer-songwriter Taylor Swift from her fourth studio album "Red" (2012).  It was released to the iTunes Store on October 16, 2012, in the United States by Big Machine Records as the fourth and final promotional single from the album.  It was the only promotional single from the album that was not re-issued as an official single, as "Begin Again", "Red", and "I Knew You Were Trouble", were all later re-issued as official singles.  The song was written by Swift and produced by Nathan Chapman and Swift.  Musically, the song is a departure from Swift's typical country pop, using influences of alternative rock while being compared to bands such as U2, Muse and The Cranberries.  The song has received immense praise from music critics, who have complimented its broader sound in comparison with Swift's previous material.
+
+Taylor Swift (album): Taylor Swift is the debut studio album by American singer-songwriter Taylor Swift, released on October 24, 2006, by Big Machine Records.  Swift was 16 years old at the time of the album's release and wrote its songs during her freshman year of high school.  Swift has writing credits on all of the album's songs, including those co-written with Liz Rose.  Swift experimented with several producers, ultimately choosing Nathan Chapman, who had produced her demo album.  Musically, the album is country music styled, and lyrically it speaks of romantic relationships, a couple of which Swift wrote from observing relationships before being in one.  Lyrics also touch on Swift's personal struggles in high school.
+
+Love Story (Taylor Swift song): "Love Story" is a song performed by American singer-songwriter Taylor Swift.  The song was written by Swift and produced by Nathan Chapman, alongside Swift.  It was released on September 12, 2008 by Big Machine Records, as the lead single from Swift's second studio album "Fearless" (2008).  The song was written about a love interest of Swift's who was not popular among Swift's family and friends.  Because of the scenario, Swift related to the plot of William Shakespeare's "Romeo and Juliet" (1597) and used it as a source of inspiration to compose the song.  However, she replaced "Romeo and Juliet"' s original tragic conclusion with a happy ending.  It is a midtempo song with a dreamy soprano voice, while the melody continually builds.  The lyrics are from the perspective of Juliet.
+
+Fearless (Taylor Swift song): "Fearless" is a country pop song performed by American singer-songwriter Taylor Swift.  The song was co-written by Swift in collaboration with Liz Rose and Hillary Lindsey and produced by Nathan Chapman and Swift.  "Fearless" was released on January 3, 2010 by Big Machine Records as the fifth and final single from Swift's second studio album of the same name (2008).  Swift composed the song while traveling on tour to promote her eponymous debut album, "Taylor Swift" (2006).  She wrote "Fearless" in regard to the fearlessness of falling in love and eventually titled her second studio album after the song.  Musically, it contains qualities commonly found in country pop music and, lyrically, is about a perfect first date.
+
+Picture to Burn: "Picture to Burn" is a song recorded by American singer-songwriter Taylor Swift.  It was co-written by Swift and Liz Rose, and produced by Nathan Chapman.  It was released on February 3, 2008 by Big Machine Records as the fourth single from Swift's eponymous studio album, "Taylor Swift" (2006).  It was inspired by the narcissistic and cocky nature of her former high school classmate and ex-boyfriend Jordan Alford with whom Swift never established a formal relationship.  In retrospect, Swift has stated that she has evolved on a personal level and as a songwriter, claiming she processed emotions differently since "Picture to Burn".  The song was chosen as a single based on the audience's reaction to it in concert.  Musically, the track is of the country rock genre with prominent usage of guitar, banjo, and drums.  The lyrics concern setting fire to photographs of a former boyfriend.
+
+Red (Taylor Swift album): Red is the fourth studio album by American singer-songwriter Taylor Swift.  It was released on October 22, 2012, by Big Machine Records, as the follow-up to her third studio album, "Speak Now".  The album title was inspired by the "semi-toxic relationships" that Swift experienced during the process of conceiving this album, which Swift described the emotions she felt as "red emotions" due to their intense and tumultuous nature.  "Red" touches on Swift's signature themes of love and heartbreak, however, from a more mature perspective while exploring other themes such as fame and the pressure of being in the limelight.  The album features collaborations with producers and guest artists such as Gary Lightbody of Snow Patrol and Ed Sheeran and is noted for Swift's experimentation with new musical genres.  Swift completed The Red Tour in support of the album on June 12, 2014, which became the highest-grossing tour of all time by a country artist, grossing over $150 million.
+
+Question: On what date was the Taylor Swift studio album which had the song "State of Grace" on it released?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the studio album."
+    },
+    "album_release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The release date of the album in YYYY-MM-DD format."
+    },
+    "album_number": {
+      "type": "integer",
+      "description": "The sequential number of the studio album."
+    },
+    "song_that_identified_album": {
+      "type": "string",
+      "description": "The song mentioned in the question that is on this album."
+    }
+  },
+  "required": [
+    "album_title",
+    "album_release_date",
+    "album_number",
+    "song_that_identified_album"
+  ],
+  "additionalProperties": false
+}

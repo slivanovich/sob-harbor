@@ -1,0 +1,13 @@
+{
+  "responding_artist_name": "Nicki Minaj",
+  "response_track_name": "No Frauds",
+  "release_year": 2017,
+  "target_artist": {
+    "name": "Remy Ma",
+    "award_won": "BET Award for Best Female Hip-Hop Artist",
+    "award_years": [
+      2005,
+      2017
+    ]
+  }
+}

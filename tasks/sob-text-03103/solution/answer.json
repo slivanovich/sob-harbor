@@ -1,0 +1,15 @@
+{
+  "aircraft_name": "Hughes H-4 Hercules",
+  "aircraft_nickname": "Spruce Goose",
+  "builder_company": "Hughes Aircraft Company",
+  "construction_location": {
+    "city": "Playa Vista, Los Angeles",
+    "region_name": "Silicon Beach"
+  },
+  "display_location": {
+    "museum_name": "Evergreen Aviation & Space Museum",
+    "city": "McMinnville",
+    "state": "Oregon"
+  },
+  "intended_war_use": "World War II"
+}

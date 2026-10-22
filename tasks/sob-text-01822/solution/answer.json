@@ -1,0 +1,14 @@
+{
+  "person_name": "Damian Green",
+  "birth_location": {
+    "city": "Barry",
+    "country": "Wales"
+  },
+  "e_borders_involvement": {
+    "program_name": "e-Borders",
+    "action_taken": "Made a statement regarding data collection",
+    "action_date": "March 2012",
+    "action_detail": "by April e-Borders would be collecting information an all passengers on 100% of non-EEA flights to the UK"
+  },
+  "political_affiliation": "Conservative"
+}

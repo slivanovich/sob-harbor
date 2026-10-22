@@ -1,0 +1,15 @@
+{
+  "older_singer": {
+    "name": "Katrina Leskanich",
+    "birth_year": 1960,
+    "birth_month": "April",
+    "birth_day": 10
+  },
+  "younger_singer": {
+    "name": "Mollie King",
+    "birth_year": 1987,
+    "birth_month": "June",
+    "birth_day": 4
+  },
+  "age_comparison_result": "Katrina Leskanich is older than Mollie King."
+}

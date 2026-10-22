@@ -1,0 +1,23 @@
+{
+  "actor_details": {
+    "name": "Hans Conried",
+    "nationality": "American"
+  },
+  "film_appearances": [
+    {
+      "film_title": "The Phantom Tollbooth",
+      "release_year": 1970,
+      "role_type": "voice actor"
+    },
+    {
+      "film_title": "Peter Pan",
+      "release_year": 1953,
+      "role_type": "voice actor",
+      "characters_voiced": [
+        "Mr. George Darling",
+        "Captain Hook"
+      ]
+    }
+  ],
+  "answer_character_name": "Captain Hook"
+}

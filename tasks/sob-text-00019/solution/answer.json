@@ -1,0 +1,12 @@
+{
+  "airport_name": "Kalaupapa Airport",
+  "settlement_name": "Kalaupapa",
+  "distance_from_settlement_km": 4,
+  "relative_direction_from_settlement": "north",
+  "settlement_type": "unincorporated community",
+  "settlement_location": {
+    "island": "Molokaʻi",
+    "county": "Kalawao County",
+    "state": "Hawaii"
+  }
+}

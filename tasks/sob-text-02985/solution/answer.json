@@ -1,0 +1,14 @@
+{
+  "band_comparison": [
+    {
+      "band_name": "One Ok Rock",
+      "formation_year": 2005
+    },
+    {
+      "band_name": "Into Another",
+      "formation_year": 1990
+    }
+  ],
+  "first_formed_band": "Into Another",
+  "first_formed_year": 1990
+}

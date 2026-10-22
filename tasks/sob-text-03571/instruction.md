@@ -1,0 +1,91 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Wu Den-yih: Wu Den-yih (born 30 January 1948) is a Chinese-Taiwanese politician.  He graduated from National Taiwan University and worked as a journalist before beginning a career in politics with a 1973 appointment to the Taipei City Council.  Wu was then elected Magistrate of Nantou County, serving from 1981 to 1989.  Following two terms as magistrate, he was named Mayor of Kaohsiung in 1990.  Wu remained mayor until 1998, having won the office in a 1994 direct election.  He then served two full terms in the Legislative Yuan from 2002 to 2008.  Shortly after winning a third term in the legislature, Wu was named Premier of the Republic of China in 2009.  He served until 2012, when he and Ma Ying-jeou formed the Kuomintang (KMT) presidential ticket.  Wu served one four-year term as Vice President of the Republic of China, stepping down in 2016.  In May 2017, he was elected party chairman.  Previously, Wu had served the KMT as secretary-general from 2007 to 2009, first vice chairman in 2014, and as acting chairman in 2014 and 2015.
+
+Peter Shumlin: Peter Elliott Shumlin (born March 24, 1956) is an American politician and member of the Democratic Party who was the 81st governor of Vermont from 2011 to 2017.  First elected governor in 2010, he was re-elected to a second term in 2012.  In 2014 he received a narrow plurality in his race for re-election, but did not attain the 50% threshold mandated by the Vermont Constitution.  In such cases the Vermont General Assembly elects the winner.  The legislature almost always selects the candidate who received a plurality; this held true, and the General Assembly re-elected Shumlin to a third term by a vote of 110–69 in January 2015.  In June 2015, Shumlin announced that he would not seek re-election in 2016.  He has signed laws on physician-assisted suicide as well as the United States' first genetically modified food labeling requirement during his tenure as governor.  He was chair of the Democratic Governors Association during his first two terms.
+
+Justin Nickels: Justin Michael Nickels (born January 9, 1987) is an American politician.  On April 7, 2009, he was elected the 27th mayor of Manitowoc, Wisconsin, the youngest full-time mayor in the country at the time.  He took office April 21, 2009, was re-elected for a second term on April 2, 2013, and was re-elected for a third term on April 4, 2017.
+
+Mayor of Watford: The Mayor of Watford is the head of the borough council of Watford, Hertfordshire, England.  The holder of the position is a directly elected mayor elected using the supplementary vote, every four years.  The current Mayor of Watford is Dorothy Thornhill.  Thornhill is Watford's first directly elected mayor, and was also the first female directly elected mayor in the United Kingdom and the Liberal Democrats' first directly elected mayor.  She has been Mayor of Watford since May 2002, being re-elected in May 2006, and in May 2010 she became the second mayor to be re-elected for a third term in the United Kingdom.
+
+John Rowswell: John Rowswell (May 18, 1955 – August 31, 2010) was a Canadian politician who served as the mayor of Sault Ste. Marie, Ontario from 2000 to 2010.  He was first elected in the 2000 municipal election, defeating Steve Butland, and in 2006 he was re-elected for his third term with approximately 56.5% of the vote.  He was a consulting engineer who operated his own company, Rowswell & Associates Engineers Ltd.  He was one of the longest-serving mayors in the city's history; only Joe Fratesi served as mayor of Sault Ste. Marie for longer than Rowswell.
+
+R. T. Rybak: Raymond Thomas "R. T." Rybak Jr. (born November 12, 1955) is an American politician, journalist, businessperson, and activist who served as the 46th mayor of Minneapolis.  In the 2001 election Rybak defeated incumbent Sharon Sayles Belton by a margin of 65% to 35%; the widest margin in city history for a challenge to an incumbent.  He took office in January 2002, and won a second term in November 2005 and a third in November 2009.  In late December 2012, he announced he would not run for another term and was going to be concentrating on his family.  Rybak called being mayor his "dream job."
+
+Pat Evans (mayor): Patricia A. Evans (born 1943) was the mayor of Plano, Texas from 2002-2009.  She was first elected in May 2002 and was reelected to another two-year term in May 2004.  On May 13, 2006, Evans clinched a third term with 57.4 percent of the vote.  Her final term lasted three years.  This makes her the longest-serving mayor since Jack Harvard.  Although all mayors in Texas run without party identification on the ballot, Evans is a member of the Plano Republican Women's Club and the Conner Harrinton Republican Women's Club.  In addition to being mayor, Evans has previously served on the Plano City Council starting with her appointment to the Plano City Council Place 3 position in 1996.  She served as deputy mayor pro tem in 2000.  In 2004, she was selected as Plano "Citizen of the Year".
+
+Toronto mayoral election, 2010: The 2010 Toronto mayoral election was held on October 25, 2010 to elect a mayor of the city of Toronto, Ontario, Canada.  The mayor's seat was open for the first time since the 2003 Toronto election due to the announcement by incumbent mayor David Miller that he would not seek a third term in office.  The nomination period for the 2010 municipal election opened on January 4, 2010 and closed on September 10, 2010.  The result of the election was a victory for former city councillor Rob Ford.  He received 47% of the vote.
+
+Jack O'Connell (politician): Jack T. O'Connell (born October 8, 1951) is an American politician and the former 26th California State Superintendent of Public Instruction, having been elected to the post in November 2002 with 61% of the vote.  He was re-elected to his post by receiving a majority (52%) of the vote in the Primary election on June 6, 2006, thus avoiding a November run-off.  He is a member of the Democratic Party.  O'Connell was unable to run for a third term in 2010 due to term limits and was succeeded by former state assemblyman Tom Torlakson.
+
+Minneapolis mayoral election, 2009: The 2009 Minneapolis mayoral election was held on November 3, 2009 to elect the Mayor of Minneapolis for a four-year term.  Incumbent R. T. Rybak won re-election for a third term in the first round with 73.6% of the vote.
+
+Question: Which American politician, journalist, businessperson, and activist won a third term as mayor with with 73.6% of the vote?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "politician_name": {
+      "type": "string",
+      "description": "The full name of the politician."
+    },
+    "nationality": {
+      "type": "string",
+      "description": "The nationality of the politician."
+    },
+    "professions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of professions or roles held by the politician."
+    },
+    "mayoral_terms_won": {
+      "type": "integer",
+      "description": "The total number of mayoral terms won by the politician."
+    },
+    "third_term_election_details": {
+      "type": "object",
+      "properties": {
+        "election_year": {
+          "type": "integer",
+          "description": "The year the politician won their third mayoral term."
+        },
+        "vote_percentage": {
+          "type": "number",
+          "description": "The percentage of votes received in the third term election."
+        },
+        "city": {
+          "type": "string",
+          "description": "The city where the politician served as mayor."
+        }
+      },
+      "required": [
+        "election_year",
+        "vote_percentage",
+        "city"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "politician_name",
+    "nationality",
+    "professions",
+    "mayoral_terms_won",
+    "third_term_election_details"
+  ],
+  "additionalProperties": false
+}

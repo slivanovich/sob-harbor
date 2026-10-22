@@ -1,0 +1,11 @@
+{
+  "airport_name": "Yeager Airport",
+  "location_details": {
+    "distance_miles": 3,
+    "distance_km": 6,
+    "direction": "east",
+    "city": "Charleston",
+    "state": "West Virginia"
+  },
+  "is_public_airport": true
+}

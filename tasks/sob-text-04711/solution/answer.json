@@ -1,0 +1,14 @@
+{
+  "question_asked": "ITM University and Pacific Lutheran University, both are located in the United States?",
+  "universities_compared": [
+    {
+      "name": "ITM University",
+      "location_country": "India"
+    },
+    {
+      "name": "Pacific Lutheran University",
+      "location_country": "United States"
+    }
+  ],
+  "are_both_in_united_states": false
+}

@@ -1,0 +1,17 @@
+{
+  "canal_names": [
+    "Beaver and Erie Canal",
+    "Louisville and Portland Canal"
+  ],
+  "common_river": "Ohio River",
+  "river_connection_details": [
+    {
+      "canal_name": "Beaver and Erie Canal",
+      "connection_description": "The canal ran from the Ohio River to Lake Erie."
+    },
+    {
+      "canal_name": "Louisville and Portland Canal",
+      "connection_description": "The canal was a 2 mi canal bypassing the Falls of the Ohio River."
+    }
+  ]
+}

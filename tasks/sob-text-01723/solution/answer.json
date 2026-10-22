@@ -1,0 +1,16 @@
+{
+  "religious_entities": [
+    {
+      "entity_name": "Religion in Greenland",
+      "orientation": "Lutheran",
+      "classification": "Protestant"
+    },
+    {
+      "entity_name": "Church of Denmark",
+      "orientation": "Lutheran",
+      "classification": "Protestant"
+    }
+  ],
+  "shared_orientation": "Lutheran",
+  "is_state_supported_church_involved": true
+}

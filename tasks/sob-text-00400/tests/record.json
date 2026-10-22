@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "7fab45c84ee9621a9af42fa7762df6188f11982e779090988e080aba864f0fa7",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a7c9d8a55429935c91b5263",
+    "source_dataset": "hotpotqa",
+    "source_answer": "RoboRally",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "East Tasman Plateau: The East Tasman Plateau is a submerged microcontinent south east of Tasmania.  Its area is 50000 km2 , and it is mostly from 2500 to deep.  It is a circular piece of continental rocks surrounded by oceanic crust.  Volcanism occurred there   million years ago .  The East Tasman Plateau is separated from the island of Tasmania by 100 km of deeper water, and the East Tasman Saddle is a higher ridge connecting the plateau to the Freycinet Peninsula region of the Tasmanian East Coast.  This ridge runs north west from the plateau.  South-west of the plateau is the L'Atalante Depression.\n\n2004–05 Washington Wizards season: The 2004–05 NBA season was the Wizards 44th season in the National Basketball Association, and their 32nd season in the city of Washington, D.C..  During the offseason, the Wizards acquired Antawn Jamison from the Dallas Mavericks.  The Wizards got off to a decent start and played above .500 for the entire season.  The Wizards posted a 20-win improvement over the previous season, finishing second in the Southeast Division with a 45–37 record, and made it back to the playoffs for the first time since 1997, back when they were known as the \"Bullets\".  Gilbert Arenas averaged 25.5 points per game and was selected along with Jamison for the 2005 NBA All-Star Game.  In the first round of the playoffs, the Wizards defeated the Chicago Bulls in six games after losing the first two games, but were swept in the semifinals by the Miami Heat in four straight games.  Following the season, Larry Hughes signed as a free agent with the Cleveland Cavaliers.\n\nPlateau (game): Plateau is a two-player abstract strategy board game invented by Jim Albea.\n\nBoundary Ranges: The Boundary Ranges, also known in the singular and as the Alaska Boundary Range, are the largest and most northerly subrange of the Coast Mountains.  They begin at the Nass River, near the southern end of the Alaska Panhandle in the Canadian province of British Columbia and run to the Kelsall River, near the Chilkoot Pass, beyond which are the Alsek Ranges of the Saint Elias Mountains, and northwards into the Yukon Territory flanking the west side of the Yukon River drainage as far as Champagne Pass, north of which being the Yukon Ranges.  To their east are the Skeena Mountains and Stikine Plateau of the Interior Mountains complex that lies northwest of the Interior Plateau; the immediately adjoining subregion of the Stikine Plateau is the Tahltan Highland.  To their northeast is the Tagish Highland, which is a subregion of the Yukon Plateau.  Both highlands are considered in some descriptions as included in the Coast Mountains.  The Alexander Archipelago lies offshore and is entirely within Alaska.\n\nSouth Cameroon Plateau: The South Cameroon Plateau or Southern Cameroon Plateau (French: \"Plateau Sud-Camerounais\" ) is the dominant geographical feature of Cameroon.  The plateau lies south of the Adamawa Plateau and southeast of the Cameroon Range.  It slopes south and west until giving way to the Cameroon coastal plain in the southwest and the Congo River basin in the southeast.  The plateau is characterised by hills and valleys in the southwest and a more gentle peneplain in the southwest.  Isolated massifs occur, especially in the southwest.  Metamorphic rocks make up the plain's basement.  The soils are ferrallitic and lateritic, with colouration ranging from red or brown in the interior to yellow on the coast.  The soils are subjected to silica leeching, so they are not productive without fertiliser.\n\nRoboRally: RoboRally is a board game originally published in 1994 by Wizards of the Coast (WotC).  It was designed in 1985 by Richard Garfield, who would later create the card game \"\".  The game and its expansions received a total of four Origins Awards.  \"RoboRally\" was rereleased in July 2005 under the Avalon Hill label, and again in 2016 by Wizards of the Coast.\n\nChilcotin Plateau: The Chilcotin Plateau is part of the Fraser Plateau, a major subdivision of the Interior Plateau of British Columbia.  The Chilcotin Plateau is physically near-identical with the region of the same name, i.e. \"the Chilcotin\", which lies between the Fraser River and the southern Coast Mountains and is defined by the basin of the Chilcotin River and so includes montane areas beyond the plateau.  East of the Chilcotin Plateau, across the Fraser River, is the Cariboo Plateau, while to the north beyond the West Road (Blackwater) River is the Nechako Plateau.  West and south of the Chilcotin Plateau are various subdivisions of the Coast Mountains, including the Chilcotin Ranges which lie along the plateau's southwest.\n\n2016–17 Washington Wizards season: The 2016–17 Washington Wizards season was the 56th season of the franchise in the National Basketball Association (NBA) and 44th in the Washington, D.C. area.  On April 14, 2016, the Wizards fired Randy Wittman after the team missed the playoffs.  On April 26, 2016, the Wizards hired Scott Brooks to be their head coach.  The Wizards clinched a playoff berth on their 129–108 victory over the Brooklyn Nets on Friday March 24, 2017 after having a one season absence from the playoffs.  On March 28, 2017, the Wizards defeated the Los Angeles Lakers 119–108 to win their first division title since 1979 ending their 38 year drought when they were named the Bullets.\n\nStar Wars: The Roleplaying Game: Star Wars: The Roleplaying Game is a role-playing game set in the \"Star Wars\" universe, written and published by West End Games (WEG) between 1987 and 1999.  The game system was slightly modified and rereleased in 2004 as \"D6 Space\", which used a generic space opera setting.  An unrelated \"Star Wars\" RPG was published by Wizards of the Coast from 2000 to 2010.  Since 2012 the official \"Star Wars\" role-playing game is another unrelated game, published by Fantasy Flight Games.\n\nRichard Garfield: Richard Channing Garfield (born June 26, 1963) is an American game designer.  Garfield created \"\", which is considered to be the first modern collectible card game (CCG).  \"Magic\" debuted in 1993, and its success spawned many imitations.  Garfield oversaw the successful growth of \"Magic\" and followed it with other game designs.  Garfield also designed the living card game (LCG) \"Netrunner\", as well as \"BattleTech\", \"\" (originally known as \"Jyhad\"), \"Star Wars Trading Card Game\", the card game \"The Great Dalmuti\", and the board game \"RoboRally\".  He also created a variation of the card game Hearts called Complex Hearts.  Garfield first became passionate about games when he played the roleplaying game \"Dungeons & Dragons\", so he designed \"Magic\" decks to be customizable like roleplaying characters.  Garfield and \"Magic \"are in the Adventure Gaming Hall of Fame.",
+    "question": "Which game, RoboRally or Plateau, was rereleased in 2016 by Wizards of the Coast?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "game_name": {
+          "type": "string",
+          "description": "The name of the game that was rereleased."
+        },
+        "rerelease_details": {
+          "type": "object",
+          "properties": {
+            "rerelease_year": {
+              "type": "integer",
+              "description": "The year of the specific rerelease in question."
+            },
+            "rerelease_publisher": {
+              "type": "string",
+              "description": "The publisher responsible for the specific rerelease."
+            }
+          },
+          "required": [
+            "rerelease_year",
+            "rerelease_publisher"
+          ],
+          "additionalProperties": false
+        },
+        "original_publication_details": {
+          "type": "object",
+          "properties": {
+            "original_publisher": {
+              "type": "string",
+              "description": "The original publisher of the game."
+            },
+            "original_publication_year": {
+              "type": "integer",
+              "description": "The original year the game was published."
+            }
+          },
+          "required": [
+            "original_publisher",
+            "original_publication_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "game_name",
+        "rerelease_details",
+        "original_publication_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "game_name": "RoboRally",
+      "rerelease_details": {
+        "rerelease_year": 2016,
+        "rerelease_publisher": "Wizards of the Coast"
+      },
+      "original_publication_details": {
+        "original_publisher": "Wizards of the Coast",
+        "original_publication_year": 1994
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

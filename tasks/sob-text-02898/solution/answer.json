@@ -1,0 +1,23 @@
+{
+  "comparison_subject": "number of bands performed in",
+  "person_a": {
+    "name": "Paul Rodgers",
+    "band_count": 5,
+    "bands": [
+      "Free",
+      "Bad Company",
+      "The Firm",
+      "The Law",
+      "Queen + Paul Rodgers"
+    ]
+  },
+  "person_b": {
+    "name": "Rob Beckley",
+    "band_count": 1,
+    "bands": [
+      "Pillar"
+    ]
+  },
+  "person_with_more_bands": "Paul Bernard Rodgers",
+  "more_bands_count": 5
+}

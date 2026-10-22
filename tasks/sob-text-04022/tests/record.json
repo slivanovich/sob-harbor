@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "record_id": "45a2c861c2378306c091522af9539778441917c1d831a6594d0ada1c241b4ed8",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae7eba4554299540e5a5697",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Collabera Inc",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Information technology consulting: In management, information technology consulting (also called IT consulting, computer consultancy, business and technology services, computing consultancy, technology consulting, and IT advisory) as a field of activity focuses on advising organizations on how best to use information technology (IT) in achieving their business objectives.  In addition to providing advice, IT consultancies often estimate, manage, implement, deploy, and administer IT systems on behalf of their client organizations - a practice known as \"outsourcing\".\n\nRaj Mamodia: Raj Mamodia (born July 18, 1971) is an American business executive.  He is the current CEO of Brillio, a global technology consulting and business solutions company spun off from Collabera in 2014.  Prior to founding Brillio, Mamodia was CEO of Collabera.\n\nCollabera: Collabera Inc is a company headquartered in Morristown, New Jersey that provides professional information technology recruiting, staffing, consulting, and business services to companies worldwide.  Collabera is the largest minority-owned IT staffing firm in the country, according to Staffing Industry Analysts, an industry advisory firm.  Additionally, Collabera is the largest privately-held technology company in New Jersey, by revenue, with $525 million in revenue for 2015 and approximately 4,200 employees in its New Jersey headquarters.\n\nSurya Kant: Surya \"Sury\" Kant is the President of TCS North American, UK and Europe operations based in New York City.  Tata Consultancy Services Limited (TCS) is the largest global information technology consulting and services company headquartered in India.  TCS is currently (June 2015) the second most valuable IT services company in the world by market-cap.  According to the TCS results for the Financial Year 2014-15, TCS North America contributed over half (53%) of the total TCS revenues.  It has crossed a significant milestone of two billion dollars revenues per quarter.  Apart from growth in business, TCS today has a number of large delivery centers in North America, including a sprawling campus of 220 acres at Cincinnati, OH, a Business Process Service Center at Midland, MI and a Solutions Center at Minneapolis, MN.\n\nHCL Infosystems: HCL Infosystems Limited is an India-based distribution and information technology (IT) services and solutions company.  The Company operates through the segments, including Hardware Products and Solutions, Services, Distribution and Learning.  The Company's product portfolio includes IT and System Integration services, digitally enabled Learning and Career Development solutions, and Distribution of technology and mobility products.  The Company's Distribution business includes Consumer Distribution and Enterprise Distribution.  The Company's Services business includes Enterprise Services and Consumer Services.  The Company's services include data centre services, security services, cloud services and network services, among others.  The Company's solutions include System Integration services, National identity and authentication services, Infrastructure solutions and services, and Financial Inclusion.  The Company's HCL Learning offers DigiSchool, MyEduWorld and Career Development Centers.\n\nComputer Business Solutions: Computer Business Solutions (CBS) is an independently owned Lesotho company.  Computer Business Solutions was established to address Information and Communication Technology (ICT) needs of organizations in Lesotho.  Computer Business Solutions is an ICT firm offering hi-tech training, consulting, enterprise solutions in areas such as software development, change management, infrastructure rollout, project management, ICT disaster management, systems implementation and technology audit in Lesotho.\n\nBrillio: Brillio is a global technology consulting and business solutions company focused on digital technologies and big data analytics.  Headquartered in Santa Clara, California, Brillio rapidly develops and deploys digitally disruptive solutions in the areas of digital experience, big data, and analytics.  Brillio has offices in the United States, Norway, United Kingdom and India.\n\nErgoGroup: ErgoGroup was a Nordic information technology corporation, systems integrator and consulting company headquartered in Oslo, Norway.  The company provided services for IT operations, business solutions, outsourcing, infrastructure and consulting.  ErgoGroup had a total of 90 offices and regional branches throughout Norway, Sweden and Finland, and was a subsidiary of Posten Norge, the Norwegian Postal Service.  It was the second largest ICT operations company in Norway.  The company also held partial ownership in SYSteam, TransWare, Gecko, Eiendomsverdi, Buypass, Eye-Share and Bekk Consulting.  ErgoGroup merged with EDB Business Partner in 2010, creating EVRY.\n\nKelly Services: Kelly Services, Inc. (formerly Russell Kelly Office Service and Kelly Girl Service, Inc.) is an American office staffing and workforce solutions company that operates globally.  The company places employees at all levels in various sectors including the financial services, information technology, and law industries.  It also offers professional services, including human resource and management consulting, outsourcing, recruitment, career transition, and vendor management services.  Kelly Services was founded by William Russell Kelly in 1946 and is headquartered in Troy, Michigan.  In 2015, the company reported 8,100 employees, $5.5 billion in revenue, and placed 550,000 employees to work in positions in various sectors, making it one of the world's largest staffing firms.\n\nTata Consultancy Services: Tata Consultancy Services Limited (TCS) is an Indian multinational information technology (IT) service, consulting and business solutions company Headquartered in Mumbai, Maharashtra.  It is a subsidiary of the Tata Group and operates in 46 countries.",
+    "question": "Raj Mamodia, is an American business executive, he is the current CEO of Brillio, a global technology consulting and business solutions company spun off from which company headquartered in Morristown, New Jersey that provides professional information technology recruiting, staffing, consulting, and business services to companies worldwide, in 2014?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "The name of the company."
+        },
+        "headquarters_location": {
+          "type": "string",
+          "description": "The city and state where the company is headquartered."
+        },
+        "services_provided": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professional services provided by the company."
+        },
+        "spin_off_year": {
+          "type": "integer",
+          "description": "The year Brillio was spun off from this company."
+        }
+      },
+      "required": [
+        "company_name",
+        "headquarters_location",
+        "services_provided",
+        "spin_off_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "company_name": "Collabera Inc",
+      "headquarters_location": "Morristown, New Jersey",
+      "services_provided": [
+        "information technology recruiting",
+        "staffing",
+        "consulting",
+        "business services"
+      ],
+      "spin_off_year": 2014
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

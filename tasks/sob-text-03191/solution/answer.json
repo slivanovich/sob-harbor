@@ -1,0 +1,22 @@
+{
+  "company_name": "Super Deluxe",
+  "company_owner": "Turner Broadcasting",
+  "overseeing_executive": {
+    "executive_name": "Kevin Reilly",
+    "executive_nationality": "American",
+    "executive_roles": [
+      {
+        "role_title": "president",
+        "organization": "TBS"
+      },
+      {
+        "role_title": "president",
+        "organization": "TNT"
+      },
+      {
+        "role_title": "Chief Creative Officer",
+        "organization": "Turner Entertainment"
+      }
+    ]
+  }
+}

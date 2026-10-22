@@ -1,0 +1,12 @@
+{
+  "daughter_info": {
+    "name": "Margaretta Faugères",
+    "birth_year": 1771,
+    "death_year": 1801
+  },
+  "mother_info": {
+    "name": "Ann Eliza Bleecker",
+    "death_year": 1783
+  },
+  "relationship_type": "daughter_of"
+}

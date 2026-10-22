@@ -1,0 +1,12 @@
+{
+  "company_name": "OSI Pharmaceuticals, Inc.",
+  "company_type": "American pharmaceutical company",
+  "headquarters_location": "Long Island, New York",
+  "other_facilities_locations": [
+    "Colorado",
+    "New Jersey",
+    "United Kingdom"
+  ],
+  "product_licensed": "Pegaptanib",
+  "licensing_year": 2000
+}

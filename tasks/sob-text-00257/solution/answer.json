@@ -1,0 +1,20 @@
+{
+  "question_focus": "Comparison of birth years between two philosophical writers",
+  "writers_compared": [
+    {
+      "name": "Tom Robbins",
+      "birth_year": 1932,
+      "is_philosophical_writer": true
+    },
+    {
+      "name": "Maurice Blanchot",
+      "birth_year": 1907,
+      "is_philosophical_writer": true
+    }
+  ],
+  "writer_born_first": {
+    "name": "Maurice Blanchot",
+    "birth_year": 1907
+  },
+  "earliest_birth_year": 1907
+}

@@ -1,0 +1,11 @@
+{
+  "company_name": "CSP Music Group",
+  "company_roles": [
+    "independent record label",
+    "artist management company"
+  ],
+  "promoted_artist": {
+    "name": "Jennifer Lynn Lopez",
+    "birth_date": "1969-07-24"
+  }
+}

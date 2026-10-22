@@ -1,0 +1,29 @@
+{
+  "person_name": "Peter F. Paul",
+  "professions": [
+    "lawyer",
+    "entrepreneur"
+  ],
+  "convictions": [
+    "conspiracy",
+    "drug dealing",
+    "securities fraud"
+  ],
+  "legal_actions": [
+    {
+      "action_type": "civil suit",
+      "against_parties": [
+        "Hillary Clinton"
+      ]
+    },
+    {
+      "action_type": "civil suit",
+      "against_parties": [
+        "Bill Clinton",
+        "Hillary Clinton"
+      ],
+      "suit_name": "Paul v. Clinton",
+      "year_filed": 2004
+    }
+  ]
+}

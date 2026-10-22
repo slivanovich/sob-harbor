@@ -1,0 +1,16 @@
+{
+  "movement_name": "Deutsche Physik",
+  "textbook_details": {
+    "title": "Deutsche Physik",
+    "number_of_volumes": 4,
+    "publication_decade": "1930s"
+  },
+  "author_details": {
+    "name": "Philipp Lenard",
+    "nationality": "German",
+    "profession": "physicist",
+    "nobel_prize_winner": true,
+    "nobel_prize_year": 1905,
+    "nobel_prize_reason": "his research on cathode rays and the discovery of many of their properties"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "83d1e581af508ffc8ce97516ba0ba6416f0a2299372eb132701c30c829495061",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a84b9ba5542991dd0999db8",
+    "source_dataset": "hotpotqa",
+    "source_answer": "James Cameron",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Seas with Nemo &amp; Friends: The Seas with Nemo & Friends (formerly The Living Seas) is an aquarium and attached dark ride attraction in Future World at Epcot at the Walt Disney World Resort.  The attraction is themed as an underwater exploration base, with several exhibits devoted to oceanic study.  The pavilion opened in 1986, but had been planned as part of the park since its opening in 1982.\n\nRadiator Springs Racers: Radiator Springs Racers is a simulated slot car type dark ride attraction in Cars Land at Disney California Adventure.  The attraction features a third-generation version of transport technology originally developed for the Test Track attraction at Epcot in Walt Disney World.  Radiator Springs Racers is themed to the fictional world in Disney·Pixar's \"Cars\".  At a cost of over $200 million, the attraction is the most expensive at Disneyland Resort and one of the most expensive theme park attractions in the world.  It accounted for about 18% of the entire cost of the $1.1 billion expansion of Disney California Adventure Park.  The attraction takes guests in a six-person vehicle through encounters with characters from the film series \"Cars\".  Guests then race another vehicle through turns and hills, ending with a randomized race result.\n\nReese's Xtreme Cup Challenge: Reese's Xtreme Cup Challenge (RXCC) is a current attraction which was installed in 2006 at Hersheypark, where it became the first competitive, interactive dark ride.  It was built by Sally Corporation, a popular dark ride manufacturer.  The ride experience theme is sports, and the building exterior is themed on the Hersheypark Arena which is directly behind, outside Hersheypark.  This ride is not to be confused with the free Hershey's Chocolate World tour ride.  The ride replaced a building which housed the park's first aid and ride department offices, as well as a practice skating rink.\n\nTerror Tomb: Terror Tomb (later renamed Forbidden Tomb) was a dark ride attraction at Chessington World of Adventures in southwest London, England, themed around a tomb robber named Abdab.  The ride opened in 1994 along with the Forbidden Kingdom area.  All music was composed by Graham Smart, including the hard rock song featured in the ride's finale.\n\nMaelstrom (ride): Maelstrom was a log flume dark ride attraction located in the Epcot theme park at Walt Disney World Resort in Florida.  Designed by Walt Disney Imagineering, the ride opened on July 5, 1988, in the Norway Pavilion of the park's World Showcase section.  It was a mix between a log chute and a traditional film attraction.  Visitors rode boats patterned after longships that passed through various scenes that featured audio-animatronic figures.  The attraction was originally supposed to be called SeaVenture, with the entrance sign during construction even displaying it as such.  But sometime between March 1988 and the ride's opening, it was changed to Maelstrom.\n\nHorizons (Epcot): Horizons was the name of a dark ride attraction at Epcot (then known as EPCOT Center), a theme park at Walt Disney World in Bay Lake, Florida.  Located on the eastern side of the \"Future World\" section of Epcot, the attraction used Disney's Omnimover conveyance system, which took guests past show scenes depicting visions of the future.  It is believed to be the sequel to Walt Disney's Carousel of Progress, an attraction in Tomorrowland at Walt Disney World's Magic Kingdom.  Horizons was the only attraction in \"Future World\" to showcase all of Epcot's \"Future World\" elements: communication, community interaction, energy, transportation, anatomy, physiology, along with man's relationship to the sea, land, air, and space.  The attraction officially opened on October 1, 1983, as part of Phase II of Epcot.  Horizons originally closed in December 1994, a little more than a year after General Electric had ended its sponsorship of the attraction.  Horizons re-opened in December 1995 due to the closure of two other attractions that were down for refurbishment in \"Future World\", Universe of Energy and World of Motion.  The attraction permanently closed on January 9, 1999, after which the attraction was dismantled and its structure demolished to make room for , a motion simulator thrill ride that opened on October 9, 2003.\n\nMr. Toad's Wild Ride: Mr. Toad's Wild Ride is a dark ride at Disneyland Park, also formerly located at the Magic Kingdom.  Originally planned to be a roller coaster, it became a dark ride attraction because Walt Disney only wanted attractions that were appropriate for all ages.  It is one of the few remaining attractions that was operational on the park's opening day in 1955 (although the current version of the ride opened in 1983).  The ride's story is based on Disney's adaptation of \"The Wind in the Willows\" (1908), one of the two segments of the film \"The Adventures of Ichabod and Mr. Toad\" (1949).  It is currently operating in Fantasyland.\n\nPandora – The World of Avatar: Pandora – The World of \"Avatar\" is a themed area inspired by James Cameron's \"Avatar\", located within Disney's Animal Kingdom theme park at the Walt Disney World Resort in Bay Lake, Florida, near Orlando.  Set a generation after the events of the \"Avatar\" films, the area is based upon the fictional exoplanetary moon, Pandora, and features Pandora's floating mountains, alien wildlife, and bioluminescent plants.  Spanning 12 acres , Pandora – The World of \"Avatar\" includes two major attractions, \"Avatar\" Flight of Passage and Na'vi River Journey, as well as retail and dining outlets.\n\nNa'vi River Journey: Na'vi River Journey is a dark ride attraction at Disney's Animal Kingdom's Pandora – The World of \"Avatar\".  The ride takes guests through the Kasvapan River of Pandora from the 2009 film \"Avatar\", showcasing native animals and bioluminescent flora, with inclusion of Audio-animatronics.\n\nMystic Manor: Mystic Manor () is a dark ride attraction in the Mystic Point area of Hong Kong Disneyland.  Unlike Disneyland's Haunted Mansion attraction and its counterparts in other Disney parks, Mystic Manor has a lighthearted, fantasy-based theme with no references to departed spirits or the afterlife, due to differences in traditional Chinese culture.  The attraction does feature several references to the Haunted Mansion, such as a Medusa changing portrait, a conservatory, and the busts that turn to follow visitors as they move.  References to other Disney attractions include several figures similar to those from The Enchanted Tiki Room in the Tribal Arts room.  The Manor's exterior design is inspired by the now-demolished Bradbury Mansion that stood at 147 North Hill Street in Los Angeles' Bunker Hill, designed by Samuel Newsom and Joseph Cather Newsom, who also designed the still-standing Carson Mansion in Eureka, California.",
+    "question": "Who inspired a themed area included a dark ride attraction with the Kasvapan River?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "inspiration_source": {
+          "type": "string",
+          "description": "The person who inspired the themed area."
+        },
+        "inspired_work_title": {
+          "type": "string",
+          "description": "The title of the work that inspired the themed area."
+        },
+        "themed_area": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the themed area."
+            },
+            "location": {
+              "type": "string",
+              "description": "The theme park where the themed area is located."
+            }
+          },
+          "required": [
+            "name",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "dark_ride_attraction": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the dark ride attraction within the themed area."
+            },
+            "featured_element": {
+              "type": "string",
+              "description": "A specific element or feature of the dark ride mentioned in the context."
+            }
+          },
+          "required": [
+            "name",
+            "featured_element"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "inspiration_source",
+        "inspired_work_title",
+        "themed_area",
+        "dark_ride_attraction"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "inspiration_source": "James Cameron",
+      "inspired_work_title": "Avatar",
+      "themed_area": {
+        "name": "Pandora – The World of Avatar",
+        "location": "Disney's Animal Kingdom theme park"
+      },
+      "dark_ride_attraction": {
+        "name": "Na'vi River Journey",
+        "featured_element": "Kasvapan River"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

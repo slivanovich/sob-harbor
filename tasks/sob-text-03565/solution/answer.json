@@ -1,0 +1,19 @@
+{
+  "artist_name": "Janelle Monáe",
+  "album_title": "The Electric Lady",
+  "album_type": "studio album",
+  "album_number": 3,
+  "release_date": "September 6, 2013",
+  "record_labels": [
+    "Wondaland Arts Society",
+    "Bad Boy Records"
+  ],
+  "preceding_album": "The ArchAndroid",
+  "concept_series_details": {
+    "series_name": "Metropolis",
+    "installments": [
+      4,
+      5
+    ]
+  }
+}

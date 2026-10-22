@@ -1,0 +1,34 @@
+{
+  "person_a_name": "Jerry Belson",
+  "person_a_career_details": {
+    "primary_professions": [
+      "writer",
+      "director",
+      "producer"
+    ],
+    "artistic_mediums": [
+      "film",
+      "musical (screenplay basis)"
+    ]
+  },
+  "person_b_name": "James Broughton",
+  "person_b_career_details": {
+    "primary_professions": [
+      "poet",
+      "filmmaker",
+      "director",
+      "actor"
+    ],
+    "artistic_mediums": [
+      "poetry",
+      "film"
+    ],
+    "other_affiliations": [
+      "San Francisco Renaissance",
+      "Radical Faeries",
+      "The Sisters of Perpetual Indulgence"
+    ]
+  },
+  "person_with_more_diverse_career": "James Broughton",
+  "diversity_reasoning": "Jerry Belson's career was primarily focused within the Hollywood film industry as a writer, director, and producer. James Broughton, in contrast, was a poet, filmmaker (director and actor), and was also involved in distinct social and artistic movements like the San Francisco Renaissance, Radical Faeries, and The Sisters of Perpetual Indulgence, indicating a broader range of professional and community engagements."
+}

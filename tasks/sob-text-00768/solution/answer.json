@@ -1,0 +1,15 @@
+{
+  "kidnapped_person_name": "Dani Yako",
+  "duration_of_detention_days": 3,
+  "detention_location": "Libertador Building",
+  "controlling_entities": [
+    {
+      "role": "Commander-in-Chief",
+      "entity_type": "President"
+    },
+    {
+      "role": "civilian Minister",
+      "entity_type": "Ministry of Defense"
+    }
+  ]
+}

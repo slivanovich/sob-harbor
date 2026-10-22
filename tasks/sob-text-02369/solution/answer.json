@@ -1,0 +1,9 @@
+{
+  "consultant_name": "Scott Howell",
+  "client_details": {
+    "client_name": "Rudy Giuliani",
+    "client_role": "former mayor",
+    "city_of_mayorship": "New York City"
+  },
+  "relationship_type": "client"
+}

@@ -1,0 +1,17 @@
+{
+  "question_type": "genus_identification",
+  "genera_compared": [
+    "Anemonopsis",
+    "Westringia"
+  ],
+  "correct_genus": "Westringia",
+  "correct_genus_attributes": {
+    "native_region": "Australia",
+    "plant_type": "shrubs"
+  },
+  "incorrect_genus": "Anemonopsis",
+  "incorrect_genus_attributes": {
+    "native_region": "Japan"
+  },
+  "comparison_criteria": "native_region_and_plant_type"
+}

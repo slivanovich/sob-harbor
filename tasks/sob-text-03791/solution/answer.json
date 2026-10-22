@@ -1,0 +1,14 @@
+{
+  "mathematicians": [
+    {
+      "name": "Andrei Okounkov",
+      "field_of_work": "mathematician"
+    },
+    {
+      "name": "Moses Schönfinkel",
+      "field_of_work": "logician and mathematician"
+    }
+  ],
+  "shared_nationality": "Russian",
+  "nationality_source": "context"
+}

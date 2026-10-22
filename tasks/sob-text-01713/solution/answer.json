@@ -1,0 +1,13 @@
+{
+  "site_name": "Mesa Verde National Park",
+  "location": {
+    "county": "Montezuma County",
+    "state": "Colorado"
+  },
+  "site_characteristics": [
+    "National Park",
+    "World Heritage Site",
+    "protects some of the best preserved Ancestral Puebloan archaeological sites in the United States"
+  ],
+  "initial_influence_theory": "McElmo Phase"
+}

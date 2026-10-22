@@ -1,0 +1,14 @@
+{
+  "musician_name": "Jean Ritchie",
+  "nationality": "American",
+  "roles": [
+    "folk music singer",
+    "songwriter"
+  ],
+  "primary_instrument": "Appalachian dulcimer",
+  "hymn_details": {
+    "title": "Brightest and Best",
+    "genre": "Christian hymn",
+    "writer": "Reginald Heber"
+  }
+}

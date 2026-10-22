@@ -1,0 +1,15 @@
+{
+  "school_name": "Second Viennese School",
+  "school_type": "group of composers",
+  "location_of_origin": "Vienna",
+  "initial_characteristics": [
+    "late-Romantic expanded tonality"
+  ],
+  "evolution_influenced_by": "Arnold Schoenberg",
+  "known_interpreters": [
+    {
+      "artist_name": "Alessandra Marc",
+      "artist_role": "dramatic soprano"
+    }
+  ]
+}

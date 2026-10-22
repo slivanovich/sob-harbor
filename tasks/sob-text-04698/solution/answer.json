@@ -1,0 +1,11 @@
+{
+  "station_name": "Schneefernerhaus",
+  "former_function": "hotel",
+  "current_function": "environmental research station",
+  "location_details": {
+    "mountain_name": "Zugspitze",
+    "country": "Germany",
+    "height_meters": 2650,
+    "proximity_to_summit": "immediately below the summit"
+  }
+}

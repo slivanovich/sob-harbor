@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+BlazBlue: Chrono Phantasma: BlazBlue: Chrono Phantasma, released in Japan as BlazBlue: Chronophantasma (ブレイブルー クロノファンタズマ , BureiBurū Kuronofantazuma ) , is a 2-D fighting game developed by Arc System Works.  It is the third game of the Blazblue series, set after the events of "".  The game was originally to be released first as an arcade game in the early fourth quarter of 2012, which was later pushed forward to November 2012.  A PlayStation 3 version of the game was released in Japan on October 24, 2013, while it was released in the United States on March 25, 2014.  Due to limited hardware and disc space the game was not released on the Xbox 360.  An updated version of the game titled BlazBlue: Chrono Phantasma Extend (ブレイブルー クロノファンタズマ エクステンド , BureiBurū: Kuronofantazuma Ekusutendo , BlazBlue: Chronophantasma Extend) , dubbed as BlazBlue: Chrono Phantasma 2.0 (ブレイブルー クロノファンタズマ ２.０ , BureiBurū: Kuronofantazuma 2.0 , BlazBlue: Chronophantasma 2.0) in the Arcade version, was originally released for Arcades in October 2014, and for the PlayStation 3, PlayStation Vita, PlayStation 4, and Xbox One in April 2015.  It was released on June 30, 2015 in North America, with the European region version releasing on October 23, 2015.
+
+Midnite Movies: Midnite Movies is a line of B movies released first on VHS and later on DVD by MGM Home Entertainment.  The line was begun by MGM in March 2001 following its acquisition of Orion Pictures, which bought out Filmways, the owner of American International Pictures.  AIP had a library of B movies from the 1950s and 1960s that were science fiction, horror, and exploitation films.  The "Midnite Movies" collection is primarily derived from the AIP library (including most of Roger Corman's and Vincent Price's horror movies) but also included Hammer Film Productions, Amicus Productions, United Artists, and Empire International Pictures movies as well.  The DVDs were first released as single films but most later releases would be double features on single double-sided discs.  Sony Pictures Home Entertainment later became owners of the MGM library and continued the "Midnite Movies" line with distributor 20th Century Fox Home Entertainment.  All double feature titles released on the 20th Century Fox label were two-disc packages.  By 2011, no new titles were forthcoming; the previous catalog titles slowly went out of print and the "Midnite Movies" website was taken down.
+
+Onimusha: Warlords: Onimusha: Warlords, released in Japan as "Onimusha" (鬼武者 ) , is an action-adventure video game and the first entry of the "Onimusha" series, released first for the PlayStation 2 in 2001.  Later it was released in an updated form as Genma Onimusha (幻魔 鬼武者 ) for the Xbox in 2002.  The original "Onimusha: Warlords" version was also ported to Microsoft Windows, although this version was only released in Asia and Russia.
+
+John Otway &amp; Wild Willy Barrett: John Otway & Wild Willy Barrett is the 1976 debut album by English folk singer-songwriter duo John Otway and Wild Willy Barrett.  Released first on their own Extracked Records, the album is a collection of recordings made between 1971 and 1976.
+
+Dangal (film): Dangal (English: "Wrestling competition" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.  It was directed by Nitesh Tiwari.  Produced by Walt Disney Pictures, Aamir Khan Productions and UTV Motion Pictures, it stars Aamir Khan as the father.  Both daughters go on to win medals at the 2010 Commonwealth Games.  Babita won a silver medal at the Games, in the 51 kg class and gold at the 2014 Glasgow Games in the 55 kg class.  In 2012, Geeta became the first Indian female wrestler to qualify for the Olympics.  Mahavir's efforts inspired dozens of Indian women to take to wrestling.  Fatima Sana Shaikh and Sanya Malhotra play the older selves of the sisters while Sakshi Tanwar plays their mother and Aparshakti Khurana, their cousin.
+
+Xeko: Xeko is a collectible card game revolving around endangered species.  It was launched on Earthday 2006.  It won the "Creative Child Magazine" 2006 Toy of the Year Award and the National Parenting Center's Seal of Approval in its first year.  Four "Mission" sets have been released.  "Mission: Costa Rica" and "Mission: Madagascar", based on biodiversity hotspots were released first.  "Mission: Indonesia", was released in 2007, with the final release, "Mission: China", was released July 19, 2008.  A total of thirty more missions were planned but never developed.
+
+Seoulite (album): Seoulite is the second album by South Korean singer Lee Hi.  The album marked her comeback to the Korean music scene after a three-year hiatus following the release of her debut studio album, "First Love", in 2013.  The album was released first in a half album format, the first half being released on March 9, 2016 and the full album released digitally in April 20, 2016, and physically a week later.
+
+Clannad (visual novel): Clannad (クラナド , Kuranado ) is a Japanese visual novel developed by Key and released on April 28, 2004 for Windows PCs.  While both of Key's first two previous works, "Kanon" and "Air", had been released first as adult games and then censored for the younger market, "Clannad" was released with a rating for all ages.  It was later ported to the PlayStation 2, PlayStation Portable, Xbox 360, PlayStation 3 and PlayStation Vita consoles.  An English version for Windows was released on Steam by Sekai Project in 2015.  The story follows the life of Tomoya Okazaki, a high school delinquent who meets many people in his last year at school, including five girls, and helps resolve their individual problems.
+
+The Wild: The Wild is a 2006 American 3D computer animated comedy directed by animator Steve "Spaz" Williams, and written by Ed Decter, John J. Strauss, Mark Gibson and Philip Halprin.  It features the voices of Kiefer Sutherland, Jim Belushi, Janeane Garofalo, Greg Cipes, Eddie Izzard, Richard Kind, William Shatner and Patrick Warburton.
+
+Hard to Explain: "Hard to Explain" is the first single from New York garage rock band The Strokes (their only previously released material was "The Modern Age" EP).  It was released first in the UK and was later released in the US with different album artwork.  (The UK version has a photo of two chairs, one red and one black, facing the camera.  The chairs appear to be in a diner or restaurant of some sort.)  Because this single is the first from their debut LP "Is This It", "Hard to Explain" made the anticipation for the album proper very high, and when "Is This It" did come out it was widely hailed as one of the best of the year.  The B-side of this single, "New York City Cops" was omitted from the US version of the album in the wake of the September 11 attacks on the World Trade Center (the chorus to the song contains the lines "New York City cops/They ain't too smart").
+
+Question: Which was released first, Dangal or The Wild?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "comparison_result": {
+      "type": "string",
+      "description": "The title of the item that was released first."
+    },
+    "first_release": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the item released first."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the item was released."
+        },
+        "media_type": {
+          "type": "string",
+          "description": "The type of media (e.g., film, album)."
+        }
+      },
+      "required": [
+        "title",
+        "release_year",
+        "media_type"
+      ],
+      "additionalProperties": false
+    },
+    "second_release": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the item released second."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the item was released."
+        },
+        "media_type": {
+          "type": "string",
+          "description": "The type of media (e.g., film, album)."
+        }
+      },
+      "required": [
+        "title",
+        "release_year",
+        "media_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "comparison_result",
+    "first_release",
+    "second_release"
+  ],
+  "additionalProperties": false
+}

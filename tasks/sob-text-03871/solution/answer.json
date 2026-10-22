@@ -1,0 +1,14 @@
+{
+  "player_details": {
+    "name": "Christian Watford"
+  },
+  "team_details": {
+    "name": "Raptors 905",
+    "league": "NBA G League"
+  },
+  "team_location": {
+    "city": "Mississauga",
+    "province_state": "Ontario",
+    "country": "Canada"
+  }
+}

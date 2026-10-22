@@ -1,0 +1,18 @@
+{
+  "band_name": "Marianas Trench",
+  "band_origin_country": "Canada",
+  "band_music_styles": [
+    "pop punk",
+    "pop-rock"
+  ],
+  "singer_name": "Poe",
+  "singer_origin_country": "American",
+  "singer_music_styles": [
+    "rock",
+    "jazz",
+    "electronica",
+    "folk",
+    "hip hop"
+  ],
+  "are_styles_different": true
+}

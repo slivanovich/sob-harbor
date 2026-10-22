@@ -1,0 +1,14 @@
+{
+  "city_name": "Istanbul",
+  "entities_found": [
+    {
+      "entity_name": "Church of St. George of Samatya",
+      "location_description": "is an Armenian church in Istanbul."
+    },
+    {
+      "entity_name": "Gülhane Park",
+      "location_description": "is a historical urban park in the Eminönü district of Istanbul, Turkey"
+    }
+  ],
+  "reasoning": "Both the Church of St. George of Samatya and Gülhane Park are explicitly stated to be located in Istanbul within the provided context."
+}

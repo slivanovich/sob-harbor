@@ -1,0 +1,11 @@
+{
+  "are_from_same_country": true,
+  "first_entity_details": {
+    "name": "GO",
+    "country_of_origin": "USA"
+  },
+  "second_entity_details": {
+    "name": "Lindy's Sports",
+    "country_of_origin": "USA"
+  }
+}

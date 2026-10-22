@@ -1,0 +1,20 @@
+{
+  "are_both_writers": false,
+  "person_1": {
+    "name": "Cate Shortland",
+    "is_writer": true,
+    "roles": [
+      "writer",
+      "director"
+    ]
+  },
+  "person_2": {
+    "name": "S. Sylvan Simon",
+    "is_writer": false,
+    "roles": [
+      "director",
+      "producer"
+    ]
+  },
+  "reasoning": "Cate Shortland is identified as a writer and director. S. Sylvan Simon is identified as a director and producer, but not as a writer. Therefore, they are not both writers."
+}

@@ -1,0 +1,62 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Snowball shrimp: The snowball shrimp or white pearl shrimp is a type of shrimp bred for the aquarium trade.  It was developed in Germany through selective breeding from a wild ancestor similar to the species "Neocaridina zhangjiajiensis".  Adults grow to a size of 25 - and are a translucent white colour.
+
+Caffeinated alcoholic drink: A caffeinated alcoholic drink, or caffeinated alcoholic beverage, is a drink that contains both alcohol (also known formally as ethanol) and caffeine.  They often include the ingredients of energy drinks as well.  In 2010 and 2011, this type of beverage faced criticism for posing health risks to their drinkers.  In some places there is a ban on caffeinated alcoholic beverages.
+
+Ratafia: Ratafia is a term used for two types of sweet alcoholic beverage, either a fortified wine or a fruit-based beverage.  The latter type is a liqueur or cordial flavoured with lemon peel, herbs in various amounts (nutmeg, cinnamon, clove, mint, rosemary, anise, etc.) typically combined with sugar.  It may also be prepared with peach or cherry kernels, bitter almonds, or other fruits, as many different varieties are made.  The same name is given to a flavouring essence resembling bitter almonds, and also to a light biscuit.  The former type is a type of "mistelle", a mixture of marc brandy and the unfermented juice of the grape, and it is the type of Ratafia produced in France.
+
+Snowball (cocktail): A Snowball is a mixture of advocaat and lemonade in approximately equal parts.  It may have other ingredients, to taste.
+
+Caesar (cocktail): A Caesar is a cocktail created and primarily consumed in Canada.  It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime.  What distinguishes it from a Bloody Mary is the inclusion of clam broth.  The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.
+
+Letter frequency: The frequency of letters in text has been studied for use in cryptanalysis, and frequency analysis in particular, dating back to the Iraqi mathematician Al-Kindi (c. 801–873 AD), who formally developed the method (the ciphers breakable by this technique go back at least to the Caesar cipher invented by Julius Caesar, so this method could have been explored in classical times).  Letter frequency analysis gained additional importance in Europe with the development of movable type in 1450 AD, where one must estimate the amount of type required for each letterform, as evidenced by the variations in letter compartment size in typographer's type cases.
+
+Caesar cipher: In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques.  It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet.  For example, with a left shift of 3, D would be replaced by A, E would become B, and so on.  The method is named after Julius Caesar, who used it in his private correspondence.
+
+Liberty pole: A liberty pole is a tall wooden pole, often used as a type of flagstaff, planted in the ground, surmounted by a Phrygian cap.  The symbol originated in the immediate aftermath of the assassination of Roman dictator Julius Caesar by a group of Rome's Senators in 44 BC.  Immediately after Caesar was killed, the leaders of the assassination plot went to meet a crowd of Romans at the Roman Forum; a pileus (a kind of skullcap that identified a freed slave) was placed atop a pole to symbolize that the Roman people had been freed from the rule of Caesar, which the assassins claimed had become a tyranny because it overstepped the authority of the Senate and thus betrayed the Republic.  During the French revolution, the Roman pileus was confused with the Phrygian cap, and this mis-identification then led to the use of the Phrygian cap as a symbol of republicanism.
+
+Frozen carbonated beverage: A frozen carbonated beverage (FCB) is a mixture of flavored sugar syrup, carbon dioxide, and water that is frozen by a custom machine creating a drink comprising a fine slush of suspended ice crystals, with liquid.  The final ice crystal concentration changes from 10% to 50%.  It dispenses on a type of beverage and a trade mark of each company producing FCB.  Some common FCBs are the Slurpee, the ICEE, and the Froster and also known as Fizzy Slush Machines.
+
+Alcohol congener analysis: Alcohol congener analysis of blood and urine is used to provide an indication of the type of alcoholic beverage consumed.  The analysis involves investigating compounds called congeners that give the beverage a distinctive appearance, aroma, and flavour, not including water and ethanol.  The theory of discovering one’s drinking habits has been investigated since the late 1970s, predominantly in Germany, for "hip-flask" defence type cases (after-drinking).  Alcohol congener analysis can play a crucial role in these cases where the driver is apprehended some time after a motor vehicle incident who, when returning a positive alcohol reading then claim that this is due to drinking an alcoholic beverage only after the incident.  This traditional methodology for congener analysis has focused solely on the detection of fermentation by-product congeners that are found in all alcoholic beverages.  By comparing the ratios of a set standard of congeners, the ingested alcoholic beverage type is proposed.
+
+Question: A Snowball and a Caesar are both what type of beverage?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "common_beverage_type": {
+      "type": "string",
+      "description": "The common type of beverage shared by the mentioned items."
+    },
+    "beverages_identified": {
+      "type": "array",
+      "description": "A list of the specific beverages identified.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation of how the common beverage type was determined from the context."
+    }
+  },
+  "required": [
+    "common_beverage_type",
+    "beverages_identified",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

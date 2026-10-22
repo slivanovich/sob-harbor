@@ -1,0 +1,18 @@
+{
+  "is_involved_in_american_music": true,
+  "entities": [
+    {
+      "name": "Pearl Jam",
+      "type": "band",
+      "nationality": "American",
+      "musical_involvement": "rock band"
+    },
+    {
+      "name": "Taylor Momsen",
+      "type": "artist",
+      "nationality": "American",
+      "musical_involvement": "singer, songwriter, lead singer and frontwoman of the American rock band The Pretty Reckless"
+    }
+  ],
+  "conclusion_reasoning": "Both Pearl Jam and Taylor Momsen are explicitly stated to be American and involved in music (Pearl Jam as an American rock band, Taylor Momsen as an American singer and frontwoman of an American rock band)."
+}

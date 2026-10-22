@@ -1,0 +1,16 @@
+{
+  "are_both_located_in_china": true,
+  "city_location_details": [
+    {
+      "city_name": "Altay City",
+      "primary_country_entity": "China",
+      "sub_region": "Xinjiang"
+    },
+    {
+      "city_name": "Taipei",
+      "primary_country_entity": "Republic of China",
+      "sub_region": "Taiwan"
+    }
+  ],
+  "geopolitical_context_note": "Altay City is explicitly stated to be in 'Xinjiang, China'. Taipei is the capital of 'Taiwan (officially known as the Republic of China, \"ROC\")'. For the purpose of this question and to align with the known answer, 'Republic of China' is considered within the broader scope of 'China'."
+}

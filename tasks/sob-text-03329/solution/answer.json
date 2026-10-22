@@ -1,0 +1,9 @@
+{
+  "person_name": "Tony Halme",
+  "album_name": "Mestarit salilla",
+  "parliamentary_service_period": {
+    "start_year": 2003,
+    "end_year": 2007
+  },
+  "political_party": "True Finns"
+}

@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are both Chaz Bono and Colton Ford singers?",
+  "individuals_evaluated": [
+    {
+      "name": "Chaz Bono",
+      "is_singer_or_musician": true,
+      "context_source": "Chaz Salvatore Bono ... is an American advocate, writer, musician and actor."
+    },
+    {
+      "name": "Colton Ford",
+      "is_singer_or_musician": true,
+      "context_source": "Colton Ford ... returned to his original career path of singer, and actor."
+    }
+  ],
+  "both_are_singers": true
+}

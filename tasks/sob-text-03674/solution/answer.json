@@ -1,0 +1,17 @@
+{
+  "sitcom_information": {
+    "title": "Only Fools and Horses",
+    "creator": "John Sullivan",
+    "final_broadcast_year": 2003,
+    "number_of_christmas_specials": 16
+  },
+  "actor_details": {
+    "name": "Kenneth MacDonald",
+    "role_in_sitcom": "Mike Fisher"
+  },
+  "actor_parent_details": {
+    "name": "William \"Bill\" MacDonald",
+    "profession": "Scottish heavyweight wrestling champion",
+    "relationship_to_actor": "father"
+  }
+}

@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Universe (Planet X album): Universe is the first studio album by instrumental rock/progressive metal supergroup Planet X, released on June 6, 2000 through Inside Out Music.  The album is essentially a continuation of keyboardist Derek Sherinian's 1999 debut solo release "Planet X", but this time as a full band effort featuring guitarist Tony MacAlpine and drummer Virgil Donati.
+
+Sean Aaberg: Sean Aaberg was born in Oakland, California.  He is the son of Philip Aaberg and LouAnn Lucke.  He grew up in Oakland, attending Bishop O'Dowd High School and briefly attended the California College of the Arts.  As a kid, he liked "anything weird, nasty and old", including cheap magazines and bought thousands of them, he said in an interview.  He and his friends read "Mad", drew comics, liked to listen to Cheech and Chong and the Ramones on the Dr. Demento show, and later discovered the Church of the Subgenius.  He admired the movies of Ralph Bakshi.  The interviewer noted that Aaberg writes in ALL CAPS.  Sean founded and played drums in the Oakland-based Hardcore Punk band The Masked Men, played drums for Baltimore-based Anarcho Punk band A//Political and founded and played drums for Eugene-based Rock and Roll band The Latrines.
+
+The Rosebuds: The Rosebuds are an indie rock band from Raleigh, North Carolina, United States.  (Not to be confused with the vocal group of the same name who recorded for George Goldner's Gee Records in the 1950s.)  Its current members are Ivan Howard (vocals/guitar/drums/bass/keyboards/programming) and Kelly Crisp (vocals/keyboard/drums/guitar/accordion).  Billy Alphin had played drums on the album "The Rosebuds Make Out", Wes Phillips played drums on the E.P."Unwind", Lee Waters played drums on the record "Birds Make Good Neighbors", and Matt McCaughan played the drums on "Night of the Furies", "Life Like" and "Loud Planes Fly Low."  Rob Lackey was behind the drum kit during the taping of "The Rosebuds Live at the Cats Cradle", a charity only recording sold at "cytunes.org" to help fight for the prevention of cancer, as well as on the track "Second Birds of Paradise" on "Loud Planes Fly Low."
+
+MoonBabies (album): MoonBabies is the second studio album by instrumental rock/progressive metal supergroup Planet X, released in 2002 through Inside Out Music.
+
+Deen Castronovo: Deen J. Castronovo (born August 17, 1964) is an American drummer and singer who has played in several notable hard rock and metal acts, such as Cacophony, Bad English, Journey, Wild Dogs, Dr. Mastermind, Hardline, Planet Us, Soul Sirkus, Social Distortion, and Black Sabbath bassist Geezer Butler's G/Z/R, as well as in backing bands for Ozzy Osbourne, Vasco Rossi, Steve Vai, Paul Rodgers, and Matthew Ward.
+
+Jeff Martin (American musician): Jeffery Louis Martin is an American musician, singer and drummer who has sung for the bands Surgical Steel, Racer X, Leatherwolf, and played drums for the bands Badlands, Blindside Blues Band, and Red Sea.  Jeff Martin played drums for Paul Gilbert, George Lynch, Michael Schenker, Dokken and P.K. Mitchell.  He also played drums in Surgical Steel before switching to lead vocals.  He has released a solo album in 2006 entitled "The Fool", featuring the guitar talents of Paul Gilbert and Michael Schenker and has also sung backing vocals for Judas Priest and The Scream.
+
+Planet Us: Planet Us (pronounced "Planet-uss") was a short-lived supergroup that formed in 2002 with Sammy Hagar on lead vocals, Neal Schon on guitar, Michael Anthony on bass, and Deen Castronovo on drums.  The band later recruited a fifth member - famed guitarist Joe Satriani - when their original choice, Slash, turned them down.
+
+The Rats (American band): The Rats were an American garage punk band from Portland, Oregon, formed by Fred Cole previously of the garage rock band, The Lollipop Shoppe.  Cole played guitar and sang, his wife, "Toody" played bass and sang, and initially Rod Rat played drums.  Their sound was a raw mix of punk rock with occasional country touches.  Their self-titled debut album appeared on Cole's Whizeagle label in 1980.  Soon after, Rod Rat left the band, though he guested on the 1981 follow-up "Intermittent Signals" before his death by suicide.  (Prior to his suicide Rod Rat (aka Rod Hibbert) also played drums in 1980-81 for Portland power pop band Domino Theory).  Sam Henry, formerly of the Wipers, played drums on this LP but left to join another Portland band, Napalm Beach.  Louis Samora was on the drum throne for the 1983 album "In a Desperate Red", still on Whizeagle.  Samora left in 1984 to concentrate on his rockabilly band, The Jackals.  The band broke up, but Bill Barker of Profile Studios in Vancouver, British Columbia convinced the band to reunite for a single.  It appeared under the band name The Desperate Edge later in 1984.  Soon after, Cole assembled a country band, Western Front, and he and Toody later reunited in Dead Moon.  The Rats' records have long been out of print and sell for high prices on eBay.  In 2008, Portland's Mississippi Records reissued the first album on vinyl.
+
+Quantum (album): Quantum is the third studio album by instrumental rock/progressive metal supergroup Planet X, released in 2007 through Inside Out Music.  Guitarist Allan Holdsworth was originally slated to feature on most tracks, but ended up not finishing the project.  As a result, his solos remain only on "Desert Girl" and "The Thinking Stone".
+
+Live from Oz: Live from Oz is a live album by instrumental rock/progressive metal supergroup Planet X, released in 2002 through Inside Out Music.
+
+Question: What is the nationality of the person who played drums in the supergroup Planet Us?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "supergroup_name": {
+      "type": "string",
+      "description": "The name of the supergroup."
+    },
+    "drummer_name": {
+      "type": "string",
+      "description": "The name of the drummer for the supergroup."
+    },
+    "drummer_nationality": {
+      "type": "string",
+      "description": "The nationality of the drummer."
+    }
+  },
+  "required": [
+    "supergroup_name",
+    "drummer_name",
+    "drummer_nationality"
+  ],
+  "additionalProperties": false
+}

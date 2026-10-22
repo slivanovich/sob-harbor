@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Affiliated High School of Sichuan University: The Affiliated High School of Sichuan University () is a public middle school for grades 7-12.  It has two campuses, both of which are located in the Wuhou District, Chengdu, Sichuan, China.  It is one of the top rated middle schools in Chengdu and it is listed as "Key School of Sichuan Province".
+
+Hornbeck High School: Hornbeck High School is a school located in Hornbeck, Louisiana, United States.  The PK-12 school is a part of the Vernon Parish School District headquartered in Leesville and has been home to Hornbeck High School, the only public school in the community, since 1898.  In 1910, Hornbeck High School became an affiliated high school, although the bears the date 1913.
+
+Affiliated High School of Peking University: The Affiliated High School of Peking University (), abbreviated as "Běidàfùzhōng" (北大附中) or BDFZ, is the affiliated high school to Peking University that offers 7th-12th grade education.  It is regarded as one of the most prestigious high schools in China.  In a 2016 ranking of Chinese high schools that send students to study in American universities, BDFZ ranked number 12 in mainland China in terms of the number of students entering top American universities.
+
+Phaungdawoo Monastic Education High School: Phaungdawoo Monastic Education Affiliated High School (Burmese: ဖောင်တော်ဦး ဘုန်းတော်ကြီး သင်ပညာရေးတွဲဖက် အထက်တန်းကျောင်း ) is a high school of Theravada Buddhist monastic education located in Mandalay, Myanmar.  Founded in 1993, the school comprises an Administration Department, Academic Department, Special Projects Development Department, Finance & Account Department, Vocational Department, Information Technology Department and Health Care Department.  The school also has a notable HIV/AIDS prevention scheme and support groups.  The school has a library, a clinic, and a furniture factory.
+
+Jinggangshan University Affiliated High School: Jinggangshan University Affiliated High School () is a Chinese secondary school in Qingyuan District, Ji'an, Jiangxi.  It is affiliated with Jinggangshan University.
+
+Chengdu: Chengdu ( ), formerly romanized as Chengtu, is a sub-provincial city which has served as capital of China's Sichuan province.  It is one of the three most populous cities in Western China (the other two are Chongqing and Xi'an).  s of 2014 , the administrative area houses 14,427,500 inhabitants, with an urban population of 10,152,632.  At the time of the 2010 census, Chengdu was the 5th-most populous agglomeration in China, with 10,484,996 inhabitants in the built-up area including Xinjin County and Deyang's Guanghan City.
+
+Chengdu No.7 High School: Chengdu No.7 High School () is located at Moziqiao, Chengdu.  Chengdu No.7 High School, with the predecessor Mochi Shuyuan founded in Song Dynasty and the predecessor as a modern school established in 1905, was formerly "Chengdu County Middle School".  It is one of the first key high schools designated by Ministry of Education of China.  It is considered as the top high school in Sichuan Province.  Chengdu No.7 High school is well-known across the country for its high quality education and good academic performance.  It is one of the four "National Model High schools" in China.  it was the first high school in Sichuan that were elected to be the key high schools in China.  A large number of the students in Chengdu No.7 High School are admitted in the top universities in China and prestigious universities in the world every year.
+
+Nanhai Experimental High School: Nanhai Experimental High School, the Affiliated High School of South China Normal University (; French: Lycée Expérimental de Nanhai, École secondaire affiliée à l'Université Normale de la Chine du Sud) is a campus in Nanhai District of the Affiliated High School of South China Normal University.  It is a Chinese public School located in the Nanhai District of Foshan City, Guangdong Province, China.  There is some evidence that there has been a school founded by Andrew Patton Happer on the site since 1888, but the Affiliated High School of South China Normal University of today was officially founded by the Chinese government in 1952.
+
+Guangdong Experimental High School: Guangdong Experimental High School () is a selective Public High School in Guangzhou, Guangdong Province, China.  It is one of the six best high schools in the city, one of the two key high schools directly administered by the Department of Education of Guangdong Province (along with the Affiliated High School of South China Normal University).  The school has a tremendously high reputation in Southern China for its consistently outstanding academic performance.
+
+Suzhou Experimental High School: Suzhou Experimental High School,officially the Suzhou Experimental High School of Jiangsu Province (simplified Chinese: 江苏省苏州实验中学;traditional Chinese: 江蘇省蘇州實驗中學; pinyin:Jiāngsū shěng Sūzhōu shíyàn zhōngxué) is located in Suzhou, Jiangsu Province, China.  It was founded in 1994,have taken the official name of "Nanjing University Affiliated High School in Suzhou" (simplified chinese 南京大学苏州附属中学）since 1996. The school become the key high schools in Jiangsu province in 1996. The school has modern teaching equipment,The school was rebuilt at 2016. It has more than 1600 students and 160 faculty.
+
+Question: In what sub-provincial city is the Affiliated High School of Sichuan University located?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "school_name": {
+      "type": "string",
+      "description": "The full name of the high school."
+    },
+    "location_city": {
+      "type": "string",
+      "description": "The name of the city where the school is located."
+    },
+    "city_type": {
+      "type": "string",
+      "description": "The administrative classification of the city."
+    }
+  },
+  "required": [
+    "school_name",
+    "location_city",
+    "city_type"
+  ],
+  "additionalProperties": false
+}

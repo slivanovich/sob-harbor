@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Robin Guarino: Robin Guarino (born April 3, 1960) is an opera and film director.  She has directed operas such as "The Marriage of Figaro", "Don Giovanni", "Lohengrin", "Così fan tutte" , and "The Magic Flute" at the Metropolitan Opera.  Also, she has directed at Seattle Opera, Glimmerglass Opera, Chautauqua Opera, Virginia Opera, and Wolf Trap Opera.  She continues to direct, most recently "L'etoile" and "The Marriage of Figaro" for the Wolf Trap Opera Festival, " La Calisto", "The Magic Flute" and "Iphigénie en Aulide" for Juilliard Opera Center, and at Gotham Chamber Opera, "Il Signor Bruschino".  She currently holds the J. Ralph Corbett Distinguished Chair in Opera at the University of Cincinnati College-Conservatory of Music."
+
+The Abduction of Figaro: The Abduction of Figaro is a comic opera, described as "A Simply Grand Opera by P. D. Q. Bach," which is actually the work of composer Peter Schickele.  It is a parody of opera in general, and the title is a play on two operas by Wolfgang Amadeus Mozart: "The Abduction from the Seraglio" and "The Marriage of Figaro".  Those two operas, "Così fan tutte", and "Don Giovanni", as well as Gilbert and Sullivan's "The Pirates of Penzance" are among the core inspirations for the piece.
+
+Le feste d'Apollo: Styled a "festa teatrale", "Le feste d'Apollo" consists of a prologue and three self-contained acts on the model of French "opéra-ballet" (the court of Parma was passionately interested in French culture).  Gluck knew the Archduchess Maria Amalia well as she had sung in two of his operas, "Il Parnaso confuso" and "La corona", in Vienna.  The composer recycled a lot of music from his earlier operas in the score of "Le feste".  In fact, the whole of the third act, "Orfeo", is a shorter reworking of his most famous piece, "Orfeo ed Euridice" (1762).  The overture to the prologue is taken from "Telemaco".  Gluck later reused some of the choruses in two of the operas he wrote for Paris, "Iphigénie en Aulide" and "Iphigénie en Tauride".
+
+Iphigénie en Aulide: Iphigénie en Aulide ("Iphigeneia in Aulis") is an opera in three acts by Christoph Willibald Gluck, the first work he wrote for the Paris stage.  The libretto was written by François-Louis Gand Le Bland Du Roullet and was based on Jean Racine's tragedy "Iphigénie".  It was premiered on 19 April 1774 by the Paris Opéra in the second Salle du Palais-Royal and revived in a slightly revised version the following year.
+
+François-Louis Gand Le Bland Du Roullet: François-Louis Gand Le Bland Du Roullet (10 April 1716 in Normanville – 2 August 1786 in Paris) was a French diplomat and playwright.  He is chiefly remembered today as the librettist of Gluck's operas "Iphigénie en Aulide" and "Alceste" (1776 French version).  He also co-wrote (with Louis-Théodore de Tschudi) the libretto for Salieri's opera "Les Danaïdes".
+
+Magdaléna Hajóssyová: Magdaléna Hajóssyová (born 25 July 1946, Bratislava) is a classical Slovak soprano who has had an active international career singing in operas, concerts, and recitals since the late 1960s.  She has been particularly active at the Prague State Opera where she has been a principal artist since 1972.  She has also had a long and fruitful partnership with the Berlin State Opera beginning in 1975.  In 1977, 1981, and 1987, she won the Berlin Critic's Prize for her portrayal of the roles of Margarete in Charles Gounod's "Faust", the Elektra in Mozart's "Idomeneo", Carl Maria von Weber's "Euryanthe", and Christoph Willibald Gluck's "Iphigénie en Aulide".
+
+Lorenzo Da Ponte: Lorenzo Da Ponte (10 March 174917 August 1838) was an Italian, later American opera librettist, poet and Roman Catholic priest.  He wrote the libretti for 28 operas by 11 composers, including three of Mozart's greatest operas, "Don Giovanni", "The Marriage of Figaro" and "Così fan tutte".
+
+All Ladies Do It: All Ladies Do It (Italian: "Così fan tutte" ) (] ) is a 1992 Italian sex comedy film directed by Tinto Brass and starring Claudia Koll.  It is loosely based on Mozart/da Ponte opera "Così fan tutte".
+
+Così fan tutte: Così fan tutte, ossia La scuola degli amanti (] ; Thus Do They All, or The School for Lovers), K. 588, is an Italian-language opera buffa in two acts by Wolfgang Amadeus Mozart first performed on 26 January 1790 at the Burgtheater in Vienna, Austria.  The libretto was written by Lorenzo Da Ponte who also wrote "Le nozze di Figaro" and "Don Giovanni".
+
+Mecklenburg State Theatre: The Mecklenburg State Theatre (German: "Mecklenburgisches Staatstheater Schwerin" ) is the principal theatre of Schwerin in Germany.  Its main theatre (or "Grosses Haus") seats 650 people and is used for the performance of plays, opera, musical theatre and ballet.  Designed by Georg Daniel, it was built between 1883 and 1886 after the previous theatre had been destroyed by fire in 1882.  The theatre was inaugurated on 3 October 1886 with a performance of Gluck's "Iphigénie en Aulide" with Marie Wittich in the title role.  The complex also includes the State Museum in Schwerin ("Staatliche Museum Schwerin") and a 240-seat concert hall, now used for performances of chamber works.  All theatres were closed for the Autumn season of 1944, with the staff drafted wherever possible.  By German WW2 standards wartime casualties and destruction by bombing in Schwerin were small, in spite of nightly RAF raids and the droning of massive bomber pulks as silver specks on the sky during the day on their way to Berlin.  Americans were the first to enter the town in the spring of 1945, handing it over to the British until the Russians arrived.  These ordered the immediate reopening of the theatre, taking great interest in light operas and operettas as an art they very much appreciated, but until then out of their reach in most parts of Stalin's Soviet Union.  Not familiar with Central European culture, one saw their well-fed ladies wearing night gowns during the invariably full houses as a substitute for an evening dress.  In the immediate years to follow, there was a gradual exodus of key staff to the West, where few found equivalent employment.  The ensuing vacancies provided new chances for many musicians, who were prepared to stay in East Germany to gain important positions there in their later career.
+
+Question: Are both Così fan tutte and Iphigénie en Aulide names of operas?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "is_both_operas": {
+      "type": "boolean",
+      "description": "True if both titles are confirmed to be operas."
+    },
+    "opera_count": {
+      "type": "integer",
+      "description": "The number of titles confirmed to be operas."
+    },
+    "operas_information": {
+      "type": "array",
+      "description": "Details about each title confirmed as an opera.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the opera."
+          },
+          "is_opera": {
+            "type": "boolean",
+            "description": "Indicates if the title is an opera."
+          },
+          "composer": {
+            "type": "string",
+            "description": "The composer of the opera."
+          },
+          "librettist": {
+            "type": "string",
+            "description": "The librettist of the opera."
+          },
+          "number_of_acts": {
+            "type": "integer",
+            "description": "The number of acts in the opera."
+          }
+        },
+        "required": [
+          "title",
+          "is_opera",
+          "composer",
+          "librettist",
+          "number_of_acts"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "is_both_operas",
+    "opera_count",
+    "operas_information"
+  ],
+  "additionalProperties": false
+}

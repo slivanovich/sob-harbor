@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Louis Nye: Louis Nye (May 1, 1913 – October 9, 2005) was an American comedic actor.  He was an entertainer to the troops during World War II and is best known for his work on countless television, film and radio programs.
+
+The Army-Navy Game (M*A*S*H): "The Army–Navy Game" is episode #20 of the first season of the TV series "M*A*S*H", originally airing on February 25, 1973; its repeat on September 9, 1973 was the last official telecast in "M*A*S*H"' s first season on CBS.  The episode was co-written by cast member McLean Stevenson ("Lt. Col. Henry Blake").
+
+Battle of Calcasieu Pass: The Battle of Calcasieu Pass was a minor skirmish fought on May 6, 1864, at the mouth of the Calcasieu River in southwestern Louisiana, during the American Civil War.  It resulted in a Confederate victory.  The participants of the battle were Lt. Benjamin Loring and Lt. C. W. Lamson on the Union’s side, and Col. W. H. Griffin on the Confederate side.  The union brought along two naval vessels, the U.S.S Wave and the U.S.S Granite City.  The U.S.S Wave did not prove too effective during the battle and was captured early on, it was soon turned into a Confederate cargo ship.  The U.S.S Granite City was originally a confederate blockade vessel, but was captured in 1863 by the U.S.S Tioga (Union).  The U.S.S Granite City was now back in the hands of the Confederates.  Captain Joseph A. Brickhouse, a Confederate veteran, said, “We fought in the open prairie, bringing on the attack with four small pieces of artillery and less than 300 infantry, poorly armed, attacking in the open prairie two such boats as the Granite City and Wave - Union gunboats - and capturing them after an action of less than two hours and 40 minutes duration.”  He described his own forces (Confederate) as unprepared, and he stated that they still had an easy battle that was short in duration.  The Confederate forces in this battle were split up into five battalions.  The first battalion was Creuzbauer's Battery, 5th Texas Artillery.  Every soldier in this battalion was born in Germany, and they all migrated to the U.S during the Civil War.  The second battalion was named Griffin’s Battalion, and was led by Col. William Henry Griffin.  The third battalion was Spaight’s Battalion, led by Lt. Col. Ashley W. Spaight.  And the final one was Daly’s Battalion, the only cavalry unit in the battle.  The U.S.S Wave and the U.S.S Granite City received orders to proceed to Calcasieu Pass.  When they arrived, immediately bombed an abandoned Confederate fort at the mouth of the river.  The Gunboats were sent with money to purchase cattle from local southern farmers.  The U.S.S Granite City ended up stealing cattle and horses from multiple farms.  This prompted a Confederate attack.  The local Confederate forces arrived quietly and prepared for a night-time attack on the Union forces.  When the Union went to sleep, they let less-experienced soldiers man the guns.  The Confederates seized the opportunity and moved their cannons closer.  The cannons lined up 1,000 yards away from the gunboats, while the cavalry and foot-soldiers advanced.  Numerous cannon shells penetrated the gunboat’s hulls.  While the cavalry and foot-soldiers moved in, the artillery advanced as well, and finished off the vessels.  On May 8th, Ella Morse, a Union Supply ship did not know of the Union casualties.  Then brought moved up all the way to the other ships with supplies.  When she noticed that confederates were manning the guns it was too late.  They gunned the ship down.  The Union Forces suffered many casualties.  They lost the Ella Morse, the U.S.S Granite City, the U.S.S Wave, and the U.S.S New London.  On the other hand, the Confederates did not lose too many soldiers.  The Confederates only suffered a few men from each battalion.
+
+McLean Stevenson: Edgar McLean Stevenson Jr. (November 14, 1927 – February 15, 1996) was an American actor most recognized for his role as Lt. Colonel Henry Blake on the TV series "M*A*S*H".  He was also recognized for his role as Michael Nicholson on "The Doris Day Show".
+
+Bob Denver: Robert Osbourne Denver (January 9, 1935 – September 2, 2005) was an American comedic actor.  He is known for having portrayed Gilligan on the television series "Gilligan's Island" and the beatnik Maynard G. Krebs on the 1959–1963 sitcom "The Many Loves of Dobie Gillis".
+
+Don Knotts: Jesse Donald "Don" Knotts (July 21, 1924 – February 24, 2006) was an American comedic actor, best known as Barney Fife on "The Andy Griffith Show", a 1960s sitcom for which he earned five Emmy awards.  He also played Luther Heggs in "The Ghost and Mr. Chicken" and Henry Limpet in "The Incredible Mr. Limpet", in which he plays a talking fish for the majority of the film.  He also portrayed Ralph Furley on "Three's Company".
+
+Patrick Warburton: Patrick John Warburton (born November 14, 1964) is an American comedic actor and voice actor.  In television, he is known for playing David Puddy on "Seinfeld", the title role on "The Tick", Jeb Denton on "Less Than Perfect", Jeff Bingham on "Rules of Engagement", and Lemony Snicket on "A Series of Unfortunate Events".  His voice roles include Kronk in "The Emperor's New Groove" and its sequels, paraplegic police officer Joe Swanson on "Family Guy", Brock Samson on "The Venture Bros", Lok in the "Tak and the Power of Juju" video game series and in the television series and Flynn in "Skylanders" video games.  In advertising he has played a "control enthusiast" in a series of commercials for National Car Rental.
+
+Selma Diamond: Selma Diamond (August 6, 1920 – May 13, 1985) was an American comedic actress and radio and television writer, known for her high-range, raspy voice, and her portrayal of Selma Hacker on the first two seasons of the NBC television comedy series "Night Court".
+
+Roger Bowen: Roger Bowen (May 25, 1932 – February 16, 1996) was an American comedic actor and novelist, known for his portrayal of Lt. Col. Henry Blake in the 1970 film "M*A*S*H".  He often portrayed stuffy defenders of the upper class and had regular roles on a number of television series.  Bowen considered himself a writer who only moonlighted as an actor.  He wrote eleven novels (including "Just Like a Movie") as well as sketches for Broadway and television.  He was also one of the co-founders of Chicago's comedy and acting troupe The Second City.
+
+Arnie (TV series): Arnie is a television sitcom that ran for two seasons (1970–72) on the CBS network.  It starred Herschel Bernardi, Sue Ane Langdon, and Roger Bowen.
+
+Question: Arnie is a television sitcom that ran for two seasons, it starred Roger Bowen, he was an American comedic actor and novelist, known for his portrayal of Lt. Col. Henry Blake in the film "M*A*S*H", released in which year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor."
+    },
+    "role_name": {
+      "type": "string",
+      "description": "The name of the role the actor played."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the film was released."
+    }
+  },
+  "required": [
+    "actor_name",
+    "role_name",
+    "film_title",
+    "release_year"
+  ],
+  "additionalProperties": false
+}

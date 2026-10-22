@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Willamette University: Willamette University is a private liberal arts college located in Salem, Oregon, United States.  Founded in 1842, it is the oldest university in the Western United States.  Willamette is a member of the Annapolis Group of colleges, and is made up of an undergraduate College of Liberal Arts and post-graduate schools of business and law.  The university is a member of the NCAA's Division III Northwest Conference and was featured in Loren Pope's "Colleges That Change Lives".  Willamette's mascot is the bearcat and old gold and cardinal are the school colors.  Approximately 2,800 students are enrolled at Willamette between the graduate and undergraduate programs.  The school employs over 200 full-time professors on the 69 acre campus located across the street from the Oregon State Capitol.
+
+Macalester College: Macalester College ( ) is a private, coeducational liberal arts college located in Saint Paul, Minnesota, US.  It was founded in 1874 as a Presbyterian-affiliated but nonsectarian college.  Its first class entered September 15, 1885.  Macalester is exclusively an undergraduate four-year institution and enrolled 1,978 students in the fall of 2013 from 50 U.S. states and 90 countries.  In 2015, "U.S. News & World Report" ranked Macalester as tied for the 23rd best liberal arts college in the United States, 6th for undergraduate teaching at a national liberal arts college, and 19th for best value at a national liberal arts college.
+
+Seven Sisters (colleges): The Seven Sisters is a loose association of seven liberal arts colleges in the Northeastern United States that are historically women's colleges.  Five of the seven institutions continue to offer all-female undergraduate programs: Barnard College, Bryn Mawr College, Mount Holyoke College, Smith College, and Wellesley College.  Vassar College has been co-educational since 1969.  Radcliffe College and its all-male coordinate school Harvard College (both of which were part of Harvard University) effectively merged in 1977, although Radcliffe did not take its current form as the Radcliffe Institute for Advanced Study until 1999.  Barnard College was Columbia University's women's liberal arts undergraduate college until its all-male coordinate school Columbia College went co-ed in 1983; to this day, Barnard continues to be an all-women's undergraduate college affiliated with Columbia.
+
+Lake Forest College: Lake Forest College is a four-year coeducational private liberal arts college in Lake Forest, Illinois, on Chicago's North Shore.  Founded in 1857 as Lind University by Presbyterian ministers, the college has been coeducational since 1876 and an undergraduate-focused liberal arts institution since 1903.  Lake Forest enrolls approximately 1,600 students representing 47 states and 81 countries.  Lake Forest offers 30 undergraduate major and minor programs in the humanities, social sciences, and natural sciences, and features programs of study in pre-law, pre-medicine, communication, business, finance, and computer science.  The majority of students live on the college's wooded 107-acre campus, which is located a half-mile from the Lake Michigan shore.
+
+College of Idaho: The College of Idaho is a private, residential liberal arts college in the western United States located in Caldwell, Idaho.  Founded in 1891, it is the state's oldest private liberal arts college, with an enrollment of 1,140 students.
+
+Vern Rutsala: Vern Rutsala (February 5, 1934 – April 2, 2014) was an American poet.  Born in McCall, Idaho, he was educated at Reed College (B.A.) and the Iowa Writers' Workshop (M.F.A.).  He taught English and creative writing at Lewis & Clark College in Portland, Oregon for more than forty years, before retiring in 2004.  He also taught for short periods at the University of Minnesota, Bowling Green State University, University of Redlands, and the University of Idaho, and served in the U.S. Army, 1956–58.  He died in Oregon on April 2, 2014.
+
+Lewis &amp; Clark College: Lewis & Clark College is a private liberal arts college located in Portland, Oregon.  It has an undergraduate College of Arts and Sciences, a School of Law, and a Graduate School of Education and Counseling.  Lewis & Clark is a member of the Annapolis Group of colleges with athletic programs competing in the National Collegiate Athletic Association's Division III Northwest Conference.  Just over 2,000 students attend the undergraduate College of Arts and Sciences, with a student body from more than 50 countries across six continents as well as most U.S. states.  The School of Law is best known for its environmental law program, while the Graduate School of Education & Counseling is active in community engagement and social justice.
+
+Zaytuna College: Zaytuna College (formerly known as Zaytuna Institute) is a Muslim liberal arts college located in Berkeley, California.  Zaytuna is the first accredited Muslim undergraduate college in the United States and was founded in 2008 by Hamza Yusuf, Zaid Shakir and Hatem Bazian.  Prior to becoming a college, Zaytuna was an institute, founded in 1996 by Hamza Yusuf, Zaid Shakir and Hesham Alalusi.  Zaytuna College seeks to incorporate the importance of the liberal arts and humanities into a traditional Islamic education curriculum.  In the academic year 2014-2015, Zaytuna College had an undergraduate student body of about fifty students, most of whom live on campus.  Zaytuna College offers one major, in Islamic Law and Theology, with courses ranging from Arabic grammar and Islamic jurisprudence, to American history and literature.  Zaytuna College also conducts an intensive Arabic language summer course.
+
+Liberal arts college: A liberal arts college is a college with an emphasis on undergraduate study in the liberal arts and sciences.  A liberal arts college aims to impart a broad general knowledge and develop general intellectual capacities, in contrast to a professional, vocational, or technical curriculum.  Students in a liberal arts college generally major in a particular discipline while receiving exposure to a wide range of academic subjects, including sciences as well as the traditional humanities subjects taught as liberal arts.  Although it draws on European antecedents, the liberal arts college is strongly associated with American higher education, and most liberal arts colleges around the world draw explicitly on the American model.
+
+Thomas More College (New York City): Thomas More College was a coeducational, undergraduate college of liberal arts and sciences that was open from the fall of 1964 until it merged with Fordham College at Rose Hill in 1974.  It offered arts and science programs for women as well as programs, such as drama, for men that were unavailable at Fordham University, which, at that time, only admitted men into its undergraduate programs.  While the undergraduate school of Fordham University was all men's, many of Fordham's graduate schools, such as the School of Education, Graduate School of Arts and Sciences, Law School, College of Pharmacy and School of Social Service were coeducational.  Thomas More College, however, provided women the opportunity to earn an undergraduate liberal arts degree.
+
+Question: Vern Rutsala Born in McCall, Idaho taught English and creative writing at private liberal arts college with just over how many students attending the undergraduate College of Arts and Sciences?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "teacher_name": {
+      "type": "string",
+      "description": "The name of the teacher."
+    },
+    "college_name": {
+      "type": "string",
+      "description": "The name of the college where the teacher taught."
+    },
+    "college_type": {
+      "type": "string",
+      "description": "The type of college (e.g., private liberal arts college)."
+    },
+    "is_private_liberal_arts": {
+      "type": "boolean",
+      "description": "Indicates if the college is a private liberal arts institution."
+    },
+    "undergraduate_arts_sciences_students": {
+      "type": "integer",
+      "description": "The approximate number of students attending the undergraduate College of Arts and Sciences."
+    }
+  },
+  "required": [
+    "teacher_name",
+    "college_name",
+    "college_type",
+    "is_private_liberal_arts",
+    "undergraduate_arts_sciences_students"
+  ],
+  "additionalProperties": false
+}

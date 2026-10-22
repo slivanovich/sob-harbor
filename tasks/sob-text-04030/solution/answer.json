@@ -1,0 +1,16 @@
+{
+  "country_name": "China",
+  "administrative_divisions": [
+    {
+      "division_name": "Xingning",
+      "division_type": "county-level city",
+      "province": "Guangdong Province"
+    },
+    {
+      "division_name": "Shunde District",
+      "division_type": "district",
+      "province": "Guangdong Province"
+    }
+  ],
+  "location_context": "Both Xingning and Shunde District are located in Guangdong Province, China."
+}

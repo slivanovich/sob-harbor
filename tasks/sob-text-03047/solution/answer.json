@@ -1,0 +1,14 @@
+{
+  "shared_country_of_origin": "France",
+  "individuals": [
+    {
+      "name": "Henri de Gaulle",
+      "country_of_origin": "France"
+    },
+    {
+      "name": "Charles de Gaulle",
+      "country_of_origin": "France"
+    }
+  ],
+  "do_they_share_origin": true
+}

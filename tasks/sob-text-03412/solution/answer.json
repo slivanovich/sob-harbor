@@ -1,0 +1,20 @@
+{
+  "person_found": {
+    "name": "Rick Bass",
+    "nationality": "American",
+    "birth_date": "March 7, 1958",
+    "professions": [
+      "writer",
+      "environmental activist"
+    ]
+  },
+  "championed_by_editor": {
+    "name": "Gordon Lish",
+    "role": "literary editor"
+  },
+  "criteria_matched": [
+    "American writer",
+    "environmental activist",
+    "championed by Gordon Lish"
+  ]
+}

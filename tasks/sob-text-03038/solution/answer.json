@@ -1,0 +1,15 @@
+{
+  "highway_name": "Interstate 81",
+  "highway_type": "Interstate Highway",
+  "connected_major_areas": [
+    {
+      "city": "Harrisburg",
+      "state": "Pennsylvania"
+    },
+    {
+      "city": "Syracuse",
+      "state": "New York"
+    }
+  ],
+  "location_relative_to_colonial_park_mall": "north"
+}

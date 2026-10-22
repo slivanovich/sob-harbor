@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "2d3e435aae4b132029cde66e542155ab347fa9934625b809aaeb3606c78c13ce",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae7676e5542995703ce8c1a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1941",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Bill Bradley (basketball, born 1941): William Bradley (June 16, 1941) was an American basketball player.  He attended Central High School in Louisville, Kentucky.\n\nCentral Visual and Performing Arts High School: Central Visual and Performing Arts High School (also known as Central VPA High School or Central High School) is a magnet high school in St. Louis, Missouri, part of the St. Louis Public Schools.  Founded in 1853, Central is the oldest public high school west of the Mississippi River, although it has moved several times and merged with a magnet school in 1984.  Central VPA specializes in the arts, with students taking courses in three art majors, including visual art, musical art, and performing art, with focuses on ceramics, drawing and painting, photography, instrumental music, vocal music, dance, and theater.\n\nUnion County Academy for Allied Health Sciences: The Union County Academy for Allied Health Sciences (UCAAHS) is a full-time Vocational public high school, located in Scotch Plains, in Union County, New Jersey, United States.  This school serves students in ninth through twelfth grades from across Union County as a career academy on the Union County Vocational Technical Schools Campus, which also includes the Academy for Information Technology, Union County Magnet High School, Academy for Performing Arts, and the Union County Vocational Technical High School.\n\nThe Academy @ Shawnee: The Academy @ Shawnee (formerly, Shawnee High School Magnet Career Academy [MCA]), is a magnet middle school and high school (grades 6-12) in the Jefferson County Public School District in Louisville, Kentucky, with a focus in Aerospace, which is the number one export in the state of Kentucky.  Qualifying students choose from Aerospace-Flight, Aerospace Engineering, Navy Junior Reserve Officers Training Corps (NJROTC).  The Academy offers the Advance Program and Advanced Placement (AP) courses, as well as some dual-credit and a pre-engineering course via Project Lead the Way.  It is one of five West Louisville schools selected as part of the Signature Partnership initiative with the University of Louisville.  The Academy@ Shawnee also houses the Challenger Learning Center, which offers science, technology, engineering, and math (STEM) student learning exercises, or missions, which are housed in a realistic looking environment that was modeled after the Challenger space shuttle and control room.\n\nSouthern High School (Kentucky): Southern High School Magnet Career Academy (MCA) was built in 1951, and the first graduating class was in 1952.  Its mission is to prepare students to be \"productive members of a technologically advanced society.\"\n\nUnion County Vocational-Technical High School: The Union County Vocational-Technical High School (UC Tech) is a full-time vocational public high school, located in Scotch Plains in Union county, New Jersey, United States.  This school serves students in ninth through twelfth grades from across Union county as a career academy on the Union County Vocational Technical Schools Campus, which also includes the Union County Academy for Allied Health Sciences, Academy for Information Technology, Union County Magnet High School and the Academy for Performing Arts.\n\nCentral High School (Louisville, Kentucky): Formally known as Louisville Central High School Magnet Career Academy, Central High School is a public high school in downtown Louisville, Kentucky, United States.\n\nSeneca High School MCA: Seneca High School MCA (Magnet Career Academy) is a Louisville, Kentucky, USA, public school.  It is located at 3510 Goldsmith Lane, Louisville, Kentucky 40220, in the Hikes Point neighborhood and is part of Jefferson County Public Schools.\n\nCentral High School (Springfield, Missouri): Central High School is a high school located in uptown Springfield, Missouri.  The school was Springfield's first high school to be built.  Construction of the building was completed in 1893.  The first graduating class graduated a year later in 1894 consisting of two out of the 76 seniors that were enrolled.  The school was renamed Central High School after the construction of Springfield's second oldest high school, Parkview High School, in 1956.  Central's mascot is a Bulldog, named Pug by the students at the time of his creation.  Central is also the home to the Kiltie Drum and Bugle Corps.  This corps was created by Dr. Robert Ritchie Robertson in 1926, and has the distinction of being the first all-female Scottish pipe and drum corps in the country.  U.S. News & World Report ranked Central High School as the 4th best school in Missouri in 2011.\n\nAustin Community Academy High School: Austin High School (now known as Austin College and Career Academy High School) is a public 4–year high school located at 231 North Pine Avenue in the Austin neighborhood on the west side of Chicago, Illinois, United States.  Operated by the Chicago Public Schools, Austin opened in 1876 and was named in honor of Henry W. Austin, a Chicago real estate developer In 2004, the online newsletter \"Chicago-Catalyst. org\" called it the yellow brick fortress.  Austin Polytech shared its campus with two smaller schools; Austin Business & Entrepreneurship Academy High and V.O.I.S.E. Academy High School.  After the 2015–2016 school year, the small schools converted into one school and was renamed Austin College and Career Academy High School.",
+    "question": "In which year was the basketball player who attended the school formally known as Louisville Central High School Magnet Career Academy born?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The full name of the basketball player."
+        },
+        "player_birth_year": {
+          "type": "integer",
+          "description": "The birth year of the basketball player."
+        },
+        "attended_school": {
+          "type": "object",
+          "properties": {
+            "school_current_name": {
+              "type": "string",
+              "description": "The current name of the school attended by the player."
+            },
+            "school_formal_name": {
+              "type": "string",
+              "description": "The formal name of the school as mentioned in the question."
+            },
+            "school_location": {
+              "type": "string",
+              "description": "The city and state where the school is located."
+            }
+          },
+          "required": [
+            "school_current_name",
+            "school_formal_name",
+            "school_location"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "player_name",
+        "player_birth_year",
+        "attended_school"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "William Bradley",
+      "player_birth_year": 1941,
+      "attended_school": {
+        "school_current_name": "Central High School",
+        "school_formal_name": "Louisville Central High School Magnet Career Academy",
+        "school_location": "Louisville, Kentucky"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

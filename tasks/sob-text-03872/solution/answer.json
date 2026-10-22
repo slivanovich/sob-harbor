@@ -1,0 +1,17 @@
+{
+  "actress_name": "Shailene Woodley",
+  "film_details": {
+    "title": "The Fault in Our Stars",
+    "co_star_name": "Ansel Elgort",
+    "release_year": 2014
+  },
+  "source_novel_details": {
+    "title": "The Fault in Our Stars",
+    "author": "John Green",
+    "nyt_best_seller_status": {
+      "is_best_seller": true,
+      "peak_position": 1,
+      "debut_month_year": "January 2012"
+    }
+  }
+}

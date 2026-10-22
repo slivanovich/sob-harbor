@@ -1,0 +1,17 @@
+{
+  "actor_name": "Fawad Afzal Khan",
+  "is_highest_paid_actor": true,
+  "awards_summary": {
+    "has_filmfare_award": true,
+    "other_awards_count": 9,
+    "other_award_names": [
+      "Lux Style Awards",
+      "Hum Awards"
+    ]
+  },
+  "band_affiliation": {
+    "band_name": "Entity Paradigm",
+    "departure_event": "Ajab Tamasha",
+    "departure_reason": "to focus on his acting career"
+  }
+}

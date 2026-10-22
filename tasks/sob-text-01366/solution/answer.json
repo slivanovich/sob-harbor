@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "Paul Scholes",
+    "birth_year": 1974
+  },
+  "person_2": {
+    "name": "Legimin Raharjo",
+    "birth_year": 1981
+  },
+  "younger_person_name": "Legimin Raharjo",
+  "age_difference_years": 7
+}

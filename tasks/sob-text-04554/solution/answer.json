@@ -1,0 +1,14 @@
+{
+  "athletes_involved": [
+    {
+      "athlete_name": "Thomaz Koch",
+      "sport_played": "tennis"
+    },
+    {
+      "athlete_name": "Jack Sock",
+      "sport_played": "tennis"
+    }
+  ],
+  "play_same_sport": true,
+  "shared_sport": "tennis"
+}

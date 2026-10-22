@@ -1,0 +1,13 @@
+{
+  "person_a": {
+    "name": "Vincent Walker",
+    "birth_date": "1980-03-02"
+  },
+  "person_b": {
+    "name": "David Usher",
+    "birth_date": "1966-04-24"
+  },
+  "older_person_name": "David Usher",
+  "older_person_birth_date": "1966-04-24",
+  "comparison_statement": "David Usher (born April 24, 1966) is older than Vincent Walker (born March 2, 1980)."
+}

@@ -1,0 +1,17 @@
+{
+  "song_title": "Still Got Time",
+  "primary_artist": {
+    "name": "Zayn",
+    "nationality": "English",
+    "role": "singer and songwriter"
+  },
+  "featured_artist": {
+    "name": "PartyNextDoor",
+    "nationality": "Canadian",
+    "role": "singer and rapper"
+  },
+  "album_info": {
+    "album_status": "upcoming second studio album"
+  },
+  "radio_debut_date": "24 March 2017"
+}

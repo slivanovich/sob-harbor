@@ -1,0 +1,12 @@
+{
+  "part_description": "underwater discharge water jet",
+  "part_model_name": "AWJ-21",
+  "manufacturer_group": "Rolls-Royce Holdings",
+  "manufacturer_subsidiary": "Rolls-Royce Naval Marine, Inc.",
+  "vessel_name": "Sea Jet",
+  "part_function_goals": [
+    "increased propulsive efficiency",
+    "reduced acoustic signature",
+    "improved maneuverability"
+  ]
+}

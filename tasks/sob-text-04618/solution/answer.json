@@ -1,0 +1,13 @@
+{
+  "chief_of_staff_person": {
+    "name": "Mark Levin",
+    "role": "chief of staff"
+  },
+  "attorney_general_person": {
+    "name": "Edwin Meese III",
+    "title": "Attorney General of the United States",
+    "term_start_year": 1985,
+    "term_end_year": 1988
+  },
+  "administration": "Ronald Reagan Administration"
+}

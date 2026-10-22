@@ -1,0 +1,24 @@
+{
+  "common_animal_type": "dog",
+  "breeds_mentioned": [
+    {
+      "name": "Cão de Castro Laboreiro",
+      "is_a_dog_breed": true,
+      "origin_location": "Castro Laboreiro, northern mountains of Portugal",
+      "other_names": [
+        "Dog from Castro Laboreiro",
+        "Portuguese Cattle Dog",
+        "Portuguese Watch Dog"
+      ]
+    },
+    {
+      "name": "Pointer",
+      "is_a_dog_breed": true,
+      "origin_location": "England",
+      "other_names": [
+        "English Pointer"
+      ]
+    }
+  ],
+  "number_of_breeds_identified": 2
+}

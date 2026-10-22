@@ -1,0 +1,15 @@
+{
+  "game_name": "Alshard",
+  "designer_person": "Jun'ichi Inoue",
+  "designer_organization": "FarEast Amusement Research",
+  "design_entities": [
+    {
+      "name": "Jun'ichi Inoue",
+      "entity_type": "person"
+    },
+    {
+      "name": "FarEast Amusement Research",
+      "entity_type": "organization"
+    }
+  ]
+}

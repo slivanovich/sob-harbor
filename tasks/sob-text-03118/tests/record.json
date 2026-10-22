@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "record_id": "86cbcde39f95949599dfce049dabf243d40b5c0314e1c4dd632c547eeaf93014",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae5a42b5542992663a4f200",
+    "source_dataset": "hotpotqa",
+    "source_answer": "T-Shirt",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Second Chance (38 Special song): \"Second Chance\" is a song by American rock band 38 Special, from their eighth studio album, 1988's \"Rock & Roll Strategy\".  Written by keyboardist Max Carl, guitarist Jeff Carlisi and Cal Curtis, the rock ballad was released as the album's second single in 1989 and became the band's highest-charting song in the United States.\n\nBravebird: Bravebird is the second studio album by American R&B-soul singer-songwriter Amel Larrieux, released in the United States on January 20, 2004 by her independent label Blisslife Records.  The album features the single \"For Real\", which reached number forty-five on \"Billboard\"' s Hot R&B/Hip-Hop Songs chart, becoming Larrieux's second highest-charting solo single on the chart after 1999's \"Get Up\".\n\nNo Type: \"No Type\" is a song by American hip hop duo Rae Sremmurd.  It was released on May 18th, 2014, by EarDrummers Entertainment and Interscope Records, as the second single from their debut studio album \"SremmLife\" (2015).  The song was produced by Seanteega and Swae Lee.  The song has peaked at number 16 on the US \"Billboard\" Hot 100 chart, becoming their second highest-charting single behind \"Black Beatles\".\n\nT-Shirt (Migos song): \"T-Shirt\" is a song by American hip hop group Migos.  It impacted radio on February 14, 2017 as the second single from their second studio album \"Culture\" (2017).  The song was produced by American production duo Nard & B, alongside their TrenchWerk cohort XL.  It is the second highest-charting song of their career, managing to reach the top 20 of the US \"Billboard\" Hot 100.\n\nMigos discography: The American hip hop group Migos has released two studio albums, one extended play (EP), twelve mixtapes and nineteen singles (including eight as a featured artist).  On July 31, 2015, Migos released their debut studio album, \"Yung Rich Nation\".  On January 27, 2017, Migos released their second studio album, \"Culture\".\n\nTonight (Jonas Brothers song): \"Tonight\" is the third single by the American pop band Jonas Brothers from their third studio album, \"A Little Bit Longer\".  Fueled by digital downloads, the song debuted and peaked at number eight on the \"Billboard\" Hot 100 songs chart on August 7, 2008, the group's second (and final) top ten single and second highest-charting single to date (after their top five single \"Burnin' Up\").  The song also reached the top twenty in Canada.\n\nFaded (Tyga song): \"Faded\" is a song by American rapper Tyga featuring Young Money-founder Lil Wayne.  The song was first released on January 13, 2012 as the fourth single from the rapper's debut studio album, \"\" (2012).  For the chart dated May 27, 2012, \"Faded\" debuted at number thirty-six on the \"Billboard\" Hot 100, marking Tyga's second highest-charting single after \"Rack City\"; which peaked at number seven.  It was released to US rhythmic radio stations on March 13, 2012.  Complex named the song No. 42 of the best 50 songs of 2012.\n\nCulture (Migos album): Culture (stylized as C U L T U R E) is the second studio album by American hip hop trio Migos.  It was released on January 27, 2017, by Quality Control Music, 300 Entertainment and Atlantic Records.  The album features guest appearances from DJ Khaled, Gucci Mane, 2 Chainz, Travis Scott and Lil Uzi Vert, while the production was handled by Metro Boomin and Murda Beatz, among others.\n\nLavender (Marillion song): \"Lavender\" is a song by the British neo-progressive rock band Marillion.  It was released as the second single from their 1985 UK number one concept album \"Misplaced Childhood\".  The follow-up to the UK number two hit \"Kayleigh\", the song was their second Top Five UK hit, entering the chart on 7 September 1985, reaching number five and staying on the chart for nine weeks.  None of the group's subsequent songs have reached the Top Five and \"Lavender\" remains their second highest-charting song.  As with all Marillion albums and singles between 1982 and 1988, the cover art was created by Mark Wilkinson.\n\nMask Off: \"Mask Off\" is a song by American rapper Future for his eponymous fifth studio album \"Future\" (2017).  The track was later released as the second single after initially charting as an album track and receiving more popularity than the lead single \"Draco\".  The song samples \"Prison Song\" by Tommy Butler.  It is the highest-charting song on the album and also Future's best-charting single to date.",
+    "question": "What is the title of the song by Migos that appears on their second studio album and is their second highest-charting song of their career? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "song_title": {
+          "type": "string",
+          "description": "The title of the song."
+        },
+        "artist_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the artist or group."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "album_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the album the song appears on."
+            },
+            "studio_album_number": {
+              "type": "integer",
+              "description": "The sequential number of the studio album in the artist's discography."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The year the album was released."
+            }
+          },
+          "required": [
+            "title",
+            "studio_album_number",
+            "release_year"
+          ],
+          "additionalProperties": false
+        },
+        "chart_performance": {
+          "type": "object",
+          "properties": {
+            "ranking_description": {
+              "type": "string",
+              "description": "A description of the song's chart ranking relative to the artist's other songs."
+            },
+            "peak_chart_position_us_billboard_hot_100": {
+              "type": "string",
+              "description": "The peak position reached on the US Billboard Hot 100 chart, if specified as a range or specific position."
+            }
+          },
+          "required": [
+            "ranking_description"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "song_title",
+        "artist_details",
+        "album_details",
+        "chart_performance"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "song_title": "T-Shirt",
+      "artist_details": {
+        "name": "Migos"
+      },
+      "album_details": {
+        "title": "Culture",
+        "studio_album_number": 2,
+        "release_year": 2017
+      },
+      "chart_performance": {
+        "ranking_description": "second highest-charting song of their career",
+        "peak_chart_position_us_billboard_hot_100": "top 20"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

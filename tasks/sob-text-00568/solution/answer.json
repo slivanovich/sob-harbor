@@ -1,0 +1,16 @@
+{
+  "world_event": "World War II",
+  "retail_strategy": {
+    "name": "high-volume, low-profit-margin strategy",
+    "target_consumers": "price-conscious consumers"
+  },
+  "store_type": {
+    "name": "Discount store",
+    "description": "A retail store which sells products at prices that are lower than the typical market value.",
+    "example_product": {
+      "product_name": "Scotsmac",
+      "product_description": "an alcoholic drink consisting of a blend of wine and whisky flavouring",
+      "bottle_size_ml": 700
+    }
+  }
+}

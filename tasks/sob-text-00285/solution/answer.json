@@ -1,0 +1,11 @@
+{
+  "building_with_specified_units": {
+    "name": "50 West Street",
+    "residential_units_count": 191
+  },
+  "other_building_in_question": {
+    "name": "125 Greenwich Street",
+    "residential_units_known_from_context": false
+  },
+  "question_unit_count": 191
+}

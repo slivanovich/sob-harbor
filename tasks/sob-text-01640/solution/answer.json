@@ -1,0 +1,14 @@
+{
+  "are_subjects_same": false,
+  "film_comparison": {
+    "film_1": {
+      "title": "Mala Mala",
+      "subject": "stories of the transgender community in Puerto Rico, including April Carrion, and the historic victory of the LGBT community with the approval and signature of Law 238-2014 (in Puerto Rico), which prevents discrimination in employment based on sexual orientation and/or gender identity"
+    },
+    "film_2": {
+      "title": "An Inconvenient Truth",
+      "subject": "Al Gore's campaign to educate citizens about global warming via a comprehensive slide show"
+    }
+  },
+  "reasoning": "Mala Mala is about the transgender and LGBT community in Puerto Rico and their fight against discrimination, while An Inconvenient Truth is about global warming and climate change education. Their subjects are distinctly different."
+}

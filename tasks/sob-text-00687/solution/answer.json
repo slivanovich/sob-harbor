@@ -1,0 +1,15 @@
+{
+  "entity_name": "Ptolemaic dynasty",
+  "entity_description": {
+    "type": "royal family",
+    "origin": "Macedonian Greek",
+    "ruled_kingdom": "Ptolemaic Kingdom",
+    "historical_period": "Hellenistic period"
+  },
+  "rule_details": {
+    "duration_years": 275,
+    "start_year_bc": 305,
+    "end_year_bc": 30
+  },
+  "relation_to_oenanthe": "through marriage"
+}

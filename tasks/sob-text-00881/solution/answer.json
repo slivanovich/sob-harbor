@@ -1,0 +1,16 @@
+{
+  "university_name": "University of Vienna",
+  "is_public": true,
+  "location": {
+    "city": "Vienna",
+    "country": "Austria"
+  },
+  "founding_details": {
+    "founder": "Duke Rudolph IV",
+    "founding_year": 1365
+  },
+  "historical_attributes": [
+    "one of the oldest universities in the German-speaking world"
+  ],
+  "rector_name": "Heinz Werner Engl"
+}

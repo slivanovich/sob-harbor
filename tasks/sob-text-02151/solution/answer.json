@@ -1,0 +1,14 @@
+{
+  "city_name": "Minneapolis",
+  "city_attributes": {
+    "is_county_seat": true,
+    "is_larger_twin_city": true,
+    "county_name": "Hennepin County",
+    "metropolitan_area": "Twin Cities"
+  },
+  "band_context": {
+    "band_name": "Slave Raider",
+    "formation_year": 1985,
+    "music_scene_relevance": true
+  }
+}

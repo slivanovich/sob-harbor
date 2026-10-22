@@ -1,0 +1,14 @@
+{
+  "person_name": "Richard J. Wood",
+  "degree_obtained": "M.Sc.",
+  "graduation_year": 1972,
+  "university_info": {
+    "name": "McMaster University",
+    "location": {
+      "city": "Hamilton",
+      "province_state": "Ontario",
+      "country": "Canada"
+    }
+  },
+  "graduated_town": "Hamilton"
+}

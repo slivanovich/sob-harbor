@@ -1,0 +1,11 @@
+{
+  "formation_name": "Back Bay Formation",
+  "located_in_province_or_state": "New Brunswick",
+  "is_maritime_province": true,
+  "maritime_provinces_of_canada": [
+    "New Brunswick",
+    "Prince Edward Island",
+    "Nova Scotia"
+  ],
+  "answer_maritime_province": "New Brunswick"
+}

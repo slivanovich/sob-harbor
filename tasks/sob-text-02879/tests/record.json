@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "bda15c66cf510d61aad7f1c3d09deb3522022e90d2bdb338db28590bd08f1171",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab69fda554299710c8d1ef9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "deputy commander of the Air Force",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Elson Moyo: Air Vice-Marshal Elson Moyo was a deputy commander of the Air Force of Zimbabwe and one of the main figures in the 2007 Zimbabwean coup d'état attempt.\n\n1997 Zambian coup d'état attempt: The 1997 Zambian coup d'état attempt was a military coup d'état attempt that took place in Zambia on 28 October 1997.  The coup lasted no more than 3 hours and took place between 6 and 9 A.M. when the coup's leader, Captain Solo (Stephen Lungu), announced via the national radio station (Zambia National Broadcasting Corporation) that a coup had taken place and that the then President, Frederick Chiluba, needed to step down.\n\n2011 Bangladesh coup d'état attempt: 2011 Bangladesh coup d'état attempt was coup attempt in Bangladesh.  Bangladesh Army on December 2011 stopped a coup attempt that was planned to have taken place on the 11-12 of January 2012.  This was announced at a press conference on 19 January 2012.  The Purpose of the coup was to establish Islamic Law in Bangladesh.  A number of officers including retired ones were arrested.  The coup plotters argued that they are nationalist trying to prevent Bangladesh from being turned into a puppet of India.\n\n2007 Zimbabwean coup d'état attempt: The Zimbabwean government foiled an alleged coup d'état attempt involving almost 400 soldiers and high-ranking members of the military that would have occurred on June 2 or June 15, 2007.  The alleged leaders of the coup, all of whom have been arrested and charged with treason, are retired army Captain Albert Matapo, Spokesman for the Zimbabwe National Army Ben Ncube, Major General Engelbert Rugeje, and Air Vice Marshal Elson Moyo.\n\n2013 Libyan coup d'état attempt: The 2013 Libyan coup d'état attempt was a coup d'état attempt by a group of members of the General National Congress to take control of the country from Libyan Prime Minister Ali Zeidan.  Zeidan was kidnapped in the early hours of the 10 October by armed gunmen and was then released several hours later after a pro-government militia stormed the site where he was being held.  Following his release Zeidan claimed the incident was an attempted coup orchestrated by two militias in line with members of the GNC opposed to Zeidan.\n\n1938 Greek coup d'état attempt: The Coup d'état attempt of 1938 or coup d'état of Chania was a short-lived coup attempt in Chania, Greece, aimed at overthrowing the dictatorship of Ioannis Metaxas in 1938.  Due to poor organization, the coup collapsed within a few hours and never seriously threatened the dictatorial regime.\n\n1995 Azerbaijani coup d'état attempt: The 1995 Azerbaijani coup d'état attempt, also known as the Turkish coup in Baku, was a coup d'état attempt by members of the Azerbaijani military, led by Colonel Rovshan Javadov at the head of a unit of Special Purpose Police Unit (\"OPON\").  The group aimed to take control of the country from president Heydar Aliyev and reinstall former president Abulfaz Elchibey.  The coup was foiled when Turkish President Süleyman Demirel became aware of elements in Turkey supporting the plot, and called Aliyev to warn him.  On 17 March 1995, units of Azerbaijani Armed Forces surrounded the insurgents in their camp and assaulted it, killing Javadov.  Reports in Turkey following the 1996 Susurluk scandal elaborated on support for the coup from elements in Turkey.\n\n1982 Spanish coup d'état attempt: The October 27, 1982, coup d'état attempt was a conspiracy conceived in Spain to overthrow the government.  Meant to take place on October 27, 1982, a day before national elections, the plan was discovered and foiled the preceding October 1.  Although made public, the importance of the coup attempt was downplayed with the cooperation of the main media, in order to avoid raising social unrest.  This coup d'état plan hardly affected the election campaign for the October 28 elections, won by Spanish Socialist Workers' Party (PSOE).  Over time, it has become an obscure chapter in Spanish history.\n\n1989 Panamanian coup d'état attempt: The 1989 Panamanian coup d'état attempt was a failed coup d'état which occurred in Panama City on 3 October.  The attempt was led by Major Moisés Giroldi, supported by a group of officers who had returned from a United Nations peacekeeping mission in Namibia.  Although the plotters succeeded in capturing Panamanian dictator Manuel Noriega, the coup was quickly suppressed.  Giroldi, together with nine other members of the Panamanian Defense Forces, was executed on 3 and 4 October 1989.  An eleventh participant died in prison after being tortured.  These events became known as the \"Albrook massacre\".\n\n1983 Upper Voltan coup d'état attempt: The 1983 Upper Voltan coup d'état attempt was an event which took place on 28 February 1983, in the Republic of Upper Volta (today Burkina Faso), just a few months after a previous \"coup d'état\" on 7 November 1982, carried out by radical elements of the army against the regime of Colonel Saye Zerbo, who himself came to power in a 1980 coup against Major General Sangoulé Lamizana.  The coup attempt on 28 February, which targeted the Council of Popular Salvation and its leader Major Dr. Jean-Baptiste Ouédraogo, failed.",
+    "question": "How is Elson Moyo associated to the 2007 Zimbabwean coup d'état attempt?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person involved."
+        },
+        "coup_attempt_year": {
+          "type": "integer",
+          "description": "The year the coup d'état attempt took place."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the coup d'état attempt occurred."
+        },
+        "association_details": {
+          "type": "object",
+          "properties": {
+            "primary_role": {
+              "type": "string",
+              "description": "The primary military or official role of the person."
+            },
+            "military_branch": {
+              "type": "string",
+              "description": "The military branch the person belonged to."
+            },
+            "involvement_description": {
+              "type": "string",
+              "description": "A description of the person's involvement in the coup attempt."
+            },
+            "outcome_status": {
+              "type": "string",
+              "description": "The status or outcome for the person following the coup attempt."
+            }
+          },
+          "required": [
+            "primary_role",
+            "military_branch",
+            "involvement_description",
+            "outcome_status"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "person_name",
+        "coup_attempt_year",
+        "country",
+        "association_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Elson Moyo",
+      "coup_attempt_year": 2007,
+      "country": "Zimbabwe",
+      "association_details": {
+        "primary_role": "deputy commander",
+        "military_branch": "Air Force of Zimbabwe",
+        "involvement_description": "one of the main figures and alleged leader",
+        "outcome_status": "arrested and charged with treason"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

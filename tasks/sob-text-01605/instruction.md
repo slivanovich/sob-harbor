@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Girlfriend (The Darkness song): "Girlfriend" is a song by British rock band The Darkness, released as the third and final single from their second studio album, "One Way Ticket to Hell... And Back".  Released on 22 May 2006, it was the band's last single before their five-year disbandment later that year.  The song is written from the perspective of a man who has cheated on his girlfriend with another woman.  He tells his now angry girlfriend in the first verse that the other girl meant nothing to him.  In the second verse he admits that the relationship is over and his once girlfriend is now his ex.  The music video for the song is inspired by the film "Flashdance".  The song was a disappointment, only charting at #39 on the UK Singles Chart.  This was the band's lowest charting single since 2003 single "Get Your Hands off My Woman".
+
+List of songs recorded by Slim Burna: Nigerian recording artist and music producer Slim Burna has recorded a total of twenty three songs including remixes, covers and guest features.  After he quit his production job at Grafton Records in 2008, he formed Street Rhymes and has since made beats and created music in his own studio.  In 2009, he released his own version of "Oyoyo" (originally by J Martins) which helped gain him some attention.  The song became a hit record, appearing on several mix albums put together by the Nigerian DJs Coalition.  He collaborated with award-winning Nigerian rapper M-Trill on the song "Oya Na", which was duly released in May 2012.  The following month, Burna released "I'm on Fire" and hinted towards a new mixtape.  He later confirmed through a video footage that he had begun work on his debut project.  The second single released from the tape was "All Day" which Burna recorded with some vocal assistance from fellow Garden City singer Bukwild Da Ikwerrian.  Bukwild contributed to the songwriting and delivered the second verse of the track.  Burna also collaborated with P.I. Piego, a member of Hip hop group Ruud Boiz, on the third single "Claro", released on February 8, 2013.  His first full length project "I'm on Fire" was released on April 11, 2013.  Later that same year, Burna also contributed a guest verse to the song "Bad Girl" for Young Paperboyz's second studio album, "Naija Boss Techno Reloaded" and released the song "Oh Na Na Na" in commemoration of Nigeria's 53rd Independence Day Anniversary, which ultimately became the first top ten hit of his career.
+
+Hot Revolver: "Hot Revolver" is a song by American recording artist Lil Wayne, released March 17, 2009, it was intended to be the second single from his seventh studio album, "Rebirth" (2010).  The song, produced by American production duo Cool & Dre, features uncredited guest vocals from Dre.  The song was originally intended to be included on "Rebirth", however for unspecified reasons it was left off the final track listing.  An extended version of the song with an extra verse from Wayne later leaked online on March 26, 2009.  A re-recorded version of the song was later included as a bonus track on Wayne's tenth studio album "I Am Not a Human Being II" (2013), featuring no Auto-Tune and a new verse from Wayne.
+
+Girls Around the World: "Girls Around the World" is a song by American recording artist Lloyd.  The song features rapper Lil Wayne and was written by Lloyd, along with Dwayne Carter, Eric Barrier, and William Griffin.  The song was produced by his production team, Big Reese and Jasper Cameron, who also produced his breakthrough hit, "You", which also featured Lil Wayne.  The song served as the lead single for Lloyd's third studio album "Lessons in Love".  "Girls Around the World" received positive to mixed reviews from critics, some of whom noted it as generic, and others named it as a top track from the album.  It reached sixty-four on the "Billboard" Hot 100 and thirteen on the Hot R&B/Hip-Hop Songs chart.  The song samples "Paid in Full" by hip hop duo Eric B. & Rakim.  Lil Wayne's verse heavily reflects and interpolates Rakim's verse in "Paid in Full".
+
+Cause An Effect: Cause An Effect is the first album by the former 1200 Techniques frontman, N'fa.  The Australian hip hop artist collaborated with various producers around the world including Roots Manuva, Mr Yoshiaki (The Black Eyed Peas), DJ Peril (of 1200 Techniques) and Deceptikonz (Dawn Raid Entertainment).  Three singles were released from the album, "Seduction is Evil (She's Hot)", "Cause An Effect" and "Universal King (Left Right Left)".  The actor, Heath Ledger, directed two video clips for the album, "Seduction is Evil (She's Hot)" and "Cause An Effect".  In 2010, N'fa re-released the single "Cause An Effect" as an EP with various remixes of the track and video clip on iTunes.
+
+Verse Simmonds: Maurice "Verse" Simmonds is a Puerto Rican American singer, songwriter, and record producer.  Based in Los Angeles California bit raised in the Virgin Islands, he moved to the United States after high school and he formed the production duo the Jugganauts in the 1990s.  The duo has since co-written and produced tracks such as "Man Down" by Rihanna and "Who Gon Stop Me" by Kanye West and Jay-Z, both of which charted prominently on "Billboard".
+
+Man Down (song): "Man Down" is a song by Barbadian singer Rihanna from her fifth studio album, "Loud" (2010).  Singer Shontelle and production duo Rock City wrote the song with its main producer, Sham.  They wrote it during a writing camp, in Los Angeles of March 2010, held by Rihanna's record label to gather compositions for possible inclusion on the then-untitled album.  Rock City were inspired by Bob Marley's 1973 song "I Shot the Sheriff" and set out to create a song which embodied the same feel, but from a female perspective.  "Man Down" is a reggae murder ballad which incorporates elements of ragga and electronic music.  Lyrically, Rihanna is a fugitive after she shoots a man, an action she later regrets.  Several critics singled out "Man Down" as "Loud"' s highlight, while others commented on her prominent West Indian accent and vocal agility.
+
+Natalia Keery-Fisher discography: The English singer-songwriter Natalia Keery-Fisher has released two studio albums, two extended play (EP), and seven singles as an artist, as well as four as a featured artist, and thirteen music videos.  She began her musical career by releasing a standalone single, entitled "Don't Play Nice", under the alias of Verbalicious, with label All Around the World.  Although the song reached number eleven in the United Kingdom, the label went bankrupt shortly after the song's release.  In 2008, Sinclair collaborated with French recording artist M. Pokora in the song "They Talk Shit About Me", as Verse.  Sinclair later changed her stage name to Natalia Cappuccini and released the extended play "Wommanequin" independently.
+
+The Entertainer (song): "The Entertainer" is a single by singer Billy Joel released as the only single from his 1974 album "Streetlife Serenade".  The song peaked at #34 on the US charts, a Top 40 hit for Joel that year.  The song is a cynical and somewhat satirical look at the fleeting fame of a musician and fickle public tastes ("Today I am your champion / I may have won your hearts / But I know the game / You'll forget my name / And I won't be here / in another year / if I don't stay on the charts"); this theme would be examined in the later song "It's Still Rock and Roll to Me".  Another verse in the song references the shortening of Joel's song, "Piano Man", from 5 minutes and 38 seconds to 3 minutes and 5 seconds to fit a radio slot, referenced by the lyrics "It was a beautiful song, / but it ran too long / If you're gonna have a hit, you gotta make it fit / So they cut it down to 3:05."  Additionally, the timing printed on the label of the 7" release of "The Entertainer" was 3:05, although the actual 45 length was 3:11 (while the album length was 3:41).  In the single version, Verse 3 (which starts at 1:02 in the album version) is edited out, and Verse 2 (which starts at 0:40) contains a steel guitar in its second half, which is actually featured in the second half of the "third" verse in the album version; indeed, on the single mix, the instrumental crescendo of the album version is anticipated by bringing the fuller instrumentation of Verse 3 under the vocals of Verse 2.  As a result of this, the slightly emptier original instrumentation of Verse 2 (which includes a downward slide on the synth) and the vocals of Verse 3 are completely omitted, while the instrumentation of Verse 3 (featuring the steel guitar) does appear, but earlier.
+
+Join the British Army: "Join the British Army" is an Irish rebel song.  The lyrics address concerns of a young man reconsidering the decisions that caused him to volunteer for the British army.  From verse to verse, examples are given as to why the young man wants to leave the British Army.
+
+Question: Which artist collaborated with Verse Simmons in the song "Man Down" ? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song in question."
+    },
+    "verse_simmonds_role": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The roles Verse Simmonds (or his production duo) had in the creation of the song."
+    },
+    "primary_artist": {
+      "type": "string",
+      "description": "The main artist of the song who collaborated with Verse Simmonds."
+    },
+    "album_name": {
+      "type": "string",
+      "description": "The album from which the song was released."
+    }
+  },
+  "required": [
+    "song_title",
+    "verse_simmonds_role",
+    "primary_artist",
+    "album_name"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,22 @@
+{
+  "person_name": "John Brereton",
+  "person_roles": [
+    "gentleman adventurer",
+    "chronicler"
+  ],
+  "voyage_details": {
+    "voyage_year": 1602,
+    "voyage_leader": {
+      "leader_name": "Bartholomew Gosnold",
+      "leader_roles": [
+        "English lawyer",
+        "explorer",
+        "privateer"
+      ],
+      "leader_founding_involvements": [
+        "Virginia Company of London",
+        "Jamestown"
+      ]
+    }
+  }
+}

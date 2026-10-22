@@ -1,0 +1,14 @@
+{
+  "club_details": {
+    "name": "Sevilla FC",
+    "country": "Spain",
+    "is_oldest_football_club_in_country": true,
+    "league": "La Liga"
+  },
+  "player_details": {
+    "full_name": "Alexandra López Rosillo",
+    "common_name": "Ale",
+    "previous_club_name": "Sevilla FC"
+  },
+  "answer": "Spain"
+}

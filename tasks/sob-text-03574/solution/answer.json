@@ -1,0 +1,9 @@
+{
+  "person_name": "Roberto Gari",
+  "birth_place": "Brooklyn",
+  "birth_place_details": {
+    "is_most_populous_borough": true,
+    "population_year": 2016,
+    "estimated_population": 2629150
+  }
+}

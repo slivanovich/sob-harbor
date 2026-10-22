@@ -1,0 +1,14 @@
+{
+  "gun_type": "rifle",
+  "weapons": [
+    {
+      "name": "Sturmgewehr 52",
+      "classification": "battle rifle"
+    },
+    {
+      "name": "FG 42",
+      "classification": "automatic rifle"
+    }
+  ],
+  "common_characteristic": "Both are explicitly described as types of rifles in the provided context."
+}

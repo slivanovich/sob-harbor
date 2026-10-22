@@ -1,0 +1,82 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Béla Bartók: Béla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist.  He is considered one of the most important composers of the 20th century; he and Liszt are regarded as Hungary's greatest composers .  Through his collection and analytical study of folk music, he was one of the founders of comparative musicology, which later became ethnomusicology.
+
+List of compositions by Béla Bartók: This aspires to be a complete list of compositions by Béla Bartók.  The catalogue numbering by András Szőllősy (Sz.) , László Somfai (BB.)  and Denijs Dille (DD.)  are provided, as well as Bartók's own opus numbers.  Note that Bartók started three times anew with opus numbers, here indicated with "(list 1)", "(list 2)" and "(list 3)" respectively.  The pieces from the third listing are by far best known; opus lists 1 and 2 are early works.  The year of composition and instrumentation (including voice) are included.  See the main article on Béla Bartók for more details.
+
+Pattern completion: In music pattern completion is "the use of a projected set to organize a work over a long span of time" (Wilson 1992, p. 210n5).  The compositional technique has been used by Béla Bartók and Igor Stravinsky.
+
+Béla Bartók Music High School: Béla Bartók Music High School (Bartók Béla Zeneművészeti Szakközépiskola) is situated in the Palace of Music (Zenepalota) in Bartók square Miskolc, Hungary. It is a famous Music school named after the famous Hungarian composer Béla Bartók. It was founded in 1966.
+
+Palace of Music (Miskolc): The Palace of Music ("Zenepalota") is a building in Bartók square, Miskolc, Hungary.  It is the building of the Béla Bartók Secondary School and the Béla Bartók Music Institute (a faculty of the University of Miskolc.)  The Palace was designed by Gyula Waelder in Neo-baroque style and was built between 1926 and 1927.  The construction was financed from USA loans, just like that of the Hotel Palace in Lillafüred and the Market Hall on Búza tér.
+
+Thomas Rajna: His first commercial recording was the complete piano solo works of Igor Stravinsky.  Since then he has recorded music by Alexander Scriabin, Robert Schumann and Olivier Messiaen, the piano part of Igor Stravinsky's "Petrushka" with the New Philharmonia under Erich Leinsdorf, and Béla Bartók's "Music for Strings, Percussion and Celesta" with Sir Georg Solti and the London Symphony Orchestra.  He has completed a cycle of recordings devoted to the entire piano music of Enrique Granados.  Subsequently he undertook to record Franz Liszt's 12 "Transcendental Etudes" and "12 Etudes", Op. 1.  Rajna has often performed his own two piano concertos.
+
+Reiner Bredemeyer: Reiner Bredemeyer (2 February 1929 − 5 December 1995) was a German composer.  He was born in Vélez, Santander and went to school in Breslau.  In 1944 he was drafted into military service and was briefly held as a prisoner of war of the American Army in Bavaria.  After the end of World War II, he met composer Karl Amadeus Hartmann who introduced him to the music of Igor Stravinsky, Béla Bartók, Anton Webern, Edgard Varèse, Charles Ives and Erik Satie.  From 1949 to 1953 he studied composition with Karl Höller at the Munich Academy for Musical Arts.  In 1954 Paul Dessau took him to East Germany, where Bredemeyer became a master student of Rudolf Wagner-Régeny at the DDR Academy of Arts, Berlin.
+
+List of string quartets by Béla Bartók: The Hungarian composer Béla Bartók wrote six string quartets, each for the usual forces of two violins, viola and cello.  Notable composers who have been influenced by them include Benjamin Britten, particularly in the Sonata in C for Cello and Piano (; ), Elliott Carter, who refers in the opening of his own First String Quartet to Bartók’s Sixth Quartet , Chen Yi , Edison Denisov, whose Second Quartet is closely related to Bartók’s Fifth Quartet , Franco Donatoni, who was deeply impressed when he heard a broadcast of Bartók's Fourth Quartet , Robert Fripp, who mentions them as an influence upon King Crimson , Miloslav Ištvan , György Kurtág, whose Opp.  1 and 28 both owe a great deal to Bartók's quartets (; ), György Ligeti, whose two string quartets both owe a great deal to Bartók’s quartets (; ), Bruno Maderna , George Perle, who credits the Bartók Fourth and Fifth Quartets as precedents for his use of arrays of chords related to one another by different types of symmetry , Walter Piston (; ), Kim Dzmitrïyevich Tsesakow , Wilfried Westerlinck , Stefan Wolpe, who explained in a public lecture how he had derived ideas from Bartók’s Fourth Quartet , and Xu Yongsan .
+
+Igor Stravinsky: Igor Fyodorovich Stravinsky (sometimes spelled "Strawinski", "Strawinsky", or "Stravinskii"; Ukrainian: І́гор Фе́дорович Страві́нський , ] ;Russian: И́горь Фёдорович Страви́нский , "Igorʹ Fëdorovič Stravinskij"; ] ; 17 June [O.S. 5 June] 1882 6 April 1971) was a Russian Empire-born composer, pianist, and conductor.  He is widely considered one of the most important and influential composers of the 20th century.
+
+Triton (chamber music society): Triton was a Paris-based chamber music society founded by Pierre-Octave Ferroud to promote new music.  Its executive committee (comité actif) was made up of composers, including Francis Poulenc, Darius Milhaud, Arthur Honegger, Bohuslav Martinů and Sergey Prokofiev.  On its honorary committee were Maurice Ravel, Albert Roussel, Arnold Schoenberg, Richard Strauss, Igor Stravinsky, Béla Bartók and Karol Szymanowski.  Concerts were held at the École normale de musique, the first being held on 16 December 1932.  The inaugural concert included the premiere of Honegger's Sonatina for violin and cello, and the European premiere of Prokofiev's Sonata for Two Violins.
+
+Question: Who was born first out of Béla Bartók and Igor Stravinsky?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "composers": {
+      "type": "array",
+      "description": "Details of the composers being compared.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The full name of the composer."
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "The birth year of the composer."
+          }
+        },
+        "required": [
+          "name",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "earlier_born_composer_name": {
+      "type": "string",
+      "description": "The name of the composer who was born first."
+    },
+    "birth_year_difference_years": {
+      "type": "integer",
+      "description": "The difference in birth years between the two composers."
+    },
+    "comparison_statement": {
+      "type": "string",
+      "description": "A statement summarizing the birth year comparison."
+    }
+  },
+  "required": [
+    "composers",
+    "earlier_born_composer_name",
+    "birth_year_difference_years",
+    "comparison_statement"
+  ],
+  "additionalProperties": false
+}

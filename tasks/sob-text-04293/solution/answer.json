@@ -1,0 +1,58 @@
+{
+  "query_topic": "Canadian former child actor",
+  "number_of_actors_found": 5,
+  "canadian_former_child_actors": [
+    {
+      "actor_name": "Sunny Besen Thrasher",
+      "nationality": "Canadian",
+      "is_former_child_actor": true,
+      "birth_date": "December 13, 1976",
+      "birth_place": "Toronto, Ontario",
+      "notable_roles": [
+        "Paul Edison in The Edison Twins",
+        "voices in the first Care Bears movies"
+      ]
+    },
+    {
+      "actor_name": "Joey Cramer",
+      "nationality": "Canadian",
+      "is_former_child_actor": true,
+      "birth_date": "August 23, 1973",
+      "notable_roles": [
+        "role in Flight of the Navigator"
+      ]
+    },
+    {
+      "actor_name": "K. C. Martel",
+      "nationality": "Canadian",
+      "is_former_child_actor": true,
+      "birth_date": "September 14, 1967",
+      "notable_roles": [
+        "Eddie on Growing Pains"
+      ]
+    },
+    {
+      "actor_name": "Xavier Petermann",
+      "nationality": "Canadian",
+      "is_former_child_actor": true,
+      "notable_roles": [
+        "performance as an autistic child in the film Mario"
+      ],
+      "awards_nominations": [
+        {
+          "award_name": "Genie Award",
+          "category": "Best Actor"
+        }
+      ]
+    },
+    {
+      "actor_name": "Steven Mond",
+      "nationality": "Canadian",
+      "is_former_child_actor": true,
+      "birth_date": "May 12, 1971",
+      "notable_roles": [
+        "Robbie Jason on Diff'rent Strokes"
+      ]
+    }
+  ]
+}

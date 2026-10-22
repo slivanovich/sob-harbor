@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Feral horse: A feral horse is a free-roaming horse of domesticated ancestry.  As such, a feral horse is not a wild animal in the sense of an animal without domesticated ancestors.  However, some populations of feral horses are managed as wildlife, and these horses often are popularly called "wild" horses.  Feral horses are descended from domestic horses that strayed, escaped, or were deliberately released into the wild and remained to survive and reproduce there.  Away from humans, over time, these animals' patterns of behavior revert to behavior more closely resembling that of wild horses.  Some horses that live in a feral condition but may be occasionally handled or managed by humans, particularly if privately owned, are referred to as "semi-feral".
+
+Corolla Wild Horses Protection Act: The Corolla Wild Horses Protection Act ( ) is a bill that was introduced into the 113th United States Congress, where it passed the United States House of Representatives.  The bill would affect wild horses living in North Carolina.
+
+Georgia Bruce: Georgia Bruce (born 7 May 1981) is an expert in equine behavior and psychology.  She specializes in the positive reinforcement based training method known as "Clicker Training".  Bruce has written two books about clicker training horses and has also produced a DVD training series on equine clicker training.  Bruce gives lessons, clinics, trick shows and clicker training demonstrations around Australia.  Her broad repertoire of horse training skills includes training trick horses, liberty horses, wild horses, starting young horses and retraining problem horses.  Bruce also has extensive experience training horses for high level performance in both dressage and reining.
+
+Stroh violin: Stroh is a maker using Stroviols, as a trade name for their phono instruments, which include violin, viola, cello, bass, ukulele, slide guitar, and mandolin.  There are also numerous Stroviols one string phonofiddles made.  These instruments are named after their designer, John Matthias Augustus Stroh, an electrical engineer in London, who patented it.  On 4 May 1899, Stroh applied for a UK patent, GB9418 titled "Improvements in Violins and other Stringed Instruments" which was accepted on 24 March 1900.  This described the use of a flat metal (other materials are also mentioned) diaphragm in the voice-box (reproducer) of a violin to mechanically amplify the sound.  Then on 16 February 1901 he applied for a second UK patent, GB3393 titled "Improvements in the Diaphragms of Phonographs, Musical Instruments, and anologous Sound-producing, Recording and Transmitting Contrivances".  Which was accepted on 14 December 1901.  This effectively extended the first concept to now use a conical resonator with corrugations at its edge, allowing a more 'rigid' diaphragm.  His failure to register his inventions in the USA allowed John Dopyera and Geo Beauchamp to subsequently obtain US patents for the tricone and single cone designs used in National brand instruments.  The Stroh violin is also closely related to other horned violins using a mica sheet-resonating diaphragm, known as phonofiddles.
+
+Black Cowboy, Wild Horses: A True Story: Black Cowboy, Wild Horses: A True Story is a 1998 children's picture book by Julius Lester and illustrator Jerry Pinkney.  It is about an ex-slave and cowboy, Bob Lemmons, who, by himself, wrangles a herd of wild horses to a corral.
+
+Wild Horses (Wild Horses album): Wild Horses is the debut studio album by the British rock band, Wild Horses, co-produced with Trevor Rabin at Konk Studios in London, and released on 14 April 1980 on EMI Records.  It peaked at No. 38, and spent four weeks in the UK Albums Chart.
+
+Dobro: The word Dobro is, in popular usage, the generic term for a wood-bodied, single cone resonator guitar.  It is also an American brand of resonator guitar, currently owned by the Gibson Guitar Corporation.  The Dobro was originally made by the Dopyera brothers when they formed the Dobro Manufacturing Company.  Their design, with a single inverted resonator, was introduced in competition to the patented Tricone and biscuit designs produced by the National String Instrument Corporation.  The Dobro name appeared on other instruments, notably electric lap steel guitars and solid body electric guitars and on other resonator instruments such as Safari resonator mandolins.
+
+Wild Horses (US country band): Wild Horses is an American country music band composed of Lon Holland (accordion, percussion), Steve Kellough (bass guitar), Michael Blake Mahler (lead guitar, vocals), Ralph McCauley (drums), Angela Rae (lead vocals), and Chris Sigmon (Dobro).  Mahler and Rae are husband and wife, and guitarist Joe Lee Koenig was formerly a member.
+
+Dobro (disambiguation): Dobro is a wood-bodied, single cone resonator guitar.
+
+Horse: The horse ("Equus ferus caballus") is one of two extant subspecies of "Equus ferus".  It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae.  The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, "Eohippus", into the large, single-toed animal of today.  Humans began to domesticate horses around 4000 BC, and their domestication is believed to have been widespread by 3000 BC.  Horses in the subspecies "caballus" are domesticated, although some domesticated populations live in the wild as feral horses.  These feral populations are not true wild horses, as this term is used to describe horses that have never been domesticated, such as the endangered Przewalski's horse, a separate subspecies, and the only remaining true wild horse.  There is an extensive, specialized vocabulary used to describe equine-related concepts, covering everything from anatomy to life stages, size, colors, markings, breeds, locomotion, and behavior.
+
+Question: What kind of wood-bodied , single cone resonator instrument did a member of the Wild horses play?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "instrument_played": {
+      "type": "string",
+      "description": "The specific instrument played by a band member."
+    },
+    "instrument_description": {
+      "type": "string",
+      "description": "A description of the instrument, including its characteristics."
+    },
+    "player_name": {
+      "type": "string",
+      "description": "The name of the band member who plays the instrument."
+    }
+  },
+  "required": [
+    "band_name",
+    "instrument_played",
+    "instrument_description",
+    "player_name"
+  ],
+  "additionalProperties": false
+}

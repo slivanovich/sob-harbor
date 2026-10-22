@@ -1,0 +1,22 @@
+{
+  "artists": [
+    {
+      "name": "Deni Hines",
+      "occupations": [
+        "solo artist",
+        "singer songwriter"
+      ]
+    },
+    {
+      "name": "Louise Wener",
+      "occupations": [
+        "writer",
+        "songwriter",
+        "singer",
+        "guitarist"
+      ]
+    }
+  ],
+  "common_musical_occupation": "singer",
+  "number_of_artists": 2
+}

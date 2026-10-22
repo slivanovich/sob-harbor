@@ -1,0 +1,14 @@
+{
+  "person_full_name": "George Alan O'Dowd",
+  "stage_name": "Boy George",
+  "band_information": {
+    "band_name": "Culture Club",
+    "role": "Lead singer",
+    "era_of_popularity": "1980s"
+  },
+  "tv_show_details": {
+    "show_name": "The Voice UK",
+    "show_type": "British television music competition",
+    "series_number": 5
+  }
+}

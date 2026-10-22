@@ -1,0 +1,20 @@
+{
+  "show_title": "We Bare Bears",
+  "producer_name": "Rob Sorcher",
+  "features_siblings": true,
+  "number_of_siblings": 3,
+  "sibling_characters": [
+    {
+      "name": "Grizzly",
+      "species": "bear"
+    },
+    {
+      "name": "Panda",
+      "species": "bear"
+    },
+    {
+      "name": "Ice Bear",
+      "species": "bear"
+    }
+  ]
+}

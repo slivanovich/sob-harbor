@@ -1,0 +1,9 @@
+{
+  "event_name": "2015 Cotton Bowl Classic",
+  "stadium_name": "AT&T Stadium",
+  "stadium_location": {
+    "city": "Arlington",
+    "state": "Texas",
+    "country": "United States"
+  }
+}

@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Transatlantic Free Trade Area: A Transatlantic Free Trade Agreement (TAFTA) is a proposal to create a free-trade agreement covering Europe and North America, on both sides of the Atlantic Ocean.  Such proposals have been made since the 1990s.  Since 2013 an agreement between the United States and the European Union (EU) has been under negotiation: the Transatlantic Trade and Investment Partnership.  If an agreement is reached and ratified on both sides, it could at least in theory be expanded to include the European Free Trade Association (EFTA).  Canada and Mexico both have free trade agreements with both the EU and EFTA.
+
+European Union–South Korea Free Trade Agreement: The European Union–South Korea Free Trade Agreement is a provisional free trade agreement between the European Union (EU), its member states and South Korea.  The agreement was signed on 15 October 2009.  The agreement has been provisionally applied since 1 July 2011.  The ratification process was partially completed on 13 December 2015, pending ratification by Italy and Korea.  "The agreement is not yet in force" in the United Kingdom and its future is yet to be clarified in the light of the United Kingdom's Withdrawal from the European Union.
+
+European Union law: European Union law is a system of rules operating within the member states of the European Union.  Since the founding of the Coal and Steel Community after World War II, the EU has developed the aim to "promote peace, its values and the well-being of its peoples".  The EU has political institutions, social and economic policies, which transcend nation-states for the purpose of cooperation and human development.  According to its Court of Justice the EU represents "a new legal order of international law". <ref name="Case 26/62">"Van Gend en Loos v Nederlandse Administratie der Belastingen" (1963) Case 26/62</ref> The EU's legal foundations are the Treaty on European Union and the Treaty on the Functioning of the European Union, unanimously agreed by the governments of 28 member states.  New members may join, if they agree to play by the rules of the organisation, and old members may leave according to their "own constitutional requirements".  People are entitled to participate through the Parliament, and their national governments in shaping the legislation the EU makes.  The Commission has the initiative for legislation, the Council of the European Union represents member state governments, the Parliament is elected by European citizens, while the Court of Justice is meant to uphold the rule of law and human rights.  As the Court of Justice has said, the EU is "not merely an economic union" but is intended to "ensure social progress and seek the constant improvement of the living and working conditions of their peoples".
+
+Ukraine–European Union Association Agreement: The Ukraine–European Union Association Agreement is a European Union Association Agreement between the European Union (EU), Euratom, Ukraine and the EU's 28 member states (which are separate parties in addition to the EU and Euratom).  It establishes a political and economic association between the parties.  The agreement entered into force on September 1, 2017, and previously parts had been provisionally applied.  The parties committed to co-operate and converge economic policy, legislation, and regulation across a broad range of areas, including equal rights for workers, steps towards visa-free movement of people, the exchange of information and staff in the area of justice, the modernisation of Ukraine's energy infrastructure, and access to the European Investment Bank.  The parties committed to regular summit meetings, and meetings among ministers, other officials, and experts.  The agreement furthermore establishes a Deep and Comprehensive Free Trade Area between the parties.
+
+EU–US Open Skies Agreement: The EU–US Open Skies Agreement is an open skies air transport agreement between the European Union and the United States.  The agreement allows any airline of the European Union and any airline of the United States to fly between any point in the European Union and any point in the United States.  Airlines of the United States are also allowed to fly between points in the European Union.  Airlines of the European Union are also allowed to fly between the United States and non-EU countries like Switzerland.  The treaty disappointed European airlines as it was tilted in favour of United States airlines: while they are allowed to operate intra-EU flights, European airlines are not permitted to operate intra-US flights nor are they allowed to purchase a controlling stake in a US operator.  The Agreement replaced and superseded previous open skies agreements between the US and individual European countries.
+
+EU FLEGT Action Plan: The European Union Forest Law Enforcement, Governance and Trade Action Plan (or EU FLEGT Action Plan) is a European Union initiative to address illegal logging and the social, economic and environmental harm it causes.  The EU adopted the Action Plan in 2003.  The plan includes activities in the EU and in tropical countries that export timber and timber products to the EU.  These measures include a regulation that prohibits EU businesses from importing or trading illegal timber, and bilateral trade agreements with timber-exporting countries.  Much of the FLEGT Action Plan focuses on promoting trade in legal timber products and creating disincentives for trade in illegal products.  However, the Action Plan's measures go further by addressing aspects of poor governance that enable illegal logging to persist.
+
+Deep and Comprehensive Free Trade Area: The Deep and Comprehensive Free Trade Areas (DCFTA) are three free trade areas established between the European Union, and Georgia, Moldova and Ukraine respectively.  The DCFTAs are part of each country's EU Association Agreement.  They allow Georgia, Moldova and Ukraine access to the EU's internal market in selected sectors and grant EU investors in those sectors the same regulatory environment in the associated country as in the EU.  The agreements with Moldova and Georgia have been ratified and officially entered into force in July 2016, although parts of them were already provisionally applied.  The agreement with Ukraine is provisionally applied but has not been ratified by the European Union and Euratom.
+
+Arctic policy of the European Union: If the accession of Iceland to the European Union occurs, the EU will increase its Arctic influence and possibly gain permanent observer status in the Arctic Council.  The Northern Dimension of European Union policy, established in the late 1990s, intended to deal with issues concerning western Russia, as well as to increase general cooperation among the EU, Iceland and Norway.  It has since become a multilateral, equal partnership among the EU, Iceland, Norway and Russia.  Canada and the United States are observers to the partnership.  Three Nordic Council members have joined the EU (Denmark in 1973 and Sweden and Finland in 1995).  The European Union’s application to become a “permanent observer” in the Arctic Council was blocked in 2009 by Canada in response to the European Union’s ban on the importation of seal products.
+
+Cross-national cooperation and agreements: Integration is a political and economic agreement among countries that gives preference to member countries to the agreement.  General integration can be achieved in three different approachable ways: through the World Trade Organization (WTO), bilateral integration, and regional integration.  In bilateral integration, only two countries economically cooperate with one and other; whereas in regional integration, several countries within the same geographic distance become joint to form organizations such as the European Union (EU) and the North American Free Trade Agreement (NAFTA).  Indeed, factors of mobility like capital, technology and labour are indicating strategies for cross-national integration along with those mentioned above.
+
+North American Free Trade Agreement: The North American Free Trade Agreement (NAFTA; Spanish: "Tratado de Libre Comercio de América del Norte", "TLCAN"; French: "Accord de libre-échange nord-américain", "ALÉNA") is an agreement signed by Canada, Mexico, and the United States, creating a trilateral trade bloc in North America.  The agreement came into force on January 1, 1994.  It superseded the Canada–United States Free Trade Agreement between the U.S. and Canada.
+
+Question: What is the name of an agreement signed by Canada, Mexico, and the United States, creating a trilateral trade bloc in North America similar to the European Union(EU)? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "agreement_name": {
+      "type": "string",
+      "description": "The name of the agreement."
+    },
+    "parties_involved": {
+      "type": "array",
+      "description": "List of countries that signed the agreement.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bloc_type": {
+      "type": "string",
+      "description": "The type of bloc created by the agreement."
+    },
+    "region": {
+      "type": "string",
+      "description": "The geographic region covered by the agreement."
+    }
+  },
+  "required": [
+    "agreement_name",
+    "parties_involved",
+    "bloc_type",
+    "region"
+  ],
+  "additionalProperties": false
+}

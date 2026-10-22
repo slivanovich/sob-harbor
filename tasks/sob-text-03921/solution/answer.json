@@ -1,0 +1,9 @@
+{
+  "entity_one_name": "Macropidia",
+  "entity_one_is_tree": false,
+  "entity_one_classification": "perennial rhizomatous flowering plant",
+  "entity_two_name": "Gum tree",
+  "entity_two_is_tree": true,
+  "entity_two_classification": "common name for smooth-barked trees and shrubs",
+  "both_are_trees": false
+}

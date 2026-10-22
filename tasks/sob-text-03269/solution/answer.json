@@ -1,0 +1,9 @@
+{
+  "company_name": "ANCAP",
+  "product_produced": "Portland cement",
+  "product_role": "basic ingredient of concrete",
+  "patent_information": {
+    "patent_year": 1824,
+    "patent_holder": "Joseph Aspdin"
+  }
+}

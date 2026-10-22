@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "record_id": "d6a185501694b132fa86f4ba2fd309f5cae833ed6ed0b43311e4567867686dad",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac5138c5542994611c8b36a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "American",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Mono Puff: Mono Puff is a New York City-based band and a side project of John Flansburgh, one of the founding members of They Might Be Giants.\n\nThey Might Be Giants In... Holidayland: They Might Be Giants In...Holidayland (sometimes referred to simply as Holidayland), was a holiday-themed E. P. released by the band They Might Be Giants in 2001 (see 2001 in music) under Restless Records.   The recording consists of: \"Santa Claus\", a Sonics cover originally released on Emusic.com's TMBG Unlimited service; \"Santa's Beard\", first released on \"Lincoln\" and later \"\"; \"Feast of Lights\", also from TMBG Unlimited, and appearing on the compilation \"Festival of Lights 2\"; \"Careless Santa\", from Mono Puff's album \"Unsupervised\"; and \"O Tannenbaum\", from 1993's \"O Tannenbaum\" E. P. and, later, TMBG Unlimited.\n\nRobin Goldwasser: Robin Goldwasser (born August 14, 1966) is an American singer and playwright.  She is a graduate of Sarah Lawrence College.  She is the co-writer of the musical \"People Are Wrong! \" with Julia Greenberg.  She has a character in the play, as does the producer, her husband, John Flansburgh of They Might Be Giants and Mono Puff.  The musical opened at the Vineyard Theater in New York in November 2004, starring Robin, John Flansburgh, Erin Hill, David Driver, and Maggie Moore.\n\nITunes Originals – Fiona Apple: iTunes Originals – Fiona Apple is an iTunes Originals release by American singer-songwriter Fiona Apple, released in the United States on February 14, 2006 (see 2006 in music) and later released in the UK in December 2007.  It consists of live tracks, previously released studio tracks, and interview tracks.\n\nFast as You Can: \"Fast as You Can\" is a song written by Fiona Apple, and produced by Jon Brion for her second album, \"When the Pawn...\".  It was released as the album's lead single in late 1999 in the United States and in February 2000 in the United Kingdom.  It became one of Apple's most successful singles in both countries, and its music video, directed by Paul Thomas Anderson, was well received.  The video and track were popular on MTV Europe's US Top 20 resulting in some popularity for Fiona Apple across Europe.\n\nYuval Gabay: Yuval Gabay (born July 23, 1963) is a Jerusalem-born hip-hop drummer who currently lives and works in the United States.  Gabay is most well known for his work with the Jazz/hip-hop quartet Soul Coughing from 1993 to 2000.  He also played drums on Firewater's 1996 debut album \"Get Off the Cross, We Need the Wood for the Fire\".  As of 2004, Gabay is a member of the band U.V Ray, along with former Soul Coughing band-mate Sebastian Steinberg.  Other projects include guest work with Suzanne Vega, Krust, Roni Size and Reprazent, John Scofield, Neil Finn, Action Figure Party, Boo Trundle, former band-mate Mark De Gli Antoni, and Mono Puff.\n\nFiona Apple: Fiona Apple McAfee-Maggart (born September 13, 1977) is an American singer-songwriter.  Classically trained on piano as a child, Apple began composing her own songs when she was 8 years old.  Her debut album, \"Tidal\", written when Apple was 17, was released in 1996 and received a Grammy Award for Best Female Rock Vocal Performance for the single \"Criminal\".  She followed with \"When the Pawn...\" (1999), produced by Jon Brion, which was also critically and commercially successful and was certified platinum.\n\nDanny Weinkauf: Danny Weinkauf (born December 4, 1963) is a Grammy-winning New York-based musician and composer.  He has been the longtime bassist for They Might Be Giants (TMBG).  He has recorded and toured with the band since the late 1990s.  Weinkauf had previously performed in a band called Lincoln along with TMBG's guitarist Dan Miller and drummer Gonzalo Martinez De La Cotera.  He has written four songs for TMBG, all for their children's albums.  Weinkauf wrote and sang \"Where Do They Make Balloons?\"  on the children's album \"No! \", \"Number Two\" from \"Here Come The 123s\", \"I Am a Paleontologist\" from \"Here Comes Science\", and \"Elephants\" from \"Why? \" He also played bass alongside bandmate John Flansburgh for his solo project Mono Puff, in addition to providing additional bass on John Linnell's \"State Songs\" album.\n\nPretendo: Pretendo is a New York City-based indie rock band formed in 2004 of ex-/present members of Enon, Skeleton Key, Creedle, The Rugburns, Mono Puff, Morricone Youth, Little Jack Melody and The DaoSon For.  Guitarist/vocalist Devon E. Levins and bassist/vocalist John Castro were childhood friends playing in the Las Vegas hardcore punk band Abeyance in the 1980s.  E. Levins met drummer Stephen Calhoon in 1997 when their respective bands Creedle and Skeleton Key had played together.  Pretendo recorded its debut eponymous album with Wharton Tiers in New York City at Fun City Studio, which was released on April 5, 2005 by Country Club Records.  Pretendo's second album entitled \"][\" (or \"Two\") was recorded in 2007 by Martin Bisi at B.C. Studio in Brooklyn, New York and includes artwork and lyrics contributed by contemporary pop artist Ron English. \"] [\" was released on March 4, 2008 by Country Club Records.  The band has commenced work on its third album, tentatively entitled \"]|[\", with new members Kenny Shaw replacing Stephen Calhoon on drums and Dan Kessler on keyboards.\n\nDan Miller (guitarist): Dan Miller (born October 3, 1967) is an American musician and songwriter.  He has toured and recorded with the alternative rock duo They Might Be Giants since late 1998.  Generally, Miller plays guitars for the band.  Prior to joining TMBG, he performed with the groups Edith O and Lincoln.  Having left Lincoln for personal reasons in 1998, he was contacted by John Flansburgh, who offered him a spot as lead guitarist for They Might Be Giants' Fall 1998 tour.  He has also toured with John Flansburgh as Mono Puff's guitarist in the late 1990s, and played on bandmate John Linnell's \"State Songs\" tour.",
+    "question": "Fiona Apple and Mono Puff, are of which nationality?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "query_entities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_name": {
+                "type": "string",
+                "description": "The name of the entity."
+              },
+              "entity_type": {
+                "type": "string",
+                "enum": [
+                  "person",
+                  "band"
+                ],
+                "description": "The type of the entity."
+              },
+              "nationality": {
+                "type": "string",
+                "description": "The nationality of the entity."
+              }
+            },
+            "required": [
+              "entity_name",
+              "entity_type",
+              "nationality"
+            ],
+            "additionalProperties": false
+          },
+          "description": "A list of entities mentioned in the query and their attributes."
+        },
+        "shared_nationality": {
+          "type": "string",
+          "description": "The nationality common to all queried entities, if they share one."
+        },
+        "answer_statement": {
+          "type": "string",
+          "description": "A concise statement summarizing the answer to the question."
+        }
+      },
+      "required": [
+        "query_entities",
+        "shared_nationality",
+        "answer_statement"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "query_entities": [
+        {
+          "entity_name": "Fiona Apple",
+          "entity_type": "person",
+          "nationality": "American"
+        },
+        {
+          "entity_name": "Mono Puff",
+          "entity_type": "band",
+          "nationality": "American"
+        }
+      ],
+      "shared_nationality": "American",
+      "answer_statement": "Both Fiona Apple and Mono Puff are American."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

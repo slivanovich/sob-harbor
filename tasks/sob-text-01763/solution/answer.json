@@ -1,0 +1,13 @@
+{
+  "mathematician": {
+    "name": "Boris Nikolaevich Delaunay",
+    "occupation": "Soviet/Russian mathematician"
+  },
+  "physicist": {
+    "name": "Nikolai Borisovich Delone"
+  },
+  "relationship": {
+    "type": "father_of"
+  },
+  "answer": "Boris Delaunay"
+}

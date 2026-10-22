@@ -1,0 +1,14 @@
+{
+  "community_info": {
+    "name": "Glencliff",
+    "is_unincorporated": true
+  },
+  "parent_location": {
+    "town_name": "Warren",
+    "county_name": "Grafton County",
+    "state_name": "New Hampshire"
+  },
+  "country": "United States",
+  "is_located_within_national_forest": true,
+  "national_forest_name": "White Mountain National Forest"
+}

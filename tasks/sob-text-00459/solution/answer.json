@@ -1,0 +1,9 @@
+{
+  "school_name": "McCurdy High School",
+  "mascot_animal": "Bobcat",
+  "animal_details": {
+    "scientific_name": "Lynx rufus",
+    "number_of_subspecies": 12,
+    "subspecies_status": "recognized"
+  }
+}

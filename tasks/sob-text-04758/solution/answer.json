@@ -1,0 +1,14 @@
+{
+  "are_in_same_country": true,
+  "cathedrals_involved": [
+    {
+      "name": "Chelmsford Cathedral",
+      "location_country": "United Kingdom"
+    },
+    {
+      "name": "Truro Cathedral",
+      "location_country": "United Kingdom"
+    }
+  ],
+  "common_country": "United Kingdom"
+}

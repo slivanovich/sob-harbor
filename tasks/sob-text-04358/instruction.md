@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+MBC Variety: MBC Persia is a free-to-air MBC Group channel that originally broadcast Hollywood films 24/7, but circa late 2009 it began featuring a variety of television series alongside the films.  The channel's current, regular schedule is similar to its former sister channel Channel 2, but unlike Channel 2 the programmes featured on MBC Persia are subtitled in Persian instead of Arabic, as MBC Persia is generally aimed at its MBC/film audience in Iran, as well as the Iranian population in the GCC countries.  The channel even featured advertisements are also of Iranian origin.
+
+List of Persian Roman Catholic saints: Though Persia/Iran had never been a Christian country, Christianity and specifically the Catholic Church had enough of an impact on Persia and Persians to produce a considerable number of saints of this origin, at various times in the Church's history– some of them travelling far afield from their native country, such as Saint Ivo of Huntingdonshire who got his fame as a hermit in England.
+
+Al-Khazini: Abu al-Fath Abd al-Rahman Mansour al-Khāzini or simply Abu al-Fath Khāzini (Arabic: أبو الفتح الخازني‎ ‎ , Persian: ابولفتح خازنی‎ ‎ ) (flourished 1115–1130) was a Muslim astronomer from Merv, then in the Khorasan province of Persia (located in today's Turkmenistan).  Merv was known for its literary and scientific achievements.
+
+Aya Hijazi: Born to an to an Egyptian mother and a Lebanese father, Aya Hijazi (sometimes reported as Hegazy, Higazi, or other variants; Arabic: آية حجازي‎ ‎ ), an American citizen, became interested in social activism.  To further her understanding of social justice, she studied Conflict Analysis and Resolution at George Mason University in the United States and law at Cairo University in Egypt.  During the Arab Spring, she returned to her native homeland, Egypt, along with her husband, Mohamed Hassanein, to establish an NGO, “Belady”, an Island for humanity.
+
+Mohamed Sillah: Mohamed Yahya Sillah was born December 12, 1949 in Massam Kpaka, Pujehun District, Republic of Sierra Leone.  His father, Alhaji Yahya Sillah, now 100 years old, served as Regent Chief (Acting Paramount Chief) for several years in Dama Chiefdom, Kenema District in the early seventies.  Alhaji Yahya Sillah was appointed to that high position by Sierra Leone President Siaka Stevens.  His mother, Haja Mamie Zoe Mansaray, was a home maker.  A journalist and human rights activist, Mohamed Yahya Sillah was a vocal torch-bearer in the transition efforts from military to civilian rule in Sierra Leone, 1996.  As Leader and National Chairman of National Alliance Democratic Party (NADP), he competed the 1996 Presidential elections in Sierra Leone, becoming one of only thirteen political leaders that qualified to contest the Presidential and Parliamentary elections in the country at the age of 46.  His adoring personality lured many Sierra Leoneans and media practitioners to view him as one of the most eloquent and charismatic politicians in Sierra Leone.  Nevertheless, he received only 0.5% of the votes (3,723 total votes), good for 13th place.  Although he protested the election results on BBC's Focus on Africa, he later suspended his protest "for the sake of peace."  Mohamed Yahya Sillah continues to enjoy massive support from the youth and women supporters in Sierra Leone.  In 2007, he withdrew his bid for national leadership in the Presidential and Parliamentary elections, citing inadequate funding and ineffective campaign management machinery.  He later put his weight behind the Sierra Leone Peoples Party (SLPP) presidential candidate, Vice President Solomon Berewa.  When Berewa lost the elections, Mohamed Yahya Sillah gracefully congratulated the winning candidate, Ernest Bai Koroma, of the All People's Congress (APC) party.  Mohamed Yahya Sillah vows to respect and help protect the dignity of any Sierra Leonean that is legitimately and democratically elected to office by the people of Sierra Leone.
+
+Khanates of the Caucasus: The Khanates of the Caucasus, or Azerbaijani khanates or Persian khanates, were various principalities established by Persia (Iran) on their territories in the Caucasus (modern-day Azerbaijan Republic, Armenia, Georgia and Dagestan) from the late Safavid to the Qajar dynasty.  The Khanates were mostly ruled by Khans of Turkic (Azeri) origin and were vassals and subjects of the Iranian shah (King).  Persia permanently lost a part of these khanates to Russia as a result of the Russo-Persian Wars in the course of the 19th century, while the others were absorbed into Persia.
+
+Mohamed Hassanein (rower): Mohamed Ahmed Hassanein Noureldin (Arabic: محمد أحمد حسنين نورالدين‎ ‎ , born 5th of February 1996 in Giza) is an Egyptian and African rowing champion, who won a bronze medal at the 2014 African Youth Games, held in Gaborone, Botswana.
+
+Mohamed Hassanein: Mohamed Hassanein (born 1913) was an Egyptian swimmer.  He competed in the men's 200 metre breaststroke at the 1936 Summer Olympics.
+
+Treaty of Finckenstein: The Treaty of Finckenstein, often spelled Finkenstein, was concluded between France and Persia (modern-day Iran) in Finckenstein Palace (East Prussia) on 4 May 1807 and formalised the Franco-Persian alliance.  Napoleon I guaranteed the integrity of Persia, recognized part of Georgia and the other parts of Transcaucasia and a part of the North Caucasus (Dagestan) as Fath Ali Shah's possession, and was to make all possible efforts for restoring those territories to him.  Napoleon also promised to furnish the Shah with arms, officers and workmen.  France on its side required the Shah to declare war against the United Kingdom, to expel all British people from Persia, and to maintain an open way if France wanted to attack British possessions in the far east.  Despite the Treaty of Finckenstein, France failed to win a diplomatic war around Persia and none of the terms of the treaty were realized.  On 12 March 1809, the United Kingdom signed a treaty with Persia forcing the French out of that country.
+
+Mohamed Hassanein Heikal: Mohamed Hassanein Heikal (Arabic: محمد حسنين هيكل‎ ‎ ‎; 23 September 1923 – 17 February 2016) was an Egyptian journalist.  For 17 years (1957–1974), he was editor-in-chief of the Cairo newspaper "Al-Ahram" and has been a commentator on Arab affairs for more than 50 years.
+
+Question: Which person has a country of origin in Persia, Al-Khazini or Mohamed Hassanein Heikal?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person whose country of origin is Persia."
+    },
+    "country_of_origin": {
+      "type": "string",
+      "description": "The country of origin for the identified person."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation for why this person was chosen based on the context."
+    },
+    "other_person_name": {
+      "type": "string",
+      "description": "The name of the other person mentioned in the question."
+    },
+    "other_person_country_of_origin": {
+      "type": "string",
+      "description": "The country of origin for the other person."
+    }
+  },
+  "required": [
+    "person_name",
+    "country_of_origin",
+    "reasoning",
+    "other_person_name",
+    "other_person_country_of_origin"
+  ],
+  "additionalProperties": false
+}

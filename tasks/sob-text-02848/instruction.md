@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Chris Corbould: Christopher Charles Corbould, {'1': ", '2': ", '3': ", '4': "} (born 1958) is a British special effects coordinator best known for his work on major blockbuster films and the action scenes on some 11 "James Bond" films since the early 1980s.  He has also worked extensively on the "Superman" and "Batman" film series on digital effects and stunts.  Corbould has been awarded two Honorary Doctorates from Southampton Solent University in December 2009 and University of Hertfordshire in 2011.  In 2011, he won the Academy Award for Best Visual Effects at the 83rd Academy Awards for his work on "Inception".  He is the brother of special effects supervisors Neil Corbould and Paul Corbould.
+
+Anthony Powell (designer): Anthony Powell (born 2 June 1935, Chorlton-cum-Hardy, Manchester, England) is an English costume designer for stage and screen.  He has won three Academy Awards, for "Travels with My Aunt" (1972), "Death on the Nile" (1978) and "Tess" (1979).  He has worked with directors such as George Cukor, Roman Polanski, Steven Spielberg, Robert Altman and David Lean.  Among the stars who have worn his creations are Dame Maggie Smith, Dame Angela Lansbury, Paul Newman, Bette Davis, Warren Beatty, Steve McQueen, Sean Connery, Dustin Hoffman, Roger Moore, Harrison Ford and Johnny Depp.
+
+Willard Van der Veer: Willard Van der Veer (August 23, 1894 – June 16, 1963) was an American cinematographer who won an Academy Award at the 3rd Academy Awards for Best Cinematography for the film "With Byrd at the South Pole" with Joseph T. Rucker.  He started his career as a documentary cameraman and later did a couple episodes of "Maverick" and the film "The Crawling Hand".
+
+The Wolfman (2010 film): The Wolfman is a 2010 American horror film and a remake of the 1941 film of the same name.  The film is directed by Joe Johnston, written by Andrew Kevin Walker and David Self and stars Benicio del Toro, Anthony Hopkins, Emily Blunt, Hugo Weaving and Geraldine Chaplin.  Rick Baker and make-up effects supervisor Dave Elsey won the Academy Award for Best Makeup at the 83rd Academy Awards for their work.
+
+Harry Perry (cinematographer): Harry Perry (May 2, 1888 – February 9, 1985) was an American cinematographer who was nominated for an Academy Award at the 3rd Academy Awards for Best Cinematography for the film "Hell's Angels" along with Tony Gaudio.
+
+John Nelson (visual effects artist): John Nelson (born July 21, 1953 in Detroit, Michigan) is a Visual effects supervisor and a 1976 graduate of the University of Michigan.  He won the Academy Award for Best Visual Effects at the 73rd Academy Awards, for his work on the film "Gladiator".  He was also nominated for the Academy Award for Best Visual Effects for supervising the visual effects in the films "I, Robot" and "Iron Man".
+
+Tess (film): Tess is a 1979 drama film directed by Roman Polanski, an adaptation of Thomas Hardy's 1891 novel "Tess of the d'Urbervilles".  The screenplay was written by Gérard Brach, John Brownjohn, and Roman Polanski.  The film received positive critical reviews upon release and was nominated for six Academy Awards including Best Picture, winning three for Best Cinematography, Best Art Direction and Best Costume Design.
+
+We Belong Together (Randy Newman song): "We Belong Together" is a song written, composed and performed by Randy Newman for the 2010 movie "Toy Story 3".  The song was nominated for several Best Original Song awards from various film society and movie awards committees.  The song won the Academy Award for Best Original Song at the 83rd Academy Awards in February 2011.
+
+Ambassador Hotel (Los Angeles): The Ambassador Hotel was a hotel in Los Angeles, California, and location of the Cocoanut Grove nightclub until it was demolished in 2005.  The hotel began operation formally on January 1, 1921, and subsequently was the site of the 2nd Academy Awards, the 3rd Academy Awards, the 5th Academy Awards, the 6th Academy Awards, the 12th Academy Awards, the 15th Academy Awards, and the June 1968 assassination of presidential candidate Robert F. Kennedy.  The hotel closed to guests in 1989.
+
+Joseph T. Rucker: Joseph T. Rucker (January 1, 1887 – October 21, 1957) was an American cinematographer who won the Academy Award at the 3rd Academy Awards for Best Cinematography for the film "With Byrd at the South Pole".  Along with Willard Van der Veer.  He spent 40 years of his life as a news cameraman at Paramount News and at NBC.  He won his Oscar for doing camera work of Admiral Byrd's trip to the North Pole.
+
+Question: Anthony Powell won his 3rd Academy award for his work on a movie that was directed by who?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "award_winner_name": {
+      "type": "string",
+      "description": "The name of the person who won the Academy Award."
+    },
+    "award_number": {
+      "type": "integer",
+      "description": "The sequential number of the Academy Award won by the person."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film for which the award was won."
+    },
+    "award_category": {
+      "type": "string",
+      "description": "The category of the Academy Award won."
+    },
+    "director_name": {
+      "type": "string",
+      "description": "The name of the director of the film."
+    }
+  },
+  "required": [
+    "award_winner_name",
+    "award_number",
+    "film_title",
+    "award_category",
+    "director_name"
+  ],
+  "additionalProperties": false
+}

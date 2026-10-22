@@ -1,0 +1,17 @@
+{
+  "individuals_compared": [
+    {
+      "name": "Raymond Vanier",
+      "birth_date": "1895-08-06"
+    },
+    {
+      "name": "Jean Mermoz",
+      "birth_date": "1901-12-09"
+    }
+  ],
+  "younger_individual_details": {
+    "name": "Jean Mermoz",
+    "birth_date": "1901-12-09"
+  },
+  "comparison_summary": "Jean Mermoz was born in 1901, making him younger than Raymond Vanier, who was born in 1895."
+}

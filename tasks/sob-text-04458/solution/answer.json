@@ -1,0 +1,14 @@
+{
+  "played_same_sport": true,
+  "common_sport": "tennis",
+  "player_details": [
+    {
+      "player_name": "Dick Crealy",
+      "sport_mentioned_in_context": "tennis"
+    },
+    {
+      "player_name": "Jack Sock",
+      "sport_mentioned_in_context": "tennis"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "954cef2fa05db93762aaaaffeaf2e4b5075372491684bc517b118653c0eef7ff",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a79132a55429970f5fffe4e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Luke Skywalker",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Captain Phasma: Captain Phasma is a fictional character in the \"Star Wars\" franchise, portrayed by Gwendoline Christie.  Introduced in \"\" (2015), the first film in the \"Star Wars\" sequel trilogy, Phasma is the commander of the First Order's force of stormtroopers. Christie confirmed that the character would reappear in the next of the trilogy's films, \"\".  The character also made an additional appearance in \"Before the Awakening\", an anthology book set before the events of \"The Force Awakens\".\n\nJourney to Star Wars: \"Journey to \"Star Wars\" is a Disney/Lucasfilm publishing initiative that connects the \"Star Wars\" sequel films with previous film installments in the franchise.  It currently includes the initiatives \"Journey to \"Star Wars: The Force Awakens\" and \"Journey to \"Star Wars: The Last Jedi\"\".  All titles under the program are canonical to the \"Star Wars\" universe.\n\nPoe Dameron: Poe Dameron is a fictional character in the \"Star Wars\" franchise.  Introduced in the 2015 film \"\", he is portrayed by Oscar Isaac.  Poe is an X-wing fighter pilot for the Resistance who inadvertently brings renegade stormtrooper Finn (John Boyega) and Jakku scavenger Rey (Daisy Ridley) into the fight against—and eventually a victory over—the sinister First Order.  He is featured in \"The Force Awakens\" media and merchandising as well as , and will appear in the film's forthcoming sequel, \"\".  Isaac and the character have received positive reviews, with Poe being compared to the characterization of Han Solo (Harrison Ford) in the original \"Star Wars\" film trilogy.\n\nStar Wars: The Force Awakens: Star Wars: The Force Awakens (also known as Star Wars: Episode VII – The Force Awakens) is a 2015 American epic space opera film co-written, co-produced and directed by J. J. Abrams.  The sequel to 1983's \"Return of the Jedi\", \"The Force Awakens\" is the first installment of the \"Star Wars\" sequel trilogy.  It stars Harrison Ford, Mark Hamill, Carrie Fisher, Adam Driver, Daisy Ridley, John Boyega, Oscar Isaac, Lupita Nyong'o, Andy Serkis, Domhnall Gleeson, Anthony Daniels, Peter Mayhew, and Max von Sydow.  Produced by Lucasfilm Ltd. and Abrams' production company Bad Robot Productions and distributed worldwide by Walt Disney Studios Motion Pictures, \"The Force Awakens\" was the first \"Star Wars\" film not produced by franchise creator George Lucas.  Set 30 years after \"Return of the Jedi\", it follows Rey, Finn and Poe Dameron's search for Luke Skywalker and their fight alongside the Resistance, led by veterans of the Rebel Alliance, against Kylo Ren and the First Order, a successor to the Galactic Empire.\n\nLego Star Wars: The Force Awakens: Lego Star Wars: The Force Awakens is a Lego-themed action-adventure video game developed by TT Fusion, based on the film \"\".  It is the fifth entry in TT Games' \"Lego Star Wars\" series.  Under license from Lucasfilm, the game was released by Warner Bros.  Interactive Entertainment for iOS, Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Nintendo 3DS, PlayStation Vita, Nvidia Shield and Wii U, on 28 June 2016, and for Android on 27 July 2016.  The game was ported and released by Feral Interactive for OS X on 30 June 2016.\n\nSolo family: The Solo family is a fictional family of characters in the \"Star Wars\" franchise.  Introduced in the 1977 film \"Star Wars\", smuggler Han Solo is initially a morally ambiguous character but evolves into one of the heroes of the film.  He is also a major character in the sequels \"The Empire Strikes Back\" (1980), \"Return of the Jedi\" (1983) and \"\" (2015).  In \"The Force Awakens\", Han and Princess Leia have a son named Ben Solo.\n\nStar Wars: Poe Dameron: Star Wars: Poe Dameron is an ongoing \"Star Wars\" comic book series which centers on Poe Dameron, the Resistance X-wing fighter pilot introduced in the 2015 film \"\".  The series is written by Charles Soule and was first illustrated by Phil Noto, and later Angel Unzueta.  It is set immediately before \"The Force Awakens\".  Published by Marvel Comics, \"Poe Dameron\" debuted on April 6, 2016.\n\nStar Wars Battle Pod: Star Wars Battle Pod is a 2014 arcade game based on the franchise \"Star Wars\".  It was unveiled at the New York Comic-Con on October 8, 2014.  The game consists of multiple scenarios that correspond with one of the major battles in the original trilogy.  There are five scenarios, the Battle of Yavin (Yavin) from \"Star Wars\" where the player is placed in an X-wing attacking the Death Star to prevent it from destroying Yavin 4, the Battle of Hoth (Hoth), from \"The Empire Strikes Back\", where one pilots a snowspeeder to assist in the evacuation of Hoth from invading Imperial forces, a speeder run through Endor (Endor) where one helps Han Solo make it to the shield generator to destroy the Death Star's shield for the rebels in space.  and the Battle of Endor (Death Star II) from \"Return of the Jedi\", which places the player in the cockpit of the \"Millennium Falcon\" to try to destroy the Death Star II and end the war.  There is one scenario that doesn't follow the storyline of the movies but sets its own path, (Vader's Revenge).  This scenario takes place literally seconds after the destruction of the first Death Star where one plays as Darth Vader who is trying to prevent the rebels from escaping with a piece of the Death Star with the ability to eliminate Han Solo in the process.  Another version of the game adds a scene from \"The Force Awakens\", where the player pilots a T-60 X-Wing to engage First Order ships on Takodana and protect General Leia's transport.\n\nJohn Boyega: John Adedayo B. Adegboyega (born 17 March 1992), known professionally as John Boyega, is an English actor and producer best known for playing Finn in the 2015 film \"\", the seventh film of the \"Star Wars\" series.  Boyega rose to prominence in his native United Kingdom for his role as Moses in the 2011 sci-fi comedy film \"Attack the Block\".\n\nKylo Ren: Kylo Ren is a fictional character in the \"Star Wars\" franchise.  Introduced in the 2015 film \"\", he is portrayed by Adam Driver.  Kylo Ren is the chosen name of Ben Solo, the son of original \"Star Wars\" trilogy characters Han Solo and Leia Organa.  Though trained by his uncle Luke Skywalker as a Jedi, he has been seduced to the dark side of the Force by Supreme Leader Snoke, and aspires to be as powerful as his grandfather, Darth Vader.  Kylo Ren is also the master of the Knights of Ren, and a commander for the First Order, an organization spawned from the fallen Galactic Empire.  He is featured in \"The Force Awakens\" media and merchandising, and will appear in the film's forthcoming sequel, \"\" (2017).",
+    "question": "Who does the character played by the English actor who was born in 1992 search for while fighting alongside the resistance in Star Wars: The Force Awakens?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "searching_character_name": {
+          "type": "string",
+          "description": "The name of the character who is searching."
+        },
+        "searching_character_actor": {
+          "type": "object",
+          "properties": {
+            "actor_name": {
+              "type": "string",
+              "description": "The name of the actor portraying the searching character."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the actor."
+            },
+            "birth_year": {
+              "type": "integer",
+              "description": "The birth year of the actor."
+            }
+          },
+          "required": [
+            "actor_name",
+            "nationality",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        },
+        "target_character_name": {
+          "type": "string",
+          "description": "The name of the character being searched for."
+        },
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film where the search takes place."
+        },
+        "faction_involved": {
+          "type": "string",
+          "description": "The faction the searching character is fighting alongside."
+        }
+      },
+      "required": [
+        "searching_character_name",
+        "searching_character_actor",
+        "target_character_name",
+        "film_title",
+        "faction_involved"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "searching_character_name": "Finn",
+      "searching_character_actor": {
+        "actor_name": "John Boyega",
+        "nationality": "English",
+        "birth_year": 1992
+      },
+      "target_character_name": "Luke Skywalker",
+      "film_title": "Star Wars: The Force Awakens",
+      "faction_involved": "Resistance"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

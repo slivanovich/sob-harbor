@@ -1,0 +1,12 @@
+{
+  "mascot_name": "Blue",
+  "team_name": "Indianapolis Colts",
+  "introduction_event": {
+    "date": "September 17, 2006",
+    "opponent_team": "Houston Texans",
+    "stadium_info": {
+      "current_name": "RCA Dome",
+      "original_name": "Hoosier Dome"
+    }
+  }
+}

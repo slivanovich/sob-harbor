@@ -1,0 +1,20 @@
+{
+  "musical_figures": [
+    {
+      "name": "Johann Christoph Pepusch",
+      "occupations": [
+        "composer"
+      ]
+    },
+    {
+      "name": "Sergei Prokofiev",
+      "occupations": [
+        "composer",
+        "pianist",
+        "conductor"
+      ]
+    }
+  ],
+  "shared_musical_occupation": "composer",
+  "number_of_figures": 2
+}

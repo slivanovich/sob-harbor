@@ -1,0 +1,12 @@
+{
+  "are_occupations_similar": true,
+  "author_1": {
+    "name": "Tim Winton",
+    "occupation_description": "multi-award-winning Australian writer of novels, children's books, non-fiction books and short stories"
+  },
+  "author_2": {
+    "name": "Jean Rhys",
+    "occupation_description": "mid-20th-century novelist who was born and grew up in the Caribbean island of Dominica, though she was mainly resident in England from the age of 16"
+  },
+  "reasoning": "Both Tim Winton and Jean Rhys are described as authors and novelists in the provided context, indicating very similar primary occupations."
+}

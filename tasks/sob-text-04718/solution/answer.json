@@ -1,0 +1,13 @@
+{
+  "actor_name": "Eugene Levy",
+  "shmenge_brothers_role": {
+    "character_name": "Stan Shmenge",
+    "instrument_played": "accordionist",
+    "show_name": "SCTV"
+  },
+  "noah_levenstein_role": {
+    "character_name": "Noah Levenstein",
+    "film_series_name": "American Pie",
+    "number_of_films_appeared_in": 8
+  }
+}

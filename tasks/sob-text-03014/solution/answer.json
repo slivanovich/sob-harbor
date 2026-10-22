@@ -1,0 +1,12 @@
+{
+  "genus_a": {
+    "name": "Aerangis",
+    "species_count": 50
+  },
+  "genus_b": {
+    "name": "Gillenia",
+    "species_count": 2
+  },
+  "genus_with_more_species": "Aerangis",
+  "comparison_summary": "Aerangis has 50 species, which is more than Gillenia's 2 species."
+}

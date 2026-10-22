@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "record_id": "c6a1bfb712af2dadfb67ee5d661ea7f05d00b91e87380743d22beb006ee4ff26",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a73d71a55429978a71e90a4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Mary and Max",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Saint (2017 film): The Saint is a 2017 espionage thriller TV movie directed by Ernie Barbarash and starring Adam Rayner in the title role of Simon Templar, created by Leslie Charteris.  This was Sir Roger Moore's final film appearance and the film was dedicated to his memory; Moore portrayed Templar in a 1960s TV series of the same title.  Filmed in 2013 as a television pilot for a proposed TV series, the film was not originally intended for release when the series was not picked up.  It eventually saw release direct-to-video in 2017 when it was released in tribute to Moore following his death.  Ian Ogilvy, who portrayed Templar in a 1970s TV series titled \"Return of the Saint\", also appears.\n\nVacation with Derek: Vacation with Derek is a 2010 Canadian television movie based on the TV series \"Life with Derek\".  The TV movie follows the McDonald-Venturi family as the children are forced to spend part of their summer vacation with their grandmother at her lodge.  It was announced on Family Channel and French-Canadian channel VRAK.TV in March 2010 that the movie would premiere on June 25, 2010 in Canada, while December 12, 2010 was listed as the premiere date in the trailer for the United States, but the move never actually aired in the U.S. when it was supposed to; the movie finally premiered in the United States on Starz Kids & Family on March 6, 2011.  A commercial on Nickelodeon Australia stated that it would premiere on June 19, 2010.  A commercial on TG4 stated the Irish premiere would be on the channel Thursday October 28, 2010 at 5:10 p.m., part of the channel's Mid-Term Halloween movie week.\n\nEden of the East: Eden of the East (Japanese: 東のエデン , Hepburn: Higashi no Eden ) is a Japanese anime television series, which premiered on Fuji TV's noitaminA timeslot on April 9, 2009.  Created, directed and written by Kenji Kamiyama, it features character designs by Chika Umino and animation production by Production I.G.  Based on an original story by Kamiyama, it is the first original animation series broadcast in noitaminA.\n\nGavin O'Connor (actor): Gavin O'Connor is an Irish actor, known for his roles in TV series such as \"Charlie (TV series)\", \"The Tudors\", \"Single Handed\" and films including \"Dorothy Mills\" (2008), \"Eden\" (2008), \"The Front Line\" (2006), \"Headrush\" (2003) and \"This Is My Father\" (1998), \"This Must Be The Place\" and \"Fifty Dead Men Walking\"\n\nLarry Gelman: Larry Gelman (born November 3, 1930) is an American film and television character actor.  He is best known for playing Dr. Bernie Tupperman on the US TV series \"The Bob Newhart Show\" and Vinnie, the poker playing friend of Oscar and Felix, in the original TV series version of \"The Odd Couple\".  He also made numerous appearances as Dr. Hubie Binder in the US TV series \"Maude\" and as officer Bernstein on \"Eight Is Enough\".  He played Max as a regular member of the cast of the situation comedy \"Needles and Pins\", which ran for 14 episodes in the autumn ·of 1973.\n\nMary and Max: Mary and Max is a 2009 Australian stop motion animated comedy-drama film written and directed by Adam Elliot as his first animated feature film with music by Dale Cornelius and produced by Melanie Coombs and Melodrama Pictures.  The voice cast included Philip Seymour Hoffman, Toni Collette, Eric Bana, Bethany Whitmore with narration by Barry Humphries.  The film premiered on the opening night of the 2009 Sundance Film Festival on January 15, 2009.  The film won the Annecy Cristal in June 2009 from the Annecy International Animated Film Festival, and Best Animated Feature Film at the Asia Pacific Screen Awards in November 2009.  The film was theatrically released on April 9, 2009 by Icon Entertainment International.  \"Mary and Max\" received very positive reviews from critics and it earned $1.7 million USD on a $8.2 million AUD budget.\n\nMax Steel: Endangered Species: Max Steel: Endangered Species is a 2004 direct-to-DVD film based on the tv series and action figure line.  It is the only Max Steel movie to share continuity with the TV series.\n\nFear Factor: Khatron Ke Khiladi (season 8): The eighth season of \"\", an Indian reality and stunt television series premiered first on 22 July 2017 and is broadcast on Colors TV.  The name of the season is \"Khatron Ke Khiladi: Pain in Spain\".  It airs on Saturday and Sunday nights at 9 PM.  The series is produced by Endemol India of Deepak Dhar.  This season also witnessed Nia Sharma coming back twice after being eliminated.\n\nCharles Wilkinson (director): Charles Wilkinson is a Canadian documentary filmmaker and film and television director.  He is best known for his \"environmental quadrilogy\" of documentaries: \"Peace Out\", \"Oil Sands Karaoke\" and \"\" and \"Vancouver: No Fixed Address\".  All four films premiered at Hot Docs International Documentary Festival, and have gone on to win awards at Hot Docs, the Vancouver International Film Festival and Yorkton Film Festival.  Before moving into documentaries, Wilkinson worked for many years in dramatic television series and on feature films.  His directing credits include such TV series as \"\", \"The Immortal\", \"So Weird\", \"Dead Man's Gun\", \"Road to Avonlea\", and \"The Beachcombers\", the feature films \"Max\", \"Blood Clan\", and \"Breach of Trust\" and the TV movie \"Heart of the Storm\".  As a pre-teen, he was one of the original performers in the Calgary Safety Roundup, paired with his brother Billy as kid cowboy singers.  \"We sang both kinds - country and western.\"\n\nMax Steel: Max Steel is a line of action figures produced and owned by the toy company Mattel since 1999.  The original figures based on the first TV series were similar to the original 12-inch G.I. Joe toys, consisting almost entirely of different versions of Max Steel, the main character, and one or two of his enemies, a couple of vehicles and two or three special packages.  The original toy series ran from 1999–2012.  At the end of that period, was substituted by a different series of toys with the same brand name, but with a change in quality and design intended to tie into the companion TV series in 2013.  The 2013 line did not exhibit 1/6 scale of the original and reduced the number of articulations and action features of the figures.",
+    "question": "Which premiered first, the TV series Eden of the East or the movie Mary and Max?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "production_a": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "premiere_date": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": [
+            "title",
+            "premiere_date"
+          ],
+          "additionalProperties": false
+        },
+        "production_b": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "premiere_date": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": [
+            "title",
+            "premiere_date"
+          ],
+          "additionalProperties": false
+        },
+        "comparison_summary": {
+          "type": "object",
+          "properties": {
+            "earlier_premiere_title": {
+              "type": "string"
+            },
+            "earlier_premiere_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "later_premiere_title": {
+              "type": "string"
+            },
+            "later_premiere_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "result_statement": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "earlier_premiere_title",
+            "earlier_premiere_date",
+            "later_premiere_title",
+            "later_premiere_date",
+            "result_statement"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "production_a",
+        "production_b",
+        "comparison_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "production_a": {
+        "title": "Eden of the East",
+        "premiere_date": "2009-04-09"
+      },
+      "production_b": {
+        "title": "Mary and Max",
+        "premiere_date": "2009-01-15"
+      },
+      "comparison_summary": {
+        "earlier_premiere_title": "Mary and Max",
+        "earlier_premiere_date": "2009-01-15",
+        "later_premiere_title": "Eden of the East",
+        "later_premiere_date": "2009-04-09",
+        "result_statement": "Mary and Max premiered before Eden of the East."
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "player_name": "Sammy Sosa",
+  "player_nationality": [
+    "Haitian",
+    "Dominican"
+  ],
+  "player_position": "right fielder",
+  "general_manager": {
+    "name": "Larry Himes",
+    "teams_managed": [
+      {
+        "team_name": "Chicago White Sox",
+        "start_year": 1986,
+        "end_year": 1990
+      },
+      {
+        "team_name": "Chicago Cubs",
+        "start_year": 1991,
+        "end_year": 1994
+      }
+    ],
+    "notable_action": "trading for Sammy Sosa during each tenure"
+  }
+}

@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1999–2000 FC Bayern Munich season: The 1999–2000 FC Bayern Munich season was the 100th season in the club's history.  FC Bayern Munich clinched its second consecutive league title, its third consecutive DFB-Ligapokal championship, and the 1999–2000 DFB-Pokal.
+
+FC Bayern Munich Junior Team: The FC Bayern Munich Junior Team is the youth academy for German football club Bayern Munich.  The Junior Team was created in 1902 and restructured in 1995.  It has educated many players who have become regulars in the Bundesliga and Germany.  The vision for the Junior Team is ""to educate young players so that it will be possible for FCB to keep a global position in club football in the next millennium and its mission is "to have the best youth development in club football.  Bayern Munich have to test before the school will accept and you can study free until you graduate if you have a talent.""  Rosters remain unchanged while players train for their position.  Bayern Munich Junior Team uses a 4–3–3 formation good system.  Bayern Munich has scouts all over the world.  Bayern Munich has developed a ""Talent Day"".  In 2003, Bayern Munich started partnering with other football clubs.  The penultimate stage for youngsters at Bayern is Bayern Munich II.
+
+1990–91 FC Bayern Munich season: The 1990–91 FC Bayern Munich season was the 91st season in the club's history and 26th season since promotion from Regionalliga Süd in 1965.  Bayern finished three points behind champions 1.  FC Kaiserslautern in the Bundesliga.  In the DFB-Pokal, Bayern were eliminated in the first round for the first time in club history.  Bayern reached the semifinals of the European Cup before being eliminated by Red Star Belgrade due to an own goal in the 90th minute of the second leg.  The first competitive match of the season was the DFB-Supercup on 31 July which Bayern won by a score of 4–1 over 1.  FC Kaiserslautern.
+
+Javi Martínez: Javier "Javi" Martínez Aginaga (] ; born 2 September 1988) is a Spanish footballer who plays for German club FC Bayern Munich as a defensive midfielder or a central defender.
+
+1987–88 FC Bayern Munich season: The 1987–88 FC Bayern Munich season was the 88th season in the club's history and 23rd season since promotion from Regionalliga Süd in 1965.  Bayern Munich finished as runner-up in the Bundesliga to SV Werder Bremen.  The club reached the quarterfinals of both the DFB-Pokal and the European Cup.  The inaugural DFB-Supercup was won by Bayern Munich over Hamburger SV.  This season was the first season under manager Jupp Heynckes, who replaced Udo Lattek.
+
+1986–87 FC Bayern Munich season: The 1986–87 FC Bayern Munich season was the 87th season in the club's history and 22nd season since promotion from Regionalliga Süd in 1965.  Bayern Munich won its 9th Bundesliga title.  This title marked a third consecutive championship for the club.  The club reached the third round of the DFB-Pokal and finished as runner-up of the European Cup.  The Bundesliga campaign ended with only one loss with no away losses.  This feat set two Bundesliga records that were not repeated until the 2012–13 season.  This season was the final season under manager Udo Lattek.
+
+2016–17 FC Bayern Munich season: The 2016–17 FC Bayern Munich season was the 118th season in the football club's history and 52nd consecutive and overall season in the top flight of German football, the Bundesliga, having won promotion from the Regionalliga in 1965 after winning the Regionalliga Süd.  Bayern Munich also participated in this season's edition of the domestic cup, the DFB-Pokal, and the premier continental cup competition, the UEFA Champions League.  Bayern were the reigning Bundesliga and DFB-Pokal champions, and therefore also participated in the German super cup, the DFL-Supercup.  It was the 12th season for Bayern in the Allianz Arena, located in Munich, Germany.  The season covers a period from 11 July 2016 to 30 June 2017.
+
+2017–18 FC Bayern Munich season: The 2017–18 FC Bayern Munich season is the 118th season in the football club's history and 53rd consecutive and overall season in the top flight of German football, the Bundesliga, having been promoted from the Regionalliga in 1965.  Bayern Munich also are participating in this season's edition of the domestic cup, the DFB-Pokal, and the premier continental cup competition, the UEFA Champions League.  Bayern are the reigning Bundesliga champions, and therefore also are participating in the German super cup, the DFL-Supercup.  This is the 13th season for Bayern in the Allianz Arena, located in Munich, Bavaria, Germany.  The season covers a period from 1 July 2017 to 30 June 2018.
+
+1984–85 FC Bayern Munich season: The 1984–85 FC Bayern Munich season was the 85th season in the club's history.  Bayern Munich won its 7th Bundesliga title, reached the semi-final of UEFA Cup Winners' Cup, and finished as runner-up of DFB-Pokal.  This season was the second season of Udo Lattek's second stint as manager of the club.  The Bundesliga campaign started 25 August 1984 with a 3-1 victory over Arminia Bielefeld.  Bayern Munich, 1.  FC Köln, and Borussia Monchengladbach were tied for first place after Round 1.  From Round 2 through Round 34 of the season, Bayern Munich were the lone team in first place.  Qualification for the 1984–85 European Cup Winners' Cup was a result of winning the 1983–84 DFB-Pokal.
+
+2012–13 FC Bayern Munich season: The 2012–13 FC Bayern Munich season was the 114th season in the club's history and the 48th consecutive season in the top flight of German football, the Bundesliga, since the promotion of the team from the Regionalliga Süd in 1965.  Before the start of the season, Bayern signed Xherdan Shaqiri, Dante, Claudio Pizarro, Mitchell Weiser, Tom Starke and Mario Mandžukić.  Bayern also added holding midfielder Javi Martínez after the first week of the Bundesliga season at the transfer deadline.  The club started the season with a nine-match winning streak.  The club would end the season claiming the Treble, winning the Bundesliga, the UEFA Champions League and the DFB-Pokal.  Bayern are the first German club to achieve the Treble and are the third European Club to complete the Treble in the last five seasons and seventh ever in European Club competition.
+
+Question: What is the birth date of this Spanish footballer, who was added as a holding midfielder in the 2012-13 FC Bayern Munich season?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "footballer_name": {
+      "type": "string",
+      "description": "The name of the footballer."
+    },
+    "nationality": {
+      "type": "string",
+      "description": "The nationality of the footballer."
+    },
+    "birth_date": {
+      "type": "string",
+      "description": "The birth date of the footballer."
+    },
+    "season_added": {
+      "type": "string",
+      "description": "The FC Bayern Munich season in which the footballer was added."
+    },
+    "role_at_addition": {
+      "type": "string",
+      "description": "The role the footballer was added as during that season."
+    }
+  },
+  "required": [
+    "footballer_name",
+    "nationality",
+    "birth_date",
+    "season_added",
+    "role_at_addition"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "record_id": "be5621ffead246209e96e45dd002b42cfc71a74a50119b0c35a2c3a2320b3113",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae61d575542992ae0d16228",
+    "source_dataset": "hotpotqa",
+    "source_answer": "2003",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Oppressed Logic: Oppressed Logic are a punk band from Oakland, California who formed in 1994.  The first album the band appeared on was a compilation called \"Pigs Suck\", which was released in 1995 by Clean Plate Records.  Then late 1995, the band released a split album with Toronto's Armed and Hammered.  They were signed to Beer City in 1995 and released their first 7\", \"P.C. Full of Shit\", in 1996, this release created a lot of controversy in this era leading up to the 1st full-length LP on Beer City titled \"Ain't A Damn Thing Changed!\" .  It was no holds barred punk rock in your face fuck you attitude, completing 2 full 6 week U.S tours in 1997 & 1998!  Fang reformed in 1997 and teamed up for a split 7\" in 1998 on Beer City Records titled \"Skinheads Smoke Dope with a Cheap Beer Hangover!\"\n\nHilary Duff: All Access Pass: Hilary Duff: All Access Pass is the first video album by American recording artist Hilary Duff, released on November 4, 2003 by Buena Vista and Hollywood Records.  Directed and produced by Virgil P. and Tess Gallagher Thompson, the hour-long DVD features the music videos for Duff's songs \"So Yesterday\", \"Why Not\" and \"I Can't Wait\".  \"All Access Pass\" also features behind-the-scenes videos of the former two music videos and her second studio album \"Metamorphosis\" (2003), and a live performance from Duff at Sessions@AOL.  Duff has stated that the DVD also documents her two-year musical journey leading up to the release of \"Metamorphosis\".  To date, it has been certified double platinum in the United States and five-times platinum in Canada.\n\nDead Swans: Dead Swans is an English hardcore punk band from Brighton, formed in 2006.  They released one full-length record entitled \"Sleepwalkers\" in 2009, as well as three EPs; \"Southern Blue\" (2008), \"It's Starting\", (2009), and \"Anxiety and Everything Else\" (2012).  They also released a split EP with metalcore band Architects in 2008.  Further, the band were nominated in the Best British Newcomer category at the 2008 Kerrang!  Awards.\n\nHilary Duff: Hilary Erhard Duff (born September 28, 1987) is an American actress and singer.  Duff began her acting career at a young age, and quickly became labeled a teen idol as the title character of the Disney Channel comedy series \"Lizzie McGuire\" (2001–2004).  The series proved to be a hit, leading to a film adaptation of the series to be released.  Duff began working on numerous projects with the Disney Channel, including the film \"Cadet Kelly\" (2002).  She later began work on an album, releasing the Christmas themed \"Santa Claus Lane\" (2002) through Walt Disney Records.  Upon signing with Hollywood Records, Duff began working on her second studio album, \"Metamorphosis\" (2003).  The album achieved critical and commercial success, topping the U.S. \"Billboard\" 200 and selling over three million copies in the nation.  It also found success in both Canada and Japan.  Duff's success in both acting and music led to her becoming a household name, with merchandise such as dolls, clothing, and fragrances being released.\n\nEndwell (band): Endwell is a hardcore band from Queens, New York formed in 2003.  They have released one independent EP, one full-length LP on Victory Records, and one EP & two full-lengths via Mediaskare Records.\n\nHilary Duff: The Concert – The Girl Can Rock: Hilary Duff: The Concert – The Girl Can Rock, commonly referred to as simply The Girl Can Rock, is the first live video album by American recording artist Hilary Duff, released on August 10, 2004 by Hollywood Records.  It contains a full concert from Ventura Theatre, Ventura, California and an accompanying music video for her single \"Come Clean\".  Some special features of the DVD include Duff's appearance with Ryan Seacrest and her getting her first surfing lesson.  In addition, the DVD contains footage of Duff recording \"Crash World\" and an interview with Duff discussing her self-titled album, \"Hilary Duff\".  Duff's DVD won the DVDX Award for Best Overall DVD in the Music Program.  The DVD was nominated for the home video VSDA Award.  The album was also certified four times platinum in Canada by Canadian Recording Industry Association (CRIA).\n\nMean Reds: Formed in 2003 in Tucson, Arizona, United States, The Mean Reds released one full-length LP, three EPs and a split album (with DVD) with notable Los Angeles, California rock band Wires On Fire.  Featuring Anthony Anzalone, Wilson Snider, Nick Letson, Byron Hambacher, and Kyle Gutiérrez, the band relocated to Silver Lake, Los Angeles, California in 2004.  Known for their raucous live performances and their affinity for Disney Channel's Hilary Duff, as well as actress Audrey Hepburn (whose film \"Breakfast at Tiffany's\" spawned the band's name - see The Mean Reds), the band embarked on several regional tours before breaking up on October 31, 2005.\n\nWires on Fire: Wires on Fire are a Los Angeles-based rock band, formed in 2004 by Jeff Lynn, Dash Hutton, Michael Shuman and Evan Weiss.  The band has released titles such as \"Homewrecker\" EP (2004), \"Wires on Fire/Mean Reds split\" (2006) and their self-titled LP (2006), which sold particularly well in the United Kingdom.  The band has toured all over the United States, sharing the stage with acts such as the Yeah Yeah Yeahs, Dillinger Escape Plan, The Icarus Line, Pretty Girls Make Graves, Cold War Kids, Black Lips, Man Man, Death From Above 1979, Pink Mountaintops and others.  The band is currently involved in recording their next full length in Shabbey Road Studios.\n\nDead Earth Politics: Dead Earth Politics is an American heavy metal rock band formed in Austin, Texas in 2005.  The band consists of Ven Scott, Tim Driscoll, Lennis Hayes and Aaron Canady.  Well known for its blend of old and new school metal influences that some have coined as “Progressive Power Thrash” has been described as a cross between Iron Maiden and Lamb of God.  The group rose to prominence in the mid late 2000s with their engaging live performances.  With one full-length LP and three EPs, the latest release was on March 14, 2015, with their \"Men Become God’s\" EP.\n\nSilent Old Mtns: Silent Old Mtns (Silent Old Mountains) is an American indie rock band, formed in Frederick, Maryland in 2011 by singer songwriter Andrew Bromhal.  They have released one full-length album and are most noted for their energetic and theatrical live shows.  They are also well known for their promotion of the indie music scene and DIY ethic: at one point touring the country in a repurposed school bus and averaging over 100 live performances per year despite having no corporate backing.  DC Rock Live music blog's David Hintz describes their sound as \"a whacked out brand of Americana folk rock that dives headlong into psyche terrain frequently.\"",
+    "question": "The Mean Reds, formed in which year, released one full-length LP, three EPs and a split album (with DVD) with notable rock band, Wires On Fire, known for their raucous live performances and their affinity for Hilary Duff?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "band_name": {
+          "type": "string",
+          "description": "The name of the band."
+        },
+        "formation_year": {
+          "type": "integer",
+          "description": "The year the band was formed."
+        },
+        "releases": {
+          "type": "object",
+          "properties": {
+            "full_length_lps": {
+              "type": "integer",
+              "description": "Number of full-length LPs released."
+            },
+            "eps": {
+              "type": "integer",
+              "description": "Number of EPs released."
+            },
+            "split_albums": {
+              "type": "integer",
+              "description": "Number of split albums released."
+            },
+            "split_album_partner": {
+              "type": "string",
+              "description": "The name of the band that collaborated on the split album."
+            },
+            "split_album_features_dvd": {
+              "type": "boolean",
+              "description": "Indicates if the split album included a DVD."
+            }
+          },
+          "required": [
+            "full_length_lps",
+            "eps",
+            "split_albums",
+            "split_album_partner",
+            "split_album_features_dvd"
+          ],
+          "additionalProperties": false
+        },
+        "notable_characteristics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of notable characteristics or affinities of the band."
+        }
+      },
+      "required": [
+        "band_name",
+        "formation_year",
+        "releases",
+        "notable_characteristics"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "band_name": "The Mean Reds",
+      "formation_year": 2003,
+      "releases": {
+        "full_length_lps": 1,
+        "eps": 3,
+        "split_albums": 1,
+        "split_album_partner": "Wires On Fire",
+        "split_album_features_dvd": true
+      },
+      "notable_characteristics": [
+        "raucous live performances",
+        "affinity for Disney Channel's Hilary Duff"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

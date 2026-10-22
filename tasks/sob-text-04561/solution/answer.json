@@ -1,0 +1,17 @@
+{
+  "parent_entities": [
+    {
+      "name": "Anu",
+      "role": "father"
+    },
+    {
+      "name": "Antu",
+      "role": "first consort"
+    }
+  ],
+  "child_entity": {
+    "name": "Anunnaki",
+    "type_of_beings": "deities"
+  },
+  "relationship_context": "Antu and Anu were the parents of the Anunnaki."
+}

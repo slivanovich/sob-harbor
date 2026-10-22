@@ -1,0 +1,12 @@
+{
+  "film_title": "Full Confession",
+  "film_release_year": 1939,
+  "starring_actor": {
+    "actor_name": "Victor McLaglen",
+    "actor_nationality": "British-American",
+    "academy_award_details": {
+      "award_category": "Best Actor",
+      "award_year": 1935
+    }
+  }
+}

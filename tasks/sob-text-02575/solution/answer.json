@@ -1,0 +1,13 @@
+{
+  "college_info": {
+    "name": "Lafayette College",
+    "location": "Easton, Pennsylvania",
+    "founding_year": 1826
+  },
+  "coach_info": {
+    "name": "Fran O'Hanlon",
+    "coaching_role": "head men's basketball coach",
+    "birthplace": "Philadelphia, Pennsylvania"
+  },
+  "final_answer": "Philadelphia, Pennsylvania"
+}

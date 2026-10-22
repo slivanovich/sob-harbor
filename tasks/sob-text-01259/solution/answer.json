@@ -1,0 +1,19 @@
+{
+  "player_name": "Nico di Biase",
+  "league_name": "North American Soccer League",
+  "number_of_teams": 8,
+  "team_locations": [
+    {
+      "location": "United States",
+      "count": 6
+    },
+    {
+      "location": "Canada",
+      "count": 1
+    },
+    {
+      "location": "Puerto Rico",
+      "count": 1
+    }
+  ]
+}

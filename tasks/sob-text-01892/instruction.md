@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+EFL Cup: The EFL Cup (referred to historically, and colloquially, as simply the League Cup), currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.  Organised by the English Football League (EFL), it is open to any club within the top four levels of the English football league system – 92 clubs in total – comprising the top level Premier League, and the three divisions of the English Football League's own league competition (Championship, League One and League Two).
+
+2017–18 A.F.C. Bournemouth season: The 2017–18 A.F.C. Bournemouth season is the club's 3rd consecutive season in the top flight of English football and their 128th year in existence.  This season Bournemouth will participate in the Premier League as well as the FA Cup and EFL Cup.
+
+2014–15 Arsenal F.C. season: The 2014–15 season was Arsenal's 23rd season in the Premier League and 95th consecutive season in the top flight of English football.  This season Arsenal participated in the Premier League, FA Cup, League Cup, Community Shield and the UEFA Champions League.  An inconsistent start to the league season ended any realistic hopes for the Premier League title as Arsenal only won two out of their first eight games.  Inconsistency plagued Arsenal throughout the first half of the campaign, not helped by numerous injuries to important players.  At one stage, Arsenal were as low as eighth heading into early December.  This would later haunt them as they mounted a superb recovery during the second half of the season where they won eight league games in a row, becoming the in-form side of the division.  Ultimately, however, the gap between themselves and leaders Chelsea was too much, the points dropped during the inconsistent first half of the season proving too much to recover.  Old habits were hard to eradicate in Europe as yet again, Arsenal were their own worst enemies.  Despite being widely expected to reach the quarter-finals, having been given a favourable draw in the Round of 16 against AS Monaco, Arsenal self-destructed at home, where panic led to Monaco winning the first leg 1–3, a scoreline which ultimately proved fatal over the course of the tie.  Arsenal, with their 0–2 away win proving useless, bowed out yet again in the round of sixteen for the fifth consecutive year.  However, Arsenal reclaimed the FA Cup, thus becoming the most successful club in the history of the competition with twelve wins, comfortably beating Aston Villa 4–0 in the final.  Arsenal finished the league season in third, thereby qualifying directly to Champions league group stage and avoiding the Champions League qualifier, something Arsène Wenger was keen to avoid as he felt it had a negative impact on competing for the Premier League title, which was the primary target set by the players, manager and coaching staff, going into the next season.
+
+2017–18 Manchester United F.C. season: The 2017–18 season is Manchester United's 26th season in the Premier League and their 43rd consecutive season in the top flight of English football.  The club will participate in the Premier League, FA Cup, EFL Cup (as holders), UEFA Champions League and UEFA Super Cup.
+
+EFL Trophy: The EFL Trophy (English Football League Trophy) is an annual English association football knockout competition open to the 48 clubs in EFL League One and EFL League Two, the third and fourth tiers of the English football league system and, since the 2016–17 season, 16 under-21 sides from Premier League and EFL Championship clubs.  It is the third most prestigious knockout trophy in English football after the FA Cup and EFL Cup (League Cup).
+
+List of EFL Cup finals: The EFL Cup is a knockout cup competition in English football organised by and named after the English Football League (EFL).  The competition was established in 1960 and is considered to be the second-most important domestic cup competition for English football clubs, after the FA Cup.  The competition is open to all 72 members of the English Football League and the 20 members of the Premier League.  For the first six seasons of the competition, the final was contested over two legs, one at each participating club's stadium.  The first Football League Cup was won by Aston Villa, who beat Rotherham United 3–2 on aggregate, after losing the first leg 2–0.  The competition's first single-legged final was held in 1967: Queens Park Rangers defeated West Bromwich Albion 3–2 at Wembley Stadium in London.
+
+2010–11 A.F.C. Bournemouth season: The 2010–11 A.F.C. Bournemouth season is the club's first season back in Football League One after a two-year absence.  During the 2010–11 English football season, Bournemouth will participate in League One, the Johnstones Paint Trophy, the FA Cup, and the Football League Cup.  Bournemouth were eliminated from the League Cup and the Johnstones Paint Trophy in the First Round and the FA Cup in the Second Round
+
+2012–13 Arsenal F.C. season: The 2012–13 season was Arsenal Football Club's 21st season in the Premier League and 93rd consecutive season in the top flight of English football.  Arsenal participated in the Premier League and the UEFA Champions League, after finishing third in the previous Premier League season.  The League Cup however was out of their reach, and despite an entertaining cup run, which included 13 goals scored in two games, Arsenal lost to fourth-division Bradford City in the quarter-finals on penalties.  In the FA Cup, Arsenal were knocked out by Championship side Blackburn Rovers in the fifth round.  The Champions League also proved fruitless, as despite a valiant effort in Bavaria winning 2–0, they were ultimately knocked out on the away goals rule against Bayern Munich, thus extending their trophy drought for an eighth season.  The highest scoring game in their season was the famous 7–5 win in the League Cup (after extra time), where they came back from 4 goals down to beat Reading.  Arsenal's highest scoring league win was the 7–3 win against Newcastle United in December.  This season, Arsenal finished fourth after having to close another large points gap (like last season) between themselves and their North London rivals Tottenham Hotspur.
+
+2016–17 A.F.C. Bournemouth season: The 2016–17 season is AFC Bournemouth's second consecutive season in the Premier League and their 127th year in existence.  This season Bournemouth will participate in the Premier League, FA Cup and Football League Cup.
+
+FA Cup: The FA Cup, known officially as The Football Association Challenge Cup, is an annual knockout football competition in men's domestic English football.  First played during the 1871–72 season, it is the oldest association football competition in the world.  It is organised by and named after The Football Association (The FA).  For sponsorship reasons, from 2015 through to 2018 it is also known as The Emirates FA Cup.  A concurrent women's tournament is also held, the FA Women's Cup.
+
+Question: The 2017–18 A.F.C. Bournemouth season is the club's 3rd consecutive season in the top flight of English football and their 128th year in existence, this  season Bournemouth will participate in the Premier League as well as the FA Cup and EFL Cup, historically, and colloquially, as simply the League Cup, currently known as which event, for sponsorship reasons, is an annual knockout football competition in men's domestic English football?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "competition_name": {
+      "type": "string",
+      "description": "The official name of the football competition."
+    },
+    "historical_name": {
+      "type": "string",
+      "description": "The historical or colloquial name of the competition."
+    },
+    "current_sponsored_name": {
+      "type": "string",
+      "description": "The current name of the competition due to sponsorship."
+    },
+    "competition_type": {
+      "type": "string",
+      "description": "The type of competition, e.g., knockout."
+    },
+    "gender_category": {
+      "type": "string",
+      "description": "The gender category of participants, e.g., men's."
+    },
+    "is_annual": {
+      "type": "boolean",
+      "description": "Indicates if the competition is held annually."
+    }
+  },
+  "required": [
+    "competition_name",
+    "historical_name",
+    "current_sponsored_name",
+    "competition_type",
+    "gender_category",
+    "is_annual"
+  ],
+  "additionalProperties": false
+}

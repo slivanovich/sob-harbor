@@ -1,0 +1,8 @@
+{
+  "entity_1_name": "Jiaonan",
+  "entity_1_province": "Shandong",
+  "entity_2_name": "Xingshan District",
+  "entity_2_province": "Heilongjiang",
+  "provinces_are_same": false,
+  "final_answer": "no"
+}

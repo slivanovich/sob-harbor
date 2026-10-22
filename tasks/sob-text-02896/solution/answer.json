@@ -1,0 +1,13 @@
+{
+  "depot_location": "Hinckley, Minnesota",
+  "depot_construction_details": {
+    "year_built": 1895,
+    "original_builder_railway": "St. Paul and Duluth Railroad",
+    "operated_by_northern_pacific": true
+  },
+  "fire_event_details": {
+    "fire_name": "Great Hinckley Fire",
+    "fire_date": "1894-09-01",
+    "area_burned_acres": 200000
+  }
+}

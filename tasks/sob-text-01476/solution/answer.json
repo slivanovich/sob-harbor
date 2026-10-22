@@ -1,0 +1,16 @@
+{
+  "question_bands": [
+    "Everclear",
+    "LostAlone"
+  ],
+  "formation_criteria": {
+    "country": "Britain",
+    "year": 2005
+  },
+  "matching_band_details": {
+    "name": "LostAlone",
+    "formation_country": "British",
+    "formation_year": 2005
+  },
+  "match_found": true
+}

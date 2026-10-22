@@ -1,0 +1,11 @@
+{
+  "mine_name": "Berkeley Pit",
+  "mine_type": "former open pit copper mine",
+  "location": {
+    "city": "Butte",
+    "state": "Montana",
+    "country": "United States"
+  },
+  "discovered_substance": "Berkeleydione",
+  "discovery_context": "discovered in fungal species which evolved to live in the Berkeley Pit"
+}

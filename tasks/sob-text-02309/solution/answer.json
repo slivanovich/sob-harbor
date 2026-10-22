@@ -1,0 +1,13 @@
+{
+  "distribution_name": "Anaconda",
+  "distribution_details": {
+    "type": "Python distribution",
+    "is_open_source": true,
+    "supported_languages": [
+      "Python",
+      "R"
+    ],
+    "includes_astropy": true
+  },
+  "final_answer": "Anaconda"
+}

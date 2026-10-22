@@ -1,0 +1,11 @@
+{
+  "fortress_name": "Kronborg",
+  "location_city": "Helsingør",
+  "location_country": "Denmark",
+  "controlled_waterways": [
+    "Kattegat",
+    "Øresund"
+  ],
+  "is_featured_in_hamlet": true,
+  "hamlet_name_in_play": "Elsinore"
+}

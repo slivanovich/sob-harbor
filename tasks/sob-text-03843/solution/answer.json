@@ -1,0 +1,21 @@
+{
+  "name": "Matthew",
+  "language_forms": [
+    {
+      "language": "Spanish",
+      "form": "Mateo"
+    },
+    {
+      "language": "Croatian",
+      "form": "Mateo",
+      "derivation_note": "from the Italian form Matteo"
+    },
+    {
+      "language": "Italian",
+      "form": "Matteo"
+    }
+  ],
+  "hebrew_origin": {
+    "meaning": "gift of God"
+  }
+}

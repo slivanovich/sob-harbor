@@ -1,0 +1,12 @@
+{
+  "prisoner_name": "Stewart Nozette",
+  "prison_details": {
+    "prison_name": "Federal Correctional Institution, Terre Haute",
+    "location_state": "Indiana",
+    "inmate_gender_housed": "male"
+  },
+  "offense_committed": [
+    "attempted espionage",
+    "fraud"
+  ]
+}

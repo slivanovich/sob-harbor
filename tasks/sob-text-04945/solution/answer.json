@@ -1,0 +1,19 @@
+{
+  "common_city_of_origin": "Berlin",
+  "entities_analyzed": [
+    "Mitte",
+    "Reichstag building"
+  ],
+  "entity_locations": [
+    {
+      "name": "Mitte",
+      "type": "borough",
+      "located_in_city": "Berlin"
+    },
+    {
+      "name": "Reichstag building",
+      "type": "historic edifice",
+      "located_in_city": "Berlin"
+    }
+  ]
+}

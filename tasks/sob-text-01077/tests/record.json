@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "record_id": "e0928af0f98c192b6f9e686e5a0b9fe057fa0679e493ed0c88ebf7960645ab6b",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7df3cd5542995f4f402347",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1926",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Eliades Acosta: Eliades Acosta Matos (born January 4, 1959 in Santiago de Cuba) is a Cuban politician, the former director of Cuba’s Jose Marti National Library (1997–2007) and until 2003 he was head of the Committee on Culture on the Cuban Communist Party’s Central Committee.  Writer polítical and histórical books, articules and essays included two novels.  Since 2010 living in Dominican Republic, and working for the National Archive and Juan Bosch Foundation.  In 2012 , International Prix Pedro Henriquez Ureña, Ateneo Dominicano.  In 2016, Prix Caonabo de Oro, for the best foreigner writer in Dominican Republic this year.\n\nCome Back Around: \"Come Back Around\" was the first single released from British rock band Feeder's 2002 album \"Comfort in Sound\".  It was their first release after drummer Jon Lee's death earlier in the year.  The promo video featured 4 female drummers as a tribute to Jon Lee.\n\nJuan Almeida Bosque: Juan Almeida Bosque (February 17, 1927 – September 11, 2009) was a Cuban politician and one of the original commanders of the insurgent forces in the Cuban Revolution.  After the rebels took power in 1959, he was a prominent figure in the Communist Party of Cuba.  At the time of his death, he was a Vice-President of the Cuban Council of State and was its third ranking member.  He received several decorations, and national and international awards, including the title of \"Hero of the Republic of Cuba\" and the Order of Máximo Gómez.\n\nSenén Casas Regueiro: Major General Senén Casas Regueiro (30 July 1934 in Bombí - 6 August 1996) was a Cuban politician.  He was the Cuban Minister of Transportation from 1989 till his death.  He was also the First Deputy Minister of Defence and the Chief of Staff of the Cuban Army.  He was a brother of another Cuban politician Julio Casas Regueiro.\n\nJorge Luis Sierra Cruz: Jorge Luis Sierra Cruz (born September 4, 1961) (died October 27, 2014) was a Cuban politician.  He was the Cuban Minister of Transportation (since 20 October 2006), the Member of the Political Bureau of the Communist Party of Cuba and the Member of the Executive Committee of CPC.  He was a Cuban Vice President since 19 February 2009 till 3 May 2010.  He is also a deputy in National Assembly of People's Power.  He died after complications from knee surgery, followed by a massive heart attack.\n\nJon Lee Anderson: Jon Lee Anderson (born January 15, 1957) is an American biographer, author, investigative reporter, war correspondent and staff writer for \"The New Yorker\", reporting from war zones such as Afghanistan, Iraq, Uganda, Israel, El Salvador, Ireland, Lebanon, Iran, and throughout the Middle East as well as during Hurricane Katrina rescue efforts with K38 Water Safety as documented in the New Yorker article Leaving Desire.  Anderson has also written for \"The New York Times\", \"Harper's\", \"Life\", and \"The Nation\".  Anderson has profiled political leaders such as Hugo Chavez, Fidel Castro, Che Guevara, and Augusto Pinochet.\n\nFidel Castro: Fidel Alejandro Castro Ruz (]    ; August 13, 1926 – November 25, 2016) was a Cuban revolutionary and politician who governed the Republic of Cuba as Prime Minister from 1959 to 1976 and then as President from 1976 to 2008.  Politically a Marxist–Leninist and Cuban nationalist, Castro also served as the First Secretary of the Communist Party of Cuba from 1961 until 2011.  Under his administration, Cuba became a one-party communist state, while industry and business were nationalized and state socialist reforms were implemented throughout society.\n\nRaúl Chibás: Raúl Chibás Rivas (April 25, 1916 – August 25, 2002) was a Cuban politician and military officer who initially supported Fidel Castro and the Cuban Revolution but later defected to the United States.  Born in Santiago de Cuba, Chibás spent his childhood in Havana and attended the University of Havana.  His older brother, Eduardo, founded and led the Orthodox Party (also known as the Cuban People's Party) in 1947.  After Eduardo committed suicide in 1951, Raúl took over as party leader.\n\nJon Lee Anderson bibliography: List of the published works by or about Jon Lee Anderson, American journalist.\n\nAbel Prieto: Abel Prieto Jiménez (born 11 November 1950) is a Cuban politician.  Abelito, as he was called as a child, is the son of Abel Prieto, a Cuban educator who for several years pre and post Castro ran a preparatory school on Pinar Del Rio.  From 1997 to 2012 he served as Minister of culture.  In March 2012 he was appointed as advisor to Cuban President Raul Castro.",
+    "question": "In what year was the Cuban politician whom Jon Lee Anderson profiled born?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "journalist_name": {
+          "type": "string",
+          "description": "The name of the journalist who profiled the politician."
+        },
+        "profiled_politician": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the Cuban politician profiled."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the politician."
+            },
+            "birth_year": {
+              "type": "integer",
+              "description": "The birth year of the politician."
+            },
+            "roles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Key political roles held by the politician."
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "birth_year",
+            "roles"
+          ],
+          "additionalProperties": false
+        },
+        "answer_year": {
+          "type": "integer",
+          "description": "The birth year of the Cuban politician profiled by Jon Lee Anderson."
+        }
+      },
+      "required": [
+        "journalist_name",
+        "profiled_politician",
+        "answer_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "journalist_name": "Jon Lee Anderson",
+      "profiled_politician": {
+        "name": "Fidel Castro",
+        "nationality": "Cuban",
+        "birth_year": 1926,
+        "roles": [
+          "revolutionary",
+          "Prime Minister",
+          "President",
+          "First Secretary of the Communist Party of Cuba"
+        ]
+      },
+      "answer_year": 1926
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

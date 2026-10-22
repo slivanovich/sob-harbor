@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+InPhase Technologies: InPhase Technologies is a technology company developing holographic storage devices and media, based in Longmont, Colorado.  InPhase was spun out from Bell Labs in 2000 after recruiting two storage industry veterans, Steve Kitrosser (Digital Equipment Corporation, Maxtor, Maxoptics, Quinta, and Seagate) joined as Chairman, and Nelson Diaz (Digital Equipment Corporation, Seagate, StorageTek), with very strong operating experience, in particular high volume magnetic disk drive and tape drive manufacturing with very high quality.  Their technology promised multiple terabyte storage.  InPhase concentrated on applied research from 2001 to 2004 to understand what issues had to be addressed and solved in order to be able to deliver high volume storage media and drives with high reliability and high manufacturing yield.  During this time frame, Stephen Socolof joined the Board of Directors representing New Venture Partners, and in late 2004 pushed the Inphase management team to get a product (a working disk drive and storage media) within one year; a number of the InPhase staff were surprised by this, and wrote a white paper explaining that the staff had tens of decades of experience in bringing digital storage products to market, and that based on where InPhase was at in product development in early 2005, it would require three to five years of additional engineering effort, in particular in manufacturing processes for storage media and drives, before InPhase could commence to sell prototype product to customers.  This warning was ignored, and the Chairman and Chief Executive Officer said they would try to get a product out in a year, without telling any other investors.  Nelson Diaz asked Demetri Lignos for a product plan, and Demetri responded with a rack mounted drive that would allow all the optics and light transmission to lie in a single two dimensional plane, enormously simplifying the manufacturing of such a product; Nelson Diaz rejected this because he had been told that StorageTek, his former employer, had a library that held five and a quarter inch form factor drives (in fact there is no such thing as a specification for a five and a quarter inch disk drive), but Demetri Lignos and his team attempted to develop a disk drive product plan that would fit into a StorageTek library and were NOT able to make all the optics and electronics fit, even thought light was following paths in THREE dimensions to complicate manufacturing, and the total length of the drive was twenty six inches).  With this as prolog, Demetri Lignos elected to retire from InPhase (after having brought many digital storage products to market from raw technology), and surprise surprise, at the end of 2005, InPhase received additional funding led by New Venture Partners to get a product out within a year, having failed to do so in 2005.  At the end of 2006, InPhase received additional funding led by New Venture Partners to get a product out within a year, having failed to do sin 2006.  At the end of 2007, InPhase received additional funding led by New Venture Partners to get a product out within a year, having failed to do so in 2007.  In April 2008 InPhase was scheduled to have a product launch at the National Association of Broadcasters (NAB) trade show in Las Vegas, NV, and at the show in the middle of the launch InPhase announced it did not have a viable product to sell to customers.  In 2008 Stephen Socolof elected to shop InPhase and its extensive patent portfolio, but to no avail, and in 2009-2010 went through a financial restructuring resulting in Steve Socolof leaving the Board and all of the New Venture Partners preferred stock was purchased by Signal Lake.
+
+List of mayors of Columbus, Ohio: This is a list of mayors of Columbus, Ohio.  There have been 48 individuals that have served as mayor of Columbus, serving 53 distinct mayoralties or consecutive terms in office.  The first mayor of Columbus was Jarvis W. Pike.  He was appointed by the Burough Council of Columbus in 1816.  The first mayor of Columbus to be elected by popular vote was John Brooks in 1834.  Five mayors have served non-consecutive terms.  Philo H. Olmsted is counted as both the 8th and 12th mayor, Alexander Patton as both the 17th and 19th mayor, James G. Bull as both the 22nd and 24th mayor, George J. Karb as both the 30th and 39th mayor, and Jack Sensenbrenner as both the 46th and 48th mayor.  Of the individuals appointed or elected as mayor, five have resigned from office - James Robinson, John Brooks, Warren Jenkins, John G. Miller, and Jim Rhodes.  No mayor has died or become permanently disabled while in office.  The shortest-serving former mayor is James Robinson, who served only eight months before resigning from office on September 11, 1827.  The longest-serving mayor is Michael B. Coleman, who served 16 years and is the only African American to serve as mayor.  Andrew Ginther is the current mayor.  He took office on January 1, 2016.
+
+Betsy Price: Betsy Price (born October 21, 1949) is an American businesswoman and politician who serves as the 44th and current mayor of Fort Worth, Texas.  She was elected on June 18, 2011, in a nonpartisan race.  She was elected for a third consecutive term, unopposed, in 2015.  A Republican, she previously served 2½ terms as the elected Tarrant County tax assessor-collector, from 2001 to 2011.
+
+Design for lean manufacturing: Design for lean manufacturing is a process for applying lean concepts to the design phase of a system, such as a complex product or process.  The term describes methods of design in lean manufacturing companies as part of the study of Japanese industry by the Massachusetts Institute of Technology.  At the time of the study, the Japanese automakers were outperforming the American counterparts in speed, resources used in design, and design quality.  Conventional mass-production design focuses primarily on product functions and manufacturing costs; however,design for lean manufacturing systematically widens the design equation to include all factors that will determine a product's success across its entire value stream and life-cycle.  One goal is to reduce waste and maximize value, and other goals include improving the quality of the design and the reducing the time to achieve the final solution.  The method has been used in architecture, healthcare, product development, processes design, information technology systems, and even to create lean business models.  It relies on the definition and optimization of values coupled with the prevention of wastes before they enter the system.  Design for lean manufacturing is system design.
+
+Digital prototyping: Digital Prototyping gives conceptual design, engineering, manufacturing, and sales and marketing departments the ability to virtually explore a complete product before it’s built.  Industrial designers, manufacturers, and engineers use Digital Prototyping to design, iterate, optimize, validate, and visualize their products digitally throughout the product development process.  Innovative digital prototypes can be created via CAutoD through intelligent and near-optimal iterations, meeting multiple design objectives (such as maximised output, energy efficiency, highest speed and cost-effectiveness), identifying multiple figures of merit, and reducing development gearing and time-to-market.  Marketers also use Digital Prototyping to create photorealistic renderings and animations of products prior to manufacturing.  Companies often adopt Digital Prototyping with the goal of improving communication between product development stakeholders, getting products to market faster, and facilitating product innovation.
+
+Rahm Emanuel: Rahm Israel Emanuel ( ; born November 29, 1959) is an American politician who is the 44th and current mayor of Chicago.  A member of the Democratic Party, Emanuel was elected in 2011.  He was re-elected on April 7, 2015.
+
+MHUB Chicago (company): mHUB is Chicago’s innovation center for physical product development and manufacturing.  Located in West Town, Chicago, mHUB is a co-working community of product designers and developers, entrepreneurs, engineers and manufacturers, a network of manufacturing mentors, industry experts and investors, and a source of intellectual and economic capital.  Catalyze, a coworking hub, World Business Chicago, and Mayor Rahm Emanuel kickstarted mHUB in early 2017.  The organization opened on March 2, 2017.  mHUB is led by Executive Director and Co-founder, Haven Allen.  Mayor Rahm Emanuel called the project, “the final piece of the manufacturing puzzle", as mHUB galvanizes and connects the manufacturing ecosystem.
+
+F. Weber &amp; Company, Inc.: F. Weber Company, Inc. is an American manufacturer and supplier of artists' materials.  Established in 1853 in Philadelphia, Pennsylvania, the F. Weber Company, Inc. is the oldest and one of the largest manufacturers of art materials in the United States.  The company has been known for quality and innovation throughout their history, for example in the late 19th and early 20th centuries—the golden years of the prestigious World Fair—F. Weber & Co. frequently won gold medals for its fine quality products.  Exhibitions included: 1873 Vienna; 1876 Centennial Exposition, Philadelphia; 1893 Columbian Exposition, Chicago; 1903 Louisiana Purchase Exposition, St. Louis; 1915 Panama-Pacific Exposition, San Francisco; and 1926 Sesqui-Centennial Exposition, Philadelphia.  Following the death of Fredrick W. Weber Sr. in 1919, his two sons Fred W. Weber and Ernest Weber had the company incorporated and renamed it F. Weber Co., Inc.  Fred W. Weber was a successful artist, chemist, inventor, and businessman, he was responsible for much of the innovation in product development from taking over in 1919 to his retirement in 1967.  With his long list of innovations, a majority of which decreased the toxicity of necessary painting supplies, Fred W. Weber elevated the company to further prominence in the US art supplies market.  His expertise in the arts as well as science along with the publication of his first book "Artists Pigments" (Van Nostrand 1923) made him a desirable lecturer on the topic of art.  He provided advice to many celebrated 20th century artists, including: Thomas Hart Benton, Dean Cornwell, Arthur Dove, Peter Hurd, Norman Rockwell, NC Wyeth, and Andrew Wyeth.  At this time the company had its factory and headquarters in Philadelphia, Pennsylvania, and retail locations in Philadelphia, Baltimore, and St. Louis.  The company was bought by Visual Art Industries of Brooklyn, NY in 1980.  Honoring the Weber family, the name was not removed from the company.  The company is now officially the Martin F. Weber Co. and still produces a variety of art supplies, including the original non-toxic white color "Permalba" formulated by Fred W. Weber himself in 1921.  The modern company is also known for its artists signature kits designed for revered television artists such as Jon Gnagy, Bob Ross, Susan Scheme, Robert Wyland and Bruce Blitz.
+
+Fred McBagonluri: Fred McBagonluri (born August 18, 1970) is a Ghanaian engineer who is currently the dean at the Faculty of Engineering at Ashesi University College.  He was also the executive director of the </nowiki> Climate Innovation Center], a new cleantech incubator backed by the World Bank.  Prior to his present role at Ashesi University College, McBagonluri lived and worked in the United States.  He was the Vice President of the New Product Development Joerns Healthcare in Arlington, Texas.  He has held various roles in engineering, strategy, marketing, and research, and has worked with numerous Institutions in the US, including Princeton University, Siemens HealthCare, and Becton and Dickinson and Co.
+
+Tom Barrett (politician): Thomas Mark "Tom" Barrett (born December 8, 1953) is an American politician and member of the Democratic Party who has served as the 44th and current Mayor of Milwaukee, Wisconsin since 2004.  He served in the United States House of Representatives from 1993 to 2003, and the Wisconsin State Senate from 1989 to 1993.  He previously served in the Wisconsin State Assembly from 1984 until 1989.
+
+Question: mHUB is Chicago’s innovation center for physical product development and manufacturing, which American politician who is the 44th and current mayor of Chicago, kickstarted mHUB in early 2017?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "mayor": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the mayor."
+        },
+        "city": {
+          "type": "string",
+          "description": "The city the mayor serves."
+        },
+        "mayoral_term_number": {
+          "type": "integer",
+          "description": "The numerical order of the mayor's term."
+        },
+        "political_party": {
+          "type": "string",
+          "description": "The political party the mayor belongs to."
+        }
+      },
+      "required": [
+        "name",
+        "city",
+        "mayoral_term_number",
+        "political_party"
+      ],
+      "additionalProperties": false
+    },
+    "mhub_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the innovation center."
+        },
+        "kickstarted_year": {
+          "type": "integer",
+          "description": "The year mHUB was kickstarted."
+        }
+      },
+      "required": [
+        "name",
+        "kickstarted_year"
+      ],
+      "additionalProperties": false
+    },
+    "action": {
+      "type": "string",
+      "description": "The action performed by the mayor related to mHUB."
+    }
+  },
+  "required": [
+    "mayor",
+    "mhub_details",
+    "action"
+  ],
+  "additionalProperties": false
+}

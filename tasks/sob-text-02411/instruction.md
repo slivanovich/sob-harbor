@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Bugatti: Automobiles Ettore Bugatti was a French car manufacturer of high-performance automobiles, founded in 1909 in the then German city of Molsheim, Alsace by Italian-born Ettore Bugatti.  Bugatti cars were known for their design beauty (Ettore Bugatti was from a family of artists and considered himself to be both an artist and constructor) and for their many race victories.  Famous Bugattis include the Type 35 Grand Prix cars, the Type 41 "Royale", the Type 57 "Atlantic" and the Type 55 sports car.
+
+Mullin Automotive Museum: The Mullin Automotive Museum is a privately owned automobile museum in Oxnard, California, US.  Established in 2010, it displays the personal car collection of businessman and philanthropist Peter W. Mullin.  The museum has a large collection of vintage Bugattis, and many of the cars are fully restored and able to be driven.
+
+African Heritage Museum: The African Heritage Museum or African Heritage Centre is a museum and art gallery in Bakau, Gambia.  It was formerly located in Banjul.  The Museum holds a large collection of African art and statues.  The art presented in the museum is for sale, and is replaced by other local art when sold.
+
+Brighton Toy and Model Museum: Brighton Toy and Model Museum (sometimes referred to as Brighton Toy Museum) is an independent toy museum situated in Brighton, East Sussex (registered charity no. 1001560).  Its collection focuses on toys and models produced in the UK and Europe up until the mid-Twentieth Century, and occupies four thousand square feet of floor space within four of the early Victorian arches supporting the forecourt of Brighton railway station.  Founded in 1991, the museum holds over ten thousand toys and models, including model train collections, puppets, construction toys and radio-controlled aircraft.
+
+Hamilton Wood Type and Printing Museum: The Hamilton Wood Type and Printing Museum was founded in 2000 and is located in Two Rivers, Wisconsin, United States.  The museum is run by the Two Rivers Historical Society.  It is dedicated to the preservation, study, production and printing of wood type used in letterpress printing.  The museum is located in a factory building of the Hamilton Manufacturing Company founded in 1880 by J.E. Hamilton.  The museum has a collection of over 1.5 million pieces in more than 1,000 styles of wood type.  Also included are presses and vintage prints.  The museum holds many workshops and conferences throughout the year and regularly welcomes groups of students from universities from across the United States.
+
+National Science Museum at Maynooth: The National Science and Ecclesiology Museum at Maynooth is a science museum located on the south campus of Maynooth University, Ireland.  It is a branch of the National Museum of Ireland.  The museum holds various artefacts from the history of science in Ireland (the largest such collection open to the public in Ireland), a large collection of scientific equipment used by Nicholas Callan and one of two death masks of Irish political leader Daniel O'Connell.  The museum was founded in 1934 as the Museum of Ecclesiology but has become more focused on science, partially due to Maynooth's association with Callan.
+
+Smith &amp; Wesson Model 78G: Smith & Wesson models 78G and 79G are vintage models of air-powered pistols.  Each model chambered either a .177 or .22 caliber pellet.  The Smith & Wesson G-series pistols were designed with attention to accuracy and weight, making them ideal in developing short-range marksmanship skills while using a less-penetrating, air-driven pellet as the projectile.  They were designed to imitate the Smith & Wesson Model 41 target pistol.  Both models are equipped with target style adjustable sights.
+
+San Diego Automotive Museum: The San Diego Automotive Museum in Balboa Park in San Diego, California is a museum that features a collection of cars and motorcycles that highlight automotive culture throughout history.  The San Diego Automotive Museum is a non-profit corporation under IRS section 501(c) It is housed in the former California State Building, built for the 1935-36 California Pacific International Exposition.
+
+Peter W. Mullin: Peter W. Mullin (born 1940/1941) is an American businessman and philanthropist.  He is the founder of the M Financial Group and Chairman of its subsidiary, M Financial Holdings.  Additionally, he serves as the Chairman of Mullin Barens Sanford Financial.  He is the founder and patron of the Mullin Automotive Museum in Oxnard, California.
+
+Simeone Foundation Automotive Museum: The Simeone Foundation Automotive Museum is an automotive museum located at 6825 Norwitch Drive in Philadelphia, Pennsylvania.  The museum's collection consists of approximately 65 racing sports cars and has been assembled over more than 50 years by Frederick A. Simeone, a retired neurosurgeon and native of Philadelphia.
+
+Question: The Mullin Automotive Museum holds a large collection of vintage models of which car make that includes the Type 41 "Royale" model?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "car_make": {
+      "type": "string",
+      "description": "The make of the car."
+    },
+    "museum_name": {
+      "type": "string",
+      "description": "The name of the museum holding the collection."
+    },
+    "specific_model_mentioned": {
+      "type": "string",
+      "description": "The specific car model mentioned in the question."
+    },
+    "collection_details": {
+      "type": "string",
+      "description": "Details about the museum's collection related to the car make."
+    }
+  },
+  "required": [
+    "car_make",
+    "museum_name",
+    "specific_model_mentioned",
+    "collection_details"
+  ],
+  "additionalProperties": false
+}

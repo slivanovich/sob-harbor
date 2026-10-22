@@ -1,0 +1,23 @@
+{
+  "person_1": {
+    "name": "Henry Koster",
+    "professions": [
+      "film director",
+      "screenwriter"
+    ]
+  },
+  "person_2": {
+    "name": "David Siegel",
+    "identifier": "screenwriter",
+    "professions": [
+      "film director",
+      "screenwriter",
+      "producer"
+    ]
+  },
+  "shared_artistic_professions": [
+    "film director",
+    "screenwriter"
+  ],
+  "final_answer_profession": "film director"
+}

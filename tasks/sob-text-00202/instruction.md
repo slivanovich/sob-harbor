@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Moe Szyslak: Morris "Moe" Szyslak is a fictional character from the American animated television series "The Simpsons".  He is voiced by Hank Azaria and first appeared in the series premiere episode "Simpsons Roasting on an Open Fire".  Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.
+
+Simpsons Roasting on an Open Fire: "Simpsons Roasting on an Open Fire", also known as "The Simpsons Christmas Special", is the series premiere episode of "The Simpsons".  It was the first episode to air despite originally being the eighth episode produced for season one.  It is the only full-length episode to air during the 1980s, having originally aired on the Fox network in the United States on December 17, 1989.
+
+Fight Quest: Fight Quest is a television show on the Discovery Channel that had a preview episode air on December 28, 2007 and began airing weekly on January 4, 2008.  The show followed Jimmy Smith and Doug Anderson as they travel around the world learning different styles of martial arts, spending five days training with notable masters of the styles they are studying, before exhibiting what they have learned in a final demonstration and/or fight.  According to quotes by the hosts, the show was mostly unscripted and a true challenge.  At the end of February an updated DVD box set was released that included the final three episodes not in the original release.  The series was canceled at the beginning of the second season and only three episodes aired, the last one ended on October 3, 2008.
+
+Flaming Moe's: "Flaming Moe's" is the tenth episode of "The Simpsons"' third season.  It first aired on the Fox network in the United States on November 21, 1991.  In the episode, Homer tells Moe Szyslak of a secret alcoholic cocktail that includes cough medicine and fire that he calls "Flaming Homer".  Moe steals the recipe from Homer, renames the drink the "Flaming Moe" and begins selling it at his tavern.  The drink is a success and boosts business and patronage, but Homer is angry at Moe for his betrayal, and seeks revenge.
+
+Moe Greene: Morris "Moe" Greene is a fictional character appearing in Mario Puzo's 1969 novel "The Godfather" and the 1972 movie of the same name.  The character's name is a composite of real Las Vegas mobsters Moe Dalitz, or possibly Moe Sedway, and Gus Greenbaum.  However, both Greene's character and personality are actually based on Bugsy Siegel: his affiliation with the mob in Los Angeles, his involvement in the development of Las Vegas, and his flamboyant tendencies.  Greene is portrayed in the movie by Alex Rocco.
+
+The Homer They Fall: "The Homer They Fall" is the third episode of "The Simpsons"<nowiki>'</nowiki> eighth season.  It originally aired on the Fox network in the United States on November 10, 1996.  After Homer realizes he has a bizarre medical condition that renders him unable to be knocked out, he is convinced to embark on a career as a boxer by Moe Szyslak, who manages him.  The episode was written by Jonathan Collier and directed by Mark Kirkland.  It guest stars Michael Buffer as himself and Paul Winfield as Lucius Sweet.
+
+Moe's (bar and lounge): Moe's was a popular bar in Fort Greene, Brooklyn named after the tavern that appears in "The Simpsons" owned and run by the character Moe Szyslak.
+
+The Simpsons Spin-Off Showcase: "The Simpsons Spin-Off Showcase" is the twenty-fourth episode of the eighth season of "The Simpsons".  It originally aired on the Fox network in the United States on May 11, 1997.  The episode centers on fictional pilot episodes of non-existent television series derived from "The Simpsons", and is a parody of the tendency of networks to spin off characters from a hit series.  As such it includes references to many different TV series.  The first fictional spin-off is "Chief Wiggum P.I.", a cop-drama featuring Chief Wiggum and Seymour Skinner.  The second is "The Love-matic Grampa", a sitcom featuring Moe Szyslak who receives dating advice from Abraham Simpson, whose ghost is possessing a love testing machine.  The final segment is "The Simpson Family Smile-Time Variety Hour", a variety show featuring the Simpson family except for Lisa, who has been replaced.
+
+Pygmoelian: "Pygmoelian" is the sixteenth episode of the eleventh season of the American animated sitcom "The Simpsons".  It originally aired on the Fox network in the United States on February 27, 2000.  In the episode, after getting his face censored out on the Duff Beer calendar for not being photogenic, Moe Szyslak gets plastic surgery and becomes the star of a popular soap opera.
+
+Moe Goes from Rags to Riches: "Moe Goes from Rags to Riches" is the twelfth episode of the twenty-third season of the American animated sitcom "The Simpsons".  It originally aired on the Fox network in the United States on January 29, 2012.  In the episode, Moe Szyslak's old bar rag tells its history, from being a medieval French tapestry to ending up at Moe's bar.  Meanwhile, Bart and Milhouse have an argument which prompts Milhouse to leave Bart.  Jeremy Irons guest starred in the episode as the voice of Moe's bar rag.
+
+Question: When did the Simpson's episode air that debuted the character Morris "Moe" Szyslak?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "character_name": {
+      "type": "string",
+      "description": "The full name of the character who debuted."
+    },
+    "debut_episode": {
+      "type": "object",
+      "properties": {
+        "episode_title": {
+          "type": "string",
+          "description": "The title of the episode where the character first appeared."
+        },
+        "air_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The original air date of the debut episode."
+        }
+      },
+      "required": [
+        "episode_title",
+        "air_date"
+      ],
+      "additionalProperties": false
+    },
+    "network": {
+      "type": "string",
+      "description": "The network on which the episode originally aired."
+    }
+  },
+  "required": [
+    "character_name",
+    "debut_episode",
+    "network"
+  ],
+  "additionalProperties": false
+}

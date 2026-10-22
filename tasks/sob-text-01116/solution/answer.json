@@ -1,0 +1,15 @@
+{
+  "plant_classification": "flowering plants",
+  "number_of_genera_identified": 2,
+  "genera_information": [
+    {
+      "genus_name": "Sinningia",
+      "plant_family": "Gesneriaceae",
+      "named_after_person": "Wilhelm Sinning"
+    },
+    {
+      "genus_name": "Calla",
+      "plant_family": "Araceae"
+    }
+  ]
+}

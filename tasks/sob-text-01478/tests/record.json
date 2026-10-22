@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "31817e943dca3e8d819ff04b182a0a4ca2331c3c99a5bd798270662caf1bc404",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8751785542993e715abee2",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1771",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Prince Richard, Duke of Gloucester: Prince Richard, Duke of Gloucester, {'1': \", '2': \", '3': \", '4': \"} (Richard Alexander Walter George; born 26 August 1944) is the youngest grandchild of King George V and Queen Mary.  He practised as an architect until the death of his elder brother placed him in direct line to inherit his father's dukedom of Gloucester, which he inherited, as the second duke, in 1974.  He is currently 24th in the line of succession to the British throne.  He is also the senior male line descendant of three British monarchs: Victoria, Edward VII and George V .\n\nGeorge V Bridge, Glasgow: George V Bridge (sometimes referred to as King George V Bridge) is a three-arched road bridge over the River Clyde in the city centre of Glasgow, Scotland, named after King George V.\n\nPrincess Marie of Hanover: Princess Marie of Hanover (German: \"Marie Ernestine Josephine Adolphine Henrietta Theresa Elizabeth Alexandrina Prinzessin von Hannover und Cumberland\" ; 2 December 1849 – 4 June 1904) was the younger daughter of King George V of Hanover and of his wife, Princess Marie of Saxe-Altenburg.\n\nOrder of Ernst August: The Order of Ernst August was founded 15 December 1865 by King George V of Hanover in memory of his father Ernest Augustus I of Hanover.  The order was awarded for both civil and military merit.  It was divided in five classes:\n\nGeorge V of Hanover: George V (George Frederick Alexander Charles Ernest Augustus; German: \"Georg Friedrich Alexander Karl Ernst August\" ; 27 May 1819 – 12 June 1878) was the last king of Hanover, the only child and successor of King Ernest Augustus.  George V's reign was ended by the Unification of Germany.\n\nGeorg Theodor August Gaffky: Georg Theodor August Gaffky (17 February 1850 – 23 September 1918) was a Hanover born bacteriologist best known for identifying bacillus salmonella typhi as the cause of typhoid disease in 1884.\n\nPrince Ernest Augustus of Hanover (1914–1987): Ernst August, Hereditary Prince of Brunswick, Prince of Hanover (German: \"Ernst August Prinz von Hannover\" ; 18 March 1914 – 9 December 1987) was head of the House of Hanover from 1953 until his death.  He was born at Braunschweig, Germany, the eldest son of Ernest Augustus, Duke of Brunswick and Princess Viktoria Luise of Prussia, the only daughter of Emperor Wilhelm II, Ernest Augustus's third cousin in descent from George III of the United Kingdom.  Ernst August's parents were, therefore, third cousins, once removed.  From his birth, he was the \"Hereditary Prince of Brunswick\".  He was also, shortly after birth in 1914, made a British prince by King George V of the United Kingdom, and was heir to the titles Duke of Cumberland and Teviotdale and Earl of Armagh which were suspended under the Titles Deprivation Act 1917.\n\nHMS King George V (41): HMS \"King George V\" (pennant number 41) was the lead ship of the five British \"King George V\"-class battleships of the Royal Navy.  Laid down in 1937 and commissioned in 1940, \"King George V\" operated during the Second World War in all three major theatres of war, the Atlantic, Mediterranean and Pacific, as well as part of the British Home Fleet and Pacific Fleets.  In May 1941, along with HMS \"Rodney\" , \"King George V\" was involved in the hunt for and pursuit of the  , eventually inflicting severe damage which led to the German vessel sinking.  On 1 May 1942 the destroyer HMS \"Punjabi\" sank after a collision with \"King George V\" in foggy conditions.  \"King George V\" took part in Operation Husky (the allied landings in Sicily) and bombarded the island of Levanzo and the port of Trapani.  She also escorted part of the surrendered Italian Fleet, which included the battleships \"Andrea Doria\" and \"Caio Duilio\" , to Malta.  In 1945 \"King George V\" took part in operations against the Japanese in the Pacific.\n\nChail Military School: Chail Military School (Rashtriya Military School Chail\" or King George Royal Indian Military College) is a residential school in Himachal Pradesh, India, established after the First World War in 1922 with a donation of 250,000 from King George V’s patriotic fund.  The foundation stone of the school was laid by King George V in February 1922.  The school started functioning at Jalandhar Cantonment in 1925.  Cadets are known as Georgians\"' after their founder father.\n\nErnest Augustus, King of Hanover: Ernest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.  He was the fifth son and eighth child of King George III of the United Kingdom and Hanover.  As a fifth son, Ernest seemed unlikely to become a monarch, but none of his four elder brothers had a legitimate son who survived infancy.  The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover.  In the United Kingdom the succession to the monarchy was determined by primogeniture and his niece Victoria succeeded to the throne, thus ending the personal union between the British Isles and Hanover that had existed since 1714.",
+    "question": "What year was the father of George V of Hanover born?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person whose birth year is being identified."
+        },
+        "relationship_to_george_v_of_hanover": {
+          "type": "string",
+          "description": "The relationship of the person to George V of Hanover."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The birth year of the person."
+        }
+      },
+      "required": [
+        "person_name",
+        "relationship_to_george_v_of_hanover",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Ernest Augustus",
+      "relationship_to_george_v_of_hanover": "father",
+      "birth_year": 1771
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

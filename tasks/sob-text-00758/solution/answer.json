@@ -1,0 +1,11 @@
+{
+  "alumnus_name": "Don Ashley Turlington",
+  "graduated_college": "Saint Joseph's College of Maine",
+  "college_location_details": {
+    "city": "Standish",
+    "state": "Maine",
+    "located_on_lake_shore": true,
+    "lake_name": "Sebago Lake"
+  },
+  "graduation_year": 2000
+}

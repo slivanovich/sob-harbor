@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+FIFA Ballon d'Or: The FIFA Ballon d'Or (] , "Golden Ball") was an annual association football award presented to the world's best men's player from 2010 to 2015.  Awarded jointly by FIFA and "France Football", the prize was a merger of the FIFA World Player of the Year award and the Ballon d'Or, the two most prestigious individual honours in world football.  The FIFA Ballon d'Or was awarded based on votes from international journalists and national team coaches and captains, who selected the players they deemed to have performed the best in the previous calendar year.
+
+2004 FIFA U-19 Women's World Championship: The 2004 FIFA U-19 Women's World Championship was held from November 10 to November 27, 2004.  It was the second edition of the youth tournament for women put together by FIFA, before being renamed FIFA U-20 Women's World Championship for the 2006 edition.  The tournament was hosted by Thailand, in two stadia in Bangkok, one in Chiang Mai and another in Phuket.  Brazil's Marta was the adidas Golden Ball recipient, as tournament MVP, and Canada's Brittany Timko won the Golden Shoe with 7 goals in 4 games.
+
+Nguyễn Hồng Sơn: Nguyễn Hồng Sơn (born October 9, 1970) is a former Vietnamese football player, who played for the Thể Công football club and the Vietnam national football team (one of the best players in the national team).  He is now a coach for U-15 Thể Công.  He and the Vietnam national team participated in 18th - 20th Southeast Asian Games.  He also participated the first Tiger Cup along with the Vietnam team and won the MVP award in 1998 Tiger Cup that was hosted in Vietnam.  He won the Vietnamese Golden Ball for the first time later in 1998 after the Tiger Cup and won the second Golden Ball in 2001.  In Pepsi World Challenge 1999, he won the second place, above Dwight Yorke, David Beckham, Roberto Carlos (footballer).
+
+African Footballer of the Year: The African Footballer of the Year award, presented to the best African footballer each year, has been conferred by the Confederation of African Football (CAF) since 1992.  An earlier "African Footballer of the Year" Golden Ball award was given out between 1970 and 1994 by "France Football" magazine.  The changes resulted in parallel Golden Ball awards given out to Abedi Pele and George Weah in 1993 and 1994 by the magazine although the CAF sponsored awards for those years were won respectively by Rashidi Yekini and Emmanuel Amuneke, as well as two awards given to Abedi Pelé in 1992. " France Football" discontinued the election from 1995 after the European Ballon d'Or – also awarded by the magazine – had been opened to all players in the European leagues.
+
+Romário: Romário de Souza Faria (born 29 January 1966), known simply as Romário (] ), is a Brazilian politician, who previously achieved worldwide fame as a professional footballer.  A prolific striker renowned for his clinical finishing, he is regarded as one of the greatest forwards of all time.  Romário starred for Brazil in their 1994 FIFA World Cup triumph, receiving the FIFA Golden Ball as player of the tournament.  He was named FIFA World Player of the Year the same year.  He came fifth in the FIFA Player of the Century internet poll in 1999, was elected to the FIFA World Cup Dream Team in 2002, and was named in the FIFA 100 list of the world's greatest living players in 2004.
+
+Football World: Football World, later renamed "Athletic World", was an American magazine devoted to the coverage of inter-collegiate sports.  Its masthead described it as "A Magazine With a Mission to Serve the College Man," a publication "devoted to Inter-collegiate Athletics and sports of Amateur standing only."  It was founded in 1921 by J. D. Fetzer.  The name of the magazine was later changed to "Athletic World" as the coverage extended to a broader range of sports, including women's swimming.  Unlike other sports magazines of the era, which focused on promoting a healthy lifestyle, "Football World/Athletic World" celebrated the entertainment value of sports with a special emphasis on the personalities of famous athletes.  The magazine was renamed "Outing" in December 1924, reflecting a change in its focus.
+
+2007 FIFA U-20 World Cup: The 2007 FIFA U-20 World Cup was the sixteenth edition of the FIFA U-20 World Cup (formerly called FIFA World Youth Championship), hosted by Canada from 30 June to 22 July 2007.  Argentina defeated Czech Republic in the title game by the score of 2–1, thus managing a back-to-back world title, its fifth in the past seven editions, and sixth overall.  Argentine player Sergio Agüero was given the FIFA U-20 Golden Shoe (top scorer, with six goals) and the FIFA U-20 Golden Ball (best player of the tournament), while Japan earned the FIFA Fair Play Award.
+
+Ballon d'Or: The Ballon d'Or (] ; "Golden Ball"), is an annual association football award presented by "France Football".  It has been awarded since 1956, although between 2010 and 2015, an agreement was made with FIFA and the award was temporarily merged with the FIFA World Player of the Year, and known as the FIFA Ballon d'Or.  Conceived by sports writer Gabriel Hanot, the Ballon d'Or award honours the male player deemed to have performed the best over the previous year, based on voting by football journalists.  Originally, only European players were in contention for the Ballon d'Or: in 1995 the award was expanded to include all players at European clubs and in 2007 to all players from around the world.
+
+Futbolita: Ash Hashim (born 16 November 1988), better known as Fútbolita™ is a Singaporean sports journalist, FIFA Players' Agent, personality and international blogger known as the "Female Voice of Football".  Her website and brand, "Futbolita" (Futbolita.com), is known for featuring exclusive interviews with world-renowned sports personalities in the European football world, including David Villa, Xavi, Fernando Torres, Cristiano Ronaldo, Romário and José Mourinho.
+
+2002 FIFA U-19 Women's World Championship: The 2002 FIFA U-19 Women's World Championship was held from August 17 to September 1.  It was the first sanctioned youth tournament for women put together by FIFA.  The tournament was hosted by Canada.  FIFA granted the tournament to Canada in March 2001.  Three cities hosted the tournament, Edmonton, Vancouver, and Victoria.  Canada's Christine Sinclair was the Adidas Golden Ball recipient, as tournament MVP, and the Golden Shoe (with 10 goals) winner.
+
+Question: Of the world-renowned sports personalities in the European football world, which one received the FIFA Golden Ball in 1994?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The full name of the football player who received the award."
+    },
+    "award_name": {
+      "type": "string",
+      "description": "The name of the award received."
+    },
+    "award_year": {
+      "type": "integer",
+      "description": "The year the award was received."
+    },
+    "tournament_name": {
+      "type": "string",
+      "description": "The name of the tournament associated with the award."
+    },
+    "player_nationality": {
+      "type": "string",
+      "description": "The nationality of the player."
+    }
+  },
+  "required": [
+    "player_name",
+    "award_name",
+    "award_year",
+    "tournament_name",
+    "player_nationality"
+  ],
+  "additionalProperties": false
+}

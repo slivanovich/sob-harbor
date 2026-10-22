@@ -1,0 +1,11 @@
+{
+  "film_title": "24 Frames",
+  "film_festival": {
+    "name": "2017 Cannes Film Festival",
+    "year": 2017,
+    "start_date": "17 May",
+    "end_date": "28 May",
+    "full_time_frame": "17 to 28 May 2017"
+  },
+  "posthumous_showing": true
+}

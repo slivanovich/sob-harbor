@@ -1,0 +1,11 @@
+{
+  "person_1": {
+    "name": "Vic Ruggiero",
+    "origin_country": "United States"
+  },
+  "person_2": {
+    "name": "Tom Bailey",
+    "origin_country": "United Kingdom"
+  },
+  "are_from_same_country": false
+}

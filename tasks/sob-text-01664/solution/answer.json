@@ -1,0 +1,9 @@
+{
+  "identified_film_title": "Swiss Family Robinson",
+  "release_year": 1960,
+  "is_american": true,
+  "is_adventure_genre": true,
+  "involves_shipwrecked_family": true,
+  "involves_building_island_home": true,
+  "meets_all_criteria": true
+}

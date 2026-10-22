@@ -1,0 +1,14 @@
+{
+  "person_a": {
+    "name": "Victor Fleming",
+    "birth_date": "February 23, 1889",
+    "birth_year": 1889
+  },
+  "person_b": {
+    "name": "Kenneth Webb",
+    "birth_date": "October 16, 1892",
+    "birth_year": 1892
+  },
+  "earliest_born_person_name": "Victor Fleming",
+  "comparison_result": "Victor Fleming was born in 1889, which is before Kenneth Webb who was born in 1892."
+}

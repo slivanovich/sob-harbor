@@ -1,0 +1,15 @@
+{
+  "highest_peak_name": "Tirich Mir",
+  "highest_peak_range": "Hindu Kush",
+  "comparison_peaks": [
+    {
+      "peak_name": "Yangra",
+      "mountain_range": "Ganesh Himal"
+    },
+    {
+      "peak_name": "Tirich Mir",
+      "mountain_range": "Hindu Kush"
+    }
+  ],
+  "reasoning": "Tirich Mir is explicitly stated as the highest mountain of the Hindu Kush range. Yangra is the highest peak of the Ganesh Himal, not the Hindu Kush."
+}

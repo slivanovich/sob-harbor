@@ -1,0 +1,15 @@
+{
+  "remake_film": {
+    "title": "20 Once Again",
+    "release_year": 2015,
+    "country_of_origin": "Chinese"
+  },
+  "original_film": {
+    "title": "Miss Granny",
+    "country_of_origin": "South Korean",
+    "director": {
+      "name": "Hwang Dong-hyuk"
+    }
+  },
+  "relationship_type": "remake"
+}

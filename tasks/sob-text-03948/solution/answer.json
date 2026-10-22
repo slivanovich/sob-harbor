@@ -1,0 +1,12 @@
+{
+  "person_name": "James Bevel",
+  "death_date": "2008-12-19",
+  "associated_book": {
+    "title": "Black Power and the American Myth",
+    "publication_year": 1970
+  },
+  "group_affiliation": {
+    "group_name": "Southern Christian Leadership Conference",
+    "role": "Director of Direct Action and of Nonviolent Education"
+  }
+}

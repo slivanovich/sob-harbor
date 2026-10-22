@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "record_id": "41f30cfb21e85115cafa4009290a4623946853bc53666e2b3dad06b8e5529130",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a7dcbb15542990b8f503ab3",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Moon Hee-joon",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Angel's Son: \"Angel's Son\" is a song written by Mikey Doling, Clint Lowery, Morgan Rose, Lajon Witherspoon of Sevendust and performed by Witherspoon and two fellow Sevendust members (drummer Morgan Rose and guitarist/vocalist Clint Lowery) and ex-Snot band member (now ex-Sevendust guitarist) Sonny Mayo, for the post-mortem compilation CD in honor of James Lynn Strait known as \"Strait Up\".  This was the only single track from the tribute album.\n\nLajon Witherspoon: Lajon \"LJ\" Jermaine Witherspoon (born October 3, 1972) is an American musician best known as the vocalist for the Atlanta-based alternative metal band Sevendust.\n\nReese Witherspoon: Laura Jeanne Reese Witherspoon ( ; born March 22, 1976) is an American actress, producer, and entrepreneur.  Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award.  Following breakout roles in \"\" (1992) and \"Jack the Bear\" (1993), she starred in the comedy-drama \"Pleasantville\" (1998), for which she won the Young Hollywood Award for Breakthrough Performance.  Her leading role of Tracy Flick in \"Election\" (1999) was nominated for a Golden Globe Award.\n\nMoon Hee-joon: Moon Hee-joon (; or spelled Moon Hee-jun; born March 14, 1978) is a South Korean pop-rock singer-songwriter signed under SidusHQ.  He initially rose to fame as the leader of former boy band H.O.T. under SM Entertainment.\n\nSevendust: Sevendust is an American alternative metal band from Atlanta, Georgia, formed in 1994 by bassist Vince Hornsby, drummer Morgan Rose and guitarist John Connolly.  After their first demo, lead vocalist Lajon Witherspoon and guitarist Clint Lowery joined the group.  Following a few name changes, the members settled on the name Sevendust and released their self-titled debut album on April 15, 1997.  They have attained success with three consecutive RIAA gold certified albums and have sold millions of albums worldwide.\n\nSeasons (Sevendust album): Seasons is the fourth studio album by American heavy metal band Sevendust.  It would be the band's final album with TVT Records and was dedicated to the memory of Reginald Witherspoon (Lajon Witherspoon's younger brother) and Dave Williams (Drowning Pool's original singer), the former was murdered in November 2002 and the latter died of cardiomyopathy in August 2002.\n\nMoment of Impact (album): Moment of Impact is the debut studio album by American rock group Eye Empire.  A Limited Edition 1000 copies were released on December 12, 2010 with a full release on September 14, 2011.  It features guest appearances from singer Lajon Witherspoon and drummer Morgan Rose of Sevendust.  It was later released as an expanded edition double album, with the title shortened to \"Impact\".\n\nProdigal Son (Sevendust song): Prodigal Son is the first single by the heavy metal band Sevendust from their seventh studio album \"\" and was written by vocalist Lajon Witherspoon and drummer Morgan Rose.  The song premiered on Active and Mainstream Rock radio on February 10, 2008.\n\nThe Past (song): \"The Past\" is the second single from the \"\" album produced by the American heavy metal band Sevendust.  This power ballad, with lead vocals from Lajon Witherspoon and featuring guest vocals by lead vocalist of the band \"Daughtry\", Chris Daughtry, is a bit of a departure for the band, falling more into the post-grunge category than what fans have come to expect from Sevendust.  \"Sorrow\", another song found on \"\", is similar in tone and also contains guest vocals, this time by Myles Kennedy.  Sevendust has not yet created a music video for \"The Past\".\n\n100 People, 100 Songs: 100 People, 100 Songs () was a 2014 South Korean singing competition program presented by Kim Sung-joo, Jang Yun-jeong and Moon Hee-joon.  It aired on JTBC from October 31, 2014 to September 27, 2015.",
+    "question": "Who was born most recently, Moon Hee-joon or Lajon Witherspoon?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_comparison": {
+          "type": "object",
+          "properties": {
+            "person_1": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the first person being compared."
+                },
+                "birth_date": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "The full birth date of the first person (YYYY-MM-DD)."
+                },
+                "birth_year": {
+                  "type": "integer",
+                  "description": "The birth year of the first person."
+                }
+              },
+              "required": [
+                "name",
+                "birth_date",
+                "birth_year"
+              ],
+              "additionalProperties": false
+            },
+            "person_2": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the second person being compared."
+                },
+                "birth_date": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "The full birth date of the second person (YYYY-MM-DD)."
+                },
+                "birth_year": {
+                  "type": "integer",
+                  "description": "The birth year of the second person."
+                }
+              },
+              "required": [
+                "name",
+                "birth_date",
+                "birth_year"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "person_1",
+            "person_2"
+          ],
+          "additionalProperties": false
+        },
+        "most_recently_born_person_name": {
+          "type": "string",
+          "description": "The name of the person who was born most recently."
+        },
+        "most_recent_birth_year": {
+          "type": "integer",
+          "description": "The birth year of the most recently born person."
+        }
+      },
+      "required": [
+        "person_comparison",
+        "most_recently_born_person_name",
+        "most_recent_birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_comparison": {
+        "person_1": {
+          "name": "Lajon Witherspoon",
+          "birth_date": "1972-10-03",
+          "birth_year": 1972
+        },
+        "person_2": {
+          "name": "Moon Hee-joon",
+          "birth_date": "1978-03-14",
+          "birth_year": 1978
+        }
+      },
+      "most_recently_born_person_name": "Moon Hee-joon",
+      "most_recent_birth_year": 1978
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

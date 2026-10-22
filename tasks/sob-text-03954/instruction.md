@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Post-punk: Post-punk (originally called new musick ) is a broad type of rock music that emerged from the punk movement of the 1970s, in which artists departed from the simplicity and traditionalism of punk rock to adopt a variety of avant-garde sensibilities.  Inspired by punk's energy and DIY ethic but determined to break from rock cliches, artists experimented diversely with sources including electronic music, free jazz, and black dance styles like funk, disco, and dub; novel recording and production techniques; and ideas from art and politics, including critical theory, modernist art and literature.  Communities that produced independent record labels, visual art, multimedia performances and fanzines developed around these pioneering musical scenes, which coalesced in cities such as London, New York, Manchester, and San Francisco.
+
+List of rock genres: This is a list of rock music genres consisting of subgenres of popular music that have roots in 1940s' and 1950s' rock and roll, and which developed into a distinct identity as rock music in the 1960s, particularly in the United Kingdom and the United States.  By the late 1960s, a number of identifiable rock music subgenres had emerged, including hybrids like blues rock, folk rock, country rock, and jazz-rock fusion, many of which contributed to the development of psychedelic rock influenced by the counter-cultural psychedelic scene.  New genres that emerged from this scene included progressive rock, which extended the artistic elements; glam rock, which highlighted showmanship and visual style; and the diverse and enduring major subgenre of heavy metal, which emphasized volume, power, and speed.  In the second half of the 1970s, punk rock both intensified and reacted against some of these trends to produce a raw, energetic form of music characterized by overt political and social critiques.  Punk was an influence into the 1980s on the subsequent development of other subgenres, including new wave, post-punk and eventually the alternative rock movement.  From the 1990s alternative rock began to dominate rock music and break through into the mainstream in the form of grunge, Britpop, and indie rock.  Further fusion subgenres have since emerged as well as conscious attempts to revisit rock's history.
+
+List of post-punk revival bands: Post-punk revival is a type of indie rock that emulates the sound of post-punk bands of the late 1970s and new wave bands of the early 1980s and has been stylistically tied to 1990s music movements such as shoegazing, Britpop, garage revival and post-hardcore.  They feature a more artsy, complex sound than other branches of indie rock, and often add synthesizer or other electronic sounds to the traditional guitar, bass and drums lineup.  Post-punk revivalism started in England in the early 2000s and, while it is still strongest there, has grown in popularity in the US, Australia and Canada.  Post-punk revivalism is prevalent in the London and New York City music scenes.
+
+Dark wave: Dark wave (or darkwave) emerged as a dark form of new wave and post-punk music combining elements of gothic rock and synth-pop.  The label began to appear in the late 1970s in German music media, coinciding with the popularity of new wave and post-punk.  Building on those basic principles, dark wave is used to describe dark, introspective lyrics and an undertone of sorrow for some bands.  In the 1980s, a subculture developed primarily in Europe alongside dark wave music, whose members were called "wavers" or "dark wavers".
+
+Gothic rock: Gothic rock (also referred to as goth rock or simply goth) is a style of rock music that emerged from post-punk in the late 1970s.  Proto-gothic rock bands grew from the strong ties they had to the English punk rock and emerging post-punk scenes.  Such bands include Siouxsie and the Banshees, Joy Division, Bauhaus and the Cure.
+
+Dead Artist Syndrome: Dead Artist Syndrome is a mainstream Christian gothic rock band formed in 1989 in Orange County, California.  The group consists of singer-songwriter Brian Healy and a rotating cast of side men.  Healy was dubbed the "father of Christian goth" by Rozz Williams, and is an ordained minister.  The name of D.A.S. according to Healy is "Dead Artist Syndrome means greater in death than in life, be it James Dean, Van Gogh or Jesus Christ".  His debut album "Prints of Darkness" was a notable, groundbreaking release.  After several years of inactivity in the late 1990s due to health issues, Healy is active again, having released two albums so far in the 2000s.  In 2006, Dead Artist Syndrome was named "Outstanding Orange County Band" by the editors and readers of Rock City News, a Los Angeles local music paper.  For several years Healy was privately in poor health his gallbladder exploded while recording vocals resulting in emergency surgery, and a neurological disorder his wife Marie Tullai Healy described as "a combination of Michael J. Fox and the late Foster Brooks everybody thought he was drunk, Brian was falling down he broke his arm, slurring his speech trying to complete his record, next thing we know he's in a wheelchair, finally in 2012 they discovered the cause and he had brain surgery and is 100% back to his old self and had no idea any of this was going on, inside his head everything was fine".  Healy himself has said on his Facebook page 'He's back" and is actively recording, producing others and hosting Frontline Records Rewind Broadcast and podcast
+
+SPK (band): SPK were an Australian industrial music and noise music group formed in 1978.  They were fronted by mainstay member, Graeme Revell on keyboards and percussion.  In 1980 the group travelled to the United Kingdom where they issued their debut album, "Information Overload Unit".  In 1983 Sinan Leong joined on lead vocals.  The group disbanded in 1988, two years later Revell and Leong relocated to the United States, where Revell has worked as a Hollywood film score composer.  According to Australian rock music historian, Ian McFarlane, SPK were "at the forefront of the local post-punk, electronic/experimental movement of the late 1970s ... [their] music progressed from discordant, industrial-strength metal noise to sophisticated and restrained dance-rock with strange attributes".
+
+Alternative rock: Alternative rock (also called alternative music, alt-rock or simply alternative) is a style of rock music that emerged from the independent music underground of the 1980s and became widely popular in the 1990s.  In this instance, the word "alternative" refers to the genre's distinction from mainstream rock music.  The term's original meaning was broader, referring to a generation of musicians unified by their collective debt to either the musical style or simply the independent, DIY ethos of punk rock, which in the late 1970s laid the groundwork for alternative music.  At times, "alternative" has been used as a catch-all description for music from underground rock artists that receives mainstream recognition, or for any music, whether rock or not, that is seen to be descended from punk rock (including some examples of punk itself, as well as new wave, and post-punk).
+
+Synth-pop: Synth-pop (short for synthesizer pop; also called techno-pop) is a subgenre of new wave music that first became prominent in the late 1970s, reached its heyday in the 1980s, and features the synthesizer as the dominant musical instrument.  It was prefigured in the 1960s and early 1970s by the use of synthesizers in progressive rock, electronic, art rock, disco, and particularly the "Krautrock" of bands like Kraftwerk.  It arose as a distinct genre in Japan and the United Kingdom in the post-punk era as part of the new wave movement of the late 1970s to the mid-1980s.
+
+Voigt/465: Voigt/465 were an Australian post-punk band based in Sydney.  They were a feature of the Sydney inner-city music-scene during the late 1970s and their music was critically acclaimed.  Their sound was influenced by Krautrock and has been described by a band-member as an "unsettling mixture of song-driven rock elements and free-noise experimentation".  Voigt/465 recorded an album, "Slights Unspoken", before they disbanded in late 1979.  With their self-funded recordings and determinedly uncompromising music Voigt/465 epitomised the do-it-yourself ethic of the alternative music scene of the late 1970s.
+
+Question: Who was dubbed the father of the type of rock music that emerged from post-punk in the late 1970s?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person identified."
+    },
+    "dubbed_title": {
+      "type": "string",
+      "description": "The specific title or epithet given to the person."
+    },
+    "genre_of_focus": {
+      "type": "string",
+      "description": "The primary rock genre that emerged from post-punk in the late 1970s."
+    },
+    "genre_person_is_father_of": {
+      "type": "string",
+      "description": "The specific subgenre for which the person was dubbed 'father'."
+    },
+    "emerged_from_genre": {
+      "type": "string",
+      "description": "The genre from which the 'genre_of_focus' emerged."
+    },
+    "emergence_period": {
+      "type": "string",
+      "description": "The time period when the 'genre_of_focus' emerged."
+    }
+  },
+  "required": [
+    "person_name",
+    "dubbed_title",
+    "genre_of_focus",
+    "genre_person_is_father_of",
+    "emerged_from_genre",
+    "emergence_period"
+  ],
+  "additionalProperties": false
+}

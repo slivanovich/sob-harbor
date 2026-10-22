@@ -1,0 +1,14 @@
+{
+  "entities_checked": [
+    {
+      "entity_name": "Catcha Lake",
+      "is_located_in_canada": true
+    },
+    {
+      "entity_name": "Big Dan Mine",
+      "is_located_in_canada": true
+    }
+  ],
+  "all_entities_are_in_canada": true,
+  "answer": true
+}

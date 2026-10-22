@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "72b2e2e59fcf542ea2e33b8a5a365c6c80ff687900d46b2e98c7fd5bc0466155",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab7e3ec5542995dae37e9dc",
+    "source_dataset": "hotpotqa",
+    "source_answer": "CBS Corporation",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "WBRK (AM): WBRK (1340 AM) is a radio station licensed to serve Pittsfield, Massachusetts.  WBRK was the Berkshires first radio station taking to the air in 1938 in studios located on \"Bank Row\" in downtown Pittsfield.  As with many stations of that era, the spacious studios allowed for live performances by the big bands and orchestras of the day.  The company later founded the only commercial television station to call the Berkshires home in the 1950s with WMGT.  The television station, with a tower on Mount Greylock, was later sold and eventually evolved into WTEN-TV based in Albany, New York.  The radio station is currently owned by WBRK, Inc.  It airs a Soft Adult Contemporary (a contemporary form of Easy Listening without so-called \"Elevator music\") music format while airing CBS Sports Radio featuring Jim Rome and Doug Gottlieb.  The station was assigned the WBRK call letters by the Federal Communications Commission.\n\nWQED (TV): WQED, VHF channel 13, is a PBS member television station located in Pittsburgh, Pennsylvania, United States.  The station is owned by WQED Multimedia.  Established on April 1, 1954, it was the first community-sponsored television station in the United States as well as the fifth public television station.  WQED also became the first station to telecast classes to elementary school classrooms when Pittsburgh launched the Metropolitan School Service in 1955.  WQED has been the flagship station for \"Mister Rogers' Neighborhood\", \"Where in the World Is Carmen Sandiego? \" (in co-production with WGBH-TV), and \"Daniel Tiger's Neighborhood\" (its live action sequences were filmed in Pittsburgh).\n\nLocal insertion: In broadcasting, local insertion is the act or capability of a broadcast television station, radio station or cable system to insert or replace part of a network feed with content unique to the local station or system.  Most often this is a station identification (required by the broadcasting authority such as the U.S. Federal Communications Commission), but is also commonly used for television or radio advertisements, or a weather or traffic report.  A digital on-screen graphic (\"dog\" or \"bug\"), commonly a translucent watermark, may also be keyed (superimposed) with a television station ID over the network feed using a character generator using genlock.  In cases where individual broadcast stations carry programs separate from those shown on the main network, this is known as regional variation (in the United Kingdom) or an opt-out (in Canada and the United States).\n\nWLIW: WLIW, channel 21, is a non-commercial educational public television station licensed to Garden City, New York, USA which serves as a secondary Public Broadcasting Service (PBS) station for the New York City television market.  WLIW is owned by the New York City-based WNET.org (formerly the Educational Broadcasting Corporation), and is a sister station to both New York City's primary PBS member station, Newark, New Jersey-licensed WNET (channel 13), and the regional NJTV network.  WLIW is the third-most watched public television station in the United States.\n\nKNIK-LP: KNIK-LP is a low-power commercial television station in Anchorage, Alaska, broadcasting on VHF channel 6, taking advantage of that station's audio signal on 87.75 MHz FM.  The station is one of very few low-power television stations that operate predominantly as a radio station by way of the fact that many FM radio receivers can tune in a VHF channel 6 television audio carrier at 87.75 MHz.  This technique is made more potent due to a formerly unforeseen interpretation of deregulatory language in FCC low-power television station regulations:\n\nHal Scott: Hal Scott (c. 1923 – September 21, 2010) was an American sportscaster.  He worked primarily at Minneapolis's television station WCCO-TV in 1960s and 1970s.  He also worked for CBS.  He was the television voice for the Minnesota Vikings from 1965 to 1967 on CBS games.  He was the brother of fellow sportscaster Ray Scott.\n\nTelevision in Trinidad and Tobago: Television in Trinidad and Tobago was introduced in 1962 beginning with Trinidad & Tobago Television.  TTT was the sole television station for 29 years being operated by the state until the first independently operated television station, the Caribbean Communications Network, CCN TV6 was launched in 1991 breaking the television monopoly market.  In 1992, a second independently operated station, AVM Television was launched.  The first independently operated cable station, The Trinity Network (TTN) now Trinity TV began operations in 1993 broadcasting on weekends only.\n\nLagos Television: Lagos Television (abbreviated LTV), or Lagos Weekend Television (abbreviated LWT, UHF channel 35, also known as LTV 8 is a state owned television station in Ikeja, Lagos, Nigeria.  Lagos State Television was established in October, 1980 and was the first Television station in Nigeria to operate on two frequencies / bands VHF and UHF but now on UHF channel 35 and the first State owned Television station on cable satellite DSTV channel 256 and later on Startimes channel 104.\n\nWCCO-TV: WCCO-TV, virtual channel 4 (UHF digital channel 32), is a CBS owned-and-operated television station, licensed to Minneapolis, Minnesota, United States and serving the Twin Cities television market.  The station is owned by the CBS Television Stations subsidiary of CBS Corporation.  WCCO-TV's studios are located on South 11th Street in downtown Minneapolis, and its transmitter is located at the Telefarm complex in Shoreview, Minnesota.\n\nWIFR-LD: WIFR-LD is a low-powered CBS-affiliated television station serving Rockford, Illinois, United States.  It broadcasts its digital signal on UHF channel 41 from a transmitter at its studios on North Meridian Road in Rockford.  Until 2017, WIFR operated as a full-power television station licensed to nearby Freeport; until 2009, it broadcast an analog signal on channel 23, which WIFR-LD continues to use as its virtual digital channel via PSIP.  It is owned by Gray Television.  WIFR is the only television station in the Rockford market to retain the same network affiliation since it first signed on.",
+    "question": "What television station did WCCO-TV worked for?  ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "station_name": {
+          "type": "string",
+          "description": "The name of the television station being queried."
+        },
+        "relationship_type": {
+          "type": "string",
+          "description": "Describes the nature of the relationship between the station and the entity it worked for (e.g., 'owned by', 'affiliated with')."
+        },
+        "related_entity": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the corporation or network that the station worked for or is owned by."
+            },
+            "entity_type": {
+              "type": "string",
+              "description": "The type of the related entity (e.g., 'corporation', 'network')."
+            }
+          },
+          "required": [
+            "name",
+            "entity_type"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "station_name",
+        "relationship_type",
+        "related_entity"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "station_name": "WCCO-TV",
+      "relationship_type": "owned by",
+      "related_entity": {
+        "name": "CBS Corporation",
+        "entity_type": "corporation"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

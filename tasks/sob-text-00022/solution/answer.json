@@ -1,0 +1,20 @@
+{
+  "person_name": "Josh Hutcherson",
+  "date_of_birth": "1992-10-12",
+  "film_details": {
+    "film_title": "In Dubious Battle",
+    "release_year": 2016,
+    "cast_members": [
+      "James Franco",
+      "Nat Wolff",
+      "Josh Hutcherson",
+      "Selena Gomez",
+      "Vincent D'Onofrio",
+      "Analeigh Tipton",
+      "Zach Braff",
+      "Bryan Cranston",
+      "Ed Harris",
+      "Robert Duvall"
+    ]
+  }
+}

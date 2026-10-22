@@ -1,0 +1,9 @@
+{
+  "casino_name": "O'Sheas Casino",
+  "parent_resort_name": "The Linq",
+  "location_details": {
+    "city": "Paradise",
+    "state": "Nevada",
+    "on_las_vegas_strip": true
+  }
+}

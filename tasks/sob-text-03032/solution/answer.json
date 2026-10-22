@@ -1,0 +1,14 @@
+{
+  "band_name": "Talking Heads",
+  "formation_city": "New York City",
+  "members_involved": [
+    {
+      "name": "Steven Stanley",
+      "role_in_band": "audio engineer, record producer, keyboardist"
+    },
+    {
+      "name": "David Byrne",
+      "role_in_band": "lead vocals, guitar"
+    }
+  ]
+}

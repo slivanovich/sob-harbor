@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Talkin' Blues: Talkin' Blues is a live album by Bob Marley & The Wailers, released in 1991.  It contains live studio recordings from 1973 and 1975 intercut with interview segments of Bob Marley.  The majority of tracks are taken from the recordings Bob Marley & The Wailers did on 31 October 1973, at The Record Plant for San Francisco radio station KSAN.  They include "You Can't Blame the Youth", sung by Peter Tosh, and "Get Up, Stand Up" with Bob Marley and Peter Tosh alternatingly taking lead vocals.  The remaining songs are taken from a performance at The Lyceum Theatre in London and interview segments from Jamaican radio in 1975.
+
+List of Bob Marley and the Wailers band members: Bob Marley and the Wailers were a Jamaican reggae band created by Bob Marley.  The band formed when self-taught musician Hubert Winston McIntosh (Peter Tosh) met Neville Livingston (Bunny Wailer), and Robert Nesta Marley (Bob Marley) in 1963 and taught them how to play guitar, keyboards, and percussion.  By late 1963 Junior Braithwaite, Beverley Kelso, and Cherry Smith had joined the Wailers.  After Peter Tosh and Bunny Wailer left the band in 1974, Bob Marley began touring with new band members.  His new backing band included brothers Carlton Barrett and Aston "Family Man" Barrett on drums and bass respectively, Junior Marvin and Al Anderson on lead guitar, Tyrone Downie and Earl "Wya" Lindo on keyboards, and Alvin "Seeco" Patterson on percussion.  The "I Threes", consisting of Judy Mowatt, Marcia Griffiths, and Marley's wife, Rita, provided backing vocals.
+
+Bob Marley: Robert Nesta Marley, OM (6 February 1945 – 11 May 1981) was a Jamaican singer-songwriter, musician and guitarist who achieved international fame and acclaim, blending mostly reggae, ska and rocksteady in his compositions.  Starting out in 1963 with the group the Wailers, he forged a distinctive songwriting and vocal style that would later resonate with audiences worldwide.  The Wailers would go on to release some of the earliest reggae records with producer Lee "Scratch" Perry.
+
+Fourth Dimension (Stratovarius album): Fourth Dimension is the fourth studio album by power metal band Stratovarius, released on 11 April 1995 through Noise Records.  The album is the band's first to feature vocalist Timo Kotipelto as well as the last with keyboardist Antti Ikonen and drummer Tuomo Lassila, thus being the last Stratovarius album to date featuring an all-Finnish line-up.  Founding member and guitarist Timo Tolkki, who had served as the band's vocalist for their first three albums, still provided background vocals on "Fourth Dimension" before handing over lead singing duties to Kotipelto for all subsequent albums.
+
+Kotipelto: Kotipelto is a Finnish melodic power metal self-named band by Timo Kotipelto created during a hiatus in activity for power metal band Stratovarius.  Kotipelto has been commercially well received in their native Finland, with a Top 10 single "Beginning" from his first release "Waiting for the Dawn", and lyrics often concentrating on ancient Egyptian themes.
+
+Dreamspace: Dreamspace is the third studio album by power metal band Stratovarius, released on 9 February 1994 through Noise Records.  It is the last Stratovarius album to feature guitarist Timo Tolkki on vocals (after which Timo Kotipelto became the lead singer on 1995's "Fourth Dimension"), as well as the first to feature bassist Jari Kainulainen.
+
+Blackoustic: Blackoustic is a collaborative acoustic album by Stratovarius and Cain's Offering vocalist Timo Kotipelto and ex-Sonata Arctica and Cain's Offering guitarist Jani Liimatainen (credited as Kotipelto & Liimatainen).  The album was released on October 19, 2012, and entered the Finnish charts at #13 the first week.  The album is self-financed.  While initially only sold during performances, the album was eventually released through the Earmusic label, which had released the prior Stratovarius albums since "Polaris".
+
+Timo Kotipelto: Timo Antero Kotipelto (born 15 March 1969 in Lappajärvi, Finland) is the vocalist of the Finnish power metal band Stratovarius and is the creator and vocalist of the power metal band Kotipelto.  Kotipelto is currently the longest standing member of Stratovarius, after the departure of Timo Tolkki.
+
+Marley (soundtrack): Marley is a posthumous two-disc soundtrack album by Bob Marley & The Wailers.  It was released by Island Records and Tuff Gong Records.  The soundtrack features music from the whole career of Bob Marley, his first recorded song, "Judge Not", to the last album he released in his lifetime, "Uprising".  "Marley" was released to coincide with the release of "Marley", a biographical film documenting the life of Bob Marley.  The album features 24 of the 66 tracks used in the film.
+
+Bob Marley Museum: The Bob Marley Museum is a museum in Kingston, Jamaica, dedicated to the reggae musician Bob Marley.  The museum is located at 56 Hope Road, Kingston 6, and is Bob Marley's former place of residence.  It was home to the Tuff Gong reggae record label which was founded by The Wailers in 1970.  In 1976, it was the site of a failed assassination attempt on Bob Marley.  The Chicago-based band 56 Hope Road takes its name in homage to the address.
+
+Question: What do Bob Marley and Timo Kotipelto have in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "common_attribute_count": {
+      "type": "integer",
+      "description": "The number of common attributes identified between Bob Marley and Timo Kotipelto based on the provided context."
+    },
+    "common_attributes": {
+      "type": "array",
+      "description": "A list of attributes or roles that both Bob Marley and Timo Kotipelto share, as explicitly stated or directly inferable from the context.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "individuals_details": {
+      "type": "array",
+      "description": "Detailed information about each individual, highlighting their relevant roles and affiliations as found in the context.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The full name of the individual."
+          },
+          "main_musical_role_in_context": {
+            "type": "string",
+            "description": "Their primary musical role as described in the context (e.g., 'singer', 'vocalist')."
+          },
+          "is_band_creator": {
+            "type": "boolean",
+            "description": "Indicates if the individual is explicitly described as a creator of a band."
+          },
+          "bands_created": {
+            "type": "array",
+            "description": "A list of bands explicitly stated to be created by the individual.",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "name",
+          "main_musical_role_in_context",
+          "is_band_creator",
+          "bands_created"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 2
+    }
+  },
+  "required": [
+    "common_attribute_count",
+    "common_attributes",
+    "individuals_details"
+  ],
+  "additionalProperties": false
+}

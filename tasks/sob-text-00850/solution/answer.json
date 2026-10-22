@@ -1,0 +1,24 @@
+{
+  "comparison_subject": "essays written",
+  "authors_compared": [
+    {
+      "name": "David James Duncan",
+      "is_identified_as_essayist": true,
+      "known_work_types": [
+        "novels",
+        "essays"
+      ]
+    },
+    {
+      "name": "Edwidge Danticat",
+      "is_identified_as_essayist": false,
+      "known_work_types": [
+        "novels",
+        "short stories",
+        "memoirs"
+      ]
+    }
+  ],
+  "author_with_more_essays": "David James Duncan",
+  "reasoning": "The context explicitly identifies David James Duncan as an 'essayist', while Edwidge Danticat is described as a 'novelist and short story writer' and a writer of 'memoirs', with no mention of her writing essays."
+}

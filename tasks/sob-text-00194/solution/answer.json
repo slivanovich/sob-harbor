@@ -1,0 +1,17 @@
+{
+  "person_1_name": "Bill Duke",
+  "person_2_name": "Li Yang",
+  "shared_profession": "film director",
+  "person_1_professions": [
+    "actor",
+    "film director"
+  ],
+  "person_2_professions": [
+    "writer",
+    "director"
+  ],
+  "person_2_directed_films": [
+    "Blind Shaft",
+    "Blind Mountain"
+  ]
+}

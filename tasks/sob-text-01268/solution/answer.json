@@ -1,0 +1,14 @@
+{
+  "opera_with_most_acts": "Die Walküre",
+  "number_of_acts_most": 3,
+  "compared_operas": [
+    {
+      "opera_name": "Die Walküre",
+      "number_of_acts": 3
+    },
+    {
+      "opera_name": "Intermezzo",
+      "number_of_acts": 2
+    }
+  ]
+}

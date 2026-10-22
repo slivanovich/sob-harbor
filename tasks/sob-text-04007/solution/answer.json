@@ -1,0 +1,13 @@
+{
+  "actress_name": "Fionnula Flanagan",
+  "nationality": "Irish",
+  "professions": [
+    "actress",
+    "political activist"
+  ],
+  "film_details": {
+    "title": "Reflections",
+    "year": 1984,
+    "genre": "drama"
+  }
+}

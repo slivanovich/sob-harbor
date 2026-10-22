@@ -1,0 +1,12 @@
+{
+  "tv_series_name": "South Park",
+  "season_number": 6,
+  "creator_details": {
+    "name": "Trey Parker",
+    "nationality": "American",
+    "roles": [
+      "actor",
+      "animator"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "university_name": "Kent State University",
+  "team_name": "Kent State Golden Flashes football",
+  "sport": "football",
+  "first_game_year": 1920,
+  "head_coach": {
+    "name": "Paul Haynes",
+    "hired_date": "December 2012",
+    "former_player_at_university": true,
+    "defensive_coordinator_stints": [
+      "Ohio State University",
+      "University of Arkansas"
+    ]
+  }
+}

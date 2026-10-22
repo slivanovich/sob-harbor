@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "15b688d1417c1796fd1ec5a529b1a6fdf62e33afe704b2c39544f01e02961b9f",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7dd2795542990b8f503ac9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Phillip Schofield",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Dancing on Ice (series 6): The sixth series of Dancing on Ice started on 9 January 2011 and ended on 27 March 2011 on ITV.  Phillip Schofield and Holly Willoughby return as hosts whilst Jayne Torvill and Christopher Dean return to mentor the celebrities.  This series saw a huge revamp of the show which included the show moving from Elstree to Shepperton Studios, acquiring a new look set, and was broadcast in high definition for the first time on ITV1 HD, STV HD and UTV HD.\n\nPhillip Schofield: Phillip Bryan Schofield (born 1 April 1962) is an English television presenter currently employed by ITV.  He is most recognised for presenting the lifestyle programme \"This Morning\", which he has co-hosted since 2002, and has also hosted other programmes on the channel.\n\nArts Plus: Arts Plus was a weekly Lifestyle programme showing the tradition and culture of India.  It ran in 1996 on Star Plus.  It had a total of 13 episodes which were telecast once a week.\n\nGudesens Conditori: Gudesens Conditori was a lifestyle programme shown on TV 2 from 1993 to 1995 presented by Egil Svartdahl.\n\nJamie &amp; Jimmy's Friday Night Feast: Jamie & Jimmy's Friday Night Feast is a UK food lifestyle programme which aired on Channel 4 in 2014.  A second series began in January 2015.  A third series began in January 2016.  A fourth series began in December 2016.\n\nTop Billing (TV show): Top Billing is a South African lifestyle television programme that airs on SABC3 on Thursday evenings from 20:30 - 21:30 and repeats on Sunday at 13:00.  It was founded by Basetsana Kumalo and Patience Stevens, who own the \"Tswelopele Production\" company.  The show is the longest-running lifestyle programme in South Africa, broadcasting since 1996.  In addition to a variety of presenters, there is a voice-over guide throughout the programme.  A magazine of the same name was launched in March 2004, containing similar content to the show.\n\nBurke's Backyard: Burke's Backyard is an Australian gardening and lifestyle programme presented by horticulturist Don Burke, broadcast on both radio and television.  On television, it was a regular weekly series on the Nine Network from 1987 to 2004.\n\nJamie's 15-Minute Meals: Jamie's 15-Minute Meals is a UK food lifestyle programme which aired on Channel 4 in 2012.  In each half-hour episode, host Jamie Oliver creates two meals, with each meal taking 15 minutes to prepare.\n\nTop Billing (magazine): In March 2004, the South African television show \"Top Billing\" announced that it would launch a magazine version of the lifestyle programme.  In June 2004, \"Top Billing\" magazine was being sold nationwide for R19.95.  The \"Top Billing\" magazine contains celebrity interviews, behind-the-scenes previews, fashion, food, travel and entertainment news of local and international status.\n\nOur Place (Australian TV series): Our Place is an Australian weekly live variety lifestyle programme broadcast on the Nine Network during early 2005.",
+    "question": "Which host of Dancing on Ice is most recognized for presenting the lifestyle programme \"This Morning\"?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "host_name": {
+          "type": "string",
+          "description": "The name of the host."
+        },
+        "show_hosted": {
+          "type": "string",
+          "description": "The name of the show they hosted, as mentioned in the question."
+        },
+        "recognized_for_program": {
+          "type": "string",
+          "description": "The name of the program the host is most recognized for."
+        },
+        "recognized_program_type": {
+          "type": "string",
+          "description": "The type of the program the host is most recognized for (e.g., lifestyle programme)."
+        },
+        "recognition_start_year": {
+          "type": "integer",
+          "description": "The year the host started co-hosting the recognized program."
+        }
+      },
+      "required": [
+        "host_name",
+        "show_hosted",
+        "recognized_for_program",
+        "recognized_program_type",
+        "recognition_start_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "host_name": "Phillip Schofield",
+      "show_hosted": "Dancing on Ice",
+      "recognized_for_program": "This Morning",
+      "recognized_program_type": "lifestyle programme",
+      "recognition_start_year": 2002
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

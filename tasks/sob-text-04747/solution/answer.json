@@ -1,0 +1,12 @@
+{
+  "pivotal_event": {
+    "name": "Battle of the Alamo",
+    "revolution": "Texas Revolution",
+    "date_range": "February 23 – March 6, 1836"
+  },
+  "person_involved": {
+    "name": "George C. Kimble",
+    "fate_in_event": "died"
+  },
+  "event_significance": "Following a 13-day siege, Mexican troops under President General Antonio López de Santa Anna launched an assault on the Alamo Mission near San Antonio de Béxar, killing all of the Texian defenders. Santa Anna's cruelty during the battle inspired many Texians to join the Texian Army."
+}

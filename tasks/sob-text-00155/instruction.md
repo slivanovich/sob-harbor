@@ -1,0 +1,106 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Brooke Barzun: Brooke Barzun (born Brooke Lee Brown on June 18, 1972) is an art curator and philanthropist based in Louisville, Kentucky with her husband, Matthew Barzun, the former United States Ambassador to the United Kingdom.  She is the daughter of Owsley Brown II and Christy Brown, and the granddaughter of Sally Brown.  Her extended family has voting control of Brown-Forman Corporation, the parent company of Jack Daniel's whiskey and other brands.
+
+Arun Chaudhary: Arun Chaudhary is an American political operative and filmmaker.  After serving on President Barack Obama's presidential 2008 campaign, he was asked to become the first official videographer of the White House, a position he held from 2009-2011.  He left in August 2011 to join mobile-messaging startup Revolution Messaging as senior vice president of communications.  He is one of the most influential characters in modern politics, having previously served as New Media Road Director for President Barack Obama's 2008 presidential campaign and as Creative Director for Senator Bernie Sanders's 2016 presidential campaign.
+
+Campaign rhetoric of Barack Obama: The campaign rhetoric of Barack Obama is the rhetoric in the campaign speeches given by President of the United States, Barack Obama, between February 10, 2007 and November 5, 2008 for the 2008 presidential campaign.  Obama became the 44th president after George W. Bush with running mate Joe Biden.  In his campaign rhetoric, Obama used three main devices: motifs, American exceptionalism, and voicing.
+
+Protests against Barack Obama: Protests against Barack Obama occurred throughout the United States during Barack Obama's 2008 presidential campaign and during Barack Obama's presidency.
+
+Hillary 1984: Hillary 1984 is the title of the viral video that combines the footage of the 2008 presidential campaign web announcement by Hillary Clinton with the 1984 Super Bowl commercial by Apple Inc. for the launch of Macintosh.  The video shows the same blond female athlete from the 1984 Super Bowl commercial updated with an iPod.  The Big Brother image that she throws the sledgehammer at is replaced with Hillary Clinton announcing that she is running for president.  It ends with the original text replaced with, "On Jan. 14, the Democratic primary will begin.  And you'll see why 2008 won't be like 1984."  The Apple symbol is a morphed into an "O", which is followed by a logo for Barack Obama's presidential campaign website.  Barack Obama's presidential spokesman Bill Burton has said "Hillary 1984" was not created by the Obama campaign.  "It's somebody else's creation," he said.
+
+Barack Obama presidential campaign, 2008: The 2008 presidential campaign of Barack Obama, then junior United States Senator from Illinois, was announced on February 10, 2007 in Springfield, Illinois.  After winning a majority of delegates in the Democratic primaries of 2008, on August 23, leading up to the convention, the campaign announced that Senator Joe Biden of Delaware would be the Vice Presidential nominee.  At the 2008 Democratic National Convention on August 27, Barack Obama was formally selected as the Democratic Party nominee for President of the United States in 2008.  He was the first African American in history to be nominated on a major party ticket.
+
+Shefali Razdan Duggal: Shefali Razdan Duggal (born November 22, 1971) is an Indian-born American Democratic political activist in San Francisco who is a Presidential Appointee to President Barack Obama to the United States Holocaust Memorial Council, which supervises the United States Holocaust Memorial Museum, for a term expiring in January 2018.  She was an active fundraiser for the Barack Obama election campaign in 2008 where she was a Trustee for the DNC South Asian American Leadership Council.  She focused on South Asian and Young Professional outreach, co-hosting a number of fundraising events for both the Senator and his surrogates.  She was a member of President Barack Obama's National Finance Committee for his reelection campaign in 2012, a co-chair for Obama Victory Trustees, and the Northern California Finance Committee.  She worked on the Massachusetts Democratic Party, New Hampshire Democratic Party, and Senators Ted Kennedy and Dianne Feinstein.  She also worked on the Al Gore presidential campaign in 2000, and Hillary Clinton’s presidential campaign in 2008.
+
+Joe Rospars: Joe Rospars is the founder of Blue State Digital.  Rospars was the New Media Director of Barack Obama's presidential campaign and for both the 2008 and 2012 presidential campaigns.  Rospars also was Barack Obama's principal digital strategist and adviser.  He managed the digital integration of fundraising, communications, and mobilization of grassroots effort.  Prior to Obama's campaign, he worked with Governor Howard Dean at the Democratic National Committee, Dean's campaign for party chairman, and at Democracy for America, and on Howard Dean's 2004 presidential campaign.
+
+Matthew Barzun: Matthew Winthrop Barzun (born October 23, 1970) is a former United States Ambassador to the United Kingdom.  He is a business executive who is known for his work with CNET Networks and for his volunteer work on Barack Obama's 2008 presidential campaign.  He served as U.S. Ambassador to Sweden from 2009 to 2011.  He was selected by President Barack Obama as National Finance Chair for the president's 2012 re-election campaign.
+
+Barack Obama: Der schwarze Kennedy: Barack Obama – Der schwarze Kennedy (English: Barack Obama – The black Kennedy ) is a best-selling German-language biography of President of the United States Barack Obama by journalist Christoph von Marschall.  The book was written by Marschall while he spent much of 2007 travelling with Obama's presidential campaign as a reporter for the Berlin newspaper "Der Tagesspiegel".  It covers Obama’s life from his childhood, through his college years, his time as a community organizer in Chicago, Illinois, and his political career including his 2008 presidential campaign.  Marschall sums up his impressions of Obama by saying, “Seine Lebensgeschichte steht für den amerikanischen Traum.”  (“His life story stands for the American Dream.”)
+
+Question: A volunteer on Barack Obama's 2008 presidential campaign married the a woman belonging to a family with control of what company?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "volunteer_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the volunteer on the campaign."
+        },
+        "campaign_name": {
+          "type": "string",
+          "description": "The name of the presidential campaign the person volunteered for."
+        }
+      },
+      "required": [
+        "name",
+        "campaign_name"
+      ],
+      "additionalProperties": false
+    },
+    "spouse_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the volunteer's spouse."
+        },
+        "family_company_control": {
+          "type": "object",
+          "properties": {
+            "controlling_family_relationship": {
+              "type": "string",
+              "description": "The relationship of the family to the spouse."
+            },
+            "controlled_company_name": {
+              "type": "string",
+              "description": "The name of the parent company controlled by the family."
+            },
+            "notable_brand_controlled": {
+              "type": "string",
+              "description": "A notable brand of the controlled company, which is the answer to the question."
+            }
+          },
+          "required": [
+            "controlling_family_relationship",
+            "controlled_company_name",
+            "notable_brand_controlled"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "family_company_control"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer_brand": {
+      "type": "string",
+      "description": "The specific brand that answers the question about the company."
+    }
+  },
+  "required": [
+    "volunteer_details",
+    "spouse_details",
+    "final_answer_brand"
+  ],
+  "additionalProperties": false
+}

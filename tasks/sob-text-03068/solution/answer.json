@@ -1,0 +1,14 @@
+{
+  "common_element_type": "racing series",
+  "common_element_name": "Formula One",
+  "entity_roles": [
+    {
+      "entity_name": "Toyota TF101",
+      "role": "was a car for"
+    },
+    {
+      "entity_name": "Allan McNish",
+      "role": "drove a car for"
+    }
+  ]
+}

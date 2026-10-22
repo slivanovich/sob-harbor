@@ -1,0 +1,15 @@
+{
+  "city_name": "Swansea",
+  "is_coastal": true,
+  "country": "Wales",
+  "size_ranking_details": {
+    "rank_description": "second largest",
+    "larger_city_after_which_it_is_ranked": "Cardiff"
+  },
+  "associated_band": {
+    "band_name": "The Electric Revelators",
+    "band_genre": "blues band",
+    "formation_year": 2004,
+    "formation_location": "Swansea"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "e51561592aba76a2fba4006ad5106613df6f09310c561b0c64e17daf9a484f5e",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abf0f1d5542993fe9a41dcd",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Alan S. Chartock",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Bobby Mehta: Siddharth N. \"Bobby\" Mehta was former CEO and vice chairman of HSBC North America.  Mehta served as an Advisor of TransUnion since December 31, 2012.  Mehta serves as consultant of TransUnion.  He served the chief executive officer and president of TransUnion from August 2007 to December 31, 2012, and Transunion Financing Corp. until December 31, 2012.  From May 2007 to July 2007, he served as a consultant to the board of directors at TransUnion.  He served as the chief executive officer and president of TransUnion until December 31, 2012.  He served as the chief executive officer of TransUnion LLC.  He served as chairman of the board and chief executive officer of HSBC Finance Corporation from April 2005 to February 2007.  He served as chief executive officer and president of TransUnion LLC from 2007 to 2012.  From 1998 to 2007, he held a variety of positions with HSBC Finance Corporation and HSBC North America Holdings, Inc.  Mehta served as chief executive officer of HSBC North America until February 2007.  Mehta served as consultant of TransUnion since May 2007 until July 2007.  Mehta served as group managing director of HSBC Holdings PLC of HSBC Finance Corp. since April 30, 2005, and its unit chief executive officer since March 2005.  He served as the chief executive of HS BC North America Holdings Inc., of HSBC Finance Corp., from March 2005 to February 15, 2007.  He served as an executive chairman of HSBC Financial Corporation Limited since April 2005 and served as its chief executive officer from April 2005 to February 15, 2007.  He served as the chief executive officer of HSBC Bank USA, N.A. until February 2007.  He served as the chief executive officer of HSBC North America Holdings Inc. since March 2005.  He served as chairman and chief executive officer of HSBC Financial Corp., Ltd.  He oversaw HSBC's global credit card services, its North American consumer lending and mortgage services businesses and its first mortgage operation.  He was also responsible for corporate marketing, strategic planning and corporate development for HSBC North America Holdings Inc. and had responsibility for the strategic management of credit cards throughout the HSBC Group.  Mehta served as group executive of Credit Card Services, Auto Finance and Canada of Household International Inc., since July 2002.  He worked at MasterCard’s U.S. region board since March 2000.  Mehta joined Household International Inc., in 1998.  He served as senior vice president of The Boston Consulting Group in Los Angeles and co-leader of Boston Consulting Group Financial Services Practice in the United States.  Mehta served as a director of Global Board of MasterCard Incorporated since March 17, 2005.  He served as unit chairman of HSBC Holdings PLC and served as its board member since March 2005.  He served as vice chairman and director of HSBC Financial Corporation Limited., (Formerly Household International Inc.).  He has been a director of Avant Credit Corporation since December 18, 2014.  He has been an independent director of The Allstate Corporation since February 19, 2014.  He serves as a member of the advisory board at Core2 Group, Inc.  He has been non-executive independent director at Piramal Enterprises Ltd since April 1, 2013.  He serves on the boards of Datacard, Chicago Public Education Fund, University of Chicago Laboratory Schools, The Economic Club of Chicago, The Field Museum and Myelin Repair Foundation.  He serves as a director of TransUnion Corp. and TransUnion LLC.  He served as a director of MasterCard International Inc. (also known as MasterCard Worldwide) (formerly, MasterCard Inc.), since March 17, 2005.  He served as a director of HSBC Financial Corp.  Ltd.  He has been a director of TransUnion since April 2012.  Mehta serves on the board of international advisors for the Monterey, California, Institute of International Studies and is a member of the Financial Services Roundtable.  He also serves on the board of advisors for the Myelin Repair Foundation.  Mehta holds a Bachelor of Arts in economics from the London School of Economics and Masters of Business Administration from the University of Chicago.  He stepped down as head of the North American unit after the lender raised its forecast for bad loans in the U.S.  He is of Indian descent.\n\nBethel Broadcasting, Incorporated: Bethel Broadcasting, Incorporated, doing business as KYUK (AM), KYUK-FM, and KYUK-TV is a non-profit corporation dedicated to serving the Yup'ik Eskimo and residents of populations of southwest Alaska with local, non-commercial public radio and television.  KYUK is a National Public Radio and Alaska Public Radio affiliate and PBS member station through the Alaska One Public Television Network.  KYUK is located in Bethel, Alaska a town situated on the banks of the Kuskokwim River within the Yukon/Kuskokwim Delta region of southwestern Alaska.\n\nThe Media Project: The Media Project is a weekly radio program that provides an inside look at media coverage of current events.  Panelists on the discussion-based show include \"Times Union\" Editor Rex Smith, WAMC CEO Alan S. Chartock, \"Daily Freeman\" Publisher Ira Fusfeld.  The half-hour program is recorded at WAMC's studios in Albany, New York and distributed by National Productions.  During the show, the panelists engage in spirited debate on timely media issues.  Print, television, radio, and internet media are covered.  In addition, mail from listeners is sometimes read and discussed.  The theme song of \"The Media Project\" is \"Newspapermen Meet Such Interesting People\", composed by Vern Partlow and sung by Pete Seeger.\n\nKVTI: KVTI (90.9 FM) is a National Public Radio affiliate station operated by Northwest Public Radio, licensed to Tacoma, Washington, and operates at 90.9 MHz with an ERP of 51 kW.  As an \"NPR & Classical Music\" station, it broadcasts NPR news, local and syndicated classical music shows (switching to jazz music on weekends), and other public radio programming.  The station is owned by Clover Park Technical College, but since 2010, has been operated by the Edward R. Murrow College of Communication at Washington State University.\n\nNorthwest Public Radio: Northwest Public Radio is the public radio service of Washington State University.  It is an affiliate of National Public Radio, Public Radio International and American Public Media.  It operates 19 radio stations and 13 translators across Washington State, Oregon, and Idaho, and provides coverage to parts of British Columbia.  The network broadcasts public radio news, talk, entertainment, classical music, jazz, and folk music.  Station programming is separated into two main program streams, \"NPR News\" and \"NPR & Classical Music\", with simulcast periods during \"Morning Edition\", \"All Things Considered\", and \"Weekend Edition\".  Since November 2013, Northwest Public Radio also operates a 24-hour jazz station, KJEM 89.9, broadcasting in the Pullman and Moscow area.\n\nTorey Malatia: Torey Malatia (born August 1951) is an American journalist, radio producer, and public media manager.  In 2016 he was named President, CEO and General Manager of Rhode Island Public Radio.  Until he resigned on July 26, 2013, he served as Chief Executive Officer and president of the board of directors of Chicago Public Media and general manager of radio station WBEZ.  He is also a member of the board of the Public Radio Exchange, a program distributor, and the Station Resource Group, a public radio program development and fundraising group.\n\nAmy Silverman: Amy Silverman is an American author, journalist, blogger, and National Public Radio contributor.  She is Managing Editor at \"Phoenix New Times\" and is a commentator for KJZZ, the National Public Radio affiliate in Phoenix.  Her work has appeared on the radio show \"This American Life\" and in \"The New York Times. \" She has a master's in journalism from Columbia University.  Her memoir, \"My Heart Can't Even Believe It\", was published by Woodbine Press in May 2016; it accounts for her experience raising a daughter with Down syndrome.\n\nWAMC: WAMC is a public radio network headquartered in Albany, New York.  The network has 12 broadcast radio stations (transmitters) and 16 broadcast relay stations (translators,repeaters).  One of the stations is an AM station: WAMC (AM) 1400 in Albany.  The organization's legal name is \"WAMC\" and it is also known as \"WAMC Public Radio\" or \"WAMC Northeast Public Radio.\"\n\nAlan S. Chartock: Alan Seth Chartock (born July 25, 1941) is the president and chief executive officer of WAMC/Northeast Public Radio, a National Public Radio affiliate, a position he has held since 1981.  He was professor of political science at SUNY New Paltz and is a Professor Emeritus of communications, at the State University of New York (SUNY) and executive publisher and project director for the \"Legislative Gazette\", a weekly newspaper, staffed by college intern reporters, covering New York State government.\n\nKNKX: KNKX (88.5 MHz) is a public radio station in Tacoma, Washington.  As a National Public Radio affiliate, it airs a jazz and news format for the Seattle metropolitan area.  The station is owned by Friends of 88.5 FM, a community-based non-profit group.  KNKX was established in 1966 as KPLU-FM by Pacific Lutheran University (PLU).  It is one of three full NPR member stations in the Seattle area, the others being KUOW-FM and KVTI, an outlet of Northwest Public Radio (though KVTI can't be heard in most of Snohomish County because of interference from KSER).",
+    "question": "The Media Project have panelists that include which president and chief executive officer of WAMC/Northeast Public Radio, a National Public Radio affiliate, a position he has held since 1981?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The full name of the individual."
+        },
+        "organization_details": {
+          "type": "object",
+          "properties": {
+            "organization_name": {
+              "type": "string",
+              "description": "The name of the organization the person leads."
+            },
+            "role": {
+              "type": "string",
+              "description": "The specific role held by the person in the organization."
+            },
+            "role_start_year": {
+              "type": "integer",
+              "description": "The year the person started in their role at the organization."
+            },
+            "is_npr_affiliate": {
+              "type": "boolean",
+              "description": "Indicates if the organization is a National Public Radio affiliate."
+            }
+          },
+          "required": [
+            "organization_name",
+            "role",
+            "role_start_year",
+            "is_npr_affiliate"
+          ],
+          "additionalProperties": false
+        },
+        "is_media_project_panelist": {
+          "type": "boolean",
+          "description": "Indicates if the person is a panelist on 'The Media Project'."
+        }
+      },
+      "required": [
+        "person_name",
+        "organization_details",
+        "is_media_project_panelist"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Alan S. Chartock",
+      "organization_details": {
+        "organization_name": "WAMC/Northeast Public Radio",
+        "role": "president and chief executive officer",
+        "role_start_year": 1981,
+        "is_npr_affiliate": true
+      },
+      "is_media_project_panelist": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

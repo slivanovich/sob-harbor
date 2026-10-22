@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "401bb0430896461cad8d90ae155ddcdcc05ccd5c57ab0e2f625bf4bfc1252cfb",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8092755542995d8a8ddf9d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "poet and diplomat",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Octavio Paz: Octavio Paz Lozano (]    ; March 31, 1914 – April 19, 1998) was a Mexican poet and diplomat.\n\nMexican literature: Mexican literature is one of the most prolific and influential of Spanish language literatures along with those of Spain, Argentina and Cuba.  It has internationally recognized authors such as Juan Rulfo, Octavio Paz, Carlos Fuentes, Amado Nervo and several others.\n\nGabriela Aguileta: Gabriela Aguileta Estrada is an award winning Mexican writer of children's books and short stories.  Born in Mexico City in 1974, she studied biology at the Faculty of Sciences of the UNAM in Mexico and in 2004 earned a doctorate in genetics from University College London (UK).  As scientist and writer she has studied, worked and lived in Israel, Canada, England, Sweden, France, Spain and Switzerland.  She was on the editorial board of the children's literary magazine \"La sonrisa del gato\" and in 2004 she was awarded a writer's fellowship from the National Foundation for Mexican Literature (Fundación para las Letras Mexicanas).  She has also authored three popular science books which allowed her to promote interest in science among children and young adults.  Most of her work has been published in Spanish.\n\nSalvador Elizondo: Salvador Elizondo Alcalde (Mexico City, December 19, 1932 - March 29, 2006) was a Mexican writer of the 60s Generation of Mexican literature.\n\nRosario Castellanos: Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author.  Along with the other members of the Generation of 1950 (the poets who wrote following the Second World War, influenced by César Vallejo and others), she was one of Mexico's most important literary voices in the last century.  Throughout her life, she wrote eloquently about issues of cultural and gender oppression, and her work has influenced feminist theory and cultural studies.  Though she died young, she opened the door of Mexican literature to women, and left a legacy that still resonates today.\n\nFrancisco J. Santamaría: Francisco Javier Santamaría (September 10, 1886 in Cacaos in Jalapa Municipality, Tabasco – March 1, 1963 in Veracruz, Veracruz) was an influential Mexican writer and politician who is best remembered for his contributions to the study of Mexican literature and lexicography; he variously worked or published as a bibliographer, essayist, geographer, journalist, judge, lawyer, lexicographer, linguist, naturalist, pedagogue, philologist, and poet.  He also served as a Senator of the Republic and as Governor of the State of Tabasco.\n\nŠerefudin's White Mosque: Šerefudin's White Mosque (Bosnian: \"Šerefudinova Bijela džamija\" ) is a mosque located in Visoko, Bosnia and Herzegovina.  It is of great architectural importance to the town and area.  The mosque's architect was Zlatko Ugljen, the craftsman was Ismet Imamović, while the contractor was Zvijezda from Visoko.  First construction was completed in 1477, but it was completely reconstructed and finished in 1980.  Its most notable award came in 1983, when it was awarded the Aga Khan Award for Architecture.  The jury commended the mosque for its boldness, creativity and brilliance, as well as its originality and innovation.  In 2007 it received another recognition from Hungarian architects for being one of the three best designed sacral places in Europe.\n\nFran Ilich: Fran Ilich Morales is a Mexican writer and media artist who principally works on the theory and practice of narrative media.  Born in 1975, during the early 1990s he co-founded the Contra-Cultura (menor) collective and was involved in the independent media scene in Tijuana—mainly the cyberpunk scene—where he was known to be an eclectic producer working with literature, photography, comics, videofilms and electronic music.  Because of this, he was identified as part of the Generation X of Mexican literature, with other writers like Guillermo Fadanelli & Naief Yehya.  In 1995 he began publishing Cinemátik, a printed tabloid on urban electronic culture.  In 1996 he was a screenwriter for Discovery Channel Interacción, a show produced by Beatriz Acevedo.  In 1997 he published his first novel, Metro-Pop.  In 1998 he was signed by Digital Entertainment Network as creator for a series of 6-minute shows targeting young Latino audiences.  However, the series never was produced, as the multimedia dot-com company and internet pioneer went bankrupt.  The same year, along with other members of Laboratorios Cinemátik, he produced Cinemátik 1.0, which is considered to be the first cyberculture festival in Latin America.  He was part of the initial group of artists and producers who founded Nortec, though he distanced himself from this scene in 1999 and moved to Berlin.  There, he became involved with Nettime, collaborating with Florian Schneider, Geert Lovink, Natalie Bookchin, Pit Schultz, Ricardo Dominguez and Alexei Shulgin.\n\nLuis Zapata (writer): Luis Zapata Quiroz (born 1951) is a Mexican writer, who is one of the most prominent gay writers in Mexican literature.\n\nJorge Volpi: Jorge Volpi (full name Jorge Volpi Escalante, born July 10, 1968) is a Mexican novelist and essayist, best known for his novels such as \"In Search of Klingsor (En busca de Klingsor)\".  Trained as a lawyer, he gained notice in the 1990s with his first publications and participation in the pronouncement of the “Crack Manifesto” with several other young writers to protest the state of Mexican literature and promote their own work.  Volpi’s novels are distinct from magical realism and other trends of Latin American literature as they focus on the actions of characters and research into academic topics, especially history and science, and do not always focus on Latin American characters and settings.  His work has been translated into twenty five languages and recognized with awards such as \"Biblioteca Breva\" Award and the Planta-Casa de América as well as a grant from the Guggenheim Foundation.  In addition to his writing he has worked as a cultural attaché, the director of Canal 22 in the State of Mexico and is currently the director of the Festival Internacional Cervantino.",
+    "question": "What was the another recognition  of one of the authors of Mexican literature who born in March 31, 1914?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "author_name": {
+          "type": "string",
+          "description": "The full name of the author."
+        },
+        "birth_date": {
+          "type": "string",
+          "description": "The birth date of the author in YYYY-MM-DD format."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the author."
+        },
+        "other_recognition": {
+          "type": "string",
+          "description": "Another significant recognition or role of the author besides their literary work."
+        }
+      },
+      "required": [
+        "author_name",
+        "birth_date",
+        "nationality",
+        "other_recognition"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "author_name": "Octavio Paz",
+      "birth_date": "1914-03-31",
+      "nationality": "Mexican",
+      "other_recognition": "diplomat"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

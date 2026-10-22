@@ -1,0 +1,21 @@
+{
+  "pageant_details": {
+    "edition_number": 46,
+    "year": 1997
+  },
+  "winner_details": {
+    "name": "Brook Lee",
+    "nationality": "American",
+    "professions": [
+      "actress",
+      "TV Host",
+      "model",
+      "beauty queen"
+    ],
+    "birth_location": {
+      "city": "Pearl City",
+      "state_or_country": "Hawaii"
+    }
+  },
+  "answer_birth_city": "Pearl City"
+}

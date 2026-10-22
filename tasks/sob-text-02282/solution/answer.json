@@ -1,0 +1,14 @@
+{
+  "comparison_result": false,
+  "operas_compared": [
+    {
+      "title": "Otello",
+      "libretto_language": "Italian"
+    },
+    {
+      "title": "Der Ring des Nibelungen",
+      "libretto_language": "German"
+    }
+  ],
+  "reasoning": "Otello has an Italian libretto, while Der Ring des Nibelungen is a cycle of German-language music dramas. Therefore, their librettos are not in the same language."
+}

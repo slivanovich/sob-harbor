@@ -1,0 +1,18 @@
+{
+  "directors": [
+    {
+      "name": "Arthur Lubin",
+      "abott_costello_films_count": 1,
+      "abott_costello_films": [
+        "Ride 'Em Cowboy"
+      ]
+    },
+    {
+      "name": "Ciro Ippolito",
+      "abott_costello_films_count": 0,
+      "abott_costello_films": []
+    }
+  ],
+  "director_with_most_abott_costello_films": "Arthur Lubin",
+  "comparison_summary": "Arthur Lubin directed more Abbott and Costello films than Ciro Ippolito."
+}

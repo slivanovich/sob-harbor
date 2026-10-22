@@ -1,0 +1,9 @@
+{
+  "stadium_name": "Centene Stadium",
+  "home_team": {
+    "name": "Great Falls Voyagers",
+    "league_type": "minor league"
+  },
+  "stadium_location": "Great Falls, Montana",
+  "stadium_capacity": 4000
+}

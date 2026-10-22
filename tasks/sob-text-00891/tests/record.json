@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "7a031ea81b65be5e45076b326da4d216731bbd3ef8fdda261719b5e41112c65d",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae11cc955429901ffe4ad9c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Sigmurethra: Sigmurethra is a taxonomic category of air-breathing land snails and slugs, terrestrial pulmonate gastropod molluscs.  This is an informal group which includes the majority of land snails and slugs.\n\nTithonia: Tithonia is a genus of flowering plants in the sunflower tribe within the Asteraceae family.\n\nEogastropoda: Eogastropoda was a previously used taxonomic category of snails or gastropods, a subclass which was erected by Ponder and Lindberg in 1997.  It was one of two great divisions (subclasses) of the class Gastropoda, the snails.  The other subclass of gastropods was the Orthogastropoda.\n\nCladorhiza segonzaci: Cladorhiza segonzaci is a species of sponge in the taxonomic category of Demospongiae.  The body of the sponge consists of a spicule and fibers and is water absorbent.\n\nHelleborine: Helleborine is the common name for a number of species of orchid.  It does not correspond to any currently used taxonomic category.  Some of the plants called helleborines are classified in the genus \"Epipactis\", some in genus \"Cephalanthera\".  A genus \"Helleborine\" was formerly recognised but has now been absorbed into the Grass pink genus \"Calapogon\".\n\nAptera: Aptera is an obsolete taxonomic category, which included the Apterygota along with various other wingless arthropods.\n\nPachysandra: Pachysandra is a genus of five species of evergreen perennials or subshrubs, belonging to the boxwood family Buxaceae.  The species are native to eastern Asia and southeast North America, some reaching a height of 20 - , with only weakly woody stems.  The leaves are alternate, leathery, with an entirely too coarsely toothed margin, and are typically 5 - long.  The small uni-sexual blooms are greenish-white and produced in late spring or early summer.\n\nCladorhiza inversa: Cladorhiza inversa is a species of sponge in the taxonomic category of Demospongiae.  The body of the sponge consists of a spicule and fibers and is water absorbent.\n\nHeterostropha: Heterostropha was a previously used taxonomic category, an order of sea snails, within the superorder Heterobranchia.  In the most current gastropod taxonomy, that of Bouchet & Rocroi, this taxon is no longer in use.\n\nGammaridae: Gammaridae is a family of amphipods.  In North America they are included among the folk taxonomic category of \"scuds\", and otherwise gammarids is usually used as a common name.",
+    "question": "Do both Tithonia and Pachysandra belong to the taxonomic category of genus?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "is_both_genus": {
+          "type": "boolean",
+          "description": "True if both entities belong to the taxonomic category of genus, false otherwise."
+        },
+        "entity_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the first entity."
+            },
+            "taxonomic_category": {
+              "type": "string",
+              "description": "The taxonomic category of the first entity."
+            }
+          },
+          "required": [
+            "name",
+            "taxonomic_category"
+          ],
+          "additionalProperties": false
+        },
+        "entity_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the second entity."
+            },
+            "taxonomic_category": {
+              "type": "string",
+              "description": "The taxonomic category of the second entity."
+            }
+          },
+          "required": [
+            "name",
+            "taxonomic_category"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "is_both_genus",
+        "entity_1",
+        "entity_2"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "is_both_genus": true,
+      "entity_1": {
+        "name": "Tithonia",
+        "taxonomic_category": "genus"
+      },
+      "entity_2": {
+        "name": "Pachysandra",
+        "taxonomic_category": "genus"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

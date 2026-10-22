@@ -1,0 +1,17 @@
+{
+  "singer_details": {
+    "name": "Maria Lourdes Aragon",
+    "nationality": "Canadian",
+    "descent": "Filipino"
+  },
+  "song_details": {
+    "title": "Born This Way",
+    "is_lead_single_of_album": true,
+    "album_title": "Born This Way",
+    "album_number": 2
+  },
+  "viral_event": {
+    "platform": "YouTube",
+    "gained_fame": true
+  }
+}

@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Famasloop: Famasloop is a Latin Grammy-nominated electronic music band from Caracas, Venezuela.  The band's members are Alain Gómez, Luis Daniel González, Ricardo Martínez, Rafael Urbina and Vanesa Gouveia.  The group's first album, Tres Casas, which was released in June 2006, experimented with electronic music to integrate several genres such as pop, Latin, rock, hip-hop, trip hop, Afro-Venezuelan, classical, Hindu, tango and jazz.
+
+Groovy Feeling: "Groovy Feeling" is the eighth single by the English electronic music band Fluke.  Taken from the album, Six Wheels on My Wagon the track was the final single released by Fluke on 27 August in 1993 after the successes of Slid and Electric Guitar.  In line with a reference pioneered by The KLF (see "Justified and Ancient") and prevalent throughout the British Electronic Music scene, all the remixes are named with references to various ice creams.  The irony of this was compounded by the single's front cover containing an image of a set of teeth fitted with a dental brace.
+
+Spacek (band): Spacek (also known as Spacek Sound System) is a British electronic music band.  Its members are Steve Spacek (Real name Steve White), Ed Spacek, and Morgan Spacek.  The group released its debut album, "Curvatia" in 2001, followed by 2003's "Vintage Hi-Tech".  Although primarily performing electronic music, the group also fuses elements of R&B, hip hop, trip hop, broken beat and soul into its anomalistic soundbed.  Steve Spacek is brother to UK drum and bass artist DBridge.
+
+The Music Band – Jazz: The Music Band – Jazz is an album by War, the fifth and final entry in their "Music Band" series, released on MCA Records in 1983.  It consists of outtakes from sessions for their 1979 albums "The Music Band" and "The Music Band 2", and features several lineups of the band which existed that year.  War were no longer recording for MCA when this album was released, and no singles from the album were issued.  Track one was probably recorded/written in 1979, when B.B.Dickerson was still in band and before Charles Miller was murdered.  Track two could have been recorded/written anytime up to 1979.
+
+Big Data (band): Big Data is an American electronic music project created by producer, Alan Wilkis.  Big Data is best known for its single "Dangerous", featuring Joywave, which reached number one on the "Billboard" Alternative Songs chart in August 2014, and was certified gold by the RIAA in May 2015.
+
+Carpenter Brut: Carpenter Brut is a French electronic music artist whose real name is Franck Hueso, based in Poitiers, France.  Little personal information is known about him aside from his French nationality.  His anonymity is a deliberate artistic choice in order to place more importance on the music itself rather than the identity of the musician behind it.  To date he has released three EPs, which were collected together and released together under the title "Trilogy" in 2015.  He has also contributed original music to a variety of soundtracks.  He started writing music as Carpenter Brut with the intention of mixing sounds from horror films, metal, rock, and electronic music.  He has toured the United States and Europe, and in 2016 he toured the US with the Swedish heavy metal band Ghost.  He performs live with a guitarist and drummer.
+
+Trans-Europe Express (album): Trans-Europe Express (German: Trans Europa Express ) is the sixth studio album by German electronic music band Kraftwerk.  Recorded in mid-1976 in Düsseldorf, Germany, the album was released in March 1977 on Kling Klang Records.  The album's themes were influenced by friends who suggested writing songs about the Trans Europ Express to reflect Kraftwerk's electronic music style.  Critics have described the album as having two specific themes: a celebration of Europe and the disparities between reality and image.  Musically, the songs on this album differ from the group's earlier Krautrock style with a focus on electronic mechanized rhythms, minimalism, and occasionally manipulated vocals.
+
+Angelspit: Angelspit is an electronic music band originally from Sydney, Australia and currently based in the United States.  The band was formed in 2004 by vocalists/synthesists Destroyx (Amelia Tan) and ZooG (Karl Learmont).  The band's music combines stylistic elements of horror, punk, pop and electronic music.  Their work contains imagery revolving around medical experiments and grotesque societies.  The band is currently based in Chicago.  Angelspit has toured with Angel Theory, Ayria, Ikon, KMFDM, Tankt and The Crüxshadows, and have also shared the stage with bands such as The Sisters of Mercy, Nitzer Ebb, Skinny Puppy and Front Line Assembly.  They performed with Lords of Acid during a 22-date U.S. tour in March 2011 and toured the United States with Blood on the Dance Floor in October 2011.
+
+2.0 (Big Data album): 2.0 is the debut studio album by electronic music band Big Data.  It was released on March 20, 2015 under Warner Bros.  Records.  From the album, two singles have been released; titled "Dangerous" featuring indie rock band Joywave and "The Business of Emotion" featuring White Sea.
+
+White Noise (band): White Noise is an English experimental electronic music band formed in London in 1968 by American-born David Vorhaus, a classical bass player with a background in physics and electronic engineering.  He was initially joined by BBC Radiophonic Workshop composers Delia Derbyshire and Brian Hodgson, who had formerly both been members of electronic music project "Unit Delta Plus".
+
+Question: What is the nationality of the electronic music band that released the album 2.0 ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the electronic music band."
+    },
+    "band_nationality": {
+      "type": "string",
+      "description": "The nationality of the electronic music band."
+    },
+    "album_details": {
+      "type": "object",
+      "properties": {
+        "album_title": {
+          "type": "string",
+          "description": "The title of the album released by the band."
+        },
+        "album_release_year": {
+          "type": "integer",
+          "description": "The year the album was released."
+        }
+      },
+      "required": [
+        "album_title",
+        "album_release_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "band_name",
+    "band_nationality",
+    "album_details"
+  ],
+  "additionalProperties": false
+}

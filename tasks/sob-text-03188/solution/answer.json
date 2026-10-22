@@ -1,0 +1,15 @@
+{
+  "sport_name": "tennis",
+  "athletes_mentioned": [
+    {
+      "name": "James Spencer Courier Jr.",
+      "nationality": "American",
+      "is_former_world_no_1": true
+    },
+    {
+      "name": "Elena Alexandrovna Likhovtseva",
+      "nationality": "Russian"
+    }
+  ],
+  "common_sport_identified": true
+}

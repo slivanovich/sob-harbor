@@ -1,0 +1,14 @@
+{
+  "breeds": [
+    {
+      "name": "Bull Terrier",
+      "is_terrier_family": true
+    },
+    {
+      "name": "Brazilian Terrier",
+      "is_terrier_family": true
+    }
+  ],
+  "common_type": "dog",
+  "number_of_breeds_identified": 2
+}

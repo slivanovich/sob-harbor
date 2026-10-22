@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "record_id": "19a45902a393d2332837c04db4ae490f8d65479b4333e4e0fdae0f3bd65114f1",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab9f9ed55429901930fa75a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Carl Grimes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Caesar Martinez (The Walking Dead): Caesar Ramon Martinez is a recurring fictional character from the comic book series \"The Walking Dead\" and is portrayed by Jose Pablo Cantillo in the third and fourth seasons of the television show of the same name.  Martinez is introduced in the 27th issue of the comic book series in April 2006 as the loyal second-in-command to The Governor.  He is responsible for bringing Rick Grimes and two of his fellow survivors, Michonne and Glenn into Woodbury to be questioned and later tortured.  In the television series, he is introduced in the third season's third episode to Andrea and Michonne as one of The Governor's soldiers.\n\nTyreese: Tyreese Williams is a fictional character from the comic book series \"The Walking Dead\" and is portrayed by Chad Coleman in the American television series of the same name.  He is a prominent character in both mediums, acting as group leader Rick Grimes' right hand man in the comic book series, up until the end of \"Made to Suffer\".\n\nRick Grimes: Rick Grimes is a fictional character and the protagonist in the comic book series \"The Walking Dead\" and the television series of the same name, portrayed by Andrew Lincoln.  Created by writer Robert Kirkman and artist Tony Moore, the character made his debut in \"The Walking Dead\" #1 in 2003.  Rick Grimes is a small town sheriff's deputy who has a son, Carl, with wife Lori.  He awakens from a coma after a life-threatening gun shot wound to find the world overrun by zombies, to which they refer as \"walkers\".\n\nThe Governor (The Walking Dead): The Governor (real name Philip Blake in the TV series and Brian Blake in the comic and novels) is a fictional character and a primary antagonist from \"The Walking Dead\" comic book and television series.  On television, he is portrayed by David Morrissey.  Created by Robert Kirkman and artists Charlie Adlard and Cliff Rathburn, the character made his comics debut in \"The Walking Dead\" #27 on April 2006 and his television debut in season 3.  In both series, The Governor is the ruthless, charismatic leader of the town of Woodbury, Georgia who comes into conflict with protagonist Rick Grimes and is responsible for the deaths of several primary characters.  The Governor's origins are explored in the novel \"\", written by Kirkman and Jay Bonansinga.\n\nT-Dog (The Walking Dead): Theodore \"T-Dog\" Douglas is a fictional character from the horror drama television series \"The Walking Dead\", which airs on AMC in the United States and is based on the comic book series of the same name\".  \"He was created by series developer Frank Darabont and portrayed by IronE Singleton.  The character was first introduced in the first season as a member of the group that series protagonist Rick Grimes encounters in Atlanta.  T-Dog was portrayed as a well-intentioned and kindhearted man towards his fellow survivors, although he struggles to prove his worth in the group.  The character eventually adapts to the group and becomes one of Rick's right-hand men.\n\nLori Grimes: Lori Grimes is a fictional character from the comic book series \"The Walking Dead\" and is portrayed by Sarah Wayne Callies in the American television series of the same name in the show's first three seasons.  Created by writer Robert Kirkman and artist Tony Moore, the character made her debut in \"The Walking Dead\" #2 in 2003.  In both forms of media, she is the wife of protagonist Rick Grimes and mother of Carl, and serves as the emotional core of the group.  The character escaped the zombie apocalypse with Carl and Rick's partner Shane Walsh, and, believing her husband to be dead, started a relationship with Shane.\n\nCarl Grimes: Carl Grimes is a fictional character from the comic book series \"The Walking Dead\" and is portrayed by Chandler Riggs in the American television series of the same name, which airs on AMC in the United States.  The character was created by writer Robert Kirkman and artist Tony Moore, and debuted in \"The Walking Dead\" #2 in 2003.  In both forms of media, Carl is the son of primary protagonist Rick Grimes, and his wife Lori Grimes, and is one of the longest-surviving characters and one of the few original Atlanta survivors still alive.\n\nGareth (The Walking Dead): Gareth is a fictional character from the American television series \"The Walking Dead\" portrayed by Andrew J. West.  Gareth is based on Chris from the comic book series of the same name, according to West himself.  Gareth is introduced at the end of season 4.  He is initially introduced as the welcoming yet mysterious leader of Terminus.  However, his true motivations are revealed after Gareth forces Rick Grimes and his fellow survivors into train car A.  At the beginning of season 5, it is revealed Gareth and his entire community are cannibals.  As the result of the actions by Carol Peletier, the group escapes, leaving many casualties of Terminus.  Gareth, however, leads the remaining survivors to try to hunt down Rick's group and eat them.\n\nThe Walking Dead: Michonne: The Walking Dead: Michonne is an episodic interactive drama graphic adventure survival horror based on Robert Kirkman's \"The Walking Dead\" comic book series by Telltale Games.  Taking place between issues 126 and 139 of \"The Walking Dead\" comic series, the game shows events of what Michonne was up to during her temporary departure from the group of survivors led by Rick Grimes in the midst of a zombie apocalypse.  Samira Wiley voiced Michonne in the game.  The three-episode series was released between February and April 2016 for personal computers, PlayStation 3 and 4 and Xbox 360 and One consoles, and on mobile devices.\n\nRosita Espinosa: Rosita Espinosa is a fictional character from the comic book series \"The Walking Dead\" and is portrayed by Christian Serratos in the American television series of the same name.  She accompanies Eugene Porter and Abraham Ford on a mission to Washington, D.C. In the comic book series, she joins Rick Grimes' group after they leave Hershel Greene's farm and go to DC.  Eventually Eugene is revealed to have lied but they continue onto Washington anyway, since he was still convinced the city would offer greater chance of survival, and they eventually find the Alexandria Safe-Zone.  Though she and Abraham continue their relationship she eventually breaks up with him when he cheats on her with Holly and moves in with Eugene, eventually starting a relationship with him, but forgives Abraham after he is killed by Dwight.  Rosita also takes part in the war against the Saviors led by Negan it's conclusion of which sees the 4 communities uniting forces.  Two years later Rosita and Eugene are married but their relationship is strained.  Rosita is revealed to be pregnant, but Eugene is not the father.  She is ultimately killed by Alpha, leader of the Whisperers, along with 11 other key members of all 4 communities.",
+    "question": "Lori Grimes is a fictional character from the comic book series, TV series, \"The Walking Dead\", she is the wife of protagonist Rick Grimes and mother of which fictional character from the comic book series \"The Walking Dead\" and is portrayed by Chandler Riggs, in the American television series, of the same name? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "character_name": {
+          "type": "string",
+          "description": "The name of the fictional character."
+        },
+        "character_role": {
+          "type": "string",
+          "description": "The relationship of the character to Lori Grimes."
+        },
+        "portrayed_by": {
+          "type": "string",
+          "description": "The actor who portrays the character in the television series."
+        },
+        "parent_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The names of the character's parents."
+        },
+        "media_appearances": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The types of media the character appears in."
+        }
+      },
+      "required": [
+        "character_name",
+        "character_role",
+        "portrayed_by",
+        "parent_names",
+        "media_appearances"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "character_name": "Carl Grimes",
+      "character_role": "son",
+      "portrayed_by": "Chandler Riggs",
+      "parent_names": [
+        "Rick Grimes",
+        "Lori Grimes"
+      ],
+      "media_appearances": [
+        "comic book series",
+        "television series"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mortal Sin (band): Mortal Sin were an Australian thrash metal band that formed in 1985 and existed over four distinct periods until 2012.  The band released five albums and were the first local thrash metal band to tour internationally.  According to Australian musicologist, Ian McFarlane, they were one of "two leading lights... [of] a small, but fervent underground thrash/speed metal scene."
+
+Kronik (album): Kronik is a compilation album released by the Canadian thrash metal/progressive metal band Voivod in 1998 on Hypnotic Records.  It is their eleventh release altogether, featuring remixes, previously unreleased songs, and live recordings.  The album features the track "Ion", which is played during the opening credits of the "Heavy Metal 2000" movie.  It was re-released in 2004 by Candlelight Records.
+
+Annihilator (band): Annihilator is a Canadian thrash metal band founded in 1984 by vocalist, guitarist, bassist, songwriter, engineer, producer, mixer and mastering engineer Jeff Waters and former vocalist John Bates.  They are the highest-selling heavy metal group from Canada in Canadian history, having sold more than three million albums worldwide, although most of their sales have been generated outside of the band's home country.  Along with Sacrifice, Voivod and Razor, Annihilator is credited as one of the "Big 4" of Canadian thrash metal.
+
+Voivod (band): Voivod is a Canadian thrash metal band from Jonquière, Quebec.  The band consists of Denis "Snake" Bélanger (vocals), Daniel "Chewy" Mongrain (guitar), Dominique "Rocky" Laroche (bass) and Michel "Away" Langevin (drums).  Their musical style has changed several times since the band's origin in the early 1980s.  Starting out as a speed metal band, Voivod have added a mix of progressive metal and thrash metal to create their own unique metal style, and they are credited as one of the "big four" Canadian thrash metal bands, along with Sacrifice, Razor, and Annihilator.
+
+Sacrifice (band): Sacrifice is a Canadian thrash metal band from Toronto, Ontario.  The band was formed by guitarists Rob Urbinati and Joe Rico in 1983.  Sacrifice played a prominent role in the 1980s scene in Toronto, and along with Voivod, Razor and Annihilator, they are considered one of the "Big 4" of Canadian thrash metal.  The band released four studio albums before parting ways in 1993.  After coming back together to play a reunion concert in 2006, they released their fifth studio album "The Ones I Condemn" on Brazilian label Marquee Records in 2009.  Although the band faced numerous lineup changes, especially in their early days, founding guitarists Urbinati, Rico and bassist Scott Watts recorded every studio album and demo and drummer Gus Pynn on everything but the "Apocalypse Inside" demo and CD.
+
+Deliverance (Deliverance album): Deliverance is the 1989 self-titled debut album by the Christian speed/thrash metal band Deliverance.  The original Intense Records pressing is now considered a valuable collectable.  It was reissued, minus 2 songs in 1998 on KMG Records as a two-disc set along with the 1990 album "Weapons of Our Warfare".  It was officially re-released late 2008 with 2 bonus tracks on Retroactive Records.  The album was ranked at No. 44 on "Metal Hammer"' s top 50 thrash metal albums of all-time list.  In 2010, "HM Magazine" listed "Deliverance" No. 31 on its Top 100 Christian Rock Albums of All Time list stating that "'If You Will' into 'The Call' is almost as good as metal gets (-Doug Van Pelt)" and that "this record would forever change and impact me and the Christian metal music scene as we knew it!" (-Bill Balford).  Heaven's Metal fanzine ranked it No. 3 on its Top 100 Christian metal albums of all-time list.  About.com writer Dan Marsicano wrote "Metal with a religious concept is not for everybody, and Deliverance doesn’t try to pander to the secular crowd.  So, if you don’t mind a little preaching, their music is straight-to-the-gut thrash metal at a time where the genre was getting more expansive with its themes and sound.  For giving Christian metal a thrash hero to rally behind, Deliverance gets the nod for this week’s Retro Recommendation."
+
+Tales from the Grave in Space: Tales from the Grave in Space is the third studio album by Irish thrash metal band Gama Bomb, and one of the first albums ever to be released as a free download by a signed band.  In a partnership between the band and record label Earache Records, the album was available for free download from 5 November 2009, hosted by RapidShare.  The album was physically released on January 25 in the UK and Europe and the US on March 8.
+
+Total Annihilation (album): Total Annihilation is a compilation album by the band Annihilator, it was released in 2010 as a free download.
+
+Forbidden (band): Forbidden was a thrash metal band from the San Francisco Bay Area.  Formed in 1985 as Forbidden Evil, the group was founded by Russ Anderson and Craig Locicero, who were both ever-present members.  Since their formation, Forbidden have broken up and reformed twice with numerous line-up changes.  The most recent line-up of the band comprised Anderson (vocals), Locicero (guitar), Matt Camacho (bass), Steve Smyth (guitar) and Sasha Horn (drums).  Along with Death Angel, Vio-lence, Defiance, Testament and Exodus (the latter of the two had featured original Forbidden drummer Paul Bostaph), they were one of the most successful Bay Area thrash metal bands and earned a loyal fanbase in the underground music community and critical acclaim, with their debut album "Forbidden Evil" (1988) regarded by critics as a classic thrash metal album and the follow-up, "Twisted Into Form", as something of a masterpiece within the tech-thrash genre.  Their earlier style was technical thrash metal, but the band later experimented with alternative and groove metal elements on their fourth album "Green" (1997).
+
+U.S.C.H!: U.S.C.H!  is the third studio album by the Finnish industrial metal band Turmion Kätilöt.  Released June 11, 2008 for free download on Turmion Kätilöt's record label Raha Records, it consists of 10 songs.  The first single from the album, Minä Määrään, was released for free download on Raha Records' website (now replaced with the free download of U.S.C.H!)  on May 21, 2008.  The band have announced a presale of the physical album, to be released on May 13, 2009.
+
+Question: What Canadian thrash metal band released a compilation album as a free download in 2010?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the thrash metal band."
+    },
+    "band_origin": {
+      "type": "string",
+      "description": "The country of origin of the band."
+    },
+    "album_name": {
+      "type": "string",
+      "description": "The name of the compilation album."
+    },
+    "album_type": {
+      "type": "string",
+      "description": "The type of the album, e.g., 'compilation'."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the album was released."
+    },
+    "release_method": {
+      "type": "string",
+      "description": "How the album was released, e.g., 'free download'."
+    }
+  },
+  "required": [
+    "band_name",
+    "band_origin",
+    "album_name",
+    "album_type",
+    "release_year",
+    "release_method"
+  ],
+  "additionalProperties": false
+}

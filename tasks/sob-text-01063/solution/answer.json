@@ -1,0 +1,14 @@
+{
+  "common_profession": "author",
+  "individuals": [
+    {
+      "name": "Anne Perry",
+      "specific_genre": "historical detective fiction"
+    },
+    {
+      "name": "Bernard Cornwell",
+      "specific_genre": "historical novels"
+    }
+  ],
+  "profession_count": 2
+}

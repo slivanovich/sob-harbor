@@ -1,0 +1,10 @@
+{
+  "park_name": "Waldameer Park",
+  "roller_coaster_name": "Ravine Flyer II",
+  "location": {
+    "city": "Erie",
+    "state": "Pennsylvania",
+    "country": "United States"
+  },
+  "feature_details": "90-degree banked turn"
+}

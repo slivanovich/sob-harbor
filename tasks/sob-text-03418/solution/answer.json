@@ -1,0 +1,10 @@
+{
+  "actor_name": "John Goodman",
+  "movie_gigantic_role": "star",
+  "voiced_character_name": "Sulley",
+  "disney_pixar_monster_films": [
+    "Monsters, Inc.",
+    "Monsters University"
+  ],
+  "number_of_monster_films": 2
+}

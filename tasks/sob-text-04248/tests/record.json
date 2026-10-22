@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "record_id": "c6f9a6d86b44612fca7c01128a20911bc914ba36c93fe75ef82fe319b81aedac",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae546e85542992663a4f1b5",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Rigveda Wiki",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "From Impressionism To Anime: From Impressionism To Anime: Japan As Fantasy And Fan Cult In The Western Imagination is a scholarly book by Susan J. Napier published in 2007 by Palgrave Macmillan.  It connects Japanophilia, Orientalism, Japonisme and modern anime and manga fandom.\n\nOmake: Omake (御負け , usually written おまけ) means \"extra\" in Japanese.  Its primary meaning is general and widespread.  It is used as an anime and manga fandom term to mean \"extra or bonus.\"  In the USA, the term is most often used in a narrow sense by anime fans to describe special features on DVD releases: deleted scenes, interviews with the actors, \"the making of\" documentary clips, outtakes, amusing bloopers, and so forth.  However, this use of the term actually predates the DVD medium by several years.  For at least the past 50 years in Japan, \"omake\" of small character figurines and toys have been giveaways that come with soft drinks and candy and sometimes the \"omake\" is more desired than the product being sold.\n\nWikia: Wikia (formerly Wikicities, website itself known as FANDOM powered by Wikia) is a wiki hosting service.  The site is free of charge, for-profit, deriving its income from advertising and sold content, publishing most user-provided text under copyleft licenses.  Wikia hosts several hundred thousand wikis using the open-source wiki software MediaWiki.  Its operator, Wikia, Inc., is a for-profit Delaware company founded in late 2004 by Jimmy Wales and Angela Beesley Starling—respectively Chairman Emeritus and Advisory Board member of the Wikimedia Foundation—and headed by Craig Palmer as CEO.  Wikia also runs the associated Fandom editorial project, offering pop-culture and gaming news.\n\nMeganekko: Meganekko (メガネっ娘 ) (メガネ, also めがね or 眼鏡, pronounced \"megane\" (\"glasses\") and \"ko\" for \"child\" (子) but using the kanji for \"daughter\" (娘)) is an anime and manga fandom character archetype.\n\nOtaku: Otaku (おたく/オタク ) is a Japanese term for people with obsessive interests, commonly the anime and manga fandom.  Its contemporary usage originated with Akio Nakamori's 1983 essay in \"Manga Burikko\".  \"Otaku\" may be used as a pejorative; its negativity stems from the stereotypical view of otaku and the media's reporting on Tsutomu Miyazaki, \"The Otaku Murderer\", in 1989.  According to studies published in 2013, the term has become less negative, and an increasing number of people now self-identify as otaku.\n\nThe Otaku Encyclopedia: The Otaku Encyclopedia is a 2009 encyclopedia written by Patrick Galbraith and published by Kodansha which provides an overview of anime and manga fandom topics, and interviews and profiles of important people in Japanese fandom.\n\nFan service: Fan service (ファンサービス , fan sābisu ) , fanservice, or service cut (サービスカット , sābisu katto ) , is material in a work of fiction or in a fictional series which is intentionally added to please the audience.  The term originated in Japanese, in the anime and manga fandom, but has been used in other languages and media.  It is about \"servicing\" the fan – giving the fans \"exactly what they want.\"  Fan service usually refers to \"gratuitous titillation\", but can also refer to intertextual references to other series or story and visual elements that audiences tend to desire.\n\nHistory of wikis: The history of wikis is generally dated from 1994, when Ward Cunningham gave the name \"WikiWikiWeb\" to the knowledge base, which ran on his company's website at c2.com, and the wiki software that powered it.  c2.com thus became the first true wiki, or a website with pages and links that can be easily edited via the browser, with a reliable version history for each page.  He chose \"WikiWikiWeb\" as the name based on his memories of the \"Wiki Wiki Shuttle\" at Honolulu International Airport, and because \"wiki\" is the Hawaiian word for \"quick\".\n\nRigveda Wiki: Rigveda Wiki is a Korean Otaku wiki which started on March 1, 2007.  As of July 17, 2013, it had more than 200,000 articles, making it the fourth-largest Korean-language wiki, following Korean Wikipedia, Korean Wiktionary and the Namu Wiki, forked of Rigveda Wiki.  It focuses on a wide range of topics.\n\nAnime and manga fandom: Anime and manga fandom (otherwise known as fan community) is a worldwide community of fans of anime and manga.  Anime includes animated series, films and videos, while manga includes Manga, graphic novels, drawings, and related artwork.  They have their origin in Japanese entertainment, but the style and culture has spread worldwide since its introduction into the West in the 1990s.",
+    "question": "What is the name of the fourth-largest Korean-language wiki focused on amine and manga fandom?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "wiki_name": {
+          "type": "string",
+          "description": "The name of the wiki."
+        },
+        "language": {
+          "type": "string",
+          "description": "The primary language of the wiki."
+        },
+        "size_rank": {
+          "type": "integer",
+          "description": "The numerical rank of the wiki by size within its language."
+        },
+        "focus_areas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of topics or communities the wiki focuses on."
+        }
+      },
+      "required": [
+        "wiki_name",
+        "language",
+        "size_rank",
+        "focus_areas"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "wiki_name": "Rigveda Wiki",
+      "language": "Korean",
+      "size_rank": 4,
+      "focus_areas": [
+        "Otaku",
+        "anime fandom",
+        "manga fandom"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Music from the Motion Picture Pulp Fiction: Music from the Motion Picture Pulp Fiction is the soundtrack to Quentin Tarantino's 1994 film "Pulp Fiction".  No traditional film score was commissioned for "Pulp Fiction".  The film contains a mix of American rock and roll, surf music, pop and soul.  The soundtrack is equally untraditional, consisting of nine songs from the movie, four tracks of dialogue snippets followed by a song, and three tracks of dialogue alone.  Seven songs featured in the movie were not included in the original 41-minute soundtrack.
+
+Srimathumitha: Srimathumitha is an Indian playback and Carnatic singer who sings mainly in Tamil.  She has also sung in Telugu, Hindi and Kannada songs.  Some of her hit songs are “Azhage Azhage” from the Movie Oru Kal Oru Kannadi, “Valayapatti Thavile” from the movie Azhagiya Tamil Magan, “Kanaa Kaanum Kalangal” from the movie 7G Rainbow Colony, and “Rathathin Rathame” from the movie Velayudham.  She is one of the leading playback singers in today’s film music scenario.  She has sung for leading music directors like Ilayaraja, Harris Jayaraj, Yuvan Shankar Raja, A. R. Rahman, Bharathwaj, Deva, S. A. Rajkumar, and Bharani.  She emerged as the “Best Voice of 2002” in the TV Reality Show Rajageetham conducted by RAJ TV.  She is the first playback singer to win the Vikadan Awards started in 2004, which was juried by late Sujatha Sir.  A. R. Rahman has featured her in 2 songs in the soundtrack of Oscar-winning movie "Slumdog Millionaire".
+
+Be Like That: "Be Like That" is a song by the American post-grunge band 3 Doors Down.  It was released in June 2001 as the fourth single from the album, "The Better Life".  It peaked at number 24 on the "Billboard" Hot 100 chart in the U.S. for the week ending November 10, 2001.  A version of the song with minor lyrical changes was made, for the movie "American Pie 2", and was featured on the movie's soundtrack.
+
+Monkey Grip (soundtrack): Monkey Grip is a soundtrack to the film of the same name, with songs provided by the Divinyls.  The movie is an adaptation by director Ken Cameron of Helen Garner's novel "Monkey Grip".  The movie had little impact at the box office, taking only A$451,000.  The soundtrack was released in May 1982 and peaked at #25 on the Australian Kent Music Report album chart.  The soundtrack contains the band's first single, "Boys in Town", as well as "Only Lonely", "Elsie" and "Only You" – all of which are featured on the international version of the Divinyls' first studio album, "Desperate".  "Monkey Grip" also features two other songs "Gonna Get You" and "Girlfriends".  Christina Amphlett also co-starred in the movie "Monkey Grip", playing a temperamental rock singer loosely based on herself, fronting a band played by fellow Divinyls members.
+
+Villa Elaine: Villa Elaine was Remy Zero's second studio album, released in 1998 and produced for Geffen Records.  After recording the album, Radiohead, who the band had toured with previously, added Remy Zero to their tour in support of "OK Computer".  The band also toured with Scottish band Travis.  The album became popular for the song "Prophecy", which was used on the soundtrack for the movies "She's All That" and "The Last Kiss".  The song "Fair" was used on Zach Braff's Grammy award-winning soundtrack to the movie "Garden State" and, more recently, featured in the movie "Fanboys".  "Hermes Bird" was used in the TV series "Felicity" and "Charmed".  "Problem" appeared on the soundtrack for the Drew Barrymore film "Never Been Kissed".
+
+Egotrippi: Egotrippi is a Finnish pop group, founded in the early 1990s.  Among their hits are "Älä koskaan ikinä", which is featured on the soundtrack of the Finnish movie "Nousukausi" (2003), "Unihiekkaa" and "Matkustaja", which reached #11 on the Finnish Top 20 and featured on the soundtrack of the movie "Kukkia ja sidontaa" (2004).
+
+Jeans (soundtrack): Jeans is the soundtrack from the 1998 film of the same name, released by West Top in March 1998.  The soundtrack features artists such as Hariharan, Harini and Unnikrishnan.  A. R. Rahman composed the music for this movie.  The original soundtrack featured lyrics by Vairamuthu in Tamil.  Following the success of the soundtrack, it was dubbed to Hindi with lyrics by Javed Akhtar and was released by T-Series.  The Telugu version lyrics were written by A. M. Rathnam and Sivaganesh which was released by Aditya Music.  The album consists of eight songs, but the last two songs were featured in the cassettes only.  Audio disks of both versions featured six songs.
+
+American Pie 2: American Pie 2 is a 2001 American sex comedy film and the sequel to the 1999 film "American Pie" and the second film in the "American Pie" film series.  It was written by Adam Herz and David H. Steinberg and directed by James B. Rogers.  The film picks up the story of the five friends from the first film as they reunite during the summer after their first year of college.  It was released in the United States on August 10, 2001, and grossed over $145 million in the US and $142 million overseas on a budget of $30 million.  It was followed by another sequel, "American Wedding".
+
+Slow Turning: Slow Turning was singer-songwriter John Hiatt's ninth album, released in 1988.  It provided Hiatt's only significant radio hit with the title track, which features the memorable line "I'm yelling at the kids in the back, 'cause they're banging like Charlie Watts".  The single "Slow Turning" was also featured in the 2002 motion picture drama the "The Rookie" which starred Dennis Quaid.  "Feels Like Rain" would later be covered by Buddy Guy on an album of the same name and was featured in the 2004 Kate Hudson movie "Raising Helen".  "Drive South" would become a country hit for Suzy Bogguss in the early 1990s.  "Icy Blue Heart" was covered by Emmylou Harris in her 1989 album "Bluebird", with backing vocals by Bonnie Raitt.  Ilse DeLange recorded "It'll Come To You"" and "Feels Like Rain" on her live album "Dear John".  During the barroom scene in the Film "Thelma and Louise", the band is playing "Tennessee Plates" (Charlie Sexton recorded the song for the soundtrack album).
+
+Kim Tae-yeon discography: Kim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer.  Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles.  She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs "If" for "Hong Gil Dong" and "Can You Hear Me" for "Beethoven Virus" (2008).  She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably "I Love You" for "" (2010), "Missing You like Crazy" for "The King 2 Hearts", "Closer" for "To the Beautiful You" (2012), and "And One" for "That Winter, the Wind Blows" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart.  Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably "Like a Star" with The One and "Different" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.
+
+Question: Who was the director of the movie that featured "Be Like That" on its soundtrack? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song."
+    },
+    "movie_title": {
+      "type": "string",
+      "description": "The title of the movie that featured the song on its soundtrack."
+    },
+    "movie_director": {
+      "type": "string",
+      "description": "The director of the movie."
+    }
+  },
+  "required": [
+    "song_title",
+    "movie_title",
+    "movie_director"
+  ],
+  "additionalProperties": false
+}

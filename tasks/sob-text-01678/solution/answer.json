@@ -1,0 +1,25 @@
+{
+  "song_title": "Cow-Cow Boogie",
+  "collaboration_year": 1944,
+  "collaborating_artists": [
+    {
+      "artist_name": "The Ink Spots",
+      "artist_type": "vocal group",
+      "lead_singer": "Bill Kenny"
+    },
+    {
+      "artist_name": "Ella Fitzgerald",
+      "artist_type": "singer"
+    }
+  ],
+  "chart_performance": [
+    {
+      "chart_name": "Harlem Hit Parade",
+      "peak_position": 1
+    },
+    {
+      "chart_name": "pop chart",
+      "peak_position": 10
+    }
+  ]
+}

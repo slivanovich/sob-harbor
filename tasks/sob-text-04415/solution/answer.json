@@ -1,0 +1,14 @@
+{
+  "movie_title": "The Crossing",
+  "director": {
+    "name": "John Woo"
+  },
+  "screenwriter": {
+    "name": "Hui-Ling Wang"
+  },
+  "release_year": 2014,
+  "genres": [
+    "epic historical romance-war drama",
+    "disaster film"
+  ]
+}

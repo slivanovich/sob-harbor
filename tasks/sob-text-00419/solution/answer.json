@@ -1,0 +1,24 @@
+{
+  "identified_comedian": {
+    "name": "Robert Alan \"Bob\" Monkhouse",
+    "nationality": "English",
+    "professions": [
+      "entertainer",
+      "comedian"
+    ],
+    "birth_date": "1 June 1928",
+    "death_date": "29 December 2003"
+  },
+  "other_person": {
+    "name": "Harry Stephen Keeler",
+    "nationality": "American",
+    "professions": [
+      "author",
+      "mystery writer",
+      "science fiction writer"
+    ],
+    "birth_date": "November 3, 1890",
+    "death_date": "January 22, 1967"
+  },
+  "answer": "Robert Alan \"Bob\" Monkhouse"
+}

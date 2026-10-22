@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Expedition: Bismarck: Expedition: Bismarck is a 2002 documentary film produced for the Discovery Channel by Andrew Wight and James Cameron, directed by James Cameron and Gary Johnstone, and narrated by Lance Henriksen.  The film follows an underwater expedition to the German battleship Bismarck and digitally reconstructs events that led up to the ship's sinking during World War II.  In 2003 the film was honored with an Emmy award for Outstanding Sound Editing for Non-Fiction Programming.
+
+James Cameron (Union colonel): James Cameron (March 1, 1800 – July 21, 1861) was a Pennsylvanian who served as colonel of the 79th New York Volunteer Infantry Regiment of the Union Army during the early days of the American Civil War (Civil War).  He was the brother of Simon Cameron, United States Senator and first United States Secretary of War in the cabinet of President Abraham Lincoln.  At the age of 61, James Cameron was killed in action at the First Battle of Bull Run, the first large battle of the war, on July 21, 1861.
+
+Lightstorm Entertainment: Lightstorm Entertainment is an American film production company.  The company was founded by Canadian filmmaker James Cameron and film producer Larry Kasanoff in 1990 and is best known for producing the films "", "Titanic" and Cameron's latest film "Avatar".  Cameron has also employed other filmmakers to produce and direct films under Lightstorm's production banner.
+
+Samuel James Cameron: Samuel James Cameron (7 January 1878 – 29 October 1959) was Regius Professor of Midwifery at the University of Glasgow from 1934 until 1942.  The son of Caesarean Section pioneer Prof Murdoch Cameron, S.J. Cameron was a foundation Fellow of Royal College of Obstetricians and Gynaecologists in 1929, and for many years a member of the Gynaecological Visiting Society.  A lifelong champion of the reputation of the founder of professional midwifery in the British isles, William Smellie, Cameron both named a maternity hospital at Lanark, Scotland, after him and saved Smellie’s library from permanent loss.
+
+James Cameron filmography: James Cameron is a Canadian director, screenwriter, and producer who has had an extensive career in film and television.  Cameron's debut was the 1978 science fiction short "Xenogenesis", which he directed, wrote and produced.  In the early part of his career, he did various technical jobs such as special visual effects producer, set dresser assistant, matte artist, and photographer.  His feature directorial debut was the 1981 release "".  The next film he directed was the science fiction action thriller "The Terminator" (1984).  It starred Arnold Schwarzenegger as the titular cyborg assassin, and was Cameron's breakthrough feature.  In 1986, he directed and wrote the science fiction action sequel "Aliens" starring Sigourney Weaver.  He followed this by directing another science fiction film "The Abyss" (1989).  In 1991, Cameron directed the sequel to "The Terminator", "" (with Schwarzenegger reprising his role), and also executive produced the action crime film "Point Break".  Three years later he directed a third Schwarzenegger-starring action film "True Lies" (1994).
+
+James Cameron's unrealized projects: The following is a list of unproduced James Cameron projects in roughly chronological order.  During his long career, Canadian film director James Cameron has worked on a number of projects which never progressed beyond the pre-production stage under his direction.  Some of these projects, fell into development hell or are officially cancelled.
+
+James Cameron's Avatar: The Game: James Cameron's Avatar: The Game is a 2009 third-person action video game based on James Cameron's 2009 film "Avatar".  The game was developed by Ubisoft Montreal and released on the PlayStation 3, Xbox 360, Microsoft Windows, Wii and Nintendo DS on December 1, 2009, with a PSP version released later on December 7, 2009.  It uses the same technology as the film to be displayed in stereoscopic 3D.  As of May 19, 2010, the game has sold nearly 2.7 million copies.
+
+Victoria Larimore: Victoria Ann Larimore (born October 5, 1956) is an American film director, television director, producer, screenwriter, and playwright.  She received an Emmy nomination for her 1992 work, "Saying Kaddish."  She has also produced:"The Amish: Not to Be Modern" (1985), "An Empty Bed" (1990), "Saying Kaddish" (1992), and the film noir thriller, "Room 32" (2002).
+
+Avatar (2009 film): Avatar, marketed as James Cameron's Avatar, is a 2009 American epic science fiction film directed, written, produced, and co-edited by James Cameron, and starring Sam Worthington, Zoe Saldana, Stephen Lang, Michelle Rodriguez, and Sigourney Weaver.  The film is set in the mid-22nd century, when humans are colonizing Pandora, a lush habitable moon of a gas giant in the Alpha Centauri star system, in order to mine the mineral unobtanium, a room-temperature superconductor.  The expansion of the mining colony threatens the continued existence of a local tribe of Na'vi – a humanoid species indigenous to Pandora.  The film's title refers to a genetically engineered Na'vi body with the mind of a remotely located human that is used to interact with the natives of Pandora.
+
+James Cameron: James Francis Cameron (born August 16, 1954) is a Canadian filmmaker, director, producer, screenwriter, inventor, engineer, philanthropist, and deep-sea explorer.  After working in special effects, he found major success after directing and writing the science fiction action film "The Terminator" (1984).  He then became a popular Hollywood director and was hired to write and direct "Aliens" (1986); three years later he followed up with "The Abyss" (1989).  He found further critical acclaim for his use of special effects in "" (1991).  After his film "True Lies" (1994) Cameron took on his biggest film at the time, "Titanic" (1997), which earned him Academy Awards for Best Picture, Best Director and Best Film Editing.
+
+Question: Do Victoria Larimore and James Cameron share the same nationality?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "question_asked": {
+      "type": "string",
+      "description": "The original question posed."
+    },
+    "person_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the first person."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the first person."
+        }
+      },
+      "required": [
+        "name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "person_2": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the second person."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the second person."
+        }
+      },
+      "required": [
+        "name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "share_same_nationality": {
+      "type": "boolean",
+      "description": "True if both individuals share the same nationality, false otherwise."
+    }
+  },
+  "required": [
+    "question_asked",
+    "person_1",
+    "person_2",
+    "share_same_nationality"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "person_of_interest": {
+    "name": "Daniel Boone",
+    "relationship_to_nathan_boone": "father"
+  },
+  "settlement_details": {
+    "current_state": "Kentucky",
+    "original_territory_status": "part of Virginia",
+    "specific_settlement_name": "Boonesborough"
+  },
+  "reasoning_source": "Daniel Boone"
+}

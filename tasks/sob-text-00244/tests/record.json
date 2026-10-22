@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "record_id": "72a783dba7cf41413d3acb27948fd0e90eff20008167b8fe4ffcd7850b029617",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8e0b2355429917b4a5bcf5",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Astragalus lemmonii: Astragalus lemmonii, the Lemmon’s milkvetch, is a rare plant of eastern California.  It is a member of the bean family, the Leguminosae (a.k.a. Fabaceae), and specifically a member of the subfamily Papilionoideae (a.k.a. Faboideae).  The genus \"Astragalus\" is a large genus within this family; members of this genus are known as milkvetches or locoweeds.  Close relatives of this particular species include \"Astragalus peckii\" and \"Astragalus lentiformis\".\n\nOnion ring: Onion rings are a form of appetizer or side dish commonly found in the United States, Canada, United Kingdom, Ireland, Australia, New Zealand, South Africa and some parts of Asia and Continental Europe.  They generally consist of a cross-sectional \"ring\" of onion (the circular structure of which lends itself well to this method of preparation) dipped in batter or bread crumbs and then deep fried; a variant is made with onion paste.  Onion rings are sometimes accompanied by condiments including ketchup, mayonnaise or other sauces.  While typically served as a side dish, onion rings can also be eaten on their own.  Like other cooked onion dishes, the cooking process decomposes propanethial oxide in the onion into the sweet-smelling and tasting bispropenyl disulfide, responsible for the slightly sweet taste of onion rings.\n\nCaistor-by-Norwich astragalus: The Caistor-by-Norwich astralagus is a roe deer astragalus found in an urn at Caistor St. Edmund, Norfolk, England.  The astragalus is inscribed with a 5th-century Elder Futhark inscription, reading raïhan \"roe\".  The inscription is the earliest found in England, and predates the evolution of the specifically Anglo-Frisian Futhorc.  As the urn was found in a cemetery that indicated some Scandinavian influence, it has been suggested that the astragalus may be an import, perhaps brought from Denmark in the earliest phase of the Anglo-Saxon settlement of Britain.  The inscription is an important testimony for the Eihwaz rune and the treatment of Proto-Germanic \"*ai\".  The \"h\" rune has the Nordic single-bar shape , not the Continental double-bar which was later adopted in the Anglo-Frisian runes.\n\nBlooming onion: A blooming onion, onion bloom, onion blossom, onion flower, bloomin' onion, or onion 'mum is a dish consisting of one large onion which is cut to resemble a flower, battered, and deep-fried.  It is served as an appetizer at some restaurants.\n\nAstragalus molybdenus: Astragalus molybdenus is a species of flowering plant in the legume family known by the common names Leadville milkvetch and molybdenum milkvetch.  It is endemic to Colorado in the United States.  If the separate species \"Astragalus shultziorum\" and \"Astragalus lackschewitzii\" are included in \"A. molybdenum\" the range expands into Wyoming and Montana.\n\nAstragalus: Astragalus is a large genus of about 3,000 species of herbs and small shrubs, belonging to the legume family Fabaceae and the subfamily Faboideae.  It is the largest genus of plants in terms of described species.  The genus is native to temperate regions of the Northern Hemisphere.  Common names include milkvetch (most species), locoweed (in North America, some species) and goat's-thorn (\"A. gummifer\", \"A. tragacanthus\").  Some pale-flowered vetches are similar in appearance, but vetches are more vine-like.\n\nAllium fistulosum: Allium fistulosum, commonly called bunching onion, long green onion, Japanese bunching onion, scallion, spring onion, Welsh onion, is a species of perennial plant.  The common name \"Welsh onion\" does not refer to Wales but derives from a near obsolete use of \"Welsh\" in the sense \"foreign, non-native\", as the species is native to China, though cultivated in many places and naturalized in scattered locations in Eurasia and North America.\n\nOnion: The onion (\"Allium cepa\" L., from Latin \"cepa\" \"onion\"), also known as the bulb onion or common onion, is a vegetable and is the most widely cultivated species of the genus \"Allium\".  Its close relatives include the garlic, shallot, leek, chive, and Chinese onion.\n\nVeratalpa: Veratalpa lugdunensiana is a fossil mammal from the Miocene of France.  Known from a single astragalus (a footbone), the species was assigned to its own genus, \"Veratalpa\", by Florentino Ameghino in 1905.  He placed it in Talpidae, the family of the moles, but in 1974, John Howard Hutchison argued that the astragalus was not talpid and more likely came from a rodent.  The astragalus is about 4.5 mm long, broad for a talpid, and has the head oriented farther from the axis of the foot than in talpids.\n\nScallion: Scallions ( green onion, spring onion and salad onion) are vegetables of various \"Allium\" onion species.  Scallions have a milder taste than most onions.  Its close relatives include the garlic, shallot, leek, chive, and Chinese onion.",
+    "question": "Can the Astragalus and the Onion be eaten?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question being answered."
+        },
+        "overall_edibility_conclusion": {
+          "type": "string",
+          "description": "A summary conclusion regarding the edibility of both items based on the provided context."
+        },
+        "items_analyzed": {
+          "type": "array",
+          "description": "Details about the edibility of each item mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item_name": {
+                "type": "string",
+                "description": "The primary name of the item."
+              },
+              "item_type": {
+                "type": "string",
+                "description": "The general type or classification of the item (e.g., 'plant genus', 'vegetable', 'bone')."
+              },
+              "common_names": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Other common names for the item, if available in context."
+              },
+              "is_edible_for_humans_from_context": {
+                "type": "boolean",
+                "description": "True if the context explicitly states or strongly implies the item is edible for humans."
+              },
+              "edibility_notes": {
+                "type": "string",
+                "description": "Relevant information from the context regarding edibility, including reasons for edibility or lack thereof, or why it's not mentioned."
+              }
+            },
+            "required": [
+              "item_name",
+              "item_type",
+              "edibility_notes"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "question_asked",
+        "overall_edibility_conclusion",
+        "items_analyzed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Can the Astragalus and the Onion be eaten?",
+      "overall_edibility_conclusion": "Based on the provided context, onions are explicitly described as edible vegetables used in dishes. However, the context does not state that Astragalus (the plant genus) is edible for human consumption; some common names like 'locoweed' even imply toxicity for certain species.",
+      "items_analyzed": [
+        {
+          "item_name": "Astragalus",
+          "item_type": "plant genus",
+          "common_names": [
+            "milkvetch",
+            "locoweed",
+            "goat's-thorn"
+          ],
+          "edibility_notes": "Astragalus is a large genus of about 3,000 species of herbs and small shrubs. While common names include 'milkvetch', 'locoweed' (for some species) implies toxicity. The context does not provide information on its edibility for human consumption."
+        },
+        {
+          "item_name": "Onion",
+          "item_type": "vegetable",
+          "common_names": [
+            "bulb onion",
+            "common onion"
+          ],
+          "is_edible_for_humans_from_context": true,
+          "edibility_notes": "The onion is a vegetable and is the most widely cultivated species of the genus Allium. It is commonly found in dishes such as onion rings (appetizer/side dish) and blooming onions (appetizer). Scallions, a type of onion, are also described as vegetables."
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

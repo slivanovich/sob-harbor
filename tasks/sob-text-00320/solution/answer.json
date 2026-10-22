@@ -1,0 +1,15 @@
+{
+  "agent": {
+    "name": "Chris Tarbell",
+    "role": "former FBI special agent"
+  },
+  "arrested_person": {
+    "alias": "Dread Pirate Roberts",
+    "full_name": "Ross Ulbricht",
+    "organization": "Silk Road"
+  },
+  "event_details": {
+    "action": "arrested",
+    "location": "Glen Park Public Library"
+  }
+}

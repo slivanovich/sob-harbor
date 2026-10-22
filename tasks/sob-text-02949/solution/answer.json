@@ -1,0 +1,16 @@
+{
+  "person": {
+    "name": "Algirdas Julien Greimas",
+    "nationality": [
+      "French",
+      "Lithuanian"
+    ],
+    "occupation": "literary scientist",
+    "other_known_contribution": "Greimas Square"
+  },
+  "model_developed": {
+    "name": "Actantial model",
+    "development_year": 1966
+  },
+  "is_developer": true
+}

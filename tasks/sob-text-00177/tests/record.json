@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "1a428585db9cfb2d4d0561b5731ae790c860029d40583c37d720e7f02a357a96",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab3d811554299233954ffc9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Melbourne & Metropolitan Tramways Board",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Collins Street, Melbourne: Collins Street is a major street in the centre of Melbourne, Victoria in Australia.  It is known for its grand Victorian architecture, prestigious boutiques and high-end retailers.  Collins Street has served as Melbourne's traditional main street since 1837 and was laid out as a core feature of the Hoddle Grid.\n\nFarm to Market Road 157: Farm to Market Road 157 (FM 157) is a Farm to Market Road in the US state of Texas, traveling from an exit on Texas State Highway 121 south, through Euless, Bedford, Fort Worth, and Arlington in Tarrant County, then enters Johnson County, and passes through Mansfield, and Venus, before entering Ellis County, and terminating at an intersection with Farm to Market Road 66 in Maypearl.  While located in Euless and Bedford, FM 157 is known as Industrial Boulevard, while in Fort Worth, it is known as Collins Street.  In Arlington, the route continues on Collins, Abram, and Cooper Streets.  In Mansfield, the road is known as Main Street and Lone Star Road; in Venus as Main Street, 8th Street, and 7th Street; and in Maypearl as Highway 157.  The highway passes directly through the center of Euless and Bedford, passing large neighborhoods and businesses.  The route passes a large wetland before passing directly through downtown Arlington, passing major attractions such as Cowboys Stadium and Rangers Ballpark.  The route passes through the center of the University of Texas at Arlington, and continues through downtown and southern Arlington, before entering Mansfield.  The route continues though central Mansfield, and south to Maypearl.  The Texas Department of Transportation (TxDOT) designated the route in 1945, and redesignated the portion traveling from SH 121 to US Bus.  287 as Urban Road 157 (UR 157) in 1995.\n\nHandicraft: A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by hand or by using only simple tools.  It is a traditional main sector of craft, and applies to a wide range of creative and design activities that are related to making things with one's hands and skill, including work with textiles, moldable and rigid materials, paper, plant fibers, etc.  One of the world's oldest handicraft is Dhokra; this is a sort of metal casting has been used in India for over 4,000 years and is still used.  Usually the term is applied to traditional techniques of creating items (whether for personal use or as products) that are both practical and aesthetic.Handicraft industries are those that produces things with hands to meet the needs of the people in their locality.Machines are not used.\n\nNorthfield Main Street Historic District: The Northfield Main Street Historic District is a historic district located along the full length of Main Street from Millers Brook to Pauchaug Brook in Northfield, Massachusetts.  The district encompasses the part of Main Street that was laid out when Northfield was first established in the 17th century.  The area has retained many of its traditional lot divisions, and features civic and residential construction from the 18th to the 20th centuries.  The district was listed on the National Register of Historic Places in 1982.\n\nChapin National Bank Building: The Chapin National Bank Building is a historic bank building at 1675-1677 Main Street in Springfield, Massachusetts.  It was built in 1917 for the Chapin National Bank, which was established in 1872 by the local transportation magnate Chester Chapin, on the site of a previous building of the same bank.  The two story Neo-Classical cast stone structure has classical Doric friezes on both its Main Street and Lyman Street facades.  When built both facades had a line of Doric columns, but those on the Lyman Street side have either been paneled over or removed.  The building was listed on the National Register of Historic Places in 1983.\n\nEnnistymon: Ennistymon or Ennistimon (Irish: \"Inis Díomáin\" ) is a country market town in County Clare, near the west coast of Ireland.  A popular tourist spot, it has a typical Irish main street, with many traditional pubs.  The river Inagh, with its small rapids known as the Cascades, runs through the town, behind the main street.  A bridge across the river leads to nearby Lahinch, on the N67 national secondary road.  The town is connected to Ennis by the N85, the main street through the town.\n\nY1-class Melbourne tram: The Y1-class was a class of four trams built by the Melbourne & Metropolitan Tramways Board built as a modified version of the Y-class to trial one man operation.  Initially used on East and West Preston routes from Collins Street, from 1934 they were transferred to the Toorak line.  From 1936 they were used on Burwood services from Camberwell depot.  In 1933, 613 was used on Victorian Railways' Sandringham railway station to Black Rock line.\n\nBack lane: A back lane is a roadway often found in a planned medieval village running parallel to the main street at the other end of the Burgage plots.  There may be a back lane on each side of the main street which together with the main street itself provide a rectangular framework for the development of the village.  Although the burgage plot was used for small scale activities such as livestock or orchards, the back lane frequently divided the village from the main agricultural area - such as the open fields.\n\nOlmsted-Hixon-Albion Block: The Olmsted-Hixon-Albion Block is a historic commercial block at 1645-1659 Main Street in the South End of downtown Springfield, Massachusetts.  The building is actually three separate buildings that were conjoined by internal connections in 1929.  The Olmsted Block (1645-1649 Main Street) was built in 1875 by John C. Olmsted, a leading businessman and banker in the city, and used as an office building.  The Hixon Block (1653-1655 Main Street) was built in 1862 for John Hixon, a wholesale shoe and boot manufacturer.  His premises was used by a paper products manufacturer after his death.  The Albion Block (1657-1659) was built in 1866 as a boarding house; it was acquired in 1877 by the Bay State Paper Company, which gave the building its name.\n\nNashville Terminal Subdivision: The Nashville Terminal Subdivision is a railroad line owned by CSX Transportation in the U.S. State of Tennessee.  The Subdivision is broken up into 5 sections all in Nashville, Tennessee.  The northern part of the Terminal is in Madison, Tennessee at milepost 000/0BA 174 on the southern end of the Ex-L&N Mainline Subdivision at Monfort.  Disptach for the Mainline Sub is known as \"LD\" which is part of the Cincinnati Division.  From here in Madison begins the double track that stays for another 22 miles south to Brentwood, Tennessee.  At milepost 000/0BA/00H 176.6, the famous Johnny Cash \"Amqui\" location where the Ex-L&N Evansville, Indiana line, the Henderson Subdivision meets with the Terminal.  Dispatch for the Henderson Sub is known as \"SA\" and operates on AAR58.  There are two crossings near each other, Williams Ave and Nesbitt Lane at Amqui.  From here the Terminal goes south about 2 miles to the Nashville National Cemetery to the first major location, known as Ekin, 000179, where there is a cross over track from number 1 to number 2 track (left to right track).  There is also the first EDD (Defect Detector) at 000179.1.  Few more miles southward, the next major location appears.  At 000181.0, Maplewood is a major location for the Terminal.  From here the regular Terminal goes south to swap crews at Kayne Ave, and the right side, Radnor Cutoff, detours the city and gives yard departures and arrivals direct access to and from Radnor yard to cities like Louisville and Chicago.  The Cutoff runs from Maplewood to Shelby Park double track.  From Shebly the track converges into one to pass the historic Shelby bridge, then it opens back to double track.  From there, the cutoff hits the Intermediates at 0BA187.0 known as Chicken Pike.  The Radnor Cutoff carries the L&N mainline classification of \"0BA\" but meets the main at the same milepost from the Terminal.  At Chicken Pike, trains are staged to await arrival to Radnor yard.  Once they get clearance, speed is decreased to 15, and at 0BA188.1 the EDD (Defect Detector) sounds for departures and arrivals.  This location is known as North Radnor.  The right track diverging from the #2 is known as A-1, it is for departure trains to Chattanooga and Atlanta.  The left track which goes west from the #1 is known as A-2, and serves as a departure track to Memphis, and if the cutoff is out of service, all northbound departures.  The interesting piece of Maplewood is the crossovers that are there to move trains from the Cutoff to the Main.  Both lines remain double track for a while.  The main runs south for 2 more miles until the Intermediate signals at 000183.0.  Commonly trains will stop before Delmas Ave when Kayne Ave is at capacity and await dispatch permission before moving south.  From here, the main continues south until the CR Cumberland River Swingbridge, where the main converges into a single track shortly to cross the bridge.  At this point, trains had been running at track speed of around 40.  From the drawbridge into town, speed is reduced to around 10.  After the bridge is passed, the main returns to double track in downtown.  On the #1 track about a half a mile south, another connecting track is present.  This is the Wye track that connects the main with the Bruceton side, while rarely used for mainline trains, locals and river jobs use it.  The location is known as 8th Avenue or 8th Avenue Wye.  The main then runs down to Kayne Ave, the central hotbed of all Nashville thru traffic.  The Memphis, Tennessee Ex-L&N Bruceton Subdivision meets with the Terminal.  The Bruceton Sub begins at Church Street at 00N0.0.  The line then runs single track until 00N0.7 \"11th Avenue\" where it turns into double track and also meets the aforementioned, Wye track.  The Bruceton line then goes southwest a while to the next signals, at \"Shops\".  Now speed has been increased.  The line is still double track until \"Sellars\", where speed is increased to 40 and jurisdiction transferred to the SD Dispatcher.  For a short time, 4 main tracks are present and an additional fifth track for switchers and yard movements.  The tracks from left to right in Kayne Ave are as follows: 100, 99, 98, 12, 3.  The Kayne Ave yard is also here in this area, which houses some frieght and some switcher engines.  The tracks to the old shed are covered and removed.  The Union Station is not an active station, but a historic hotel.  Crew change usually occurs at the \"walkway\" which is under the Demombreun St bridge by the Kayne Ave Tower.  This is also where the Ex-NC&StL Chattanooga Subdivision begins.  Then tracks run south to Fogg St/South End where things get complicated.  At milepost 000/0BA/00J187 the 98 track merges into the 12 track, making for 3 tracks now.  There is a crossover from 99 to 12, also a crossover from 12 to 3.  About 2/10ths of a mile down the 99 merges into the 12 track reducing the tracks back to the regular double.  About 4/10ths of a mile down the line from Fogg St, 000187.4, Oak St, is a crossover track from #2 to #1 (the track names are no longer 3 and 12, but are back to regular names).  When trains use this crossover northbound, such as Memphis bound trains from the A-2 line, they refer to it as \"Long Lead\".  And now, the Terminal splits into two parts.  The right side turns into a single track shortly, and will become the Chattanooga Subdivision, and the left side runs south to Brentwood.  The right track runs single shortly until double track for a while.  This begins part of the Chattanooga Sub or J-Line.  The #2 meets with the A-2 connection track at 00J2.2 known as A-2.  Speed is now increased to 40.  Commonly northbounds will stage at 4th Ave on the #1 to await clearance.  Now about a mile down the #1 meets the A-1 connection line.  At 00J3.6 known as A-1.  Further down the double track ends at Glencliff (00J4.9).  Now it runs single for three miles until it hits Danley, which has the D Line connection track, which is an arrival track for incoming Radnor trains from the J Line.  At Danley, the Terminal ends but the same dispatcher handles traffic, \"SC\".  At Oak Street, our main terminal line goes south two miles to 000189.0 known as Criaghead or Vine Hill.  There is a crossover here from #1 to #2 track.  And there is also a connection/delivery track to the Nashville and Eastern Railroad which connects the Tennessee Central Railroad Museum to a major railroad.  Trains sometimes stop on the #2 before Craighead if they are waiting to enter Radnor yard.  Sometimes trains wait on the #1 at the Berry Road crossing if they await arrival to Kayne Ave. At this point, speed has been increased to 30 from 10.  Moving south, the line hits Radnor Yard at 000192.  The #2 track meets the E-Line arrival track which most Memphis trains and locals use.  The B-Line which meets the #1 track is used for departures out of the C yard and local jobs.  At Mayton, 000192.3, the B line meets the #1 track, and there is a crossover track from #2 to #1.  Speed is now at 40.  2 miles south, at 000194.0, South Radnor, the next intersection is present.  This is where the Radnor A yard meets the main.  There is a single departure/arrival track that meets the #2 track along with a crossover from #1 to #2 track.  Commonly, the #2 track south of the signals is used to halt trains.  This location is known as TVA, because of the power station that is adjacent.  From here the Terminal runs about 2.5 miles south until we hit the southern tip.  The tracks converge onto one single main, at 000/0BA196.6 known as Brentwood.  Speed is increased to 50 and jurisdiction to the S.E. dispatcher.  The right track is the main, S&NA North, while the left track is the Nashville Subdivision which runs to Columbia and exchanges freight with the TSRR.  The Nashville Terminal Subdivision is one of the busiest locations on the CSX network, and one of the most important.",
+    "question": "Who build the transportation commonly used on Melbourne's traditional main street?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "street_name": {
+          "type": "string",
+          "description": "The name of Melbourne's traditional main street."
+        },
+        "transportation_type": {
+          "type": "string",
+          "description": "The type of transportation commonly used on the street."
+        },
+        "builder_entity": {
+          "type": "string",
+          "description": "The entity responsible for building the transportation."
+        },
+        "transportation_details": {
+          "type": "object",
+          "properties": {
+            "class_name": {
+              "type": "string",
+              "description": "The specific class name of the transportation."
+            },
+            "number_built": {
+              "type": "integer",
+              "description": "The number of units of this transportation class built."
+            },
+            "initial_routes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "A list of initial routes where the transportation was used."
+            }
+          },
+          "required": [
+            "class_name",
+            "number_built",
+            "initial_routes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "street_name",
+        "transportation_type",
+        "builder_entity",
+        "transportation_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "street_name": "Collins Street",
+      "transportation_type": "trams",
+      "builder_entity": "Melbourne & Metropolitan Tramways Board",
+      "transportation_details": {
+        "class_name": "Y1-class",
+        "number_built": 4,
+        "initial_routes": [
+          "East Preston",
+          "West Preston"
+        ]
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

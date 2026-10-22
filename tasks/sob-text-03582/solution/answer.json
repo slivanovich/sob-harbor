@@ -1,0 +1,20 @@
+{
+  "road_name": "Mullan Road",
+  "builder_details": {
+    "name": "John Mullan, Jr.",
+    "role": "led the construction crew"
+  },
+  "historical_significance": "first wagon road to cross the Rocky Mountains to the Inland of the Pacific Northwest",
+  "geographical_scope": {
+    "region": "Inland Pacific Northwest",
+    "states_territories": [
+      "Montana",
+      "Idaho",
+      "Washington"
+    ]
+  },
+  "construction_timeline": {
+    "start_period": "spring of 1859",
+    "end_period": "summer 1860"
+  }
+}

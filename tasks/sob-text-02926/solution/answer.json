@@ -1,0 +1,11 @@
+{
+  "traveler_name": "Mansfield Parkyns",
+  "kingdom_name": "Ethiopian Empire",
+  "alternative_kingdom_name": "Abyssinia",
+  "travel_details": {
+    "duration_years": 3,
+    "start_year": 1843,
+    "end_year": 1846,
+    "book_title": "Life in Abyssinia: being notes collected during three years' residence and travels in that country"
+  }
+}

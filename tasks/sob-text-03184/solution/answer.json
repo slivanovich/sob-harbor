@@ -1,0 +1,16 @@
+{
+  "entities": [
+    {
+      "name": "West Gate Bridge",
+      "type": "bridge",
+      "location_city": "Melbourne"
+    },
+    {
+      "name": "West Gate Distributor",
+      "type": "road",
+      "location_city": "Melbourne"
+    }
+  ],
+  "common_location_country": "Australia",
+  "number_of_entities": 2
+}

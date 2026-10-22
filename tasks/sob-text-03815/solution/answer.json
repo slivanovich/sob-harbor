@@ -1,0 +1,14 @@
+{
+  "associated_band_name": "Foo Fighters",
+  "entities_associated": [
+    "These Days",
+    "Dave Grohl"
+  ],
+  "dave_grohl_role_in_band": [
+    "frontman",
+    "founder",
+    "lead vocalist",
+    "rhythm and lead guitarist",
+    "primary songwriter"
+  ]
+}

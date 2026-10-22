@@ -1,0 +1,12 @@
+{
+  "film_details": {
+    "title": "Waking Ned",
+    "director_name": "Kirk Jones",
+    "release_year": 1998
+  },
+  "actor_role": {
+    "actor_name": "David Kelly",
+    "role_name": "Michael O'Sullivan"
+  },
+  "answer": "Kirk Jones"
+}

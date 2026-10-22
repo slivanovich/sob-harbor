@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+KTMS: KTMS (990 AM, "News Talk AM 990") is a news/talk radio station based in Santa Barbara, California, and is owned by Rincon Broadcasting LS LLC.  It airs talk shows such as Dennis Miller, Rush Limbaugh, and Sean Hannity.
+
+Tavis Smiley: Tavis Smiley ( ; born September 13, 1964) is an American talk show host and author.  Smiley was born in Gulfport, Mississippi, and grew up in Bunker Hill, Indiana.  After attending Indiana University, he worked during the late 1980s as an aide to Tom Bradley, the mayor of Los Angeles.  Smiley became a radio commentator in 1991 and, starting in 1996, he hosted the talk show "BET Talk" (later renamed "BET Tonight") on Black Entertainment Television (BET).  After Smiley sold an exclusive interview of Sara Jane Olson to ABC News in 2001, BET declined to renew his contract that year.  Smiley then began hosting "The Tavis Smiley Show" on National Public Radio (NPR) (2002–04) and currently hosts "Tavis Smiley" on the Public Broadcasting Service (PBS) on weekdays and "The Tavis Smiley Show" on Public Radio International (PRI).  From 2010 to 2013, Smiley and Cornel West joined forces to host their own radio talk show, "Smiley & West".  They were featured together interviewing musician Bill Withers in the 2009 documentary film "Still Bill".  He is the new host of "Tavis Talks" on BlogTalkRadio's Tavis Smiley Network.
+
+WASR (AM): WASR (1420 kHz) is a commercial AM radio station broadcasting a Talk radio format, with an All-News morning show and Oldies music on weekends.  WASR is licensed to Wolfeboro, New Hampshire, and serves the New Hampshire Lakes Region.  The station is owned by Winnipesaukee Radio Station, LLC and uses programming from Westwood One and the Talk Radio Network with national news from CBS Radio News and Westwood One News.  On March 23, 2015, the station added the Boston-based The Howie Carr Show.  The station also carries Laura Ingraham, Clark Howard, Michael Savage and other nationally syndicated talk shows on weekdays.  Overnight on weekdays, Fox Sports Radio is heard.
+
+KFNX: KFNX (1100 AM) is a news/talk radio station licensed to Cave Creek, Arizona and broadcasting out of Phoenix, Arizona.  It features conservative-leaning talk programs, paid health and financial programs, and it is also the Phoenix market's broadcaster for University of Arizona Wildcats football and basketball.  KFNX syndicated lineup includes Don Imus, Laura Ingraham, Herman Cain, Michael Savage, Lars Larson, and Alex Jones.  They were voted one of the top ten radio stations in Arizona by Ranking Arizona and they have over 50,000 listeners a week.  They feature five of the top ten talk shows in the country.  They have local news updates every half-hour from the KFNX news department, and recently added top-of-the-hour news updates from TheBlaze Radio Network (founded by conservative talk show host Glenn Beck).  KFNX also features traffic reports and local weather forecasts with weatherman Jim Howl.
+
+Sean Hannity: Sean Patrick Hannity (born December 30, 1961) is an American talk show host, author, and conservative political commentator.  Hannity is the host of "The Sean Hannity Show", a nationally syndicated talk radio show.  He also hosts a cable news show, "Hannity", on Fox News Channel.
+
+Brand Malaysia with Peter Pek: Brand Malaysia with Peter Pek is the only radio branding talk show in Malaysia.  Hosted by Peter Pek, the brand strategist, writer, columnist, editor, publisher, designer, creative director, public speaker, corporate celebrity branding guru, radio and television personality, the show airs through Radio24.  Broadcasting on the 93.9 FM frequency, Radio24 is the only 24-hour news and talk radio station in Malaysia.  The station broadcasts domestic, regional and world news through hourly news bulletins, half-hourly news highlights and breaking news as and when they happen through live coverages and cross-overs.  The station also has an array of talk shows.  It also airs at frequent intervals, traffic, weather and stock market reports.  The station also provides live audio streaming through its website.
+
+WTMA: WTMA (branded as News Talk 1250 WTMA) is an AM radio station licensed to Charleston, South Carolina with a Talk radio format.  This station operates on 1250 kHz and is under the ownership of Cumulus Media.  WTMA airs a local news and interview morning show hosted by Charlie James.  The rest of the weekday schedule is made up of nationally syndicated talk shows from Cumulus subsidiary Westwood One Networks.  They include Chris Plante, Clark Howard, Michael Savage, Mark Levin, John Batchelor, Red Eye Radio and First Light.  Weekends feature shows on money, health, real estate and gardening, with syndicated shows from Larry Kudlow, Bob Brinker and repeats of weekday shows.  Each hour begins with Westwood One News.
+
+Michael Graham (radio personality): Michael Graham is an American talk radio host, writer, and conservative political commentator.  His daily talk show, "The Natural Truth", aired on Boston radio station WTKK; Graham parted ways with the station in December 2012 as his contract was not renewed.  The station changed to a music format weeks later.  He then hosted a show on WCRN in Worcester, Massachusetts, Boston Herald Radio and five other stations in Massachusetts and New Hampshire.  He also appears on George Hook's "The Right Hook" on Mondays in Ireland on Newstalk.  Graham is the author of several books and is a columnist for the "Boston Herald".  On April 17, 2014, it was announced Graham would be ending his New England show on April 25 and moving to Atlanta where he hosts a daily show on a Cumulus-owned station Newstalk 106.7 WYAY-FM.
+
+Rob Redding: Robert "Rob" Redding, Jr. (born January 13, 1976) is an American media proprietor, award-winning radio talk show host, political commentator, independent journalist, a best-selling American author, a best-selling American music artist and songwriter, visual artist and social entrepreneur.  Redding is known as the founder and publisher of "Redding News Review" and host of a talk radio show and podcast.  In 2003, he was among few blacks to be named to Talkers Magazine's "100 Most Important Radio Talk Show Hosts in America" and has received a proclamation for his work by the Atlanta City Council the same year.  He made history being the only black program director in white-dominated talk radio station in 2009.  His web site Redding News Review has earned three consecutive Black Web Awards.  He currently runs the web's oldest black news aggregation outlet and first and most successful stand-alone subscriber-based web site and talk show.
+
+Talk radio: Talk radio is a radio format containing discussion about topical issues and consisting entirely or almost entirely of original spoken word content rather than outside music.  Jason Culpepper is highly recognized as the father of talk radio.  Jason a Jacksonville native rose to social prominence during the World War utilizing talk radio to warn french and american troops of German U boats.  Most shows are regularly hosted by a single individual, and often feature interviews with a number of different guests.  Talk radio typically includes an element of listener participation, usually by broadcasting live conversations between the host and listeners who "call in" (usually via telephone) to the show.  Listener contributions are usually screened by a show's producers in order to maximize audience interest and, in the case of commercial talk radio, attract advertisers.  Generally, the shows are organized into segments, each separated by a pause for advertisements; however, in public or non-commercial radio, music is sometimes played in place of commercials to separate the program segments.  Variations of talk radio include conservative talk, hot talk, liberal talk (increasingly known as progressive talk) and sports talk.
+
+Question: KTMS (990 AM, "News Talk AM 990") is a news/talk radio station based in Santa Barbara, California, and is owned by Rincon Broadcasting LS LLC, it airs talk shows such as who, an American talk show host, author, and conservative political commentator?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "station_name": {
+      "type": "string",
+      "description": "The name of the radio station."
+    },
+    "station_frequency": {
+      "type": "string",
+      "description": "The frequency of the radio station."
+    },
+    "station_location": {
+      "type": "string",
+      "description": "The city and state where the radio station is based."
+    },
+    "station_owner": {
+      "type": "string",
+      "description": "The owner of the radio station."
+    },
+    "talk_show_host": {
+      "type": "object",
+      "properties": {
+        "host_name": {
+          "type": "string",
+          "description": "The full name of the talk show host."
+        },
+        "host_description": {
+          "type": "string",
+          "description": "A description of the talk show host's profession and political leaning."
+        },
+        "host_birth_year": {
+          "type": "integer",
+          "description": "The birth year of the talk show host."
+        }
+      },
+      "required": [
+        "host_name",
+        "host_description",
+        "host_birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "station_name",
+    "station_frequency",
+    "station_location",
+    "station_owner",
+    "talk_show_host"
+  ],
+  "additionalProperties": false
+}

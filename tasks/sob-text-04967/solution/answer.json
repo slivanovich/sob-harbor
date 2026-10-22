@@ -1,0 +1,16 @@
+{
+  "genus_with_more_species": "Dennstaedtia",
+  "comparison_summary": "Dennstaedtia contains more species than Delairea.",
+  "genera_comparison": [
+    {
+      "genus_name": "Dennstaedtia",
+      "species_count_text": "some species"
+    },
+    {
+      "genus_name": "Delairea",
+      "species_count": 1,
+      "species_count_text": "only one species",
+      "family": "Asteraceae"
+    }
+  ]
+}

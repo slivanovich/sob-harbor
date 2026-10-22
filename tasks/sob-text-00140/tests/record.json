@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "6748344897e1328555bc04429170dd6e224dacf927ace02685364b9ec055054a",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8466cd554299123d8c2239",
+    "source_dataset": "hotpotqa",
+    "source_answer": "2000",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Rule of Rose: Rule of Rose is a survival horror video game developed by Punchline for the PlayStation 2.  It was first released in 2006 by Sony Computer Entertainment in Japan.  After Sony Computer Entertainment's American and European branch did not express interest in localizing the title, it was published later that year by Atlus USA in North America and by 505 Games in Europe.  Set in England in 1930, the plot revolves around a nineteen-year-old woman named Jennifer, who becomes trapped in a world ruled by young girls who have established a class hierarchy called the Red Crayon Aristocrats.\n\nAndrew House: Andrew House (born 23 January 1965) is a Welsh businessman and President and Global CEO of Sony Interactive Entertainment (SIE).  He also serves as an Executive Vice President of Sony Corporation.  House started working for Sony Computer Corporation in 1990, working in the Tokyo-based corporate communications department.  Five years later in 1995, he transferred to SCEI's marketing and communications to contribute to the launch of the PlayStation gaming system.  March 1996, he was promoted to Vice President of Marketing at Sony Computer Entertainment America (SCEA), then promoted again in 2002 to Executive Vice President of SCEA.  From 2005 to 2009, House was the Chief Marketing Officer of the Sony Corporation.  From 2009 until 2011, House was co-CEO and then CEO of Sony Computer Entertainment Europe (SCEE), then became President and Group CEO of SCEI, replacing Kaz Hirai.  In 2013, House led the conference which revealed the PlayStation 4.\n\nThe Tester: The Tester was a serialized reality program created by Sony Computer Entertainment and produced by 51 Minds.  Notable as the first original live-action series distributed on a video game console, it features eleven or twelve contestants, selected from thousands of applicants, competing in a variety of challenges to win a job at Sony Computer Entertainment in quality assurance as a game tester with a $5,000 signing bonus and a PlayStation 3 video game console.  The winner of the third season also earned an opportunity to work at SCE Santa Monica Studio as a Production Associate on an unnamed PlayStation 3 title, a two-year lease on a 2012 Ford Focus Titanium edition and a Sony BRAVIA 3D Television.  The first season launched in North America on February 18, 2010 and new episodes were released weekly until the finale aired on April 8, 2010.  In its third season, the program is available as a free download exclusively on the PlayStation Network.  Full seasons can also be streamed from the PlayStation website.\n\nPetz: Dogz 2 and Catz 2: Petz: Catz 2 (にゃんこと魔法の帽子 , Nyanko to Mahō no Bōshi , \"Kitten and the Magical Hat\") and Petz: Dogz 2 (わんこと魔法の帽子 , Wanko to Mahō no Bōshi , \"Puppy and the Magical Hat\") are video games for the PC, Nintendo DS, PlayStation 2 and Wii, the latter two are similar to \"The Dog Island\".  Players can choose from 40 breeds of dogs or cats, in Dogz most breeds have a choice of two fur colours.  In the UK these games are titled \"Dogz\" and \"Catz\".\n\nWhite Knight Chronicles II: White Knight Chronicles II is a video game developed by Level-5 and published by Sony Computer Entertainment in Japan and Europe as well as D3 Publisher in North America for the PlayStation 3.  The game is a direct sequel to the 2008 title \"White Knight Chronicles\" and was announced at TGS 2009.  The game was released in Japan on July 8, 2010, in PAL regions in June 2011, and in North America on September 13, 2011.  On June 18, 2013, the server for the game was shut down by D3Publisher and Sony Computer Entertainment America.\n\nPlayStation Move Ape Escape: PlayStation Move Ape Escape (フリフリ！ サルゲッチュ , \"Furi Furi!  Sarugechu\" , lt. Ape Escape Fury!  Fury!)  , simply titled Ape Escape in Europe and known in Asian countries as Ape Escape On The Move, is a 2010 rail shooter and party video game developed by Sony Computer Entertainment's Japan Studio and published by Sony Computer Entertainment for the PlayStation 3 video game console.  The game was originally announced at the Tokyo Game Show 2009 as one of the title supporting the PlayStation Move controller.  The title was released on December 9, 2010 in Japan, on June 22, 2011 in Europe, and on July 5, 2011 in North America.  An English version of the game in Asia was also released January 31, 2011.\n\nRatchet &amp; Clank: Ratchet & Clank is a series of action platformer and third-person shooter video games.  The franchise was created and developed by Insomniac Games and published by Sony Computer Entertainment for PlayStation consoles, such as PlayStation 2, PlayStation 3 and PlayStation 4 with the exclusion of \"\" and \"Secret Agent Clank\", which were developed by High Impact Games for the PlayStation Portable.  Every game in the series has only been released for Sony platforms, as the intellectual property is owned by Sony Computer Entertainment.  An animated feature film adaptation produced by Rainmaker Entertainment and Blockade Entertainment and distributed by Focus Features and Gramercy Pictures was initially scheduled for release in 2015, but was subsequently pushed back for release on April 29, 2016.\n\nPS3 (disambiguation): PlayStation 3 is a seventh-generation video game console made by Sony Computer Entertainment.\n\nSeventh generation of video game consoles: In the history of video games, the seventh generation includes consoles released since late 2005 by Nintendo, Microsoft, and Sony Computer Entertainment.  The eighth generation began in November 2012.  For home consoles, the seventh generation began on November 22, 2005 with the release of Microsoft's Xbox 360 and continued with the release of Sony Computer Entertainment's PlayStation 3 on November 17, 2006, and Nintendo's Wii on November 19, 2006.  Each new console introduced a new type of breakthrough in technology.  The Xbox 360 offered games rendered natively at high-definition video (HD) resolutions, the PlayStation 3 offered HD movie playback via a built-in 3D Blu-ray Disc player, and the Wii focused on integrating controllers with movement sensors as well as joysticks.  Some of the Wii controllers could be moved about to control in-game actions, which enabled players to simulate real-world actions during gameplay (e.g., in the Wii sports tennis game, the user swings the controller to hit the on-screen image of a tennis ball).  Video game consoles had become an important part of the global IT infrastructure.  It is estimated that video game consoles represented 25% of the world's general-purpose computational power in 2007.\n\nPlayStation 2: The PlayStation 2 (PS2) is a home video game console that was developed by Sony Computer Entertainment.  It is the successor to the PlayStation, and is the second installment in the PlayStation lineup of consoles.  It was released on March 4, 2000 in Japan, October 26, 2000 in North America, November 24, 2000 in Europe, and November 17, 2000 in Australia.  It competed with Sega's Dreamcast, Microsoft's Xbox, and Nintendo's GameCube in the sixth generation of video game consoles.",
+    "question": "What year was the console made by Sony Computer Entertainment that Petz: Catz 2 is out for released in Japan?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "game_title": {
+          "type": "string",
+          "description": "The title of the video game."
+        },
+        "console_name": {
+          "type": "string",
+          "description": "The name of the Sony Computer Entertainment console the game is available on."
+        },
+        "console_developer": {
+          "type": "string",
+          "description": "The developer of the console."
+        },
+        "japan_release_year": {
+          "type": "integer",
+          "description": "The year the specified console was released in Japan."
+        }
+      },
+      "required": [
+        "game_title",
+        "console_name",
+        "console_developer",
+        "japan_release_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "game_title": "Petz: Catz 2",
+      "console_name": "PlayStation 2",
+      "console_developer": "Sony Computer Entertainment",
+      "japan_release_year": 2000
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

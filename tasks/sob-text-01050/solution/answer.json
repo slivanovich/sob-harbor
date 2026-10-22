@@ -1,0 +1,11 @@
+{
+  "player_name": "LaMelo Ball",
+  "school_attended": "Chino Hills High School",
+  "school_location": "Chino Hills, California",
+  "father_details": {
+    "name": "LaVar Ball",
+    "occupation": "American businessman and media personality",
+    "year_gained_media_attention": 2017,
+    "reason_for_attention": "making a series of incredible claims concerning the careers of himself and his sons"
+  }
+}

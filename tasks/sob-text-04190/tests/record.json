@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "e6fdee387694be8dc752ae71a199724b629f4974eab182b1c10bcc012e6b385f",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8a8afd5542996c9b8d5f23",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1948",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Clif Cary: Clif Cary was an Australian cricket reporter of the 1930s and 1940s.  He was the \"sports editor on the commercial radio network with the largest sports audience in the Commonwealth\" and in 1946 he published \"Test Cricket and Records\", \"a splendid, authentic and comprehensive history of the many great Anglo-Australian matches\" from 1876 to 1938.  He was a cricket commentator for the radio station 2UE for the 1946-47 Ashes series.  After which he wrote \"Cricket Controversy, Test matches in Australia 1946-47\", an account of the series in which he was critical of the poor selection of the England team, Wally Hammond's uninspired leadership, Don Bradman's overeagerness to win, which Cary thought verged on gamesmanship, and the mistakes made by the Australian umpires George Borwick and John Scott.  Along with Jack Fingleton he was regarded as one of Bradman's critics, even though he admired his batting.\n\n1958–59 Ashes series: The 1958–59 Ashes series consisted of five cricket Test matches, each scheduled for six days with eight ball overs.  It formed part of the MCC tour of Australia in 1958–59, and the matches outside the Tests were played in the name of the Marylebone Cricket Club.  The England team led by Peter May was labelled the strongest ever to leave England.  It had the formidable bowling attack of Fred Trueman, Frank Tyson, Brian Statham, Peter Loader, Jim Laker and Tony Lock; the all-rounder Trevor Bailey; the outstanding wicket-keeper Godfrey Evans; and the batting of Colin Cowdrey, Tom Graveney, Raman Subba Row and Ted Dexter.  They had won the last three Ashes series in 1953, 1954–55 and 1956, but lost the series 4–0 to Australia.  It was one of the biggest upsets in Test cricket history and the biggest margin of defeat in an Ashes series since the 5–0 \"whitewashing\" inflicted by Warwick Armstrong's Australians in 1920–21.\n\n1974–75 Ashes series: The 1974–75 Ashes series consisted of six cricket Test matches, each match lasted five days with six hours of play each day and eight ball overs.  It formed part of the MCC tour of Australia in 1974–75 and the matches outside the Tests were played in the name of the Marylebone Cricket Club.  Ian Chappell's Australians won the series 4–1 and \"brutally and unceremoniously wrenched the Ashes\" from Mike Denness's England team.  It was Australia's first series victory over England for ten years and the experience proved popular as 777,563 spectators came through the gates and paid nearly a million Australian dollars for the privilege.  For the first time the first day of the Third Test at Melbourne was held on Boxing Day in an Ashes series, now a cricketing tradition.\n\n1962–63 Ashes series: The 1962–63 Ashes series consisted of five cricket Test matches, each of five days with six hours play each day and eight ball overs, a change as before 1960-61 Australian Test matches had been played over six days.  It formed part of the MCC tour of Australia in 1962–63 and the matches outside the Tests were played in the name of the Marylebone Cricket Club.  The MCC was determined to \"brighten up\" cricket, but the series was drawn 1-1 and Australia retained the Ashes.  The MCC chose Ted Dexter to captain an England team managed by Bernard Marmaduke Fitzalan-Howard, 16th Duke of Norfolk.  The Duke's presence generated considerable press interest, as did the model Mrs Dexter and the Reverend David Sheppard—the future Bishop of Liverpool—who preached in cathedrals across Australia.\n\n1946–47 Ashes series: The 1946–47 Ashes series consisted of five cricket Test matches, each of six days with five hours play each day and eight ball overs.  Unlike pre-war Tests in Australia, matches were not timeless and played to a finish.  It formed part of the MCC tour of Australia in 1946–47 and England played its matches outside the Tests in the name of the Marylebone Cricket Club.  The England team was led by the veteran Wally Hammond and his vice-captain Norman Yardley with the strong batting line up of Len Hutton, Cyril Washbrook, Bill Edrich, Denis Compton and Joe Hardstaff, but a weak bowling attack that relied on pre-war bowlers like the 37-year-old Bill Voce of Bodyline fame and the mercurial leg-spinner Doug Wright.  The two successes of the tour were the newly capped Alec Bedser, who would carry the England bowling attack until 1955, and Godfrey Evans who would be England's first choice wicketkeeper until 1959.  England had drawn the Victory Tests 2-2 in 1945 and were thought to be equal in strength, but Hammond lost 3-0 to Don Bradman's Australian team which had only two other pre-war players - Lindsay Hassett and Sid Barnes, who had played 5 Tests between them - and was packed with fresh talent in the shape of Arthur Morris, Keith Miller, Ray Lindwall, Colin McCool, Ernie Toshack and Don Tallon.  There were several controversial umpiring decisions which assumed greater significance as they favoured Australia and in particular Don Bradman.\n\n1950–51 Ashes series: The 1950–51 Ashes series consisted of five cricket Test matches, each of six days with five hours play each day and eight ball overs.  It formed part of the MCC tour of Australia in 1950–51 and the matches outside the Tests were played in the name of the Marylebone Cricket Club.  The England team under the captaincy of the big-hearted all-rounder Freddie Brown was regarded as the weakest sent to Australia and \"without Bedser and Hutton, England would have been little better than a club side\".  Few gave them a chance of regaining the Ashes and they lost the series 4–1 to Lindsay Hassett's Australian team, which had far greater reserves of talent.  In the Fifth and final Test England beat Australia for the first time since 1938 and ended their unbeaten run of 14 Tests against England, 26 Tests against all teams and 96 games in all cricket since the Second World War.  After this victory England would defeat Australia in 1953, 1954–55 and 1956.\n\n1965–66 Ashes series: The 1965–66 Ashes series consisted of five cricket Test matches, each of five days with six hours play and eight ball overs.  It formed part of the MCC tour of Australia in 1965–66 and the matches outside the Tests were played in the name of the Marylebone Cricket Club.  M.J.K. Smith led the England team with the intent on\n\nSid Barnes: Sidney George Barnes (5 June 1916 – 16 December 1973) was an Australian cricketer and cricket writer, who played 13 Test matches between 1938 and 1948.  Able to open the innings or bat down the order, Barnes was regarded as one of Australia's finest batsmen in the period immediately following the Second World War.  He helped create an enduring record when scoring 234 in the second Test against England at Sydney in December 1946; exactly the same score as his captain, Don Bradman, in the process setting a world-record 405 run fifth wicket partnership.  Barnes averaged 63.05 over 19 innings in a career that, like those of most of his contemporaries, was interrupted by the Second World War.\n\n1954–55 Ashes series: The 1954–55 Ashes series consisted of five cricket Test matches, each of six days with five hours play each day and eight ball overs.  It formed part of the MCC tour of Australia in 1954–55 and the matches outside the Tests were played in the name of the Marylebone Cricket Club.  The England team was captained by Len Hutton, the first professional cricketer to lead an MCC tour of Australia.  The Australian team under Ian Johnson was confident of victory, but despite losing the First Test by an innings England won the series 3–1 and retained the Ashes.  They were the only touring team to win a series in Australia between 1932–33 and 1970–71 and only the second of three touring teams to win a series in Australia from behind (the other two being England in 1911–12 and the West Indies in 1992–93).  The tour is best remembered for the bowling of Frank \"Typhoon\" Tyson, who was at the time regarded as the fastest, most frightening bowler ever seen in Australia.  The series saw a phenomenal concentration of bowling prowess on both sides – four of the bowlers had career Test averages under 21, another five under 25 and the remaining four under 30.  Unsurprisingly therefore, the ball dominated the bat for most of the series and each side only topped 300 in an innings twice.  Unlike the following series in 1958–59 there were rarely any umpiring disputes and Keith Miller wrote \"Mel McInnes, Colin Hoy and Ron Wright were our leading umpires in the 1954–55 M.C.C. tour of Australia, and I have no hesitation in saying that McInnes gave the finest exhibition of umpiring in a Test series that I have experienced\".\n\n1970–71 Ashes series: The 1970–71 Ashes series consisted of seven cricket Test matches, each of five days with six hours play each day and eight ball overs.  It formed part of the MCC tour of Australia in 1970–71 and the matches outside the Tests were played in the name of the Marylebone Cricket Club.  Ray Illingworth's England team beat Bill Lawry's Australians 2–0 and regained the Ashes, the only full Test series in Australia in which the home team failed to win a Test.  \"The Momentous Series of 1970–71\" was pivotal in cricket history and \"essentially ushered in the modern period of Test cricket\".  It was the first Test series to have more than five Tests and the first One Day International in cricket history was played in Melbourne; like the first test match in history it was won by Australia.",
+    "question": "The 1946–47 Ashes series consisted of five cricket Test matches, each of six days with five hours play each day and eight ball overs, Hammond lost 3-0 to Don Bradman's Australian team which had only two other pre-war players - Lindsay Hassett and Sidney George Barnes, an Australian cricketer and cricket writer, who played 13 Test matches between 1938 and which year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "cricketer_name": {
+          "type": "string",
+          "description": "The full name of the cricketer."
+        },
+        "test_career_start_year": {
+          "type": "integer",
+          "description": "The start year of the cricketer's Test match career."
+        },
+        "test_career_end_year": {
+          "type": "integer",
+          "description": "The end year of the cricketer's Test match career."
+        },
+        "total_test_matches_played": {
+          "type": "integer",
+          "description": "The total number of Test matches played by the cricketer."
+        },
+        "context_ashes_series": {
+          "type": "string",
+          "description": "The Ashes series mentioned in the context of the question."
+        }
+      },
+      "required": [
+        "cricketer_name",
+        "test_career_start_year",
+        "test_career_end_year",
+        "total_test_matches_played",
+        "context_ashes_series"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "cricketer_name": "Sidney George Barnes",
+      "test_career_start_year": 1938,
+      "test_career_end_year": 1948,
+      "total_test_matches_played": 13,
+      "context_ashes_series": "1946–47 Ashes series"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

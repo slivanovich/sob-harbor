@@ -1,0 +1,11 @@
+{
+  "astronaut_details": {
+    "full_name": "Leroy Gordon Cooper Jr.",
+    "given_first_name_matched": "Leroy"
+  },
+  "astronaut_group_details": {
+    "group_name": "Mercury Seven",
+    "announcement_year": 1959
+  },
+  "final_answer": "Gordon Cooper"
+}

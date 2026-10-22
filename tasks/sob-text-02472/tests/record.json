@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "5c3145e532d3100959f80d4c15b1c065b233b7499e8e096a2ecc6721e5eb588e",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8f9e43554299458435d69f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "in 1993",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Sorcerer (role-playing game): Sorcerer is an award winning occult-themed indie role-playing game written by Ron Edwards and published through Adept Press.  The game focuses on sorcerers who summon, bind, and interact with demons, powerful non-human entities who work with and against the sorcerer.\n\nIndie role-playing game: An indie role-playing game is a role-playing game published outside of traditional, \"mainstream\" means.  Varying definitions require that commercial, design, or conceptual elements of the game stay under the control of the creator, or that the game should just be produced outside of a corporate environment.\n\nDiana: Warrior Princess: Diana: Warrior Princess is an indie role-playing game written by Marcus Rowland and initially published by Heliograph Incorporated, based on an article describing the setting which originally appeared in \"Valkyrie\" magazine.  It is distributed as a PDF via Steve Jackson Games.  It describes a fictionalised version of the twentieth century as it might be seen a few thousand years from now.\n\nUresia: Grave of Heaven: Uresia: Grave of Heaven is an anime-inspired fantasy world for role-playing games written by S. John Ross.  Originally published for the \"Big Eyes, Small Mouth\" role-playing game, the most recent edition published in 2012 is systemless.  Like the previous edition, it includes maps drawn by the author.  \"Uresia\" was originally published by Guardians of Order.\n\nLexicon (game): Lexicon is a computer-assisted role-playing game invented by Neel Krishnaswami and popularised by the indie role-playing game community.  As originally proposed, it is played online using wiki software.  Players assume the role of scholars who write the history and background of a particular fictitious time, setting, or incident.  As the game goes on, the players collaboratively create an elaborately interwoven account.\n\nPolaris (2005 role-playing game): Polaris: Chivalric Tragedy at Utmost North (2005) is an indie role-playing game written by Ben Lehman and published by These Are Our Games.  \"Polaris\" is a collaborative roleplaying game, and as such differs from many role-playing games in that there is no single \"game master\".  A player's \"opposition\" is controlled by the other players in the game.\n\nThe Shadow of Yesterday: The Shadow of Yesterday (or TSoY) is a narrativist sword and sorcery (with optional elements of heroic fantasy) indie role-playing game, designed by Clinton R. Nixon and published by CRN Games.\n\nHalcyon (role-playing game): Halcyon is an indie role-playing game, independently published by Neuwerld Studios among two editions.  The \"Player Codex\" was released in 2008 in softcover format, replaced in 2010 by the illustrated \"Core Rulebook\" in hardcover format.\n\nRisus: Risus: The Anything RPG is a rules-light generic role-playing game (RPG) written, designed and illustrated by S. John Ross of Cumberland Games and Diversions.  \"Risus\" is available free on the web.  It was first published online in 1993.  Earlier versions of the game were titled GUCS: The Generic Universal Comedy System (a parody of \"GURPS\") and were distributed privately beginning in 1989.\n\nS. John Ross (game designer): Samuel John Ross, Jr., known as S. John Ross, is a game designer and owner of Cumberland Games & Diversions.  He wrote the early Indie role-playing game Risus.",
+    "question": "When was the early Indie role-playing game written by S.John Ross was first published?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "game_name": {
+          "type": "string",
+          "description": "The name of the role-playing game."
+        },
+        "author_name": {
+          "type": "string",
+          "description": "The name of the game's author."
+        },
+        "first_publication_year": {
+          "type": "integer",
+          "description": "The year the game was first published."
+        }
+      },
+      "required": [
+        "game_name",
+        "author_name",
+        "first_publication_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "game_name": "Risus",
+      "author_name": "S. John Ross",
+      "first_publication_year": 1993
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "6c13437e54a5b0f8e23e07fa8784650f7d28750b93a58263c766b65cccbee0e2",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae62f255542996de7b71b7e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1982",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Jessie Burton: Jessie Burton (born 1982) is an English author and actress.  As of February 2017 she has published two novels, \"The Miniaturist\" and \"The Muse\".\n\nThe Miniaturist: The Miniaturist is the 2014 debut novel of English actress and author Jessie Burton.  An international bestseller, it was the focus of a publishers bidding war at the 2013 London Book Fair.  Set in Amsterdam in 1686/7, the novel was inspired by Petronella Oortman's doll's house on display at the Rijksmuseum.  It does not otherwise attempt to be a biographical novel.",
+    "question": "When was the author of \"The Miniaturist\" born? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "author_name": {
+          "type": "string",
+          "description": "The name of the author."
+        },
+        "book_title": {
+          "type": "string",
+          "description": "The title of the book mentioned in the question."
+        },
+        "author_birth_year": {
+          "type": "integer",
+          "description": "The birth year of the author."
+        }
+      },
+      "required": [
+        "author_name",
+        "book_title",
+        "author_birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "author_name": "Jessie Burton",
+      "book_title": "The Miniaturist",
+      "author_birth_year": 1982
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

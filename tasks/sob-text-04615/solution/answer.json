@@ -1,0 +1,22 @@
+{
+  "query_subject_1": {
+    "name": "Alvin Toffler",
+    "is_writer": true,
+    "occupation_details": [
+      "writer",
+      "futurist",
+      "businessman"
+    ]
+  },
+  "query_subject_2": {
+    "name": "Anaïs Nin",
+    "is_writer": true,
+    "occupation_details": [
+      "essayist",
+      "memoirist",
+      "author",
+      "writer"
+    ]
+  },
+  "all_subjects_are_writers": true
+}

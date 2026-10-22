@@ -1,0 +1,19 @@
+{
+  "person_identified": {
+    "name": "James Forrestal",
+    "roles": [
+      "last Cabinet-level United States Secretary of the Navy",
+      "first United States Secretary of Defense"
+    ]
+  },
+  "named_complex": {
+    "name": "Forrestal Village",
+    "type": "mixed-use retail and office complex",
+    "location": {
+      "state": "New Jersey",
+      "county": "Middlesex County",
+      "township": "Plainsboro Township"
+    }
+  },
+  "answer_state": "New Jersey"
+}

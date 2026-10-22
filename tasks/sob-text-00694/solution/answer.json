@@ -1,0 +1,10 @@
+{
+  "novelist_name": "Philip Pullman",
+  "novelist_nationality": "English",
+  "editor_details": {
+    "editor_name": "David Fickling",
+    "editor_location": "Oxford",
+    "editor_specialty": "children's book"
+  },
+  "published_by_editor": true
+}

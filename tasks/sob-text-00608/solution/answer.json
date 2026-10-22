@@ -1,0 +1,16 @@
+{
+  "president_name": "Anwar Sadat",
+  "president_title": "third President of Egypt",
+  "named_after_entity": {
+    "entity_name": "Sadat X",
+    "entity_type": "rapper",
+    "original_name": "Derek Murphy",
+    "group_affiliation": "Brand Nubian"
+  },
+  "president_details": {
+    "full_name": "Muhammad Anwar el-Sadat",
+    "term_start_date": "1970-10-15",
+    "term_end_date": "1981-10-06",
+    "cause_of_death": "assassination"
+  }
+}

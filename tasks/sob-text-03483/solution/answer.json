@@ -1,0 +1,15 @@
+{
+  "church_name": "First Church in Albany (Reformed)",
+  "church_location": {
+    "street_address": "North Pearl and Orange streets",
+    "city": "Albany",
+    "state": "New York"
+  },
+  "pastor_details": {
+    "name": "Eilardus Westerlo",
+    "nationality": "Dutch",
+    "role": "pastor",
+    "tenure_start_year": 1760,
+    "tenure_end_year": 1790
+  }
+}

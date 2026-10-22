@@ -1,0 +1,13 @@
+{
+  "song_title": "With a Little Help from My Friends",
+  "album_title": "Sgt. Pepper's Lonely Hearts Club Band",
+  "album_release_year": 1967,
+  "song_writers": [
+    "John Lennon",
+    "Paul McCartney"
+  ],
+  "identified_composer_details": {
+    "full_name": "James Paul McCartney",
+    "description": "English singer-songwriter, multi-instrumentalist, and composer"
+  }
+}

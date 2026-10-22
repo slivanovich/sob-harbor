@@ -1,0 +1,13 @@
+{
+  "division_name": "Enerpac",
+  "parent_organization": "Actuant",
+  "parent_organization_details": {
+    "nyse_ticker": "ATU",
+    "market_value_billion_usd": 1.5,
+    "company_description": "diversified global manufacturing company",
+    "headquarters_location": {
+      "city": "Menomonee Falls",
+      "state": "Wisconsin"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are Fairbanks International Airport and Deadhorse Airport both located on the North Slope of Alaska?",
+  "airport_locations": [
+    {
+      "airport_name": "Fairbanks International Airport",
+      "is_on_north_slope": false,
+      "stated_location": "three miles (5 km) southwest of the central business district of Fairbanks, a city in the Fairbanks North Star Borough of the United States state of Alaska"
+    },
+    {
+      "airport_name": "Deadhorse Airport",
+      "is_on_north_slope": true,
+      "stated_location": "in Deadhorse on the North Slope of Alaska"
+    }
+  ],
+  "both_on_north_slope": false
+}

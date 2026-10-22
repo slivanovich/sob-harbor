@@ -1,0 +1,23 @@
+{
+  "is_in_music_industry": true,
+  "musicians_involved": [
+    {
+      "name": "Babyface",
+      "roles": [
+        "singer",
+        "songwriter",
+        "record producer"
+      ]
+    },
+    {
+      "name": "Tony Kakko",
+      "roles": [
+        "musician",
+        "composer",
+        "vocalist",
+        "primary songwriter"
+      ]
+    }
+  ],
+  "reasoning": "Babyface is described as an American singer, songwriter, and record producer. Tony Kakko is a Finnish musician, composer, and vocalist, primarily known as the vocalist and primary songwriter for Sonata Arctica. Both have clear roles within the music industry."
+}

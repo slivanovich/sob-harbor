@@ -1,0 +1,15 @@
+{
+  "substance_identified": "Tyrosine",
+  "other_name_for_substance": "4-hydroxyphenylalanine",
+  "is_standard_amino_acid": true,
+  "is_part_of_cancer_treatment_compound": true,
+  "cancer_treatment_compound_details": {
+    "compound_name": "Edotreotide",
+    "compound_aliases": [
+      "SMT487",
+      "(DOTA-Phe-Tyr)octreotide",
+      "DOTATOC"
+    ],
+    "compound_use": "treatment and diagnosis of certain types of cancer when bound to various radionuclides"
+  }
+}

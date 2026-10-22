@@ -1,0 +1,23 @@
+{
+  "games_evaluated": [
+    {
+      "game_name": "Abalone",
+      "designer_count": 2,
+      "designer_names": [
+        "Michel Lalet",
+        "Laurent Lévi"
+      ]
+    },
+    {
+      "game_name": "Elfenland",
+      "designer_count": 1,
+      "designer_names": [
+        "Alan R. Moon"
+      ]
+    }
+  ],
+  "game_matching_criteria": "Abalone",
+  "criteria_met": {
+    "number_of_designers": 2
+  }
+}

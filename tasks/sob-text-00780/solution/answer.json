@@ -1,0 +1,14 @@
+{
+  "genera_edibility_status": [
+    {
+      "genus_name": "Manettia",
+      "is_edible": false
+    },
+    {
+      "genus_name": "Fragaria",
+      "is_edible": true
+    }
+  ],
+  "are_both_edible": false,
+  "reasoning": "The context explicitly states that Fragaria is known for its edible fruits. However, there is no information in the context to suggest that Manettia is edible."
+}

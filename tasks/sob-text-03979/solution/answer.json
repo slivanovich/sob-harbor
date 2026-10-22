@@ -1,0 +1,13 @@
+{
+  "state_name": "Maine",
+  "school_information": {
+    "school_name": "Berwick Academy",
+    "location_town": "South Berwick",
+    "founding_year": 1791,
+    "oldest_in_state": true
+  },
+  "river_information": {
+    "river_name": "Salmon Falls River",
+    "forms_state_border": true
+  }
+}

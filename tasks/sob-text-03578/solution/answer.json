@@ -1,0 +1,14 @@
+{
+  "ambassador_to_russia": {
+    "name": "Jon Meade Huntsman Jr.",
+    "current_role": "United States ambassador to Russia"
+  },
+  "father": {
+    "name": "Jon Meade Huntsman",
+    "relationship_to_ambassador": "father",
+    "other_roles": [
+      "founder of Huntsman Corporation"
+    ]
+  },
+  "family_dynasty_context": "part of the Huntsman family dynasty"
+}

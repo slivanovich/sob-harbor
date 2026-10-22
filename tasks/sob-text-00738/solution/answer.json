@@ -1,0 +1,17 @@
+{
+  "program_name": "UNLV Rebels football",
+  "university_affiliation": {
+    "name": "University of Nevada, Las Vegas",
+    "type": "public research",
+    "location": "Paradise, Nevada",
+    "houses_dental_school": true
+  },
+  "program_details": {
+    "start_date": "September 14, 1968",
+    "coach": {
+      "name": "Tony Sanchez",
+      "previous_role": "head football coach",
+      "previous_school": "Bishop Gorman High School"
+    }
+  }
+}

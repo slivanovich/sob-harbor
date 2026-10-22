@@ -1,0 +1,21 @@
+{
+  "person_name": "Jeffrey D. Struecker",
+  "roles": [
+    "author",
+    "pastor",
+    "former U.S. Army Ranger"
+  ],
+  "military_service": {
+    "branch": "U.S. Army",
+    "unit_type": "Ranger",
+    "notable_engagements": [
+      "Battle of Mogadishu",
+      "Operation Just Cause",
+      "Operation Desert Storm"
+    ]
+  },
+  "co_authorship_details": {
+    "co_author_with": "Alton Gansky",
+    "number_of_books": 3
+  }
+}

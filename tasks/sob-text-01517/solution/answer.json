@@ -1,0 +1,12 @@
+{
+  "first_produced_film": {
+    "title": "Saludos Amigos",
+    "production_year": 1942
+  },
+  "second_produced_film": {
+    "title": "Hot Lead and Cold Feet",
+    "production_year": 1978
+  },
+  "common_producer": "Walt Disney",
+  "answer_film_title": "Saludos Amigos"
+}

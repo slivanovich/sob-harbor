@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Paul Davis (cricketer): Paul John Davis (born 24 April 1981) is an Australian cricketer who previously played several matches for Western Australia in domestic competitions.  From Perth, Davis represented Western Australia at both under-17 and under-19 level, as well as playing grade cricket for Mount Lawley.  Having previously played several matches for the state second XI, he made his limited-overs debut for Western Australia late in the 2007–08 season of the Ford Ranger Cup, against Victoria at the WACA Ground.  In his second match, Davis took 3/49 to help dismiss Queensland for 111, bowling alongside Steve Magoffin and Ben Edmondson.  Due to this form, he gained a full contract with the Western Australian Cricket Association (WACA) for the following season.
+
+Chris Brown (cricketer, born 1973): Christopher Mark Brown (born 27 March 1973), more commonly known as Chris Brown, is a former Cook Islands cricketer, who previously played representative cricket for Auckland at New Zealand domestic level.  Born in Rarotonga, Brown's early cricket was played for Auckland under-age teams, and he went on to represent the New Zealand national under-19s in several matches as a right-arm fast bowler.  Making his first-class debut during the 1993–94 season of the Shell Trophy, he took ten wickets in his debut match, and represented the New Zealand Cricket Academy twice later in the season.
+
+Mark Palmer (cricketer): Mark Brendon Palmer (born 10 February 1967) is a former Australian cricketer who played a single List A match for Western Australia during the 1989–90 season.  From Perth, Palmer played at state under-16 and under-19 level, and played several matches as wicket-keeper for the Australian under-19 cricket team during both the 1985–86 and 1986–87 seasons.  He went on to attend the Western Australian Institute of Sport (WAIS), participating in its cricket program.  Having previously played for the state colts team, Palmer's sole match at senior state level came against Sri Lanka, during its 1989–90 tour of Australia.  The match, played at the end of Sri Lanka's tour, was the first of a two-part series, with both matches held at the WACA Ground in early February 1990.  Western Australia trialled several new players in both matches, with Palmer one of four List A debutants in the match, alongside Brendan Julian, Chris Mack, and Darrin Ramshaw.  Replacing usual state wicket-keeper Tim Zoehrer, Palmer was bowled by Rumesh Ratnayake for a golden duck, but took two catches in Sri Lanka's innings, off the bowling of Peter Capes and Steve Russell.  He did not play at state level again.
+
+Dean Jones (cricketer): Dean Mervyn Jones AM (born 24 March 1961) is a former Australian cricketer, who played Tests and One Day Internationals for Australia.  He works as a coach currently and as a sports commentator.
+
+Wayne Hill: Wayne Douglas Hill (born 5 December 1953) is a former Australian cricketer who played several matches as a wicket-keeper for Western Australia, and later served in a number of positions with the Western Australian Cricket Association (WACA).  From Perth, Hill made his first-class debut for Western Australia during the 1983–84 Sheffield Shield, playing four matches during the competition when Rod Marsh was unavailable due to selection for the national team.  He scored 31 not out in Western Australia's first innings, in what was to be his highest first-class score.  Marsh retired at the end of the season, and Hill played in Western Australia's first three Sheffield Shield matches, as well as a tour match against the West Indies and a match in the limited-overs McDonald's Cup.  However, he was subsequently replaced by Tim Zoehrer as wicket-keeper in both competitions, and did not play at state level again.  Hill continued to play at grade cricket level for the Perth Cricket Club, retiring after the 1987–88 season with 162 matches and a club-record 323 dismissals (264 catches and 59 stumpings).  From 1995, he served on the selection panel for Western Australia, and was appointed chairman of selectors in April 2002.  Hill retired from the panel at the conclusion of the 2006–07 season, and was replaced by Tom Hogan as chairman.
+
+Michael Cox (cricketer): Michael John Cox (born 26 April 1957) is a former Australian cricketer who played several matches for Western Australia during the mid-1980s.  Born in Newcastle, Cox grew up in New South Wales, where he attended Maitland Boys High School and captained the school's cricket team.  Having played for local teams in Maitland and Newcastle, he was selected for several regional representative sides before moving to Sydney where he played with Gordon in the Sydney grade cricket competition.  Although Cox played several times at colts level, he was never selected for the New South Wales state team and eventually moved to Western Australia to further his opportunities.  His only matches at state level came during the 1985–86 and 1986–87 seasons, when Western Australia's usual wicket-keeper, Tim Zoehrer, was unavailable due to national selection.  Cox achieved moderate success in both Sheffield Shield and McDonald's Cup matches, but was dropped when after Zoehrer's return.
+
+John Taylor (cricketer, born 1979): John James Taylor (born 3 April 1979) is a former Australian cricketer who played several matches for Western Australia during the 2003–04 season.  From Melbourne, Taylor played his early cricket in Victoria, representing the state's under-19s and second XI teams.  Prior to the 2002–03 season, he moved to Western Australia, hoping to gain selection at senior level.  Taylor made his limited-overs debut for Western Australia in the ING Cup in early November 2003, and his Pura Cup debut shortly after.  A right-handed all-rounder, he was regularly selected in both formats of the game during the 2003–04 season, playing first-class matches and eight limited-overs matches.  Taylor's best bowling figures, 4/70, came against Victoria in late November 2003, while his highest first-class score (and only half-century) was an innings of 50 runs against New South Wales in late January 2004.  However, at the end of the season he returned to Victoria for family reasons, despite having been offered a full contract from the Western Australian Cricket Association (WACA) for the following season.  Taylor did not play at state level again, but did play one match for a Victorian Invitation XI against the touring New Zealanders in December 2004.
+
+Ken Lilly: Kenneth Edward "Ken" Lilly (born 25 December 1959) is a former Australian cricketer.  From Perth, Lilly played several matches for the state colts team from the early 1980s onwards, but did not make his debut at senior level until the 1988–89 season, when he was aged 29.  A right-arm fast bowler, he played two Sheffield Shield matches late in the season, as well as a single match in the limited-overs FA Insurance Cup.  Lilly made his first-class debut against Victoria in January 1989 at the WACA Ground, taking 3/72 in the first innings and four wickets for the match.  His second (and last) first-class match came against New South Wales the following month.  He took two wickets in the match, but finished with an economy rate of 5.48 from his 21 overs, failing to bowl a maiden.  Lilly's only one-day game at state level came between his two Sheffield Shield matches.  He took 1/19 from five overs, helping to dismiss Tasmania for 121 runs.  Lilly did not play at state level again, with Western Australia's fast-bowling stocks including several Australian internationals, notably Terry Alderman, Ken MacLeay, Chris Matthews, and Bruce Reid.  However, he remained active at grade cricket level, and later coached North Perth, where he was involved in the establishment of a trophy commemorating former state player Mark McPhee.
+
+Stuart Karppinen: Stuart James Karppinen (born 13 June 1973) is a former Australian cricketer who is the current strength and conditioning coach of the Australian national cricket team.  Born in Townsville, Karppinen moved to Canberra with his family at a young age.  He played for the Australian Capital Territory Under-19s at the 1991–92 Barclays Bank Australian Under-19 Championships, taking one wicket in his only match.  He was first selected for the Australian Capital Territory senior side during the 1993–94 season, although the ACT did not at the time have either first-class or List A status, and thus only played state teams' Second XIs and other sides touring Canberra.  Karppinen was also the recipient of an Australian Institute of Sport scholarship in 1997.  The Australian Capital Territory was admitted to the Australian domestic limited-overs competition for the 1997–98 season, playing as the "Canberra Comets".  Karppinen played six matches for the team in their inaugural season, taking nine wickets with a best of 2/35.  Karppinen did not play any matches the following season, and transferred to Western Australia for the 1999–2000 season.
+
+Darrin Ramshaw: Darrin Joseph Ramshaw (born 29 November 1965) is a former Australian cricketer who played at domestic level for Western Australia and Victoria during the late 1980s and early 1990s.  The son of Graham Ramshaw, Ramshaw was a talented junior sportsman, playing Australian rules football for the Perth Football Club in the West Australian Football League (WAFL) and representing the Australian under-19 cricket team.  He made his Sheffield Shield debut for Western Australia during the 1989–90 season, but moved to Victoria the following season, where he established himself as an opening batsman.  Later moving to the middle order, in the absence of Dean Jones Ramshaw captained Victoria in several matches during the 1993–94 season, but that season was his last at state level.  He later served as assistant coach of Tasmania and coach of Western Australia's under-19 team.
+
+Question: When was the former Australian cricketer born during who's absence Darrin Joseph Ramshaw captained Victoria in several matches during the 1993–94 season?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "cricketer_name": {
+      "type": "string",
+      "description": "The name of the cricketer whose birth date is being sought."
+    },
+    "role_description": {
+      "type": "string",
+      "description": "A description of the cricketer's role or context as identified in the question."
+    },
+    "season_of_absence": {
+      "type": "string",
+      "description": "The season during which Darrin Ramshaw captained Victoria in the cricketer's absence."
+    },
+    "birth_date": {
+      "type": "string",
+      "description": "The birth date of the identified cricketer."
+    }
+  },
+  "required": [
+    "cricketer_name",
+    "role_description",
+    "season_of_absence",
+    "birth_date"
+  ],
+  "additionalProperties": false
+}

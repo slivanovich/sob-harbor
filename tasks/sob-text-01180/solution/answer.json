@@ -1,0 +1,16 @@
+{
+  "question": "Are both Michael Kiske and Yuju singers?",
+  "entities_checked": [
+    {
+      "name": "Michael Kiske",
+      "is_singer": true,
+      "role_description": "German singer best known as the lead vocalist for the German power metal band Helloween"
+    },
+    {
+      "name": "Yuju",
+      "is_singer": true,
+      "role_description": "South Korean singer, best known as the main vocalist of the South Korean girl group GFriend"
+    }
+  ],
+  "all_entities_are_singers": true
+}

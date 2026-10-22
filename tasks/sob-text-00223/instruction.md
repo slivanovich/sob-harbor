@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Baltimore's Marching Ravens: Baltimore's Marching Ravens are the official marching band of the Baltimore Ravens American football team.  They were founded as the Baltimore Colts' Marching Band on September 7, 1947 and have continuously operated ever since, supporting three separate football franchises.  The band first supported the original Baltimore Colts from 1947 to 1950, but continued to operate even after the franchise disbanded in 1950.  After a new Baltimore Colts franchise was installed in 1953, the band became associated with the newly founded team.  The band endured a second relocation when the Colts moved to Indianapolis in the middle of the night in 1984, leaving Baltimore without a team for eleven years.  The band became attached to a third franchise when the Cleveland Browns relocated to Baltimore in 1996 and became the Ravens.  They are one of two official marching bands in the NFL, the other being the Washington Redskins Marching Band.
+
+List of Indianapolis Colts seasons: The Indianapolis Colts, formerly the Baltimore Colts, are an American football team playing in the National Football League (NFL).  This list documents the season-by-season records of the Colts franchise from to present, including postseason records and league awards for individual players or head coaches.  In 1953, a Baltimore-based group led by Carroll Rosenbloom gained the rights to a new Baltimore franchise.  Rosenbloom was granted an NFL team, and was awarded the holdings of the defunct Dallas Texans organization.  The new team was named the Colts after the previous team that folded after the 1950 NFL season.  After 31 seasons in Baltimore, Colts owner Robert Irsay moved the team to Indianapolis, Indiana.
+
+1986 Tampa Bay Buccaneers season: The 1986 Tampa Bay Buccaneers season began with the team trying to improve on an 2–14 season.  This was one of the worst seasons in franchise history.  There is some sentiment that the 1986 team was even worse than the winless team of 1976, and the 473 points conceded was not beaten by any NFL team until the 2001 Indianapolis Colts gave up 486.  The Buccaneers selected Bo Jackson with the top pick in the draft, but were unable to convince him to join the team.  Three weeks after the draft, Jackson signed a three-year baseball contract with the Kansas City Royals.  Despite holding four of the first forty selections in the draft, and the presence of a great influx of fresh talent from defunct USFL teams, the Buccaneers were unable to find any impact players in either the draft or free agency.  They entered the season with a roster nearly identical to the previous season's 2–14 team.
+
+2011 Charleston Southern Buccaneers football team: The 2011 Charleston Southern Buccaneers football team represented Charleston Southern University in the 2011 NCAA Division I FCS football season.  The Buccaneers were led by ninth-year head coach Jay Mills and played their home games at Buccaneer Field.  They were a member of the Big South Conference.  They finished the season 0–11, 0–6 in Big South play to finish in last place.  It was the second winless season in school history as they also went 0–11 in 1994.
+
+Charlie Davis (running back): Charles Douglas "Charlie" Davis (born January 16, 1952) is a former American football running back for the Cincinnati Bengals and Tampa Bay Buccaneers of the National Football League (NFL).  A 1974 NFL Draft choice from the University of Colorado, he rushed 72 times for 375 yards and caught 19 passes for 171 yards as a rookie, but suffered a preseason knee injury that prevented him from playing in 1975.  In 1976, he was traded to the expansion Buccaneers for a future draft choice, which turned out to be a 1977 fourth-rounder.  Davis scored the Buccaneers' first-ever offensive touchdown, a 1-yard run in week 4 of the 1976 season against the Baltimore Colts, but later suffered another knee injury and spent the remainder of the 1976 season and the 1977 season on injured reserve.
+
+1982 Baltimore Colts season: The 1982 Baltimore Colts season was the 30th season for the team in the National Football League (NFL), and the Colts' penultimate season in Baltimore.  The Colts finished the NFL's strike-shortened 1982 season without a victory, finishing with eight losses and one tie in their nine games.  The Colts joined the 1976 Tampa Bay Buccaneers as the second team since the AFL-NFL merger to finish a regular season winless.  They were later joined by the 2008 Detroit Lions.
+
+Baltimore Colts relocation to Indianapolis: The Baltimore Colts relocation to Indianapolis was a successful effort by the then-owner of the Baltimore Colts (Robert Irsay) to move the American football team from Baltimore, Maryland to Indianapolis, Indiana.  The team began play as the Indianapolis Colts for the 1984 National Football League (NFL) season.  The Colts' move was completely unannounced and occurred in the early hours of March 29, 1984, after years of lobbying for a new stadium to replace the inadequate Memorial Stadium.  The franchise's move continues to embitter many Baltimore natives decades afterward, and would have a lasting impact on the NFL, including another controversial relocation twelve years later that resulted in Baltimore receiving its current NFL team, the Ravens.
+
+History of the Baltimore Colts: The professional American football franchise currently known as the Indianapolis Colts was originally based in Baltimore, Maryland, from 1953 to 1984.  This article chronicles the franchise's history during its time as the Baltimore Colts.  Named in honor of Baltimore's history of horse breeding and racing (including the Preakness Stakes, one of the events in the U.S. Triple Crown championship series) at Pimlico Race Course, this was the second incarnation of the "Baltimore Colts" after the first one played from 1947 to 1950 in the old All America Football Conference for three years and moved to the National Football League (NFL) with a few other AAFC teams after the 1949 merger, but playing only one season.  The 1953-83 Baltimore Colts team played its home games at Memorial Stadium on 33rd Street during its entire tenure in Baltimore before the franchise relocated to Indianapolis, Indiana, in March 1984.
+
+2008 Detroit Lions season: The 2008 Detroit Lions season was the 79th season for the franchise in the National Football League.  The Lions entered their third season under head coach Rod Marinelli and were looking to improve on the 7–9 record they put together in 2007.  Instead, the Lions had one of the worst seasons in pro sports history.  The team lost all sixteen of their games in 2008, becoming the first team since the 1976 Tampa Bay Buccaneers to end an NFL season with no wins and no tied games as well as the first and only team to do it since the schedule was expanded to sixteen games.  The Lions were mathematically eliminated from the playoffs by Week 11, when they stood 0–10.  The team's victory over the Kansas City Chiefs in Week 16 of 2007 stood as their last until Week 3 of the 2009 season.  From the time the Lions recorded a win over the Denver Broncos in 2007 to reach 6–2, the team went 5–47 over their following 52 games (including all of 2008 and 2009) before winning four games in a row at the end of the 2010 season.  As of 2017, this is the only team in NFL history to finish a season with a 0–16 record.  The 2016 Cleveland Browns and the 2009 St. Louis Rams came close to 0–16, both going 1–15.
+
+Baltimore Colts (1947–50): The Baltimore Colts were a professional American football team based in Baltimore, Maryland.  The first team to bear the name Baltimore Colts, they were members of the All-America Football Conference (AAFC) from 1947 to 1949 and then joined the National Football League (NFL) for one season before folding.  They were one of the least successful teams in the AAFC and NFL both on and off the field, winning only 11 games in their history.  In 1953, Baltimore was granted an expansion team that revived the Colts name; this team is now the Indianapolis Colts.
+
+Question: Which 2008 football team, along with the 1976 Tampa Buccaneers and 1982 Baltimore Colts, had a winless season? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "identified_team_name": {
+      "type": "string",
+      "description": "The name of the football team from the 2008 season that had a winless record."
+    },
+    "identified_season_year": {
+      "type": "integer",
+      "description": "The year of the winless season for the identified team."
+    },
+    "identified_team_record": {
+      "type": "string",
+      "description": "The win-loss record of the identified team for their winless season."
+    },
+    "is_identified_team_winless": {
+      "type": "boolean",
+      "description": "Indicates if the identified team's season was winless."
+    },
+    "comparison_teams": {
+      "type": "array",
+      "description": "A list of other teams mentioned in the context that also had winless seasons.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "team_name": {
+            "type": "string",
+            "description": "The name of the comparison team."
+          },
+          "season_year": {
+            "type": "integer",
+            "description": "The year of the comparison team's winless season."
+          },
+          "win_loss_record": {
+            "type": "string",
+            "description": "The win-loss record of the comparison team for their winless season."
+          }
+        },
+        "required": [
+          "team_name",
+          "season_year",
+          "win_loss_record"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "identified_team_name",
+    "identified_season_year",
+    "identified_team_record",
+    "is_identified_team_winless",
+    "comparison_teams"
+  ],
+  "additionalProperties": false
+}

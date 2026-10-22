@@ -1,0 +1,15 @@
+{
+  "race_name": "Undead",
+  "game_name": "Warhammer Fantasy Battle",
+  "publisher": "Games Workshop",
+  "included_creatures": [
+    "ghosts",
+    "vampires",
+    "skeletons",
+    "mummies"
+  ],
+  "sub_factions": [
+    "Tomb Kings of Khemri",
+    "Vampire Counts"
+  ]
+}

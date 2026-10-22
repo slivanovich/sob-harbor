@@ -1,0 +1,13 @@
+{
+  "designer_name": "Jose Verges",
+  "aircraft_details": {
+    "aircraft_name": "Aeroflying Sensation",
+    "aircraft_type": "ultralight aircraft",
+    "manufacturer": "Aeroflying",
+    "country_of_origin": "French"
+  },
+  "former_employer_details": {
+    "company_name": "Airbus",
+    "company_description": "European multinational corporation that designs, manufactures, and sells civil and military aeronautical products worldwide"
+  }
+}

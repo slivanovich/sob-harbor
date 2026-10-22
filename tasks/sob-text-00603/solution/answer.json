@@ -1,0 +1,12 @@
+{
+  "pilot_name": "Amy McGrath Henderson",
+  "aircraft_name": "F/A-18 Hornet",
+  "aircraft_roles": [
+    "fighter",
+    "attack aircraft"
+  ],
+  "designers": [
+    "McDonnell Douglas",
+    "Northrop"
+  ]
+}

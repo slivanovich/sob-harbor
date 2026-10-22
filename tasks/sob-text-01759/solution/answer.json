@@ -1,0 +1,10 @@
+{
+  "aircraft_name": "ATR 72",
+  "aircraft_type": "twin-engine turboprop",
+  "aircraft_role": "short-haul regional airliner",
+  "airport_compatibility": "Tempuling Airport",
+  "passenger_capacity": {
+    "min": 72,
+    "max": 78
+  }
+}

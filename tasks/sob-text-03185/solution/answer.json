@@ -1,0 +1,9 @@
+{
+  "county_town_name": "Hertford",
+  "county": "Hertfordshire",
+  "population": 26000,
+  "road_information": {
+    "road_name": "A414",
+    "road_type": "major road"
+  }
+}

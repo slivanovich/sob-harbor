@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "record_id": "a68bb4d1aa4a6225102c4be3d914aa3deb1c0f37209af60ba9550ad83440f18d",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a838d7a5542992ef85e22f6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "\"Buckley\"-class",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "USS Midway (CV-41): USS \"Midway\" (CVB/CVA/CV-41) was an aircraft carrier of the United States Navy, the lead ship of her class.  Commissioned a week after the end of World War II, \"Midway\" was the largest ship in the world until 1955, as well as the first U.S. aircraft carrier too big to transit the Panama Canal.  A revolutionary hull design, based on the planned \"Montana\"-class battleship , gave her enhanced protection compared to previous carriers.  She operated for 47 years, during which time she saw action in the Vietnam War and served as the Persian Gulf flagship in 1991's Operation Desert Storm.  Decommissioned in 1992, she is now a museum ship at the USS \"Midway\" Museum, in San Diego, California, and the only remaining U.S. aircraft carrier commissioned right after World War II ended that was not an \"Essex\"-class aircraft carrier .\n\nUSS Douglas H. Fox: USS \"Douglas H. Fox\" (DD-779) an \"Allen M. Sumner\"-class destroyer , was named in honor of Lieutenant Commander Douglas H. Fox, the commanding officer of the destroyer USS \"Barton\" , who went down with his ship when she was torpedoed and sunk in the naval battle of Guadalcanal on 13 November 1942.  Fox was posthumously awarded the Navy Cross for his contribution to the defeat of a superior enemy force in this battle, and was later awarded a Gold Star in lieu of a second Navy Cross for earlier actions on 26 and 30 October and 3 November, when he rescued survivors of the aircraft carrier USS \"Hornet\" under hazardous conditions.\n\nUSS Hopping (DE-155/APD-51): USS \"Hopping\" (DE-155/APD-51), a \"Buckley\"-class destroyer escort of the United States Navy, was named in honor of Lieutenant Commander Hallsted L. Hopping, commanding officer of Scouting Six, embarked on the USS Enterprise, killed in action during the February 1, 1942 Marshall Islands Raid.  LCDR Hopping was the first U.S. Navy aircraft squadron commander to lose his life in World War II.\n\nUSS John R. Pierce: USS \"John R. Pierce\" (DD-753), an \"Allen M. Sumner\"-class destroyer , is the only ship of the United States Navy to be named for Lieutenant Commander John Reeves Pierce, who commanded \"Argonaut\" , a transport submarine, which was lost during battle in January 1943.  Lieutenant Commander Pierce was posthumously awarded the Navy Cross.\n\nUSS Wasp (CV-7): USS \"Wasp\" (CV-7) was a United States Navy aircraft carrier commissioned in 1940 and lost in action in 1942.  She was the eighth ship named  , and the sole ship of a class built to use up the remaining tonnage allowed to the U.S. for aircraft carriers under the treaties of the time.  As a reduced-size version of the \"Yorktown\"-class aircraft carrier hull, \"Wasp\" was more vulnerable than other United States aircraft carriers available at the opening of hostilities.  \"Wasp\" was initially employed in the Atlantic campaign, where Axis naval forces were perceived as less capable of inflicting decisive damage.  After supporting the occupation of Iceland in 1941, \"Wasp\" joined the British Home Fleet in April 1942 and twice ferried British fighter aircraft to Malta.  \"Wasp\" was then transferred to the Pacific in June 1942 to replace losses at the battles of Coral Sea and Midway.  After supporting the invasion of Guadalcanal, \"Wasp\" was sunk by the Japanese submarine \"I-19\" on 15 September 1942.\n\nUSS Enterprise (CV-6): USS \"Enterprise\" (CV-6), was the seventh U.S. Navy vessel to bear the name.  Colloquially called \"the Big E\", she was the sixth aircraft carrier of the United States Navy.  A \"Yorktown\"-class carrier, she was launched in 1936 and was one of only three American carriers commissioned before World War II to survive the war (the others being \"Saratoga\" and \"Ranger\" ).  She participated in more major actions of the war against Japan than any other United States ship.  These actions included the Attack on Pearl Harbor (18 dive bombers of VS-6 were over the harbor, 6 were shot down with a loss of eleven men, making her the only American Aircraft carrier with men at Pearl Harbor during the Attack and the first to receive casualties during the Pacific War), the Battle of Midway, the Battle of the Eastern Solomons, the Battle of the Santa Cruz Islands, various other air-sea engagements during the Guadalcanal Campaign, the Battle of the Philippine Sea, and the Battle of Leyte Gulf.  \"Enterprise\" earned 20 battle stars, the most for any U.S. warship in World War II, and was the most decorated U.S. ship of World War II, She is also the first American ship to sink an enemy vessel during the Pacific War, the sole surviving pilot of the six planes shot down over Pearl Harbor sank Japanese submarine I-70 on 10 December 1941.  On three occasions during the Pacific War, the Japanese announced that she had been sunk in battle, resulting in her being named \"The Grey Ghost\".\n\nUSS Dwight D. Eisenhower: USS \"Dwight D. Eisenhower\" (CVN-69) (\"\"Ike\"\") is a nuclear-powered aircraft carrier currently in service with the United States Navy.  Commissioned in 1977, the ship is the second of the ten \"Nimitz\"-class aircraft carrier s currently in service, and is the first ship named after the 34th President of the United States, Dwight D. Eisenhower.  The vessel was initially named simply as USS \"Eisenhower\", much like the lead ship of the class, \"Nimitz\" , but the name was changed to its present form on 25 May 1970.  The carrier, like all others of her class, was constructed at Newport News Shipbuilding Company in Virginia, with the same design as the lead ship, although the ship has been overhauled twice to bring her up to the standards of those constructed more recently.\n\nUSS Holton: USS \"Holton\" (DE-703), a \"Buckley\"-class destroyer escort of the United States Navy, was named after Ralph Lee Holton, who was born on 19 September 1918, and graduated from the Naval Academy in December 1941.  He was awarded the Navy Cross for his valiant rescue work aiding survivors of the stricken aircraft carrier \"Lexington\" on 8 May 1942 in the Battle of the Coral Sea.  As officer-in-charge of a boat detailed to rescue survivors from the burning carrier, Ensign Holton, under a hail of flaming debris from bombs, ammunition, and gasoline exploding on \"Lexington\", persistently returned to the stricken ship and thus effected a series of daring rescues in which he saved the lives of many members of the ship's crew who otherwise would have been lost.  Less than a month later, on 6 June, Ensign Holton was reported missing and presumed dead as his ship, the destroyer \"Hammann\" , was sunk by a Japanese submarine during the Battle of Midway while assisting the aircraft carrier \"Yorktown\" .\n\nUSS Wayne E. Meyer: USS \"Wayne E. Meyer\" (DDG-108) is an \"Arleigh Burke\"-class guided missile destroyer in the United States Navy.  She is named after Rear Admiral Wayne E. Meyer, who is known as the Father of Aegis.  The ship is part of Destroyer Squadron 1 of Carrier Strike Group One which is currently headed by the \"Nimitz\"-class nuclear-powered aircraft carrier  .  \"Wayne E. Meyer\" is the 58th destroyer in her class.  She carries the 100th AEGIS Weapon System to be delivered to the United States Navy.\n\nUSS Hayter (DE-212): USS \"Hayter\" (DE-212/APD-80), a \"Buckley\"-class destroyer escort of the United States Navy, was named in honor of Lieutenant Commander Hubert M. Hayter (1901–1942), who was killed in action, while serving aboard the cruiser USS \"New Orleans\" during the Battle of Tassafaronga on 30 November 1942.  Lieutenant Commander Hayter was serving as damage control officer when \"New Orleans\" received a torpedo hit, and as Central Station, his battle post, filled with asphyxiating gas he ordered all men without masks to leave the compartment giving his own to a partially stricken seaman.  After clearing the compartment of all personnel, Lt. Cmdr. Hayter was finally overcome by the fumes.  For this extraordinary act of heroism he was posthumously awarded the Navy Cross.",
+    "question": "What class of ship is the destroyer named after this lieutenant commander embarked on the sixth aircraft carrier of the United States Navy and killed in action?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "destroyer_class": {
+          "type": "string",
+          "description": "The class of the destroyer."
+        },
+        "named_person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the lieutenant commander."
+            },
+            "rank": {
+              "type": "string",
+              "description": "The rank of the person."
+            },
+            "cause_of_death": {
+              "type": "string",
+              "description": "The circumstances of their death."
+            },
+            "embarked_on_carrier": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the aircraft carrier."
+                },
+                "designation": {
+                  "type": "string",
+                  "description": "The hull designation of the aircraft carrier."
+                },
+                "order_of_commissioning": {
+                  "type": "integer",
+                  "description": "The numerical order of this carrier among US Navy aircraft carriers."
+                }
+              },
+              "required": [
+                "name",
+                "designation",
+                "order_of_commissioning"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "rank",
+            "cause_of_death",
+            "embarked_on_carrier"
+          ],
+          "additionalProperties": false
+        },
+        "destroyer_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the destroyer."
+            },
+            "designation": {
+              "type": "string",
+              "description": "The hull designation of the destroyer."
+            }
+          },
+          "required": [
+            "name",
+            "designation"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "destroyer_class",
+        "named_person",
+        "destroyer_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "destroyer_class": "Buckley-class",
+      "named_person": {
+        "name": "Hallsted L. Hopping",
+        "rank": "Lieutenant Commander",
+        "cause_of_death": "killed in action during the February 1, 1942 Marshall Islands Raid",
+        "embarked_on_carrier": {
+          "name": "Enterprise",
+          "designation": "CV-6",
+          "order_of_commissioning": 6
+        }
+      },
+      "destroyer_details": {
+        "name": "Hopping",
+        "designation": "DE-155/APD-51"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

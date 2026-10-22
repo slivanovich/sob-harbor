@@ -1,0 +1,14 @@
+{
+  "question_asked": "Were both Sinclair Lewis and Kahlil Gibran from America?",
+  "author_1": {
+    "name": "Sinclair Lewis",
+    "is_from_america": true,
+    "nationality_details": "American novelist, first writer from the United States"
+  },
+  "author_2": {
+    "name": "Kahlil Gibran",
+    "is_from_america": false,
+    "nationality_details": "Lebanese-American artist, philosopher and writer; Lebanese writer, poet, and visual artist"
+  },
+  "both_from_america": false
+}

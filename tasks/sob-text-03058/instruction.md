@@ -1,0 +1,98 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Convention of 1836: The Convention of 1836 was the meeting of elected delegates in Washington-on-the-Brazos, Texas in March 1836.  The Texas Revolution had begun five months previously, and the interim government, known as the Consultation, had wavered over whether to declare independence from Mexico or pledge to uphold the repudiated Mexican Constitution of 1824.  Unlike those of previous Texas councils, delegates to the Convention of 1836 were younger, more recent arrivals to Texas, and more adamant on the question of independence.  As delegates prepared to convene, Mexican President Antonio Lopez de Santa Anna led a large army into Texas to quell the revolt; the vanguard of this army arrived at San Antonio de Bexar on February 23.
+
+Battle of the Alamo: The Battle of the Alamo (February 23 – March 6, 1836) was a pivotal event in the Texas Revolution.  Following a 13-day siege, Mexican troops under President General Antonio López de Santa Anna launched an assault on the Alamo Mission near San Antonio de Béxar (modern-day San Antonio, Texas, United States), killing all of the Texian defenders.  Santa Anna's cruelty during the battle inspired many Texians—both Texas settlers and adventurers from the United States—to join the Texian Army.  Buoyed by a desire for revenge, the Texians defeated the Mexican Army at the Battle of San Jacinto, on April 21, 1836, ending the revolution.
+
+Siege of the Alamo: The Siege of the Alamo (February 23 – March 6, 1836) describes the first thirteen days of the Battle of the Alamo.  On February 23, Mexican troops under General Antonio Lopez de Santa Anna entered San Antonio de Bexar, Texas and surrounded the Alamo Mission.  The Alamo was defended by a small force of Texans and Tejanos, led by William Barrett Travis and James Bowie, and included Davy Crockett.  Before beginning his assault on the Alamo, Santa Anna offered them one last chance to surrender.  Travis replied by opening fire on the Mexican forces and, in doing so, effectively sealed their fate.  The siege ended when the Mexican Army launched an early-morning assault on March 6.  Almost all of the defenders were killed, although several civilians survived.
+
+Juan Seguín: Juan Nepomuceno Seguín (October 27, 1806 – August 27, 1890) was a political and military figure of the Texas Revolution helping to establish the independence of Texas.  Numerous places and institutions are named in his honor, including the county seat of Seguin in Guadalupe County, the Juan N. Seguin Memorial Interchange in Houston, Juan Seguin Monument in Seguin, World War II Liberty Ship SS Juan N. Seguin, Seguin High School in Arlington.
+
+Damacio Jiménez: Damacio Jiménez was Tejano soldier who served under Juan Seguín during the Battle of the Alamo, but was not recognized as such until 150 years afterwards.  Records placing him among those who perished in the battle were found in 1986 among court files by Laredo, Texas attorney Raul Casso IV.  In support of an 1861 military land grant claim by the heirs of Jiménez, Seguin provided sworn testimony verifying the soldier's place in his company, as did Cornelio Delgado who stated he had seen Jiménez's corpse after the battle.  The cash-poor Republic of Texas adopted a system of military land grants in lieu of service pay.  Issuance of the grants were dependent upon the military muster lists and either the veterans or their heirs filing a claim, a process that required an upfront fee to complete.  For service at the Battle of the Alamo and the Goliad massacre, the heirs were eligible to file for the land grants.  Researchers on the defenders of the Alamo sometimes relied on the military land grants, but did not always check through the muster lists.  Although the claim was filed in 1861, it was never registered due to a lack of filing fee.  Casso referred to Jiménez as "the 189th Alamo defender".  He was officially added to the list of Alamo defenders in 1987.
+
+DeWitt Colony: Tyler (ca. 1820s through the 1840s) was a settlement in Mexican Texas founded by Green DeWitt.  From lands belonging to that colony, the present Texas counties of DeWitt, Guadalupe and Lavaca were created.  The hub of the colony was primarily located, however, in what is now Gonzales County.  The first battle of the Texas Revolution occurred in the DeWitt Colony.
+
+Erasmo Seguín: Juan Jose Maria Erasmo Seguin (May 26, 1782 – October 30, 1857) was a prominent citizen and politician in San Antonio de Bexar (modern-day San Antonio, Texas, USA) in the 19th century.  From 1807 until 1835, Seguin served as head postmaster of San Antonio, Texas.  After Mexico achieved independence from Spain, Seguín was named the sole representative from Texas to the constitutional convention.  He helped to draft the Constitution of 1824 and was a major influence in the addition of a general colonization provision.  Seguín assisted Stephen F. Austin in choosing land for the first colony of American settlers to immigrate to Texas.  He later supported the Texas Revolution, providing political as well as material support.
+
+2014 Texas Revolution season: The 2014 Texas Revolution season was the team's fifteenth season as a professional indoor football franchise, fifth in the Indoor Football League (IFL), and second as the "Texas Revolution".  One of nine teams in the IFL for the 2014 season, the Texas Revolution competed in the United Conference for the second consecutive year.  The team played their home games at the Allen Event Center in Allen, Texas.  Chris Williams returned to the IFL as the Texas Revolution's director of football operations and head coach for 2014.  The team started strong but faltered, compiling a 3–11 record and missing the playoffs.  In the post-season, Williams resigned and the team announced their departure from the IFL.
+
+Juana Navarro Alsbury: Juana Gertrudis Navarro Alsbury (1812 – July 23, 1888) was one of the few Texian survivors of the Battle of the Alamo during the Texas Revolution in 1836.  As Mexican forces entered her hometown, San Antonio de Bexar, on February 23, Alsbury's cousin by marriage, James Bowie, brought her with him to the Alamo Mission so that he could protect her.  Bowie, the co-commander of the Texian forces, collapsed from illness on the second day of the siege; Alsbury nursed him throughout the remainder of the siege.  On March 4, Texian co-commander William Barret Travis sent her as an emissary to Mexican commander Antonio Lopez de Santa Anna to negotiate an honorable surrender for the Texian forces.  She made no headway, and her visit likely increased Santa Anna's impatience to end the siege in a spectacular fashion.  Santa Anna launched an early-morning assault on the Alamo on March 6.
+
+List of Alamo defenders: The Battle of the Alamo (February 23 – March 6, 1836) was a crucial conflict of the Texas Revolution.  In 1835, colonists from the United States joined with Tejanos (Mexicans born in Texas) in putting up armed resistance to the centralization of the Mexican government.  President Antonio López de Santa Anna and the government in Mexico City believed the United States had instigated the insurrection with a goal of annexing Texas.
+
+Question: What pivotal event in the Texas Revolution occurred between February 23 and March 6, 1836 and involved Damacio Jiménez serving under Juan Seguín?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "event_name": {
+      "type": "string",
+      "description": "The name of the pivotal event."
+    },
+    "event_type": {
+      "type": "string",
+      "description": "The type of the event, e.g., battle, siege."
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The start date of the event in YYYY-MM-DD format."
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The end date of the event in YYYY-MM-DD format."
+    },
+    "key_figures_involved": {
+      "type": "array",
+      "description": "A list of key individuals involved in the event.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the individual."
+          },
+          "role": {
+            "type": "string",
+            "description": "The role of the individual in the event."
+          },
+          "served_under": {
+            "type": "string",
+            "description": "The name of the person the individual served under, if applicable."
+          }
+        },
+        "required": [
+          "name",
+          "role"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "historical_significance": {
+      "type": "string",
+      "description": "A description of the event's importance in the Texas Revolution."
+    }
+  },
+  "required": [
+    "event_name",
+    "event_type",
+    "start_date",
+    "end_date",
+    "key_figures_involved",
+    "historical_significance"
+  ],
+  "additionalProperties": false
+}

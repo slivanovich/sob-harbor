@@ -1,0 +1,16 @@
+{
+  "query_summary": "Origin locations for KMFDM and Empire of the Sun.",
+  "number_of_bands_found": 2,
+  "bands": [
+    {
+      "band_name": "KMFDM",
+      "origin_city": "Hamburg",
+      "origin_country": "Germany"
+    },
+    {
+      "band_name": "Empire of the Sun",
+      "origin_city": "Sydney",
+      "origin_country": "Australia"
+    }
+  ]
+}

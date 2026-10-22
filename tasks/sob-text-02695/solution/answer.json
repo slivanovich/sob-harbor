@@ -1,0 +1,20 @@
+{
+  "comparison_topic": "Popularity of soft drinks/mineral water in Norway",
+  "compared_items": [
+    "Volvic",
+    "Solo"
+  ],
+  "most_popular_item_in_norway": "Solo",
+  "item_popularity_data": [
+    {
+      "item_name": "Volvic"
+    },
+    {
+      "item_name": "Solo",
+      "is_popular_in_norway": true,
+      "popularity_description": "Solo quickly became Norway's most popular soft drink, and until the 1960s was bigger than Coca-Cola in Norway. In 1999, Pepsi passed Solo in market share, leaving Solo as third most popular.",
+      "market_share_rank_in_norway": 3,
+      "historical_peak_popularity": "most popular until the 1960s"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "film_title": "Rope",
+  "film_director": "Alfred Hitchcock",
+  "film_release_year": 1948,
+  "is_hitchcocks_first_technicolor": true,
+  "source_play": {
+    "title": "Rope",
+    "author": "Patrick Hamilton",
+    "publication_year": 1929
+  }
+}

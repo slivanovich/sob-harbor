@@ -1,0 +1,20 @@
+{
+  "opera_name": "Einstein on the Beach",
+  "composer": "Philip Glass",
+  "director": "Robert Wilson",
+  "premiere_details": {
+    "date": "1976-07-25",
+    "location": "Avignon Festival in France"
+  },
+  "structural_details": {
+    "number_of_acts": 4,
+    "number_of_knee_plays": 5,
+    "approximate_duration_hours": 5
+  },
+  "libretto_writers": [
+    "Christopher Knowles",
+    "Samuel M. Johnson",
+    "Lucinda Childs"
+  ],
+  "composed_for_ensemble": "Philip Glass Ensemble"
+}

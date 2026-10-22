@@ -1,0 +1,10 @@
+{
+  "player_name": "Kobie Ferguson",
+  "birth_year": 1999,
+  "player_nationality": "Australian",
+  "player_sport": "football (soccer)",
+  "last_team_played_for": {
+    "team_name": "Newcastle Jets FC",
+    "alternative_name": "Newcastle Jets Women"
+  }
+}

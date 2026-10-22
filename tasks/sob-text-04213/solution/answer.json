@@ -1,0 +1,16 @@
+{
+  "are_both_dog_types": true,
+  "dog_type_confirmations": [
+    {
+      "breed_name": "Catahoula Cur",
+      "is_a_dog_type": true,
+      "confirmation_source": "The Catahoula Cur is an American dog breed"
+    },
+    {
+      "breed_name": "Basset Hound",
+      "is_a_dog_type": true,
+      "confirmation_source": "The Basset Hound is a short-legged breed of dog"
+    }
+  ],
+  "number_of_breeds_evaluated": 2
+}

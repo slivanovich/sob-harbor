@@ -1,0 +1,10 @@
+{
+  "agency_name": "Vertic A/S",
+  "agency_country": "Danish",
+  "client_company": {
+    "name": "Novo Nordisk",
+    "type": "pharmaceutical",
+    "country_of_origin": "Danish",
+    "is_multinational": true
+  }
+}

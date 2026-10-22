@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Gulf South Conference: The Gulf South Conference (GSC) is a collegiate athletic conference affiliated at the National Collegiate Athletic Association (NCAA) Division II level which operates in the southeastern United States.
+
+ECAC Division II Lacrosse League: The Eastern College Athletic Conference Division II Lacrosse League, also known as the ECAC Division II Lacrosse League, is an American NCAA Division II college athletic conference and part of the Eastern College Athletic Conference that only sponsors men's Division II lacrosse.  The league was founded in March 2012 and began play in the 2012-13 academic year (2013 lacrosse season).  The founding members included Alderson Broaddus University (then Alderson–Broaddus College), Lake Erie College, Lindenwood University, Mercyhurst University, Ohio Valley University, Seton Hill University, Walsh University, and Wheeling Jesuit University.  The new conference brings together four former associate member in men's lacrosse only of the East Coast Conference: Lake Erie, Mercyhurst, Seton Hill, and Wheeling Jesuit; Lindenwood from the Western Intercollegiate Lacrosse Association; and Ohio Valley from competing as and Independent program; Walsh, in the program's first season of NCAA competition as part of the university's transition from NAIA; and Alderson-Broaddus, the program's first season in existence.
+
+NCAA Division II Men's Ice Hockey Championship: The NCAA Division II Men's Ice Hockey Championship was an annual tournament to determine the top men's ice hockey team in NCAA Division II from 1978 until 1984 and then again from 1993 until 1999.  The Division II Championship was suspended following 1999, due to a lack of sponsoring schools.  Most of the schools in Division II hockey became members of newly formed hockey conferences such as College Hockey America.  The Northeast Ten Conference is the last remaining Division II conference that sponsors ice hockey.
+
+Shadrick McAfee: Shadrick "Mac" McAfee (born September 22, 1974) is the former coach of the Arena Football League Louisiana Swashbucklers and was a professional football player in the National Football League, Canadian Football League, Regional Football League, Arena Football League 2, National Indoor Football League, Intense Football League, and Indoor Football League.  He played running back, wide receiver, defensive back, linebacker, and kick returner in his career.  McAfee attended Philadelphia High School in Mississippi.  McAfee played at NCAA Division II Mississippi College after high school and after two years transferred to the University of Central Arkansas.  In 1998 he was named all Gulf South Conference at running back.
+
+Angelo State Rams baseball: The Angelo State Rams baseball team represents Angelo State University in NCAA Division II college baseball.  The team was resurrected in 2005 after a long hiatus because of continued student requests and support.  The team belongs to the Lone Star Conference and plays home games at Foster Field, an on-campus field.  The field was constructed in 2000 and features 4,200 seats, a Triple-A lighting system and an inning-by-inning scoreboard with a video display.  It features major league style dugouts and locker rooms and a complete training facility, making it one of the most modern facilities in NCAA Division II college baseball.  In 2015 2.1 million dollars of renovations were made to the facility, including adding an AstroTurf playing field, all new blue chair back seats, and padding the outfield wall.  In addition the ASU Sports Complex consists of two NCAA regulation fields used for practice, along with indoor practice facilities.  The Rams only coach has been Kevin Brooks.  The only coach in ASU baseball history, he has a 219-134 Lone Star Conference record and an 14-11 record in five trips to the NCAA postseason.  The Rams are the only Lone Star Conference team to ever make the College World Series and Brooks has taken them there three in only 12 seasons.  The Rams have also won the Lone Star Conference tournament championship two times, including the 2015 LSC Championship when the team swept their way to the title and in 2012.  His list of accomplishments includes the LSC South Division title in 2006, the Lone Star Conference and NCAA Division II South Central Regional titles in 2007,2015, and 2016, a semifinal appearance in the 2009 South Central Regional tournament and the LSC regular season and tournament championships in 2012.  He has coached over 100 All-Lone Star Conference selections, 40 All-Region picks and 23 All-American selections.  Brooks has also prepared his players for the next level as 22 former Rams have played or are currently playing professional baseball, including 7 in the last 2 years.
+
+Great Midwest Athletic Conference: The Great Midwest Athletic Conference (G-MAC) was named the 24th NCAA Division II conference and operates in the Great Lakes and East South Central States regions of the United States.  The G-MAC began conference play in the 2012-13 academic year hosting 12 championships and continued to work through the educational assessment program.  The conference received approval and became an active Division II conference in 2013-14, hosting 17 championships.
+
+High Point Panthers: The High Point Panthers are the 16 varsity athletic teams that represent High Point University (HPU) in North Carolina, United States.  All of HPU's varsity teams compete at the NCAA Division I level.  All sports except men's lacrosse compete in the Big South Conference.  The men's lacrosse team joined the Southern Conference July 1, 2014.  The Panthers joined Division I in 1999, after having been NCAA Division II and being members of the National Association of Intercollegiate Athletics (NAIA) prior to 1992.  HPU was a founding member of the North State Conference, which is now the NCAA Division II Conference Carolinas.
+
+NCAA Division II Men's Basketball Tournament: The NCAA Division II Men's Basketball Championship is an annual championship tournament for colleges and universities that are members of NCAA Division II, a grouping of schools in the United States (plus one school in Canada) that are generally smaller than the higher-profile institutions of Division I.  The tournament, originally known as the NCAA College Division Basketball Championship, was established in 1957, immediately after the NCAA subdivided its member schools into the University Division (today's Division I) and College Division.  It became the Division II championship in 1974, when the NCAA split the College Division into the limited-scholarship Division II and the non-scholarship Division III, and added the "Men's" designation in 1982 when the NCAA began sponsoring a Division II women's championship.
+
+West Virginia Intercollegiate Athletic Conference: The West Virginia Intercollegiate Athletic Conference (WVIAC) was a collegiate athletic conference which historically operated exclusively in the state of West Virginia, but expanded into Pennsylvania in its final years.  It participated in the NCAA's Division II, but held its final athletic competitions in spring 2013, and officially disbanded on September 1 of that year.  Its football-playing members announced in June 2012 that they planned to withdraw to form a new Division II conference effective at the end of the 2012–13 season; this led to a chain of conference moves that saw all but one of the WVIAC's members find new conference homes.
+
+Jim Johnson (athletic director): James Johnson is an American university sports administrator and a former NCAA Division II conference commissioner.  Johnson is currently the athletic director for Pittsburg State University, a NCAA Division II sports program in Pittsburg, Kansas.  Previously, Johnson was the Commissioner of the Mid-America Intercollegiate Athletics Association (MIAA).
+
+Question: What NCAA Division II conference featured former NFL and CFL star SHadrick McAfee?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "conference_name": {
+      "type": "string",
+      "description": "The name of the NCAA Division II conference."
+    },
+    "ncaa_division": {
+      "type": "string",
+      "description": "The NCAA division of the conference."
+    },
+    "player_details": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The name of the player."
+        },
+        "achievement": {
+          "type": "string",
+          "description": "The achievement of the player in the conference."
+        },
+        "achievement_year": {
+          "type": "integer",
+          "description": "The year the achievement occurred."
+        }
+      },
+      "required": [
+        "player_name",
+        "achievement",
+        "achievement_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "conference_name",
+    "ncaa_division",
+    "player_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+{
+  "player_name": "Eric Dickerson",
+  "position": "running back",
+  "team_name": "Los Angeles Rams",
+  "season_year": 1983,
+  "draft_details": {
+    "draft_year": 1983,
+    "draft_round": "first round",
+    "team_drafted_by": "Los Angeles Rams"
+  }
+}

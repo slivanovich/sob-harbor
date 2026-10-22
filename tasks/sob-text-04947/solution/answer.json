@@ -1,0 +1,12 @@
+{
+  "event_name": "2011 IHOP shooting",
+  "organization_involved": {
+    "name": "National Guard",
+    "members_killed_count": 3,
+    "control_entities": [
+      "the state",
+      "the federal government"
+    ]
+  },
+  "total_fatalities": 4
+}

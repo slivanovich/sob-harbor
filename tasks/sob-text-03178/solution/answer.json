@@ -1,0 +1,16 @@
+{
+  "query_entities": [
+    {
+      "entity_name": "Fiona Apple",
+      "entity_type": "person",
+      "nationality": "American"
+    },
+    {
+      "entity_name": "Mono Puff",
+      "entity_type": "band",
+      "nationality": "American"
+    }
+  ],
+  "shared_nationality": "American",
+  "answer_statement": "Both Fiona Apple and Mono Puff are American."
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Carpenter's Station, Kentucky: Carpenter's Station, Kentucky, originally "Carpenter's Fort", was established about 2 mi west of present-day Hustonville, Kentucky, by three Carpenter brothers, George Carpenter, John Carpenter, and Adam Carpenter, who came to the site from Rockingham County, Virginia, in the summer of 1779.  The brothers were of Germanic descent, sons of George Zimmerman (which Anglicizes to Carpenter), who was born c. 1720 in Switzerland, emigrated to Pennsylvania colony around 1740, and settled in Rockingham County, Virginia, before the American Revolutionary War.
+
+Dan O'Bannon: Daniel Thomas "Dan" O'Bannon (September 30, 1946 – December 17, 2009) was an American film screenwriter, director, visual effects supervisor, and occasional actor, usually in the science fiction and horror genres.
+
+Dark Star (album): Dark Star is a live album by the rock group the Grateful Dead.  It was recorded on May 4, 1972, at the Olympia Theatre in Paris, France.  It contains only one song from that concert — a version of "Dark Star" that, including an embedded drum solo, is almost 40 minutes long.  It was produced as a vinyl LP in a limited edition of 4,200 copies, and released on April 21, 2012, in conjunction with Record Store Day.
+
+Dark Star (soundtrack): Dark Star is a soundtrack by John Carpenter for the 1974 film of the same name.  While recorded in 1973, it wasn't released by Citadel until 1980, after the 1979 re-release of the film and the success of Carpenter's 1978 film Halloween.  A limited expanded edition was released in 2016 through We Release Whatever The Fuck We Want Records.
+
+Dark Star (film): Dark Star is a 1974 American science fiction comedy film directed by John Carpenter and co-written with Dan O'Bannon.  It follows the crew of the deteriorating starship "Dark Star", twenty years into their mission to destroy unstable planets that might threaten future colonization of other planets.
+
+Dark Star: H. R. Giger's World: Dark Star: H. R. Giger's World (German: "Dark Star: H. R. Gigers Welt" ) is a 2014 Swiss documentary directed by Belinda Sallin about surrealist H. R. Giger.  Giger's friends, family, and fans describe the impact he and his art have had on their lives, and Giger discusses some of his early inspirations.  It was shot in 2013 and 2014, and Giger died shortly after production ended.
+
+The Fog: The Fog (also known as John Carpenter's The Fog) is a 1980 American horror film directed by John Carpenter, who also co-wrote the screenplay and created the music for the film.  It stars Adrienne Barbeau, Jamie Lee Curtis, Tom Atkins, Janet Leigh and Hal Holbrook.  It tells the story of a strange, glowing fog that sweeps in over a small coastal town in California, bringing with it the vengeful ghosts of mariners who were killed in a shipwreck there exactly 100 years before.
+
+Dark star (Newtonian mechanics): A dark star is a theoretical object compatible with Newtonian mechanics that, due to its large mass, has a surface escape velocity that equals or exceeds the speed of light.  Whether light is affected by gravity under Newtonian mechanics is unclear but if it were accelerated the same way as projectiles, any light emitted at the surface of a dark star would be trapped by the star's gravity, rendering it dark, hence the name.  Dark stars are analogous to black holes in general relativity.
+
+Dark Star (song): "Dark Star" is a song released as a single by the Grateful Dead on Warner Bros. records in 1968.  It was written by lyricist Robert Hunter and composed by lead guitarist Jerry Garcia; however, compositional credit is sometimes extended to include Phil Lesh, Bill Kreutzmann, Mickey Hart, Ron "Pigpen" McKernan, and Bob Weir.  "Dark Star" was an early Grateful Dead classic and became one of their most loved and anticipated numbers, often with the group using it as a vehicle for musical improvisation sessions that extended beyond the original structure of the song.  The song is included in The Rock and Roll Hall of Fame's 500 Songs that Shaped Rock and Roll list and was ranked at number 57 on Rolling Stone's 100 Greatest Guitar Songs of All Time.  "Dark Star" was often the basis for jamming during the Dead's live shows, allowing the band to employ techniques typical of improvisational jazz.
+
+Tommy Lee Wallace: Thomas "Tommy" Lee Wallace (born September 6, 1949) is an American film producer, director, editor, and screenwriter.  He is best known for directing horror films such as "", "Fright Night Part 2" and "It".  He is a long-time collaborator of director John Carpenter, getting his first credit as an art director on Carpenter's directorial debut "Dark Star".  Along with Charles Bornstein, he edited both the original "Halloween" and "The Fog".  Initially approached to direct "Halloween II", a position eventually taken by Rick Rosenthal, he directed the following entry "Season of the Witch."
+
+Question: In what year was the screenwriter who co-wrote "Dark Star" with John Carpenter born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "screenwriter_name": {
+      "type": "string",
+      "description": "The name of the screenwriter who co-wrote the film."
+    },
+    "screenwriter_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the screenwriter."
+    },
+    "director_name": {
+      "type": "string",
+      "description": "The director of the film."
+    }
+  },
+  "required": [
+    "film_title",
+    "screenwriter_name",
+    "screenwriter_birth_year",
+    "director_name"
+  ],
+  "additionalProperties": false
+}

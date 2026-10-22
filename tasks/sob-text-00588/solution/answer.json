@@ -1,0 +1,14 @@
+{
+  "directors_compared": [
+    {
+      "name": "Peter Chan",
+      "birth_year": 1962
+    },
+    {
+      "name": "George King",
+      "birth_year": 1899
+    }
+  ],
+  "director_born_first": "George King",
+  "birth_year_difference": 63
+}

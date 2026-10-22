@@ -1,0 +1,14 @@
+{
+  "movement_name": "garden city movement",
+  "initiator": {
+    "name": "Sir Ebenezer Howard",
+    "nationality": "English",
+    "birth_date": "29 January 1850",
+    "death_date": "1 May 1928"
+  },
+  "publication": {
+    "title": "To-morrow: A Peaceful Path to Real Reform",
+    "publication_year": 1898
+  },
+  "movement_initiation_year": 1898
+}

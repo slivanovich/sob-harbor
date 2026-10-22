@@ -1,0 +1,12 @@
+{
+  "classification_level": "genus",
+  "classified_entities": [
+    {
+      "entity_name": "Anisacanthus"
+    },
+    {
+      "entity_name": "Holodiscus"
+    }
+  ],
+  "entity_count": 2
+}

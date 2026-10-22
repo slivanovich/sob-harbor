@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Harold Holt Memorial Swimming Centre: The Harold Holt Memorial Swimming Centre is a public swimming pool complex located on the corner of High street & Edgar Street, Glen Iris, Melbourne, Australia.  Built in the 1960s by Australian architects Kevin Borland and Daryl Jackson, the Swimming Centre is considered to be a fine example of Brutalist architecture.  Originally built as a municipal swimming baths, in 1927, the facilities were renovated in 1967 by Borland and Jackson to accommodate for higher swimming participation numbers.  It is named in honour of Australian Prime Minister Harold Holt, whose drowning death was announced during its construction and was the local member for the area.
+
+Portsea, Victoria: Portsea is a resort town suburb of Melbourne, Australia, located across Port Phillip from the Melbourne CBD.  Its local government area is the Shire of Mornington Peninsula.
+
+Zara Bate: Dame Zara Kate Bate {'1': ", '2': ", '3': ", '4': "} (née Dickins , previously Fell and Holt; 10 March 190914 June 1989) was an Australian fashion designer and socialite who was best known as the wife of Harold Holt, the 17th Prime Minister of Australia.  She grew up in Melbourne, attending Ruyton Girls' School and Toorak College.  Going into the dressmaking business, she opened a shop in 1930 and eventually expanded into a chain of boutiques.  Zara's first marriage to James Fell was short-lived, although they had three children together.  She remarried to Harold Holt – a Liberal Party politician – in 1946, although they had known each other for many years previously.  She became the prime minister's wife in 1966, and was known for her energy and flamboyance.  She was widowed in December 1967, when her husband disappeared while swimming at Cheviot Beach, Victoria.  Zara published her autobiography in 1968, and the following year remarried to Jeff Bate, another politician.  She was widowed for a second time in 1984, and subsequently retired to the Gold Coast.
+
+Harold Holt: Harold Edward Holt, {'1': ", '2': ", '3': ", '4': "} ( ; 5 August 190817 December 1967), was an Australian politician and the 17th Prime Minister of Australia from 1966 to 1967.  He was born in Stanmore, New South Wales and won a scholarship to study law at the University of Melbourne.  Holt went into business as a solicitor, during which time he joined the United Australia Party (UAP).  In 1935, aged just 27, he was elected to parliament for Fawkner.  He held this seat until 1949, when he transferred to Higgins.  Holt spent 32 years in Parliament, including many years as a senior Cabinet Minister, but was Prime Minister for only 22 months before he disappeared in December 1967 while swimming at Cheviot Beach near Portsea, Victoria and was presumed drowned.
+
+Natasha Ryan: Natasha Anne Ryan (born 1984) is an Australian woman who went missing in 1998 as a young teenage girl from Rockhampton, Queensland.  Police assumed she had been murdered by a local serial killer.  Ryan was discovered alive in 2003 during the trial of the man accused of her murder, almost five years after she went missing.
+
+Murder of Nurin Jazlin: Nurin Jazlin Binti Jazimin (11 September 1999 – 16 September 2007) was an eight-year-old Malaysian murder victim, who was originally reported missing after she had gone to a wet market near her house in Section 1, Wangsa Maju, Kuala Lumpur to buy a hair clip on the night of 20 August 2007.  Her parents made a missing person report to the police and a search for her was made in the subsequent weeks, conducted by several organisations including the mainstream media and NGOs.  Police were able to find CCTV footage, from a nearby camera, showing her being dragged into a white van the night she went missing.  Her murder has not been solved.
+
+Kholat (video game): Kholat is an indie survival horror video game developed by Polish developers IMGN.PRO, in which the player controls a protagonist who is tracing the steps of a group of nine Russian college students who went missing in February 1959 on Kholat Syakhl.  The game is based on the Dyatlov Pass incident, a true event that involved ten Russian students, nine of which went missing on Kholat Syakhl and were found dead in the time span of four months (the tenth student had walked back earlier due to illness).  Холатчахль ("Kholat Syakhl") is a transliteration in Russian of Holatchahl, meaning "Dead Mountain" in Mansi.
+
+Tiburón Island Tragedy: The Tiburón Island Tragedy occurred in 1905 when three members of a small American gold prospecting expedition went missing in the Sonoran Desert near Tiburón Island.  At the time, Tiburon was inhabited by the Seri natives, who were widely believed to have been responsible for the fate of the expedition.  There were also Yaqui renegades active in the area and there were rumors about their involvement as well.  However, the sole American survivor, Jack Hoffman, said that lack of water was most likely the cause.  Of the five-man expedition, the leader, Thomas F. Grindell, and two of his associates disappeared while the other two men survived, including a Papago guide, who left the journey early on.  A prolonged search for the missing men then commenced.  Led by Edward P. Grindell, search parties uncovered several artifacts that had belonged to members of the expedition, as well as evidence of their fate, but no trace of the men themselves was found.  It was not until over a year later that the remains of Thomas Grindell were discovered by another group of explorers.  Evidence at the scene seemed to confirm that dehydration was the cause of death.
+
+Donnell S. Holt: Donnell S. Holt (March 7, 1908, Graham, North Carolina – 1982) was president and Chairman of the board of Cannon Mills.  He graduated from the University of North Carolina in 1926 with a major in chemistry.  Holt had aspirations of attending medical school but the Great Depression made that impossible due to his family's financial state.  Holt went to work at the Esther Hosiery Mill.  He then got a job in the accounting section at Trevora Mills in Graham.  Holt married Margaret McConnell in July 1932.  Holt became vice president of Trevora in 1937.
+
+Murder of Alayna Ertl: Alayna Ertl was a missing 5-year-old girl from Watkins, Minnesota who was later found murdered.  She went missing on Saturday, August 20, 2016 and was last seen alive around 2am Central Daylight Time, according to the Amber Alert that was issued for her.  When her parents woke up at 8am Saturday, they noted that their daughter, their pickup truck, and the house guest who had stayed with them overnight were gone.  After her parents reported her missing, her father's cell phone in the truck pinged a cell tower in Todd County, Minnesota giving a clue to where she might be.  Her body was located nine hours later in Cass county near the Wilderness Park in a swampy area.
+
+Question: Harold Edward Holt went missing while swimming in the suburb of what city?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The full name of the person who went missing."
+    },
+    "event_type": {
+      "type": "string",
+      "description": "The type of event related to the person, e.g., 'disappearance'."
+    },
+    "location_details": {
+      "type": "object",
+      "properties": {
+        "suburb_name": {
+          "type": "string",
+          "description": "The name of the suburb where the event occurred."
+        },
+        "city_name": {
+          "type": "string",
+          "description": "The name of the city to which the suburb belongs."
+        },
+        "country_name": {
+          "type": "string",
+          "description": "The country where the event occurred."
+        },
+        "activity_at_disappearance": {
+          "type": "string",
+          "description": "The activity the person was engaged in when they disappeared."
+        }
+      },
+      "required": [
+        "suburb_name",
+        "city_name",
+        "country_name",
+        "activity_at_disappearance"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "event_type",
+    "location_details"
+  ],
+  "additionalProperties": false
+}

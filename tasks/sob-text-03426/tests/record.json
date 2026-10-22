@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "4aea7fd1a2c266672dc02340901e437382412d21d3aead3a6f7e2ec9b2a5bbd6",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a86364b5542991e771815c0",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Canada",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "North American Soccer League: The North American Soccer League (NASL) is a professional men's soccer league with eight teams: six in the United States, one in Canada and one in Puerto Rico.  It is sanctioned by the United States Soccer Federation (U.S. Soccer) as a Division II league in the United States soccer league system, under Major League Soccer (MLS) and alongside United Soccer League (formerly USL Pro).  It is headquartered in New York City.\n\nJohn Doyle (soccer): John Joseph Doyle (born March 16, 1966) is a retired American soccer player who played professionally in both Europe and the United States including the Western Soccer League, American Professional Soccer League and Major League Soccer.  He was the 1995 A-League Defender of the Year and the 1996 MLS Defender of the Year.  He also earned fifty-three caps with the U.S. national team between 1987 and 1994 including two games at the 1990 FIFA World Cup.  He was a member of the U.S. team at the 1988 Summer Olympics and was most recently the general manager of the San Jose Earthquakes of Major League Soccer before being fired on August 29, 2016.\n\nMajor League Soccer: Major League Soccer (MLS) is a men's professional soccer league, sanctioned by U.S. Soccer, that represents the sport's highest level in both the United States and Canada.  MLS constitutes one of the major professional sports leagues of the United States and Canada.  The league comprises 22 teams—19 in the U.S. and 3 in Canada.  The MLS regular season runs from March to October, with each team playing 34 games; the team with the best record is awarded the Supporters' Shield.  The postseason includes twelve teams competing in the MLS Cup Playoffs through November and December, culminating in the championship game, the MLS Cup.  MLS teams also play in other domestic competitions against teams from other divisions in the U.S. Open Cup and in the Canadian Championship.  MLS teams also compete against continental rivals in the CONCACAF Champions League.\n\nMLS Caribbean Combine: The Major League Soccer Caribbean Combine is an annual showcase of Caribbean football talent between the ages of 18-21 organized jointly by Major League Soccer and the Caribbean Football Union in 2013, with the inaugural combine being held in January 2014.  All 31 member associations are encouraged to send representatives that fit the criteria.  The combine provides opportunities for Caribbean players to be observed by MLS scouts with the hopes of being invited to the MLS Combine, an invite-only showcase event held in Fort Lauderdale, Florida prior to the annual MLS SuperDraft.  The combine is part of an agreement between the two entities as they try to promote football development throughout the Caribbean region.  About the impact of Caribbean players on the league, MLS Technical Director Alfonso Mondelo said, \"Quite a few players have played, continue to play in the MLS and have done so successfully...Now we are looking forward to the next generation of players who will be coming in\", while MLS Executive Vice President Todd Durbin said, “We recognize that the CONCACAF area, and particularly the Caribbean, is rich with soccer talent, and this will be an opportunity for our scouts to evaluate and identify the region’s top players...Caribbean players from islands like Jamaica, Haiti, Grenada and others have been key performers in MLS.  This event will help recognize the next generation of MLS stars as we look to achieve our goal of being among the best leagues in the world by 2022.”  From a Caribbean perspective, CFU President Gordon Derrick stated, “As CFU Member Associations turn their attention to Russia 2018, this is an exciting developmental opportunity for the opulent young talent in the Caribbean to assess their developmental level and the growth required to play at the highest level...This partnership with MLS is another way in which we at the CFU are seeking to bridge the gap that exists between talent availability and scouting opportunities that the Caribbean region has received from professional leagues.”\n\nPaul Wright (soccer): Paul Wright (born July 29, 1969 in London, England) is a U.S. soccer forward who spent most of his career in the U.S. indoor leagues.  He began his career with the San Diego Nomads in the Western Soccer Alliance, led the American Professional Soccer League in scoring in 1994 and played four seasons with the Kansas City Wizards in Major League Soccer.  He currently plays for the San Diego Sockers of the Professional Arena Soccer League.\n\nJeff Baicher: Jeff Baicher (born November 16, 1968 in Sunnyvale, California) is a retired American soccer forward whose professional career took him through multiple leagues, including the Western Soccer League, American Professional Soccer League, Continental Indoor Soccer League and Major League Soccer.  He ended his playing career with the Bay Area Seals of the USL A-League.  He earned two caps with the U.S. national team and coaches youth soccer.\n\nMark Simpson (soccer): Mark Simpson (born March 18, 1966) is a retired American soccer goalkeeper and former coach who spent six seasons with D.C. United in Major League Soccer.  He backstopped the team to the MLS Cup 1996.  He also spent one season in the American Professional Soccer League, two in the USISL and six in the National Professional Soccer League.  He earned one cap with the U.S. National Futsal Team in 1999.  He was the Director of Soccer Operations for the planned North American Soccer League team Virginia Cavalry FC.\n\nU.S. Soccer Development Academy: The U.S. Soccer Development Academy (DA) is an American soccer league, considered the top tier of youth soccer in the United States.  Formed in 2007, the league features youth academies and youth clubs from various organizations, including Major League Soccer, the North American Soccer League and the United Soccer Leagues.  It succeeded the Super Y-League as the premier youth soccer league in the U.S.  The DA's mission is to provide education, resources, and support to impact everyday club environments in order to develop world-class players.\n\nMarc Dos Santos: Marc Dos Santos (born May 26, 1977) is a Canadian soccer manager with experience in the United Soccer League, North American Soccer League, and Major League Soccer.  He currently is the manager of the San Francisco Deltas of the North American Soccer League, beginning play in the 2017 season.  Most recently, he was the manager of the Swope Park Rangers of the United Soccer League, an affiliate of Sporting Kansas City of Major League Soccer.  The North American Soccer League Coach of the Year in 2015, Dos Santos led the Ottawa Fury FC to the NASL Championship Final after a first-place finish in the Fall Season.  Previously, he focused on youth initiatives in Brazil with FC Primeira Camisa (U-20's) and SE Palmeiras (U-15's), culminating with a Copa do Brasil Sub-15 championship and a technical director position with Desportivo Brasil.  The Montreal native was first hired by the Montreal Impact in January 2007 to lead the club's reserve team, Trois-Rivieres Attak FC, in the Canadian Soccer League.  After leading the squad to titles in their initial two seasons – first as 2007 Open Canada Cup champions, then as 2008 CSL National Division champions – Dos Santos was added to the Impact's technical staff as an assistant coach in June 2008 and became head coach in May 2009.  During his tenure, the Impact won the inaugural Canadian Championship in 2008 to claim the Voyageurs Cup and a berth in the 2008-09 CONCACAF Champions League.  Dos Santos then led Montreal through three different leagues in consecutive campaigns, winning the USL First Division title in 2009 before transitioning into USSF Division 2 in 2010 and the North American Soccer League in 2011.\n\nCarlos Carmona: Carlos Emilio Carmona Tello (born February 21, 1987) is a Chilean professional footballer who plays for Atlanta United as a midfielder in the Major League Soccer (MLS) men's professional soccer league, sanctioned by U.S. Soccer, that represents the sport's highest level in both the United States and Canada.",
+    "question": "Jeff Baicher (born November 16, 1968 in Sunnyvale, California) is a retired American soccer forward whose professional career took him through multiple leagues, including Major League Soccer (MLS) is a men's professional soccer league, sanctioned by U.S. Soccer, that represents the sport's highest level in both the United States and which country?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person mentioned in the question."
+        },
+        "person_role": {
+          "type": "string",
+          "description": "The professional role of the person."
+        },
+        "league_name": {
+          "type": "string",
+          "description": "The name of the soccer league in question."
+        },
+        "highest_level_countries": {
+          "type": "array",
+          "description": "A list of countries where the specified league represents the highest level of soccer.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "person_name",
+        "person_role",
+        "league_name",
+        "highest_level_countries"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Jeff Baicher",
+      "person_role": "retired American soccer forward",
+      "league_name": "Major League Soccer",
+      "highest_level_countries": [
+        "United States",
+        "Canada"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

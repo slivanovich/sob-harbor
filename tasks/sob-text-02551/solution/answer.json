@@ -1,0 +1,16 @@
+{
+  "person_of_interest": {
+    "name": "John H. Dowd",
+    "title": "Hershey Chocolate Company brand manager",
+    "known_for_summary": "negotiating the agreement that placed Reese's Pieces to tie in with Steven Spielberg's \"E.T. the Extra-Terrestrial\""
+  },
+  "negotiation_event": {
+    "film_title": "E.T. the Extra-Terrestrial",
+    "film_director": "Steven Spielberg"
+  },
+  "product_involved": {
+    "product_name": "Reese's Pieces",
+    "product_category": "peanut butter candy",
+    "manufacturer": "The Hershey Company"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "film_title": "Predestination",
+  "release_year": 2014,
+  "directors": [
+    "Michael Spierig",
+    "Peter Spierig"
+  ],
+  "genre": "science fiction thriller",
+  "award_details": {
+    "award_name": "AACTA Award",
+    "recipient_name": "Matt Villa",
+    "award_number_for_recipient": 2
+  }
+}

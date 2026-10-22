@@ -1,0 +1,9 @@
+{
+  "film_title": "Tower of Terror",
+  "film_year": 1997,
+  "film_genre": "supernatural thriller",
+  "based_on_attraction": {
+    "attraction_name": "The Twilight Zone Tower of Terror",
+    "attraction_type": "accelerated drop tower dark ride"
+  }
+}

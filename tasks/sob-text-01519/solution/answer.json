@@ -1,0 +1,16 @@
+{
+  "country_of_location": "China",
+  "entities_located": [
+    {
+      "entity_name": "Jiaozhou City",
+      "entity_type": "county-level city",
+      "province_or_region": "Shandong Province"
+    },
+    {
+      "entity_name": "Yingkou",
+      "entity_type": "prefecture-level city",
+      "province_or_region": "Liaoning province"
+    }
+  ],
+  "total_entities_found": 2
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Silk Stockings (film): Silk Stockings is a 1957 Metrocolor Metro-Goldwyn-Mayer CinemaScope musical film adaptation of the 1955 stage musical of the same name, which itself was an adaptation of the film "Ninotchka" (1939).  "Silk Stockings" was directed by Rouben Mamoulian and stars Fred Astaire and Cyd Charisse.  The supporting cast includes Janis Paige, Peter Lorre, Jules Munshin, and George Tobias repeating his Broadway role.
+
+Scrooge, or, Marley's Ghost: Scrooge, or, Marley's Ghost is a 1901 British short silent drama film, directed by Walter R. Booth, featuring the miserly Ebenezer Scrooge confronted by Marley's ghost and given visions of Christmas past, present, and future, is the earliest known film adaptation of Charles Dickens's 1843 novel "A Christmas Carol".  The film, "although somewhat flat and stage-bound to modern eyes," according to Ewan Davidson of BFI Screenonline, "was an ambitious undertaking at the time," as, "not only did it attempt to tell an 80 page story in five minutes, but it featured impressive trick effects, superimposing Marley's face over the door knocker and the scenes from his youth over a black curtain in Scrooge's bedroom."
+
+High Society (musical): High Society is a musical comedy with a book by Arthur Kopit and music and lyrics by Cole Porter.  Some updated or new lyrics were provided by Susan Birkenhead.  The musical is based on Philip Barry's 1939 stage comedy, "The Philadelphia Story" and the subsequent 1956 musical film adaptation, "High Society", which features Porter's songs.  The musical includes most of the music featured in the movie, along with several songs selected from other Porter musicals.  It premiered on Broadway in 1998 and has since been revived.  Another musical adaptation of the story had opened in London in 1987 with a different book by Richard Eyre.
+
+The Muppet Christmas Carol: The Muppet Christmas Carol is a 1992 American-British musical fantasy comedy-drama film and an adaptation of Charles Dickens's 1843 novel "A Christmas Carol".  It is the fourth in a series of live-action musical films featuring The Muppets, with Michael Caine starring as Ebenezer Scrooge.  Although it is a comedic film with contemporary songs, "The Muppet Christmas Carol" otherwise follows Dickens's original story closely.  The film was produced and directed by Brian Henson for Jim Henson Productions and released by Walt Disney Pictures.
+
+David Pevsner: David Pevsner is an American actor, singer, dancer, and writer.  Pevsner appeared in the 1990 revival of "Fiddler on the Roof", 1991 revival of "Rags", and some other theatrical productions.  He also wrote three songs for the 1999 musical "Naked Boys Singing! ", including "Perky Little Porn Star."  He wrote and produced two one-person shows, "To Bitter and Back" (2003) and "Musical Comedy Whore" (2013).  Pevsner portrayed mostly minor roles in films and television.  His major screen roles are Ebenezer Scrooge in the 2012 film adaptation of "A Christmas Carol", "Scrooge & Marley", and Ross Stein in a 2011 web series "Old Dogs & New Tricks".  He recorded the 2016 album "Most Versatile", whose album cover pays homage to Bruce Springsteen's album "Born in the U.S.A."
+
+Scrooge (musical): Scrooge: The Musical is a 1992 stage musical with book, music and lyrics by Leslie Bricusse.  Its score and book are closely adapted from the music and screenplay of the 1970 musical film "Scrooge" starring Albert Finney and "A Christmas Carol" by Charles Dickens.  Bricusse was nominated for an Academy Award for the song score he wrote for the film, and most of those songs were carried over to the musical.
+
+Painting the Clouds with Sunshine (film): Painting the Clouds with Sunshine is the title of a Technicolor musical film released in 1951, directed by David Butler and starring Dennis Morgan and Virginia Mayo (singing voice was dubbed by Bonnie Lou Williams).  The film is a musical adaptation of the 1919 play "The Gold Diggers" by Avery Hopwood.  It is the fourth film adaptation of the play, after "The Gold Diggers" (1923), "Gold Diggers of Broadway" (1929) and "Gold Diggers of 1933" (1933).  The film features two songs from "Gold Diggers of Broadway": the title song and "Tiptoe Through the Tulips"; as well as a song from "Gold Diggers of 1933", "We're in the Money".
+
+Anonymous Noise (film): Anonymous Noise (Japanese: 覆面系ノイズ , Hepburn: Fukumenkei Noise ) is an upcoming youth drama musical film adaptation of the anime and manga series by Ryoko Fukuyama.  A live-action film adaptation was announced via the 21st issue of "Hana to Yume" in October 2016.  Koichiro Miki is directing the film; he and Rie Yokota are writing the script.  Principal photography began in November 2016.  The film will be released on November 25, 2017 in Japan.
+
+Scrooge (1970 film): Scrooge is a 1970 British musical film adaptation in Panavision of Charles Dickens' 1843 story "A Christmas Carol".  It was filmed in London between January and May 1970 and directed by Ronald Neame, and starred Albert Finney in the title role.  The film's musical score was composed by Leslie Bricusse, and arranged and conducted by Ian Fraser.  With eleven musical arrangements interspersed throughout (all retaining a traditional British air), the award-winning motion picture is a faithful musical retelling of the original.  The film received limited praise, but Albert Finney won the Golden Globe Award for Best Actor in a Musical/Comedy in 1971.
+
+A Christmas Carol (1984 film): A Christmas Carol is a 1984 British-American made-for-television film adaptation of Charles Dickens' famous 1843 novella of the same name.  The film is directed by Clive Donner, who had been an editor of the 1951 film "Scrooge", and stars George C. Scott as Ebenezer Scrooge.
+
+Question: Who directed the musical film adaptation from which Scrooge was closely adapted? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the musical film adaptation."
+    },
+    "year_released": {
+      "type": "integer",
+      "description": "The year the film was released."
+    },
+    "director": {
+      "type": "string",
+      "description": "The director of the film."
+    },
+    "original_source": {
+      "type": "string",
+      "description": "The original work the film is an adaptation of."
+    }
+  },
+  "required": [
+    "film_title",
+    "year_released",
+    "director",
+    "original_source"
+  ],
+  "additionalProperties": false
+}

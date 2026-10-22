@@ -1,0 +1,15 @@
+{
+  "race_name": "2000 Molson Indy Vancouver",
+  "race_date": "September 3, 2000",
+  "location": {
+    "venue": "Concord Pacific Place",
+    "city": "Vancouver",
+    "province_state": "British Columbia",
+    "country": "Canada"
+  },
+  "winner": {
+    "driver_name": "Paul Tracy",
+    "nationality": "Canadian",
+    "margin_of_victory": "less than half a second"
+  }
+}

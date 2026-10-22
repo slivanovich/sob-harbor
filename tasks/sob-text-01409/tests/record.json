@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "record_id": "69ea2882ccbe5e9410c3022599c08a5c685c58bdedfd0bfb24fad8c90bf55449",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a73dd8d5542993a88ae2e7a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Supergirl",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Honor Bound (film): Honor Bound (also known as Red End) is a 1988 film directed by Jeannot Szwarc.\n\nEnigma (1982 film): Enigma is a 1982 Anglo-American thriller film directed by Jeannot Szwarc and starring Martin Sheen, Sam Neill, Brigitte Fossey, and Kevin McNally.  Based on Michael Barak's novel \"Enigma Sacrifice\", the film centers on a CIA agent that tries to infiltrate Soviet intelligence in order to stop a murderous plot.\n\nLes Soeurs Soleil: Les Soeurs Soleil is a 1997 French comedy film directed by Jeannot Szwarc, starring and co-written by Marie-Anne Chazel.\n\nMaureen Teefy: Maureen Jane Teefy (born October 26, 1953) is an American actress.  Her films include \"Fame\" (1980), \"Grease 2\" (1982) and\" Supergirl\" (1984).\n\nSupergirl (film): Supergirl is a 1984 British superhero film directed by Jeannot Szwarc and written by David Odell, based on the DC Comics character of the same name and serves as a spin-off to Alexander and Ilya Salkind's \"Superman\" film series.  The film stars Helen Slater as Supergirl, along with Faye Dunaway, Mia Farrow and Peter O'Toole, with Marc McClure reprising his role as Jimmy Olsen from the \"Superman\" films.  He was the only actor to do so.  \"Supergirl\" was the first superhero film to feature a woman in the lead role.\n\nSomewhere in Time (film): Somewhere in Time is a 1980 American romantic science fiction drama film directed by Jeannot Szwarc.  It is a film adaptation of the 1975 novel \"Bid Time Return\" by Richard Matheson, who also wrote the screenplay.  The film stars Christopher Reeve, Jane Seymour, and Christopher Plummer.\n\nBug (1975 film): Bug is a 1975 American horror film in Panavision, directed by Jeannot Szwarc and written by William Castle and Thomas Page, from Page's 1973 novel \"The Hephaestus Plague\".  It was the last film Castle was involved in before his death.  The film starred Bradford Dillman, Joanna Miles and Richard Gilliland.\n\nThe Great Air Race (miniseries): Half a World Away (aka The Great Air Race) is a 1991 Australian television miniseries directed by Marcus Cole from an original story by Ross Dimsey, who served as the producer of the series.  The international cast included Helen Slater, Robert Reynolds, Caroline Goodall, Helen Slater, Tim Hughes and Barry Bostwick.  The film was based on the 1934 MacRobertson Air Race.  The film was also known as \"The Great Air Race\" in video and international versions.\n\nLa Vengeance d'une blonde: La Vengeance d'une blonde is a 1994 French comedy film directed by Jeannot Szwarc.\n\nHalf a World Away (TV miniseries): Half a World Away (aka The Great Air Race) is a 1991 Australian television miniseries directed by Marcus Cole from an original story by Ross Dimsey, who served as the producer of the series.  The international cast included Helen Slater, Robert Reynolds, Caroline Goodall, Helen Slater, Tim Hughes and Barry Bostwick.  The film was based on the 1934 MacRobertson Air Race.  The film was also known as \"The Great Air Race\" in video and international versions.",
+    "question": "Maureen Jane Teefy and Helen Slater both starred in what 1984 film directed by Jeannot Szwarc? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the film was released."
+        },
+        "director_name": {
+          "type": "string",
+          "description": "The name of the film's director."
+        },
+        "starring_actors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of actors who starred in the film and were mentioned in the question."
+        },
+        "film_genre": {
+          "type": "string",
+          "description": "The genre of the film."
+        },
+        "is_spin_off": {
+          "type": "boolean",
+          "description": "Indicates if the film is a spin-off of another series."
+        }
+      },
+      "required": [
+        "film_title",
+        "release_year",
+        "director_name",
+        "starring_actors",
+        "film_genre",
+        "is_spin_off"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "Supergirl",
+      "release_year": 1984,
+      "director_name": "Jeannot Szwarc",
+      "starring_actors": [
+        "Maureen Jane Teefy",
+        "Helen Slater"
+      ],
+      "film_genre": "superhero",
+      "is_spin_off": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

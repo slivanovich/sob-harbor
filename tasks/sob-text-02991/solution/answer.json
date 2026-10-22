@@ -1,0 +1,11 @@
+{
+  "player_name": "James Michael Pouncey",
+  "player_position": "center",
+  "college_team": "University of Florida",
+  "draft_details": {
+    "year": 2011,
+    "round": "first round",
+    "pick_overall": 15,
+    "team_drafted_by": "Miami Dolphins"
+  }
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Facsimile: A facsimile (from Latin "fac simile" (to 'make alike'), a spelling that remained in currency until the late 19th century) is a copy or reproduction of an old book, manuscript, map, art print, or other item of historical value that is as true to the original source as possible.  It differs from other forms of reproduction by attempting to replicate the source as accurately as possible in scale, color, condition, and other material qualities.  For books and manuscripts, this also entails a complete copy of all pages; hence, an incomplete copy is a "partial facsimile".  Facsimiles are sometimes used by scholars to research a source that they do not have access to otherwise, and by museums and archives for media preservation and conservation.  Many are sold commercially, often accompanied by a volume of commentary.  They may be produced in limited editions, typically of 500–2,000 copies, and cost the equivalent of a few thousand United States dollars.  The term "fax" is a shortened form of "facsimile" though most faxes are not reproductions of the quality expected in a true facsimile.
+
+Sharmeelee: Sharmilee is a hit 1971 Hindi movie produced by Subodh Mukherjee and directed by Samir Ganguly.  The film stars Shashi Kapoor, Raakhee, Narendra Nath, Nazir Hussain, Iftekhar, S N Banerjee, Anita Guha and Asit Sen.  Raakhee played a double role in this film, and its success helped make her one of the decade's top leading lady in Hindi films.
+
+L (film): L ("Learning") is a Greek movie produced in 2011, directed by Babis Makridis, written by Babis Makridis and Efthymis Filippou, based on an original idea by Yorgos Giokas.  It is the first Greek movie selected to compete at the 2012 Sundance Film Festival (19–29 January 2012) where its international premiere will take place.  The movie is also nominated to compete in the official Tiger Awards competition in the International Film Festival Rotterdam (25 January – 5 February 2012) where its European premiere will take place.The film was nominated for Best Script award at the Hellenic Film Academy Awards.  A six-minute extract of the movie was first released at the Work Progress Section of the Karlovy Vary International Film Festival, at the Czech Republic in July 2011.  L is Makridis's first feature film.  His short film "The Last Fakir" (2005) was awarded the "Newcomer's Prize" at the 2005 International Short Film Festival in Drama which takes place in Greece.
+
+Manchali: Manchali is a 1973 Hindi romantic drama movie produced and directed by Raja Nawathe, and starring Sanjeev Kumar, Leena Chandavarkar, Nazima and Nirupa Roy.  The title track was very catchy and popular.  It was one of the best known films with Sanjeev Kumar in a comedy role (others being Vidhaata, Seeta Aur Geeta, and Angoor).  Music director were Laxmikant Pyarelal.  This movie story based on novel Swayamber by Satyendra Sharat.  There are shades of "Taming of the Shrew" in how the hero woos the girl.  This theme is repeated in the 1981 Hindi film "Naukar Biwi Ka". The movie was commercial success at box office 1973.
+
+Aama (film): "Aama" (आमा) (Literally: Mother) is the first Nepali movie produced in Nepal, starring Shiva Shankar Manandhar and Bhuvan Chand (Thapa) as the leading actors.  The movie was produced by the Information Department of the Nepalese Government and released on October 7, 1964.  Bollywood film maker Hira Singh Khatri was invited by the late King Mahendra to direct the first Nepali movie.
+
+Crazy Boy (film): Crazy Boy is a romantic teenage love story and family entertainer Kannada language movie produced in the 2016.  The movie stars Dilip Prakash in lead role and Ashika, making her debut as the female lead in the film.  Directed by Kannada movie director Mahesh Babu the movie released on 18 August 2016.
+
+Dongodu: Dongodu (English : "Thief") is a 2003 Telugu language comedy movie produced by Bheemineni Rushita Sai under Goodwill Cinema banner.  The film features Ravi Teja and Kalyani in the lead roles.  Music has been composed Vidyasagar.  The movie released on 7 August 2003 was a decent Boxoffice success.  This is a remake of Malayalam film Meesa Madhavan.
+
+Pepe (film): Pepe is a 1960 musical comedy film starring Cantinflas in the title role, directed by George Sidney.  The film contained a multitude of cameo appearances, attempting to replicate the success of Cantiflas' American debut "Around the World in 80 Days".
+
+Around the World in 80 Days (1956 film): Around the World in 80 Days (sometimes spelled as Around the World in Eighty Days) is a 1956 American epic adventure-comedy film starring Cantinflas and David Niven , produced by the Michael Todd Company and released by United Artists.
+
+Dixie (film): Dixie is a 1943 American biographical film of songwriter Daniel Decatur Emmett directed by A. Edward Sutherland and starring Bing Crosby and Dorothy Lamour.  Filming in Technicolor, "Dixie" was only a moderate success and received mixed reviews.  Contrary to rumor, it has not been withdrawn from circulation due to racial issues (Crosby appears in blackface during several musical numbers) but is simply one of hundreds of vintage Paramount Pictures from the 1930s and 1940s now owned by Universal and not actively marketed.  The movie was broadcast several times in the late 1980s on American Movie Classics channel.  The movie produced one of Crosby's most popular songs, "Sunday, Monday, or Always".
+
+Question: "Pepe" was attempting to replicate Cantiflas' success from a movie produced by whom?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "replicated_film_title": {
+      "type": "string",
+      "description": "The title of the film that was attempting to replicate success."
+    },
+    "source_film_title": {
+      "type": "string",
+      "description": "The title of the film whose success was being replicated."
+    },
+    "source_film_producer": {
+      "type": "string",
+      "description": "The producer of the source film."
+    },
+    "actor_whose_success_was_replicated": {
+      "type": "string",
+      "description": "The name of the actor whose success was being replicated."
+    }
+  },
+  "required": [
+    "replicated_film_title",
+    "source_film_title",
+    "source_film_producer",
+    "actor_whose_success_was_replicated"
+  ],
+  "additionalProperties": false
+}

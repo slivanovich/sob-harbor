@@ -1,0 +1,17 @@
+{
+  "film_context": {
+    "title": "Man About Dog",
+    "director_name": "Paddy Breathnach",
+    "film_nationality": "Irish"
+  },
+  "actor_identified": {
+    "name": "Allen Leech",
+    "role_in_identified_film": "star"
+  },
+  "tv_series_role_details": {
+    "series_name": "Rome",
+    "character_played": "Marcus Agrippa",
+    "series_network": "HBO",
+    "series_genre": "historical drama"
+  }
+}

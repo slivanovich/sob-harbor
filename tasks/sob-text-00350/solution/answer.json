@@ -1,0 +1,10 @@
+{
+  "person_name": "John Bilezikjian",
+  "profession": "musician and composer",
+  "sang_in_armenian": true,
+  "sang_in_turkish": true,
+  "sang_in_assyrian": true,
+  "other_singing_languages": [
+    "English"
+  ]
+}

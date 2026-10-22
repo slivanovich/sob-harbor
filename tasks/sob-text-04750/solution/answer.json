@@ -1,0 +1,14 @@
+{
+  "parodied_band_name": "the Beatles",
+  "parody_band_name": "The Rutles",
+  "ricky_fataar_involvement": {
+    "is_member": true,
+    "is_actor": true,
+    "context_of_involvement": "The Rutles: All You Need Is Cash"
+  },
+  "parody_characteristics": [
+    "visual pastiches",
+    "aural pastiches",
+    "parodies"
+  ]
+}

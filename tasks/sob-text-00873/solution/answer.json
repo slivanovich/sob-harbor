@@ -1,0 +1,14 @@
+{
+  "defined_term": "Commonwealth realm",
+  "definition": "A sovereign state that is a member of the Commonwealth of Nations and shares the same person, currently Elizabeth II, as its head of state and reigning constitutional monarch, but retains a crown legally distinct from the other realms.",
+  "attributes": {
+    "is_sovereign_state": true,
+    "is_member_of_commonwealth_of_nations": true,
+    "head_of_state": {
+      "person": "Elizabeth II",
+      "role": "reigning constitutional monarch",
+      "shared_with_other_realms": true
+    },
+    "crown_status": "legally distinct from the other realms"
+  }
+}

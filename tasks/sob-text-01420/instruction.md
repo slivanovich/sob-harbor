@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Dark Tower II: The Drawing of the Three: The Drawing of the Three is a fantasy novel by American writer Stephen King, the second book in "The Dark Tower" series, published by Grant in 1987.  The series was inspired by "Childe Roland to the Dark Tower Came" by Robert Browning.  The story is a continuation of "" and follows Roland of Gilead and his quest towards the Dark Tower.  The subtitle of this novel is RENEWAL.
+
+Picone identity: In the field of ordinary differential equations, the Picone identity, named after Mauro Picone, is a classical result about homogeneous linear second order differential equations.  Since its inception in 1910 it has been used with tremendous success in association with an almost immediate proof of the Sturm comparison theorem, a theorem whose proof took up many pages in Sturm's original memoir of 1836.  It is also useful in studying the oscillation of such equations and has been generalized to other type of differential equations and difference equations.
+
+Fundamental Astronomy: Fundamental Astronomy (1984–2017) is an astronomy textbook by Finnish author of University of Turku; Pekka Kröger and Heikki Oja of University of Helsinki; Markku Poutanen of Finnish Geodetic Institute; and Karl Johan Donner of University of Helsinki.  The first edition was published in Finnish by Ursa, Helsinki, 1984, and later published in English by Springer.  The 6th edition was published in 2017 (ISBN  ; previous editions were published in 2007, 2003, 1996, 1994 and 1987).  It contains 548 pages and is illustrated with more than 419 images, including 34 color plates.  There are many pages on the solar system, the Milky Way, galaxies, and cosmology.
+
+The Dark Tower (series): The Dark Tower is a series of eight books written by American author Stephen King that incorporates themes from multiple genres, including dark fantasy, science fantasy, horror, and Western.  It describes a "gunslinger" and his quest toward a tower, the nature of which is both physical and metaphorical.  The series, and its use of the Dark Tower, expands upon Stephen King's multiverse and in doing so, links together many of his other novels.  King has described the series as his "magnum opus".  In addition to the eight novels of the series proper that comprise 4,250 pages, many of King's other books relate to the story, introducing concepts and characters that come into play as the series progresses.
+
+Print reading: Print reading, in the manufacturing industry, is the most efficient way to convey information about systems and equipment from the drafting table that could not be conveyed by words alone.  By using symbols and notes, a large amount of information that might require many pages of written description can be presented in a condensed form on one diagram.
+
+HP LaserJet 1012: The HP LaserJet 1012 is a low-end, monochrome laser printer from Hewlett-Packard that retails for US $199.99 and was designed as an inexpensive laser alternative to Inkjet printers for home and small office use.  It is capable of printing a maximum 15 pages per minute (although after many pages, the print speed slows down to prevent overheating, as the printer has no onboard fan) and has a 1200 dpi effective output (optical 600 dpi).
+
+Sport Week: Sport Week is a weekly sports newspaper based in Patras in the Achaea prefecture in Greece.  It was first published in 1999 from S Media Group S.A..  It has many pages and these pages features news from all the athletic information from Achaea, Etoloakarnania, Ilia, Kefalonia and Zakynthos.
+
+Leningrad 46: Leningrad 46 (2014) (Russian: Ленинград 46 , stylized as ЛЕНИНГРАД ★ 46) is a highly popular Russian television series which revolves around the story of courage, the drama of human destiny, for the first time opening up many pages of post-war life in Leningrad - harsh and sometimes cruel.  The city has just survived the siege and is still reeling from hunger, destruction and death.  Here, the police conduct a nervous war on crime, cleaning up Leningrad after the war.
+
+The Assignment (novella): Der Auftrag (English: The Assignment , subtitled "Or, on the Observing of the Observer of the Observers") is a 1986 novella by the Swiss writer Friedrich Dürrenmatt.  The first English publication appeared in 1988, translated by Joel Agee.  The experimental narrative is divided into twenty-four parts, each one a single sentence spanning many pages.  In his forward to the 2008 English language edition, Theodore Ziolkowski notes that the inspiration for the twenty-four sentence structure came after listening to a recording of Glenn Gould performing the first half of Bach's "The Well-Tempered Clavier I", itself a work in twenty-four movements.  Inspiration for the plot came from the Austrian poet Ingeborg Bachmann's unfinished novel "The Franza Case", which Dürrenmatt's second wife, documentary filmmaker Charlotte Kerr, was attempting to turn into a film at the time of their meeting.
+
+Black fax: The term black fax refers to a prank fax transmission, consisting of one or more pages entirely filled with a uniform black tone.  The sender's intention is generally to use up as much of the recipient's fax ink, toner, or thermal paper as possible, thus costing the recipient money and/or denying the recipient use of their own machine (this is similar to computer-based denial of service attacks).  This is made easier because the fax transmission protocols compress the solid black image very well, so a very short fax call can produce many pages.
+
+Question: After The Drawing of the Three was written, how many pages did the series end up containing?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "series_name": {
+      "type": "string",
+      "description": "The name of the book series."
+    },
+    "total_pages": {
+      "type": "integer",
+      "description": "The total number of pages in the entire series."
+    },
+    "number_of_books": {
+      "type": "integer",
+      "description": "The number of books that comprise the series proper."
+    }
+  },
+  "required": [
+    "series_name",
+    "total_pages",
+    "number_of_books"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "regal_period_alternative_name": "Roman Kingdom",
+  "period_description": "monarchical form of government of the city of Rome and its territories",
+  "associated_historical_figure": {
+    "name": "Servius Tullius",
+    "reign_start_year_bc": 575,
+    "reign_end_year_bc": 535,
+    "associated_structures": [
+      {
+        "structure_name": "Temple of Diana",
+        "construction_century_bc": 6
+      }
+    ]
+  }
+}

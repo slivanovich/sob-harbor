@@ -1,0 +1,18 @@
+{
+  "question_about_musical_groups": true,
+  "are_all_entities_musical_groups": true,
+  "identified_musical_groups": [
+    {
+      "group_name": "The Music",
+      "is_a_musical_group": true,
+      "genre": "alternative rock",
+      "origin_country": "England"
+    },
+    {
+      "group_name": "John Butler Trio",
+      "is_a_musical_group": true,
+      "genre": "roots and jam",
+      "origin_country": "Australia"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "agent_name": "Marc Roberts",
+  "agent_profession": "sports agent",
+  "represented_athlete": {
+    "name": "Raymond Anthony \"Ray\" Mercer",
+    "primary_sport": "mixed martial artist",
+    "other_sports_competed_in": [
+      "boxer",
+      "kickboxer"
+    ]
+  },
+  "relationship_type": "represented by"
+}

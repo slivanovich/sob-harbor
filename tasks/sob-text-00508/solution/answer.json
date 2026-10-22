@@ -1,0 +1,13 @@
+{
+  "animal_type": "dog",
+  "breeds_mentioned": [
+    {
+      "breed_name": "Miniature Fox Terrier"
+    },
+    {
+      "breed_name": "English Water Spaniel",
+      "is_extinct": true
+    }
+  ],
+  "all_are_same_animal_type": true
+}

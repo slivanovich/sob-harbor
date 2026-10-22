@@ -1,0 +1,13 @@
+{
+  "candidate_name": "Sharron Angle",
+  "election_year": 2010,
+  "opponent": {
+    "name": "Harry Reid",
+    "political_party": "Democratic",
+    "roles": [
+      "U.S. Senator",
+      "Majority Leader"
+    ],
+    "election_result": "won re-election"
+  }
+}

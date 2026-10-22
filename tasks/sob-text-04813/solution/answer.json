@@ -1,0 +1,13 @@
+{
+  "band_name": "Brand New",
+  "member_name": "Derrick Sherman",
+  "instruments_played": [
+    "guitar",
+    "backing vocals",
+    "keyboards"
+  ],
+  "membership_period": {
+    "start_year": 2005,
+    "end_year": 2013
+  }
+}

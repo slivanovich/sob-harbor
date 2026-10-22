@@ -1,0 +1,14 @@
+{
+  "film_title": "Sudden Death",
+  "director_name": "Peter Hyams",
+  "is_listed_as_successful": true,
+  "van_damme_involvement": {
+    "actor_name": "Jean-Claude Van Damme",
+    "role": "starring actor"
+  },
+  "director_van_damme_collaborations": [
+    "Timecop",
+    "Sudden Death",
+    "Enemies Closer"
+  ]
+}

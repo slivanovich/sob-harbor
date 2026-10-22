@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "record_id": "7d0aeeb77c682138620544518240b52e800b5fb38878a4f38d54b53cdfdafadd",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae622925542996de7b71b6e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Christian X",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Tom Clough: Tom Clough (1881–1964), known as 'The Prince of Pipers', was an English player of the Northumbrian pipes, or Northumbrian smallpipes.  He was also a pipemaker, and the pipes he made with Fred Picknell include several important innovations, and have a distinctive tone.  He had studied the instrument with the noted piper Thomas Todd, and from his own father Henry Clough.  His three surviving recordings, among the earliest recordings made of the instrument, and his considerable body of music manuscripts, including his own compositions, give considerable insight into the traditional playing technique and style of the instrument.  This is particularly so because at least four previous generations of the family had been pipers, as was his son 'Young Tom' (1912–1987) – they thus form a continuous link between earliest players of the modern instrument, and contemporary players.  In contrast to the widely accepted notion of traditional folk music as an essentially rural activity, he and his family lived in the mining community of Newsham in south-east Northumberland, and were miners themselves.  At the end of his life, 'Young Tom' recalled piping sessions at the 'Willow Tree' in Newsham, with his father Tom, grandfather Henry Clough, and Richard Mowat all playing – Henry's and Richard Mowat's playing would get more furious and inaccurate as the evening progressed; Tom was teetotal.  Young Tom had the job of carrying his grandfather's pipes afterwards.  There is a composite photograph of the Clough family at.  Here Tom himself is on the left, his pipemaking collaborator Fred Picknell standing behind him, his father Henry Clough and son 'Young Tom' standing towards the right, while an older image of Tom's grandfather 'Old Tom', seated piping in the foreground, has been added subsequently.  Old Tom died in 1885, and the main photograph was taken in 1924.  The other figure, seated on the far right, is believed to be Captain Nicholson of Haydon Bridge, a traditional fiddler.\n\nPrince Valdemar of Denmark: Prince Valdemar of Denmark, (27 October 1858 – 14 January 1939) was a member of the Danish Royal Family, the third son and youngest child of Christian IX of Denmark and his wife Louise of Hesse-Kassel.  Valdemar was the younger brother of Frederik VIII of Denmark, Queen Alexandra of the United Kingdom, George I of Greece, Empress Maria Feodorovna of Russia, and Crown Princess Thyra of Hanover, and also grandfather of Queen Anne of Romania, the wife of King Michael I of Romania.\n\nAbdul Muntaqim: Pengiran Muda Abdul Muntaqim (born 17 March 2007) is the oldest child and first son of Al-Muhtadee Billah, heir to the Sultan of Brunei, and his wife, Sarah, Crown Princess of Brunei.  He has a younger sister, Princess Muneerah Madhul, who was born in 2011.  The Prince is second-in-line to become Sultan of Brunei after his father Al-Muhtadee Billah. His father is heir to Abdul Muntaqim's grandfather Sultan Haji Hassanal Bolkiah of Brunei.\n\nJacob Nielsen, Count of Halland: Jacob Nielsen (died about 1309), a great grandson of Valdemar II of Denmark, was count of Northern Halland.  His father (Niels Nielsen) and grandfather (Niels Valdemarsen) had both held Halland as a county before him.  Jacob received Halland in 1283, but switched allegiance to the King of Norway two years later and was declared an outlaw in 1287 after the murder of Eric V of Denmark.  In Halland, he built the fortresses of Hunehals and later Varberg Fortress.  Jacob's position weakened after the Norwegian king started to lose interest in the conflict with Denmark, and in 1305, he had to give up Halland to Haakon V of Norway.  Haakon granted it to his own son-in-law, the Swedish duke Erik Magnusson.\n\nGreek royal family: The Greek royal family (Greek: Ελληνική Βασιλική Οικογένεια) is a branch of the House of Glücksburg that reigned in Greece from 1863 to 1924 and again from 1935 to 1973.  Its first monarch was George I, the second son of King Christian IX of Denmark.  He and his successors styled themselves \"Kings of the Hellenes\".  Most members of the dynasty (aside from the last king to reign, Constantine II and his queen consort, Anne-Marie of Denmark) hold the title \"Prince or Princess of Greece and Denmark\" with the style \"Royal Highness\", except Marina, Consort of Prince Michael, and their daughters Princess Alexandra and Princess Olga.\n\nPrincess Elisabeth of Denmark: Princess Elisabeth of Denmark, {'1': \", '2': \", '3': 'RE', '4': \"} (\"Elisabeth Caroline-Mathilde Alexandrine Helena Olga Thyra Feodora Estrid Margrethe Désirée\"; born 8 May 1935 in Copenhagen) is the daughter of Hereditary Prince Knud and Hereditary Princess Caroline-Mathilde of Denmark, and is a first cousin of the present Danish monarch, Queen Margrethe II.\n\nKnud, Hereditary Prince of Denmark: Knud, Hereditary Prince of Denmark (Knud Christian Frederik Michael; 27 July 1900 – 14 June 1976), was the younger son and child of Christian X and Alexandrine of Mecklenburg-Schwerin.\n\nGrandfather paradox: The grandfather paradox is a paradox of time travel in which inconsistencies emerge through changing the past.  The name comes from the paradox's common description: a person travels to the past and kills their own grandfather before the conception of their father or mother, which prevents the time traveler's existence.  Despite its title, the grandfather paradox does not exclusively regard the contradiction of killing one's own grandfather to prevent one's birth.  Rather, the paradox regards any action that alters the past, since there is a contradiction whenever the past becomes different from the way it was.\n\nPrincess Vilhelmine Marie of Denmark: Princess Vilhelmine Marie of Denmark and Norway (Danish: \"Vilhelmine af Danmark\" ; German: \"Wilhelmine von Dänemark\" ) (18 January 1808, Kiel, Duchy of Schleswig – 30 May 1891 in Glücksburg, Schleswig-Holstein, Prussia) was the youngest daughter of Frederick VI of Denmark and his wife and first cousin Marie Sophie of Hesse-Kassel.  Her paternal grandfather, Christian VII of Denmark, had major psychological problems and as result, her father had been acting as Regent since 1784.  Within two months of her birth, Vilhelmine Marie's grandfather died of a cerebral aneurysm and her father ascended as king.  At the time of her death, she was the last surviving grandchild of Christian VII.\n\nPrincess Caroline-Mathilde of Denmark: Princess Caroline-Mathilde of Denmark (Danish: \"Caroline-Mathilde Louise Dagmar Christine Maud Augusta Ingeborg Thyra Adelheid\" ; 27 April 1912 – 12 December 1995) was a daughter of Prince Harald of Denmark and granddaughter of King Frederick VIII of Denmark.  As the wife of Knud, Hereditary Prince of Denmark, she became Hereditary Princess of Denmark by marriage.",
+    "question": "Who was the father of Kund and grandfather of the princess of Denmark?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_identified": {
+          "type": "string",
+          "description": "The name of the person who is the father and grandfather."
+        },
+        "relationships": {
+          "type": "array",
+          "description": "A list of relationships this person holds.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "relationship_type": {
+                "type": "string",
+                "enum": [
+                  "father",
+                  "grandfather"
+                ],
+                "description": "The type of relationship."
+              },
+              "related_person_name": {
+                "type": "string",
+                "description": "The name of the person related to."
+              },
+              "related_person_title": {
+                "type": "string",
+                "description": "The title of the related person."
+              }
+            },
+            "required": [
+              "relationship_type",
+              "related_person_name",
+              "related_person_title"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "source_documents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The titles of the context documents from which the information was extracted."
+        }
+      },
+      "required": [
+        "person_identified",
+        "relationships",
+        "source_documents"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_identified": "Christian X",
+      "relationships": [
+        {
+          "relationship_type": "father",
+          "related_person_name": "Knud",
+          "related_person_title": "Hereditary Prince of Denmark"
+        },
+        {
+          "relationship_type": "grandfather",
+          "related_person_name": "Elisabeth",
+          "related_person_title": "Princess of Denmark"
+        }
+      ],
+      "source_documents": [
+        "Knud, Hereditary Prince of Denmark",
+        "Princess Elisabeth of Denmark"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

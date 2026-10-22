@@ -1,0 +1,14 @@
+{
+  "tv_series_name": "Hannibal",
+  "actor_roles": [
+    {
+      "actor_name": "Richard Armitage",
+      "character_played": "Francis Dolarhyde"
+    },
+    {
+      "actor_name": "Mads Mikkelsen",
+      "character_played": "Dr. Hannibal Lecter"
+    }
+  ],
+  "dr_hannibal_lecter_actor": "Mads Mikkelsen"
+}

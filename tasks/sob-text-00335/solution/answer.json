@@ -1,0 +1,11 @@
+{
+  "album_name": "Wu-Tang Forever",
+  "group_name": "Wu-Tang Clan",
+  "release_date": {
+    "day": 3,
+    "month": "June",
+    "year": 1997
+  },
+  "album_order_description": "second studio album",
+  "preceded_album_name": "The W"
+}

@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "record_id": "8bf5ca75a7d4463ffaf69c6b3bef76899dd831747f5a2cdf767cd90e21b5a5a2",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8e28c2554299068b959e70",
+    "source_dataset": "hotpotqa",
+    "source_answer": "director",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Little Monsters (disambiguation): Little Monsters is a 1989 comedy-drama film starring Fred Savage and Howie Mandel.\n\nIzu Ojukwu: Izu Ojukwu is a Nigerian film director.  In 2007 he won \"Best Director\" for \"Sitanda\" at the 3rd Africa Movie Academy Awards, which received nine nominations and won five awards at the event, including \"Best Picture\" and \"Best Nigerian Film\".\n\n'76 (film): '76, formerly Lions of '76, is a 2016 Nigerian historical fiction drama film produced by Adonaijah Owiriwa and Izu Ojukwu and directed by Izu Ojukwu.  It stars Ramsey Nouah, Chidi Mokeme, Rita Dominic and Ibinabo Fiberesima.\n\nParty Crasher (Modern Family): \"Party Crasher\" is the 12th episode of the fourth season of the American sitcom \"Modern Family\", and the series' 84th episode overall.  It aired January 16, 2013.  The episode was written by Danny Zuker & Christopher Lloyd and directed by Fred Savage.\n\nDinosaurs! – A Fun-Filled Trip Back in Time!: Dinosaurs!  – A Fun-Filled Trip Back in Time!  is a short film released by Golden Book Video in 1987 under their \"GoldenVision\" series.  It stars Fred Savage playing a grade school student named Philip who gives a class report on dinosaurs, with the help of an animated chalkboard and Will Vinton's claymation dinosaurs.\n\nAlero's Symphony: Alero's Symphony is a 2011 Nigerian musical drama film directed by Izu Ojukwu and starring Bimbo Manuel, Ivie Okujaye and Chibuzor 'Faze' Oji.  It premiered at The Palms, Genesis Cinemas, Lagos.  The film is an upshot of the Amstel Malta Box Office 5 (AMBO 5) reality show.  It received 4 nominations at the 8th Africa Movie Academy Awards and was screened across major Nigerian cities by the Africa Film Academy.\n\nGranny Pants: \"Granny Pants\" is the fifth episode in the third season, the 46th episode overall, of the American dramedy series \"Ugly Betty\", which aired on October 23, 2008.  The episode was written by Sheila Lawrence and directed by Fred Savage.\n\nAcross the Niger: Across the Niger is a Nigerian drama movie produced in 2004, directed by Izu Ojukwu and written by Kabat Esosa Egbon.  It starred Chiwetalu Agu, who was nominated for \"best actor in a supporting role\" for his part in the film at the 2008 4th annual African Movie Academy Awards.\n\nFred Savage: Frederick Aaron \"Fred\" Savage (born July 9, 1976) is an American actor, television director, and producer.  He is best known for his role as Kevin Arnold in the American television series \"The Wonder Years\", which ran from 1988 to 1993.  He has earned several awards and nominations, such as People's Choice Awards and Young Artist Awards.\n\nWhite Waters: White Waters is a 2007 sports drama film directed by Izu Ojukwu.  The film received 12 nominations and won four awards at the 4th African Movie Academy Awards including winning Best Director, Best Cinematography, Best Sound and Best Actress award in a Supporting Role for Joke Silva.",
+    "question": "What profession does Izu Ojukwu and Fred Savage have in common?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "common_profession": {
+          "type": "string",
+          "description": "The profession shared by both individuals."
+        },
+        "individuals": {
+          "type": "array",
+          "description": "Details about each individual and their listed professions.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the individual."
+              },
+              "professions": {
+                "type": "array",
+                "description": "A list of professions attributed to the individual.",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "professions"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Explanation of how the common profession was identified."
+        }
+      },
+      "required": [
+        "common_profession",
+        "individuals",
+        "reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "common_profession": "director",
+      "individuals": [
+        {
+          "name": "Izu Ojukwu",
+          "professions": [
+            "film director"
+          ]
+        },
+        {
+          "name": "Fred Savage",
+          "professions": [
+            "actor",
+            "television director",
+            "producer"
+          ]
+        }
+      ],
+      "reasoning": "Izu Ojukwu is identified as a 'film director'. Fred Savage is identified as an 'actor, television director, and producer'. Both share the profession of 'director'."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

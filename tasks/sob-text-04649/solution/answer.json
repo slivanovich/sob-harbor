@@ -1,0 +1,14 @@
+{
+  "person_name": "Nancy Reagan",
+  "mother_details": {
+    "name": "Edith Prescott Luckett Davis",
+    "relationship_to_person": "mother"
+  },
+  "husband_details": {
+    "name": "Ronald Reagan",
+    "relationship_to_person": "wife",
+    "presidency_number": 40
+  },
+  "person_occupation": "American film actress",
+  "person_role": "First Lady of the United States"
+}

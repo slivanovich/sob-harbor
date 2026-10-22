@@ -1,0 +1,17 @@
+{
+  "university_names": [
+    "University of Pittsburgh",
+    "Northwestern University"
+  ],
+  "university_type": "research",
+  "university_details": [
+    {
+      "name": "University of Pittsburgh",
+      "description_of_type": "state-related research university"
+    },
+    {
+      "name": "Northwestern University",
+      "description_of_type": "private research university"
+    }
+  ]
+}

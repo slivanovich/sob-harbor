@@ -1,0 +1,13 @@
+{
+  "politician": {
+    "name": "Antoinette Sandbach",
+    "political_party": "Conservative Party",
+    "constituency": "Eddisbury",
+    "birth_date_full": "15 February 1969",
+    "birth_year": 1969,
+    "birth_month": "February",
+    "birth_day": 15
+  },
+  "query_context": "conservative politician whose constituency is Eddisbury",
+  "final_answer": "15 February 1969"
+}

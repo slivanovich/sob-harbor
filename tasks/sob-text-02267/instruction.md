@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Tom Bailey (American football): George Thomas Bailey (February 7, 1949 – September 2, 2005) was an American football running back in the National Football League.  He was a 10th round selection (256th overall pick) in the 1971 NFL Draft out of Florida State University.  He played four seasons for the Philadelphia Eagles (1971–1974).  After his professional football career, Bailey earned an MBA from the University of South Florida and then began a successful executive career in multiple industries; the consumer products industry, the wholesale pharmaceutical industry,and his own successful IPO and corporation consulting firm.  George (Tom) raised two children; Erin and Thomas with his wife Susan O'Shea Bailey in the Dallas, Texas area for the majority of his life.  He died on September 2, 2005 in Jacksonville Beach, Florida due to a massive heart attack and complications from atherosclerosis.  During his tenure at Florida State University, Tom Bailey held and still holds some of Florida State University's top athletic and running back statistics which include the first touchdown in the inaugural Peach Bowl.  An endowment scholarship in his name was created by Florida State University athletic alumni in 2010, this scholarship being awarded to future Florida State University athletes.
+
+List of Florida State Seminoles men's golfers: This List of Florida State Seminoles men's golfers includes notable athletes who played for the Florida State Seminoles men's golf team that represents Florida State University in Tallahassee, Florida, and who play or have played golf professionally.  These Florida State University alumni played on the PGA Tour and/or on the affiliated Web.com Tour or Champions Tour.  The table lists their wins on these tours and other notable golfing achievements.
+
+Mina Jo Powell Alumni Green: Mina Jo Powell Alumni Green comprises a half-acre on the campus of Florida State University.  The site encompasses a rich history, which includes the green as the original site for Florida A&M University, also located in Tallahassee, Florida.  Mina Jo Powell graduated from Florida State University (alumna, BS 1950, MS 1963).  FSU President Bernard Sliger dedicated the green in her name November 10, 1990.  Until 1951, the Alumni Green, as it had been called for nearly a half-century, was the sole site for commencement ceremonies when FSU was called the Florida State College for Women.  In 1946, the college's name changed to Florida State University and admission included men.  After World War II, and with the influx of nearly ten times the number of students before the War, ceremonies shifted to the newly constructed Doak Campbell Stadium in 1951.
+
+Florida State University School: Florida State University School (FSUS) is a laboratory school located in Tallahassee, Florida, United States.  It is sponsored by Florida State University and works in close collaboration with the Florida State University College of Education.  The school is often referred to as Florida High School, or "Florida High", though it actually serves grades kindergarten through 12th.
+
+Paul Dirac: Paul Adrien Maurice Dirac {'1': ", '2': ", '3': ", '4': "} ( ; 8 August 1902 – 20 October 1984) was an English theoretical physicist who made fundamental contributions to the early development of both quantum mechanics and quantum electrodynamics.  He was the Lucasian Professor of Mathematics at the University of Cambridge, a member of the Center for Theoretical Studies, University of Miami, and spent the last decade of his life at Florida State University.
+
+Albert A. Murphree: Albert Alexander Murphree (April 29, 1870 – December 20, 1927) was an American college professor and university president.  Murphree was a native of Alabama, and became a mathematics instructor after earning his bachelor's degree.  He later served as the third president of Florida State College (later renamed Florida State University) from 1897 to 1909, and the second president of the University of Florida from 1909 to 1927.  Murphree is the only person to have been the president of both of Florida's original state universities, the University of Florida and Florida State University, and he played an important role in the organization, growth and ultimate success of both institutions.
+
+Mary Hicks: Mary Hicks is a professor Emeritus at Florida State University, Tallahassee, Florida.  Mary Ward Hicks taught at Florida State University for 30 years in the Interdivisional Program of Marriage and the Family.  Before coming to Florida State University in 1973, Hicks received the award of “Outstanding Educator of America” in 1972.  In 1974, in St. Louis, Hicks received the Ernest G. Osborne Teaching Award.  Educated at the University of Idaho and the University of California, Hicks received her PhD in Child Development from Pennsylvania State University.
+
+Dirac large numbers hypothesis: The Dirac large numbers hypothesis (LNH) is an observation made by Paul Dirac in 1937 relating ratios of size scales in the Universe to that of force scales.  The ratios constitute very large, dimensionless numbers: some 40 orders of magnitude in the present cosmological epoch.  According to Dirac's hypothesis, the apparent similarity of these ratios might not be a mere coincidence but instead could imply a cosmology with these unusual features:
+
+Florida State–Virginia football rivalry: The Florida State–Virginia football rivalry is an American college football rivalry between the Florida State Seminoles football team of Florida State University and Virginia Cavaliers football team of the University of Virginia.  The Jefferson–Eppes Trophy is awarded to the winner of the game.  The trophy was created in 1995 and was named for former President of the United States and founder of the University of Virginia, Thomas Jefferson, and Francis W. Eppes VII, Jefferson's grandson and two-time mayor of Tallahassee, and president of the Board of Trustees of the West Florida Seminary, now Florida State University.
+
+David M. Gilbert: David M. Gilbert is J. Herbert Taylor Distinguished Professor of Molecular Biology in the Department of Biological Science and Co-founder and Associate Director of the Center for Genomics and Personalized Medicine at Florida State University.  Gilbert’s work focuses on the mechanisms regulating DNA replication during the cell cycle and the relationship between DNA replication and structural and functional organization of chromosomes, most recently during differentiation in human and mouse embryonic stem cells and in pediatric leukemia.  Gilbert received his BA degrees in Biochemistry/Cell Biology and Philosophy from the University of California, San Diego and his PhD in Genetics from Stanford University.  He did two post-doctoral training periods, first as an EMBO Fellow with Pierre Chambon in Strasbourg, France, studying transcriptional control, and second as a Roche Fellow with Melvin DePamphilis studying replication origin recognition.  He joined the faculty at State University of New York (SUNY) Upstate Medical University in 1994 and was appointed full professor in 2003.  In 2006, he moved to Florida State University for his current endowed chair position and was elected as a fellow of the American Association for the Advancement of Science (AAAS) in 2008 and then elected as a council delegate of the AAAS in 2010, as well as to the American Society of Hematology in 2013 and the International Society for Stem Cell Research in 2014.  Gilbert’s other awards include the American Cancer Society Junior Faculty Research Award (2000), the SUNY President’s Young Investigator Award (2002), the NIH Career Enhancement Award for Stem Cell Research (2004) Florida State University Distinguished Research Professor (2015) and the Pfeiffer Endowed Professorship for Cancer Research (2015).  He is a principal investigator in the NIH Encyclopedia of DNA Elements (ENCODE) Consortium and is a board member of the Southeast Stem Cell Consortium (SESCC).  He has served on American Cancer Society (1996–2004) and NIH study sections (1997–present) and is an editorial member of the Epigenetics Society and is on the editorial board of the Journal of Cell Biology.  He also maintains ReplicationDomain, a free online database resource for storing, sharing and visualizing DNA replication timing and other chromosome mapping data.
+
+Question: What Florida State University physicist hypothesized the Dirac large numbers hypothesis?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "physicist_name": {
+      "type": "string",
+      "description": "The name of the physicist who proposed the hypothesis."
+    },
+    "hypothesis_name": {
+      "type": "string",
+      "description": "The name of the hypothesis."
+    },
+    "university_affiliation": {
+      "type": "string",
+      "description": "The university the physicist was affiliated with."
+    },
+    "physicist_field": {
+      "type": "string",
+      "description": "The field of study of the physicist."
+    }
+  },
+  "required": [
+    "physicist_name",
+    "hypothesis_name",
+    "university_affiliation",
+    "physicist_field"
+  ],
+  "additionalProperties": false
+}

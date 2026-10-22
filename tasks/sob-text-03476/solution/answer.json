@@ -1,0 +1,29 @@
+{
+  "band_name": "Immortal",
+  "genre": "black metal",
+  "origin": {
+    "city": "Bergen",
+    "country": "Norway"
+  },
+  "founding_year": 1991,
+  "founding_members": [
+    {
+      "stage_name": "Abbath Doom Occulta",
+      "real_name": "Olve Eikemo",
+      "roles": [
+        "frontman",
+        "bassist"
+      ]
+    },
+    {
+      "stage_name": "Demonaz Doom Occulta",
+      "real_name": "Harald Nævdal",
+      "roles": [
+        "guitarist"
+      ]
+    }
+  ],
+  "first_live_dvd": {
+    "title": "The Seventh Date of Blashyrkh"
+  }
+}

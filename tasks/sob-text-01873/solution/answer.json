@@ -1,0 +1,13 @@
+{
+  "actress_name": "Vivian Vance",
+  "best_known_role": "Ethel Mertz",
+  "show_of_best_known_role": "I Love Lucy",
+  "other_notable_role": "Vivian Bagley",
+  "show_of_other_notable_role": "The Lucy Show",
+  "lucy_show_details": {
+    "series_name": "The Lucy Show",
+    "network": "CBS",
+    "run_years": "1962–68",
+    "co_star_seasons": 3
+  }
+}

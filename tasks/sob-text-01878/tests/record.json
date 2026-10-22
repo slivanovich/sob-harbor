@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "c9590ab060d264b8d97a3b8ea470ee5538b2df4a73beb8b9f4e96c6599b64254",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac298ef55429967731025aa",
+    "source_dataset": "hotpotqa",
+    "source_answer": "14 seasons",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Anders Carlsson: Anders \"Masken\" Carlsson (born 25 November 1960 in Gävle, Sweden) is a Swedish retired ice hockey center who played parts of three seasons with the New Jersey Devils in the National Hockey League and many seasons in the Elitserien for Brynäs IF, Södertälje SK, VIK Västerås HK and Leksands IF.  In addition to playing in the 1987 Canada Cup, he represented Sweden six times at the World Championships, winning gold medals in 1987 and 1991, and silver medals in 1986, 1990 and 1997.  He is currently an amateur scout for the Colorado Avalanche He is currently General Manager of SHL-team Rögle BK.\n\nFred Campbell (basketball): Fred Gaines Campbell (August 8, 1920 – December 3, 2008) was an American professional basketball player and coach as well as minor league baseball player.  He played in the National Basketball League for the Detroit Gems and Detroit Vagabond Kings.  While playing for the Gems he served as the head coach during the second half of the season after coach Joel Mason resigned.  In many seasons with the Vagabond Kings, except for the only one in which the franchise played in the NBL (the rest of the years they were independent), Campbell also served as a player-coach.  In two seasons as an NBL player, Campbell averaged 5.8 points per game.\n\nField goal percentage: Field goal percentage in basketball is the \"ratio\" of field goals \"made\" to field goals \"attempted\".  Its abbreviation is FG%.  Although three-point field goal percentage is often calculated separately, three-point field goals are included in the general field goal percentage.  Instead of using scales of 0 to 100%, the scale .000 to 1.000 is commonly used.  A higher field goal percentage denotes higher efficiency.  In basketball, a FG% of .500 (50%) or above is considered a good percentage, although this criterion does not apply equally to all positions.  Guards usually have lower FG% than forwards and centers. Field goal percentage does not completely tell the skill of a player, but a low field goal percentage can indicate a poor offensive player or a player who takes many difficult shots.  In the NBA, Center Shaquille O'Neal has a high career FG% (around .580) because he plays near the basket making many high percentage layups and slam dunks. Guard Allen Iverson often had a low FG% (around .420) because he took the bulk of his team's shot attempts, even with high difficulty shots.\n\nBörje Salming: Anders Börje Salming (] ; born 17 April 1951), nicknamed \"The King\", is a Swedish retired professional ice hockey defenceman.  He played for Brynäs IF, the Toronto Maple Leafs, the Detroit Red Wings, and AIK.  Salming was one of the first European players to make an impact in the National Hockey League (NHL), paving the way for future generations of players.  He was one of the premier defencemen of his era in the NHL, and was recognized for this by being inducted into the Hockey Hall of Fame in 1996.  Remembered for his many seasons with the Maple Leafs, he holds numerous franchise records, including most assists.  Salming also played extensively for Sweden in international play.  He was recognized for this by being selected to the International Ice Hockey Federation (IIHF) Centennial All-Star Team.  On 27 January 2017, in a ceremony during the All-Star Weekend in Los Angeles, Salming was part of the second group of players to be named one of the '100 Greatest NHL Players' in history.\n\nRobert Smith (basketball): Robert Leroy Smith (born March 10, 1955) is an American retired basketball player.  A 5'11\" point guard born in Los Angeles, California and from UNLV, Smith played for seven NBA teams in as many seasons from 1977 to 1984.\n\nRK Gorenje Velenje: Rokometni Klub Gorenje Velenje (English: Gorenje Velenje Handball Club ), commonly referred to as RK Gorenje or simply Gorenje, is a Slovenian handball club from Velenje.  They play their games at the Red Hall (\"Rdeča dvorana \").  The club has many selections ranging from junior to professional teams.  The club's greatest achievements were four republic championship titles (1972–73, 1980–81, 1984–85 and 1988–89) in the former Yugoslavia.  Since the Slovenian independence, the club has won three league titles (2008–09, 2011–12, and 2012–13), and one Slovenian handball cup title (2002–03).  The club also participated in the EHF competitions for many seasons, including the EHF Cup, the EHF Cup Winners' Cup, and the EHF Champions League.  Currently, Gorenje competes in the Slovenian First League.  Together with Celje, they are the only club that have participated in every season of the Slovenian First League since its formation in 1991.\n\nBobby Hauck: Robert Lawrence Hauck (born June 14, 1964) is a college football coach, currently the special teams coordinator for the San Diego State football team.  He most recently was the head coach at UNLV Rebels.  Hauck was previously the head coach at Montana, where he led the Grizzlies to seven conference titles and postseason berths in as many seasons, including three national championship game appearances.  In 2013, following three losing seasons at UNLV, Hauck led the Rebels to their first winning season since 2000.\n\nList of pre-NHL seasons: Prior to the first season of the National Hockey League (NHL), which commenced on December 19, 1917, there had been many seasons of ice hockey played by various amateur and professional leagues, often held contemporaneously, going back to the 1880s, to which the NHL can trace its roots.  Below is a list of pre-NHL seasons by ice hockey leagues that are precursors of the National Hockey League.\n\nAllen Iverson: Allen Ezail Iverson (born June 7, 1975) is an American former professional basketball player who played for 14 seasons in the National Basketball Association (NBA).  He played both the shooting guard and point guard positions.  Iverson was an eleven-time NBA All-Star, won the All-Star game MVP award in 2001 and 2005, and was the NBA's Most Valuable Player (MVP) in 2001.  Iverson is now the captain/coach of 3's Company in the BIG3.\n\nMichael Holton: Michael David \"Mike\" Holton (born August 4, 1961) is a retired American professional basketball player, and current television studio analyst for the Portland Trail Blazers of the NBA.  Born in Seattle, Washington, he played college basketball at UCLA from 1979 to 1983, and was selected in the third round of the 1983 NBA Draft by the Golden State Warriors, but began his NBA career with the Phoenix Suns in 1984–85.  Holton, a 6'4\" 185 lb guard, also spent his career with the Chicago Bulls, Portland Trail Blazers, and Charlotte Hornets.  He also played in the CBA for four different teams in as many seasons from 1983 to 1992.  He started 60 games for the expansion Charlotte Hornets.  Holton briefly played for Great Taste Coffee in the Philippine Basketball Association.",
+    "question": "How many seasons did, the Guard with a FG% around .420, play in the NBA ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The name of the basketball player."
+        },
+        "player_position": {
+          "type": "string",
+          "description": "The primary position played by the player."
+        },
+        "field_goal_percentage": {
+          "type": "number",
+          "description": "The approximate field goal percentage of the player."
+        },
+        "nba_seasons_played": {
+          "type": "integer",
+          "description": "The total number of seasons the player played in the NBA."
+        },
+        "league": {
+          "type": "string",
+          "description": "The professional basketball league where the seasons were played."
+        }
+      },
+      "required": [
+        "player_name",
+        "player_position",
+        "field_goal_percentage",
+        "nba_seasons_played",
+        "league"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Allen Iverson",
+      "player_position": "Guard",
+      "field_goal_percentage": 0.42,
+      "nba_seasons_played": 14,
+      "league": "National Basketball Association"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

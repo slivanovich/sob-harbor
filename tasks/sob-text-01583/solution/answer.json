@@ -1,0 +1,16 @@
+{
+  "film_title": "Dramatic School",
+  "release_year": 1938,
+  "director": {
+    "name": "Robert B. Sinclair"
+  },
+  "starring_actor": {
+    "name": "Luise Rainer",
+    "academy_awards_won_description": "first actor to win more than one Academy Award"
+  },
+  "reasoning_points": [
+    "Luise Rainer was the first actor to win more than one Academy Award.",
+    "Dramatic School is a 1938 American romantic drama film directed by Robert B. Sinclair.",
+    "Dramatic School starred Luise Rainer."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "question_asked": "Are Kabru and Mount Everest both on the border between Nepal and India?",
+  "mountains_compared": [
+    {
+      "name": "Mount Everest",
+      "border_countries": [
+        "China",
+        "Nepal"
+      ]
+    },
+    {
+      "name": "Kabru",
+      "border_countries": [
+        "Nepal",
+        "India"
+      ]
+    }
+  ],
+  "are_borders_identical": false,
+  "final_answer": "no"
+}

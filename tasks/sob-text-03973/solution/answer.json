@@ -1,0 +1,12 @@
+{
+  "main_boxer_name": "Derrick Gainer",
+  "opponent_boxer": {
+    "name": "Chris John",
+    "nationality": "Indonesian"
+  },
+  "fight_details": {
+    "outcome_for_main_boxer": "loss",
+    "decision_method": "unanimous decision",
+    "title_involved": "WBA title"
+  }
+}

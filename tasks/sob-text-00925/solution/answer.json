@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "name": "Hello Mr.",
+      "media_type": "magazine"
+    },
+    {
+      "name": "Cracked",
+      "media_type": "magazine"
+    }
+  ],
+  "common_media_type": "magazine",
+  "media_type_count": 1
+}

@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Black Hawk (artist): Čhetáŋ Sápa' (Black Hawk) (ca. 1832–ca. 1890) was a medicine man and member of the Sans Arc or "Itázipčho" band of the Lakota people.  He is most known for a series of 76 drawings that were later bound into a ledger book that depicts scenes of Lakota life and rituals.  The ledger drawings were commissioned by William Edward Canton, a federal "Indian trader" at the Cheyenne River Indian Reservation.  Black Hawk's drawings were drawn between 1880-1881.  Today they are known as one of the most complete visual records of Lakota cosmology, ritual and daily life.
+
+John Shillito Company: John Shillito & Co. (commonly known as Shillito's) was Cincinnati's first department store.  It was founded by John Shillito (1809-1879) and William McLaughlin in 1830 as "McLaughlin & Shillito", but their partnership soon broke up.  In 1857, Shillito, then operating on his own, built a store on Cincinnati's Fourth Street, designed by James W. McLaughlin, the son of his former partner.  In 1878, Shillito's moved to a new landmark building on Race and Seventh streets, also designed by James McLaughlin.  The fashionable new store had eight floors, five elevators, over 800,000 sf of space, and employed over 1000 people.
+
+Amiot Métayer: Amiot Métayer (died September 20/21, 2003) was a gang leader in Haiti.  His gang, based in the northern city of Gonaïves, was called the "Cannibal Army" he was also known as "Ti-Cubain" (créole for Little Cuban).  Although he had once worked for Haitian President Jean-Bertrand Aristide to put pressure on his political opposition, the government arrested him for arson on May 21, 2002, after pressure from the U.S. government for his acts of violence towards political parties.  At the time of his arrest, the Bush administration had been putting constant pressure on the Haitian government to arrest him as well as other such "handyman" that were being employed by Haitian President Jean-Bertrand Aristide.  He was, however, freed from jail by members of his gang in August 2002 and proceeded to lead anti-government riots.  He was found murdered in September 2003, his body dumped in the bushes, with his heart, liver and eyes missing.  His supporters accused Aristide of having ordered his death.
+
+One Bull: Henry Oscar One Bull (Lakota: "Tȟatȟáŋka Waŋžíla" in Standard Lakota Orthography) (circa 1853-1947) was a Lakota Sioux man best known for being the nephew and adopted son of the holy man, Sitting Bull.  He was also the younger brother of White Bull, a famous Lakota warrior and chief contributor to Stanley Vestal's biography of their uncle.  He wore his uncle's shield during the Battle of Little Bighorn.  One Bull joined his uncle in fleeing to Canada following the Battle of the Little Bighorn in 1876.  Sitting Bull's band remained in the "Grandmother's Country" until he surrendered in North Dakota in 1881.  One Bull stood by Sitting Bull at his surrender.
+
+Leonard Crow Dog: Leonard Crow Dog (born 1942) is a Sicangu Lakota medicine man and spiritual leader who became well known during the takeover of the town of Wounded Knee on the Pine Ridge Indian Reservation in South Dakota in 1973, known as the Wounded Knee Incident.  Through his writings and teachings he has sought to unify Indian people of all nations.  As a practitioner of traditional herbal medicine and a leader of Sun Dance ceremonies, he is also dedicated to keeping Lakota traditions alive.
+
+James McLaughlin (Indian agent): James McLaughlin (1842–1923) was a Canadian-American United States Indian agent and inspector, best known for having ordered the arrest of Sitting Bull in December 1890, which resulted in the chief's death.  Before this event, he was known for his positive relations with several tribes.  His memoir, published in 1910, was entitled, "My Friend the Indian."
+
+Sitting Bull: Sitting Bull (Lakota: Tȟatȟáŋka Íyotake ] in Standard Lakota Orthography, also nicknamed "Húŋkešni" ] or "Slow"; c. 1831 – December 15, 1890) was a Hunkpapa Lakota holy man who led his people during years of resistance to United States government policies.  He was killed by Indian agency police on the Standing Rock Indian Reservation during an attempt to arrest him, at a time when authorities feared that he would join the Ghost Dance movement.
+
+The Man Who Woke Up (1918 film): The Man Who Woke Up is a 1918 American silent film directed by James McLaughlin and featuring William V. Mong.
+
+Edward McLaughlin: Edward "Punchy" McLaughlin (died October 20, 1965) was a former boxer and a member of the "The McLaughlin Brothers" gang of Charlestown, Massachusetts.  Vincent Teresa, former mobster described Edward in his biography "My Life in the Mafia" as, "Punchy was just as crazy as George... a legbreaker for the longshoreman's union.  Punchy was a cuckoo and as hotheaded as they came.  After his brother Bernard McLaughlin was murdered in October 1961 by their former friend, "Winter Hill Gang" leader James "Buddy" McLean (Punchy and his brothers had been known to perform hits for gangs all over New England, including the Winter Hill Gang), Punchy and brother George McLaughlin murdered Russell Nicholson who was rumored to be McLean's driver in the shooting.  After surviving many assassination attempts, one where he lost a hand and another where he lost half his jaw, Punchy was on his way to Boston's Suffolk Superior Courthouse for his brother Georgie's murder trial, and was shot dead at the Spring Street Metropolitan Transit Authority Loop in West Roxbury, Massachusetts.
+
+Wocekiye: Wocekiye is the common term for the Sioux religious system.  It derives from the Siouan word for "prayer."  Whether there was any other known term is unknown.  It surrounds the worship of a pantheon of deities, who are related in a similarly derivative manner from one another to the Christian god, who are known collectively as the Wakantanka (wah-kaw-taw-kah), or the Great Mystery.  Up to the late 19th century, much of the edicts surrounding the religion were considered taboo to speak of to outsiders.  The Wicasa Wakan (Wee-chah-shuh wah-kaw), or Shamans/ Holy Men, made an exception with a Caucasian man named James Walker.  Among the Lakota POWs in the Dakotas, they put him through the rites to become one of them and passing on much of their knowledge in the hopes that it could be preserved and one day returned to the Siouan people.  He wrote all he learned down in 3 books, "Lakota Myth," "Lakota Society" & "Lakota Beliefs & Ritual," but much of what he was taught was often confused, contradictory and muddled.  Other holy men continued to pass down important knowledge to their own children.  Other things were recorded through happenstance by a missionary named Eugene Buechel around the turn of the 20th century, who created the groundwork for the Lakota Dictionary.
+
+Question: James McLaughlin is best known for having ordered the arrest of a Lakota man that died on what reservation?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_who_ordered_arrest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the person who ordered the arrest."
+        },
+        "role": {
+          "type": "string",
+          "description": "The role of the person who ordered the arrest."
+        }
+      },
+      "required": [
+        "name",
+        "role"
+      ],
+      "additionalProperties": false
+    },
+    "person_arrested_and_died": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the Lakota man who was arrested and died."
+        },
+        "tribe": {
+          "type": "string",
+          "description": "The tribe of the Lakota man."
+        },
+        "death_year": {
+          "type": "integer",
+          "description": "The year the Lakota man died."
+        }
+      },
+      "required": [
+        "name",
+        "tribe",
+        "death_year"
+      ],
+      "additionalProperties": false
+    },
+    "reservation_of_death": {
+      "type": "string",
+      "description": "The name of the reservation where the Lakota man died."
+    }
+  },
+  "required": [
+    "person_who_ordered_arrest",
+    "person_arrested_and_died",
+    "reservation_of_death"
+  ],
+  "additionalProperties": false
+}

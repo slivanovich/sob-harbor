@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "6ed8260d903b2f47fc4d23d0623283b1e07fa0ac889b4f56f2e503d9c859b014",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5adc9ed2554299473435375b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Spec O'Donnell: Walter \"Spec\" O'Donnell (April 9, 1911 – October 14, 1986) was an American film actor.  He appeared in 191 films between 1923 and 1978.  He was born in Fresno, California and died in Woodland Hills, Los Angeles.  He worked frequently for producer Hal Roach, often appearing in silent comedies as the bratty son of Max Davidson or Charley Chase.  His sound era roles were mostly uncredited bits, though he has the unusual distinction of playing the same role (a newsboy) in both an original film and its remake: \"Princess O'Hara\" and \"It Ain't Hay\".\n\nThelma Todd: Thelma Alice Todd (July 29, 1906 – December 16, 1935) was an American actress.  Appearing in about 120 pictures between 1926 and 1935, she is best remembered for her comedic roles in films such as Marx Brothers' \"Monkey Business\" and \"Horse Feathers\", a number of Charley Chase's short comedies, and co-starring with Buster Keaton and Jimmy Durante in \"Speak Easily\".  She also had roles in Wheeler and Woolsey farces, several Laurel and Hardy films, the last of which (\"The Bohemian Girl\") featured her in a part that was truncated by her suspicious death at the age of 29.\n\nDog Shy: Dog Shy is a 1926 two-reel silent comedy film starring Charley Chase.  Chase plays a young man with a fear of dogs.  After being chased by one, he enters a phone booth and a young lady tells him her trouble: she is being pressured into marrying a wealthy duke against her wishes.  He agrees to help her and meet at her home.  He is, however, mistaken as a newly hired butler.  After a series of hilarious misunderstandings and disasters, Chase is recognized as a hero and enjoys a happy ending.\n\nBaldwin Cooke: Baldwin Gardiner Cooke (March 10, 1888 – December 31, 1953), also known as Baldy Cooke, was a comedic American actor.  Born in New York, Cooke and his wife, Alice, toured in vaudeville with Stan Laurel, remaining close friends over the years.  He appeared in some thirty Laurel and Hardy comedies.  Cooke also appeared in the Our Gang series, and supported Charley Chase in 1931's \"La Señorita de Chicago\".  His grave is located at Valhalla Memorial Park Cemetery where Laurel's co-star, Oliver Hardy is interred.\n\nCrazy like a Fox (1926 film): Crazy like a Fox is a 1926 American short film starring Charley Chase.  The two-reel silent comedy stars Chase as a young man who feigns insanity in order to get out of an arranged marriage, only to find out that his sweetheart is the girl he has been arranged to marry.  Chase would remake the film as \"The Wrong Miss Wright\" (1937) in the sound era during his tenure at Columbia Pictures.\n\nViola Richard: Viola Richard, (26 January 1904 – 28 December 1973), was an American actress who appeared in several silent short comedies at the Hal Roach Studios opposite Laurel and Hardy, Charley Chase and Max Davidson in the 1920s.  Pert and vivacious, she left Roach in 1928, but returned in 1935 to play small roles in an Our Gang short and again with Laurel and Hardy in \"Tit for Tat\".\n\nJohn Korty: John Korty (born June 22, 1936) is an American film director and animator, best known for the television film \"The Autobiography of Miss Jane Pittman\" and the documentary \"Who Are the DeBolts?  And Where Did They Get Nineteen Kids? \", as well as the theatrical animated feature \"Twice Upon a Time\".  He has won an Academy Award for Best Documentary Feature (for \"Who Are the DeBolts?\")  and several other major awards.  He is described by the film critic Leonard Maltin as \"a principled filmmaker who has worked both outside and within the mainstream, attempting to find projects that support his humanistic beliefs\".\n\nCharley Chase: Charley Chase (born Charles Joseph Parrott, October 20, 1893 – June 20, 1940) was an American comedian, actor, screenwriter and film director, best known for his work in Hal Roach short film comedies.  He was the older brother of comedian/director James Parrott.\n\nH. M. Walker: Harley M. \"Beanie\" Walker (June 27, 1878 – June 23, 1937) was a member of the Hal Roach movie production company from 1916 until his resignation in 1932.  The title cards he wrote for Harold Lloyd, Charley Chase, \"Our Gang\" and Laurel and Hardy comedies \"have entered legend, both for silent films, and as opening remarks for the earlier talkies.\"  He was also an officer of the Roach Studio corporation.\n\nNeighborhood House (film): Neighborhood House is a 1936 American comedy film directed by Charley Chase, Harold Law and Alan Hale, Sr. and written by Charley Chase, Harold Law, Richard Flournoy and Arthur Vernon Jones.  The film stars Charley Chase, Rosina Lawrence, Darla Hood, George Meeker, Ben Taggart and Dick Elliott.  The film was released on May 9, 1936, by Metro-Goldwyn-Mayer.",
+    "question": "Are both John Korty and Charley Chase known for comedies?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question posed."
+        },
+        "person_1_name": {
+          "type": "string",
+          "description": "The name of the first person mentioned in the question."
+        },
+        "person_1_known_for_comedies": {
+          "type": "boolean",
+          "description": "True if the first person is known for comedies, false otherwise."
+        },
+        "person_2_name": {
+          "type": "string",
+          "description": "The name of the second person mentioned in the question."
+        },
+        "person_2_known_for_comedies": {
+          "type": "boolean",
+          "description": "True if the second person is known for comedies, false otherwise."
+        },
+        "both_known_for_comedies": {
+          "type": "boolean",
+          "description": "The final answer to whether both individuals are known for comedies."
+        }
+      },
+      "required": [
+        "question_asked",
+        "person_1_name",
+        "person_1_known_for_comedies",
+        "person_2_name",
+        "person_2_known_for_comedies",
+        "both_known_for_comedies"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Are both John Korty and Charley Chase known for comedies?",
+      "person_1_name": "John Korty",
+      "person_1_known_for_comedies": false,
+      "person_2_name": "Charley Chase",
+      "person_2_known_for_comedies": true,
+      "both_known_for_comedies": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

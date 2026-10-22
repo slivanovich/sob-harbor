@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Love in a Cold Climate (TV serial): Love in a Cold Climate is a British television serial drama produced by the BBC in association with WGBH Boston, and first broadcast in two parts on BBC One on 4 and 11 February 2001.  The serial was adapted by Deborah Moggach from Nancy Mitford's novels "The Pursuit of Love" and "Love in a Cold Climate", and was directed by Tom Hooper.
+
+Sex in a Cold Climate: Sex in a Cold Climate is an 1998 Irish documentary film detailing the mistreatment of "fallen women" in the Magdalene laundries in Ireland.  It was produced and directed by Steve Humphries and narrated by Dervla Kirwan.  It was used as a source for the 2002 film, "The Magdalene Sisters".
+
+Swedish fashion: Sweden is located in the very northern part of Europe between Norway and Finland, with edges touching the North Sea and the Baltic Sea.  Northern Sweden has a cold climate with year-round snow, while the more southern parts have a more temperate climate.  The country has an abundance of forests and mountains.  It holds the largest population, as well as the largest area within the Scandinavian countries.  Due to this, it has a strong influence over the rest of Norden.  Sweden, in turn, serves as the fashion capital of Scandinavia.  Sweden's capital, Stockholm, is the host of the country's biannual fashion week.
+
+Interstitial condensation: Interstitial condensation is a form of structural damping that occurs when warm, moist air penetrates inside a wall, roof or floor structure, reaches the dew point and condenses into liquid water.  Interstitial condensation is differentiated from surface condensation in buildings sometimes called "cold-bridge condensation" or "warm front condensation" where the condensation forms on the interior or exterior surfaces of a building rather than inside the wall or roof cavities.  The warm, damp air may penetrate a wall from the inside of a heated building in a cold climate or from the exterior of an air-conditioned building in a warm climate.  This condensation may allow mold growth, rotting of timber, corrosion of metal components and/or a reduction in the thermal insulation's effectiveness.  The resulting structural damage may occur without visible indications until significant damage has occurred.  Most building materials are permeable so the common method of controlling interstitial condensation is to control indoor moisture at its sources or through dehumidification and/or ventilation and add an impermeable barrier on the warm side of the wall.
+
+Flora and fauna of the Kerguelen Islands: The Kerguelen Islands are part of the Southern Indian Ocean Islands tundra ecoregion that includes several subantarctic islands.  In this cold climate plant life is mainly limited to grasses, mosses and lichens, although the islands are also known for the indigenous, edible Kerguelen cabbage.  The islands are located at the Antarctic convergence, where cold water moving up from the Antarctic mixes with the warmer water of the Indian Ocean.  As a consequence, marine mammals, especially seals, and seabirds and penguins are numerous.
+
+Iron Age Cold Epoch: The Iron Age Cold Epoch (also referred to as Iron Age climate pessimum or Iron Age neoglaciation) was a period of unusually cold climate in the North Atlantic region, lasting from about 900 BC to about 300 BC, with an especially cold wave in 450 BC during the expansion of ancient Greece.  It was followed by the Roman Warm Period (250 BC – 400 AD).
+
+Robinsonekspedisjonen Vinter (2012): Robinsonekspedisjonen Vinter, is the twelfth season of the Norwegian version of the Swedish show Expedition Robinson and the first season of Robinsonekspedisjonen to take place in a cold climate.  This season premiered on March 11, 2012 and finished in late May.  The main twist this season is that the contestants live in the cold climate of Rauland, Norway.
+
+Innuitian Mountains: The Innuitian Mountains are a mountain range in Nunavut and the Northwest Territories, Canada .  They are part of the Arctic Cordillera and are largely unexplored, due to the hostile climate.  They are named after the northern indigenous people, who live in the region.  In some locations the Innuitian Mountains measure over 2500 m in height, and 1290 km in length.  The highest point is Barbeau Peak at 2616 m .  There are no trees or wildlife in the Innuitian Mountains due to the harsh cold climate as well as being located north of the Arctic tree line.  This region is mostly barren with vast areas of permafrost.  There are metallic mineral resources including iron and zinc and fossil fuel resources such as coal.
+
+Dervla Kirwan: Kirwan was born in Churchtown, Dublin, Ireland.  Her father, Peter Kirwan, was an insurance broker, and her mother, Maureen O'Driscoll, was a language teacher.  She is the youngest of three daughters.  She attended Loreto Beaufort in Rathfarnham, Dublin, a Catholic school for girls, until the age of 16, when she was asked to leave as her career as an actress started to progress.  Kirwan completed secondary school at the now-defunct non-denominational school Sandymount High School in Dublin.
+
+List of ants of Andorra: Seventy-five ant species have been recorded in Andorra, a small landlocked country located in the heart of the Pyrenees and bordered by Spain and France.  The country covers an area of approximately 468 km2 .  The ant fauna of Andorra is mostly dominated by Central European species (some are typical cold climate specialists); however species belonging to the Mediterranean ant fauna are also found.  This can be explained by the particular geographic situation of Andorra which is characterized by a high mountain Mediterranean climate.
+
+Question: What is the birthplace of the narrator of Sex in a Cold Climate?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "narrator_name": {
+      "type": "string",
+      "description": "The name of the narrator of the film."
+    },
+    "narrator_birthplace": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the narrator was born."
+        },
+        "region": {
+          "type": "string",
+          "description": "The region or county where the narrator was born."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the narrator was born."
+        }
+      },
+      "required": [
+        "city",
+        "region",
+        "country"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "film_title",
+    "narrator_name",
+    "narrator_birthplace"
+  ],
+  "additionalProperties": false
+}

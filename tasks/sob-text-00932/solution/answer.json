@@ -1,0 +1,17 @@
+{
+  "beer_style_name": "Old ale",
+  "characteristics": {
+    "color": "dark",
+    "flavor_profile": "malty",
+    "origin_regions": [
+      "England",
+      "Australia"
+    ],
+    "minimum_abv_england": 5,
+    "abv_any_strength_australia": true
+  },
+  "associated_terms": [
+    "stock ale",
+    "keeping ale"
+  ]
+}

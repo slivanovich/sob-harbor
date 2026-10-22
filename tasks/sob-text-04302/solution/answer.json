@@ -1,0 +1,14 @@
+{
+  "common_film_type": "documentary film",
+  "common_release_year": 2007,
+  "compared_entities": [
+    {
+      "name": "The 11th Hour",
+      "type": "2007 documentary film"
+    },
+    {
+      "name": "Audience of One",
+      "type": "2007 documentary film"
+    }
+  ]
+}

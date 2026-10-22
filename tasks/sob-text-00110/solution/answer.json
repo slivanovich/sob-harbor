@@ -1,0 +1,11 @@
+{
+  "film_title": "Muddu Meena",
+  "country_of_origin": "India",
+  "availability_outside_origin": [
+    "South Asia",
+    "Greater Middle East",
+    "Southeast Asia",
+    "Eastern Africa"
+  ],
+  "is_widely_available": true
+}

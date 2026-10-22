@@ -1,0 +1,12 @@
+{
+  "first_location": {
+    "name": "Kangding",
+    "province": "Sichuan"
+  },
+  "second_location": {
+    "name": "Shahe, Hebei",
+    "province": "Hebei"
+  },
+  "are_in_same_province": false,
+  "comparison_summary": "Kangding is located in Sichuan province, while Shahe, Hebei is located in Hebei province. Therefore, they are not in the same Chinese province."
+}

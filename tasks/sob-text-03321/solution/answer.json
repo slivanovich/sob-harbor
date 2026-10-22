@@ -1,0 +1,18 @@
+{
+  "question_answer": false,
+  "band_formation_details": [
+    {
+      "band_name": "Fastbacks",
+      "formation_city": "Seattle",
+      "formation_state": "Washington",
+      "formed_in_saint_paul_minnesota": false
+    },
+    {
+      "band_name": "Hüsker Dü",
+      "formation_city": "Saint Paul",
+      "formation_state": "Minnesota",
+      "formed_in_saint_paul_minnesota": true
+    }
+  ],
+  "all_bands_formed_in_saint_paul_minnesota": false
+}

@@ -1,0 +1,10 @@
+{
+  "venue_name": "Astrodome",
+  "venue_city": "Houston",
+  "venue_nickname": "Eighth Wonder of the World",
+  "fighters": [
+    "Muhammad Ali",
+    "Buster Mathis"
+  ],
+  "fight_date": "1971-11-17"
+}

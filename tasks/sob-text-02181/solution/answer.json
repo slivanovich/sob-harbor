@@ -1,0 +1,14 @@
+{
+  "movie_title": "Argo",
+  "release_year": 2012,
+  "director": {
+    "name": "Ben Affleck"
+  },
+  "starring_actor": {
+    "name": "Christopher Denham"
+  },
+  "genres": [
+    "political thriller",
+    "historical drama"
+  ]
+}

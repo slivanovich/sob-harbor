@@ -1,0 +1,15 @@
+{
+  "actor_name": "William Shatner",
+  "role_details": {
+    "role_name": "James T. Kirk",
+    "franchise": "Star Trek"
+  },
+  "teacher_details": {
+    "teacher_name": "Charles Jordan",
+    "other_students_of_teacher": [
+      "Susan Clark",
+      "Lorne Greene"
+    ]
+  },
+  "final_identified_actor": "William Shatner"
+}

@@ -1,0 +1,12 @@
+{
+  "photographer": {
+    "name": "Frank Lennon",
+    "nationality": "Canadian"
+  },
+  "event": {
+    "name": "Summit Series",
+    "year": 1972,
+    "sport": "ice hockey"
+  },
+  "notable_photograph_subject": "Paul Henderson celebrating Canada's win over the Soviet Union"
+}

@@ -1,0 +1,15 @@
+{
+  "film_title": "Spendthrift",
+  "film_genre": "romance",
+  "film_year": 1936,
+  "director": {
+    "name": "Raoul Walsh"
+  },
+  "main_actor": {
+    "name": "Henry Fonda",
+    "profession": [
+      "film actor",
+      "stage actor"
+    ]
+  }
+}

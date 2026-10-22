@@ -1,0 +1,15 @@
+{
+  "university_name": "Baylor University",
+  "university_type": "private Baptist university",
+  "location": "Waco, Texas",
+  "charter_year": 1845,
+  "chartering_authority": "last Congress of the Republic of Texas",
+  "is_oldest_continuously_operating_in_texas": true,
+  "is_one_of_first_educational_institutions_west_of_mississippi": true,
+  "coach_affiliation": {
+    "coach_name": "Pete Fredenburg",
+    "role": "assistant coach",
+    "start_year": 1982,
+    "end_year": 1993
+  }
+}

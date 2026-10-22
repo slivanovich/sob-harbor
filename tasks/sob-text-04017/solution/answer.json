@@ -1,0 +1,13 @@
+{
+  "successor_singer": {
+    "name": "Sigrid Arnoldson",
+    "role": "successor",
+    "critics_dubbed_nickname": "the new Swedish Nightingale"
+  },
+  "predecessor_singer": {
+    "name": "Jenny Lind",
+    "role": "predecessor",
+    "common_nickname": "Swedish Nightingale"
+  },
+  "relationship_description": "Sigrid Arnoldson was believed by critics to be Jenny Lind's successor."
+}

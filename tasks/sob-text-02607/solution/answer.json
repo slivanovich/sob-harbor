@@ -1,0 +1,14 @@
+{
+  "comparison_subject_1": "Corey Taylor",
+  "comparison_subject_1_genres": [
+    "heavy metal",
+    "alternative metal"
+  ],
+  "comparison_subject_2": "Jawbox",
+  "comparison_subject_2_genres": [
+    "alternative rock"
+  ],
+  "target_genre_type": "death metal",
+  "more_affiliated_subject": "Corey Todd Taylor",
+  "reasoning": "Corey Taylor is known as the lead singer of the heavy metal band Slipknot and the alternative metal band Stone Sour. Jawbox is described as an alternative rock band. While neither is explicitly death metal, heavy metal and alternative metal are generally closer in style and subgenre relation to death metal than alternative rock is."
+}

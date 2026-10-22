@@ -1,0 +1,16 @@
+{
+  "person_served_by_shirley": {
+    "name": "Charlotte of Mecklenburg-Strelitz",
+    "title": "Queen",
+    "spouse": {
+      "name": "George III",
+      "title": "King"
+    }
+  },
+  "sewallis_shirley_details": {
+    "name": "Sewallis Shirley",
+    "birth_year": 1709,
+    "death_year": 1765
+  },
+  "final_answer": "King George III"
+}

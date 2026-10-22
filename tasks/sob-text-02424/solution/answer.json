@@ -1,0 +1,15 @@
+{
+  "song_details": {
+    "title": "Without You",
+    "album": "Nilsson Schmilsson"
+  },
+  "writer": {
+    "name": "Pete Ham",
+    "role": "co-writer"
+  },
+  "award_details": {
+    "award_name": "Ivor Novello Awards",
+    "number_of_awards": 2,
+    "year": 1973
+  }
+}

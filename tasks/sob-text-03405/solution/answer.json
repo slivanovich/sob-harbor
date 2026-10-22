@@ -1,0 +1,20 @@
+{
+  "question_asked": "Were both Mike Shinoda and Chrissie Hynde members of the rock band The Pretenders?",
+  "person_1": {
+    "name": "Mike Shinoda",
+    "is_pretenders_member": false,
+    "known_bands": [
+      "Linkin Park",
+      "Fort Minor"
+    ]
+  },
+  "person_2": {
+    "name": "Chrissie Hynde",
+    "is_pretenders_member": true,
+    "known_bands": [
+      "The Pretenders"
+    ]
+  },
+  "both_were_members": false,
+  "final_answer": false
+}

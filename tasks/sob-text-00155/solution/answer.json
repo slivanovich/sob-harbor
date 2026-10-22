@@ -1,0 +1,15 @@
+{
+  "volunteer_details": {
+    "name": "Matthew Barzun",
+    "campaign_name": "Barack Obama's 2008 presidential campaign"
+  },
+  "spouse_details": {
+    "name": "Brooke Barzun",
+    "family_company_control": {
+      "controlling_family_relationship": "extended family",
+      "controlled_company_name": "Brown-Forman Corporation",
+      "notable_brand_controlled": "Jack Daniel's"
+    }
+  },
+  "final_answer_brand": "Jack Daniel's"
+}

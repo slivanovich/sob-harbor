@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Good Girl Gone Bad: Reloaded: Good Girl Gone Bad: Reloaded is the reissue of Barbadian singer Rihanna's third studio album "Good Girl Gone Bad" (2007).  It was first released digitally in selected countries on June 2, 2008, by Def Jam Recordings and SRP Records.  Launched to mark the first anniversary of the original album, "Good Girl Gone Bad: Reloaded" features three newly recorded songs and a DVD showing exclusive behind-the-scenes footage of Rihanna's worldwide tour, the Good Girl Gone Bad Tour (2007–2009).  For the new material, she worked with past collaborators Ne-Yo, StarGate, and C. "Tricky" Stewart, as well as Brian Kennedy, Mark Endert, Mike Elizondo, Mark "Spike" Stent and Maroon 5.
+
+Good Girl Gone Bad Live: Good Girl Gone Bad Live is the first live long-form video by Barbadian singer Rihanna.  It was first released on June 9, 2008 by Def Jam Recordings.  The DVD and Blu-ray release features Rihanna's concert at the Manchester Arena in Manchester, United Kingdom held on December 6, 2007, as part of her Good Girl Gone Bad Tour (2007—2009) which supported singer's third studio album "Good Girl Gone Bad" (2007).  Most of the concert's set list originates from "Good Girl Gone Bad", however, Rihanna also performed songs from her previous albums "Music of the Sun" (2005) and "A Girl like Me" (2006).  It also contains a special Documentary Feature that presents Rihanna discussing her experiences during the tour.
+
+Good Girl Gone Bad: Good Girl Gone Bad is the third studio album by Barbadian singer Rihanna.  It was released on May 31, 2007, by Def Jam Recordings and SRP Records.  Rihanna worked with various producers on the album, including Christopher "Tricky" Stewart, Terius "Dream" Nash, Neo da Matrix, Timbaland, Carl Sturken, Evan Rogers and StarGate.  Inspired by Brandy Norwood's fourth studio album "Afrodisiac" (2004), "Good Girl Gone Bad" is a pop, dance-pop and R&B album with 1980s music influences.  Described as a turning point in Rihanna's career, it represents a departure from the Caribbean sound of her previous releases, "Music of the Sun" (2005) and "A Girl like Me" (2006).  Apart from the sound, she also endorsed a new image for the release going from an innocent girl to an edgier and more sexual look.
+
+Loud (Rihanna album): Loud is the fifth studio album by Barbadian singer Rihanna.  It was released on November 12, 2010, by Def Jam Recordings and SRP Records.  It was recorded between February and August 2010, during the singer's Last Girl on Earth Tour and the filming of her first feature film "Battleship".  Rihanna was the executive producer of "Loud" and worked with various record producers, including StarGate, Sandy Vee, The Runners, Tricky Stewart and Alex da Kid.  The album features several guest vocalists, including rappers Drake, Nicki Minaj and Eminem, who is featured on the sequel to "Love the Way You Lie", titled "Love the Way You Lie (Part II)".
+
+List of Rihanna concert tours: Barbadian recording artist Rihanna has embarked on four concert tours, three of which have been worldwide.  Her 2006 debut, was based in North America only and supported her first and second studio album, "Music of the Sun" (2005) and "A Girl like Me" (2006).  The tour lasted for three months, through which Rihanna performed 36 shows.  The same year, Rihanna continued to tour as a special guest on the PCD World Tour with Pussycat Dolls, Roc the Block Tour with Jay-Z and Ne-Yo, and the Monkey Business Tour with Black Eyed Peas.  In the period from 2007 till 2009, she performed on the worldwide Good Girl Gone Bad Tour in a support of her third studio album with same name.  During the tour, Rihanna visited Europe, North America, Oceania, Asia and Africa.  It featured Rihanna presenting completely different style and wearing leather outfits.  The Good Girl Gone Bad Tour sparked controversy in Malaysia where the Pan-Malaysian Islamic Party recommended that Rihanna's concert tour should be banned due her provocative outfits.  A DVD, titled "Good Girl Gone Bad Live" was released on June 16, 2008.  It features the show from Evening News Arena in Manchester, England, held on December 6, 2007.
+
+Diamonds World Tour: The Diamonds World Tour was the fifth concert tour by Barbadian recording artist Rihanna.  It was launched in support of her seventh studio album "Unapologetic" (2012).  The tour was announced in September 2012 following the singer's performance at the 2012 MTV Video Music Awards.  The tour kicked off on March 8, 2013 in Buffalo, New York and officially ending on November 15, 2013 in New Orleans, Louisiana.  The tour visited the Americas, Europe, Asia, Africa, and Australia with 96 shows in total.  This was Rihanna's first Australian tour since February 2011 with The Last Girl On Earth Tour.
+
+Last Girl on Earth: The Last Girl on Earth was the third concert tour by Barbadian recording artist Rihanna.  The tour visited Europe, Asia, North America and Australia to support her fourth studio album, "Rated R" (2009).  The tour was announced through MTV News in December 2009.  The tour grossed over $40 million according to Trollpoll as Rihanna earned over $30 million worldwide and around $10 million in Australia.  In an interview, Rihanna stated, "It's going to be a worldwide tour, so it's going to be a very long tour.  We'll definitely be in your city, so look out for that."  The tour received generally positive reception.
+
+Talk That Talk: Talk That Talk is the sixth studio album by Barbadian singer Rihanna, released on November 18, 2011, by Def Jam Recordings and SRP Records.  It was recorded while traveling for the Loud Tour between February and November 2011, and was originally planned to be a reissue of her previous studio album "Loud" (2010).  As executive producer, Rihanna enlisted a wide range of producers including Alex da Kid, Calvin Harris, Chase & Status, No I.D., and StarGate to achieve her desired sound.  Following in the same vein as "Loud", "Talk That Talk" is a dance-oriented pop/R&B crossover album that incorporates elements of hip hop, dubstep, electronic and house music.  The album also continues to have subtle dancehall genres, whilst its lyrical content and themes revolve around a nihilist, romantic and lascivious lover.
+
+Rated R (Rihanna album): Rated R is the fourth studio album by Barbadian singer Rihanna.  It was released on November 20, 2009 by Def Jam Recordings and SRP Records.  Recording sessions for the album began in April 2009 and took place at several recording studios throughout United States and Europe.  Rihanna, together with Antonio "L.A." Reid and The Carter Administration, was the executive producer of the album and worked with various record producers, including Chase & Status, StarGate, The-Dream, Ne-Yo, and Brian Kennedy.  The record featured several vocalists and instrumentalists, including Young Jeezy, will.i.am, Justin Timberlake and Slash, who played the guitars in "Rockstar 101".
+
+Music of the Sun: Music of the Sun is the debut studio album by Barbadian singer Rihanna.  It was released on August 30, 2005 in the United States through Def Jam Recordings.  Prior to signing with Def Jam, Rihanna was discovered by record producer Evan Rogers in Barbados, who helped Rihanna record demo tapes to send out to several record labels.  Jay-Z, the former chief executive officer (CEO) and president of Def Jam, was given Rihanna's demo by Jay Brown, his A&R at Def Jam, and invited her to audition for the label after hearing what turned out to be her first single, "Pon de Replay".  She auditioned for Jay-Z and L.A. Reid, the former CEO and president of record label group The Island Def Jam Music Group, and was signed on the spot to prevent her from signing with another record label.
+
+Question: The Last Girl on Earth was the third concert tour by Barbadian recording artist Rihanna, the tour visited Europe, Asia, North America and Australia to support her fourth studio album, which 2009 , and fourth studio album by Barbadian singer Rihanna, and released on November 20, 2009 by Def Jam Recordings and SRP Records?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the studio album."
+    },
+    "album_release_year": {
+      "type": "integer",
+      "description": "The year the album was released."
+    },
+    "album_label": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The record label(s) that released the album."
+    },
+    "supported_tour_name": {
+      "type": "string",
+      "description": "The name of the concert tour that supported this album."
+    },
+    "album_number": {
+      "type": "integer",
+      "description": "The sequential number of the album in the artist's discography."
+    }
+  },
+  "required": [
+    "album_name",
+    "album_release_year",
+    "album_label",
+    "supported_tour_name",
+    "album_number"
+  ],
+  "additionalProperties": false
+}

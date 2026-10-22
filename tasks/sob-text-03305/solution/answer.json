@@ -1,0 +1,17 @@
+{
+  "actor_name": "John Marley",
+  "original_name": "Mortimer Marlieb",
+  "birth_date": "1907-10-17",
+  "death_date": "1984-05-22",
+  "films_starred_in": [
+    {
+      "title": "Faces",
+      "year": 1968,
+      "is_academy_award_nominated": true
+    },
+    {
+      "title": "The Glitter Dome",
+      "year": 1984
+    }
+  ]
+}

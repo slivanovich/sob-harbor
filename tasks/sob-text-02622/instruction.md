@@ -1,0 +1,102 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ulrich Gabler: Ulrich Gabler (1 October 1913 – 24 February 1994) was a German shipbuilding engineer, who specialized in the design and development of diesel-powered submarines.  During World War II he served as chief engineer in the U-boat force on "U-121" and "U-564" , then under the command of Reinhard Suhren.  Suhren had recommended Gabler for the Knight's Cross of the Iron Cross, a request that was turned down and Gabler received the German Cross in Gold on 15 October 1942.  Following his war patrols on "U-564" he worked on the design and development of the U-boat classes XXII, XVII A and XXVI.  After the war he founded the "Ingenieurkontor Lübeck" (IKL) which among others designed the type 201, 202 and 209 submarines.  In 1963 he was appointed honorary professor at the University of Hamburg for shipbuilding.
+
+10th U-boat Flotilla: The 10th U-boat Flotilla (German "10.  Unterseebootsflottille") was a German U-boat flotilla used for front-line combat purposes during World War II.  Founded on 15 January 1942 at Lorient under the command of "Korvettenkapitän" Günther Kuhnke, eighty U-boats operated with this flotilla before it was dissolved on 21 August 1944, and the remaining U-boats were moved to bases in Norway and Germany.  Kuhnke himself took command of "U-853" , the last U-boat to leave, on 27 August 1944 to sail to Flensburg where he assumed command of 33rd U-boat Flotilla.
+
+SS Inkosi (1902): SS "Inkosi" was a 3661-ton British steamship built in 1902.  She was torpedoed and sunk during the First World War by the German U-boat SM "U-96" on 28 March 1918, while on passage from Liverpool for Lamlash and Pernambuco with a general cargo and coal.  Three crew were lost with the vessel.
+
+Wilhelm Dommes: Wilhelm Dommes (16 April 1907 in Berent District, West Prussia – 23 January 1990 in Hannover) was a German U-boat commander in World War II and recipient of the Knight's Cross of the Iron Cross.  The Knight's Cross of the Iron Cross was awarded to recognize extreme battlefield bravery or successful military leadership.  He is notable as being the commander of U-boats in the Indian Ocean, whereby German and Japanese forces fought together in the only time in the war.  He was the first commander of the U-boat base, in the former British seaplane base in Penang, where he served as head of the Southeast Asia U-boat region.
+
+Engelbert Endrass: Engelbert Endrass (German: Engelbert Endraß ) (2 March 1911 – 21 December 1941) was a German U-boat commander in World War II.  He commanded the Type VIIB U-boat "U-46" and the Type VIIC "U-567" , being credited with sinking twenty-two ships on ten patrols, for a total of  gross register tons (GRT) of Allied shipping, to purpotedly become the 23rd highest scoring U-boat commander of World War II.  He was a recipient of the Knight's Cross of the Iron Cross with Oak Leaves of Nazi Germany.  It was Germany's highest military decoration at the time of its presentation to Endrass.
+
+Das Boot: Das Boot (] , German meaning "The Boat") is a 1981 German war film written and directed by Wolfgang Petersen, produced by Günter Rohrbach, and starring Jürgen Prochnow, Herbert Grönemeyer, and Klaus Wennemann.  It has been exhibited both as a theatrical release and as a TV miniseries (1985), in several different home video versions of various running times, and in a longer director's cut version supervised by Petersen in 1997.
+
+Helmut Brümmer-Patzig: Helmut Patzig, also known as Helmut Brümmer-Patzig (26 October 1890 – 11 March 1984) was a German U-boat commander in the Kaiserliche Marine in World War I, and the Kriegsmarine in World War II.  He was captain of "U-86" , the vessel that sank a Canadian hospital ship,  , in 1918.  Patzig evaded conviction for the war crime at the Leipzig War Crimes Trials in 1921 because he fled German jurisdiction.  During the Second World War he returned to naval service, serving as commander of the 26th U-boat Flotilla, a U-boat training group, from 1943 into 1945.
+
+Hans Peter Dengel: Hans Peter Dengel (28 Nov 1916 - 2 July 1944) was an engineering officer of the Kriegsmarine during World War II who served as chief engineer of the famous U-boat U-96 during its later war patrols under the command of Heinrich Lehmann-Willenbrock.  Dengel was killed on-board U-543 when that boat was struck by fire from Allied aircraft.  He was the inspiration for the character of "the Chief" in both the novel and film "Das Boot".  In the film, he was portrayed by German actor Klaus Wennemann.
+
+Robert-Richard Zapp: Robert-Richard Zapp (3 April 1904 – 17 July 1964) was a German U-boat commander in World War II.  As commander of the Type IXC U-boat "U-66" , he sank sixteen ships on five patrols, for a total of 106,200 tons of Allied shipping, to become the 27th highest scoring U-Boat ace of World War II.  He was also a recipient of the Knight's Cross of the Iron Cross (German: "Ritterkreuz des Eisernen Kreuzes" ).  The Knight's Cross of the Iron Cross was awarded to recognise extreme battlefield bravery or successful military leadership.
+
+Action of 6 October 1944: The Action of 6 October 1944 was an incident of World War II in which a German U-boat was sunk by a Dutch submarine while operating in the Java Sea.  The sinking was part of the German U-boat campaign in the Indian and Pacific Oceans.
+
+Question: Hans Peter Dengel, chief engineer of German U-boat U-96, was said to be the inspiration for a character in which 1981 movie?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "inspired_person": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the person who served as inspiration."
+        },
+        "role": {
+          "type": "string",
+          "description": "The role of the inspired person."
+        },
+        "u_boat_served_on": {
+          "type": "string",
+          "description": "The U-boat the inspired person served on."
+        }
+      },
+      "required": [
+        "name",
+        "role",
+        "u_boat_served_on"
+      ],
+      "additionalProperties": false
+    },
+    "inspired_movie": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the movie."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the movie."
+        },
+        "inspired_character_name": {
+          "type": "string",
+          "description": "The name of the character inspired by the person."
+        },
+        "actor_portraying_character": {
+          "type": "string",
+          "description": "The actor who portrayed the inspired character in the film."
+        }
+      },
+      "required": [
+        "title",
+        "release_year",
+        "inspired_character_name",
+        "actor_portraying_character"
+      ],
+      "additionalProperties": false
+    },
+    "inspiration_details": {
+      "type": "string",
+      "description": "A brief description of the inspiration."
+    }
+  },
+  "required": [
+    "inspired_person",
+    "inspired_movie",
+    "inspiration_details"
+  ],
+  "additionalProperties": false
+}

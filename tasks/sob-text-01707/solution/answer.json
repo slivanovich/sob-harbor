@@ -1,0 +1,18 @@
+{
+  "person_names": [
+    "Percy Adlon",
+    "Max Marcin"
+  ],
+  "common_job_title": "director",
+  "job_details": {
+    "percy_adlon_roles": [
+      "director",
+      "screenwriter",
+      "producer"
+    ],
+    "max_marcin_roles": [
+      "screenwriter",
+      "director"
+    ]
+  }
+}

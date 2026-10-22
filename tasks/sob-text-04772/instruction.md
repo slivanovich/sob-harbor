@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Anamorph (film): Anamorph is a 2007 independent psychological thriller film directed by Henry S. Miller and starring Willem Dafoe.  Dafoe plays a seasoned detective named Stan Aubray, who notices that a case he has been assigned to bears a striking similarity to a previous case of his.  The film is based on the concept of anamorphosis, a painting technique that manipulates the laws of perspective to create two competing images on a single canvas.
+
+X2 (film): X2 (often promoted as X2: X-Men United and internationally as X-Men 2) is a 2003 American superhero film based on the X-Men superhero team appearing in Marvel Comics.  It is the sequel to 2000's "X-Men", and the second installment in the "X-Men" film series.  The film was directed by Bryan Singer, written by Michael Dougherty, Dan Harris, and David Hayter, and features an ensemble cast including Hugh Jackman, Patrick Stewart, Ian McKellen, Halle Berry, Famke Janssen, James Marsden, Rebecca Romijn-Stamos, Brian Cox, Alan Cumming, Bruce Davison, Shawn Ashmore, Aaron Stanford, Kelly Hu, and Anna Paquin.  The plot, inspired by the graphic novel "", pits the X-Men and their enemies, the Brotherhood, against the genocidal Colonel William Stryker (Brian Cox).  He leads an assault on Professor Xavier's school to build his own version of Xavier's mutant-tracking computer Cerebro, in order to destroy every mutant on Earth and to save the human race from them.
+
+Justice League (film): Justice League is an upcoming American superhero film based on the DC Comics superhero team of the same name, distributed by Warner Bros.  Pictures.  It is intended to be the fifth installment in the DC Extended Universe (DCEU).  The film is directed by Zack Snyder and written by Chris Terrio and Joss Whedon, from a story by Snyder and Terrio, and features an ensemble cast that includes Ben Affleck, Henry Cavill, Gal Gadot, Jason Momoa, Ezra Miller, Ray Fisher, Ciarán Hinds, Amy Adams, Willem Dafoe, Jesse Eisenberg, Jeremy Irons, Diane Lane, Connie Nielsen, and J. K. Simmons.  In "Justice League", Batman and Wonder Woman assemble a team consisting of Flash, Aquaman, and Cyborg to face the catastrophic threat of Steppenwolf and his army of Parademons.
+
+Superman IV: The Quest for Peace: Superman IV: The Quest for Peace is a 1987 American superhero film directed by Sidney J. Furie, based on the DC Comics character Superman.  It is the fourth and final film in the original "Superman" film series, and the first film in that series not to be produced by Alexander and Ilya Salkind, but rather by Golan-Globus' Cannon Films, in association with Warner Bros. Gene Hackman returned as Lex Luthor, who creates an evil solar-powered version of Superman called Nuclear Man.
+
+Before It Had a Name: Before It Had a Name is a 2005 film directed by Giada Colagrande and co-written by her and husband Willem Dafoe.  The film premiered at the Venice Film Festival and was retitled as "The Black Widow" when it was released on DVD.  It marked the first time Dafoe had developed a project to the point of being shot as well as the first time Colagrande had written in English.
+
+Watchmen (film): Watchmen is a 2009 American superhero film directed by Zack Snyder, based on the 1986–87 DC Comics limited series of the same name by Alan Moore and Dave Gibbons.  It stars an ensemble cast of Malin Åkerman, Billy Crudup, Matthew Goode, Carla Gugino, Jackie Earle Haley, Jeffrey Dean Morgan, and Patrick Wilson.  A dark satirical and dystopian take on the superhero genre, the film is set in an alternate history in the year 1985 at the height of the Cold War between the United States and the Soviet Union, as a group of mostly retired American superheroes investigates the murder of one of their own before uncovering an elaborate and deadly conspiracy, while their moral limitations are challenged by the complex nature of the circumstances.
+
+Aquaman (film): Aquaman is an upcoming American superhero film based on the DC Comics character of the same name, distributed by Warner Bros.  Pictures.  It is intended to be the sixth installment in the DC Extended Universe (DCEU).  The film is being directed by James Wan, with a screenplay by Will Beall, from a story by Wan and Geoff Johns, and stars Jason Momoa, Amber Heard, Patrick Wilson, Willem Dafoe, Yahya Abdul-Mateen II, Temuera Morrison, Dolph Lundgren, and Nicole Kidman.
+
+Spider-Man 2: Spider-Man 2 is a 2004 American superhero film directed by Sam Raimi and written by Alvin Sargent from a story by Alfred Gough, Miles Millar, and Michael Chabon.  The sequel to the 2002 film "Spider-Man", it is the second film in Raimi's Spider-Man film trilogy based on the fictional Marvel Comics comic book series "The Amazing Spider-Man".  Tobey Maguire, Kirsten Dunst, and James Franco reprise their respective roles as Peter Parker "/" Spider-Man, Mary Jane "M.J." Watson and Harry Osborn.
+
+Willem Dafoe: William J. "Willem" Dafoe (born July 22, 1955) is an American actor.  A member of the experimental theatre company the Wooster Group, he was nominated for the Academy Award for Best Supporting Actor for his roles as Elias in Oliver Stone's "Platoon" (1986) and Max Schreck in the comedy-horror film "Shadow of the Vampire" (2000).  His other film appearances include "The Last Temptation of Christ" (1988), "Mississippi Burning" (1988),"The English Patient" (1996), "American Psycho" (2000), the "Spider-Man" trilogy (2002–2007), "John Wick" (2014), "The Grand Budapest Hotel" (2014), and "Justice League" (2017).  He has also had voice roles in "Finding Nemo" (2003) and its sequel "Finding Dory" (2016), "Fantastic Mr. Fox" (2009), "John Carter" (2012) and the recent adaptation of "Death Note" (2017).
+
+Spider-Man (2002 film): Spider-Man is a 2002 American superhero film directed by Sam Raimi and based on the Marvel Comics comic book series titled "The Amazing Spider-Man".  The film stars Tobey Maguire as Peter Parker, a high school student living in New York City, who turns to crimefighting after developing spider-like super powers.  "Spider-Man" also stars Kirsten Dunst as Peter's love interest Mary Jane Watson, Willem Dafoe as Norman Osborn/Green Goblin, Rosemary Harris and Cliff Robertson as Aunt May and Uncle Ben, and James Franco as his best friend Harry Osborn.
+
+Question: William J. "Willem" Dafoe has an apperance in American superhero film directed by who?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor in question."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the American superhero film."
+    },
+    "film_genre": {
+      "type": "string",
+      "description": "The genre of the film."
+    },
+    "director_name": {
+      "type": "string",
+      "description": "The director of the American superhero film."
+    }
+  },
+  "required": [
+    "actor_name",
+    "film_title",
+    "film_genre",
+    "director_name"
+  ],
+  "additionalProperties": false
+}

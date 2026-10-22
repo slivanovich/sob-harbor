@@ -1,0 +1,16 @@
+{
+  "band_name": "AC/DC",
+  "band_origin": "Australian",
+  "genre": "hard rock",
+  "mixer_name": "Mike Fraser",
+  "mixed_albums": [
+    "The Razors Edge",
+    "Ballbreaker",
+    "Stiff Upper Lip",
+    "Black Ice",
+    "Rock Or Bust"
+  ],
+  "mixed_songs": [
+    "Thunderstruck"
+  ]
+}

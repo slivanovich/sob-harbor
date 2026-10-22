@@ -1,0 +1,10 @@
+{
+  "building_name": "Bank of Glen Jean",
+  "original_purpose": "bank",
+  "current_purpose_description": "visitor contact center",
+  "location": {
+    "community": "Glen Jean",
+    "state": "West Virginia"
+  },
+  "national_park_service_unit_served": "New River Gorge National River"
+}

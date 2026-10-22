@@ -1,0 +1,13 @@
+{
+  "tournament_name": "Trofeo Santiago Bernabéu",
+  "honoree_details": {
+    "name": "Santiago Bernabéu",
+    "significance": "long-time Real Madrid president"
+  },
+  "tournament_characteristics": {
+    "type": "friendly tournament",
+    "organizer": "Real Madrid",
+    "frequency": "each year",
+    "timing_in_season": "beginning of the season"
+  }
+}

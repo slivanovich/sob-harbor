@@ -1,0 +1,91 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Vladimir Ashkenazy: Vladimir Davidovich Ashkenazy (Russian: Влади́мир Дави́дович Ашкена́зи , "Vladimir Davidovich Ashkenazi"; born 6 July 1937) is an internationally recognized solo pianist, chamber music performer, and conductor.  He is originally from Russia and has held Icelandic citizenship since 1972.  He has lived in Switzerland since 1978.  Ashkenazy has collaborated with well-known orchestras and soloists.  In addition, he has recorded a large storehouse of classical and romantic works.  His recordings have earned him five Grammy awards plus Iceland's Order of the Falcon.
+
+Geir Henning Braaten: Geir Henning Braaten (born 29 October 1944 in Odalen) is a Norwegian pianist.  In Oslo, he studied with Nicolai Dirdal from age five, and later with Robert Riefling, both at the Oslo Conservatory of Music.  He also studies in France with Yvonne Lefébure, with Bruno Seidlhofer in Vienna.He had his debut in 1966 and has toured widely, especially in the East, including Turkey, Yugoslavia, France, USSR, U.S., Korea, Middle East and Taiwan.  He has performed on Hong Kong radio and played with the Tokyo Symphony Orchestra.  Braaten has collaborated with conductors including Moshe Atzmon, Aldo Ceccato, Mariss Jansons, Ken-Ichiro Kobayashi and Walter Weller.  His complete edition of Grieg gave rise to concerts with the Royal Philharmonic Orchestra and won the prestigious MIDEM award.  .  He has had a close collaboration with world renowned violinist Aaron Rosand.  He is retired from his position associate professor at the Norwegian Academy of Music, but continues his busy concert schedule , both as soloist and in chamber music with violinist Ole Bohn among others.
+
+Kenneth Fulton: Kenneth Fulton,MME - Ph.D is the Sanders Alumni Professor of Choral Studies and Chair of the Division of Ensembles and Conducting at Louisiana State University (LSU)'s College of Music and Dramatic Arts.  He is conductor of the LSU A Cappella Choir and teaches choral music.  Internationally recognized as a conductor and clinician, Fulton has appeared professionally in 32 different states.  Dr. Fulton's choirs have given 18 invitational performances for national audiences of the American Choral Directors Association and the Music Educators National Conference, the College Music Society, the Sonneck Society, and the American Musicological Society, as well as numerous regional performances.  He was also chorus master for the Baton Rouge Symphony Chorus for fifteen years and Artistic Director/Conductor for the Linz International Choral Festival in Linz, Austria, where he annually conducted performances with the Festival Orchestra and Chorus.  Dr. Fulton is known as one of the most respected university choral conductors in America.
+
+Janet Williams (soprano): Janet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, Berlin Staatsoper, Paris Opera, Théâtre des Champs-Élysées, Opera de Lyon, Nice Opera, Théâtre Royal de la Monnaie, Opera Geneva, Frankfurt Opera, Cologne Opera, Leipzig Opera, San Francisco Opera, Washington Opera, Dallas Opera, and Michigan Opera Theatre as well as in concerts throughout Europe, North America, Canada, Israel and Japan with conductors including Vladimir Ashkenazy, Daniel Barenboim, Myung-whun Chung, Philippe Herreweghe, René Jacobs, Marek Janowski, Neeme Järvi, Raymond Leppard, Fabio Luisi, Sir Neville Marriner, Nicholas McGegan, Zubin Mehta, Kent Nagano, John Nelson, Donald Runnicles, Gerard Schwarz and Michael Tilson Thomas.
+
+James Levine: James Lawrence Levine ( ; born June 23, 1943) is an American conductor and pianist.  He is primarily known for his tenure as Music Director of the Metropolitan Opera, a position he held for 40 years (1976 to 2016).  He has made numerous recordings, as well as television and radio broadcasts, with the Metropolitan Opera Orchestra.  Levine has also held leadership positions with the Ravinia Festival, the Munich Philharmonic, and the Boston Symphony Orchestra.  In 1980, he started the Lindemann Young Artists Development Program and often works to train promising singers, conductors, and musicians for professional careers.  After suffering severe health problems, Levine took a hiatus from conducting for almost two years.  He returned to conducting in 2013.  He stepped down as the Music Director of the Metropolitan Opera at the end of the 2015-2016 season to assume the new position of Music Director Emeritus.
+
+Benjamin Bowman: Benjamin Walter Bowman (born September 20, 1979) is an American-Canadian violinist.  The Metropolitan Opera Orchestra named Bowman as its concertmaster for an initial one-year term for the 2017/18 season; he will share his role with David Chan. .  Bowman has performed to critical acclaim throughout North America, Europe and Asia.  He is a member or frequent guest artist for leading chamber music ensembles internationally, including the twice Grammy-nominated ARC Ensemble (Artists of The Royal Conservatory of Music), Art of Time Ensemble, and Leondari Ensemble.  Bowman was featured on the 2013 Juno-winning album "Levant" and the 2011 Juno-nominated disc "Armenian Chamber Music" with the Amici Chamber Ensemble.  He is the concertmaster of the American Ballet Theatre orchestra (as of October 2014).
+
+Julie Landsman: Julie Landsman (born April 3, 1953) is an American-born French horn player and teacher.  Formerly Principal Horn of the Metropolitan Opera from 1985-2010, Landsman now primarily performs chamber music.  Prior to her appointment with the Metropolitan Opera Orchestra, Landsman served as co-principal horn with the Houston Symphony, and has toured internationally with the New York Philharmonic and Orpheus Chamber Orchestra.  Julie Landsman is on the faculties of The Juilliard School and the Bard College Conservatory of Music, and her students hold prominent positions in orchestras throughout the world.  A graduate of Juilliard, her teachers have included James Chambers, Howard Howard and Carmine Caruso.  Landsman is featured horn soloist on the recording of Wagner's Ring Cycle with the Metropolitan Opera conducted by James Levine, and has appeared on numerous other recordings.  Music festival appearances have included the Marlboro Music Festival, Sarasota Music Festival, Chamber Music Northwest, Santa Fe Chamber Music Festival, Aspen Music Festival and School, Mainly Mozart Orchestra, and La Jolla SummerFest.  Landsman grew up in Brooklyn.
+
+Cynthia Phelps: Cynthia Phelps (born 1961 in Hollywood, Los Angeles, California) is an American violist whose versatile career involves work as a chamber musician, solo artist, and orchestral musician.  Phelps is currently the Principal Violist of the New York Philharmonic, a position to which she was appointed in 1992.  She is a former faculty member of the Manhattan School of Music and is currently a faculty member at the Juilliard School.  She has appeared as a soloist with numerous orchestras throughout the world including the Minnesota Orchestra, New York Philharmonic, San Diego Symphony, Orquesta Sinfonica de Bilbao, and Hong Kong Philharmonic.  As a chamber musician, Ms. Phelps performs regularly with the Chamber Music Society of Lincoln Center, Bargemusic, the Boston Chamber Music Society, the Chicago Chamber Musicians, La Musica, Seattle Chamber Music Society, and the Bridgehampton Chamber Music Festival.  Phelps has performed with some of the world's greatest musicians including Isaac Stern, Itzhak Perlman, Pinchas Zukerman, Yo-Yo Ma, Lynn Harrell, and Yefim Bronfman, among many others.  She has toured internationally as a member of the Zukerman and Friends Ensemble, appeared with the Guarneri String Quartet, and performed in recital in Paris, Rome, London, and Cardiff, Wales, as well as in Boston, Los Angeles, New York and Washington.  Ms. Phelps is a recipient of the Pro Musicis International Award, and a top prize winner at both the Lionel Tertis International Viola Competition and the Washington International String Competition.  She has recorded for the Marlboro Recording Society, and the Covenant, Nuova Era, Polyvideo, Virgin Classics labels, and most recently Cala Records where her first solo CD was released.  Her appearances on television and radio have included "Live from Lincoln Center" on PBS, National Public Radio, Radio France, and RAI in Italy.
+
+Chamber Music Society of Detroit: The Chamber Music Society of Detroit, founded in 1944, is the tenth oldest chamber music series in the United States as recognized by Chamber Music America.  The core of the Chamber Music Society of Detroit’s offerings is a nine-concert chamber music series and a three-concert piano series which bring world-class performers to metropolitan Detroit.  Complementing the concert series are a comprehensive education program in Detroit area schools, an international classical music award, a Pre-Concert Talk series and other events.  The Chamber Music Society presents its concerts at Seligman Performing Arts Center, located on the campus of Detroit Country Day School in Beverly Hills, Michigan.
+
+Valery Vorona: Valery Vorona (Russian: "Валерий Ворона" ) is a Russian violinist, soloist, conductor, and Meritorious Artist.  Vorona graduated from the Gnessin State Musical College and was a post-graduate student at the Moscow Conservatory where he later became a professor.  Later on he became a conductor and teacher in positions which added to his career.  Currently he is both artistic director and conductor-in-chief of the Moscow Chamber Orchestra for young violinists as well as a soloist of the Moscow Philharmonic Orchestra and a President of the Russian Performing Art Foundation.  He also serves as a rector at the Ippolitov-Ivanov Mupic Pedagogical Institute and by 2008 became both conductor and soloist of the Saint Petersburg International Economic Forum.  He has participated at various festivals such as the Russian Festival in San Francisco as well as "Vladimir Spivakov Festival" and Sakharov Festival in Nizhny Novgorod.  Besides national performances he has also performed overseas in such countries as France, Greece, Israel, Italy, Spain, the United States and various former Soviet republics.  He has appeared with many well-known conductors including Ukrainian Oleh Krysa and Oleksandr Bondurianskyi and the Russian conductors Valentin Berlinsky, Vladimir Ponkin, Vladimir Repin, Yuri Bashmet, and Maxim Vengerov.
+
+Question: Janet Williams is an American soprano who has won international critical acclaim for performances at the Metropolitan Opera, etc, with conductors including which  internationally recognized solo pianist, chamber music performer, and conductor?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "soprano_name": {
+      "type": "string",
+      "description": "The name of the soprano."
+    },
+    "soprano_nationality": {
+      "type": "string",
+      "description": "The nationality of the soprano."
+    },
+    "collaborator_info": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the collaborating musician."
+        },
+        "primary_role": {
+          "type": "string",
+          "description": "The primary role of the collaborator as a conductor."
+        },
+        "additional_roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other musical roles held by the collaborator."
+        },
+        "recognition": {
+          "type": "string",
+          "description": "How the collaborator is recognized internationally."
+        }
+      },
+      "required": [
+        "name",
+        "primary_role",
+        "additional_roles",
+        "recognition"
+      ],
+      "additionalProperties": false
+    },
+    "performance_summary": {
+      "type": "string",
+      "description": "A summary of the types and locations of performances where the soprano and conductor collaborated."
+    }
+  },
+  "required": [
+    "soprano_name",
+    "soprano_nationality",
+    "collaborator_info",
+    "performance_summary"
+  ],
+  "additionalProperties": false
+}

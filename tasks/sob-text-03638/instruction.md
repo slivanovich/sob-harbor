@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Non-Stop (film): Non-Stop is a 2014 American mystery action thriller film directed by Jaume Collet-Serra and starring Liam Neeson, Julianne Moore, Michelle Dockery, Lupita Nyong'o, and Scoot McNairy.  An international co-production among France, the United States, and the United Kingdom, it was the first film from Silver Pictures since "Weird Science", and its first film to be distributed by Universal Pictures since the end of Universal's deal with Warner Bros..  The film received mixed to positive reviews from critics and was a box office success.
+
+Mad City: Burn the Witch: "Mad City: Burn the Witch" is the second episode of the third season, and 46th episode overall from the Fox series "Gotham".  The episode was written by executive producer Ken Woodruff and directed by Danny Cannon.  It was first broadcast on September 26, 2016.  In the episode, Bruce comes face to face with the council that wanted him dead.  Gordon teams up with Valerie Vale to find Fish Mooney, who is going on a rampage to find the place where Dr. Hugo Strange is held.  Meanwhile, Ivy Pepper undergoes into a physical change after the contact with Indian Hills' monster.  The episode marks the introduction of Maggie Geha to the series and is credited as a main cast member.
+
+Phoenix (1998 film): Phoenix is a 1998 American crime film directed by British director Danny Cannon and starring Ray Liotta.  Liotta plays a cop whose gambling debt leaves him indebted to the underworld and desperate to find a way out without compromising his principles.
+
+Sex and Breakfast: Sex and Breakfast is a 2007 independent dark comedy film starring Macaulay Culkin, Eliza Dushku, Alexis Dziena and Kuno Becker.  Shooting took place in September 2006.  The film opened in Los Angeles November 30, 2007, and was released on DVD on January 22, 2008 by First Look Pictures.  The film was directed by first-time director Miles Brandman.
+
+Goal! (film series): The "Goal!"  trilogy is a series of football films directed by Danny Cannon, Jaume Collet-Serra and Andrew Morahan.  The first film, "Goal! ", was released in 2005, and the second film, "", was released in 2007.  The third and final part, "", was released in 2009.
+
+Goal! (film): Goal!  (also known as Goal!  The Dream Begins in the United States) is a 2006 sports drama film directed by Danny Cannon and starring Kuno Becker as Santiago Muñez, a young man with a rough background who is offered the chance to trial with one of England's top association football clubs.  The film was produced by Mike Jefferies, Matt Barrelle, and Mark Huffam and distributed by Buena Vista Pictures.  It was made with full co-operation from FIFA, which is one of the reasons why actual teams and players are used throughout the film.  The $50m deal that was struck between the producers and Adidas was, at the time - "and still is" - the biggest ever between a corporate brand and a film production.
+
+Unknown (2011 film): Unknown is a 2011 British-German-French psychological thriller action film directed by Jaume Collet-Serra, starring Liam Neeson, Diane Kruger, January Jones, Aidan Quinn, Bruno Ganz, and Frank Langella.  The film is based on the 2003 French novel published in English as "Out of My Head", by Didier Van Cauwelaert.
+
+Panic 5 Bravo: Panic 5 Bravo is an action-thriller film directed by Kuno Becker about American paramedics that become trapped on the Mexican side of the border and terrorized by a violent psychopath.  It was released in the U.S. by Pantelion Films.
+
+Spoken Word (film): Spoken Word is a 2009 drama film, directed by Victor Nuñez.  It stars Kuno Becker, Ruben Blades, Miguel Sandoval and Persia White.
+
+The Shallows (film): The Shallows is a 2016 American survival thriller film directed by Jaume Collet-Serra, written by Anthony Jaswinski and starring Blake Lively.  In the film, a surfer gets stranded 200 yard from shore, and must use her wits and determination to survive a great white shark attack.  Principal photography began in October 2015 in New South Wales and Queensland, Australia.
+
+Question: What is a 2006 sports drama film directed by Danny Cannon and starring Kuno Becker as Santiago Muñez that is third in a serries, and the second in the series isfootball films directed by Danny Cannon, Jaume Collet-Serra and Andrew Morahan? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the film was released."
+    },
+    "genre": {
+      "type": "string",
+      "description": "The genre of the film."
+    },
+    "director": {
+      "type": "string",
+      "description": "The primary director of the film."
+    },
+    "main_actor": {
+      "type": "string",
+      "description": "The main actor starring in the film."
+    },
+    "character_name": {
+      "type": "string",
+      "description": "The name of the character played by the main actor."
+    },
+    "is_part_of_trilogy": {
+      "type": "boolean",
+      "description": "Indicates if the film is part of a trilogy."
+    },
+    "trilogy_name": {
+      "type": "string",
+      "description": "The name of the film trilogy."
+    },
+    "trilogy_directors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of directors involved in the film trilogy."
+    }
+  },
+  "required": [
+    "film_title",
+    "release_year",
+    "genre",
+    "director",
+    "main_actor",
+    "character_name",
+    "is_part_of_trilogy",
+    "trilogy_name",
+    "trilogy_directors"
+  ],
+  "additionalProperties": false
+}

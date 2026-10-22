@@ -1,0 +1,16 @@
+{
+  "film_details": {
+    "title": "Prince Vladimir",
+    "release_year": 2006,
+    "genre": "traditionally-animated feature film"
+  },
+  "villain_character": {
+    "name": "Kurya",
+    "title_or_role": "Pecheneg prince and khan",
+    "ethnicity_or_group": "Pecheneg"
+  },
+  "ally_of_villain": {
+    "name": "Svyatoslav I of Kiev",
+    "alliance_purpose": "campaigns in the Balkans"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "actor_name": "Vincent Gardenia",
+  "award_category": "Best Supporting Actor",
+  "nomination_sequence": 2,
+  "film_details": {
+    "title": "Moonstruck",
+    "release_year": 1987,
+    "director_name": "Norman Jewison"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "question_entities": [
+    "Hypocalymma",
+    "Viguiera"
+  ],
+  "entity_details": [
+    {
+      "entity_name": "Hypocalymma",
+      "is_described_as_shrub": true,
+      "other_growth_forms": [],
+      "is_exclusively_shrub": true
+    },
+    {
+      "entity_name": "Viguiera",
+      "is_described_as_shrub": true,
+      "other_growth_forms": [
+        "herbs"
+      ],
+      "is_exclusively_shrub": false
+    }
+  ],
+  "are_both_exclusively_shrubs": false,
+  "final_answer": false
+}

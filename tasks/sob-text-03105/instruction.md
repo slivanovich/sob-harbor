@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Legend (2014 film): Legend is a 2014 Telugu action drama film produced by Ram Achanta, Gopichand Achanta and Anil Sunkara under 14 Reels Entertainment and Sai Korrapati was presented the film on Varahi Chalana Chitram directed by Boyapati Srinu.  Starred Nandamuri Balakrishna, worked for the second time with Boyapati Srinu after "Simha", Jagapathi Babu first time in negative shade.  alongside Radhika Apte, Sonal Chauhan, in lead roles and music composed by Devi Sri Prasad.  Ram Prasad handled the cinematography.  The film released on 28 March 2014 worldwide.  Upon release, the film received positive reviews from critics.  The film recorded as "Blockbuster" at box office.
+
+Pune Station Bus Stand: Pune Station Bus Stand is one of the three major bus stands in city of Pune.  This stand is next to Pune Railway Station and so it is called Pune Station Bus Stand.  This stand connects Pune to Mumbai (Dadar) by AC buses.  This also connects Pune to Shirdi, Ahmednagar, Barshi, Thane, Mumbai (Borivali), Solapur, Kolhapur, Satara, Mahabaleshwar, Panvel etc. in Maharashtra.  Buses traveling from Pune to outside states operate from this bus stand.  This stand links Pune to Hyderabad in Telangana and Hubli in Karnataka which are outside Maharashtra.  Buses to Konkan also operate from this stand.  This stand has 8 platforms.  Pune International Airport is around 10 km from Pune Station Bus Stand.
+
+Radhika Apte: Radhika Apte (born 7 September 1985) is an Indian film and stage actress.  Hailing from Pune, Maharashtra, Apte began her acting career in theatre, working with the theatre troupe Aasakta in her home town, before venturing into films.  She made her feature film debut with a brief role in the Hindi fantasy "Vaah!  Life Ho Toh Aisi! " (2005).
+
+Maharashtra Sahitya Parishad: Maharashtra Sahitya Parishad is a literary institution situated in the West Indian state of Maharashtra for the purpose of the "furtherance of Marathi language and literature".  It was set up in Pune in 1906.  The Encyclopedia of Indian Literature considers it as Marathi's first representative literary body.  The "Parishad" arranges annual conferences runs "Maharashtra Sahitya Patrika" a Marathi quarterly, provides a reference library, conducts qualifying examinations in Marathi language and literature and classes for non-Marathi speakers in Pune.  It has undertaken the publishing a "History of Marathi literature".  It has constituted various awards in the field of literature.  The "Parishad" according to Deshpande lead in the demand for the formation of a separate linguistic state - Maharashtra.
+
+Pune Suburban Railway: Pune Suburban Railway, also known as Pune Suburban Service or Pune Local Railway, is a suburban rail system connecting Pune to its suburbs and neighboring villages in Pune District, Maharashtra.  It is operated by Central Railway (CR).  Pune's suburban railway operates on two routes, i.e. from Pune Junction to Lonavla and from Pune Junction to Talegaon.  There are 5 trains which operate on Pune Junction - Talegaon route while 18 trains operate on Pune Junction - Lonavla route.
+
+Pune - Gorakhpur Express: Gorakhpur Pune Express is a weekly mail/express train of the Indian Railways, running between Pune Junction, the important city of Maharashtra and Gorakhpur Junction, the prominent city of Uttar Pradesh.  Gorakhpur Pune Express shares its rake with Gyan Ganga Express.  11037 Gorakhpur Pune Express leaves Pune Junction on Thursday at 16:15.  11038 Gorakhpur Pune Express leaves Gorakhpur Junction on Saturday at 15:30.  Gorakhpur Pune Express consists of 23 coaches - one AC-II coach, two AC-III coaches, 13 sleeper class coaches, one pantry coach, four general (unreserved) coaches and two SLR.
+
+Shivajinagar, Pune: Before 1750, Shivajinagar was known as "Bhambvade" later British changed it to "Bhamburde".  This village is traditionally owned by Bahirat-Patil (बहिरट-पाटील).  During 1717 due to some financial reasons Bahirat Patil sold their half Patilki to Shirole.  Shivajinagar is an area in the heart of Pune city.  This is the most important area of the city as the district court (Pune), Pune Municipal Corporation, College of Engineering (Pune), Agricultural College (Pune), Shivaji preparatory military school etc. are located in this area.  The bus stand at Shivajinagar connects the city to destinations in the state of Maharashtra.  Shivajinagar Railway Station is an important station for the suburban railway traffic of Pune.  Resorts like the Pride Hotel and Ashish Plaza are located in this area.  Ferguson College, Deccan Education Society, Marathwada Mitramandal's College'sare well known colleges in Pune city and are also located in this area.  Shivajinagar is well connected to the city by local PMPML buses.  This area marks the origin of Shivaji road which links this region to Swargate via Shaniwarwada and JM road & FC road which link to Deccan Gymkhana.  This area also has roads like the Ambedkar road (University road) which links Pune Railway Station area to Pune University and Aundh via Shivajinagar and The Mumbai - Pune old hnational highway begins from SHivajinagar which links Pune Railway Station area via Shivajinagar, Khadki, Pimpri, Chinchwad, and Nigdi and Dehu Road.
+
+Pune Police: Pune City police department is the law enforcement agency with jurisdiction over 790 km comprising Pune and Pimpri Chinchwad cities in Maharashtra.  The city police is division of Maharashtra Police, i.e state police department of Maharashtra.  The current Pune commissionerate came into existence on 1 July 1965.  Pune Police Department operates from 31 police stations.  It also has the responsibility of traffic policing the city roads.
+
+Balwant Moreshwar Purandare: Balwant Moreshwar Purandare (born July 29, 1922) Pune), popularly known as Babasaheb Purandare, was born on Nag Panchami, is a writer and theatre personality from Maharashtra, India.  His works are mostly based on the events related to the life of Shivaji, the 17th-century founder of the Maratha Empire; as a result he is termed as "Shiv-Shahir" ("Shivaji's bard").  He is mostly known for his popular play on Shivaji, "Jaanta Raja" which was popular not only in Maharashtra but also in Andhra Pradesh and Goa.  Purandare has also studied the history of the Peshwas of Pune.  He is also known for his significant contribution along with Madhav Deshpande & Madhav Mehere as senior party leaders in the early-1970s of Shiv Sena along with Bal Thackeray .  In 2015, he was awarded with Maharashtra Bhushan Award, Maharashtra's highest civilian award.  But controversies are in the air that he should not be awarded due to his obligatory remarks in his novels.
+
+Brihan Maharashtra College of Commerce: Brihan Maharashtra College of Commerce is a college affiliated to Savitribai Phule Pune University(formerly Pune University).  The College was established in 1943, in Pune by the Deccan Education Society.  Chandrashekhar Agashe, the Managing Agent of the Brihan Maharashtra Sugar Syndicate Ltd., was instrumental in getting a donation of Rs 2,00,000/- for the college from the Syndicate, hence the name Brihan Maharashtra College of Commerce.
+
+Question: Legend co-starred which actress from Pune, Maharashtra?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "film_release_year": {
+      "type": "integer",
+      "description": "The release year of the film."
+    },
+    "actress_name": {
+      "type": "string",
+      "description": "The name of the actress who co-starred in the film."
+    },
+    "actress_origin_city": {
+      "type": "string",
+      "description": "The city the actress hails from."
+    },
+    "actress_origin_state": {
+      "type": "string",
+      "description": "The state the actress hails from."
+    }
+  },
+  "required": [
+    "film_title",
+    "film_release_year",
+    "actress_name",
+    "actress_origin_city",
+    "actress_origin_state"
+  ],
+  "additionalProperties": false
+}

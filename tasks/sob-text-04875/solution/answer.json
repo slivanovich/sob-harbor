@@ -1,0 +1,14 @@
+{
+  "documentaries_evaluated": [
+    {
+      "title": "Young, Jewish, and Left",
+      "mentions_gender_roles": false
+    },
+    {
+      "title": "Transparent",
+      "mentions_gender_roles": false
+    }
+  ],
+  "both_documentaries_discuss_gender_roles": false,
+  "conclusion_reason": "The descriptions for 'Young, Jewish, and Left' and 'Transparent' do not explicitly mention that either documentary discusses gender roles."
+}

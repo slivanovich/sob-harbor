@@ -1,0 +1,27 @@
+{
+  "beer_type_name": "Trappist beer",
+  "naming_convention_term": "dubbel",
+  "number_of_monasteries_brewing": 11,
+  "monastery_locations": [
+    {
+      "country": "Belgium",
+      "count": 6
+    },
+    {
+      "country": "Netherlands",
+      "count": 2
+    },
+    {
+      "country": "Austria",
+      "count": 1
+    },
+    {
+      "country": "Italy",
+      "count": 1
+    },
+    {
+      "country": "United States",
+      "count": 1
+    }
+  ]
+}

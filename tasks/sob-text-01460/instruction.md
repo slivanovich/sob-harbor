@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Hypervisor: A hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines.  A computer on which a hypervisor runs one or more virtual machines is called a "host machine", and each virtual machine is called a "guest machine".  The hypervisor presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems.  Multiple instances of a variety of operating systems may share the virtualized hardware resources: for example, Linux, Windows, and macOS instances can all run on a single physical x86 machine.  This contrasts with operating-system-level virtualization, where all instances (usually called "containers") must share a single kernel, though the guest operating systems can differ in user space, such as different Linux distributions with the same kernel.
+
+Chris Roberts (game developer): Chris Roberts (born May 27, 1968) is an American video game designer, programmer, film producer and film director.  He created the "Wing Commander" series while at Origin Systems and is now working on the crowdfunded space simulator "Star Citizen".
+
+Usage share of desktop operating systems: The usage share of desktop operating systems is the percentage of the operating systems (OS) used in computers (approximately market share) with so-called (retronym) desktop operating system, that also run on e.g. laptops. Originally the only computers running those operating systems, where desktop computers, while with the introduction of so-called new class of mobile operating systems, desktop got to be the part of the name of the former class of OSes.  The computers running these OSes have the desktop metaphor style of GUI, unlike the mobile OSes.  See also usage share of operating systems for breakdown of the share of desktop, mobile (and other styles of) operating systems, separately, and share of those all operating systems as part of across classes.
+
+MS-DOS: MS-DOS ( ; acronym for "Microsoft Disk Operating System") is a discontinued operating system for x86-based personal computers mostly developed by Microsoft.  Collectively, MS-DOS, its rebranding as IBM PC DOS, and some operating systems attempting to be compatible with MS-DOS, are sometimes referred to as "DOS" (which is also the generic acronym for disk operating system).  MS-DOS was the main operating system for IBM PC compatible personal computers during the 1980s and the early 1990s, when it was gradually superseded by operating systems offering a graphical user interface (GUI), in various generations of the graphical Microsoft Windows operating system.
+
+Macintosh operating systems: The family of Macintosh operating systems developed by Apple Inc. includes the graphical user interface-based operating systems it has designed for use with its Macintosh series of personal computers since 1984, as well as the related system software it once created for compatible third-party systems.
+
+Nomad (video game): Project Nomad is a 1993 computer game developed by Intense!  Interactive and Papyrus Design Group, Inc. and published by GameTek.  It is a cross between a simple space simulator, a trading game and an adventure.  It has only been released for PC DOS operating systems.  It works properly both under Windows XP and DosBox.
+
+Driver wrapper: A driver wrapper is software that functions as an adapter between an operating system and a driver, such as a device driver, that was not designed for that operating system.  It can enable the use of devices for which no drivers for the particular operating system are available.  In particular, as of 2010 Microsoft Windows is the dominant family of operating systems for IBM PC compatible computers, and many devices are supplied with drivers for Windows but not other operating systems.
+
+Star Citizen: Star Citizen is an upcoming massively multiplayer, space trading and combat video game for Microsoft Windows and Linux.  The development includes a single-player campaign titled "Squadron 42".
+
+Comparison of operating systems: These tables provide a comparison of operating systems, of computer devices, as listing general and technical information for a number of widely used and currently available PC or handheld (including smartphone and tablet computer) operating systems.  The article "Usage share of operating systems" provides a broader, and more general, comparison of operating systems that includes servers, mainframes and supercomputers.
+
+Microsoft Space Simulator: Microsoft Space Simulator is a space flight simulator program, based on Microsoft Flight Simulator for MS-DOS.  It was one of the first general-purpose space flight simulators and it incorporated concepts from astrodynamics and celestial mechanics.
+
+Question: On what operating systems the crowdfunded space simulator that Chris Roberts created is compatible with?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "game_title": {
+      "type": "string",
+      "description": "The title of the crowdfunded space simulator."
+    },
+    "game_genre": {
+      "type": "string",
+      "description": "The genre of the game."
+    },
+    "developer_name": {
+      "type": "string",
+      "description": "The name of the person who created the game."
+    },
+    "compatible_operating_systems": {
+      "type": "array",
+      "description": "A list of operating systems the game is compatible with.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "game_title",
+    "game_genre",
+    "developer_name",
+    "compatible_operating_systems"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "television_special": {
+    "title": "A Man and His Music + Ella + Jobim",
+    "year": 1967
+  },
+  "featured_performers": {
+    "singers": [
+      "Frank Sinatra",
+      "Ella Fitzgerald",
+      "Antonio Carlos Jobim"
+    ],
+    "orchestra_leader": "Nelson Riddle"
+  },
+  "answer": "Nelson Riddle"
+}

@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "71252511ead59f02b0347f17f0ddac1e8c9688d3ef8ad861938dbe4c2c266cf3",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8510405542992a431d1ac7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Donald Trump",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "One Wells Fargo Center: One Wells Fargo Center is a skyscraper in Charlotte, North Carolina.  It is the headquarters for Wells Fargo's east coast division.  At 588 ft tall and 42 stories, it is the fourth tallest building in Charlotte.  When it was opened on September 14, 1988, it was the tallest building in North Carolina.  In 1992, One Wells Fargo Center was surpassed by the Bank of America Corporate Center, and again in 2002 by Hearst Tower, another Bank of America building.  It is considered Charlotte's first postmodern high-rise.\n\nWells Fargo: Wells Fargo & Company is an American international banking and financial services holding company headquartered in San Francisco, California, with \"hubquarters\" throughout the country.  It is the world's second-largest bank by market capitalization and the third largest bank in the U.S. by assets.  In July 2015, Wells Fargo became the world's largest bank by market capitalization, edging past ICBC, before slipping behind JP Morgan Chase in September 2016, in the wake of a scandal involving the creation of over 2 million fake bank accounts by Wells Fargo employees.  Wells Fargo surpassed Citigroup Inc. to become the third-largest U.S. bank by assets at the end of 2015.  Wells Fargo is the second-largest bank in deposits, home mortgage servicing, and debit cards.  The firm's primary U.S. operating subsidiary is national bank Wells Fargo Bank, N.A., which designates its main office as Sioux Falls, South Dakota.\n\nSoutheast Financial Center: Southeast Financial Center is a two-acre development in Miami, Florida, United States.  It consists of a 765 ft tall office skyscraper and its 15-story parking garage.  It was previously known as the Southeast Financial Center (1984–1992), the First Union Financial Center (1992–2003), and the Wachovia Financial Center (2003-2011).  In 2011, it retook its old name of Southeast Financial Center as Wachovia became Wells Fargo and moved into its new headquarters, the nearby Wells Fargo Center building.\n\nKhizr and Ghazala Khan: Khizr Muazzam Khan (born 1950) and Ghazala Khan (born 1951) are the Pakistani American parents of United States Army Captain Humayun Khan, who was killed in 2004 during the Iraq War.  The couple received international attention following a speech at the 2016 Democratic National Convention that criticized Republican presidential candidate Donald Trump.\n\n2016 Democratic National Convention: The 2016 Democratic National Convention was a presidential nominating convention, held at the Wells Fargo Center in Philadelphia, Pennsylvania, from July 25 through to July 28, 2016.  The convention gathered delegates of the Democratic Party, the majority of them elected through a preceding series of primaries and caucuses, to nominate a candidate for president and vice president in the 2016 United States presidential election.  Former U.S. Secretary of State, Hillary Clinton, was chosen as the party's nominee for president by a 59.67% majority of delegates present at the convention roll call, defeating primary rival Senator Bernie Sanders, who received 39.16% of votes from delegates, and becoming the first female candidate to be formally nominated for presidential by a major political party in the United States.  Her running mate, Senator Tim Kaine from Virginia, was confirmed by delegates as the party's nominee for vice president by acclamation.\n\nWells Fargo Center (Tampa): Wells Fargo Center, formerly the Wachovia Center, is a 311 ft high rise in Tampa, Florida, U.S.A., anchored by Wells Fargo & Company, Phelps Dunbar and UBS.  It was completed in 1985 and has 22 floors.  Under new ownership in 2013, the building is undergoing a renovation of the fitness center, parking garage and common areas including the restrooms and corridors.  The building received Gold LEED certification in 2010.  It was originally known as First Union Plaza until First Union Corporation completed its merger into Wachovia in 1993, then that merged into Wells Fargo in 2008.  It is the 13th tallest building in Tampa.\n\nWells Fargo Building (Augusta): The Wells Fargo Building,formerly known as the Wells Fargo Bank Center, is a commercial and financial skyscraper in Augusta, Georgia, in the United States.  After its completion, the building was the tallest building in Augusta from 1967 to 1976, when the Lamar Building surpassed it due to the completion of the penthouse.  Today, it is the third tallest building in the city.  The building's exterior surface is made completely in aluminum steel glass.  At the time of its completion, the building was named the Georgia Railroad Bank & Trust.  In 1989, the building's name was changed to the Wachovia Bank Center, making it the official headquarters of Wachovia in the eastern part of Georgia and the Central Savannah River Area.  In 2008, the building's name was changed again to the Wells Fargo Building.  It is now the official headquarters of Wells Fargo in the Augusta region.\n\nWachovia Tower (Baltimore): The Wells Fargo Tower, formerly known as the First Union Signet Tower, Wachovia Tower, and Union Trust Building, is a commercial high-rise in Baltimore, Maryland.  The building rises 24 floors above street level and is 330 ft in height; it is tied with Charles Center South as the 17th-tallest building in the city.  The structure was completed in 1985.  The Wells Fargo Tower was developed by the Dallas-based Trammell Crow Company, and is currently owned by the Wells Fargo and Company.  The structure is an example of modern architecture, and has a glass, steel and concrete façade.  The Wachovia Tower rises from the site formerly occupied by the Calvert Building and 7-9 Saint Paul Street.  The building, formerly housing offices for Wachovia, is now home to the regional office of Wells Fargo and Company.\n\n2000 Republican National Convention: The 2000 National Convention of the Republican Party of the United States convened at the First Union Center (now the Wells Fargo Center) in Philadelphia, Pennsylvania, from July 31 to August 3, 2000.  The 2066 delegates assembled at the convention nominated Texas Governor George W. Bush for President and former U.S. Secretary of Defense Richard B. \"Dick\" Cheney for Vice President. \n\nList of Wells Fargo presidents: The List of Wells Fargo presidents includes those persons who have served as President of Wells Fargo since 1852.  It includes the presidents of the express mail company from 1852 to 1918 and of the Wells Fargo Bank, which was separated from the express company in 1905 and merged with the Nevada National Bank to form the Wells Fargo Nevada National Bank - the lineal ancestor of the present Wells Fargo Bank.",
+    "question": "There is a famous couple that criticized who at the convention held in the Wells Fargo Center in Philadelphia, Pennsylvania?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "criticized_person": {
+          "type": "string",
+          "description": "The name of the person who was criticized."
+        },
+        "criticizing_couple": {
+          "type": "object",
+          "properties": {
+            "first_person_name": {
+              "type": "string",
+              "description": "The name of the first person in the couple."
+            },
+            "second_person_name": {
+              "type": "string",
+              "description": "The name of the second person in the couple."
+            }
+          },
+          "required": [
+            "first_person_name",
+            "second_person_name"
+          ],
+          "additionalProperties": false
+        },
+        "event_details": {
+          "type": "object",
+          "properties": {
+            "convention_name": {
+              "type": "string",
+              "description": "The name of the convention where the criticism occurred."
+            },
+            "location": {
+              "type": "string",
+              "description": "The city and state where the convention was held."
+            },
+            "venue": {
+              "type": "string",
+              "description": "The specific venue where the convention was held."
+            },
+            "year": {
+              "type": "integer",
+              "description": "The year the convention took place."
+            }
+          },
+          "required": [
+            "convention_name",
+            "location",
+            "venue",
+            "year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "criticized_person",
+        "criticizing_couple",
+        "event_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "criticized_person": "Donald Trump",
+      "criticizing_couple": {
+        "first_person_name": "Khizr Muazzam Khan",
+        "second_person_name": "Ghazala Khan"
+      },
+      "event_details": {
+        "convention_name": "2016 Democratic National Convention",
+        "location": "Philadelphia, Pennsylvania",
+        "venue": "Wells Fargo Center",
+        "year": 2016
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

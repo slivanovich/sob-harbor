@@ -1,0 +1,13 @@
+{
+  "superhero_name": "Moon Knight",
+  "superhero_publisher": "Marvel Comics",
+  "superhero_creators": [
+    "Doug Moench",
+    "Don Perlin"
+  ],
+  "enemy_details": {
+    "name": "Black Spectre",
+    "type": "supervillain",
+    "relationship": "greatest enemy"
+  }
+}

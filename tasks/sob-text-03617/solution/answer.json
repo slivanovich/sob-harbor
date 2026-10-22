@@ -1,0 +1,10 @@
+{
+  "episode_title": "The Variable",
+  "series_name": "Lost",
+  "character_chased": {
+    "name": "Juliet Burke",
+    "actor_name": "Elizabeth Mitchell",
+    "role_title": "Dr. Juliet Burke"
+  },
+  "chasing_entity": "Dharma Initiative"
+}

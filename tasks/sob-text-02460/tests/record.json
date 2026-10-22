@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "b2876117b0bc5aa25613364de7344c61ef40b146760ddbdac32c648e7dcc183f",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7904a555429974737f7943",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Gotti",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "List of female movie actors by name: M: This is an alphabetical list of notable female movie actors with a last name that begins with the letter M.\n\nList of female movie actors by name: L: This is an alphabetical list of notable female movie actors with a last name that begins with the letter L.\n\nCreature from the Black Lagoon (pinball): Creature from the Black Lagoon is a pinball machine designed by John Trudeau (\"Dr. Flash\") and released by Midway (under the \"Bally\" brand name).  It is loosely based on the movie of the same name.  The game's theme is 1950's drive-in theater.  The pinball machine was licensed from Universal Studios by Bally so that the backglass artwork, the cabinet artwork, and the creature looked like the original movie actors and monsters.\n\nList of female movie actors by name: T–V: This is an alphabetical list of notable female movie actors with a last name that begins with the letter T, U, or V.\n\nArmand Assante: Armand Anthony Assante Jr. (born October 4, 1949) is an American actor.  He is noted for an Emmy Award-winning role as mobster John Gotti in the 1996 HBO miniseries \"Gotti\".\n\nList of female movie actors by name: P–Q: This is an alphabetical list of notable female movie actors with a last name that begins with the letter P or Q.\n\nList of female movie actors by name: S: This is an alphabetical list of notable female movie actors with a last name that begins with the letter S.\n\nThe Hunley: The Hunley is a 1999 television movie directed by John Gray and starring Armand Assante, Donald Sutherland, Alex Jennings, Michael Dolan and Christopher Bauer.  The film is based on the true story of the \"H. L. Hunley\" submarine and the Action of 17 February 1864.\n\nList of female movie actors by name: R: This is an alphabetical list of notable female movie actors with a last name that begins with the letter R.\n\nList of female movie actors by name: N–O: This is an alphabetical list of notable female movie actors with a last name that begins with the letter N or O.",
+    "question": "What was the name of the TV series that one of the Hunley movie actors won an Emmy for?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor who won the Emmy."
+        },
+        "movie_title": {
+          "type": "string",
+          "description": "The title of the movie the actor was in."
+        },
+        "award_details": {
+          "type": "object",
+          "properties": {
+            "award_name": {
+              "type": "string",
+              "description": "The name of the award won."
+            },
+            "series_name": {
+              "type": "string",
+              "description": "The name of the TV series or miniseries for which the award was won."
+            },
+            "series_type": {
+              "type": "string",
+              "description": "The type of the series (e.g., miniseries)."
+            },
+            "award_year": {
+              "type": "integer",
+              "description": "The year the award-winning series was released or the award was given."
+            },
+            "role_description": {
+              "type": "string",
+              "description": "Description of the role for which the award was won."
+            }
+          },
+          "required": [
+            "award_name",
+            "series_name",
+            "series_type",
+            "award_year",
+            "role_description"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "actor_name",
+        "movie_title",
+        "award_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Armand Assante",
+      "movie_title": "The Hunley",
+      "award_details": {
+        "award_name": "Emmy Award",
+        "series_name": "Gotti",
+        "series_type": "HBO miniseries",
+        "award_year": 1996,
+        "role_description": "mobster John Gotti"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

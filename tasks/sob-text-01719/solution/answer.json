@@ -1,0 +1,15 @@
+{
+  "entity_name": "Edison",
+  "entity_type": "township",
+  "location_details": {
+    "county": "Middlesex County",
+    "state": "New Jersey",
+    "country": "United States"
+  },
+  "related_businesses": [
+    {
+      "business_name": "Kam Man Food",
+      "business_type": "Chinese supermarket chain"
+    }
+  ]
+}

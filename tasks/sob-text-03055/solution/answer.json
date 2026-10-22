@@ -1,0 +1,18 @@
+{
+  "film_titles": [
+    "Underdog",
+    "Monkey Kingdom"
+  ],
+  "film_details": [
+    {
+      "title": "Underdog",
+      "release_year": 2007
+    },
+    {
+      "title": "Monkey Kingdom",
+      "release_year": 2015
+    }
+  ],
+  "are_release_years_same": false,
+  "comparison_result": "Underdog was released in 2007 and Monkey Kingdom was released in 2015, so they were not released in the same year."
+}

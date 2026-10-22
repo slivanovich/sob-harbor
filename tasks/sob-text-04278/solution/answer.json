@@ -1,0 +1,23 @@
+{
+  "album_name": "Honky Tonk Heroes",
+  "artist": "Waylon Jennings",
+  "release_year": 1973,
+  "featured_song": {
+    "song_title": "We Had It All",
+    "original_album": "Honky Tonk Heroes",
+    "covered_by_artists": [
+      "Rita Coolidge",
+      "Dobie Gray",
+      "Susan Jacks",
+      "Willie Nelson",
+      "Dolly Parton",
+      "the Rolling Stones",
+      "Bob Dylan",
+      "Rod Stewart",
+      "Tina Turner",
+      "Conway Twitty",
+      "Ray Charles",
+      "Dottie West"
+    ]
+  }
+}

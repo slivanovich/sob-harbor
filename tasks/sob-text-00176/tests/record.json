@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "9b263c61eef53054dd381e30d8eb836f6526fe664cc5833d1c76e0e963cfbc9b",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7c727855429935c91b51b7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1,234",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Absarokee, Montana: Absarokee ( ) is a census-designated place (CDP) in Stillwater County, Montana, United States, approximately 14 mi south of Columbus on Highway 78.  It is named after the Crow Indians who formerly inhabited the land.  The population was 1,234 at the 2000 census.  The Stillwater Mine, operated by the Stillwater Mining Company, is located near Absarokee.\n\nPeloncillo Mountains (Hidalgo County): The Peloncillo Mountains of Hidalgo County, (Spanish language \"pelo\", hair, \"pelón\", hairless, bald; \"peloncillo\", Little Baldy), is a major 35 mi long mountain range southwest of New Mexico's Hidalgo County, and also part of the New Mexico Bootheel region.  The range continues to the northwest into Arizona as the Peloncillo Mountains of Cochise County, Arizona.  The extreme southwest corner of the range also lies in Arizona.  It is a linear range bordering the linear San Bernardino Valley of southeast Cochise County, Arizona.\n\nGranite Range (Washoe County): The Granite Range is a mountain range in Washoe County, Nevada west of the town of Gerlach and the lower Black Rock Desert playa.\n\nHighland Mountains: The Highland Mountains, highest point Table Mountain, el.  10223 ft , are a small mountain range southwest of Whitehall, Montana in Silver Bow and Madison County, Montana.\n\nGravelly Range: The Gravelly Range, highest peak Black Butte, el.  10542 ft , is a mountain range southwest of Cameron, Montana in Madison County, Montana.\n\nGranite Range (Elko County): The Granite Range is a mountain range in Elko County, Nevada.\n\nKomatke, Arizona: Komatke (O'odham: Komaḍk) is a census-designated place in Maricopa County, Arizona, United States.  The area currently comprising the CDP had a population of 821 at the 2010 census.  It is located within the Gila River Indian Community.  Its name refers to the Sierra Estrella mountain range.  Komatke is located at the base of the mountain range.\n\nGranite Range (Montana): The Granite Range, el.  11092 ft , is a mountain range southwest of Absarokee, Montana in Stillwater County, Montana.\n\nLewis and Clark Range: The Lewis and Clark Range, el.  7109 ft , is a small mountain range southwest of Seeley Lake, Montana in Powell County, Montana.\n\nYuna River: The Yuna River (Spanish: Río Yuna) is the second longest river in the Dominican Republic at 185.17 km in length.  It forms within the Cordillera Central mountain range southwest of the city of Bonao and passes through the fertile Cibao Valley.  The river from there turns north-northeast passing the city of Bonao along the way.  Southwest of Cotuí, the river reaches Hatillo Dam (Spanish: \"Presa de Hatillo\") before turning northeast then east as it reaches its mouth at the Samaná Bay in the northeast part of the Dominican Republic.  Like many rivers in the Dominican Republic, the name is derived from the Taíno language.",
+    "question": " The Granite Range is a mountain range southwest of a census-designated place with a population of what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "mountain_range_name": {
+          "type": "string",
+          "description": "The name of the mountain range."
+        },
+        "associated_cdp": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the census-designated place (CDP)."
+            },
+            "population": {
+              "type": "integer",
+              "description": "The population of the CDP."
+            },
+            "census_year": {
+              "type": "integer",
+              "description": "The year the population was recorded."
+            },
+            "county": {
+              "type": "string",
+              "description": "The county where the CDP is located."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the CDP is located."
+            }
+          },
+          "required": [
+            "name",
+            "population",
+            "census_year",
+            "county",
+            "state"
+          ],
+          "additionalProperties": false
+        },
+        "mountain_range_location_relative_to_cdp": {
+          "type": "string",
+          "description": "The geographical relationship of the mountain range to the CDP."
+        }
+      },
+      "required": [
+        "mountain_range_name",
+        "associated_cdp",
+        "mountain_range_location_relative_to_cdp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "mountain_range_name": "Granite Range",
+      "associated_cdp": {
+        "name": "Absarokee",
+        "population": 1234,
+        "census_year": 2000,
+        "county": "Stillwater County",
+        "state": "Montana"
+      },
+      "mountain_range_location_relative_to_cdp": "southwest"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

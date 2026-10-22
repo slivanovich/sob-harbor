@@ -1,0 +1,13 @@
+{
+  "film_title": "Yamanam",
+  "character_name": "Ambili",
+  "actress_name": "Archana",
+  "actress_details": {
+    "nationality": "Indian",
+    "known_for_industry": "South Indian film industry",
+    "dance_forms": [
+      "Kuchipudi",
+      "Kathak"
+    ]
+  }
+}

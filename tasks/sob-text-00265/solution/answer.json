@@ -1,0 +1,17 @@
+{
+  "network_name": "A&E",
+  "founding_year": 1984,
+  "ownership_structure": {
+    "type": "joint venture",
+    "owners": [
+      {
+        "name": "Hearst Corporation",
+        "stake_percentage": "50%"
+      },
+      {
+        "name": "Disney–ABC Television Group",
+        "stake_percentage": "50%"
+      }
+    ]
+  }
+}

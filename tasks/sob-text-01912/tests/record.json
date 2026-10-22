@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "ca99ae83b0488f9fe548e3ab3d7e2e3d7016ecb33afd435fac6792f6681ba78a",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8590c25542994c784ddb26",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Raoul Walsh",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Once Upon a Time in the West (disambiguation): Once Upon a Time in the West is a Western film starring Henry Fonda and Charles Bronson.\n\nJames Thurber: James Grover Thurber (December 8, 1894 – November 2, 1961) was an American cartoonist, author, humorist, journalist, playwright, and celebrated wit.  He was best known for his cartoons and short stories published mainly in \"The New Yorker\" magazine, such as \"The Catbird Seat,\" and collected in his numerous books.  He was one of the most popular humorists of his time, as he celebrated the comic frustrations and eccentricities of ordinary people.  He wrote the Broadway comedy \"The Male Animal\" in collaboration with his college friend Elliott Nugent; it was later adapted into a film starring Henry Fonda and Olivia de Havilland.  His short story \"The Secret Life of Walter Mitty\" has been adapted for film twice, once in 1947 and again in 2013.\n\nSpendthrift (film): Spendthrift is a 1936 American Paramount Pictures romance film directed by Raoul Walsh and starring Henry Fonda, Pat Paterson and Mary Brian.\n\nDavid Newell (actor, born 1905): David Newell was primarily known as an American character actor, whose acting career spanned from the very beginning of the sound film era through the middle of the 1950s.  He made his film debut in a featured role in \"The Hole in the Wall\", a 1929 film starring Edward G. Robinson and Claudette Colbert.  Early in his career he had many featured roles, in such films as: RKO's \"The Runaway Bride\" in 1929, starring Mary Astor; 1931's \"Ten Cents a Dance\", starring Barbara Stanwyck and directed by Lionel Barrymore; and \"White Heat\" in 1934.  He would occasionally receive a starring role, as in 1930's \"Just Like Heaven\", which co-starred Anita Louise.  However, by the mid-1930s he was being relegated to mostly smaller supporting roles.  Some of the more notable films he appeared in include: \"A Star is Born\" (1937), which stars Janet Gaynor and Fredric March; \"Blondie\" (1938); the Bette Davis vehicle, \"Dark Victory\" (1939); \"Day-Time Wife\" (1939), starring Tyrone Power and Linda Darnell; \"It's a Wonderful World\" (1939), with James Stewart and Claudette Colbert; \"Rings on Her Fingers\" (1942), starring Henry Fonda and Gene Tierney; the Danny Kaye and Dinah Shore film, \"Up in Arms\" (1944), which also stars Dana Andrews; 1947's \"Killer McCoy\" with Mickey Rooney, Brian Donlevy, and Ann Blyth; \"Homecoming\" (1948), starring Clark Gable, Lana Turner, and Anne Baxter; \"That Wonderful Urge\" (1949), starring Tyrone Power and Gene Tierney; \"David and Bathsheba\" (1951), starring Gregory Peck and Susan Hayward; and Cecil B. DeMille's 1952 blockbuster, \"The Greatest Show on Earth\".  During his 25-year acting career, he appeared in over 110 films.  His final appearance in film was in 1954's \"The Eddie Cantor Story\", in which he had a small supporting role.\n\nAdvise and Consent: Advise and Consent is a 1959 political novel by Allen Drury that explores the United States Senate confirmation of controversial Secretary of State nominee Robert Leffingwell, who was a member of the Communist Party.  The novel spent 102 weeks on \"The New York Times\" Best Seller list, won the Pulitzer Prize for Fiction in 1960 and was adapted into a successful 1962 film starring Henry Fonda.  It was followed by Drury's \"A Shade of Difference\" in 1962, and four additional sequels.\n\nStage Struck (1958 film): Stage Struck is a 1958 American drama film directed by Sidney Lumet, and stars Henry Fonda, Susan Strasberg and Christopher Plummer in his film debut.  It was based on the 1925 Paramount Pictures film of the same name.  The screenplay, by Augustus and Ruth Goetz, is based on the stage play \"Morning Glory\" by Zoë Akins, which also served as the basis for the 1933 film \"Morning Glory\" which starred Katharine Hepburn, Douglas Fairbanks, Jr. and Adolphe Menjou in corresponding roles.\n\nPeter Fonda: Peter Henry Fonda (born February 23, 1940) is an American actor.  He is the son of Henry Fonda, younger brother of Jane Fonda, and father of Bridget and Justin Fonda (by first wife Susan Brewer, stepdaughter of Noah Dietrich).  Fonda is an icon of the counterculture of the 1960s.\n\nThe Fugitive (1947 film): The Fugitive is a 1947 drama film starring Henry Fonda and directed by John Ford, based on the novel \"The Power and the Glory\" by Graham Greene.  The film was shot on location in Mexico, and utilised the skills of Mexican cinematographer Gabriel Figueroa.\n\nHenry Fonda: Henry Jaynes Fonda (May 16, 1905 – August 12, 1982) was an American film and stage actor with a career spanning five decades.\n\nThe Dirty Game: The Dirty Game (German: Spione unter sich , French: Guerre secrète , Italian: La guerra segreta ) is a 1965 anthology spy film starring Henry Fonda and Robert Ryan.",
+    "question": "Who was the director of Spendthrift an American Paramount Pictures romance film starring Henry Fonda who was an American film and stage actor?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "film_genre": {
+          "type": "string",
+          "description": "The genre of the film."
+        },
+        "film_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "director": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the film's director."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "main_actor": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the main actor mentioned in the question."
+            },
+            "profession": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "The professions of the main actor."
+            }
+          },
+          "required": [
+            "name",
+            "profession"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "film_title",
+        "film_genre",
+        "film_year",
+        "director",
+        "main_actor"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "Spendthrift",
+      "film_genre": "romance",
+      "film_year": 1936,
+      "director": {
+        "name": "Raoul Walsh"
+      },
+      "main_actor": {
+        "name": "Henry Fonda",
+        "profession": [
+          "film actor",
+          "stage actor"
+        ]
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

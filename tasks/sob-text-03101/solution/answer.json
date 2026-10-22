@@ -1,0 +1,12 @@
+{
+  "series_name": "South Park",
+  "preceding_episode": {
+    "title": "Black Friday",
+    "air_date": "2013-11-13"
+  },
+  "following_episode": {
+    "title": "A Song of Ass and Fire",
+    "air_date": "2013-11-20"
+  },
+  "is_part_of_story_arc": true
+}

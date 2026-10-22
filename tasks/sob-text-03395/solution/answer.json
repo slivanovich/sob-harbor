@@ -1,0 +1,11 @@
+{
+  "film_title": "Loser Takes All",
+  "film_year": 1956,
+  "director": "Ken Annakin",
+  "star_details": {
+    "star_name": "Glynis Johns",
+    "star_birthplace": "Pretoria, South Africa",
+    "star_origin": "Welsh"
+  },
+  "answer": "Pretoria, South Africa"
+}

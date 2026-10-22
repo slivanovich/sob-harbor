@@ -1,0 +1,10 @@
+{
+  "aircraft_name": "Heinkel He 111",
+  "designers": [
+    "Siegfried Günter",
+    "Walter Günter"
+  ],
+  "manufacturer": "Heinkel Flugzeugwerke",
+  "design_year": 1934,
+  "operating_unit": "Lehrgeschwader 1"
+}

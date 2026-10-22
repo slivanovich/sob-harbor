@@ -1,0 +1,11 @@
+{
+  "bowl_game_name": "Orange Bowl",
+  "stadium_info": {
+    "name": "Hard Rock Stadium",
+    "location": "Miami Gardens, Florida"
+  },
+  "ceo_info": {
+    "name": "Tom Garfinkel",
+    "title": "president and chief executive officer"
+  }
+}

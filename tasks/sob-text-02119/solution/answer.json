@@ -1,0 +1,25 @@
+{
+  "answer": true,
+  "individuals_involved": [
+    {
+      "name": "Manoel de Oliveira",
+      "roles": [
+        "film director",
+        "screenwriter"
+      ]
+    },
+    {
+      "name": "Donald Crisp",
+      "roles": [
+        "film actor",
+        "producer",
+        "director",
+        "screenwriter"
+      ]
+    }
+  ],
+  "similar_jobs_identified": [
+    "director",
+    "screenwriter"
+  ]
+}

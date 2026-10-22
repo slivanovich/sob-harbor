@@ -1,0 +1,14 @@
+{
+  "park_comparison": [
+    {
+      "park_name": "Guadarrama National Park",
+      "area_hectares": 34000
+    },
+    {
+      "park_name": "Atlantic Islands of Galicia National Park",
+      "area_hectares": 8400
+    }
+  ],
+  "larger_park_name": "Guadarrama National Park",
+  "unit_of_measurement": "hectares"
+}

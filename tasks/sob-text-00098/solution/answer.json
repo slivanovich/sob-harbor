@@ -1,0 +1,10 @@
+{
+  "fort_name": "South Channel Fort",
+  "location_details": {
+    "distance_from_town_km": 6,
+    "direction_from_town": "north-east",
+    "town_name": "Sorrento",
+    "port_name": "Port Phillip"
+  },
+  "port_location_description": "southern Port Phillip, Victoria, Australia"
+}

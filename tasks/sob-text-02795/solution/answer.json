@@ -1,0 +1,12 @@
+{
+  "person_a": {
+    "name": "Christina Booth",
+    "birth_year": 1965
+  },
+  "person_b": {
+    "name": "Pharrell Williams",
+    "birth_year": 1973
+  },
+  "older_person_name": "Christina Booth",
+  "age_difference_years": 8
+}

@@ -1,0 +1,14 @@
+{
+  "player": {
+    "name": "Gerald McCoy",
+    "position": "defensive tackle",
+    "college": "Oklahoma",
+    "all_american_honors": true
+  },
+  "team_season_details": {
+    "team_name": "Tampa Bay Buccaneers",
+    "season_year": 2010,
+    "season_achievement": "best turnaround in franchise history"
+  },
+  "final_answer": "Gerald McCoy"
+}

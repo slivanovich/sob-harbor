@@ -1,0 +1,16 @@
+{
+  "universities_compared": [
+    {
+      "name": "Cornell University",
+      "type": "private and statutory Ivy League research university",
+      "location": "Ithaca, New York"
+    },
+    {
+      "name": "University of Cincinnati",
+      "type": "comprehensive public research university",
+      "location": "Cincinnati, Ohio"
+    }
+  ],
+  "common_university_type": "research",
+  "number_of_universities": 2
+}

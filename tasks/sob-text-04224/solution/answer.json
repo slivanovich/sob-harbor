@@ -1,0 +1,14 @@
+{
+  "assistant_details": {
+    "name": "William Corcoran Eustis",
+    "rank": "captain",
+    "role": "personal assistant"
+  },
+  "general_details": {
+    "full_name": "John Joseph Pershing",
+    "nickname": "Black Jack",
+    "highest_rank": "General of the Armies",
+    "notable_role_ww1": "commander of the American Expeditionary Force (AEF)"
+  },
+  "war_context": "World War I"
+}

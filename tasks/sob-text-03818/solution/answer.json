@@ -1,0 +1,16 @@
+{
+  "is_both_alcoholic": true,
+  "beverages_details": [
+    {
+      "name": "Fuzzy navel",
+      "is_alcoholic": true,
+      "alcohol_description": "A fuzzy navel is a mixed drink made from peach schnapps and orange juice. The addition of another 1 or 1½ oz of vodka to the fuzzy navel creates a 'hairy navel', the more 'hair' referring to the increased strength of alcohol in the drink."
+    },
+    {
+      "name": "Pastis",
+      "is_alcoholic": true,
+      "alcohol_description": "Pastis is an anise-flavoured spirit and apéritif from France, typically containing from 40–45% ABV (alcohol by volume)."
+    }
+  ],
+  "conclusion_reasoning": "Both Fuzzy navel (containing peach schnapps and potentially vodka) and Pastis (an anise-flavoured spirit with 40-45% ABV) are described as alcoholic beverages in the context."
+}

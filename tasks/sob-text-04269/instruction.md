@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Curtain Call (Nina Sky song): "Curtain Call" is a song by the American hip-hop soul duo Nina Sky.  It was released as second single from their unreleased second studio album on August 12, 2008.  It features a guest appearance rapper Rick Ross.  In 2007, Nina Sky announced new album "The Musical" featuring Rick Ross.  The album was never released because of many issues with their record label Polo Grounds/J.  The second single from upcoming album was later announced to be "Curtain Call".  Although single was moderately successful, no music video was released.  Instead, duo filmed a music video for their following single "On Some Bullshit".
+
+Curtain Call (Aiden Grimshaw song): "Curtain Call" is a single by English singer-songwriter Aiden Grimshaw.  The song was written by Grimshaw, Jarrad Rogers and Steve Rushton.  It was released on 13 August 2012 via RCA Records.  It was released as the second single from Grimshaw's debut album "Misty Eye".  The song features vocals from Labrinth's sister ShezAr.
+
+Ti Voglio Qui: "Ti Voglio Qui" is the second single by Australian pop singer Tina Arena from her 1997 album "In Deep" and the Italian version of its hit lead single Burn.  As an alternate language version of a hit single, this release lacked substantial mainstream appeal and therefore failed to make any significant commercial or chart impact unlike its highly successful English counterpart.  Despite being released at the same time, the two songs are often credited as the first and second singles from the "In Deep" album.  It is credited as a single released from this album due to its connection to "Burn" and the two songs' simultaneous releases, despite being a non-album track.  This quickly made its limited CD Single a highly sought-after collector's item, as it was the only way to obtain this song until it was re-released on the limited edition 2CD version of the "Greatest Hits 1994-2004" album.  Although this version of the album is now out of print, the song can still be purchased from a number of Australian legal music download services.  A Spanish version of "Burn" was also recorded and released as a bonus track on the versions of the "In Deep" album released in a number of South American countries.
+
+List of awards and nominations received by 2NE1: This is a comprehensive list of the awards received by 2NE1, a girl group formed by YG Entertainment in South Korea.  Their first extended play, "2NE1" (2009), was received well and spawned the hits "Fire" and "I Don't Care", one of the biggest singles of 2009.  It earned 2NE1 many awards and nominations.  After initial success in 2009, the group released their first full-length album in 2010, "To Anyone". " Clap Your Hands", "Go Away", and "Can't Nobody" were used as promotional singles.  In 2011, they came back with the second EP, "2NE1" (2011), which earned 2NE1 many awards and nominations, including Album of the Year, and Song of the Year for the lead single "I Am the Best".  They released four singles in 2012 to 2013, including the hits "I Love You" and "Missing You", and released their first full-album in Japan.  They released their second full Korean album "Crush" in 2014 with the lead single "Come Back Home", and entered the Billboard 200 chart.  In January 2017, they released a farewell song called "Goodbye" for their fans after the announce of their disbandment.
+
+Wild (Jessie J song): "Wild" is a single by English singer-songwriter Jessie J and the lead single from her second studio album, "Alive" (2013).  The single released in the United Kingdom and Ireland features American rapper Big Sean and British MC Dizzee Rascal, while the single released in other countries such as Australia, the United States and the Netherlands only features Big Sean.  It was written by Jessica Cornish, Claude Kelly, Dylan Mills, Joshua Coleman and Sean Anderson and produced by Ammo.  The single was released as a download on 26 May 2013 in the United Kingdom.  it reached #38 in the UK year-end chart, selling more than 300,000 copies.  it also ended up at #71 in the Australian year-end chart, selling more than 150,000 copies.
+
+Curtain Call: The Hits: Curtain Call: The Hits is the first greatest hits compilation album by American rapper Eminem.  It was released on December 6, 2005, under Aftermath Entertainment, Shady Records, and Interscope Records.  The album collects Eminem's most popular singles, as well as four new songs, including a live version of "Stan", featuring English singer and songwriter Elton John from the 43rd Grammy Awards, plus new songs "Fack", "When I'm Gone" and "Shake That" featuring Nate Dogg.
+
+When I'm Gone (Eminem song): "When I'm Gone" is a song by American rapper Eminem from his first greatest hits compilation album "" (2005).  It was released on December 6, 2005, the same day as the album was released, as the lead single.
+
+Curtain Call (UK album): Curtain Call is a live album by UK recorded during one single night in Kawasaki, Japan.  The album was released in 2015 to coincide to the final concerts by the band, hence the title.  The track list consists of complete live performances of the two studio albums by the band, "UK" and "Danger Money", plus the two non-studio tracks present on the live album "Night After Night (UK album)".  The line-up is the same as their previous live album "Reunion – Live in Tokyo".
+
+Pyramid Song: "Pyramid Song" is a song by the English rock band Radiohead, released as the lead single from their fifth studio album "Amnesiac" (2001).  The song was their first single released in over three years, after none were taken from their previous studio album "Kid A" (2000).  It was issued as "Amnesiac"' s lead single in most parts of the world except in the United States, where "I Might Be Wrong" was the first radio-only single.
+
+Getcha Some: "Getcha Some" is a song co-written and recorded by American country music artist Toby Keith.  It was released in September 1998 as the lead single released from his album, "Greatest Hits Volume One".  It peaked at number 18 on the U.S. "Billboard" Hot Country Songs chart in the U.S. and number 22 on the Canadian "RPM" Country Tracks chart.  It also peaked at number 2 on the U.S. "Billboard" Bubbling Under Hot 100 chart.  This song is also included on his 2008 compilation album, 35 Biggest Hits.  It was written by Keith with Chuck Cannon.
+
+Question: In what year was the lead single released for Curtain Call: The Hits?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album."
+    },
+    "album_type": {
+      "type": "string",
+      "description": "The type of the album (e.g., greatest hits compilation)."
+    },
+    "lead_single_title": {
+      "type": "string",
+      "description": "The title of the lead single from the album."
+    },
+    "lead_single_release_year": {
+      "type": "integer",
+      "description": "The year the lead single was released."
+    }
+  },
+  "required": [
+    "album_title",
+    "album_type",
+    "lead_single_title",
+    "lead_single_release_year"
+  ],
+  "additionalProperties": false
+}

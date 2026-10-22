@@ -1,0 +1,21 @@
+{
+  "book_title": "Diary of a Wimpy Kid",
+  "author_details": {
+    "name": "Jeff Kinney",
+    "created_poptropica": true
+  },
+  "book_attributes": {
+    "genres": [
+      "satirical",
+      "realistic fiction",
+      "comedy"
+    ],
+    "target_audiences": [
+      "children",
+      "teenagers"
+    ],
+    "is_satirical": true,
+    "is_realistic_fiction": true,
+    "is_comedy": true
+  }
+}

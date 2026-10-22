@@ -1,0 +1,26 @@
+{
+  "entity_name": "Tan Hill",
+  "entity_type": "high point",
+  "main_definition": "a high point on the Pennine Way",
+  "geographical_context": {
+    "region": "Richmondshire district",
+    "county": "North Yorkshire",
+    "country": "England",
+    "specific_route": "Pennine Way",
+    "national_park_proximity": "close to the northern boundary of the Yorkshire Dales National Park"
+  },
+  "nearby_locations": {
+    "settlements": [
+      "Keld",
+      "Muker"
+    ],
+    "bordering_areas": [
+      "County Durham",
+      "Cumbria"
+    ]
+  },
+  "isolation_attributes": {
+    "nearest_town": "Kirkby Stephen",
+    "distance_to_nearest_town_miles": 11
+  }
+}

@@ -1,0 +1,68 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Tadeusz Sawicz: Tadeusz Władysław Sawicz (13 February 1914 – 19 October 2011) was a Polish World War II fighter pilot.  He served in the Polish Air Force, and after the fall of Poland, he served in the Polish and allied units in France and United Kingdom.  He was the commander of several air units, including the No. 315 Polish Fighter Squadron, 1st Polish Fighter Wing, 3rd Polish Fighter Wing, 131st (Polish) Fighter Wing and 133rd Fighter Wing.  He participated in the Battle of Britain and was ranked as the 82nd highest scoring Polish fighter pilot of the war.
+
+56th Fighter Wing: The 56th Fighter Wing is a fighter wing in the United States Air Force.  It is the Air Force’s only active-duty F-16 training wing.  The 56th graduates more than 400 General Dynamics F-16 Fighting Falcon pilots and 300 air control professionals annually.  The wing is also responsible for three additional squadrons under the 54th Fighter Group located at Holloman Air Force Base, New Mexico, where F-16 training is moving as the wing transitions to become the sole pilot training center for the Lockheed Martin F-35 Lightning II.
+
+Nazi concentration camps: Nazi Germany maintained concentration camps (German: "Konzentrationslager" , KZ or KL) throughout the territories it controlled before and during the Second World War.  The first Nazi camps were erected in Germany in March 1933 immediately after Hitler became Chancellor and his Nazi Party was given control of the police by Reich Interior Minister Wilhelm Frick and Prussian Acting Interior Minister Hermann Göring.  Used to hold and torture political opponents and union organizers, the camps initially held around 45,000 prisoners.
+
+Cape Cod Air Show &amp; Open House: The Cape Cod Airshow & Open House was an airshow held in August of every odd numbered year at Otis Air National Guard Base in Falmouth, Massachusetts.  It most recently was run in 2007 after a six-year hiatus.  The show in 2003 was canceled because of Operation Iraqi Freedom and the show in 2005 was canceled for unknown reasons.  The most recent show exhibited the 101st Air Refueling Wing, the 102nd Fighter Wing, the 103rd Fighter Wing, the 104th Fighter Wing, and various other aircraft from the United States and Canada.  The United States Air Force Thunderbirds performed as well.  The show was usually attended by several hundred thousand spectators.
+
+Interior minister of the Republic of Iran: Abdolreza Rahmani Fazli is the current Interior Minister.  His term will be up August 2015, Elections for a new interior minister can be voted in by the majority of people or chosen by the head of Parliament.  Due to the recent changes in the political spectrum and the way in which officials acquire political status Iran has become much more inclusive of the majority of people and allowing them to cast a vote.  This means that even if the selection of the new Interior minister is a closed door private selection the majority of the people can still choose to vote that person out in which a special election would be held.
+
+Anatoly Romanov: Anatoly Alexandrovich Romanov (Russian: Анатолий Александрович Романов ; born September 27, 1948, Mikhailovka, Belebeyevsky District, Bashkortostan) is a Russian Colonel-General, a former deputy interior minister - the commander of the Russian Interior Ministry and the Commander of the Joint Group of Federal Forces in Chechnya, Hero of the Russian Federation.  1995 - Deputy Minister of Internal Affairs of the Russian Federation - the commander of the Interior Troops of the Russian Interior Ministry.
+
+Hermann Göring: Hermann Wilhelm Göring (or Goering; ] ; 12 January 1893 – 15 October 1946) was a German political and military leader as well as one of the most powerful figures in the Nazi Party (NSDAP) that ruled Germany from 1933 to 1945.  A veteran World War I fighter pilot ace, he was a recipient of the "Pour le Mérite".  He was the last commander of "Jagdgeschwader" 1, the fighter wing once led by Manfred von Richthofen.
+
+Enabling Act of 1933: The Enabling Act (German: "Ermächtigungsgesetz ") was a 1933 Weimar Constitution amendment that gave the German Cabinet – in effect, Chancellor Adolf Hitler – the power to enact laws without the involvement of the Reichstag.  It passed in both the Reichstag and Reichsrat on 24 March 1933, and was signed by President Paul von Hindenburg later that day.  The act stated that it was to last four years unless renewed by the Reichstag, which occurred twice.  The Enabling Act gave Hitler plenary powers.  It followed on the heels of the Reichstag Fire Decree, which abolished most civil liberties and transferred state powers to the Reich government.  The combined effect of the two laws was to transform Hitler's government into a legal dictatorship.
+
+Hassan Al Alfi: Hassan Al Alfi was a police major, governor and interior minister of Egypt.  He served as interior minister from 1993 to 1997.  He resigned from office following the Luxor massacre.
+
+Ferenc Keresztes-Fischer: Ferenc Keresztes-Fischer (18 February 1881 – 3 March 1948) was a lawyer and a Hungarian politician.  He was an advisor of the Pécsi Takarékpénztár Rt. / Pécs Savings Bank Corp.  He was the prefect of Baranya County 1921–1931, and the prefect of Somogy County 1925–1931 and was appointed as Interior Minister of Hungary twice; between 1931–1935 and 1938–1944.  He controlled the police terror against both the left and right wing political movements.  In a secret directive he ordered the collection of Press articles. (?)  On 12 September 1938, he allowed the OMIKE to increase its activities.  During the Second World War he was an active supporter of the Regent, Admiral Miklós Horthy.  After the death of Pál Teleki (3 April 1941) Keresztes-Fischer became acting Prime Minister on that day.  One year later, On March 7, 1942, Bárdossy the prime minister was forced to resign suddenly by Regent Horthy and as Minister of the Interior, Ferenc-Keresztes was the interim Prime Minister until 9 March, when Miklós Kállay was appointed to this position.
+
+Question: The Prussian Acting Interior Minister that gave Hitler control of the German police was the last commander of what fighter wing?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the individual."
+    },
+    "role_in_nazi_germany": {
+      "type": "string",
+      "description": "The role held by the person in Nazi Germany."
+    },
+    "action_taken": {
+      "type": "string",
+      "description": "The specific action taken by the person related to Hitler's power."
+    },
+    "last_commanded_fighter_wing": {
+      "type": "string",
+      "description": "The name of the fighter wing the person last commanded."
+    },
+    "previous_commander_of_wing": {
+      "type": "string",
+      "description": "The name of the previous commander of that fighter wing."
+    }
+  },
+  "required": [
+    "person_name",
+    "role_in_nazi_germany",
+    "action_taken",
+    "last_commanded_fighter_wing"
+  ],
+  "additionalProperties": false
+}

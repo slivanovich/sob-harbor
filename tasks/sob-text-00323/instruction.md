@@ -1,0 +1,80 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mesne profits: Mesne (pronounced "mean") profits are sums of money paid for the occupation of land to a person with right of immediate occupation, where no permission has been given for that occupation.  The concept is feudal in origin, and common in countries which rely on the English legal system (including many former British colonies).  The word is derived from the root word demesne.
+
+Valses nobles et sentimentales (Ravel): The Valses nobles et sentimentales is a suite of waltzes composed by Maurice Ravel.  The piano version was published in 1911, and an orchestral version was published in 1912.  The title was chosen in homage to Franz Schubert, who had released collections of waltzes in 1823 entitled "Valses nobles" and "Valses sentimentales".  The piano edition is published with a quotation of Henri de Régnier: "…le plaisir délicieux et toujours nouveau d'une occupation inutile" (the delicious and forever-new pleasure of a useless occupation).
+
+Franz Viehböck: Franz Artur Viehböck (born August 24, 1960 in Vienna) is an Austrian electrical engineer, and was Austria's first cosmonaut.  He was titulated "„Austronaut“" by his country's media.  He visited the Mir space station in 1991 aboard Soyuz TM-13, returning aboard Soyuz TM-12 after spending just over a week in space.
+
+Moritz von Hirschfeld: Karl Ulrich Friedrich Wilhelm Moritz von Hirschfeld (4 July 1790 in Halberstadt – 13 October 1859 in Coblenz), Prussian general, got his schooling in a military academy.  In 1806, he entered into his father's regiment and participated in the unhappy campaign of that year.  In 1809, he participated with his older brother Eugen in an uprising against the French occupation forces.  This ended in their fleeing to England in 1809.  Both joined the Spanish dragoons in their struggles against the French.  His brother was killed in battle in 1811.  Lieutenant Moritz received severe wounds two times in battle, and ended in French captivity.  He escaped in 1813, under very dangerous circumstances.  His 15 wounds made him barely recognizable when he received a medal for his actions.  In 1814 he participated in the campaign in France as a lieutenant colonel in the Spanish army.
+
+Ulrich Walter: Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut.
+
+Franz Inc: Franz Inc. was founded in 1984 as a vehicle to produce and sell Macsyma.  While that never developed into a business, the Company did sell Franz Lisp while a new Common Lisp implementation, Allegro Common Lisp, was developed, and is still sold to commercial and academic users today.  In 2005, Franz began a development program focused on Semantic Web technologies.  The resulting product, AllegroGraph, is a transactional, and scalable Graph Database product.  In early 2015, AllegroGraph v5 added n-Dimensional indexing capabilities which provides a novel mechanism for efficient storage and retrieval of multi-dimensional data, and spatial data in particular.
+
+Carl Mannich: Carl Ulrich Franz Mannich (March 8, 1877 in Breslau – March 5, 1947 in Karlsruhe) was a German chemist.  From 1927 to 1943 he was professor for pharmaceutical chemistry at the University of Berlin.  His areas of expertise were keto bases, alcohol bases, derivatives of piperidine, papaverine, lactones and also Digitalis-glycosides.
+
+Convention of Balta Liman: The Convention of Balta Liman of 1 May 1849 was an agreement between the Russian Empire and the Ottomans regulating the political situation of the two Danubian Principalities (the basis of present-day Romania), signed during the aftermath of the Revolutions of 1848.  Moldavia, which had been placed under Russian occupation in late spring 1848 following a revolutionary attempt, and Wallachia, where a liberal Provisional Government had briefly assumed power before facing a common Ottoman-Russian reaction, were confirmed their previous status of Ottoman suzerainty and Russian protectorate (first established in 1831–32 by the "Regulamentul Organic").  Minor provisions were added, signifying a relative increase in Ottoman influence—namely, "hospodars" were no longer elected by the local National Assemblies for life, and instead appointed by the Sublime Porte for seven-year terms.  A common military presence was maintained until 1851.  The document led to the appointment of Barbu Dimitrie Ştirbei as hospodar of Wallachia and Grigore Alexandru Ghica as hospodar of Moldavia.  The Convention was rendered void by the Crimean War (during which the Principalities fell under Austrian occupation), and the statutory system itself was annulled by the 1856 Treaty of Paris.
+
+RuSHA trial: The RuSHA trial against the SS racial policies of genocide (officially, United States of America vs. Ulrich Greifelt, et al) was the eighth of the twelve trials held in Nuremberg by the U.S. authorities for Nazi war crimes after the end of World War II.  These twelve trials were all held before U.S. military courts in their occupation zone in Germany, not before the International Military Tribunal, although they took place in the same rooms, at the Palace of Justice.  The twelve U.S. trials are collectively known as the "Subsequent Nuremberg Trials" or, more formally, as the "Trials of War Criminals before the Nuremberg Military Tribunals" (NMT).
+
+Woodham Walter Common SSSI: Woodham Walter Common SSSI is an 80 hectare biological Site of Special Scientific Interest (SSSI) in Danbury in Essex.  The site includes six nature reserves within the Danbury Ridge Nature Reserves, managed by the Essex Wildlife Trust.  These are Woodham Walter Common itself, Birch Wood, Pheasanthouse Wood, Poors' Piece, Scrubs Wood and a small area in Pheasanthouse Farm.  The largest part of the SSSI is the 32.3 hectare Woodham Walter Common, which is managed by the Wildlife Trust on behalf of Maldon District Council and Woodham Walter Parish Council.
+
+Question: Franz Viehböck and Ulrich Walter, have which occupation in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "common_occupation": {
+      "type": "string",
+      "description": "The occupation shared by both individuals."
+    },
+    "individuals": {
+      "type": "array",
+      "description": "Details about each individual and their listed occupations.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the individual."
+          },
+          "occupations": {
+            "type": "array",
+            "description": "A list of occupations for the individual.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "occupations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation of how the common occupation was identified."
+    }
+  },
+  "required": [
+    "common_occupation",
+    "individuals",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

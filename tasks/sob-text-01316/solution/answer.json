@@ -1,0 +1,13 @@
+{
+  "songwriter_name": "Ringo Starr",
+  "albums_associated": [
+    "Time Takes Time"
+  ],
+  "vocal_details": {
+    "vocal_role": "lead vocals",
+    "songs_with_lead_vocals_examples": [
+      "Yellow Submarine"
+    ],
+    "vocal_frequency_description": "occasionally sang lead vocals, usually for one song on an album"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collaboration_name": "Acid Brass",
+  "collaborators": [
+    {
+      "name": "Jeremy Deller",
+      "type": "artist"
+    },
+    {
+      "name": "Williams Fairey Brass Band",
+      "type": "band"
+    }
+  ],
+  "fusion_genres": [
+    "traditional brass band music",
+    "acid house",
+    "Detroit techno"
+  ],
+  "detroit_techno_details": {
+    "genre_name": "Detroit techno",
+    "origin_city": "Detroit",
+    "first_production_period": "the 1980s and early 1990s"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "591bc066a5557e68c1d7b7a55228dd0935fbfb6457bbccddf34fc22488a0d9e2",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5abaf9405542996cc5e49f43",
+    "source_dataset": "hotpotqa",
+    "source_answer": "11,231",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "WTKS-FM: WTKS-FM is a radio station serving the Orlando and Central Florida areas, airing a hybrid talk radio/alternative rock format.  The station is owned and operated by iHeartMedia and licensed by the (U.S.) Federal Communications Commission to broadcast from Cocoa Beach, Florida (though the studio is located in Maitland, Florida).  WTKS-FM's transmission tower is in Bithlo, Florida.\n\nCliffwood Beach, New Jersey: Cliffwood Beach is an unincorporated community and census-designated place (CDP) located within Aberdeen Township, in Monmouth County, New Jersey, United States.  As of the 2010 United States Census, the CDP's population was 17,011.  As of the 2010 United States Census, the CDP's population was 3,194.\n\nSewaren, New Jersey: Sewaren is an unincorporated community and census-designated place (CDP) within Woodbridge Township, in Middlesex County, New Jersey, United States.  As of the 2010 United States Census, the CDP's population was 17,011.  As of the 2010 United States Census, the CDP's population was 2,756.\n\nEthnic groups in Los Angeles: The 1990 United States Census and 2000 United States Census found that non-Hispanic whites were becoming a minority in Los Angeles.  Estimates for the 2010 United States Census results find Latinos to be approximately half (47-49%) of the city's population, growing from 40% in 2000 and 30-35% in 1990 census.\n\nBrainards, New Jersey: Brainards is an unincorporated community and census-designated place (CDP) located within Harmony Township, in Warren County, New Jersey, United States, that was created as part of the 2010 United States Census.  As of the 2010 United States Census, the CDP's population was 202.  It was formerly known as Martin's Creek.\n\nBlairstown (CDP), New Jersey: Blairstown is an unincorporated community and census-designated place (CDP) located within Blairstown Township, in Warren County, New Jersey, United States, that was created as part of the 2010 United States Census.  As of the 2010 United States Census, the CDP's population was 515.\n\nAnderson, New Jersey: Anderson is a Census-designated place located within Mansfield Township, in Warren County, New Jersey, United States, that was created as part of the 2010 United States Census.  As of the 2010 United States Census, the CDP's population was 342.\n\nStrathmore, New Jersey: Strathmore is an unincorporated community and census-designated place (CDP) within Aberdeen Township, in Monmouth County, New Jersey, United States.  As of the 2010 United States Census, the CDP's population was 17,011.  As of the 2010 United States Census, the CDP's population was 7,258.\n\nCocoa Beach, Florida: Cocoa Beach is a city in Brevard County, Florida.  The population was 11,231 at the 2010 United States Census.  It is part of the Palm Bay-Melbourne-Titusville, Florida Metropolitan Statistical Area.\n\nDallas: Dallas ( ) is a city in the U.S. state of Texas.  It is the most populous city in the Dallas–Fort Worth metroplex, which is the fourth most populous metropolitan area in the United States.  The city's population ranks ninth in the U.S. and third in Texas after Houston and San Antonio.  The city's prominence arose from its historical importance as a center for the oil and cotton industries, and its position along numerous railroad lines.  The bulk of the city is in Dallas County, of which it is the county seat; however, sections of the city are located in Collin, Denton, Kaufman, and Rockwall counties.  According to the 2010 United States Census, the city had a population of 1,197,816.  The United States Census Bureau's estimate for the city's population increased to 1,317,929 as of July 1, 2016.",
+    "question": "According to the 2010 United States Census, what was the population of the city from which WTKS-FM broadcasts?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "city_name": {
+          "type": "string",
+          "description": "The name of the city."
+        },
+        "census_year": {
+          "type": "integer",
+          "description": "The year of the United States Census."
+        },
+        "population": {
+          "type": "integer",
+          "description": "The population of the city according to the specified census."
+        },
+        "radio_station_call_sign": {
+          "type": "string",
+          "description": "The call sign of the radio station."
+        },
+        "broadcast_licensing_location": {
+          "type": "string",
+          "description": "The type of location from which the station is licensed to broadcast (e.g., city, CDP)."
+        }
+      },
+      "required": [
+        "city_name",
+        "census_year",
+        "population",
+        "radio_station_call_sign",
+        "broadcast_licensing_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "city_name": "Cocoa Beach",
+      "census_year": 2010,
+      "population": 11231,
+      "radio_station_call_sign": "WTKS-FM",
+      "broadcast_licensing_location": "city"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

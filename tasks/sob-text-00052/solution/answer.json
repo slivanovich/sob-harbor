@@ -1,0 +1,11 @@
+{
+  "event_name": "2009 NBA draft",
+  "event_location": "WaMu Theatre at Madison Square Garden",
+  "event_date": "June 25, 2009",
+  "player_draft_details": {
+    "player_name": "Gerald Henderson Jr.",
+    "draft_year": 2009,
+    "overall_pick_number": 12,
+    "drafting_team": "Charlotte Bobcats"
+  }
+}

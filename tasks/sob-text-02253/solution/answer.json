@@ -1,0 +1,11 @@
+{
+  "actress_name": "Jane Leeves",
+  "film_details": {
+    "film_title": "James and the Giant Peach",
+    "role_type": "voice actor",
+    "character_category": "insect"
+  },
+  "tv_show_details": {
+    "tv_show_title": "Frasier"
+  }
+}

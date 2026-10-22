@@ -1,0 +1,10 @@
+{
+  "footballer_name": "Saidy Janko",
+  "nationality": "Swiss",
+  "primary_position": "right-back",
+  "club_signed_in_2013": {
+    "name": "Manchester United",
+    "location": "Old Trafford, Greater Manchester, England"
+  },
+  "current_or_most_recent_club": "Saint-Étienne"
+}

@@ -1,0 +1,12 @@
+{
+  "physicist_name": "Alexei Alexeyevich Abrikosov",
+  "nationalities": [
+    "Soviet",
+    "Russian",
+    "American"
+  ],
+  "developed_theory": {
+    "theory_name": "Fermi liquid theory",
+    "development_method": "diagrammatic perturbation theory"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "70da707c9d0fc13fad3559fffccbb32ed86d1e4f993c9de807e0f629b9bebdb2",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5abb16e15542996cc5e49f9e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Fairy-Queen",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Elektra (opera): Elektra, Op.  58, is a one-act opera by Richard Strauss, to a German-language libretto by Hugo von Hofmannsthal, which he adapted from his 1903 drama \"Elektra\".  The opera was the first of many collaborations between Strauss and Hofmannsthal.  It was first performed at the Dresden State Opera on 25 January 1909.  It was dedicated to his friends Natalie and Willy Levin.\n\nZauvijek volim te: \"Zauvijek volim te\" (Cyrillic: Заувијек волим те, English translation: \"I Love You Forever\") is a song performed by Stefan Filipović, and was the Montenegrin entry for the Eurovision Song Contest 2008.  It was performed first in the first semi-final on May 20, 2008 but failed to make it to the final.  It got 23 points in total (12 from Bosnia and Herzegovina, 10 from Slovenia and 1 point from San Marino), which was enough only for a 14th place.The 10 and 12 points given make this song the best Montenegrin entry so far.\n\nIt's Too Soon to Know: \"It's Too Soon to Know\" is an American doo-wop ballad by Deborah Chessler (1923-2012), performed first by The Orioles.  It was number one on the American Rhythm and blues charts in November 1948.  It is considered by some to be the first \"rock and roll\" song, and described by others as \"the first rhythm and blues vocal group harmony recording\".\n\nDio, come ti amo: \"Dio, come ti amo\" (English translation: \"God, How I Love You\") was performed first time as duo by Domenico Modugno and Gigliola Cinquetti in San Remo Festival, 1966.  Later it was the Italian entry in the Eurovision Song Contest 1966, performed in Italian by Domenico Modugno.\n\nSweetwater (band): Sweetwater was an American rock band originally from Los Angeles, California.  They were the act scheduled to open the Woodstock Festival in 1969; however, due to being stopped by the police on their way to the festival, folksinger Richie Havens' trio (Daniel Ben Zebulon, percussion, Paul \"Deano\" Williams, guitar, backing vocals) performed first.  Sweetwater performed next, becoming the first band to perform at the festival.\n\nSemi-opera: The terms \"semi-opera\", \"dramatic[k] opera\" and \"English opera\" were all applied to Restoration entertainments that combined spoken plays with masque-like episodes employing singing and dancing characters.  They usually included machines in the manner of the restoration spectacular.  The first examples were the Shakespeare adaptations produced by Thomas Betterton with music by Matthew Locke.  After Locke's death a second flowering produced the semi-operas of Henry Purcell, notably \"King Arthur\" and \"The Fairy-Queen\".  Semi-opera received a deathblow when the Lord Chamberlain separately licensed plays without music and the new Italian opera.\n\nGanglionectomy: A ganglionectomy, also called a gangliectomy, is the surgical removal of a ganglion.  The removal of a ganglion cyst usually requires a ganglionectomy.  Such cysts usually form on the hand, foot or wrist and may cause pain or impair body function.  Aspiration of the cyst and steroid injections are typically performed first.  If they fail, the cyst is excised under local, regional or even general anesthetic.  Ganglionectomies are also performed for other reasons, such as the treatment of chronic pain.\n\nThe Fairy-Queen: The Fairy-Queen (1692; Purcell catalogue number Z.629) is a masque or semi-opera by Henry Purcell; a \"Restoration spectacular\".  The libretto is an anonymous adaptation of William Shakespeare's wedding comedy \"A Midsummer Night's Dream\".  First performed in 1692, \"The Fairy-Queen\" was composed three years before Purcell's death at the age of 35.  Following his death, the score was lost and only rediscovered early in the twentieth century.\n\nTe Siento: \"Te Siento\" (English: I Feel You) is a song performed by reggaeton duo Wisin & Yandel.  The song is taken from Wisin & Yandel's re-release studio album \"Evolution\".  It was released as the third single on December 15, 2009.  On November 5, 2009 a part of the song was performed first time on the Latin Grammy Awards 2009 along with \"Abusadora\", using a short intro-video to perform.\n\nOlive Gilbert: Olive Sarah Gilbert (22 November 1898 – 19 February 1981) was a British singer and actress, who, in a career spanning seven decades, performed first in opera and then in many of Ivor Novello's musicals in London's West End.",
+    "question": "Which opera was performed first, The Fairy-Queen or Elektra?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "earlier_performance_entity": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the entity that was performed first."
+            },
+            "first_performance_year": {
+              "type": "integer",
+              "description": "The year of the first performance of the earlier entity."
+            }
+          },
+          "required": [
+            "title",
+            "first_performance_year"
+          ],
+          "additionalProperties": false
+        },
+        "later_performance_entity": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the entity that was performed later."
+            },
+            "first_performance_year": {
+              "type": "integer",
+              "description": "The year of the first performance of the later entity."
+            }
+          },
+          "required": [
+            "title",
+            "first_performance_year"
+          ],
+          "additionalProperties": false
+        },
+        "comparison_summary": {
+          "type": "string",
+          "description": "A summary statement indicating which entity was performed first."
+        }
+      },
+      "required": [
+        "earlier_performance_entity",
+        "later_performance_entity",
+        "comparison_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "earlier_performance_entity": {
+        "title": "The Fairy-Queen",
+        "first_performance_year": 1692
+      },
+      "later_performance_entity": {
+        "title": "Elektra",
+        "first_performance_year": 1909
+      },
+      "comparison_summary": "The Fairy-Queen was performed first."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

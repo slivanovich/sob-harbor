@@ -1,0 +1,24 @@
+{
+  "film_title": "Little Monsters",
+  "release_year": 1989,
+  "genres": [
+    "fantasy",
+    "black comedy"
+  ],
+  "country_of_origin": "American",
+  "main_actors": [
+    {
+      "actor_name": "Fred Savage",
+      "role_in_film": "Brian Stevenson",
+      "professions": [
+        "actor",
+        "television director",
+        "producer"
+      ]
+    },
+    {
+      "actor_name": "Howie Mandel",
+      "role_in_film": "Maurice"
+    }
+  ]
+}

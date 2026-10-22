@@ -1,0 +1,18 @@
+{
+  "plant_identified": {
+    "name": "Fatsia",
+    "is_native_to_japan_and_taiwan": true,
+    "native_regions": [
+      "southern Japan",
+      "Taiwan"
+    ]
+  },
+  "other_plant_mentioned": {
+    "name": "Lopezia",
+    "is_native_to_japan_and_taiwan": false,
+    "native_regions": [
+      "Mexico"
+    ]
+  },
+  "answer_summary": "Fatsia is native to southern Japan and Taiwan, while Lopezia is largely restricted to Mexico."
+}

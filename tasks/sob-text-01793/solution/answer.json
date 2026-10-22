@@ -1,0 +1,20 @@
+{
+  "actress_details": {
+    "name": "Brittany Murphy",
+    "breakthrough_role": {
+      "film_title": "Clueless",
+      "character_name": "Tai Frasier"
+    }
+  },
+  "related_film_details": {
+    "title": "Don't Say a Word",
+    "release_year": 2001,
+    "genre": "psychological thriller",
+    "co_star_name": "Michael Douglas"
+  },
+  "novel_details": {
+    "is_based_on_novel": true,
+    "author_name": "Andrew Klavan"
+  },
+  "final_answer": "Andrew Klavan"
+}

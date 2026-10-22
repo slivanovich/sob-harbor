@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "a124ee9b27955280ca0ec87092fd83a0731b97cd44f29d270920e7f9d59ad965",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5abbdedc55429931dba145ba",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Serpentine and the Long Water",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Connaught Village: Connaught Village is a commercial and residential area just west of Marble Arch and just north of Hyde Park within the City of Westminster, London.  As part of the Hyde Park Estate, it is owned by the Church Commissioners of England.  Numerous boutiques, designer shops and restaurants.  The couture store of famous shoemaker Jimmy Choo was previously located here.  Tony Blair, former leader of the Labour Party and Prime Minister, resides in Connaught Square.\n\nConnaught Square (Thunder Bay): Connaught Square is a public park located in the north end of Thunder Bay, Ontario, Canada.  It is located directly east of Waverley Park across Algoma Street, formed by the conflux of Waverly Street and Red River Road.  The square was originally named Gore Park, then renamed in 1936 for Prince Arthur, Duke of Connaught, after whom the former city of Port Arthur (originally Prince Arthur's Landing) was named.  It covers a quarter of an acre, or 1,000 square metres.  Contrary to its name is actually triangular.\n\nStatue Square: Statue Square (; lit.  \"Empress' Statue Square\") is a public pedestrian square in Central, Hong Kong.  Built entirely on reclaimed land at the end of the 19th century, Statue Square consists of two parts separated by Chater Road into a northern and a southern section.  It is bordered by Connaught Road Central in the north and by Des Voeux Road Central in the south.\n\nThomas Allason: Thomas Allason (1790–1852) was an English architect, surveyor and landscaper, noted in particular for his work at Connaught Square and the Ladbroke Estate in Kensington.\n\nEllerman baronets: The Ellerman Baronetcy, of Connaught Square in the Metropolitan Borough of Paddington, was a title in the Baronetage of the United Kingdom.  It was created on 11 December 1905 for the shipowner and investor John Ellerman.  His only son, the second Baronet, was a natural historian and philanthropist.  The title became extinct on the latter's death in 1973.\n\nHyde Park, London: Hyde Park is a Grade I-registered major park in Central London.  It is the largest of four Royal Parks that form a chain from the entrance of Kensington Palace through Kensington Gardens and Hyde Park, via Hyde Park Corner and Green Park past the main entrance to Buckingham Palace.  The park is divided by the Serpentine and the Long Water.\n\nSt. Andrew's Church, Thunder Bay: St. Andrew's Church is a Roman Catholic Parish church in Thunder Bay, Ontario.  It was founded by the Society of Jesus in the 1872 and is a centre for ministry with the Fort William First Nation.  It is situated on Connaught Square in the Port Arthur area of the city.\n\nConnaught Square: Connaught Square in Westminster, London, England, was the first square of city houses to be built in the Bayswater area.  It is named after the Earl of Connaught who had a house nearby.  The current appearance of the square dates from the 1820s.  The square is just north of Hyde Park, and to the west of Edgware Road.  It is also within 300 m of Marble Arch, and the western end of Oxford Street.\n\nSeward Square: Seward Square is a square and park maintained by the National Park Service located at the intersection of Pennsylvania Avenue and North Carolina Avenue in the Capitol Hill neighborhood of Southeast Washington, D.C.  The square is bounded by 4th Street to the west and 6th Street to the east.  North and south of the park are the respective westbound and eastbound lanes of Seward Square, SE.  Because Pennsylvania and North Carolina Avenues intersect in the middle of the square, it divides the square into four unique smaller parks.  The park is named after William Henry Seward, the United States Secretary of State under Presidents Abraham Lincoln and Andrew Johnson.  Seward is noted for his part in the American purchase of Alaska from the Russian Empire in 1867.  The purchase was ridiculed at the time and was colloquially known as \"Seward's Folly\".  There is no statue of William Seward on the site of the park, however there is a statue of his adopted daughter, Olive Risley Seward located at a private residence at the corner of 6th Street and North Carolina Avenue, SE.  The statue was sculpted in 1971 by John Cavanaugh.\n\nPassyunk Square, Philadelphia: Passyunk Square is a neighborhood in South Philadelphia bounded by Broad Street to the west, 6th Street to the east, Tasker Street to the south and Washington Avenue to the north.  Passyunk Square is bordered by the Bella Vista, Hawthorne, Central South Philadelphia, Wharton and Point Breeze neighborhoods.  The neighborhood got its Lenape name from the 1800s Passyunk Township, Pennsylvania which named Passyunk Square Park, located between 12th, 13th, Reed and Wharton Streets.  The park was eventually renamed Columbus Square Park, and subsequently the neighborhood became known as Columbus Square.  Geoff DiMasi revived the Passyunk Square name when forming the Passyunk Square Civic Association in 2003.",
+    "question": "Connaught Square is just north of a park that is divided by what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "square_name": {
+          "type": "string",
+          "description": "The name of the square mentioned in the question."
+        },
+        "nearby_park": {
+          "type": "string",
+          "description": "The name of the park located near the square."
+        },
+        "park_location_relative_to_square": {
+          "type": "string",
+          "description": "The directional relationship of the park to the square (e.g., north, south, east, west)."
+        },
+        "park_dividing_features": {
+          "type": "array",
+          "description": "A list of features that divide the nearby park.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "square_name",
+        "nearby_park",
+        "park_location_relative_to_square",
+        "park_dividing_features"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "square_name": "Connaught Square",
+      "nearby_park": "Hyde Park",
+      "park_location_relative_to_square": "south",
+      "park_dividing_features": [
+        "Serpentine",
+        "Long Water"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "film_details": {
+    "title": "The Lottery",
+    "year": 1989
+  },
+  "attraction_details": {
+    "name": "Studio Backlot Tour"
+  },
+  "theme_park_details": {
+    "name": "Disney-MGM Studios",
+    "resort_name": "Walt Disney World Resort"
+  },
+  "location": {
+    "city": "Lake Buena Vista",
+    "state": "Florida"
+  },
+  "answer_state": "Florida"
+}

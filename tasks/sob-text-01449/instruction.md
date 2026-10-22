@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jack Frost (1997 film): Jack Frost is a 1997 American horror comedy film written and directed by Michael Cooney.  The movie takes place in the fictional town of Snowmonton, where (on the week before Christmas) a truck carrying serial killer Jack Frost (Scott MacDonald) to his execution crashes into a genetics truck.  The genetic material causes Jack's body to mutate and fuse together with the snow on the ground.  Jack is presumed dead and his body melts away.  However, he comes back as a killer snowman and takes revenge on the man who finally caught him, Sheriff Sam Tiler (Christopher Allport).
+
+Juan Díaz de Garayo: Juan Díaz de Garayo y Ruiz de Argandoña, also known as "The Sacamantecas" ("The fat extractor" in Spanish) (October 17, 1821 – May 11, 1881), was a Spanish serial killer active near Vitoria, Álava, who strangled five women and a 13-year-old girl, and attacked four other women during two different periods, 1870 to 1874 and 1878 to 1879.  A lust-motivated serial killer, Garayo first killed prostitutes after hiring and sleeping with them consensually, but grew more disorganized and violent as time went on, attacking, raping and murdering women that he saw walking alone in the country.  His last two victims, murdered in consecutive days, were also stabbed, and the second was disembowelled.
+
+Cold North Killers: Canadian Serial Murder: Cold North Killers: Canadian Serial Murder is a 2012 Canadian non-fiction book written by Lee Mellor and published by Dundurn Press.  It documents the lives of sixty Canadian serial killers, with the earliest being Edward H. Rulloff and the most recent being Russell Williams.  The book uses Katherine Ramsland's interpretation of what constitutes a serial killer—someone who has killed at least two people on two separate occasions, and who attempted to or likely would have killed again—as outlined in her 2007 book "The Human Predator".  "Cold North Killer's" own definition of what constitutes a Canadian serial killer includes both Canadians who committed murder abroad (such as Keith Hunter Jesperson and Gordon Stewart Northcott) and non-Canadians who committed murder in Canada (like William Dean Christenson and Earle Nelson).
+
+My Brother the Serial Killer: My Brother the Serial Killer is a 2012 American television documentary about serial killer Glen Rogers, otherwise known as the "Casanova Killer", who was convicted for a series of murders and arsons.  The documentary was narrated by Rogers' brother Clay Rogers and aired on Investigation Discovery in November 2012.  "My Brother the Serial Killer" received widespread media attention for Clay's claims that his brother was responsible for the 1994 murders of Nicole Brown Simpson and Ronald Lyle Goldman.
+
+Stewart Wilken: Stewart Wilken AKA "Boetie Boer" (born 11 November 1966) is a convicted serial killer from South Africa.  Wilken is regarded as a highly unusual serial killer, having killed individuals from two distinct victim types: female prostitutes and young boys (he also killed his adolescent daughter, Wuane).  Wilken killed from 1990 until he was arrested in January 1997.  He was active in Port Elizabeth, on the east coast of South Africa.
+
+Dexter (episode): "Dexter", or "Pilot", is the pilot episode of the first season television drama series "Dexter", which premiered on October 1, 2006 on Showtime in the United States.  The episode was written by developer James Manos, Jr. and directed by Michael Cuesta.  It was based on the opening of the novel "Darkly Dreaming Dexter" by Jeff Lindsay.  The pilot introduces the series' protagonist, Dexter Morgan (Michael C. Hall), a Miami Metro Police Department blood spatter analyst with a double life as a serial killer.  While solving murders in the Homicide division, Dexter also spends his time hunting and killing murderers and criminals who have escaped the justice system.  The pilot introduces the "Ice Truck Killer", a serial killer who targets prostitutes and leaves their bodies dismembered and bloodless, and the rivalry that develops between the killer and Dexter.
+
+Elfriede Blauensteiner: Elfriede Blauensteiner (22 January 1931 – 18 November 2003), dubbed the "Black Widow", was an Austrian serial killer who murdered at least three victims by poison.  In each case, she inherited the victim's possessions.
+
+George Chapman (murderer): George Chapman (14 December 1865 – 7 April 1903) was a Polish serial killer known as the Borough Poisoner.  Born Seweryn Antonowicz Kłosowski in Congress Poland, he moved as an adult to England, where he committed his crimes.  He was convicted and executed after poisoning three women, but is remembered today mostly because some police officers suspected him of being the notorious serial killer Jack the Ripper.
+
+Jack Unterweger: Johann "Jack" Unterweger (16 August 195029 June 1994) was an Austrian serial killer who murdered prostitutes in several countries.  First convicted of a 1974 murder, he was released in 1990 as an example of rehabilitation.  He became a journalist and minor celebrity, but within months started killing again.  He committed suicide following a conviction for several murders.  Austrian psychiatrist Dr. Reinhard Haller diagnosed him with narcissistic personality disorder in 1994.
+
+Jack (2015 film): Jack is a 2015 Austrian thriller film about serial killer Jack Unterweger, directed by Elisabeth Scharang.  It was screened in the Contemporary World Cinema section of the 2015 Toronto International Film Festival.
+
+Question: Jack is a 2015 Austrian thriller film about serial killer Jack Unterweger, was an Austrian serial killer who murdered prostitutes in several countries, and first convicted of a murder, in which year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "serial_killer_name": {
+      "type": "string",
+      "description": "The name of the serial killer."
+    },
+    "killer_nationality": {
+      "type": "string",
+      "description": "The nationality of the serial killer."
+    },
+    "first_conviction_year": {
+      "type": "integer",
+      "description": "The year of the serial killer's first conviction for murder."
+    },
+    "film_about_killer": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the film about the serial killer."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "genre": {
+          "type": "string",
+          "description": "The genre of the film."
+        }
+      },
+      "required": [
+        "title",
+        "release_year",
+        "genre"
+      ],
+      "additionalProperties": false
+    },
+    "victim_type": {
+      "type": "string",
+      "description": "The primary type of victims targeted by the serial killer."
+    }
+  },
+  "required": [
+    "serial_killer_name",
+    "killer_nationality",
+    "first_conviction_year",
+    "film_about_killer",
+    "victim_type"
+  ],
+  "additionalProperties": false
+}

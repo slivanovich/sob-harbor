@@ -1,0 +1,10 @@
+{
+  "person_name": "Vishweshwaraiah Prakash",
+  "institute_name": "Central Food Technological Research Institute (CFTRI)",
+  "institute_location": {
+    "city": "Mysore",
+    "state": "Karnataka",
+    "country": "India",
+    "geographical_feature": "Chamundi Hills"
+  }
+}

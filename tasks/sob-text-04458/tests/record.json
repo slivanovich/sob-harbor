@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "record_id": "bdb8b4d875c99789208bd0c86cf328bddc08a5a98773943d7d5090de3939d8f3",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a89bf515542992e4fca83b4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2014 Wimbledon Championships – Men's Doubles: Bob and Mike Bryan were the defending champions, but lost to Vasek Pospisil and Jack Sock in the final, 7–6, 6–7, 6–4, 3–6, 7–5.\n\n2016 BNP Paribas Open – Men's Doubles: Vasek Pospisil and Jack Sock were the defending champions, but lost in the final to Pierre-Hugues Herbert and Nicolas Mahut, 3–6, 6–7.\n\n1976 Volvo International – Doubles: Haroon Rahim and Erik Van Dillen were the defending champions but only Van Dillen competed that year with Dick Crealy.\n\nSteve Johnson (tennis): Steve \"Stevie\" Johnson Jr. (born December 24, 1989) is an American professional tennis player.  For 1 week in August 2016 he was the top ranked American in men's singles.  He has a career high ranking of world number 21.  He has won four ATP Challenger Tour titles and two ATP Tour 250 titles at Nottingham on grass and at Houston on clay.  He won a bronze medal in men's doubles at the 2016 Olympics with Jack Sock.\n\nJack Sock: Jack Sock (born September 24, 1992) is an American professional tennis player who is currently ranked world No. 21 in men's singles by the Association of Tennis Professionals (ATP).  He is one of the top ranked American men in both singles and doubles on the ATP Tour.  A former junior US Open champion, Sock's singles success is highlighted by 7 ATP finals, including three titles.  His career best result came at the 2017 Indian Wells Masters, where he reached the semi-finals.\n\n2016 China Open – Men's Doubles: Vasek Pospisil and Jack Sock were the defending champions, but Pospisil chose to play in Tokyo instead.  Sock played alongside Bernard Tomic but lost in the final to Pablo Carreño Busta and Rafael Nadal, who won 6−7, 6−2, [10−8].\n\nDick Crealy: Richard Crealy (born 18 September 1944) is an Australian former tennis player most notable for reaching the finals of the Australian Open in 1970, being a member of the 1970 Australian Davis Cup Team, and winning four Grand Slam titles in doubles.\n\n2012 US Open – Mixed Doubles: Melanie Oudin and Jack Sock were the defending champions but lost to Sania Mirza and Colin Fleming in the second round.  <br> Kim Clijsters played her last professional match, in any format, losing in the second round with Bob Bryan to Ekaterina Makarova and Bruno Soares.  Unseeded pair Makarova and Soares ended up winning the title after defeating fourth seeds Květa Peschke and Marcin Matkowski in the final 6–7, 6–1, [12–10].\n\n2014 Nielsen Pro Tennis Championships – Singles: Jack Sock was the defending champion but decided not to participate. <br>\n\n1970 Swedish Open: The 1970 Swedish Open was a combined men's and women's tennis tournament played on outdoor clay courts held in Båstad, Sweden and was part of the Grand Prix circuit of the 1970 Tour.  It was the 23rd edition of the tournament and was held from 2 July through 12 July 1970.  Dick Crealy and Peaches Bartkowicz won the singles titles.",
+    "question": "Did Dick Crealy and Jack Sock play the same sport?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "played_same_sport": {
+          "type": "boolean",
+          "description": "Indicates whether Dick Crealy and Jack Sock played the same sport."
+        },
+        "common_sport": {
+          "type": "string",
+          "description": "The name of the sport they both played."
+        },
+        "player_details": {
+          "type": "array",
+          "description": "Details for each player mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "player_name": {
+                "type": "string",
+                "description": "The name of the player."
+              },
+              "sport_mentioned_in_context": {
+                "type": "string",
+                "description": "The sport associated with the player as stated in the context."
+              }
+            },
+            "required": [
+              "player_name",
+              "sport_mentioned_in_context"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "played_same_sport",
+        "common_sport",
+        "player_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "played_same_sport": true,
+      "common_sport": "tennis",
+      "player_details": [
+        {
+          "player_name": "Dick Crealy",
+          "sport_mentioned_in_context": "tennis"
+        },
+        {
+          "player_name": "Jack Sock",
+          "sport_mentioned_in_context": "tennis"
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

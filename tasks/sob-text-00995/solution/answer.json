@@ -1,0 +1,12 @@
+{
+  "older_person": {
+    "name": "Aleksandr Danilovich Aleksandrov",
+    "birth_year": 1912
+  },
+  "younger_person": {
+    "name": "Anatoly Fomenko",
+    "birth_year": 1945
+  },
+  "age_difference_years": 33,
+  "comparison_summary": "Aleksandr Danilovich Aleksandrov is older than Anatoly Fomenko."
+}

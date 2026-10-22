@@ -1,0 +1,15 @@
+{
+  "racing_event": "2017 Mexico City ePrix",
+  "driver_name": "Lucas di Grassi",
+  "racing_team": "Audi Sport ABT",
+  "team_headquarters": "Kempten im Allgäu, Germany",
+  "team_management": {
+    "manager_type": "brothers",
+    "manager_names": [
+      "Hans-Jürgen Abt",
+      "Christian Abt"
+    ],
+    "management_start_year": 2003,
+    "current_sole_manager_since": 2011
+  }
+}

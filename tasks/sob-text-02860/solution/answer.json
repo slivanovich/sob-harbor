@@ -1,0 +1,16 @@
+{
+  "are_both_writers": true,
+  "individuals": [
+    {
+      "name": "Ben Okri",
+      "is_writer": true,
+      "profession_details": "Nigerian poet and novelist"
+    },
+    {
+      "name": "Henry Charles Frank Morant",
+      "is_writer": true,
+      "profession_details": "Australian writer"
+    }
+  ],
+  "reasoning": "The context explicitly states that Ben Okri is a 'Nigerian poet and novelist' and that Henry Charles Frank Morant 'was an Australian writer'."
+}

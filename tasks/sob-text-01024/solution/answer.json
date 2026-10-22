@@ -1,0 +1,22 @@
+{
+  "common_music_type": "rock",
+  "bands_involved": [
+    {
+      "band_name": "Royal Blood",
+      "genres_mentioned": [
+        "hard rock",
+        "blues rock",
+        "garage rock",
+        "stoner rock",
+        "psychedelic rock"
+      ]
+    },
+    {
+      "band_name": "The Rubens",
+      "genres_mentioned": [
+        "alternative rock"
+      ]
+    }
+  ],
+  "number_of_bands": 2
+}

@@ -1,0 +1,11 @@
+{
+  "prison_name": "HM Prison Kirkham",
+  "prison_category": "Category D",
+  "located_relative_to": "southwest of",
+  "town_details": {
+    "town_name": "Kirkham",
+    "is_civil_parish": true,
+    "borough": "Borough of Fylde",
+    "county": "Lancashire"
+  }
+}

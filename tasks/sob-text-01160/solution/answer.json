@@ -1,0 +1,19 @@
+{
+  "musical_title": "A Very Potter Musical",
+  "creative_roles_summary": {
+    "music_and_lyrics_writers": [
+      "Darren Criss",
+      "A. J. Holmes"
+    ],
+    "book_writers": [
+      "Matt Lang",
+      "Nick Lang",
+      "Brian Holden"
+    ]
+  },
+  "question_specific_answer": {
+    "role_in_question": "music and lyrics writer",
+    "excluded_person": "Darren Criss",
+    "answer_person": "A. J. Holmes"
+  }
+}

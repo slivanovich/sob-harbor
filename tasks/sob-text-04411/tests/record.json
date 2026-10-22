@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "a337e6f3c7d7cc488be63b2763a906c9247a273d37a50084fec03258ba90efa3",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab3419955429969a97a8113",
+    "source_dataset": "hotpotqa",
+    "source_answer": "CBS",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "H. B. Warner: Henry Byron Warner (26 October 1875 – 21 December 1958) was an English film and theatre actor.  He was a popular theatre and film actor during the silent era and played Jesus Christ in \"The King of Kings\".  In later years, he successfully transitioned into supporting roles and appeared in numerous films directed by Frank Capra.  Warner's most notable role to modern audiences is \"Mr. Gower\" in the perennially shown film \"It's A Wonderful Life\", directed by Capra.  and in a cameo in \"Sunset Boulevard\", directed by Billy Wilder.\n\nMustafa Changazi: Mustafa Changazi (مصطفئ ݘݩگݐڒی, born 1990) is a Pakistani actor, former RJ, voice over artist and model.  He is best known for his radio shows on Radioactive 96 and his TV role in Hum TV serial \"Bari Apa\", where he was playing the character Adeel.  He followed this with roles in other TV serials such as \"Humnasheen\", \"Walls Carte Dor- Meethi si lagan\".  He has done various television commercials with many leading brands which amassed him attention and kickstarted his media career.  He is also known for his theater acting and has done several successful commercial plays.  He recently acted in Pakistan's first (to-be released) spy thriller film, \"Operation 021\".\n\nShredy Jabarin: Shredy Jabarin or Shredi Jabarin (Arabic: شريدي جبارين‎ ‎ , Hebrew: שרדי ג'בארין‎ ‎ ; other orthographies: Shredi Jabarin) is an actor, director, writer, producer, filmmaker, photographer, artist and acting teacher.  Born on the 2nd of Dec 1981 in Jaffa and studies acting in the faculty of art in the theater department and the film department in Tel Aviv University 1999-2003, participated in international films and theatre plays in English, French, German, Arabic and Hebrew.  He has one nomination for best actor for his role in the film For my Father.  He played main parts in films like For my Father and The Saviour where her played Jesus.\n\nVictor Garber: Victor Joseph Garber (born March 16, 1949) is a Canadian actor and singer.  He is known for playing Jesus in \"Godspell\", Anthony Hope in \"\", John Wilkes Booth in \"Assassins\", Jack Bristow in the television series \"Alias\", Max in \"Lend Me a Tenor\", Thomas Andrews in James Cameron's \"Titanic\", and Ken Taylor, Canadian Ambassador to Iran, in \"Argo\".  He is currently a series regular on \"Legends of Tomorrow\" as Dr. Martin Stein, playing the same role as a guest star on \"The Flash\" and the web series \"Vixen.\n\nSelva Rasalingam: Selva Rasalingam (born 1968) is a British actor.  He has appeared on stage in the West End theatre and for the Royal Shakespeare Company and has made appearances in many UK television series including \"Doctor Who\", \"Luther and Hustle\", and on film including \"\" and \"Skyfall\".  He played Jesus in the 2014 version of \"The Gospel of John\".\n\nLloyd Owen: Lloyd Owen (born 14 April 1966) is an English actor.  Trained at the National Youth Theatre and the Royal Academy of Dramatic Art (RADA) in London, he is probably best known for his portrayal of Indiana Jones's father Professor Dr. Henry Jones, Sr. in \"The Young Indiana Jones Chronicles\" between 1992 and 1993 and for playing Paul Bowman-MacDonald in the BBC Scotland series \"Monarch of the Glen\" from 2002 to 2005.  He played the role of solicitor William Heelis in the film \"Miss Potter\" (2006).  His most recent TV role was playing the US President in \"You, Me and the Apocalypse\" on Sky.\n\nIgor Skvarica: Igor Skvarica (born 26 August 1986) is an Bosnian actor who has performed in film, television, theatre and radio.  He is best known for his roles in Chefurs Raus!  (2013), With Mom (2013), The Prosecutor the Defender the Father and His Son (2015).  He also played an exciting role of Beslan in the last season of the Sean Bean starring TV Series Legends (2015).  His theatre work includes appearances in \"Stones in His Pockets\"(Marie Jones), \"The Life Before Us\" (Romain Gary), \"Animal farm\" (George Orwell), \"The Lower Depths\" (Maxim Gorky), \"A Streetcar Named Desire\" (Tennessee Williams).  Igor studied acting at the Academy of Performing Arts in Sarajevo.\n\nNelson Chia: Nelson Chia (, Chinese surname: 谢 Chia) is a Singaporean actor/director/lecturer who has taken on many roles on stage and on TV.  He snared his first major TV role in the drama Together Whenever, which was aired on SPH MediaWorks Channel U, alongside Erica Lee.  Chia has been working in theatre both as an actor and director since 1994.  Nelson studied at The Chinese High School and Hwa Chong Junior College He holds a Bachelor of Arts in Theatre Studies from National University of Singapore and a master's degree in Theatre Arts (Directing) from Goldsmiths College, University of London.  He briefly headed the Department of Theatre in Nanyang Academy of Fine Arts, but later left the post in order to devote more time to his craft.  He is currently an adjunct lecturer with the Department of Theatre in Nanyang Academy of Fine Arts as well as the Theatre Studies Program in National University of Singapore.  He is the associate artistic director at Toy Factory Productions (formerly Toy Factory Theatre Ensemble), an Associate Artist with The Substation and the founding member of a collaborative ensemble A Group Of People.\n\nI Had Three Wives: I Had Three Wives is an American comedy-drama television series that aired on CBS from August 14 to September 11, 1985.  The series' lead was Victor Garber in his first starring role on television.\n\nMartin Donovan: Martin Donovan (born August 19, 1957) is an American film, stage and television actor.  He has had a long collaboration with director Hal Hartley and appeared in many of Hartley's films, such as \"Trust\" (1990), \"Surviving Desire\" (1991), \"Simple Men\" (1992), \"Flirt\" (1993), \"Amateur\" (1994), and \"The Book of Life\" (1998; in which he played Jesus).  Donovan also played Peter Scottson on Showtime's cable series \"Weeds\".  He made his writing/directorial debut with the film \"Collaborator\" (2011).",
+    "question": "The actor that played Jesus in \"Godspell\" had his first starring tv role in a series that aired on what network?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor who played Jesus in 'Godspell'."
+        },
+        "role_in_godspell": {
+          "type": "string",
+          "description": "The specific role the actor played in 'Godspell'."
+        },
+        "first_starring_tv_series": {
+          "type": "string",
+          "description": "The name of the TV series where the actor had their first starring role."
+        },
+        "tv_network": {
+          "type": "string",
+          "description": "The television network on which the series aired."
+        },
+        "series_air_year": {
+          "type": "integer",
+          "description": "The year the series first aired."
+        }
+      },
+      "required": [
+        "actor_name",
+        "role_in_godspell",
+        "first_starring_tv_series",
+        "tv_network",
+        "series_air_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Victor Garber",
+      "role_in_godspell": "Jesus",
+      "first_starring_tv_series": "I Had Three Wives",
+      "tv_network": "CBS",
+      "series_air_year": 1985
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

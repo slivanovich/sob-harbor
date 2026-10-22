@@ -1,0 +1,11 @@
+{
+  "series_name": "SpongeBob SquarePants",
+  "network": "Nickelodeon",
+  "is_animated_series": true,
+  "character_details": {
+    "character_name": "Mrs. Puff",
+    "voice_actor": "Mary Jo Catlett",
+    "debut_episode": "Boating School",
+    "debut_date": "August 7, 1999"
+  }
+}

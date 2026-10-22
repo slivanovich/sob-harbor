@@ -1,0 +1,15 @@
+{
+  "film_title": "Andre",
+  "film_year": 1994,
+  "film_genres": [
+    "comedy drama"
+  ],
+  "plot_summary_keywords": [
+    "child's encounter",
+    "seal"
+  ],
+  "voice_actor": {
+    "name": "Mark Elliot",
+    "role_type": "voice-over artist"
+  }
+}

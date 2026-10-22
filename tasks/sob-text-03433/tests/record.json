@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "record_id": "f4cb231d7ebf3a290cc5d5f96c207e81fa083ddcf966f96f3588caacf751aa87",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae1b56d5542997283cd2257",
+    "source_dataset": "hotpotqa",
+    "source_answer": "DeLorean DMC-12",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "John DeLorean: John Zachary DeLorean (January 6, 1925 – March 19, 2005) was an American engineer and executive in the U.S. automobile industry, widely known for his work at General Motors and as founder of the DeLorean Motor Company.\n\nLowell Park (novel): Set in 1990, Jenny Brix lives in Iowa City.  She is a history buff.  She even has a Ronald Reagan picture when he was in his 20s as a lifeguard!  When she goes to a meeting, a very old professor has a heart attack.  Panicking, she uses CPR on him, thus saving his life.  After a few stops to the hospital, he asks her which US president she likes best.  She answers Ronald Reagan.  So then the professor tells her that she can go back in time and meet him.  She is shocked, but the professor keeps telling her it's true.  She finally believes him, sort of.  The professor takes her to Dixon, Illinois, Reagan's childhood home.  There the professor tells her she has 80 hours to stay out of the timezone, or her body will be used to the other timezones and can't come back to present day (1990).  When she goes into the time machine, it actually is set on 1832, instead of 1932 (where she was going).  She then meets Abraham Lincoln (who develops a little crush on her), and Chief Black Hawk during the Black Hawk War.  After all of that is straightened out, she goes to 1932 with less than half the time left she started with.  Once she gets there she sees a young, handsome Ronald Reagan going past her to save a person from drowning.  She then gets some friends, Scooter and Betsy.  They say there is a dance at Dixon's run down, old high school.  There she dances with Ronald and his brother.  While dancing with Ronald, she falls down the steps with him.  They then get a crush on each other.  After going on a few dates, she has to go to her original timezone.  She and Ronald have a sad exchange (Ronald doesn't know about the time traveling) when she has to leave.  Jenny then takes Scooter and Betsy to Lowell Park, where she shows them the time machine.  She then leaves, leaving the others dumbfounded.  When she comes back, professor says he is Scooter, and spent the rest of his life finding things about the time machine after she left until he finally made the time machine.\n\nTime Machine series: The Time Machine series of science fiction stories for children, published between 1959 and 1989 in \"Boys' Life\" magazine, featured a group of American Boy Scouts who acquire an abandoned time machine.  The Polaris Patrol visited the future and the past, sometimes recruiting new Scouts.  The stories used the time machine as a framework for history lessons, but also explored the consequences of having a time machine (as well as the various technologies the boys who discovered it obtain from the future).\n\nChevrolet Aerovette: The Chevrolet Aerovette was a concept car created by Chevrolet, beginning life as Experimental Project 882 (XP-882) in the late 1960s.  It had a mid-engine configuration using a transverse mounting of its V8 engine.  Zora Arkus-Duntov's engineers originally built two XP-882 prototypes during 1969, but John DeLorean, Chevrolet's general manager, canceled the program believing it to be impractical and costly.  However, when Ford announced plans to sell the DeTomaso Pantera through Lincoln-Mercury dealers, DeLorean ordered that one XP-882 prototype be cleaned up for display at the 1970 New York Auto Show.\n\nCar Town: Car Town was a social network game developed by Cie Games.  It allowed users collect and modify virtual vehicles.  The object of the game was to win races and build a collection of vehicles.  Car Town had many licenses for different brands, including the Indy Racing League, which allowed users to collect selected Indy cars, Universal Studios, which gave the game a license to include the DeLorean time machine from the \"Back to the Future\" series, and fully customized cars from The Fast and the Furious series.  Pirelli World Challenge and the National Hot Rod Association gave the game licenses to include their racing cars such as Funny Cars. Top Gear also gave a license to include their shows and videos, as well as a few exclusive vehicles.\n\nDeLorean Motor Company: The DeLorean Motor Company (DMC) is an American automobile manufacturer originally formed by automobile industry executive John DeLorean in 1975.  It is remembered for the one model it produced — the distinctive stainless steel DeLorean DMC-12 sports car featuring gull-wing doors—and for its brief and turbulent history, ending in receivership and bankruptcy in 1982.  Near the end, in a desperate attempt to raise the funds his company needed to survive, John DeLorean was filmed appearing to accept money to take part in drug trafficking, but was subsequently acquitted of charges brought against him on the basis of entrapment.\n\nBack to the Future Part II: Back to the Future Part II is a 1989 American science-fiction adventure comedy film directed by Robert Zemeckis and written by Bob Gale.  It is the sequel to the 1985 film \"Back to the Future\" and the second installment in the \"Back to the Future\" trilogy.  The film stars Michael J. Fox, Christopher Lloyd, Thomas F. Wilson, and Lea Thompson and continues immediately following the original film.  After repairing the damage to history done by his previous time travel adventures, Marty McFly (Fox) and his friend Dr. Emmett \"Doc\" Brown (Lloyd) travel to 2015 to prevent McFly's future son from ending up imprisoned.  However, their presence allows Biff Tannen (Wilson) to steal Doc's DeLorean time machine and travel to 1955, where he alters history by making his younger self wealthy.\n\nSinclair Vehicles: Sinclair Vehicles Ltd was a company formed in March 1983 by Sir Clive Sinclair as a focus for his work in the field of electric vehicles.  The initial investment was £8.6m, which came from the proceeds of the sale of some of Sir Clive's shares in Sinclair Research.  Barrie Wills, formerly of the DeLorean Motor Company, was appointed as managing director.\n\nDeLorean DMC-12: The DeLorean DMC-12 (commonly referred to simply as \"the DeLorean,\" as it was the only model ever produced by the company) is a sports car manufactured by John DeLorean's DeLorean Motor Company for the American market from 1981–83.  The car features gull-wing doors and an innovative fiberglass body structure with a steel backbone chassis, along with external brushed stainless steel body panels.  It became widely known and iconic for its appearance, and a modified DMC-12 was immortalized as the DeLorean time machine in the \"Back to the Future\" media franchise.\n\nDeLorean time machine: The DeLorean time machine is a fictional automobile-based time travel device featured in the \"Back to the Future\" franchise.  In the feature film series, Dr. Emmett Brown builds a time machine based on a DeLorean DMC-12 car, to gain insights into history and the future.  Instead, he ends up using it to travel over 130 years of Hill Valley history (from 1885 to 2015) with Marty McFly to change the past for the better and to undo the negative effects of time travel.  One of the cars used in filming is on display at Universal Studios Hollywood.",
+    "question": "What car made by John DeLorean Motor Company was featured in the Back to the Future movies, as a time machine?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "car_name": {
+          "type": "string",
+          "description": "The name of the car model."
+        },
+        "manufacturer": {
+          "type": "string",
+          "description": "The company that manufactured the car."
+        },
+        "founder": {
+          "type": "string",
+          "description": "The founder of the car manufacturing company."
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Key design features of the car."
+        },
+        "movie_franchise": {
+          "type": "string",
+          "description": "The movie franchise where the car was featured."
+        },
+        "role_in_movie": {
+          "type": "string",
+          "description": "The specific role the car played in the movie franchise."
+        }
+      },
+      "required": [
+        "car_name",
+        "manufacturer",
+        "founder",
+        "features",
+        "movie_franchise",
+        "role_in_movie"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "car_name": "DeLorean DMC-12",
+      "manufacturer": "DeLorean Motor Company",
+      "founder": "John DeLorean",
+      "features": [
+        "gull-wing doors",
+        "fiberglass body structure with a steel backbone chassis",
+        "external brushed stainless steel body panels"
+      ],
+      "movie_franchise": "Back to the Future",
+      "role_in_movie": "time machine"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

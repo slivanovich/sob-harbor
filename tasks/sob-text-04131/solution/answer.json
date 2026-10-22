@@ -1,0 +1,9 @@
+{
+  "prison_name": "Spandau Prison",
+  "last_prisoner": {
+    "name": "Rudolf Hess",
+    "role_in_nazi_germany": "Deputy Führer"
+  },
+  "cause_of_death": "suicide",
+  "death_year": 1987
+}

@@ -1,0 +1,16 @@
+{
+  "bands_compared": [
+    {
+      "band_name": "Death Cab for Cutie",
+      "formation_city": "Bellingham",
+      "formation_location_detail": "Washington"
+    },
+    {
+      "band_name": "Caifanes",
+      "formation_city": "Mexico City",
+      "formation_location_detail": "Mexico"
+    }
+  ],
+  "are_formation_cities_identical": false,
+  "final_answer": "no"
+}

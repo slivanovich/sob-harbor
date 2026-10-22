@@ -1,0 +1,13 @@
+{
+  "first_individual": {
+    "name": "Israel Gelfand",
+    "birth_year": 1913
+  },
+  "second_individual": {
+    "name": "Mykhailo Pylypovych Kravchuk",
+    "birth_year": 1892
+  },
+  "person_born_earliest": "Mykhailo Pylypovych Kravchuk",
+  "earliest_birth_year": 1892,
+  "latest_birth_year": 1913
+}

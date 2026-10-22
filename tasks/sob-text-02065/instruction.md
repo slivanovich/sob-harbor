@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Bare-faced Messiah: Bare-faced Messiah: The True Story of L. Ron Hubbard is a posthumous biography of Scientology founder L. Ron Hubbard by British journalist Russell Miller.  First published in the United Kingdom on 26 October 1987, the book takes a critical perspective, challenging the Church of Scientology's account of Hubbard's life and work.  It quotes extensively from official documents acquired using the Freedom of Information Act and from Hubbard's personal papers, which were obtained via a defector from the Church.  It was also published in Australia, Canada and the United States.
+
+Scientology in the United Kingdom: Scientology in the United Kingdom is practised mainly within the Church of Scientology and its related groups which go under names including "Hubbard Academy of Personal Independence" and "Dianetics and Scientology Life Improvement Centre".  The national headquarters, and former global headquarters, is Saint Hill Manor at East Grinstead, which for seven years was the home of L. Ron Hubbard, the pulp fiction author who created Scientology.  Church-connected groups promoting aspects of L. Ron Hubbard's teaching, including Narconon and CCHR, have also been active in the UK, in some cases with charitable status.  There have also been groups practising Scientology independently of the Church.
+
+Scientology: Scientology is a body of religious beliefs and practices developed in 1954 by American author L. Ron Hubbard (1911–86).  Hubbard initially developed a program of ideas called Dianetics, which was distributed through the Dianetics Foundation.  The foundation soon entered bankruptcy, and Hubbard lost the rights to his seminal publication "" in 1952.  He then recharacterized the subject as a religion and renamed it Scientology, retaining the terminology, doctrines, the E-meter, and the practice of auditing.  Within a year, he regained the rights to Dianetics and retained both subjects under the umbrella of the Church of Scientology.
+
+Secure Web SmartFilter EDU: Secure Web SmartFilter EDU, formerly known as Bess, is a brand of content-control software made by Secure Computing Corporation, which acquired maker N2H2 in 2003; it is usually used in libraries and schools.  The main purpose of the system is as an Internet filter, blocking minors using the public computers from accessing web content deemed inappropriate by the local administrators of the system based on the Acceptable Use Policy of the organization.  The system is not installed locally (on each individual computer workstation), but installs on the server between the users and the open Internet.  This feature makes it harder to bypass, though it is not uncommon for students with more extensive computer knowledge to attempt to bypass the system.  The system allows for teachers or administrators to temporarily bypass the system if they need to access sites that are blocked for educational purposes.
+
+L. Ron Hubbard: Lafayette Ronald Hubbard (March 13, 1911 – January 24, 1986), better known as L. Ron Hubbard ( ) and often referred to by his initials, LRH, was an American author and the founder of the Church of Scientology.  After establishing a career as a writer, becoming best known for his science fiction and fantasy stories, he developed a system called Dianetics which was first expounded in book form in May 1950.  He subsequently developed his ideas into a wide-ranging set of doctrines and practices as part of a new religious movement that he called Scientology.  His writings became the guiding texts for the Church of Scientology and a number of affiliated organizations that address such diverse topics as business administration, literacy and drug rehabilitation.  The Church's dissemination of these materials led to Hubbard being listed by the "Guinness Book of World Records" as the most translated and published author in the world.  The Guinness World Record for the most audio books published for one author is also held by Hubbard.  In 2014, Hubbard was cited by "Smithsonian" magazine as one of the 100 most significant Americans of all time, as one of the eleven religious figures on that list.
+
+Scieno Sitter: Scieno Sitter is content-control software that, when installed on a computer, blocks certain websites critical of Scientology from being viewed.  The software was released by the Church of Scientology in 1998 for Church members using Windows 95.  The term "Scieno Sitter" was coined by critics of Scientology who assert that the program is a form of Internet censorship.
+
+Brain-Washing (book): Brain-Washing: A Synthesis of the Russian Textbook on Psychopolitics, sometimes referred to as The Brainwashing Manual, is a book published by the Church of Scientology in 1955.  It purports to be a condensation of the work of Lavrentiy Beria, the Soviet secret police chief.  The book states Kenneth Goff as author.  Its true authorship is not clear, the three common hypotheses being: Scientology founder L Ron Hubbard, Kenneth Goff (alias Oliver Kenneth Goff), or both L Ron Hubbard and Kenneth Goff based on an acquired US agency report.  The third hypothesis is questionable as there is not proof that the two men ever knew each other.  Claims that L Ron Hubbard was the author are also dubious as the only source of this claim is his estranged son, L Ron Hubbard Jr., who made it his life work trying to intentionally discredit his father in every possible way, and in addition to withdrawing all his accusations before his death, has been discredited in courts of law.
+
+Margaret Grubb: Margaret Louise "Polly" Grubb (September 22, 1907 – November 17, 1963) was the first wife of pulp fiction author and Scientology founder L. Ron Hubbard, to whom she was married between 1933 and 1947.  She was the mother of Hubbard's first son, L. Ron Hubbard, Jr. and his first daughter, Katherine May "Kay" Hubbard.
+
+Computer lab: A computer lab is a space which provides computer services to a defined community.  Computer labs are typically provided by libraries to the public, by academic institutions to students who attend the institution, or by other institutions to the public or to people affiliated with that institution.  Users typically must follow a certain user policy to retain access to the computers.  This generally consists of the user not engaging in illegal activities or attempting to circumvent any security or content-control software while using the computers.  In public settings, computer lab users are often subject to time limits, in order to allow more people a chance to use the lab, whereas in other institutions, computer access typically requires valid personal login credentials, which may also allow the institution to track the user's activities.  Computers in computer labs are typically equipped with internet access, while scanners and printers may augment the lab setup.  Computers in computer labs are typically arranged either in rows, so that every workstation has a similar view of one end of the room to facilitate lecturing or presentations, or in clusters, to facilitate small group work.  In some cases, generally in academic institutions, student laptops or laptop carts take the place of dedicated computer labs, although computer labs still have a place in applications requiring special software or hardware not practically implementable in personal computers.
+
+DansGuardian: DansGuardian, written by SmoothWall Ltd and others, is content-control software: software designed to control which websites users can access.  It also includes virus filtering and usage monitoring features.  DansGuardian must be installed on a Unix or Linux computer, such as a server computer; its filtering extends to all computers in an organization, including Windows and Macintosh computers.  DansGuardian is used by schools, businesses, value-added Internet service providers, and others.
+
+Question: Scieno Sitter is content-control software that, when installed on a computer, blocks certain websites critical of which body of religious beliefs and practices developed in 1954 by American author L. Ron Hubbard, from being viewed?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "religious_belief_system_name": {
+      "type": "string",
+      "description": "The name of the body of religious beliefs and practices."
+    },
+    "founder_name": {
+      "type": "string",
+      "description": "The name of the American author who developed the religious beliefs and practices."
+    },
+    "development_year": {
+      "type": "integer",
+      "description": "The year the religious beliefs and practices were developed."
+    },
+    "content_control_software": {
+      "type": "object",
+      "properties": {
+        "software_name": {
+          "type": "string",
+          "description": "The name of the content-control software."
+        },
+        "blocking_target": {
+          "type": "string",
+          "description": "What the software blocks (e.g., websites critical of the belief system)."
+        }
+      },
+      "required": [
+        "software_name",
+        "blocking_target"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "religious_belief_system_name",
+    "founder_name",
+    "development_year",
+    "content_control_software"
+  ],
+  "additionalProperties": false
+}

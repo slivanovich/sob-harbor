@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "Reuben Nakian",
+    "nationality": "American"
+  },
+  "person_2": {
+    "name": "Garo Yepremian",
+    "nationality": "American"
+  },
+  "nationalities_are_same": true,
+  "answer": true
+}

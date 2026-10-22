@@ -1,0 +1,8 @@
+{
+  "championship_name": "FIA Formula E Championship",
+  "car_details": {
+    "power_source": "electric",
+    "design_type": "open-wheel auto racing car"
+  },
+  "team_involved": "Techeetah"
+}

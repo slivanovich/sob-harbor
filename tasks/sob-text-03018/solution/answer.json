@@ -1,0 +1,12 @@
+{
+  "films": [
+    {
+      "title": "Walt Disney"
+    },
+    {
+      "title": "Manson"
+    }
+  ],
+  "shared_genre": "documentary film",
+  "genre_is_consistent": true
+}

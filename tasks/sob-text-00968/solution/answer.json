@@ -1,0 +1,18 @@
+{
+  "artist_name": "Rihanna",
+  "album_details": {
+    "album_title": "Music of the Sun",
+    "release_year": 2005,
+    "record_label": "Def Jam Recordings"
+  },
+  "debut_single_details": {
+    "single_title": "Pon de Replay",
+    "single_release_date": "May 24, 2005",
+    "writers_producers": [
+      "Vada Nobles",
+      "Alisha Brooks",
+      "Carl Sturken",
+      "Evan Rogers"
+    ]
+  }
+}

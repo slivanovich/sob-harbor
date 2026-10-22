@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "13d41739a394989c9e3043c8213282a00dc98df1c27ec101ea9c8d5bb246e404",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab55158554299488d4d9928",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Bergen County",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Sussex County, New Jersey: Sussex County is the northernmost county in the State of New Jersey.  Its county seat is Newton.  It is part of the New York City Metropolitan Area.  As of the 2016 Census estimate, the county's population was 142,522, making it the 17th-most populous of the state's 21 counties, a 4.5% decrease from the 149,265 enumerated in the 2010 United States Census, in turn an increase of 5,099 (3.5%) over the 144,166 persons enumerated in the 2000 Census, retaining its position as the 17th-most populous county among the state's 21 counties.  Based on 2010 Census data, Vernon Township was the county's largest in both population and area, with a population of 23,943 and covering an area of 70.59 sqmi .  s of 2010 The Bureau of Economic Analysis ranked the county as having the 131st-highest per capita income ($49,207) of the 3,113 counties in the United States (and the ninth-highest in New Jersey).\n\nUnion County, New Jersey: Union County is a county in the U.S. state of New Jersey.  As of the 2016 Census estimate, the county's population was 555,630, making it the seventh-most populous of the state's 21 counties, an increase of 3.6% from the 2010 United States Census, when its population was enumerated at 536,499, in turn an increase of 13,958 (2.7%) from the 522,541 enumerated in the 2000 Census.  In 2010, Union County slipped to the seventh-most populous county in the state, having been surpassed by Ocean County.  Union County is part of the New York metropolitan area.  Its county seat is Elizabeth.  The Bureau of Economic Analysis ranked the county as having the 119th-highest per capita income of all 3,113 counties in the United States (and the eighth-highest in New Jersey) in 2009.  A study by Forbes.com determined that Union County pays the second-highest property taxes of all U.S. counties, based on 2007 data.  With a population density of 4,955 people per square mile (water excluded), Union County was the 15th-most densely populated county in America as of the 2010 Census, and third-densest in New Jersey, behind Hudson County (ranked 6th nationwide at 9,754 per square mile) and Essex County (ranked 11th at 6,126).\n\nBergen County, New Jersey: Bergen County is the most populous county in the U.S. state of New Jersey.  As of the 2016 Census estimate, the county's population was 939,151, an increase of 3.8% from the 2010 United States Census, which in turn represented an increase of 20,998 (2.4%) from the 884,118 counted in the 2000 Census.  Located in the northeastern corner of New Jersey and its Gateway Region, Bergen County is part of the New York City Metropolitan Area and is directly across the George Washington Bridge from Manhattan.\n\nOcean County, New Jersey: Ocean County is a county located along the Jersey Shore in the U.S. state of New Jersey.  Its county seat is Toms River.  Since 1990, Ocean County has been one of New Jersey's fastest-growing counties.  As of the 2016 Census estimate, the county's population was 592,497, a 2.8% increase from the 576,567 enumerated in the 2010 United States Census, making Ocean the state's sixth-most populous county.  The 2010 population figure represented an increase of 65,651 (+12.8%) from the 2000 Census population of 510,916, as Ocean surpassed Union County to become the sixth-most populous county in the state.  Ocean County was also the fastest growing county in New Jersey between 2000 and 2010 in terms of increase in the number of residents and second-highest in percentage growth.  Ocean County was established on February 15, 1850, from portions of Monmouth County, with the addition of Little Egg Harbor Township which was annexed from Burlington County on March 30, 1891.  The most populous place was Lakewood Township, with 92,843 residents at the time of the 2010 Census (up 32,491 since 2000, the largest population increase of any municipality in the state), while Jackson Township, covered 100.62 sqmi , the largest total area of any municipality in the county.\n\nGloucester County, New Jersey: Gloucester County is a county located in the U.S. state of New Jersey.  As of the 2016 Census estimate, the county's population was 292,330, making it the state's 14th-most populous county, an increase of 1.4% from the 2010 United States Census, when its population was enumerated at 288,288, in turn an increase of 33,615 (+13.2%) from the 254,673 counted in the 2000 U.S. Census.  The percentage increase in the county's population between 2000 and 2010 was the largest in New Jersey, almost triple the statewide increase of 4.5%, and the absolute increase in residents was the third highest.  Its county seat is Woodbury.\n\nMonmouth County, New Jersey: Monmouth County is a county located in Central New Jersey, in the United States within the New York metropolitan area, and the northernmost county along the Jersey Shore.  As of the 2016 Census estimate, the county's population was 625,846, making it the state's fifth-most populous county, representing a decrease of 0.7% from the 2010 Census, when the population was enumerated at 630,380, in turn an increase of 15,079 from 615,301 at the 2000 Census.  As of 2010, the county fell to the fifth-most populous county in the state, having been surpassed by Hudson County.  Its county seat is Freehold Borough.  The most populous place was Middletown Township, with 66,522 residents at the time of the 2010 Census, while Howell Township covered 61.21 sqmi , the largest total area of any municipality.\n\nBarnstable Academy: Barnstable Academy is a university preparatory private school serving students in fifth through twelfth grades in Oakland, New Jersey in Bergen County, New Jersey, United States.  The school was founded in 1978.  The school is accredited by AdvancED.\n\nSalem County, New Jersey: Salem County is a county located in the U.S. state of New Jersey.  Its western boundary is formed by the Delaware River and it has the eastern terminus of the Delaware Memorial Bridge, connecting to New Castle, Delaware.  Its county seat is Salem.  The county is part of the Delaware Valley area.  As of the 2016 Census estimate, the county's population was 63,436, making it the state's least populous county, representing a 4.0% decrease from the 66,083 enumerated at the 2010 Census, in turn increasing by 1,798 (+2.8%) from the 64,285 counted in the 2000 Census, retaining its position as the state's least populous county.  The most populous place was Pennsville Township, with 13,409 residents at the time of the 2010 Census.  Lower Alloways Creek Township covers 72.46 sqmi , the largest total area of any municipality.\n\nMercer County, New Jersey: Mercer County is a county located in the U.S. state of New Jersey.  Its county seat is Trenton, the state capital.  The county constitutes the Trenton-Ewing, NJ Metropolitan Statistical Area and is considered part of the New York Metropolitan Area by the United States Census Bureau, but also directly borders the Philadelphia metropolitan area and is included within the Federal Communications Commission's Philadelphia Designated Market Area.  As of the 2016 Census estimate, the county's population was 371,023, making it the state's 12th-most populous county, an increase of 1.2% from the 2010 United States Census, when its population was enumerated at 366,513, in turn an increase of 15,752 (4.5%) from the 350,761 enumerated in the 2000 Census, retaining its position as the 12th-most populous county in the state.  Mercer County stands among the highest-income counties in the United States, with the Bureau of Economic Analysis having ranked the county as having the 78th-highest per capita income of all 3,113 counties in the United States (and the sixth-highest in New Jersey) as of 2009.\n\nMiddlesex County, New Jersey: Middlesex County is a county located in north-central New Jersey, United States.  As of the 2016 Census estimate, the county's population was 837,073, making it the state's second-most populous county, an increase of 3.4% from the 2010 United States Census, when its population was enumerated at 809,858, making it the second-most populous county in the state.  Middlesex is part of the New York metropolitan area, and its county seat is New Brunswick.  The center of population of the state of New Jersey is located in Middlesex County, in East Brunswick Township, just east of the New Jersey Turnpike.  The 2000 Census showed that the county ranked 63rd in the United States among the highest-income counties by median household.  The Bureau of Economic Analysis ranked the county as having the 143rd-highest per capita income of all 3,113 counties in the United States (and the 10th-highest in New Jersey) as of 2009.  Middlesex County holds the nickname, \"The Greatest County in the Land\".",
+    "question": "What is the most populous county in New Jersey and has Barnstable Academy as one of its institutions?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "county_name": {
+          "type": "string",
+          "description": "The name of the county."
+        },
+        "is_most_populous_in_state": {
+          "type": "boolean",
+          "description": "True if the county is the most populous in New Jersey."
+        },
+        "population_2016_estimate": {
+          "type": "integer",
+          "description": "The estimated population of the county as of the 2016 Census estimate."
+        },
+        "institution_found": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the institution located in the county."
+            },
+            "location_town": {
+              "type": "string",
+              "description": "The town where the institution is located."
+            }
+          },
+          "required": [
+            "name",
+            "location_town"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "county_name",
+        "is_most_populous_in_state",
+        "population_2016_estimate",
+        "institution_found"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "county_name": "Bergen County",
+      "is_most_populous_in_state": true,
+      "population_2016_estimate": 939151,
+      "institution_found": {
+        "name": "Barnstable Academy",
+        "location_town": "Oakland"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+ZeroCater: ZeroCater is a foodservice company Headquartered in San Francisco, CA, specializing in providing companies catered meals from local restaurants, caterers, and food trucks.  ZeroCater currently feeds thousands of companies including, BuzzFeed, IDEO, Bleacher Report, Chan Zuckerberg Initiative, ClassPass, and Blue Apron.  As of March 2017, it is operational in the San Francisco Bay Area, New York City, Los Angeles, Austin, Washington D.C. and Chicago.
+
+Sandra Liu Huang: Sandra Liu Huang leads the Product team at the Chan Zuckerberg Initiative.  Previously she was the Director of Product Management at Quora, a question-and-answer platform; and an early and senior member of the Product team at Facebook.
+
+Jim Shelton: James H. Shelton III is the head of the Chan Zuckerberg Initiative's Education division.  He was the formerly the Deputy Secretary of Education for the United States.  In this role, he oversaw a broad range of management, policy, and program functions.
+
+Roman Waschuk: Roman Waschuk (also Roman Vashchuk, ukr.: Роман Ващук), (born 1962 in Toronto, Ontario), ethnic Ukrainian, Canadian diplomat, Ambassador of Canada to Ukraine.  His parents immigrated after the Second World War to Canada.  His father was born in Ivano-Frankivsk, his mother born in Buchach.  He studied history with focus on Central and Eastern Europe, also German and Russian, receiving 1985 a MA at University of Toronto.  He worked for the Commission of Inquiry on War Criminals Juli 1985 – December 1986, Providing background information to investigators and counsel on WW2-era events in Central, Eastern and Southern Europe.  He is fluent in English, French, German, Russian, Ukrainian, Polish and Serbian.  He was member of the Ukrainian Scouting organization "Plast" in Canada.
+
+Priscilla Chan (philanthropist): Priscilla Chan (born February 24, 1985) is an American pediatrician and philanthropist.  She is the wife of the co-founder and CEO of Facebook, Mark Zuckerberg.  Born and raised in Massachusetts, she attended Harvard University for undergrad and received her medical degree from the University of California, San Francisco (UCSF).  As of 2015, she and her husband have pledged more than $1.6 billion to charities.  In December 2015, they pledged to donate 99% of their Facebook shares, valued at $45 billion, to the Chan Zuckerberg Initiative, a philanthropic and political action company that focuses on health and education.
+
+Wilma Chan: Wilma Chan (born October 5, 1949 in Boston, Massachusetts, ) is a politician in California serving on the Alameda County Board of Supervisors.  Chan served as the California State Assembly Majority Leader from 2002–2004; she was the first woman and the first Asian American to hold the position.  She also served as Assembly Majority Whip from 2001-2002.  Chan is a Democrat.  She represented the 16th District, which includes Oakland, Alameda, and Piedmont from 2000 to 2006 before being termed out.  In June, Chan lost a Democratic Party primary election for the California State Senate District 9 seat that is now held by Senate President Pro Tem Don Perata, who will be termed out in 2008.  Chan was a resident of Oakland for more than 20 years; she lives in Alameda.  She is the mother of two grown children.
+
+Chan Zuckerberg Initiative: The Chan Zuckerberg Initiative (CZI) is a limited liability company founded by Facebook founder Mark Zuckerberg and Priscilla Chan with an investment of "up to $1 billion in [Facebook] shares in each of the next three years".  Its creation was announced on December 1, 2015, for the birth of their daughter, Maxima Chan Zuckerberg.
+
+BioRxiv: bioRxiv is a preprint repository for the biological sciences launched in November 2013.  It is hosted by the Cold Spring Harbor Laboratory (CSHL).  As preprints, papers hosted on bioRxiv are not peer-reviewed, but undergo basic screening and checked against plagiarism.  Readers may offer comments on the preprint.  It was inspired by and intends to complement the arXiv repository, which mostly focuses on physics and connected disciplines, launched in 1991 by Paul Ginsparg (who also serves on the bioRxiv advisory board).  It received support from both the CSHL and the Lourie Foundation.  Additional funding from the Chan Zuckerberg Initiative was confirmed in April 2017.
+
+Cornelia Bargmann: Cornelia Isabella "Cori" Bargmann (born 1961) is an American neurobiologist.  She is known for her work on the behavior in the C. elegans, particularly olfaction in the worm.  Studying the C. elegans is allowing Bargmann to uncover how neurons and genes affect behavior.  Knowing that many of the gene mechanisms in roundworms mimic those of mammals, she is able to manipulate certain genes and observe how that affects changes in behavior.  She has been elected to the National Academy of Sciences and had been a Howard Hughes Medical Institute investigator at UCSF and then Rockefeller University from 1995 to 2016.  It was announced on September 21, 2016 that she had been named the incoming president of science at the Chan Zuckerberg Initiative, effective October 1, 2016.  In 2012 she was awarded the $1 million Kavli Prize, and in 2013 the $3 million Breakthrough Prize in Life Sciences.
+
+Andela: Andela is a global engineering organization that extends engineering teams with world-class software developers.  The company recruits the most talented developers on the African continent, shapes them into technical leaders, and places them as full-time distributed team members with companies that range from Microsoft and IBM to dozens of high-growth startups.  Backed by Chan Zuckerberg Initiative, GV (Google Ventures) and Spark Capital, Andela is building the next generation of global technology leaders.  Andela has offices in Lagos, Nairobi, Kampala and New York.
+
+Question: In which year was Maxima Chan Zuckerberg's mother born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person whose birth year is being identified."
+    },
+    "relationship_to_maxima": {
+      "type": "string",
+      "description": "The relationship of the person to Maxima Chan Zuckerberg."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The year the person was born."
+    }
+  },
+  "required": [
+    "person_name",
+    "relationship_to_maxima",
+    "birth_year"
+  ],
+  "additionalProperties": false
+}

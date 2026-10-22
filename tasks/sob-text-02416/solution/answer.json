@@ -1,0 +1,8 @@
+{
+  "common_beverage_type": "cocktail",
+  "beverages_identified": [
+    "Snowball",
+    "Caesar"
+  ],
+  "reasoning": "Both 'Snowball' and 'Caesar' are explicitly defined as 'cocktail' in their respective context entries."
+}

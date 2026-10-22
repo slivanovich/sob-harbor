@@ -1,0 +1,14 @@
+{
+  "magazine_comparison": [
+    {
+      "magazine_name": "Mandate",
+      "first_publication_year": 1975
+    },
+    {
+      "magazine_name": "Black Inches",
+      "first_publication_year": 1993
+    }
+  ],
+  "earliest_published_magazine": "Mandate",
+  "earliest_publication_year": 1975
+}

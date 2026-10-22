@@ -1,0 +1,16 @@
+{
+  "universities_info": [
+    {
+      "university_name": "Yale University",
+      "university_type": "private Ivy League research university",
+      "country": "United States"
+    },
+    {
+      "university_name": "Rice University",
+      "university_type": "private research university",
+      "country": "United States"
+    }
+  ],
+  "shared_country": "United States",
+  "all_are_private_research_universities": true
+}

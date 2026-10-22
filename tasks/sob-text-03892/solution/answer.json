@@ -1,0 +1,16 @@
+{
+  "individuals": [
+    {
+      "name": "George Adomian",
+      "profession": "mathematician",
+      "descent_as_stated": "Armenian descent"
+    },
+    {
+      "name": "Hovsep Pushman",
+      "profession": "artist",
+      "descent_as_stated": "Armenian background"
+    }
+  ],
+  "shared_descent_origin": "Armenian",
+  "descent_category": "ethnic"
+}

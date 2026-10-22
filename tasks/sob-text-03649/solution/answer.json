@@ -1,0 +1,14 @@
+{
+  "player_specialists": [
+    {
+      "player_name": "Vania King",
+      "specialization": "doubles"
+    },
+    {
+      "player_name": "Cyril Suk III",
+      "specialization": "doubles"
+    }
+  ],
+  "common_specialization_type": "doubles",
+  "number_of_specialists_found": 2
+}

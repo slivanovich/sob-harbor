@@ -1,0 +1,19 @@
+{
+  "person_name": "Margot Kidder",
+  "nationalities": [
+    "Canadian",
+    "American"
+  ],
+  "occupations": [
+    "actress",
+    "activist"
+  ],
+  "starred_in_horror_film": true,
+  "horror_film_roles": [
+    {
+      "film_title": "Sisters",
+      "film_year": 1973,
+      "film_genre": "psychological horror"
+    }
+  ]
+}

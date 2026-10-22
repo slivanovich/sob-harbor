@@ -1,0 +1,19 @@
+{
+  "author_details": {
+    "name": "Georg Christoph Lichtenberg",
+    "roles": [
+      "scientist",
+      "satirist",
+      "Anglophile"
+    ]
+  },
+  "work_details": {
+    "title": "Lichtenberg's Avertissement",
+    "purpose": "deter the citizens of Göttingen, Germany, from attending the performance of Jacob Philadelphia"
+  },
+  "event_details": {
+    "event_performer": "Jacob Philadelphia",
+    "event_year": 1777,
+    "event_location": "Göttingen, Germany"
+  }
+}

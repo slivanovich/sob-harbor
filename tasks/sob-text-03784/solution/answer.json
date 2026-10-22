@@ -1,0 +1,14 @@
+{
+  "show_name": "We Got Married",
+  "season_number": 4,
+  "kim_ye_won_participant": {
+    "name": "Kim Ye-won",
+    "role_in_show": "participant",
+    "occupation_type": "singer"
+  },
+  "paired_singer": {
+    "name": "Henry Lau",
+    "nationality": "Canadian",
+    "birth_year": 1989
+  }
+}

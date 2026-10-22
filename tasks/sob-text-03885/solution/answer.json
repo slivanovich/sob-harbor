@@ -1,0 +1,15 @@
+{
+  "airport_name": "Beatty Airport",
+  "town_details": {
+    "town_name": "Beatty",
+    "county": "Nye County",
+    "state": "Nevada",
+    "is_unincorporated": true,
+    "river_name": "Amargosa River"
+  },
+  "airport_location_relative_to_town": {
+    "distance_nautical_miles": 3,
+    "distance_km": 6,
+    "relative_direction_from_town_cbd": "southwest"
+  }
+}

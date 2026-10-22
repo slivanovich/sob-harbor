@@ -1,0 +1,15 @@
+{
+  "play_title": "Peer Gynt",
+  "play_author": "Henrik Ibsen",
+  "play_details": {
+    "publication_year": 1867,
+    "number_of_acts": 5,
+    "genre": "verse play"
+  },
+  "band_information": {
+    "band_name": "LoMsk",
+    "album_name": "Bukkerittet",
+    "band_origin": "Lom in Gudbrandsdalen",
+    "establishment_year": 1982
+  }
+}

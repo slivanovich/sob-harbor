@@ -1,0 +1,15 @@
+{
+  "professor_name": "Bradford Humes Young",
+  "university_name": "Oral Roberts University",
+  "university_location": {
+    "city": "Tulsa",
+    "state": "Oklahoma",
+    "country": "United States"
+  },
+  "university_characteristics": [
+    "interdenominational",
+    "Christian",
+    "comprehensive liberal arts university"
+  ],
+  "department": "Graduate Department of Oral Roberts University"
+}

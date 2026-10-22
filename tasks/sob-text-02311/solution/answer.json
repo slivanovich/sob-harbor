@@ -1,0 +1,11 @@
+{
+  "king_name": "Edward I of England",
+  "king_birth_year": 1239,
+  "event_details": {
+    "action": "swore fealty",
+    "entity_involved": "Prioress",
+    "entity_location": "St. Leonards Nunnery, Perth, Scotland",
+    "year_of_event": 1296,
+    "king_action_preceding_event": "foray in Scotland"
+  }
+}

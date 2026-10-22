@@ -1,0 +1,12 @@
+{
+  "cdp_name": "Incline Village",
+  "population": 8777,
+  "census_year": 2010,
+  "location_details": {
+    "relative_to_entity": "Mount Baldy",
+    "distance_miles": 2.4,
+    "direction": "southeast"
+  },
+  "county": "Washoe County",
+  "state": "Nevada"
+}

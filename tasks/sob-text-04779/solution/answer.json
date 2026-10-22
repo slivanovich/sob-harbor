@@ -1,0 +1,15 @@
+{
+  "person_name": "Storm Thorgerson",
+  "person_roles": [
+    "graphic designer",
+    "music video director"
+  ],
+  "worked_for_artists_relevant_to_question": [
+    "Peter Gabriel",
+    "Rival Sons"
+  ],
+  "rival_sons_album_artwork_details": {
+    "album_title": "Pressure & Time",
+    "artist_name": "Rival Sons"
+  }
+}

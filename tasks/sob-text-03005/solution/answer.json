@@ -1,0 +1,9 @@
+{
+  "entity_name": "Cape Cod",
+  "entity_type": "geographical region",
+  "location": {
+    "state_name": "Massachusetts",
+    "state_abbreviation": "MA",
+    "country": "United States"
+  }
+}

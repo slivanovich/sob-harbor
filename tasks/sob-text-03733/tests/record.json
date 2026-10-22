@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "e240ea33a94598f522e91aee51752cbd59bee429e52e26bc57183fcf5f092faa",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae788845542994a481bbd6f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "fifteen",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Caroline Swift: Dame Caroline Jane Swift, Lady Openshaw {'1': \", '2': \", '3': \", '4': \"} (born 30 May 1955), styled The Hon. Mrs Justice Swift, was leading counsel to the Inquiry in the Shipman Inquiry, which began in 2001.\n\nHarold Shipman: Doctor Death: Harold Shipman: Doctor Death is a 2002 ITV television drama about the life and crimes of serial killer Harold Shipman.  Starring James Bolam in the role of Shipman, the programme was directed by Roger Bamford and written by Michael Eaton.  Broadcast on July 9, 2002, the programme attracted a viewing audience of 7.37 million.  The programme was released on DVD on July 15, 2013 by Strawberry Media, in association with ITV.\n\nDark Angel (2016 TV series): Dark Angel is a British two-part television drama miniseries, based on the adaptation of the book \"Mary Ann Cotton: Britain's First Female Serial Killer\" by David Wilson.  The series was broadcast on 31 October and 7 November 2016, and starred Joanne Froggatt as protagonist Mary Ann Cotton, widely regarded as Britain's first female serial killer, who was found guilty of murder in March 1873 for the murder of three of her husbands, allegedly in order to collect on their insurance policies.\n\nHarold Shipman: Harold Frederick Shipman (14 January 1946 – 13 January 2004) was a British general practitioner and one of the most prolific serial killers in recorded history.  On 31 January 2000, a jury found Shipman guilty of fifteen murders for killing patients under his care.  He was sentenced to life imprisonment with the recommendation that he never be released.\n\nBruce Mendenhall: Bruce Mendenhall (born April 14, 1951) is a convicted American murderer and accused serial killer.  He was arrested in Tennessee in July 2007 – and found guilty in 2010 – for the June 26, 2007 murder of Sara Hulbert.  A long haul trucker, his truck was found to contain the blood of numerous other murdered or missing women.  He has been charged with the murders of three other women at truck stops in Alabama, Indiana and Tennessee.  He is still under investigation for murders in Georgia, Illinois, New Mexico, Oklahoma, and Texas—some of which carry the death penalty.\n\nDeath of Theresa Allore: Theresa Allore was a 19-year-old Canadian college student who disappeared on Friday, November 3, 1978 from Champlain College Lennoxville in the Eastern Townships of Quebec.  Five months later, on April 13, 1979, her body was discovered in a small body of water approximately one kilometer from her dormitory residence in Compton, Quebec.  Upon her disappearance police initially suggested she was a runaway.  When her body was discovered police then suggested that she was the possible victim of a drug overdose, perhaps with the assistance of fellow college students.  In the summer of 2002, the family of Theresa Allore enlisted the support of an investigative reporter and friend, Patricia Pearson, who produced a series of articles for Canada's National Post newspaper that presented compelling evidence that Theresa Allore was a victim of murder, and that her death was possibly linked to two other unsolved local cases; the death of 10-year-old Manon Dube in March 1978, and the murder of Louise Camirand in 1977.  The theory was supported by geographic profiler and then FBI consultant, Kim Rossmo, who suggested a serial sexual predator may have been operating in the Quebec region in the late 1970s and advised police to investigate the three deaths as a series.  Rossmo later gained notoriety when, in 1998, he suggested that Vancouver police create a serial killer task force to investigate the multiple cases of missing women from Vancouver's downtown Eastside.  Robert Pickton was eventually arrested and found guilty of six murders, though he was accused of, and implicated in, an additional 26 murders of Vancouver missing women.\n\nThe Shipman Inquiry: The Shipman Inquiry was the report produced by a British governmental investigation into the activities of general practitioner and serial killer Harold Shipman.  Shipman was caught in 1998 and the inquiry commenced after his trial in 2000.  It released its findings in various stages, with its sixth and final report being released on 27 January 2005.  It was chaired by Dame Janet Smith DBE.\n\nChester Turner: Chester Dewayne Turner (born November 5, 1966) is an American convicted serial killer.  On April 30, 2007, he was convicted of the murders of 10 women in Los Angeles, and was also found guilty in the death of the unborn child of one of his victims.  He was convicted of 4 additional murders on June 19, 2014.  Prosecutors have called Turner \"one of the most prolific serial killers in the city’s history\".  On July 10, 2007, Turner was sentenced to death for the 11 murders he was originally convicted of committing.  On June 26, 2014, Turner was sentenced to death a second time for the 4 additional murders.\n\nMy Brother the Serial Killer: My Brother the Serial Killer is a 2012 American television documentary about serial killer Glen Rogers, otherwise known as the \"Casanova Killer\", who was convicted for a series of murders and arsons.  The documentary was narrated by Rogers' brother Clay Rogers and aired on Investigation Discovery in November 2012.  \"My Brother the Serial Killer\" received widespread media attention for Clay's claims that his brother was responsible for the 1994 murders of Nicole Brown Simpson and Ronald Lyle Goldman.\n\nJanet Smith (judge): Dame Janet Hilary Smith, DBE (born 29 November 1940), styled The Rt Hon. Lady Justice Smith, is an English judge and former High Court Judge and President of the Council of The Inns of Court.  She is perhaps best known as the judge who prepared \"The Shipman Inquiry\", a report on the activities of the British serial killer Harold Shipman.  On 21 November 2002, Smith became the fourth woman to be promoted to the Court of Appeal, but has since retired from that role.",
+    "question": "The Shipman Inquiry was a report into the activities of the serial killer who was found guilty of how many murders?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "serial_killer_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the serial killer."
+            },
+            "convicted_murders_count": {
+              "type": "integer",
+              "description": "The number of murders the serial killer was found guilty of."
+            },
+            "conviction_date": {
+              "type": "string",
+              "description": "The date of the serial killer's conviction."
+            }
+          },
+          "required": [
+            "name",
+            "convicted_murders_count",
+            "conviction_date"
+          ],
+          "additionalProperties": false
+        },
+        "inquiry_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the inquiry."
+            },
+            "purpose": {
+              "type": "string",
+              "description": "The purpose of the inquiry."
+            }
+          },
+          "required": [
+            "name",
+            "purpose"
+          ],
+          "additionalProperties": false
+        },
+        "inquiry_subject_killer_name": {
+          "type": "string",
+          "description": "The name of the serial killer who was the subject of the inquiry."
+        }
+      },
+      "required": [
+        "serial_killer_details",
+        "inquiry_details",
+        "inquiry_subject_killer_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "serial_killer_details": {
+        "name": "Harold Shipman",
+        "convicted_murders_count": 15,
+        "conviction_date": "31 January 2000"
+      },
+      "inquiry_details": {
+        "name": "The Shipman Inquiry",
+        "purpose": "report produced by a British governmental investigation into the activities of general practitioner and serial killer Harold Shipman"
+      },
+      "inquiry_subject_killer_name": "Harold Shipman"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

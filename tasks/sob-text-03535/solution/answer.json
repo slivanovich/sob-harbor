@@ -1,0 +1,17 @@
+{
+  "common_category": "board game",
+  "entities": [
+    "København",
+    "Vinci"
+  ],
+  "entity_details": [
+    {
+      "name": "København",
+      "type": "board game"
+    },
+    {
+      "name": "Vinci",
+      "type": "board game"
+    }
+  ]
+}

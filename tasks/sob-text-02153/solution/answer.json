@@ -1,0 +1,12 @@
+{
+  "university_name": "University of Providence",
+  "designated_faith": "Roman Catholic",
+  "accreditation_details": {
+    "accrediting_body": "Northwest Association of Schools and Colleges"
+  },
+  "location_details": {
+    "city": "Great Falls",
+    "state": "Montana",
+    "city_size_rank_in_state": 3
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "films_compared": [
+    {
+      "title": "102 Dalmatians",
+      "release_year": 2000
+    },
+    {
+      "title": "Freaky Friday",
+      "release_year": 1976
+    }
+  ],
+  "earliest_film": {
+    "title": "Freaky Friday",
+    "release_year": 1976
+  },
+  "comparison_statement": "Freaky Friday was released first, in 1976, while 102 Dalmatians was released in 2000."
+}

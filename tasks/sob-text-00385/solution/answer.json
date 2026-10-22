@@ -1,0 +1,27 @@
+{
+  "episode_title": "Purple Rain-Union",
+  "series_name": "Bob's Burgers",
+  "air_date": "December 1, 2013",
+  "episode_identifiers": {
+    "season_number": 4,
+    "episode_number_in_season": 6,
+    "overall_episode_number": 51
+  },
+  "title_references": [
+    {
+      "reference_type": "song",
+      "referenced_work_title": "Purple Rain",
+      "referenced_artist": "Prince"
+    },
+    {
+      "reference_type": "film",
+      "referenced_work_title": "Purple Rain",
+      "referenced_artist": "Prince"
+    },
+    {
+      "reference_type": "album",
+      "referenced_work_title": "Purple Rain",
+      "referenced_artist": "Prince"
+    }
+  ]
+}

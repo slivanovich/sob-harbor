@@ -1,0 +1,13 @@
+{
+  "band_name": "The Doobie Brothers",
+  "band_origin": {
+    "city": "San Jose",
+    "state": "California"
+  },
+  "album_details": {
+    "title": "Live at Wolf Trap",
+    "release_year": 2004,
+    "album_type": "live album",
+    "live_album_sequence_number": 3
+  }
+}

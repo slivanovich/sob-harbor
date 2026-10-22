@@ -1,0 +1,18 @@
+{
+  "bands_information": [
+    {
+      "band_name": "Cave In",
+      "formation_location": "Methuen, Massachusetts",
+      "is_formed_in_california": false
+    },
+    {
+      "band_name": "Grandaddy",
+      "formation_location": "Modesto, California",
+      "is_formed_in_california": true
+    }
+  ],
+  "question_criteria": {
+    "location_sought": "California"
+  },
+  "answer_band_name": "Grandaddy"
+}

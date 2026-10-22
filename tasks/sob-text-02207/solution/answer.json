@@ -1,0 +1,18 @@
+{
+  "question_asked": "Are Cycas and Heuchera both genus of plants ?",
+  "is_both_genus": true,
+  "plant_entities_analysis": [
+    {
+      "entity_name": "Cycas",
+      "is_confirmed_genus": true,
+      "taxonomic_family": "Cycadaceae",
+      "context_evidence": "Cycas is the type genus and the only genus recognised in the family Cycadaceae."
+    },
+    {
+      "entity_name": "Heuchera",
+      "is_confirmed_genus": true,
+      "taxonomic_family": "Saxifragaceae",
+      "context_evidence": "Heuchera is a genus of evergreen, herbaceous perennial plants in the family Saxifragaceae"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "linking_film": {
+    "title": "Mississippi Masala",
+    "release_year": 1991,
+    "genre": "romantic drama",
+    "screenwriter": "Sooni Taraporevala"
+  },
+  "screenwriter_details": {
+    "name": "Sooni Taraporevala",
+    "other_notable_screenplays": [
+      "The Namesake",
+      "Salaam Bombay",
+      "Little Zizou",
+      "Such a Long Journey"
+    ]
+  },
+  "oscar_nominated_film": {
+    "title": "Salaam Bombay",
+    "release_year": 1988,
+    "director": "Mira Nair",
+    "is_oscar_nominated": true
+  }
+}

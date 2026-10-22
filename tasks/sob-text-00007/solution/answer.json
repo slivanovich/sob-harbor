@@ -1,0 +1,14 @@
+{
+  "triggering_event": {
+    "name": "Tunisian Revolution",
+    "start_date": "17 December 2010",
+    "location": "Tunisia"
+  },
+  "revolutionary_wave": {
+    "name": "Arab Spring",
+    "description": "revolutionary wave"
+  },
+  "inspired_movement": {
+    "name": "Occupy Wall Street"
+  }
+}

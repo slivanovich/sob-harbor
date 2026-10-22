@@ -1,0 +1,17 @@
+{
+  "proposer_details": {
+    "name": "Charles Fort",
+    "nationality": "American",
+    "birth_year": 1874,
+    "professions": [
+      "writer",
+      "researcher"
+    ]
+  },
+  "proposed_concept": {
+    "name": "The Super-Sargasso Sea",
+    "description": "A dimension into which lost things go",
+    "concept_type": "dimension"
+  },
+  "relationship_to_lost_things": "dimension into which lost things go"
+}

@@ -1,0 +1,14 @@
+{
+  "suburb_name": "Morphett Vale",
+  "administrative_location": {
+    "city_of_onkaparinga": "Onkaparinga",
+    "state": "South Australia",
+    "is_southern_suburb_of_adelaide": true
+  },
+  "suburb_demographics": {
+    "is_largest_suburb_in_state": true,
+    "population": 23000,
+    "area_km2": 12.76,
+    "number_of_businesses": 1000
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "cities_mentioned": [
+    {
+      "city_name": "Kuytun",
+      "administrative_division": "Ili Kazakh Autonomous Prefecture, Xinjiang",
+      "country": "China"
+    },
+    {
+      "city_name": "Zaoyang",
+      "administrative_division": "Hubei province",
+      "country": "People's Republic of China"
+    }
+  ],
+  "number_of_cities": 2,
+  "common_country": "People's Republic of China"
+}

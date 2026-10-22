@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "46accd3023cf80f9993d65e53d4ac477e3aaea0da762498b6e29c58655c021ab",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a80a3205542992bc0c4a792",
+    "source_dataset": "hotpotqa",
+    "source_answer": "April 12, 2011",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Marigold (song): \"Marigold\" (originally titled \"Color Pictures of a Marigold\") is a song written and composed by American rock musician Dave Grohl, that was first released on \"Pocketwatch\", an album Grohl issued under the pseudonym Late!  in 1992.\n\nList of Foo Fighters band members: Foo Fighters is an American alternative rock band formed by multi-instrumentalist and vocalist Dave Grohl in 1994.  After recording the album \"Foo Fighters\" alone, Grohl enlisted guitarist Pat Smear, bassist Nate Mendel and drummer William Goldsmith to join the band.  This lineup recorded the second Foo Fighters album, 1997's \"The Colour and the Shape\", although most of Goldsmith's drum recordings were removed and re-recorded by Grohl for the release, after he left the band due to creative tensions.  Goldsmith was replaced by Taylor Hawkins, and Franz Stahl replaced Smear after he also departed, although he only remained in the band for a short period and did not record an album with the group.  The group's third album, \"There Is Nothing Left to Lose\", featured Hawkins on drums and was released in 1999.\n\nThe Only Way Is Up: \"The Only Way Is Up\" is a song written by George Jackson and Johnny Henderson and originally released in 1980 as a single by soul singer Otis Clay.  In 1988, it became a chart-topping single for Yazz and the Plastic Population.  The song is the official theme tune for award-winning ITV2 series \"The Only Way Is Essex\".  The song was a favourite of M People's, who would frequently play it on their live tours.  The band's lead singer, Heather Small, has described it as her favourite song, and once explained that, should she ever be anywhere, this is the song that she would sing.\n\nProbot: Probot was a heavy metal side project of ex-Nirvana drummer and Foo Fighters rhythm guitarist and lead-singer Dave Grohl.  Described by Grohl as \"a death metal \"Supernatural,\"\" the album mixes instrumentals recorded by Grohl himself with various metal singers whom the musician admired.  The album was released in February 2004 by Southern Lord Records.  It featured one single entitled \"Centuries of Sin\"/\"The Emerald Law\".\n\nThese Days (Foo Fighters song): \"These Days\" is the third single, (fourth in the UK), from the American rock band Foo Fighters' seventh studio album \"Wasting Light\".  It was written by Dave Grohl and co-produced by Butch Vig.  Dave Grohl has stated that it is his favourite song that he has ever written.  On August 18, 2012, the Foo Fighters performed \"These Days\" at Pukkelpop, as a tribute to the people who died or were injured there a year earlier, due to a violent thunderstorm that raged over the festival grounds.\n\nFoo Fighters: Sonic Highways: Sonic Highways is a 2014 American documentary miniseries directed by Dave Grohl and written by Mark Monroe.  The documentary was made concurrently with Foo Fighters' eighth album, \"Sonic Highways\", and was broadcast on HBO.  Grohl described the project as \"a love letter to the history of American music\".  Each of the eight episodes is presented as an exploration of the musical history of a different American city through a series of interviews by Grohl.  The group is also shown incorporating what they learned from the interviews into the writing and recording of a new song in or near that city.  The series debuted on October 17, 2014.\n\nLow (Foo Fighters song): \"Low\" was the third single to be released from the Foo Fighters' fourth album \"One by One\", released in 2002.  It was released as a single in 2003.  Dave Grohl described \"Low\" as \"the kind of song that you pray would be a single.  (...) It’s the one that everybody likes, but there’s just no way ’cause it’s too weird.\"  The song begun as an instrumental demo written by Grohl and drummer Taylor Hawkins in Hawkins' home studio in Topanga, California, some time after the 2002 Coachella Valley Music and Arts Festival.\n\nMantra (Dave Grohl song): \"Mantra\" is a song by Dave Grohl, Josh Homme, and Trent Reznor from the 2013 album \"\", the soundtrack to the 2013 documentary \"Sound City\".  Grohl was joined by different artists for different tracks as Grohl's Sound City Players.  For \"Mantra\", the final track on the album, he was joined by Homme and Reznor.  Homme also appeared on two other tracks on the album, \"Centipede\" and \"A Trick With No Sleeve\".\n\nFoo Fighters (album): Foo Fighters is the self-titled debut studio album by American hard rock band Foo Fighters, released on July 4, 1995, by Capitol Records through Dave Grohl's label Roswell.  Grohl wrote and recorded the entire album himself – with the exception of a guest guitar spot by Greg Dulli – with the assistance of producer Barrett Jones at Robert Lang Studios in Seattle, Washington, in 1994.  Grohl claimed he recorded the album just for fun, describing it as a cathartic experience to recover from the death of his Nirvana lead singer Kurt Cobain.\n\nWasting Light: Wasting Light is the seventh studio album by American rock band Foo Fighters.  It was released on April 12, 2011 on RCA Records, and is the first album to feature rhythm guitarist Pat Smear since \"The Colour and the Shape\" (1997), making the band a five piece with the album.  Wishing to capture the essence of the group's earlier work and avoid the artificiality of digital recording, frontman Dave Grohl arranged for the band to record in his garage in Encino, California using only analog equipment.  The sessions were supervised by producer Butch Vig, with whom Grohl had worked on Nirvana's \"Nevermind\".  Since the old equipment did not allow for many mistakes to be corrected in post-production, the band spent three weeks rehearsing the songs, and Vig had to relearn outdated editing techniques.  The band went for a heavier and rawer sound to contrast with the musical experiments from their previous albums, and most of the lyrics were written as Grohl reflected upon his life and possible future.  Guest musicians include Bob Mould, Krist Novoselic, Jessy Greene, Rami Jaffe and Fee Waybill.",
+    "question": "In regards to the album that had, according to Dave Grohl, his favourite song he has ever written, when was it released?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "album_name": {
+          "type": "string",
+          "description": "The name of the album."
+        },
+        "artist": {
+          "type": "string",
+          "description": "The artist who released the album."
+        },
+        "favorite_song_by_dave_grohl": {
+          "type": "string",
+          "description": "The name of the song that Dave Grohl stated is his favorite he has ever written."
+        },
+        "album_release_date": {
+          "type": "string",
+          "description": "The release date of the album."
+        }
+      },
+      "required": [
+        "album_name",
+        "artist",
+        "favorite_song_by_dave_grohl",
+        "album_release_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "album_name": "Wasting Light",
+      "artist": "Foo Fighters",
+      "favorite_song_by_dave_grohl": "These Days",
+      "album_release_date": "April 12, 2011"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

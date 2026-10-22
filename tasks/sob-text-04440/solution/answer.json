@@ -1,0 +1,12 @@
+{
+  "game_title": "Star Citizen",
+  "creator": "Chris Roberts",
+  "game_attributes": [
+    "crowdfunded",
+    "space simulator"
+  ],
+  "compatible_operating_systems": [
+    "Microsoft Windows",
+    "Linux"
+  ]
+}

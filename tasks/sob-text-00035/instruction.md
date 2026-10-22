@@ -1,0 +1,65 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+António de Oliveira Salazar: António de Oliveira Salazar (] ; 28 April 1889 – 27 July 1970) was a Portuguese politician and economist who was Prime Minister of Portugal from 1932 to 1968.  Salazar founded and led the "Estado Novo" ("New State"), the corporatist authoritarian government that ruled Portugal until 1974.
+
+Paolo Treves: Born in Milan in 1908, son of the well-known Italian socialist Claudio Treves (1869-1933).  Paolo Treves worked for the Milanese socialist paper La Giustizia in the early 1920s and studied under Benedetto Croce, with whom he corresponded until the outbreak of war despite the latter's tacit support for Benito Mussolini.  After the Fascist takeover, Paolo was singled out and detained for several months by the government, primarily because of Mussolini's hatred of the elder Treves.
+
+Spain during World War II: The Spanish State under the dictatorship of General Franco did not officially join the Axis Powers during World War II.  However Franco's regime supplied material and military support to the Axis, in recognition of the heavy assistance it had received from Germany and Italy in the Spanish Civil War.  Despite ideological sympathy and allowing volunteers to serve on the Eastern Front, Franco later stationed field armies in the Pyrenees to dissuade a German occupation of the Iberian Peninsula.  The Spanish policy frustrated German proposals that would have encouraged Franco to take British-controlled Gibraltar.  Franco considered joining the war and invading Gibraltar in 1940 after the Fall of France, but knew his armed forces would not be able to defend the Canary Islands and Spanish Morocco from a British attack.
+
+Epirus Revolt of 1854: The 1854 revolt in Epirus was one of the most important of a series of Greek uprisings that occurred in the Ottoman-occupied Greek world during that period.  When the Crimean War (1854–1856) broke out, many Epirote Greeks, with tacit support from the Greek state, revolted against the Ottoman rule.  Although this movement was supported by distinguished military personalities, the correlation of forces doomed it from the start, leading to its suppression after a few months.
+
+Historical Memory Law: Law 57/2007 That recognises and broadens the rights and establishes measures in favour of those who suffered prosecution or violence during the Civil War and the Dictatorship (in Spanish: "Ley 57/2007 por la que se reconocen y amplían derechos y se establecen medidas en favor de quienes padecieron persecución o violencia durante la Guerra Civil y la Dictadura"), commonly known as Historical Memory Law "(Sp: Ley de Memoría Historica)" is a Spanish law passed by the Congress of Deputies on 31 October 2007.  It was based on a bill proposed by the Spanish Socialist Workers' Party government of Prime Minister José Luis Rodríguez Zapatero.  The Historical Memory Law principally recognizes the victims on both sides of the Spanish Civil War, gives rights to the victims and the descendants of victims of the Civil War and the subsequent dictatorship of General Francisco Franco, and formally condemns the Franco Regime.  The conservative Popular Party and the Republican Left of Catalonia (ERC) both voted against passage of the law but for different reasons.  For its no vote the Popular Party accused the Socialist Party government of weakening the political consensus of the transition to democracy and "using the Civil War as an argument for political propaganda," while the Republican Left of Catalonia rejected the law on the basis it did not go far enough.
+
+Iberian Pact: The Iberian Pact ("Pacto Ibérico"), formally the Portuguese–Spanish Treaty of Friendship and Non-Aggression was a non-aggression pact signed at Lisbon on 17 March 1939 by the nationalist governments of Portugal and Spain.  At the time, Spain was in the midst of the final stage of the Civil War.  By 1 April all of Spain was under the control of—and most of the international community had recognised the authority of—General Francisco Franco.  Portugal under António de Oliveira Salazar had lent tacit support to Franco during the Civil War.
+
+Green armies: The Green armies, Green Army (Russian: "Зелёная Армия"), or Greens (Russian: "Зелёные") were armed peasant groups which fought against all governments in the Russian Civil War of 1917–22.  They fought to protect their communities from requisitions or reprisals carried out by third parties.  At times associated with the Socialist-Revolutionary Party (by far the largest grouping of the Russian Constituent Assembly elected in 1917), the Green Armies had at least tacit support throughout much of Russia.  However, the Green Armies' primary base, the peasantry, were largely reluctant to wage an active campaign during the Russian Civil War.  Its strength during the civil war has been measured at 40,000 men.
+
+Canadian–American Reciprocity Treaty: The Canadian–American Reciprocity Treaty of 1854, also known as the Elgin-Marcy Treaty, was a trade treaty between the United Kingdom and the United States, applying to British possessions in North America including the Province of Canada, New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland Colony.  It covered raw materials and was in effect from 1854 to 1865.  It represented a move toward free trade and so was opposed by protectionist elements in the United States.  After the conclusion of the American Civil War, the protectionist elements were joined by Americans angry at British tacit support for the Confederate States of America during the war, and the alliance was successful in terminating the treaty in 1866.  The response in much of British North America was to form the Dominion of Canada (1867), which was expected to both open up many new economic opportunities inside Canada and unify the colonies against growing expansionist sentiments in the United States, associated with the Alaska Purchase.  Attempts by the Liberal Party of Canada to revive free trade in 1911 led to a political victory for the Conservative Party, which warned that Canada would be annexed by the Americans.  Talk of reciprocity was ended for decades.
+
+Franco, ese hombre: Franco, ese hombre, translated into English as Franco, that man, is a 1964 documentary film by Spanish director José Luis Sáenz de Heredia.  It follows the military and political career of the Spanish Head of State Francisco Franco until the 25th anniversary of the end of the Civil War.  It uses diverse footage and interviews Franco's doctor in Morocco, Manuel Aznar Zubigaray, and Franco himself.  It is a commemorative documentary of the 25th anniversary of Franco's victory in the Spanish Civil War.
+
+Robert Knolles: Sir Robert Knolles ("c." 1325 – 15 August 1407) was an important English knight of the Hundred Years' War, who, operating with the tacit support of the Crown, succeeded in taking the only two major French cities, other than Calais and Poitiers, to fall to Edward III.  His methods, however, earned him infamy as a freebooter and a ravager: the ruined gables of burned buildings came to be known as "Knolly's mitres".
+
+Question: Then was the politician and economist which Portugal was under when he lent tacit support to Franco during the Civil War.born 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the politician and economist."
+    },
+    "country_of_leadership": {
+      "type": "string",
+      "description": "The country the person led."
+    },
+    "support_action": {
+      "type": "string",
+      "description": "The type of support provided to Franco during the Civil War."
+    },
+    "birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The birth date of the person."
+    }
+  },
+  "required": [
+    "person_name",
+    "country_of_leadership",
+    "support_action",
+    "birth_date"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+{
+  "first_nation_name": "O'Chiese First Nation",
+  "trade_activity": "Fur trade",
+  "traded_commodities": {
+    "main_category": "animal fur",
+    "specific_items_from_context": [
+      "small game"
+    ],
+    "method_of_acquisition": "trapped"
+  }
+}

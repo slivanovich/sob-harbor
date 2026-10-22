@@ -1,0 +1,11 @@
+{
+  "defendant_name": "Morgan Earp",
+  "defense_attorney_name": "Thomas Fitch",
+  "trial_type": "preliminary hearing",
+  "duration_in_words": "a month-long",
+  "duration_in_months": 1,
+  "charges": [
+    "murder"
+  ],
+  "outcome": "exonerated"
+}

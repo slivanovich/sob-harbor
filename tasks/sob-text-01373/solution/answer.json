@@ -1,0 +1,14 @@
+{
+  "airports": [
+    {
+      "airport_name": "Fairbanks International Airport",
+      "location_state": "Alaska"
+    },
+    {
+      "airport_name": "Wiley Post–Will Rogers Memorial Airport",
+      "location_state": "Alaska"
+    }
+  ],
+  "common_state": "Alaska",
+  "number_of_airports_found": 2
+}

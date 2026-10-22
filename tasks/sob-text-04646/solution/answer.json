@@ -1,0 +1,19 @@
+{
+  "opera_with_more_acts": "Venus and Adonis",
+  "bluebeards_castle_details": {
+    "composer": "Béla Bartók",
+    "number_of_acts": 1
+  },
+  "venus_and_adonis_operas_details": [
+    {
+      "composer": "John Blow",
+      "number_of_acts": 3,
+      "title_variant": "Venus and Adonis"
+    },
+    {
+      "composer": "Henri Desmarets",
+      "number_of_acts": 5,
+      "title_variant": "Vénus et Adonis"
+    }
+  ]
+}

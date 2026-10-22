@@ -1,0 +1,11 @@
+{
+  "senator_name": "Jeffry Lane Flake",
+  "political_party": "Republican Party",
+  "state_represented": "Arizona",
+  "senator_role": "Junior United States Senator",
+  "service_start_year": 2013,
+  "served_alongside_nominee": {
+    "nominee_name": "John McCain",
+    "nominee_election_year": 2008
+  }
+}

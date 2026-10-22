@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Pamela Harriman: Pamela Beryl Harriman ("née" Digby; 20 March 1920 – 5 February 1997), also known as Pamela Churchill Harriman, was an English-born American socialite who was married and linked to important and powerful men.  In later life, she became a political activist for the Democratic Party and a diplomat.  She was married three times, her first husband being Randolph Churchill, the son of prime minister Winston Churchill.  Her only child, Winston Churchill, was named after his famous grandfather.
+
+Winston Churchill (1940–2010): Winston Spencer-Churchill (10 October 1940 – 2 March 2010), generally known as Winston Churchill, was a British Conservative Party politician and a grandson of former Prime Minister Sir Winston Churchill.  During the period of his prominence as a public figure, he was normally referred to as Winston Churchill, MP, in order to distinguish him from his grandfather.  His father Randolph Churchill was also an MP.
+
+Westminster College (Missouri): Westminster College is a private, residential, undergraduate college with a curriculum based on the liberal arts.  Located in Fulton, Missouri, the College was established in 1851 as Fulton College.  The National Churchill Museum (formerly known as the Winston Churchill Memorial and Library) is a national historic site located on campus and is recognized by the US Congress and by the International Churchill Society.  It is home to the Church of St Mary, Aldermanbury.  The church, designed by Sir Christopher Wren in 1667, was rebuilt on the campus to commemorate Sir Winston Churchill, who made his famous "Iron Curtain" speech at the college gymnasium in 1946.  Mikhail Gorbachev gave a speech there in 1992, declaring the end of the Cold War.  Steeped in historic tradition, the college continues with contemporary and world-known speakers discussing topical issues impacting society.
+
+Terry Southern: Terry Southern (May 1, 1924 – October 29, 1995) was an American novelist, essayist, screenwriter, and university lecturer, noted for his distinctive satirical style.  Part of the Paris postwar literary movement in the 1950s and a companion to Beat writers in Greenwich Village, Southern was also at the center of Swinging London in the 1960s and helped to change the style and substance of American films in the 1970s.  In the 1980s he wrote for "Saturday Night Live" and lectured on screenwriting at several universities in New York.
+
+National Churchill Museum: The National Churchill Museum (formerly the Winston Churchill Memorial and Library), located on the Westminster College campus in Fulton, Missouri, United States, commemorates the life and times of Sir Winston Churchill.  In 1946, Winston Churchill delivered his famous in the Westminster Historic Gymnasium.  In it was the line: "From Stettin in the Baltic to Trieste in the Adriatic an iron curtain has descended across the Continent."  This sentence caused the oration to become known as the "Iron Curtain" speech.  "Sinews of Peace" heralded the beginning of the Cold War.
+
+Montagu Porch: Montagu Phippen Porch (1877- November 1964) was Winston Churchill's stepfather, although three years his junior.  He was born in 1877 in Glastonbury, a parish of Somerset in the United Kingdom.  He was educated at Magdalene College in Cambridge.  In 1900 he joined the Imperial Yeomanry, which was a Cavalry regiment of the British Army.  In 1906 he joined the Colonial Service and served as an officer until 1919, with the majority of his duties served in Africa.  On June 1, 1918, Porch married Lady Randolph Churchill, mother of Winston Churchill.  There was quite an age difference here as Porch was 42 and Lady Randolph Churchill (Jennie Jerome) was 64.  It was Lady Randolph's third marriage and the first for the younger Porch.  The couple remained married for three years until Lady Randolph Churchill's death in 1921.
+
+Winston Churchill: Sir Winston Leonard Spencer-Churchill, {'1': ", '2': ", '3': ", '4': "} (30 November 187424 January 1965) was a British statesman, army officer, and writer.  He served as Prime Minister of the United Kingdom from 1940 to 1945 and again from 1951 to 1955.  As a Member of Parliament (MP), he represented five constituencies over the course of his career.  As Prime Minister, Churchill led Britain to victory during World War II.  He led the Conservative Party for fifteen years from 1940 to 1955.
+
+Winston Churchill Collegiate Institute: Winston Churchill Collegiate Institute (Winston Churchill CI, WCCI, Churchill) is a public high school in the Dorset Park neighbourhood of Scarborough, Toronto, Ontario, Canada and is owned and operated by the Toronto District School Board (and the former Scarborough Board of Education prior to merger.)  Although the language of instruction is English, 59 percent of the students do not use English as their primary language, and 26 percent have resided in Canada less than five years.  In Spring 2007, there were 554 male students and 467 female students.  Since then, the enrollment sits below 1000 with 644 students.  The motto for Winston Churchill is "Fides, Virtus, Doctrina" which means "Faith, Excellence, Knowledge".
+
+Winston Churchill: The Wilderness Years: Winston Churchill: The Wilderness Years is an 8-part 1981 drama serial based on the life of Winston Churchill, and particularly his years in during the 1920s and 1930s.  It was made by Southern Television on a budget of £3¼ million and originally broadcast on ITV on Sunday nights at 10 pm.  It was written and directed by Ferdinand Fairfax, with historian Martin Gilbert as co-writer.  Churchill was played by Robert Hardy.
+
+Clement Attlee: Clement Richard Attlee, 1st Earl Attlee, {'1': ", '2': ", '3': ", '4': "} (3 January 1883 – 8 October 1967) was a British Labour politician who served as Prime Minister of the United Kingdom from 1945 to 1951 and Leader of the Labour Party from 1935 to 1955.  In 1940, Attlee took Labour into the wartime coalition government and served under Winston Churchill, becoming the first person to hold the office of Deputy Prime Minister of the United Kingdom.  He went on to lead the Labour Party to an unexpected landslide victory at the 1945 general election; forming the first Labour majority government, and a mandate to implement its postwar reforms.  The 12.0% national swing from the Conservatives to Labour was unprecedented at that time and remains the largest ever achieved by any party at a general election in British electoral history.  He was re-elected with a narrow majority at the 1950 general election.  In the following year, Attlee called a snap general election, hoping to increase his parliamentary majority.  However, he was narrowly defeated by the Conservatives under the leadership of Winston Churchill; despite winning the most votes of any political party in any general election in British political history until the Conservative Party's fourth consecutive victory in 1992.  Attlee remains the longest-ever serving Leader of the Labour Party.
+
+Question: Who was a part of the Paris postwar literary movement in the 1950s, Terry Southern or Winston Churchill?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person who was part of the literary movement."
+    },
+    "movement_name": {
+      "type": "string",
+      "description": "The name of the literary movement."
+    },
+    "time_period": {
+      "type": "string",
+      "description": "The decade when the person was involved in the movement."
+    },
+    "location": {
+      "type": "string",
+      "description": "The city where the literary movement was active."
+    }
+  },
+  "required": [
+    "person_name",
+    "movement_name",
+    "time_period",
+    "location"
+  ],
+  "additionalProperties": false
+}

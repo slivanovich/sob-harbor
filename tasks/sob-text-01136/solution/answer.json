@@ -1,0 +1,7 @@
+{
+  "airport_name": "Haneda Airport",
+  "served_area": "Greater Tokyo Area",
+  "airline_hub_for": "All Nippon Airways",
+  "is_one_of_primary_airports": true,
+  "total_primary_airports_in_area": 2
+}

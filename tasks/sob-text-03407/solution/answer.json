@@ -1,0 +1,17 @@
+{
+  "property_name": "Circus Circus Las Vegas",
+  "property_type": [
+    "hotel",
+    "casino",
+    "RV park"
+  ],
+  "location": {
+    "city": "Winchester",
+    "state": "Nevada",
+    "strip_location": "Las Vegas Strip"
+  },
+  "casino_details": {
+    "square_footage": 123928
+  },
+  "former_owner_group": "Mandalay Resort Group"
+}

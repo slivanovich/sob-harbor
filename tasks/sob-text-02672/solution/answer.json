@@ -1,0 +1,21 @@
+{
+  "person_details": {
+    "name": "Dinesh D'Souza",
+    "nationality": "Indian American",
+    "occupations": [
+      "conservative political commentator",
+      "author",
+      "filmmaker"
+    ],
+    "birth_date": {
+      "year": 1961,
+      "month": "April",
+      "day": 25
+    }
+  },
+  "associated_film": {
+    "title": "America: Imagine the World Without Her",
+    "release_year": 2014
+  },
+  "final_answer": "April 25, 1961"
+}

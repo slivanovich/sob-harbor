@@ -1,0 +1,21 @@
+{
+  "activist": {
+    "name": "Xokonoschtletl Gómora",
+    "role": "civic activist"
+  },
+  "artifact": {
+    "name": "Montezuma's headdress",
+    "type": "quetzal feather headdress",
+    "historical_owner": "Moctezuma II",
+    "current_location": "Vienna Museum of Ethnology",
+    "historical_event_context": "Spanish Conquest of the Aztec Empire"
+  },
+  "dispute_details": {
+    "is_disputed": true,
+    "disputing_parties": [
+      "Austria",
+      "Mexico"
+    ],
+    "dispute_reignited_year": 2012
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "common_vegetation_type": "plants",
+  "entities": [
+    {
+      "entity_name": "Filipendula",
+      "vegetation_description": "perennial herbaceous flowering plants"
+    },
+    {
+      "entity_name": "Aloinopsis",
+      "vegetation_description": "ice plants"
+    }
+  ],
+  "reasoning_basis": "plants"
+}

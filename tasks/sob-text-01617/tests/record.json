@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "1bc98bcc5c71f50fa28f2c4a370991c8f5f5188e59851163c50f3aa5ca9642c0",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a83adca5542990548d0b21c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Julia Ann",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "24th AVN Awards: The 24th AVN Awards ceremony, presented by Adult Video News (AVN), honored the best pornographic films of 2006 and took place January 13, 2007 at the Mandalay Bay Events Center in Paradise, Nevada.  During the ceremony, Adult Video News presented AVN Awards (commonly referred to as the Oscars of porn)) in 119 categories released during the eligibility period, Oct. 1, 2005 to Sept. 30, 2006.  The ceremony, televised in the United States by Playboy TV, was produced and directed by Gary Miller.  Adult film star Jessica Drake hosted for the first time, with comedian Jim Norton, who also co-hosted in 2004.\n\n13th AVN Awards: The 13th AVN Awards ceremony, organized by Adult Video News (AVN) honored the best pornographic films of 1995 and took place on January 7, 1996 at the Aladdin Theatre for the Performing Arts in Paradise, Nevada, beginning at 8:15 p.m. PST / 11:15 p.m. EST.  During the ceremony, AVN presented AVN Awards in 97 categories.  The ceremony, taped for broadcast in the United States by Spice Networks, was produced and directed by Gary Miller and Mark Stone.  Comedian Bobby Slayton hosted the show for the first time, alongside actress co-hosts Jenna Jameson and Julia Ann.  Hall of Fame inductees were honored at a gala held a month earlier.\n\n20th AVN Awards: The 20th AVN Awards ceremony, presented by Adult Video News (AVN), took place January 11, 2003 at the Venetian Hotel Grand Ballroom, at Paradise, Nevada, U.S.A.  During the ceremony, AVN presented AVN Awards in nearly 90 categories honoring the best pornographic films released between Oct. 1, 2001 and Sept. 30, 2002.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Comedian Doug Stanhope co-hosted the show for the first time with adult film star Chloe.\n\n30th AVN Awards: The 30th AVN Awards ceremony, or XXX AVN Awards, was an event during which \"Adult Video News\" (\"AVN\") presented its annual AVN Awards to honor the best pornographic movies and adult entertainment products of 2012.  Movies or products released between October 1, 2011 and September 30, 2012 were eligible.  The ceremony was held on January 19, 2013 at The Joint in the Hard Rock Hotel and Casino, Paradise, Nevada.  Comedian April Macie, AVN Hall of Fame inductee Jesse Jane and Asa Akira, who won Female Performer of the Year, hosted the AVN Awards.  The awards show was held immediately after the Adult Entertainment Expo at the same venue.\n\n14th AVN Awards: The 14th AVN Awards ceremony, organized by Adult Video News (AVN), took place January 11, 1997 at Riviera Hotel & Casino, Winchester, Nevada, beginning at 7:45 p.m. PST / 10:45 p.m. EST.  During the show, AVN presented AVN Awards (the industry's equivalent of the Academy Awards) in 41 categories honoring the best pornographic films released released between Oct. 1, 1995 and Sept. 30, 1996.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Comedian Bobby Slayton returned as host, with actresses Nici Sterling and Kylie Ireland as co-hosts.  At a pre-awards event held the previous evening, 60 more AVN Awards, mostly for technical achievements, were given out by hostess Dyanna Lauren and comedy ventriloquist Otto of Otto & George, however, the pre-awards event was neither televised nor distributed on VHS tapes as was the main evening’s ceremony.\n\nJulia Ann: Julia Ann (born October 8, 1969) is the stage name of American pornographic actress, feature dancer.  She is a member of the AVN Hall of Fame and the XRCO Hall of Fame.\n\n18th AVN Awards: The 18th AVN Awards ceremony, presented by Adult Video News (AVN), took place January 8, 2001 at the Venetian Hotel Grand Ballroom, at Paradise, Nevada, U.S.A.  During the ceremony, AVN presented AVN Awards in 77 categories honoring the best pornographic films released between Oct. 1, 1999 and Sept. 30, 2000.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Adult film star Jenna Jameson hosted the show for the second time.\n\n17th AVN Awards: The 17th AVN Awards ceremony, presented by Adult Video News (AVN), took place January 8, 2000 at the Venetian Hotel Grand Ballroom, at Paradise, Nevada, U.S.A.  During the ceremony, AVN presented AVN Awards (often dubbed the \"Academy Awards Of Porn\") in 77 categories honoring the best pornographic films released between Oct. 1, 1998 and Sept. 30, 1999.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Adult film star Juli Ashton hosted the show.\n\n16th AVN Awards: The 16th AVN Awards ceremony, organized by \"Adult Video News\" (AVN) honored the best of 1998 in pornographic movies and took place on January 9, 1999, at Bally's Las Vegas, Las Vegas, Nevada.  During the ceremony, AVN presented AVN Awards in 68 categories.  The ceremony, televised by Playboy TV, was produced by Gary Miller and directed by Mark Stone.  Comedian Robert Schimmel returned as host and actresses Alisha Klass, Midori and Serenity co-hosted the award show.  Five weeks earlier in a ceremony held at the Westin Bonaventure in Los Angeles, California, on December 4, 1998, the awards for gay pornographic movies were presented in a new separate ceremony known as the GayVN Awards.\n\n15th AVN Awards: The 15th AVN Awards ceremony, organized by Adult Video News (AVN), took place January 10, 1998 at Caesars Palace, in Paradise, Nevada, U.S.A.  During the show, AVN presented AVN Awards (the industry's equivalent of the Academy Awards) in 54 categories honoring the best pornographic films released released between Oct. 1, 1996 and Sept. 30, 1997.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Comedian Robert Schimmel hosted, with adult film actresses Racquel Darrian and Misty Rain as co-hosts.  At a pre-awards cocktail reception held the previous evening, 50 more AVN Awards, mostly for behind-the-scenes achievements, were given out by hosts Nici Sterling and Dave Tyree, however, this event was neither televised nor distributed on VHS tapes as was the main evening's ceremony.  Both events included awards categories for gay movies; the final year the show included both gay and heterosexual awards.  The gay awards were subsequently spun off into a separate show, the GayVN Awards.",
+    "question": "What pornographic star is a member of the XRCO Hall of Fame and co-hosted the 13th AVN Awards Ceremony?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "porn_star_name": {
+          "type": "string",
+          "description": "The name of the pornographic star."
+        },
+        "is_xrco_hall_of_fame_member": {
+          "type": "boolean",
+          "description": "Indicates if the porn star is a member of the XRCO Hall of Fame."
+        },
+        "co_hosted_awards_ceremonies": {
+          "type": "array",
+          "description": "List of AVN Awards ceremonies co-hosted by the star.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ceremony_number": {
+                "type": "integer",
+                "description": "The ordinal number of the AVN Awards ceremony."
+              },
+              "ceremony_year": {
+                "type": "integer",
+                "description": "The year the AVN Awards ceremony took place."
+              }
+            },
+            "required": [
+              "ceremony_number",
+              "ceremony_year"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "porn_star_name",
+        "is_xrco_hall_of_fame_member",
+        "co_hosted_awards_ceremonies"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "porn_star_name": "Julia Ann",
+      "is_xrco_hall_of_fame_member": true,
+      "co_hosted_awards_ceremonies": [
+        {
+          "ceremony_number": 13,
+          "ceremony_year": 1996
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

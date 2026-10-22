@@ -1,0 +1,9 @@
+{
+  "castle_name": "New Slains Castle",
+  "location": {
+    "region": "Aberdeenshire",
+    "country": "Scotland"
+  },
+  "condition": "ruined",
+  "nearby_landmark": "Old Slains Castle"
+}

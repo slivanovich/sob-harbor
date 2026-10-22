@@ -1,0 +1,14 @@
+{
+  "films": [
+    {
+      "title": "Mary and Max",
+      "release_year": 2009
+    },
+    {
+      "title": "Monsters vs. Aliens",
+      "release_year": 2009
+    }
+  ],
+  "all_released_in_same_year": true,
+  "shared_release_year": 2009
+}

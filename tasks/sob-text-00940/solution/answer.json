@@ -1,0 +1,19 @@
+{
+  "genus_comparison": {
+    "genus_a": {
+      "name": "Ammi",
+      "species_count": 3
+    },
+    "genus_b": {
+      "name": "Geranium",
+      "species_count": 422
+    }
+  },
+  "comparison_result": {
+    "genus_with_more_species": "Geranium",
+    "more_species_count": 422,
+    "genus_with_fewer_species": "Ammi",
+    "fewer_species_count": 3
+  },
+  "answer": "Geranium"
+}

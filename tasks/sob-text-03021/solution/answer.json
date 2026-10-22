@@ -1,0 +1,15 @@
+{
+  "event_details": {
+    "event_name": "Funeral of Margaret Thatcher",
+    "date": "17 April 2013",
+    "honored_person_name": "Margaret Thatcher"
+  },
+  "homage_payers_category": "successors as Prime Minister",
+  "oldest_prime_minister_who_paid_homage": {
+    "name": "Sir John Major",
+    "birth_year": 1943,
+    "prime_minister_term_start": 1990,
+    "prime_minister_term_end": 1997,
+    "reasoning_for_oldest": "Since Margaret Thatcher's death in 2013, he is the oldest living former Prime Minister."
+  }
+}

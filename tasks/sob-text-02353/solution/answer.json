@@ -1,0 +1,13 @@
+{
+  "first_mixed_doubles_winner": {
+    "player_name": "Matt Lucena",
+    "year_of_first_win": 1995,
+    "tournament": "US Open"
+  },
+  "second_mixed_doubles_winner": {
+    "player_name": "Horia Tecău",
+    "year_of_first_win": 2012,
+    "tournament": "Australian Open"
+  },
+  "comparison_summary": "Matt Lucena won a mixed doubles title first in 1995, while Horia Tecău won his first in 2012."
+}

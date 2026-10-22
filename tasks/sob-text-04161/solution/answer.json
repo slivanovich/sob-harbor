@@ -1,0 +1,14 @@
+{
+  "comparison_result": "Sloan released more EPs than Godsmack.",
+  "bands": [
+    {
+      "band_name": "Godsmack",
+      "ep_count": 1
+    },
+    {
+      "band_name": "Sloan",
+      "ep_count": 2
+    }
+  ],
+  "question_answered": true
+}

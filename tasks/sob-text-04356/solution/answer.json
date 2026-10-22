@@ -1,0 +1,10 @@
+{
+  "event_name": "2003 FIA GT Magny-Cours 500km",
+  "event_year": 2003,
+  "circuit": {
+    "name": "Circuit de Nevers Magny-Cours",
+    "country": "France",
+    "capacity": 90000
+  },
+  "answer_capacity": 90000
+}

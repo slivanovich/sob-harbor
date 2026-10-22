@@ -1,0 +1,9 @@
+{
+  "city_name": "Glasgow",
+  "county_name": "Valley County",
+  "is_county_seat": true,
+  "population_details": {
+    "year": 2015,
+    "count": 3414
+  }
+}

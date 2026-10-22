@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+H. Y. Sharada Prasad: Holenarasipur Yoganarasimham Sharada Prasad (1924–2008) was an Indian civil servant, journalist and writer, best known as the media adviser to Indira Gandhi, former Prime Minister of India.  He also served as the media adviser to Rajiv Gandhi, during his tenure as the Indian Prime Minister.  Born on 15 April 1924 to Holenarasipura Yoganarasimham and Saraswati in Bangalore in the south India state of Karnataka, he started his career as a journalist at the Indian Express Group and later joined the Publications Division of the Government of India as an assistant editor during which time he served as the editor of "Yojana", the official journal of the Planning Commission of India.  His stint as the editor of the journal was reported to have brought him to Indira Gandhi's notice who invited him to join her staff as the media adviser.
+
+Kirk Watson: Kirk Watson (born March 18, 1958) is an American attorney and Democratic politician from the capital city of Austin.  He served as Austin mayor from 1997 to 2001.  He ran unsuccessfully for Texas Attorney General in the 2002 election, defeated by the Republican Greg Abbott.  In 2006, Watson was elected to the Texas State Senate from District 14.
+
+Attorney General of Sri Lanka: The Attorney General of Sri Lanka is the Sri Lankan government's chief legal adviser, and its primary lawyer in the Supreme Court of Sri Lanka.  The Attorney General is usually a highly respected Senior Advocate, and is appointed by the ruling government.  The current Attorney General is Jayantha Jayasuriya.  The president does not have any power to make orders, mandatory or otherwise, to the attorney general.  He heads the Attorney General's Department.
+
+Byron Baer: Byron M. Baer (October 18, 1929 – June 24, 2007) was an American Democratic Party politician from New Jersey who served in both houses of the New Jersey Legislature.  He served in the New Jersey General Assembly from 1972 to 1993 and in the State Senate from 1994 to 2005, where he represented the 37th Legislative District.  In the early 1970s, Baer was the primary author of New Jersey's Sunshine Law, and was an advocate of open government throughout his legislative career.
+
+Warlick Carr: Marvin Warlick Carr (January 4, 1921 – July 9, 2008) was a prominent American attorney in Lubbock, Texas, and the brother of former Texas Attorney General Waggoner Carr.  Carr specialized in business transactions, real estate, business litigation, probate, estate planning, and mediation.
+
+Attorney General of New South Wales: The Attorney General of New South Wales, in formal contexts also Attorney-General or Attorney General for New South Wales and usually known simply as the Attorney General, is a minister in the Government of New South Wales who has responsibility for the administration of justice in New South Wales, Australia.  In addition, the Attorney General is one of the Law Officers of the Crown.  Along with the subordinate Solicitor General, Crown Advocate, and Crown Solicitor, the Attorney General serves as the chief legal and constitutional adviser of the Crown and Government of New South Wales.
+
+Wanda Garner Cash: Wanda Garner Cash (born December 21, 1949 in Laredo, Texas) is an advocate for open government, speaker, commentator, expert witness and media adviser on open government issues to former Texas Attorney General Greg Abbott.
+
+Brenno de Winter: Brenno de Winter (born 6 December 1971 in Ede) is a Dutch ICT and investigative journalist.  He writes for Linux Magazine, Computer!Totaal, NU.nl and Webwereld and is a commenter for the "PowNews" programme on PowNed TV.  Brenno is also a podcaster and hosts "Laura Speaks Dutch".  He caused controversy by submitting requests for information on the basis of the Open Government Act (WOB) to include Jeltje van Nieuwenhoven (regarding her role as OV ambassador) and hundreds WOB requests to all Dutch municipalities and provinces.  Because not all agencies fulfilled the WOB requests, de Winter filed lawsuits against them.  The Dutch Association of Journalists (NEY) supported de Winter.  In the decision of the Hague court on 4 May 2010, de Winter's favor, which is not confirmed that municipalities may levy fees for the appeal to the WOB.  In April 2010, de Winter was involved in the disclosure of the expenditure of the FENS funds (1.3 billion euros) by the NS.  After the publications and media appearances] of de Winter related to the ease and simplicity of the "OV-chipkaart", the public transport smart card in the Netherlands, the Minister of Infrastructure and Environment was able to get the NVB in Haaglanden about a one-month postponement.  Due to the disclosure the District Attorney decided to open a criminal investigation against de Winter; however, after a legal defense fund met its goals within an hour.  The Journalist magazine Villamedia has named Brenno de Winter as the journalist of the year 2011.  In July 2012 de Winter broke a new story about Dutch employer censorship after an employee of Unisys Netherlands was threatened with termination for giving a presentation about online censorship for the conference Last H.O.P.E., New York, USA In September 2012 de Winter released a video and accompanying news story of how he was able to use an obvious fake identification to gain access to numerous Netherlands and European government offices: The European Parliament, four Dutch Ministries among which the Ministry of Justice and the Ministry of the Interior, The Dutch Secret Service, The Dutch Telecom Regulator OPTA, The Dutch National Cyber Security Center, The Royal Palace, The Dutch National Police, The Police Department of The Hague and Brabant Zuid-Oost.  De Winter purchased the obvious fake ID at the 28C3 Chaos Computer Club Congress in 2011 where he was the conference closing speaker.
+
+Attorney General of Bangladesh: The Attorney General of Bangladesh (Bengali: মহাব্যবহারদেশক, Mahābyabahāradēśaka ) is the Bangladeshi government's chief legal adviser, and its primary lawyer in the Supreme Court of Bangladesh.  The Attorney General is usually a highly respected Senior Advocate, and is appointed by the ruling government.  The current Attorney General is Mahbubey Alam.  The Attorney General is the ex-officio chairman of the Bangladesh Bar Council and accordingly he performs the duties assigned to that post and empowered to participate in any reference to Supreme Court made by the President under article 106 of the Constitution and can express his own opinion.
+
+Greg Abbott: Gregory Wayne "Greg" Abbott (born November 13, 1957) is an American lawyer and politician who has served as the 48th Governor of Texas since January 2015.  During the term of his predecessor, Rick Perry, Abbott was the 50th Attorney General of Texas.
+
+Question: Wanda Garner Cash, is an advocate for open government, speaker, commentator, expert witness and media adviser on open government issues to former Texas Attorney General, Gregory Wayne "Greg" Abbott, an American lawyer and politician, who has served as the 48th Governor of Texas since when?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The full name of the person."
+    },
+    "current_role": {
+      "type": "string",
+      "description": "The current political office held by the person."
+    },
+    "current_role_number": {
+      "type": "integer",
+      "description": "The numerical designation of the current role (e.g., 48th)."
+    },
+    "current_role_start_date": {
+      "type": "string",
+      "description": "The start date of the current political office."
+    },
+    "previous_role": {
+      "type": "string",
+      "description": "The previous political office held by the person."
+    },
+    "previous_role_number": {
+      "type": "integer",
+      "description": "The numerical designation of the previous role (e.g., 50th)."
+    }
+  },
+  "required": [
+    "person_name",
+    "current_role",
+    "current_role_number",
+    "current_role_start_date",
+    "previous_role",
+    "previous_role_number"
+  ],
+  "additionalProperties": false
+}

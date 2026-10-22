@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Negeri Sembilan FA season 2010: Negeri Sembilan FA plays in the Malaysian Super League and the Malaysian FA Cup in season 2009.  Negeri Sembilan qualified for the Malaysia Cup, after finishing 7th in the Super League, Negeri qualified to Malaysia Cup Final for the first time with their coach Wan Jamak Wan Hassan.  They won the trophy after defeating Kelantan FA.  Midfielder Shahurain Abu Samah capitalised on a defensive mix-up in the Kelantan box to open the scoring in the 18th minute before on-loan Malaysian international striker Hairuddin Omar doubled the lead a minute into the second half.  Mohd Zaquan Adha Abdul Radzak put the result beyond doubt when he converted a penalty in the 58th minute after Shahurain Abu Samah was brought down.  Kelantan, who were chasing their first Malaysia Cup title after finishing runner-up, scored a consolation goal in stoppage time through a free-kick from striker Indra Putra Mahayuddin, the competition's leading scorer.  Negeri ended their FA campaign at Semi-Final, defeated by Kelantan FA.
+
+1961 European Cup Winners' Cup Final: The 1961 European Cup Winners' Cup Final was a football match contested between Fiorentina of Italy and Rangers of Scotland.  It was the final of the 1960–61 European Cup Winners' Cup the first UEFA Cup Winners' Cup final.  It was the only time that the final was played over two legs.  The first leg was played at Ibrox Stadium, Glasgow and the second leg at the Stadio Comunale in Florence.  It was Rangers first European final and in doing so became the first British team to reach the final of a European football competition.  It was Fiorentina's second European final having previously reached the 1957 European Cup final.
+
+1978 European Cup Final: The 1978 European Cup Final was an association football match between Liverpool of England and Club Brugge of Belgium on 10 May 1978 at Wembley Stadium, London, England (the venue was decided in Bern by the UEFA Executive Committee on 20 September 1977).  It was the final match of the 1977–78 season of Europe's premier cup competition, the European Cup.  Liverpool were the reigning champions and were appearing in their second European Cup final.  Club Brugge were appearing in their first European Cup final.  The two sides had met once before in European competition, when they contested the 1976 UEFA Cup Final, which Liverpool won 4–3 on aggregate.
+
+1976 Norwegian Football Cup: Brann won the Norwegian Cup by beating Sogndal 2–1 on 24 October.  The goal scorers for Brann were Steinar Aase, who scored in the 66th minute, and Bjørn Tronstad, who scored in the 87th minute.  For Sogndal, Knut Christiansen scored in the 80th minute.  17 700 spectators attended the game at Ullevål stadion in Oslo.  The referee was Odd Johannessen.  This was the fourth time Brann won the Norwegian Cup.
+
+1991 European Super Cup: The 1991 European Super Cup was the 16th UEFA Super Cup, an annual football match contested by the winners of the previous season's European Cup and Cup Winners' Cup competitions.  The match was played on 19 November 1991 and featured the 1990–91 European Cup winners, Red Star Belgrade, and Manchester United, winners of the 1990–91 Cup Winners' Cup.  It was meant to be played over two legs, but due to the political unrest in Yugoslavia at the time, UEFA decided that only the Old Trafford leg would be played.  Manchester United won the match 1–0, with Brian McClair scoring the winning goal in the 67th minute.
+
+1967 European Cup Winners' Cup Final: The 1967 European Cup Winners' Cup Final was a football match contested between Bayern Munich of West Germany and Rangers of Scotland.  The match took place at the Städtisches Stadion in Nuremberg, West Germany on 31 May 1967 in front of a crowd of 69,480.  It was the final match of the European Cup Winners' Cup 1966–67 competition and the seventh European Cup Winners' Cup final in all.  The competition was one of three football competitions that was run by UEFA at that time.  Both teams had to go through four qualifying rounds before reaching the final.
+
+1966 Norwegian Football Cup: Fredrikstad won the Norwegian Cup after beating Lyn 3-2 on 30 October.  The goal scorers for Fredrikstad were Bjørn Borgen in the 33rd and 59th minute, and Arne Pedersen in the 89th minute.  For Lyn, Harald Berg scored in the 54th minute and Ole Stavrum scored in the 57th minute.
+
+1983–84 FC Dinamo București season: The 1983-84 season was FC Dinamo Bucureşti's 35th season in Divizia A.  In this season, Dinamo made the biggest ever performance at the European level, reaching the semifinals of the European Cup.  The "European Champions Cup campaign" started with the Finnish team, Kuusysi Lahti (1-0 and 3-0).  The second round pushes Dinamo against the current champion, Hamburger SV - team of Stein, Kalz and Magath.  At Bucharest, Augustin, Multescu and Orac score for 3-0.  The thrilling second leg finishes 3-2 (goals Talnar and Multescu).  In order to accede in the semifinals of CCE, Dinamo had to defeat another top team: Dinamo Minsk, with Aleinikov, Zygmantovich and Gurinovich.  The first leg was 1-1 (Rednic equalizing in the 87th minute!) , and it was followed by a 1-0 victory at Bucharest (with Augustin scoring).  Dinamo was the first Romanian team to reach the European Champions Cup semifinals, where it met Liverpool F.C..  Dinamo lost 1-0 on Anfield and 2-1 in Bucharest, in front of the team which ultimately won the 1984 European Cup Final.
+
+1956 European Cup Final: The 1956 European Cup Final was the first ever final in the pan-European football competition, the European Cup, now known as the UEFA Champions League.  It was contested by Real Madrid of Spain and Stade de Reims-Champagne from France.  It was played at the Parc des Princes in Paris on 13 June 1956 in front of 38,000 people.  Real Madrid reached the final by beating the now seven times champions Milan 5–4 on aggregate, whereas Reims beat Scottish club Hibernian 3–0 on aggregate.  The match finished 4–3 to Real Madrid, who went on to record an unrivalled five consecutive European Cup titles.  The match started brightly for Reims, with Michel Leblond and Jean Templin scoring to make it 2–0 inside ten minutes, but by half time Madrid had levelled the scores, through goals from Alfredo Di Stéfano and Héctor Rial.  Reims took the lead again on 62 minutes through Michel Hidalgo, but Marquitos and Rial scored in the 67th and 79th minutes respectively to win the cup for Madrid.
+
+Marcos Alonso Imaz: Marcos Alonso Imaz (16 April 1933 – 6 March 2012), nicknamed Marquitos, was a Spanish footballer who played as a defender.
+
+Question: What is the nationality of the man who scored in the 67th minute of the The 1956 European Cup Final?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "final_name": {
+      "type": "string",
+      "description": "The name of the football final match."
+    },
+    "scorer_name": {
+      "type": "string",
+      "description": "The name of the player who scored the goal."
+    },
+    "goal_minute": {
+      "type": "integer",
+      "description": "The minute in which the goal was scored."
+    },
+    "scorer_nationality": {
+      "type": "string",
+      "description": "The nationality of the player who scored the goal."
+    },
+    "scoring_team": {
+      "type": "string",
+      "description": "The team for which the player scored."
+    }
+  },
+  "required": [
+    "final_name",
+    "scorer_name",
+    "goal_minute",
+    "scorer_nationality",
+    "scoring_team"
+  ],
+  "additionalProperties": false
+}

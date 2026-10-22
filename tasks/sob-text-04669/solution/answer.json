@@ -1,0 +1,13 @@
+{
+  "tv_show_details": {
+    "name": "Sunday Life",
+    "type": "British magazine/discussion television programme",
+    "replaced_show_name": "Heaven and Earth Show"
+  },
+  "athlete_presenter": {
+    "name": "Colin Jackson",
+    "nationality": "Welsh",
+    "specialization": "sprint and hurdling athlete"
+  },
+  "co_presenter_name": "Louise Minchin"
+}

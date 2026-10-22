@@ -1,0 +1,13 @@
+{
+  "person_1_name": "Roger Zelazny",
+  "person_1_occupations": [
+    "poet",
+    "writer"
+  ],
+  "person_2_name": "Mark Salzman",
+  "person_2_occupations": [
+    "writer",
+    "English teacher"
+  ],
+  "mutual_occupation": "writer"
+}

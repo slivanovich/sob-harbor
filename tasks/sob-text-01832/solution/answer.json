@@ -1,0 +1,14 @@
+{
+  "country_name": "China",
+  "located_cities": [
+    {
+      "city_name": "Shenzhou City",
+      "province_name": "Hebei province"
+    },
+    {
+      "city_name": "Longchang",
+      "province_name": "Sichuan Province"
+    }
+  ],
+  "number_of_cities_found": 2
+}

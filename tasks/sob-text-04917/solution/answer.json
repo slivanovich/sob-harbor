@@ -1,0 +1,16 @@
+{
+  "person_name": "Alexander Kolchak",
+  "roles": [
+    "polar explorer",
+    "commander",
+    "ruler"
+  ],
+  "country_of_origin": "Russia",
+  "expedition_details": {
+    "expedition_name": "Russian polar expedition of 1900–02",
+    "expedition_purpose": "to study the Arctic Ocean north of New Siberian Islands and search for the legendary Sannikov Land",
+    "expedition_start_year": 1900,
+    "expedition_end_year": 1902,
+    "ship_name": "Zarya"
+  }
+}

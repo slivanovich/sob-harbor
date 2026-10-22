@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "7c021767c1e98b48c7b984eaf89a0e1d7e6c67175fafdbccd807ded6d447e2eb",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a803e46554299485f598599",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Melbourne",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Barbara James: Barbara James (nee Johnson) (8 November 1943 – 31 March 2003) was an author, historian, journalist, political adviser and activist based in Darwin in the Northern Territory of Australia.  James is best known for documenting the contribution of women to the development of the Northern Territory in books and articles, most significantly, the award-winning \"No Man’s Land: Women in the Northern Territory.\"  She was also a press secretary and adviser to Bob Collins, Leader of the Territory Opposition and Senator for the Northern Territory and later Clare Martin, Chief Minister of the Northern Territory.\n\nParliament of the Northern Territory: The Parliament of the Northern Territory is a unicameral legislature in the Northern Territory, Australia, consisting of the Northern Territory Legislative Assembly and the Administrator of the Northern Territory, who represents the Monarch.  It is one of the three unicameral parliaments in Australia, the Legislative Council being replaced by the Legislative Assembly in 1974.  The Legislative Assembly sits in Parliament House in the Territory's capital, Darwin.\n\nDarwin Correctional Centre: The Darwin Correctional Centre, an Australian minimum to maximum security prison for males and females, is approximately 30 km by road from Darwin, Northern Territory, Australia.  The centre is managed by Northern Territory Department of Correctional Services, of the Government of the Northern Territory.  The centre detains sentenced and charged felons under Northern Territory and/or Commonwealth law.\n\nCherrie Ireland: Cheryl \"Cherrie\" Ann Dallas-Smith (née Loydstrom, formerly Ireland), MBE is an Australian former wheelchair athlete, swimmer and table tennis player who represented her country at two Paralympic Games and two Commonwealth Paraplegic Games in the 1960s and 1970s.  Born in Darwin, She was on holiday in Melbourne when she was paralysed by polio at the age of five.  Her family moved to Brisbane and she became involved in competitive sport through the Queensland Sports and Social Club for the Disabled.\n\nBrinkin, Northern Territory: Brinkin is a northern suburb of Darwin, the capital city of the Northern Territory, Australia.  It is located 12 km north of Darwin's central business district, and is home to the Casuarina campus of Charles Darwin University (formerly Northern Territory University's campus).\n\nParliament House, Darwin: Parliament House in Darwin is Australia's newest Parliament Building, it has been the seat of the Northern Territory Legislative Assembly since 1994.  Parliament House is located on State Square in the centre of Darwin, which is also the administrative centre of the Northern Territory law and government.  It features Post modern features.  The Northern Territory Library is housed in Parliament House.Construction of Parliament House began in 1990, and the building was completed in 1994, and officially opened by the Governor-General of Australia, Bill Hayden on 18 August 1994.  Before Parliament House the former Northern Territory Legislative Council established in 1948 was housed in various temporary buildings around Darwin.  After 1974 the Northern Territory Legislative Assembly continued to operate on the same basis, and settled in buildings on the current location until 1990 when they were demolished to allow commencement of the construction of Parliament House.  From 1990 to the end of 1994, the Assembly temporarily met in the Chan Building.\n\nMix 104.9: Mix 104.9 (call sign: 8MIX) is a radio station in Darwin, Northern Territory, Australia.  It started broadcasting in 1997 - at the time, sister station Hot 100 was the only commercial radio station in Darwin - and has a relay in the remote town of Katherine (106.9 FM) as well as relays in smaller communities such as Pine Creek, Northern Territory, Adelaide River, Northern Territory and Bathurst Island, Northern Territory north of Darwin.\n\nMcMillans Road: McMillans Road is a major arterial road in the northern and eastern suburbs of Darwin, Northern Territory Australia.  The road provides an access route for some of the city's most important infrastructure including Darwin International Airport, Northern Territory Institute of Sport, Marrara Oval and the headquarters and training college of the Northern Territory Police.  It is also the main road access to Crocodylus Park, a major tourist attraction boasting a crocodile farm and small zoo.  The road is named for the McMillan brothers as it was originally the access to pastoral leases they held in the 1920s and 1930s.\n\nDarwin, Northern Territory: is the capital city of the Northern Territory of Australia.  Situated on the Timor Sea, Darwin is the largest city in the sparsely populated Northern Territory, with a population of 142,300.  It is the smallest and most northerly of the Australian capital cities, and acts as the Top End's regional centre.\n\nPalmerston, Northern Territory: Palmerston is a planned satellite city of Darwin, the capital and largest city in Australia's Northern Territory.  Palmerston is situated near Darwin Harbour and had a population of 27,618 at the 2011 census, making it the second largest city in the sparsely populated Northern Territory.  Palmerston is currently the fastest growing city in the Northern Territory and has briefly in the past held the title of the fastest growing city in Australia.",
+    "question": "Though Cherrie Ireland was born in Darwin, the capital city of the Northern Territory of Australia, she was on holiday in which city when she became paralysed by polio?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person."
+        },
+        "event_type": {
+          "type": "string",
+          "description": "The type of event that occurred."
+        },
+        "cause_of_event": {
+          "type": "string",
+          "description": "The cause of the event."
+        },
+        "event_location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the event took place."
+            }
+          },
+          "required": [
+            "city"
+          ],
+          "additionalProperties": false
+        },
+        "person_birth_location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the person was born."
+            },
+            "territory": {
+              "type": "string",
+              "description": "The territory where the person was born."
+            },
+            "country": {
+              "type": "string",
+              "description": "The country where the person was born."
+            }
+          },
+          "required": [
+            "city",
+            "territory",
+            "country"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "person_name",
+        "event_type",
+        "cause_of_event",
+        "event_location",
+        "person_birth_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Cherrie Ireland",
+      "event_type": "paralysis",
+      "cause_of_event": "polio",
+      "event_location": {
+        "city": "Melbourne"
+      },
+      "person_birth_location": {
+        "city": "Darwin",
+        "territory": "Northern Territory",
+        "country": "Australia"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "record_id": "6c110b4b1ff65ac52a30ccf61ab665c38010a343db4c3ffd980bd937bef6efe1",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ade4e0d5542997c77adede6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Boston",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Buckman Tavern: Buckman Tavern is a historic American Revolutionary War site associated with the revolution's very first battle, the 1775 Battle of Lexington and Concord.  It is located on the Battle Green in Lexington, Massachusetts and operated as a museum by the Lexington Historical Society.\n\nYates County Genealogical and Historical Society: The Yates County Genealogical and Historical Society focuses on the history of Yates County, New York and operates the Yates History Center, which consists of three museums in the village of Penn Yan, New York: the 19th century period Oliver House Museum, the L. Caroline Underwood Museum with historic decorative arts items and displays of local history, and the adjacent Scherer Carriage House that features exhibits about local evangelist Jemima Wilkinson.\n\nWLXX: WLXX (92.9 FM) is an FM radio station broadcasting a country music format.  Licensed to Lexington, Kentucky, USA, the station serves the Lexington Metro Area and all of Central Kentucky.  The station perhaps has the largest coverage area of all of the FM radio stations in the Lexington area, with a one hundred+ mile radius broadcast and service area.  It can be listened to in Louisville and beyond if traveling west on Interstate 64 and well past Morehead, Kentucky if traveling east.  It can also be picked up in Cincinnati, Ohio and Corbin, Kentucky.  The station is currently owned by Cumulus Media.\n\nHistorical Society of Central Florida: The Historical Society of Central Florida, formerly the Orange County Historical Society, is a historical society located in Orlando, Florida, United States.  Located at the Orange County Regional History Center in the old Orange County Courthouse, the Historical Society collects and preserves the regional history of Central Florida.\n\nJames Phinney Munroe: James Phinney Munroe (b. 1862 d. 1929) was an American author, businessman, professor and genealogist of the Clan Munro.  He attended the Massachusetts Institute of Technology and graduated in 1882, although remained active in the affairs of the school.  He published a number of mostly scholarly works.  He was the father-in-law of Frederic Lansing Day who married his daughter Katharine.  Munroe, who lived in Lexington, Massachusetts, was a president of the Lexington Historical Society and Treasurer and President of the Munroe Felt and Paper Company.  He edited the second edition of Charles Hudson's \"History of Lexington.\"\n\nSchmucker Hall: Schmucker Hall is an American Civil War site listed on the National Register of Historic Places in Adams County, Pennsylvania, that was constructed as the original Gettysburg Theological Seminary building.  Used as both a Union and Confederate hospital during the 1863 Battle of Gettysburg, the facility served as the seminary's main building from 1832 to 1895, then as a dedicated dormitory for students until 1951.  In 1960, it was leased by the Adams County Historical Society.  Beginning in 2006, the Historical Society, along with the Seminary Seminary Ridge Historic Preservation Foundation, rehabilitated the building for adaptive reuse as the Seminary Ridge Museum www.seminaryridgemuseum.org .  The Adams County Historical Society moved into the nearby Wolf House on the seminary campus preceding the renovation.  In 2013, on the 150th anniversary of the battle, the Seminary, the Adams County Historical Society and the Seminary Ridge Historic Preservation Foundation opened the building as the Seminary Ridge Museum.  The Museum houses displays about many different aspects of the battle, the seminary, the town, and the civil war, and the struggle among faith groups over slavery, as well as offering tours of the cupola.  The exhibit and museum have earned international, national and regional awards and the rehabilitation achieved LEED Certification in 2013.\n\nLexington, Massachusetts: Lexington is a town in Middlesex County, Massachusetts, United States.  The population was 31,394 at the 2010 census, in nearly 11,100 households.  Settled in 1641, it is celebrated as the site of the first shots of the American Revolutionary War, in the Battle of Lexington on April 19, 1775.  It is part of the Greater Boston Area and is the sixth wealthiest small city in the United States.\n\nNathaniel Hurd: Nathaniel Hurd (c. 1729 – 1777) was an engraver and silversmith in Boston, Massachusetts, in the 18th century.  He engraved \"bookplates ... heraldic devices, seals, ... paper currency, and business cards.\"  The lion rampant logo for the prestigious Phillips Exeter Academy is taken from a bookplate Hurd designed for John Phillips in 1775.  Examples of Hurd's work are in the collections of Harvard University; Yale University; Historic Deerfield; the Lexington Historical Society; and the Museum of Fine Arts Boston.\n\nHancock–Clarke House: The Hancock–Clarke House is a historic house at 36 Hancock Street in Lexington, Massachusetts, that is a National Historic Landmark.  Built in 1738, the house is notable as the only surviving house associated with statesman John Hancock, who lived here for several years as a child.  It played a prominent role in the Battle of Lexington and Concord as both Hancock and Samuel Adams, leaders of the colonials, were staying in the house before the battle.  The House is operated as a museum by the Lexington Historical Society.  It is open weekends starting in mid-April and daily from May 30–October 31.  An admission fee is charged.\n\nLexington Historical Society: The Lexington Historical Society, founded in 1886 in Lexington, Massachusetts preserves and celebrates Lexington's history, with a special emphasis on the town's important role in the beginning of the American Revolution.  The Society presents entertaining and educational programs year-round in the restored Lexington Depot.  The Depot is available for rental by Lexington community groups, residents and businesses.",
+    "question": "The Lexington Historical Society focuses on the history of the American Revolution and the Battle of Lexington, near this present-day metro area.",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "historical_society_name": {
+          "type": "string",
+          "description": "The name of the historical society."
+        },
+        "historical_society_founding_year": {
+          "type": "integer",
+          "description": "The year the historical society was founded."
+        },
+        "historical_society_location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the historical society is primarily located."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the historical society is located."
+            },
+            "metro_area": {
+              "type": "string",
+              "description": "The present-day metro area that the historical society's location is part of."
+            }
+          },
+          "required": [
+            "city",
+            "state",
+            "metro_area"
+          ],
+          "additionalProperties": false
+        },
+        "historical_society_focus_areas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Key historical periods or events that the society emphasizes."
+        },
+        "associated_battles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specific battles related to the historical society's focus."
+        }
+      },
+      "required": [
+        "historical_society_name",
+        "historical_society_founding_year",
+        "historical_society_location",
+        "historical_society_focus_areas",
+        "associated_battles"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "historical_society_name": "Lexington Historical Society",
+      "historical_society_founding_year": 1886,
+      "historical_society_location": {
+        "city": "Lexington",
+        "state": "Massachusetts",
+        "metro_area": "Greater Boston Area"
+      },
+      "historical_society_focus_areas": [
+        "Lexington's history",
+        "American Revolution"
+      ],
+      "associated_battles": [
+        "Battle of Lexington",
+        "Battle of Lexington and Concord"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

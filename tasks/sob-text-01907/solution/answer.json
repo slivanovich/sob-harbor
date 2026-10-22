@@ -1,0 +1,16 @@
+{
+  "comparison_result": {
+    "genus_with_more_species": "Photinia",
+    "more_species_count_range": "40–60",
+    "less_species_genus": "Nandina",
+    "less_species_count": 1
+  },
+  "photinia_details": {
+    "genus_name": "Photinia",
+    "species_count_range": "40–60"
+  },
+  "nandina_details": {
+    "genus_name": "Nandina",
+    "species_count": 1
+  }
+}

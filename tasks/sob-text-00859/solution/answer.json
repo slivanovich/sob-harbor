@@ -1,0 +1,18 @@
+{
+  "magazine": {
+    "name": "Departures",
+    "country_of_origin": "American",
+    "publication_frequency": "quarterly",
+    "genre": "lifestyle",
+    "original_publisher": "Time Inc."
+  },
+  "publisher_in_question": {
+    "name": "Hearst Shkulev Media",
+    "publishes_localized_version": true,
+    "localized_regions": [
+      "Russia",
+      "Ukraine"
+    ]
+  },
+  "final_answer": "Departures"
+}

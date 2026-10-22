@@ -1,0 +1,10 @@
+{
+  "player_name": "Reginald \"Reggie\" Carter",
+  "school_name": "Long Island Lutheran High School",
+  "school_type": "Lutheran college preparatory school",
+  "school_location": {
+    "city": "Brookville",
+    "state": "New York"
+  },
+  "answer_city": "Brookville"
+}

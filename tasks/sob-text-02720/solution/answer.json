@@ -1,0 +1,13 @@
+{
+  "singer": {
+    "name": "Jimmy Boyd",
+    "known_for_song": "I Saw Mommy Kissing Santa Claus"
+  },
+  "film": {
+    "title": "The Two Little Bears",
+    "release_year": 1961,
+    "director": "Randall Hood",
+    "genre": "comedy"
+  },
+  "relationship_description": "Jimmy Boyd, known for recording 'I Saw Mommy Kissing Santa Claus', starred in the film 'The Two Little Bears'."
+}

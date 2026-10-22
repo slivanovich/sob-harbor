@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "e1bad05c5253029eb9a635768d9e5abd69729bc7c236fd1e730714945416f50a",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac53eb65542994611c8b46a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Korean",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Battle Gear 3: Battle Gear 3 (バトル・ギア3 , Batoru Gia Surī ) is a 2002 arcade online racing game released by Taito and based on real Japanese locations such as Hakone and touge races on board tuned sports cars licensed by famous Japanese makers including Nissan, Toyota and Mazda.  On December 15, 2003, Taito released an updated System 246 version named \"Battle Gear 3 Tuned\" (\"バトル・ギア3・チューンド\" ) and featuring seven extra cars including the Mazda RX-8 Type-S (SE3P) and the Nissan 350Z (Z33).  Also, four new tracks (the B courses) including a secret one, were added, as well as an exclusive \"Takumi Mode\" (\"匠モード\" ) .  The Takumi Mode gives the player a finishing time/reduced speed penalty each time the car hits a wall.  The purpose of this feature is to offer a more realistic and artistic driving experience \"dixit\" the developer himself.  This principle was used one year later by Polyphony Digital in \"Gran Turismo 4\".  By Christmas of the same year, Nextech Entertainment ported \"Battle Gear 3\" to the PlayStation 2 with an opening CG movie, an exclusive \"Event Race\" online contest mode and some extras from the updated version, consisting of four cars (D-Class) and two courses (B).\n\nMazda RX-8 Hydrogen RE: The Mazda RX-8 Hydrogen RE is a 2003 bi-fuel version of the RX-8 sports car, in which the twin-rotor wankel rotary engine is configured to run on either hydrogen or gasoline.  This is the fifth Mazda vehicle to be fitted with a hydrogen wankel rotary engine.  The hydrogen tank, with a capacity of 110 liters at 350 bar stores up to 2.4 kilograms of hydrogen and is fitted in addition to the 61 liter gasoline tank.  In 2005, Mazda obtained street approval for this vehicle.  The following year, the first vehicles were leased to customers (Idemitsu and Iwatani).  In November 2007, Mazda announced the delivery of 30 RX-8 HRE to the Norwegian hydrogen project Hynor.\n\nMazda RX-8: The Mazda RX-8 was a sports car that was manufactured by Mazda from 2003 to 2012.  It was first shown in 2001 at the North American International Auto Show.  It is the successor to the RX-7 and, like its predecessors in the RX range, it is powered by a Wankel engine.  The RX-8 began North American sales in the 2003 model year.\n\nKouichi Yamashita: Kouchi Yamashita (山下広一 , Yamashita Kouchi ) is a drifting driver who in 2008 defected from D1 Grand Prix into the US Formula D series.  He is known for his own unique style of drifting and his skills with the rotary engine.  He drives the Mazda RX-8 which is tuned with a 20B Renesis engine from the Korean market producing a power of 429HP.  He has achieved one victory from the D1GP series.  Previously he was known for driving the Toyota AE86.\n\nMazda 717C: The Mazda 717C is a prototype racing car built for Mazdaspeed for the 24 Hours of Le Mans under the Group C Junior formula.  It was the first sportscar built by Mazda since the ending of their running in GT with the RX-7 in 1982.  It used a 2-rotor \"13B\" Wankel engine, similar to the production engine in the Mazda RX-7.  The bodywork and chassis were actually built by Mooncraft with assistance from Mazda.\n\nMotor tax in the Republic of Ireland: Motor Tax (Irish: \"Cáin Mhótair\") is an annual duty payable on motor vehicles (subject to exemptions) in Ireland for use in public places.  A new system for new private cars was introduced on 1 July 2008 where the tax rates are based on the carbon dioxide emissions of the car while in operation.  Prior to this, tax rates are assessed on engine displacement - this includes used imports first registered in their original country of sale before July 2008.  Motorcycles are all taxed the same regardless of engine displacement, with a special rate for electrically powered cycles.  For goods vehicles, commercial vehicles and PSVs it is based on weight or is a standardised fee.  For taxation of cars with Wankel engines under the old size-based system, the actual engine displacement is multiplied by 1.5 so for example a Mazda RX-8 with a 1.3 litre rotary engine is taxed as a 1.8 litre car.\n\nCenter Wheeling Market: The Center Wheeling Market is a historic public market located along Market Street between 22nd and 23rd Streets in Wheeling, Ohio County, West Virginia.  It consists of the Center Wheeling Market building as well as the Center Wheeling Fish Market.  The 1853 Center Wheeling Market building was designed by architect Thomas Pope as an open market.  The building is of neo-classical style with three bays and structural cast iron Doric order columns.  It has a gable roof and features a belfry complete with bell.  The 1890 open brick, neo-Romanesque section was designed by Wheeling architect Edward B. Franzheim.  It has brick piers that support a hipped roof with cross gables and a three-foot overhang.  In 1900, a wooden enclosure was built at the northern bay to house the Center Wheeling Fish Market.\n\nNatasha Firman: Natasha Firman (born 22 June 1976) is an English racing driver and winner of the inaugural Formula Woman championship in 2004.  On the way to that victory, she achieved two wins and four third places out of seven races.  She later set new endurance records in the Mazda RX-8.\n\nTRNA-dihydrouridine20a/20b synthase (NAD(P)+): TRNA-dihydrouridine20a/20b synthase (NAD(P)) (EC 1.3.1.90 , \"Dus4p\") is an enzyme with systematic name \"tRNA-5,6-dihydrouracil20a/20b:NAD(P) oxidoreductase\".  This enzyme catalyses the following chemical reaction\n\nLa Merced Market: The La Merced Market is a traditional public market located in the eastern edge of the historic center of Mexico City and is the largest retail traditional food market in the entire city.  The area, also called La Merced, has been synonymous with commercial activity since the early colonial period when traders arrived here from other parts of New Spain.  At one time, nearly the entire neighborhood was filled with market stalls and in the 1860s it was decided to build a permanent market on the grounds of the old La Merced monastery.  In the first half of the 20th century, this market was the major wholesaler for the entire city.  This ended when the Central de Abasto was opened in the 1980s, but La Merced remains the largest traditional retail market.  The market area is also known for flagrant prostitution in which women can be seen soliciting at all hours of the day and night.  It is estimated that about one third of these prostitutes are underage.",
+    "question": "Kouchi Yamashita drove a Mazda RX-8 with a 20B Genesis engine from a market located where",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "driver_name": {
+          "type": "string",
+          "description": "The name of the racing driver."
+        },
+        "car_model": {
+          "type": "string",
+          "description": "The model of the car driven by the racer."
+        },
+        "engine_model": {
+          "type": "string",
+          "description": "The specific model of the engine used in the car."
+        },
+        "engine_origin_market": {
+          "type": "string",
+          "description": "The market from which the engine originated."
+        },
+        "engine_power_hp": {
+          "type": "integer",
+          "description": "The horsepower produced by the engine."
+        }
+      },
+      "required": [
+        "driver_name",
+        "car_model",
+        "engine_model",
+        "engine_origin_market",
+        "engine_power_hp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "driver_name": "Kouchi Yamashita",
+      "car_model": "Mazda RX-8",
+      "engine_model": "20B Renesis",
+      "engine_origin_market": "Korean",
+      "engine_power_hp": 429
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

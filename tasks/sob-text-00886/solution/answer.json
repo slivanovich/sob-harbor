@@ -1,0 +1,12 @@
+{
+  "player_name": "Jim Edmonds",
+  "nicknames": [
+    "Jimmy Baseball",
+    "Jimmy Ballgame"
+  ],
+  "team_details": {
+    "team_name": "St. Louis Cardinals",
+    "season": 2006,
+    "position": "center fielder"
+  }
+}

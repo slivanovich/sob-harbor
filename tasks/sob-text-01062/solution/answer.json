@@ -1,0 +1,16 @@
+{
+  "confidant_details": {
+    "name": "Peder Anker Wedel-Jarlsberg",
+    "title": "Count",
+    "relationship_to_royal": "Lord Chamberlain and close confidant"
+  },
+  "royal_figure_details": {
+    "name_as_prince": "Prince Carl of Denmark",
+    "name_as_king": "Haakon VII of Norway"
+  },
+  "residence_details": {
+    "name": "Esviken",
+    "type": "summer residence",
+    "location": "Asker, Norway"
+  }
+}

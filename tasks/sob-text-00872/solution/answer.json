@@ -1,0 +1,11 @@
+{
+  "brewery_name": "Little Creatures Brewery",
+  "location": {
+    "city": "Fremantle",
+    "state_region": "Western Australia",
+    "country": "Australia"
+  },
+  "founding_year": 2000,
+  "original_brewers_origin": "Matilda Bay Brewing Company",
+  "product_mentioned": "Little Creatures Pale Ale"
+}

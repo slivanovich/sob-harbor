@@ -1,0 +1,16 @@
+{
+  "person_name": "Linus Carl Pauling",
+  "publication_details": {
+    "total_papers_and_books": 1200,
+    "scientific_topics_count": 850
+  },
+  "model_development": {
+    "model_name": "CPK models",
+    "model_type": "physical molecular models",
+    "basis_of_model": "van der Waals radii",
+    "co_developers": [
+      "Robert Corey",
+      "Walter Koltun"
+    ]
+  }
+}

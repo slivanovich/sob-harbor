@@ -1,0 +1,15 @@
+{
+  "band_originated_in_chicago": "Material Issue",
+  "other_band_origin_city": "Los Angeles",
+  "question_answered": true,
+  "bands_compared": [
+    {
+      "band_name": "Local Natives",
+      "origin_city": "Los Angeles"
+    },
+    {
+      "band_name": "Material Issue",
+      "origin_city": "Chicago"
+    }
+  ]
+}

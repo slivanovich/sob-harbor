@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "637c1f33607ca955465b3acc0a02aa9f93832dfeaab5ad606230c946bb913395",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab6b2d7554299110f219a4f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "nonprofit, non-governmental organization",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Albert B. Cummins: Albert Baird Cummins (February 15, 1850July 30, 1926), American lawyer and politician.  He was the 18th Governor of Iowa elected to three consecutive terms and U.S. Senator for Iowa serving for 18 years.\n\nHasan Abdullayev: Academician Hasan Abdullayev (also spelled as Gasan Mamed Bagir ogly Abdullaev) (Azerbaijani: \"Həsən Məmmədbağır oğlu Abdullayev\" ; Russian: \"Гасан Мамед Багир оглы Абдуллаев\" ; August 20, 1918 – September 1, 1993) was a leading top Soviet and Azerbaijani physicist, scientist and public official, President of the National Academy of Sciences of the Azerbaijan SSR.  He was a Doctor of Sciences in physics and mathematics, Professor of physics and mathematics, Director of the Institute of Mathematics and Physics of the National Academy of Sciences of the Azerbaijan SSR, full Academician of the National Academy of Sciences of the Azerbaijan SSR, corresponding member of the Soviet Academy of Sciences and Russian Academy of Sciences, and in 1970-1983 was the longest-serving President of the National Academy of Sciences of the Azerbaijan SSR.  He was also an elected member of the Azerbaijan SSR Parliament, and the elected member of the 8th, 9th and 10th convocations of the Supreme Soviet of the Soviet Union.  Academician Abdullayev was one of the founders of the Soviet semiconductors physics and a leading scientist in new technologies.  He made an outstanding contribution to the development of electronics, astrophysics, aeronautics, medicine, biophysics and defense industries.  Academician Abdullayev was the author of 585 Soviet and foreign patents, including 171 secret and 65 top secret patents, author of 28 scientific books (monographs), over 800 journal and encyclopedia articles in English, Russian and Azerbaijani languages.\n\nRobert Lilligren: Robert Lilligren (born July 2, 1960) is an American politician and member of the Minnesota Democratic-Farmer-Labor Party.  He was an elected member of the Minneapolis City Council.  He was first elected in 2001, to represent the 8th Ward of the Minneapolis City Council.  Following the defeat of Green Party Green Party member Dean Zimmermann, during the 2005 municipal elections, Lilligren represented the 6th Ward of the City of Minneapolis.  When first elected to office, Lilligren was serving as a volunteer on eight different community boards and commissions including: vice-chair of Phillips West Neighborhood organization, the Midtown Greenway Coalition (a bike/walk advocacy group), the Hennepin County-appointed I-35W Project Advisory Committee, and as a board member for several affordable housing groups throughout South Minneapolis.\n\nCharles James Murray: Charles James Murray (1851 – 25 September 1929) was a British Conservative Party politician and diplomat.  He was the son of Charles Augustus Murray, and was elected as a Member of Parliament (MP) for Hastings in 1880, a position he resigned in 1883.  He was elected Member of Parliament for Coventry in 1895 until his defeat at the 1906 general election.\n\nAlbert Baird Hastings: Albert Baird Hastings (1895-1987) was an American biochemist and physiologist.  He spent 28 years as the department chair and Hamilton Kuhn Professor of Biological Chemistry at Harvard University.  After retiring from Harvard, Hastings moved to the Scripps Clinic and Research Foundation (now the Scripps Research Institute), where he became the director of the division of biochemistry and helped to establish the institution's emerging program in basic research.  In 1966, he became one of the first faculty members at the University of San Diego's new medical school.  His research focused on the biochemical underpinnings of physiology and included characterizing acid-base homeostasis in blood and pioneering the use of radioactive tracers for studying metabolism.  Hastings received a number of honors and awards for his work, including election to the National Academy of Sciences in 1937 and the President's Medal for Merit in 1948 following his wartime service on the Committee for Medical Research.  Hastings died of heart failure in 1987 at age 91.\n\nHilton Cheong-Leen: Hilton Cheong-Leen, CBE, JP (; born 6 August 1922) is a Hong Kong politician and businessman.  He was an elected member of the Urban Council of Hong Kong for 34 years from 1957 to 1991.  He was also the first Chinese chairman of the council from 1981 to 1986.  He had been a long-time chairman of the Hong Kong Civic Association, one of the two quasi-opposition political groups in the post-war Urban Council.  From 1973 to 1979, he was appointed unofficial member of the Legislative Council of Hong Kong.  From 1985 to 1988, he was again became among the first elected member of the Legislative Council through Urban Council constituency in the first Legislative Council election in 1985.\n\nAntonio Luiz Braga: Born in Herculândia-SP-Brazil and graduated bachelor's degree in chemistry at the Federal University of São Carlos in 1981, master's degree in Organic Chemistry from the University of São Paulo (1984) and a PhD in Organic Chemistry from the University of São Paulo (1989) under the guidance of Prof. Comasseto.  He was Professor of Chemistry at the Federal University of Santa Maria (1985-2008).  He was coordinator of the Chemistry Committee of FAPERGS (2000-2001).  He was coordinator of a Center of Excellence project (PRONEX-2005 -. .  Support Center for Bio-Organic Organocalcogênios, He was General secretary of the 11th Brazilian Meeting on Organic Synthesis (11th BMOS, 2005).  Currently he is a Full Professor at the Federal University of Santa Catarina, Chemistry Department.  He has experience in Organic synthesis, acting on the following topics: Green Chemistry, Asymmetric Catalysis, organoselenium bioactive molecules and selenium and tellurium derived amino acids and other natural products, Synthesis of the seleno-enzyme glutathione peroxidase mimetic.  Coordinates CT_Infra projects at UFSC; has supervised 29 PhD students, 31 masters students, 8 postdocs (6 Brazilians, 1 German and 1 Indian), 4 doctors / German sandwich has published over 240 papers in journals recognized by the community, cited by 6400 research articles, H level:. .  42, deposited 8 patents (USA, Brazil).  Award: researcher Featured in Chemistry, FAPERGS, 2007.  In 2009 he was elected member in the Advisory Board of the International Conference on the Chemistry of Selenium and Tellurium (ICCST).  A member of the CNPq Chemistry Committee between 2009 - 2011 (CA Coordinator between 2009-2010).  Designated and elected member of the Brazilian Academy of Sciences (ABC).  In 2014 he was elected to the advisory board of the Brazilian Chemical Society (SBQ).\n\nNational Academy of Sciences: The National Academy of Sciences (NAS) is a United States nonprofit, non-governmental organization.  NAS is part of the National Academies of Sciences, Engineering, and Medicine, along with the National Academy of Engineering (NAE) and the National Academy of Medicine (NAM).\n\nHal Baird: Hal Baird is a retired College baseball coach.  From 1980 to 1984, Baird coached at East Carolina University.  In 1985, he became the head coach at Auburn University where he remained until 2000.  While at Auburn, he became the schools most successful head coach in history, winning a total of 634 games and he led his team to the 1994 College World Series and the 1997 College World Series.  He is a member of the \"East Carolina University athletic Hall of Fame\".  Hal Baird was a standout in baseball for 15 years as a player, assistant coach and head coach at East Carolina (ECU).  A 1971 ECU graduate, Baird helped the Pirates to a Southern Conference title and a NCAA Tournament appearance in 1970.  In the league championship game against George Washington, Baird struck out a Southern Conference record 20 batters.  His 105 strikeouts in 1971 ranks among the top performances in school history.\n\nEdgar Baird: Edgar Albert Baird, ONL (May 28, 1911 – May 1, 2005) was a businessman born in Campbellton Newfoundland, Canada.  Baird was the founder of the Newfoundland chapter of the Junior Forest Rangers, and worked in the forestry and aviation industry where he was Chief Woods Ranger for Newfoundland, responsible for forest fire protection initiatives for Newfoundland and Labrador.",
+    "question": "What type of organization is this body that Albert Baird Hastings became an elected member in 1937?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person who became an elected member."
+        },
+        "organization_name": {
+          "type": "string",
+          "description": "The name of the organization the person was elected to."
+        },
+        "election_year": {
+          "type": "integer",
+          "description": "The year the person was elected to the organization."
+        },
+        "organization_type": {
+          "type": "string",
+          "description": "The primary type of the organization."
+        },
+        "organization_attributes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Additional descriptive attributes of the organization."
+        }
+      },
+      "required": [
+        "person_name",
+        "organization_name",
+        "election_year",
+        "organization_type",
+        "organization_attributes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Albert Baird Hastings",
+      "organization_name": "National Academy of Sciences",
+      "election_year": 1937,
+      "organization_type": "nonprofit",
+      "organization_attributes": [
+        "non-governmental organization",
+        "United States"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

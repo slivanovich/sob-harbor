@@ -1,0 +1,12 @@
+{
+  "series_name": "Oz books",
+  "series_creator": "L. Frank Baum",
+  "protagonist_character_name": "Peter Brown",
+  "author_who_used_protagonist": "Ruth Plumly Thompson",
+  "protagonist_books_count": 3,
+  "protagonist_books_titles": [
+    "The Gnome King of Oz",
+    "Jack Pumpkinhead of Oz",
+    "Pirates in Oz"
+  ]
+}

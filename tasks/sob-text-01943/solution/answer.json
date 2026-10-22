@@ -1,0 +1,13 @@
+{
+  "person_a": {
+    "name": "Richard Djerf",
+    "birth_date": "1969-11-06"
+  },
+  "person_b": {
+    "name": "John Emil List",
+    "birth_date": "1925-09-17"
+  },
+  "earlier_born_person_name": "John Emil List",
+  "earlier_birth_year": 1925,
+  "comparison_summary": "John Emil List was born earlier than Richard Djerf."
+}

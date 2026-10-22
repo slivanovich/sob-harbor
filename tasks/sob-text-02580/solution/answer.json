@@ -1,0 +1,22 @@
+{
+  "rescuing_force_details": {
+    "name": "United States Navy SEALs",
+    "affiliation": "U.S. Navy",
+    "force_type": "primary special operations force"
+  },
+  "rescue_operation_details": {
+    "date": "January 25, 2012",
+    "location_description": "12 miles north of the Somali town of Adow",
+    "hostages_freed": [
+      {
+        "name": "Jessica Buchanan",
+        "nationality": "U.S. citizen"
+      },
+      {
+        "name": "Poul Hagen Thisted",
+        "nationality": "Danish citizen"
+      }
+    ]
+  },
+  "us_citizen_hostage_name": "Jessica Buchanan"
+}

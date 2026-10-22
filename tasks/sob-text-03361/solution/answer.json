@@ -1,0 +1,14 @@
+{
+  "question_asked": "Are Nuphar and Geum both types of aquatic plants?",
+  "nuphar_details": {
+    "genus_name": "Nuphar",
+    "is_aquatic": true,
+    "classification_source": "Nuphar is genus of aquatic plants in the family Nymphaeaceae"
+  },
+  "geum_details": {
+    "genus_name": "Geum",
+    "is_aquatic": false,
+    "classification_source": "Geum , commonly called avens, is a genus of about 50 species of rhizomatous perennial herbaceous plants in the rose family"
+  },
+  "both_are_aquatic": false
+}

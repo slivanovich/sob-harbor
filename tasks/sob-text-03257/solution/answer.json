@@ -1,0 +1,14 @@
+{
+  "contestant_name": "Gabriel Soto",
+  "nationality": "Mexican",
+  "pageant_details": {
+    "pageant_name": "Mister World",
+    "year": 1996,
+    "placement": "second",
+    "is_debut_year_for_country": true
+  },
+  "contestant_professions": [
+    "actor",
+    "model"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "record_id": "9878cad1d5faf355f98f496087f8cb46492c48a3045b373265a9b43c850061c5",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae4cabe55429960a22e01e6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "New Brunswick",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Tupelo Bay Formation: The Tupelo Bay Formation is a geologic formation in South Carolina.  It preserves fossils dating back to the Paleogene period.\n\nGeorgian Bay Formation: The Georgian Bay Formation is a geologic formation in Michigan.  It preserves fossils dating back to the Ordovician period.\n\nEllis Bay Formation: The Ellis Bay Formation is a geologic formation in Quebec.  It preserves fossils dating back to the Ordovician period.\n\nSargent Bay Formation: The Sargent Bay Formation is a geologic formation in Quebec.  It preserves fossils dating back to the Silurian period.\n\nBush Bay Formation: The Bush Bay Formation is a geologic formation in Michigan.  It preserves fossils dating back to the Silurian period.\n\nEgmont Bay Formation: The Egmont Bay Formation is a geologic formation in Prince Edward Island.  It preserves fossils dating back to the Carboniferous period.\n\nShallow Bay Formation: The Shallow Bay Formation is a geologic formation in Newfoundland and Labrador.  It preserves fossils dating back to the Ordovician period.\n\nRed Bay Formation: The Red Bay Formation is a geologic formation in Florida.  It preserves fossils dating back to the Neogene period.\n\nBack Bay Formation: The Back Bay Formation is a geologic formation in New Brunswick.  It preserves fossils dating back to the Silurian period.\n\nNew Brunswick: New Brunswick (French: \"Nouveau-Brunswick\" ; ) is one of Canada's three Maritime provinces (together with Prince Edward Island and Nova Scotia) and is the only constitutionally bilingual (English–French) province.  The principal cities are Fredericton, the capital, Greater Moncton, currently the largest metropolitan (CMA) area and the most populous city, and the port city of Saint John, which was the first incorporated city in Canada and largest in the province for 231 years until 2016.",
+    "question": "Which one of Canada's three Maritime provinces is The Back Bay Formation  a geologic formation in",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "formation_name": {
+          "type": "string",
+          "description": "The name of the geologic formation."
+        },
+        "located_in_province_or_state": {
+          "type": "string",
+          "description": "The province or state where the formation is located."
+        },
+        "is_maritime_province": {
+          "type": "boolean",
+          "description": "Indicates if the location is one of Canada's Maritime provinces."
+        },
+        "maritime_provinces_of_canada": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of Canada's Maritime provinces mentioned in the context."
+        },
+        "answer_maritime_province": {
+          "type": "string",
+          "description": "The specific Maritime province where the formation is located, if applicable."
+        }
+      },
+      "required": [
+        "formation_name",
+        "located_in_province_or_state",
+        "is_maritime_province",
+        "maritime_provinces_of_canada",
+        "answer_maritime_province"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "formation_name": "Back Bay Formation",
+      "located_in_province_or_state": "New Brunswick",
+      "is_maritime_province": true,
+      "maritime_provinces_of_canada": [
+        "New Brunswick",
+        "Prince Edward Island",
+        "Nova Scotia"
+      ],
+      "answer_maritime_province": "New Brunswick"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

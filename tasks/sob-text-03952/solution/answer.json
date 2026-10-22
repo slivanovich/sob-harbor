@@ -1,0 +1,19 @@
+{
+  "mountain_details": {
+    "name": "Blue Ridge mountains",
+    "location_description": "North Georgia mountains",
+    "age_in_years": 1000000000,
+    "age_qualifier": "over",
+    "age_comparison": "among the oldest mountains in the United States",
+    "part_of_larger_system": "Appalachian Mountains"
+  },
+  "associated_gold_rush": {
+    "name": "Georgia Gold Rush",
+    "start_year": 1829,
+    "spread_location": "North Georgia mountains"
+  },
+  "answer": {
+    "age_description": "over 1 billion years",
+    "age_value_in_years": 1000000000
+  }
+}

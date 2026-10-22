@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Discovery Channel: Discovery Channel (formerly The Discovery Channel from 1985 to 1995, and often referred to as simply Discovery) is an American basic cable and satellite television channel (which is also delivered via IPTV, terrestrial television and internet television in other parts of the world) that is the flagship television property of Discovery Communications, a publicly traded company run by CEO David Zaslav.  s of 2012 , Discovery Channel is the third most widely distributed cable channel in the United States, behind TBS and The Weather Channel; it is available in 409 million households worldwide, through its U.S. flagship channel and its various owned or licensed television channels internationally.
+
+Jonathan Goodwin (escapologist): Jonathan Goodwin (born 20 February 1980) is a Welsh TV escapologist and daredevil.  He first appeared on Channel 4 TV programme "Dirty Tricks" and has subsequently appeared in TV specials "The Seven Stupidest Things to Escape From", and "Deathwish Live" as well as Discovery Channel's "One Way Out" and "How Not to Become Shark bait" in which he allowed himself to be attacked by a Caribbean reef shark.  Goodwin returned to Discovery Channel in 2009 for a ten-part series of "One Way Out" which also starred engineer Terry Stroud.  He also appeared in an episode of the Channel 4 program "Balls of Steel" with his dad helping him with a stunt.
+
+Mick Kaczorowski: Michael "Mick" Kaczorowski (born January 4, 1960) is the Creative Director and Producer of Bangkok Swagger is a nine time nominated and three time Emmy Award winning Producer and Executive Producer.  As Executive Producer, he is responsible for some of Animal Planet and Discovery’s biggest and most iconic hits including , Raising the Mammoth, and Walking with Prehistoric Beasts.  Kaczorowski is also responsible for many of Discovery Channel and Animal Planet long running hit series including Meerkat Manor, North Woods Law, River Monsters, Alaskan Bush Family, Wild West Alaska, Buggin with Rude, and American Stuffers.  Kaczorowski has worked in Washington D.C. for Discovery Channel, Animal Planet and the National Geographic Society.  Kaczorowski began his filmmaking career in 1982 working in feature films for Director Robert Altman on Streamers, O.C. and Stiggs and Secret Honor.  In 1985 Kaczorowski helped launch before it became National Geographic Television, and was a film editor for over 10 years editing over 40 films, earning two Emmy nominations for best editing for Dancing with Stingrays and Ocean Kayakers.  He edited Discovery Channel’s first original production Ivory Wars.  Kaczorowski joined Discovery Communications in 1994 holding many positions and titles across different Discovery networks.  Over the next 20 years, he developed, supervised and managed everything from documentary specials and long running series, IMAX movies “”, Discovery’s first feature film “”, Animal Planet’s first feature film “” and Animal Planet’s first scripted drama “The Whale”.  His production company Bangkok Swagger casts, develops and creates programing around the world for the web, social media and traditional television & cable networks.
+
+Manhunt: Unabomber: Manhunt: Unabomber is an American drama miniseries created by Andrew Sodroski.  The series stars Paul Bettany, Jane Lynch, Sam Worthington, Katja Herbers, Chris Noth, Michael Nouri and Brían F. O'Byrne.  The series depicts a fictionalized account of the true story of the FBI's hunt for the man known as the Unabomber.  The miniseries premiered on August 1, 2017, on Discovery Channel.
+
+Desert Car Kings: Desert Car Kings is a reality television series that debuted on the Discovery Channel on January 26, 2011.  It is based on the McClure family, who run Desert Valley Auto Parts in Phoenix, Arizona.  The show's main characters, Jason and his father Ron, restore classic cars on a limited time-frame; restorations are usually given until their next auction.  The operation houses more than 10,000 rust-free vehicles on more than 100 acres of dry Arizona land.  Restorations have included a 1965 Ford Thunderbird, a 1970 Oldsmobile 442, a 1962 Ford Galaxie, a 1964 Plymouth Barracuda, a 1955 Ford F-100, and a 1966 Chevrolet Chevelle SS.  With average ratings, critics vary in their opinion on the show.  Some praise it, others calling it superficial.  With its time slot competing with cable television's highest-rated reality show at the time (A&E's, Storage Wars), the show had several factors working against it.  Despite the final episode airing over a year earlier, according to a May 6, 2012 Discovery Channel Facebook posting, the show had not been canceled.  Finally, an announcement came from Discovery Channel that a second season of Desert Valley Car Kings was not picked up due to production costs.  Since its cancellation, it has begun airing reruns on the Velocity cable television network.  As of July 2015 it is also airing in the UK on the Quest station (Recorded in 2011 - Some confusion, UK viewers think it is more recent).
+
+You Spoof Discovery: You Spoof Discovery: The ultimate viewer-submitted low-cost high-quality extremely entertaining Discovery parody special hosted by Mike Rowe of Dirty Jobs, who also narrates the series American Chopper, American Hot Rod and Deadliest Catch, commonly shortened to You Spoof Discovery, was a one-hour special on the Discovery Channel which showed viewer-submitted parodies of Discovery Channel shows.  The special premiered on February 25, 2007 and was hosted by Mike Rowe.  Over 600 entries were submitted.  The makers of parodies that made it on the air were given $500 from the Discovery Channel.  According to Jane Root, then the president of Discovery Channel, the series was intended to be the beginning of a new wave of viewer-generated content.
+
+The FBI Files: The FBI Files is an American television docudrama series that originally ran from 1998 to 2006.  It was carried by the Discovery Channel cable network and produced by New Dominion Pictures of Suffolk, Virginia.  The show was cancelled by the Discovery Channel in 2006; however, Escape (TV network), Discovery Channel and its sister network, Investigation Discovery, air re-runs, although until October 2012, Investigation Discovery only showed episodes from seasons 5,6, and 7.  As of October 2012, the network now airs episodes from the earlier seasons (although not necessarily in chronological order), with updated information about the cases at the end of most episodes.  Up to late September 2012, WE tv showed episodes from seasons 1-4, but the network had removed the episode introductions by Jim Kallstrom.  In the UK on Channel 5, "The FBI Files" airs most Saturday nights before QuizCall.  It has also been shown on TV Denmark, Discovery Australia and Netflix in Canada.  All seven seasons have been released on DVD.
+
+Bill Corbett: William D. "Bill" Corbett (born March 30, 1960) is an American writer and performer for television, film and theatre.  He was a writer and performer on the cult television show "Mystery Science Theater 3000" ("MST3K"), for which he voiced the robot Crow T. Robot during the show's later seasons on the Sci Fi Channel and played the character Observer and other minor roles.  In 2001, Corbett co-wrote the Sci Fi Channel miniseries "The Adventures of Edward the Less" with several other former "MST3K" writers.  Corbett also co-wrote the 2008 film "Meet Dave" starring Eddie Murphy.
+
+List of Man vs. Wild episodes: "Man vs. Wild " is a television series on Discovery Channel in the United States, Australia, New Zealand, Canada, Brazil, India and Europe.  The show is called "Born Survivor" in parts of Europe, including the UK, where it was originally broadcast by Channel 4, but latterly moved to Discovery Channel UK.  In Africa, Asia and eastern parts of Europe, it is titled "Ultimate Survival" and again, broadcast by Discovery Channel.  In Bulgaria, the show is called "Оцеляване на Предела", which is a translated title to "Ultimate Survival".
+
+Katja Herbers: Katja Mira Herbers (born October 19, 1980) is a Dutch actress of theatre, film, and television.  She is best known for playing Dr. Helen Prins on the critically acclaimed television series "Manhattan" created by Sam Shaw and for portraying the emotionally unstable borderliner Joyce on the Dutch hit show "Divorce".
+
+Question: The actress that played Joyce on the Dutch show "Divorce" also starred in what Discovery Channel miniseries?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actress_name": {
+      "type": "string",
+      "description": "The name of the actress who played Joyce on 'Divorce'."
+    },
+    "dutch_show_name": {
+      "type": "string",
+      "description": "The name of the Dutch show where the actress played Joyce."
+    },
+    "discovery_channel_miniseries": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the Discovery Channel miniseries the actress starred in."
+        },
+        "premiere_date": {
+          "type": "string",
+          "description": "The premiere date of the miniseries."
+        }
+      },
+      "required": [
+        "title",
+        "premiere_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actress_name",
+    "dutch_show_name",
+    "discovery_channel_miniseries"
+  ],
+  "additionalProperties": false
+}

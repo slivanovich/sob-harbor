@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Russell Tovey: Russell George Tovey (born 14 November 1981) is an English actor with numerous television, film and stage credits.  Tovey is best known for playing the role of a werewolf, George Sands in the BBC's supernatural drama "Being Human."  His other notable roles include Rudge in both the stage and film versions of "The History Boys", Steve in the BBC Three sitcom "Him & Her", Kevin Matheson in the HBO original series "Looking" and as Henry Knight on BBC TV series "Sherlock".  Currently, he stars as Harry Doyle in the drama-thriller series "Quantico" on the ABC network.
+
+Roman's Empire: Roman's Empire was a British television comedy show starring Mathew Horne, Neil Dudgeon, Chris O'Dowd, Montserrat Lombard and Sarah Solemani.  Written by brothers Harry and Jack Williams (sons of writer Nigel Williams) as their TV writing debut, the programme's first episode was shown on BBC Two on 12 April 2007.
+
+List of Undone episodes: "Undone" is a British science fiction comedy radio series based on the theme of parallel universes, written by and starring Ben Moor for BBC Radio 7.  The series follows the life of Edna Turner (Sarah Solemani in the pilot and series 1; and Alex Tregear from series 2 onwards), who moves to London to work on a listings magazine in London called "Get Out!" .  In London, she encounters a man called Tankerton Slopes (Moor), who comes from an alternative version of London called "Undone" - the place "where the weirdness comes from."  Everything weird or strange in London has flowed from Undone, while mundane things flow from London to Undone.  Tankerton offers Edna a job of patrolling the gaps between the two cities, and trying to find Undoners hiding in London and send them, because if they stay too long London becomes too strange and reality may be destroyed.
+
+George Sands: George Sands is a fictional werewolf in the comedy-drama TV series "Being Human", portrayed by Russell Tovey.  The male lead for the duration of the show's last first three series appeared in 24 episodes of the drama.
+
+Him &amp; Her: Him & Her is a British television sitcom about a lazy twenty-something couple: Steve and Becky, who live in Walthamstow, London.  It was first broadcast in the United Kingdom on BBC Three on 6 September 2010.  It is written by Stefan Golaszewski and stars Russell Tovey and Sarah Solemani.  The theme tune is the song "Boom Bang-a-Bang" by Lulu.
+
+Undone (radio series): Undone is a radio comedy broadcast by the BBC on the digital channel BBC 7, written by and starring Ben Moor.  It uses a sci-fi theme of parallel universes to poke fun at life and especially the media business in London.  The series focuses on the life of Edna Turner (Sarah Solemani in Series One and Alex Tregear in Series Two and Three), a journalist for a listings magazine who discovers a weird parallel version of London called "Undone".
+
+Reina King: Reina King (born April 11, 1975) is an American film and television actress.  She began her acting career with the role of Carolyn (1985–1986), the adopted child of Roger and Nadine on the TV sitcom "What's Happening Now!! "—a sequel to the popular 1970s TV sitcom "What's Happening!! ".  In 1987, she played Tiffany James in the movie "Maid to Order" and in 1988, she played actress Alfre Woodard's oldest daughter, Lanell Cooley, in the movie "Scrooged".  Reina also appeared in one episode (The Sing-Off, as Girl #2) of the sitcom "227" in 1988; the same sitcom her sister Regina King starred in as Brenda Jenkins.  In 1990, she played Rhonda in the film "To Sleep with Anger" with Mary Alice.  And in 1998, Reina was in the short film "A Hollow Place" as the mother of Corliss Young.
+
+Being Human (UK TV series): Being Human is a British supernatural comedy-drama television series.  It was created and written by Toby Whithouse for broadcast on BBC Three.  The show blends elements of flatshare comedy and horror drama.  The pilot episode starred Andrea Riseborough as Annie Sawyer (a ghost), Russell Tovey as George Sands (a werewolf), and Guy Flanagan as John Mitchell (a vampire) – all of whom are sharing accommodation and attempting as best as they can to live a "normal" life and blend in with the ordinary humans around them.
+
+The Five (TV series): The Five is a British crime drama television series, created by crime author Harlan Coben as his first original series for television.  "The Five" began broadcast on 15 April 2016 on Sky1 in the UK.  The series stars Tom Cullen, O. T. Fagbenle, Lee Ingleby and Sarah Solemani as childhood friends Mark, Danny, Slade and Pru, who are re-united after DNA evidence left at a murder scene is revealed to be that of Mark's brother Jesse, who disappeared one summer's day after playing in the park with the four friends.  The first series consists of ten episodes, with two episodes broadcast each week consecutively.  Set in the fictional town of "Westbridge", the series was filmed in Liverpool, Wirral, Runcorn, and surrounding areas, including Frodsham.
+
+Sarah Solemani: Sarah Solemani is an award winning English actress, writer and activist, best known for starring in the BAFTA winning sitcom "Him & Her" , playing Renee Zellweger's best friend 'Miranda' in Working Title's "Bridget Jones's Baby", for which she was nominated for an Evening Standard Best Actress Award, and for her role as Rosie Gulliver in "Bad Education".
+
+Question: The actor that plays George Sands in "Being Human" also stars with Sarah Solemani in a tv sitcom written by who?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_playing_george_sands": {
+      "type": "string",
+      "description": "The name of the actor who plays George Sands."
+    },
+    "co_star_name": {
+      "type": "string",
+      "description": "The name of the co-star mentioned in the question."
+    },
+    "shared_sitcom": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the TV sitcom where both actors star."
+        },
+        "is_tv_sitcom": {
+          "type": "boolean",
+          "description": "Indicates if the identified show is a TV sitcom."
+        },
+        "writer": {
+          "type": "string",
+          "description": "The writer of the TV sitcom."
+        }
+      },
+      "required": [
+        "title",
+        "is_tv_sitcom",
+        "writer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actor_playing_george_sands",
+    "co_star_name",
+    "shared_sitcom"
+  ],
+  "additionalProperties": false
+}

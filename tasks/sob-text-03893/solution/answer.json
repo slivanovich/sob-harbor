@@ -1,0 +1,16 @@
+{
+  "person_identified": "George Balanchine",
+  "relationship_to_vera_zorina": "husband",
+  "person_details": {
+    "full_name": "George Balanchine",
+    "birth_date": "January 22, 1904",
+    "death_date": "April 30, 1983",
+    "roles": [
+      "choreographer",
+      "co-founder of New York City Ballet",
+      "Artistic Director of New York City Ballet",
+      "father of American ballet"
+    ],
+    "years_as_artistic_director_of_nycb": 35
+  }
+}

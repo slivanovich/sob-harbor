@@ -1,0 +1,16 @@
+{
+  "event_description": "Report released accusing the National Science Foundation of poor management and practices.",
+  "accuser_details": {
+    "name": "Tom Coburn",
+    "political_party": "Republican",
+    "senator_status": "junior",
+    "state_represented": "Oklahoma"
+  },
+  "accused_entity": "National Science Foundation",
+  "accusation_details": [
+    "poor management and practices",
+    "various research projects",
+    "the social sciences"
+  ],
+  "event_date": "2011-05-26"
+}

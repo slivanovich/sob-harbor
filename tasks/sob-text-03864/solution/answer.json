@@ -1,0 +1,25 @@
+{
+  "athlete_name": "Sally Pearson",
+  "nationality": "Australian",
+  "olympic_games_year_of_event": 2008,
+  "event_name": "100 metres hurdles",
+  "medal_won_at_event": "silver",
+  "is_overall_multiple_gold_medalist": true,
+  "gold_medal_achievements": [
+    {
+      "championship_type": "World Championships",
+      "year": 2011,
+      "event": "100 metres hurdles"
+    },
+    {
+      "championship_type": "World Championships",
+      "year": 2017,
+      "event": "100 metres hurdles"
+    },
+    {
+      "championship_type": "Olympic Games",
+      "year": 2012,
+      "event": "100 metres hurdles"
+    }
+  ]
+}

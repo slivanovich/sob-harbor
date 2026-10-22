@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Michael Walrath: Michael Walrath (born April 17, 1975) is a serial investor, advisor and founder of start up and expansion stage companies.  He has expertise in auction marketplaces, consumer Internet and digital media, fundraising, corporate management, and mergers and acquisitions.  Walrath served as CEO and Founder of Right Media, an online advertising exchange marketplace that was acquired by Yahoo for $850 million in 2007.  After Right Media, Walrath co-founded the WGI Group, an early stage venture capital firm that provides seed investments to Internet entrepreneurs.  Walrath currently serves as Chairman of Moat, a search engine and resources guide for display ads; Chairman of Yext Inc., a location software company that synchronizes business listings across 50 sites and has been valued at $270 million; and Board of Directors Member of Inadco, Inc., a cost-per-lead advertising platform.  Walrath was the recipient of the highly prestigious Ernst & Young Entrepreneur of the Year award in 2007.
+
+Curtiss-Wright: The Curtiss-Wright Corporation is an American-based, global diversified product manufacturer and service provider for the commercial, industrial, defense, and energy markets.  Created in 1929 from the consolidation of Curtiss Aeroplane and Motor Company, Wright Aeronautical (founded by Glenn L. Martin and the Wright brothers as Wright-Martin), and various supplier companies, by the end of World War II it was the largest aircraft manufacturer in the United States, supplying whole aircraft in large numbers to the U.S. Armed Forces.  It has since evolved away from final assembly of finished aircraft, becoming a component manufacturer specializing in actuators, aircraft controls, valves, and surface treatment services.  It also is a supplier to commercial nuclear power, nuclear navy systems, industrial vehicles and to the oil and gas industries.
+
+Giuseppe Mascitelli: Giuseppe Mascitelli, born in Marche in 1959, is graduated in philosophy at the University of Urbino and, after nearly three decades of collaboration with the Mediolanum Group, is the founder of Filmare GroUP, a holding company (which is processed in SpA by the year) which includes all the initiatives of its main shareholder, the family Mascitelli and deals with activities around the world of communication, but not limited to; its activity is summarized by the slogan 'Experience Makers'.  Filmare GroUP includes Mascitelli & Partners, an initiative to share with the major institutions of the banking and insurance a wealth experiences and knowledge about communication, training and research in these sectors.  Founder, in 1998, along with Ennio Doris, of Alboran SPA (with which he has implemented the first European TV Company in finance), is also co-founder in 2006 of Mobango Ltd, one of the world's first Mobile Community.  Always up to date with technological innovation, Mascitelli has implemented its digital ecosystem with numerous platforms connected with www.giuseppemascitelli.com aggregator.
+
+Monira Rahman: Monira Rahman (born 1966) worked as secretary/PA to Dr John Morrison OBE who consulted for the Canadian International Development Agency in Dhaka, Bangladesh prior to becoming the founder of the Acid Survivors Foundation, an organization dedicated to raising awareness and preventing acid attacks.  She later became Executive Director of ASF and was granted the Human Rights Award of the German section of Amnesty International in 2005, as ASF was able to reduce number of acid attacks in Bangladesh about 40%.  Dr John Morrison developed the Acid Survivors Foundation in Bangladesh.  The Acid Survivors Foundation was officially established on 12 May 1999 under a Trust Deed by Mr Kazi Fazlur Rahman.  Dr John Morrison was the Founder Executive Director of the Foundation and Monira Rahman was the Deputy Director.  Since August 2002, Monira Rahman become its Chief Executive Officer.  When Monira Rahman took over the CEO position, the number of acid attack was increasing at the rate of 38% each year.  But under her leadership a social movement is continuing which resulted 75% reduction of acid attack by the year 2010.  Monira Rahman won Amnesty International's Human Rights Defenders Award 2006, Americans for UNFPA award 2009 and World's Children's Prize 2010.
+
+Glenn L. Martin: Glenn Luther Martin (January 17, 1886 – December 5, 1955) was an American aviation pioneer.  He designed and built his own aircraft and was an active pilot.  He founded his own aircraft company in 1912 which today through several mergers is amalgamated into the Lockheed Martin company.
+
+Govinda Raj Joshi: Govinda Raj Joshi is a Nepalese politician.  Govinda Raj Joshi was born in 1949 at Khalte village in Rupakot Village Development Committee of Tanahun district, Nepal, He stepped into the field of politics in 1964 when he had just begun his student life.  Joshi who regards late BP Koirala as his ideal was the president of free student union (College of Education) and Gandaki Student Council in 1967.  Joshi was a member of Tarun Dal, the youth wing of Nepali Congress Party, in the year 1969 in Tanahun district, He formed the Nepali Congress Tanahun district committee and was the secretary of Nepali Congress, Tanahun, in 2033,He was the secretary of multiparty campaign committee of Nepali Congress Party in 1979, He was the vice- president of Nepali Congress Party, Tanahun district and eventually made it to the central committee member of the party in the year 1997.  Likewise, Mr. Joshi was elected as central committee member of the party in the year 2000.  Twice a central committee member; Mr. Joshi has already held the post of a joint general secretary of the party.  He actively worked as a coordinator while the construction of the Nepali Congress Party Building was underway at Sanepa, Lalitpur.  Joshi who started his career as a teacher was also the founder of Tribhuwan High School, Tanahu district .  He was the founder head master of the school and taught at the very school for six years as a volunteer and spent his personal money to establish high school in his own village .  Later on he was the head master of Shiva Secondary School Rising and also the founder of Adikabi Bhanubhakta Multiple College, Tanahun.  He taught at the very college for two years as a volunteer.
+
+Benyamin Cohen: Benyamin Cohen (born 1975) was the founder and editor of both Jewsweek and American Jewish Life Magazine He is the author of the memoir "My Jesus Year: A Rabbi's Son Wanders the Bible Belt in Search of His Own Faith".  Publisher's Weekly named it one of the best books of the year, and Cohen received the Georgia Author of the Year Award.  He was the founder and editor of the award-winning national magazine American Jewish Life and the online magazine Jewsweek, and he has written for the Huffington Post, the Daily Beast, the Washington Post, and Slate.  Prior to that he edited Torah from Dixie, thoughts on the weekly Bible portion, which was later turned into a book by the same name.  He is now the content director for the Mother Nature Network, a science and environmental news website.
+
+Marita Cheng: Marita Cheng (born 5 March 1989) is the founder of Robogals.  She was named the 2012 Young Australian of the Year.  She is the founder and current CEO of 2Mar Robotics, a start-up robotics company.
+
+Saint Sava: Saint Sava (Serbian: Свети Сава/Sveti Sava , ] , 1174 – 14 January 1236), known as The Enlightener, was a Serbian prince and Orthodox monk, the first Archbishop of the autocephalous Serbian Church, the founder of Serbian law, and a diplomat.  Sava, born Rastko (), was the youngest son of Serbian Grand Prince Stefan Nemanja (founder of the Nemanjić dynasty), and ruled the appanage of Hum briefly in 1190–92.  He then left for Mount Athos where he became a monk, with the name "Sava" ("Sabbas").  At Athos, he established the monastery of Hilandar, which became one of the most important cultural and religious centres of the Serbian people.  In 1219 he was recognized as the first Serbian Archbishop by the Patriarchate, and in the same year he authored the oldest known constitution of Serbia, "Zakonopravilo", thus securing full independence; both religious and political.  Sava is regarded the founder of Serbian medieval literature.
+
+Rolf Robert Rohn: Rolf Robert Rohn (born September 3, 1944) is a Liturgical Artist, Designer, Appraiser, Educator, Construction Consultant and founder of the Pittsburgh-based liturgical design consultancy Rohn & Associates Design, Inc., as well as its subsidiary, Rohn & Associates Custom Studio, Inc.  He has dedicated his professional career to the study and execution of sacred art and liturgical design.  His life-long commitment to his profession began after he emigrated from Germany at age eight and became an apprentice to his father, the self-taught liturgical artist Rudolph N. Rohn and founder of Rudolph N. Rohn Art Studios in Pittsburgh, PA.  Rolf majored in Art History and Theology at local Duquesne University, taking over the family business after the death of his father in 1975.  He has continued his education over the years by studying ancient liturgical art, techniques and architecture in cities all over the world.  Rolf spends several months a year in Italy sourcing new artisans and maintaining close working relationships with carefully selected craftsmen.  He has worked on over 2,500 projects in both the United States and Europe.
+
+Question: What year was the founder of Curtiss-Wright born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the founder."
+    },
+    "company_founded": {
+      "type": "string",
+      "description": "The name of the company founded by the person that was part of the Curtiss-Wright consolidation."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the founder."
+    }
+  },
+  "required": [
+    "person_name",
+    "company_founded",
+    "birth_year"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+  "manager_name": "Luiz Felipe Scolari",
+  "manager_nicknames": [
+    "Felipão",
+    "Phil Scolari",
+    "Big Phil"
+  ],
+  "is_world_cup_winner": true,
+  "assistant_coach": {
+    "name": "Flávio Murtosa",
+    "role": "assistant coach"
+  },
+  "relationship_description": "Flávio Murtosa has a long friendship with Luiz Felipe Scolari and works mostly as his assistant coach."
+}

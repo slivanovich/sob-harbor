@@ -1,0 +1,23 @@
+{
+  "actor_details": {
+    "name": "Patrick George McGee",
+    "death_year": 1982
+  },
+  "film_details": {
+    "title": "Docteur Jekyll et les femmes",
+    "release_year": 1981,
+    "director_name": "Walerian Borowczyk",
+    "genre": "horror",
+    "starring_actors": [
+      "Udo Kier",
+      "Marina Pierro",
+      "Patrick Magee",
+      "Howard Vernon",
+      "Gérard Zalcberg"
+    ]
+  },
+  "temporal_relationship": {
+    "description": "Film released one year before actor's death.",
+    "years_before_actor_death": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "person_a": {
+    "name": "Larry Cohen",
+    "professions": [
+      "producer",
+      "director",
+      "screenwriter"
+    ]
+  },
+  "person_b": {
+    "name": "Wang Xiaoshuai",
+    "professions": [
+      "director",
+      "screenwriter",
+      "actor"
+    ]
+  },
+  "common_professions": [
+    "director",
+    "screenwriter"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "film_title": "The Stanford Prison Experiment",
+  "film_year": 2015,
+  "film_director": "Kyle Patrick Alvarez",
+  "actor_details": {
+    "actor_name": "Ezra Matthew Miller",
+    "birth_date": "1992-09-30",
+    "nationality": "American",
+    "professions": [
+      "actor",
+      "singer"
+    ]
+  }
+}

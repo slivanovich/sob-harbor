@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "record_id": "1a03ee21b19077a6a0ec32262025e8d0a682dc982aefaeeb38b2e075504a5845",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae2b8755542994d89d5b43d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Rubén Darío",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Rubén Darío: Félix Rubén García Sarmiento (January 18, 1867 – February 6, 1916), known as Rubén Darío, was a Nicaraguan poet who initiated the Spanish-American literary movement known as \"modernismo\" (modernism) that flourished at the end of the 19th century.  Darío has had a great and lasting influence on 20th-century Spanish literature and journalism.  He has been praised as the \"Prince of Castilian Letters\" and undisputed father of the \"modernismo\" literary movement.\n\nRubén Darío National Theatre: The Rubén Darío National Theatre (Spanish: Teatro Nacional Rubén Darío ) is the national theatre of Nicaragua.  It is located in the capital, Managua, and was named in honor of Nicaragua's (and one of Latin America's) most renowned poets, Rubén Darío.\n\nNational Library of Nicaragua Rubén Darío: The National Library of Nicaragua Rubén Darío is the national library of Nicaragua, located in the city of Managua.  It was founded in 1880, and damaged in the 1931 earthquake.  Another earthquake in 1972 caused further damage, furthermore, it was looted.  One of its librarians was the poet Rubén Darío, in whose honour it was renamed.\n\nNicaraguan literature: Nicaraguan literature can be traced to pre-Columbian times with the myths and oral literature that formed the cosmogonic view of the world that indigenous people had.  Some of these stories are still known in Nicaragua.  Like many Latin American countries, the Spanish conquerors have had the most effect on both the culture and the literature.  The literature of Nicaragua has had many important literary figures in the Spanish language with internationally prominent writers such as Rubén Darío, who is regarded as the most important literary figure in Nicaragua.  He is referred to as the \"\"Father of Modernism\"\" for leading the modernismo literary movement at the end of the 19th century.  Other important literary figures include Salomón de la Selva, Carlos Martínez Rivas, Pablo Antonio Cuadra, Alberto Cuadra Mejia, Manolo Cuadra Vega, Pablo Alberto Cuadra Arguello, Ernesto Cardenal, Sergio Ramírez Mercado, Gioconda Belli, José Coronel Urtecho, Alfonso Cortés, Julio Valle Castillo, and Claribel Alegría, among others.\n\nNicaraguan one hundred-cordoba note: This series 2002 note is Blue.  On the obverse is Rubén Darío and on the reverse is the Rubén Darío Theatre located in Managua.\n\nAlfonso Cortés: Alfonso Cortés (9 December 1893 - 3 February 1969) was a Nicaraguan poet.  He is often referred to as the most important poet after Rubén Darío (poet who initiated the Spanish-American literary movement known as modernismo (modernism)).  Before his death, he often said he was \"less important than Darío, but more profound\".\n\nRubén Darío (disambiguation): Rubén Darío primarily refers to the Nicaraguan poet Rubén Darío.\n\nCiudad Darío: Ciudad Darío (] ) is a municipality in the Matagalpa department of Nicaragua.  It is the birthplace of poet Rubén Darío.\n\nJonathan Kellerman: Jonathan Kellerman (born August 9, 1949) is an American psychologist, and Edgar and Anthony Award-winning author of numerous bestselling suspense novels.\n\nDarío (crater): Darío is a crater on Mercury.  It has a diameter of 151 kilometers.  Its name was adopted by the International Astronomical Union in 1976.  Dario is named for the Nicaraguan poet Rubén Darío, who lived from 1867 to 1916.",
+    "question": "Who had more of an influence on Spanish literature, Jonathan Kellerman or Rubén Darío?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "comparison_subjects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "nationality": {
+                "type": "string"
+              },
+              "primary_profession": {
+                "type": "string"
+              },
+              "notable_achievements": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "influence_on_spanish_literature_description": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "nationality",
+              "primary_profession",
+              "influence_on_spanish_literature_description"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "field_of_comparison": {
+          "type": "string"
+        },
+        "more_influential_person_name": {
+          "type": "string"
+        },
+        "reasoning_summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "comparison_subjects",
+        "field_of_comparison",
+        "more_influential_person_name",
+        "reasoning_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "comparison_subjects": [
+        {
+          "name": "Jonathan Kellerman",
+          "nationality": "American",
+          "primary_profession": "psychologist and author",
+          "notable_achievements": [
+            "Edgar and Anthony Award-winning author of numerous bestselling suspense novels"
+          ],
+          "influence_on_spanish_literature_description": "No information provided regarding influence on Spanish literature."
+        },
+        {
+          "name": "Rubén Darío",
+          "nationality": "Nicaraguan",
+          "primary_profession": "poet",
+          "notable_achievements": [
+            "Initiated the Spanish-American literary movement 'modernismo'",
+            "Praised as the 'Prince of Castilian Letters'",
+            "Undisputed father of the 'modernismo' literary movement",
+            "Regarded as the most important literary figure in Nicaragua"
+          ],
+          "influence_on_spanish_literature_description": "Had a great and lasting influence on 20th-century Spanish literature and journalism, and initiated the 'modernismo' literary movement."
+        }
+      ],
+      "field_of_comparison": "Spanish literature",
+      "more_influential_person_name": "Rubén Darío",
+      "reasoning_summary": "Rubén Darío is explicitly stated to have had a great and lasting influence on 20th-century Spanish literature and initiated the 'modernismo' movement. Jonathan Kellerman is an American author with no mentioned influence on Spanish literature in the provided context."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

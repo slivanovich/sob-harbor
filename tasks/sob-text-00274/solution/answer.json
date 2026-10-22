@@ -1,0 +1,20 @@
+{
+  "actress_details": {
+    "name": "Juliette Lewis",
+    "film_in_question": "Kalifornia"
+  },
+  "fame_making_film": {
+    "title": "Cape Fear",
+    "release_year": 1991,
+    "awards_nominations": [
+      "Academy Award nomination for Best Supporting Actress",
+      "Golden Globe nomination for Best Supporting Actress"
+    ]
+  },
+  "reasoning_path": [
+    "Identified female stars in 'Kalifornia': Juliette Lewis and Michelle Forbes.",
+    "Searched for 'Juliette Lewis' context.",
+    "Found that Juliette Lewis 'gained fame for her role in Martin Scorsese's 1991 remake of the thriller 'Cape Fear'.",
+    "Confirmed 'Cape Fear' as the fame-making film in 1991 for Juliette Lewis."
+  ]
+}

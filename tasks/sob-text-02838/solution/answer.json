@@ -1,0 +1,12 @@
+{
+  "scientist_name": "Albert Ghiorso",
+  "death_date": "2010-12-26",
+  "discovered_element": "Mendelevium",
+  "element_atomic_number": 101,
+  "discovery_team_members": [
+    "Gregory R. Choppin",
+    "Bernard G. Harvey",
+    "Stanley G. Thompson",
+    "Glenn T. Seaborg"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "production_a": {
+    "title": "Eden of the East",
+    "premiere_date": "2009-04-09"
+  },
+  "production_b": {
+    "title": "Mary and Max",
+    "premiere_date": "2009-01-15"
+  },
+  "comparison_summary": {
+    "earlier_premiere_title": "Mary and Max",
+    "earlier_premiere_date": "2009-01-15",
+    "later_premiere_title": "Eden of the East",
+    "later_premiere_date": "2009-04-09",
+    "result_statement": "Mary and Max premiered before Eden of the East."
+  }
+}

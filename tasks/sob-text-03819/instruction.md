@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Big Bang (film): Big Bang (; lit.  "I'll Shoot") is a 2007 South Korean action-comedy film written and directed by Park Jung-woo, and starring Kam Woo-sung and Kim Su-ro.
+
+Phoenix (2006 film): Phoenix is a 2006 film by American director Michael Akers, his third feature film after "Gone, But Not Forgotten" (2003) and "Matrimonium" (2005).  The film was produced by Sandon Berg with Israel Ehrisman as co-producer and starred Chad Edward Bartley as Dylan, Gaetano Jones as Kenneth Sparks and Jeff Castle as Demetrius Stone.  The film was distributed by United Gay Network.  This film was inspired by Michaelangelo Antonioni's film L'Avventura and obviously adds a gay twist.
+
+Pandora (2016 film): Pandora () is a 2016 South Korean disaster film written and directed by Park Jung-woo, starring Kim Nam-Gil.  The film was released in South Korea on December 7, 2016.
+
+Baby Mine (1928 film): Baby Mine is a 1928 silent film comedy produced and distributed by MGM.  This film is a remake of the 1917 film "Baby Mine" both being based on Margaret Mayo's 1910 Broadway comedy "Baby Mine".  This film stars Karl Dane, George K. Arthur and Charlotte Greenwood and is her third feature film, she having made two previous films in 1916 and 1918.
+
+Jim Finn (filmmaker): Jim Finn is the writer/director of what have been called "Utopian comedies."  His first feature film "Interkosmos" (71 minutes, 2006) is about an East German space colonization mission.  His second feature "La Trinchera Luminosa del Presidente Gonzalo" (60 minutes, 2007) is about a day in the life of a Shining Path women's prison cellblock.  His third feature "The Juche Idea" (62 minutes, 2008) is about an artist residency in North Korea.  He has been making short films and videos since 1999.  His work is available through the Video Data Bank and Facets DVD.
+
+William Eubank: William Eubank (born November 15, 1982) is an American film director, screenwriter, and cinematographer.  His third feature film, the estimated $65 million action thriller "Underwater", is scheduled to be released in 2018 by 20th Century Fox.  His second feature film "The Signal" premiered at the 2014 Sundance Film Festival and was released in theaters by Focus Features on June 13, 2014.  For his first feature film, "Love", released in 2011, in addition to directorial and director of photography duties, Eubank also served as production designer.
+
+Park Jung-woo: Park Jung-woo (born 1969) is a South Korean film director and screenwriter.  Park is an award-winning screenwriter turned director, and probably ranks as South Korea's most well-known screenwriter for his famous stories such as "Attack the Gas Station" (1999), "Last Present" (2001), "Kick the Moon" (2001), "Break Out" (2002) and "Jail Breakers" (2002).  In 2004, he debuted with his directorial feature "Dance with the Wind" (2004).  His third feature "Deranged" (2012) is a refreshing and unique take on the disaster genre, was a hit with more than 4.5 million admissions.
+
+Deranged (2012 film): Deranged () is a 2012 South Korean science fiction thriller film starring Kim Myung-min, Kim Dong-wan, Moon Jung-hee and Lee Ha-nui.  Korea's first film on an infectious disease epidemic, it was directed by Park Jung-woo, and produced by Lim Ji-young and Oz One Film.  Distributed by CJ E&M, the film was released on July 5, 2012 and runs at 109 minutes.
+
+Dance with the Wind: Dance with the Wind (Korean: 바람의 전설 ; "Baramui jeonseol") is a 2004 South Korean film starring Lee Sung-jae and Park Sol-mi, and is the directorial debut of Park Jung-woo.  The story is adapted from a 1999 book by novelist Ji Seong-sa.
+
+Attack the Gas Station: Attack the Gas Station!  (Korean: 주유소 습격 사건 ) is a 1999 Korean crime-comedy film directed by Kim Sang-jin and written by Park Jung-woo.
+
+Question: Who distributed Park Jung-woo's third feature?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "director_name": {
+      "type": "string",
+      "description": "The name of the film director."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the director's third feature film."
+    },
+    "film_year": {
+      "type": "integer",
+      "description": "The release year of the director's third feature film."
+    },
+    "distribution_company": {
+      "type": "string",
+      "description": "The company that distributed the director's third feature film."
+    }
+  },
+  "required": [
+    "director_name",
+    "film_title",
+    "film_year",
+    "distribution_company"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+{
+  "dean_name": "Bernard Ramanantsoa",
+  "school_name": "HEC Paris",
+  "school_location": {
+    "city": "Paris",
+    "country": "France"
+  },
+  "dean_tenure_start_year": 1996,
+  "dean_tenure_end_year": 2015,
+  "school_prestige_description": "widely considered to be one of the most prestigious and selective graduate schools in the world"
+}

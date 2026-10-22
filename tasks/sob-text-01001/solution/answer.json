@@ -1,0 +1,16 @@
+{
+  "genre_name": "rock",
+  "bands_info": [
+    {
+      "band_name": "The Offspring",
+      "origin_country": "American",
+      "formation_year": 1984
+    },
+    {
+      "band_name": "Let's Active",
+      "origin_country": "American",
+      "formation_year": 1981
+    }
+  ],
+  "number_of_bands_in_genre": 2
+}

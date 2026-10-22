@@ -1,0 +1,16 @@
+{
+  "shared_music_genre": "alternative rock",
+  "artists": [
+    {
+      "name": "Paul Westerberg",
+      "is_associated_with_genre": true
+    },
+    {
+      "name": "Hello Sleepwalkers",
+      "is_associated_with_genre": true
+    }
+  ],
+  "genre_pioneers_or_influences": [
+    "The Replacements"
+  ]
+}

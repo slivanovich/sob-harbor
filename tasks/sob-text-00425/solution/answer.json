@@ -1,0 +1,20 @@
+{
+  "person_details": {
+    "name": "William McEwan",
+    "occupations": [
+      "politician",
+      "brewer"
+    ]
+  },
+  "founded_entity": {
+    "entity_type": "brewery",
+    "entity_name": "Fountain Brewery",
+    "founding_year": 1856
+  },
+  "related_brand_info": {
+    "brand_name": "McEwan's",
+    "brand_origin_city": "Edinburgh",
+    "brand_origin_country": "Scotland",
+    "current_owner": "Wells & Youngs"
+  }
+}

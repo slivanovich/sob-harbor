@@ -1,0 +1,11 @@
+{
+  "actress_name": "Emma Hamilton",
+  "drama_school": {
+    "name": "Royal Academy of Dramatic Art",
+    "location": {
+      "city": "London",
+      "country": "England"
+    }
+  },
+  "is_graduate": true
+}

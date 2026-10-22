@@ -1,0 +1,12 @@
+{
+  "person_arrested": "Edgar Valdez Villarreal",
+  "role_in_organization": "right hand of Arturo",
+  "arrest_details": {
+    "month_of_arrest": "August",
+    "year_of_arrest": 2010,
+    "charges": [
+      "large scale drug trafficking"
+    ],
+    "location_of_arrest": "near Mexico City"
+  }
+}

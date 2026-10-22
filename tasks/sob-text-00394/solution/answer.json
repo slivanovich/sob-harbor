@@ -1,0 +1,14 @@
+{
+  "actor_details": {
+    "name": "Robert Foxworth",
+    "birth_date": "1941-11-01",
+    "nationality": "American",
+    "profession": "film, stage, and television actor"
+  },
+  "film_details": {
+    "title": "The Black Marble",
+    "release_year": 1980,
+    "genre": "mystery/romantic comedy"
+  },
+  "director_name": "Harold Becker"
+}

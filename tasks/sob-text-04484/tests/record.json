@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "532581754418b4935a8572fd4f1da67f1822680a15d200ba0468216b3f369b24",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5adf08625542995534e8c73b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Macon, Georgia",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Atlantic Sun Conference: The Atlantic Sun Conference, branded as the ASUN Conference, is a collegiate athletic conference operating mostly in the Southeastern United States.  The league participates at the NCAA Division I level, and does not sponsor football.  Originally established as the Trans America Athletic Conference (TAAC) in 1978, its headquarters are located in Macon, Georgia.\n\n2016–17 Lipscomb Bisons women's basketball team: The 2016–17 Lipscomb Bisons women's basketball team will represent Lipscomb University in the 2016–17 NCAA Division I women's basketball season.  The Bisons, led by fifth year head coach Greg Brown, played their home games at Allen Arena and are members of the Atlantic Sun Conference.  They finished the season 6–24, 3–11 in A-Sun play to finish in a tie for sixth place.  They lost in the quarterfinals of A-Sun Tournament to Jacksonville.\n\n2012–13 Lipscomb Bisons men's basketball team: The 2012–13 Lipscomb Bisons men's basketball team represented Lipscomb University during the 2012–13 NCAA Division I men's basketball season.  The Bisons, led by 14th year head coach Scott Sanderson, played their home games at Allen Arena and were members of the Atlantic Sun Conference.  They finished the season 12–18, 7–11 in A-Sun play to finish in ninth place.  They lost in the quarterfinals of the Atlantic Sun Basketball Tournament to Mercer.\n\n2015–16 Lipscomb Bisons men's basketball team: The 2015–16 Lipscomb Bisons men's basketball team represented Lipscomb University during the 2015–16 NCAA Division I men's basketball season.  The Bisons, led by third year head coach Casey Alexander, played their home games at Allen Arena and were members of the Atlantic Sun Conference.  They finished the season 12–21, 7–7 in A-Sun play to finish in a tie for fifth place.  They defeated Jacksonville in the quarterfinals of the A-Sun Tournament to advance to the semifinals where they lost to Stetson.\n\nLipscomb Bisons women's basketball: The Lipscomb Bisons women's basketball team is the women's basketball team that represents Lipscomb University in Nashville, Tennessee, United States.  The school's team currently competes in the Atlantic Sun Conference.\n\n2015–16 Lipscomb Bisons women's basketball team: The 2015–16 Lipscomb Bisons women's basketball team will represent Lipscomb University in the 2015–16 NCAA Division I women's basketball season.  The Bisons, led by fourth year head coach Greg Brown, played their home games at Allen Arena and were members of the Atlantic Sun Conference.  They finished the season 5–25, 2–12 in A-Sun play to finish in seventh place.  They lost in the quarterfinals of A-Sun Tournament to Jacksonville.\n\n2016–17 Lipscomb Bisons men's basketball team: The 2016–17 Lipscomb Bisons men's basketball team represented Lipscomb University during the 2016–17 NCAA Division I men's basketball season.  The Bisons, led by fourth-year head coach Casey Alexander, played their home games at Allen Arena in Nashville, Tennessee as members of the Atlantic Sun Conference.  They finished the season 20–13, 11–3 in ASUN play to finish in second place.  As the No. 2 seed in the ASUN Tournament, they defeated NJIT in the quarterfinals to advance to the semifinals where they lost to North Florida.  Despite having 20 wins, they did not participate in a postseason tournament.\n\n2014–15 Lipscomb Bisons women's basketball team: The 2014–15 Lipscomb Bisons women's basketball team will represent Lipscomb University in the 2014–15 NCAA Division I women's basketball season.  The Lady Bisons were coached by third year head coach Greg Brown and were a member of the Atlantic Sun Conference.  They finished the season 8-21, 3-11 in A-Sun play for a seventh-place finish.  They lost in the quarterfinals of the 2015 Atlantic Sun Women's Basketball Tournament to Stetson.\n\nLipscomb Bisons men's basketball: The Lipscomb Bisons men's basketball team is the men's basketball team that represents Lipscomb University in Nashville, Tennessee, United States.  The school's team currently competes in the Atlantic Sun Conference.  They are coached by Casey Alexander.  The Bisons are yet to make a trip to the NCAA tournament.\n\n2017–18 Lipscomb Bisons men's basketball team: The 2017–18 Lipscomb Bisons men's basketball team will represent Lipscomb University during the 2017–18 NCAA Division I men's basketball season.  The Bisons, led by fifth-year head coach Casey Alexander, will play their home games at Allen Arena in Nashville, Tennessee as members of the Atlantic Sun Conference.",
+    "question": "The 2015–16 Lipscomb Bisons women's basketball team were members of a conference that is headquartered where?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "team_season": {
+          "type": "string",
+          "description": "The season of the basketball team."
+        },
+        "team_gender": {
+          "type": "string",
+          "description": "The gender of the basketball team (men's or women's)."
+        },
+        "conference_name": {
+          "type": "string",
+          "description": "The name of the athletic conference the team belongs to."
+        },
+        "conference_headquarters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the conference headquarters is located."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the conference headquarters is located."
+            }
+          },
+          "required": [
+            "city",
+            "state"
+          ],
+          "additionalProperties": false
+        },
+        "final_answer": {
+          "type": "string",
+          "description": "The full location of the conference headquarters."
+        }
+      },
+      "required": [
+        "team_season",
+        "team_gender",
+        "conference_name",
+        "conference_headquarters",
+        "final_answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "team_season": "2015–16",
+      "team_gender": "women's",
+      "conference_name": "Atlantic Sun Conference",
+      "conference_headquarters": {
+        "city": "Macon",
+        "state": "Georgia"
+      },
+      "final_answer": "Macon, Georgia"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

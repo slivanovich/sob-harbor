@@ -1,0 +1,23 @@
+{
+  "entities_analyzed": [
+    {
+      "name": "Redbook",
+      "type_identified": "magazine",
+      "is_women_focused": true,
+      "publisher": "Hearst Corporation"
+    },
+    {
+      "name": "Home Monthly",
+      "type_identified": "magazine",
+      "is_women_focused": true,
+      "publication_frequency": "monthly",
+      "location": "Pittsburgh, Pennsylvania",
+      "century_of_publication": "late 19th century"
+    }
+  ],
+  "common_classification": "magazine",
+  "classification_attributes": {
+    "is_periodical": true,
+    "target_audience_gender": "women"
+  }
+}

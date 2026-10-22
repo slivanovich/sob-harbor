@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "7852f17c342a4677f63117b4c1281ee961a1ed2a215efd0b0672a08664bba14d",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8b80f75542995d1e6f13cb",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ishtar Gate",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Ishtar Gate: The Ishtar Gate (Arabic: بوابة عشتار‎ ‎ , Persian: دروازه ایشتار‎ ‎ ) was the eighth gate to the inner city of Babylon.  It was constructed in about 575 BCE by order of King Nebuchadnezzar II on the north side of the city.  It was excavated in the early 20th century and a reconstruction using original bricks is now shown in the Pergamon Museum, Berlin.\n\nPergamon (album): Pergamon (1986), originally simply released as Tangerine Dream (1980) with two parts \"Quichotte\" - Part one and two, is the third live album and fourteenth overall by Tangerine Dream.  It is a selection from the two live concerts held on 31 January 1980 at the Palast der Republik in East Berlin.  The second of the two original concerts is available as \"Tangerine Tree Volume 17: East Berlin 1980\".  The original title \"Quichotte\" is a reference to Don Quixote, a film version of which was being screened in a nearby cinema as one of the concerts was performed, while the retitle is a reference to the Pergamon Museum located in East Berlin near the Palast der Republik.\n\nMshatta Facade: The Mshatta Facade is the decorated part of the facade of the 8th century Umayyad residential palace of Qasr Mshatta, one of the Desert Castles of Jordan, which is now installed in the south wing of the Pergamon Museum in Berlin, Germany.  It is part of the permanent exhibition of the Pergamon Museum of Islamic Art dedicated to Islamic art from the 8th to the 19th centuries.  This was only a relatively small section of the full length of the facade, surrounding the main entrance; most of the wall was undecorated and remains \"in situ\".\n\nStefan Weber (Orientalist): Stefan Weber (October 17, 1967, in Aachen) is a German Orientalist and director of the Museum of Islamic Art (\"Museum für Islamische Kunst\") at the Pergamon Museum in Berlin, Germany.  Previously, he was assistant professor of material history at the Institute for the Study of Muslim Civilisations of Aga Khan University in London.\n\nEdmund de Unger: Edmund Robert Anthony de Unger (Hungarian: \"Odon Antal Robert de Unger\" , b 6 August 1918, Budapest - d 25 January 2011, Ham, Surrey) was a Hungarian-born property developer and art collector.  In London he built up the Keir Collection, one of the greatest post-war collections of Islamic art, bequeathed in 2008 to the Pergamon Museum of Islamic Art in Berlin.  The arrangement for the museum to curate the collection came to an end in July 2012.  The collection is now hosted by the Dallas Museum of Art as of May 2014 for a 15-year renewable loan.\n\nAntikensammlung Berlin: The Antikensammlung Berlin (Berlin antiquities collection) is one of the most important collections of classical art in the world, now held in the Altes Museum and Pergamon Museum in Berlin, Germany.  It contains thousands of ancient archaeological artefacts from the ancient Greek, Roman, Etruscan and Cypriot civilizations.  Its main attraction is the Pergamon Altar and Greek and Roman architectural elements from Priene, Magnesia, Baalbek and Falerii.  In addition, the collection includes a large number of ancient sculptures, vases, terracottas, bronzes, sarcophagi, engraved gems and metalwork.\n\nVorderasiatisches Museum Berlin: The Vorderasiatisches Museum (] , \"Near East Museum\") is an archaeological museum in Berlin.  It is in the basement of the south wing of the Pergamon Museum and has one of the world's largest collections of Southwest Asian art. 14 halls distributed across 2,000 square meters of exhibition surface display southwest Asian culture spanning six millennia.  The exhibits cover a period from the 6th millennium BCE into the time of the Muslim conquests.  They originate particularly from today's states of Iraq, Syria and Turkey, with singular finds also from other areas.  Starting with the Neolithic finds, the emphasis of the collection is of finds from Sumer, Babylonia and Assyria, as well as northern Syria and eastern Anatolia.\n\nMarket Gate of Miletus: The Market Gate of Miletus (German: \"das Markttor von Milet\" ) is a large marble monument in the Pergamon Museum in Berlin, Germany.  It was built in Miletus in the 2nd century AD and destroyed in an earthquake in the 10th or 11th century.  In the early 1900s, it was excavated, rebuilt, and placed on display in the museum.  Only fragments had survived and reconstruction involved significant new material, a practice which generated criticism of the museum.  The gate was damaged in World War II and underwent restoration in the 1950s.  Further restoration work took place in the first decade of the 21st century.\n\nPergamon Museum: The Pergamon Museum (German: \"Pergamonmuseum\" ) is situated on the Museum Island in Berlin.  The building was designed by Alfred Messel and Ludwig Hoffmann and was constructed over a period of twenty years, from 1910 to 1930.  The Pergamon Museum houses monumental buildings such as the Pergamon Altar, the Ishtar Gate of Babylon, and the Market Gate of Miletus reconstructed from the ruins found in ancient Middle East.\n\nSam'al lions: The Sam'al lions are four lion-shaped statues which are currently located in the Vorderasiatisches Museum Berlin (Pergamon Museum).",
+    "question": "What is the name of the eighth gate to the city of Babylon, currently housed at Pergamon Museum?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "gate_name": {
+          "type": "string",
+          "description": "The name of the gate."
+        },
+        "original_city": {
+          "type": "string",
+          "description": "The city to which the gate originally belonged."
+        },
+        "gate_number": {
+          "type": "integer",
+          "description": "The numerical designation of the gate within its original city."
+        },
+        "current_museum_location": {
+          "type": "string",
+          "description": "The name of the museum where the gate is currently housed."
+        },
+        "original_construction_details": {
+          "type": "object",
+          "properties": {
+            "construction_year_bce": {
+              "type": "integer",
+              "description": "The approximate year of construction in BCE."
+            },
+            "builder_king": {
+              "type": "string",
+              "description": "The king who ordered the construction of the gate."
+            },
+            "original_side_of_city": {
+              "type": "string",
+              "description": "The side of the city where the gate was originally located."
+            }
+          },
+          "required": [
+            "construction_year_bce",
+            "builder_king",
+            "original_side_of_city"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "gate_name",
+        "original_city",
+        "gate_number",
+        "current_museum_location",
+        "original_construction_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "gate_name": "Ishtar Gate",
+      "original_city": "Babylon",
+      "gate_number": 8,
+      "current_museum_location": "Pergamon Museum, Berlin",
+      "original_construction_details": {
+        "construction_year_bce": 575,
+        "builder_king": "Nebuchadnezzar II",
+        "original_side_of_city": "north"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "airports": [
+    {
+      "airport_name": "Chippewa Valley Regional Airport",
+      "location_country": "United States"
+    },
+    {
+      "airport_name": "Greenbrier Valley Airport",
+      "location_country": "United States"
+    }
+  ],
+  "common_country": "United States",
+  "all_airports_in_same_country": true
+}

@@ -1,0 +1,18 @@
+{
+  "company_name": "Best Buy",
+  "company_headquarters": {
+    "city": "Richfield",
+    "state": "Minnesota",
+    "country": "USA"
+  },
+  "technology_partner": {
+    "name": "Slyce Inc.",
+    "headquarters": {
+      "city": "Philadelphia",
+      "state": "PA",
+      "country": "USA"
+    },
+    "technology_type": "visual search and recognition",
+    "used_in_mobile_applications": true
+  }
+}

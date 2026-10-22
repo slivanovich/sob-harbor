@@ -1,0 +1,14 @@
+{
+  "film_title": "Dorf Goes Fishing",
+  "release_year": 1993,
+  "genre": "comedy",
+  "starring_actor": {
+    "name": "Ronnie Schell",
+    "occupations": [
+      "actor",
+      "stand-up comedian",
+      "voice actor"
+    ],
+    "notable_tv_appearance": "You Bet Your Life"
+  }
+}

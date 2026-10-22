@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "c1e4e831ea31f4732a724956a49127a3202e54d500c6175b78ca44370d493c36",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7b42f355429931da12ca43",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Cecil John Rhodes PC",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Rhodes Scholarship: The Rhodes Scholarship, named for the British mining magnate and South African politician Cecil John Rhodes, is an international postgraduate award for students to study at the University of Oxford.  It is widely considered to be one of the world's most prestigious scholarships. Established in 1902, it was the first large-scale programme of international scholarships, inspiring the creation of a great many other awards across the globe.\n\nRhodes Memorial: Rhodes Memorial on Devil's Peak in Cape Town, South Africa, is a memorial to English-born, South African politician Cecil John Rhodes (1853–1902).  The memorial was designed by the renowned architect, Sir Herbert Baker.\n\nCecil Rhodes: Cecil John Rhodes PC (5 July 1853 – 26 March 1902) was a British businessman, mining magnate and politician in South Africa, who served as Prime Minister of the Cape Colony from 1890 to 1896.  An ardent believer in British imperialism, Rhodes and his British South Africa Company founded the southern African territory of Rhodesia (now Zimbabwe and Zambia), which the company named after him in 1895.  South Africa's Rhodes University is also named after him.  Rhodes set up the provisions of the Rhodes Scholarship, which is funded by his estate, and put much effort towards his vision of a Cape to Cairo Railway through British territory.\n\nTrader Horn: Alfred Aloysius \"Trader\" Horn (born Alfred Aloysius Smith; 1861–1931) was an ivory trader in central Africa.  He wrote a book, \"Trader Horn: A Young Man's Astounding Adventures in 19th-Century Equatorial Africa\" (ISBN  ), detailing his journeys into jungles teeming with buffalo, gorillas, man-eating leopards, serpents and \"savages\".  The book also documents his efforts to free slaves, meet the founder of Rhodesia, Cecil Rhodes, and liberate a princess from captivity.\n\nRhodes Estate Preparatory School: Rhodes Estate Preparatory School (known informally as REPS or R.E.P.S) is an all-boys' private boarding preparatory school in Matopos, Bulawayo, Zimbabwe near the Matobo National Park.  Founded in 1932, its completion was funded by the estate of Cecil John Rhodes, after whom it is named and whose summer home is located on the main site.  The school is modelled after the traditional British public school in terms of system, structure and traditions due to its deep English roots.\n\nRhodes Fruit Farms: Rhodes Fruit Farms, founded by Cecil John Rhodes in 1902, exists today as Boschendal The Estate, one of the oldest wine estates in South Africa.\n\nSouth African College Schools: The South African College Schools is a primary and secondary education institution in Newlands, Cape Town, South Africa.  Founded in 1829, it is the oldest in South Africa.  SACS is one of four schools expressly named by Cecil John Rhodes to offer an annual Rhodes Scholarship to one of its graduating students.  The schools are a combination of the South African College Junior School and the South African College High School.\n\nWilliam Gaul: William Thomas Gaul (1850–1927) was Rector of All Saints Church, Du Toit's Pan, Kimberley, afterwards of St Cyprian's Church, Kimberley, Rural Dean of Griqualand West, and Archdeacon in what was still the Diocese of Bloemfontein, before being elected the second Bishop of Mashonaland, where he styled himself \"the smallest bishop with the largest diocese in Christendom.\"  He officiated at the funeral of Cecil John Rhodes and helped draft the Rhodes Trust Deed.\n\nTrader Horn (1931 film): Trader Horn is a 1931 American Pre-Code adventure film starring Harry Carey and Edwina Booth, and directed by W.S. Van Dyke.  It is the first non-documentary film shot on location in Africa.  The film is based on the book of the same name by trader and adventurer Alfred Aloysius Horn and tells of adventures on safari in Africa.\n\nJames Rose Innes: Sir James Rose Innes, {'1': \", '2': \", '3': \", '4': \"} PC (8 January 1855 – 16 January 1942) was the Chief Justice of South Africa from 1914 to 1927 and, in the view of many, its greatest ever judge.  Before becoming a judge he was a member of the Cape Parliament, the Cape Colony's Attorney-General, and a prominent critic of Cecil John Rhodes.",
+    "question": "Who was born first Alfred Aloysius \"Trader\" Horn or Cecil John Rhodes PC",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_born_first": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the person born first."
+            },
+            "birth_year": {
+              "type": "integer",
+              "description": "The birth year of the person born first."
+            }
+          },
+          "required": [
+            "name",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        },
+        "person_born_second": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the person born second."
+            },
+            "birth_year": {
+              "type": "integer",
+              "description": "The birth year of the person born second."
+            }
+          },
+          "required": [
+            "name",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        },
+        "comparison_result": {
+          "type": "string",
+          "description": "A statement indicating who was born first."
+        }
+      },
+      "required": [
+        "person_born_first",
+        "person_born_second",
+        "comparison_result"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_born_first": {
+        "name": "Cecil John Rhodes PC",
+        "birth_year": 1853
+      },
+      "person_born_second": {
+        "name": "Alfred Aloysius \"Trader\" Horn",
+        "birth_year": 1861
+      },
+      "comparison_result": "Cecil John Rhodes PC was born first."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

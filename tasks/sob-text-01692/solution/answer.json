@@ -1,0 +1,16 @@
+{
+  "question_asked": "Did Jeffrey Steele and Frank Iero both become Nashville songwriters?",
+  "answer": false,
+  "individuals_evaluated": [
+    {
+      "name": "Jeffrey Steele",
+      "is_nashville_songwriter": true,
+      "reasoning": "Jeffrey Steele is explicitly stated to be an American country music singer and songwriter, and has become a prolific Nashville songwriter, co-writing more than sixty hit songs."
+    },
+    {
+      "name": "Frank Iero",
+      "is_nashville_songwriter": false,
+      "reasoning": "Frank Iero is described as an American musician, rhythm guitarist, and backup vocalist for rock and post-hardcore bands, with no mention of him being a Nashville songwriter or having any association with Nashville songwriting."
+    }
+  ]
+}

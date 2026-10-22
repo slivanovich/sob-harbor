@@ -1,0 +1,25 @@
+{
+  "common_attribute_count": 2,
+  "common_attributes": [
+    "singer",
+    "band creator"
+  ],
+  "individuals_details": [
+    {
+      "name": "Bob Marley",
+      "main_musical_role_in_context": "singer",
+      "is_band_creator": true,
+      "bands_created": [
+        "The Wailers"
+      ]
+    },
+    {
+      "name": "Timo Kotipelto",
+      "main_musical_role_in_context": "vocalist",
+      "is_band_creator": true,
+      "bands_created": [
+        "Kotipelto"
+      ]
+    }
+  ]
+}

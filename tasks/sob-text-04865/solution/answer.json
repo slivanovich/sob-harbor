@@ -1,0 +1,14 @@
+{
+  "entrepreneur_details": {
+    "name": "George Eastman",
+    "nationality": "American",
+    "occupation": "entrepreneur",
+    "birth_date": "July 12, 1854",
+    "death_date": "March 14, 1932"
+  },
+  "founded_organization": {
+    "name": "Center for Governmental Research, Inc.",
+    "founding_year": 1915
+  },
+  "answer_death_date": "March 14, 1932"
+}

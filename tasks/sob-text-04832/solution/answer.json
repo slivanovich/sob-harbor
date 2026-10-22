@@ -1,0 +1,9 @@
+{
+  "question_asked": "Are the bands Flow and Against the Current from the same country?",
+  "band_1_name": "Flow",
+  "band_1_country_of_origin": "Japan",
+  "band_2_name": "Against the Current",
+  "band_2_country_of_origin": "USA",
+  "are_from_same_country": false,
+  "reasoning": "Flow is a Japanese rock band, while Against the Current is an American pop rock band based in Poughkeepsie, New York. Therefore, they are not from the same country."
+}

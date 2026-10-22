@@ -1,0 +1,15 @@
+{
+  "film_category": "documentary film",
+  "films_discussed": [
+    "Fahrenheit 9/11",
+    "Troop 1500"
+  ],
+  "award_details": {
+    "award_name": "Gracie Award",
+    "winning_film": "Troop 1500",
+    "award_categories": [
+      "Individual Achievement Award for Outstanding Director",
+      "Outstanding Documentary"
+    ]
+  }
+}

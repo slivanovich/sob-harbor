@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "5828d32c9d745cd4ce7b8f54d31e865e0fc2296461ae297f05bf057243032f45",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae76d565542997ec2727642",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Rio",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Joe Pizzulo: Joe Pizzulo is an American vocalist best known as one of the lead singers on 1980s hit singles credited to Sérgio Mendes, including \"Never Gonna Let You Go\" (from Mendes' self-titled 1983 album) and \"Alibis\" (from the 1984 album \"Confetti\").  Pizzulo has had several singles and soundtrack appearances, but he is also a prominent background singer for many artists.\n\nI Sing the Body Electric (album): I Sing the Body Electric is the second album released by Weather Report from 1972.  The album includes two new members of the band: percussionist Dom Um Romão and drummer Eric Gravatt.  The last three tracks were recorded live in concert in Tokyo, Japan on January 13, 1972.  These tracks have been edited for this album and can be heard in their entirety on Weather Report's 1972 import album \"Live in Tokyo\".\n\nGold: A 50th Anniversary Celebration: Gold: A 50th Anniversary Celebration is a compilation album by American pop singer Johnny Mathis that was released on November 21, 2006, by Columbia Records and takes the first 13 of its 18 tracks from the first four years of his recording career.  The collection then jumps ahead 27 years for the remaining five songs, two of which had not been released elsewhere: \"So Many Stars\" comes from the recording date of an unfinished Sergio Mendes project, and \"The Shadow of Your Smile\" was later featured on the 2007 Dave Koz album \"At the Movies\".\n\nScott Harris (songwriter): Scott Harris Friedman is an American multi-platinum songwriter, producer, and musician best known for his work with Shawn Mendes and co-writing hit song \"Don't Let Me Down\" by The Chainsmokers featuring Daya, which reached #1 on the US Mainstream Top 40 chart in 2016.  Harris has 10 songs on Shawn Mendes' sophomore album \"Illuminate\" including the lead single \"Treat You Better\" which reached the top 3 at the US Mainstream Top 40 chart, \"There's Nothing Holdin' Me Back which hit number 1 at the US Mainstream Top 40 chart and 10 songs on Shawn Mendes' debut album Handwritten which debuted at number 1 on the \"Billboard\" 200.  Harris has also written songs for a number of artists, including Jessie J, Melanie Martinez, X Ambassadors, and Tiesto; he co-wrote every song on The Shawn Mendes EP in 2014, which debuted at number five on the \"Billboard\" 200.\n\nDom Um Romão: Dom Um Romão (3 August 1925 – 27 July 2005) was a Brazilian jazz drummer and percussionist.  Noted for his expressive stylings with the fusion band Weather Report, Romão recorded with varied artists such as Cannonball Adderley, Paul Simon, Antonio Carlos Jobim, Jorge Ben, Sergio Mendes and Brasil '66 and Tony Bennett.  He died in Rio de Janeiro shortly after suffering a stroke.  He was the percussionist Tom Jobim brought to the studio for the legendary album Jobim recorded with Frank Sinatra in 1967 for Reprise \"Francis Albert Sinatra & Antonio Carlos Jobim\"\n\nLani (album): Lani is a studio album recorded by American singer Lani Hall.  It was produced by Juan Carlos Calderón, and released by A&M Records in 1983.  \"Lani\" is the first album by Hall to be recorded in Spanish language, and includes the song \"The Quiero Así\", a duet with Mexican singer José José; José, a fan of \"Herb Alpert Presents Sergio Mendes & Brasil '66\", on which Hall sang lead vocals, wanted to record with her.  The album was nominated for a Grammy Award for Best Latin Pop Performance in 1984.\n\nEric Gravatt: Eric Kamau Grávátt (born March 6, 1947) is a jazz drummer from Philadelphia.  He has played with McCoy Tyner, Joe Henderson, Weather Report, Byard Lancaster, Dom Um Romão.  He was a member of Weather Report from 1972–1974.\n\nJorge Ben Jor: Jorge Duilio Lima Menezes (born March 22, 1945), known originally as Jorge Ben and later as Jorge Ben Jor, is a Brazilian popular musician.  His characteristic style fuses samba, funk, rock and bossa nova with lyrics that blend humor and satire with often esoteric subject matter.  Some of his hits include \"Chove Chuva,\" \"Mas Que Nada,\" \"Ive Brussel,\" \"Balança Pena,\" among others, and have been interpreted by artists such as Caetano Veloso, Sergio Mendes, Miriam Makeba, and Marisa Monte.\n\nBraziliana (album): Braziliana is a 1965 album by Brazilian guitarist Luiz Bonfá and his wife singer Maria Toledo, of songs mainly composed by Bonfá and Toledo, produced by Bobby Scott.  The backing musicians included drummers Hélcio Milito and Dom Um Romão.  Stereo Review accorded it a Recording of Special Merit.  The album was recorded after the success of the 1964 Getz/Gilberto album, and increased interest in samba and bossa nova in Europe.  After being out of print for many years the LP was reissued as CD in the Verve Originals series in 2008.\n\nSérgio Mendes: Sérgio Santos Mendes (] ; born February 11, 1941) is a Brazilian musician.  He has over 55 releases, and plays bossa nova heavily crossed with jazz and funk.  He was nominated for an Academy Award for Best Original Song in 2012 as co-writer of the song \"Real in Rio\" from the animated film \"Rio\".",
+    "question": "Dom Um Romão collaborated with many artists, this one, Sergio Mendes who is most known for being the co-writer for the song \"Real in Rio\" from which animated film?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "collaborating_artist_name": {
+          "type": "string",
+          "description": "The name of the artist who collaborated with the primary artist."
+        },
+        "primary_artist_name": {
+          "type": "string",
+          "description": "The name of the primary artist in question."
+        },
+        "song_details": {
+          "type": "object",
+          "properties": {
+            "song_title": {
+              "type": "string",
+              "description": "The title of the song co-written by the primary artist."
+            },
+            "award_nomination": {
+              "type": "string",
+              "description": "The award the song was nominated for."
+            },
+            "nomination_year": {
+              "type": "integer",
+              "description": "The year of the award nomination."
+            }
+          },
+          "required": [
+            "song_title",
+            "award_nomination",
+            "nomination_year"
+          ],
+          "additionalProperties": false
+        },
+        "animated_film_details": {
+          "type": "object",
+          "properties": {
+            "film_title": {
+              "type": "string",
+              "description": "The title of the animated film."
+            },
+            "film_genre": {
+              "type": "string",
+              "description": "The genre of the film, e.g., 'animated'."
+            }
+          },
+          "required": [
+            "film_title",
+            "film_genre"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "collaborating_artist_name",
+        "primary_artist_name",
+        "song_details",
+        "animated_film_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "collaborating_artist_name": "Dom Um Romão",
+      "primary_artist_name": "Sérgio Mendes",
+      "song_details": {
+        "song_title": "Real in Rio",
+        "award_nomination": "Academy Award for Best Original Song",
+        "nomination_year": 2012
+      },
+      "animated_film_details": {
+        "film_title": "Rio",
+        "film_genre": "animated"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

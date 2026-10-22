@@ -1,0 +1,14 @@
+{
+  "comparison_result": "Pagliacci Pizza",
+  "chains_compared": [
+    {
+      "chain_name": "Pagliacci Pizza",
+      "founding_year": 1979
+    },
+    {
+      "chain_name": "Eatza Pizza",
+      "founding_year": 1997
+    }
+  ],
+  "earliest_founding_year": 1979
+}

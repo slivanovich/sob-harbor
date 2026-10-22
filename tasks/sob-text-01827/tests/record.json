@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "b7f9c89b6f86a3192239a11f9923a0e2037942a07d7778b61c6001d511a5f593",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac01051554299012d1db594",
+    "source_dataset": "hotpotqa",
+    "source_answer": "WWE",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Brock Lesnar: Brock Edward Lesnar ( ; born July 12, 1977) is an American professional wrestler and former professional mixed martial artist, professional American football player and amateur wrestler who is currently signed with WWE.  He performs on the Raw brand where he is the current WWE Universal Champion in his first reign.\n\nAlexander Yakovlev (fighter): Alexander Andreevich Yakovlev (Russian: Александр Андреевич (Магомедович) Яковлев; born July 18, 1984), also known as Sultan Tikhaev, is a Russian amateur wrestler, mixed martial artist and rapper.  Yakovlev is recognized as an aggressive welterweight competitor who competed in the M-1 Global, ProFC, Shooto Russia, and Bodog Fight promotions.  Yakovlev’s martial arts background included training in Sambo and Freestyle Wrestling prior to turning his attention to professional fighting at the age of nineteen.  He is currently fighting in the welterweight division for the Ultimate Fighting Championship.\n\nMiesha Tate: Miesha Theresa Tate ( ; born August 18, 1986) is an American Mixed Martial Arts Pundit and former mixed martial artist who competed in the Ultimate Fighting Championship (UFC) and is a former UFC Women's Bantamweight Champion.  Primarily known for her grappling ability, Tate became a wrestler while attending Franklin Pierce High School in Tacoma, Washington and won a state championship during her senior year in 2005.  She began her professional mixed martial arts (MMA) career in 2007, and won the bantamweight championship of the Freestyle Cage Fighting promotion in 2009.  Tate gained increased recognition in 2011, when she won the Strikeforce Women's Bantamweight Championship.  She has also won a silver medal in the FILA Grappling Championships.\n\nKen Shamrock: Kenneth Shamrock (born Kenneth Wayne Kilpatrick; February 11, 1964) is an American mixed martial artist, Ultimate Fighting Championship (UFC) Hall of Famer, and retired professional wrestler.  He emerged as one of the biggest stars in the history of mixed martial arts, headlining over 15 main events and co-main events in the UFC and Pride Fighting Championships during the course of his career and set numerous pay-per-view records with his drawing power.  Shamrock is widely considered to be a legendary figure and icon in the sport of mixed martial arts.  Shamrock was named The World's Most Dangerous Man by ABC News in a special entitled \"The World's Most Dangerous Things\" in the early part of his UFC career, a moniker which has stuck as his nickname.\n\nDan Henderson: Daniel Jeffery Henderson (born August 24, 1970) is an American former mixed martial artist and Olympic wrestler, who last competed as a middleweight in the Ultimate Fighting Championship.  He was the last Strikeforce Light Heavyweight Champion and was the last Welterweight (80 kg ) and Middleweight (95 kg ) champion of Pride Fighting Championships.  Additionally, Henderson was the Brazil Open '97 Tournament Champion, the UFC 17 Middleweight Tournament Champion, the Rings: King of Kings 1999 Tournament Champion and the Pride Weltwerweight Grand Prix Tournament Champion.  During his career, Henderson also challenged for the UFC Middleweight Championship (2x), the UFC Light Heavyweight Championship and the Strikeforce Middleweight Championship.  He was the first mixed martial artist to concurrently hold two titles in two different weight classes in a major MMA promotion.  At the time of his retirement after UFC 204, he was the oldest fighter on the UFC roster.  Known to be one of the greatest mixed martial artists of all time having defeated a total of seventeen MMA world champions across four major MMA promotions (UFC, PRIDE FC, Strikeforce, and RINGS).\n\nKazuyuki Fujita: Kazuyuki Fujita (藤田 和之 , Fujita Kazuyuki ) (born October 16, 1970) is a Japanese professional wrestler, mixed martial artist and a former amateur wrestler.  He has fought in mixed martial arts promotions including Pride Fighting Championships, K-1 and World Victory Road.  He competes in mixed martial arts, shoot style wrestling and puroresu, and holds notable victories over Ken Shamrock, Gilbert Yvel, Mark Kerr, Bob Sapp, Karam Gaber, Peter Graham, and James Thompson.\n\nShannon Ritch: Shannon Grey Ritch (born September 27, 1970) is an American professional mixed martial artist, boxer, professional wrestler and kickboxer, known for being the former Gladiators Challenge Heavyweight Champion and KOTC Middleweight Champion also current RUF Interim Heavyweight Champion and IFC Middleweight Champion.  A professional competitor since 1998, Ritch has competed for the MFC, Pancrase, K-1, PRIDE, Rebel Fighting Championship, King of the Cage and the WEC.  Ritch has also has been featured in two episodes of Walker, Texas Ranger as a Biker Gang Member and a character named Knight, Choke in 2011 as an extra, CSI Las Vegas as Thug #2, an episode of iCarly as a MMA Fighter, an episode of Numbers in 2010, an episode of Ultimate Soldier Challenge on the History Channel representing a military contracting company and most recently in 2017 the direct to DVD film, directed by Robert Parham, Bullets, Blades and Blood and upcoming in 2018 No Way Out directed by Jeffrey D. Parker.  Shannon claims he has over 200 professional MMA fights 112 wins, 88 losses and 2 draws, some fights going undocumented and dating back as far as 1991.  His documented record of fights goes back to 1998 with a record of 56 wins, 81 loses, and 4 draws.  Shannon also holds a 2-1 record in professional boxing and a 25-2 record in bare knuckle boxing with all of his wins coming by way of knockout, in 2017 he was inducted into the Bare Knuckle Boxing Hall of Fame and also plans to round out his boxing career in 2018 against boxing superstar Bobby Gunn.  Ritch is also an occasional professional wrestler, recently in mid 2017 main eventing a card in Guyana.  Shannon has also found success as a grappler winning multiple NAGA, Grapplers Quest and Abu Dhabi Combat Club competitions, most recently winning a gold medal in the super heavyweight division at the Grand Canyon 2017 BJJ Open in Arizona and a silver medal at the '17 Arizona State BJJ Championships.  Ritch is also an avid golf player, winning 1st place in many state and pro am competitions held within his native Arizona as recent as 2017.\n\n&quot;Dr. Death&quot; Steve Williams: Steven Williams (May 14, 1960 – December 29, 2009), better known by his ring name \"Dr. Death\" Steve Williams, was an American professional wrestler, author, former collegiate football player, and amateur wrestler at the University of Oklahoma.  Dr. Death was a three-time professional wrestling world heavyweight champion, having won the UWF World Heavyweight Championship twice and the Triple Crown Heavyweight Championship once.  In addition to his singles success, Dr. Death achieved notoriety in Japan in tag team competition, winning the World Tag Team Championship eight times with notable tag team partners Terry Gordy, Gary Albright, Vader, and Johnny Ace.  He also achieved great tag team success in North America, winning tag team titles in the Mid-South, World Championship Wrestling, UWF and NWA United States Tag Team Championship as well as winning the World's Strongest Tag Determination League twice with Gordy and Mike Rotunda.\n\nLuke Zachrich: Luke Zachrich (born October 1, 1981) is an American mixed martial artist and former professional boxer who formerly competed in the Middleweight division of the Ultimate Fighting Championship A professional mixed martial arts competitor since 2006, Zachrich was a member of Team Forrest on the seventh season of The Ultimate Fighter, and has also fought for King of the Cage, Xtreme Fighting Organization, Bellator, and Ultimate Victory Challenge, the latter of which he was the inaugural Middleweight Champion.\n\nStipe Miocic: Stipe Miocic ( ; born August 19, 1982) is an American professional mixed martial artist currently competing in the Ultimate Fighting Championship (UFC).  He is the reigning, defending UFC Heavyweight Champion.  As of September 2017, he is ranked #3 pound-for-pound in the UFC.  Miocic has defended the belt twice, and by doing so has tied the record for most successful title defenses held with Randy Couture, Tim Sylvia, Brock Lesnar, and Cain Velasquez.",
+    "question": "Which organization is this American professional wrestler and former professional mixed martial artist, professional American football player and amateur wrestler born in 1977, who defended his Ultimate Fighting Championship twice, signed with?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the individual identified by the description."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The birth year of the individual."
+        },
+        "current_organization": {
+          "type": "string",
+          "description": "The organization the individual is currently signed with."
+        },
+        "current_role": {
+          "type": "string",
+          "description": "The individual's current role or brand within their organization."
+        },
+        "ufc_title_defenses_count": {
+          "type": "integer",
+          "description": "The number of times the individual defended a UFC title."
+        }
+      },
+      "required": [
+        "person_name",
+        "birth_year",
+        "current_organization",
+        "current_role",
+        "ufc_title_defenses_count"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Brock Lesnar",
+      "birth_year": 1977,
+      "current_organization": "WWE",
+      "current_role": "WWE Universal Champion on the Raw brand",
+      "ufc_title_defenses_count": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

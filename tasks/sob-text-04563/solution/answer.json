@@ -1,0 +1,15 @@
+{
+  "station_name": "33rd Street",
+  "system_full_name": "Port Authority Trans-Hudson",
+  "system_abbreviation": "PATH",
+  "system_type": "rapid transit system",
+  "named_after_entity": "Port Authority of New York and New Jersey",
+  "service_areas": [
+    "Newark",
+    "Harrison",
+    "Hoboken",
+    "Jersey City",
+    "lower Manhattan",
+    "midtown Manhattan"
+  ]
+}

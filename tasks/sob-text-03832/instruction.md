@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1989 NBA Expansion Draft: The 1989 NBA Expansion Draft was the ninth expansion draft of the National Basketball Association (NBA).  The draft was held on June 15, 1989, so that the newly founded Minnesota Timberwolves and Orlando Magic could acquire players for the upcoming 1989–90 season.  Minnesota and Orlando had been awarded the expansion teams on April 22, 1987.  In an NBA expansion draft, new NBA teams are allowed to acquire players from the previously established teams in the league.  Not all players on a given team are available during an expansion draft, since each team can protect a certain number of players from being selected.  In this draft, each of the twenty-three other NBA teams had protected eight players from their roster and the Timberwolves and the Magic selected eleven and twelve unprotected players respectively, one from each team.  Last year's expansion teams, the Charlotte Hornets and the Miami Heat, were not involved in the expansion draft and did not lose any player.  Prior to the draft, the league conducted a coin flip between the Timberwolves and the Magic to decide their draft order in this expansion draft and in the 1989 NBA draft.  The Magic won the coin flip and chose to have the first selection and the right to select twelve players in this expansion draft, thus allowing the Timberwolves to receive the higher pick in the 1989 Draft.
+
+2015–16 Minnesota Timberwolves season: The 2015–16 Minnesota Timberwolves season was the 27th season of the franchise in the National Basketball Association (NBA).  Before the season, the Timberwolves announced that head coach and team president Flip Saunders will not coach the team this season as he continued his battle with cancer.  Sam Mitchell was named interim head coach.  On October 25, 2015, Saunders died and the Wolves announced that Mitchell would be the interim coach for the entire season.  Around the start of the season, the Timberwolves would be the first team in NBA history to hold four players that were around 20 or younger between Andrew Wiggins, Zach LaVine, Karl-Anthony Towns, and Tyus Jones to start out a season.  It would also mark the final season under Kevin Garnett's time in the NBA and his return with the Timberwolves.
+
+Chris Carr (basketball): Chris Dean Carr (born March 12, 1974) is an American former professional basketball player who was selected by the Phoenix Suns in the 2nd round (56th overall) of the 1995 NBA draft.  Carr played six seasons in the NBA for the Suns, Minnesota Timberwolves, New Jersey Nets, Golden State Warriors, Chicago Bulls and Boston Celtics.  His best year as a pro came during the 1997–98 season as a member of the Timberwolves, appearing in 51 games and averaging 9.9 ppg.  Carr also appeared in the 1997 NBA Slam Dunk Contest, and made it to the final round, before losing to Kobe Bryant.  Carr played collegiately at Southern Illinois University Carbondale.  He also played in Greece with AEK Athens BC and in Serbia with KK Lavovi 063.
+
+Karl-Anthony Towns: Karl-Anthony Towns Jr. (born November 15, 1995) is a Dominican-American professional basketball player for the Minnesota Timberwolves of the National Basketball Association (NBA).  He played college basketball for the University of Kentucky.  Towns was named to the Dominican Republic national basketball team Olympic squad as a 16-year-old, although the Dominican Republic ultimately did not qualify for the 2012 Olympics.  He was selected with the first overall pick in the 2015 NBA draft by the Minnesota Timberwolves, and went on to be named NBA Rookie of the Year for the 2015–16 season.
+
+2004–05 Minnesota Timberwolves season: The 2004–05 NBA season was the 16th season for the Minnesota Timberwolves in the National Basketball Association.  After appearing in the Conference Finals last year, the Timberwolves played around .500 for the first half of the season.  However, the team began to struggle losing six straight games between January and February, slipping below .500.  After a 25–26 start, longtime head coach Flip Saunders was fired and replaced with General Manager Kevin McHale for the remainder of the season.  The Timberwolves improved under McHale, but finished third in the Northwest Division with a 44–38 record, missing the playoffs for the first time since 1996.  Kevin Garnett led the team in scoring, rebounding and assists, as he was selected for the 2005 NBA All-Star Game.  Following the season, Latrell Sprewell retired after turning down a contact extension, Sam Cassell was traded to the Los Angeles Clippers, and McHale was fired as coach.
+
+Jamal Abu-Shamala: Jamal Abu-Shamala (Arabic: جمال أبو شمالة‎ ‎ ; born July 25, 1987 in Shakopee, Minnesota) is a Palestinian American basketball player who formerly played college basketball for the Minnesota Golden Gophers.  Ranks among the top in made three pointers and three point percentage.  Abu-Shamala played internationally for the Jordanian national team, first playing internationally in 2008.  In 2015 Abu-Shamala plays for the Palestine national team.  Abu-Shamala played significant minutes as they retained their title at the William Jones Cup.  Abu-Shamala also played in the D-league for the Miami Heat and Minnesota Timberwolves affiliate team.
+
+Ricky Rubio: Ricard Rubio i Vives (born October 21, 1990) is a Spanish professional basketball player for the Utah Jazz of the National Basketball Association (NBA).  Rubio became the youngest player ever to play in the Spanish ACB League on October 15, 2005, at age 14.  He made his EuroLeague debut on October 24, 2006, at age 16, becoming the first player born in the 1990s to play in a EuroLeague game.  He is the fifth-youngest player to make their debut in the EuroLeague.  On June 25, 2009, he was drafted with the fifth pick in the first round of the 2009 NBA draft by the Timberwolves, making him the first player born in the 1990s to be drafted by the NBA.  The Timberwolves had an agreement in principle with his former Spanish team, DKV Joventut, to buy out his contract, but Rubio backed out of the deal.  On August 31, 2009, Joventut traded the rights to Rubio to FC Barcelona, and Rubio signed a six-year contract with FC Barcelona the following day.  In 2011, Rubio joined the Minnesota Timberwolves, and spent six seasons in Minnesota before being traded to the Jazz in June 2017.
+
+Joe Wylie: Joseph Jay Wylie, Sr. (born February 10, 1968), is an American retired professional basketball player.  Born in Washington, D.C., he is listed at 6'9" and weighed 220 lbs.  Wylie played collegiate ball with the University of Miami Hurricanes from 1988 to 1991), where he earned the names, "Wylie's World", and "Jumping Joe Wylie", because of his ability to leap over his opponents.  Wylie entered the 1991 NBA Draft and was picked 38th in the second round by the Los Angeles Clippers.  On July 4, 1991, almost a week after the draft, the Clippers traded him to the New York Knicks for a 1993 second round pick.  The Knicks were enthusiastic of getting such a player of his calibre; In 1992, Wylie was invited to the Minnesota Timberwolves training camp but he was eventually cut from the roster during the preseason.  In 1993 Wylie played in 6 preseason games with the Detroit Pistons and was the last cut before contracts became guaranteed.  He eventually played his professional basketball career mostly overseas in Italy, Spain, France, Venezuela, Puerto Rico, Turkey, Argentina, Israel, Portugal, the Philippines, Germany, Russia, the Dominican Republic and Hungary.  He also played in CBA with the Columbus Horizon during the 1991–92 season.  He retired in 2009.  Wylie has a son, Joseph Micheal Wylie, Jr., who played collegiate football at his alma mater but later transferred to Tennessee State University.
+
+Shelton Jones: Shelton Jones (born April 4, 1966) is a retired American professional basketball player who played collegiately at St. John's University.  He was selected by the San Antonio Spurs in the 2nd round (27th overall) of the 1988 NBA Draft.  Shelton played only one year in the NBA during the 1988-89 season, splitting time with the Spurs, Golden State Warriors and mainly, the Philadelphia 76ers, for whom he also appeared in the NBA Slam Dunk Contest, finishing on 4th place after advancing to the semi-finals.  After the season, he was selected by the Minnesota Timberwolves as the 16th pick in the NBA Expansion Draft.  After his selection, he said: "I'm a little stunned right now.  I thought I'd be taken by Orlando because I'd heard some things.  Things like this happen.  That's the kind of year I had.  I'll make the best of the situation.  I look forward to getting out there and meeting with the coach.  I don't even know who it is." .  As it turned out, the Timberwolves waived him before the season began, and he never played in the NBA again.
+
+2016–17 Minnesota Timberwolves season: The 2016–17 Minnesota Timberwolves season was the 28th season of the franchise in the National Basketball Association (NBA).  On April 20, 2016, the Timberwolves hired Tom Thibodeau as their new head coach.  On September 23, 2016, Kevin Garnett would officially retire from the NBA, thus ending his 21-year career in the process.  On April 11, 2017, the Timberwolves would unveil a new logo and new uniforms to enter the next season.  They improved their 29–53 output from the previous season, but missed the playoffs for the 13th consecutive season, continuing the longest playoff drought in the NBA.
+
+Question: Which Minnesota Timberwolves player was around 20 or younger in the 2015-16 season and also played for University of Kentucky ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the basketball player."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The NBA team the player was associated with during the specified season."
+    },
+    "season": {
+      "type": "string",
+      "description": "The NBA season in question."
+    },
+    "age_at_season_start": {
+      "type": "integer",
+      "description": "The player's age at the start of the specified season."
+    },
+    "college_team": {
+      "type": "string",
+      "description": "The college team the player played for."
+    },
+    "draft_details": {
+      "type": "object",
+      "properties": {
+        "draft_year": {
+          "type": "integer",
+          "description": "The year the player was drafted into the NBA."
+        },
+        "overall_pick": {
+          "type": "integer",
+          "description": "The overall pick number in the NBA draft."
+        }
+      },
+      "required": [
+        "draft_year",
+        "overall_pick"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "player_name",
+    "team_name",
+    "season",
+    "age_at_season_start",
+    "college_team",
+    "draft_details"
+  ],
+  "additionalProperties": false
+}

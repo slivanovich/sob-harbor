@@ -1,0 +1,16 @@
+{
+  "mines_compared": [
+    {
+      "mine_name": "Ptarmigan and Tom Mine",
+      "opening_year": 1941,
+      "location": "Northwest Territories, Canada at Yellowknife"
+    },
+    {
+      "mine_name": "Lupin Mine",
+      "opening_year": 1982,
+      "location": "Nunavut Territory, Canada"
+    }
+  ],
+  "earliest_opening_mine_name": "Ptarmigan and Tom Mine",
+  "earliest_opening_year": 1941
+}

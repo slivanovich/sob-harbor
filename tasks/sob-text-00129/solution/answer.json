@@ -1,0 +1,13 @@
+{
+  "album_details": {
+    "album_title": "Symbolic",
+    "album_number": 5,
+    "release_year": 2000
+  },
+  "song_details": {
+    "song_title": "I Shot the Sheriff",
+    "original_artist": "The Wailers",
+    "original_release_year": 1973
+  },
+  "is_cover_song": true
+}

@@ -1,0 +1,14 @@
+{
+  "rnb_group_name": "Jagged Edge",
+  "signing_producer": "Jermaine Dupri",
+  "song_featuring_group_and_sample": {
+    "song_title": "Puppy Love",
+    "lead_artist": "Lil' Bow Wow",
+    "features_rnb_group": true
+  },
+  "sampled_track_details": {
+    "sampled_track_title": "Kanday",
+    "sampled_track_artist": "LL Cool J",
+    "sampled_track_album": "Bigger and Deffer"
+  }
+}

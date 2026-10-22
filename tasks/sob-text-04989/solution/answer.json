@@ -1,0 +1,14 @@
+{
+  "entities_involved": [
+    {
+      "entity_name": "Wilma King",
+      "country_context": "B.A. in American history from Jackson State University, and both an M.A. and Ph.D. in Recent U.S. History from Indiana University."
+    },
+    {
+      "entity_name": "University of Missouri",
+      "country_context": "located in Columbia, Missouri, U.S."
+    }
+  ],
+  "common_country_name": "United States",
+  "country_abbreviation": "U.S."
+}

@@ -1,0 +1,38 @@
+{
+  "comparison_subject_1": {
+    "name": "Bill Melendez",
+    "roles_and_works": [
+      "Animator for Walt Disney Productions (Pinocchio, Fantasia, Dumbo, Bambi)",
+      "Animator for Warner Bros. Cartoons",
+      "Animator for UPA",
+      "Animator for Peanuts series",
+      "Film director for Peanuts series",
+      "Voice artist for Snoopy",
+      "Voice artist for Woodstock",
+      "Producer for Peanuts series",
+      "Producer for Cathy's Valentine",
+      "Worked on Peanuts television specials with Hank Smith"
+    ],
+    "work_count": 10
+  },
+  "comparison_subject_2": {
+    "name": "Garry Marshall",
+    "roles_and_works": [
+      "Director of The Flamingo Kid",
+      "Writer of The Flamingo Kid",
+      "Creator of Happy Days",
+      "Creator of Happy Days spin-offs",
+      "Developer of Neil Simon's The Odd Couple for television",
+      "Director of Pretty Woman",
+      "Director of Runaway Bride",
+      "Director of Valentine's Day",
+      "Director of New Year's Eve",
+      "Director of Mother's Day",
+      "Director of The Princess Diaries",
+      "Voice artist for Buck Cluck in Chicken Little"
+    ],
+    "work_count": 12
+  },
+  "person_with_more_work": "Garry Marshall",
+  "more_work_count": 12
+}

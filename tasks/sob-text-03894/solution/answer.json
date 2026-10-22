@@ -1,0 +1,19 @@
+{
+  "sweet_crude_film_details": {
+    "title": "Sweet Crude",
+    "premiere_year": 2009,
+    "premiere_month": "April",
+    "director": "Sandy Cioffi"
+  },
+  "my_generation_film_details": {
+    "title": "My Generation",
+    "premiere_year": 2000,
+    "director": "Barbara Kopple"
+  },
+  "more_recent_film_title": "Sweet Crude",
+  "premiere_comparison": {
+    "sweet_crude_premiere_is_later": true,
+    "my_generation_premiere_is_later": false,
+    "year_difference": 9
+  }
+}

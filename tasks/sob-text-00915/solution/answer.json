@@ -1,0 +1,31 @@
+{
+  "athlete_name": "Paula Radcliffe",
+  "athlete_nationality": "English",
+  "award_received": "MBE",
+  "known_for_event_type": "Marathon",
+  "antrim_international_cross_country_winner": true,
+  "major_marathon_wins": [
+    {
+      "marathon_name": "London Marathon",
+      "years_won": [
+        2002,
+        2003,
+        2005
+      ]
+    },
+    {
+      "marathon_name": "New York Marathon",
+      "years_won": [
+        2004,
+        2007,
+        2008
+      ]
+    },
+    {
+      "marathon_name": "Chicago Marathon",
+      "years_won": [
+        2002
+      ]
+    }
+  ]
+}

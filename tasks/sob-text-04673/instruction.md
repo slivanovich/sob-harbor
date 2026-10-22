@@ -1,0 +1,76 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jackson Hole Mountain Resort: The Jackson Hole Mountain Resort (JHMR) is a ski resort in the western United States, at Teton Village, Wyoming.  In the Teton Range of the Rocky Mountains, it is located in Teton County, 12 mi northwest of Jackson and due south of Grand Teton National Park.  It is named after the historically significant Jackson Hole valley and is known for its steep terrain and a large continuous vertical drop of 4,139 ft .
+
+Teton National Forest: Teton National Forest was first established by the General Land Office on February 22, 1897 as the Teton Forest Reserve with 892440 acre .  A commission was established in 1896 to plan for a system of national forest reserves, recommending an expansion of the territory protected by the Yellowstone Timberland Reserve.  President Grover Cleveland's 1897 proclamation established a protected area encompassing the northern end of Jackson Hole, extending from the south boundary of the Yellowstone Forest Reserve south to the area of the Gros Ventre River, and from the Idaho border in the west to the area of the Continental Divide in the east.  Much of this area would eventually be incorporated into Grand Teton National Park.  In 1902 the southern porion of the Yellowstone reserve was added, while the Teton Reserve was greatly expanded to the south and east while excluding the southern portion of Jackson Hole around the town of Jackson.
+
+Blacktail Butte: Blacktail Butte (7688 ft ) is a butte mountain landform rising from Jackson Hole valley in Grand Teton National Park in the U.S. state of Wyoming.  Blacktail Butte was originally named "Upper Gros Ventre Butte" in an early historical survey conducted by the U.S. Geological Survey.  Most of Blacktail Butte is densely forested with a mixed fir forest of lodgepole pine, Douglas fir and Engelmann spruce, with scattered pockets of aspen.  There are several large sedimentary rock outcroppings, which are used by rock climbers.  This butte is a principal landmark in Jackson Hole, with much of the Jackson Hole valley floor and many portions of the Teton Range visible from its hillsides.
+
+John Bernhard Leiberg: John Bernhard Leiberg (1853–1913) was a Swedish botanical explorer, forester, and bryologist in the northwestern United States.  Leiberg came to the United States in 1868 and settled near Lake Coeur d'Alene, Idaho.  He spent the first part of his career as an explorer and plant collector for various flora projects mainly in Idaho, Washington, Oregon, and Nevada.  Later he worked with the United States Geological Survey.  With little formal education, at age 17 he began publishing plant collections and in 1884 he and his wife, Carrie, settled in the Lake Pend Oreille, Idaho Territory.  His wife was a doctor and surgeon.  He supplied specimens to the New York Botanical Garden and in 1892 he spent the winter in Hamilton, Montana.  He worked as a field botanist for Frederic Coville, curator of the US National Herbarium and in 1897 he was transferred to the US Geological Survey and assigned to examine the area of the 6480 sqmi Bitterroot Forest Reserve which later became National Forests in Montana and Idaho.  (The reserves had been expanded by President Grover Cleveland by his February 22, 1897 proclamation.)  He surveyed the Bitterroot reserve in 1897 and 1898 and wrote the 19th and 20th annual reports for the US Geological Survey describing the topography, trees and mapping locations in an area previously relatively undocumented.  From 1900 to 1904 he published descriptions of several other western forest reserves.  He spent a short time in the Philippines, a US protectorate, where he was a forest inspector for the Insular Forest Service.  He left government service in 1906 and briefly settled on a farm in Eugene, Oregon.  He travelled the world in 1910 and died in 1913.  He contributed to and authored many publications including "Contributions to the Flora of Idaho and Minnesota" and many forestry related works.
+
+Establishment of Grand Teton National Park: The establishment of Grand Teton National Park took place over a period spanning more than 50 years.  Located in the northwestern region of the U.S. state of Wyoming, Grand Teton National Park is 10 mi south of Yellowstone National Park which was established in 1872, when Wyoming, Idaho and Montana were still territories and the region was very sparsely settled.  By the late 19th century, conservationists were working to provide further protection to surrounding regions, leading President Grover Cleveland to create the Teton Forest Reserve, which included a portion of northern Jackson Hole.  By 1902, the reserve had been combined into the Yellowstone Forest Reserve, then was divided again in 1908 by President Theodore Roosevelt, establishing the Teton National Forest, which protected most of the Teton Range.  By 1907, the U.S. Bureau of Reclamation had constructed a temporary dam at the Snake River outlet of Jackson Lake.  This dam failed in 1910 and a new concrete Jackson Lake Dam replaced it by 1911.  The dam was further enlarged in 1916, raising lake waters 39 ft as part of the Minidoka Project, designed to provide irrigation for agriculture in the state of Idaho.  Though efforts to protect the Teton Range and Jackson Hole as part of an expanded Yellowstone National Park dated back to the late 19th century, proposals to construct more dams on some of the other lakes in Jackson Hole led Yellowstone National Park superintendent Horace Albright to block such efforts.  Albright was originally an advocate of the expanded Yellowstone plan which was very unpopular with local residents.  By the mid-1920s local sentiment had changed as a result of proposals for a new national park including only the Teton Range and six lakes at the base of the range.  With the general agreement of prominent Jackson Hole residents to this plan, President Calvin Coolidge signed the executive order establishing the 96000 acre Grand Teton National Park on February 26, 1929.
+
+Signal Mountain (Wyoming): Signal Mountain is an isolated summit standing 7720 ft above sea level.  The mountain is located in Grand Teton National Park in the U.S. state of Wyoming.  The next closest higher summit is more than 10 mi distant, and this isolation provides sweeping views of the Teton Range, much of the northern Jackson Hole area as well as the Snake River.  Though located adjacent to the Tetons, Signal Mountain was not formed in the same manner or period.  The mountain originally was formed by volcanic ashfall from one of the eruptions of the Yellowstone hotspot.  The peak is also partially a glacial moraine formed by a receding glacier that came south out of the Yellowstone icecap.  This same glacier also created neighboring Jackson Lake.
+
+Grover Cleveland: Stephen Grover Cleveland (March 18, 1837June 24, 1908) was an American politician and lawyer who was the 22nd and 24th President of the United States, the only President in American history to serve two non-consecutive terms in office (188589 and 189397).  He won the popular vote for three presidential electionsin 1884, 1888, and 1892and was one of two Democrats (with Woodrow Wilson) to be elected president during the era of Republican political domination dating from 1861 to 1933.
+
+Jackson Hole National Monument: Jackson Hole National Monument was a wildlife reserve in Jackson Hole, most of which is now a part of Grand Teton National Park in Wyoming, United States.  It was created by executive order by Franklin Delano Roosevelt in 1943, and met with considerable opposition from Wyoming legislators.  Roosevelt later vetoed a bill that would have disestablished it.  Jackson Hole is named after a fur trapper named Davey Jackson.
+
+Jackson Lake Ranger Station: The Jackson Lake Ranger Station is the last Depression-era U.S. Forest Service ranger station in its original location in Grand Teton National Park.  When first established, the park comprised only the mountainous terrain above Jackson Hole, while the remainder of what would eventually become the park was administered by the Forest Service as part of Teton National Forest.  The Jackson Lake Station was built in 1933 as close as possible to Park Service property as possible as a kind of resistance to the park's expansion.  The station was one of five Forest Service stations in the area, and was taken over by the National Park Service when Jackson Hole National Monument was established in 1943, later becoming an enlarged Grand Teton National Park.  It is the only such station not to have been moved or altered by the Park Service.
+
+Grover Cleveland High School (Queens): Grover Cleveland High School is a large, comprehensive high school in Ridgewood, Queens.  Grover Cleveland High School, Bayside High School, Samuel J. Tilden High School, Abraham Lincoln High School, John Adams High School, Walton High School, and Andrew Jackson High School were all built during the Great Depression from one set of blueprints in order to save money.  The school is so named after former US president Grover Cleveland.
+
+Question: For which political party did two time president Grover Cleveland and creator of the Teton Forest Reserve which included a portion of northern Jackson Hole, stand?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "president_name": {
+      "type": "string",
+      "description": "The full name of the president."
+    },
+    "political_party": {
+      "type": "string",
+      "description": "The political party the president belonged to."
+    },
+    "related_actions_in_context": {
+      "type": "array",
+      "description": "A list of actions or proclamations made by the president that are mentioned in the context.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_description": {
+            "type": "string",
+            "description": "Description of the action."
+          },
+          "date": {
+            "type": "string",
+            "description": "The date of the action, if specified."
+          }
+        },
+        "required": [
+          "action_description"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "president_name",
+    "political_party",
+    "related_actions_in_context"
+  ],
+  "additionalProperties": false
+}

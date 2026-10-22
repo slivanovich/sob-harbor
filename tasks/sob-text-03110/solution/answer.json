@@ -1,0 +1,14 @@
+{
+  "bands_compared": [
+    {
+      "band_name": "Kasabian",
+      "country_of_origin": "England"
+    },
+    {
+      "band_name": "Jawbox",
+      "country_of_origin": "United States"
+    }
+  ],
+  "all_bands_from_england": false,
+  "final_answer": "no"
+}

@@ -1,0 +1,10 @@
+{
+  "film_title": "Howard the Duck",
+  "director_name": "Willard Huyck",
+  "release_year": 1986,
+  "genres": [
+    "science-fiction",
+    "comedy"
+  ],
+  "starring_actor": "Tommy Swerdlow"
+}

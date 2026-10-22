@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Knights of Labor: Knights of Labor (K of L), officially Noble and Holy Order of the Knights of Labor, was the largest and one of the most important American labor organizations of the 1880s.  Its most important leader was Terence V. Powderly.  The Knights promoted the social and cultural uplift of the workingman, rejected socialism and anarchism, demanded the eight-hour day, and promoted the producers ethic of republicanism.  In some cases it acted as a labor union, negotiating with employers, but it was never well organized, and after a rapid expansion in the mid-1880s, it suddenly lost its new members and became a small operation again.
+
+Seattle General Strike Project: The Seattle General Strike Project is a multimedia initiative to chronicle the Seattle General Strike, the first general strike in the United States.  In February 1919, what began as a wage dispute in the city’s shipyard expanded into a week-long walkout involving more than 50,000 workers that heralded a wave of post-war labor unrest and America’s first red scare.  The website maintained by the project is one of the foremost collections of primary and academic material on the event, and is part of the Pacific Northwest Labor and Civil Rights History Projects program at the University of Washington.
+
+1934 West Coast waterfront strike: The 1934 West Coast Waterfront Strike (also known as the 1934 West Coast Longshoremen's Strike, as well as a number of variations on these names) lasted eighty-three days, triggered by sailors and a four-day general strike in San Francisco, and led to the unionization of all of the West Coast ports of the United States.
+
+Albert Goodwin: Albert "Ginger" Goodwin (May 10, 1887 – July 27, 1918) of Treeton, England, affectionately named for his bright red hair, was a migrant coal miner who found work in the Cumberland mines, arriving on Vancouver Island in late 1910.  Goodwin was disgruntled by the working conditions and management's ubiquitous disregard of all labour factions.  Zealous for change, Goodwin became an advocate for workers rights, organizing and promoting the proliferation of trade unions.  Goodwin increased in stature to become a highly prominent leader of the social movement that organized labour, but died rather suddenly under highly controversial circumstances that have not been settled to this day.  The widely held belief was that Goodwin was murdered in an attempt to stifle collective bargaining; his death inspired the 1918 Vancouver general strike on August 2, 1918, Canada's first General Strike ever.  This strike was a precursor to the Winnipeg General Strike of 1919, a defining moment in Canadian labour history.
+
+1877 St. Louis general strike: Generally accepted as the first general strike in the United States, the 1877 St. Louis general strike grew out of the Great Railroad Strike of 1877.  The general strike was largely organized by the Knights of Labor and the Marxist-leaning Workingmen's Party, the main radical political party of the era.  When the railroad strike reached East St. Louis, Illinois in July 1877, the St. Louis Workingman's Party led a group of approximately 500 people across the river in an act of solidarity with the nearly 1,000 workers on strike.  The party transformed, through speeches and organization, an initial strike among railroad workers into a strike by thousands of workers in several industries for the eight-hour day and a ban on child labor.  One speaker was noted to say, At another large rally a black man spoke for those who worked on the steamboats and levees.  He asked, "Will you stand to us regardless of color?"  The crowd shouted back, "We will!"
+
+1918 Vancouver general strike: The 1918 Vancouver General Strike was the first general strike in Canadian history and was held 2 August 1918.  It was organized as a one-day political protest against the killing of draft evader and labour activist Albert "Ginger" Goodwin, who had called for a general strike in the event that any worker was drafted against their will.  The strike was met with violence from returned soldiers who had been mobilized and supplied with vehicles to storm the Labour Temple at 411 Dunsmuir Street (the present-day 411 Seniors Centre).  Three hundred men ransacked the offices of the Vancouver Trades and Labour Council (VTLC), twice attempted to defenestrate VTLC secretary Victor Midgely and forced him and a longshoreman to kiss the Union Jack.  A woman working in the office was also badly bruised when she prevented Midgely from being thrown out the window.  Labour activist and suffragette Helena Gutteridge was also at the scene, but was unscathed.
+
+Canada on Strike: "Canada on Strike" is the fourth episode in the twelfth season of the American animated television series "South Park".  The 171st episode of the series overall, it first aired on Comedy Central in the United States on April 2, 2008.  In the episode, the nation of Canada, feeling disrespected by the rest of the world, goes on a general strike, demanding money, spurring the boys to raise money by creating a viral video.
+
+International Longshore and Warehouse Union: The International Longshore and Warehouse Union (ILWU) is a labor union which primarily represents dock workers on the West Coast of the United States, Hawaii and Alaska, and in British Columbia, Canada.  It also represents hotel workers in Hawaii, cannery workers in Alaska, warehouse workers throughout the West and bookstore workers in Portland, Oregon.  The union was established in 1937 after the 1934 West Coast Waterfront Strike, a 3-month-long strike that culminated in a 4-day general strike in San Francisco, California, and the Bay Area.  It disaffiliated from the AFL-CIO on August 30, 2013.  In 2014, the San Francisco Chronicle described the ILWU today as "the aristocrat of the working class; a top member can earn over well over $100,000 a year with excellent benefits", with vacancies receiving thousands or sometimes even tens of thousands of applications.  Union officials claim that pay numbers are inflated because they do not include "casuals", part-time workers who are not registered ILWU members, do not receive benefits and earn less, with the minimum being $25.71 per hour.
+
+Portuguese legislative election, 1983: The Portuguese legislative election of 1983 took place on 25 April.  The last election, in October 1980 had been won by a right-wing coalition, the Democratic Alliance and Francisco Sá Carneiro had retained office as Prime Minister with an increased majority.  However, Sá Carneiro, along with other important members of the coalition, died in an aircrash only two months after the election, on 5 December 1980.  Such happenings caused a massive political instability and Francisco Pinto Balsemão, a senior official of the Social Democratic Party, the largest party in the Alliance, became Prime Minister.  But Balsemão lacked support from such senior members of his party as Aníbal Cavaco Silva, and several ministers resigned.  Moreover, the right-wing policy was criticized by the left-wing and by the trade unions, and in February, the General Confederation of the Portuguese Workers, with the support of the Communists, called for a general strike that shook the government.  The wave of resignations among Balsemão's ministers continued and by the end of the year, he also resigned.  Because no one inside the Social Democratic Party accepted the office of Prime Minister, the President Ramalho Eanes dissolved the Parliament and called an election for April.
+
+1912 New York City waiters' strike: The 1912 New York City Waiters’ Strike began on May 7, 1912, at the Belmont Hotel and was the first general strike for waiters and hotel workers in New York City history.  That day over 150 hotel workers walked out as a sign of protest against their poor working conditions.  The strike was organized by Joseph James Ettor and Elizabeth Gurley Flynn of the Industrial Workers of the World (IWW) in conjunction with the Hotel Workers' International Union.  At the height of the strike there were 54 hotels and 30 restaurants and other establishments without their staff.  This amounted to 2,500 waiters, 1,000 cooks, and 3,000 other striking hotel workers.  The strike continued through the rest of May but police began reprimanding protestors, making many of them go back to work.  The strike officially ended on June 25, 1912.
+
+Question: The first general strike in the United States was largely organized by the largest and one of the most important 1880's what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "strike_name": {
+      "type": "string",
+      "description": "The name of the general strike."
+    },
+    "strike_year": {
+      "type": "integer",
+      "description": "The year the general strike occurred."
+    },
+    "organizing_entity": {
+      "type": "string",
+      "description": "The primary entity that largely organized the strike."
+    },
+    "entity_description": {
+      "type": "string",
+      "description": "A description of the organizing entity, as requested in the question."
+    },
+    "entity_type": {
+      "type": "string",
+      "description": "The specific type of organization the entity was."
+    }
+  },
+  "required": [
+    "strike_name",
+    "strike_year",
+    "organizing_entity",
+    "entity_description",
+    "entity_type"
+  ],
+  "additionalProperties": false
+}

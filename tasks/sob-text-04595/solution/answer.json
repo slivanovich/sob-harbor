@@ -1,0 +1,15 @@
+{
+  "driver_name": "David Coulthard",
+  "nationality": "British",
+  "grand_prix_1995_result": {
+    "race_name": "1995 British Grand Prix",
+    "year": 1995,
+    "position": 3,
+    "team": "Williams"
+  },
+  "championship_2001_result": {
+    "championship_year": 2001,
+    "championship_position": "runner-up",
+    "team": "McLaren"
+  }
+}

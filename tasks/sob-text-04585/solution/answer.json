@@ -1,0 +1,16 @@
+{
+  "villages_compared": [
+    {
+      "village_name": "Schuylerville",
+      "is_smallest_in_state": false
+    },
+    {
+      "village_name": "Victory",
+      "is_smallest_in_state": true
+    }
+  ],
+  "identified_smallest_village_name": "Victory",
+  "state": "New York",
+  "population_of_identified_smallest": 544,
+  "population_census_year": 2000
+}

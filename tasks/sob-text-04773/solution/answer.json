@@ -1,0 +1,16 @@
+{
+  "common_group_type": "rock band",
+  "groups_analyzed": [
+    {
+      "group_name": "Skunk Anansie",
+      "specific_type_in_context": "English rock band",
+      "origin_country": "England"
+    },
+    {
+      "group_name": "7 Year Bitch",
+      "specific_type_in_context": "American punk rock band",
+      "origin_country": "American"
+    }
+  ],
+  "analysis_summary": "Both Skunk Anansie and 7 Year Bitch are explicitly described as types of 'rock band' in the provided context, with 7 Year Bitch being a 'punk rock band' which is a subgenre of rock."
+}

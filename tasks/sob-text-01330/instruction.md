@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Cardiant: Cardiant is a Finnish heavy metal band.  It was established in city of Hämeenlinna in 2000, but most of band members have been replaced and the current assembly has been working since 2008.  In the early years, the band recorded several demos until the it signed a contract with the record company Underground Symphony.  The first album, Midday Moon, was released in 2005, but the record company did not released it in Europe.  However, other record company, Marquee/Avalon, released it in Japan.
+
+American Record Corporation: American Record Corporation (ARC), also referred to as American Record Company, American Recording Corporation, or (erroneously) as ARC Records, was an American record company.  It resulted from the merger in 1929 of three companies: the Cameo Record Corporation (which owned Cameo, Lincoln and Romeo Records), the Pathé Phonograph and Radio Corporation (which owned Actuelle, Pathé, and Perfect), and the Plaza Music Company (which owned Banner, Domino, Jewel, Oriole, and Regal).
+
+San Francisco Dues: San Francisco Dues is a studio album by Chuck Berry, released in 1971 by Chess Records.
+
+Music West Records: Music West Records was an independent record company founded by Allan Kaplan on December 1985 in San Rafael, California.  The company was initially formed to promote Ray Lynch.  During its run, artists released under the record company included Jim Chappell, Kenneth Nash, Chris Spheeris, and Øystein Sevåg.  According to Gary Chappell, the manufacturer for Music West, the artists originated independently, claiming that the company's idea "has a statement that comes directly from the
+
+Gallo Record Company: Gallo Record Company is the largest (and oldest independent) record label in South Africa.  It is based in Johannesburg, South Africa, and is owned by Times Media Group (formerly Johnnic Communications and Avusa).  The current Gallo Record Company is a hybrid of two rival South African record labels between the 1940s and 1980s: the original Gallo Africa (1926–85) and G.R.C. (Gramophone Record Company, 1939–85).  In 1985 Gallo Africa acquired G.R.C.; as a result, Gallo Africa became known as "Gallo-GRC".  Five years after the acquisition, the company was renamed "Gallo Record Company".
+
+Notes from San Francisco: Notes from San Francisco is a posthumous album by Irish musician Rory Gallagher.  Released in 2011, It consists of two CDs.  The first disc is a never released album that Gallagher recorded in San Francisco in December 1977.  The album was to be a major shift for Gallagher.  Rather than producing it himself he worked with Elliot Mazer a successful producer who had a long track record with artists such as Bob Dylan, Janis Joplin, and The Band.  At the last minute -- causing great distress to his manager and brother Donal and to his record company -- Gallagher decided to just pull the record.  In an interview Gallagher stated "it wasn't because of the material or the musicians or anything like that.  It was a song thing that I didn't think on the technical side everything worked.  So I scrapped the thing" After scrapping the album Gallagher reworked his band firing all the musicians except the bass player and hiring a new drummer.  This new Gallagher power trio re-recorded the San Francisco songs with Gallagher producing and released them as Photo-Finish.  Shortly before his death, Rory reportedly gave Donal permission to eventually release the original San Francisco versions of the songs if they were remixed.  Donal had his son Daniel remix the songs in 2011.  The second disc is a live performance also recorded in San Francisco in December 1979.
+
+Hard Candy (Madonna album): Hard Candy is the eleventh studio album by American singer and songwriter Madonna.  It was released on April 19, 2008, by Warner Bros.  Records.  The album was her final studio album with the record company, marking the end of a 25-year recording history.  Madonna started working on the album in early 2007, and collaborated with Justin Timberlake, Timbaland, The Neptunes and Nate "Danja" Hills.  The album has an overall R&B vibe, while remaining a dance-pop record at its core.  The Pet Shop Boys were also asked to collaborate with Madonna on the album by Warner Bros., but the record company later changed their mind and withdrew their invitation.
+
+Bob Grever: Bob Grever (1936—August 23, 2016) was an American music executive who once owned San Antonio independent record label Cara Records.  He became the "most powerful record company owner" in the state of Texas in the 1980s.  Grever sold the record company and its roster of recordings as well as its Tejano music musicians to EMI Latin, spearheading the 1990s Tejano music golden age.  His most notable artists include Emilio Navaira and Selena.  Other musicians Grever signed were Joe Posada, David Lee Garza, Bobby Naranjo, Mazz, and La Mafia.  Songwriter Luis Silva, became head of promotions while working for Cara Records.  Grever came from a musician family, his grandmother Maria Grever, became one of the most successful female composers.  Music critic, Ramiro Burr of the "San Antonio Express-News", called Grever "one of the two most important people in the Tejano music explosion of the 80's and 90's."  After Grever sold Cara Records, he worked with the Backstreet Boys and NSYNC.  He also became president of Zomba Group's Latin music division.  Grever died on August 23, 2016 due to complications brought on by cancer on August 23, 2016, he was 79 years old.  He was posthumously awarded at the 2016 Tejano Music Awards for Special Lifetime Achievement.
+
+Bay of Kings: Bay of Kings is the seventh studio album from English guitarist Steve Hackett, released in October 1983 on Lamborghini Records.  His first album consisting entirely of instrumental classical guitar music, Hackett's former record company Charisma Records refused to release it over concerns about its commercial viability.  Hackett left the label and released "Bay of Kings" through independent record company Lamborghini Records, started by Patric Mimran who owned the said car company at that time.  It was later reissued by Hackett's own label, Camino Records.  His wife at the time, Kim Poor, originally painted a nude portrait for the cover, but it was replaced for the Camino reissue by a painting of her husband.
+
+Chess Records: Chess Records was an American record company, founded in 1950 in Chicago and specializing in blues and rhythm and blues.  Over time it expanded into soul music, gospel music, early rock and roll, and occasional jazz and comedy recordings, released on the Chess, Checker, Argo, and Cadet labels.  The Chess catalogue is currently owned by Universal Music Group and managed by Geffen Records.
+
+Question: Who owned the record company that released the album "San Franciso Dues"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album in question."
+    },
+    "releasing_record_company": {
+      "type": "string",
+      "description": "The record company that released the album."
+    },
+    "record_company_owner": {
+      "type": "string",
+      "description": "The entity that owns the record company."
+    },
+    "ownership_status": {
+      "type": "string",
+      "description": "Describes the current ownership status of the record company or its catalogue."
+    }
+  },
+  "required": [
+    "album_name",
+    "releasing_record_company",
+    "record_company_owner",
+    "ownership_status"
+  ],
+  "additionalProperties": false
+}

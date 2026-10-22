@@ -1,0 +1,22 @@
+{
+  "comparison_summary": "Broken Social Scene is a musical collective with a fluctuating number of members, ranging from 6 to 19. Daniel Amos was formed by 4 members and currently has 3 members. Therefore, Broken Social Scene has more members.",
+  "bands_data": [
+    {
+      "band_name": "Broken Social Scene",
+      "member_details": {
+        "member_count_description": "a musical collective including as few as six and as many as nineteen members",
+        "min_members": 6,
+        "max_members": 19
+      }
+    },
+    {
+      "band_name": "Daniel Amos",
+      "member_details": {
+        "member_count_description": "formed in 1974 by Terry Scott Taylor on guitars and vocals, Marty Dieckmeyer on bass guitar, Steve Baxter on guitars and Jerry Chamberlain on lead guitars. Current members include bassist Tim Chandler, guitarist Greg Flesch and drummer Ed McTaggart.",
+        "founding_members_count": 4,
+        "current_members_count": 3
+      }
+    }
+  ],
+  "band_with_more_members": "Broken Social Scene"
+}

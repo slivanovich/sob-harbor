@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+TVT Records: TVT Records was an American record label founded by Steve Gottlieb.  Over the course of its 25-year history, the label released some 25 Gold, Platinum and Multi-platinum releases.  Its roster included Nine Inch Nails, Ja Rule, Lil Jon, Underworld, KMFDM, Gravity Kills, The KLF, The Baldwin Brothers, Sevendust, Nothingface, the Wellwater Conspiracy, Brian Jonestown Massacre, The Holloways, The Cinematics, Buck-O-Nine, DJ Hurricane, Speech and Pitbull.  Its biggest commercial successes were the triple platinum Nine Inch Nails's "Pretty Hate Machine", two double platinum releases by Lil Jon, and platinum releases by Snoop Dogg and Tha Eastsidaz, Dashboard Confessional, Default and Ying Yang Twins as well as gold releases by Sevendust, Gravity Kills and The Black Crowes and Jimmy Page.  Additionally, TVT also had success overseas, achieving a gold release in Germany and Sweden with The Connells and scored platinum and gold records in Canada with Default.
+
+3 Peace Records: 3 Peace Records is an independent record label founded by Florida-based rock band Boyce Avenue.  Founded in 2006 by the band members, they were approached by Universal Republic to partner in the release of the album.  The band, impressed with Republic’s excitement about the music and the band’s wanting to remain extremely hands-on with their music, videos and websites, signed with Universal Republic in November 2009.  The band’s major label debut album, "All We Have Left", released on June 15, 2010.  However, on August 9, 2011, Boyce Avenue split with Universal Republic and returned to independent recording on 3 Peace.  The label signed its second act, recording artist Hannah Trigwell, on October 14, 2012.
+
+Bearsville Records: Bearsville Records was founded in 1970 by Albert Grossman.  Artists included Todd Rundgren, Elizabeth Barraclough, Foghat, Halfnelson/Sparks, Bobby Charles, Randy VanWarmer, Paul Butterfield's Better Days, Lazarus, Jesse Winchester, and NRBQ.  The label closed in 1984, two years before Grossman's death.
+
+Breaking Benjamin discography: American rock band Breaking Benjamin has released five studio albums, one compilation album, three extended plays, sixteen singles and ten music videos.  The group has sold over 7 million units in the United States alone, with three platinum records, two gold records, two multi-platinum singles, two platinum singles, and five gold singles as designated by the RIAA.  The band signed with Hollywood Records in 2002 following the success of their independently-released eponymous EP, and began recording their first full-length major-label debut "Saturate" shortly thereafter.  The record peaked at No. 2 on the "Billboard" Heatseekers chart and No. 136 on the "Billboard" 200 chart.  It was certified gold more than thirteen years later.  The band's sophomore effort, "We Are Not Alone", released in 2004, peaked at No. 20 on the "Billboard" 200, and was later certified platinum in the United States and gold in New Zealand.  Breaking Benjamin's third studio album "Phobia" was released in 2006 and reached No. 2 on the "Billboard" 200 chart, No. 1 on the Digital Albums chart, No. 1 on the Rock Albums chart, and was certified platinum nearly three years after its release.  Breaking Benjamin released their fourth record in late 2009 titled "Dear Agony", reaching No. 1 on the Hard Rock Albums and Modern Rock/Alternative Albums charts, No. 2 on the Rock Albums and Digital Albums charts, and No. 4 on the "Billboard" 200.  The record was certified gold three months after its release and was eventually certified platinum seven years later.
+
+Paradise Records: Paradise Records was a U.S. record label started by Leon Russell in 1976.  The company established offices in Los Angeles.  Paradise Records was the second record label company started by Russell.  The first was Shelter Records started by Leon Russell and Denny Cordell that operated from 1969 to 1981.  Shelter Records had offices in both Los Angeles and Tulsa, Russell's home town, where the label sought to promote a "workshop atmosphere" with a recording studio in a converted church, adjoining houses for artists working at the studio, and other facilities.  Russell remained with Shelter until 1976, when he and Cordell fell out.  In a settlement, Cordell then became sole owner of the Shelter Records label and Russell then departed to start his own label, Paradise Records.  Leon Russell had already received five US Gold records under Shelter Records.  Paradise Records had a recording studio in Burbank, California and also made music videos in the recording studio.  Paradise Records was learning place for members of Concrete Blonde and Steve Ripley, both later started the country retro group, "The Tractors."  Leon also took the First Church of God at Third and Trenton in Tulsa and transformed it into The Church Studio.  Church Studio still stands and is now home of Steve Ripley and The Tractors.  Paradise Records are currently made and distributed by Warner Bros.  Records.
+
+Mavin Records: Mavin Records (also known as the Supreme Mavin Dynasty) is a revamped Nigerian-based record label founded by recording artist and record producer Don Jazzy on May 8, 2012.  The label's inception came to fruition following the closure of Mo' Hits Records, a record label owned by the aforementioned producer and D'banj.  The label is home to recording artists such as Tiwa Savage, Iyanya, Dr SID, D'Prince, Di'Ja, Reekado Banks, Korede Bello, Johnny Drille, Poe, and the DNA Twins.  The label also houses a roster of producers such as Jazzy himself, Altims and Baby Fresh.  In 2014, DJ Big N became the label's official disc jockey.  Wande Coal was formerly signed to the label.  On May 8, 2012, the label released a compilation album titled "Solar Plexus".
+
+Peacefrog Records: Peacefrog Records is an independent record label based in London, United Kingdom.  The label produces releases in many different styles of electronic music, as well as branching out into folk and indie artists such as José González, Nouvelle Vague and Little Dragon.  The label was started by Pete Hutchison and Paul Ballard in 1991.  After the Lodger 303 E.P., Ballard withdrew from Peacefrog Records.  The record label subsequently released a number of techno records by artists including Luke Slater, Moodymann and Suburban Knight.  The label has built up a following over the years, increased by the mainstream success of José González and has become synonymous for synching many of its recently signed artists music to film and television.  Notable examples of this include the 2006 iconic Sony Bravia "Balls" (Jose Gonzalez) and in 2011, Twinings "Sea" (Charlene Soraia).  Both artists enjoyed top 10 single success as a consequence.  Jose Gonzales LP "Veneer" was certified Platinum in 2006 and Charlene Soraia's "Wherever you will go" certified gold in 2012 with sales in excess of 500,000.  Other artists signed to the label who have enjoyed commercial success include Nouvelle Vague who achieved sales of over 1 million worldwide over the 3 albums recorded for the label.  Peacefrog is also an active and successful music publishing company.
+
+Majique Music: Majique Music is a boutique independent record label founded in 2003 by Ray Vanderby.  The label was first based in Sydney, New South Wales.  In 2006 the office was moved to Melbourne Victoria and since 2008 the label is based in Orange, New South Wales.  The label initially secured distribution through MGM for its first signing, alternative rock band Cosmic Nomads, who released a single called Make Love Not War (Cosmic Nomads album) in 2004.  The single achieved average national radio airplay.  Cosmic Nomads have been signed to the label exclusively since 2004.  In 2005 Ray Vanderby released solo recordings up until today.  In 2008 the blues band Roadhouse Rebels was signed to the label.  The band released an album called "Wanted To Be Alive".
+
+Foghat: Foghat is an English rock band formed in London in 1971.  The band is known for the use of electric slide guitar in their music.  The band has achieved eight gold records, one platinum and one double platinum record, and despite several line-up changes, continues to record and perform.
+
+Neon Gold Records: Neon Gold Records is a New York City-based boutique record label founded in 2008 by Derek Davies and Lizzy Plapinger.
+
+Question: An English rock band formed in London in 1971 that has achieved eight gold records is signed to a record label founded by who?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "band_origin": {
+      "type": "string",
+      "description": "The city and country where the band was formed."
+    },
+    "band_formation_year": {
+      "type": "integer",
+      "description": "The year the band was formed."
+    },
+    "gold_records_achieved_by_band": {
+      "type": "integer",
+      "description": "The number of gold records achieved by the band."
+    },
+    "record_label": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the record label the band was signed to."
+        },
+        "founder": {
+          "type": "string",
+          "description": "The founder of the record label."
+        }
+      },
+      "required": [
+        "name",
+        "founder"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "band_name",
+    "band_origin",
+    "band_formation_year",
+    "gold_records_achieved_by_band",
+    "record_label"
+  ],
+  "additionalProperties": false
+}

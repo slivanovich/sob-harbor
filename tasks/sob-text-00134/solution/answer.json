@@ -1,0 +1,18 @@
+{
+  "films_checked": [
+    {
+      "film_title": "Chernobyl Heart",
+      "won_academy_award": true,
+      "award_category": "Best Documentary Short Subject",
+      "award_year": 2003
+    },
+    {
+      "film_title": "Born into Brothels",
+      "won_academy_award": true,
+      "award_category": "Best Documentary Feature",
+      "award_year": 2004
+    }
+  ],
+  "all_films_won_academy_award": true,
+  "question_answered": true
+}

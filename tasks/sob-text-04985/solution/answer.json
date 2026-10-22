@@ -1,0 +1,13 @@
+{
+  "university_name": "University of Tennessee at Chattanooga",
+  "current_mascot": {
+    "type": "mockingbird",
+    "common_name": "Northern mockingbird",
+    "scientific_species_name": "Mimus polyglottos"
+  },
+  "previous_mascot_details": {
+    "name": "Chief Moccanooga",
+    "replacement_year": 1996,
+    "reason_for_replacement": "potentially offensive at the request of the Chattanooga InterTribal Association"
+  }
+}

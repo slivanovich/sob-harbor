@@ -1,0 +1,13 @@
+{
+  "first_entity": {
+    "name": "Minneapolis–St. Paul Airport Trams",
+    "constructor": "Poma-Otis Transit Company"
+  },
+  "second_entity": {
+    "name": "Minneapolis–Saint Paul International Airport",
+    "other_names": [
+      "Wold–Chamberlain Field"
+    ]
+  },
+  "common_constructor_identified": false
+}

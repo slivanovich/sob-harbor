@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "record_id": "d5a77f12cb284d5909bd620ab8a0b47e5d5ab9f85c96449309d355fa0bda0662",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac526f855429924173fb614",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Hostage",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Robert Roy Pool: Robert Roy Pool (born 1953) is an American screenwriter, best known for his authorship of the motion pictures \"Outbreak\" (1995), starring Dustin Hoffman, and \"The Big Town\" (1987), starring Matt Dillon.  He also received a \"story by\" credit on the motion picture \"Armageddon\" (1998), which starred Bruce Willis and Billy Bob Thornton.  Pool has collaborated with Laurence Dworet, a former emergency room doctor.\n\nA Good Day to Die Hard: A Good Day to Die Hard is a 2013 American action thriller film and the fifth installment in the \"Die Hard\" film series.  The film was directed by John Moore and written by Skip Woods, and stars Bruce Willis as John McClane.  The main plot finds McClane travelling to Russia to get his estranged son, Jack, an undercover CIA agent, out of prison.  He is soon caught in the crossfire of a global terrorist plot.  Alongside Willis, the film also stars Jai Courtney, Cole Hauser, Yuliya Snigir and Sebastian Koch as the film's villain.\n\nJimmy Bennett: James Michael Bennett (born February 9, 1996) is an American actor and musician.  He is known for his roles as a child actor in \"Daddy Day Care\", \"Hostage\", \"Poseidon\", \"Evan Almighty\", \"Orphan\", Shorts, and as young James T. Kirk in the 2009 film \"Star Trek\".  He also starred on the ABC series \"No Ordinary Family\" as JJ Powell, a teenager gifted with vast intelligence after a plane crash.\n\nHostage (2005 film): Hostage is a 2005 American action thriller drama film produced by and starring Bruce Willis and directed by Florent Emilio Siri.  The film was based on a novel by Robert Crais, and was adapted for the screen by Doug Richardson.\n\nMoonlighting (theme song): \"Moonlighting\" is the theme song to the ABC comedy-crime drama of the same name, which ran from 1985 to 1989 and starred Bruce Willis and Cybill Shepherd.  The theme song was performed by Al Jarreau, who wrote the song with Lee Holdridge; it was produced by Nile Rodgers.  Included on the soundtrack album for the series and released as a single in 1987, the song reached number 23 on the \"Billboard\" Hot 100 and spent one week at number one on the Adult Contemporary chart.  In 1988 the song earned two Grammy Award nominations for Best Pop Vocal Performance, Male and for Best Song Written Specifically for a Motion Picture or Television.\n\nMichael Budd: Michael Hamish Budd (born 2 July 1974) is an award winning Australian film Actor, Director and Producer.  He is an active member of the Australian Directors Guild.  And best known for playing Esmael, alongside Henry Cavill (Man of Steel) and Sigourney Weaver in The Cold Light of Day The film also starred Bruce Willis.\n\nFirst Kill (2017 film): First Kill is an American action thriller film directed by Steven C. Miller and written by Nick Gordon.  The film stars Hayden Christensen and Bruce Willis.\n\nLast Man Standing (1996 film): Last Man Standing is a 1996 American action thriller film written and directed by Walter Hill and starring Bruce Willis, Christopher Walken and Bruce Dern.  It is a credited remake of Akira Kurosawa's \"Yojimbo\".\n\nRed (2010 film): Red is a 2010 American action comedy film inspired by the limited comic book series of the same name created by Warren Ellis and Cully Hamner and published by the DC Comics imprint Homage.  The film stars Bruce Willis, Morgan Freeman, John Malkovich, Mary-Louise Parker, Helen Mirren and Karl Urban, with German film director Robert Schwentke directing a screenplay by Jon Hoeber and Erich Hoeber.  In the film version, the title is derived from the designation of former CIA Agent Frank Moses (Bruce Willis), meaning \"Retired, Extremely Dangerous\".\n\nWake (cancelled film): Wake is a cancelled American action thriller film written by Christopher Borrelli.  The film had Ben Kingsley, Piper Perabo, Cameron Monaghan and Ellen Burstyn set to star.  Filming began on February 16, 2015 in Cleveland, which halted on February 26 due to financial issues.  It was then expected to resume production in 2-3 weeks, but it was postponed for an indefinite time after actor Bruce Willis and director John Pogue left the film due to financing and scheduling issues.",
+    "question": "Jimmy Bennett is known for a role in what 2005 American action thriller that was produced by and starred Bruce Willis?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "genre": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The genres of the film."
+        },
+        "bruce_willis_involvement": {
+          "type": "object",
+          "properties": {
+            "starred": {
+              "type": "boolean",
+              "description": "Indicates if Bruce Willis starred in the film."
+            },
+            "produced": {
+              "type": "boolean",
+              "description": "Indicates if Bruce Willis produced the film."
+            }
+          },
+          "required": [
+            "starred",
+            "produced"
+          ],
+          "additionalProperties": false,
+          "description": "Details of Bruce Willis's involvement in the film."
+        },
+        "jimmy_bennett_known_for_role": {
+          "type": "boolean",
+          "description": "Indicates if Jimmy Bennett is known for a role in this film."
+        }
+      },
+      "required": [
+        "film_title",
+        "release_year",
+        "genre",
+        "bruce_willis_involvement",
+        "jimmy_bennett_known_for_role"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "Hostage",
+      "release_year": 2005,
+      "genre": [
+        "action",
+        "thriller",
+        "drama"
+      ],
+      "bruce_willis_involvement": {
+        "starred": true,
+        "produced": true
+      },
+      "jimmy_bennett_known_for_role": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

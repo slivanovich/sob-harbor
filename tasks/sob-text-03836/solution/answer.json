@@ -1,0 +1,13 @@
+{
+  "singer_name": "Neha Kakkar",
+  "reality_show_competition": {
+    "show_name": "Indian Idol",
+    "season": 2,
+    "year_of_competition": 2006
+  },
+  "recorded_song": {
+    "song_title": "Chitta Kukkad",
+    "song_theme": "wedding-themed",
+    "song_language": "Punjabi"
+  }
+}

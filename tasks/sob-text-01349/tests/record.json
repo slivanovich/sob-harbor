@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "record_id": "6505572aeb73bdc25ccc706c50fbd40e226d0fda2568c706780f1e255d5e4d77",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a88e04a5542993b751ca8a0",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Chickamauga Confederate order of battle: The following Confederate States Army units and commanders fought in the Battle of Chickamauga of the American Civil War.  The Union order of battle is listed separately.  Order of battle compiled from the army organization during the campaign.\n\nBattle of Davis's Cross Roads: The Battle of Davis's Cross Roads, also known as the Battle of Dug Gap, was fought September 10–11, 1863, in northwestern Georgia, as part of the Chickamauga Campaign of the American Civil War.  It was more of a series of maneuvers and skirmishes than an actual battle and casualties were negligible.\n\nBattle of Chickamauga: The Battle of Chickamauga, fought on September 18–20, 1863 between Union and Confederate forces in the American Civil War, marked the end of a Union offensive in southeastern Tennessee and northwestern Georgia — the Chickamauga Campaign.  It was the first major battle of the war fought in Georgia, the most significant Union defeat in the Western Theater, and involved the second-highest number of casualties after the Battle of Gettysburg.\n\nGeorgia Sharpshooters: The 1st Battalion Georgia Sharpshooters were authorized by an act in April, 1862 by the Confederate Congress, and were formed in Savannah, Georgia.  The 1st Battalion Sharpshooters served at Fort McAllister defending the coast of Georgia in the Battle of Fort McAllister (1863).  They also saw action at the Battle of Jackson, Mississippi as well as the Battle of Chickamauga, and the Chattanooga Campaign.  As Confederate forces moved south, falling back through Atlanta.  The Sharpshooters fought to the end of the war, their last engagement being at the Battle of Bentonville in March, 1865.\n\n23rd Tennessee Infantry Regiment: The 23rd Regiment, Tennessee Infantry was an infantry regiment from Tennessee that served with the Confederate States Army in the American Civil War.  Notable battles fought in include the Battle of Shiloh and the Battle of Chickamauga.\n\nBattle of Aachen: The Battle of Aachen was a major combat action of World War II, fought by American and German forces in and around Aachen, Germany, between 2–21 October 1944.  The city had been incorporated into the Siegfried Line, the main defensive network on Germany's western border; the Allies had hoped to capture it quickly and advance into the industrialized Ruhr Basin.  Although most of Aachen's civilian population was evacuated before the battle began, much of the city was destroyed and both sides suffered heavy losses.  It was one of the largest urban battles fought by U.S. forces in World War II, and the first city on German soil to be captured by the Allies.  The battle ended with a German surrender, but their tenacious defense significantly disrupted Allied plans for the advance into Germany.\n\n13th Tennessee Infantry Regiment: The 13th Regiment, Tennessee Infantry was an infantry regiment from Tennessee that served with the Confederate States Army in the American Civil War.  Notable battles fought in include the Battle of Shiloh and the Battle of Chickamauga.\n\nChickamauga Union order of battle: The following Union Army units and commanders fought in the Battle of Chickamauga of the American Civil War.  The Confederate order of battle is listed separately.  Order of battle compiled from the army organization during the campaign.\n\n24th Tennessee Infantry Regiment: The 24th Regiment, Tennessee Infantry was an infantry regiment from Tennessee that served with the Confederate States Army in the American Civil War.  Notable battles fought in include the Battle of Shiloh and the Battle of Chickamauga.\n\nChickamauga Campaign: The Chickamauga Campaign of the American Civil War was a series of battles fought in northwestern Georgia from August 21 to September 20, 1863, between the Union Army of the Cumberland and Confederate Army of Tennessee.  The campaign started successfully for Union commander William S. Rosecrans, with the Union army occupying the vital city of Chattanooga and forcing the Confederates to retreat into northern Georgia.  But a Confederate attack at the Battle of Chickamauga forced Rosecrans to retreat back into Chattanooga and allowed the Confederates to lay siege to the Union forces.",
+    "question": "Were both Battle of Chickamauga and Battle of Aachen fought in the same continent?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_comparison": {
+          "type": "string",
+          "description": "The specific comparison being made in the question."
+        },
+        "battle_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the first battle."
+            },
+            "location": {
+              "type": "string",
+              "description": "Geographic location of the first battle."
+            },
+            "continent": {
+              "type": "string",
+              "description": "Continent where the first battle took place."
+            }
+          },
+          "required": [
+            "name",
+            "location",
+            "continent"
+          ],
+          "additionalProperties": false
+        },
+        "battle_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the second battle."
+            },
+            "location": {
+              "type": "string",
+              "description": "Geographic location of the second battle."
+            },
+            "continent": {
+              "type": "string",
+              "description": "Continent where the second battle took place."
+            }
+          },
+          "required": [
+            "name",
+            "location",
+            "continent"
+          ],
+          "additionalProperties": false
+        },
+        "same_continent": {
+          "type": "boolean",
+          "description": "True if both battles were fought on the same continent, false otherwise."
+        }
+      },
+      "required": [
+        "question_comparison",
+        "battle_1",
+        "battle_2",
+        "same_continent"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_comparison": "Were both Battle of Chickamauga and Battle of Aachen fought in the same continent?",
+      "battle_1": {
+        "name": "Battle of Chickamauga",
+        "location": "southeastern Tennessee and northwestern Georgia",
+        "continent": "North America"
+      },
+      "battle_2": {
+        "name": "Battle of Aachen",
+        "location": "Aachen, Germany",
+        "continent": "Europe"
+      },
+      "same_continent": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

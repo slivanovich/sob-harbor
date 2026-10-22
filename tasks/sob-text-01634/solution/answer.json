@@ -1,0 +1,19 @@
+{
+  "earthquake_event_name": "2011 Tōhoku earthquake and tsunami",
+  "magnitude": "9.0–9.1 (M)",
+  "event_type": "undersea megathrust earthquake",
+  "location_description": "off the coast of Japan",
+  "event_date_utc": "2011-03-11",
+  "event_time_utc": "05:46",
+  "epicenter_details": {
+    "distance_from_landmark_km": 70,
+    "landmark_name": "Oshika Peninsula of Tōhoku",
+    "direction_from_landmark": "east of"
+  },
+  "hypocenter_depth_km": 29,
+  "affected_vessel": {
+    "vessel_name": "Kyotoku-maru no. 18",
+    "vessel_type": "fishing trawler",
+    "impact_description": "swept inland during tsunami"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "person_a": {
+    "name": "Eddie Vedder",
+    "birth_date": "December 23, 1964",
+    "birth_year": 1964
+  },
+  "person_b": {
+    "name": "Nam Woo-hyun",
+    "birth_date": "February 8, 1991",
+    "birth_year": 1991
+  },
+  "comparison_result": {
+    "born_first_name": "Eddie Vedder",
+    "born_first_year": 1964,
+    "born_second_name": "Nam Woo-hyun",
+    "born_second_year": 1991
+  }
+}

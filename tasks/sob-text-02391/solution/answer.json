@@ -1,0 +1,14 @@
+{
+  "vehicle": {
+    "name": "Pantanal",
+    "type": "mid-size pickup truck"
+  },
+  "manufacturer": {
+    "name": "Troller Veículos Especiais S/A",
+    "country_of_origin": "Brazil"
+  },
+  "production_period": {
+    "start_year": 2006,
+    "end_year": 2008
+  }
+}

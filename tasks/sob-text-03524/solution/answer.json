@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are Jens Kidman and Nate Ruess both lead vocalists?",
+  "answer": true,
+  "individuals": [
+    {
+      "name": "Jens Kidman",
+      "role_description": "lead vocalist for the Swedish extreme metal band Meshuggah",
+      "is_lead_vocalist": true
+    },
+    {
+      "name": "Nate Ruess",
+      "role_description": "lead singer of the indie pop band Fun. , and previously of The Format",
+      "is_lead_vocalist": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "question_asked": "Were Ted Sharks and Dallas M. Fitzgerald both Japanese directors?",
+  "directors_compared": [
+    {
+      "name": "Ted Sharks",
+      "is_japanese": true,
+      "nationality": "Japanese",
+      "profession": "film director"
+    },
+    {
+      "name": "Dallas M. Fitzgerald",
+      "is_japanese": false,
+      "nationality": "American",
+      "profession": "motion picture director"
+    }
+  ],
+  "both_are_japanese_directors": false
+}

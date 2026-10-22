@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lanacom: Lanacom was a software firm based in Toronto, founded by ex-Delrina executive Tony Davis.  It focused on "push" content software for the Internet.  In early 1997 the firm released a product called "Headliner", a program which automatically collated and delivered content derived from Internet sources.  It offered several different types of interfaces for the end-user: Ticker (news ticker), NewsTitle (just the news titles) and ScreenSaver.
+
+GPS Tuner: GPS Tuner is the name of a software company based in Budapest, Hungary, and of a software product they make.  The software is a tool intended for off-road navigation based on the Global Positioning System (GPS), where it is used to determine position while cycling, hiking, geocaching, boating, flying, driving, and many other outdoor sporting activities.  It can be used by those with a GPS receiver alone, or in a smartphone, Pocket PC, or iPhone.  Recently, the firm released a new version of its navigation software dedicated to electric bicycles named eBike Navigation.  This new version includes a variety of battery management features like display for battery capacity, range, gear, power and battery consumption.  EBike Navigation also offers assistance recommendations for optimizing battery capacity along with a real rage calculation based on terrain elevation and other variable conditions.  In mid-2010, the firm released an iPhone app version of the software that included technology allowing off-road turn-by-turn navigation.
+
+The Firm (hip hop group): The Firm was an American hip hop supergroup that formed in New York City in 1996.  It was created by rapper Nas, his manager Steve Stoute, producer Dr. Dre and production team the Trackmasters.  The group was composed of East Coast-based rappers Nas, Foxy Brown, AZ and also Nature, who served as a replacement for Cormega after he was ousted from the group.
+
+The Firm (soundtrack): The Firm is an album by American pianist Dave Grusin released in 1993, recorded for the GRP label.  This album is a soundtrack to the Motion Picture "The Firm" directed by Sidney Pollack.  It reached No. 131 on "Billboard"'s Contemporary Jazz chart.  This soundtrack was a 1993 Academy Award nominee for Best Original Score.
+
+The Firm (album): The Firm is the first studio album by the British rock band The Firm, released by Atlantic Records on 11 February 1985.  Tracks ranged from the epic "Midnight Moonlight" based on a previously unreleased song by Led Zeppelin called "Swan Song", first tinkered with during the "Physical Graffiti" sessions, to the commercially successful "Radioactive".  "Closer" employs a horn section to subtle effect.  It also includes the Righteous Brothers' hit "You've Lost That Lovin' Feelin'" with the fretless bass sound of Tony Franklin.
+
+Mean Business: Mean Business is the second and final studio album by The Firm, released by Atlantic Records on 3 February 1986.  Repeating the same bluesy formula as on the first album, "The Firm" (1985), "Mean Business" did not achieve the same commercial success.
+
+Foxy Brown (rapper): Inga DeCarlo Fung Marchand (born September 6, 1978), better known by her stage name Foxy Brown, is an American rapper, model, and actress.  She is of mixed Afro-Trinidadian, Indo-Trinidadian and Chinese Trinidadian descent.  She is best known for her solo work, as well as numerous collaborations with other artists and her brief stint as part of hip hop group The Firm.  Raised in Brooklyn, New York, her father Winston Marchand abandoned the family at a young age to pursue his career at ERAC records.  Her albums include "Ill Na Na" in 1996, followed by "Chyna Doll" in 1999, and Grammy-nominated "Broken Silence" in 2001.  She also performed on the 1997 self-titled album by the Firm, the only album to be released by that group to date.  She has held an extensive arrest record and served some time in jail.
+
+Radioactive (The Firm song): "Radioactive" is a song by English rock band The Firm.  It was the first single released from their eponymous début album "The Firm", where it was the fifth track.  It was written by Paul Rodgers.
+
+Firm Biz: "Firm Biz" is the first single by the Hip hop supergroup The Firm from their singular collaborative LP "The Album".  The song was produced by L.E.S, who based the song's track on a sample of Teena Marie's 1981 hit "Square Biz".  "Firm Biz" also features a chorus performed by former En Vogue singer Dawn Robinson, reworked from the "Square Biz" chorus.  AZ raps the first verse of the song, Nas the second, and Foxy Brown the third and final verse.  The song never reached any US chart positions, but was a UK Top 20 hit in 1997.  A remix of the song was released, featuring a verse from Half-A-Mill and a chorus by Mary J. Blige.  The word "feds" is censored in the explicit version, in verse 2, performed by Nas, when he says "Never that though Black .4-4's for feds".
+
+Will Dailey: Will Dailey is an independent American recording artist, performer and producer.  His sound has been described as having a rich vintage vibe while having a firm appreciation of AM rock, pop and big hooks.  He has released albums with Universal, CBS Records, Wheelkick Records and JS Music Group.  Dailey has released four full-length albums since 2004.  His last full-length album, "National Throat", came out on Wheelkick Records, on August 26, 2014.  It directly followed Dailey's choice to split with a major label and use Pledge Music to create his album.  Based out of Boston, he is notable as being a 7 time winner in the Boston Music Award: Best Male Singer-Songwriter in 2006, again on December 2, 2009 and December 2, 2012 and Album of the Year and Artist of the Year December 14, 2014 and Male Vocalist in 2015 and 2016.  The first single, "Sunken Ship", was a finalist in the 2013 International Songwriting Competition, received heavy radio play and received Song of The Year in the New England Music Awards.  The album was released exclusively on vinyl three month prior to official release date.  It premiered on Billboards Heat Seekers chart at #18 and won Album of the Year in the New England Music Awards April 19, 2015 as well.  In 2009 and 2010, Dailey released "Torrent", which involved the artist digitally releasing a burst of new music approximately every three months, and then compiling that material, along with bonus material, as a physical and digital audio package twice a year.  Dailey is also a part of the John Mellencamp and Stephen King musical project Ghost Brothers of Darkland County.
+
+Question: When was the only album by the firm released?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "group_name": {
+      "type": "string",
+      "description": "The name of the musical group."
+    },
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the album was released."
+    },
+    "is_only_album": {
+      "type": "boolean",
+      "description": "Indicates if this was the only album released by the group."
+    }
+  },
+  "required": [
+    "group_name",
+    "album_title",
+    "release_year",
+    "is_only_album"
+  ],
+  "additionalProperties": false
+}

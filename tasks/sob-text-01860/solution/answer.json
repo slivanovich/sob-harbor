@@ -1,0 +1,14 @@
+{
+  "question_entities": [
+    {
+      "name": "Scarling.",
+      "is_music_group": true
+    },
+    {
+      "name": "Archive",
+      "is_music_group": true
+    }
+  ],
+  "all_entities_make_music": true,
+  "reasoning": "Scarling. is described as an 'American noise pop band' that 'released two albums'. Archive is described as a 'musical group' whose 'music spans electronic, trip hop, avant-garde, post-rock and progressive rock' and has 'released ten studio albums'. Both are clearly groups that make music."
+}

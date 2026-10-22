@@ -1,0 +1,14 @@
+{
+  "directors_compared": [
+    {
+      "name": "Mikio Naruse",
+      "birth_year": 1905
+    },
+    {
+      "name": "Ron Underwood",
+      "birth_year": 1953
+    }
+  ],
+  "earliest_born_director_name": "Mikio Naruse",
+  "earliest_birth_year": 1905
+}

@@ -1,0 +1,9 @@
+{
+  "person_a_name": "Mick Jagger",
+  "person_b_name": "Janis Joplin",
+  "shared_occupations": [
+    "singer",
+    "songwriter"
+  ],
+  "number_of_shared_occupations": 2
+}

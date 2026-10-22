@@ -1,0 +1,17 @@
+{
+  "recordings_name": "The Feynman Tapes",
+  "producer_or_recorder": "Ralph Leighton",
+  "subject_of_recordings": "Richard Feynman",
+  "books_based_on_recordings": [
+    {
+      "title": "Surely You're Joking, Mr. Feynman!",
+      "release_year": 1985
+    },
+    {
+      "title": "What Do You Care What Other People Think?"
+    },
+    {
+      "title": "Classic Feynman: All the Adventures of a Curious Character"
+    }
+  ]
+}

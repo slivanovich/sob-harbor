@@ -1,0 +1,10 @@
+{
+  "election_year": 1996,
+  "election_date": "November 5, 1996",
+  "election_type": "gubernatorial",
+  "winner_details": {
+    "name": "Jeanne Shaheen",
+    "role_at_time_of_election": "State Senator",
+    "office_won": "Governor"
+  }
+}

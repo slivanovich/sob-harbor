@@ -1,0 +1,15 @@
+{
+  "player_full_name": "Joseph Paul DiMaggio",
+  "player_position": "center fielder",
+  "hitting_streak_details": {
+    "streak_length_games": 56,
+    "is_current_record": true,
+    "streak_start_date": "May 15, 1941",
+    "streak_end_date": "July 16, 1941"
+  },
+  "brother_details": {
+    "brother_full_name": "Vincent Paul DiMaggio",
+    "brother_position": "center fielder",
+    "played_same_position": true
+  }
+}

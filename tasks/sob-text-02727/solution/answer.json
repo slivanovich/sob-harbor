@@ -1,0 +1,15 @@
+{
+  "company_name": "Bug AS",
+  "city_of_establishment": "Bergen",
+  "number_of_boroughs": 8,
+  "borough_names": [
+    "Arna",
+    "Bergenhus",
+    "Fana",
+    "Fyllingsdalen",
+    "Laksevåg",
+    "Ytrebygda",
+    "Årstad",
+    "Åsane"
+  ]
+}

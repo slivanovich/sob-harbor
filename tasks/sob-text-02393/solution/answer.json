@@ -1,0 +1,13 @@
+{
+  "bowl_game": {
+    "name": "Insight Bowl",
+    "year": 2010,
+    "location": "Tempe, Arizona"
+  },
+  "missouri_tigers_coach": "Gary Pinkel",
+  "opponent_team": {
+    "name": "Iowa Hawkeyes",
+    "conference": "Big Ten Conference"
+  },
+  "missouri_tigers_conference": "Big 12 Conference"
+}

@@ -1,0 +1,15 @@
+{
+  "road_information": {
+    "name": "109 Street",
+    "type": "arterial road"
+  },
+  "landmark_information": {
+    "name": "Kingsway Mall",
+    "type": "shopping centre"
+  },
+  "location": {
+    "city": "Edmonton",
+    "province": "Alberta",
+    "country": "Canada"
+  }
+}

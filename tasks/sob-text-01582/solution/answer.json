@@ -1,0 +1,21 @@
+{
+  "actor_name": "Jason Clarke",
+  "films_involved_in": [
+    {
+      "title": "Serenity",
+      "role_type": "starring",
+      "director": "Steven Knight"
+    },
+    {
+      "title": "White House Down",
+      "role_type": "role",
+      "release_year": 2013
+    },
+    {
+      "title": "Zero Dark Thirty",
+      "role_type": "role",
+      "release_year": 2012
+    }
+  ],
+  "total_matching_films": 3
+}

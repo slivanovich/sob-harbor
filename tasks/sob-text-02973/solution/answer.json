@@ -1,0 +1,13 @@
+{
+  "album_title": "Listen To This, Eddie",
+  "concert_details": {
+    "venue_name": "Los Angeles Forum",
+    "city": "Los Angeles",
+    "state": "California"
+  },
+  "nearby_airport": {
+    "airport_name": "Los Angeles International Airport",
+    "distance_miles": 3,
+    "direction_from_venue": "east"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "poem_title": "Hugh Selwyn Mauberley",
+  "author": "Ezra Pound",
+  "publication_year": 1920,
+  "related_person": {
+    "name": "T.S. Eliot",
+    "event_description": "moved to England",
+    "event_year": 1914,
+    "years_after_event": 6
+  }
+}

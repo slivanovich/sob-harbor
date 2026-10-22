@@ -1,0 +1,12 @@
+{
+  "player_who_played_position": {
+    "name": "Peter Løvenkrands",
+    "nationality": "Danish",
+    "position": "striker"
+  },
+  "related_brother": {
+    "name": "Tommy Løvenkrands",
+    "relationship_to_player": "older brother"
+  },
+  "answer_context": "Peter Løvenkrands is one of two brothers mentioned, and he played mainly as a striker."
+}

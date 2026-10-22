@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "d1cfce293883843ec5ed82e0db3767e9bdaecf3d534aceed60c7e2a1676d0808",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac0bbc8554299012d1db621",
+    "source_dataset": "hotpotqa",
+    "source_answer": "in the American Hockey League",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "1997–98 WCHL season: The 1997-98 West Coast Hockey League season was the third season of the West Coast Hockey League, a North American minor professional league.  Nine teams participated in the regular season, and the San Diego Gulls were the league champions.  In addition to league play, WCHL teams played regular season games against the Russian Superleague team CKA-Amur (now Amur Khabarovsk).\n\n1959–60 EPHL season: The 1959-60 Eastern Professional Hockey League season was the first season of the Eastern Professional Hockey League, a North American minor professional league.  Six teams participated in the regular season, and the Montreal Royals were the league champions.\n\n1960–61 EPHL season: The 1960-61 Eastern Professional Hockey League season was the second season of the Eastern Professional Hockey League, a North American minor professional league.  Six teams participated in the regular season, and the Hull-Ottawa Canadians were the league champions.\n\nSherbrooke Saint-François: The Sherbrooke Saint-François was a minor league professional ice hockey team based in Sherbrooke, Quebec.  The team was part of the minor professional league Ligue Nord-Américaine de Hockey (LNAH).  The Saint-Francois played at the Palais des Sports.\n\nDennis McCauley: Dennis McCauley (born August 15, 1985) is an American professional ice hockey player who is currently playing for the Portland Pirates in the American Hockey League.\n\nBakersfield Oilers: The Bakersfield Oilers was a semi-pro hockey team in the Pacific Southwest Hockey League that played in Bakersfield, California in 1994-95.  The Oilers played out of the 4,100 seat Bakersfield Convention Center.  The Oilers were the predecessor to the Bakersfield Fog of the West Coast Hockey League.  They made the transition along with the Alaska Gold Kings (Fairbanks, Alaska), Anchorage Aces (Anchorage, Alaska), and Fresno Falcons (Fresno, California) to a minor professional league in 1995-96.  The players had college, major junior, junior A and minor pro experience.  Many of the players spent their off season playing roller hockey Roller Hockey International and were living in southern California.\n\n1961–62 EPHL season: The 1961-62 Eastern Professional Hockey League season was the third season of the Eastern Professional Hockey League, a North American minor professional league.  Six teams participated in the regular season, and the Hull-Ottawa Canadians were the league champions.\n\n1998–99 WCHL season: The 1998–99 West Coast Hockey League season was the fourth season of the West Coast Hockey League, a North American minor professional league.  Nine teams began the regular season, although the Tucson Gila Monsters folded after 21 games.  Tucson's unexpected mid-season exit created schedule irregularities, causing some teams to play 70 regular season games while others played 71.\n\n1962–63 EPHL season: The 1962-63 Eastern Professional Hockey League season was the fourth and final season of the Eastern Professional Hockey League, a North American minor professional league.  Four teams participated in the regular season, and the Kingston Frontenacs were the league champions.\n\nPortland Pirates: The Portland Pirates were a minor league professional ice hockey team in the American Hockey League (AHL).  Their home arena was the Cross Insurance Arena in downtown Portland, Maine.  The franchise was previously known as the Baltimore Skipjacks from 1982 to 1993.",
+    "question": "What minor professional league did Dennis McCauley play?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The name of the ice hockey player."
+        },
+        "league_name": {
+          "type": "string",
+          "description": "The name of the minor professional league the player is associated with."
+        },
+        "league_type": {
+          "type": "string",
+          "description": "The type of the league, e.g., 'minor professional'."
+        },
+        "team_name": {
+          "type": "string",
+          "description": "The name of the team the player is currently playing for."
+        }
+      },
+      "required": [
+        "player_name",
+        "league_name",
+        "league_type",
+        "team_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Dennis McCauley",
+      "league_name": "American Hockey League",
+      "league_type": "minor professional",
+      "team_name": "Portland Pirates"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

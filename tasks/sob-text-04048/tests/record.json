@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "c5b6a5194957cd760564fed49383c4b2d7bdfabb2cd6227d3f4710ae778dac16",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8029125542992e7d278e05",
+    "source_dataset": "hotpotqa",
+    "source_answer": "302.6 sqmi",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "63rd Drive–Rego Park (IND Queens Boulevard Line): 63rd Drive–Rego Park is a local station on the IND Queens Boulevard Line of the New York City Subway, consisting of four tracks.  Located at 63rd Drive and Queens Boulevard in the Rego Park neighborhood of Queens, it is served by the R train at all times except nights, when the E train takes over service.  The M train provides additional service here on weekdays except nights.\n\nJewish Museum Munich: The Jewish Museum Munich (Hebrew: המוזיאון היהודי במינכן‎ ‎ ), provides an overview of Munich’s Jewish history and is part of the city's new Jewish Center located at Sankt-Jakobs-Platz in Munich, Germany.  It is situated between the main synagogue Ohel Jakob and the Jewish Community Center which is home to the \"Jewish Community of Munich and Upper Bavaria\" and houses a public elementary school, a kindergarten, a youth center as well as a community auditorium and a kosher restaurant.  The museum was built from 2004 until its inauguration on March 22, 2007 and is run by the city of Munich.\n\nNew York City: The City of New York, often called New York City or simply New York, is the most populous city in the United States.  With an estimated 2016 population of 8,537,673 distributed over a land area of about 302.6 sqmi , New York City is also the most densely populated major city in the United States.  Located at the southern tip of the state of New York, the city is the center of the New York metropolitan area, one of the most populous urban agglomerations in the world.  A global power city, New York City exerts a significant impact upon commerce, finance, media and entertainment, art, fashion, research, technology, education, politics, and sports, its fast pace defining the term \"New York minute\".  Home to the headquarters of the United Nations, New York is an important center for international diplomacy and has been described as the cultural, financial, and media capital of the world.\n\nParkside (LIRR station): Parkside is a former elevated Long Island Rail Road station on the north side of Metropolitan Avenue on the border of the Middle Village, Rego Park, Forest Hills, and Glendale neighborhoods in Queens, New York City.  Opened in 1927, the wooden station was part of the Rockaway Beach Branch and was the northernmost station on the branch before the junction with the Main Line at Rego Park Station and the terminus of the line at Grand Street Station in Elmhurst.  The station was closed in 1962, twelve years after the LIRR had abandoned the Rockaway portions of the line.\n\nEl Centro de Estudios Torat Emet: El Centro de Estudios Judíos “Torat Emet” is a Spanish-language Jewish education and spirituality center for Jews from all over Latin America who live in the New York area of the United States.  The weekly classes and events are held at its synagogue at the Lincoln Park Jewish Center in Yonkers, New York.\n\nRego Park, Queens: Rego Park is a neighborhood in the borough of Queens in New York City.  Rego Park is bordered to the north by Elmhurst and Corona, the east and south by Forest Hills and the west by Middle Village.  Rego Park's boundaries include Queens Boulevard, the Long Island Expressway, Woodhaven Boulevard, and Yellowstone Boulevard.  There is a large Jewish population in the neighborhood, which features high-rise apartment buildings and detached houses, as well as a large commercial zone.\n\nRego Park Jewish Center: The Rego Park Jewish Center (1948) is an Art Deco Streamline Moderne synagogue in the Rego Park neighborhood of Queens, New York City.\n\nRockaway Beach Branch: The Rockaway Beach Branch was a rail line owned and operated by the Long Island Rail Road in Queens, New York City, United States.  The line left the Main Line at Whitepot Junction in Rego Park heading south via Ozone Park and across Jamaica Bay to Hammels in the Rockaways, turning west there to a terminal at Rockaway Park.  Along the way it connected with the Montauk Branch near Glendale, the Atlantic Branch near Woodhaven, and the Far Rockaway Branch at Hammels.\n\nEugene Armbruster: Eugene L. Armbruster (1865–1943) was a New York City photographer, illustrator, writer, and historian born in Baden-Baden, Germany and based in Bushwick, Brooklyn, where he died.  His work includes many buildings, roads, and neighborhoods in area towns such as Amagansett, Astoria, Bridgehampton, Brooklyn, Brooklyn Heights, Bushwick, Coney Island, Corona, East New York, East Hampton, Elmhurst, Flatbush, Flatlands, Flushing, Forest Hills, Gravesend, Hempstead, Jackson Heights, Jamaica, Jericho, Long Island City, Manhattan, Maspeth, Middle Village, Montauk, Oyster Bay, Queens Village, Rego Park, Ridgewood, Rikers Island, South Ozone Park, Southampton, Williamsburg, and Sullivan County.\n\nLincoln Park Jewish Center: The Lincoln Park Jewish Center is a Modern Orthodox synagogue located in 311 Central Park Avenue in Yonkers, New York.",
+    "question": "The Rego Park Jewish Center is in the city with a land area of what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "jewish_center_name": {
+          "type": "string",
+          "description": "The name of the Jewish Center."
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "neighborhood": {
+              "type": "string",
+              "description": "The neighborhood where the Jewish Center is located."
+            },
+            "city": {
+              "type": "string",
+              "description": "The city where the Jewish Center is located."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the city is located."
+            }
+          },
+          "required": [
+            "neighborhood",
+            "city",
+            "state"
+          ],
+          "additionalProperties": false
+        },
+        "city_attributes": {
+          "type": "object",
+          "properties": {
+            "land_area_sqmi": {
+              "type": "number",
+              "description": "The land area of the city in square miles."
+            }
+          },
+          "required": [
+            "land_area_sqmi"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "jewish_center_name",
+        "location",
+        "city_attributes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "jewish_center_name": "Rego Park Jewish Center",
+      "location": {
+        "neighborhood": "Rego Park",
+        "city": "New York City",
+        "state": "New York"
+      },
+      "city_attributes": {
+        "land_area_sqmi": 302.6
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

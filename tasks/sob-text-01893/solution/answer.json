@@ -1,0 +1,14 @@
+{
+  "answer": false,
+  "airports_compared": [
+    {
+      "airport_name": "Piedmont Triad International Airport",
+      "location_state": "North Carolina"
+    },
+    {
+      "airport_name": "LaGuardia Airport",
+      "location_state": "New York"
+    }
+  ],
+  "reasoning": "Piedmont Triad International Airport is located in North Carolina, while LaGuardia Airport is located in New York. Therefore, both are not located in North Carolina."
+}

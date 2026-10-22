@@ -1,0 +1,14 @@
+{
+  "professor": {
+    "name": "Rudolf Peierls",
+    "profession": "physicist",
+    "nationality": "German-born British",
+    "manhattan_project_role": "played a major role in Tube Alloys, Britain's nuclear programme, and the Manhattan Project"
+  },
+  "student": {
+    "name": "Walter Marshall, Baron Marshall of Goring",
+    "field_of_study": "mathematical physics",
+    "university": "Birmingham University"
+  },
+  "relationship_type": "professor_of"
+}

@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "8c921e5c24bdb19ca105fbbdd165f38539c4300c7ca02cb30f0d0588085f84d1",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac020815542990832d3a1f8",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Cosgrove Hall Films.",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Fairwater Films: Fairwater Films is a British animation studio based in Cardiff.\n\nAardman Animations: Aardman Animations, Ltd., also known as Aardman Studios, or simply as Aardman, is a British animation studio based in Bristol.  Aardman is known for films made using stop-motion clay animation techniques, particularly those featuring Plasticine characters Wallace and Gromit.  After some experimental computer animated short films during the late 1990s, beginning with \"Owzat\" (1997), it entered the computer animation market with \"Flushed Away\" (2006).  Aardman films have made $973.2 million worldwide and average $163 million per film.  All of their stop motion films are among the highest-grossing stop-motion films, with their debut, \"Chicken Run\" (2000), being their top-grossing film as well as the highest-grossing stop-motion film of all time.\n\nOscar's Orchestra: Oscar's Orchestra is a British children's animated TV series that ran from 1994 to 1996 comprising a total of three seasons and 39 episodes.  The series was produced by the popular British animation studio Collingwood O'Hare Entertainment (who is also famous for producing other such animated TV series and films as \"Dennis the Menace\", \"Captain Zed and the Zee Zone\", \"The Secret Show\" and \"Rarg\") in association with Warner Music Vision and Europe Images and was originally shown on the BBC as part of their children's block CBBC.  It also aired on the British children's cable networks The Children's Channel (TCC) and Nickleodeon and has broadcast in over more than 100 different countries worldwide such as ARD in Germany, France 2 in France and ABC in Australia.\n\nJohn Lemmon Films: John Lemmon Films is a traditional character animation studio based in Charlotte, North Carolina, United States, and is listed among five “prominent animation houses”.  The company was founded in 1984 by John Lemmon and Mike Rosinski.  Initially the animation studio worked exclusively in clay animation, but has since diversified into stop-motion, 2D animation and Flash animation, as well as web game design.  The company has produced clay animated TV commercials for clients including: Disney, Cartoon Network and Dairy Queen.  The studio has created clay-animated versions of well-known products, including the Coleman lantern, and has produced clay animated spots for Tandy Corporation’s chain of stores called McDuff Electronics and for Cedar Point.\n\nCosgrove Hall Films: Cosgrove Hall Films (also known as Cosgrove Hall Productions) was a British animation studio founded by Brian Cosgrove and Mark Hall; its headquarters was in Chorlton-cum-Hardy, Manchester.  Cosgrove Hall was once a major producer of children's television and animated programmes; Cosgrove Hall's programmes are still seen in over eighty countries.  The company was wound down by its then owner, ITV plc, on 26 October 2009.\n\nDerek Lamb: Derek Reginald Lamb (20 June 1936 – 5 November 2005) was a British animation filmmaker and producer.  While serving as executive producer of the National Film Board of Canada's English Animation Studio from 1976 to 1982, he produced the Oscar-winner \"Special Delivery\", directed by John Weldon and Eunice Macaulay, and produced and scripted Eugene Fedorenko's \"Every Child\".  He also created numerous animated sketches for \"Sesame Street\", sometimes in collaboration with John Canemaker.\n\nCartoon Network Development Studio Europe: Cartoon Network Development Studio Europe is a British animation studio based in London that is owned by Cartoon Network and Turner Broadcasting System Europe, both of which are subsidiaries of Time Warner.  It was founded in early 2007 and is the European equivalent to Cartoon Network Studios, based in Burbank, California.\n\nFantomcat: Fantomcat is an animated series produced by Cosgrove Hall Films.  It was first broadcast in 1995, and was animated after \"Avenger Penguins\" in 1994, by Alfonso Productions, a Spanish animation studio.  It aired largely on Children's ITV.  The series also had a brief run on Pop, on TV3 in New Zealand and on Network Ten in Australia.  It was produced and directed by Ben Turner.\n\nAvenger Penguins: Avenger Penguins is an animated series produced by Cosgrove Hall Films and Thames Television in 1993, filmed by Alfonso Productions, a Spanish-based animation studio also responsible for bringing Cosgrove Hall's show \"Fantomcat\" to life.  It aired largely on Children's ITV and was originally to be called \"Hell's Penguins\", although was renamed in concern to how the religious audience in the US would respond.  It has the distinction of being the last Cosgrove Hall cartoon to be animated using hand painted animation cels, as all 2D animated series from the studio thereafter would use computers for the ink and paint process; with the animation drawings scanned and then digitally coloured.\n\nBolexbrothers: bolexbrothers (alternatively Bolex Brothers) is an independent British animation studio based in Bristol.  The studio specialises in stop motion animation, producing numerous short films and commercials, as well as one stop motion feature film, \"The Secret Adventures of Tom Thumb\" (their second feature, \"The Magic Roundabout\", was computer animated).  Named after the Bolex brand of 16mm cameras once popular with animators, the studio was established in 1991 by animator and former theatrical effects designer Dave Borthwick , and colleague Dave Alex Riddett.",
+    "question": "What is the name of the British animation studio that produced Fantomcat?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "studio_name": {
+          "type": "string",
+          "description": "The name of the animation studio."
+        },
+        "is_british": {
+          "type": "boolean",
+          "description": "Indicates if the studio is British."
+        },
+        "produced_series": {
+          "type": "array",
+          "description": "A list of animated series produced by the studio.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "series_title": {
+                "type": "string",
+                "description": "The title of the animated series."
+              },
+              "production_role": {
+                "type": "string",
+                "description": "The role of the studio in the production of the series (e.g., 'produced')."
+              }
+            },
+            "required": [
+              "series_title",
+              "production_role"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "studio_name",
+        "is_british",
+        "produced_series"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "studio_name": "Cosgrove Hall Films",
+      "is_british": true,
+      "produced_series": [
+        {
+          "series_title": "Fantomcat",
+          "production_role": "produced"
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

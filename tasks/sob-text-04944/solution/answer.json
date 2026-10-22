@@ -1,0 +1,14 @@
+{
+  "are_cities_in_same_province": false,
+  "city_locations": [
+    {
+      "city_name": "Qingzhen",
+      "province_name": "Guizhou"
+    },
+    {
+      "city_name": "Gongzhuling",
+      "province_name": "Jilin"
+    }
+  ],
+  "comparison_summary": "Qingzhen is in Guizhou province, and Gongzhuling is in Jilin province. They are not in the same province."
+}

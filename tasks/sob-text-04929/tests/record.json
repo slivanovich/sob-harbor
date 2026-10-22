@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "35b137a0f080a2d541fad6f63ac73ca30dc1d475d00b77d46741a898b88beb54",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8f1f7a554299458435d58e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Las Vegas Sands",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Palazzo: The Palazzo is a luxury hotel and casino resort located on the Las Vegas Strip in Paradise, Nevada.  It is the tallest completed building in Nevada.  Designed by the Dallas based HKS, Inc., the hotel offers luxury in an Italian Renaissance ambiance.  The hotel and casino are part of a larger complex (operated as one hotel) comprising the adjoining Venetian Resort and Casino and the Sands Convention Center, all of which are owned and operated by the Las Vegas Sands Corporation.\n\nAtlantis Casino Resort Spa: Atlantis Casino Resort Spa (formerly Golden Road Motor Inn, Travelodge, Quality Inn and Clarion) is a hotel and casino located in Reno, Nevada.  It is owned and operated by Monarch Casino & Resort, Inc. (NASDAQ: MCRI ).  The three hotel towers have combined 824 guest rooms and Jacuzzi suites.  The casino floor spans 64,814 sq ft and is one of Reno's most profitable and luxurious properties.  Nearly $150 million has been spent on upgrading the facility.  Atlantis competes directly with Peppermill Hotel Casino for customers.\n\nEldorado Resort Casino: Eldorado Resort Casino is a hotel and casino located in Downtown Reno, Nevada.  It anchors a network of connected hotel-casinos in the downtown Reno core that included Circus Circus Reno and Silver Legacy Reno and are owned and operated by Eldorado Resorts.\n\nWinStar World Casino: WinStar World Casino and Resort is a hotel and casino located near the Oklahoma–Texas state line, 1 mi north of the Red River, at Exit 1 off Interstate 35 and Winstar Boulevard in Thackerville, Oklahoma.  The casino opened as the WinStar Casino in 2004, and was expanded (with a 395-room hotel tower) and renamed the WinStar World Casino in 2009, with its 519000 sqft of casino floor making it the largest casino in the state of Oklahoma.  In August 2013, WinStar Resorts completed a major expansion project, which added a new 1000-room second hotel tower that was divided into two phases; this also added a new casino that is attached to the tower.  As a result of the completion of this expansion, the casino overtook Foxwoods Resort Casino to become the largest casino in the United States based on gaming floor space.  WinStar has over 7,400 electronic games, 46 table poker rooms, 99 total table games, Racer's off-track betting, High Limit Room, keno, and bingo.\n\nGold Coast Hotel and Casino: The Gold Coast Hotel & Casino is a hotel and casino located in Paradise, Nevada.  This locals' casino is owned and operated by Boyd Gaming.  The Gold Coast is located one mile (1.6 km) west of the Las Vegas Strip on West Flamingo Road.  It is located across the street from the Palms Casino Resort and the Rio All Suite Hotel and Casino.\n\nOdawa Casino Resort: Odawa Casino Resort is a Northern Michigan casino resort.  Located in Resort Township near Petoskey, Michigan, the casino opened for business on June 20, 2007.  It is owned and operated by the Little Traverse Bay Bands of Odawa Indians.  The resort replaced Victories Casino in 2007, which had served as the tribe's casino until the new resort was opened.  In addition to gaming, Odawa Casino Resort features multiple restaurants and retail outlets, a concert venue (Ovation Hall), a nightclub (The O Zone Nightclub), and a circular lounge bar in the middle of the gaming floor (Rendezvous).  The resort also includes a AAA Diamond rated Hotel.  Full shuttle transportation is available to all resort guests.  Odawa Casino Resort is open to guests of all ages, however, the casino's gaming floor and the O Zone Nightclub are restricted to those of age 21 and older.  Starting in 2011, the minimum gaming age at Odawa Casino Resort has been approved to be lowered to 19 years old.\n\nThe Venetian Las Vegas: The Venetian Resort Hotel Casino is a five-diamond luxury hotel and casino resort located on the Las Vegas Strip in Paradise, Nevada, United States, on the site of the old Sands Hotel.  Designed by KlingStubbins, the hotel tower contains 36 stories and rises 475 ft .  The Venetian is owned and operated by Las Vegas Sands.  The Venetian also serves as the seat of the corporate headquarters for its parent company.\n\nFantasy Springs Resort Casino: Fantasy Springs Resort Casino is a casino and hotel located south and east of Palm Springs, California near I-10 in Indio, California.  It is owned and operated by Cabazon Band of Mission Indians, a federally recognized tribe.  The hotel has 250 rooms and the casino consists of 2000 slot machines and video poker, 40 tables, and 100000 sqft of special events center space.\n\nTulalip Resort Casino: Tulalip Resort Casino is an Indian casino and resort in Quil Ceda Village, Washington, owned and operated by the Tulalip Tribes of Washington.  It opened in 2004 as Tulalip Casino, and was renamed in late 2007 because of the new hotel, which opened August 15, 2008.  In addition to the AAA Four Diamond award-winning 12-story hotel with 370 rooms and suites, the resort includes 192,000 sqft of gaming space.  The property has 7 restaurants: Tulalip Bay, Blackfish, Cedars Cafe, The Draft Bar and Grill, Journeys East, Eagles Buffet and Canoes Carvery.  The T Spa is the resort's onsite spa and features 14,000 sqft of treatment rooms.  There are also meeting facilities, and the Canoes Cabaret, Orca Ballroom, and Tulalip Amphitheatre for entertainment events.\n\nPalazzo della Questura, Naples: The Palazzo della Questura (Police Headquarters) of Naples, Italy, is a building located on Via Medina and Via Armando Diaz.  ALong Via Medina, it is located adjacent to the tall modern NH Ambassador hotel, and two doors north from the Baroque Palazzo Giordano.  North of the Questura is the contemporary, and equally imposing, Palazzo delle Poste.",
+    "question": "The resort casino located adjacent to The Palazzo is owned and operated by what company?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "main_resort_name": {
+          "type": "string",
+          "description": "The name of the primary resort mentioned in the question."
+        },
+        "adjacent_resort_name": {
+          "type": "string",
+          "description": "The name of the resort casino located adjacent to the main resort."
+        },
+        "relationship_description": {
+          "type": "string",
+          "description": "A description of how the adjacent resort is related to the main resort."
+        },
+        "owner_operator_company": {
+          "type": "string",
+          "description": "The company that owns and operates the adjacent resort casino."
+        }
+      },
+      "required": [
+        "main_resort_name",
+        "adjacent_resort_name",
+        "relationship_description",
+        "owner_operator_company"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "main_resort_name": "The Palazzo",
+      "adjacent_resort_name": "The Venetian Resort and Casino",
+      "relationship_description": "part of a larger complex comprising the adjoining Venetian Resort and Casino",
+      "owner_operator_company": "Las Vegas Sands Corporation"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

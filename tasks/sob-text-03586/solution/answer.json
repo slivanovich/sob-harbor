@@ -1,0 +1,9 @@
+{
+  "plant_genus_name": "Aegopodium",
+  "is_apiaceae_family": true,
+  "native_regions": [
+    "Europe",
+    "western Asia"
+  ],
+  "reasoning": "Aegopodium is described as 'a plant genus of the carrot family Apiaceae native to Europe and western Asia'. Hydrangea is native to 'southern and eastern Asia (...) and the Americas' and is not stated to be in the Apiaceae family."
+}

@@ -1,0 +1,10 @@
+{
+  "song_title": "What's My Name?",
+  "artist": "Rihanna",
+  "album_title": "Loud",
+  "album_number": 5,
+  "chart_performance": {
+    "chart_name": "US Billboard Hot 100",
+    "peak_position": 1
+  }
+}

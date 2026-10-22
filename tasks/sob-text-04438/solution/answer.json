@@ -1,0 +1,15 @@
+{
+  "plantation_owner": {
+    "name": "George Washington",
+    "title": "first President of the United States"
+  },
+  "plantation_details": {
+    "name": "Mount Vernon",
+    "location": "Fairfax County, Virginia"
+  },
+  "worker_details": {
+    "name": "Hercules",
+    "status": "slave",
+    "role": "head cook"
+  }
+}

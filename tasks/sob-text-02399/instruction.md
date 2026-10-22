@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ashan Pillai: Ashan Pillai (born 1969 in Colombo, Sri Lanka) is a British violist.  He was educated as a music and academic scholar at Merchant Taylors School, London and then at the Royal Academy of Music, London, the University of Southern California, Los Angeles and the Juilliard School, New York City.  His principal teachers were John White, Donald McInnes and Karen Tuttle.
+
+Juilliard School: The Juilliard School ( ), informally referred to as Juilliard and located in the Lincoln Center for the Performing Arts on the Upper West Side of Manhattan, New York City, is a performing arts conservatory established in 1905.  The school trains about 850 undergraduate and graduate students in dance, drama, and music.  It is widely regarded as one of the world's leading music schools, with some of the most prestigious arts programs.  In 2016, QS Quacquarelli Symonds ranked it as the world's best institution for Performing Arts in their inaugural global ranking of the discipline.
+
+Tribute (ballet): Tribute is a ballet made by Christopher d'Amboise to music by Johann Sebastian Bach.  The première took place Saturday, June 4, 2005, at the School of American Ballet workshop performance, Juilliard Theater, Lincoln Center for the Performing Arts.  The New York City Ballet première was Sunday, February 4, 2007, at the New York State Theater, also at Lincoln Center.
+
+Cynthia Phelps: Cynthia Phelps (born 1961 in Hollywood, Los Angeles, California) is an American violist whose versatile career involves work as a chamber musician, solo artist, and orchestral musician.  Phelps is currently the Principal Violist of the New York Philharmonic, a position to which she was appointed in 1992.  She is a former faculty member of the Manhattan School of Music and is currently a faculty member at the Juilliard School.  She has appeared as a soloist with numerous orchestras throughout the world including the Minnesota Orchestra, New York Philharmonic, San Diego Symphony, Orquesta Sinfonica de Bilbao, and Hong Kong Philharmonic.  As a chamber musician, Ms. Phelps performs regularly with the Chamber Music Society of Lincoln Center, Bargemusic, the Boston Chamber Music Society, the Chicago Chamber Musicians, La Musica, Seattle Chamber Music Society, and the Bridgehampton Chamber Music Festival.  Phelps has performed with some of the world's greatest musicians including Isaac Stern, Itzhak Perlman, Pinchas Zukerman, Yo-Yo Ma, Lynn Harrell, and Yefim Bronfman, among many others.  She has toured internationally as a member of the Zukerman and Friends Ensemble, appeared with the Guarneri String Quartet, and performed in recital in Paris, Rome, London, and Cardiff, Wales, as well as in Boston, Los Angeles, New York and Washington.  Ms. Phelps is a recipient of the Pro Musicis International Award, and a top prize winner at both the Lionel Tertis International Viola Competition and the Washington International String Competition.  She has recorded for the Marlboro Recording Society, and the Covenant, Nuova Era, Polyvideo, Virgin Classics labels, and most recently Cala Records where her first solo CD was released.  Her appearances on television and radio have included "Live from Lincoln Center" on PBS, National Public Radio, Radio France, and RAI in Italy.
+
+Chapel Hill-Carrboro City Schools: Chapel Hill-Carrboro City Schools (CHCCS) is a school district which educates over twelve thousand students (pre-K through 12th grade) in the southeastern part of Orange County, North Carolina.  Being near three major universities as well as the Research Triangle Park, it serves one of the best educated populations in the United States.  It is the school district for most of Chapel Hill (except the small portion of Chapel Hill that is in Durham County) and all of Carrboro, including schools from elementary through high school.  It is financed through property taxes, including a city supplement, as well as state and federal money.  The administrative center is located at Lincoln Center at 750 South Merritt Mill Road.  Lincoln Center is the site of the former all-black high school.  Services are available for gifted, special needs, and limited English proficiency students.  The District's mission is "to enable all students to acquire, through programs of excellence and fairness, the knowledge, skills, and insights necessary to live rewarding, productive lives in an ever-changing society."  Neil Pedersen served as superintendent of this district from 1992-2011.  Thomas Forcella was superintendent from 2011, until he quit in mid-2016.  Jim Causby is currently serving as Interim Superintendent.
+
+New York Public Library for the Performing Arts: The New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center, at 40 Lincoln Center Plaza, is located in Manhattan, New York City, at the Lincoln Center for the Performing Arts on the Upper West Side, between the Metropolitan Opera House and the Vivian Beaumont Theater.  It houses one of the world's largest collections of materials relating to the performing arts.  It is one of the four research centers of the New York Public Library's Research library system, and it is also one of the branch libraries.
+
+Live from Lincoln Center: Live From Lincoln Center is a seventeen-time Emmy Award-winning series that has broadcast notable Lincoln Center performances on PBS since 1976.  The program, which currently airs between six and nine times per season, is produced by Lincoln Center for the Performing Arts, the world-renowned performing arts nonprofit organization located in New York City.  Episodes of Live From Lincoln Center feature Lincoln Center’s outstanding resident artistic organizations, most notably the New York Philharmonic, the group that represents the greatest percentage of the broadcast’s body of work.  Funding for the series is currently made possible by major grants from the Robert Wood Johnson 1962 Charitable Trust, Thomas H. Lee and Ann Tenenbaum, the Robert and Renee Belfer Family Foundation, the MetLife Foundation, Mercedes T. Bass, and the National Endowment for the Arts.
+
+Gordon Davis: Gordon Jamison Davis, a partner in the New York office of the law firm Venable LLP, was born in Chicago in 1941 and has been a resident of New York City since his graduation from Harvard Law School in 1967.  Mr. Davis has been a prominent leader in New York City's public, civic, and legal affairs for four decades.  He was Mayor Ed Koch’s first commissioner of parks and recreation and is considered one of New York’s most successful parks commissioners.  He was one of the first African Americans to become a partner in a major New York corporate law firm (Lord Day & Lord, 1983).  He is the Founding Chairman of Jazz at Lincoln Center, one of the four Founding Trustees of the Central Park Conservancy, a Founding Member in the first class inducted into the Performing Arts Hall of Fame at Lincoln Center, a Life Trustee of the New York Public Library, an appointee of President Barack Obama to the board of the Kennedy Center for the Performing Arts, and a recipient of an honorary degree (LL.D.)  and the Bicentennial Medal from his alma mater, Williams College.
+
+Vivian Beaumont Theater: The Vivian Beaumont Theater is a theater located in the Lincoln Center for the Performing Arts complex at 150 West 65th Street on the Upper West Side of Manhattan.  It is New York City's only Broadway-class theater (thus making its productions eligible for the Tony Awards) that is "not" located in the Theater District near Times Square.  The building was one of the last structures designed by Finnish-born mid-century architect Eero Saarinen, and is currently the home of Lincoln Center Theater.
+
+Lincoln Center (Oregon): Lincoln Center is a multi-building office complex in Tigard, Oregon, United States.  Opened in 1981, the six-building complex was built over a decade and includes the 12-story Lincoln Tower, the tallest building in Washington County.  Located on S.W. Greenburg Road at Oregon Route 217, Lincoln Center is adjacent to the Washington Square shopping mall in the Portland metropolitan area.
+
+Question: Which school  located in the Lincoln Center did  Ashan Pillain attended 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string",
+      "description": "The name of the student."
+    },
+    "attended_school": {
+      "type": "string",
+      "description": "The name of the school attended by the student."
+    },
+    "school_details": {
+      "type": "object",
+      "properties": {
+        "school_name": {
+          "type": "string",
+          "description": "The name of the school."
+        },
+        "is_located_in_lincoln_center": {
+          "type": "boolean",
+          "description": "Indicates if the school is located in the Lincoln Center for the Performing Arts."
+        },
+        "location_description": {
+          "type": "string",
+          "description": "A description of the school's location, specifically mentioning Lincoln Center."
+        }
+      },
+      "required": [
+        "school_name",
+        "is_located_in_lincoln_center",
+        "location_description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "student_name",
+    "attended_school",
+    "school_details"
+  ],
+  "additionalProperties": false
+}

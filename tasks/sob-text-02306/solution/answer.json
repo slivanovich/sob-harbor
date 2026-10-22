@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "Daron Malakian",
+    "birth_date": "1975-07-18"
+  },
+  "person_2": {
+    "name": "Matthew Tuck",
+    "birth_date": "1980-01-20"
+  },
+  "older_person_name": "Daron Malakian",
+  "age_difference_years": 4
+}

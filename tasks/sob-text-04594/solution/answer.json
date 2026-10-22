@@ -1,0 +1,9 @@
+{
+  "hospital_name": "Children's Hospital",
+  "closure_year": 1948,
+  "patient_transfer_details": {
+    "number_of_patients": 56,
+    "receiving_hospital_initial_name": "Maine General Hospital",
+    "receiving_hospital_current_name": "Maine Medical Center"
+  }
+}

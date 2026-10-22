@@ -1,0 +1,9 @@
+{
+  "animal_breeds_in_question": [
+    "Pont-Audemer Spaniel",
+    "Jämthund"
+  ],
+  "common_animal_type": "dog",
+  "type_confirmation": "Both the Pont-Audemer Spaniel and the Jämthund are breeds of dog.",
+  "is_common_type_identified": true
+}

@@ -1,0 +1,18 @@
+{
+  "question_category": "Biological Classification",
+  "entities_evaluated": [
+    {
+      "entity_name": "Arnica",
+      "is_a_plant": true,
+      "plant_type_description": "genus of perennial, herbaceous plants",
+      "botanical_family": "Asteraceae"
+    },
+    {
+      "entity_name": "Carludovica",
+      "is_a_plant": true,
+      "plant_type_description": "genus in the family Cyclanthaceae",
+      "botanical_family": "Cyclanthaceae"
+    }
+  ],
+  "conclusion": true
+}

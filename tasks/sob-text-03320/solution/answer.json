@@ -1,0 +1,20 @@
+{
+  "tax_law_name": "Irish tax law",
+  "jurisdiction": "Ireland",
+  "key_characteristics": [
+    "does not include transfer pricing rules",
+    "has territorial taxation",
+    "does not levy taxes on income booked in subsidiaries of Irish companies that are outside the state",
+    "includes income tax",
+    "includes value added tax (VAT)",
+    "includes various other taxes"
+  ],
+  "corporate_tax_details": {
+    "standard_rate": 12.5,
+    "taxation_type": "territorial taxation",
+    "transfer_pricing_rules_present": false
+  },
+  "related_tax_strategies": [
+    "double Irish arrangement"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "person_comparison": {
+    "person_1": {
+      "name": "Lajon Witherspoon",
+      "birth_date": "1972-10-03",
+      "birth_year": 1972
+    },
+    "person_2": {
+      "name": "Moon Hee-joon",
+      "birth_date": "1978-03-14",
+      "birth_year": 1978
+    }
+  },
+  "most_recently_born_person_name": "Moon Hee-joon",
+  "most_recent_birth_year": 1978
+}

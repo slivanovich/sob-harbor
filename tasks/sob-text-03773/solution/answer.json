@@ -1,0 +1,14 @@
+{
+  "rebellion_leader_name": "Boudica",
+  "tribe_name": "Iceni",
+  "target_empire": "Roman Empire",
+  "rebellion_years": [
+    60,
+    61
+  ],
+  "provoker": {
+    "name": "Catus Decianus",
+    "role": "procurator",
+    "provocation_factor": "rapacity"
+  }
+}

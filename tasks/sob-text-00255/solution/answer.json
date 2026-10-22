@@ -1,0 +1,16 @@
+{
+  "singer_details": {
+    "name": "Gala",
+    "nationality": "Italian",
+    "role": [
+      "pop singer",
+      "songwriter"
+    ]
+  },
+  "debut_album": "Come Into My Life",
+  "associated_song": {
+    "title": "Come into My Life",
+    "release_year": 1997,
+    "is_debut_album_single": true
+  }
+}

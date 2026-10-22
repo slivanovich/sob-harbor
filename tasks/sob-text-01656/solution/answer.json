@@ -1,0 +1,15 @@
+{
+  "film_title": "Brooklyn",
+  "producer": {
+    "name": "Amanda Posey",
+    "relationship_to_nick_hornby": "wife"
+  },
+  "release_year": 2015,
+  "main_actors": [
+    "Saoirse Ronan",
+    "Emory Cohen",
+    "Domhnall Gleeson",
+    "Jim Broadbent",
+    "Julie Walters"
+  ]
+}

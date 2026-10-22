@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Toy Story 3: Toy Story 3 is a 2010 American 3D computer-animated comedy-drama film produced by Pixar Animation Studios for Walt Disney Pictures.  It is the third installment in Pixar's "Toy Story" series, and the sequel to 1999's "Toy Story 2".  It was directed by Lee Unkrich, the editor of the first two films and the co-director of "Toy Story 2", written by Michael Arndt, while Unkrich wrote the story along with John Lasseter and Andrew Stanton, respectively director and co-writer of the first two films.  The plot focuses on the toys Woody, Buzz Lightyear, and their friends dealing with an uncertain future as their owner, Andy, prepares to leave for college.  The film features an ensemble voice cast with Tom Hanks, Tim Allen, Joan Cusack, Don Rickles, Wallace Shawn, John Ratzenberger, Estelle Harris, Jodi Benson, and John Morris reprising their roles from the previous films, along with Blake Clark as the voice of Slinky Dog (because Jim Varney died ten years before the release of the film) and Ned Beatty, Michael Keaton, Whoopi Goldberg, Timothy Dalton, Kristen Schaal, Bonnie Hunt, and Jeff Garlin voicing the new characters introduced in this film.
+
+Bud Luckey: William "Bud" Luckey (born July 28, 1934) is an American animator, cartoonist, singer, musician, designer, composer, artist and voice actor.  He is best known for his work at Pixar as a character designer for "Toy Story", "Boundin'", "Toy Story 2", "A Bug's Life", "Monsters, Inc.", "Finding Nemo", "Cars", "The Incredibles", "Ratatouille" and "Toy Story 3".  As a voice for animated characters Luckey is known as the voice of Rick Dicker in "The Incredibles", Chuckles the Clown in "Toy Story 3" and "Toy Story 4" and as the "Winnie the Pooh" character Eeyore from A. A. Milne's classic children's book series "Winnie-the-Pooh".
+
+Jessie (Toy Story): Jessie The Yodeling Cowgirl is a fictional character from the films "Toy Story 2" and "Toy Story 3".  At Christmas in 1999, the "Wall Street Journal" called Jessie toys among the hottest of the season.  In the movie, she is a very rare toy modeled after a character on the fictional television show "Woody's Roundup", where the characters included Sheriff Woody, Jessie, Stinky Pete the Prospector and Bullseye, Woody's horse.  Her hair is formed in a ponytail braid tied with a bow.
+
+Toy Story 2: Buzz Lightyear to the Rescue: Toy Story 2: Buzz Lightyear to the Rescue (also known as Disney Pixar's Action Game: Toy Story 2) is a platform game based on Pixar's computer animated movie "Toy Story 2" and is the sequel to the first "Toy Story" video game.  It was released for the Nintendo 64, PlayStation, Dreamcast, and Microsoft Windows in 1999 and 2000.  A different version of the game, titled "Toy Story 2", was released for the Game Boy Color on November 22, 1999.  A sequel to the game was released 11 years later based on "Toy Story 3".  It would be re-released as PSOne Classic for PlayStation 3, PlayStation Vita and PlayStation Portable.
+
+Partysaurus Rex: Toy Story Toons: Partysaurus Rex is a 2012 Pixar computer animated short film directed by Mark Walsh.  It was first screened in theaters ahead of the 3-D theatrical re-release of "Finding Nemo".  "Partysaurus Rex" is the third short in the "Toy Story Toons" series, based on the characters from the "Toy Story" feature films.  The short involves Rex getting left in the bathroom and making friends with bath toys.  It is one of the final roles of Don Rickles as Mr. Potato Head, before his passing in 2017, followed by "Toy Story of Terror! ", "Toy Story That Time Forgot" and "Toy Story 4".
+
+Toy Story of Terror!: Toy Story of Terror!  is a 21-minute Halloween television special, based on the Disney Pixar "Toy Story" movies.  It is set shortly after the events of "Toy Story 3" and "Toy Story Toons", and premiered on the American television network ABC on Wednesday, October 16, 2013.  It was written and directed by Angus MacLane, produced by Galyn Susman, with Tom Hanks, Tim Allen, Joan Cusack, Don Rickles, Wallace Shawn, Timothy Dalton, and Kristen Schaal reprising their roles of Woody, Buzz Lightyear, Jessie, Mr. Potato Head, Rex, Mr. Pricklepants, and Trixie with Carl Weathers as Combat Carl and Stephen Tobolowsky as the motel manager.  Michael Giacchino composed the music for the special.  The film's soundtrack was released on October 15, 2013, on Amazon.com and iTunes in digital format.
+
+Toy Story That Time Forgot: Toy Story That Time Forgot is a Christmas-themed 22-minute television special that aired on ABC on Tuesday, December 2, 2014.  It was written and directed by Steve Purcell and produced by Galyn Susman.  Michael Giacchino composed the music for the special.  Most of the regular cast from the "Toy Story" series reprised their roles, including Tom Hanks as Woody, Tim Allen as Buzz Lightyear, Kristen Schaal as Trixie, Wallace Shawn as Rex, Timothy Dalton as Mr. Pricklepants, Don Rickles as Mr. Potato Head, and Joan Cusack as Jessie, with Kevin McKidd and Emma Hudak joining as new characters Reptillus Maximus and Angel Kitty, respectively.  It was Don Rickles' final role before his death in April 2017.  The film was generally well received and even got a rare 100% rating on Rotten Tomatoes.
+
+Joan Cusack: Joan Cusack ( , born October 11, 1962) is an American actress.  She received Academy Award nominations for Best Supporting Actress for her roles in the romantic comedy-drama "Working Girl" (1988) and the romantic comedy "In & Out" (1997), as well as one Golden Globe nomination for her performance in the latter.  She is also known as the voice of Jessie in the "Toy Story" franchise.
+
+Toy Story 2: Toy Story 2 is a 1999 American computer-animated comedy film produced by Pixar Animation Studios for Walt Disney Pictures.  Directed by John Lasseter and co-directed by Lee Unkrich and Ash Brannon, it is the sequel to 1995's "Toy Story".  In the film, Woody is stolen by a toy collector, prompting Buzz Lightyear and his friends to vow to rescue him, but Woody is then tempted by the idea of immortality in a museum.  Many of the original characters and voices from "Toy Story" return for this sequel, and several new characters—including Jessie (voiced by Joan Cusack), Barbie (voiced by Jodi Benson), Stinky Pete (voiced by Kelsey Grammer) and Mrs. Potato Head (voiced by Estelle Harris)—are introduced.
+
+Toy Story Land: Toy Story" Land (known as Toy Story" Playland at Walt Disney Studios Park) is a themed land at Walt Disney Studios Park, Hong Kong Disneyland, and soon-to-be at Disney's Hollywood Studios and Shanghai Disneyland Park.  The area is based on the Disney·Pixar film series, "Toy Story".  In France, it is part of Toon Studio and opened on August 17, 2010 at a cost of 79 million euros.  In Hong Kong, "Toy Story" Land opened on November 18, 2011.  A version of "Toy Story" Land for Disney's Hollywood Studios was announced on August 15, 2015 at the D23 Expo.
+
+Question: What Toy Story character is voiced by Joan Cusack?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "character_name": {
+      "type": "string",
+      "description": "The name of the Toy Story character."
+    },
+    "voice_actor_name": {
+      "type": "string",
+      "description": "The name of the actor who voices the character."
+    },
+    "character_details": {
+      "type": "object",
+      "properties": {
+        "character_type": {
+          "type": "string",
+          "description": "The type or description of the character."
+        },
+        "first_film_appearance": {
+          "type": "string",
+          "description": "The title of the first film in which the character appeared."
+        }
+      },
+      "required": [
+        "character_type",
+        "first_film_appearance"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "character_name",
+    "voice_actor_name",
+    "character_details"
+  ],
+  "additionalProperties": false
+}

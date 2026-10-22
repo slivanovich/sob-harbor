@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Dry (group): Dry is a Cantopop music duo that formed between 1997 and 1998 with Mark Lui () and Stephen Fung () as bandmates.  The group was formed when Mark decided to create a band with himself and another person.  After meeting Stephen through friends introductions, they agreed to start a music duo with Universal Music.  A year after they formed, they decided to part ways to pursue different career paths.  Mark continued as songwriter to many cantopop artists such as Leon Lai and Miriam Yeung.  While Stephen started his career in acting and later shift toward to directing and producing Hong Kong films such as Enter the Phoenix.
+
+Bahubuthayo: Bahubuthayo (also spelled Bahu boothayo; Sinhalese: "බහුබූතයෝ" ) is a 2001 Sinhala comedy mystery film written and directed by Udayakantha Warnasuriya, and co-produced by the director himself with Deepa Fernando for Fun Flower Films.  The film features Paboda Sandeepani, Mahendra Perera and Rodney Warnakula in the leading roles while Vijaya Nandasiri, Richerd Manamudali, Srinath Maddumage, and Quintus Weerakoon in supporting roles.  Music composed by Ananda Perera.  The film is the prequel in 2015 Gindari film.  Produced by EAP circuit cinemas, showed more than 50 theatres.  It released on 8 August 2001 and was a commercial hit in Sri Lankan film history in that year, which induced the director to make its sequels.  The film was shot at locations around Colombo.
+
+Grand Masti: Grand Masti (English: "Grand Fun") also referred to as Masti 2 is a Bollywood sex-comedy film directed by Indra Kumar and produced by Ashok Thakeria.  The film is a sequel to the 2004 film "Masti", and the second installment of "Masti film series".  It features Riteish Deshmukh, Vivek Oberoi and Aftab Shivdasani reprising their roles from the original, yet the film does not continue and is a new installment.  The film also stars Bruna Abdullah, Karishma Tanna, Sonalee Kulkarni, Kainaat Arora, Maryam Zakaria and Manjari Fadnis.  "Grand Masti" released on 13 September 2013.
+
+Kung Phooey: Kung Phooey is an independent film, directed and produced by Darryl Fong.  In addition he also co-stars in the movie with Michael Chow and Colman Domingo.  The movie is about a monk who tries to find a mysterious lost "Fountain of Youth" (a magic peach).  He travels to British Columbia (actually filmed in San Francisco, poking fun at movies like "Rumble in the Bronx" that disguise BC locations to look like US cities), and, with a new band of friends, tries to retrieve the stolen artifact.  The parody comes into play here with many jokes making fun of old Kung fu movies, for instance joking about how all the bad guys make "Hi-yah! " sounds.
+
+The Good Girl (2004 film): The Good Girl is a 2004 Spanish independent pornographic short film directed by Erika Lust and produced by Lust Films.  The story is a traditional "pizza delivery guy" cliché, but takes place from a female perspective.  The film also does not take itself too seriously by making fun of typical porn clichés.  The duration of the film is 21 minutes.  "The Good Girl" was nominated for best short film of the year at the International Erotic Film Festival of Barcelona (FICEB 2005).  A Digg poster claimed that it was first porn film under a Creative Commons license when its internet version was released in 2006.  LustFilm stopped distributing it for free in 2007 when it became part of a movie named "Cinco historias para ellas" ("Five Hot Stories for Her"), though the original clip distributed under a Creative Commons Attribution-NonCommercial-NoDerivs 2.5 License can be still downloaded from other places.
+
+Stephen Fung: Fung Tak-lun born 9 August 1974, known professionally as Stephen Fung (), is a Hong Kong actor, singer, writer, and film director.
+
+Man with a Plan: Man With A Plan is an independently produced satire released in 1996, starring dairy farmer and actor Fred Tuttle as himself in a fictional story that finds him running for the U.S. House of Representatives.  Since its release, it has remained a local cult classic in Vermont.  Many details of the film can be read as poking fun at certain public figures and groups in Vermont; for example, Fred describes himself as being affiliated with the "Regressive Party," a clear reference to the Vermont Progressive Party.  The fictional incumbent Representative William Blachly also bears a definite resemblance to Vermont Senator Patrick Leahy.  Parts of the film also seem to satirize American politics, in ways that the voice-over narration makes explicit—for example, it is made very clear at the beginning of the film that Fred's main reason in running for office is that he lacks the skills, strength, and education for any other job that would be lucrative enough to pay his father's costly medical bills.  It is also made obvious during the campaign section of the film that Fred's victory is entirely the result of his charisma and charm, rather than of any amount of political savvy or wisdom.
+
+Sandade Sandadi: Sandade Sandadi (English: "Fun and Fun") is a 2002 Telugu Comedy film, produced by Adityaram on Adityaram Movies banner and directed by Muppalaneni Shiva.  Starring Jagapathi Babu, Rajendra Prasad, Sivaji, Urvasi, Raasi, Sanghavi in the lead roles and music composed by Koti.  The film recorded as "Super Hit" at the box office.  The film was a remake of Kannada film "Kothigalu Saar Kothigalu" (2001) which was also remade in Hindi as "Shaadi No. 1" (2005).
+
+Jalsa (2016 film): Jalsa (English: "Fun") is an upcoming Marathi comedy film directed by Ashutosh Raj.  The film stars Bharat Ganeshpure, Sagar Karande, Abhijit Chavan, Ashutosh Raj, Nikhil Wairagar, Girija Joshi and Shital Ahirrao in pivotal roles.  Story of the film is written by Ashutosh Raj and Abhiram Bhadkamkar.  The film is produced by Studio 9 Entertainment and Ashutosh Raj.  In this film, Mansi Naik will be seen performing on song "Bai Vadyavar Ya" as tribute to legendary Marathi actor Nilu Phule.  This song is composed by Sameer Saptiskar, choreographed by Rajesh Bidve and sung by Anand Shinde.
+
+Lisa Rose Apramian: Lisa Rose Apramian (Armenian: Լիզա րոզ Աբրամիյան ; also known as Dr. Lisa) is an Armenian-American author and director.  She is most known for the documentary she wrote, directed, produced "Not Bad for a Girl".  The film was executive produced by Tina Silvey, co-produced by Courtney Love, Kurt Cobain, and Kyle C. Kyle (former drummer for Venus and the Razorblades and the Motels).  The film focused on the women in rock, creativity and gender performance.  It included grunge and women's rock movements such as Rock for Choice with Feminist Majority, the riot grrrl scene and musicians including artists such as L7, Babes in Toyland, Hole and the Lunachicks.  Joan Jett is also interviewed.  Apramian studied at the University of Southern California where she received a B.S. in psychology and a B.S. in Critical Gender Studies, a M.S. and Ph.D in Counseling Psychology and phenomenology.  She currently facilitates workshops, teaches courses and conducts research.  She occasionally engages in theatrical coaching.  Two of her clients ), Renee Humphrey and Alicia Witt, were awarded Jury Awards for best acting Sundance Film Festival, in Rafael Zelinsky's movie, "Fun".
+
+Question: What is an example of a film that was directed and produced by Fun Tak-lun?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The professional name of the person."
+    },
+    "person_full_name": {
+      "type": "string",
+      "description": "The full birth name of the person."
+    },
+    "role": {
+      "type": "string",
+      "description": "The role of the person in the film."
+    },
+    "film_details": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "film_genre": {
+          "type": "string",
+          "description": "The genre or type of the film."
+        }
+      },
+      "required": [
+        "film_title",
+        "film_genre"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "person_full_name",
+    "role",
+    "film_details"
+  ],
+  "additionalProperties": false
+}

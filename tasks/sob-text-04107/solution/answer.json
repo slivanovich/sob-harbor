@@ -1,0 +1,11 @@
+{
+  "person_name": "Thomas James",
+  "organization_name": "American Missionary Association",
+  "organization_acronym": "AMA",
+  "organization_details": {
+    "founding_date": "September 3, 1846",
+    "founding_location": "Albany, New York",
+    "type": "Protestant-based abolitionist group"
+  },
+  "person_role_in_organization": "served with"
+}

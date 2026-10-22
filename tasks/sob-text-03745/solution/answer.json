@@ -1,0 +1,16 @@
+{
+  "answer_is_yes": true,
+  "magazines_analyzed": [
+    {
+      "magazine_name": "Viva",
+      "is_for_women": true,
+      "contextual_description": "adult woman's magazine"
+    },
+    {
+      "magazine_name": "Off our backs",
+      "is_for_women": true,
+      "contextual_description": "American radical feminist periodical"
+    }
+  ],
+  "total_magazines_for_women": 2
+}

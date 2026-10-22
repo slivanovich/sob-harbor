@@ -1,0 +1,6 @@
+{
+  "effect_name": "Backmasking",
+  "effect_category": "Reverse tape effect",
+  "media_reversed": "magnetic tape",
+  "is_deliberate_process": true
+}

@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Staffan Scheja: Bo Staffan Scheja (born 25 April 1950) is a Swedish pianist and professor.  Scheja started studying piano at the age of nine and made his concert debut at the age of 14 with the Sveriges Radios symfoniorkester.  He also performed with the Royal Stockholm Philharmonic Orchestra.  He studied at the Royal College of Music in Stockholm 1964–1969 and 1969–1972 at the Juilliard School in New York with pianists Rosina Lhévinne, Ilona Kabos and Ania Dorfmann.  In 1975, he was the awardee at the international Ferruccio Busoni International Piano Competition in Bolzano.  For a number of years he lived in the US and performed in concerts at Carnegie Hall and at several head of state visits by Swedish dignitaries to the US.
+
+Sa Chen: Sa Chen () (born 1979 in Chongqing, China) is a Chinese pianist.  She won first prize in the 1994 China International Piano Competition, fourth place in the 2000 International Frederick Chopin Piano Competition, a prize in the Leeds International Piano Competition and was third in the 2005 Van Cliburn International Piano Competition.
+
+Balázs Fülei: Balázs Fülei was born in Kecskemét, Hungary 1984.  He started to learn music at the age of eight, his first teacher was Katonáné Szabó Judit.  In the Bartók Conservatory, Budapest, his professors were Gábor Eckhardt and Balázs Réti, then he made his diploma with honours at the Franz Liszt Academy of Music, Budapest, 2008 in György Nádor, Márta Gulyás and Balázs Réti’s class.  Balázs Fülei was an active participant in prof. Amadeus Webersinke, Florent Boffard, Ferenc Rados, Gábor Csalog, Norma Fischer, Zoltán Kocsis, Bertrand Ott, Jan Marisse Huizing, Jan Wijn, Boris Berman and György Kurtág's piano and chamber music courses.  Balázs Fülei is living an active musical life as a concert pianist, he gave several concerts almost in every country in Europe, in China, Japan, Australia and in the United States.  He was an artist of the International Miami Piano Festival, and the Ferruccio Busoni Festival.  He won the 1st prize on the 10th Hungarian National Piano Competition, and in the Andor Földes Piano Competition of Liszt Academy of Music in 2003.  He was the winner of the 43.  "Arcangelo Speranza" International Piano Competition in Taranto Italy, May 2005, 3rd prize winner of the 25.  International Piano Competition „Ettore Pozzoli” in Milan-Seregno in 2007.  In 2007 Balázs Fülei got a special prize in the 13.  International Tchaikovsky Competition in Moscow.  He was selected twice to the New Masters On Tour by The International Holland Music Sessions in The Netherlands and played in 2007 in the Concertgebouw, Diligentia Den Haag and other capitals in Europe.  He performed in a DVD recording in May 2006 in Tokyo, Japan with the ballades of Chopin and Liszt, then made his New York debut in Carnegie Hall, 2008.  Balázs Fülei plays chamber and contemporary music many times, he played world prémieres of Hungarian composers.  He is an artist of the Starlet Music Management.
+
+Marioara Trifan: Trifan was born in Los Angeles and grew up in New Jersey.  She studied at the Curtis Institute of Music, Philadelphia, and at the Juilliard School, New York, where she received Bachelor's and Master's degrees.  She won prizes at several international piano competitions, such as Ferruccio Busoni International Piano Competition (1971), Paloma O'Shea International Piano Competition (1975), Clara Haskil International Piano Competition (1981), Sydney International Piano Competition (1977), Santander International Piano Competition (1975), Premio Jaén (1973), Concorso Internazionale Dino Ciani in Milan (1975).
+
+José Carlos Cocarelli: José Carlos Cocarelli (born 17 March 1959) is a Brazilian classical pianist resident in France.  Born in Rio de Janeiro, he was a pupil of Adele Marcus and Merces de Silva Telles.  He won the Ferruccio Busoni International Piano Competition in 1985 and the Concours Long-Thibaud in 1986.
+
+Leonard Hokanson: Leonard Hokanson (August 13, 1931 – March 21, 2003) was an American pianist who achieved prominence in Europe as a soloist and chamber musician.  Born in Vinalhaven, Maine, he attended Clark University in Worcester, Massachusetts and Bennington College in Vermont, where he received a master of arts degree with a major in music.  He made his concert debut with the Philadelphia Orchestra at the age of eighteen.  Drafted into the U.S. Army after graduate school, he was posted to Augsburg, Germany.  He achieved early recognition as a performer in Europe, serving as a soloist with such orchestras as the Berlin Philharmonic, the Rotterdam Philharmonic, and the Vienna Symphony.  He was awarded the Steinway Prize of Boston and was a prizewinner at the Busoni International Piano Competition in Bolzano, Italy.  His numerous international music festival appearances included Aldeburgh, Berlin, Echternach, Lucerne, Prague, Ravinia, Salzburg, Schleswig-Holstein, Tanglewood, and Vienna.
+
+Zhang Zuo (Zee Zee): Zhang Zuo (Chinese: 左章; pinyin: Zuǒ Zhāng, born 10 October 1988), also known by the name “Zee Zee”, is a Chinese pianist, who has won first prize awards at the 1st International Piano Competition in China, the Gina Bachauer International Artists Piano Competition in the United States, the Krainev International Piano Competition in Ukraine, and the Juilliard's 32nd annual William Petschek Piano Recital Award.
+
+Ferruccio Busoni International Piano Competition: The Ferruccio Busoni International Piano Competition is a music competition for young pianists that takes place in Bolzano, Italy.
+
+Bolzano: Bolzano ( ; ] ,    or ] ; German: "Bozen" (formerly "Botzen"), ] ; Ladin: "Balsan" or "Bulsan"; Latin: "Bauzanum" ) is the capital city of the province of South Tyrol in northern Italy.  With a population of 105,713 (2013), Bolzano is also by far the largest city in South Tyrol.
+
+Cleveland International Piano Competition: The Cleveland International Piano Competition takes place biennially in Cleveland, Ohio.  The initial Competition in 1975 and the nine others that followed were sponsored jointly by the Robert Casadesus Society and the Cleveland Institute of Music to honor the memory of French pianist Robert Casadesus.  As a result, the Competition was then called the Casadesus International Piano Competition.  In 1994, a new organization was formed: the Piano International Association of Northern Ohio (PIANO).
+
+Question: What is the population of the city in which Staffan Scheja was the awardee at the international Ferruccio Busoni International Piano Competition in 1975?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "pianist_name": {
+      "type": "string",
+      "description": "The name of the pianist."
+    },
+    "competition_name": {
+      "type": "string",
+      "description": "The name of the international piano competition."
+    },
+    "competition_year": {
+      "type": "integer",
+      "description": "The year the pianist was awarded at the competition."
+    },
+    "award_city": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the city where the competition took place."
+        },
+        "population": {
+          "type": "integer",
+          "description": "The population of the city."
+        }
+      },
+      "required": [
+        "name",
+        "population"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "pianist_name",
+    "competition_name",
+    "competition_year",
+    "award_city"
+  ],
+  "additionalProperties": false
+}

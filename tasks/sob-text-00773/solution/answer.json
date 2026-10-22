@@ -1,0 +1,16 @@
+{
+  "person_name": "Phil Ruffin",
+  "residence_city": "Las Vegas",
+  "business_interests": [
+    "casinos",
+    "greyhound racing tracks",
+    "oil production",
+    "convenience stores",
+    "real estate"
+  ],
+  "greyhound_track_details": {
+    "track_name": "Wichita Greyhound Park",
+    "track_location_city": "Wichita",
+    "track_closure_year": 2007
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "comparison_groups": [
+    {
+      "group_name": "Verticordia",
+      "species_count": 101,
+      "count_description": "more than 100 species"
+    },
+    {
+      "group_name": "Ericaceae",
+      "species_count": 4250,
+      "count_description": "c. 4250 known species"
+    }
+  ],
+  "group_with_more_species": "Ericaceae",
+  "comparison_result": "Ericaceae contains more species than Verticordia."
+}

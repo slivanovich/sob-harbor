@@ -1,0 +1,13 @@
+{
+  "university_name": "Bethune–Cookman University",
+  "university_attributes": [
+    "private",
+    "co-ed",
+    "historically black"
+  ],
+  "location": {
+    "city": "Daytona Beach",
+    "state": "Florida",
+    "country": "United States"
+  }
+}

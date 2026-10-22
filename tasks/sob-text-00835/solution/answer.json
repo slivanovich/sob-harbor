@@ -1,0 +1,13 @@
+{
+  "composer_details": {
+    "name": "Luigi Cherubini",
+    "birth_year": 1760,
+    "death_year": 1842
+  },
+  "beethoven_assessment": {
+    "assessment_type": "contemporary opinion",
+    "description": "regarded Cherubini as the greatest of his contemporaries",
+    "is_greatest_contemporary": true
+  },
+  "other_composer_in_question": "Charles Gounod"
+}

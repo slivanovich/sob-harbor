@@ -1,0 +1,12 @@
+{
+  "comparison_entity_1": {
+    "name": "Pomona College",
+    "founding_year": 1887
+  },
+  "comparison_entity_2": {
+    "name": "Brown University",
+    "founding_year": 1764
+  },
+  "earlier_founded_entity_name": "Brown University",
+  "founding_year_difference": 123
+}

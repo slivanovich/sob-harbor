@@ -1,0 +1,22 @@
+{
+  "film_title": "Bounty Hunters",
+  "release_year": 2016,
+  "director": {
+    "name": "Shin Terra"
+  },
+  "lead_actor": {
+    "name": "Lee Min-ho",
+    "nationality": "South Korean",
+    "known_for_role": "Gu Jun-pyo",
+    "known_for_series": "Boys Over Flowers",
+    "occupations": [
+      "actor",
+      "singer"
+    ]
+  },
+  "genres": [
+    "action",
+    "comedy",
+    "drama"
+  ]
+}

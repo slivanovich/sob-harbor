@@ -1,0 +1,14 @@
+{
+  "film_title": "Hostage",
+  "release_year": 2005,
+  "genre": [
+    "action",
+    "thriller",
+    "drama"
+  ],
+  "bruce_willis_involvement": {
+    "starred": true,
+    "produced": true
+  },
+  "jimmy_bennett_known_for_role": true
+}

@@ -1,0 +1,12 @@
+{
+  "band_1_details": {
+    "name": "Smoking Popes",
+    "origin_location": "Chicago, Illinois"
+  },
+  "band_2_details": {
+    "name": "Thirty Seconds to Mars",
+    "origin_location": "Los Angeles, California"
+  },
+  "band_further_west": "Thirty Seconds to Mars",
+  "comparison_summary": "Thirty Seconds to Mars, from Los Angeles, California, is from further west than Smoking Popes, from Chicago, Illinois."
+}

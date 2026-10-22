@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+German referendum, 1934: A referendum on merging the posts of Chancellor and President was held in Germany on 19 August 1934, after the death of President Paul von Hindenburg 17 days earlier.  The German leadership sought to gain approval for Adolf Hitler's assumption of supreme power.  The referendum was associated with widespread intimidation of voters, and Hitler used the resultant large "yes" vote to claim public support for his activities as the "de facto" head of state of Germany.  In fact, he had assumed these offices and powers immediately upon von Hindenburg's death and used the referendum to legitimize this move, taking the title "Führer und Reichskanzler" (Führer and Chancellor).
+
+Sri Lankan national referendum, 1982: The 1982 Sri Lankan national referendum took place on December 22, 1982, giving the people of Sri Lanka the option to extend the life of parliament by 6 years.  It was the first and so far only national referendum to be held in Sri Lanka.  The referendum was called for by President J. R. Jayawardene, who had been elected to a fresh six-year term as President in October 1982.  With the life of the current parliament due to expire in August 1983, Jayawardene faced the possibility of his ruling United National Party losing its massive supermajority in parliament if regular general elections were held.  He therefore proposed a referendum to extend the life of parliament, with its constituents unchanged, thereby permitting the United National Party to maintain its two-thirds parliamentary majority.
+
+Júlio Prestes: (March 15, 1882 – February 9, 1946) was a Brazilian poet, lawyer and politician.  He was the last elected President of Brazil of the period known as República Velha, but never took office because the government was overthrown in the Revolution of 1930.  Júlio Prestes was the only politician who was elected President of Brazil to be impeded of taking office.  He was the last politician born in São Paulo to be elected President of Brazil.
+
+Students and Pupils Movement of Côte d'Ivoire: Students and Pupils Movement of Côte d'Ivoire (in French: "Mouvement des Etudiants et Elèves de Côte d'Ivoire"), generally called M.E.E.C.I., was an organization of students and pupils in Côte d'Ivoire.  M.E.E.C.I. was founded of the initiative of the regime of Félix Houphouët-Boigny.  The founding congress was held in the P.D.C.I. office in Abidjan April 3–5, 1969.  Tanoh Brou Antoine (later Minister of Environment) was elected president of the executive committee.  Alphonse Djédjé Mady was elected president the standing council.  Mambo Yapi was elected president of the accounting commisariat.
+
+Paul von Hindenburg: Paul Ludwig Hans Anton von Beneckendorff und von Hindenburg (   ), known generally as Paul von Hindenburg (] ; 2 October 1847 – 2 August 1934) was a German military officer, statesman, and politician who largely controlled German policy in the second half of World War I and served as the elected President of Germany from 1925 until his death in 1934.  He played the key role in the Nazi "Seizure of Power" in January 1933 by appointing Adolf Hitler chancellor of a "Government of National Concentration", even though the Nazis were a plurality in cabinet.
+
+Russian presidential referendum, 1991: A referendum on creating the post of President of Russia was held in Russia on 17 March 1991.  The referendum was held alongside a referendum of the preservation of USSR.  Prior to the referendum, the Russian head of state was the Chairman of the Supreme Soviet of the Russian SFSR, elected by the Congress of People's Deputies of the Russian SFSR.  With 71.4% of voters approving the proposal, the post of President of the Russian SFSR was introduced, and two months later Boris Yeltsin was elected as the first president.
+
+Ecuadorian general election, 2017: General elections were held in Ecuador on 19 February 2017 alongside a referendum on tax havens.  Voters elected a new President and National Assembly.  Incumbent President Rafael Correa of the PAIS Alliance was not eligible for re-election, having served two terms.  In the first round of the presidential elections, PAIS Alliance candidate Lenín Moreno received 39% of the vote.  Although he was more than 10% ahead of his nearest rival, Guillermo Lasso of the Creating Opportunities party, Moreno was just short of the 40% threshold required to avoid a run-off.  As a result a second round was held on 2 April.  In the second round Moreno was elected President with 51.16% of the vote.
+
+Seventh Amendment to the Constitution of Pakistan: The Seventh Amendment to the Constitution of Pakistan (Urdu: آئین پاکستان میں ساتویں ترمیم) was adopted by the elected Parliament of Pakistan on 16 May 1977, a month before the ending of ending of the democratic government of Prime minister Zulfikar Bhutto.  The "VII Amendment" was also the last of seven amendments that were adopted the elected Parliament and enforced by the Government of Prime minister Zulfikar Ali Bhutto.  The "VII Amendment" orders and enables the people elected Prime Minister to obtain a Vote of confidence by the people elected members of Parliament.  The "VII Amendment" also constitutionally orders the people elected President to hold a national referendum for the approval of Prime minister if he or she fails to secure the vote of confidence of the members of Parliament.
+
+8th Parliament of Sri Lanka: The 8th Parliament of Sri Lanka was a meeting of the Parliament of Sri Lanka, with the membership determined by the results of the 1977 parliamentary election held on 21 July 1977.  The United National Party won a 5/6 majority to form a government under J.R. Jayewardene.  later Mr Jayawardane introduce a new constitution to Sri Lanka and was elected the 1st President of Sri Lanka.  The government extended their term to stay in power in 1983 with out an election and stayed in power until 1989.  The 1982 Sri Lankan national referendum took place on December 22, 1982, giving the people of Sri Lanka the option to extend the life of parliament by 6 years.  It was the first and so far only national referendum to be held in Sri Lanka. [1] The referendum was called for by President J. R. Jayawardene, who had been elected to a fresh six-year term as President in October 1982.  With the life of the current parliament due to expire in August 1983,
+
+Peruvian constitutional referendum, 1939: A constitutional referendum was held in Peru on 18 June 1939.  The proposed changes were approved by 88% of voters.  Following the referendum, Manuel Prado Ugarteche was elected President on 4 December.
+
+Question: Who was elected elected President of Germany in 1925 and whose death led to the referendum on merging the posts of Chancellor and President?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The full name of the person."
+    },
+    "role": {
+      "type": "string",
+      "description": "The primary political role held by the person."
+    },
+    "country": {
+      "type": "string",
+      "description": "The country where the person held office."
+    },
+    "election_year": {
+      "type": "integer",
+      "description": "The year the person was elected President."
+    },
+    "death_year": {
+      "type": "integer",
+      "description": "The year of the person's death."
+    },
+    "associated_referendum": {
+      "type": "object",
+      "properties": {
+        "referendum_year": {
+          "type": "integer",
+          "description": "The year the referendum was held."
+        },
+        "referendum_purpose": {
+          "type": "string",
+          "description": "The main purpose or topic of the referendum."
+        }
+      },
+      "required": [
+        "referendum_year",
+        "referendum_purpose"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "role",
+    "country",
+    "election_year",
+    "death_year",
+    "associated_referendum"
+  ],
+  "additionalProperties": false
+}

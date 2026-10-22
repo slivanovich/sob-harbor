@@ -1,0 +1,11 @@
+{
+  "university_name": "Georgia Institute of Technology",
+  "has_international_campuses": true,
+  "international_campus_locations": [
+    "France",
+    "Ireland",
+    "China",
+    "Singapore"
+  ],
+  "number_of_international_campuses": 4
+}

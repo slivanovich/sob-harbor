@@ -1,0 +1,21 @@
+{
+  "person_name": "Cory Anthony Booker",
+  "birth_date": "1969-04-27",
+  "political_party": "Democratic",
+  "current_senate_role": {
+    "title": "Junior United States Senator",
+    "state": "New Jersey",
+    "in_office_since_year": 2013
+  },
+  "previous_mayoral_role": {
+    "title": "Mayor",
+    "city": "Newark",
+    "start_year": 2006,
+    "end_year": 2013
+  },
+  "documentary_information": {
+    "documentary_title": "Brick City",
+    "city_featured": "Newark",
+    "person_role_in_documentary": "Mayor"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "war_name": "Korean War",
+  "battles_involved": [
+    {
+      "battle_name": "Battle of the Ch'ongch'on River",
+      "battle_significance": "decisive battle"
+    }
+  ],
+  "campaign_context": {
+    "campaign_name": "Second Phase Campaign",
+    "campaign_description": "extended military offensive by the Chinese People's Volunteer Army",
+    "campaign_duration": "last week of November, 1950, and the first two weeks of December"
+  }
+}

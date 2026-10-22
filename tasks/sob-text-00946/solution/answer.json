@@ -1,0 +1,14 @@
+{
+  "song_title": "Girl Talk",
+  "composer": "Neal Hefti",
+  "film_details": {
+    "film_title": "Harlow",
+    "release_year": 1965,
+    "film_type": "biographical",
+    "subject_details": {
+      "subject_name": "Jean Harlow",
+      "profession": "American film actress and sex symbol",
+      "era_of_prominence": "1930s"
+    }
+  }
+}

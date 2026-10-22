@@ -1,0 +1,13 @@
+{
+  "question_asked": "Do both groups, Chvrches and Anavae, feature a guitar?",
+  "chvrches_features_guitar": true,
+  "chvrches_guitar_players": [
+    "Iain Cook"
+  ],
+  "anavae_features_guitar": true,
+  "anavae_guitar_players": [
+    "Josh Platt",
+    "Shane Britton"
+  ],
+  "both_groups_feature_guitar": true
+}

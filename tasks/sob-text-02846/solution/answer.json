@@ -1,0 +1,21 @@
+{
+  "compared_battles": [
+    {
+      "name": "Battle of Pusan Perimeter",
+      "start_date": "August 4, 1950"
+    },
+    {
+      "name": "Battle of Peleliu",
+      "start_date": "September 1944"
+    }
+  ],
+  "earlier_battle": {
+    "name": "Battle of Peleliu",
+    "start_date": "September 1944"
+  },
+  "later_battle": {
+    "name": "Battle of Pusan Perimeter",
+    "start_date": "August 4, 1950"
+  },
+  "answer": "The Battle of Peleliu happened first."
+}

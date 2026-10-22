@@ -1,0 +1,16 @@
+{
+  "policy_name": "Indian removal",
+  "advocate": {
+    "name": "Isaac McCoy"
+  },
+  "policy_details": {
+    "action": "forcible removal",
+    "origin_region": "eastern United States",
+    "destination_region": "west of the Mississippi River",
+    "proposed_indian_state_locations": [
+      "Kansas",
+      "Nebraska",
+      "Oklahoma"
+    ]
+  }
+}

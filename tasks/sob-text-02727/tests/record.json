@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "2e21e35d8a614c9c5c962bf81b67895eebe1cb369107b8109874443330702db4",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae77f9f5542997ec272766c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "eight",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Bergen: Bergen, historically Bjørgvin, is a city and municipality in Hordaland on the west coast of Norway.  At the end of the first quarter of 2016 , the municipality's population was 278,121, and the Bergen metropolitan region has about 420,000 inhabitants.  Bergen is the second-largest city in Norway.  The municipality covers 465 km2 and is on the peninsula of Bergenshalvøyen.  The city centre and northern neighbourhoods are on Byfjorden, 'the city fjord', and the city is surrounded by mountains; Bergen is known as the 'city of seven mountains'.  Many of the extra-municipal suburbs are on islands.  Bergen is the administrative centre of Hordaland and consists of eight boroughs—Arna, Bergenhus, Fana, Fyllingsdalen, Laksevåg, Ytrebygda, Årstad and Åsane.\n\nGreenstat: Greenstat is a Norwegian company established in 2015.  It works with renewable energy and production and export of hydrogen.  Greenstat claims itself to be \"green energy company for a green generation\".\n\nBauer-Nilsen: Bauer Nilsen AS is a Norwegian company established in 1925.\n\nFinance Credit: Finance Credit was a Norwegian company that went bankrupt in 2002, after facing criminal investigation for siphoning funds (in total 1,4 billion NOK) it borrowed from six Norwegian banks to offshore tax havens, in what became known as the Finance Credit scandal, arguably the biggest economic fraud in Norwegian history.  The company was founded by Torgeir Stensrud and Trond Kristoffersen, who were in 2005 convicted on charges of fraud to 7 and 9 years in prison, respectively.  Stensrud and Kristoffersen were also both fined about 100 million €.\n\nSF Norge: SF Norge AS is a Norwegian company for film distribution which was established in 1989.  The company buys and sells films and distributes them to Norwegian cinemas.  On 1 January 2000, SF signed a deal with the American film company 20th Century Fox.  SF has also signed distribution deals with other large companies such as New Line Cinema, MGM and Revolution Studios.\n\nBug AS: Bug AS is a Norwegian full-service production company established in 1995, By Gunnar Larsen in Bergen, Norway.  In its startup period the company produced industrial 3d, Still Vizualisation and Camera point of view walkthrougs.  Later such as idents for TV commercials and company presentations.\n\nOWEC Tower: OWEC Tower AS is a Norwegian company established in 2004.  They design foundations for offshore wind turbines and are leading within the steel jacket type.\n\nPickupcat: PickUpCat vas a Norwegian company established in 1996.  The company was based on a module-based concept invented by Norwegian marine engineer Dag O. Aavitsland.  The concept implied that ships should be built in two detachable modules so that the motor module and the cargo module could be separated.\n\nRaufoss Ammunisjonsfabrikker: Raufoss Ammunisjonsfabrikker was a Norwegian company based at Raufoss, established in 1896 as \"Rødfoss Patronfabrik\".  Initially the company manufactured ammunition, and later also other products, such as aluminium parts to the automotive industry.  Until 1948 the company was a subordinate to the Norwegian Ministry of Defence.  In the 1990s the automobile division was split off as \"Raufoss Automotive\" and eventually taken over by Norsk Hydro.  The ammunition division was merged with the Swedish company Celsius and the Finnish company Patria, forming the new company Nammo.\n\nEurofoto: Eurofoto is a Norwegian Online shopping company specializing in Photography products and imaging.  The company is located at Reed, Breim in Gloppen, Sogn og Fjordane.  The company was founded march 7.  2000, and became the leading Norwegian company within online Photography printing and digital imaging.  The company was a daughter company of Intele AS, until September 2010.  Eurofoto AS was then sold to Japan Photo Holding Norge AS.  Their slogan is \"Lifelong memories\" (no: \"Minner for livet\")",
+    "question": "Bug AS is a Norwegian company established in a city that consists of how many buroughs?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "The name of the company in question."
+        },
+        "city_of_establishment": {
+          "type": "string",
+          "description": "The city where the company was established."
+        },
+        "number_of_boroughs": {
+          "type": "integer",
+          "description": "The total number of boroughs in the city of establishment."
+        },
+        "borough_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of the names of the boroughs in the city of establishment."
+        }
+      },
+      "required": [
+        "company_name",
+        "city_of_establishment",
+        "number_of_boroughs",
+        "borough_names"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "company_name": "Bug AS",
+      "city_of_establishment": "Bergen",
+      "number_of_boroughs": 8,
+      "borough_names": [
+        "Arna",
+        "Bergenhus",
+        "Fana",
+        "Fyllingsdalen",
+        "Laksevåg",
+        "Ytrebygda",
+        "Årstad",
+        "Åsane"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

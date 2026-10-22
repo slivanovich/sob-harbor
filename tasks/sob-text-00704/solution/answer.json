@@ -1,0 +1,14 @@
+{
+  "actor_name": "Kevin Pollak",
+  "is_professional_poker_player": true,
+  "movie_starred_in": "Avalon",
+  "poker_career_details": {
+    "poker_player_description": "avid poker player",
+    "wsop_participation": {
+      "year": 2012,
+      "finish_position": 134,
+      "total_entrants": 6598,
+      "winnings_usd": 52718
+    }
+  }
+}

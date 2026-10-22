@@ -1,0 +1,10 @@
+{
+  "tourist_attraction_name": "Pike Place Market",
+  "world_ranking": 33,
+  "located_near_entity": {
+    "name": "Helios",
+    "type": "residential skyscraper",
+    "city": "Seattle",
+    "state": "Washington"
+  }
+}

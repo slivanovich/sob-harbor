@@ -1,0 +1,13 @@
+{
+  "destroyer_name": "USS Hoel",
+  "destroyer_designation": "DD-768",
+  "destroyer_class": "Gearing-class",
+  "named_after_person": {
+    "name": "William R. Hoel",
+    "role": "United States Navy officer",
+    "awards": [
+      "Navy Cross"
+    ],
+    "lifespan": "1824-1879"
+  }
+}

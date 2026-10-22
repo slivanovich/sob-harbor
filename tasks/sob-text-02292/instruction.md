@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Snow White's Scary Adventures: Snow White's Scary Adventures is a dark ride at the Disneyland, Tokyo Disneyland, Disneyland Park (Paris) theme parks, and formerly the Magic Kingdom theme park at the Walt Disney World Resort.  Located in Fantasyland, it is one of the few remaining attractions that was operational on Disneyland's opening day in 1955 (although the present version of the attraction opened in 1983).  The ride was also one of the few rides that was operational since opening day in Walt Disney World Resort.  The ride's story is based on Disney's 1937 film, "Snow White and the Seven Dwarfs", their first animated feature film.
+
+Journey into Imagination with Figment: Journey into Imagination with Figment is the third and latest incarnation of a dark ride attraction located within the Imagination!  pavilion at the Epcot theme park at Walt Disney World.  Originally opened on March 5, 1983, its original and current version feature the small purple dragon named Figment as well as the song ""One Little Spark"," composed by the Sherman Brothers.
+
+Horizons (Epcot): Horizons was the name of a dark ride attraction at Epcot (then known as EPCOT Center), a theme park at Walt Disney World in Bay Lake, Florida.  Located on the eastern side of the "Future World" section of Epcot, the attraction used Disney's Omnimover conveyance system, which took guests past show scenes depicting visions of the future.  It is believed to be the sequel to Walt Disney's Carousel of Progress, an attraction in Tomorrowland at Walt Disney World's Magic Kingdom.  Horizons was the only attraction in "Future World" to showcase all of Epcot's "Future World" elements: communication, community interaction, energy, transportation, anatomy, physiology, along with man's relationship to the sea, land, air, and space.  The attraction officially opened on October 1, 1983, as part of Phase II of Epcot.  Horizons originally closed in December 1994, a little more than a year after General Electric had ended its sponsorship of the attraction.  Horizons re-opened in December 1995 due to the closure of two other attractions that were down for refurbishment in "Future World", Universe of Energy and World of Motion.  The attraction permanently closed on January 9, 1999, after which the attraction was dismantled and its structure demolished to make room for , a motion simulator thrill ride that opened on October 9, 2003.
+
+Maelstrom (ride): Maelstrom was a log flume dark ride attraction located in the Epcot theme park at Walt Disney World Resort in Florida.  Designed by Walt Disney Imagineering, the ride opened on July 5, 1988, in the Norway Pavilion of the park's World Showcase section.  It was a mix between a log chute and a traditional film attraction.  Visitors rode boats patterned after longships that passed through various scenes that featured audio-animatronic figures.  The attraction was originally supposed to be called SeaVenture, with the entrance sign during construction even displaying it as such.  But sometime between March 1988 and the ride's opening, it was changed to Maelstrom.
+
+Walt Disney World Dolphin: The Walt Disney World Dolphin is a resort hotel designed by architect Michael Graves located between Epcot and Disney's Hollywood Studios in the Walt Disney World Resort in Bay Lake, Florida, next to Disney's BoardWalk Resort area.  It opened on June 1, 1990 and is joined to its sister hotel, the Walt Disney World Swan (also designed by Graves) by a palm-tree lined covered walkway crossing a lagoon.  The Walt Disney World Swan and Dolphin is a joint venture between the Walt Disney Company, Tishman Hotel Corporation, MetLife and Starwood Hotels and Resorts.  The land the resort occupies is owned by the Walt Disney Company, while the buildings themselves are leased by Disney to the Tishman Hotel Corporation and MetLife but operated by Starwood Hotels & Resorts Worldwide under the Sheraton Hotels brand.  The Walt Disney World Swan and Dolphin are a part of the Walt Disney Collection of resorts; because of this they are Disney branded and guests of the resort have access to special Disney benefits available to Disney Resort Hotel guests only.
+
+The Great Movie Ride: The Great Movie Ride was a dark ride attraction located at Disney's Hollywood Studios in the Walt Disney World Resort.  The attraction employed the use of Audio-Animatronic figures, practical sets, live actors, special effects, and projections to recreate iconic scenes from twelve classic films throughout motion picture history.  The attraction—which debuted with the park on May 1, 1989—was located inside a replica of Grauman's Chinese Theatre, one of Hollywood's most famous movie palaces.
+
+Frozen Ever After: Frozen Ever After is a dark water ride attraction in Epcot at the Walt Disney World Resort.  Part of the Norway Pavilion of the park's World Showcase section, the attraction features scenes inspired by Disney's 2013 animated film "Frozen" as well as the 2015 animated short "Frozen Fever".  It opened on June 21, 2016 and replaced the former Maelstrom attraction, utilizing the same ride vehicles and a similar track layout.
+
+Radiator Springs Racers: Radiator Springs Racers is a simulated slot car type dark ride attraction in Cars Land at Disney California Adventure.  The attraction features a third-generation version of transport technology originally developed for the Test Track attraction at Epcot in Walt Disney World.  Radiator Springs Racers is themed to the fictional world in Disney·Pixar's "Cars".  At a cost of over $200 million, the attraction is the most expensive at Disneyland Resort and one of the most expensive theme park attractions in the world.  It accounted for about 18% of the entire cost of the $1.1 billion expansion of Disney California Adventure Park.  The attraction takes guests in a six-person vehicle through encounters with characters from the film series "Cars".  Guests then race another vehicle through turns and hills, ending with a randomized race result.
+
+Gran Fiesta Tour Starring The Three Caballeros: Gran Fiesta Tour Starring The Three Caballeros is a musical dark boat ride housed within the pyramid-shaped Mexico Pavilion, at the Epcot theme park at the Walt Disney World Resort in Florida.  It was the first World Showcase attraction to feature Disney characters based on an existing property.  Norway followed suit in 2014 when it closed its Maelstrom ride to make room for Frozen Ever After, which opened in 2016.
+
+Splash Mountain: Splash Mountain is a log flume dark ride at Disneyland, Tokyo Disneyland, and the Magic Kingdom at the Walt Disney World Resort, based on the characters, stories, and songs from the 1946 Disney film "Song of the South".  Although there are variations in the story and features between the three locations, each installation begins with a peaceful outdoor float-through that leads to indoor dark ride segments, with a climactic steep drop into a "briar patch" followed by an indoor finale.  The drop is 50 ft .
+
+Question: Frozen Ever After is a dark water ride attraction in Epcot at the Walt Disney World Resort, it opened on June 21, 2016 and replaced the former Maelstrom attraction, Maelstrom was a log flume dark ride attraction located in the Epcot theme park, at Walt Disney World Resort, in which state?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "attraction_name": {
+      "type": "string",
+      "description": "The name of the attraction being discussed."
+    },
+    "attraction_type": {
+      "type": "string",
+      "description": "The type of the attraction."
+    },
+    "theme_park": {
+      "type": "string",
+      "description": "The theme park where the attraction was located."
+    },
+    "resort_name": {
+      "type": "string",
+      "description": "The resort where the theme park is located."
+    },
+    "location_state": {
+      "type": "string",
+      "description": "The state where the attraction was located."
+    },
+    "replaced_by_attraction": {
+      "type": "string",
+      "description": "The name of the attraction that replaced it."
+    },
+    "replacement_opening_date": {
+      "type": "string",
+      "description": "The opening date of the replacement attraction."
+    }
+  },
+  "required": [
+    "attraction_name",
+    "attraction_type",
+    "theme_park",
+    "resort_name",
+    "location_state",
+    "replaced_by_attraction",
+    "replacement_opening_date"
+  ],
+  "additionalProperties": false
+}

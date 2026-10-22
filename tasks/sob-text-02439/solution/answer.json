@@ -1,0 +1,15 @@
+{
+  "soldier_name": "Audie Murphy",
+  "birth_date": "20 June 1925",
+  "military_service_details": {
+    "conflict": "World War II",
+    "medal_of_honor_recipient": true,
+    "other_awards_mentioned": [
+      "every military combat award for valor available from the U.S. Army",
+      "French and Belgian awards for heroism"
+    ]
+  },
+  "acting_career_details": {
+    "film_title": "The Cimarron Kid"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "combat_sport_name": "Boxing",
+  "sport_type": "Professional",
+  "participants": [
+    {
+      "name": "Gary Cornish"
+    },
+    {
+      "name": "Anthony Joshua"
+    }
+  ]
+}

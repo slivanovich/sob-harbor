@@ -1,0 +1,15 @@
+{
+  "film_details": {
+    "title": "The River Wild",
+    "year": 1994,
+    "genre": "adventure crime-thriller",
+    "director": "Curtis Hanson"
+  },
+  "producer_details": {
+    "name": "Lawrence Turman"
+  },
+  "actor_character_details": {
+    "actor_name": "Joseph Mazzello",
+    "character_name": "Roarke"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "a458092af0f6acf13c1396691b26b2201fe7cef59419725a1aa29e7b0c7b1f04",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae0aee855429945ae95941d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1942",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "A Guide to the Star Wars Universe: A Guide to the Star Wars Universe is a reference book published by Del Rey.  The first edition was published in 1984 and written by Raymond L. Velasco.  A second edition was published in 1994, written by Bill Slavicsek.  He also wrote a third edition, published in 2000.  The books alphabetically detail people, places, things, and events in the Star Wars universe.  Most of the entries are quite short, the longest being a little over two pages.  Each entry is divided into G-canon and Expanded Universe information, and has sources cited.  The second edition also included a brief timeline, and a comparison of sublight speeds in starfighters.\n\nStar Wars: Galactic Battlegrounds: Star Wars: Galactic Battlegrounds is a real-time strategy video game set in the Star Wars universe.  It was developed by \"Age of Empires\" developer Ensemble Studios and LucasArts, who also published the game in North America.  The Japanese version published by Electronic Arts and Squaresoft Joint Venture Electronic Arts Square.  It was released in November 11, 2001.  An expansion pack, \"Clone Campaigns\", was released in May 14, 2002, adding two new factions and campaigns.  Later that year, both \"Galactic Battlegrounds\" and \"Clone Campaigns\" were released in a box set, \"Star Wars: Galactic Battlegrounds Saga\".\n\nStar Wars Miniatures: Star Wars Miniatures is a 34mm scale collectible miniatures tabletop game based on the \"Star Wars\" fictional universe that was produced by Wizards of the Coast.  The game was originally released in September 2004 and continued production until May 2010.  \"Star Wars Miniatures\" players build point-based squads from one of ten different in-universe factions then conduct battles between those squads.  The game mechanics are a simplified version of the d20 roleplaying game system.  Multiple maps, scenarios, and set themes from different settings and time periods from within the Star Wars universe are available.\n\nBongy Westphall Universe: The Bongy Westphall Universe is a fictional universe of 44 related films released by Full Moon Entertainment.  Series creator Charles Band took inspiration from team up comics he read as a child.  The universe is named after the Tommy Westphall Universe and also the film Evil Bong which presents the largest crossover in the fictional universe.  The named was coined by film podcast Double Feature during their \"Killapalooza\" episode highlighting the Puppet Master franchise.\n\nWookieepedia: Wookieepedia: The \"Star Wars\" Wiki is an online encyclopedia for information on the \"Star Wars\" fictional universe—including information on all the films, as well as \"Clone Wars\", \"\" and its , \"Rebels\", the \"Star Wars\" expanded universe, and any upcoming \"Star Wars\" material.  It is a specialized wiki created to be an extensive encyclopedia of the \"Star Wars\" universe with some articles reaching up to 60,000 words, and is written almost entirely from an in-universe perspective.  The name Wookieepedia is a portmanteau of Wookiee and encyclopedia, a pun on the name of \"Wikipedia\".  The logo, too, is a visual pun showing the incomplete second Death Star as opposed to Wikipedia's incomplete \"jigsaw logo\".\n\nThe Gene Wars universe: The Gene Wars universe is a fictional universe developed by science fiction and fantasy author C. J. Cherryh .  The universe currently consists of two science fiction novels, \"Hammerfall\" (2001) and \"Forge of Heaven\" (2004).  The books were published by HarperCollins under the company's \"Eos\" imprint.  \"Hammerfall\" was nominated for the John W. Campbell Memorial Award in 2002.\n\nTime Lord: The Time Lords are a fictional, ancient extraterrestrial species in the British science fiction television series \"Doctor Who\", of which the series' protagonist, the Doctor, is a member.  Time Lords are so named for their command of time travel technology and their non-linear perception of time.  Originally they were described as a powerful and wise race from the planet Gallifrey, from which the Doctor was a renegade; details beyond this were very limited for the first decade of the series.  They later became integral to many episodes and stories as their role in the fictional universe developed.  For the first eight years after the series resumed in 2005, the Time Lords were said to have been destroyed at some point between the original series' cancellation in 1989 and the show's revival during the fictional Last Great Time War.  In 2013, the 50th anniversary special \"The Day of the Doctor\" concerned this supposed destruction and their eventual survival.\n\nC. J. Cherryh: Carolyn Janice Cherry (born September 1, 1942), better known by the pen name C. J. Cherryh, is an American writer of speculative fiction.  She has written more than 60 books since the mid-1970s, including the Hugo Award-winning novels \"Downbelow Station\" (1981) and \"Cyteen\" (1988), both set in her Alliance-Union universe.  She is known for \"world building,\" depicting fictional realms with great realism supported by vast research in history, language, psychology, and archeology.  Her series of fantasy novels set in the Alliance-Union universe, the Morgaine Stories, have sold in excess of 3 million copies.\n\nVector Prime: Star Wars: The New Jedi Order - Vector Prime is a science fiction novel by American writer R. A. Salvatore and published in 1999.  It is the first installment of the New Jedi Order series set in the Star Wars universe.  The book has received much controversy for the death of a prominent character from the films (the first and only time a major film character has been killed off in the \"Star Wars\" expanded universe), despite George Lucas's approval.  On its release, the book was featured on the New York Times Hardcover Bestseller List.\n\nHorus Heresy (card game): Horus Heresy is a collectible card game originally produced in 2003 by Sabertooth Games.  The game is set in the \"Warhammer 40,000\" fictional universe developed by parent company Games Workshop.  It attempts to recreate the struggle between the Loyalist forces of the Emperor of Mankind and the Traitor forces of Warmaster Horus, during the civil war known as the Horus Heresy.  The game's development and sale by the publisher were discontinued in 2008, following financial difficulties at the parent company.",
+    "question": "The Gene Wars universe is a fictional universe developed by an author born in which year ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "fictional_universe_name": {
+          "type": "string",
+          "description": "The name of the fictional universe."
+        },
+        "author_details": {
+          "type": "object",
+          "properties": {
+            "author_name": {
+              "type": "string",
+              "description": "The name of the author who developed the universe."
+            },
+            "birth_year": {
+              "type": "integer",
+              "description": "The birth year of the author."
+            }
+          },
+          "required": [
+            "author_name",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        },
+        "question_answer": {
+          "type": "integer",
+          "description": "The birth year of the author who developed the specified fictional universe."
+        }
+      },
+      "required": [
+        "fictional_universe_name",
+        "author_details",
+        "question_answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "fictional_universe_name": "The Gene Wars universe",
+      "author_details": {
+        "author_name": "C. J. Cherryh",
+        "birth_year": 1942
+      },
+      "question_answer": 1942
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

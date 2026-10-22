@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1891 Indiana Hoosiers football team: The 1891 Indiana Hoosiers football team was an American football team that represented Indiana University Bloomington during the 1891 college football season.  In Indiana's fourth season of intercollegiate football, Billy Herod served as the school's football coach.  Indiana played six games and compiled a 1-5 record.  The team's 30-0 victory over the Louisville Athletic Club was the first in the history of the Indiana University football program.
+
+1887 Indiana Hoosiers football team: The 1887 Indiana Hoosiers football team was an American football team that represented Indiana University Bloomington during the 1887 college football season.  In its first season of intercollegiate football, economics professor Arthur B. Woodford served as the school's football coach, and fullback Harry Wise was the team's captain.  Indiana played one game, arranged by the Indianapolis Athletic Club as part of a series of "rugby games of foot ball" intended to establish the college championship of Indiana.  Indiana was matched against the team from Franklin College with the game set for October 15, 1887.  In a game played at Athletic Park in Indianapolis, Franklin won, 10–8.  The roster of Indiana's 1887 football team included Thomas M. Honan, who later served as the State of Indiana's Attorney General, W. E. Jenkins, who became the Indiana University librarian, and George B. Davis, of Greensburg, Indiana.
+
+1956 Indiana Hoosiers football team: The 1956 Indiana Hoosiers football team was an American football team that represented the Indiana Hoosiers in the 1956 Big Ten Conference football season.  The Hoosiers played their home games at Memorial Stadium in Bloomington, Indiana.  The team was coached by Bernie Crimmins, in his fifth and final year as head coach of the Hoosiers.  On November 28, 1956, Crimmins, at age 37, resigned as Indiana's head football coach.  He had compiled a 13–32 record and was unable to produce a winning team in five years in the position.
+
+1918 Indiana Hoosiers football team: The 1918 Indiana Hoosiers football team was an American football team that represented Indiana University during the 1918 Big Ten Conference football season.  In their third season under head coach Ewald O. Stiehm, the Hoosiers compiled a 2–2 record and played no games against Big Ten Conference teams.  No Indiana players received either All-American or All-Big Ten honors.
+
+Kevin Wilson (American football): Kevin Reece Wilson (born October 23, 1961) is an American football coach and former player who is the current offensive coordinator at Ohio State University.  Wilson served as the head football coach at Indiana University Bloomington from 2011 to 2016 and was the offensive coordinator at the University of Oklahoma from 2002 to 2010.
+
+Bob Stephenson (American football): Robert E. "Bob" Stephenson (born September 20, 1959) is a former American football player.  A native of Evansville, Indiana, Stephenson He played college football as a tight end for the Indiana University Hoosiers football team from 1979 to 1981.  As a member of the 1979 Indiana Hoosiers football team, he played in the 1979 Holiday Bowl and scored the first touchdown in a bowl game in Indiana Hoosiers football history.  He was selected by both the coaches (UPI) and media (AP) as the first-team tight end on the 1981 All-Big Ten Conference football team.  He was selected as the tight end on the all-time Indiana football teams named by the "Chicago Tribune" in 1993 and by "Inside Indiana" magazine.  He was inducted into the Indiana Football Hall of Fame in 2007.
+
+2009 Indiana Hoosiers football team: The 2009 Indiana Hoosiers football team represented Indiana University Bloomington during the 2009 NCAA Division I FBS football season.  The Hoosiers were led by Bill Lynch, who was in his third season as head coach.  The Hoosiers played their home games at Memorial Stadium in Bloomington, Indiana.  The Hoosiers finished the season 4–8 (1–7 Big Ten).
+
+1889 Indiana Hoosiers football team: The 1889 Indiana Hoosiers football team was an American football team that represented Indiana University Bloomington during the 1889 college football season.  In Indiana's third season of intercollegiate football, Evans Woollen, a 24-year-old Yale University graduate, served as the school's football coach.  Indiana played only two games, a 6-6 tie with DePauw University and a 40-2 loss to Wabash College.
+
+Dave Schnell: David "Dave" Schnell (July 15, 1966 - May 22, 2011) was an American football player.  He attended Elkhart Central High School in Elkhart, Indiana, and he was selected by "Sports Illustrated" in 1985 as the best high school football player in the United States.  He then played college football at the quarterback position for the Indiana University Hoosiers football team.  He led the 1987 Indiana Hoosiers football team to victories over both Michigan and Ohio State, becoming the only Indiana quarterback to record victories against both teams in the same year.  The following year, he was selected by the conference coaches as the second-team quarterback on the 1988 All-Big Ten Conference football team.  Schnell was diagnosed with leukemia in 2007 and died from the disease in May 2011 at age 44.  He was inducted into the Indiana Football Hall of Fame in May 2010.
+
+2013 Indiana Hoosiers football team: The 2013 Indiana Hoosiers football team represented the Indiana University during the 2013 NCAA Division I FBS football season.  The Hoosiers played in the Leaders Division of the Big Ten Conference and played their home games at Memorial Stadium in Bloomington, Indiana.  The team was led by head coach Kevin Wilson, who was in his third season.  They finished the season 5–7, 3–5 in Big Ten play to finish in fourth place in the Leaders Division.
+
+Question: What is the name of this American football coach and former player who was head football coach at Indiana University and led the Hoosiers football team in their third season?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "coach_name": {
+      "type": "string",
+      "description": "The name of the American football coach."
+    },
+    "university_name": {
+      "type": "string",
+      "description": "The university where the coach served as head football coach."
+    },
+    "coach_season_number": {
+      "type": "integer",
+      "description": "The specific season number for the coach at the university, as mentioned in the question."
+    },
+    "team_season_year": {
+      "type": "integer",
+      "description": "The year of the football season when the coach was in their specified season number."
+    },
+    "team_record": {
+      "type": "string",
+      "description": "The overall win-loss record of the team during that specific season."
+    },
+    "conference_record": {
+      "type": "string",
+      "description": "The conference win-loss record of the team during that specific season."
+    }
+  },
+  "required": [
+    "coach_name",
+    "university_name",
+    "coach_season_number",
+    "team_season_year",
+    "team_record",
+    "conference_record"
+  ],
+  "additionalProperties": false
+}

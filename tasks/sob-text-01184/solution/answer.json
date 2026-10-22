@@ -1,0 +1,15 @@
+{
+  "actress_details": {
+    "name": "Maribel Verdú",
+    "role_played": "Mercedes"
+  },
+  "film_details": {
+    "title": "Pan's Labyrinth",
+    "release_year": 2006
+  },
+  "director_details": {
+    "name": "Guillermo del Toro",
+    "nationality": "Mexican"
+  },
+  "final_answer_director_nationality": "Mexican"
+}

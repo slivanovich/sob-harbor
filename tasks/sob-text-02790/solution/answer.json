@@ -1,0 +1,11 @@
+{
+  "coach_name": "Sharon Dawley",
+  "university_name": "Tufts University",
+  "coaching_role": "head basketball coach",
+  "university_ranking": {
+    "rank": 27,
+    "year": 2016,
+    "ranking_type": "nationally",
+    "source": "U.S. News & World Report"
+  }
+}

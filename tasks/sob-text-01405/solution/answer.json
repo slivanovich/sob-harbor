@@ -1,0 +1,20 @@
+{
+  "state_name": "Pennsylvania",
+  "politicians_served": [
+    {
+      "name": "Joe Sestak",
+      "roles": [
+        "United States Representative",
+        "United States Senate nominee"
+      ]
+    },
+    {
+      "name": "Pat Toomey",
+      "roles": [
+        "United States Senator",
+        "United States Representative"
+      ]
+    }
+  ],
+  "level_of_service": "federal"
+}

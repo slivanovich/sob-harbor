@@ -1,0 +1,16 @@
+{
+  "person_name": "Zachary Knight Galifianakis",
+  "person_details": {
+    "occupations": [
+      "actor",
+      "writer",
+      "comedian"
+    ],
+    "prominence_event": "Comedy Central Presents",
+    "film_appearance": {
+      "film_title": "Below",
+      "film_year": 2002
+    }
+  },
+  "birth_date": "October 1, 1969"
+}

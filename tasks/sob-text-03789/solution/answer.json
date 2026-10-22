@@ -1,0 +1,13 @@
+{
+  "crime_family_name": "Detroit Partnership",
+  "younger_brother": {
+    "full_name": "Vito William Giacalone",
+    "nickname": "Billy Jack",
+    "role": "capo"
+  },
+  "older_brother": {
+    "full_name": "Anthony Giacalone",
+    "nickname": "Tony Jack",
+    "role": "capo"
+  }
+}

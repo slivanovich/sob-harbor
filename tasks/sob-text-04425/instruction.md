@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Vasquez v. Hillery: Vasquez v. Hillery, 474 U.S. 254 (1986) is a United States Supreme Court case.  An African-American man named Booker T. Hillery was convicted for murder by a California grand jury in 1962.  Hillery was accused of stabbing fifteen-year-old girl named Marlene Miller with scissors in the small town of Hanford.  Miller was said to be sewing a dress alone in the house and did not notice an intruder sneaking into the household.  The perpetrator fought with the young woman and hogtied her and stabbed her chest.  Deputies came on to the crime scene; with evidence and a witness, all fingers pointed to Booker T. Hillery, who was on parole for rape at the time.  Hillery pleaded he was innocent, but he was indicted by a California grand jury and subsequently convicted.  However, members of his own race were systematically excluded from the indicting grand jury, suggesting that the defendant was singled out for murder due to his criminal past and race.  This caused Booker T. Hillery to seek petitions for a retrial.
+
+Victor Ivan: Majuwana Kankanamage Victor Ivan (Sinhala language: මාජුවානා කන්කානම්ගේ වික්ටර් අයිවන්) is Sri Lankan journalist.  He was a Marxist rebel in his youth and later became the Editor of the controversial Sinhalese newspaper "Ravaya".  He served as the Editor of the Ravaya for 25 years consecutively since its inception.  Victor is an investigative journalist, political critic, a theorist, social activist and also an author of several books.  He was the 7th accused of the main court case on the Youth Insurrection 1971.  The panel of judges described him as the most colourful character of all suspects respondents.  Judgment of the Criminal Justice Commission.  Inquiry No, 1 – Government Printer- page 255.  He was sentenced to 5 years imprisonment at the end of the inquiry.  During his imprisonment he abandoned the doctrine of the JVP as well as that of Marxism.  While rejecting the doctrine of violence he became an ardent follower of Mahatma Gandhi adopting the philosophy of non-violence expounded by him.
+
+Southwell inquiry: The Southwell inquiry was an inquiry performed by AJ Southwell, a former Australian judge, into allegations of sexual abuse in Roman Catholic Archdiocese of Melbourne by a 53-year-old man (who could not be named) who alleged that he was sexually abused in 1961 at a Roman Catholic youth camp when he was 12 years old by George Pell, who at that time was a seminarian and was at the time of the allegation Archbishop of Sydney.
+
+2016 Minto stabbing attack: On 10 September 2016, a man armed with a knife attacked another man walking his dog in Minto, a suburb of Sydney, Australia.  As he stabbed the victim the accused allegedly shouted "someone is going to die today."  The perpetrator subsequently sought to attack police, but was arrested a short time later.
+
+Eastern University massacre: Eastern University massacre also known as Vantharamulai (also Vantharoomulai) campus massacre refers to the arrest and subsequent mass murder of 158 minority Sri Lankan Tamil refugees who had taken refuge in the Eastern University campus close to the city Batticaloa on September 5, 1990.  A witness identified the Sri Lankan Army personnel as the perpetrator.  The event is part of what is known amongst Sri Lankan Tamils as Black September series of civilian massacres.  The Sri Lankan government eventually established a presidential commission of inquiry.  The inquiry found evidence of illegal abduction and mass murders.  It also named the responsible parties, currently there is no evidence of any judicial follow up to the inquiry.
+
+Salmon Letters: In Britain, Salmon Letters are official letters sent out by a public inquiry to people that will be subject to criticism when that inquiry's report is released.  The aim of the letter is to give the person a chance to prepare for the resultant exposure and possible legal recourse which may need to be taken when allegations against them become public.  The letters also serve to inform someone of the allegations they may have to answer to during the tribunal period of that inquiry which may, or may not, become something that is of interest to the public once the report is published.
+
+Suspect: In law enforcement jargon, a suspect is a known person accused or suspected of committing a crime.  Police and reporters in the United States often use the word suspect as a jargon when referring to the perpetrator of the offense (perp in dated US slang).  However, in official definition, the perpetrator is the robber, assailant, counterfeiter, etc.—the person who committed the crime.  The distinction between suspect and perpetrator recognizes that the suspect is not "known" to have committed the offense, while the perpetrator—who may not yet have been suspected of the crime, and is thus not necessarily a suspect—is the one who did.  The suspect may be a different person from the perpetrator, or there may have been no actual crime, which would mean there is no perpetrator.
+
+George Pell: George Pell {'1': ", '2': ", '3': ", '4': "} (born 8 June 1941) is an Australian cardinal prelate of the Catholic Church.  He became the inaugural Prefect of the Secretariat for the Economy in 2014.  He previously served as the eighth Archbishop of Sydney (2001–2014), Auxiliary Bishop of Melbourne (1987–1996), and Archbishop of Melbourne (1996–2001).  He was created a cardinal in 2003.  Ordained in 1966, he has also been an author, columnist, public speaker and sportsman, having been signed by the Richmond Football Club, an Australian Rules Football team, in 1959.  Since becoming Archbishop of Melbourne in 1996, he has maintained a high public profile on a wide range of issues, while retaining a strict adherence to Catholic orthodoxy.
+
+Kin punishment: Kin punishment is the practice of punishing the family members of someone accused of a crime, either in place of or in addition to the perpetrator.  It refers to the principle of a family sharing responsibility for a crime committed by one of its members, and is a form of collective punishment.
+
+Ferdinand Walsin Esterhazy: Charles Marie Ferdinand Walsin Esterhazy (16 December 1847 – 21 May 1923) was an officer in the French Army from 1870 to 1898.  He gained notoriety as a spy for the German Empire and the actual perpetrator of the act of treason of which Captain Alfred Dreyfus was wrongfully accused and convicted in 1894 (see Dreyfus affair).
+
+Question: When did the accused perpetrator in the Southwell Inquiry become a cardinal?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "inquiry_name": {
+      "type": "string",
+      "description": "The name of the inquiry."
+    },
+    "accused_perpetrator_name": {
+      "type": "string",
+      "description": "The name of the person accused of the crime in the inquiry."
+    },
+    "cardinal_appointment_year": {
+      "type": "integer",
+      "description": "The year the accused perpetrator became a cardinal."
+    },
+    "role_at_time_of_allegation": {
+      "type": "string",
+      "description": "The role of the accused perpetrator at the time the allegation was made."
+    }
+  },
+  "required": [
+    "inquiry_name",
+    "accused_perpetrator_name",
+    "cardinal_appointment_year",
+    "role_at_time_of_allegation"
+  ],
+  "additionalProperties": false
+}

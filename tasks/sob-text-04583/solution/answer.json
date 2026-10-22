@@ -1,0 +1,16 @@
+{
+  "is_cat_breed_names": false,
+  "names_checked": [
+    {
+      "name": "Braque d'Auvergne",
+      "animal_type": "dog",
+      "is_cat_breed": false
+    },
+    {
+      "name": "Kuchi",
+      "animal_type": "dog",
+      "is_cat_breed": false
+    }
+  ],
+  "summary_conclusion": "Both Braque d'Auvergne and Kuchi are identified as dog breeds in the context, not cat breeds."
+}

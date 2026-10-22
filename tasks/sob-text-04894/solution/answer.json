@@ -1,0 +1,19 @@
+{
+  "actress": {
+    "name": "Jennifer Tilly",
+    "nationality": [
+      "American",
+      "Canadian"
+    ],
+    "professions": [
+      "actress",
+      "poker player"
+    ]
+  },
+  "film": {
+    "title": "Empire of Silver",
+    "year": 2009,
+    "genre": "historical epic"
+  },
+  "role_description": "starred in"
+}

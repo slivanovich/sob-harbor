@@ -1,0 +1,17 @@
+{
+  "player_identified": "Ted Williams",
+  "player_career_details": {
+    "roles": [
+      "professional baseball player",
+      "manager"
+    ],
+    "major_league_career_years": "1939 to 1960",
+    "major_league_team": "Boston Red Sox"
+  },
+  "context_of_mention": {
+    "mentioned_by_columnist": "Roy Blount Jr.",
+    "columnist_quote_excerpt": "fishes with Ted Williams and Red Smith",
+    "associated_with_person": "Ralph W. 'Bud' Leavitt Jr.",
+    "activity": "fishing"
+  }
+}

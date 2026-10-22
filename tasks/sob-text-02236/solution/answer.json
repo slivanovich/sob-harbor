@@ -1,0 +1,9 @@
+{
+  "non_power_traditional_punch": "jab",
+  "is_traditional_boxing_punch": true,
+  "power_punches_mentioned": [
+    "uppercut",
+    "hook",
+    "cross"
+  ]
+}

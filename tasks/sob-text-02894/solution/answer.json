@@ -1,0 +1,28 @@
+{
+  "aviator_name": "Marion Wilberforce",
+  "aircraft_details": {
+    "model_name": "de Havilland DH.98 Mosquito",
+    "origin_country": "British",
+    "engine_configuration": "twin-engine",
+    "wing_configuration": "shoulder-winged",
+    "primary_role": "multi-role combat aircraft",
+    "other_known_roles": [
+      "low to medium-altitude daytime tactical bomber",
+      "high-altitude night bomber",
+      "pathfinder",
+      "day or night fighter",
+      "fighter-bomber",
+      "intruder",
+      "maritime strike aircraft",
+      "fast photo-reconnaissance aircraft",
+      "fast transport"
+    ],
+    "nicknames": [
+      "The Wooden Wonder",
+      "Mossie"
+    ],
+    "crew_size": 2,
+    "construction_material": "wood"
+  },
+  "aviator_flew_this_aircraft": true
+}

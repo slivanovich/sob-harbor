@@ -1,0 +1,16 @@
+{
+  "titles_analyzed": [
+    {
+      "title_name": "Tintin and I",
+      "genre": "documentary",
+      "release_year": 2003
+    },
+    {
+      "title_name": "Chernobyl Heart",
+      "genre": "documentary film",
+      "release_year": 2003
+    }
+  ],
+  "identified_common_genre": "documentary",
+  "number_of_titles_analyzed": 2
+}

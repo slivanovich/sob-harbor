@@ -1,0 +1,17 @@
+{
+  "question_entities": [
+    {
+      "name": "Janus",
+      "is_website": false,
+      "is_feminist_culture_related": true
+    },
+    {
+      "name": "Velvetpark",
+      "is_website": true,
+      "is_feminist_culture_related": true
+    }
+  ],
+  "all_entities_are_websites": false,
+  "all_entities_are_feminist_culture_related": true,
+  "final_answer": false
+}

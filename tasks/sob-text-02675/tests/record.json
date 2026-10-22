@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "record_id": "7adb2936ad44b2261d69d0dd4474b480450319237dd32c547cb07b643326e20f",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae4d25a5542990ba0bbb160",
+    "source_dataset": "hotpotqa",
+    "source_answer": "children's fantasy novel",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Ode to the Confederate Dead: \"Ode to the Confederate Dead\" is a long poem by the American poet-critic Allen Tate published in 1928 in Tate's first book of poems, \"Mr. Pope and Other Poems\".  It is one of Tate's best-known poems and considered by some critics to be his most \"important.\"  Heavily influenced by the work of T. S. Eliot, this Modernist poem takes place in a graveyard in the South where the narrator grieves the loss of the Confederate soldiers buried there.  However, unlike the \"\" to the Confederate Dead written by the 19th-century American poet Henry Timrod, Tate's \"Ode\" is not a straightforward ode.  Instead, Tate uses the graveyard and the dead Confederate soldiers as a metaphor for his narrator's troubled state of mind, and the poem charts the narrator's dark stream of consciousness, as he contemplates (or tries to avoid contemplating) his own mortality.\n\nSiege of Donegal: The Siege of Donegal took place in 1601 during Tyrone's Rebellion when a force led by Hugh Roe O'Donnell laid siege to the settlement of Donegal.  The garrison of the town were a mixture of Irish Army troops and Gaelic forces loyal to the Crown led by Niall Garve O'Donnell.  Heavy fighting took place during the month-long siege in which Donegal Abbey was wrecked by an accidental gunpowder explosion.  Having suffered several repulses Hugh Roe O'Donnell abandoned the siege and moved his army southwards to Munster to take part in the Battle of Kinsale.  In his absence Crown forces were able to use Donegal as a base to capture the strategic town of Ballyshannon.\n\nThe Midnight Charter: The Midnight Charter is a young adult fantasy novel by David Whitley.  It is the first novel in the Agora Trilogy, and the author's debut novel.  It was nominated for the 2010 Carnegie Medal, but lost to Neil Gaiman's \"The Graveyard Book\".\n\nThe Warlord of Mars: The Warlord of Mars is a science fantasy novel by American writer Edgar Rice Burroughs, the third of his Barsoom series.  Burroughs began writing it in June, 1913, going through five working titles; \"Yellow Men of Barsoom\", \"The Fighting Prince of Mars\", \"Across Savage Mars\", \"The Prince of Helium\", and \"The War Lord of Mars\".\n\nFrosses: Frosses (Irish: \"Na Frosa\" ) is a small village in County Donegal, Ireland.  It is situated in the south of the county on the R262 regional road and it lies 7 miles west of Donegal Town.  Due to the village's small size, a popular joke emerged that one side of the village didn't speak to the other, one side being the local graveyard.  The local Catholic Church is St. Mary's, located on the main street.\n\nNeil Gaiman: Neil Richard MacKinnon Gaiman ( ; born Neil Richard Gaiman, 10 November 1960) is an English author of short fiction, novels, comic books, graphic novels, audio theatre, and films.  His notable works include the comic book series \"The Sandman\" and novels \"Stardust\", \"American Gods\", \"Coraline\", and \"The Graveyard Book\".  He has won numerous awards, including the Hugo, Nebula, and Bram Stoker awards, as well as the Newbery and Carnegie medals.  He is the first author to win both the Newbery and the Carnegie medals for the same work, \"The Graveyard Book\" (2008).  In 2013, \"The Ocean at the End of the Lane\" was voted Book of the Year in the British National Book Awards.\n\nThe Graveyard Book: The Graveyard Book is a children's fantasy novel by the English author Neil Gaiman, simultaneously published in Britain and America during 2008.  \"The Graveyard Book\" traces the story of the boy Nobody \"Bod\" Owens who is adopted and raised by the supernatural occupants of a graveyard after his family is brutally murdered.\n\nTommy McCafferty: Tommy 'The Ghost\" McCafferty is an Irish kickboxer.  He was born in Letterkenny, County Donegal.  McCafferty was the ISKA World Light middleweight and ISKA Middleweight kickboxing champion, 2008-2012He is currently competing in MMA holding belts at featherweight in the Chaos Fighting Championships and Immortal Fighting Championships.On August 16,Tommy will be fighting for the premier European MMA Promotion Cage Warriors Fighting Championship for the first time against Dean Reilly and won this fight\n\nThe Fighting Prince of Donegal: The Fighting Prince of Donegal is a 1966 Walt Disney Productions adventure film starring Peter McEnery and Susan Hampshire, based on the novel \"Red Hugh: Prince of Donegal\" by Robert T. Reilly.  It was released by the Buena Vista Distribution Company.\n\nLaghy: Laghey or Laghy () is a small village in County Donegal, Ireland, between Ballintra and Donegal Town.  Laghey is one of three villages that make up the parish of Drumholm, formerly a civil and Church of Ireland parish, now only used as a division of the Roman Catholic Diocese of Raphoe.  The village has a quarry, a supermarket, garden centre, filling station, two public houses, a church with a graveyard, an Orange hall, a recycling centre, a Donegal County Council yard and salt depot, and a national school (St Eunan's NS).  Laghey is also near two of the most scenic beaches in Ireland, namely Rossnowlagh and Murvagh.  Murvagh is also the home to the Donegal Golf Club.",
+    "question": "What is the difference in genre between The Fighting Prince of Donegal and The Graveyard Book?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "book_one_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the first work being compared."
+            },
+            "media_type": {
+              "type": "string",
+              "description": "The type of media (e.g., film, novel)."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The genre of the first work."
+            },
+            "is_adaptation": {
+              "type": "boolean",
+              "description": "Indicates if the work is an adaptation of another source."
+            },
+            "source_novel_title": {
+              "type": "string",
+              "description": "The title of the novel the work is based on, if applicable."
+            }
+          },
+          "required": [
+            "title",
+            "media_type",
+            "genre",
+            "is_adaptation",
+            "source_novel_title"
+          ],
+          "additionalProperties": false
+        },
+        "book_two_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the second work being compared."
+            },
+            "media_type": {
+              "type": "string",
+              "description": "The type of media (e.g., film, novel)."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The genre of the second work."
+            }
+          },
+          "required": [
+            "title",
+            "media_type",
+            "genre"
+          ],
+          "additionalProperties": false
+        },
+        "genre_comparison_statement": {
+          "type": "string",
+          "description": "A statement summarizing the genre difference between the two works."
+        }
+      },
+      "required": [
+        "book_one_details",
+        "book_two_details",
+        "genre_comparison_statement"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "book_one_details": {
+        "title": "The Fighting Prince of Donegal",
+        "media_type": "film",
+        "genre": "adventure film",
+        "is_adaptation": true,
+        "source_novel_title": "Red Hugh: Prince of Donegal"
+      },
+      "book_two_details": {
+        "title": "The Graveyard Book",
+        "media_type": "novel",
+        "genre": "children's fantasy novel"
+      },
+      "genre_comparison_statement": "The Fighting Prince of Donegal is an adventure film, while The Graveyard Book is a children's fantasy novel."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

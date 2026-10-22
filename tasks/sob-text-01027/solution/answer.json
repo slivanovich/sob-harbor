@@ -1,0 +1,16 @@
+{
+  "bands_involved": [
+    {
+      "band_name": "He Is We",
+      "genre": "indie pop",
+      "is_pop_genre": true
+    },
+    {
+      "band_name": "The White Tie Affair",
+      "genre": "pop",
+      "is_pop_genre": true
+    }
+  ],
+  "all_are_pop_bands": true,
+  "reasoning": "He Is We is an indie pop band, and The White Tie Affair is a pop band. Both genres fall under the broader category of pop."
+}

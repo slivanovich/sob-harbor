@@ -1,0 +1,16 @@
+{
+  "question_asked": "Were both Oliver Sykes and Gordon Gano lead vocalists?",
+  "answer": true,
+  "individuals_roles": [
+    {
+      "name": "Oliver Sykes",
+      "is_lead_vocalist": true,
+      "band_name": "Bring Me the Horizon"
+    },
+    {
+      "name": "Gordon Gano",
+      "is_lead_vocalist": true,
+      "band_name": "Violent Femmes"
+    }
+  ]
+}

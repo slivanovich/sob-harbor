@@ -1,0 +1,13 @@
+{
+  "boxer_name": "Archie Kemp",
+  "event_outcome": "died in the ring",
+  "match_location_type": "boxing ring",
+  "location_characteristics": {
+    "is_raised_platform": true,
+    "shape": "square",
+    "posts_at_corners": true,
+    "number_of_rope_rows": 4,
+    "ropes_attachment_method": "attached with a turnbuckle",
+    "ropes_interconnection": "connected together between the posts"
+  }
+}

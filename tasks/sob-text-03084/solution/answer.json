@@ -1,0 +1,13 @@
+{
+  "film_details": {
+    "title": "Thuppakki",
+    "antagonist_actor_name": "Vidyut Jammwal"
+  },
+  "actor_martial_art_training": {
+    "actor_name": "Vidyut Jammwal",
+    "martial_art_learned": "Kalaripayattu",
+    "age_started_learning_years": 3,
+    "martial_art_origin_region": "Kerala"
+  },
+  "final_answer": "Kalaripayattu"
+}

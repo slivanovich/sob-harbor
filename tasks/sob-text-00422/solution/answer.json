@@ -1,0 +1,16 @@
+{
+  "event_comparison": {
+    "first_event": {
+      "entity_name": "St. Elizabeths Hospital",
+      "event_description": "designated a National Historic Landmark",
+      "year": 1990
+    },
+    "second_event": {
+      "entity_name": "Sibley Memorial Hospital",
+      "event_description": "part of Johns Hopkins Medicine",
+      "year": 2010
+    }
+  },
+  "earliest_event_entity": "St. Elizabeths Hospital",
+  "earliest_event_year": 1990
+}

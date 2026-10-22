@@ -1,0 +1,12 @@
+{
+  "event_year": 2001,
+  "event_name": "Webby Awards",
+  "venue": {
+    "name": "War Memorial Opera House",
+    "city": "San Francisco"
+  },
+  "nearby_government_building": {
+    "name": "City Hall",
+    "relationship_to_venue": "across from the rear facade"
+  }
+}

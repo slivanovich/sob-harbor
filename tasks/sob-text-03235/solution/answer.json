@@ -1,0 +1,16 @@
+{
+  "actress_name": "Lauren Tom",
+  "sitcom_role": {
+    "character_name": "Julie",
+    "sitcom_title": "Friends",
+    "sitcom_main_cast_members": [
+      "Jennifer Aniston",
+      "Matt LeBlanc",
+      "David Schwimmer"
+    ]
+  },
+  "animated_series_role": {
+    "character_name": "Amy Wong",
+    "animated_series_title": "Futurama"
+  }
+}

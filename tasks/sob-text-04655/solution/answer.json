@@ -1,0 +1,14 @@
+{
+  "film_title": "The Blues Brothers",
+  "director": {
+    "name": "John Landis",
+    "birth_year": 1950,
+    "occupation": [
+      "film director",
+      "screenwriter",
+      "actor",
+      "producer"
+    ]
+  },
+  "setting_location": "Chicago, Illinois"
+}

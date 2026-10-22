@@ -1,0 +1,19 @@
+{
+  "common_media_type": "film",
+  "entities_involved": [
+    {
+      "entity_name": "Lin-Manuel Miranda",
+      "media_types": [
+        "film",
+        "musical"
+      ]
+    },
+    {
+      "entity_name": "Million Dollar Arm",
+      "media_types": [
+        "film"
+      ]
+    }
+  ],
+  "reasoning": "Lin-Manuel Miranda co-wrote songs for the 'Moana' film soundtrack and is set to star in the 'Mary Poppins Returns' film. 'Million Dollar Arm' is explicitly described as a '2014 American biographical sports drama film'. Both are associated with 'film'."
+}

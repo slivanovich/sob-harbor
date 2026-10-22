@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1995–96 Charlotte Hornets season: The 1995–96 NBA season was the 8th season for the Charlotte Hornets in the National Basketball Association.  During the offseason, the Hornets re-acquired Kendall Gill from the Seattle SuperSonics.  On the first day of the regular season, the Hornets acquired Glen Rice, Matt Geiger and second-year guard Khalid Reeves from the Miami Heat.  Rice would prove to be a solid pick with his long range ability from beyond the arch.  He was also selected to play in the 1996 NBA All-Star Game.  The Hornets got off to a slow start losing eight of their first eleven games, but played around .500 along the way.  In January, they dealt Gill and Reeves to the New Jersey Nets for Kenny Anderson, who became the team's starting point guard, while Muggsy Bogues sat out with a knee injury that only limited him to just six games.  Scott Burrell was also injured, only playing just 20 games due to a shoulder injury.
+
+Muggsy Bogues: Tyrone Curtis "Muggsy" Bogues (born January 9, 1965) is an American retired basketball player.  The shortest player ever to play in the National Basketball Association, the 5 ft Bogues played point guard for four teams during his 14-season career in the NBA.  He is best known for his ten seasons with the Charlotte Hornets, and also played for the Washington Bullets, Golden State Warriors, and Toronto Raptors.  After his NBA career, he served as head coach of the now-defunct WNBA team Charlotte Sting.
+
+1997–98 Charlotte Hornets season: The 1997–98 NBA season was the tenth season for the Charlotte Hornets in the National Basketball Association.  During the offseason, the Hornets signed free agents David Wesley and Bobby Phills, while re-signing former Hornets forward J.R. Reid.  Early into the season, they traded Muggsy Bogues to the Golden State Warriors for B.J. Armstrong.  The Hornets had another stellar season posting a ten-game winning streak between February and March, as they finished the season third in the Central Division with a 51–31 record, and qualified for their fourth Playoff appearance.  Glen Rice led them with 22.3 points per game, and made his third and final All-Star appearance in the 1998 NBA All-Star Game.  In the playoffs, they defeated the Atlanta Hawks 3–1 in the first round, but were eliminated 4–1 by the Chicago Bulls in the Conference Semifinals, despite winning Game 2 at the United Center 78–76.
+
+1998–99 Golden State Warriors season: The 1998–99 NBA season was the Warriors' 53rd season in the National Basketball Association, and 37th in the San Francisco Bay Area.  In the 1998 NBA draft, the Warriors selected Vince Carter out of the University of North Carolina with the fifth pick, but soon traded him to the Toronto Raptors for his college teammate Antawn Jamison.  The team also acquired John Starks, Chris Mills and Terry Cummings from the New York Knicks during the offseason.  After losing their first five games, the Warriors started to show signs of improvement in a lockout shortened season.  Despite playing 32 games fewer, they won two more games than the previous year, finishing sixth in the Pacific Division with a 21–29 record.  Jamison was selected to the All-Rookie Second Team.  Following the season, Bimbo Coles was traded to the Atlanta Hawks, Muggsy Bogues signed as a free agent with the Toronto Raptors, and Tony Delk signed with the Sacramento Kings.
+
+Charlotte Hornets draft history: The original Charlotte Hornets of the National Basketball Association (NBA) were established in 1988 as an expansion team, based in Charlotte, North Carolina.  The team's roster was filled with unprotected players at the 1988 NBA Expansion Draft, and five days later the Hornets made their first picks out of college players at the 1988 NBA draft.  The Hornets remained in Charlotte for 14 seasons before relocating to New Orleans in 2002.  Two years after the Hornets' departure, the Charlotte Bobcats were established in 2004.  The Bobcats first participated in the 2004 NBA draft, two days after their expansion draft was held.  The franchise's name was changed back to the Hornets at the conclusion of the 2013–14 season, one year after the team in Louisiana renamed itself the New Orleans Pelicans.  The history and records of the original Charlotte Hornets were conveyed to the newly named Charlotte Hornets.
+
+1997–98 San Antonio Spurs season: The 1997–98 NBA season was the Spurs' 22nd season in the National Basketball Association, and 31st season as a franchise.  After finishing with the third-worst record in 1996–97, the Spurs won the 1997 NBA Draft Lottery, dubbed as the "Tim Duncan sweepstakes."  During the offseason, the team signed free agents Jaren Jackson and Malik Rose.  Despite losing Sean Elliott for the remainder of the season to a knee injury after 36 games, the Spurs finished second in the Midwest Division with a 56–26 record, and returned to the playoffs after a one-year absence.  Duncan was named Rookie of The Year, and was selected to the 1998 NBA All-Star Game along with David Robinson.  In the playoffs, the Spurs defeated the Phoenix Suns 3–1 in the Western Conference First Round, but lost 4–1 to the Utah Jazz in the semifinals.  Following the season, Vinny Del Negro signed as a free agent with the Milwaukee Bucks, three-point specialist Chuck Person signed with the Charlotte Hornets, and Monty Williams was released.
+
+2014–15 Charlotte Hornets season: The 2014–15 Charlotte Hornets season was the franchise's 25th season in the National Basketball Association (NBA).  This was the team's first year as the Charlotte Hornets since 2002.  The team had been known as the Charlotte Bobcats since its revival in 2004.  However, when the team formally changed its name to the Hornets on May 20, 2014; they also reclaimed the history and records of the original Charlotte Hornets franchise from the 1988–89 NBA season through the 2001–02 NBA season.  The New Orleans Pelicans retained the remaining history that exists under the New Orleans(/Oklahoma City) Hornets name from the 2002–03 NBA season through the 2012–13 NBA season.  The team was led by head coach Steve Clifford and assistant coaches Patrick Ewing, Bob Beyer, Stephen Silas, Bob Weiss, and Mark Price.
+
+List of Charlotte Hornets seasons: The Charlotte Hornets are a professional basketball club based in Charlotte, North Carolina.  They are members of the National Basketball Association (NBA), playing in the Southeast Division of the Eastern Conference.  The original Charlotte Hornets franchise played in Charlotte from 1988–2002 before relocating to New Orleans, Louisiana and becoming the New Orleans Hornets.  A new franchise, the "Charlotte Bobcats", began play in the 2004–05 season.  The team played for ten seasons as the Bobcats before adopting the Hornets name for the 2014–15 season.  The Hornets name was left available after the New Orleans Hornets became the New Orleans Pelicans.  As part of a deal between the Bobcats, Hornets and NBA, the renamed Hornets reclaimed the original Hornets' history and records from 1988 to 2002, while all of the Hornets' records from 2002 to 2013 remained with the Pelicans.  As a result, the Hornets are now reckoned as having suspended operations after the 2001–02 season before returning as the Bobcats in 2004; This has allowed all of Charlotte's NBA history to be recognized under one single franchise.
+
+1992–93 Charlotte Hornets season: The 1992–93 NBA season was the fifth season for the Charlotte Hornets in the National Basketball Association.  In the 1992 NBA draft, the Hornets selected center Alonzo Mourning out of Georgetown with the second overall pick.  With the addition of Mourning, along with second-year star Larry Johnson and Muggsy Bogues, the Hornets struggled around .500 for most of the season, but won 9 of their final 12 games finishing their season third in the Central Division with a 44–38 record, and qualified for their first ever playoff appearance.  The team became the first of the four expansion franchises of the late 1980s to win a playoff series, when Mourning sunk a 20 ft jumper at the buzzer in Game 4 of the first round playoff series against the 4th-seeded Boston Celtics.  However, in the semifinals, the Hornets were eliminated by the New York Knicks in five games.
+
+1997–98 Golden State Warriors season: The 1997–98 NBA season was the Warriors' 52nd season in the National Basketball Association, and 36th in the San Francisco Bay Area.  The Warriors got a new logo, new uniforms, and moved into their new arena known as The Arena in Oakland.  During the offseason, the Warriors acquired second-year center Erick Dampier from the Indiana Pacers, and Brian Shaw from the Orlando Magic.  Early into the season, they traded B.J. Armstrong to the Charlotte Hornets for Muggsy Bogues and Tony Delk.  However, the Warriors struggled losing 13 of their first 14 games of the season.  Things would get worse in December as Latrell Sprewell choked new head coach P.J. Carlesimo during practice, and was suspended for the rest of the season, which was 68 games.  Without Sprewell, the Warriors then suffered a 14-game losing streak as the season progressed.
+
+Question: The 1997–98 NBA season was the tenth season for the Charlotte Hornets in the National Basketball Association, early into the season, they traded Muggsy Bogues to which sports organization?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "season": {
+      "type": "string",
+      "description": "The NBA season during which the trade occurred."
+    },
+    "trading_team": {
+      "type": "string",
+      "description": "The team that traded Muggsy Bogues."
+    },
+    "player_traded": {
+      "type": "string",
+      "description": "The name of the player who was traded."
+    },
+    "receiving_organization": {
+      "type": "string",
+      "description": "The sports organization that acquired Muggsy Bogues."
+    },
+    "player_received_in_return": {
+      "type": "string",
+      "description": "The player received by the trading team in exchange."
+    }
+  },
+  "required": [
+    "season",
+    "trading_team",
+    "player_traded",
+    "receiving_organization",
+    "player_received_in_return"
+  ],
+  "additionalProperties": false
+}

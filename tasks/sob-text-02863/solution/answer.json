@@ -1,0 +1,12 @@
+{
+  "older_fighter": {
+    "name": "Nate Marquardt",
+    "birth_date": "1979-04-20"
+  },
+  "younger_fighter": {
+    "name": "Yushin Okami",
+    "birth_date": "1981-07-21"
+  },
+  "comparison_summary": "Nate Marquardt was born on April 20, 1979, making him older than Yushin Okami, who was born on July 21, 1981.",
+  "is_older_fighter_correct": true
+}

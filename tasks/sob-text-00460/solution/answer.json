@@ -1,0 +1,17 @@
+{
+  "common_category": "board game",
+  "entities_compared": [
+    "Junta",
+    "Ashta Chamma"
+  ],
+  "entity_details": [
+    {
+      "name": "Junta",
+      "type": "board game"
+    },
+    {
+      "name": "Ashta Chamma",
+      "type": "board game"
+    }
+  ]
+}

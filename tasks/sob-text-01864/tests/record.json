@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "record_id": "7080a2515d796cc1e928d3003660995db0b4cc0ddc01ab611a8c19b09270932f",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae1391f55429901ffe4ae09",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Gladiolus: Gladiolus (from Latin, the diminutive of \"gladius\", a sword,) is a genus of perennial cormous flowering plants in the iris family (Iridaceae).\n\nList of Gladiolus cultivars: This is a list of cultivars of the Gladiolus genus of flowering plants.\n\nAptenia: Aptenia is a small genus of flowering plants in the family Aizoaceae.  They are native to southern Africa.  The genus name is from the Greek \"a-\" (not) and \"ptenos\" (winged), and refers to the wingless fruit capsules.",
+    "question": "Are Aptenia and Gladiolus both flowering plants?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question posed."
+        },
+        "genus_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the first genus."
+            },
+            "is_flowering_plant": {
+              "type": "boolean",
+              "description": "Indicates if the genus is a flowering plant."
+            },
+            "family": {
+              "type": "string",
+              "description": "The plant family to which the genus belongs."
+            }
+          },
+          "required": [
+            "name",
+            "is_flowering_plant",
+            "family"
+          ],
+          "additionalProperties": false
+        },
+        "genus_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the second genus."
+            },
+            "is_flowering_plant": {
+              "type": "boolean",
+              "description": "Indicates if the genus is a flowering plant."
+            },
+            "family": {
+              "type": "string",
+              "description": "The plant family to which the genus belongs."
+            }
+          },
+          "required": [
+            "name",
+            "is_flowering_plant",
+            "family"
+          ],
+          "additionalProperties": false
+        },
+        "both_are_flowering_plants": {
+          "type": "boolean",
+          "description": "True if both genera are flowering plants, false otherwise."
+        }
+      },
+      "required": [
+        "question_asked",
+        "genus_1",
+        "genus_2",
+        "both_are_flowering_plants"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Are Aptenia and Gladiolus both flowering plants?",
+      "genus_1": {
+        "name": "Gladiolus",
+        "is_flowering_plant": true,
+        "family": "Iridaceae"
+      },
+      "genus_2": {
+        "name": "Aptenia",
+        "is_flowering_plant": true,
+        "family": "Aizoaceae"
+      },
+      "both_are_flowering_plants": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

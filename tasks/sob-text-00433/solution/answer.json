@@ -1,0 +1,9 @@
+{
+  "physicist_name": "Kyriakos Tamvakis",
+  "organization": {
+    "name": "CERN",
+    "type": "European research organization",
+    "key_characteristic": "operates the largest particle physics laboratory in the world"
+  },
+  "physicist_role_at_organization": "Theory Division"
+}

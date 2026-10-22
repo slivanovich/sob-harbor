@@ -1,0 +1,21 @@
+{
+  "athlete": {
+    "name": "Samir Brahimi",
+    "nationality": "Algerian",
+    "birth_date": "1990-05-17",
+    "sport": "boxing"
+  },
+  "event": {
+    "name": "All-Africa Games",
+    "year": 2011,
+    "edition": "10th",
+    "host_city": "Maputo",
+    "host_country": "Mozambique",
+    "start_date": "2011-09-03",
+    "end_date": "2011-09-18"
+  },
+  "athlete_achievement": {
+    "medal_type": "silver"
+  },
+  "answer": "Mozambique"
+}

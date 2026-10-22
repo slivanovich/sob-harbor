@@ -1,0 +1,18 @@
+{
+  "player_name": "Jamal Crawford",
+  "traded_from_team": "Chicago Bulls",
+  "traded_to_team": "New York Knicks",
+  "trade_details": {
+    "season": "2003–04",
+    "trading_team_division_standing": "last place in the Central Division"
+  },
+  "player_career_history": {
+    "played_for_atlanta_hawks": true,
+    "played_for_los_angeles_clippers": true,
+    "other_career_teams_mentioned": [
+      "Cleveland Cavaliers",
+      "Golden State Warriors",
+      "Portland Trail Blazers"
+    ]
+  }
+}

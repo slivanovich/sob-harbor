@@ -1,0 +1,13 @@
+{
+  "beer_brand_name": "Taedonggang",
+  "brewery_details": {
+    "name": "Taedonggang Brewing Company",
+    "ownership_type": "state-owned",
+    "location": {
+      "city": "Pyongyang",
+      "country": "North Korea",
+      "continent": "Asia"
+    }
+  },
+  "is_leading_brand_in_country": true
+}

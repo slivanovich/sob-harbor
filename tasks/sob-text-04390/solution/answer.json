@@ -1,0 +1,24 @@
+{
+  "college_with_more_programs": "California State University, Chico",
+  "colleges_information": [
+    {
+      "college_name": "California State University, Chico",
+      "degrees_offered": {
+        "bachelor_degrees": 126,
+        "master_degrees": 35,
+        "teaching_credentials": 4,
+        "total_degree_programs": 165
+      },
+      "focus_areas": []
+    },
+    {
+      "college_name": "Institute of Space Technology",
+      "focus_areas": [
+        "astronomy",
+        "aerospace engineering",
+        "astronautics"
+      ]
+    }
+  ],
+  "comparison_basis": "California State University, Chico explicitly lists 165 degree programs and credentials, while the Institute of Space Technology only lists areas of study without specific program counts, indicating CSU Chico offers more quantifiable programs."
+}

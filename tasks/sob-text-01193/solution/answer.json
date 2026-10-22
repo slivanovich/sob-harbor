@@ -1,0 +1,13 @@
+{
+  "arena_name": "Landers Center",
+  "location": {
+    "city": "Southaven",
+    "state": "Mississippi"
+  },
+  "capacity_seats": 8400,
+  "built_year": 2000,
+  "hosted_teams": [
+    "Memphis Hustle",
+    "Mississippi RiverKings"
+  ]
+}

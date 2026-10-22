@@ -1,0 +1,10 @@
+{
+  "film_title": "Office Space",
+  "release_year": 1999,
+  "film_genre": "comedy",
+  "director_name": "Mike Judge",
+  "featured_character": {
+    "character_name": "William \"Bill\" Lumbergh",
+    "actor_portraying_character": "Gary Cole"
+  }
+}

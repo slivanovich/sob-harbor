@@ -1,0 +1,16 @@
+{
+  "first_to_pass_away": "George Jacob Gershwin",
+  "composers": [
+    {
+      "name": "Igor Fyodorovich Stravinsky",
+      "date_of_death": "6 April 1971",
+      "year_of_death": 1971
+    },
+    {
+      "name": "George Jacob Gershwin",
+      "date_of_death": "July 11, 1937",
+      "year_of_death": 1937
+    }
+  ],
+  "comparison_result": "George Jacob Gershwin passed away in 1937, which is before Igor Fyodorovich Stravinsky who passed away in 1971."
+}

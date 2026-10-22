@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "ed6a2d1664b69e76fbb61a9adaa543f90cbe540bd2fa4a75c628ca58e5c492bb",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abebb585542997719eab59a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Jungle Captive",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Buck Taylor: Walter Clarence Taylor, III, known as Buck Taylor (born May 13, 1938), is an American actor best known for his role as gunsmith-turned-deputy Newly O'Brien in 174 episodes during the last eight seasons of CBS's \"Gunsmoke\" television series (1967–1975).  In recent years, he has painted the portrait of his friend and \"Gunsmoke\" series' star James Arness.  Taylor's painting specialty is the American West, and each year, he creates the posters for several Texas rodeos. Taylor lives with his second wife on a ranch near Fort Worth, Texas.\n\nMilburn Stone: Hugh Milburn Stone, sometimes known as Milly Stone (July 5, 1904 – June 12, 1980), was an American film and television actor best known as \"Doc\" (Dr. Galen Adams) on the CBS western series \"Gunsmoke\".\n\nKen Curtis: Ken Curtis (July 2, 1916 – April 28, 1991) was an American singer and actor best known for his role as Festus Haggen on the long-running CBS western television series \"Gunsmoke\".  Although he appeared on \"Gunsmoke\" in other earlier roles, he was first cast in his iconic role in season 8 episode 13, \"Us Haggens\".  His next appearance was with his mule, Ruth, in \"Prairie Wolfer\" in season 9 episode 16, which also featured Noah Beery Jr., as a villain.\n\nThe Lodger (1944 film): The Lodger is a 1944 horror film about Jack the Ripper, based on the novel of the same name by Marie Belloc Lowndes.  It stars Merle Oberon, George Sanders and Laird Cregar, features Sir Cedric Hardwicke and was directed by John Brahm from a screenplay by Barré Lyndon.\n\nJungle Woman: Jungle Woman is a 1944 horror film released by Universal Pictures and starring Acquanetta, Evelyn Ankers, J. Carrol Naish, Samuel S. Hinds, Lois Collier, Milburn Stone, and Douglass Dumbrille.  This is a sequel to \"Captive Wild Woman\" and was followed by \"The Jungle Captive\".\n\nGage Clarke: Gage Clarke (March 3, 1900 – October 22, 1964) was an American character actor best known for his role as the principal in \"Mister Peepers\".  His other work consisted largely of one-shot appearances in television series such as seven major supporting roles as different characters in \"Maverick\", twelve roles in \"Gunsmoke\" (Clarke played a key role in the \"Maverick\" spoof of \"Gunsmoke\", an episode entitled \"Gun-Shy\"), \"Mister Ed\", \"Laramie\", \"Ben Casey\", \"Checkmate\", \"The Twilight Zone\", \"The Real McCoys\" (twice), four roles in \"Alfred Hitchcock Presents\", \"Bourbon Street Beat\", \"Thriller\", \"Have Gun Will Travel\", and many others, as well as movies including \"I Want to Live! \", \"The Bad Seed\", \"The Brothers Karamazov\", and \"The Absent-Minded Professor\".  Clarke, a slightly overweight actor with a double chin, specialized in playing avuncular, rather timid characters, with one of his largest parts being frightened gambler \"Foursquare Farley\" in the \"Maverick\" episode \"Greenbacks, Unlimited\" opposite James Garner and John Dehner.  He made two guest appearances on \"Perry Mason\", including the role of Frederick Rollins in \"The Case of the Glittering Goldfish\" in 1959.  He also played the part of Mr. Murg in \"Pollyanna\" in 1960.\n\nMarshall Kent (actor): Marshall Kent (October 6, 1908 - January 15, 1985) was an American television and film actor who appeared in 30 television series or films between 1956 and 1977.  He was best known for his role as \"Doc\" in the 1958 spoof of \"Gunsmoke\" presented as an episode of \"Maverick\" starring James Garner entitled \"Gun-Shy.\"  He also appeared in various other series including \"Dragnet\" with Jack Webb, \"Perry Mason\" with Raymond Burr, \"The Deputy\" with Henry Fonda, \"The Gray Ghost\", \"The Millionaire\", \"Highway Patrol\" with Broderick Crawford, \"General Electric Theater\", \"The Loretta Young Show\", \"Dennis the Menace\", \"The Thin Man\", \"Room 222\", \"The Wonderful World of Disney\", \"The Doris Day Show\", and \"Little House on the Prairie\".  He was also a supporting player in films including \"Beyond the Valley of the Dolls\", \"The Decks Ran Red\" with James Mason and Dorothy Dandridge, \"Teenage Thunder\", \"Ring of Fire\" with David Janssen, and \"The Last Voyage\" with Robert Stack and Dorothy Malone.\n\nKatharine Isabelle: Katharine Isabelle Murray (born November 2, 1981) is a Canadian actress best known as a scream queen for her roles in various horror films.  Born in Vancouver, British Columbia, she made her screen debut as a child in \"Cousins\" (1989), followed by supporting roles in numerous films and television series.  Initially credited as Katie Murray, she later began using the name Katherine Isobel and subsequently Katharine Isabelle.  She has starred in the werewolf horror films, \"Ginger Snaps\" (2000), its sequel, \"\" (2004), and \"\" (2004).  Her portrayal of the death-obsessed teen, Ginger Fitzgerald, became one of her most notable roles.  Additional roles in horror films include \"Disturbing Behavior\" (1998), \"Carrie\" (2002), \"Freddy vs. Jason\" (2003), \"\" (2010), and \"American Mary\" (2012).  For her performance in the horror film, \"American Mary\" (2012), she earned several nominations for best actress, including Fangoria Chainsaw Awards, Screamfest Horror Film Festival and Toronto After Dark Film Festival.\n\nRobert Brubaker: Robert Brubaker (October 9, 1916 – April 15, 2010) was an American character actor best known for his roles in television and movie westerns, including \"Gunsmoke\" and \"40 Guns to Apache Pass\".  Brubaker was the only actor to have two recurring roles on the television series, \"Gunsmoke\", portraying both a bartender named Floyd and a stagecoach driver named Jim Buck.  Some of Brubaker's other credits included the Rock Hudson film, \"Seconds\", and television crime drama \"The Walter Winchell File\" and the television police drama \"The Asphalt Jungle\".\n\nRobert Totten: Robert C. Totten (February 5, 1937 – January 27, 1995) was an American television director, writer, and actor, best known for his work on the CBS series \"Gunsmoke\".  He directed twenty-seven \"Gunsmoke\" episodes between 1966 and 1971 and guest starred in eight segments between 1967 and 1973.  He also directed eight episodes of NBC's \"Walt Disney's Wonderful World of Color\" between 1969 and 1975.",
+    "question": "What is the name of the sequel to the 1944 horror film that the actor best known as \"Doc\" on Gunsmoke starred in?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "sequel_film_title": {
+          "type": "string",
+          "description": "The title of the sequel film."
+        },
+        "original_film_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the original film."
+            },
+            "year": {
+              "type": "integer",
+              "description": "The release year of the original film."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The genre of the original film."
+            }
+          },
+          "required": [
+            "title",
+            "year",
+            "genre"
+          ],
+          "additionalProperties": false
+        },
+        "actor_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the actor."
+            },
+            "best_known_role": {
+              "type": "string",
+              "description": "The role the actor is best known for."
+            },
+            "series_name": {
+              "type": "string",
+              "description": "The television series associated with the actor's best known role."
+            }
+          },
+          "required": [
+            "name",
+            "best_known_role",
+            "series_name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "sequel_film_title",
+        "original_film_details",
+        "actor_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "sequel_film_title": "The Jungle Captive",
+      "original_film_details": {
+        "title": "Jungle Woman",
+        "year": 1944,
+        "genre": "horror film"
+      },
+      "actor_details": {
+        "name": "Milburn Stone",
+        "best_known_role": "Doc",
+        "series_name": "Gunsmoke"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

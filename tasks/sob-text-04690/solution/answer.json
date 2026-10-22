@@ -1,0 +1,15 @@
+{
+  "comparison_type": "genus_species_count",
+  "genera_compared": [
+    {
+      "genus_name": "Symplocos",
+      "species_count": 300
+    },
+    {
+      "genus_name": "Erodium",
+      "species_count": 60
+    }
+  ],
+  "genus_with_more_species": "Symplocos",
+  "species_difference": 240
+}

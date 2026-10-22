@@ -1,0 +1,16 @@
+{
+  "station_info": {
+    "call_sign": "WTMA",
+    "frequency_khz": 1250,
+    "licensed_location": "Charleston, South Carolina"
+  },
+  "host_info": {
+    "name": "Michael Savage",
+    "description": "American radio host, author, activist, nutritionist, and conservative political commentator"
+  },
+  "talk_show_details": {
+    "show_name": "The Savage Nation",
+    "syndication_network": "Cumulus Media Networks",
+    "syndication_start_date": "October 23, 2012"
+  }
+}

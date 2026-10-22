@@ -1,0 +1,17 @@
+{
+  "musician_name": "Manolo Badrena",
+  "musician_type": "percussionist",
+  "noted_band_affiliation": {
+    "band_name": "Weather Report",
+    "start_year": 1976,
+    "end_year": 1977
+  },
+  "collaborator_details": {
+    "name": "Joni Mitchell",
+    "nationality": "Canadian",
+    "occupations": [
+      "singer-songwriter",
+      "painter"
+    ]
+  }
+}

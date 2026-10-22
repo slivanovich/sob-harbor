@@ -1,0 +1,10 @@
+{
+  "game_name": "Twilight Struggle",
+  "theme_source": "Cold War",
+  "game_type": "card-driven strategy game",
+  "number_of_players": 2,
+  "player_factions": [
+    "United States",
+    "Soviet Union"
+  ]
+}

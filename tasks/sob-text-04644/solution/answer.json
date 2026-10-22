@@ -1,0 +1,17 @@
+{
+  "query_locations": [
+    {
+      "name": "Jiaojiang District",
+      "country": "China"
+    },
+    {
+      "name": "Taichung",
+      "country": "Taiwan"
+    }
+  ],
+  "all_locations_in_same_country": false,
+  "countries_involved": [
+    "China",
+    "Taiwan"
+  ]
+}

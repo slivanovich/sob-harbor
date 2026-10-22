@@ -1,0 +1,16 @@
+{
+  "common_profession": "film director",
+  "individuals": [
+    {
+      "name": "Jack Hill",
+      "nationality": "American",
+      "birth_year": 1933
+    },
+    {
+      "name": "Pedro Costa",
+      "nationality": "Portuguese",
+      "birth_year": 1958
+    }
+  ],
+  "number_of_individuals": 2
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+John I. Thornycroft &amp; Company: John I. Thornycroft & Company Limited, usually known simply as Thornycroft was a British shipbuilding firm founded by John Isaac Thornycroft in Chiswick in 1866.  It moved to Woolston, Southampton, in 1908, merging in 1966 with Vosper & Company to form one organisation called Vosper Thornycroft.  From 2002 to 2010 the company acquired several international and US based defence and services companies, and changed name to the VT Group.  In 2010 the company was absorbed by Babcock International who retained the UK and international operations, but sold the US based operations to the American Jordan Company, who took the name VT Group.
+
+Pentair: Pentair plc (PNR) is a multinational diversified industrial company incorporated in Ireland with tax residency in UK, with its main U.S. office located in Minneapolis, Minnesota.  Pentair was founded in the US, where roughly half of the company's revenue is derived as of 2015.  However, PNR was reorganized in 2014, shifting the corporate domicile from Switzerland to Ireland.
+
+US Airways Group: US Airways Group Inc. was an airline holding company based in Tempe, Arizona.  US Airways Group operated US Airways, along with its subsidiaries PSA Airlines, Inc. and Piedmont Airlines, Inc., which are wholly owned but marketed under the branding of US Airways Express.  It merged with America West Holdings Corporation, parent of America West Airlines, in 2005, and the combined company adopted the better-known US Airways name; the two airlines' operating certificates merged in 2007.  It also operates additional companies that provide associated services.  ACE Aviation Holdings, the Canadian parent of Air Canada retained a roughly 6.1% investment stake in US Airways Group.  The route network covered destinations in 47 states, as well as international destinations.
+
+UbiNetics: UbiNetics was a 3G wireless technology company based in Cambridge, UK, with offices in the US, Japan, Hong Kong, India (Bangalore) and China.  The company was founded by Ali Pourtaheri in1998.  They had other development centers within UK at Swindon and the US in Melbourne, FL.  The company had gone through three different acquisitions; WCDMA Silicon on chip group acquired by Analog Devices (ADI), Test and Measurement equipment group, which produced UMTS/HSDPA test mobiles to Aeroflex and the rest of R&D by Cambridge Silicon Radio (CSR Plc) in Cambridge in 2005.  The name UbiNetics stood for Ubiquitous Networks.  The company was initially formed as a spin-off from PA Consulting with several engineers, PhD and post graduates from University of Southampton and other universities in Europe.
+
+Mineral-insulated copper-clad cable: Mineral-insulated copper-clad cable is a variety of electrical cable made from copper conductors inside a copper sheath, insulated by inorganic magnesium oxide powder.  The name is often abbreviated to MICC or MI cable, and colloquially known as pyro (because the original manufacturer and vendor for this product in the UK was a company called Pyrotenax).  A similar product sheathed with metals other than copper is called "mineral insulated metal sheathed" (MIMS) cable.
+
+MBlox: Mblox Inc. is a global company that provides Saas-based mobile messaging solutions to enterprises, including global one-way and two-way SMS, MMS, push notifications, short codes and virtual mobile numbers.  Mblox Ltd. was founded in 1999, in London, United Kingdom but later Mblox inc. became the US based parent company after the successful merger with Mobilesys.  The company is headquartered in Campbell, California, USA, with offices in Atlanta (US), London (UK), Paris (France), Lund (Sweden), Stockholm (Sweden), Canterbury (UK), Madrid (Spain), Prague (Czech Republic), Sydney (Australia)
+
+No Colour Bar: No Colour Bar: Black British Art in Action 1960–1990 was a major public art and archives exhibition, the first of its kind in the UK, held at the Guildhall Art Gallery, City of London, over a six-month period (10 July 2015 – 24 January 2016), with a future digital touring exhibition, and an associated programme of events.  "No Colour Bar" took its impetus from the life work and archives of Jessica Huntley (23 February 1927 – 13 October 2013) and Eric Huntley (born 25 September 1929), Guyanese-born campaigners, political activists and publishers, who founded the publishing company Bogle-L'Ouverture Publications and the associated Walter Rodney Bookshop.
+
+Kinks-Size: Kinks-Size is the second US-only album by the English band The Kinks, released in 1965.  Differences in record company practice between the UK and US in the early 1960s, such as the US tending to issue shorter LPs, featuring less original material and the comparative unpopularity of EPs in the US all left US record companies with extra LPs worth of material (see also The Beatles and The Rolling Stones).  In 1965, this meant, as well as versions of the two UK Kinks albums from that year, Reprise issued another two complete LPs - "Kinks-Size" and "Kinkdom".
+
+Revolver Entertainment: Revolver Entertainment is a film distributor in the United Kingdom and the United States.  Justin Marciano founded it in 1997 in the UK and Revolver UK entered administration in April 2013.  Justin's brother, Seb Marciano formed Revolver Entertainment LLC, a US company based in Los Angeles, California in 2007.  Revolver US is still successfully operating independently of Revolver UK.
+
+Morse Diving: Morse Diving is an American manufacturer of diving equipment.  It was founded in 1837 as Morse & Fletcher in Boston MA.  The name was changed in 1864 to A J Morse and Son and it remained under that name until 1905 when the company was incorporated and Inc. was added to the name.  In 1940 the company was purchased and the name was changed to Morse Diving Equipment Company Incorporated and later moved its operations to Rockland, MA and continued under that name until 1998 when it was purchased by Kenneth Downey, an employee, and did business under the name of Morse Diving Inc.  Downey sold the company in 2014 to Watson "Robbie" Holland, and the name changed, yet again, to Morse International.  Morse filed for bankruptcy and Diving Equipment and Supply Company (DESCO) acquired its assets in 2016.  DESCO reverted to the name A J Morse & Son and Morse products will be marketed under that name.  DESCO's business plan is to bring back the quality and products associated with the earlier name.  DESCO has on re-introduced the breast plate feed (air being fed into the breast plate rather than the bonnet)helmet design from the early 1900s as its first offering.  They also make the standard commercial model with the air feed in the rear of the helmet.  The A J Morse & Son US Navy Mark V helmet is also offered.
+
+Question: What company is associated with the UK but also was founded in the US?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "The name of the company."
+    },
+    "founded_country": {
+      "type": "string",
+      "description": "The country where the company was founded."
+    },
+    "uk_association": {
+      "type": "string",
+      "description": "Details of the company's association with the UK."
+    },
+    "meets_criteria": {
+      "type": "boolean",
+      "description": "True if the company is associated with the UK and was founded in the US."
+    }
+  },
+  "required": [
+    "company_name",
+    "founded_country",
+    "uk_association",
+    "meets_criteria"
+  ],
+  "additionalProperties": false
+}

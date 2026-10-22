@@ -1,0 +1,104 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Gift (1994 film): The Gift is a 30-minute made-for-television movie directed by Laura Dern and starring Jason Adelman, Bonnie Bedelia, Peter Horton, Diane Ladd, Isabella Rossellini and Mary Steenburgen.  It is about a woman trying to cope with the prospect of breaking up with her longtime partner and moving on with her life.
+
+Europe '51: Europe '51 (Italian: Europa '51 , ] , also known as "The Greatest Love") is a 1952 Italian neorealist film directed by Roberto Rossellini, starring Alexander Knox and Ingrid Bergman as a woman who's declared insane after her son's suicide.
+
+Fear (1954 film): Fear (Italian: La Paura ) is a 1954 drama film directed by Roberto Rossellini and starring his wife Ingrid Bergman.  It has also been released as Angst in the English-speaking world.  It is loosely based on the Stefan Zweig novel "Fear".  It was filmed in Munich and was shot simultaneously in German and English.  Rossellini created it because he wanted to explore the reconstruction of Germany from both a material and moral standpoint ten years after making his previous German film "Germany Year Zero".  The film is noirish with aspects reminiscent of Hitchcock and German Expressionism.
+
+Mario Vitale: Mario Vitale (1923–2003) was an Italian film actor.  Vitale was a fisherman chosen by Roberto Rossellini to star alongside Ingrid Bergman in the 1950 film "Stromboli".  He played prominent roles in several other films until the mid-1950s.
+
+The War of the Volcanoes: The War of the Volcanoes (Italian original title La guerra dei vulcani) is a 2012 documentary film directed by detailing the filming of Roberto Rossellini's 1950 film "Stromboli" starring Ingrid Bergman as well as the 1950 film "Volcano" starring Anna Magnani.
+
+Ferrari 375 MM: Ferrari 375 MM, was a race car produced by Ferrari in 1953 and 1954.  It was named "375" for the per-cylinder displacement in the 4.5L V12 engine, and the "MM" stood for the Mille Miglia race.  The engine was based on its Ferrari 375 F1 counterpart, but with smaller stroke and bigger bore.  The first prototype was a Vignale Spyder and 3 next cars were Pinin Farina Berlinettas, all converted from Ferrari 340 MM.  Perhaps the most known 375 MM is the "Ingrid Bergman" version, commissioned in 1954 by director Roberto Rossellini for his wife, actress Ingrid Bergman.  The Bergman 375 MM was subsequently bought and restored by the Microsoft executive Jon Shirley and the restoration specialist Butch Dennison.  It later became the first postwar Ferrari to win Best of Show at the Pebble Beach Concours d'Elegance.
+
+Stromboli (film): Stromboli, also known as Stromboli, Land of God (Italian: "Stromboli, terra di Dio" ), is a 1950 Italian-American film directed by Roberto Rossellini and featuring Ingrid Bergman.  The drama is considered a classic example of Italian neorealism.
+
+Isabella Rossellini: Isabella Fiorella Elettra Giovanna Rossellini (born 18 June 1952) is an Italian actress, filmmaker, author, philanthropist, and model.  The daughter of the Swedish actress Ingrid Bergman and of Italian neorealist film director Roberto Rossellini, she is noted for her successful tenure as a Lancôme model, and for her roles in films such as "Blue Velvet" (1986) and "Death Becomes Her" (1992).  Rossellini also received a Golden Globe Award nomination for her performance in "Crime of the Century" (1996).
+
+Journey to Italy: Journey to Italy, also known as Voyage to Italy, is a 1954 drama film directed by Roberto Rossellini.  Ingrid Bergman and George Sanders play Katherine and Alex Joyce, an English married couple whose trip to Italy unexpectedly undermines their marriage.  The film was written by Rossellini and Vitaliano Brancati, but is loosely based on the novel "Duo" by Colette.  Although the film was an Italian production, its dialogue was in English.  The first theatrical release was in Italy under the title Viaggio in Italia; the dialogue had been dubbed into Italian.
+
+Elettra Rossellini Wiedemann: Elettra Rossellini Wiedemann (born July 26, 1983) is an American food editor and writer, fashion model, and socialite of Italian, Swedish, French, and German descent.  She is the daughter of Italian actress and model Isabella Rossellini and American Jonathan Wiedemann (a Harvard-educated Microsoft design manager and former fashion model) who were married from 1983 to 1986 after having met at a Calvin Klein photo shoot.  Her maternal grandparents were Ingrid Bergman and Roberto Rossellini.
+
+Question: Born from Ingrid Bergman and Roberto Rossellini, worked with who to act in a 30-minute made-for-television movie?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_of_interest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the person born from Ingrid Bergman and Roberto Rossellini."
+        },
+        "parents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The names of the parents of the person of interest."
+        }
+      },
+      "required": [
+        "name",
+        "parents"
+      ],
+      "additionalProperties": false
+    },
+    "movie_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the movie."
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "description": "The duration of the movie in minutes."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of movie (e.g., made-for-television)."
+        }
+      },
+      "required": [
+        "title",
+        "duration_minutes",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "co_star": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the co-star in the specified movie."
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_of_interest",
+    "movie_details",
+    "co_star"
+  ],
+  "additionalProperties": false
+}

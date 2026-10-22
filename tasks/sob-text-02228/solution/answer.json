@@ -1,0 +1,17 @@
+{
+  "actor_details": {
+    "name": "Benicio del Toro",
+    "nationality": "Puerto Rican"
+  },
+  "film_in_question": "The Way of the Gun",
+  "award_winning_film_details": {
+    "title": "Traffic",
+    "release_year": 2000,
+    "awards_received": [
+      "Academy Award",
+      "BAFTA Award",
+      "Golden Globe Award",
+      "Screen Actors Guild Award"
+    ]
+  }
+}

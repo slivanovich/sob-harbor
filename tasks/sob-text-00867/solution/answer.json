@@ -1,0 +1,18 @@
+{
+  "person_details": {
+    "name": "Jane Powell",
+    "birth_date": "April 1, 1929",
+    "professions": [
+      "singer",
+      "dancer",
+      "actress"
+    ],
+    "nationality": "American"
+  },
+  "film_details": {
+    "title": "Rich, Young and Pretty"
+  },
+  "fame_details": {
+    "period_of_rise_to_fame": "mid-1940s"
+  }
+}

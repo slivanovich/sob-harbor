@@ -1,0 +1,18 @@
+{
+  "magazine_names": [
+    "Playboy",
+    "Fast Company"
+  ],
+  "magazine_details": [
+    {
+      "name": "Playboy",
+      "country_of_publication": "United States"
+    },
+    {
+      "name": "Fast Company",
+      "country_of_publication": "United States"
+    }
+  ],
+  "are_published_in_same_country": true,
+  "common_country_of_publication": "United States"
+}

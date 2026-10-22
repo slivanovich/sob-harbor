@@ -1,0 +1,16 @@
+{
+  "are_both_in_tibet": false,
+  "mountains_information": [
+    {
+      "name": "Manaslu",
+      "is_located_in_tibet": false,
+      "primary_location": "Nepal"
+    },
+    {
+      "name": "Siguang Ri",
+      "is_located_in_tibet": true,
+      "primary_location": "Tibet, China"
+    }
+  ],
+  "conclusion_reasoning": "Manaslu is located in Nepal, while Siguang Ri is located in Tibet, China. Since only one of the two mountains is in Tibet, the answer is false."
+}

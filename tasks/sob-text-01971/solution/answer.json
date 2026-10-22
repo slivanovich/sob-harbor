@@ -1,0 +1,17 @@
+{
+  "person_name": "Ethan Strimling",
+  "mayoral_information": {
+    "is_current_mayor": true,
+    "city": "Portland, Maine"
+  },
+  "related_political_roles": [
+    {
+      "role_type": "state senator",
+      "term_duration_years": 7,
+      "term_start_year": 2002,
+      "term_end_year": 2009,
+      "replaced_by": "Justin Alfond",
+      "replaced_in_role_type": "Democratic state senator"
+    }
+  ]
+}

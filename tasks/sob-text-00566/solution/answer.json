@@ -1,0 +1,14 @@
+{
+  "nightclub_name": "CCC nightclub",
+  "rapper_details": {
+    "name": "Proof",
+    "death_year": 2006
+  },
+  "event_hosted": {
+    "type": "open mic contests",
+    "location": "Hip Hop Shop",
+    "day_of_week": "Saturdays",
+    "start_time": "4:00 P.M.",
+    "end_time": "6:00 P.M."
+  }
+}

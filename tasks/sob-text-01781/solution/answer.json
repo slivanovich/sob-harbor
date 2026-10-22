@@ -1,0 +1,11 @@
+{
+  "city_1": {
+    "name": "Yan'an",
+    "province": "Shaanxi"
+  },
+  "city_2": {
+    "name": "Hunchun",
+    "province": "Jilin"
+  },
+  "are_in_same_province": false
+}

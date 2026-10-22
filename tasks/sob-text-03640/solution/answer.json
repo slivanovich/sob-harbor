@@ -1,0 +1,16 @@
+{
+  "question_topic": "bands_origin_comparison",
+  "bands_information": [
+    {
+      "band_name": "Guided by Voices",
+      "origin_city": "Dayton",
+      "origin_state": "Ohio"
+    },
+    {
+      "band_name": "Gravity Kills",
+      "origin_city": "St. Louis",
+      "origin_state": "Missouri"
+    }
+  ],
+  "band_from_ohio": "Guided by Voices"
+}

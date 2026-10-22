@@ -1,0 +1,12 @@
+{
+  "building_under_construction": {
+    "name": "30 Hudson Yards",
+    "status": "currently under construction",
+    "type": "office building"
+  },
+  "other_building_mentioned": {
+    "name": "New York World Building",
+    "status": "razed in 1955"
+  },
+  "final_answer": "30 Hudson Yards"
+}

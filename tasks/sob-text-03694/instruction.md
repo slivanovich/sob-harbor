@@ -1,0 +1,75 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Dada Life: Olle Cornéer and Stefan Engblom are a Swedish DJ duo from Stockholm, known by the collective name Dada Life.  The duo was formed in 2006.  They have released two albums, a number of singles and remixes and one compilation.  The duo had early chart success in Belgium and the Netherlands, while their second album "The Rules of Dada" reached the Billboard 200.  They are known for their humour during their live performances, while their name is a homage to the absurdist movement of the early twentieth century.
+
+Old Tunes: Old Tunes is the collective name given to two unreleased audio cassette recordings by the Scottish electronic music duo Boards of Canada: "Old Tunes Vol.  1" (also known as "A Few Old Tunes"), and "Old Tunes Vol.  2", both produced in 1996.
+
+Hoffmann &amp; Hoffmann: Hoffmann & Hoffmann were a German singing duo consisting of brothers Michael Hoffmann (born 3 December 1950, Karlsruhe) and Günter Hoffmann (born 4 October 1951, Karlsruhe - died 15 March 1984, Rio de Janeiro, Brazil).  They had several hits in Germany and are known for their participation in the 1983 Eurovision Song Contest.
+
+Hexagon Sun: Hexagon Sun is an artistic collective based in the Pentland Hills, Scotland.  The confirmed members are Mike Sandison, Marcus Eoin, Peter Iain Campbell (a.k.a. "PIC"), Simon Goderich (a.k.a. "goderich"), Mark David Garrett (a.k.a. "mdg"), Rachel Stewart, Alan Mackenzie, Andrew Wilson, and Christopher Horne (a.k.a. "christ. ").  .  The most well known venture of the collective is the electronic music band Boards of Canada, of whom Eoin and Sandison are the sole members.  The band has used the Hexagon Sun name for their recording studio and has released songs with the title "Turquoise Hexagon Sun" and "Orange Hexagon Sun" on the album "Boc Maxima", the "Hi Scores" EP, and later, "Music Has the Right to Children".
+
+Tonto's Expanding Head Band: Tonto's Expanding Head Band was a British-American electronic music duo consisting of Malcolm Cecil and Robert Margouleff.  Despite releasing only two albums in the early 1970s, the duo were (and still remain) influential because of their session and production work for other musicians (most notably Stevie Wonder), extensive commercial advertising work and the unique warmth and personality of their work.
+
+The Rough Guide to Scottish Music (1996 album): The Rough Guide to Scottish Music is a world music compilation album originally released in 1996.  The third release of the World Music Network Rough Guides series, it cuts through a broad swathe of Scottish music, focusing largely on roots revival.  The compilation was produced by Phil Stanton, co-founder of the World Music Network.
+
+Boards of Canada: Boards of Canada are a Scottish electronic music duo consisting of brothers Michael Sandison and Marcus Eoin.  Signing to Skam and then Warp Records in the 1990s, the duo received recognition following the release of their influential album "Music Has the Right to Children" in 1998.  They have since released a number of recordings to critical praise, including "Geogaddi" (2002) and "Tomorrow's Harvest" (2013).
+
+John Hearne (composer): John Michael Hearne (born 1937) is a Scottish music publisher, composer, conductor and singer.  He was the first Chairman of the Scottish Society of Composers, and was the Chairman of the Scottish Music Advisory Committee of the BBC from 1986 to 1990.
+
+Tomorrow's Harvest: Tomorrow's Harvest is the fourth studio album by the Scottish electronic music duo Boards of Canada, released on 5 June 2013 on Warp.  Band members Mike Sandison and Marcus Eoin began composing and recording the album following the release of "The Campfire Headphase" (2005) and the expansion of their studio at Hexagon Sun near Pentland Hills.  The duo continued recording intermittently until late 2012, when large parts of the album were recorded.  Influenced by film soundtracks from the 1970s, "Tomorrow's Harvest" features a more downtempo form of ambient music, similar to Boards of Canada's earlier releases.
+
+Moebius &amp; Plank: Moebius & Plank was a German electronic music duo consisting of musicians Dieter Moebius (also of the act Cluster) and Conny Plank.  They recorded three albums between 1979 and 1986 as well as two additional albums, one a collaboration with Mani Neumeier and the other with Mayo Thompson.  Plank died of cancer in 1987.  Their final two albums were released posthumously in 1995 and 1998 respectively
+
+Question: The Scottish music duo consisting of brothers Michael Sandison and Marcus Eoin, produced two albums, related to the collective name Old Tunes, in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "duo_name": {
+      "type": "string",
+      "description": "The name of the music duo."
+    },
+    "member_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The names of the members of the duo."
+    },
+    "collective_album_name": {
+      "type": "string",
+      "description": "The collective name given to the albums."
+    },
+    "individual_album_titles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The specific titles of the albums."
+    },
+    "production_year": {
+      "type": "integer",
+      "description": "The year the albums were produced."
+    }
+  },
+  "required": [
+    "duo_name",
+    "member_names",
+    "collective_album_name",
+    "individual_album_titles",
+    "production_year"
+  ],
+  "additionalProperties": false
+}

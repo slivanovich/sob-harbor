@@ -1,0 +1,16 @@
+{
+  "band_formed_before_2000": true,
+  "bands_info": [
+    {
+      "band_name": "Pearl Jam",
+      "formation_year": 1990
+    },
+    {
+      "band_name": "No Devotion",
+      "formation_year": 2014
+    }
+  ],
+  "bands_meeting_criteria": [
+    "Pearl Jam"
+  ]
+}

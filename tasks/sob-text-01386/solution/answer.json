@@ -1,0 +1,10 @@
+{
+  "driver_name": "Jeff Wood",
+  "race_name": "Caesars Palace Grand Prix",
+  "race_series_transition": {
+    "original_series": "Formula One World Championship",
+    "transition_year": 1983,
+    "new_series": "CART"
+  },
+  "driver_participation_year": 1983
+}

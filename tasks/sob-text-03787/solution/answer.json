@@ -1,0 +1,14 @@
+{
+  "first_nation_name": "Sweetgrass First Nation",
+  "agreement_details": {
+    "agreement_name": "Treaty 6",
+    "agreement_type": "Treaty",
+    "parties_involved": [
+      "Canadian monarch",
+      "Plains and Woods Cree",
+      "Assiniboine",
+      "other band governments of First Nations"
+    ]
+  },
+  "establishment_context": "The reserve was established as part of Treaty 6."
+}

@@ -1,0 +1,10 @@
+{
+  "mascot_name": "Billy the Marlin",
+  "team_name": "Miami Marlins",
+  "stadium_info": {
+    "stadium_name": "Marlins Park",
+    "design_style": "neomodern form of baseball architecture",
+    "leed_certification_year": 2012,
+    "leed_certification_description": "greenest MLB park"
+  }
+}

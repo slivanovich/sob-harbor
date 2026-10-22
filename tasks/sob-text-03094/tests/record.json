@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "record_id": "776d50ac6ca613886adbbbda25034c96fa34037e2ba406ba594b305273fa502e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a74dfad55429974ef308c84",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Katrina Elizabeth Leskanich",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Rob Persaud: Rob Persaud is a British music producer and songwriter who currently works and resides in Los Angeles, California.  He is published by Dr. Luke's Prescription Songs.  He has produced, engineered, mixed or written tracks for Jay Sean, Lady Gaga, Chris Lane, Mollie King, Jordan Fisher, Before You Exit, Sabrina Carpenter, Josh Groban, Madison Beer, Nick Jonas and others.\n\nReturn to the Centre of the Earth: Return to the Centre of the Earth is a studio album by the English keyboardist Rick Wakeman, released on 15 March 1999 on EMI Classics.  The album is a sequel to his 1974 concept album \"Journey to the Centre of the Earth\", itself based on the same-titled science fiction novel by Jules Verne.  Wakeman wrote a new story of three unnamed travellers who attempt to follow the original journey two hundred years later, including the music which features guest performances from Ozzy Osbourne, Bonnie Tyler, Tony Mitchell, Trevor Rabin, Justin Hayward, and Katrina Leskanich.  The story is narrated by Patrick Stewart.  Recording was delayed after Wakeman was hospitalised with a life threatening case of double pneumonia and pleurisy, and needed time to recover.\n\nBack to You (Mollie King song): \"Back to You\" is a song by English recording artist Mollie King.  The song was released as a digital download on 19 August 2016 by Island Records.\n\nThe Saturdays discography: English-Irish girl group The Saturdays have released five studio albums, one compilation album, two extended plays and eighteen singles.  The Saturdays were formed in 2007, with a number of different auditions through their management: Frankie Sandford, Rochelle Wiseman, Una Healy, Mollie King and Vanessa White were the successful auditionees and were granted a place within the band.\n\nKatrina Woolverton: Katrina Woolverton (born Katrina Abrahemian on August 19, 1977) is an American singer/songwriter and recording artist from Los Angeles, California.  She rose to fame in 2011 with the release of her debut album \"In The Blink Of An Eye\" that featured three top charting singles, \"Shame on Me\" (#1 on iHeartRadio Top 20 On Demand Adult Chart and #46 on the Billboard Hot AC Chart), \"OPM\" (#26 Billboard Hot Dance) and \"So Eden\" (Billboard Hot AC Top 50.)  Katrina was named iHeartRadio's \"Artist to Watch in 2011\" and was the opening act in the U.S. for Meatloaf during the Mad, Mad World Tour 2012.  In 2012 and 2013 she released two stand-alone singles, \"Watch Me Walk Away\" (#43 Billboard Hot AC) the only non-Woolverton composition she has recorded - originally penned by Katy Perry along with co-writers Charlie Midnight and Holly Knight; and \"Ready To Love,\" collaborating with electropop producer/remixer Frankmusik (Vincent Frank) who has worked with Ellie Goulding (\"Wish I Stayed\"), and many others.  \"Ready To Love\" reached #33 on the Billboard Dance/Electronic Song Chart, and the #12 of the Billboard Dance Club Chart.\n\nThe Saturdays: The Saturdays was a British-Irish girl group based in London, England.  The group formed during the summer of 2007.  The line up consisted of Frankie Bridge, Una Healy, Rochelle Humes, Mollie King and Vanessa White.  They were formed through Fascination Records, who gave them an instant record deal with the label as well as a sub-division of Polydor Records.  As soon as the contract was finalised The Saturdays went on tour with Girls Aloud during their Tangled Up Tour.  The group's music style is pop, however throughout their career their management have experimented with dance-pop and electropop.  To create this music, Ina Wroldsen, Steve Mac and Quiz & Larossi have been heavily involved.\n\nMollie King: Mollie Elizabeth King (born 4 June 1987) is an English singer-songwriter.  She is best known for being a member of girl group The Saturdays.  In the Saturdays, King has had thirteen top-ten and eight top-five singles, including the UK no.1 hit What About Us on the UK Singles Chart and five top-ten albums on the UK Albums Chart.  Before The Saturdays, King was a member of another girl group, Fallen Angelz, with whom she appeared on \"The X Factor\".  In 2015, King signed a solo deal with Island Records.\n\nAdrian Fry: Adrian Fry (born 1969) is a British freelance jazz trombonist, arranger and composer.  He has performed with many British bands including Back to Basie, Frank Griffith Nonet & Big Band, Elio Pace, Karen Sharp Quintet, Stan Tracey Big Band, Michael Garrick Big Band, Don Weller Electric Octet & Big Band, the Pasadena Roof Orchestra, Bone Supremacy and Pete Cater's Ministry of Jazz.  His credits as a session musician include Albert Lee, Incognito, Katrina Leskanich and Shakin' Stevens.  In 2010 he was Assistant Musical Director on BBC Radio 2's Weekend Wogan.\n\nKatrina Leskanich: Katrina Elizabeth Leskanich (born April 10, 1960) is an American musician, author and former lead singer of British pop rock band Katrina and the Waves whose song \"Walking on Sunshine\" was an international hit in 1985 and in 1997 won the Eurovision Song Contest for the United Kingdom with the song \"Love Shine a Light\".\n\nEurovision Song Contest 1997: The Eurovision Song Contest 1997, was the 42nd Eurovision Song Contest and it was held at the Point Theatre in Dublin, Ireland, on 3 May 1997.  Carrie Crowley and Boyzone member Ronan Keating were the presenters of the show.  Twenty-five countries took part in the 1997 Contest, which saw Italy return after a 1993 , along with Denmark , Germany , Hungary , and Russia , who last took part in the 1995 , despite having taken part in the non-televised 1996 pre-qualifying round in which they failed to qualify and therefore were absent.  Belgium , Finland , and Slovakia withdrew from the contest due to the relegation rule.  The United Kingdom won the competition, thanks to Katrina and the Waves, led by American-born Katrina Leskanich, making it the second time that the British won the Eurovision on Irish soil.  It also remains to this day the last time the United Kingdom won the contest.",
+    "question": "Which singer is older, Mollie King or Katrina Leskanich?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "older_singer": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "birth_year": {
+              "type": "integer"
+            },
+            "birth_month": {
+              "type": "string"
+            },
+            "birth_day": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "birth_year",
+            "birth_month",
+            "birth_day"
+          ],
+          "additionalProperties": false
+        },
+        "younger_singer": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "birth_year": {
+              "type": "integer"
+            },
+            "birth_month": {
+              "type": "string"
+            },
+            "birth_day": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "birth_year",
+            "birth_month",
+            "birth_day"
+          ],
+          "additionalProperties": false
+        },
+        "age_comparison_result": {
+          "type": "string",
+          "description": "States which singer is older."
+        }
+      },
+      "required": [
+        "older_singer",
+        "younger_singer",
+        "age_comparison_result"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "older_singer": {
+        "name": "Katrina Leskanich",
+        "birth_year": 1960,
+        "birth_month": "April",
+        "birth_day": 10
+      },
+      "younger_singer": {
+        "name": "Mollie King",
+        "birth_year": 1987,
+        "birth_month": "June",
+        "birth_day": 4
+      },
+      "age_comparison_result": "Katrina Leskanich is older than Mollie King."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

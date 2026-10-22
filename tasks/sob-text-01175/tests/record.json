@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "record_id": "8ba06ebf4bfb2f26bcc01e1ef2898f3360605fc6617f0dc784bc528bc43446e0",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5a730de75542994cef4bc433",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Georgia Institute of Technology",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Undergraduate Research Opportunities Program: An Undergraduate Research Opportunities Program provides funding and/or credit to undergraduate students who volunteer for faculty-mentored research projects pertaining to all academic disciplines at universities such as The University of Queensland, Boston University, the Georgia Institute of Technology (Georgia Tech), the University of California, Irvine, California State University, Long Beach, the Massachusetts Institute of Technology (MIT), the University of Michigan, the University of Michigan-Flint, Florida State University, the Hong Kong University of Science and Technology (HKUST), the University of Minnesota, the University of Illinois, Urbana-Champaign, the RWTH Aachen University, Imperial College London, the University of New Hampshire, and the University of Oregon.\n\nEngineering science and mechanics: Engineering Science and Mechanics (ESM) is a multidisciplinary and interdisciplinary engineering program and/or academic department at the Pennsylvania State University, University of Virginia, Virginia Polytechnic Institute and State University, Georgia Institute of Technology, or University of Alabama.  A B.S., M.S., M.Eng. , or Ph.D. degree in engineering science, engineering mechanics, or engineering science and mechanics is awarded by these universities upon completion of the respective program.\n\nPenn State University Press: Penn State University Press, also called The Pennsylvania State University Press, was established in 1956, and is a non-profit publisher of scholarly books and journals.  It is the independent publishing branch of the Pennsylvania State University and is a division of the Penn State University Library system.  The Penn State University Press primarily publishes scholarship but, as a part of a land-grant university with a mandate to serve the citizens of the commonwealth of Pennsylvania, it also specializes in producing books about Pennsylvania and the Penn State University.  The areas of scholarship the Press is most known for are philosophy, art history, medieval studies, Latin American studies, political science, religious studies, and early American history.  The Penn State Press employs approximately 24 people, and produces about 70 books a year and over 50 journals.  The Press also has several internship programs for Penn State students interested in a publishing career.\n\nList of Georgia Institute of Technology athletes: Georgia Institute of Technology has graduated a number of athletes.  This includes graduates, non-graduate former students and current students of Georgia Tech who are notable for their achievements within athletics, sometimes before or after their time at Georgia Tech.  Other alumni can be found in the list of Georgia Institute of Technology alumni; notable administration, faculty, and staff can be found on the list of Georgia Institute of Technology faculty.  Intercollegiate sports teams at Georgia Tech are called \"Yellow Jackets\", and are run by the Georgia Tech Athletic Association.  The Athletic Association runs Georgia Tech's Hall of Fame, which has inducted many of Tech's greatest players throughout the program's history.\n\nPennsylvania State University: The Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania.  Founded in 1855, the university has a stated threefold mission of teaching, research, and public service.  Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery.  Its University Park campus, the flagship campus, lies within the Borough of State College and College Township.  It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College.  The College of Medicine is located in Hershey.  Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state.  Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.\n\nGeorgia Institute of Technology: The Georgia Institute of Technology (commonly referred to as Georgia Tech, Tech, or GT) is a public research university in Atlanta, Georgia, in the United States.  It is a part of the University System of Georgia and has satellite campuses in Savannah, Georgia; Metz, France; Athlone, Ireland; Shenzhen, China; and Singapore.\n\nSurigao del Sur State University: Surigao del Sur State University is a state university, with its main campus in Tandag City, Surigao del Sur, Philippines and five satellite campuses in Cantilan, Lianga, Cagwait, San Miguel and Tagbina.  The university provides higher education in the fields of industrial technology, teacher education, agriculture, agribusiness, commercial sciences, forestry, aqua-marine technology, environmental science, arts, sciences, engineering and technology.\n\nHistory of Georgia Tech: The history of the Georgia Institute of Technology can be traced back to Reconstruction-era plans to develop the industrial base of the Southern United States.  Founded on October 13, 1885 in Atlanta, Georgia as the Georgia School of Technology, the university opened in 1888 after the construction of Tech Tower and a shop building and only offered one degree in mechanical engineering.  By 1901, degrees in electrical, civil, textile, and chemical engineering were also offered.  In 1948, the name was changed to the Georgia Institute of Technology to reflect its evolution from an engineering school to a full technical institute and research university.\n\nDick Bestwick: Dick Bestwick (born August 18, 1930) is a former American football player, coach, and college athletics administrator.  He served as the head football coach of the University of Virginia from 1976 to 1981, compiling a record of 16–49–1.  A native of Grove City, Pennsylvania, he played college football at the University of North Carolina at Chapel Hill, graduating from the school in 1952.  Bestwick received his Masters in Education from Pennsylvania State University.  Prior to his tenure at Virginia, Bestwick spent 1954 to 1962 as a high school football coach at three different schools including his alma mater, Grove City High School, and 1967 to 1975 as an assistant coach at Georgia Institute of Technology.  Bestwick was hired as the head football coach at Marshall University in 1971 after the 1970 plane crash that took the lives of most of the university's football team and coaching staff.  He left the position after two days on the job and returned to Georgia Tech.\n\nPing Li: Ping Li () is a Professor of Psychology, Linguistics, and Information Sciences and Technology at Pennsylvania State University.  He specializes in language acquisition, focusing on bilingual language processing in East Asian languages and connectionist modeling.  Li received a B.A. in Chinese linguistics from Peking University in 1983, an M.A. in theoretical linguistics from Peking University, a Ph.D. in psycholinguistics from Leiden University and the Max Planck Institute for Psycholinguistics in 1990, and completed post-doctoral fellowships at the Center for Research in Language at the University of California, San Diego and the McDonnell-Pew Center for Research in Cognitive Neuroscience in 1992.  Li has been employed at the Chinese University of Hong Kong (1992–1996), the University of Richmond (1996–2006), and Pennsylvania State University (2008–present), and he has also served as a Visiting Associate Professor at Hong Kong University (2002–2003), an Adjunct Professor at the State Key Laboratory for Cognitive Neuroscience and Learning at Beijing Normal University (2000–present), as well as Program Director for the Perception, Action, and Cognition Program and the Cognitive Neuroscience Program at the National Science Foundation (2007–2009).",
+    "question": "Which university has satellite campuses in multiple countries, Georgia Institute of Technology or Pennsylvania State University?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "university_name": {
+          "type": "string",
+          "description": "The name of the university that has satellite campuses in multiple countries."
+        },
+        "has_international_campuses": {
+          "type": "boolean",
+          "description": "Indicates whether the university has satellite campuses in multiple countries."
+        },
+        "international_campus_locations": {
+          "type": "array",
+          "description": "A list of countries where the university has satellite campuses.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "number_of_international_campuses": {
+          "type": "integer",
+          "description": "The total number of international satellite campuses mentioned."
+        }
+      },
+      "required": [
+        "university_name",
+        "has_international_campuses",
+        "international_campus_locations",
+        "number_of_international_campuses"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "university_name": "Georgia Institute of Technology",
+      "has_international_campuses": true,
+      "international_campus_locations": [
+        "France",
+        "Ireland",
+        "China",
+        "Singapore"
+      ],
+      "number_of_international_campuses": 4
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

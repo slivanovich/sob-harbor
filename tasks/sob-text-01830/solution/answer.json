@@ -1,0 +1,12 @@
+{
+  "defense_attorney": {
+    "name": "Justin Brooks"
+  },
+  "client": {
+    "name": "Brian Banks",
+    "profession": "American football linebacker",
+    "team_name": "Atlanta Falcons",
+    "team_signing_year": 2013
+  },
+  "representation_context": "Justin Brooks, as director of the California Innocence Project, freed Brian Banks, a wrongfully-convicted former NFL football player."
+}

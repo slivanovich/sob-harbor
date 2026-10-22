@@ -1,0 +1,15 @@
+{
+  "athlete_name": "Lee Choon-Huan",
+  "games_details": {
+    "name": "2010 Asian Games",
+    "year": 2010,
+    "host_city": "Guangzhou",
+    "host_country": "China",
+    "start_date": "2010-11-12",
+    "end_date": "2010-11-27"
+  },
+  "medal_won": {
+    "type": "gold",
+    "event": "team relay"
+  }
+}

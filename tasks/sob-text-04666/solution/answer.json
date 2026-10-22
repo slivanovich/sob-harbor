@@ -1,0 +1,14 @@
+{
+  "player_one": {
+    "name": "Paul Annacone",
+    "birth_date": "March 20, 1963",
+    "birth_year": 1963
+  },
+  "player_two": {
+    "name": "Carly Gullickson",
+    "birth_date": "November 26, 1986",
+    "birth_year": 1986
+  },
+  "born_first_player_name": "Paul Annacone",
+  "comparison_statement": "Paul Annacone was born on March 20, 1963, which is before Carly Gullickson who was born on November 26, 1986."
+}

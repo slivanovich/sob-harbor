@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "973efb7f5d5ecf978a3a76da2a2cb945c7884d72eccbf8a31fa0ece99fd93b2e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a76d54955429972597f13de",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Billings",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Manhattan, Kansas, metropolitan area: The Manhattan–Junction City Combined Statistical Area, as defined by the United States Census Bureau, is an area consisting of three counties in northeastern Kansas, anchored by the city of Manhattan.  It was upgraded from a Micropolitan Statistical Area (μSA) to a Metropolitan Statistical Area (MSA) by the Office of Management and Budget on November 20, 2008.  It was changed from a Metropolitan Statistical Area (MSA) to a Combined Statistical Area (CSA) by the Office of Management and Budget on February 28, 2013.\n\nCasper, WY Metropolitan Statistical Area: The Casper, WY Metropolitan Statistical Area is a United States Census Bureau defined Metropolitan Statistical Area (MSA) with the principal city being Casper in central State of Wyoming.  The Casper Metropolitan Statistical Area is defined as Natrona County, Wyoming.  Many consider the Casper Metro Area to be the economic hub of central Wyoming.  The Census Bureau estimates that the population was 73,129 in 2008, ranking as the 375th most populous metropolitan area in the United States.\n\nRed Lodge, Montana: Red Lodge is a city in and the county seat of Carbon County, Montana, United States.  It is part of the Billings Metropolitan Statistical Area.  The population was 2,125 at the United States Census, 2010.\n\nBaton Rouge–Pierre Part combined statistical area: The Baton Rouge–Pierre Part Combined Statistical Area is a former Combined Statistical Area made up of ten parishes in southeastern Louisiana.  The statistical area consisted of the Baton Rouge Metropolitan Statistical Area (MSA) and the Pierre Part Micropolitan Statistical Area (μSA).  As of the 2000 census, the CSA had a population of 729,361 (though a July 1, 2009 estimate placed the population at 809,821).  The Combined Statistical Area ceased to exist when the Pierre Part Micropolitan Statistical Area was eliminated by the Census Bureau.\n\nShreveport-Bossier City-Minden CSA: The Shreveport-Bossier City-Minden Combined Statistical Area was made up of four parishes in northwestern Louisiana.  The statistical area consisted of then-Shreveport-Bossier City Metropolitan Statistical Area and then-Minden Micropolitan Statistical Area.  As of the 2010 census, the CSA had a population of 439,000 (though a July 1, 2011 estimate placed the population at 444,000).  On February 28, 2013, OMB changed definitions of census statistical areas, and all four parishes in this combined statistical area were redefined as Shreveport-Bossier City Metropolitan Statistical Area.\n\nJacksonville metropolitan area: The Jacksonville metropolitan area, also called Greater Jacksonville or Metro Jacksonville, is the metropolitan area centered on the principal city of Jacksonville, Florida and including the First Coast of North Florida.  The U.S. Office of Management and Budget designates the area as the Jacksonville, Florida Metropolitan Statistical Area, a metropolitan statistical area used for statistical purposes by the United States Census Bureau and other government agencies.  The OMB defines the metropolitan statistical area as consisting of five counties: Duval, Clay, St. Johns, Nassau, and Baker.  According to the 2010 United States Census, the total population was 1,345,596, with a 2016 estimate of 1,478,212.  The Jacksonville metropolitan area is the 40th largest in the country and the fourth largest in the state of Florida, behind the Miami, Tampa, and Orlando metropolitan areas.\n\nEd Kelly (baseball): Edward Leo Kelly (December 10, 1888 – November 4, 1928) was an American right-handed pitcher in Major League Baseball who pitched three games, all in relief, for the Boston Red Sox in 1914.  Kelly pitched a total of two and one-thirds innings for the Red Sox, retiring nine of eleven total batters faced and allowing one unearned run.  Kelly died in Red Lodge, Montana at the age of 39.\n\nColumbia metropolitan area (South Carolina): As defined by the U.S. Office of Management and Budget, and used by the U.S. Census Bureau for statistical purposes only, the Columbia Metropolitan Statistical Area, is an area consisting of six counties in central South Carolina, anchored by the city of Columbia.  As of the 2010 census, the MSA had a population of 767,598; as of the 2015 census estimates, the population is 810,068.  It is the second-largest metropolitan statistical area in the state of South Carolina, since the Anderson metropolitan statistical area was combined with Greenville's following the 2010 census.\n\nPortland metropolitan area, Maine: The city of Portland, Maine, is the hub city of a metropolitan area in southern Maine, in the United States.  The region is commonly known as Greater Portland or the Portland metropolitan area.  For statistical purposes, the U.S. federal government defines three different representations of the Portland metropolitan area.  The Portland–South Portland–Biddeford, Maine, metropolitan statistical area is a region consisting of three counties in Maine, anchored by the city of Portland and the smaller cities of South Portland and Biddeford.  As of the 2010 census, the MSA had a population of 514,098.  A larger combined statistical area (CSA), the Portland–Lewiston–South Portland combined statistical area, is defined as the combination of this metropolitan statistical area (MSA) with the adjacent Lewiston–Auburn MSA.  The CSA comprises four counties in southern Maine.  The Portland–South Portland metropolitan New England city and town area is defined on the basis of cities and towns rather than entire counties.  It consists of most of Cumberland and York counties plus the town of Durham in Androscoggin County.\n\nAtlanta metropolitan area: Metro Atlanta, designated by the United States Office of Management and Budget as the Atlanta-Sandy Springs-Roswell, GA Metropolitan Statistical Area, is the most populous metro area in the US state of Georgia and the ninth-largest metropolitan statistical area (MSA) in the United States.  Its economic, cultural and demographic center is Atlanta, and it had a 2015 estimated population of 5.7 million people according to the U.S. Census Bureau.  The metro area forms the core of a broader trading area, the Atlanta–Athens-Clarke–Sandy Springs Combined Statistical Area.  The Combined Statistical Area spans up to 39 counties in north Georgia and had an estimated 2015 population of 6.3 million people.  Atlanta is considered an \"beta(+) world city.\"  It is the third largest metropolitan region in the Census Bureau's Southeast region behind Greater Washington and South Florida.",
+    "question": "Ed Kelly died in a city that is part of what Metropolitan Statistical Area?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person."
+        },
+        "city_of_death": {
+          "type": "string",
+          "description": "The city where the person died."
+        },
+        "state_of_death": {
+          "type": "string",
+          "description": "The state where the person died."
+        },
+        "metropolitan_statistical_area": {
+          "type": "string",
+          "description": "The Metropolitan Statistical Area that the city of death is part of."
+        }
+      },
+      "required": [
+        "person_name",
+        "city_of_death",
+        "state_of_death",
+        "metropolitan_statistical_area"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Ed Kelly",
+      "city_of_death": "Red Lodge",
+      "state_of_death": "Montana",
+      "metropolitan_statistical_area": "Billings Metropolitan Statistical Area"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

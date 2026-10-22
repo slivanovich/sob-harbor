@@ -1,0 +1,11 @@
+{
+  "player_name": "Tyson Chandler",
+  "player_nationality": "American",
+  "player_profession": "professional basketball player",
+  "draft_details": {
+    "draft_year": 2001,
+    "draft_pick_overall": 2,
+    "drafting_team": "Los Angeles Clippers"
+  },
+  "current_team": "Phoenix Suns"
+}

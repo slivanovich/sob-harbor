@@ -1,0 +1,13 @@
+{
+  "album_name": "Kala",
+  "artist": {
+    "name": "M.I.A.",
+    "nationality": "British",
+    "is_group": false
+  },
+  "release_year": 2007,
+  "sampled_song_details": {
+    "song_title": "Paper Planes",
+    "sampled_by_song": "Swagga Like Us"
+  }
+}

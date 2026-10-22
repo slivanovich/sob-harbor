@@ -1,0 +1,14 @@
+{
+  "common_category": "magazine",
+  "entities_sharing_category": [
+    {
+      "name": "Pulse!",
+      "description_snippet": "Pulse! was a tabloid magazine published by Tower Records"
+    },
+    {
+      "name": "If",
+      "description_snippet": "If was an American science-fiction magazine launched in March 1952 by Quinn Publications"
+    }
+  ],
+  "number_of_entities": 2
+}

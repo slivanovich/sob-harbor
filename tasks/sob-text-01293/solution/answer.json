@@ -1,0 +1,19 @@
+{
+  "artist_details": {
+    "name": "Vulca",
+    "origin_town": "Veii",
+    "notable_works": [
+      "terracotta statue of Jupiter that was inside the Temple of Jupiter Optimus Maximus",
+      "Apollo of Veii"
+    ],
+    "historical_significance": "The only Etruscan artist mentioned by ancient writers"
+  },
+  "roman_king_details": {
+    "name": "Lucius Tarquinius Superbus",
+    "title": "seventh and final king of Rome",
+    "reign_start_year_bc": 535,
+    "reign_end_year_bc": 509
+  },
+  "question_context_year_bc": 535,
+  "final_answer_artist_name": "Vulca"
+}

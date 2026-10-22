@@ -1,0 +1,90 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+29th Annual Grammy Awards: The 29th Annual Grammy Awards were held on February 24, 1987, at Shrine Auditorium, Los Angeles, California.  They recognized accomplishments by musicians from the previous year.
+
+Grammy Award for Best Rap Performance: The Grammy Award for Best Rap Performance is an honor presented to recording artists for quality rap performances.  It was first presented at the 31st Annual Grammy Awards in 1989 and again at the 32nd Annual Grammy Awards in 1990, after which point the award was split into two categories: Best Rap Solo Performance and Best Rap Performance by a Duo or Group.  These two categories were combined again in 2012 as a result of a restructure of Grammy categories, and the reinstated Award for Best Rap Performance was presented at the 54th Grammy Awards in 2012.
+
+Alanis Morissette: Alanis Nadine Morissette ( ; ; born June 1, 1974) is a Canadian American alternative rock singer-songwriter, musician, multi-instrumentalist, record producer, and actress.  Morissette began her career in Canada in the early 1990s, with two commercially successful dance-pop albums.  Afterwards, she moved to Holmby Hills, Los Angeles, and in 1995 released "Jagged Little Pill", a more rock-oriented album which sold more than 33 million units globally and is her most critically acclaimed work.  Her following album, "Supposed Former Infatuation Junkie", was released in 1998.
+
+41st Annual Grammy Awards: The 41st Annual Grammy Awards were held on February 24, 1999, at Shrine Auditorium, Los Angeles.  They recognized accomplishments by musicians from the year 1998.  Lauryn Hill was the main recipient, winning a total of 5 awards including Album of the Year and Best New Artist.  Her album was the first Hip Hop act ever to win the coveted award.  Also the ceremony was known as the "Grammy Year of Women", every artist nominated for Album of the Year were all female (including Garbage, with Shirley Manson as the headsinger).  Madonna won four awards while musicians the Dixie Chicks, Vince Gill, Alanis Morissette & Shania Twain won two apiece.  Celine Dion also received two awards both for "My Heart Will Go On", which received a total of four awards.
+
+58th Annual Grammy Awards: The 58th Annual Grammy Awards was held on February 15, 2016, at the Staples Center in Los Angeles.  The ceremony recognizes the best recordings, compositions and artists of the eligibility year, which was from October 1, 2014, to September 30, 2015.  The "pre-telecast" ceremony, officially known as the Premiere Ceremony, in which the majority of awards were presented, was held at the nearby Microsoft Theater.  It was the sixteenth Grammy ceremony to be held at the Staples Center, tying the Shrine Auditorium in Los Angeles for hosting the most Grammy ceremonies.  It also marks the latest date for a Grammy ceremony since 2003, which were held on February 23.
+
+31st Annual Grammy Awards: The 31st Annual Grammy Awards were held on February 22, 1989, at Shrine Auditorium, Los Angeles.  They recognized accomplishments by musicians from the previous year.
+
+35th Annual Grammy Awards: The 35th Annual Grammy Awards were held on February 24, 1993 and recognized accomplishments by musicians from the previous year.  The nominations were announced on January 7, 1993.  The evening's host was the American stand-up comedian Garry Shandling, who hosted the ceremony for the third time.  Model, Author April Gabriellé, Trophy Girl.  The CBS network broadcast the show live from the Shrine Auditorium in Los Angeles, California.
+
+24th Annual Grammy Awards: The 24th Annual Grammy Awards were held on February 24, 1982, at the Shrine Auditorium in Los Angeles, and were broadcast live on American television.  The event recognized the accomplishments of musicians during the year 1981.  Quincy Jones was the major recipient of awards with a total of five Grammys.
+
+6th Annual Latin Grammy Awards: The 6th Annual Latin Grammy Awards were held in Los Angeles at the Shrine Auditorium on Thursday, November 3, 2005.  It was the first ceremony to be broadcast by Univision in the United States.  Ivan Lins was the big winner winning two awards including Album of the Year.  He is the first and only Brazilian and Portuguese language artist to win Album of the Year to date.  Alejandro Sanz was honored with Record of the Year and Song of the Year.  Juanes won three awards including Best Rock Solo Vocal Album.
+
+Cosas del Amor (Enrique Iglesias album): Cosas del Amor (English: "Regarding Love" ) is the third Spanish studio album recorded by Spanish singer-songwriter Enrique Iglesias, It was released by Fonovisa on September 22, 1998 (see 1998 in music).  The album was produced again by Spanish songwriter and record producer Rafael Pérez-Botija.  In 1999, the album received a nomination for Grammy Award for Best Latin Pop Performance in the 41st Annual Grammy Awards, losing to "Vuelve" by Ricky Martin, but was beaten by "Tango", recorded by Enrique's father Julio Iglesias.  The album yielded two number-one singles on the "Billboard" Hot Latin Tracks chart: "Esperanza" and "Nunca Te Olvidaré".  The third single was canceled in favor of his first English language hit single "Bailamos", which was included on the soundtrack for the movie "Wild Wild West".  A video for the track "Ruleta Rusa" was filmed, and the song was released as a promo single in Argentina.  The album debuted at number-one in the "Billboard" Top Latin Albums chart in the week of October 10, 1998, staying at pole position for five weeks in 1998 and three weeks in 1999.  In the "Billboard" 200, the album debuted and peaked at number 64.  Nunca te Olvidaré served as the opening theme for the novela of the same name.  The album sold 4 million copies worldwide.
+
+Question: The 41st Annual Grammy Awards were held on February 24, 1999, at Shrine Auditorium, which Canadian American alternative rock singer-songwriter, musician, multi-instrumentalist, record producer, and actress, won two awards?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "event_name": {
+      "type": "string",
+      "description": "The name of the Grammy Awards ceremony."
+    },
+    "event_year": {
+      "type": "integer",
+      "description": "The year the Grammy Awards ceremony was held."
+    },
+    "event_date": {
+      "type": "string",
+      "description": "The specific date the Grammy Awards ceremony was held."
+    },
+    "event_location": {
+      "type": "string",
+      "description": "The venue where the Grammy Awards ceremony took place."
+    },
+    "artist_name": {
+      "type": "string",
+      "description": "The name of the artist who won awards."
+    },
+    "artist_nationalities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The nationalities of the artist."
+    },
+    "artist_professions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The professions of the artist."
+    },
+    "awards_won_count": {
+      "type": "integer",
+      "description": "The number of awards won by the artist at this ceremony."
+    }
+  },
+  "required": [
+    "event_name",
+    "event_year",
+    "event_date",
+    "event_location",
+    "artist_name",
+    "artist_nationalities",
+    "artist_professions",
+    "awards_won_count"
+  ],
+  "additionalProperties": false
+}

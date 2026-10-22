@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Château de Bourdeilles: The Château de Bourdeilles is a castle located in the commune of Bourdeilles in the Dordogne "département" in southwestern France.  A castle may have existed at Bourdeilles in the 9th century, but the oldest parts of the current castle date from the early 14th century.  The castle consists of an octagonal keep, connected to a two story building of which only the outer walls remain.  Next to the old castle, a Renaissance palace was built at the end of the 16th century.  Much of the interior decoration has been preserved.  The castle and the palace are surrounded by a wall.  The entrance gate is protected by two round towers.  Since 1919, the château has been listed as a "monument historique" by the French Ministry of Culture.
+
+Southampton Castle: Southampton Castle was located in the town of Southampton in Hampshire, England.  Constructed after the Norman conquest of England, it was located in the north-west corner of the town overlooking the River Test, initially as a wooden motte and bailey design.  By the late 12th century the royal castle had been largely converted to stone, playing an important part in the wine trade conducted through the Southampton docks.  By the end of the 13th century the castle was in decline, but the threat of French raids in the 1370s led Richard II to undertake extensive rebuilding.  The result was a powerfully defended castle, one of the first in England to be equipped with cannon.  The castle declined again in the 16th century and was sold off to property speculators in 1618.  After being used for various purposes, including the construction of a Gothic mansion in the early 19th century, the site was flattened and largely redeveloped.  Only a few elements of the castle still remain visible in Southampton.
+
+Fortifications of Kingston upon Hull: The fortifications of Kingston upon Hull consisted of three major constructions: the brick built Hull town walls, first established in the early 14th century (Edward I), with four main gates, several posterngates, and up to thirty towers at its maximum extent; Hull Castle, on the east bank of the River Hull, protecting Hull's river harbour, constructed in the mid 16th century (Henry VIII) and consisting of two blockhouses and a castle connected by a curtain wall; and the later 17th century Citadel, an irregular triangular, bastioned, primitive star fort replacing the castle on the east river bank.
+
+Rochlitz Castle: Rochlitz Castle or Rochlitz Palace (German: "Schloss Rochlitz" ) lies in the west of the town of Rochlitz in the county of Mittelsachsen in the Free State of Saxony.  It was built on the site of an imperial castle, erected in the second half of the 10th century, which fell into the possession of the Wettin margraves in 1143.  Its appearance, which includes several Romanesque wings, is considerably influenced by its remodelling into a margravial "schloss" in the fourth quarter of the 14th century.  Further conversions and additions followed at the end of the 15th and in the 16th centuries, when the castle became a secondary "residenz", dower house and hunting lodge for the Wettin family.  The castle or palace was the residence for members of the Saxon princely house eight times.  From the 18th century the castle served as an administrative centre (justice department and district court); in 1852 it became a gaol, which necessitated considerable alteration.  The museum founded in 1892 was gradually expanded and, today, takes up almost the entire castle.
+
+Craignethan Castle: Craignethan Castle is a ruined castle in South Lanarkshire, Scotland.  It is located above the River Nethan, a tributary of the River Clyde, at [ NS816464] .  The castle is two miles west of the village of Crossford, and 4.5 miles north-west of Lanark.  Built in the first half of the 16th century, Craignethan is recognised as an excellent early example of a sophisticated artillery fortification, although its defences were never fully tested.
+
+Intabulation: Intabulation, from the Italian word "intavolatura", refers to an arrangement of a vocal or ensemble piece for keyboard, lute, or other plucked string instrument, written in tablature.  It was a common practice in 14th–16th century keyboard and lute music.  A direct effect of intabulation was one of the early advantages of keyboards, the ability to render multiple instruments' music on one instrument.  The earliest intabulation is from the mid-14th century Robertsbridge Codex, also one of the first sources of keyboard music still in existence.  Some other early sources of intabulated music are the Faenza and Reina manuscripts (from the 14th century) and the Buxheim manuscript (from the 15th century).  The Faenza manuscript,the largest of these early manuscripts, written circa 1400, contains pieces written or transcribed in the 14th century, such as those by Francesco Landini and Guillaume de Machaut.  More than half of its pieces are intabulations.  The large Buxheim manuscript is dominated by intabulations, mainly of prominent composers of the time, including John Dunstaple, Gilles Binchois, Walter Frye, and Guillaume Dufay.  The term "intabulation" continued to be popular through the 16th century, but fell out of use in the early 17th century, though the practice continued.  The exception is the 16th- and 17th-century Italian keyboard pieces which included both vocal and instrumental music.  Intabulations contain all the vocal lines of a polyphonic piece, for the most part, although they are sometimes combined or redistributed in order to work better on the instrument the intabulation is intended for, and idiomatic ornaments are sometimes added.
+
+MacLellan's Castle: MacLellan's Castle in the town of Kirkcudbright, southwest Scotland, was built in the late 16th century.  It stands in the centre of Kirkcudbright, on the south side of the River Dee which flows into the Solway Firth.  The L-plan castle was the residence of the MacLellan family from whom it derived its name.  The family sold the castle in 1752, and from 1782 to 1912 it was held by the Earls of Selkirk.  Today, the site is curated by Historic Scotland.
+
+Castle Donovan: Castle Donovan (Irish: "Caisleán Uí Dhonnabháin" ) or Castledonovan or O'Donovan's Castle refer to the remains of an Irish tower house or "túrtheach", in a valley near Drimoleague, of medium size which was the so-called "seat" of the Clann Cathail sept of the O'Donovans for a period during the 16th century.  The original name of the castle, and when the O'Donovans were actually living in it, was Sowagh (or Sooagh, Suagh) before the 17th century.  The name of "Castle Donovan", after the "Manor of the Castle of O'Donovan", is associated with a regrant from James II of England in 1615.  Approximately 60 feet in height, it sits on a large rock or outcropping, which forms the ground floor, close to the bank of the River Ilen.  It is commonly believed to have been built, or at the very least augmented, by Donal of the Hides, Lord of Clancahill from about 1560 to his death 1584.  His son Donal II O'Donovan then repaired or further altered the structure some decades later, but was not living in it by then.  It is believed that his father had already relocated the family in the first decade of that century to the more profitable Rahine Manor on the seacoast to protect their maritime interests.
+
+River Nethan: The River Nethan is a river which flows between Glenbuck in East Ayrshire and Crossford, South Lanarkshire where it feeds into the River Clyde, with the town of Lesmahagow and surrounding villages sitting on the river course.  The area of woodland surrounding the River Nethan at Crossford and Auchenheath has been declared a site of special scientific interest and forms a part of the Clyde Valley Woodlands National Nature Reserve as Nethan Gorge.  Craignethan Castle, a 16th-century fortification, overlooks the river.
+
+Ljubljana Castle: Ljubljana Castle (Slovene: "Ljubljanski grad" , German: "Laibacher Schloss" ) is a castle complex standing on Castle Hill above downtown Ljubljana, the capital of Slovenia.  It is a key landmark of the town.  Originally a medieval fortress, it was probably constructed in the 11th century and rebuilt in the 12th century.  It acquired its present outline with an almost complete overhaul in the 15th century, whereas the majority of the buildings date to the 16th and 17th centuries.  Initially a defense structure and since the first half of the 14th century the seat of the lords of Carniola, it was since the early 19th century used for various other purposes and today is used as a major cultural venue.
+
+Question: In what half of the 16th century was the castle that overlooks the river that flows between Glenbuck and Crossford built? built?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "castle_name": {
+      "type": "string",
+      "description": "The name of the castle."
+    },
+    "river_overlooked": {
+      "type": "string",
+      "description": "The name of the river that the castle overlooks."
+    },
+    "river_flow_description": {
+      "type": "string",
+      "description": "A description of where the river flows, including its start and end points."
+    },
+    "construction_century": {
+      "type": "integer",
+      "description": "The century in which the castle was built."
+    },
+    "construction_half_century": {
+      "type": "string",
+      "description": "The specific half of the century when the castle was built (e.g., 'first half', 'second half')."
+    }
+  },
+  "required": [
+    "castle_name",
+    "river_overlooked",
+    "river_flow_description",
+    "construction_century",
+    "construction_half_century"
+  ],
+  "additionalProperties": false
+}

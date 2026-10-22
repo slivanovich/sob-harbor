@@ -1,0 +1,10 @@
+{
+  "query_cities": [
+    "Artux",
+    "Erenhot"
+  ],
+  "identified_city": "Erenhot",
+  "city_type": "county-level city",
+  "administrative_affiliation": "Xilin Gol League",
+  "is_part_of_xilin_gol_league": true
+}

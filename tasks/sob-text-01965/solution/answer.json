@@ -1,0 +1,12 @@
+{
+  "film_title": "Star Wars Holiday Special",
+  "film_year": 1978,
+  "film_genre": [
+    "musical",
+    "science fiction"
+  ],
+  "film_type": "television film",
+  "film_country": "American",
+  "introduced_character": "Boba Fett",
+  "planet_featured": "Kashyyyk"
+}

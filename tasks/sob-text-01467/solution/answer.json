@@ -1,0 +1,24 @@
+{
+  "parent_name": "V. Lakshminarayana",
+  "violinist_son": {
+    "name": "L. Subramaniam",
+    "profession": "violinist",
+    "other_roles": [
+      "composer",
+      "conductor"
+    ],
+    "birth_year": 1947
+  },
+  "other_notable_sons": [
+    {
+      "name": "L. Vaidyanathan",
+      "profession": "musicologist, music director and composer",
+      "is_violinist": false
+    },
+    {
+      "name": "L. Shankar",
+      "profession": "violinist",
+      "is_violinist": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "airport_info": {
+    "name": "Sauce Viejo Airport",
+    "iata_code": "SFN"
+  },
+  "airline_serving_airport": {
+    "name": "Austral Líneas Aéreas",
+    "type": "domestic airline",
+    "country_of_origin": "Argentina"
+  },
+  "sister_company": {
+    "name": "Aerolíneas Argentinas",
+    "relationship_type": "sister company"
+  }
+}

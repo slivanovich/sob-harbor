@@ -1,0 +1,13 @@
+{
+  "congressional_district": {
+    "state": "New York",
+    "district_number": 19
+  },
+  "representative": {
+    "name": "John Faso",
+    "party": "Republican",
+    "birth_date": "1952-08-25",
+    "date_assumed_office": "2017-01-03"
+  },
+  "district_location_description": "Located in New York's Hudson Valley and Catskills regions, north of the New York City metropolitan area and mostly south of Albany."
+}

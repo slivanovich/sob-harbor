@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "bf5e96a58fe447d33bcbc14a841b57bc8f01b66094652e740059970ce1e6a8c7",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5abc7af15542993a06baf8ed",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Candle (Sick and Tired): \"Candle (Sick and Tired)\" is a pop rock song recorded by American band The White Tie Affair, released as the lead single from their debut album, \"Walk This Way\".  The video for this single features a guest appearance from \"Glee\" star Heather Morris as well as cameos from lonelygirl15 star Jessica Rose and Good Charlotte guitarist Benji Madden.\n\nList of U.S. State Dinners: A state dinner in the United States is a formal dinner held in honor of a foreign head of state, such as a king, queen, president, or any head of government.  It is hosted by the President of the United States and held in the State Dining Room at the White House in Washington D.C. Other formal dinners for important people of other nations, such as a prince or princess, are called official dinners, the difference being that the federal government does not pay for them.  Nowadays these dinners are more often black tie rather than white tie (see formal wear).\n\nWhite tie: White tie, also called full evening dress or a dress suit, is the most formal evening dress code in Western high fashion.  For men, it consists of a black tailcoat worn over a white starched shirt, marcella waistcoat and the eponymous white bow tie worn around a detachable collar.  High-waisted black trousers and patent leather shoes complete the outfit, although decorations can be worn and a top hat and white scarf are acceptable as accessories.  Women wear full length evening or ball gown and, optionally, jewellery, tiaras, a small bag and evening gloves.\n\nThe World as We Know It: The World as We Know It is the second studio album by The Morning Of, released on January 29, 2008.  In October and November, the band went on tour alongside the Higher, Just Surrender and the White Tie Affair.\n\nHe Is We: He Is We is an indie pop band from Tacoma, Washington.\n\nChris Wallace (musician): Chris Wallace (born March 22, 1982) is an American singer, songwriter, and producer.  He was prominently known as the former lead vocalist and front man of the American pop rock band The White Tie Affair.  Wallace has released one album, \"Push Rewind\" in 2012.  In 2016, Wallace signed a songwriting contract with Pulse Music Group.\n\nWalk This Way (album): Walk This Way is the major label debut of the band The White Tie Affair.  The album contains the singles \"Allow Me To Introduce Myself...Mr. Right\" and \"Candle (Sick and Tired)\".  Produced by the collaborative team behind Wired All Wrong (Matt Mahaffey and Jeff Turzo) \"Walk This Way\" was recorded at Annetenna Studios in Burbank, California.\n\nThe Sneetches (band): The Sneetches were an American indie pop/power pop band formed in San Francisco, California, United States, in 1985, who released several albums before splitting up in the mid-1990s.  The band was described by \"Trouser Press\" as \"one of the most tasteful, consistently tuneful pop bands on the American scene\".  In 2017 All Music described and Sneetches as \"one of the best classic guitar pop bands in the late '80s/early '90s.\"\n\nBlack Tie Affair (TV series): Black Tie Affair is an American crime drama spoof that aired from May 29 until June 19, 1993.\n\nThe White Tie Affair: The White Tie Affair (also known as TWTA) was a pop band from Chicago, Illinois consisting of Chris Wallace (vocals), Sean-P (guitar), Tim McLaughlin (drums) and Ryan McLain (keyboards).  In early 2007, the band signed with Epic Records/Slightly Dangerous and released their debut album, \"Walk This Way\" in April 2008.  The album contains the band's two singles, \"Allow Me to Introduce Myself...Mr. Right\" and \"Candle (Sick and Tired)\", which have been featured on MTV's \"TRL\" and \"The Hills\".",
+    "question": "Are He Is We and The White Tie Affair both pop bands?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "bands_involved": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "band_name": {
+                "type": "string",
+                "description": "The name of the band."
+              },
+              "genre": {
+                "type": "string",
+                "description": "The genre of the band as described in the context."
+              },
+              "is_pop_genre": {
+                "type": "boolean",
+                "description": "Indicates if the band's genre is considered a pop genre."
+              }
+            },
+            "required": [
+              "band_name",
+              "genre",
+              "is_pop_genre"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Details about the bands mentioned in the question."
+        },
+        "all_are_pop_bands": {
+          "type": "boolean",
+          "description": "The final answer to whether all listed bands are pop bands."
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "A brief explanation of why the bands are classified as pop or not."
+        }
+      },
+      "required": [
+        "bands_involved",
+        "all_are_pop_bands",
+        "reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "bands_involved": [
+        {
+          "band_name": "He Is We",
+          "genre": "indie pop",
+          "is_pop_genre": true
+        },
+        {
+          "band_name": "The White Tie Affair",
+          "genre": "pop",
+          "is_pop_genre": true
+        }
+      ],
+      "all_are_pop_bands": true,
+      "reasoning": "He Is We is an indie pop band, and The White Tie Affair is a pop band. Both genres fall under the broader category of pop."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

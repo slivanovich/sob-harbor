@@ -1,0 +1,30 @@
+{
+  "primary_common_profession": "director",
+  "all_common_professions": [
+    "director",
+    "screenwriter",
+    "producer"
+  ],
+  "number_of_common_professions": 3,
+  "individuals_details": [
+    {
+      "name": "Willi Forst",
+      "professions_listed": [
+        "actor",
+        "screenwriter",
+        "film director",
+        "film producer",
+        "singer"
+      ]
+    },
+    {
+      "name": "Alan Taylor",
+      "professions_listed": [
+        "television director",
+        "film director",
+        "television producer",
+        "screenwriter"
+      ]
+    }
+  ]
+}

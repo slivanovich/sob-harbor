@@ -1,0 +1,18 @@
+{
+  "question_asked": "Are both Michael Hofmann and Paul Bogart film directors?",
+  "answer": true,
+  "individuals_checked": [
+    {
+      "name": "Michael Hofmann",
+      "is_film_director": true,
+      "other_professions": []
+    },
+    {
+      "name": "Paul Bogart",
+      "is_film_director": true,
+      "other_professions": [
+        "producer"
+      ]
+    }
+  ]
+}

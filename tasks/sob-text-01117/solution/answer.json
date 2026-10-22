@@ -1,0 +1,17 @@
+{
+  "flora_names": [
+    "Latania",
+    "Arundina"
+  ],
+  "native_ocean": "Indian Ocean",
+  "flora_details": [
+    {
+      "name": "Latania",
+      "native_location_description": "native to islands in the western Indian Ocean"
+    },
+    {
+      "name": "Arundina",
+      "native_location_description": "This tropical Asiatic genus extends from India, Sri Lanka, Nepal, Thailand, Vietnam, the Ryukyu Islands, Malaysia, Singapore, China to Indonesia, the Philippines and New Guinea."
+    }
+  ]
+}

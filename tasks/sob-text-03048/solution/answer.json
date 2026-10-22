@@ -1,0 +1,16 @@
+{
+  "season_identifier": "2012–13",
+  "top_flight_league_name": "Bundesliga",
+  "league_context": {
+    "consecutive_season_in_top_flight": 48,
+    "promotion_year_to_top_flight": 1965
+  },
+  "player_signed_details": {
+    "common_name": "Dante",
+    "full_name": "Dante Bonfim Costa Santos",
+    "nationality": "Brazilian",
+    "birth_date": "18 October 1983",
+    "club_as_described_in_context": "Nice",
+    "league_of_club_as_described_in_context": "French Ligue 1"
+  }
+}

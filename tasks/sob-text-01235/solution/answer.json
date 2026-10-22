@@ -1,0 +1,21 @@
+{
+  "film_comparison": [
+    {
+      "film_title": "Koyaanisqatsi",
+      "directors": [
+        "Godfrey Reggio"
+      ],
+      "director_count": 1
+    },
+    {
+      "film_title": "The Last Lions",
+      "directors": [
+        "Dereck Joubert",
+        "Beverly Joubert"
+      ],
+      "director_count": 2
+    }
+  ],
+  "film_with_more_directors": "The Last Lions",
+  "max_director_count": 2
+}

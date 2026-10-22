@@ -1,0 +1,16 @@
+{
+  "person_a": {
+    "name": "Countee Cullen",
+    "birth_date": "1903-05-30",
+    "death_date": "1946-01-09",
+    "lifespan_years": 42
+  },
+  "person_b": {
+    "name": "Guillermo Cabrera Infante",
+    "birth_date": "1929-04-22",
+    "death_date": "2005-02-21",
+    "lifespan_years": 75
+  },
+  "longer_lived_person_name": "Guillermo Cabrera Infante",
+  "age_difference_years": 33
+}

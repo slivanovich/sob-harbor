@@ -1,0 +1,13 @@
+{
+  "sportscaster_name": "Bob Uecker",
+  "collaboration_details": {
+    "years_of_collaboration": 12,
+    "team_broadcasted_for": "Milwaukee Brewers"
+  },
+  "collaborator_professions": [
+    "sportscaster",
+    "comedian",
+    "actor"
+  ],
+  "was_major_league_baseball_player": true
+}

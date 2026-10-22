@@ -1,0 +1,10 @@
+{
+  "company_name": "Firaxis Games",
+  "game_series_name": "Civilization",
+  "company_location": {
+    "city": "Hunt Valley",
+    "state": "Maryland",
+    "country": "United States"
+  },
+  "is_us_based": true
+}

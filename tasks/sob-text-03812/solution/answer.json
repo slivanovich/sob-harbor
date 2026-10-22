@@ -1,0 +1,11 @@
+{
+  "ballet_name": "Swan Lake",
+  "composer": {
+    "name": "Pyotr Ilyich Tchaikovsky",
+    "nationality": "Russian"
+  },
+  "composition_years": {
+    "start_year": 1875,
+    "end_year": 1876
+  }
+}

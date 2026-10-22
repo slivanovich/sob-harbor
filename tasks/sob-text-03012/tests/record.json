@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "c9ace114746598d9e6fbab21cbfef23cb4350c997f6de1c4461d0d2be08e0b33",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae4d88b5542990ba0bbb172",
+    "source_dataset": "hotpotqa",
+    "source_answer": "6 ft",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Bryan Harper (baseball): Bryan James Harper (born December 29, 1989) is an American baseball pitcher in the Washington Nationals organization.  He is the older brother of Nationals outfielder Bryce Harper.\n\nMoon Guitars: Moon Guitars was established in 1979 by Jimmy Moon in a small workshop on the Island of Arran in Scotland.  His reputation grew quickly and he was soon making (mostly electric guitars) and repairing instruments for many of Scotland’s finest musicians.  A move to Glasgow was made in 1985 and for the following ten years, the company produced mostly custom electric instruments for many of Scotland’s well-known bands including Big Country, Texas, Simple Minds, Wet Wet Wet and Del Amitri.  The next five years saw a change in the industry, and recognising this shift, Jimmy returned to his roots and began producing acoustic guitars and the entire mandolin family.  Acoustic guitars range from Standard Series through to Master Grade instruments built with exotic timbers.  The range also includes signature models for Bryan Adams and Scottish folk singer Dougie MacLean.  Some current users of Moon acoustic instruments include: Adele, Ally McErlaine (Texas & Red Sky July), Bryan Adams, Dougie MacLean, Guy Berryman (Coldplay), Paolo Nutini, Trevor Rabin, Steve Earle, Peter Rowan, Roy Harper and the Scissor Sisters.\n\nB5 (group): B5, previously known as TNT Boyz and Audio, was a R&B music group originating from St. Petersburg, Florida which later relocated to Atlanta, Georgia.  The group consisted of the five Breeding family brothers, Dustin Michael (b. October 8, 1987), Kelly Allen (b. February 27, 1988), Patrick Owen (b. September 19, 1990), Carnell Frederick (b. Hunnicut, November 30, 1989), and Bryan Jesse (b. October 14, 1992).  They were formerly known as the TNT Boyz featuring only the four eldest brothers, but renamed themselves B5 when Bryan, the youngest brother, joined the group.  From late 2009 to early 2010, they renamed themselves Audio and then returned to the name B5 on May 30, 2012.  Bryan and Patrick left the group, leaving Dustin, Kelly, and Carnell to rename themselves Men in Black(MIB).  After Dustin and Carnell had their own kids, they dropped out of the group leaving Kelly as a rapper and Dustin a soloist, while Carnell stopped making music to devote his time to his family.\n\nBryce Harper: Bryce Aron Max Harper (born October 16, 1992) is an American professional baseball right fielder for the Washington Nationals of Major League Baseball (MLB).  He stands 6 ft tall and weighs 230 lb .  Harper was chosen by the Nationals with the first overall pick in the 2010 Major League Baseball Draft.\n\nAll the Way to the Ocean: All the Way to the Ocean is a 2016 computer animated short film based on the children's book of the same name by Joel Harper.  The screenplay was written by Joel Harper, Pete Michels, and Doug Rowell.  The film was directed by Doug Rowell and produced by Joel Harper.  The film is narrated by American actress Marcia Cross and features the song With My Own Two Hands by Ben Harper (brother of) Joel Harper.  This is an alternate version of the original song featuring Jack Johnson and is also featured on the Curious George film soundtrack \"Sing-A-Longs and Lullabies for the Film Curious George\".  The lyrics focus on how changes in the world can come about when a single person decides to take action.  The song's popularity in Europe was such that Ben Harper was awarded French \"Rolling Stone Magazine\"'s \"Artist of the Year\" (Artiste De L'Année) in 2003.  The film also features music by Joel Harper and Burning Spear with their collaboration on the song The Time is Now.  The film stars voice-overs by actress and activist Amy Smart and Australian musician Xavier Rudd.\n\nEunice Harper Higgins: Eunice Higgins (née Harper) is the main character in the comedy sketch \"The Family\" played by Carol Burnett (featured on \"The Carol Burnett Show\").  Eunice was also featured in her eponymous CBS made-for-TV movie, which aired in 1982.  The film starred Carol Burnett as Eunice; Ken Berry as Eunice's well-to-do brother, Philip (Berry played a different brother, Vinton, on the spin-off TV series); Harvey Korman as Eunice's husband, Ed Higgins; Betty White as Eunice's sister, Ellen Harper-Jackson; Vicki Lawrence as Eunice's \"Mama\", Thelma Harper; and Dick Clair as the voice of Eunice's father, Carl Harper.  The film takes the Harper family on a 23-year journey.\n\nBilly Bryan (baseball): William Ronald Bryan (born December 4, 1938, in Morgan, Georgia) is an American former Major League Baseball catcher.  He was signed by the Kansas City Athletics in 1960.  Bryan played eight seasons in the majors: Kansas City Athletics, 1961–1965; New York Yankees, 1966–1967; and the Washington Senators, 1968.  Bryan stood 6 ft tall, weighed 200 lb , batted left-handed and threw right-handed.\n\nMark Harper (cricketer): Mark Anthony Harper (born 31 October 1957 in Georgetown, Guyana) is a former cricketer and current head coach of Guyana, a team he represented throughout his playing career.  Harper has previously coached the national teams of Bermuda (from 2001 to 2004) and the Turks and Caicos Islands (from 2007 to 2008).  Harper's brother, Roger, played international cricket for the West Indies in the 1980s and 1990s.\n\nThe Wyatt Family: The Wyatt Family was a professional wrestling stable in WWE.  The group, originally composed of Bray Wyatt, Luke Harper, and Erick Rowan, debuted in WWE's developmental branch NXT in November 2012, with Harper and Rowan going on to win the NXT Tag Team Championship.  The Wyatt Family would go on to debut on the main roster in July 2013, as a villainous faction terrorizing other WWE wrestlers, including Kane, CM Punk, Daniel Bryan, John Cena, Sheamus, and members of The Shield, among others.\n\nBryan Harper: Bryan Harper (born 1927) is an Australian sprint canoeist who competed in the late 1950s.  At the 1956 Summer Olympics in Melbourne, he finished seventh in the C-1 1000 m event and ninth in the C-1 10000 m event.",
+    "question": "Bryan Harper's brother is how tall?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person mentioned in the question."
+        },
+        "relationship_type": {
+          "type": "string",
+          "description": "The type of relationship to the person_name."
+        },
+        "related_person_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the related person."
+            },
+            "occupation": {
+              "type": "string",
+              "description": "The occupation or role of the related person."
+            },
+            "team_organization": {
+              "type": "string",
+              "description": "The team or organization the related person is associated with."
+            },
+            "height": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "description": "The numerical value of the height."
+                },
+                "unit": {
+                  "type": "string",
+                  "description": "The unit of measurement for height (e.g., 'ft', 'cm')."
+                }
+              },
+              "required": [
+                "value",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "occupation",
+            "team_organization",
+            "height"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "person_name",
+        "relationship_type",
+        "related_person_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Bryan Harper",
+      "relationship_type": "brother",
+      "related_person_details": {
+        "name": "Bryce Harper",
+        "occupation": "professional baseball right fielder",
+        "team_organization": "Washington Nationals",
+        "height": {
+          "value": 6,
+          "unit": "ft"
+        }
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

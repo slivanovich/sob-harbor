@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Flight dispatcher: A flight dispatcher (also known as an aircraft dispatcher, airline dispatcher, flight follower or flight operations officer) assists in planning flight paths, taking into account aircraft performance and loading, enroute winds, thunderstorm and turbulence forecasts, airspace restrictions, and airport conditions.  Dispatchers also provide a flight following service and advise pilots if conditions change.  They usually work in the operations center of the airline.  In the United States and Canada, the flight dispatcher shares legal responsibility with the commander of the aircraft (joint responsibility dispatch system).
+
+Threat and error management: Threat and error management (TEM) is an overarching safety management approach that assumes that pilots will naturally make mistakes and encounter risky situations during flight operations.  Rather than try to avoid these threats and errors, its primary focus is on teaching pilots to manage these issues so they do not impair safety.  Its goal is to maintain safety margins by training pilots and flight crews to detect and respond to events that are likely to cause damage (threats) as well as mistakes that are most likely to be made (errors) during flight operations.
+
+Air Force Flight Standards Agency: The Air Force Flight Standards Agency (AFFSA) operates as a U.S. Air Force Field Operating Agency operating under the direction of the Headquarters of the U.S. Air Force.  AFFSA maximizes the effectiveness of Air Force global air operations by ensuring access to worldwide airspace in all weather conditions.  The agency does this by providing accurate, relevant, and timely flight information and support services to Department of Defense, national, and coalition aviators.  It also acts as lead command for the creation and application of criteria, procedures, and precision equipment for worldwide instrument flight operations, air traffic control, airfield management, and air traffic control and landing systems for the Air Force.  AFFSA evaluates and capitalizes on emerging technologies to ensure unrestricted access to domestic and international airspace.  It partners with Federal Aviation Administration, sister services, major commands, coalition partners, and host nations to maintain the consistency and accuracy of more than 81 airfields, 1,092 navigation systems and 8,214 instrument approach procedures worldwide.  It performs combat flight inspections, oversees the Air Force airfield operations standardization program and instructs the Air Force Advanced Instrument School.
+
+Jat Airways: Jat Airways (Serbian: Јат ервеј "Jat ervej", stylized as JatAirways; ] ) was the national flag carrier and largest airline of Serbia, and formerly Yugoslavia.  Founded in 1927 as Aeroput, the airline ceased operations during World War II.  After resuming flights in 1947, the airline was renamed "JAT Jugoslovenski Aerotransport" on 1 April 1947.  The airline was renamed again on 8 August 2003.  Jat Airways and their predecessors were one of the oldest airlines still in operation.  Flight operations were based at Belgrade Nikola Tesla Airport, and the airline operated scheduled services to 72 international destinations, outside the areas formerly part of Yugoslavia, as well as charters and wet leases. Jat Airways was owned by the government of Serbia and had 1,250 employees.
+
+Strike/Flight numerals: A Strike/Flight Numeral is a Department of the Navy device that may be awarded for wear on the Air Medal to individuals serving in any capacity in the United States Armed Forces.  A Strike/Flight Award is awarded to individuals for meritorious achievement while participating in sustained aerial flight operations, under flight orders.  Strike/Flight Numerals are bronze Arabic numerals 5/16 inch in height and are worn to denote the total number of Strike/Flight awards
+
+Piedmont Airlines: Piedmont Airlines, Inc. is an American regional airline operating for American Eagle, formerly US Airways Express.  It is a wholly owned subsidiary of the American Airlines Group, headquartered in unincorporated Wicomico County, Maryland, near the city of Salisbury.  It conducts flight operations using Bombardier Dash 8, and Embraer ERJ 145 aircraft.  Piedmont Airlines, Inc. also provides ground handling and customer service for airports in the Northeastern & Western parts of the United States.  Its main base is Philadelphia International Airport with hubs in Charlotte Douglas International Airport.
+
+Air China: Air China Limited is the flag carrier and one of the major airlines of the People's Republic of China, with its headquarters in Shunyi District, Beijing.  Air China's flight operations are based at Beijing Capital International Airport.  In 2015, the airline carried 90 million domestic and international passengers with an average load factor of 80%.
+
+Shandong Airlines: Shandong Airlines Co.Ltd.  (, nicknamed SDA or 山航 "Shānháng") is an airline based in the Shandong Airlines Center (山东航空大厦 "Shāndōng Hángkōng Dàshà") in Jinan, Shandong, China.  The Chinese carrier operates mainly domestic trunk routes from Jinan, Qingdao and Yantai to major cities in China.  It is owned by Air China and holds a 10 percent stake in Sichuan Airlines.
+
+Qingdao Liuting International Airport: Qingdao Liuting International Airport (IATA: TAO, ICAO: ZSQD) is the main airport serving the city of Qingdao in Shandong Province, China.  It is about 31 km from the city center.  Qingdao is a focus city for China Eastern Airlines and Shandong Airlines.  Its IATA code is used for its former romanized name Tsingtao.
+
+Air Mekong: Mekong Aviation Joint Stock Company (Vietnamese: "Công ty Cổ phần Hàng không Mê Kông" ), doing business as Air Mekong, was an airline from Vietnam which operated scheduled passenger flights from its base at Phu Quoc Airport and secondary hubs at Noi Bai International Airport and Tan Son Nhat International Airport.  Its headquarters were located in Phú Quốc, Kiên Giang Province.  It was established in 2009 and flight operations were launched on 9 October 2010.  This is the third private-owned airline of Vietnam, after Indochina Airlines (defunct as of 2009), and VietJet Air.  Air Mekong leased four Bombardier CRJ 900 aircraft from SkyWest Airlines, each equipped with 90 seats in both business and economy classes.  In 2011, Air Mekong operated 10,750 flights and carried about 710 thousand passengers.
+
+Question: The flight operations for the owner of Shandong Airlines is based where?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "owner_airline_name": {
+      "type": "string",
+      "description": "The name of the airline that owns Shandong Airlines."
+    },
+    "owner_airline_headquarters": {
+      "type": "string",
+      "description": "The headquarters location of the owner airline."
+    },
+    "flight_operations_base": {
+      "type": "string",
+      "description": "The airport where the owner airline's flight operations are based."
+    }
+  },
+  "required": [
+    "owner_airline_name",
+    "owner_airline_headquarters",
+    "flight_operations_base"
+  ],
+  "additionalProperties": false
+}

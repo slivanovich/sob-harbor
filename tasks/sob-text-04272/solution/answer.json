@@ -1,0 +1,17 @@
+{
+  "more_specific_city": {
+    "name": "Qingzhen",
+    "administrative_level": "county-level city"
+  },
+  "less_specific_city": {
+    "name": "Guang'an",
+    "administrative_level": "prefecture-level city"
+  },
+  "comparison_result": "Qingzhen",
+  "reasoning": "Qingzhen is described as a 'county-level city under the administration of Guiyang in Guizhou province', indicating it is a subdivision of a prefecture-level city. Guang'an is described as a 'prefecture-level city in eastern Sichuan province'. In the Chinese administrative hierarchy, a county-level city is a more specific subdivision than a prefecture-level city.",
+  "administrative_levels_involved": [
+    "province",
+    "prefecture-level city",
+    "county-level city"
+  ]
+}

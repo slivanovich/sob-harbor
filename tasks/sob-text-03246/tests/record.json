@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "record_id": "65c11dce1a6a9594bfb0070cf4014060476a84a0883a5b516d88afe86da75d88",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5adf1ecd5542993344016be6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Ammobium: Ammobium is genus of perennial Asteraceae species described as a genus in 1824.\n\nSidalcea: Sidalcea is a genus (approx. 25 species) of the botanical family Malvaceae.  It contains several species of flower known generally as checkerblooms or checkermallows, or prairie mallows in the United Kingdom.  They can be annuals or perennials, some rhizomatous.  They are native to West and Central North America.\n\nSidalcea candida: Sidalcea candida, the white checkerbloom, prairie mallow or white checkermallow, is a wildflower found from Nevada to Wyoming and south to the southern part of New Mexico.  The plant grows to three feet, and is also known as wild hollyhock.  Its flowers are about one inch wide with five petals.  It is found mostly in mountain meadows and along streams.  It flowers between June and September.",
+    "question": "Are Ammobium and Sidalcea both flowers?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_topic": {
+          "type": "string",
+          "description": "The main topic or subject of the question."
+        },
+        "genera_information": {
+          "type": "array",
+          "description": "Details about each genus mentioned in the context.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "genus_name": {
+                "type": "string",
+                "description": "The name of the plant genus."
+              },
+              "is_flower_genus": {
+                "type": "boolean",
+                "description": "Indicates if the genus is known to contain flower species."
+              },
+              "botanical_family": {
+                "type": "string",
+                "description": "The botanical family to which the genus belongs."
+              },
+              "life_cycle": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Describes the life cycle of the plants in the genus (e.g., perennial, annual)."
+              },
+              "common_names": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Common names associated with the genus or its species."
+              }
+            },
+            "required": [
+              "genus_name",
+              "is_flower_genus",
+              "botanical_family",
+              "life_cycle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "overall_answer": {
+          "type": "boolean",
+          "description": "The direct answer to the question: Are both genera flowers?"
+        }
+      },
+      "required": [
+        "question_topic",
+        "genera_information",
+        "overall_answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_topic": "plant genera comparison",
+      "genera_information": [
+        {
+          "genus_name": "Ammobium",
+          "is_flower_genus": true,
+          "botanical_family": "Asteraceae",
+          "life_cycle": [
+            "perennial"
+          ]
+        },
+        {
+          "genus_name": "Sidalcea",
+          "is_flower_genus": true,
+          "botanical_family": "Malvaceae",
+          "life_cycle": [
+            "annuals",
+            "perennials"
+          ],
+          "common_names": [
+            "checkerblooms",
+            "checkermallows",
+            "prairie mallows"
+          ]
+        }
+      ],
+      "overall_answer": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

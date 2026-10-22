@@ -1,0 +1,17 @@
+{
+  "person_1": {
+    "name": "Maurice Pialat",
+    "careers": [
+      "film director",
+      "screenwriter",
+      "actor"
+    ]
+  },
+  "person_2": {
+    "name": "João Pedro Rodrigues",
+    "careers": [
+      "film director"
+    ]
+  },
+  "shared_career": "film director"
+}

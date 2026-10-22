@@ -1,0 +1,14 @@
+{
+  "astronomer": {
+    "name": "Francis Preserved Leavenworth",
+    "birth_location": {
+      "city": "Mount Vernon",
+      "state": "Indiana"
+    }
+  },
+  "galaxy_discovered": {
+    "name": "NGC 1234",
+    "discovery_year": 1886
+  },
+  "answer_birth_state": "Indiana"
+}

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "c8e1c3ac54b198f1e9c80e9819cfcd2d3b8198ec57dfc5a9f90513b3b70c15f2",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a86dff25542996432c57200",
+    "source_dataset": "hotpotqa",
+    "source_answer": "since 2012",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "America West Express: America West Express was the name for America West Airlines commuter and regional flights operated by Mesa Air Group's Mesa Airlines under a code share agreement.  Today Mesa Airlines operates for US Airways Express.\n\nWestAir Commuter Airlines: WestAir Commuter Airlines, also known as WestAir Airlines(IATA:OE,VB/ICAO WCA,SDU), was a United States airline formed when Stol Air Commuter changed its name in 1978.  One of the founders was Maurice J. Gallagher, Jr., who later acquired Allegiant Air.  WestAir subsequently became a United Express air carrier via a code sharing agreement with United Airlines.  It was headquartered in Fresno, California.  WestAir was sold to Mesa Air Group in 1992.\n\nMesa Airlines: Mesa Airlines, Inc. is an American regional airline based in Phoenix, Arizona.  It is a FAA Part 121-certificated air carrier operating under air carrier certificate number MASA036A issued on June 29, 1979.  It is a subsidiary of Mesa Air Group and operates flights as American Eagle and United Express via respective code sharing agreements with American Airlines and United Airlines.  It serves more than 180 markets in the Western Hemisphere.  Mesa's safety record was noted as having the fewest incidents among domestic regional airlines in the \"Journal of Air Transportation\".\n\nMesa Air Group: Mesa Air Group, Inc. is a Nevada Corporation commercial aviation holding company with headquarters in Suite 700 at 410 North 44th Street in the Camelback East area of Phoenix, Arizona, United States.  The company operates one regional airline subsidiary: Mesa Airlines which operates as American Eagle, US Airways Express and United Express under contractual agreements with American Airlines and United Airlines respectively.\n\nGo! (airline): Go!  (styled as go!) , based in Honolulu was a regional brand of Phoenix, Arizona-based Mesa Airlines.  Go!  operated inter-island services within Hawaii.  Its main base was Honolulu International Airport.  It was a division within the Mesa Airlines subsidiary of Mesa Air Group and its flights were operated by Mesa Airlines.  The airline ceased operations in Hawaii on April 1, 2014.\n\nHenan Airlines: Henan Airlines (, formerly Kunpeng Airlines (), was a charter airline based in northern China.  Kunpeng was founded as a joint venture between Shenzhen Airlines of China and Mesa Air Group of the United States and was also the largest sino-foreign regional airline in China.  In 2009 Mesa Air Group and Shenzhen terminated their agreement and Shenzhen announced that the airline would be renamed Henan Airlines.\n\nShenzhen Airlines: Shenzhen Airlines () is an airline headquartered in Shenzhen Bao'an International Airport in Bao'an District, Shenzhen, Guangdong, China.  It has been a member of Star Alliance since 2012, and is currently one of two Chinese airlines that is part of the global airline network.\n\nAir Midwest: Air Midwest, Inc., was a Federal Aviation Administration Part 121 certificated air carrier that operated under air carrier certificate number AMWA510A issued on May 15, 1965.  It was headquartered in Wichita, Kansas, United States, and was a subsidiary of Mesa Air Group.  Besides initially flying as an independent air carrier, it later operated code sharing feeder flights on behalf of Eastern Air Lines as Eastern Air Midwest Express, on behalf of Trans World Airlines (TWA) as Trans World Express and on behalf of US Airways as US Airways Express.  It also operated feeder flights on behalf of Braniff (1983-1990) and Ozark Air Lines in addition to flying for Mesa Airlines.  Air Midwest was shut down by its parent company, Mesa Airlines, in June 2008.\n\nGo! Mokulele: go!  Mokulele was an American business marketing inter-island flights within the state of Hawaii.  The airline was a joint venture between Mesa Airlines and Mokule Flight Services formed in October 2009 when the companies merged their competing airline business subsidiaries, go!  and Mokulele Airlines, under one umbrella company.  Mesa Air Group owned approximately 75% of the company, while Transpac and other Mokulele shareholders owned approximately 25%.  The airline had its headquarters in Honolulu CDP, City and County of Honolulu.  Following Mesa's late 2011 divestiture of its ownership stake in Mokulele, Mesa announced it was discontinuing the \"go!  Mokulele\" brand.\n\nFreedom Airlines: Freedom Airlines, Inc. was an American FAA Part 121 certificated air carrier operating under air carrier certificate number FDKA087K issued on April 1, 2002.  The Nevada Corporation was headquartered in Irving, Texas and a subsidiary of Mesa Air Group.  It operated flights as Delta Connection for Delta Air Lines serving Delta's hub at Cincinnati/Northern Kentucky International Airport in Hebron, KY, near Cincinnati, OH using EMB 145 aircraft.  Freedom's base moved to Cincinnati from New York City in July 2009.  Freedom previously operated the CRJ-900 aircraft for Delta Connection as well, however, this contract was canceled and all aircraft were transferred to Eagan, MN-based Mesaba Airlines, Atlanta, GA-based Atlantic Southeast Airlines, and Pinnacle Airlines.",
+    "question": "How long has the airline, that joined Mesa Air Group to found Henan Airlines, been a member of Star Alliance?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "airline_name": {
+          "type": "string",
+          "description": "The name of the airline that joined Mesa Air Group to found Henan Airlines."
+        },
+        "alliance_name": {
+          "type": "string",
+          "description": "The name of the airline alliance."
+        },
+        "membership_start_year": {
+          "type": "integer",
+          "description": "The year the airline became a member of the specified alliance."
+        }
+      },
+      "required": [
+        "airline_name",
+        "alliance_name",
+        "membership_start_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "airline_name": "Shenzhen Airlines",
+      "alliance_name": "Star Alliance",
+      "membership_start_year": 2012
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "actor_details": {
+    "name": "Paul Rudd",
+    "education": [
+      {
+        "institution_name": "University of Kansas",
+        "field_of_study": "theatre"
+      },
+      {
+        "institution_name": "British American Drama Academy"
+      }
+    ]
+  },
+  "film_details": {
+    "title": "Wanderlust",
+    "release_year": 2012,
+    "director": "David Wain",
+    "co_star": "Jennifer Aniston"
+  },
+  "college_answer": "University of Kansas"
+}

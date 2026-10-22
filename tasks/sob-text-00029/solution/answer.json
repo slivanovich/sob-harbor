@@ -1,0 +1,13 @@
+{
+  "song_title": "City of Stars",
+  "award_details": {
+    "award_name": "Academy Award",
+    "award_category": "Best Original Song",
+    "award_ceremony": 89
+  },
+  "performers": [
+    "Ryan Gosling",
+    "Emma Stone"
+  ],
+  "film_title": "La La Land"
+}

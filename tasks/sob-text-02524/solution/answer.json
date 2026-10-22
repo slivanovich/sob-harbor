@@ -1,0 +1,13 @@
+{
+  "monument_name": "Peace & Harmony",
+  "location": {
+    "city": "Liverpool",
+    "country": "England"
+  },
+  "unveilers": [
+    "Julian Lennon",
+    "Cynthia Lennon"
+  ],
+  "unveiling_date": "Saturday 9 October 2010",
+  "dedicated_to": "John Lennon"
+}

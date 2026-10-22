@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "6b9162ed4ebb13e121fc1a40f4b95297f8358dead90f04ea5f52d79dd009c412",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a73d48655429905862fe0db",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Casey Affleck",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "List of Austin City Limits performers: This list of \"Austin City Limits\" performers is a list of musicians who have appeared on the American PBS television music program \"Austin City Limits\".  Also listed are years in which they appeared.  This list does not include performers who otherwise may have appeared at the annual Austin City Limits Music Festival, but who did not appear on the PBS television program.\n\nThe Dreadful Lemon Sky: The Dreadful Lemon Sky (1975) is the sixteenth novel in the Travis McGee series by John D. MacDonald.  It is the 87th novel in The Top 100 Crime Novels of All Time as compiled by the Mystery Writers of America (it is not included in the U.K. version of the list).\n\nLemon Sky: Lemon Sky is a play by Lanford Wilson which ran Off-Broadway in 1970.\n\nSoul Survivors (band): The Soul Survivors are an American, Philadelphia-based, Soul Music and R&B group, founded by New York natives Richie and Charlie Ingui along with Kenny Jeremiah.  The Soul Survivors are known for their 1967 hit single \"Expressway to Your Heart\", which was the first hit by Philadelphia soul record producers and songwriters Kenny Gamble and Leon Huff.  The Soul Survivors are still performing and recording new music and covers, most recently working with David Uosikkenen of the The Hooters and his project \"In The Pocket\" which is paying tribute to the vast catalog of music created in Philadelphia.\n\nCasey Affleck: Caleb Casey McGuire Affleck-Boldt (born August 12, 1975) is an American actor and director.  He began his career as a child actor, appearing in the PBS television movie \"Lemon Sky\" (1988) and the ABC miniseries \"The Kennedys of Massachusetts\" (1990).  He later appeared in three Gus Van Sant films – \"To Die For\" (1995), \"Good Will Hunting\" (1997), and \"Gerry\" (2002) – and in Steven Soderbergh's comedy heist trilogy \"Ocean's Eleven\" (2001), \"Ocean's Twelve\" (2004) and \"Ocean's Thirteen\" (2007).  His first leading role was in Steve Buscemi's independent comedy-drama \"Lonesome Jim\" (2006).\n\nSky Movies (New Zealand): Sky Movies is a group of subscription television movie channels in New Zealand operated by Sky Network Television.  Sky Movies was started in 1990 as one of the original channels on the Sky UHF Service.  Sky Movies has progressed from the original channel (now known as Sky Movies Premiere) in 1990 to six separate movie channels screening special interest movies, today.  All Sky Movies channels are simulcasted in high definition.\n\nNeal Du Brock: Neal Du Brock directed the world-premieres of many important plays including Edward Albee's Box (play) and Lanford Wilson's Lemon Sky (starring Christopher Walken and Charles Durning).\n\nJill Eikenberry: Jill Susan Eikenberry (born January 21, 1947) is an American film, stage, and television actress.  She is known for her role as lawyer Ann Kelsey on the NBC drama \"L.A. Law\" (1986–94), for which she is a five-time Emmy Award and four-time Golden Globe Award nominee, winning the Golden Globe for Best Actress in a Drama Series in 1989.  She received an Obie Award in 1986 for the Off-Broadway plays \"Lemon Sky\" and \"Life Under Water\", and was nominated for a 2011 Drama Desk Award for the Off-Broadway musical \"The Kid\".  Her film appearances include \"Hide in Plain Sight\" (1980), \"Arthur\" (1981) and \"The Manhattan Project\" (1986).\n\nSoul Survivors: Soul Survivors is a 2001 psychological thriller film starring Melissa Sagemiller as college student Cassie, whose boyfriend Sean (Casey Affleck) dies in a car accident that results from her driving after a night of partying.  The accident leaves Cassie racked with guilt and emotionally vulnerable to the point that she begins hallucinating strange visions and waking-dreams, even though Cassie's friends Annabel (Eliza Dushku) and Matt (Wes Bentley), as well as a local priest called Father Jude (Luke Wilson), all attempt to assist her in coping with the loss.\n\nMelissa Sagemiller: Melissa Sagemiller (born June 1, 1974) is an American television and film actress.  She is known for her performances in films \"Get Over It\" (2001), \"Soul Survivors\" (2001), \"Sorority Boys\" (2002), \"The Clearing\" (2004), \"The Guardian\" (2006) and \"Mr. Woodcock\" (2007).  Sagemiller also starred in television dramas \"Sleeper Cell\" (2005–06), and \"Raising the Bar\" (2008–09), and from 2010 to 2011 had the recurring role as A.D.A. Gillian Hardwicke in the \"\".",
+    "question": "Which actor from the movie \"Soul Survivors\" started his career in the PBS television movie \"Lemon Sky\"?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor."
+        },
+        "film_appearances": {
+          "type": "array",
+          "description": "A list of films or television movies the actor appeared in.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "The title of the film or television movie."
+              },
+              "type": {
+                "type": "string",
+                "description": "The type of production (e.g., 'film', 'PBS television movie')."
+              },
+              "year": {
+                "type": "integer",
+                "description": "The year of the production's release or broadcast."
+              }
+            },
+            "required": [
+              "title",
+              "type",
+              "year"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "common_roles_identified": {
+          "type": "boolean",
+          "description": "Indicates if an actor common to both productions was identified."
+        }
+      },
+      "required": [
+        "actor_name",
+        "film_appearances",
+        "common_roles_identified"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Casey Affleck",
+      "film_appearances": [
+        {
+          "title": "Lemon Sky",
+          "type": "PBS television movie",
+          "year": 1988
+        }
+      ],
+      "common_roles_identified": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

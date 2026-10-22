@@ -1,0 +1,16 @@
+{
+  "song_title": "Wild Horses",
+  "primary_artist_name": "Birdy",
+  "song_writer_details": [
+    {
+      "writer_name": "Birdy",
+      "writer_role": "writer"
+    },
+    {
+      "writer_name": "John McDaid",
+      "writer_role": "writer",
+      "writer_origin_city": "Derry",
+      "writer_origin_country": "Northern Ireland"
+    }
+  ]
+}

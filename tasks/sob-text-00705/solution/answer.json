@@ -1,0 +1,17 @@
+{
+  "unrest_event": {
+    "name": "Portland Rum Riot",
+    "description": "A brief but violent period of civil unrest",
+    "date": "June 2, 1855"
+  },
+  "triggering_legislation": {
+    "name": "Maine law",
+    "purpose": "prohibited the sale and manufacture of alcohol in the state from 1851"
+  },
+  "key_figure_involved": {
+    "name": "Neal Dow",
+    "role": "American Prohibition advocate and politician",
+    "nickname": "Napoleon of Temperance",
+    "opponents_action": "rioted"
+  }
+}

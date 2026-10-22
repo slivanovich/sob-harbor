@@ -1,0 +1,9 @@
+{
+  "restaurant_name": "Mak's Noodle",
+  "restaurant_type": "traditional Cantonese restaurant",
+  "location": {
+    "city": "Central",
+    "region_or_country": "Hong Kong"
+  },
+  "specialty_cuisine": "wonton noodles"
+}

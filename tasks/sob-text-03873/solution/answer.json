@@ -1,0 +1,21 @@
+{
+  "question_asked": "Were both Jerry Belson and Alejandro Jodorowsky actors in Hollywood films?",
+  "answer": false,
+  "individuals_involved": [
+    {
+      "name": "Jerry Belson",
+      "is_actor": false,
+      "acted_in_hollywood_films": false,
+      "known_roles_in_hollywood_films": [
+        "writer",
+        "director",
+        "producer"
+      ]
+    },
+    {
+      "name": "Alejandro Jodorowsky",
+      "is_actor": true,
+      "acted_in_hollywood_films": false
+    }
+  ]
+}

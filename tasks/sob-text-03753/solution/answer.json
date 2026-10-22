@@ -1,0 +1,13 @@
+{
+  "publications": [
+    {
+      "name": "Parents",
+      "media_type": "magazine"
+    },
+    {
+      "name": "My Weekly",
+      "media_type": "magazine"
+    }
+  ],
+  "common_media_type": "magazine"
+}

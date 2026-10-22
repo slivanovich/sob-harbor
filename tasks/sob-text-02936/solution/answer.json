@@ -1,0 +1,18 @@
+{
+  "genus_comparison": [
+    {
+      "genus_name": "Hedychium",
+      "species_count_range": "70-80",
+      "min_species_count": 70,
+      "max_species_count": 80
+    },
+    {
+      "genus_name": "Malephora",
+      "species_count_range": "13 to 17",
+      "min_species_count": 13,
+      "max_species_count": 17
+    }
+  ],
+  "genus_with_more_species": "Hedychium",
+  "comparison_result": "Hedychium includes more species than Malephora."
+}

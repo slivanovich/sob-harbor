@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mornings on Horseback: Mornings on Horseback is a 1981 biography of the 26th President of the United States Theodore Roosevelt written by popular historian David McCullough, covering the early part of Roosevelt's life.  The book won McCullough's second National Book Award and his first "Los Angeles Times" Prize for Biography.
+
+John Adams (miniseries): John Adams is a 2008 American television miniseries chronicling most of U.S. President John Adams's political life and his role in the founding of the United States.  Paul Giamatti portrays John Adams.  The miniseries was directed by Tom Hooper.  Kirk Ellis wrote the screenplay based on the book "John Adams" by David McCullough.  The biopic of John Adams and the story of the first fifty years of the United States was broadcast in seven parts by HBO between March 16 and April 20, 2008.  "John Adams" received widespread critical acclaim and many prestigious awards.  The show won four Golden Globe awards and thirteen Emmy awards, more than any other miniseries in history.
+
+The Baroque Cycle: The Baroque Cycle is a series of novels by American writer Neal Stephenson.  It was published in three volumes containing 8 books in 2003 and 2004.  The story follows the adventures of a sizeable cast of characters living amidst some of the central events of the late 17th and early 18th centuries in Europe, Africa, Asia, and Central America.  Despite featuring a literary treatment consistent with historical fiction, Stephenson has characterized the work as science fiction, because of the presence of some anomalous occurrences and the work's particular emphasis on themes relating to science and technology.  The sciences of cryptology and numismatics feature heavily in the series, as they do in some of Stephenson's other works.
+
+The Congress (1988 film): The Congress is a 1988 documentary film directed by the Emmy Award-winning director Ken Burns.  The Florentine Films production, which focuses on the United States Congress, aired on PBS in 1989.  Narrated by David McCullough, the documentary features use of photographs, paintings, and film from sessions of Congress, in its implementation of the Ken Burns Effect.  Scenes from the Academy Award-winning Frank Capra film "Mr. Smith Goes to Washington" are also used.  The work features numerous interviews from writers and historians including Charles McDowell, David McCullough, Cokie Roberts, George Tames, David Broder, James MacGregor Burns, Barbara Fields, and Alistair Cooke.  Many congressmen are specifically referred to, including Henry Clay, John C. Calhoun, Jefferson Davis, Thomas Brackett Reed, Joseph Gurney Cannon, George William Norris, Jeannette Rankin, and Everett Dirksen.  The film also includes focus on the Congress' work during pivotal periods in United States history, including the Civil War, Civil Rights Movement, and Women's suffrage.  The documentary was released by PBS, on DVD in 2004.  Footage of the Capitol from the film was later incorporated into Burns' later masterpiece, The Civil War.
+
+The Great Simoleon Caper: "The Great Simoleon Caper" is a short story by Neal Stephenson that appeared in "TIME" on March 1, 1995.  It deals with concepts familiar to Stephenson's fans: encryption, digital currency, and distributed republics.  It appears to be set in a United States that precedes the events in Stephenson's novel "Snow Crash" (1992), using an early version of his Metaverse.
+
+David McCullough: David Gaub McCullough ( ; born July 7, 1933) is an American author, narrator, historian, and lecturer.  He is a two-time winner of the Pulitzer Prize and the National Book Award and a recipient of the Presidential Medal of Freedom, the United States' highest civilian award.
+
+Quicksilver (novel): Quicksilver is a historical novel by Neal Stephenson, published in 2003.  It is the first volume of "The Baroque Cycle", his late Baroque historical fiction series, succeeded by "The Confusion" and "The System of the World" (both published in 2004).  "Quicksilver" won the Arthur C. Clarke Award and was nominated for the Locus Award in 2004.  Stephenson organized the structure of "Quicksilver" such that chapters have been incorporated into three internal books titled "Quicksilver", "The King of the Vagabonds", and "Odalisque".  In 2006, each internal book was released in separate paperback editions, to make the 900 pages more approachable for readers.  These internal books were originally independent novels within the greater cycle during composition.
+
+The Greater Journey: The Greater Journey: Americans in Paris is a 2011 non-fiction book by the Pulitzer Prize-winning author David McCullough.  In a departure from McCullough's most recent works, Founding Fathers like Benjamin Franklin and Thomas Jefferson, who spent time in Paris, are not covered.  Instead, the book is about 19th-century Americans like James Fenimore Cooper and Samuel Morse, who migrated to Paris and went on to achieve importance in culture or innovation.  Other subjects include Elihu Washburne, the American ambassador to France during the Franco-Prussian War, Elizabeth Blackwell, the first female doctor in the United States, and American artists who worked in Paris such as George Healy, Mary Cassatt, and Augustus Saint-Gaudens.
+
+Neal Stephenson: Neal Town Stephenson (born October 31, 1959) is an American writer and game designer known for his works of speculative fiction.
+
+The Confusion: The Confusion is a novel by Neal Stephenson.  It is the second volume in "The Baroque Cycle" and consists of two sections or books, "Bonanza" and "The Juncto".  In 2005, "The Confusion" won the Locus Award, together with "The System of the World", also by Stephenson.
+
+Question: Neal Stephenson and David McCullough had similar professions, but one received a prestigious award called what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "award_name": {
+      "type": "string",
+      "description": "The name of the prestigious award received by one of the individuals."
+    },
+    "recipient_name": {
+      "type": "string",
+      "description": "The name of the person who received the award."
+    },
+    "recipient_profession": {
+      "type": "string",
+      "description": "The primary profession of the award recipient."
+    },
+    "award_significance": {
+      "type": "string",
+      "description": "A description of the award's significance or status."
+    }
+  },
+  "required": [
+    "award_name",
+    "recipient_name",
+    "recipient_profession",
+    "award_significance"
+  ],
+  "additionalProperties": false
+}

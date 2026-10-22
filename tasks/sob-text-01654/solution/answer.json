@@ -1,0 +1,8 @@
+{
+  "company_name": "Vocelli Pizza",
+  "company_type": "pizzeria",
+  "base_location": {
+    "city": "Pittsburgh",
+    "state": "Pennsylvania"
+  }
+}

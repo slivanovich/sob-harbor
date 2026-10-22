@@ -1,0 +1,14 @@
+{
+  "movie_comparison": {
+    "first_movie": {
+      "title": "Freaky Friday",
+      "release_year": 1976
+    },
+    "second_movie": {
+      "title": "Dragonslayer",
+      "release_year": 1981
+    }
+  },
+  "earlier_movie_title": "Freaky Friday",
+  "comparison_result": "Freaky Friday (1976) came out before Dragonslayer (1981)."
+}

@@ -1,0 +1,12 @@
+{
+  "person_a": {
+    "name": "Alfred E. Green",
+    "birth_year": 1889
+  },
+  "person_b": {
+    "name": "Chris Eyre",
+    "birth_year": 1968
+  },
+  "earlier_born_person_name": "Alfred E. Green",
+  "birth_year_difference": 79
+}

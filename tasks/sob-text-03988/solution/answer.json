@@ -1,0 +1,15 @@
+{
+  "competition_name": "2014 Commonwealth Games",
+  "event_details": {
+    "venue": "Scottish Exhibition and Conference Centre",
+    "city": "Glasgow",
+    "country": "Scotland",
+    "start_date": "2014-07-24",
+    "end_date": "2014-07-26"
+  },
+  "athlete_details": {
+    "athlete_name": "Jina Devi Chongtham",
+    "sport": "judoka",
+    "weight_class_kg": 78
+  }
+}

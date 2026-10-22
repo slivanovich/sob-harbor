@@ -1,0 +1,16 @@
+{
+  "is_answer_yes": true,
+  "dog_breeds_identified": [
+    {
+      "breed_name": "Beagle",
+      "is_a_dog": true,
+      "context_confirmation_snippet": "The Beagle is a breed of small hound"
+    },
+    {
+      "breed_name": "Cavalier King Charles Spaniel",
+      "is_a_dog": true,
+      "context_confirmation_snippet": "The Cavalier King Charles Spaniel is a small spaniel classed as a toy dog"
+    }
+  ],
+  "summary_conclusion": "Both Beagle and Cavalier King Charles Spaniel are explicitly identified as dog breeds in the provided context."
+}

@@ -1,0 +1,25 @@
+{
+  "common_category": "cocktail",
+  "categorized_entities": [
+    {
+      "name": "Bourbon Lancer",
+      "description_snippet": "a type of cocktail made by mixing Bourbon whiskey with Champagne."
+    },
+    {
+      "name": "Cocktails with cachaça",
+      "description_snippet": "many cocktails made with cachaça, the national spirit of Brazil."
+    }
+  ],
+  "category_attributes": {
+    "definition_source": "The Fine Art of Mixing Drinks",
+    "main_types": [
+      "aromatic",
+      "sour"
+    ],
+    "ingredient_categories": [
+      "the base",
+      "modifying agents",
+      "special flavorings and coloring agents"
+    ]
+  }
+}

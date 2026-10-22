@@ -1,0 +1,15 @@
+{
+  "song_title": "Zip-a-Dee-Doo-Dah",
+  "film_details": {
+    "title": "Song of the South",
+    "release_year": 1946
+  },
+  "singer_details": {
+    "name": "James Baskett",
+    "role_in_film": "Uncle Remus",
+    "recognition": {
+      "award_name": "Honorary Academy Award",
+      "award_type": "Oscar"
+    }
+  }
+}

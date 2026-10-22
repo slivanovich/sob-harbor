@@ -1,0 +1,17 @@
+{
+  "person_hired": "Carl Bialik",
+  "hiring_organization": "FiveThirtyEight.com",
+  "hiring_date": "late 2013",
+  "hiring_manager": {
+    "name": "Nate Silver",
+    "nationality": "American",
+    "occupations": [
+      "statistician",
+      "writer"
+    ],
+    "analysis_fields": [
+      "baseball",
+      "elections"
+    ]
+  }
+}

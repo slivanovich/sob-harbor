@@ -1,0 +1,10 @@
+{
+  "city_name": "Plentywood",
+  "is_county_seat": true,
+  "county_details": {
+    "name": "Sheridan County",
+    "state": "Montana"
+  },
+  "population_2010": 1734,
+  "location_relative_to_raymond": "South"
+}

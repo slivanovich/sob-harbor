@@ -1,0 +1,94 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Signs of the Times (magazine): Signs of the Times is a monthly magazine originally published by Pacific Press, a Seventh-day Adventist publishing house.  "Signs" presents articles that are considered to be helpful in assisting readers to live in modern society.  The magazine focuses on life's-style issues, health articles and Christian devotional and other religious articles.  From its historical roots, the magazine emphasizes the second coming of Christ to this earth and living such lives so as to be able to meet Jesus at His second coming.
+
+Selected Stories of Philip K. Dick: Selected Stories of Philip K. Dick is a collection of science fiction stories by Philip K. Dick.  It was first published by Random House in 2002.  Many of the stories had originally appeared in the magazines "Planet Stories", "Fantasy and Science Fiction", "Imagination", "Space Science Fiction", "Astounding", "Beyond Fantasy Fiction", "Orbit", "Galaxy Science Fiction", "Fantastic Universe", "Amazing Stories", "Rolling Stone College Papers", "Omni" and "Playboy".
+
+Year's Best Science Fiction Novels: 1954: Year’s Best Science Fiction Novels: 1954 is a 1954 anthology of science fiction novellas edited by E. F. Bleiler and T. E. Dikty.  An abridged edition was published in the UK by Grayson in 1955 under the title "The Year’s Best Science Fiction Novels: Second Series".  The stories had originally appeared in 1953 and 1954 in the magazines "Amazing Stories", "Thrilling Wonder Stories", "Science Stories", "Galaxy Science Fiction" and "Space Science Fiction".
+
+Second Variety (1991 collection): Second Variety is a collection of science fiction stories by Philip K. Dick.  It was first published by Citadel Twilight in 1991 and reprints Volume III of "The Collected Stories of Philip K. Dick" with the addition of the story "Second Variety".  Many of the stories had originally appeared in the magazines "If", "Science Fiction Adventures", "Science Fiction Stories", "Orbit", "Fantasy and Science Fiction", "Imagination", "Future", "Galaxy Science Fiction", "Beyond Fantasy Fiction", "Satellite", "Science Fiction Quarterly", "Imaginative Tales" and "Space Science Fiction".
+
+The Philip K. Dick Reader: The Philip K. Dick Reader is a collection of science fiction stories by American writer Philip K. Dick.  It was first published by Citadel Twilight in 1997.  Many of the stories had originally appeared in the magazines "If", "Science Fiction Adventures", "Science Fiction Stories", "Orbit", "Fantasy and Science Fiction", "Imagination", "Future", "Galaxy Science Fiction", "Beyond Fantasy Fiction", "Satellite", "Imaginative Tales", "Fantastic Universe" and "Space Science Fiction".  It is identical in content and order to the edition of volume 3 of the Collected Stories of Philip K. Dick produced by the same publisher apart from the substitution of three stories in positions 21-23 of 24 and the omission of the end notes in the Collected Stories edition.  At press time, stories 21 and 24 had already been made into successful movie adaptations and stories 22 and 23 had been optioned.
+
+Beyond Lies the Wub (collection): Beyond Lies the Wub is a collection of science fiction stories by Philip K. Dick.  It was first published by Gollancz in 1988 and reprints Volume I of "The Collected Stories of Philip K. Dick".  Many of the stories had originally appeared in the magazines "Fantasy and Science Fiction", "Planet Stories", "If", "Galaxy Science Fiction", "Imagination", "Space Science Fiction", "Fantastic Story Magazine", "Amazing Stories", "Future", "Cosmos", "Fantasy Fiction", "Beyond Fantasy Fiction", "Thrilling Wonder Stories" and "Startling Stories".  The collection was reprinted by Citadel Press in 2003 under the title Paycheck and Other Classic Stories.
+
+The Best of Philip K. Dick: The Best of Philip K. Dick is a collection of science fiction stories by Philip K. Dick.  It was first published by Del Rey Books in 1977.  Many of the stories had originally appeared in the magazines "Planet Stories", "Fantasy and Science Fiction", "Space Science Fiction", "Imagination", "Astounding Stories", "Galaxy Science Fiction", "Amazing Stories", "Science Fiction Stories" and "Startling Stories", as well as the anthologies "Dangerous Visions" and "Star Science Fiction Stories No.3".
+
+The Variable Man: The Variable Man is a novella written and sold by Philip K. Dick before he had an agent.  It was first published in Space Science Fiction (British), Vol.  2 No. 2, July 1953 and Space Science Fiction, September 1953 with the US publication illustrated by Alex Ebel.  Despite the magazine cover dates it is unclear whether the first publication was in the UK or in the United States where magazines tended to be published farther ahead of their cover dates than in the UK.  "The Variable Man" can be found in several collections of Dick's short stories, including "The Variable Man" and "The Short Happy Life of the Brown Oxford".
+
+Robots, Androids, and Mechanical Oddities: Robots, Androids, and Mechanical Oddities: The Science Fiction of Philip K. Dick is a collection of science fiction stories by Philip K. Dick.  It was first published by the Southern Illinois University Press in 1984 and was edited by Patricia S. Warrick and Martin H. Greenberg.  The stories had originally appeared in the magazines "Fantasy and Science Fiction", "Galaxy Science Fiction", "Space Science Fiction", "Astounding", "Future", "Orbit", "Science Fiction Stories", "Imagination", "Amazing Stories", "Rolling Stone College Papers" and "Playboy".
+
+Space Science Fiction: Space Science Fiction was a science fiction magazine published by Space Publications, Inc. of New York and The Archer Press Ltd. of London that ran for eight issues from May 1952 to September 1953.  "Space" was edited by Lester del Rey and featured a book review column by George O. Smith.  Del Rey's conflicts with the publishers ensured that the magazine would have a short run, in spite of the superior quality of the stories.  Illustrator Alex Ebel contributed to this magazine over the course of his career.
+
+Question: Which publication has run longest, Signs of the Times or Space Science Fiction?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "longest_running_publication_name": {
+      "type": "string",
+      "description": "The name of the publication that has run for the longest period based on the provided context."
+    },
+    "comparison_conclusion": {
+      "type": "string",
+      "description": "A brief explanation of why one publication is considered to have run longer than the other."
+    },
+    "publications_details": {
+      "type": "array",
+      "description": "Details for each publication involved in the comparison.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the publication."
+          },
+          "publication_type": {
+            "type": "string",
+            "description": "The type of publication (e.g., magazine, anthology)."
+          },
+          "publication_duration_description": {
+            "type": "string",
+            "description": "A description of the publication's run, including start/end dates or status if available."
+          },
+          "start_year": {
+            "type": "integer",
+            "description": "The starting year of the publication's run, if specified."
+          },
+          "end_year": {
+            "type": "integer",
+            "description": "The ending year of the publication's run, if specified."
+          },
+          "number_of_issues": {
+            "type": "integer",
+            "description": "The total number of issues published, if specified."
+          }
+        },
+        "required": [
+          "name",
+          "publication_type",
+          "publication_duration_description"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "longest_running_publication_name",
+    "comparison_conclusion",
+    "publications_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Seventh Star: Seventh Star is the twelfth studio album by English rock band Black Sabbath, released in January 1986.  The release came at a difficult time as the group had just finished a highly contentious tour, experiencing conflicts within the band.  With guitarist and songwriter Tony Iommi being the sole original member left, musicians Geoff Nicholls, Eric Singer, and Dave Spitz contributed to the album, playing keyboards, drums, and bass, respectively.  Glenn Hughes, ex-Deep Purple bassist and vocalist, was
+
+Many Faces Of Death, Vol. III: Many Faces Of Death, Vol.  III is the third album by Detroit rap group Detroit's Most Wanted.  "Legalize It" and "Keep Holding On" were released as singles.  The song "I Never Had a Good Day" is a response to Ice Cube's hit single It Was a Good Day from the previous year.  Shortly before the release of this album, The group would break up due to a conflict of interest as MC Hammer wanted to sign DMW to his label Bust It Records but was prevented from doing so only by group leader Motsi Ski who would turn down the offer after disapproving of Hammer's plans for the group which would've involved a name change and a toning down of the group's lyrics.  MC Lee and DJ Duncan Hines would leave DMW to go sign with Hammer on Bust It Records, Causing Motsi Ski to be the only remaining member left in the group.  This would be the final album as a group effort by DMW until the 2004 bonus disc of the Special Anniversary Edition of .
+
+The Isaacs: The Isaacs are a country and bluegrass gospel music group consisting of mother Lily Isaacs, and daughters Becky and Sonya Isaacs and son Ben Isaacs, along with John Bowman (husband of Becky Isaacs) as an instrumentalist and songwriter.  Joe Isaacs, formerly a singer and banjo player in the group, has left since his 1998 divorce from Lily Isaacs.  He now does solo work on a far more localized level.
+
+Northern Lights (bluegrass band): Northern Lights was an American Progressive bluegrass band formed in 1975 in New England, which musical career spanned more than three decades.  Known for a progressive style of bluegrass playing, the band went through a number of line-up changes through the years and included such personalities as Alison Brown or multiinstrumentalist Jake Armerding, son of founding member Taylor Armerding, who started playing with the band full-time at age of 14, but played occasionally when he was 12.  As of 2009, there is no founding member left in the group.  Guitarist Bill Henry, who joined the band in 1982 assumed the leadership role and Northern Lights continue to play without interruption as a quintet, consisting of two generation of musicians - Bill Henry, John Daniel and Alex MacLeod as well as young players Eric Robertson and Mike Barnett.
+
+The Lexicon of Live: The Lexicon of Live is a live album released by pop group ABC.  Although Martin Fry was the only member left, he had a backing band, and came out in his trademark gold suit.
+
+Revelation (Ultravox album): Revelation is the ninth studio album by British new wave rock band Ultravox, released in 1993.  The album was issued after the dissolution of the band in 1988 and the reformation of a new five-piece line-up in 1992, with Tony Fenelle as lead vocalist and keyboard player Billy Currie as the only original member left.
+
+Goblin (album): Goblin is the debut studio album by American rapper Tyler, The Creator.  It was released on May 10, 2011, by XL Recordings.  The album's production came almost entirely from Tyler himself, along with contributions from fellow Odd Future member Left Brain.  "Goblin" continues Tyler's dialogues with his fictional therapist Dr. TC, first heard on "Bastard".
+
+Walking with a Panther: Walking with a Panther is the third studio album by American hip-hop artist LL Cool J, released June 9, 1989, on Def Jam Recordings.  While his previous album "Bigger and Deffer" (1987) was produced by The L.A. Posse, Dwayne Simon was the only member left of the group willing to work on "Walking with a Panther", as other members, such as Bobby "Bobcat" Erving, wanted a higher pay after realizing how much of a success the previous album had become.  Def Jam, however, refused to change the contract which caused the L.A. Posse to leave.  "Walking with a Panther" was primarily produced by LL Cool J and Dwayne Simon, with additional production from Rick Rubin and Public Enemy's production team, The Bomb Squad.
+
+Nature's Symphony in 432: Nature's Symphony in 432 is an album by The Isaacs.  It earned the group a Grammy Award nomination for Best Roots Gospel Album.
+
+Immortal Soul (album): Immortal Soul is the fourteenth studio album by the American heavy metal band Riot, released on October 31, 2011 through Steamhammer Records in Europe.  It is the last album featuring long-time guitarist Mark Reale, who at the time was the only original member left in the band, before his death in January 2012.
+
+Question: In 1998, Which member left the group that released the album "Nature's Symphony in 432"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "group_name": {
+      "type": "string",
+      "description": "The name of the music group."
+    },
+    "album_mentioned": {
+      "type": "string",
+      "description": "The album released by the group that was mentioned in the question."
+    },
+    "member_who_left": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the member who left the group."
+        },
+        "year_left": {
+          "type": "integer",
+          "description": "The year the member left the group."
+        },
+        "reason_for_leaving": {
+          "type": "string",
+          "description": "The stated reason for the member leaving the group."
+        },
+        "previous_role": {
+          "type": "string",
+          "description": "The role(s) the member had in the group before leaving."
+        }
+      },
+      "required": [
+        "name",
+        "year_left",
+        "reason_for_leaving",
+        "previous_role"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "group_name",
+    "album_mentioned",
+    "member_who_left"
+  ],
+  "additionalProperties": false
+}

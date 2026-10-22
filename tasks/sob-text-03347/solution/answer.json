@@ -1,0 +1,17 @@
+{
+  "writer": {
+    "name": "Kurt Cobain",
+    "death_year": 1994,
+    "birth_year": 1967
+  },
+  "written_work": {
+    "title": "Closing Time",
+    "type": "song",
+    "associated_band": "Hole",
+    "other_writers": [
+      "Courtney Love",
+      "Patty Schemel"
+    ]
+  },
+  "reasoning_summary": "Kurt Cobain co-wrote the song 'Closing Time' for the band Hole and died in 1994, matching the question's criteria."
+}

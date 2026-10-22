@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "record_id": "a1be4360e610369f91bd785166714c50f70cc4483204158a5044a6f5623a7c6d",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a9050925542995651fb512f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "John Travolta",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Mike Mitchell (director): Mike Mitchell (born October 18, 1970) is an American film director, producer, actor and former animator.  He directed the films \"Surviving Christmas\", \"Sky High\", \"Shrek Forever After\" and \"\".\n\nKelly Vitz: Kelly Vitz (born Kelly Vitzthum on June 10, 1988) is an American actress and is best known for portraying Magenta in the 2005 film, \"Sky High\".\n\nSky High (2005 film): Sky High is a 2005 American superhero comedy film about an airborne school for teenage superheroes.  It was directed by Mike Mitchell, and written by Paul Hernandez, Robert Schooley and Mark McCorkle.  The film stars Michael Angarano as Will, an incoming freshman at the school, Danielle Panabaker as his best friend and love interest, Kurt Russell and Kelly Preston as his parents, Mary Elizabeth Winstead as a popular senior, Steven Strait as Will's rival, and Lynda Carter as Principal Powers.\n\nKelly Preston: Kelly Preston (born October 13, 1962) is an American actress and former model.  She has appeared in more than sixty television and film productions, most notably including \"Mischief\", \"Twins\" and \"Jerry Maguire\".  She is married to John Travolta, with whom she collaborated on the fantasy film \"Battlefield Earth\".  She also starred in the films \"The Cat in the Hat\", \"Old Dogs\", and \"Broken Bridges\".\n\nSky High (2003 film): Sky High (スカイハイ , also known as \"Skyhigh\") is a supernatural action film from director Ryuhei Kitamura.  It is based on the manga of the same title by Tsutomu Takahashi and serves as a prequel to a Japanese television drama of the same name, and starring the same actress, Yumiko Shaku.  Although the film is a prequel to the series, the film was made while the series was still in production, sometime between the first and second seasons.  The film had a clear effect on the direction of the second season, as evidenced in the look and style of Mina/Izuko's second season costuming—more similar to the darker, edgier look she sports in the film, as opposed to the softer, colourful, kimono-like outfit of the first season.  The film reveals how the somewhat meek Mina became the heroic Izuko, as seen in the series (and the film’s action climax).\n\nDanielle Panabaker: Danielle Nicole Panabaker (born September 19, 1987) is an American actress.  She began acting as a teenager and first came to prominence for her roles in the Disney films \"Stuck in the Suburbs\" (2004), \"Sky High\" (2005) and \"Read It and Weep\" (2006), the latter alongside her younger sister Kay Panabaker, and in the HBO miniseries \"Empire Falls\" (2005).\n\nSki Hi Lee: Robert E. Leedy (February 9, 1921 - 1973 or 74) was a Canadian professional wrestler, better known as Ski Hi Lee.  He was active for some twenty years.  His name is sometimes written as Ski-Hi Lee, Sky Hi Lee, Sky-Hi Lee or Sky High Lee.  The pronunciation is 'Sky High' rather than 'Skee High'.  Lee was usually billed from Texas and wrestled as a cowboy.  He had a 54 inch chest, 87 inch arm reach and was said to be 6'8\" tall.\n\nBoundless Oceans, Vast Skies: \"Boundless Oceans, Vast Skies\" (; lit.  \"sea wide sky empty\") is a song performed by the Hong Kong rock band Beyond.  Being released on 1993 in the Cantonese album \"Rock and Roll\", the song was massively popular.  The song has been also translated as \"Under a Vast Sky\", \"Ocean Wide Sky High\", \"Vast Seas, Clear Skies\", and\n\nJake Sandvig: Steven Jacob \"Jake\" Sandvig (born September 8, 1986) is an American actor.  He is best known for playing Hugh Payne in \"Twenty Good Years\" and Preston Shackleton in \"Cracking Up\".  In 2009, he made a guest appearance in \"Ruby & the Rockits\".  He is also known for his roles in \"Easy A\" and \"Sky High\".\n\nSky High (TV series): Sky High (スカイハイ , Sukai Hai ) (also known as \"Skyhigh\") is a live-action, supernatural Japanese television drama series, starring actress and model, Yumiko Shaku.  It aired in Japan, first run, from 2003 to 2004, and was popular enough to spawn the 2003 feature film of the same name (produced while the series was still in production and starring the same actress).  Both are based on the Japanese manga, \"Skyhigh\".  Shaku stars as Izuko, the Guardian of the Gate to the afterlife.",
+    "question": "Sky High starred the actress who is married to which actor?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_name": {
+          "type": "string",
+          "description": "The name of the film in question."
+        },
+        "actress_details": {
+          "type": "object",
+          "description": "Details about the actress who starred in the film and is married.",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the actress."
+            },
+            "film_role_description": {
+              "type": "string",
+              "description": "Description of her role or involvement in the film, as stated in the context."
+            },
+            "married_to_actor": {
+              "type": "object",
+              "description": "Details about the actor she is married to.",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the actor."
+                },
+                "relationship_status": {
+                  "type": "string",
+                  "description": "The described relationship status with the actor."
+                }
+              },
+              "required": [
+                "name",
+                "relationship_status"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "film_role_description",
+            "married_to_actor"
+          ],
+          "additionalProperties": false
+        },
+        "answer": {
+          "type": "string",
+          "description": "The name of the actor who is married to the actress from the film."
+        }
+      },
+      "required": [
+        "film_name",
+        "actress_details",
+        "answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_name": "Sky High",
+      "actress_details": {
+        "name": "Kelly Preston",
+        "film_role_description": "starred in the films",
+        "married_to_actor": {
+          "name": "John Travolta",
+          "relationship_status": "married to"
+        }
+      },
+      "answer": "John Travolta"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

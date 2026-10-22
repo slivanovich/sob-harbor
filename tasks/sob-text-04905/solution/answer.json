@@ -1,0 +1,8 @@
+{
+  "entity_a_name": "Hong Kong",
+  "entity_a_population": 7200000,
+  "entity_b_name": "Wuzhong, Ningxia",
+  "entity_b_population": 1300000,
+  "larger_population_entity": "Hong Kong",
+  "population_difference": 5900000
+}

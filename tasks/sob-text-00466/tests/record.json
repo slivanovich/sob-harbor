@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "record_id": "a12c71d022fd8d9c161d1698aca3cdd0f47a9fcdd46aa645a5503799069f0a67",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac2fe69554299218029dbb0",
+    "source_dataset": "hotpotqa",
+    "source_answer": "American Airlines Group",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "American Airlines C.R. Smith Museum: The American Airlines C.R. Smith Museum (CRSM) is located on the campus of the American Airlines Flight Academy, which is situated at the southern end of DFW International Airport and in close proximity to the world headquarters of American Airlines.  The location is at the midpoint between the city centers of Dallas and Fort Worth near the intersection of Highways 183 and 360.  The CRSM has an exhibit gallery of approximately 25000 sqft and a 10000 sqft hangar that houses the Flagship Knoxville, a fully restored DC-3 aircraft.  The museum also includes a 1500 sqft gift shop and a large-format theatre similar to IMAX.\n\nPSA Airlines: PSA Airlines, Inc. is an American regional airline headquartered at Dayton International Airport in Vandalia, Ohio, that flies under the American Eagle brand for American Airlines.  PSA is a wholly owned subsidiary of American Airlines Group.  PSA has crew bases in Washington, D.C.; Knoxville, Tennessee; Charlotte, North Carolina; Cincinnati, Ohio; and Dayton, Ohio.  It has maintenance bases in Charlotte, North Carolina; Cincinnati, Ohio; Dayton, Ohio and at the Akron–Canton Airport in Green, Ohio.\n\nAmerican Airlines Group: American Airlines Group, Inc. is an American publicly traded airline holding company headquartered in Fort Worth, Texas.  It was formed December 9, 2013, in the merger of AMR Corporation, the parent company of American Airlines, and US Airways Group, the parent company of US Airways.  The airline groups together form the largest airline in the world, with more than 6,700 daily flights to 336 locations in 56 countries worldwide, about $40 billion in operating revenue, over 100,000 employees, and plans to take delivery of 607 new aircraft, including 517 narrowbody aircraft and 90 widebody international aircraft.  The integration of American Airlines and US Airways was completed when the Federal Aviation Administration granted a single operating certificate for both carriers on April 8, 2015.\n\nAMR Corporation: AMR Corporation was a commercial aviation business and airline holding company based in Fort Worth, Texas, which was the parent company of American Airlines, American Eagle Airlines, AmericanConnection and Executive Airlines.  AMR filed for Chapter 11 bankruptcy in November 2011, and merged with US Airways Group on December 9, 2013 to form American Airlines Group, Inc.\n\nAmerican Eagle (airline brand): American Eagle is an American brand name for the regional branch of American Airlines, under which ten individual regional airlines operate short- and medium-haul feeder flights.  Three of these airlines, Envoy Air (formerly American Eagle Airlines), Piedmont Airlines and PSA Airlines, are wholly owned subsidiaries of American Airlines Group.  Just like the regional brands of the other two major airlines (Delta Connection and United Express), American Airlines' regional brand accounts for more than 60% of American Airlines flights.\n\nPedro Fábregas: Pedro Fábregas (born 12 April 1965) is an officer at American Airlines Group, the parent company of American Airlines, US Airways and Envoy Air.  Pedro Fábregas was named president and chief executive officer of Envoy Air Airlines in December 2013.  At Envoy Air, Fábregas oversees one of the world's largest regional airlines, with more than 14,000 employees and operating more than 220 regional aircraft on approximately 1,400 daily flights to nearly 150 cities throughout the United States, Canada, the Bahamas, Mexico and the Caribbean.\n\nIllumina (company): Illumina, Inc. is an American company incorporated in April 1998 that develops, manufactures and markets integrated systems for the analysis of genetic variation and biological function.  The company provides a line of products and services that serve the sequencing, genotyping and gene expression and proteomics markets.  Its headquarters are located in San Diego, California.\n\nThomas W. Horton: Thomas W. Horton (born 05/24/1961) was the Chairman, President, and Chief Executive Officer of AMR Corporation until it merged with US Airways Group to form American Airlines Group, Inc. and was the Chairman of American Airlines Group, Inc. and American Airlines.  He also served as Chairman of oneworld, the global airline alliance, until March 2014.\n\nDoug Parker: William Douglas \"'Doug\" Parker is an American businessman who is the current Chairman and CEO of American Airlines Group, Inc., the parent company of American Airlines.\n\nEnvoy Air: Envoy Air Inc. (formerly American Eagle Airlines) is an air carrier headquartered in Irving, Texas, in the Dallas-Fort Worth metroplex.  It is a wholly owned subsidiary of American Airlines Group that, along with several carriers outside the group, feeds the American Airlines route network under the American Eagle brand.  With over 1,800 flights a day, serving 159 cities across the United States, Canada, Mexico and the Caribbean, Envoy is considered to be the world's largest regional airline system.  Envoy is an affiliate member of the Oneworld airline alliance.",
+    "question": "Which company headquarters is located in Texas, American Airlines Group or Illumina?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question posed."
+        },
+        "companies_evaluated": {
+          "type": "array",
+          "description": "List of companies mentioned in the question with their headquarters information.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "company_name": {
+                "type": "string",
+                "description": "Name of the company."
+              },
+              "headquarters_location": {
+                "type": "string",
+                "description": "The city and state where the company's headquarters is located."
+              }
+            },
+            "required": [
+              "company_name",
+              "headquarters_location"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "company_with_texas_headquarters": {
+          "type": "string",
+          "description": "The name of the company identified as having its headquarters in Texas."
+        },
+        "is_question_answered": {
+          "type": "boolean",
+          "description": "True if a company with Texas headquarters was found, false otherwise."
+        }
+      },
+      "required": [
+        "question_asked",
+        "companies_evaluated",
+        "company_with_texas_headquarters",
+        "is_question_answered"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Which company headquarters is located in Texas, American Airlines Group or Illumina?",
+      "companies_evaluated": [
+        {
+          "company_name": "American Airlines Group",
+          "headquarters_location": "Fort Worth, Texas"
+        },
+        {
+          "company_name": "Illumina",
+          "headquarters_location": "San Diego, California"
+        }
+      ],
+      "company_with_texas_headquarters": "American Airlines Group",
+      "is_question_answered": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

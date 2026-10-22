@@ -1,0 +1,17 @@
+{
+  "person": {
+    "name": "Lisa Randall",
+    "nationality": "American",
+    "field_of_work": [
+      "particle physics",
+      "cosmology"
+    ],
+    "academic_position": "Frank B. Baird, Jr. Professor of Science"
+  },
+  "podcast": {
+    "name": "Point of Inquiry",
+    "start_year": 2005,
+    "description": "a think tank promoting science, reason, and secular values in public policy and at the grass roots"
+  },
+  "relationship": "was a former guest on"
+}

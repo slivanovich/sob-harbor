@@ -1,0 +1,14 @@
+{
+  "country_name": "Spain",
+  "national_parks_info": [
+    {
+      "park_name": "Cabañeros National Park",
+      "is_located_in_country": true
+    },
+    {
+      "park_name": "Atlantic Islands of Galicia National Park",
+      "is_located_in_country": true
+    }
+  ],
+  "all_parks_in_same_country": true
+}

@@ -1,0 +1,14 @@
+{
+  "comparison_result": "Valparaiso University",
+  "universities_compared": [
+    {
+      "name": "American University of Sharjah",
+      "location_country": "United Arab Emirates"
+    },
+    {
+      "name": "Valparaiso University",
+      "location_country": "United States"
+    }
+  ],
+  "reasoning": "Valparaiso University is located in the United States, which is geographically farther west than the United Arab Emirates, where American University of Sharjah is located."
+}

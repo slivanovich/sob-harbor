@@ -1,0 +1,14 @@
+{
+  "animal_name": "Andean mountain cat",
+  "species_scientific_name": "Leopardus jacobita",
+  "conservation_status": "Endangered",
+  "population_estimate": 2500,
+  "habitat_details": {
+    "native_region": "high Andes",
+    "national_park": {
+      "name": "San Guillermo National Park",
+      "establishment_year": 1999
+    },
+    "biosphere_reserve_name": "San Guillermo Biosphere Reserve"
+  }
+}

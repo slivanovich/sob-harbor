@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ford Explorer: The Ford Explorer is a full-size sport utility vehicle produced by the American manufacturer Ford Motor Company since 1990, based since 2010 on a crossover platform.  The Ford Explorer became one of the most popular sport utility vehicles on the road.  The model years 1991 through 2010 were traditional body-on-frame, mid-size SUVs. For the 2011 model year, Ford moved the Explorer to a more modern unibody, full-size crossover SUV platform, the same Volvo-derived platform the Ford Flex and Ford Taurus use although with significantly greater ground clearance.  It is slotted between the traditional body-on-frame, full-size Ford Expedition and the mid-size CUV (Crossover Utility Vehicle) Ford Edge.  Although outwardly similar, the fifth generation Explorer, Ford Edge and Ford Escape do not share platforms.  The fifth generation Explorer does, however, share platforms with the Ford Flex and Lincoln MKT.
+
+Jeep Liberty (KJ): The Jeep Liberty (KJ), or Jeep Cherokee (KJ) outside North America, is a compact SUV that was produced by Jeep and designed by Bob Boniface through early 1998.  Introduced in May 2001 for the 2002 model year as a replacement for the Cherokee (XJ), the Liberty was priced between the Wrangler and Grand Cherokee.  It was the smallest of the 4-door Jeep SUVs up until the car platform based 4-door Compass and Patriot arrived for 2007.  The Liberty featured unibody-construction.  It was assembled at the Toledo North Assembly Plant in the United States, as well as in other countries including Egypt and Venezuela.
+
+Jeep Compass: The Jeep Compass is a compact crossover SUV introduced for the 2007 model year.  The Compass, along with the related Patriot slots below the Jeep Wrangler as an entry-level sport utility vehicle, and is one of Jeep's first crossover SUVs.
+
+Jeep Grand Cherokee (ZJ): The Jeep Grand Cherokee (ZJ) is the first generation of the Jeep Grand Cherokee sport utility vehicle.  Introduced in 1992 for the 1993 model year, development of the ZJ Grand Cherokee started under American Motors and continued after their acquisition by Chrysler in 1987.  It originally came in three trim levels: base, Laredo, and Limited.  The base model included features such as full instrumentation, cloth interior, a standard five-speed manual transmission, and was given the "SE" name for the 1994 model year.  Power windows and locks were not standard equipment on the base and SE, although they were finally included in 1995.  The minimal difference in price resulted in low consumer demand, so the low-line model was eventually discontinued.  Additional standard features included a driver-side air bag and four-wheel anti-lock braking system (ABS).  The Laredo was the mid-scale model with standard features that included power windows, power door locks, and cruise control.  Exterior features included medium-grey plastic paneling on the lower body and five-spoke aluminum wheels.  The Limited was the premium model, featuring lower body paneling that was the same color as the rest of the vehicle.  The Limited also had standard features such as leather seating, power sunroof, heated mirrors, heated power seats, and a keyless entry system.  The "Up-Country" version was also offered between 1993 and 1997, often painted "Champagne Pearl" or black.  It came with 4WD and a 4.0 straight-6.  Package groups with the various trim levels included: Convenience, Fog Lamp / Skid Plate, Lighting, Luxury, Power, Security, Trailer/Towing.
+
+Sport utility vehicle: A sport utility vehicle or suburban utility vehicle (SUV) is a vehicle classified as a light truck, but operated as a family vehicle.  SUVs are similar to a large station wagon or estate car, though typically featuring tall interior packaging, high H-point seating, high center of gravity, high ground-clearance and especially four- or all-wheel-drive capability for on- or off-road ability.  Some SUVs include the towing capacity of a pickup truck with the passenger-carrying space of a minivan or large sedan.
+
+Crossover (automobile): A crossover or crossover utility vehicle (CUV) is a vehicle built on a unibody car platform combining in highly variable degrees features of a sport utility vehicle (SUV) with those of a passenger vehicle, especially a station wagon or hatchback.
+
+Jeep Liberty: The Jeep Liberty, or Jeep Cherokee (KJ/KK) outside North America, is a compact SUV that was produced by Jeep for the model years 2002–2012.  Introduced as a replacement for the Cherokee (XJ), the Liberty was priced between the Wrangler and Grand Cherokee.  It was the smallest of the 4-door Jeep SUVs until the car based 4-door Compass and Patriot arrived for 2007.  The Liberty featured unibody-construction.  It was assembled at the Toledo North Assembly Plant in the United States, as well as in other countries including Egypt and Venezuela.  The Liberty ceased production on August 16, 2012.  The next generation restored the previous nameplate of Jeep Cherokee that was always used outside of North America.
+
+Jeep Wagoneer: Jeep Wagoneer are a station wagon (later described as a sport utility vehicle - SUV) marque of Jeep vehicles, with several models marketed for the 1963 to 1993 model years.
+
+Jeep Liberty (KK): The Jeep Liberty (KK), or Jeep Cherokee (KK) outside North America, is a compact SUV that was produced by Jeep.  Introduced for the 2008 model year as a successor for the first generation Liberty.  The Liberty featured unibody-construction.  It was assembled at the Toledo North Assembly Plant in the United States, as well as in other countries including Egypt and Venezuela.  In 2010 estimates by Jeep were that 70% of Liberty buyers were new to the marque.  The second generation Liberty ceased production on August 16, 2012.  For its followup, the name of Liberty was retired; the next generation restored the name of "Cherokee".  The model remains on sale in Venezuela as of early 2016 having yet to be replaced by FCA Venezuela with the KL model Cherokee.
+
+Jeep Cherokee (XJ): The Jeep Cherokee (XJ) is a sport utility vehicle that was manufactured and marketed by Jeep from 1983 to 2001.  Sharing the name of the original full-size SJ model, but without a traditional body-on-frame chassis, the XJ instead featured a light-weight unibody design, The models were originally marketed as Sportwagons and became the precursor to the modern sport utility vehicle (SUV) as that term was not yet in use.
+
+Question: What was the sport utility vehicle that was replaced by the Jeep Liberty originally marketed as?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "replacement_vehicle_name": {
+      "type": "string",
+      "description": "The name of the vehicle that replaced another."
+    },
+    "replaced_vehicle_name": {
+      "type": "string",
+      "description": "The name of the vehicle that was replaced."
+    },
+    "replaced_vehicle_type": {
+      "type": "string",
+      "description": "The type of the vehicle that was replaced."
+    },
+    "original_marketing_term": {
+      "type": "string",
+      "description": "The term the replaced vehicle was originally marketed as."
+    }
+  },
+  "required": [
+    "replacement_vehicle_name",
+    "replaced_vehicle_name",
+    "replaced_vehicle_type",
+    "original_marketing_term"
+  ],
+  "additionalProperties": false
+}

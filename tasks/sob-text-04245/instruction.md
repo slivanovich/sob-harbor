@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+MGMT: MGMT is an American psychedelic rock band formed in 2002 at Wesleyan University.  It currently consists of Andrew VanWyngarden (lead vocals, guitar, keyboards, bass guitar, drums, percussion) and Ben Goldwasser (vocals, keyboards, guitar, percussion).  In the live lineup it consists of VanWyngarden, Goldwasser, Will Berman (drums, percussion, harmonica, backing vocals), Matt Asti (bass guitar, backing vocals), James Richardson (lead guitar, keyboards, backing vocals) and Hank Sullivant (guitar, keyboards).
+
+The Baroques: The Baroques were an American psychedelic rock band formed in Milwaukee, Wisconsin in 1966.  The band reached regional success for their transition from garage rock to the psychedelic rock genre, and the controversary aroused from their single, "Mary Jane".  The band released one studio album before its disbandment in 1968.
+
+July (band): July were a psychedelic rock band from Ealing, London that were professionally active between 1968 and 1969.  The band's music was a blend of psychedelic rock and psychedelic pop, marked by lush harmonies, acoustic guitars, keyboards, and intricate lead guitar work.  Although none of the band's records managed to chart in the UK or the U.S., July are today best remembered for their songs "My Clown", "Dandelion Seeds", and "The Way", which have all been included on a number of compilation albums over the years.
+
+Quicksilver Messenger Service: Quicksilver Messenger Service (sometimes credited as simply Quicksilver) is an American psychedelic rock band formed in 1965 in San Francisco.  The band achieved wide popularity in the San Francisco Bay Area and through their recordings, with psychedelic rock enthusiasts around the globe, and several of their albums ranked in the Top 30 of the Billboard Pop charts.  They were part of the new wave of album-oriented bands, achieving renown and popularity despite an almost complete lack of success with their singles, apart from "Fresh Air", which reached number 49 in 1970.  Though not as commercially successful as contemporaries Jefferson Airplane and the Grateful Dead, Quicksilver was integral to the beginnings of their genre.  With their jazz and classical influences and a strong folk background, the band attempted to create an individual, innovative sound.  Music historian Colin Larkin wrote: "Of all the bands that came out of the San Francisco area during the late '60s, Quicksilver typified most the style, attitude and sound of that era."
+
+Cyanna: Cyanna (siāna) was a rock band from Athens, Greece formed in 1999.  The sound of the band was originally based on blending keyboards and electronic beats with guitars, influenced by both alternative rock and dance music styles.  Eventually the electronic elements were replaced by a more organic classic rock approach, with their last release being an acoustic folk rock EP.  Cyanna was very active in the greek alternative scene from 2002 to 2013 when it was disbanded by its founders, Spyreas Sid and Nick Sid, before forming Cyanna Mercury in early 2014.  The band was known for their intense live shows and constant changes in music styles, crossing over the boundaries of the underground greek alternative into and out of the mainstream realm.  They shared the stage with prestigious international acts such as Massive Attack (2008), MGMT (2009), The Stranglers (2009), Fischerspooner (2009), IAMX (2010), and Gorillaz Soundsystem (2010), and did an extensive tour in Greece in 2011.  The band also appeared in some european festivals in Germany, Switzerland and Bulgaria.  They released 3 albums, one EP, many demos, singles, remixes and appeared in numerous compilations both in underground and major labels.  Their biggest commercial hit came in 2008 with "Shine", the second single from the "Just A Crash" album, that became the Vodafone campaign song in Greece for two years (2009 - 2011), while their critically acclaimed best release would be their last, "The Undressed EP", an independent self funded release, that included "I Am Cannibal".
+
+Angel'in Heavy Syrup: Angel'in Heavy Syrup was an all-female Japanese psychedelic rock band formed in 1990 in Osaka.  Emerging from the Japanese noise rock scene, they were influenced by krautrock bands such as Amon Düül II, but drew primarily from psychedelic and progressive rock, resulting in their characteristic ethereal neo-psychedelic sound.  After the release of their last album in 2002, the band appears to have fallen into indefinite hiatus status.
+
+Bardo Pond: Bardo Pond are an American psychedelic rock band formed in 1991, and who are currently signed to London-based label Fire Records.  The current members are Michael Gibbons (guitar), John Gibbons (guitar), Isobel Sollenberger (flute and vocals), Clint Takeda (bass guitar) and Jason Kourkounis (drums).  Bardo Pond's music is often classified as space rock, acid rock, post-rock, shoegazing, noise or psychedelic rock.  Some Bardo Pond album titles have been derived from the names of esoteric psychedelic substances.  Their sound has been likened to Pink Floyd, Spacemen 3 and My Bloody Valentine amongst others.
+
+Tetrix (band): Tetrix (often stylized as TETRIX) is a Canadian psychedelic rock/improvised music band formed in Calgary.  The band was formed in 2001 with the intention of exploring connections between jazz, psychedelic rock, hip hop, punk rock and electronic music.
+
+Morgen (band): Morgen was an American psychedelic rock band formed in Long Island.  Their only album, "Morgen", is considered one of the best (though obscure) heavy American psychedelic rock albums of the 1960s.
+
+Ersen ve Dadaşlar: Ersen ve Dadaşlar, was a Turkish rock band created by Ersen Dinleten, and was popular in the 1970s Turkish psychedelic rock scene.  Ersen Dinleten started to play with the band called "Kardaşlar".  At first times they called themselves "Ersen ve Kardaşları".  After releasing two singles, they decided to change their bands name to "Ersen ve Dadaşlar".  They mixed up the sound of classic psychedelic rock with traditional Turkish folk music and became one of the first representants of the Turkish Psychedelic Rock.
+
+Question: Cyanna has shared the stage with a psychedelic rock band formed in 2002 where?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the psychedelic rock band that shared the stage with Cyanna."
+    },
+    "formation_year": {
+      "type": "integer",
+      "description": "The year the band was formed."
+    },
+    "formation_location": {
+      "type": "string",
+      "description": "The specific location where the band was formed."
+    }
+  },
+  "required": [
+    "band_name",
+    "formation_year",
+    "formation_location"
+  ],
+  "additionalProperties": false
+}

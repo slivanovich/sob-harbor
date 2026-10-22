@@ -1,0 +1,17 @@
+{
+  "compared_mines": [
+    {
+      "mine_name": "Colomac Mine",
+      "operation_start_period": "1990"
+    },
+    {
+      "mine_name": "Northland Pyrite Mine",
+      "operation_start_period": "early 1900s"
+    }
+  ],
+  "earliest_operating_mine": {
+    "name": "Northland Pyrite Mine",
+    "operation_start_period": "early 1900s"
+  },
+  "comparison_summary": "Northland Pyrite Mine began operation first."
+}

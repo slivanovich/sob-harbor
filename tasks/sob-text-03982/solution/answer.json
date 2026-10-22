@@ -1,0 +1,46 @@
+{
+  "operations_compared": [
+    {
+      "operation_name": "Meuse-Argonne Offensive",
+      "war": "World War I",
+      "start_date": "26 September 1918",
+      "end_date": "11 November 1918",
+      "duration_days": 47,
+      "us_soldiers_involved": 1200000,
+      "us_lives_lost": 26277,
+      "german_lives_lost": 28000,
+      "involved_forces": [
+        "Allied",
+        "United States",
+        "German"
+      ],
+      "key_locations_mentioned": [
+        "Western Front",
+        "France",
+        "Ligny-en-Barrois"
+      ]
+    },
+    {
+      "operation_name": "Operation Nordwind",
+      "war": "World War II",
+      "start_date": "31 December 1944",
+      "end_date": "25 January",
+      "involved_forces": [
+        "German",
+        "American"
+      ],
+      "key_locations_mentioned": [
+        "Western Front",
+        "Alsace and Lorraine",
+        "northeastern France",
+        "Herrlisheim",
+        "Fortified Sector of Rohrbach"
+      ]
+    }
+  ],
+  "common_location": "Western Front",
+  "wars_involved": [
+    "World War I",
+    "World War II"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "listed_entity_name": "St. Ignatius Mission",
+  "entity_type": "mission",
+  "location_details": {
+    "town": "St. Ignatius",
+    "state": "Montana",
+    "reservation": "Flathead Indian Reservation"
+  },
+  "register_details": {
+    "register_name": "U.S. National Register of Historic Places",
+    "listing_year": 1973
+  }
+}

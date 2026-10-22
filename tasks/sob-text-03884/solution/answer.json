@@ -1,0 +1,14 @@
+{
+  "nationality": "American",
+  "individuals": [
+    {
+      "name": "Mike Shinoda",
+      "role_or_profession": "musician"
+    },
+    {
+      "name": "Jean Terrell",
+      "role_or_profession": "singer"
+    }
+  ],
+  "count_of_individuals": 2
+}

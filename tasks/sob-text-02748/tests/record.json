@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "record_id": "cb808cef17ecad6d757d22018065b2d4c340563fe0cdc9f686060fae3a495a76",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a892b2a554299669944a4de",
+    "source_dataset": "hotpotqa",
+    "source_answer": "James Alfred \"Jimmy\" Moody",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Archie Wiles: Charles Archibald Wiles - A useful middle-order batsman whose first-class career spanned the years 1920 to 1936, Archie Wiles remains the second oldest Test debutant for West Indies.  He was 40 years and 345 days old when he appeared in the second Test of 1933 against England and is surpassed in age only by N. Betancourt who was 42 years, 242 days old on his own representative debut three years earlier.  Wiles was born in Brigetown, Barbados on August 11, 1892, and died in Diego Martin, Trinidad on November 4, 1957, aged 65.  In spite of some very good performances with the bat, he failed when the big occasion came at Old Trafford, scoring just 0 and 2.  Although born in Barbados, Wiles played his domestic cricket for Trinidad in the Caribbean’s annual Inter-Colonial tournament.  During his career, he surpassed fifty runs in an innings on eight occasions, twice going on to make a century; in February 1925 he scored 110 against British Guiana at Port-of-Spain, Trinidad and two years later he made his highest first-class score, 192, against Barbados at Bridgetown.  This particular game, a timeless match played over eight days, was remarkable insofar as despite Wiles’ first innings total, which included a fourth-wicket partnership of 146 with Joe Small, and in spite of Trinidad’s first innings lead of 384, Barbados won by 146 runs (Barbados 175 & 726, Trinidad 559 & 217).  Wiles’ death in 1957 went unrecorded at the time and therefore no obituary was written for him for the Wisden Almanack.\n\nJoseph Volpe (opera manager): Joseph Volpe (born July 2, 1940) is an American opera manager and arts management consultant.  He is noted for his long association with the Metropolitan Opera, in which he served as General Manager from 1990 to 2006.  In all, he spent 42 years working at the Met in various capacities, rising rapidly to managerial positions.  Since February 2016 he has been Executive Director of the Sarasota Ballet.\n\nPrisoner support: Prisoner support encompasses a variety of activities aimed a providing assistance to prisoners, particularly political prisoners.  Many programs devoted to this purpose have quite limited resources; for instance, Nottingham Black Prisoner Support, with one staff worker, had 297 active cases in 1999.  Black Prisoner Support groups such as Partners of Prisoners have sought to establish productive working relationships with prison staff.  South Carolina's Alston Wilkes Society is the largest statewide prison support organization in the United States, with a budget of $918,000 and a staff of 50.  It operates two halfway houses, arbitrates prisoner grievances, maintains a youth home, helps ex-inmates find work, and provides social services to prisoners' families.  There are many special-interest prison support groups such as the Out of Control Lesbian Committee to Support Women in Prison.  Some political movements find it to be in their interests to provide prisoner supports; Break the Chains argues, \"Any movement that does not support its political internees is a movement destined to fail.  When power is challenged, it inevitably turns to violent repression and imprisonment to maintain itself.  In order to avoid defeat, movements must become organized and capable of combating the repression of the state apparatus, and they must be able to support their comrades and allies in the event that they are arrested or imprisoned.  Few would commit themselves to a movement that would leave them behind prison walls, or a movement that is incapable of sustaining itself in the face of state intimidation.\"  Ratner writes that the prisoner support movement has been hampered by \"particularly strong public antipathy toward offenders who would deny culpability by assigning blame to the 'system'.  This compromises the efforts of prisoner-support groups, who must rally public support in order to procure government funds.  Such groups face the dilemma of rapidly losing their own legitimacy should they draw too closely to the very offenders whom they seek to help — offenders who are not perceived by the public as victims of injustice.  Thus, many 'outside' groups are forced to shun the support of inmates who are in prison for violent offences, a serious ideological fracture of inside-outside alliances which limits the possibilities for prisoner politicization.\"\n\nJohn Allen Kendrick: John Allen Kendrick (February 18, 1901 – January 20, 1960) was an American criminal, escape artist, bank robber and member of the Tri-State Gang whose career spanned four decades.  He was listed on the FBI's Top Ten Most Wanted in late 1955, and was apprehended by the FBI that same year.\n\nFrankie Fraser: Frank Davidson \"Frankie\" Fraser, better known as \"Mad\" Frankie Fraser (13 December 1923 – 26 November 2014), was an English gangster and criminal who spent 42 years in prison for numerous violent offences.\n\nViolent and Sex Offender Register: In the United Kingdom, the Violent and Sex Offender Register (ViSOR) is a database of records of those required to register with the police under the Sexual Offences Act 2003 (the 2003 Act), those jailed for more than 12 months for violent offences, and those thought to be at risk of offending.  In response to a Freedom of Information request in 2009, for example, Greater Manchester Police reported that of 16 people in their area placed on ViSOR since 2007 on their initiative and not as a result of a relevant conviction, four (25%) had clean criminal records.\n\nFrederick Grant Dunn: Frederick Grant Dunn (1905–1959) was an American criminal, burglar and bank robber whose career spanned over four decades from 1919 until his mysterious death in 1959.  He led a small gang during the 1940s and 1950s, Dunn becoming referred to by the press as \"the modern John Dillinger\", and whose activities eventually resulted in his being listed on the FBI's Ten Most Wanted in 1958.\n\nAl Clark (film editor): Al Clark was a prolific editor whose career spanned four decades, most of which was spent at Columbia Pictures.  He was nominated for 5 Academy Awards and 1 Emmy during his career.  He is credited with editing over 120 films, and towards the end of his career, in the 1960s, he also edited several television series.\n\nJimmy Moody: James Alfred \"Jimmy\" Moody (27 February 1941 – 1 June 1993) was an English gangster and hitman whose career spanned more than four decades and included run-ins with Jack Spot, Billy Hill, \"Mad\" Frankie Fraser, the Krays, the Richardsons and the Provisional IRA.  Described by Police Detectives as \"extremely professional\" and \"extremely intimidating\", Moody's speciality was robbing armoured trucks and would use a chainsaw to saw through the side of security vehicles.\n\nEdwarda O'Bara: Edwarda O'Bara (March 27, 1953November 21, 2012) was an American who spent 42 years in a diabetic coma starting in January 1970 after contracting pneumonia in December 1969.",
+    "question": "Who was an English gangster and hitman whose career spanned more than four decades and included run-ins with an English gangster and criminal who spent 42 years in prison for numerous violent offences ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "identified_person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of the person identified."
+            },
+            "primary_role": {
+              "type": "string",
+              "description": "The primary role or profession of the identified person."
+            },
+            "career_span_description": {
+              "type": "string",
+              "description": "A description of the duration of the identified person's career."
+            }
+          },
+          "required": [
+            "name",
+            "primary_role",
+            "career_span_description"
+          ],
+          "additionalProperties": false
+        },
+        "associated_individuals": {
+          "type": "array",
+          "description": "A list of individuals with whom the identified person had interactions, as described in the context.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the associated individual."
+              },
+              "role": {
+                "type": "string",
+                "description": "The role or profession of the associated individual."
+              },
+              "prison_sentence_years": {
+                "type": "integer",
+                "description": "The number of years the associated individual spent in prison."
+              },
+              "relationship_type": {
+                "type": "string",
+                "description": "The nature of the relationship or interaction between the identified person and this associated individual."
+              }
+            },
+            "required": [
+              "name",
+              "role",
+              "prison_sentence_years",
+              "relationship_type"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "final_answer_name": {
+          "type": "string",
+          "description": "The name of the person who is the final answer to the question."
+        }
+      },
+      "required": [
+        "identified_person",
+        "associated_individuals",
+        "final_answer_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "identified_person": {
+        "name": "James Alfred \"Jimmy\" Moody",
+        "primary_role": "English gangster and hitman",
+        "career_span_description": "more than four decades"
+      },
+      "associated_individuals": [
+        {
+          "name": "Frank Davidson \"Frankie\" Fraser",
+          "role": "English gangster and criminal",
+          "prison_sentence_years": 42,
+          "relationship_type": "had run-ins with"
+        }
+      ],
+      "final_answer_name": "James Alfred \"Jimmy\" Moody"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

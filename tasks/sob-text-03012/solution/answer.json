@@ -1,0 +1,13 @@
+{
+  "person_name": "Bryan Harper",
+  "relationship_type": "brother",
+  "related_person_details": {
+    "name": "Bryce Harper",
+    "occupation": "professional baseball right fielder",
+    "team_organization": "Washington Nationals",
+    "height": {
+      "value": 6,
+      "unit": "ft"
+    }
+  }
+}

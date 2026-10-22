@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Breakthrough role: A breakthrough role, also known as breakout role, is a term in the film industry to describe the performance of an actor or actress in a film or television show which contributed significantly to the development of their career and beginning of critical recognition.  Such a moment in an actor's career may often occur some time after they begin acting as their roles become more substantial.  Often a breakthrough role is a significant increase in importance in the actor's part in the film moving up from a minor character or extra to one of the leading cast, or a "high impact" role in a film which has mainstream success and results in the widespread recognition or popularity of the actor.  Martin Shingler defines a breakthrough performance as one which "attracts the attention of film critics, or receives rave reviews and is subsequently nominated for a major film award."
+
+Jennifer Lopez filmography: American entertainer Jennifer Lopez has appeared in many motion pictures and television programs.  She is one of the highest paid actresses in Hollywood and is the highest paid actress of Latin descent, making up to US$15 million per film role.  She is also the richest actress in Hollywood, with an estimated net worth of $320 million (as of 2014).  Lopez made her acting debut at age 16 with a small role in the 1986 film "My Little Girl".  From there, she received her first high-profile job in 1991 as a Fly Girl dancer on the television comedy program "In Living Color".  Following her departure from the show in 1993, Lopez made several guest appearances in the television series "South Central", appeared in the made-for-television movie "Lost in the Wild" (1993) and starred as Melinda Lopez in the television series "Second Chances" (1993) and its spin-off "Hotel Malibu" (1994).  "Second Chances" and "Hotel Malibu" ran for only a brief period, receiving negative reviews.  Lopez's first major film role came in the 1995 motion picture "Money Train", alongside Wesley Snipes and Woody Harrelson.  The film faced negative reviews and is considered to be a box office bomb.  Her next two film roles in "Jack" (1996) and "Blood and Wine" (1997) were received similarly; however, critics were divided by the latter.  Lopez received her first leading role in the Selena biopic of the same name in 1997.  The film was a commercial and critical success and is often cited by critics as her breakout role.  Later that year, Lopez starred as Terri Flores in the film "Anaconda", which garnered negative reviews by critics despite being a box office success.  In 1998, Lopez starred alongside George Clooney in the crime film "Out of Sight" (1998).  The film met with positive reviews and was a box office success.  In the same year, she also lent her voice to the animated film "Antz".
+
+Carly Chaikin: Carly Hannah Chaikin (born March 26, 1990) is an American actress.  She began acting in 2009 and received her breakout role two years later, co-starring as Dalia Royce in the ABC sitcom "Suburgatory".  She played the role until the series' cancellation in 2014, and one year later began playing the role of Darlene in the critically acclaimed USA Network television drama "Mr. Robot".
+
+Grigoriy Dobrygin: Grigoriy Eduardovich Dobrygin ("also trans. " Grigory; Russian: Григо́рий Эдуа́рдович Добры́гин ; born 17 February 1986) is a Russian film and theatre actor, director and producer.  A classically trained ballet dancer, Dobrygin had his breakout role as the first Russian superhero in the 2009 film "Black Lightning".  After starring in the critically acclaimed "How I Ended This Summer" (2010), he made his Western debut in 2014 in "A Most Wanted Man" and "Black Sea".  He has been called Russia's top acting export and the "Russian James Franco" for his versatility.
+
+Megan Fox: Megan Denise Fox (born May 16, 1986) is an American actress and model.  She began her acting career in 2001, with several minor television and film roles, and played a regular role on the "Hope & Faith" television sitcom.  In 2004, she made her film debut with a role in the teen comedy "Confessions of a Teenage Drama Queen".  In 2007, she co-starred as Mikaela Banes, the love interest of Shia LaBeouf's character, in the blockbuster action film "Transformers", which became her breakout role.  Fox reprised her role in the 2009 sequel, "".  Later in 2009, she starred as the eponymous lead in the black comedy horror film "Jennifer's Body".
+
+Totalmente Inocentes: The film stars Fábio Porchat, Fabio Assunção, Mariana Rios, Kiko Mascarenhas, Fábio Lago, Leandro Firmino and Álamo Facó, in addition to the special guests Ingrid Guimarães, Felipe Neto, Vivianne Pasmanter and Di Ferrero, lead singer of the band NX Zero.
+
+Rooney Mara: Patricia Rooney Mara ( ; born April 17, 1985) is an American actress and philanthropist.  She made her screen debut in the slasher film "" (2005) and went on to have a breakout role in the independent coming-of-age drama "Tanner Hall" (2009), followed by the roles of Nancy in the 2010 remake of "A Nightmare on Elm Street" and Erica Albright in the biographical drama film "The Social Network" (2010).
+
+Leandro Firmino: Leandro Firmino (born June 23, 1978) is a Brazilian actor.  He is best known for his role as Li'l Zé in the film "Cidade de Deus".  He also had a main role in one episode of spin-off series "City of Men".  Played the role of Thiago in "Trash" with Wagner Moura and Rooney Mara.  His next role will be in Rodrigo Rodrigues`s "Goitaca" with Mario Babic and Lady Francisco.
+
+Natalie Zea: Natalie Zea (born March 17, 1975) is an American actress, known for her performances on television.  Zea began her acting career in theatre.  Her first major role was on the NBC daytime soap opera "Passions" (2000–2002), where she played the role of Gwen Hotchkiss.  Her breakout role was on the ABC primetime soap opera "Dirty Sexy Money" as socialite Karen Darling, where she starred from 2007 to 2009.  Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in "The Shield", "Hung" and "Californication".
+
+Masiela Lusha: Masiela Lusha ( ; born October 23, 1985) is an American actress, author, producer and humanitarian.  Lusha gained worldwide recognition for playing her first major role as Carmen Consuelo Lopez on the globally syndicated ABC sitcom "George Lopez", a role which earned her two consecutive Young Artist Awards for Leading Young Actress in a Comedy or Drama.  After transitioning into film, she had her breakout role in Sony Picture's "".  Lusha also starred alongside David Hasselhoff and Ian Ziering in SyFy's television movie "".
+
+Question:  Leandro Firmino played the role of Thiago in "Trash" alongside the actress who had a breakout role in which 2009 film?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_in_question": {
+      "type": "string",
+      "description": "The actor whose co-star's breakout role is being sought."
+    },
+    "co_starred_film": {
+      "type": "string",
+      "description": "The film in which the actor and the co-star appeared together."
+    },
+    "co_star_actress": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the actress who co-starred."
+        },
+        "breakout_role_film": {
+          "type": "string",
+          "description": "The title of the film that was her breakout role."
+        },
+        "breakout_role_year": {
+          "type": "integer",
+          "description": "The year her breakout role film was released."
+        }
+      },
+      "required": [
+        "name",
+        "breakout_role_film",
+        "breakout_role_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actor_in_question",
+    "co_starred_film",
+    "co_star_actress"
+  ],
+  "additionalProperties": false
+}

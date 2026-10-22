@@ -1,0 +1,8 @@
+{
+  "company_name": "BevMo!",
+  "base_city": "Concord, California",
+  "city_location_details": {
+    "distance_from_san_francisco_miles": 29,
+    "direction_from_san_francisco": "east"
+  }
+}

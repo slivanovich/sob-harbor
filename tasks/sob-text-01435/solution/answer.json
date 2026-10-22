@@ -1,0 +1,15 @@
+{
+  "berber_confederation_name": "Tuareg people",
+  "primary_habitat": "Sahara desert",
+  "has_annual_festival": true,
+  "festival_details": {
+    "festival_name": "Festival au Désert",
+    "music_showcased": "traditional Tuareg music as well as music from around the world",
+    "festival_location_history": [
+      "Tin Essako",
+      "Tessalit",
+      "Essakane",
+      "outskirts of Timbuktu"
+    ]
+  }
+}

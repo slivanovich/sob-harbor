@@ -1,0 +1,21 @@
+{
+  "person_name": "Jared Leto",
+  "birth_date": "1971-12-26",
+  "professions": [
+    "actor",
+    "singer",
+    "songwriter",
+    "director"
+  ],
+  "notable_roles": [
+    {
+      "title": "My So-Called Life",
+      "year": 1994,
+      "character_name": "Jordan Catalano"
+    },
+    {
+      "title": "Basil",
+      "year": 1998
+    }
+  ]
+}

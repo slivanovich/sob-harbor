@@ -1,0 +1,12 @@
+{
+  "person_who_ordered_arrest": {
+    "name": "James McLaughlin",
+    "role": "Indian agent"
+  },
+  "person_arrested_and_died": {
+    "name": "Sitting Bull",
+    "tribe": "Hunkpapa Lakota",
+    "death_year": 1890
+  },
+  "reservation_of_death": "Standing Rock Indian Reservation"
+}

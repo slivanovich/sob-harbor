@@ -1,0 +1,12 @@
+{
+  "funeral_service_provider": "Frank E. Campbell Funeral Chapel",
+  "deceased_individual": {
+    "name": "Jacqueline Kennedy Onassis",
+    "relationship_to_president": "wife",
+    "president_details": {
+      "name": "John F. Kennedy",
+      "presidency_ordinal_number": 35
+    }
+  },
+  "event_type": "funeral"
+}

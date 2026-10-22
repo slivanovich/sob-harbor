@@ -1,0 +1,17 @@
+{
+  "island_details": {
+    "name": "Star Island",
+    "size_acres": 38,
+    "location_state": "New Hampshire"
+  },
+  "monument_details": {
+    "name": "Tucke Monument",
+    "type": "obelisk gravestone monument",
+    "height_feet": 46.5,
+    "year_erected": 1914,
+    "honored_person": {
+      "name": "Reverend John Tucke"
+    }
+  },
+  "final_answer_height_feet": 46.5
+}

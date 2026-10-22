@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "19c3d8eaf67aa667fef187e57beaa8c0ed04e50af540731f6fe8f101b679ce1a",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae1109455429901ffe4ad42",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Port Phillip",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Zawiszyn, Masovian Voivodeship: Zawiszyn is a village in the administrative district of Gmina Jadów, within Wołomin County, Masovian Voivodeship, in east-central Poland.  It lies approximately 6 km north-east of Jadów, 35 km north-east of Wołomin, and 57 km north-east of Warsaw.\n\nKrusze, Masovian Voivodeship: Krusze is a village in the administrative district of Gmina Klembów, within Wołomin County, Masovian Voivodeship, in east-central Poland.  It lies approximately 6 km north-east of Klembów, 13 km north-east of Wołomin, and 35 km north-east of Warsaw.\n\nMokra Wieś, Masovian Voivodeship: Mokra Wieś is a village in the administrative district of Gmina Tłuszcz, within Wołomin County, Masovian Voivodeship, in east-central Poland.  It lies approximately 6 km north-east of Tłuszcz, 23 km north-east of Wołomin, and 44 km north-east of Warsaw.\n\nSouth Channel Fort: South Channel Fort, also known as South Channel Island, is a 0.7 ha artificial island in southern Port Phillip, Victoria, Australia, 6 km north-east of the town of Sorrento.  It was part of a network of fortifications protecting the narrow entrance to Port Phillip.\n\nLeśniaki, Będzin County: Leśniaki is a village in the administrative district of Gmina Siewierz, within Będzin County, Silesian Voivodeship, in southern Poland.  It lies approximately 6 km north-east of Siewierz, 24 km north-east of Będzin, and 36 km north-east of the regional capital Katowice.\n\nDerkacze: Derkacze (German: \"Dicking\" ) is a village in the administrative district of Gmina Dobiegniew, within Strzelce-Drezdenko County, Lubusz Voivodeship, in western Poland.  It lies approximately 6 km north-east of Dobiegniew, 24 km north-east of Strzelce Krajeńskie, and 49 km north-east of Gorzów Wielkopolski.\n\nSorrento, Victoria: Sorrento is a township in Victoria, Australia, located on the shores of Port Phillip on the Mornington Peninsula, about one and a half hours by car south of Melbourne.  It is a largely upper-class, seaside resort area, but is also a quiet seaside township in the off-peak months of the year.  It was named by the Italian founders after the southern Italian town.\n\nHucisko, Zawiercie County: Hucisko is a village in the administrative district of Gmina Włodowice, within Zawiercie County, Silesian Voivodeship, in southern Poland.  It lies approximately 6 km north-east of Włodowice, 12 km north-east of Zawiercie, and 52 km north-east of the regional capital Katowice.\n\nBiałe Błota, Świecie County: Białe Błota is a village in the administrative district of Gmina Jeżewo, within Świecie County, Kuyavian-Pomeranian Voivodeship, in north-central Poland.  It lies approximately 6 km north-east of Jeżewo, 16 km north-east of Świecie, 56 km north of Toruń, and 60 km north-east of Bydgoszcz.\n\nStarowola, Wołomin County: Starowola is a village in the administrative district of Gmina Jadów, within Wołomin County, Masovian Voivodeship, in east-central Poland.  It lies approximately 6 km north-east of Jadów, 36 km north-east of Wołomin, and 58 km north-east of Warsaw.",
+    "question": "South Channel Fort is located 6 km north-east of a town on the shores of what port?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "fort_name": {
+          "type": "string",
+          "description": "The name of the fort."
+        },
+        "location_details": {
+          "type": "object",
+          "properties": {
+            "distance_from_town_km": {
+              "type": "number",
+              "description": "The distance from the specified town in kilometers."
+            },
+            "direction_from_town": {
+              "type": "string",
+              "description": "The cardinal direction from the specified town."
+            },
+            "town_name": {
+              "type": "string",
+              "description": "The name of the town the fort is located relative to."
+            },
+            "port_name": {
+              "type": "string",
+              "description": "The name of the port associated with the town."
+            }
+          },
+          "required": [
+            "distance_from_town_km",
+            "direction_from_town",
+            "town_name",
+            "port_name"
+          ],
+          "additionalProperties": false
+        },
+        "port_location_description": {
+          "type": "string",
+          "description": "A description of the port's location or context."
+        }
+      },
+      "required": [
+        "fort_name",
+        "location_details",
+        "port_location_description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "fort_name": "South Channel Fort",
+      "location_details": {
+        "distance_from_town_km": 6,
+        "direction_from_town": "north-east",
+        "town_name": "Sorrento",
+        "port_name": "Port Phillip"
+      },
+      "port_location_description": "southern Port Phillip, Victoria, Australia"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "artist_name": "Duane Eddy",
+  "album_details": {
+    "album_title": "Road Trip",
+    "release_year": 2011,
+    "ranking": 37
+  },
+  "magazine_details": {
+    "magazine_name": "Mojo",
+    "first_published_year": 1993,
+    "first_cover_stars": [
+      "Bob Dylan",
+      "John Lennon"
+    ]
+  }
+}

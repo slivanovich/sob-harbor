@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Japan men's junior national softball team: Japan men's junior national softball team is the junior national under-17 team for Japan.  The team competed at the 1985 ISF Junior Men's World Championship in Fargo, North Dakota where they finished fourth.  The team competed at the 1989 ISF Junior Men's World Championship in Summerside, Prince Edward Island where they finished third.  The team competed at the 1993 ISF Junior Men's World Championship in Auckland, New Zealand where they finished third.  The team competed at the 1997 ISF Junior Men's World Championship in St. John's, Newfoundland where they finished fifth.  The team competed at the 2001 ISF Junior Men's World Championship in Sydney, Australia where they finished second.  The team competed at the 2005 ISF Junior Men's World Championship in Summerside, Prince Edward Island where they finished second.  The team competed at the 2008 ISF Junior Men's World Championship in Whitehorse, Yukon where they finished third.  The team competed at the 2012 ISF Junior Men's World Championship in Parana, Argentina where they finished second.
+
+South Korea women's junior national softball team: South Korea women's junior national softball team is the junior national under-17 team for South Korea.  The team competed at the 1991 ISF Junior Women's World Championship in Adelaide, Australia where they had 3 wins and 8 losses.  The team competed at the 1995 ISF Junior Women's World Championship in Normal, Illinois where they finished eleventh.  The team competed at the 1999 ISF Junior Women's World Championship in Taipei, Taiwan where they finished fourteenth.  The team competed at the 2003 ISF Junior Women's World Championship in Nanjing, China where they finished thirteenth.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished eleventh.
+
+Netherlands women's junior national softball team: Netherlands women's junior national softball team is the junior national under-17 team for Netherlands.  The team competed at the 1985 ISF Junior Women's World Championship in Fargo, North Dakota where they finished sixth.  The team competed at the 1987 ISF Junior Women's World Championship in Oklahoma City, Oklahoma where they finished sixth.  The team competed at the 1991 ISF Junior Women's World Championship in Adelaide, Australia where they had 5 wins and 6 losses.  The team competed at the 1995 ISF Junior Women's World Championship in Normal, Illinois where they finished seventh.  The team competed at the 1999 ISF Junior Women's World Championship in Taipei, Taiwan where they finished twelfth.  The team competed at the 2003 ISF Junior Women's World Championship in Nanjing, China where they finished tenth.  The team competed at the 2007 ISF Junior Women's World Championship in Enschede, Netherlands where they finished sixth.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished tenth.
+
+Japan women's junior national softball team: Japan women's junior national softball team is the junior under-19 national team for Japan.  The team competed at the 1985 ISF Junior Women's World Championship in Fargo, North Dakota where they finished second.  The team competed at the 1987 ISF Junior Women's World Championship in Oklahoma City, Oklahoma where they finished third.  The team competed at the 1991 ISF Junior Women's World Championship in Adelaide, Australia where they had 12 wins and 2 losses.  The team competed at the 1995 ISF Junior Women's World Championship in Normal, Illinois where they finished second.  The team competed at the 1999 ISF Junior Women's World Championship in Taipei, Taiwan where they finished first.  The team competed at the 2003 ISF Junior Women's World Championship in Nanjing, China where they finished first.  The team competed at the 2007 ISF Junior Women's World Championship in Enschede, Netherlands where they finished second.  The team competed at the 2011 ISF Junior Women's World Championship in Cape Town, South Africa where they finished second.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished first.
+
+China women's junior national softball team: China women's junior national softball team is the junior national under-17 team for China.  The team competed at the 1985 ISF Junior Women's World Championship in Fargo, North Dakota where they finished first.  The team competed at the 1987 ISF Junior Women's World Championship in Oklahoma City, Oklahoma where they finished second.  The team competed at the 1991 ISF Junior Women's World Championship in Adelaide, Australia where they had 8 wins and 5 losses.  The team competed at the 1995 ISF Junior Women's World Championship in Normal, Illinois where they finished sixth.  The team competed at the 1999 ISF Junior Women's World Championship in Taipei, Taiwan where they finished fourth.  The team competed at the 2003 ISF Junior Women's World Championship in Nanjing, China where they finished fourth.  The team competed at the 2007 ISF Junior Women's World Championship in Enschede, Netherlands where they finished ninth.  The team competed at the 2011 ISF Junior Women's World Championship in Cape Town, South Africa where they finished eighth.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished eighth.
+
+New Zealand women's junior national softball team: New Zealand women's junior national softball team is the junior national under-17 team for New Zealand.  The team competed at the 1987 ISF Junior Women's World Championship in Oklahoma City, Oklahoma where they finished eighth.  The team competed at the 1991 ISF Junior Women's World Championship in Adelaide, Australia where they had 7 wins and 4 losses.  The team competed at the 1995 ISF Junior Women's World Championship in Normal, Illinois where they finished eighth.  The team competed at the 1999 ISF Junior Women's World Championship in Taipei, Taiwan where they finished ninth.  The team competed at the 2003 ISF Junior Women's World Championship in Nanjing, China where they finished eighth.  The team competed at the 2007 ISF Junior Women's World Championship in Enschede, Netherlands where they finished eleventh.  The team competed at the 2011 ISF Junior Women's World Championship in Cape Town, South Africa where they finished sixth.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished fourth.
+
+Mexico women's junior national softball team: Mexico women's junior national softball team is the junior national under-17 team for Mexico.  The team competed at the 1985 ISF Junior Women's World Championship in Fargo, North Dakota where they finished eighth.  The team competed at the 1987 ISF Junior Women's World Championship in Oklahoma City, Oklahoma where they finished tenth.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished twelfth.
+
+Australia women's junior national softball team: Australia women's junior national softball team is the junior national under-17 team for Australia.  The team competed at the 1985 ISF Junior Women's World Championship in Fargo, North Dakota where they finished fifth.  The team competed at the 1987 ISF Junior Women's World Championship in Oklahoma City, Oklahoma where they finished fourth.  The team competed at the 1991 ISF Junior Women's World Championship in Adelaide, Australia where they had 9 wins and 3 losses.  The team competed at the 1995 ISF Junior Women's World Championship in Normal, Illinois where they finished third.  The team competed at the 1999 ISF Junior Women's World Championship in Taipei, Taiwan where they finished sixth.  The team competed at the 2003 ISF Junior Women's World Championship in Nanjing, China where they finished third.  The team competed at the 2007 ISF Junior Women's World Championship in Enschede, Netherlands where they finished third.  The team competed at the 2011 ISF Junior Women's World Championship in Cape Town, South Africa where they finished fourth.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished third.
+
+Brampton: Brampton ( or ) is a city in the Canadian province of Ontario.  Situated in Southern Ontario, it is a suburban city in the Greater Toronto Area (GTA) and the seat of Peel Region.  The city has a population of 593,638 as of the Canada 2016 Census.  Brampton is Canada's ninth-most populous municipality and the third most populous city in the Greater Golden Horseshoe Region, behind Toronto and Mississauga.
+
+Canada women's junior national softball team: Canada women's junior national softball team is the junior national under-17 team for Canada.  The team competed at the 1985 ISF Junior Women's World Championship in Fargo, North Dakota where they finished seventh.  The team competed at the 1987 ISF Junior Women's World Championship in Oklahoma City, Oklahoma where they finished seventh.  The team competed at the 1991 ISF Junior Women's World Championship in Adelaide, Australia where they had 5 wins and 6 losses.  The team competed at the 1995 ISF Junior Women's World Championship in Normal, Illinois where they finished fifth.  The team competed at the 1999 ISF Junior Women's World Championship in Taipei, Taiwan where they finished seventh.  The team competed at the 2003 ISF Junior Women's World Championship in Nanjing, China where they finished sixth.  The team competed at the 2007 ISF Junior Women's World Championship in Enschede, Netherlands where they finished fifth.  The team competed at the 2011 ISF Junior Women's World Championship in Cape Town, South Africa where they finished fifth.  The team competed at the 2013 ISF Junior Women's World Championship in Brampton, Ontario where they finished fifth.
+
+Question: The Mexico women's junior national softball team competed in a city in Ontario which is a sububan city in what area?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "city_name": {
+      "type": "string",
+      "description": "The name of the city where the team competed."
+    },
+    "province": {
+      "type": "string",
+      "description": "The province where the city is located."
+    },
+    "country": {
+      "type": "string",
+      "description": "The country where the city is located."
+    },
+    "suburban_area": {
+      "type": "string",
+      "description": "The larger area of which the city is a suburban part."
+    }
+  },
+  "required": [
+    "city_name",
+    "province",
+    "country",
+    "suburban_area"
+  ],
+  "additionalProperties": false
+}

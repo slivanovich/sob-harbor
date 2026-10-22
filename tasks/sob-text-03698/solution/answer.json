@@ -1,0 +1,17 @@
+{
+  "actor_name": "John Goodman",
+  "known_for_role": "Dan Conner",
+  "film_details": {
+    "title": "10 Cloverfield Lane",
+    "year": 2016,
+    "genres": [
+      "science fiction",
+      "psychological thriller"
+    ],
+    "director": "Dan Trachtenberg",
+    "producers": [
+      "J. J. Abrams",
+      "Lindsey Weber"
+    ]
+  }
+}

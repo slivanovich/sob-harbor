@@ -1,0 +1,12 @@
+{
+  "movie_title": "Harry Potter and the Philosopher's Stone",
+  "criteria_met": {
+    "has_lego_theme": true,
+    "written_by_steve_kloves": true
+  },
+  "film_series_info": {
+    "series_name": "Harry Potter",
+    "installment_number": 1
+  },
+  "reasoning": "The context states that 'Lego models... were made for the first six films' of the 'Harry Potter' series, and explicitly mentions 'The first sets appeared in 2001, to coincide with the release of the first film 'Harry Potter and the Philosopher's Stone''. It also states that 'Harry Potter and the Philosopher's Stone' 'was written by Steve Kloves'."
+}

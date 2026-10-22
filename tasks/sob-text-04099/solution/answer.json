@@ -1,0 +1,16 @@
+{
+  "mountain_name": "Howard Knob",
+  "rises_above_feet": 1000,
+  "location_details": {
+    "town_name": "Boone",
+    "campus": {
+      "full_name": "Appalachian State University",
+      "alternative_names": [
+        "Appalachian",
+        "App State",
+        "App",
+        "ASU"
+      ]
+    }
+  }
+}

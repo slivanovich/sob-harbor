@@ -1,0 +1,9 @@
+{
+  "airport_name": "Haugesund Airport, Karmøy",
+  "airline": {
+    "name": "Wizz Air",
+    "country_of_origin": "Hungary",
+    "is_low_cost_carrier": true
+  },
+  "serves_as_low_cost_airport_for_this_airline": true
+}

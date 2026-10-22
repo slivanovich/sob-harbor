@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "3532b50cebdf9c7146b74930eaf741bb95bf63bb7ee3982685ce1367dbe916cf",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab5fe02554299637185c658",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Lord & Taylor",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Lord &amp; Taylor: Lord & Taylor is the oldest luxury department store in the United States, headquartered in New York City.  It is a subsidiary of the oldest commercial corporation in North America, the Hudson's Bay Company.\n\nList of Hudson's Bay Company brands: The Hudson's Bay Company, like most large retail and grocery chains, offers store brands, commonly referred to as \"generic brands,\" which are lower cost alternatives to name brand products.  The company has numerous store brands, each catering to a different consumer need or desire.  Many products offered under the company's brands are private label products, which can be found in many different categories at most of the company's family of stores (The Bay, Home Outfitters, Designer Depot, and Fields).  This is a list of the Hudson's Bay Company's brands.\n\nWalt Whitman House: The Walt Whitman House is a historic building in Camden, Camden County, New Jersey, United States, which was the last residence of American poet Walt Whitman, in his declining years before his death.  It is located at 330 Dr. Martin Luther King Jr.  Boulevard, known as Mickle St. during Whitman's time there.\n\nJessie Louisa Whitman: Jessie Louisa Whitman (1863-1957) was the niece of the renowned American writer, Walt Whitman.  Her interview with Ralph L. Fansler, coupled with her letters, have greatly contributed to Walt Whitman’s biographical information.\n\nWalt Whitman Shops: Walt Whitman Shops (formerly known as Walt Whitman Mall) is a luxury shopping mall located in Huntington Station, New York on Walt Whitman Road (Route 110) and New York Avenue.  It has many stores including main anchors Bloomingdale's, Lord & Taylor, Macy's and Saks Fifth Avenue.  The mall is owned and managed by Melvin Simon and Associates, one of the largest developers of shopping malls in the United States and owner of Long Island's largest mall, Roosevelt Field in Garden City.  Suffolk County Transit, Nassau Inter-County Express and Huntington Area Rapid Transit all have bus routes that service the mall.\n\nJohn Work (fur trader): John Work (c. 1792 – 22 December 1861) was a chief factor of the Hudson's Bay Company and head of one of the original founding families in Victoria, British Columbia.  Work joined the Hudson’s Bay Company in 1814 and served in many capacities until his death in 1861, ultimately becoming a member of the company’s Board of Management for its Western Department.  He also served on Vancouver Island’s Legislative Council.  At the time of his death, Work was the largest private land owner of Vancouver Island.  Work left an important legacy in the form of sixteen journals which chronicle his trading expeditions from 1823 to 1851.  His journals provide a detailed record of Pacific Northwest land features, native peoples, and the Hudson’s Bay Company’s fur trading business in the early 19th century.\n\nFort Nisqually: Fort Nisqually was an important fur trading and farming post of the Hudson's Bay Company in the Puget Sound area, part of the Hudson's Bay Company's Columbia Department.  It was located in what is now DuPont, Washington.  Today it is a living history museum located in Tacoma, Washington, USA, within the boundaries of Point Defiance Park.  The Fort Nisqually Granary, moved along with the Factor's House from the original site of the second fort to this park, is a U.S. National Historic Landmark.  Built in 1843, the granary is the oldest building in Washington state and one of the only surviving examples of a Hudson's Bay Company \"post on sill\" structure.  The Factor's House and the granary are the only surviving Hudson's Bay Company buildings in the United States.\n\nFort Walla Walla–Fort Colville Military Road: The Fort Walla Walla–Fort Colville Military Road was built in June 1859 to connect the Walla Walla area with its fairly easy access to the Columbia River to the mountainous area of the Huckleberry and Selkirk Mountains of current Northeast Washington and the Inland Northwest.  Brigadier General William S. Harney, commander of the Department of Oregon, opened up the district north of the Snake River to settlers in 1858 and ordered Brevet Major Pinkney Lugenbeel, 9th Infantry Regiment (United States) to establish a U.S. Army post to restrain the Indians lately hostile to the U.S. Army's Northwest Division and to protect miners who flooded into the area after first reports of gold in the area appeared in Western Washington newspapers in July 1855.  It was common practice to use existing Indian trails to develop military roads, and only make necessary improvements for the movement of artillery or supply trains.  Brevet Major Lugenbeel followed the long established Indian trail, then Hudson Bay Company brigade trail from the U.S. Fort Walla Walla area to Hudson Bay Company Fort Colvile, but had to leave the trail at current Orin-Rice Road, two miles south of Colville, where the southernmost land claims of the Hudson Bay Company fort began.  Washington Territorial Governor Isaac Stevens and the U.S. Army were ordered by the United States Department of State to honor land ownership claims by the Hudson Bay Company.  Lugenbeel's command arrived from Fort Walla Walla on June 20, 1859; Pinkney Lugenbeel was later credited with improving and building up the Military Road.\n\nWalt Whitman High School (Bethesda, Maryland): Walt Whitman High School is a public secondary institution serving roughly the western part of Bethesda—an unincorporated suburban area of Washington, D.C., in Montgomery County, in Maryland.  The school is named in honor of the American poet, Walt Whitman.  Thomas W. Pyle Middle School feeds into Walt Whitman High School.\n\nWalt Whitman Bridge: The Walt Whitman Bridge is a green-colored single-level suspension bridge spanning the Delaware River from Philadelphia to Gloucester City, in Camden County, New Jersey, United States.  Named after the poet Walt Whitman, who resided in nearby Camden toward the end of his life, the Walt Whitman Bridge is one of the larger bridges on the east coast of the United States.  The bridge is owned and operated by the Delaware River Port Authority.",
+    "question": " Which store in Walt Whitman Shops is a subsidiary of the Hudson's Bay Company?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "store_name": {
+          "type": "string",
+          "description": "The name of the store found in Walt Whitman Shops."
+        },
+        "parent_company": {
+          "type": "string",
+          "description": "The name of the parent company."
+        },
+        "is_subsidiary": {
+          "type": "boolean",
+          "description": "Indicates if the store is a subsidiary of the specified parent company."
+        },
+        "shopping_mall_name": {
+          "type": "string",
+          "description": "The name of the shopping mall where the store is located."
+        }
+      },
+      "required": [
+        "store_name",
+        "parent_company",
+        "is_subsidiary",
+        "shopping_mall_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "store_name": "Lord & Taylor",
+      "parent_company": "Hudson's Bay Company",
+      "is_subsidiary": true,
+      "shopping_mall_name": "Walt Whitman Shops"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

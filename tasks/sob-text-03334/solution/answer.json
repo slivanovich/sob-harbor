@@ -1,0 +1,18 @@
+{
+  "person_with_wider_scope": "Naz Edwards",
+  "person_one": {
+    "name": "Naz Edwards",
+    "professions": [
+      "voice actress",
+      "singer",
+      "Broadway star"
+    ]
+  },
+  "person_two": {
+    "name": "Ana Lenchantin",
+    "professions": [
+      "cellist"
+    ]
+  },
+  "reasoning": "Naz Edwards is described as a voice actress, singer, and Broadway star, indicating multiple distinct professional roles. Ana Lenchantin is primarily described as a cellist, even though she performs with many bands, her role remains within the scope of a cellist."
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "cf247c1344e2867d8a46183493904e0b92912f02c29b217638c6797913d1f11f",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7d3ff55542997cc2c47437",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ardea Beverage Company",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Sweetener (disambiguation): A sweetener is a substance, most commonly a sugar substitute (artificial sweetener), added to food to give it the basic taste of sweetness.\n\nPeace Iced Tea: Peace Iced Tea (often labeled Peace Tea) is a brand of assorted iced tea beverages produced by the Monster Beverage Corporation.  The product launched on December 21, 2009.  Peace Tea contains no artificial flavors or coloring, although it does contain an artificial sweetener, sucralose.  The only flavor not to include sucralose was the Unsweetened Tea (also branded as High Tea), but it was discontinued in early 2012.  Peace tea is served in 23 oz cans, and is distributed across the United States.\n\nNeotame: Neotame is an artificial sweetener made by NutraSweet that is between 7,000 and 13,000 times sweeter than sucrose (table sugar).  In the European Union, it is known by the E number E961.  It is moderately heat-stable, extremely potent, rapidly metabolized, completely eliminated, and does not appear to accumulate in the body.\n\nChocolate milk: Chocolate milk is sweetened chocolate-flavored milk.  It can be made by mixing chocolate syrup (or chocolate powder) with milk (from cows, goats, soy, rice, etc.).  It can be purchased pre-mixed with milk or made at home by blending milk with cocoa powder and a sweetener (such as sugar or a sugar substitute), melted chocolate, chocolate syrup, or a pre-made powdered chocolate milk mix.  Other ingredients, such as starch, salt, carrageenan, vanilla, or artificial flavoring are sometimes added.\n\nNutrisoda: Nutrisoda (formerly known as \"airforce Nutrisoda\") was the brand name of a nutrient-enhanced soda sold in the United States by the Ardea Beverage Company.  Nutrisoda contained zero sugar, zero sodium, zero aspartame, and zero to ten calories.  It was sweetened with Sucralose, an artificial sweetener made by chlorinating sucrose.\n\nTruvia: Truvia (marketed and stylized as truvía) is a stevia-based sugar substitute developed jointly by The Coca-Cola Company and Cargill.  It is distributed and marketed by Cargill as a tabletop sweetener as well as a food ingredient.  Truvia is made of rebiana, erythritol, and natural flavors.  Because it comes from the stevia plant, Cargill classifies it as a natural sweetener in addition to being a non-nutritive sweetener, although Cargill has settled lawsuits alleging deceptive marketing of Truvia as \"natural\".  Since its launch in 2008, Truvia natural sweetener has become the second best-selling sugar substitute in units in the U.S. behind Splenda, surpassing Equal and Sweet'n Low.  Truvia competes with Stevia In The Raw, the #2 brand of stevia and with PepsiCo's PureVia, the #3 brand of stevia.\n\nSodium cyclamate: Sodium cyclamate (sweetener code 952) is an artificial sweetener.  It is 30–50 times sweeter than sucrose (table sugar), making it the least potent of the commercially used artificial sweeteners.  It is often used with other artificial sweeteners, especially saccharin; the mixture of 10 parts cyclamate to 1 part saccharin is common and masks the off-tastes of both sweeteners.  It is less expensive than most sweeteners, including sucralose, and is stable under heating.\n\nPureVia: PureVia is a stevia-based low calorie sugar substitute developed jointly by Pepsico and Whole Earth Sweetener Company which is a wholly owned subsidiary of artificial sweetener manufacturing company Merisant.\n\nSucralose: Sucralose is an artificial sweetener and sugar substitute.  The majority of ingested sucralose is not broken down by the body, so it is noncaloric.  In the European Union, it is also known under the E number E955.  Sucralose is about 320 to 1,000 times sweeter than sucrose, three times as sweet as aspartame, twice as sweet as sodium saccharin and three times as sweet as acesulfame potassium.  Evidence of benefit is lacking for long-term weight loss with some data supporting weight gain and heart disease risks.\n\nAcesulfame potassium: Acesulfame potassium ( ), also known as acesulfame K (K is the symbol for potassium) or Ace K, is a calorie-free sugar substitute (artificial sweetener) often marketed under the trade names Sunett and Sweet One.  In the European Union, it is known under the E number (additive code) E950.  It was discovered accidentally in 1967 by German chemist Karl Clauss at Hoechst AG (now Nutrinova).  In chemical structure, acesulfame potassium is the potassium salt of 6-methyl-1,2,3-oxathiazine-4(3\"H\")-one 2,2-dioxide.  It is a white crystalline powder with molecular formula C4H4KNO4S and a molecular weight of 201.24 g/mol.",
+    "question": "Nutrisoda (formerly known as \"airforce Nutrisoda\") was the brand name of a nutrient-enhanced soda sold in the United States by which company, it was sweetened with Sucralose, an artificial sweetener made by chlorinating sucrose, and sugar substitute ? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "product_name": {
+          "type": "string",
+          "description": "The brand name of the product."
+        },
+        "selling_company": {
+          "type": "string",
+          "description": "The company that sold the product."
+        },
+        "sweetener_details": {
+          "type": "object",
+          "properties": {
+            "sweetener_name": {
+              "type": "string",
+              "description": "The name of the sweetener used in the product."
+            },
+            "is_artificial": {
+              "type": "boolean",
+              "description": "Indicates if the sweetener is artificial."
+            },
+            "is_sugar_substitute": {
+              "type": "boolean",
+              "description": "Indicates if the sweetener is a sugar substitute."
+            },
+            "sweetener_composition": {
+              "type": "string",
+              "description": "Description of how the sweetener is made or its origin."
+            }
+          },
+          "required": [
+            "sweetener_name",
+            "is_artificial",
+            "is_sugar_substitute",
+            "sweetener_composition"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "product_name",
+        "selling_company",
+        "sweetener_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "product_name": "Nutrisoda",
+      "selling_company": "Ardea Beverage Company",
+      "sweetener_details": {
+        "sweetener_name": "Sucralose",
+        "is_artificial": true,
+        "is_sugar_substitute": true,
+        "sweetener_composition": "made by chlorinating sucrose"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

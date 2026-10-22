@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "record_id": "a7ebe0d10420a0db464f2e3f69997b4d41098db35f8501211228a3baa1e528ea",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a76b27e5542993735360166",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Kmart",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Sears: Sears, short name for Sears, Roebuck & Company, is an American chain of department stores founded by Richard Warren Sears and Alvah Curtis Roebuck in 1886.  Formerly based at the Sears Tower in Chicago and currently headquartered in Hoffman Estates, Illinois, it began as a mail ordering catalog company and began opening retail locations in 1925.  The company was bought by the American big box chain Kmart in 2005, which renamed itself Sears Holdings upon completion of the merger.  In terms of domestic revenue, Sears was the largest retailer in the United States until October 1989, when Walmart surpassed the record.  It is currently the fifth-largest American department store company by sales as of October 2013 (behind Walmart, Target, Best Buy, and The Home Depot), and the twelfth-largest retailer in the country overall.  Sears operates divisions in Canada and Mexico, as well as several other subsidiaries within its brand.\n\nMammoth Mart: Mammoth Mart was a discount department store chain, located in the northeastern United States, primarily in the New England area.  The chain was founded by Max Coffman and Henry Gornstein in Framingham, Massachusetts in 1956, and was something of a prototype for the large, downscale department store, selling housewares, hardware and clothing in stark, unfussy buildings, usually in suburban shopping center locations.  Other discount department store retailers like K-Mart, Zayre, and Bradlees would subsequently expand on this concept.\n\nWoodward &amp; Lothrop: Woodward & Lothrop was a department store chain headquartered in Washington, D.C. Woodward & Lothrop was Washington, D.C.'s first department store, opening in 1887.  Woodies, as it was often nicknamed, maintained stores in the Mid-Atlantic United States.  Its flagship store was a fixture of the shopping district in downtown Washington, with Garfinckel's, and in the late 1990s the center of controversy over competing visions for DC's urban renewal.\n\nKmart: Kmart is an American big box department store chain headquartered in Hoffman Estates, Illinois, United States.  The chain purchased Sears for $11 billion in 2005, forming a new corporation under the name Sears Holdings Corporation.  The Kmart name was incorporated in 1916 while the first store didn't open its doors until 1962.  At its peak in 2000, Kmart operated 2,171 stores including 105 Super Kmart Center locations.  For the 2005 fiscal year under the new company, the Kmart store count was at 1,416 with only 55 Super Kmart Center locations.  Currently, the chain is operating 624 stores with only 1 Super Kmart Center location remaining (Store #4939 in Warren, OH).  This number is the amount of stores that still exist after the closings that took place during the first quarter of 2017.\n\nEastern Hills Mall: Eastern Hills Mall is a shopping mall located at the western border of the Town of Clarence in Erie County, New York, United States.  It lies on Transit Road (New York State Route 78, a 73.49-mile state highway), which in the vicinity of the mall, divides Clarence, New York from the town of Amherst, New York east of (Buffalo, New York).  The mall is north of the junction of NY-78 with NY-5, and Main Street.  The name \"Eastern Hills\" refers to the very low hills that contribute to a slightly higher elevation than the bordering areas along the Onondaga Escarpment.  Eastern Hills Mall is part of a long commercial strip on Transit Road.  It consists of two long wings running north and south and one short wing running east and west, which connects the north-south wings in a \"double L-shaped\" formation.  A major department store is at the end of each wing.  A food court is located adjacent to the end of the long south wing.  A three-screen movie theater showing mainly independent films is also located in the mall, as well as a small New York State Department of Motor Vehicles office.  Surrounding the mall is a large, but generally unkept, parking lot.  The ratio of the mall is so large, it provides the highest parking ratio of any Buffalo area mall.  Much of the parking lot space is leased to area car dealerships to store overstock vehicles due to the low volume of shoppers at the mall.  Eastern Hills Mall is currently at approximately 70% occupancy, with many vacant stores throughout the mall and popular anchor store Dave & Busters shuttering its doors in 2015 to move to the nearby Walden Galleria.  Eastern Hills is considered by many area residents to be a \"dead mall\" and is listed on the website Deadmalls.com.  Most major and nationally recognized retailers have left and been replaced by independently owned \"mom-and-pop\" type stores, selling crafts and homemade goods.  It is common for retailers to open and close within their first few months, unable to turn a profit due to the low volume of shoppers that still visit Eastern Hills Mall.\n\nInterstate Department Stores: Interstate Department Stores, Inc., was founded in 1928 as an American holding company for a chain of small department stores.  After a very rapid expansion as the result of acquisition and expansion of two discount store chains acquired in 1959 and 1960 and also two toy store chains acquired in 1967 and 1969, the firm was renamed in 1970 as Interstate Stores, Inc., to better reflect its business.  Increased competition and the changes in consumer buying habits eventually led to decreased sales in the late 1960s and early 1970s which forced the firm to file for bankruptcy in 1974.  After shedding all of its non-performing units, the firm was able to exit bankruptcy with the entire toy division intact along with a small remnant of the department store division in 1978.  The firm was renamed Toys \"R\" Us upon emergence from bankruptcy.\n\nThe Emporium (San Francisco): The Emporium was a mid-line department store chain headquartered in San Francisco, California, which operated for 99 years—from 1896 to 1995.  The flagship location on San Francisco's Market Street was a destination shopping location for decades, and several branch stores operated in the various suburbs of the Bay Area.  The Emporium and its sister department store chains were acquired by Federated Department Stores in 1995, with many converted to Macy's locations.\n\nNew Harbour Mall: New Harbour Mall was an enclosed shopping mall located in Fall River, Massachusetts, United States, at the intersection of Route 24 and Route 81.  Opened in 1971, the mall was noted for having once been the only shopping center in the United States to feature rival department store chains Kmart and Walmart as its anchor stores until 2013.\n\nEfird's Department Store: Efird's Department Store, also known as Lourie’s Department Store, is a historic department store building located at Columbia, South Carolina.  It was built about 1870, and is a rectangular brick building renovated and expanded in 1919.  This included the addition of a third story and the installation of a new brick façade and store entrances.  Between 1919 and 1958, it housed the Columbia branch of the Charlotte, North Carolina based Efird’s Department Store chain.\n\nGus Blass Department Store: The Gus Blass Department Store is a historic commercial building at 318-324 Main Street in Little Rock, Arkansas.  It is a seven story masonry structure, built in 1912 to a design by George R. Mann, a leading Arkansas architect.  It was one of the first instances of two-way concrete slab construction in the nation, and was one of the first department stores in the state to be air conditioned (in 1936).  The Blass Department Store was for many years the city's largest department store, and remained in business here into the 1970s, ultimately becoming a part of the Dillard's department store chain before closing in 1972.",
+    "question": "What Store American is a big box department store chain headquartered in Hoffman Estates, Illinois, United States that was one of the rival department store chains for a shopping mall located in Fall River, Massachusetts? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "store_name": {
+          "type": "string",
+          "description": "The name of the department store."
+        },
+        "store_type": {
+          "type": "string",
+          "description": "The type of store, e.g., 'American big box department store chain'."
+        },
+        "headquarters_location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city",
+            "state",
+            "country"
+          ],
+          "additionalProperties": false
+        },
+        "mall_association": {
+          "type": "object",
+          "properties": {
+            "mall_name": {
+              "type": "string",
+              "description": "The name of the shopping mall where the store was a rival."
+            },
+            "mall_location": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city",
+                "state",
+                "country"
+              ],
+              "additionalProperties": false
+            },
+            "role": {
+              "type": "string",
+              "description": "Description of the store's role in the mall, e.g., 'rival anchor store'."
+            },
+            "rival_store_name": {
+              "type": "string",
+              "description": "The name of the store it was a rival with in that mall."
+            }
+          },
+          "required": [
+            "mall_name",
+            "mall_location",
+            "role",
+            "rival_store_name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "store_name",
+        "store_type",
+        "headquarters_location",
+        "mall_association"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "store_name": "Kmart",
+      "store_type": "American big box department store chain",
+      "headquarters_location": {
+        "city": "Hoffman Estates",
+        "state": "Illinois",
+        "country": "United States"
+      },
+      "mall_association": {
+        "mall_name": "New Harbour Mall",
+        "mall_location": {
+          "city": "Fall River",
+          "state": "Massachusetts",
+          "country": "United States"
+        },
+        "role": "rival anchor store",
+        "rival_store_name": "Walmart"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

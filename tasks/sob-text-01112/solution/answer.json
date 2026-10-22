@@ -1,0 +1,14 @@
+{
+  "person": {
+    "name": "Andy Duncan",
+    "title": "executive",
+    "date_of_birth": "31 July 1962"
+  },
+  "organization_details": {
+    "name": "Camelot UK Lotteries Limited",
+    "alias": "Camelot Group",
+    "person_role_in_organization": "CEO",
+    "role_start_date": "October 2014"
+  },
+  "scheme_operated": "UK National Lottery"
+}

@@ -1,0 +1,19 @@
+{
+  "band_name": "New Order",
+  "band_attributes": {
+    "type": "English rock band",
+    "formed_year": 1980,
+    "current_member_count": 5,
+    "current_members": [
+      "Bernard Sumner",
+      "Stephen Morris",
+      "Gillian Gilbert",
+      "Phil Cunningham",
+      "Tom Chapman"
+    ]
+  },
+  "compilation_album_info": {
+    "album_title": "Total: From Joy Division to New Order",
+    "material_included": true
+  }
+}

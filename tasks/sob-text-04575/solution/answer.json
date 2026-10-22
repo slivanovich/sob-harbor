@@ -1,0 +1,8 @@
+{
+  "flight_number": "605",
+  "airline_name": "Indian Airlines",
+  "departure_airport": {
+    "current_name": "Chhatrapati Shivaji International Airport",
+    "former_name": "Sahar International Airport"
+  }
+}

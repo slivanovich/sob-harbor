@@ -1,0 +1,14 @@
+{
+  "fighter_name": "Guy Mezger",
+  "opponent_nationality": "Dutch",
+  "opponent_discipline": "kickboxer",
+  "defeated_opponent": {
+    "name": "Semmy Schilt",
+    "birth_date": "October 27, 1973",
+    "achievements": [
+      "one-time K-1 World Grand Prix Champion",
+      "four-time K-1 World Grand Prix Champion",
+      "only fighter in K-1 history to win the world championship three times in a row"
+    ]
+  }
+}

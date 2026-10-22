@@ -1,0 +1,9 @@
+{
+  "city_name": "Thebes",
+  "king_name": "Oedipus",
+  "settlement_details": {
+    "settlement_type": "Mycenaean",
+    "evidence_type": "clay tablets written in the Linear B script",
+    "historical_period": "Bronze Age"
+  }
+}

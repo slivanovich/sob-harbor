@@ -1,0 +1,19 @@
+{
+  "team_name": "Brooklyn Dodgers",
+  "name_origin_description": "reputed skill of Brooklyn residents at evading the city's trolley streetcar network",
+  "historian_details": {
+    "name": "Frank Graham, Sr.",
+    "occupation": "American sportswriter and biographer",
+    "covered_publication": "New York Sun",
+    "coverage_start_year": 1915,
+    "coverage_end_year": 1943,
+    "wrote_team_history": true,
+    "other_historical_subjects": [
+      "New York Yankees",
+      "New York Giants",
+      "Al Smith",
+      "Lou Gehrig",
+      "John McGraw"
+    ]
+  }
+}

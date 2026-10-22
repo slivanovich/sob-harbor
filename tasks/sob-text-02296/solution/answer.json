@@ -1,0 +1,10 @@
+{
+  "grand_prix_year": 1996,
+  "winning_driver": "Damon Hill",
+  "driver_who_retired": {
+    "name": "Gerhard Berger",
+    "nationality": "Austrian",
+    "retirement_reason": "engine failed",
+    "laps_remaining_at_retirement": 3
+  }
+}

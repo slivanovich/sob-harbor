@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2010 Medicaid fraud: The 2010 Medicaid fraud was a case of Medicaid fraud carried out by an Armenian-American organized crime group called the Mirzoyan-Terdjanian Organization.  The scam involved a crime syndicate which created 118 fake clinics in 25 states and used stolen medical license numbers of real doctors and matched them to legitimate Medicare patients whose names and billing information were also stolen.  The group submitted more than $163 million in claims and received $35 million of that before they were caught.  Prosecutors charged 73 individuals in several states with allegations of racketeering conspiracy, bank fraud, money laundering and identity theft.
+
+Irish Mob: The Irish Mob is the oldest organized crime group in the United States, in existence since the early 19th century.  Originating in Irish American street gangs of the 19th century—depicted in Herbert Asbury's 1928 book "The Gangs of New York"—the Irish Mob has appeared in most major U.S. cities, including Boston, New York City, Philadelphia, and Chicago.
+
+Dubois Brothers: The Dubois Brothers were a French-Canadian organized crime group, who operated mostly in Montreal in the 1950s to the mid-1980s.  The Dubois Brothers began their reputation for their criminal behaviour and their toughness throughout their teenage years.  By the 1960s the Dubois Brothers were gaining control and were becoming the only crime group in Montreal that were considered to rival the Cotroni Clan in the 1960s and 1970s.  The Dubois Brothers engaged in extortion, the exploitation of strippers and prostitutes, drug trafficking, loan sharking, and the murder of rival victims.  A report by the Quebec Crime Commission called the gang "the most important criminal organization in Quebec," so vicious and strong that they were known to be feared by both motorcycle gangs and the nearby mafia.
+
+Organized crime: Organized crime is a category of transnational, national, or local groupings of highly centralized enterprises run by criminals who intend to engage in illegal activity, most commonly for money and profit.  Some criminal organizations, such as terrorist groups, are politically motivated.  Sometimes criminal organizations force people to do business with them, such as when a gang extorts money from shopkeepers for so-called "protection".  Gangs may become disciplined enough to be considered "organized".  A criminal organization or gang can also be referred to as a mafia, mob, or crime syndicate; the network, subculture and community of criminals may be referred to as the underworld.  European sociologists (e.g. Diego Gambetta) define the mafia as a type of organized crime group that specializes in the supply of extra-legal protection and quasi law enforcement.  Gambetta's classic work on "the Sicilian Mafia" generates an economic study of the mafia, which exerts great influence on studies of "the Russian Mafia", "the Chinese Mafia", "Hong Kong Triads" and "the Japanese Yakuza".
+
+All the Money in the World: All the Money in the World is an upcoming 2017 American crime drama film directed by Ridley Scott and based on John Pearson's novel "Painfully Rich: The Outrageous Fortunes and Misfortunes of the Heirs of J. Paul Getty".  It stars Michelle Williams, Kevin Spacey, Mark Wahlberg, Romain Duris, Charlie Plummer, Andrew Buchan and Timothy Hutton.  The plot of the film involves the biographical account from the early 1970s of the sustained refusal of J. Paul Getty to cooperate with the extortion demands of a group of kidnappers, from the organized crime group 'Ndrangheta, who had abducted and mutilated his grandson John Paul Getty III.
+
+Danny Hogan: "Dapper" Danny Hogan (ca. 1880 - December 4, 1928) was a charismatic underworld figure and boss of Saint Paul, Minnesota's Irish Mob during Prohibition.  Due to his close relationships with the officers of the deeply corrupt St. Paul Police Department, Hogan was able to act as a go between, overseeing the notorious
+
+Gulf Cartel: The Gulf Cartel (Spanish: "Cártel del Golfo" , "Golfos", or "CDG") is a criminal syndicate and drug trafficking organization in Mexico, and perhaps one of the oldest organized crime groups in the country.  It is currently based in Matamoros, Tamaulipas, directly across the border from Brownsville, Texas.
+
+'Ndrangheta: The 'Ndràngheta (] ) is an organized crime group centered in Calabria, Italy.  Despite not being as famous abroad as the Sicilian Mafia, and having been considered more rural than the Neapolitan Camorra and the Apulian Sacra Corona Unita, the 'Ndrangheta became the most powerful crime syndicate in Italy in the late 1990s and early 2000s.  While commonly tied together with the Sicilian Mafia, the 'Ndrangheta operates independently from them, though there is contact between the two, due to the geographical proximity and shared culture and language between Calabria and Sicily.  A US diplomat estimated that the organization's narcotics trafficking, extortion and money laundering activities accounted for at least 3% of Italy's GDP in 2010.  Since the 1950s, the organization has spread towards Northern Italy and worldwide.  According to a 2013 "Threat Assessment on Italian Organised Crime" of Europol, the 'Ndrangheta is among the richest and most powerful organised crime groups at a global level.
+
+Harry Sagansky: Harry J. "Doc" Sagansky (January 6, 1898 – January 28, 1997) was a Jewish organized crime figure in Boston who controlled one of city's largest bookmaking operations during the 1950s.  He is also the oldest organized crime figure to serve a federal prison sentence at the age of 91.
+
+Mafia Commission Trial: The Mafia Commission Trial (February 25, 1985 – November 19, 1986), officially known as United States v. Anthony Salerno, et al., was a criminal trial in New York City, United States.  Using evidence obtained by the Federal Bureau of Investigation, eleven organized crime figures, including the heads of New York's so-called "Five Families," were indicted by United States Attorney Rudolph Giuliani under the Racketeer Influenced and Corrupt Organizations Act (RICO) on charges including extortion, labor racketeering, and murder for hire.  The case struck a blow against "The Commission," a loose organization of the New York Mafia organizations that met to resolve disputes or discuss criminal activities, sometimes likened to organized crime's board of directors.  "Time" magazine called this "Case of Cases" possibly "the most significant assault on the infrastructure of organized crime since the high command of the Chicago Mafia was swept away in 1943," and quoted Giuliani's stated intention: "Our approach... is to wipe out the five families."
+
+Question: When was "Dapper" Danny Hogan head of Minnesota's branch of the oldest organized crime group in the United States?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the individual."
+    },
+    "role": {
+      "type": "string",
+      "description": "The role held by the individual within the organization."
+    },
+    "organization_name": {
+      "type": "string",
+      "description": "The name of the organized crime group."
+    },
+    "organization_location": {
+      "type": "string",
+      "description": "The specific location where the organization operated or was led."
+    },
+    "time_period_of_leadership": {
+      "type": "string",
+      "description": "The time period during which the individual was head of the organization."
+    }
+  },
+  "required": [
+    "person_name",
+    "role",
+    "organization_name",
+    "organization_location",
+    "time_period_of_leadership"
+  ],
+  "additionalProperties": false
+}

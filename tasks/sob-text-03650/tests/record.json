@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "e9ad9a9e903c64a8a74e8e9a06b1044ee7142efee434d8f92598bc8a5b33b74f",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab298ca554299194fa93428",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1952",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Vajiralongkorn: Maha Vajiralongkorn Bodindradebayavarangkun (Thai: มหาวชิราลงกรณ บดินทรเทพยวรางกูร , rtgs: \"Mahawachiralongkon Bodinthrathepphayawarangkun\" ,  ] ; born 28 July 1952) is the King of Thailand, since 2016.  He is the only son of King Bhumibol Adulyadej and Queen Sirikit.  In 1972, at the age of 20, he was made crown prince by his father.  After his father's death on 13 October 2016, he was expected to succeed to the throne of Thailand but asked for time to mourn before taking the throne.  He accepted the throne on the night of 1 December 2016 but will not be crowned formally until after the cremation of his father, expected to be on 26 October 2017.  His father Bhumibol's coronation took place four years after his accession.  The government retroactively declared his reign to have begun on 13 October 2016, upon his father's death.  As the tenth monarch of the Chakri Dynasty, he is also styled as Rama X.  At the age of 64, Vajiralongkorn is the oldest Thai monarch to ascend to the throne.\n\nSapphire Jubilee of Queen Elizabeth II: On 6 February 2017, the Sapphire Jubilee of Queen Elizabeth II, marking sixty-five years of her reign, occurred.  The longest-reigning monarch in British history, Queen Elizabeth II was the first British monarch to have a sapphire jubilee.  This Jubilee featured blue stamps from the Royal Mail, commemorative coins from the Royal Mint, and a reissue of an official 2014 portrait of Queen Elizabeth II by David Bailey.  In this official portrait the Queen wears sapphire jewellery which she received as a wedding present from her father.  The Jubilee also involved a gun salute at the Tower of London, a gun salute in Green Park, gun salutes in several other places around the United Kingdom, and the ringing of the bells in Westminster Abbey.  Theresa May, the Prime Minister of the United Kingdom, congratulated Queen Elizabeth II in regard to the occasion, saying in part, \"I know the nation will join with me today in celebrating and giving thanks for the lifetime of service Her Majesty the Queen has given to our country and to the Commonwealth.\"\n\nPrime Minister of Bangladesh: The Prime Minister of the People's Republic of Bangladesh (Bengali: \"বাংলাদেশের প্রধানমন্ত্রী\" – \"Bangladesher Prodhanmontri\" ) is the Head of the Government of Bangladesh.  The Prime Minister and the Cabinet are collectively accountable for their policies and actions to the Parliament, to their political party and ultimately to the electorate.\n\nPresident of the European Commission: The President of the European Commission is the head of the European Commission, the executive branch of the :European Union.  The President of the Commission leads a cabinet of Commissioners, referred to as the \"college\", collectively accountable to the European Parliament, which is directly elected by EU citizens.  The President is empowered to allocate portfolios amongst, reshuffle or dismiss Commissioners as necessary.  The college directs the Commission's civil service, sets the policy agenda and determines the legislative proposals it produces (the Commission is the only body that can propose EU laws).\n\nHome Office under Theresa May: The Home Office under Theresa May refers to the period during which British Prime Minister Theresa May served as Home Secretary.  As a member of David Cameron's first government May was appointed as Home Secretary on 12 May 2010, shortly after Cameron became prime minister, and continued in the post as part of the second Cameron ministry following the 2015 general election.  She held the post until she succeeded Cameron as prime minister on 13 July 2016.\n\nPrime Minister of Norway: The Prime Minister of Norway (Norwegian: \"statsminister\" , literally the \"minister of the state\") is the political leader of Norway and the Head of the Government of Norway.  The Prime Minister and Cabinet (consisting of all the most senior government department heads) are collectively accountable for their policies and actions to the Monarch, to the Storting (Parliament of Norway), to their political party, and ultimately the electorate.  In practice, since it is nearly impossible for a government to stay in office against the will of the Storting, the Prime Minister is primarily answerable to the Storting.\n\nMonarchy of the United Kingdom: The monarchy of the United Kingdom, commonly referred to as the British monarchy, is the constitutional monarchy of the United Kingdom, its dependencies and its overseas territories.  The current monarch and head of state, Queen Elizabeth II, ascended the throne on the death of her father, King George VI, on 6 February 1952.\n\nPrime Minister of the United Kingdom: The Prime Minister of the United Kingdom is the head of Her Majesty's Government in the United Kingdom.  The Prime Minister (sometimes informally abbreviated to PM) and Cabinet (consisting of all the most senior ministers, most of whom are government department heads) are collectively accountable for their policies and actions to the Monarch, to Parliament, to their political party and ultimately to the electorate.  The office is one of the Great Offices of State.  The of the office, Theresa May, leader of the Conservative Party, was appointed by the Queen on 13 July 2016.\n\nPrime Minister of Sri Lanka: The Prime Minister of the Democratic Socialist Republic of Sri Lanka (Sinhalese: ශ්‍රී ලංකා අග්‍රාමාත්‍ය \"Sri Lanka Agramathya\" ; Tamil: இலங்கை பிரதமர் ) is the most senior member of parliament in the cabinet of ministers in Sri Lanka which is collectively accountable for their policies and actions to parliament.  The President is both head of state and head of government in Sri Lanka.  Since 1978, most prime ministers have served as mere deputies to the executive presidency, while at times served as the \"de-facto\" head of government.  The of the office, Ranil Wickremesinghe, leader of the United National Party, was appointed by Maithripala Sirisena on 9 January 2015.  This was the third time that Wickramasinghe was appointed Prime Minister of Sri Lanka.\n\nPrime Minister of the Czech Republic: The Chairman of the Government of the Czech Republic (Czech: \"Předseda vlády České republiky\"), normally referred to in English as the Prime Minister, is the head of the Government of the Czech Republic.  The Prime Minister and Cabinet (consisting of all the most senior ministers, who are government ministries heads) are collectively accountable for their policies and actions to the Chamber of Deputies.  The current Prime Minister, Bohuslav Sobotka, leader of the Czech Social Democratic Party, was appointed by the President on 17 January 2014, and serves as 11th person in this position.",
+    "question": "In what year did the monarch Theresa may is \"collectively accountable\" to ascend to the throne?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "monarch_name": {
+          "type": "string",
+          "description": "The name of the monarch."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country ruled by the monarch."
+        },
+        "accession_year": {
+          "type": "integer",
+          "description": "The year the monarch ascended to the throne."
+        },
+        "prime_minister_name": {
+          "type": "string",
+          "description": "The name of the Prime Minister."
+        },
+        "accountability_description": {
+          "type": "string",
+          "description": "A description of the accountability relationship between the Prime Minister and the Monarch."
+        }
+      },
+      "required": [
+        "monarch_name",
+        "country",
+        "accession_year",
+        "prime_minister_name",
+        "accountability_description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "monarch_name": "Queen Elizabeth II",
+      "country": "United Kingdom",
+      "accession_year": 1952,
+      "prime_minister_name": "Theresa May",
+      "accountability_description": "collectively accountable to"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

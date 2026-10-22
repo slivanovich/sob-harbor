@@ -1,0 +1,14 @@
+{
+  "question_asked": "Detlev Buck and Herschell Gordon Lewis, are American?",
+  "is_both_american": false,
+  "individuals_details": [
+    {
+      "name": "Detlev Buck",
+      "nationality": "German"
+    },
+    {
+      "name": "Herschell Gordon Lewis",
+      "nationality": "American"
+    }
+  ]
+}

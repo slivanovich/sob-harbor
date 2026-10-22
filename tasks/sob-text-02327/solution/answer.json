@@ -1,0 +1,14 @@
+{
+  "hotel_name": "The Grove Park Inn",
+  "hotel_type": "historic resort hotel",
+  "location_details": {
+    "mountain_slope": "western-facing",
+    "mountain_name": "Sunset Mountain",
+    "city": "Asheville",
+    "state": "North Carolina"
+  },
+  "associated_country_club": {
+    "former_name": "Asheville Country Club",
+    "current_name": "Grove Park Inn Country Club"
+  }
+}

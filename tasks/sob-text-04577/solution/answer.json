@@ -1,0 +1,13 @@
+{
+  "actor_name": "Gene Hackman",
+  "award_won": "Academy Award for Best Actor",
+  "movie_details": {
+    "title": "The French Connection",
+    "release_year": 1971,
+    "adaptation_details": {
+      "source_book_title": "The French Connection: A True Account of Cops, Narcotics, and International Conspiracy",
+      "source_author": "Robin Moore",
+      "source_publication_year": 1969
+    }
+  }
+}

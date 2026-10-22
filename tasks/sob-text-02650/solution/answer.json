@@ -1,0 +1,15 @@
+{
+  "ship_name": "USS Kauffman",
+  "namesakes": [
+    {
+      "person_name": "James L. Kauffman",
+      "rank": "Vice Admiral",
+      "honor_received": "Navy Cross"
+    },
+    {
+      "person_name": "Draper L. Kauffman",
+      "rank": "Rear Admiral"
+    }
+  ],
+  "primary_honor_for_question": "Navy Cross"
+}

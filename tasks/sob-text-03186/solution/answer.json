@@ -1,0 +1,11 @@
+{
+  "entity_name": "Swiss Guards",
+  "role_description": "Swiss soldiers who have served as guards at foreign European courts",
+  "service_start_century": 15,
+  "commander_details": {
+    "name": "Pierre Victor, baron de Besenval de Brünstatt",
+    "role": "last commander of the Swiss Guards in France",
+    "birth_year": 1722,
+    "death_year": 1794
+  }
+}

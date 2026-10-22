@@ -1,0 +1,15 @@
+{
+  "person_name": "Caleb Deschanel",
+  "professions": [
+    "film cinematographer",
+    "film/television director"
+  ],
+  "academy_award_details": {
+    "nominations_count": 5,
+    "nomination_category": "Best Cinematography"
+  },
+  "executive_producer_connection": {
+    "producer_name": "Vincent Arcaro",
+    "relationship_description": "executive produced some of their works"
+  }
+}

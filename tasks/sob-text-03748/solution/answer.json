@@ -1,0 +1,19 @@
+{
+  "telescope_name": "Thirty Meter Telescope",
+  "primary_location_details": {
+    "location_name": "Mauna Kea",
+    "sacred_to_group": "Native Hawaiians",
+    "reasons_for_opposition": [
+      "sacred site",
+      "visual appearance",
+      "protests"
+    ],
+    "construction_status": "halted"
+  },
+  "alternative_site_details": {
+    "site_name": "Roque de los Muchachos Observatory",
+    "country": "Spain",
+    "island": "La Palma",
+    "region": "Canary Islands"
+  }
+}

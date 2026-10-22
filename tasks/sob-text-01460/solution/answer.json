@@ -1,0 +1,9 @@
+{
+  "game_title": "Star Citizen",
+  "game_genre": "space simulator",
+  "developer_name": "Chris Roberts",
+  "compatible_operating_systems": [
+    "Microsoft Windows",
+    "Linux"
+  ]
+}

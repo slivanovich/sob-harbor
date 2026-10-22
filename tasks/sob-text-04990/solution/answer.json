@@ -1,0 +1,25 @@
+{
+  "university_name": "Montclair State University",
+  "university_classification": "public doctoral research university (R3)",
+  "university_location": {
+    "main_section": "Upper Montclair",
+    "main_city": "Montclair",
+    "intersecting_areas": [
+      {
+        "area_name": "Great Notch",
+        "municipality": "Little Falls"
+      },
+      {
+        "area_name": "Montclair Heights",
+        "municipality": "Clifton"
+      }
+    ],
+    "state": "New Jersey",
+    "country": "U.S."
+  },
+  "associated_coach": {
+    "coach_full_name": "Henry M. Ferris",
+    "coach_nickname": "Hank",
+    "coach_role": "former head football coach"
+  }
+}

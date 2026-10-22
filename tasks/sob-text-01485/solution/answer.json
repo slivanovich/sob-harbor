@@ -1,0 +1,8 @@
+{
+  "entity_type": "breeds",
+  "entities": [
+    "German Hound",
+    "Samoyed"
+  ],
+  "common_category": "dog"
+}

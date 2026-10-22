@@ -1,0 +1,13 @@
+{
+  "mountain_name": "Black Mountain",
+  "state_of_mountain": "Kentucky",
+  "is_highest_in_state": true,
+  "elevation": {
+    "value": 4145,
+    "unit": "ft"
+  },
+  "route_on_mountain": {
+    "name": "State Route 160",
+    "state": "Virginia"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "main_boxer": {
+    "name": "Liam Smith",
+    "title_held": "WBO light-middleweight title",
+    "title_reign_years": {
+      "start_year": 2015,
+      "end_year": 2016
+    }
+  },
+  "related_boxer": {
+    "name": "Callum Smith",
+    "relationship_to_main_boxer": "younger brother",
+    "is_professional_boxer": true
+  },
+  "answer": "Callum Smith"
+}

@@ -1,0 +1,13 @@
+{
+  "question_asked": "Was Life in Cold Blood broadcast in the same country that Black Tar Heroin was filmed in?",
+  "entity_1": {
+    "name": "Life in Cold Blood",
+    "broadcast_country": "United Kingdom"
+  },
+  "entity_2": {
+    "name": "Black Tar Heroin (film)",
+    "filming_country": "United States"
+  },
+  "countries_match": false,
+  "final_answer": "no"
+}

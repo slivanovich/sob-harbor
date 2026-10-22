@@ -1,0 +1,11 @@
+{
+  "person_1": {
+    "name": "Andrew Stockdale",
+    "nationality": "Australian"
+  },
+  "person_2": {
+    "name": "Bobby Tench",
+    "nationality": "British"
+  },
+  "have_same_nationality": false
+}

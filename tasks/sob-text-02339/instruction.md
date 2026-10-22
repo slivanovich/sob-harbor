@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Demetrious Johnson (fighter): Demetrious Khrisna Johnson (born August 13, 1986) is an American mixed martial artist.  He is the first ever and the current Flyweight Champion of the Ultimate Fighting Championship (UFC).  He currently holds the longest active championship reign at ten title defenses.  He is also the #1 ranked pound for pound MMA fighter in the world.  Known for his quick striking and elusive movement, Johnson has also landed the most takedowns in UFC Flyweight history and holds the record for the latest finish in UFC history with a submission win at 4:59 of the fifth round against Kyoji Horiguchi.  He is also the only UFC fighter to record over 10 takedowns in three different fights.
+
+Skip Hall (MMA): J. "Skip" Hall is a former mixed martial artist and IBM sales manager.  At 57, "Skip" claimed to be the oldest pro-debuting fighter, and in 2008 at the age of 63 he gained a measure of notoriety as an unusually old combat sports athlete.  He was a participant in the Jasper City Slugfest in August 2006 against former UFC Superfight Champion Dan Severn, and retired in 2009 from active MMA fighting after declaring himself "Oldest Active MMA Fighter in history."
+
+Tank Abbott: David Lee "Tank" Abbott (born April 26, 1965) is an American mixed martial arts fighter, former professional wrestler, and author.  He currently hosts his own podcast series titled "The Proving Ground with Tank Abbott."  Abbott is perhaps best known for being an icon in the early stages of mixed martial arts and the UFC, but has also competed in the PRIDE Fighting Championships, Strikeforce, EliteXC, and Cage Rage.  He has described his fighting style, which he developed brawling in the bars and streets of Huntington Beach, California, as "Pit Fighting".  Abbott was the first fighter to regularly wear what would be known as traditional MMA gloves in the UFC .  He is also the author of his biography which is called "Bar Brawler".
+
+Joanna Jędrzejczyk: Joanna Jędrzejczyk (] ; born August 18, 1987) is a Polish mixed martial artist and former Muay Thai kickboxer who competes in the women's strawweight division of the Ultimate Fighting Championship.  She is the current UFC Women's Strawweight Champion and the third European (and only Polish) champion in UFC history after Bas Rutten in 1999 and Andrei Arlovski in 2005.  As of May 2017, she is the consensus #1 female strawweight, and #1 pound-for-pound female MMA fighter in the world.  She is also currently the #8 pound-for-pound fighter in the UFC mixed gender rankings, making her the top female on the list.
+
+Dan Henderson: Daniel Jeffery Henderson (born August 24, 1970) is an American former mixed martial artist and Olympic wrestler, who last competed as a middleweight in the Ultimate Fighting Championship.  He was the last Strikeforce Light Heavyweight Champion and was the last Welterweight (80 kg ) and Middleweight (95 kg ) champion of Pride Fighting Championships.  Additionally, Henderson was the Brazil Open '97 Tournament Champion, the UFC 17 Middleweight Tournament Champion, the Rings: King of Kings 1999 Tournament Champion and the Pride Weltwerweight Grand Prix Tournament Champion.  During his career, Henderson also challenged for the UFC Middleweight Championship (2x), the UFC Light Heavyweight Championship and the Strikeforce Middleweight Championship.  He was the first mixed martial artist to concurrently hold two titles in two different weight classes in a major MMA promotion.  At the time of his retirement after UFC 204, he was the oldest fighter on the UFC roster.  Known to be one of the greatest mixed martial artists of all time having defeated a total of seventeen MMA world champions across four major MMA promotions (UFC, PRIDE FC, Strikeforce, and RINGS).
+
+Championship Fighting Alliance: Championship Fighting Alliance (CFA) is a mixed martial arts (MMA) based promotion company located in Miami Lakes, Florida.  It was founded by former MMA fighter and promoter Jorge De La Noval in 2011.  It has currently produced 10 live events.  Fallon Fox, who currently is signed to fight for CFA, is the first openly transgender MMA fighter in history.  On May 24, 2013, CFA will be hosting CFA 11, their 11th event at the Bankunited Center located on the University of Miami campus.  Fighter 411 reported that CFA had held the most events in Florida during the 2012-2013 season.
+
+Paul Creighton: Paul Creighton (born July 4, 1970) is a retired American mixed martial artist and Brazilian Jiu Jitsu black belt under Renzo Gracie who competed in the Lightweight division of the Ultimate Fighting Championship.  His last fight in mixed martial arts competition, came at a losing effort at UFC 37: High Impact at the CenturyTel Center in Bossier City, Louisiana on May 10, 2002 against B.J. Penn.
+
+Carlos Newton: Carlos Newton (born August 17, 1976) is an Anguillian-born Canadian retired mixed martial artist and one of the original MMA pioneers.  He is a former UFC Welterweight Champion and Pride FC Japan MMA Legend.  Known as "The Ronin", he competed worldwide in the biggest MMA organizations including UFC, Pride FC, IFL, K-1, Shooto and most recently W-1.  He is a 3rd Degree Brazilian Jiu-Jitsu Black Belt alongside his coach Terry Riggs, at Warrior MMA in Newmarket, Ontario.  Newton has always been considered a fan favourite and a "Submission Master" and has dubbed his personal fighting style—an amalgam of Brazilian Jiu-Jitsu, judo, wrestling and boxing as "Dragon Ball Jiu-Jitsu" in tribute to "Dragon Ball", a Japanese manga series.  As a testament to his worldwide popularity, Newton is one of only a few MMA athletes to ever be allowed to compete in the UFC and Pride FC at the same time.
+
+B.J. Penn: Jay Dee "B.J." Penn (born December 13, 1978) is an American professional mixed martial artist and Brazilian Jiu-Jitsu practitioner.  Penn debuted and competed in the Ultimate Fighting Championship (UFC), and later in K-1.  Prior to fighting for the UFC, he became the first American Gold medalist of the World Jiu-Jitsu Championship.  In mixed martial arts, Penn has competed in the Featherweight, Lightweight, Welterweight, and Middleweight divisions.  As a former UFC Lightweight Champion and UFC Welterweight Champion, he is one of only three fighters in UFC history to win titles in multiple weight classes.  Penn was also a Co-champion in the UFC 41 Lightweight Tournament, due to an eventual draw opposite Caol Uno in the tournament finale.  Through his tenures as champion, Penn unofficially unified the UFC Lightweight Championship (against Sean Sherk) and broke the all-time lightweight title defense record.  Penn was inducted into the UFC Hall of Fame, as the inaugural inductee in the Modern-Era Wing by career-long rival Matt Hughes, during "International Fight Week" in July 2015.
+
+KHK MMA: The Khalid Bin Hamad Al Khalifa Mixed Martial Arts (KHK MMA) is a martial arts organization based in Bahrain.  It was founded under the patronage of His Highness Khalid bin Hamad Al Khalifa for its current CEO and professional MMA fighter Mohammed "The Hawk" Shahid in February 2015.  Fighters competing under KHK MMA banner include: former UFC lightweight champion Frankie Edgar, UFC lightweight contender Khabib Nurmagomedov, UFC lightweight fighter Islam Makhachev, Bellator fighter James Gallagher, 2-time IMMAF champion Jose "Shorty" Torres, former UFC fighter and current Titan FC contender Alex Soto, and current Desert Force fighter Hamza Kooheji.  KHK MMA activities include: coaching pro fighters, developing amateur MMA, promoting martial arts events, fitness gyms, and a sports gear brand.
+
+Question: Paul Creighton lost at UFC 37 against the MMA fighter who also practices what other fighting style?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "event_name": {
+      "type": "string",
+      "description": "The name of the MMA event where the fight took place."
+    },
+    "loser_fighter_name": {
+      "type": "string",
+      "description": "The name of the fighter who lost the match."
+    },
+    "winner_fighter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the fighter who won the match."
+        },
+        "other_fighting_style": {
+          "type": "string",
+          "description": "The other fighting style practiced by the winning fighter, besides MMA."
+        }
+      },
+      "required": [
+        "name",
+        "other_fighting_style"
+      ],
+      "additionalProperties": false
+    },
+    "answer": {
+      "type": "string",
+      "description": "The specific fighting style requested in the question."
+    }
+  },
+  "required": [
+    "event_name",
+    "loser_fighter_name",
+    "winner_fighter",
+    "answer"
+  ],
+  "additionalProperties": false
+}

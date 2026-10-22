@@ -1,0 +1,17 @@
+{
+  "comparison_entities": [
+    {
+      "genus_name": "Honeysuckle",
+      "species_count": 180
+    },
+    {
+      "genus_name": "Abelia",
+      "species_count": 30
+    }
+  ],
+  "comparison_result": {
+    "entity_with_more_species": "Honeysuckle",
+    "species_difference": 150
+  },
+  "question_answered": true
+}

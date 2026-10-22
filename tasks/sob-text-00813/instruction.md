@@ -1,0 +1,87 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ancient City Ruins of Liye: The site of Ancient City Ruins of Liye () is the archaeological site of seat of the historic Qianling County () in Dongting Prefecture (), Qin dynasty (221 BC–206 BC).  Its site is located in the present-day Liye Town, Longshan County, Hunan Province, China, and it is known for 37,400 pieces of Qin Bamboo slips unearthed in 2002.  The Ancient City was built by Chu State in the late Warring States period, reconstructed in the Qin dynasty and abandoned in the early Western Han dynasty.  The site of Ancient City Ruins was approved as a hiistorical and cultural site protected at the national level in Hunan on November 22, 2002.  The Qin Bamboo Slips Museum and the Ruins Park has been established and officially opened on October 28, 2010.
+
+King Xiaowen of Qin: King Xiaowen of Qin (reigned 250 BC) was a Chinese king, who had a very brief reign.  He is also known as Lord Anguo (安國君).  His grandson was Emperor Qin Shi Huang.
+
+Qin Shi Huang: Qin Shi Huang ( ; 18 February 25910 September 210) was the founder of the Qin dynasty (秦朝 ) and was the first emperor of a unified China.  He was born Ying Zheng (嬴政 ) or Zhao Zheng (趙政 ), a prince of the state of Qin.  He became the King Zheng of Qin (秦王政 ) when he was thirteen, then China's first emperor when he was 38 after the Qin had conquered all of the other Warring States and unified all of China in 221 BC.  Rather than maintain the title of "king" borne by the previous Shang and Zhou rulers, he ruled as the First Emperor (始皇帝 ) of the Qin dynasty from 220 to 210 BC.  His self-invented title "emperor" (皇帝 , "  "), as indicated by his use of the word "First", would continue to be borne by Chinese rulers for the next two millennia.
+
+Zhang Han (Qin dynasty): Zhang Han (died 205 BC) was a military general of the Qin dynasty.  When uprisings erupted throughout China during the reign of Qin Er Shi, Zhang Han led the Qin armies and successfully quelled several of these rebel forces.  In 207 BC, Zhang Han was defeated by Xiang Yu of Chu at the Battle of Julu, after which he surrendered along with his 200,000 troops.  He was conferred the title of "King of Yong" (雍王) by Xiang Yu and given part of the lands in Guanzhong as his fief when Xiang split the former Qin Empire into the Eighteen Kingdoms after the fall of the Qin dynasty.  Zhang Han's territory was conquered by Liu Bang in 206 BC, and he committed suicide a year later.
+
+Emperor Yi of Chu: Emperor Yi of Chu (died 206 BC), also known as King Huai II of Chu, personal name Xiong Xin, was the ruler of the Chu state in the late Qin dynasty.  He was a grandson of King Huai of Chu.  In 223 BC, during the Warring States period, the Chu state was conquered by the Qin state, which unified the various Chinese feudal states in a series of wars and established the Qin dynasty in 221 BC.  In 209 BC, when rebellions broke out throughout China to overthrow the Qin dynasty, the Chu state was revived as an insurgent state against Qin imperial rule.  Xiong Xin was discovered by Xiang Liang, a rebel leader who descended from a famous Chu general (Xiang Yan), and installed on the Chu throne as "King Huai II of Chu".  However, Xiong Xin was merely a puppet ruler because power was concentrated in Xiang Liang's hands, and was later passed on to Xiang Liang's nephew, Xiang Yu, after Xiang Liang was killed in battle.  In 206 BC, the Qin dynasty was overthrown by the rebels, after which Xiang Yu, who was the "de facto" leader of all the rebel forces, divided the former Qin Empire into the Eighteen Kingdoms.  He promoted King Huai II to a more "honourable" title – Emperor Yi of Chu – and made him the nominal sovereign ruler over all the Eighteen Kingdoms.  Xiang Yu then had Emperor Yi relocated to Chen County (郴縣; in present-day Chenzhou, Hunan) and secretly ordered Ying Bu to assassinate the emperor during the journey.
+
+Liye Qin Slips: The Liye Qin Slips () is a large collection of bamboo slips which were unearthed at the ancient town of Liye, Longshan County, Hunan Province, China in 2002.  The event is one of the most important archaeological finds of the 21st century in China.  The archaeologists found more than 37,000 pieces of bamboo writing slips in 2002 in the Ancient City Ruins of Liye (), on which more than 200,000 Chinese characters recorded the governing state secrets of the Qin dynasty.  It was considered as the most important archaeological discovery of the Qin dynasty after the Qin Terracotta Army unearthed in 1973 in an eastern suburb of Xi'an.
+
+Ying Bu: Ying Bu (died 195 BC), also known as Qing Bu, was a military general and vassal king who lived in the early Western Han dynasty.  He was a native of Lu County (六縣; present-day Lu'an, Anhui).  In his early life under the Qin dynasty, Ying Bu was convicted and sentenced to "qing" (黥; a form of punishment which involved branding a criminal by tattooing his face), so he was also called "Qing Bu".  He was then sent to Mount Li to perform hard labour by constructing Qin Shi Huang's mausoleum.  He later escaped with some men and became the leader of a bandit gang.  Ying Bu participated in the insurrection against the Qin dynasty after the Dazexiang Uprising broke out in 209 BC.  After the uprising failed, he became part of a rebel force led by Xiang Liang.  He assisted Xiang Liang's nephew and successor Xiang Yu in overthrowing the Qin dynasty.  After the fall of Qin, he initially fought on Xiang Yu's side in the Chu–Han Contention (206–202 BC), a power struggle for supremacy over China between Xiang Yu and Liu Bang (Emperor Gao).  However, later, he defected to Liu Bang's side and helped Liu defeat Xiang Yu and become the emperor.  During this period of time, Ying Bu held the title of "King of Jiujiang".  After Liu Bang established the Han dynasty in 202 BC, he appointed Ying Bu as a vassal king and granted him the title of "King of Huainan".  In 195 BC, Ying Bu rebelled against the Han dynasty but was defeated and killed.
+
+Qin dynasty: The Qin dynasty () was the first dynasty of Imperial China, lasting from 221 to 206 BC.  Named for its heartland of Qin, in modern-day Gansu and Shaanxi, the dynasty was founded by the Qin state and its founding emperor took the title Qin Shi Huang, the First Emperor of Qin.  The strength of the Qin state was greatly increased by the "Legalist" reforms of Shang Yang in the fourth century BC, during the Warring States period.  In the mid and late third century BC, the Qin state carried out a series of swift conquests, first ending the powerless Zhou dynasty, and eventually conquering the other six of the Seven Warring States.  It is the shortest major dynasty in Chinese history, lasting only 15 years with two emperors, but the imperial system it inaugurated lasted, with interruptions and adaptation, until 1911.
+
+Li Si: Li Si (; c. 280 BCSeptember or October 208 BC) was a Chinese politician of the Qin dynasty.  He served as the Chancellor (or Prime Minister) of the Qin dynasty from 246–208 BC, well known Legalist writer and politician, and notable calligrapher.  He served under two rulers: Qin Shi Huang, the king of the Qin state and later the First Emperor of the Qin dynasty; and Qin Er Shi, Qin Shi Huang's youngest son and the Second Emperor.  Concerning administrative methods, Li "indicated that he admired and utilized the ideas of Shen Pu-hai", repeatedly referring to the technique of Shen and Han Fei, but regarding law followed Shang Yang.
+
+Zhao Gao: Zhao Gao (Simplified Chinese 赵高, died 207 BC) was a Chinese politician of the Qin dynasty.  Allegedly a eunuch, he served as a close aide to all three emperors of the Qin dynasty – Qin Shi Huang, Qin Er Shi and Ziying – and was regarded as having played an instrumental role in the downfall of the dynasty.
+
+Question: Regarding the founder of the Qin dynasty, who was his grandfather?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "founder_of_qin_dynasty": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the founder of the Qin dynasty."
+        },
+        "title": {
+          "type": "string",
+          "description": "The primary title held by the founder."
+        }
+      },
+      "required": [
+        "name",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "grandfather": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the grandfather of the Qin dynasty founder."
+        },
+        "reign_period": {
+          "type": "string",
+          "description": "The period during which the grandfather reigned."
+        }
+      },
+      "required": [
+        "name",
+        "reign_period"
+      ],
+      "additionalProperties": false
+    },
+    "relationship_description": {
+      "type": "string",
+      "description": "A description of the relationship between the founder and the identified individual."
+    }
+  },
+  "required": [
+    "founder_of_qin_dynasty",
+    "grandfather",
+    "relationship_description"
+  ],
+  "additionalProperties": false
+}

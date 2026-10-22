@@ -1,0 +1,21 @@
+{
+  "film_title": "Trouble the Water",
+  "film_year": 2008,
+  "film_type": "documentary film",
+  "production_team": {
+    "directors": [
+      "Tia Lessin",
+      "Carl Deal"
+    ],
+    "producers": [
+      "Tia Lessin",
+      "Carl Deal"
+    ]
+  },
+  "distributor_info": {
+    "name": "Zeitgeist Films",
+    "type": "American independent film distributor",
+    "base_location": "New York City",
+    "film_style_characteristic": "auteur-driven"
+  }
+}

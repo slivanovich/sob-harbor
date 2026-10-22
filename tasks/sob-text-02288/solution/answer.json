@@ -1,0 +1,10 @@
+{
+  "film_title": "Afterwards",
+  "actor_name": "John Malkovich",
+  "actor_roles": [
+    "actor",
+    "director",
+    "producer"
+  ],
+  "films_count_threshold": 70
+}

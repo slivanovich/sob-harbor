@@ -1,0 +1,28 @@
+{
+  "game_comparisons": [
+    {
+      "game_name": "Arkham Horror",
+      "publisher_details": {
+        "publisher_count": 2,
+        "publisher_names": [
+          "Chaosium",
+          "Fantasy Flight Games"
+        ]
+      }
+    },
+    {
+      "game_name": "Polarity",
+      "publisher_details": {
+        "publisher_count": 4,
+        "publisher_names": [
+          "Telemotion Technologies",
+          "Irwin Toy",
+          "Mattel",
+          "Temple Games"
+        ]
+      }
+    }
+  ],
+  "game_with_most_publishers": "Polarity",
+  "comparison_summary": "Polarity has had 4 publishers, which is more than Arkham Horror's 2 publishers."
+}

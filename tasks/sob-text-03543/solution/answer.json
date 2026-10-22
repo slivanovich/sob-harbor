@@ -1,0 +1,12 @@
+{
+  "gurudwara_name": "Gurudwara Guru Nanak Dham",
+  "location": {
+    "town_name": "Rameswaram",
+    "municipality_grade": "second grade",
+    "district_name": "Ramanathapuram",
+    "state_name": "Tamil Nadu",
+    "country_name": "India"
+  },
+  "construction_year": 1511,
+  "reason_for_construction": "commemorate the visit of the first Sikh guru, Guru Nanak to Rameswaram"
+}

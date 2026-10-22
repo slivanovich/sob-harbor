@@ -1,0 +1,15 @@
+{
+  "film_title": "The Great Wall",
+  "release_year": 2016,
+  "director": "Zhang Yimou",
+  "writers": [
+    "Tony Gilroy",
+    "Doug Miro",
+    "Carlo Bernard"
+  ],
+  "main_actress": {
+    "name": "Jing Tian",
+    "nationality": "Chinese"
+  },
+  "film_genre": "monster film"
+}

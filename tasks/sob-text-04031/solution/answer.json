@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "Sebastian Gutierrez",
+    "birth_year": 1974
+  },
+  "person_2": {
+    "name": "Henry Jaglom",
+    "birth_year": 1938
+  },
+  "older_person_name": "Henry David Jaglom",
+  "age_difference_years": 36
+}

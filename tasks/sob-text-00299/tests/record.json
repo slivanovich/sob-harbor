@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "bbf0866f002165943cf3486ca1432543447032091f1cf56a3b5f4148c75b4f8d",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5a89e41c554299669944a5f9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Glottiphyllum",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Monanthes: Monanthes is a genus of small, succulent, subtropical plants of the Crassulaceae family.  The about ten species are mostly endemic to the Canary Islands and Savage Islands, with some found on Madeira.  Its center of diversity is Tenerife, with seven species occurring on this island.  On Fuerteventura and Lanzarote, only \"M. laxiflora\" occurs.\n\nAichryson: Aichryson is a genus of about 15 species of succulent, subtropical plants, mostly native to the Canary Islands, with a few in the Azores, Madeira and Morocco, and one in Portugal.\n\nGlottiphyllum: Glottiphyllum is a genus of about 57 species of succulent subtropical plants of the family \"Aizoaceae\".\n\nChrysosplenium: Chrysosplenium (golden saxifrage or golden-saxifrage) is a genus of 57 species of flowering plants in the family Saxifragaceae.  Species can be found throughout the arctic and northern temperate parts of the Northern Hemisphere, with the highest species diversity in eastern Asia; two species are found disjunctly in South America.\n\nGlottiphyllum longum: Glottiphyllum longum is a species of succulent plant in the Aizoaceae family, native to South Africa.\n\nAriocarpus: Ariocarpus is a genus of 8 species of succulent, subtropical plants of the Cactaceae family.\n\nGlottiphyllum cruciatum: Glottiphyllum cruciatum is a species that are part of over 50 succulents that are subtropical plants of the family \"Aizoaceae\".  The plant has many synonyms including \"Glottiphyllum angustum\".\n\nAeonium: Aeonium (tree houseleek) is a genus of about 35 species of succulent, subtropical plants of the family Crassulaceae.  Many species are popular in horticulture.  The genus name comes from the ancient Greek \"aionos\" (ageless).  While most of them are native to the Canary Islands, some are found in Madeira, Morocco, and in East Africa (for example in the Semien Mountains of Ethiopia).\n\nGlottiphyllum uncatum: Glottiphyllum uncatum is a species of succulent plant in the Aizoaceae family, native to South Africa.\n\nArthrocereus: Arthrocereus is a genus of cactus, originating from southern Minas Gerais, Brazil.",
+    "question": "What is a genus of about 57 species of succulent subtropical plants of the family \"Aizoaceae\", Arthrocereus or Glottiphyllum ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "identified_genus_name": {
+          "type": "string",
+          "description": "The name of the genus that matches the description."
+        },
+        "species_count": {
+          "type": "integer",
+          "description": "The approximate number of species in the genus."
+        },
+        "plant_characteristics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of characteristics describing the plants in the genus."
+        },
+        "family": {
+          "type": "string",
+          "description": "The botanical family to which the genus belongs."
+        },
+        "is_correct_answer": {
+          "type": "boolean",
+          "description": "Indicates if this genus is the correct answer to the question posed."
+        }
+      },
+      "required": [
+        "identified_genus_name",
+        "species_count",
+        "plant_characteristics",
+        "family",
+        "is_correct_answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "identified_genus_name": "Glottiphyllum",
+      "species_count": 57,
+      "plant_characteristics": [
+        "succulent",
+        "subtropical"
+      ],
+      "family": "Aizoaceae",
+      "is_correct_answer": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

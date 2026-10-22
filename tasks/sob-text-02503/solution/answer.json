@@ -1,0 +1,20 @@
+{
+  "highest_ranked_player": {
+    "name": "Elena Bovina",
+    "ranking": 14,
+    "ranking_date": "April 2005"
+  },
+  "players_compared": [
+    {
+      "name": "Nicolas Mahut",
+      "career_high_singles_ranking": 37,
+      "ranking_date": "5 May 2014"
+    },
+    {
+      "name": "Elena Bovina",
+      "career_high_singles_ranking": 14,
+      "ranking_date": "April 2005"
+    }
+  ],
+  "comparison_summary": "Elena Bovina has the highest career singles world ranking (World No. 14) compared to Nicolas Mahut (World No. 37)."
+}

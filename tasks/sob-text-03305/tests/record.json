@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "record_id": "cda1e70018003a0475ea715903e738575c8bb06c6e4cac484c2326f68828c850",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5adc53c45542996e68525309",
+    "source_dataset": "hotpotqa",
+    "source_answer": "John Marley (born Mortimer Marlieb, October 17, 1907 – May 22, 1984) was an American actor",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Mark Rydell: Mark Rydell (born March 23, 1928) is an American actor, film director and producer.  He has directed many Academy Award-nominated films including \"The Fox\" (1967), \"The Reivers\" (1969), \"Cinderella Liberty\" (1973), \"The Rose\" (1979), \"The River\" (1984) and \"For the Boys\" (1991).  He was nominated for an Academy Award for Best Director for \"On Golden Pond\" (1981).  Mark Rydell also studied Acting at The Neighborhood Playhouse School of the Theatre in New York City.\n\nJohn Marley: John Marley (born Mortimer Marlieb, October 17, 1907 – May 22, 1984) was an American actor who was known for his role as Phil Cavalleri in \"Love Story\" and as Jack Woltz— the defiant film mogul who awakens to find the severed head of his prized horse in his bed—in \"The Godfather\" (1972).  He starred in John Cassavetes' feature \"Faces\" (1968) and appeared in \"The Glitter Dome\" (1984).\n\nKen Shadie: Kenneth George \"Ken\" Shadie {'1': \", '2': \", '3': \", '4': \"} (born 8 December 1935) is an Australian screenwriter, who co-wrote the Academy Award-nominated screenplay for the film \"Crocodile Dundee\" with Paul Hogan and John Cornell.\n\nScott Pinsker: Scott Pinsker is a filmmaker, talk-show host, author and celebrity publicist.  He has written for FOXNews.com, the \"Washington Times\", Breitbart, \"Jewish World Review\", Bulldog Reporter and elsewhere.  He was the creator and executive producer of \"National Lampoon's Strip Poker\" in 2005 and also appeared in Academy Award-nominated director Brett Morgen's political film \"Ollie's Army\" and the Academy Award-nominated documentary \"A Perfect Candidate \".\n\nThe Glitter Dome: The Glitter Dome is a 1984 made-for-HBO film starring James Garner, Margot Kidder and John Lithgow.  The film, based on the 1981 Joseph Wambaugh Hollywood-set homicide novel, was directed by Stuart Margolin, who also scored the film and played a supporting part.  The movie was filmed in Victoria, British Columbia and co-starred Colleen Dewhurst.  It was subsequently released on video in 1985.  The film was also the last film for John Marley.\n\nAndrew Walker (actor): Andrew W. Walker (born June 9, 1979) is a Canadian actor and film producer.  He made his film debut in \"Laserhawk\" (1997), followed by roles in American television series such as \"Maybe It's Me\", \"Sabrina the Teenage Witch\", and \"Hot Properties\".  He also starred alongside Academy Award-nominated actor David Strathairn in \"Steel Toes\" (2006), which earned him an ACTRA Award for Best Actor in 2008.  He subsequently appeared in films such as \"The Mountie\" and \"The Gundown\", and had a starring role on the Lifetime cop drama \"Against the Wall\".\n\nAlan Young: Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".  He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961–1966).  Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.  During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.  He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.\n\nFaces (film): Faces is a 1968 drama film, written and directed by John Cassavetes and starring John Marley, Cassavetes' wife Gena Rowlands, Fred Draper, Seymour Cassel and Lynn Carlin.  Both Cassel and Carlin received Academy Award nominations for this film.  Cassavetes was nominated for the Academy Award for Best Original Screenplay for \"Faces\".  The film was shot in high contrast 16 mm black and white film stock.  In 2011, it was added to the National Film Registry of the Library of Congress.\n\nAcademy Film Archive: The Academy Film Archive is part of the Academy Foundation, established in 1944 with the purpose of organizing and overseeing the Academy of Motion Picture Arts and Sciences’ educational and cultural activities, including the preservation of motion picture history.  Although the current incarnation of the Academy Film Archive began in 1991, the Academy of Motion Picture Arts and Sciences acquired its first film in 1929.  Located in Hollywood, California at the Pickford Center for Motion Picture Study, the Archive has a diverse range of moving image material.  The Archive's collection comprises 85,000 titles and 190,000 separate items, including early American cinema, a vast collection of documentary films, filmed and taped interviews, amateur and private home movies of Hollywood legends, makeup and sound test reels, and a wide selection of experimental film, as well as Academy Award-winning films, Academy Award-nominated films, and a complete collection of every Academy Awards show since 1949.  Since acquiring the Packard Humanities Institute Collection, the Archive has the world's largest known trailer collection.  The Archive is also concerned with the preservation and restoration of films, as well as new technologies and methods of preservation, restoring over 800 titles  of historical and artistic importance.\n\nKhalid Abdalla: Khalid Abdalla (Arabic: خالد عبد الله‎ ‎ , \"Khālid ‘Abd Allāh\"; born 26 October 1980) is a British Egyptian actor and activist.  He came to international prominence after starring in the 2006 Academy Award-nominated and BAFTA-winning film, \"United 93\".  Written and directed by Paul Greengrass, it chronicles events aboard United Airlines Flight 93, which was hijacked as part of the September 11 attacks.  Abdalla played Ziad Jarrah, the pilot and leader of the four hijackers on board the flight.  He starred as Amir in \"The Kite Runner\" and acted with Matt Damon in \"Green Zone\", his second film with director Paul Greengrass.  Abdalla appears as himself in Jehane Noujaim's documentary on the ongoing Egyptian revolution, \"The Square\", which won the Audience Award at Sundance Festival in 2013.",
+    "question": "Which actor starred in both 1968's Academy Award-nominated ''Faces'' and 1984's ''The Glitter Dome''?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The full name of the actor."
+        },
+        "original_name": {
+          "type": "string",
+          "description": "The original birth name of the actor, if different."
+        },
+        "birth_date": {
+          "type": "string",
+          "description": "The birth date of the actor in YYYY-MM-DD format."
+        },
+        "death_date": {
+          "type": "string",
+          "description": "The death date of the actor in YYYY-MM-DD format."
+        },
+        "films_starred_in": {
+          "type": "array",
+          "description": "A list of films the actor starred in, relevant to the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "The title of the film."
+              },
+              "year": {
+                "type": "integer",
+                "description": "The release year of the film."
+              },
+              "is_academy_award_nominated": {
+                "type": "boolean",
+                "description": "True if the film was Academy Award-nominated."
+              }
+            },
+            "required": [
+              "title",
+              "year"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "actor_name",
+        "birth_date",
+        "death_date",
+        "films_starred_in"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "John Marley",
+      "original_name": "Mortimer Marlieb",
+      "birth_date": "1907-10-17",
+      "death_date": "1984-05-22",
+      "films_starred_in": [
+        {
+          "title": "Faces",
+          "year": 1968,
+          "is_academy_award_nominated": true
+        },
+        {
+          "title": "The Glitter Dome",
+          "year": 1984
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

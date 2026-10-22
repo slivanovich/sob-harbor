@@ -1,0 +1,14 @@
+{
+  "person": {
+    "name": "Matthias Bernegger",
+    "birth_town": "Hallstatt"
+  },
+  "birth_town_location": {
+    "town_name": "Hallstatt",
+    "district_name": "Gmunden",
+    "state_name": "Upper Austria"
+  },
+  "answer": {
+    "district_of_birth": "Gmunden"
+  }
+}

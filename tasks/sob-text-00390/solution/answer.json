@@ -1,0 +1,16 @@
+{
+  "entities": [
+    {
+      "name": "Electronic Arts",
+      "type": "company",
+      "country_of_origin": "American"
+    },
+    {
+      "name": "John Riccitiello",
+      "type": "person",
+      "country_of_origin": "American"
+    }
+  ],
+  "common_country_of_origin": "American",
+  "information_found": true
+}

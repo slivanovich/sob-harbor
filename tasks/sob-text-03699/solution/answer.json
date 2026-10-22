@@ -1,0 +1,10 @@
+{
+  "airport_name": "Cleveland Burke Lakefront Airport",
+  "lake_name": "Lake Erie",
+  "lake_properties": {
+    "size_rank_great_lakes": 4,
+    "size_metric": "surface area"
+  },
+  "airport_location_description": "on the shore of Lake Erie",
+  "city_state": "Cleveland, Ohio"
+}

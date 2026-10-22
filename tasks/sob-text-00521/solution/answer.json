@@ -1,0 +1,10 @@
+{
+  "airline_name": "Canadian North",
+  "headquarters": {
+    "city": "Calgary",
+    "province_territory": "Alberta",
+    "country": "Canada"
+  },
+  "main_base_airport": "Edmonton Airport",
+  "serves_iqaluit_airport": true
+}

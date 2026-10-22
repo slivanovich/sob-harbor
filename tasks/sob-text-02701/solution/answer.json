@@ -1,0 +1,10 @@
+{
+  "politician_name": "Theresa Villiers",
+  "political_party": "British Conservative Party",
+  "role_at_time_of_statement": "Northern Ireland Secretary",
+  "inquiry_details": {
+    "inquiry_name": "Northern Ireland Historical Institutional Abuse Inquiry",
+    "cooperation_pledged": true,
+    "agencies_involved_in_cooperation": "all state agencies"
+  }
+}

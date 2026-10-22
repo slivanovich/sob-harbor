@@ -1,0 +1,14 @@
+{
+  "artists": [
+    {
+      "name": "Superchunk",
+      "origin_country": "United States"
+    },
+    {
+      "name": "Lorde",
+      "origin_country": "New Zealand"
+    }
+  ],
+  "are_from_same_country": false,
+  "comparison_reasoning": "Superchunk is an American band from Chapel Hill, North Carolina, while Lorde is a New Zealand singer-songwriter. Their countries of origin are different."
+}

@@ -1,0 +1,14 @@
+{
+  "common_industry": "film",
+  "entities_involved": [
+    {
+      "name": "Arnold Johnson",
+      "type": "actor"
+    },
+    {
+      "name": "Rocky",
+      "type": "film"
+    }
+  ],
+  "reasoning": "Arnold Johnson was an American actor who appeared in several films, including 'Rocky', which is a 1976 American sports drama film."
+}

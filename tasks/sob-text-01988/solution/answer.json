@@ -1,0 +1,18 @@
+{
+  "bus_body_name": "Plaxton Centro",
+  "designer": "Bluebird Vehicles",
+  "manufacturer": "Plaxton",
+  "operator_details": {
+    "name": "Blackpool Transport Services Ltd.",
+    "delivery_year": 2010,
+    "service_areas": [
+      "Blackpool",
+      "Fylde",
+      "Fleetwood",
+      "Lytham St Annes",
+      "Poulton-le-Fylde",
+      "Cleveleys"
+    ],
+    "owner": "Blackpool Borough Council"
+  }
+}

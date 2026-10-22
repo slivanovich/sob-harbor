@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Heisman curse: The Heisman curse is a term coined to reference a two-part assertion of a negative future for the winning player of the Heisman Trophy.  The "curse" supposes that any college football player who wins the Heisman plays on a team that will likely lose its subsequent bowl game.  The trend of post-award failure has garnered the attention of the mainstream media.  Talk of a curse in relation to bowl results was particularly prevalent from 2003 to 2008, when six Heisman Trophy winners compiled a cumulative 1–5 bowl game record, and five of those six led number one ranked teams into the Bowl Championship Series (BCS) National Championship Game as favorites (Heisman Trophy winners, including Reggie Bush, who gave back his Heisman Trophy, are 4–8 overall in the BCS National Championship Game and College Football Playoff National Championship, although prior to 2009 they were 1–6).  Additionally, the Heisman curse asserts that in most cases a Heisman winner will have either a poor career in the National Football League (NFL), or in fact not even see such a football career at all.  Although many Heisman winners have not enjoyed success at the professional level, including players like Matt Leinart, Andre Ware, Jason White, Rashaan Salaam, Eric Crouch, Ty Detmer, Troy Smith and Gino Torretta, proponents of the "curse" rarely cite highly successful players such as Barry Sanders, Charles Woodson, Eddie George, Tim Brown, Bo Jackson, Marcus Allen, Earl Campbell, and Tony Dorsett among the notables.
+
+Expeditie Robinson: Battle of the Titans: Expeditie Robinson: Strijd der Titanen (also known as Expeditie Robinson: Battle of the Titans), was a special All-Stars season of the Dutch/Belgian version of the Swedish show Expedition Robinson, or Survivor as it is referred to in some countries.  This season began airing in March 2006 and concluded in July of that year.  This season began with a surprise "plank" challenge in which the winner would automatically be immune from the first elimination and would be one of two contestants to be "leaders" of a tribe.  As the winner of this challenge Ilona van der Laan, along with Veronique De Pryker, who Ilona picked as the person she got along with the least, picked their tribes from the fifteen other contestants.  The last person not picked, Björn Lemeirel, was eliminated from the game.  Another twist occurred in episode four when each tribe was asked to pick one player that they trusted the most.  The North team chose Melvin Pigot, while the South team chose Richard Mackowia.  These two contestants were both sent to a secret island called Entatula where the merge tribe of Panga would live.  Eventually those living on the island had chosen all but Fleur Roozenburg, Lydia Guiso, Maxime Verbist, Ryan van Esch, and Veronique De Pryker to join them, they composed the Miniloc tribe and were forced to take part in a series of duels until only one remained and would return to the game.  When it came time for the final four, the contestants took part in a couple of final challenges in order to determine who would be the finalists.  The first of these challenges was won by Jennifer Smit while the second was won by Ryan van Esch.  Ultimately, it was Ryan van Esch who won this season over Jennifer Smit by a jury vote of 4-2.
+
+Tom Draper: Thomas Edward Draper (nicknamed "Drapes" or in Finland "Toppi") (born November 20, 1966 in Outremont, Quebec) is a retired Canadian professional ice hockey goaltender.  He was chosen in the eighth round, 165th overall,and the 8th pick by the Winnipeg Jets in the 1985 NHL Entry Draft.  On February 28, 1991 the Jets traded Tom to the St. Louis Blues for future considerations.  Which on May 24, 1991 turned out being for Jim Vesey and in the same contract he was traded back to the Winnipeg Jets.  Then on June 22, 1991 the Buffalo Sabres acquired him from the Jets for the seventh round draft pick in the 1992 entry draft.  On September 30, 1993 the Sabres traded him to the New York Islanders for a seventh round draft pick, Steve Plouffe in the 1994 entry draft.  He then became a free agent and the Winnipeg Jets picked him up again on December 14, 1995.
+
+Robin Cole: Robin Cole, a former professional American football player, was born September 11, 1955 in Compton, California.  He was the seventh of ten children born to Obediah and Georgia Mae Cole.  He attended high school at Compton High, graduating in 1973.  He furthered his education at the University of New Mexico where he became an All American and the first person to be a first round draft pick out of the University.  He was drafted by the Pittsburgh Steelers, the 21st pick in the first round of the draft.  At Pittsburgh, he was a part of the Steel Curtain defense, replacing Andy Russell as right outside linebacker.  He played linebacker and defensive end for twelve seasons for the Pittsburgh Steelers.  He played in two Super Bowls - Super Bowl XIII and Super Bowl XIV.  Mr. Cole was in the starting lineup in Super Bowl XIV in 1980 and was elected to the Pro Bowl in 1984.  He was runner up for MVP in Super Bowl XIV.  He played one season, 1988, with the New York Jets.
+
+Anthony Woodson: Anthony Woodson (born January 7, 1988) is a professional Canadian football running back for the Calgary Stampeders of the Canadian Football League.  He was drafted 29th overall by the Winnipeg Blue Bombers in the 2010 CFL Draft and played for parts of two seasons with the club.  On September 9, 2013, Woodson was traded to the Toronto Argonauts, along with a fifth round draft pick in 2014, in exchange for offensive lineman Marc Parenteau and a third round draft pick in 2014.  He signed with the Hamilton Tiger-Cats as a free agent on February 11, 2015 and spent two years with the team before signing with his hometown Stampeders on February 17, 2017.
+
+Marc Parenteau: Marc Parenteau (born December 4, 1980 in Sherbrooke, Quebec) is a professional Canadian football offensive lineman who last played for the Winnipeg Blue Bombers of the Canadian Football League.  He was drafted 36th overall by the Ottawa Renegades in the 2003 CFL Draft.  He was signed by the Saskatchewan Roughriders to a contract on February 12, 2007 and played for five seasons before being released on February 10, 2012.  He was soon after signed by the Toronto Argonauts on February 13, 2012.  Parenteau would go on to win the 100th Grey Cup with the Argonauts.  On September 9, 2013, Parenteau was traded to the Winnipeg Blue Bombers, along with a 3rd round draft pick in 2014, in exchange for running back Anthony Woodson and a fifth round draft pick in 2014.  He retired after 9 years in the CFL in January 2014 after winning 2 Grey Cups (2007 & 2012) and he is the only offensive lineman to ever score a touchdown in a Grey Cup game (2010).  Before his CFL career, Marc was an All-Star (All Big East) lineman with the Boston College Eagles from 1999-2003.  He continues to be a real estate sales representative in the Ottawa, ON area.
+
+Rashaan Salaam: Rashaan Iman Salaam (October 8, 1974 – December 5, 2016) was an American college and professional football player who was a running back in the National Football League (NFL) for four seasons during the 1990s.  Salaam played college football for the University of Colorado and won the 1994 Heisman Trophy.  He was picked by the Chicago Bears in the first round of the 1995 NFL Draft, and played professionally for the Bears and Cleveland Browns of the NFL.  Salaam died on December 5, 2016, of an apparent suicide.
+
+Dante Hall: Damieon Dante Hall (born September 20, 1978) is a former American football return specialist and wide receiver who played nine seasons in the National Football League (NFL).  Hall is considered one of the best return specialists in NFL history.  Hall is nicknamed "The Human Joystick."  Hall was a fifth round draft pick out of Texas A&M University by the Kansas City Chiefs in the 2000 NFL Draft.  Hall played for the Chiefs for six years before being traded to the St. Louis Rams on April 25, 2007 for the Rams' third and fifth-round pick in the 2007 NFL Draft.  Hall was ranked the 10th greatest return specialist in NFL History on NFL Network's NFL Top 10 Return Aces.
+
+Ray Snell: Ray Snell (born February 24, 1958) is a former guard in the National Football League for the Tampa Bay Buccaneers, Pittsburgh Steelers and the Detroit Lions.  Tampa Bay, using their 4th ever first round draft pick, acquired Snell with the 22nd pick in the first round of the 1980 NFL Draft.  After four seasons in Tampa Bay in which he started 46 of 64 games he was traded to the Pittsburgh Steelers.  Once in Pittsburgh he immediately started 13 games.  In 1986, he suffered a blow out fracture to the right eye, in which a bone was lodged behind it.  He was then traded to the Detroit Lions where he retired.  During 1981, he and George Yarno alternated plays bringing in the offensive play call for Doug Williams.
+
+List of Atlanta Falcons first-round draft picks: The Atlanta Falcons, a professional American football team based in Atlanta, are part of the National Football Conference South Division.  They joined the National Football League (NFL) as an expansion team for the 1966 season and became the first NFL franchise in the Southeastern United States.  They first participated in the 1966 NFL Annual Player Selection Meeting, more commonly known as the NFL Draft.  In the NFL Draft, each NFL franchise annually seeks to add new players to its roster.  Teams are ranked in reverse order based on the previous season's record, with the worst record picking first, the second-worst picking second and so on.  The two exceptions to this order are made for teams that appeared in the previous Super Bowl; the Super Bowl champion always picks 32nd, and the Super Bowl loser always picks 31st.  Teams have the option of trading away their picks to other teams for different picks, players, cash, or a combination thereof.  Thus, it is not uncommon for a team's actual draft pick to differ from their assigned draft pick, or for a team to have extra or no draft picks in any round due to these trades.
+
+Question: Which NFL team chose a first round draft pick in 1995?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "team_name": {
+      "type": "string",
+      "description": "The name of the NFL team that made the draft pick."
+    },
+    "draft_year": {
+      "type": "integer",
+      "description": "The year of the NFL Draft."
+    },
+    "round_number": {
+      "type": "integer",
+      "description": "The round number of the draft pick."
+    },
+    "player_picked": {
+      "type": "string",
+      "description": "The name of the player chosen in that draft pick."
+    }
+  },
+  "required": [
+    "team_name",
+    "draft_year",
+    "round_number",
+    "player_picked"
+  ],
+  "additionalProperties": false
+}

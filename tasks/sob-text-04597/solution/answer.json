@@ -1,0 +1,8 @@
+{
+  "person_name": "John H. Ebersole",
+  "role": "radiologist",
+  "event_type": "autopsy",
+  "subject_of_autopsy": "John F. Kennedy",
+  "location_of_xrays": "Bethesda Naval Medical Center",
+  "date_of_autopsy": "22 November 1963"
+}

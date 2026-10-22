@@ -1,0 +1,16 @@
+{
+  "common_industry": "film",
+  "industry_category": "entertainment",
+  "entities_involved": [
+    {
+      "entity_name": "Fortissimo",
+      "role": "song",
+      "specific_connection_to_film": "The arrangements of the song were by Luis Bacalov, a film composer. The lyrics were written by Lina Wertmüller, a director and screenwriter who directed the film 'Rita the Mosquito'."
+    },
+    {
+      "entity_name": "Luis Bacalov",
+      "role": "composer",
+      "specific_connection_to_film": "He is an Argentine-born Italian composer of film scores, composed scores for Spaghetti Western films, and won an Academy Award for Original Score for 'Il Postino'."
+    }
+  ]
+}

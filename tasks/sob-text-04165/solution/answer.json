@@ -1,0 +1,18 @@
+{
+  "destruction_event": {
+    "day": 11,
+    "month": "September",
+    "year": 2001,
+    "event_name": "September 11 attacks"
+  },
+  "developer_involved": {
+    "name": "Larry Silverstein",
+    "role": "businessman and developer"
+  },
+  "destroyed_buildings_developed_by_silverstein": [
+    {
+      "building_name": "7 World Trade Center (original structure)",
+      "location": "Lower Manhattan"
+    }
+  ]
+}

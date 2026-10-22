@@ -1,0 +1,16 @@
+{
+  "actor_name": "Chris Tucker",
+  "film_appearances": [
+    {
+      "title": "Dead Presidents",
+      "type": "film",
+      "character_name": "unknown"
+    },
+    {
+      "title": "Rush Hour film series",
+      "type": "film_series",
+      "character_name": "Detective James Carter"
+    }
+  ],
+  "common_film_series_count": 2
+}

@@ -1,0 +1,13 @@
+{
+  "person_of_interest": {
+    "name": "Arthur Samuel Drakeford",
+    "birth_year": 1878,
+    "role_in_airline_establishment": "responsible for the establishment of the former domestic carrier Trans Australia Airlines"
+  },
+  "established_airline_details": {
+    "name": "Trans Australia Airlines",
+    "merger_partner": "Qantas",
+    "merger_year": 1992
+  },
+  "answer_birth_year": 1878
+}

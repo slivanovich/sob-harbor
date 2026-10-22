@@ -1,0 +1,19 @@
+{
+  "author_name": "Zadie Smith",
+  "author_nationality": "English",
+  "author_professions": [
+    "novelist",
+    "essayist",
+    "short-story writer"
+  ],
+  "royal_society_of_literature_fellowship": {
+    "is_fellow": true,
+    "year_elected": 2002
+  },
+  "tv_series_details": {
+    "title": "White Teeth",
+    "year_released": 2002,
+    "number_of_parts": 4,
+    "based_on_novel_title": "White Teeth"
+  }
+}

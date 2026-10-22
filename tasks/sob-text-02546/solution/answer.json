@@ -1,0 +1,14 @@
+{
+  "album_name": "Mr. Davis",
+  "guest_artist": {
+    "professional_name": "The Weeknd",
+    "real_name": "Abel Makkonen Tesfaye",
+    "nationality": "Canadian",
+    "roles": [
+      "singer",
+      "songwriter",
+      "record producer"
+    ]
+  },
+  "is_featured_on_album": true
+}

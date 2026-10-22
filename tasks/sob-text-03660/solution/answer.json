@@ -1,0 +1,26 @@
+{
+  "person_names": [
+    "Anders Morgenthaler",
+    "Max Neufeld"
+  ],
+  "common_profession": "film director",
+  "individuals_professions": [
+    {
+      "name": "Anders Morgenthaler",
+      "professions": [
+        "comics artist",
+        "children's book author",
+        "animator",
+        "film director"
+      ]
+    },
+    {
+      "name": "Max Neufeld",
+      "professions": [
+        "film director",
+        "actor",
+        "screenwriter"
+      ]
+    }
+  ]
+}

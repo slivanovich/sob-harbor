@@ -1,0 +1,15 @@
+{
+  "entity_name": "Reign of Fire",
+  "entity_type": "video game",
+  "based_on_film": {
+    "film_title": "Reign of Fire",
+    "film_release_year": 2002,
+    "film_genre": "post-apocalyptic fantasy",
+    "film_director": "Rob Bowman"
+  },
+  "game_details": {
+    "game_genre": "action-adventure",
+    "game_release_year": 2002,
+    "developer": "Kuju Entertainment"
+  }
+}

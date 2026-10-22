@@ -1,0 +1,11 @@
+{
+  "state_route_number": 37,
+  "state_route_location": "Florida",
+  "county_containing_majority": {
+    "name": "Polk County",
+    "state": "Florida",
+    "largest_city": "Lakeland",
+    "county_seat": "Bartow",
+    "population_2010_census": 602095
+  }
+}

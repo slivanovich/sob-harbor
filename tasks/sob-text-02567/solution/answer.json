@@ -1,0 +1,8 @@
+{
+  "city_name": "Addu City",
+  "city_description": "a city in Maldives that consists of the inhabited islands of the southernmost atoll of the archipelago",
+  "convention_centre": {
+    "name": "Equatorial Convention Centre",
+    "location_island": "Hithadhoo"
+  }
+}

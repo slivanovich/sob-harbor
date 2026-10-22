@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Nobukazu Takemura: Nobukazu Takemura (竹村延和 "Takemura Nobukazu") is a Japanese musician and artist whose style has run from jazz to house to drum and bass to chamber music to electronic glitch within less than a decade.  Born in Hirakata, Osaka in August 1968, he became interested in music at a young age by listening to the radio, and began to make music at home with a tape recorder and keyboard.  During high school, after a record store job that exposed him to jazz and hip hop, he had regular gigs in the clubs of Osaka and Kyoto as a battle DJ before launching his music career.
+
+Stomp Out Loud: Stomp Out Loud is a 1997 musical produced by HBO that featured the Brighton, UK and Manhattan-based dance troupe known as Stomp.  The film is 44 minutes long and provides footage from the Broadway performances as well as scenes shot solely for the film.  The film transforms ordinary objects and moments to make music in an unexpected way.  There is hardly any dialogue in the film, but the movement of the actors display the unspoken words.  The location of the scenes vary from the inside of a truck, under a bridge, the streets on a rainy day, the kitchen of a restaurant, and in the air with the actors suspended.  The objects used to make the music vary from basketballs, broomsticks, socks, and trash cans.
+
+Christopher Janney: Christopher Janney (born 1950) is an American composer/artist/architect known for his work on the interrelation of architecture and music.  Sometimes he attempts to make architecture more like music as in his sound sculptures titled "Urban Musical Instruments" of which "Soundstair" (musical stairs)and "Sonic Forest" are examples.  Other times, he develops performance projects which make music more like architecture as in his "Physical Music" series which includes "HeartBeat," a piece danced by Mikhail Baryshnikov.  Much of Janney's permanent work has sought to create "permanent participatory soundworks for public spaces," including installations for airports in Dallas, Boston, Miami and Sacramento, Atlanta and the New York City Subway.
+
+Let's Make Music: Let's Make Music is a 1941 musical starring Bob Crosby and written by Nathanael West.  The songs in "Let's Make Music" include the classic "Big Noise from Winnetka".
+
+Archive (band): Archive are a musical group based in London, England, whose music spans electronic, trip hop, avant-garde, post-rock and progressive rock.  Over their twenty-year history, the band has released ten studio albums and enjoyed established success throughout Europe, while remaining little-known in their native Britain.
+
+Alexis Barba: She trained Make Music For Me, a thoroughbred horse which finished fourth in the 2010 Kentucky Derby.  Make Music For Me is known to have late speed which he used to move up from twentieth place.  This ability to close (late speed) was displayed earlier in the year in winning the 2010 Pasadena Stakes at Santa Anita Racetrack.
+
+Alexandra Chernitsyna: Alexandra Chernitsyna (born 1982 in Kaliningrad) is a German-Russian flute and piano player.  She also teach music to kids.  Alexandra Chernitsyna was born and raised in Russian port, Kaliningrad and began to make music with flute and piano when ahe was 6.  As Alexandra Chernitsyna was 12, she chose her musical career and completed in 2001 to study music at the Conservatory Rachmaninov with a major in flute.  she get her first degree in 4 years old.  Alexandra Chernitsyna taught at private schools and urban music landscape and recorder.
+
+Jarring Effects: Jarring Effects is a French musical label based in Lyon, south-east of France.  Jarring Effects encourages musicians to be independent, produce the music themselves, be creative and to make music they enjoy rather than trying to make it commercially viable.  It was created on an associative basis and remains an association.
+
+Scarling.: Scarling.  is an American noise pop band from Los Angeles, whose core members are Jessicka and Christian Hejnal-Addams.  The band formed in 2002.  They have released two albums, "Sweet Heart Dealer" and "So Long, Scarecrow".
+
+Musical acoustics: Musical acoustics or music acoustics is a branch of acoustics concerned with researching and describing the physics of music – how sounds are employed to make music.  Examples of areas of study are the function of musical instruments, the human voice (the physics of speech and singing), computer analysis of melody, and in the clinical use of music in music therapy.
+
+Question: Are both "Scarling." and "Archive" groups which make music?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "question_entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the entity mentioned in the question."
+          },
+          "is_music_group": {
+            "type": "boolean",
+            "description": "True if the entity is described as a music group or makes music, false otherwise."
+          }
+        },
+        "required": [
+          "name",
+          "is_music_group"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Details for each entity mentioned in the question."
+    },
+    "all_entities_make_music": {
+      "type": "boolean",
+      "description": "The final answer to whether all specified entities are groups that make music."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "A brief explanation of why the final answer is true or false based on the context."
+    }
+  },
+  "required": [
+    "question_entities",
+    "all_entities_make_music",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "483e7eafa76d0721c7e590f2c4cd4b0960494d49bf569a906308c08eebd0e8dd",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae67d405542996d980e7b8a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Eon",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "South Park: The Stick of Truth: South Park: The Stick of Truth is a 2014 role-playing video game developed by Obsidian Entertainment in collaboration with South Park Digital Studios and published by Ubisoft.  Based on the American adult animated television series \"South Park\", the game follows the New Kid, who has moved to the eponymous town and becomes involved in an epic role-play fantasy war involving humans, wizards, and elves, who are fighting for control of the all-powerful Stick of Truth.  Their game quickly escalates out of control and brings them into conflict with aliens, Nazi zombies, and gnomes, threatening the entire town with destruction.\n\nKingdom Under Fire II: Kingdom Under Fire II is a video game set in a high fantasy setting developed by Blueside which merge real-time strategy (RTS), role-playing game (RPG) and massively multiplayer online game (MMO) genres - the game is to have a single player, and online multiplayer mode.  The game follows on chronologically from \"\", and is the first RTS game set in the \"Kingdom Under Fire\" universe to be released since the 2005 \"\".\n\nAbaza (TV series): Abaza is an Egyptian television series that aired for one season on Sada Elbalad TV in 2014.  \"Abaza\" is set in a fictitious world where humans and monsters live next to each other in harmony.  The monsters in \"Abaza\" are not evil and are portrayed in a caricatured manner.\n\nEon (role-playing game): Eon is a fantasy role-playing game set in the fictitious world of Mundana.  It's developed and published by Swedish company Helmgast.  Eon is the Swedish word for Aeon.\n\nWarhammer Fantasy Roleplay: Warhammer Fantasy Roleplay or Warhammer Fantasy Role-Play (abbreviated to WFRP or WHFRP) is a role-playing game set in the \"Warhammer Fantasy\" setting.  Over the years, it has been through a number of phases and different publishers, most of which were related in some way to Games Workshop.\n\nThe Caine Mutiny (film): The Caine Mutiny is a 1954 American film.  A fictional Navy drama set in the Pacific during World War II, it was directed by Edward Dmytryk and produced by Stanley Kramer, and stars Humphrey Bogart, José Ferrer, Van Johnson, and Fred MacMurray.  The film is based on \"The Caine Mutiny,\" the 1951 Pulitzer Prize-winning novel written by Herman Wouk.  It depicts the events on board a fictitious World War II U.S. Navy destroyer minesweeper and a subsequent court-martial for mutiny.\n\nLorien Trust: Lorien Trust (sometimes abbreviated to LT) is the trading name of Merlinroute ltd., a Live Action Role-Play organisation that runs LARP events at Locko Park, Derby, UK.  It runs some of Britain's largest Live Roleplay events, attracting around 1,200 to 1,500 to its first three events each year and around 2,500 to 3,000 people to The Gathering.  It was formed in 1992, originally as a charitable organisation (hence \"Trust\" in the name).  In 1995 it became Merlinroute ltd trading as Lorien Trust.  The Lorien Trust has a well established game world, and uses its own set of LARP rules, known simply as the \"Lorien Trust rules system\".  In addition to the four events held per year, the Lorien Trust also sanctions many smaller events to use the same system and game world.\n\nMetagaming: Metagaming is any strategy, action or method used in a game which transcends a prescribed ruleset, uses external factors to affect the game, or goes beyond the supposed limits or environment set by the game.  Another definition refers to the game universe outside of the game itself.  In role-play situations, for example, it would mean to tell somebody some information about another player or something they are doing that the said player's character should not intrinsically know about.  In simple terms, it is the use of out-of-game information or resources to affect one's in-game decisions.\n\nPretty Pretty Princess: The board game Pretty Pretty Princess is a game for young children (ages five and up) with a fantasy/role-play theme.  This game does not sell in stores anymore.\n\nNeogames: Neogames is a Swedish role-playing game publisher situated in Gothenburg.  They were after the re-creation of Target Games the largest RPG publisher in the country.  Neogames are known for developing the three first editions of the fantasy RPG license \"Eon\", a role-playing game set in a fairly standard fantasy setting with elves, dwarves and magic.",
+    "question": "What fantasy role-play game set in the fictitious world of Mundana was created by Neogames?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "game_name": {
+          "type": "string",
+          "description": "The name of the fantasy role-play game."
+        },
+        "game_type": {
+          "type": "string",
+          "description": "The genre or type of the game."
+        },
+        "setting_world": {
+          "type": "string",
+          "description": "The name of the fictitious world where the game is set."
+        },
+        "developer_info": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the company that developed the game."
+            },
+            "role": {
+              "type": "string",
+              "description": "The specific role of the developer in creating the game (e.g., 'developed first three editions')."
+            }
+          },
+          "required": [
+            "name",
+            "role"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "game_name",
+        "game_type",
+        "setting_world",
+        "developer_info"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "game_name": "Eon",
+      "game_type": "fantasy role-playing game",
+      "setting_world": "Mundana",
+      "developer_info": {
+        "name": "Neogames",
+        "role": "developed the three first editions"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

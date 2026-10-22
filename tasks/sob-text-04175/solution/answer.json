@@ -1,0 +1,8 @@
+{
+  "movie_title": "Breaking Dawn",
+  "character_name": "Bella Swan",
+  "husband_character": {
+    "name": "Edward Cullen",
+    "actor_name": "Robert Pattinson"
+  }
+}

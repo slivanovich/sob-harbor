@@ -1,0 +1,16 @@
+{
+  "actor_details": {
+    "name": "Rick Moranis",
+    "birth_date": "1953-04-18",
+    "nationality": [
+      "Canadian-American"
+    ]
+  },
+  "animated_series": {
+    "main_title": "Gravedale High",
+    "alternative_title_with_actor": "Rick Moranis in Gravedale High",
+    "premiere_year": 1990,
+    "number_of_episodes": 13
+  },
+  "reasoning": "Rick Moranis is a Canadian-American actor born on April 18, 1953. The animated series 'Gravedale High' is also known as 'Rick Moranis in Gravedale High', directly incorporating his name."
+}

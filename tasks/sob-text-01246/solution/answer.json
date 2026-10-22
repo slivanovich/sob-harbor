@@ -1,0 +1,24 @@
+{
+  "compared_individuals": [
+    {
+      "name": "Nikos Kazantzakis",
+      "job_experiences": [
+        "writer",
+        "poet",
+        "philosopher"
+      ],
+      "number_of_distinct_experiences": 3
+    },
+    {
+      "name": "Thomas Sigismund Stribling",
+      "job_experiences": [
+        "writer",
+        "lawyer"
+      ],
+      "number_of_distinct_experiences": 2
+    }
+  ],
+  "comparison_metric": "diversity of job experiences",
+  "person_with_more_diverse_experiences": "Thomas Sigismund Stribling",
+  "diversity_reasoning": "While Nikos Kazantzakis had three distinct roles (writer, poet, philosopher), these are all closely related within the literary and academic fields. Thomas Sigismund Stribling's roles as a writer and a lawyer represent two distinct professional domains, making his experiences more diverse."
+}

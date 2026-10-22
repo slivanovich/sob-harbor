@@ -1,0 +1,18 @@
+{
+  "band_name": "Vixen",
+  "album_name": "Live & Learn",
+  "album_type": "studio album",
+  "album_number": 4,
+  "band_origin": {
+    "country": "American",
+    "city_state": "Los Angeles, California"
+  },
+  "genres": [
+    "hard rock",
+    "rock"
+  ],
+  "commercial_success_period": "late 1980s and early 1990s",
+  "associated_scenes": [
+    "Los Angeles, California glam metal scene"
+  ]
+}

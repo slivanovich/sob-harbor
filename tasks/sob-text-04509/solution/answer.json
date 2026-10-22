@@ -1,0 +1,12 @@
+{
+  "person_name": "Will Rogers",
+  "is_friend_of_bill_hanley": true,
+  "professions": [
+    "stage and motion picture actor",
+    "vaudeville performer",
+    "American cowboy",
+    "humorist",
+    "newspaper columnist",
+    "social commentator"
+  ]
+}

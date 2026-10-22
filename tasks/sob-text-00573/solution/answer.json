@@ -1,0 +1,12 @@
+{
+  "university_name": "University of Missouri",
+  "home_stadium_name": "Faurot Field at Memorial Stadium",
+  "bowl_game_details": {
+    "bowl_game_name": "Texas Bowl",
+    "year": 2009,
+    "opponent_team": "Navy Midshipmen",
+    "university_score": 13,
+    "opponent_score": 35,
+    "outcome": "loss"
+  }
+}

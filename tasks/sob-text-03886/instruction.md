@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Sean Payton: Patrick Sean Payton (born December 29, 1963) is an American football coach and former player who is the current head coach of the New Orleans Saints of the National Football League (NFL).  Payton was a quarterback at Naperville Central High School and Eastern Illinois University and played professionally in 1987 and 1988.  He began his coaching career as offensive assistant for San Diego State University and had several assistant coaching positions on college and NFL teams before being named as the tenth full-time coach in Saints history in 2006.  On March 23, 2016, Payton agreed to a 5 years contract extension with the Saints.
+
+New Zealand Messenger Championship: The New Zealand Messenger Championship is a Group One event for 4 and 5 year old pacing horses in New Zealand.  Run at Alexandra Park in early May, it has traditionally been the most prestigious 4 year-old race in New Zealand, and a key guide to feature races in the following season like the New Zealand Trotting Cup.  However, from 2013 5 year olds will be eligible to compete, as will be the case will all other traditional 4 year old feature races in New Zealand.
+
+1970–71 Kentucky Colonels season: The 1970–71 Kentucky Colonels season was the fourth season of the Colonels in the American Basketball Association.  University of Kentucky star Dan Issel was signed by the Colonels.  Issel was given a 10-year contract worth $1.4 million, while playing all but one game in the whole season, leading to him being named Rookie of the Year, alongside averaging 29.9 points and 13.2 rebounds per game during the season.  Despite a 10-5 record, Rhodes was fired during the season.  After having business manager Alex Groza coach the team for 2 games, Frank Ramsey was hired to coach the rest of the season.  In the Semifinals, the Colonels beat The Floridians 4 games to 2.  In the Eastern Division Finals, they beat the Virginia Squires 4 games to 2.  In the ABA Finals, they lost to the Utah Stars in seven games.
+
+Marcos Rogério Oliveira Duarte: Born in Quaraí, Rio Grande do Sul, Marcos Rogério started his career with RS Futebol Clube, which he played in 2003 Campeonato Brasileiro Série C.  He signed a new 3-year contract in August 2004.  He then loaned to Juventude and played a few matches at 2004 Campeonato Brasileiro Série A.  In July 2005 he was signed by Grêmio in 2-year deal, which he finished as the champion of 2005 Campeonato Brasileiro Série B.  He also extended his contract with RS until 30 June 2009 in August 2005.  He was released by Grêmio in February 2007 and joined Esporte Clube Guarani.  After the end of 2007 Campeonato Gaúcho, he left for Taquaritinga in July, agreed a contract until 30 December 2008.  He played for the team at 2007 Copa Energil C.
+
+Production flexibility contract: In the United States, a production flexibility contract is a 7-year contract covering crop years 1996-2002, authorized by the 1996 farm bill (P.L. 104-127) between the Commodity Credit Corporation (CCC) and farmers, which makes fixed income support payments.  Farmers were given production flexibility and diversification options on their contract acres not previously allowed on base acres.  Each farm’s total payment was the payment rate times the payment quantity for participating base acres.  In exchange for annual fixed payments, the owner or operator agreed to comply with the applicable conservation plan for the farm, the wetland protection requirements currently in law, and the constraints on growing fruits and vegetables on contract acres.  Land enrolled in a contract had to be maintained in an agricultural or related activity.  The law stated that not more than $35.6 billion would be paid over the 7-year period, in declining annual amounts from $5.3 billion in FY1996 to $4.0 billion in FY in 2002.  The annual payments were allocated among commodities similar to historical deficiency payments, with 53.6% going to feed grains, 26.3% for wheat, 11.6% for upland cotton, and 8.5% for rice.  Target prices and deficiency payments, authorized in the 1973 farm bill, were eliminated.  The 2002 farm bill (P.L. 101-171, Sec. 1105) replaced this 7-year contract with an annual producer agreement (contract) required for participation in the Direct and Counter-cyclical Program (DCP).
+
+2008 Buffalo Bulls football team: The 2008 Buffalo Bulls football team represented the University at Buffalo in the 2008 NCAA Division I FBS football season.  2008 was a season of firsts for the Bulls.  With a 40–34 double overtime win over Bowling Green on November 21, the Bulls won the MAC East division and gained a berth to the MAC Championship for the first time.  The Bulls won their first-ever conference championship by beating #12 ranked and previously undefeated Ball State, 42–24 on December 5.  The win was also Buffalo's first-ever against a ranked opponent and ensured a winning season for the first time since Buffalo returned to the top-level of college football in 1999.  They earned an invitation to the International Bowl at the Rogers Centre in Toronto, their first trip to a bowl game in their history, exactly fifty years after the Bulls turned down their only previous bowl bid, to the Tangerine Bowl, when they were told by the bowl's organizers that their two black players would not be allowed to play.  The Bulls also received their first-ever votes in the "USA Today" Coaches' Poll after winning the MAC Championship when UTEP coach Mike Price voted the Bulls #23 on his ballot.  On December 16, Buffalo announced head coach Turner Gill agreed to a contract extension and a raise.  Gill's contract now runs through 2013 and makes him one of the highest-paid coaches in the MAC.  The ending of the season was bittersweet as the Bulls lost to the Connecticut Huskies 38-20 in the International Bowl, but the Bulls were able to give about two dozen members of the 1958 Bulls team the bowl experience they missed by inviting them to be honorary captains for the game.
+
+Stuart Jones (rugby league): Stuart Jones (born 7 December 1981) is a professional rugby league player for Castleford Tigers.  He has previously played for Huddersfield Giants, St. Helens and Wigan Warriors.  His normal position is second row, Though he can also operate at Loose Forward.  Stuart was awarded a 2-year contract extension by Castleford in June 2009 tying him to the club until the end of the 2011 season.
+
+2009 New Orleans Saints season: The 2009 New Orleans Saints season was the franchise's 43rd season in the National Football League (NFL).  It was the most successful season in franchise history, culminating with a victory in Super Bowl XLIV.  The Saints recorded a franchise record 13 regular season victories (later tied in the 2011 season), an improvement on their 8–8 record and fourth-place finish in the National Football Conference (NFC)'s southern division from 2008.  As a result, the Saints advanced to the playoffs for the first time since 2006.  For head coach Sean Payton, this was his fourth season with the franchise, commanding a club overall record of 36–24.
+
+Highest-paid NBA players by season: The highest-paid NBA players by season over the past twelve seasons have received contracts with salaries noted in the twenty-million-dollar range.  In this twelve-year span, Kevin Garnett received $28,000,000, which was the highest salary payment of any NBA player, during the 2003–04 season.  Garnett has been the highest-paid NBA player per year in seven of the past twelve NBA seasons.  Michael Jordan was the first NBA player to sign a contract worth over thirty million dollars in a season.  During the 1997–98 season, Jordan earned $33,000,000.  Kobe Bryant become just the second player to reach this milestone when the 2013–14 season began.  LeBron James became the third in the 2016–17 season.  Stephen Curry became the first player to eclipse $40-Million per year when he signed a record 5 year contract worth $201-Million in 2017.
+
+2009 Buffalo Bills season: The 2009 Buffalo Bills season was the 50th Professional Football season for the original American Football League team, and its 40th in the NFL.  The Bills were unable to improve upon their third consecutive 7–9 regular season record (2006, 2007 and 2008) and failed to make the playoffs for the 10th consecutive year, the longest standing playoff drought in the NFL.  Dick Jauron returned as head coach for a fourth season, the first Bills coach since Marv Levy to receive a contract extension beyond three years.  He was fired on November 17 after a 3–6 start and replaced on an interim basis by defensive coordinator Perry Fewell, who was fired at the end of the season, but not before starting Ryan Fitzpatrick for the rest of the season.
+
+Question: Who agreed to a 5 year contract extension with a team than in 2009 was in his fourth season with that franschise?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The full name of the person."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The name of the team the person is associated with."
+    },
+    "contract_details": {
+      "type": "object",
+      "properties": {
+        "contract_length_years": {
+          "type": "integer",
+          "description": "The duration of the contract in years."
+        },
+        "contract_type": {
+          "type": "string",
+          "description": "The type of contract, e.g., 'extension' or 'new_contract'."
+        },
+        "agreement_year": {
+          "type": "integer",
+          "description": "The year the contract was agreed upon."
+        }
+      },
+      "required": [
+        "contract_length_years",
+        "contract_type",
+        "agreement_year"
+      ],
+      "additionalProperties": false
+    },
+    "season_information": {
+      "type": "object",
+      "properties": {
+        "season_year": {
+          "type": "integer",
+          "description": "The specific season year being referenced."
+        },
+        "season_number_with_franchise": {
+          "type": "integer",
+          "description": "The sequential number of the season the person was with the franchise during the referenced year."
+        }
+      },
+      "required": [
+        "season_year",
+        "season_number_with_franchise"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "team_name",
+    "contract_details",
+    "season_information"
+  ],
+  "additionalProperties": false
+}

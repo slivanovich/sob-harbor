@@ -1,0 +1,14 @@
+{
+  "club_name": "Spearmint Rhino",
+  "founding_location": {
+    "city": "Upland",
+    "state": "California",
+    "country": "United States"
+  },
+  "countries_of_operation": [
+    "United States",
+    "United Kingdom",
+    "Australia"
+  ],
+  "was_lvda_member": true
+}

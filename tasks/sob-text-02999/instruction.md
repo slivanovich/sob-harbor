@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Deepali Kishore: Deepali Kishore (: दीपाली किशोर ) (born 6 January 1989 in Patna, Bihar) is an Indian singer.  She was a finalist of "Indian Idol 3".  She also appeared along with Bollywood actor John Abraham and performed a group song from film "Goal".  She has sung a song for movie "Don Muthuswami".  The song is "I Love You", composed by Anu Malik.  She has hosted the auditions and the Roobaroos with Meiyang Chang in "Indian Idol" season 4.  She has hosted a music show "" on DD National, with Abhas Joshi.  Deepali is acting in the Bhojpuri soap "Badki Malkayen" on Mahua TV.
+
+Jaspreet Jasz: Jaspreet Jasz (born Jaspreet Singh Kohli in New Delhi, India) is an Indian singer whose vocals have been featured in Bollywood and Telugu cinema, as well as advertisement jingles.  He won recognition through the music reality television series "Indian Idol".
+
+Anweshaa: Anweshaa (born Anweshaa Dattagupta; 15 December 1993, Changed Her Name to Anwesshaa) is an Indian singer who made her presence felt in the Indian music scene at the age of 13 through the reality show "Amul STAR Voice of India", Chhote Ustaad.  Anweshaa was runner-up in the finals, where the outcome was solely decided on the number of votes polled.  She was the favorite of judges throughout the contest and had the sole distinction of winning a Sarvottam for all her performance.  Anwesha is known for starring in Amul Music ka maha muqqabla at the age of 16.  She not only had the sole distinction of '6 Singer of the Day awards' for seven performances, but also won the 'Singer of the Series award'.  In spite of being the youngest in the show, she defeated the winners and participants of various shows (Indian idol, JJWS, SVOI, SAREGAMAPA) who participated in 'music ka maha muqqabla' and received the award.  She was hugely applauded in this show for her flawless and rocking performances, which helped her team to the finals.  Also one of the opposite teams captain in the show, Shankar Mahadevan said that '"she was the best singer that ever emerged from a reality show after Shreya Ghoshal in the 90s".  She has also made her debut in commercial playback singing in a Hindi movie Golmaal Returns.  Anweshaa has sung the song "Tha Karke", which is said to be the most expensive song to ever be shot in Bollywood.  Apart from few Bollywood songs, She has sung many Bengali songs, albums, two Tamil songs and one Telugu song for the movie (Uu Kodathara?  Ulikki Padathara?)  and a Telugu album song to her credit.  Anwesha made her Kannada debut with the film Santheyalli Nintha Kabira in 2016.  She also appeared in Coke Studio aside Papon.  Along with other awards, she won "Best female playback singer" award for Bengali song in Tele Cine Awards 2011 (nominations included Shreya Ghoshal, Richa Sharma, June Banerjee).
+
+Muskurane: "Muskurane" (English: Smile) is a romantic Hindi song from the 2014 Bollywood film, "CityLights".  Composed by Jeet Ganguly, the song is sung by Arijit Singh, with lyrics penned by Rashmi Singh.  The music video of the track features actors Rajkummar Rao, Patralekha and Arijit Singh.
+
+Antara Mitra: Antara Mitra (born 10 July 1987) is an Indian singer.  Mitra came to limelight when she became a contestant in the popular singing reality show "Indian Idol 2" in 2006. Mitra become more well-known and got recognition after the release of her duets Gerua and Janam Janam with Arijit Singh.  She also received significant amount of Indian media coverage for her singing of the Dilwale songs.
+
+Phir Bhi Tumko Chaahunga: "Phir Bhi Tumko Chaahunga" (English: "I will still love you") is a song from the Indian film "Half Girlfriend".  Picturised on Shraddha Kapoor and Arjun Kapoor, the song has been sung by Arijit Singh and Shashaa Tirupati.  The music of the song is composed by Mithoon and the lyrics are penned by Manoj Muntashir.  Reprise version of the track is sung by Arijit Singh titled, "Pal Bhar (Chaahunga Reprise)", and also another version titled, "Phir Bhi Tumko Chaahungi" is sung by Shraddha Kapoor along with the instrumental "Half Girlfriend (Love Theme)".
+
+Yashraj Kapil: Yashraj Kapil is an Indian singer from Faridabad.  He is the winner of the reality show "Sitaron Ko Choona Hai", and also participated in the music reality shows "Sur Kshetra" and "Indian Idol 5".
+
+Asees Kaur: Asees Kaur (born 26 September 1988) is an Indian playback singer who has participated in various singing reality shows like Indian Idol and Awaz Punjab Di.
+
+Bolna (song): "Bolna" (English: ""Please say"") is a duet song sung by Arijit Singh and Asees Kaur.  The music is composed by Tanishk Bagchi and the lyrics are penned by Dr. Devender Kafir.  It is one of the songs from the soundtrack of the film "Kapoor & Sons".  The song has been described as beautiful, soulful and melodious.
+
+Soch Na Sake: "Soch Na Sake" (English: ""Can't think of"") is a song from the 2016 Indian film "Airlift", an adapted version of Hardy Sandhu's ""Soch"", sung by Amaal Mallik, Arijit Singh and Tulsi Kumar.  The lyrics for the song is written by Kumaar and the music is composed by Amaal Mallik.  The song is a melodious mixture of Hindi and Punjabi lyrics.  There is also a solo version of the song, sung by Arijit Singh.
+
+Question: Which Indian singer participated in Indian Idol and also sung a duet with Arijit Singh?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "singer_name": {
+      "type": "string",
+      "description": "The name of the Indian singer."
+    },
+    "participated_in_indian_idol": {
+      "type": "boolean",
+      "description": "Indicates if the singer participated in the 'Indian Idol' reality show."
+    },
+    "duet_with_arijit_singh": {
+      "type": "object",
+      "description": "Details about a duet song performed by the singer with Arijit Singh.",
+      "properties": {
+        "song_title": {
+          "type": "string",
+          "description": "The title of the duet song."
+        },
+        "film_name": {
+          "type": "string",
+          "description": "The name of the film the song is from."
+        }
+      },
+      "required": [
+        "song_title",
+        "film_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "singer_name",
+    "participated_in_indian_idol",
+    "duet_with_arijit_singh"
+  ],
+  "additionalProperties": false
+}

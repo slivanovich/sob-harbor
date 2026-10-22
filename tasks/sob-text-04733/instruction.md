@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Kennebec Journal: The Kennebec Journal is a seven-day morning daily newspaper published in Augusta, Maine.  It is owned by MaineToday Media, which also publishes the state's largest newspaper, the "Portland Press Herald".
+
+Journal-Gazette Building: The Journal-Gazette Building is a historic commercial building located in downtown Fort Wayne, Indiana.  It was designed by noted Fort Wayne architect Charles R. Weatherhogg and built in 1927-1928.  It is a four-story, 13 bay, red brick building with limestone trim in the Chicago Style.  The seven central bays feature round arch window openings.  For many years the building housed "The Journal Gazette" newspaper plant.
+
+Jackson Tower: Jackson Tower, formerly The Oregon Journal Building is a 12-story, 57.3 m glazed terra-cotta historic office building in downtown Portland, Oregon.  Located on the corner of Broadway and Yamhill Streets, it enjoys a prominent location adjacent to Pioneer Courthouse Square.
+
+Somerville Journal Building: The Somerville Journal Building is a historic commercial building at 8-10 Walnut Street in Somerville, Massachusetts.  It was built in 1894 as offices and the printing facility for the "Somerville Journal", a weekly publication that continues to exist as part of the "Wicked Local" franchise of GateHouse Media.  The building, a somewhat typical example of late 19th-century commercial architecture, was listed on the National Register of Historic Places in 1989.
+
+Hometown Journal: The Hometown Journal is a weekly newspaper published in Struthers, Ohio and distributed nationally.  It is owned by The Hometown Journal Publishing Co., LLC.  The paper has had many transformations since its foundation at the turn of the 20th century, having once been known as the "Lowellville Journal" and most recently the "Journal".  The paper is often simply referred to as "The Journal" and specializes in community events of Struthers, Ohio, Campbell, Ohio, Lowellville, Ohio and Coitsville, Ohio, though it is known to feature news from much of Mahoning County, Ohio, the rest of the state, and parts of Western Pennsylvania.  Its name was changed to the "Hometown Journal" in October 2006 after current publisher and owner Nancy Johngrass took control of the publication.  Between the "Struthers Journal" and the "Hometown Journal", subscribers missed only a few weeks of publication.
+
+Seattle Daily Journal of Commerce: The Seattle Daily Journal of Commerce is a daily (six days per week) newspaper based in Seattle, Washington.  Specializing in business, construction, real estate, and legal news and public notices, it began publication in 1895 as the "Bulletin", later the "Daily Bulletin" and the "Seattle Daily Bulletin".  After merging with the "Times" in 1907 (an unrelated paper to today's "Seattle Times"), it published as the "Morning Times and Seattle Daily Bulletin" for a year before reverting to its old name.  It took the name "Daily Journal of Commerce" for the first time in 1919 as the "Daily Journal of Commerce and the Daily Bulletin", dropping the "Daily Bulletin" portion two years later.  "Seattle" was added to the paper's name in 1924.  From 1951 to 1956 the paper was published under the name "Seattle Daily Journal of Commerce and Construction Record", and then as the "Seattle Daily Journal of Commerce and Northwest Construction Record" until 1989, when it once again became simply the "Seattle Daily Journal of Commerce".  The Seattle Weekly ran a profile in 2007 about the newspaper and how it is adapting to the internet age.
+
+Wirgman Building: The Wirgman Building was an early 19th-century Federal-style commercial and residential building located on East Main Street (U.S. Route 50) in Romney, West Virginia.  Following its completion around 1825 to serve as the Romney branch office for the Bank of the Valley of Virginia, the Wirgman Building at various times served as a location for every subsequent bank established in Romney, to include the Bank of Romney and the First National Bank of Romney.  During the American Civil War, the building was used as a military prison.  For a time, the Wirgman Building's second floor housed the offices and printing plant of the "Hampshire Review" newspaper.  By 1937, the ground floor of the Wirgman Building housed office and mercantile space, and the second floor was divided into apartments.  After the Wirgman Building sustained damage in a fire in 1964, it was demolished in 1965 to make way for the construction of the new Bank of Romney headquarters building.  Prior to its demolition, the Wirgman Building was photographed and documented by the National Park Service's Historic American Buildings Survey in 1937.
+
+Evansville Journal News: Evansville Journal News, also known as the Citizens Bank Building-Evansville Journal Building, is a historic commercial building located in downtown Evansville, Indiana.  It was built in 1910, and is a two-story, Beaux-Arts style brick building with a limestone front.  The building was originally built to house a newspaper.
+
+Franklin Printing House: Franklin Printing House, also known as the Koza Building, is a historic building located in Iowa City, Iowa, United States.  It was built in 1856 expressly for the purposes of housing the "Iowa Capitol Reporter", a local newspaper named for when this was Iowa's capital city.  The newspaper's offices were located on the main floor, the composition room was on the second floor, and printing press was in the basement.  The "Iowa Capitol Reporter" was sold by the 1860s and the "Iowa City Republican" took over the building.  They moved out in the mid-1870s, and the building housed a series of saloons into the 1890s.  After it was occupied by a variety of businesses, the building housed John V. Koza's meat shop for about 40 years.  The three-story brick building is considered an excellent example of pre-Civil War commercial architecture in Iowa City.  The metal cornice across the top of the main facade dates from sometime prior to 1904.  The present storefront dates to a 1984 renovation, at which time the two cast iron columns were discovered.  The building was listed on the National Register of Historic Places in 1986.
+
+Journal Building (Augusta, Maine): The "Journal" Building (also known as the Gannett Building and Handley Hall) is a historic commercial building at 325-331 Water Street in downtown Augusta, Maine.  Built in 1899 to a design by Arthur G. Wing, it is a fine local example of commercial Renaissance Revival architecture.  It was for main years home to Augusta's leading newspaper, the "Kennebec Journal".  It was listed on the National Register of Historic Places in 1986.  It is now occupied by facilities of the University of Maine at Augusta.
+
+Question: What the name of the the owner of the newspaper which was housed in the Journal Building?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "building_name": {
+      "type": "string",
+      "description": "The name of the historic building."
+    },
+    "building_location": {
+      "type": "string",
+      "description": "The city and state where the building is located."
+    },
+    "newspaper_housed": {
+      "type": "string",
+      "description": "The name of the newspaper that was housed in the building."
+    },
+    "newspaper_owner": {
+      "type": "string",
+      "description": "The name of the owner of the newspaper."
+    }
+  },
+  "required": [
+    "building_name",
+    "building_location",
+    "newspaper_housed",
+    "newspaper_owner"
+  ],
+  "additionalProperties": false
+}

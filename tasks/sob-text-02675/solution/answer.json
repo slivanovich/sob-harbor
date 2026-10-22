@@ -1,0 +1,15 @@
+{
+  "book_one_details": {
+    "title": "The Fighting Prince of Donegal",
+    "media_type": "film",
+    "genre": "adventure film",
+    "is_adaptation": true,
+    "source_novel_title": "Red Hugh: Prince of Donegal"
+  },
+  "book_two_details": {
+    "title": "The Graveyard Book",
+    "media_type": "novel",
+    "genre": "children's fantasy novel"
+  },
+  "genre_comparison_statement": "The Fighting Prince of Donegal is an adventure film, while The Graveyard Book is a children's fantasy novel."
+}

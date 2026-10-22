@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Annie Duke: Anne LaBarr "Annie" Duke (née Lederer; September 13, 1965) is an American professional poker player and author.  She holds a World Series of Poker (WSOP) gold bracelet from 2004 and used to be the leading money winner among women in WSOP history (a title now held by Vanessa Selbst).  Duke won the 2004 World Series of Poker Tournament of Champions and the National Heads-Up Poker Championship in 2010.  She has written a number of instructional books for poker players, including "Decide to Play Great Poker" and "The Middle Zone", and she published her autobiography, "How I Raised, Folded, Bluffed, Flirted, Cursed, and Won Millions at the World Series of Poker", in 2005.
+
+Tristan Wade: Tristan Wade is an American professional poker player from Boynton Beach, Florida.  He won his first World Series of Poker bracelet at the 2011 World Series of Poker Europe.  In addition to a bracelet, 2011 saw Wade earn his first 3 World Series of Poker (WSOP) final tables, with two at the summer 2011 World Series of Poker before his fall bracelet in Europe.  Wade is also an instructor at Deepstacks University.  Wade is an alumnus of University of Central Florida where he earned a bachelor of science degree in psychology.  WSOP.com lists him as a resident of Boynton Beach, Florida, while Hendon mob claims he is from Orlando, Florida.  Wade made his first trip to Europe at the age of 26 in 2011 because of Black Friday, which had limited his options for play in the United States.
+
+World Series of Poker bracelet: The World Series of Poker (WSOP) bracelet is considered the most coveted non-monetary prize a poker player can win.  Since 1976, a bracelet has been awarded to the winner of every event at the annual WSOP.  Even if the victory occurred before 1976, WSOP championships are now counted as "bracelets".  During the first years of the WSOP only a handful of bracelets were awarded each year.  In 1990, there were only 14 bracelet events.  By 2000, that number increased to 24.  As the popularity of poker has increased during the 2000s, the number of events has likewise increased.  In 2011, 58 bracelets were awarded at the WSOP, seven at the World Series of Poker Europe (WSOPE), and one to the WSOP National Circuit Champion.  This brought the total number of bracelets awarded up to 959.  Five additional bracelets were awarded for the first time in April 2013 at the inaugural World Series of Poker Asia-Pacific (WSOP APAC) in Melbourne, Australia. .  In 2017, 74 for bracelets were awarded at the WSOP and an additional 11 will be awarded at the WSOPE in Czech Republic.
+
+Doyle Brunson: Doyle F. Brunson (born August 10, 1933) is an American poker player who has played professionally for over 50 years.  He is a two-time World Series of Poker (WSOP) Main Event champion, a Poker Hall of Fame inductee, and the author of several books on poker.
+
+David Baker (poker player, born 1986): David "Bakes" Baker (born October 17, 1986) is an American professional poker player who has won a World Series of Poker bracelet and appeared at four World Series of Poker final tables.  He also has a Spring Championship of Online Poker (SCOOP) championship.  Baker currently has over US$2 million in tournament winnings.  In order to avoid confusion with David "ODB" Baker, he is listed in the World Series of Poker (WSOP) database by the name "David Bakes Baker" and listed at "Bluff Magazine" as "David (Bakes) Baker".  Baker, who is from Bloomfield Hills, Michigan, attended Michigan State University before taking up poker.
+
+Sam Stein: Samuel "Sam" Stein (born January 11, 1988) is an American professional poker player from Los Angeles who lives in Henderson, Nevada.  He won his first World Series of Poker bracelet at the 2011 World Series of Poker where he made two final tables and three in the money finishes.  In both the 2010 and 2011 World Series of Poker, he finished in the money in two $10,000 Championship events, with one of them being the Pot Limit Texas hold 'em championship event each year.  Of his nine World Series of Poker (WSOP) cashes, his last five are in pot limit events.
+
+World Poker Tour bracelet: The World Poker Tour bracelet is the World Poker Tour's (WPT) answer to the World Series of Poker (WSOP) bracelet.  Beginning in 1976, the WSOP started awarding bracelets to winners of WSOP events.  The WSOP bracelet has become synonymous with greatness.  "It's impossible to overstate the value of a World Series of Poker gold bracelet to anyone who takes the game seriously," stated World Series of Poker Commissioner Jeffrey Pollack during the 2006 bracelet unveiling.  "It is the equivalent of winning the Stanley Cup in hockey or the Lombardi Trophy in football."  Since their introduction, a poker player's success has been measured by the number of bracelets they had won.  With introduction of the WPT bracelet, the WPT hopes to capitalize on the prestige of winning poker bracelets.  WPT Founder, President and CEO, Steve Lipscomb said, "The championship bracelet has become synonymous with poker as a symbol of achievement and respect, and we are honored to continue the tradition that Benny Binion [the founder of the WSOP] began over 30 years ago."
+
+Post-oak bluff: In no-limit or pot-limit poker, a post-oak bluff is a very small bet relative to the size of the already-existing pot.  This type of bluff may be employed as an attempt at using reverse psychology to steal the pot.  It holds comparatively little risk for the player making the bet.  The term was popularized by Doyle Brunson in his 1979 book "Super System".
+
+Konstantin Puchkov: Konstantin Puchkov (born 1952) is a Russian poker player, horse trainer and horse breeder from Moscow.  He was the fourth Russian-born player to earn a World Series of Poker bracelet.  He is best known for having earned a World Series of Poker bracelet in his first World Series of Poker in the money finish (2010 World Series of Poker Event #31: H.O.R.S.E., $1,500 buy-in) and setting the record for most in the money finishes at one series during the 2012 World Series of Poker (11).
+
+Dario Alioto: Dario Alioto (born 1984) is a professional poker player from Palermo, Italy.  Alioto's first major success in poker came at the European Poker Tour 2005 Barcellona main event, where he finished in 7th place and earned €52,000.  Right after this score, he started grinding PLO cash games that became his best poker game, rapidly becoming one of the best Italian professional players.  Later on in his career, he won his first World Series of Poker bracelet in the £5,000 Pot Limit Omaha event at the 2007 World Series of Poker Europe.  Alioto earned £234,390 for his finish.  He has also had success at the 2008 World Series of Poker, where he has earned over $230,000 from four cashes.  A well-respected cash game player online and live, he played most of the many televised Italian high-stakes cash games in the last few years.
+
+Question: How many times did the man who popularized the term "Post-oak bluff" win the World Series of Poker?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "poker_player_name": {
+      "type": "string",
+      "description": "The name of the poker player who popularized the term."
+    },
+    "popularized_term": {
+      "type": "string",
+      "description": "The poker term popularized by the player."
+    },
+    "wsop_wins_count": {
+      "type": "integer",
+      "description": "The number of times the player won the World Series of Poker."
+    },
+    "wsop_win_details": {
+      "type": "string",
+      "description": "Specific details about the WSOP wins, if available (e.g., 'Main Event champion')."
+    }
+  },
+  "required": [
+    "poker_player_name",
+    "popularized_term",
+    "wsop_wins_count",
+    "wsop_win_details"
+  ],
+  "additionalProperties": false
+}

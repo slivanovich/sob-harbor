@@ -1,0 +1,8 @@
+{
+  "question_asked": "Which director was English, Ernst Lubitsch or Chris Menges?",
+  "director_identified": "Chris Menges",
+  "director_nationality": "English",
+  "other_director_name": "Ernst Lubitsch",
+  "other_director_nationality": "German American",
+  "reasoning": "The context states 'Chris Menges ... is an English cinematographer and film director.' and 'Ernst Lubitsch ... was a German American film director'."
+}

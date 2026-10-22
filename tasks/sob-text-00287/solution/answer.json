@@ -1,0 +1,14 @@
+{
+  "film_title": "Dangal",
+  "release_year": 2016,
+  "film_genre": [
+    "biographical",
+    "sports drama"
+  ],
+  "film_language": "Hindi",
+  "debut_actor_details": {
+    "actor_name": "Aparshakti Khurana",
+    "debut_type": "Bollywood debut",
+    "role_in_film": "cousin"
+  }
+}

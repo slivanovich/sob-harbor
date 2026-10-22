@@ -1,0 +1,16 @@
+{
+  "common_biological_rank": "genus",
+  "entities_classified": [
+    {
+      "name": "Cucurbita",
+      "description": "herbaceous vines in the gourd family",
+      "family": "Cucurbitaceae"
+    },
+    {
+      "name": "Annona",
+      "description": "flowering plants in the pawpaw/sugar apple family",
+      "family": "Annonaceae"
+    }
+  ],
+  "number_of_entities": 2
+}

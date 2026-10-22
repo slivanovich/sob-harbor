@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+DRDO Rustom: The DRDO Rustom (English: "Warrior") is a Medium Altitude Long Endurance unmanned air vehicle (UAV) being developed by Defence Research and Development Organisation for the three services, Indian Army, Indian Navy and the Indian Air Force of the Indian Armed Forces.  Rustom is derived from the NAL's LCRA (Light Canard Research Aircraft) developed by a team under the leadership of late Prof Rustom Damania in the 1980s.  The UAV will have structural changes and a new engine.  Rustom will replace/supplement the Heron UAVs in service with the Indian armed forces.
+
+Anil Kumar (wrestler): Anil Kumar (born 1 March 1979) is an Indian wrestler who hails from Haryana.  At the 2010 Commonwealth Games, he won a gold in the Men's Greco-Roman 96 kg's wrestling.  On 30 August 2015 Anil Kumar won gold medal in the 50 kg freestyle category at the World Cadet Championship in Sarajevo, Bosnia.
+
+Indian Armed Forces: The Indian Armed Forces (: "Bhāratīya Saśastra Senāeṃ") are the military forces of the Republic of India.  It consists of three professional uniformed services: the Indian Army, Indian Navy, and Indian Air Force.  Additionally, the Indian Armed Forces are supported by the Indian Coast Guard and paramilitary organisations (Assam Rifles, and Special Frontier Force) and various inter-service commands and institutions such as the Strategic Forces Command, the Andaman and Nicobar Command and the Integrated Defence Staff.  The President of India is the Supreme Commander of the Indian Armed Forces.  The Indian Armed Forces are under the management of the Ministry of Defence (MoD) of the Government of India.  With strength of over 1.4 million active personnel, it is the world's 2nd largest military force and has the world's largest volunteer army.  It is important to note that the Central Armed Police Forces, which are commonly and incorrectly referred to as 'Paramilitary Forces', are headed by officers from the Indian Police Service and are under the control of the Ministry of Home Affairs, not the Ministry of Defence.
+
+Kamal Kishor: Kamal Kishor was born in the village Rajdhani, Gorakhpur in the state of Uttar Pradesh, Dhobi family.After joining Indian Armed Forces, he completed his graduation (B.A) from Indian Armed Forces Institution.  Kishor served in the Indian Armed Forces before joining politics.  Post his army service, he was worked as a businessperson and agriculturist.
+
+Indian Air Force: The Indian Air Force (IAF; : "Bhāratīya Vāyu Senā") is the air arm of the Indian armed forces.  Its complement of personnel and aircraft assets ranks fourth amongst the airforces of the world.  Its primary mission is to secure Indian airspace and to conduct aerial warfare during armed conflict.  It was officially established on 8 October 1932 as an auxiliary air force of the British Empire which honored India's aviation service during World War II with the prefix "Royal".  After India gained independence from the United Kingdom in 1947, the name Royal Indian Air Force was kept and served in the name of Dominion of India.  With the government's transition to a Republic in 1950, the prefix "Royal" was removed after only three years.
+
+Anil Kumar Gain: Anil Kumar Gain (Bengali: অনীল কুমার গায়েন ), (1 February 1919 – 7 February 1978) (also spelt Anil Kumar Gayen) was an Indian mathematician and statistician best known for his works on the Pearson product-moment correlation coefficient in the field of applied statistics, with his colleague Ronald Fisher.  He received his Ph.D. from the University of Cambridge under the supervision of Henry Ellis Daniels, who was the then President of the Royal Statistical Society.  He was honoured as a Fellow of the Royal Statistical Society and the famous Cambridge Philosophical Society.
+
+List of military operations of India: The Indian Armed Forces is the overall unified military of the Republic of India encompassing the Indian Army, the Indian Air Force and the Indian Navy.  The President of India serves as the commander-in-chief of the armed forces.  With an estimated total active force of 1,325,000 personnel, maintains the world's second largest armed forces.
+
+MP Anil Kumar: Flying Officer MP Anil Kumar (5 May 1964 – 20 May 2014) was a MiG 21 pilot in the Indian Air Force; after he became a quadriplegic as a result of a motor-cycle accident, he became a writer and historian.  After the accident in 1988 he lived in the Paraplegic Rehabilitation Centre of Pune, where on 20 May 2014 he died.
+
+INS Baaz: INS Baaz is an Indian naval air station under the joint-services Andaman and Nicobar Command (ANC) of the Indian Armed Forces.  It is located near Campbell Bay, on Great Nicobar island in the Andaman & Nicobar Islands.  It is the southernmost air station of the Indian Armed Forces.  It overlooks the Strait of Malacca as well as the Six Degree channel between Great Nicobar and the Indonesian island of Sumatra.
+
+Anil Kumar Bhattacharya: Anil Kumar Bhattacharya (also spelled Anil Kumar Bhattacharyya, Bengali: অনিল কুমার ভট্টাচার্য) (1 April 1915 – 17 July 1996) was an Indian statistician who worked at the Indian Statistical Institute founded by P C Mahalanobis in the 1930s and early 40s.  He made fundamental contributions to multivariate statistics, particularly for his measure of similarity between two multinomial distributions, known as the Bhattacharya coefficient, based on which he defined a metric, the Bhattacharya distance.  This measure is widely used in comparing statistical samples in biology, physics, computer science, etc.
+
+Question: What is the name of this air arm of the Indian armed forces, in which MP Anil Kumar was a MiG 21 pilot?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "air_arm_name": {
+      "type": "string",
+      "description": "The name of the air arm of the Indian armed forces."
+    },
+    "pilot_details": {
+      "type": "object",
+      "properties": {
+        "pilot_name": {
+          "type": "string",
+          "description": "The name of the pilot."
+        },
+        "aircraft_type": {
+          "type": "string",
+          "description": "The type of aircraft the pilot flew."
+        },
+        "pilot_rank": {
+          "type": "string",
+          "description": "The rank of the pilot."
+        }
+      },
+      "required": [
+        "pilot_name",
+        "aircraft_type",
+        "pilot_rank"
+      ],
+      "additionalProperties": false
+    },
+    "air_arm_mission": {
+      "type": "string",
+      "description": "The primary mission of the air arm."
+    }
+  },
+  "required": [
+    "air_arm_name",
+    "pilot_details",
+    "air_arm_mission"
+  ],
+  "additionalProperties": false
+}

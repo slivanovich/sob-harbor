@@ -1,0 +1,14 @@
+{
+  "question_context": "classification of biological genera",
+  "onoclea_classification": {
+    "is_genus": true,
+    "is_plant": true,
+    "family": "Onocleaceae"
+  },
+  "bunchosia_classification": {
+    "is_genus": true,
+    "is_plant": true,
+    "family": "Malpighiaceae"
+  },
+  "both_are_plant_genera": true
+}

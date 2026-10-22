@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Eazy-E: Eric Lynn Wright (September 7, 1964March 26, 1995), better known by his stage name Eazy-E, was an American rapper who performed solo and in the hip hop group N.W.A.  Wright is affectionately called "The Godfather of Gangsta rap".  He was born to Richard and Kathie Wright in Compton, California.  After dropping out of high school in the tenth grade, he supported himself primarily by selling drugs before founding Ruthless Records and becoming a rapper.  Arabian Prince, Eazy-E, Dr. Dre and Ice Cube formed N.W.A.  After DJ Yella and MC Ren joined the group, N.W.A released their debut single "Panic Zone".  In 1988, they released their most controversial album, "Straight Outta Compton".  The group released two more albums and then disbanded after Eazy released Dr. Dre from his contract.  Eazy-E died in March 1995 after a brief battle with AIDS.
+
+Straight Outta Compton: Straight Outta Compton is the debut studio album by American hip hop group N.W.A, released August 8, 1988 on group member Eazy-E's record label Ruthless Records.  Production for the album was handled by Dr. Dre with DJ Yella giving co-production along with Arabian Prince Co-Production work on the project.  The album has been viewed as the pioneering record of gangsta rap with its ever-present profanity and violent lyrics.  This was the group's only release with rapper Ice Cube prior to his 1989 departure.  It has been considered to be one of the greatest and most influential hip-hop records by music writers and has had an enormous impact on the evolution of hip hop.
+
+Represent (Compton's Most Wanted album): Represent is the fourth album by Comptons Most Wanted, their first since "Music to Driveby" in 1992.  It included the singles, "This is Compton 2000" and "Then U Gone".  In 2007, MC Eiht re-released the album in the name, "Representin'".  The Cover art pays tribute to the N.W.A album "Straight Outta Compton"
+
+Straight Outta Compton (song): "Straight Outta Compton" is a song by American hip hop group N.W.A.  It was released on July 10, 1988 as the lead single from their debut album of the same name.  It also appears on N.W.A's "Greatest Hits" with an extended mix and "".  It was voted number 19 on About.com's Top 100 Rap Songs, and is ranked number 6 on VH1's 100 Greatest Songs of Hip Hop.
+
+The Chronic: The Chronic is the debut studio album by American hip hop recording artist Dr. Dre.  It was released on December 15, 1992, by his own record label Death Row Records and distributed by Priority Records.  Recording sessions for the album took place in June 1992 at Death Row Studios in Los Angeles and at Bernie Grundman Mastering in Hollywood.  The album is named after a slang term for high-grade cannabis, and its cover is a homage to Zig-Zag rolling papers.  It was Dr. Dre's first solo album after he had departed from hip hop group N.W.A and its label Ruthless Records over a financial dispute.  On "The Chronic", he included both subtle and direct insults at Ruthless and its owner, former N.W.A member Eazy-E.  Although a solo album, it features many appearances by Snoop Dogg, who used the album as a launch pad for his own solo career.
+
+Eazy-Duz-It (song): "Eazy-Duz-It" is a single by rapper Eazy-E, from the album of the same name.  It was released in 1989.  It features the song "Radio" as a b-side.  The b-side of the cassette single also contained the original version of the song Compton's N The House which only appears on the cassette single version, the vinyl single has a radio edit of Eazy-Duz-It instead of Compton's N The House.  There is a remix version of Compton's N The House that appears on N.W.A.'s Straight Outta Compton album, but the original can only be found on the cassette single and has never been released elsewhere.
+
+Gangsta Gangsta (N.W.A song): "Gangsta Gangsta" is a single from American hip hop group N.W.A's 1988 album, "Straight Outta Compton".  The song later appeared on the "N.W.A Greatest Hits" album and "The Best of N.W.A. - The Strength of Street Knowledge".  This song later appeared in the 2013 video game "Grand Theft Auto V".
+
+Express Yourself (N.W.A song): "Express Yourself" is a song recorded by American hip hop group N.W.A, performed solo by Dr. Dre.  The song, off their 1988 album "Straight Outta Compton", samples Charles Wright & the Watts 103rd Street Rhythm Band's song of the same name.  Unlike most songs on the album and by N.W.A, the song is devoid of profanity.  "Express Yourself" was released in 1989 as the album's last single, the album version of the track features rap vocals from Dr. Dre only whereas the 2002 reissue, single edition and video version features small verses from MC Ren and Ice Cube, the writer of the song.  The song reached number 26 in the UK in September 1989.
+
+N.W.A discography: The discography of N.W.A, an American hip hop group, consists of two studio albums, six compilation albums, one extended play (EP), eight singles, one video album and five music videos. N.W.A was formed in Compton, California in 1986 by Eazy-E, Dr. Dre, DJ Yella, Arabian Prince and Ice Cube, with The D.O.C. and MC Ren joining later.  The group's first release was the compilation album "N.W.A. and the Posse" in 1987, which also featured songs by The Fila Fresh Crew, Rappinstine and Ron-De-Vu.  Their debut album "Straight Outta Compton" followed the next year, which initially reached number 37 on the US "Billboard" 200; it has since reached number four, and has sold over 3.5 million copies in the US alone. " Straight Outta Compton", "Gangsta Gangsta" and "Express Yourself" were released as singles from the album, all of which registered on the "Billboard" Hot R&B/Hip-Hop Songs chart.
+
+Straight Outta Compton (film): Straight Outta Compton is a 2015 American biographical film directed by F. Gary Gray, depicting the career of gangsta rap group N.W.A.  Titled after N.W.A's 1988 debut studio album, the film focuses on members Eazy-E, Ice Cube, and Dr. Dre, and the rise and fall of the group.  Members of N.W.A were involved in making the film, including Ice Cube and Dr. Dre as producers, as was Eazy-E's widow, Tomica Woods-Wright, while MC Ren and DJ Yella served as creative consultants.  Ice Cube is portrayed by his son, O'Shea Jackson Jr., with Corey Hawkins as Dr. Dre and Jason Mitchell as Eazy-E.  Paul Giamatti also stars as N.W.A's manager Jerry Heller.
+
+Question: Represent is the fourth album by Comptons Most Wanted, their first since "Music to Driveby" in 1992, the Cover art pays tribute to the N.W.A album, Straight Outta Compton is the debut studio album by American hip hop group N.W.A, released August 8, 1988 on group member Eazy-E's record label, titled what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The artist or group who released the album."
+    },
+    "release_date": {
+      "type": "string",
+      "description": "The release date of the album."
+    },
+    "record_label": {
+      "type": "string",
+      "description": "The record label on which the album was released."
+    },
+    "is_debut_album": {
+      "type": "boolean",
+      "description": "Indicates if this was the artist's debut studio album."
+    }
+  },
+  "required": [
+    "album_title",
+    "artist",
+    "release_date",
+    "record_label",
+    "is_debut_album"
+  ],
+  "additionalProperties": false
+}

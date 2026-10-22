@@ -1,0 +1,10 @@
+{
+  "person_name": "Harold Edward Holt",
+  "event_type": "disappearance",
+  "location_details": {
+    "suburb_name": "Portsea",
+    "city_name": "Melbourne",
+    "country_name": "Australia",
+    "activity_at_disappearance": "swimming"
+  }
+}

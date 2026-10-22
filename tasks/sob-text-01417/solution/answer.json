@@ -1,0 +1,14 @@
+{
+  "musician_name": "Gerald Conway",
+  "musician_nationality": "English",
+  "musician_role": "drummer/percussionist",
+  "associated_singer": {
+    "full_name": "Yusuf Islam",
+    "former_stage_name": "Cat Stevens",
+    "nationality": "British",
+    "instrumentation": [
+      "multi-instrumentalist"
+    ]
+  },
+  "performance_period": "1970s"
+}

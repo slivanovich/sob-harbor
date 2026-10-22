@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "bafad2b72c77afc21edb9fb3e154b800d88fdfd8a04c51cd14f5914f85ffe3b7",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a90c93855429916514e7575",
+    "source_dataset": "hotpotqa",
+    "source_answer": "PAW Patrol",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Spin Master: Spin Master is a Canadian global toy and entertainment company that has been designing, developing, manufacturing, and marketing consumer products for children around the world since 1994.  Its brands include \"Bakugan\", Meccano, Air Hogs, PAW Patrol, Aquadoodle, TGR, Tech Deck and 2015 Toy of the Year, Zoomer Dino.  Spin Master employs over 1000 people globally with offices in Canada, United States, Mexico, France, Italy, United Kingdom, Slovakia, Germany, Sweden, the Netherlands, China, Hong Kong, Japan, and Australia.\n\nBrown Bag Films: Brown Bag Films, or Brown Bag, is an Irish-Canadian television animation production studio, based in Dublin, Ireland with a 2D facility based in Manchester, UK.  Best known for its character CGI-animated television series' and short films, including the Oscar nominated \"Give Up Yer Aul Sins\" and \"Granny O'Grimm's Sleeping Beauty\".  Brown Bag Films was established in 1994 by Cathal Gaffney and Darragh O'Connell and the studio has garnered a number of awards, including Academy Award nominations for \"Give Up Yer Aul Sins\" (Best Animated Short Film 2001) and \"Granny O'Grimm's Sleeping Beauty\" (Best Animated Short Film 2010), six Emmy Award wins for \"Peter Rabbit\", an Emmy award for \"Bing\" and a number of BAFTA, Emmy and Annie nominations for their shows \"Octonauts\", \"Doc McStuffins\" and \"Henry Hugglemonster\".\n\nAlvin and the Chipmunks (2015 TV series): Alvin and the Chipmunks (stylized as ALVINNN!!!  and the Chipmunks) is an American/French CGI-animated television series which is on Sky Kids, Nicktoons and POP.  It features Alvin and the Chipmunks and The Chipettes that was first announced in 2010.  After a 25-year hiatus, the premiere of this series marks their first television appearance together since 1990.  A promotional trailer for the series was posted on YouTube.\n\nReBoot: The Guardian Code: ReBoot: The Guardian Code is an upcoming Canadian live-action/CGI-animated television series, produced by Rainmaker Entertainment.  It is a \"re-imagining\" or a \"sequel\" of the 1994 CGI-animated series \"ReBoot\" and is planned to air on YTV sometime in 2018.\n\nPAW Patrol: PAW Patrol is a Canadian CGI–animated television series created by Keith Chapman.  It is produced by Spin Master Entertainment in association with TVOKids and Nickelodeon, with animation provided by Guru Studio.  In Canada, the series is primarily broadcast on TVOKids, which first ran previews of the show in August 2013.  The series first aired on Nickelodeon in the United States on August 12, 2013.\n\nJay Foreman (businessman): Jay Foreman is an American businessman.  He is President and CEO of The Bridge Direct and its related companies, Basic Fun and Good Stuff.  The Bridge Direct was established by Mr. Foreman and Oaktree Capital Management as a vehicle to create a dynamic and growing children’s entertainment products company both organically and through acquisition.  The Bridge Direct and its related companies design, develop and market toys for children directly to major mass and specialty retailers such as Toys R Us, Wal-Mart and Target, as well as Barnes and Noble, Bed Bath and Beyond and Kohl’s stores, among hundreds of others.  In addition, via the company’s Good Stuff division, it develops and sells stuffed toys and novelties to major mass entertainment venues, such as major theme parks like Six Flags, Knott’s Berry Farm and all the Cedar Fair parks, as well as family entertainment centers such as Chuck E Cheese’s and Dave and Busters.  The company also sells all its product globally, both to direct end users and via a network of distributors.  The company manufactures and sells both internally developed product lines as well as product lines from well-known entertainment companies such as Disney, Nickelodeon and Warner Bros, as well as sports entertainment brands such as WWE, NFL, NBA, MLB and NHL.  In addition the company licenses IP from top global toy companies, such as Mattel, Hasbro and Moose Toys.  He resides in Boca Raton, Florida.\n\nMonster by Mistake: Monster By Mistake!  is a Canadian CGI-animated series that aired on YTV from October 31, 1996 to March 23, 2003.  The series was created by Mark Mayerson of Catapult Productions based off the children's hospital drama book series of the same name, and co-produced with CCI Entertainment (formerly Cambium) in Toronto, Canada.  The two companies partnered in Studio 345, a computer animation and former Sears catalogue production facility for the production of the show, which was made using Houdini software.\n\nMiffy's Adventures Big and Small: Miffy's Adventures Big and Small (Dutch: \"Nijntjes avonturen groot en klein\" ) is a Dutch-British CGI-animated television series, based on the \"Miffy\" book series by Dutch artist Dick Bruna.  It is a continuation of the \"Miffy and Friends\" series, which aired from 2003 until 2007.  The show airs on KRO in the Netherlands.\n\nInspector Gadget (2015 TV series): Inspector Gadget is a Canadian-American CGI-animated television series produced by DHX Media.  It is a sequel to the original series, which aired from 1983 to 1986.  The show was announced on June 11, 2013, with 26 episodes.  The show debuted on January 3, 2015 on Boomerang in France and officially premiered on Teletoon in Canada on September 7, 2015.\n\nReBoot: ReBoot is a Canadian CGI-animated action-adventure television series that originally aired from 1994 to 2001.  It was produced by Vancouver-based production company Mainframe Entertainment, Alliance Communications and BLT Productions.  The animated series was created by Gavin Blair, Ian Pearson, Phil Mitchell, and John Grace, with the visuals designed by Brendan McCarthy after an initial attempt by Ian Gibson.",
+    "question": "What Canadian CGI-animated television series is produced by a Canadian global toy and entertainment company?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "series_name": {
+          "type": "string",
+          "description": "The name of the Canadian CGI-animated television series."
+        },
+        "series_animation_type": {
+          "type": "string",
+          "description": "The animation style of the series."
+        },
+        "series_origin_country": {
+          "type": "string",
+          "description": "The country of origin for the television series."
+        },
+        "producer_company": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the producing company."
+            },
+            "type": {
+              "type": "string",
+              "description": "A description of the company's primary business."
+            },
+            "origin_country": {
+              "type": "string",
+              "description": "The country of origin for the producing company."
+            }
+          },
+          "required": [
+            "name",
+            "type",
+            "origin_country"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "series_name",
+        "series_animation_type",
+        "series_origin_country",
+        "producer_company"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "series_name": "PAW Patrol",
+      "series_animation_type": "CGI–animated",
+      "series_origin_country": "Canadian",
+      "producer_company": {
+        "name": "Spin Master Entertainment",
+        "type": "Canadian global toy and entertainment company",
+        "origin_country": "Canada"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

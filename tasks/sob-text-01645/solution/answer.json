@@ -1,0 +1,15 @@
+{
+  "player_details": {
+    "name": "Lance Rentzel",
+    "position": "flanker"
+  },
+  "league_information": {
+    "name": "National Football League",
+    "abbreviation": "NFL"
+  },
+  "teams_played_for": [
+    "Minnesota Vikings",
+    "Dallas Cowboys",
+    "Los Angeles Rams"
+  ]
+}

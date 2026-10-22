@@ -1,0 +1,17 @@
+{
+  "paramilitary_groups_involved": [
+    "Continuity IRA",
+    "Real IRA"
+  ],
+  "targeted_organizations": [
+    {
+      "name": "British Army",
+      "is_ruc_successor": false
+    },
+    {
+      "name": "Police Service of Northern Ireland",
+      "is_ruc_successor": true
+    }
+  ],
+  "ruc_successor_targeted": "Police Service of Northern Ireland"
+}

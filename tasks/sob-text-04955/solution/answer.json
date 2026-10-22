@@ -1,0 +1,25 @@
+{
+  "common_nationality": "American",
+  "shared_professional_contexts": [
+    "Andy Warhol's Superstars",
+    "Andy Warhol's Factory"
+  ],
+  "films_with_shared_involvement": [
+    {
+      "title": "Beauty No. 1",
+      "year": 1965,
+      "sedgwick_role": "star",
+      "wein_role": "star"
+    },
+    {
+      "title": "Beauty No. 2",
+      "year": 1965,
+      "sedgwick_role": "star",
+      "wein_role": "writer, assistant director, actor (uncredited onscreen)"
+    }
+  ],
+  "wein_sedgwick_relationship": {
+    "type": "discovery",
+    "description": "Chuck Wein discovered Edie Sedgwick."
+  }
+}

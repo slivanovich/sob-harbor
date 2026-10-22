@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "bacce44dd91d2acdd3c0f96f9274013c868f82ef02a4c9f3de223fff2d925ae7",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae606e555429929b0807a6b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Wynn Resorts",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Station Casinos: Station Casinos is a gaming company based in the Las Vegas suburb of Summerlin, Nevada, founded by Frank Fertitta, Jr. Station Casinos, along with Affinity Gaming, Boyd Gaming, and American Casino & Entertainment Properties, dominate the locals casino market in Las Vegas.  The company purchased several sites that were gaming-entitled, meaning that major casinos can be built at that location without additional approvals.  There are only a limited number of such sites available in the Las Vegas area.  Station has also branched out into managing casinos that they do not own.  Red Rock Resorts, Inc. () is a publicly traded holding company that owns a portion of Station Casinos.\n\nCotai Strip: The Cotai Strip is a term coined by American Las Vegas Sands Corporation with regard to its building of a strip of hotel-casinos in the Cotai section of Macau, a special administrative region of the People's Republic of China.  Cotai was the result of a major land reclamation project which joined the two islands of Coloane and Taipa, and is part of the Macau government's continuous efforts to expand the region's territory.  The reclaimed land in Cotai is to be mainly used for casino developments and Las Vegas Sands Corporation envisioned that their development of several adjacent properties would comprise an area that would resemble the Las Vegas Strip, albeit on a considerably smaller scale.\n\nWynn Resorts: Wynn Resorts Limited is a publicly traded corporation based on the Las Vegas Strip, Nevada that is a developer and operator of high end hotels and casinos.  It was founded in 2002 by former Mirage Resorts Chairman and CEO Steve Wynn.  s of 2016 , the Company has developed five properties.\n\nSteve Wynn: Stephen Alan Wynn (\"né\" Weinberg; born January 27, 1942) is an American real estate businessman and art collector.  He is known for his involvement in the American luxury casino and hotel industry.  Early in his career he oversaw the construction and operation of several notable Las Vegas and Atlantic City hotels, including the Golden Nugget, the Golden Nugget Atlantic City, The Mirage, Treasure Island, the Bellagio, and Beau Rivage in Mississippi, and he played a pivotal role in the resurgence and expansion of the Las Vegas Strip in the 1990s.  In 2000, Wynn sold his company Mirage Resorts to MGM Grand Inc., resulting in the formation of MGM Mirage (now MGM Resorts International).  Wynn afterwards took his company Wynn Resorts public in an initial public offering, and he remains Wynn Resorts' CEO and Chairman of the Board.  He is a member of the Republican Party.  Wynn is the finance chair of the Republican National Committee (RNC) since 2017.\n\nRoger Thomas (designer): Roger Thomas (born 1951) is an American interior designer best known for his work on resort hotels and casinos in Las Vegas, including the Bellagio, Wynn Las Vegas and Encore Las Vegas.  His work also extends to other areas of the world, including Wynn Macau and Encore Macau in China.  He is the Executive Vice President of Design for Wynn Design & Development, and principal of the Roger Thomas Collection.  Thomas has been named five times to the \"Architectural Digest\" AD100 list of the world's preeminent architects and designers, and was inducted into the \"Interior Design Magazine\" Hall of Fame in 2015.\n\nWynn Las Vegas: Wynn Las Vegas, often simply referred to as Wynn, is a luxury resort and casino located on the Las Vegas Strip in Paradise, Nevada.  The US$2.7-billion resort is named after casino developer Steve Wynn and is the flagship property of Wynn Resorts.  The resort covers 215 acre .  It is located at the northeast corner of Las Vegas Boulevard and Sands Avenue, directly across The Strip from the Fashion Show Mall.\n\nEncore Las Vegas: Encore Las Vegas (also called Encore at Wynn Las Vegas; often just called Encore) is a luxury resort, casino and hotel located on the Las Vegas Strip in Paradise, Nevada.  The resort is connected to its sister resort, Wynn Las Vegas; both are owned by Wynn Resorts, headed by casino developer Steve Wynn.\n\nWynn Palace: Wynn Palace, also referred to as Wynn Palace Cotai, is an integrated resort owned and operated by Wynn Resorts in Macau, China.  As the company's first resort on the Cotai Strip and third skyscraper in Macau, Wynn Palace features a luxury hotel with 1,706 rooms, a casino, an 8-acre performance lake, gondolas, meeting facilities, spa and salon, and retail and dining venues.  With 29 floors and a construction floor area of around 450,000 square meters, Steve Wynn has described it as \"the most aggressive, ambitious and lovely project\" undertaken by Wynn Resorts.  Construction began in 2013 with total cost estimated at USD $4.4 billion.  between commencement in 2013 and the opening on August 22, 2016.  On January 28, 2016, \"Forbes\" described Wynn Palace's then-upcoming debut as one of the \"20 Most Anticipated Hotel Openings Of 2016.\"  After it opened, the Las Vegas Review-Journal said \"the project is the best [Wynn] ever produced,\" and the Associated Press wrote that \"the lavish decor and extravagant features Wynn is known for abound.\"  There are approximately 350 gaming tables, of which 60 are used as VIP tables.\n\nWynn Macau: Wynn Macau () (), owned by Wynn Resorts, is a luxury integrated resort in Sé, Macau, China, offering gaming combined with a hotel, restaurants, shops, spa, and a \"Performance Lake\".  It opened on 6 September 2006.  Steve Wynn is the Chairman of the Board and Chief Executive Officer of Wynn Macau.\n\nTrump International Hotel Las Vegas: The Trump International Hotel Las Vegas is a 64-story luxury hotel, condominium, and timeshare located on Fashion Show Drive near Las Vegas Boulevard, just off the Las Vegas Strip in Paradise, Nevada, named for real estate developer and the 45th and current President of the United States Donald Trump.  It is located across the street from Wynn Las Vegas, behind Alon Las Vegas on 3.46 acre , near the Fashion Show Mall, and features both non-residential hotel condominiums and residential condominiums.  The exterior glass is infused with gold.  The hotel is a member of The Leading Hotels of the World.",
+    "question": "What publicly traded corporation based on the Las Vegas Strip, Nevada owns Wynn Macau?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "The name of the publicly traded corporation."
+        },
+        "is_publicly_traded": {
+          "type": "boolean",
+          "description": "Indicates if the company is publicly traded."
+        },
+        "base_location": {
+          "type": "string",
+          "description": "The primary location where the company is based."
+        },
+        "owned_property_name": {
+          "type": "string",
+          "description": "The name of the property owned by the corporation."
+        },
+        "owned_property_location": {
+          "type": "string",
+          "description": "The location of the owned property."
+        }
+      },
+      "required": [
+        "company_name",
+        "is_publicly_traded",
+        "base_location",
+        "owned_property_name",
+        "owned_property_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "company_name": "Wynn Resorts",
+      "is_publicly_traded": true,
+      "base_location": "Las Vegas Strip, Nevada",
+      "owned_property_name": "Wynn Macau",
+      "owned_property_location": "Sé, Macau, China"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

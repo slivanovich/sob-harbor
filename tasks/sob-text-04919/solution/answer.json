@@ -1,0 +1,13 @@
+{
+  "geographical_region_type": "Metropolitan statistical area",
+  "geographical_region_name": "Lebanon, Pennsylvania Metropolitan statistical area",
+  "location_details": {
+    "county": "Lebanon County",
+    "state": "Pennsylvania"
+  },
+  "associated_borough": {
+    "name": "Palmyra",
+    "population": 7096,
+    "census_year": 2000
+  }
+}

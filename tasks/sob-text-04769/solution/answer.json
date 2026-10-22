@@ -1,0 +1,15 @@
+{
+  "saber_designer": {
+    "name": "George S. Patton",
+    "rank_at_design": "Second Lieutenant",
+    "later_rank": "General"
+  },
+  "saber_designed": {
+    "name": "Model 1913 Cavalry Saber",
+    "design_year": 1913
+  },
+  "commanded_military_unit": {
+    "unit_name": "U.S. Seventh Army",
+    "conflict": "World War II"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "magazine_series_name": "Ranger Rick",
+  "primary_intention": "to instill a passion for nature and promote activity outdoors",
+  "comparison_magazines": [
+    {
+      "name": "Sports Illustrated",
+      "stated_purpose": "American sports media franchise"
+    },
+    {
+      "name": "Ranger Rick",
+      "stated_purpose": "to instill a passion for nature and promote activity outdoors"
+    }
+  ],
+  "matches_criteria": true
+}

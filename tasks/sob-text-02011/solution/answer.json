@@ -1,0 +1,17 @@
+{
+  "locations_info": [
+    {
+      "location_name": "Jiaojiang District",
+      "country": "China"
+    },
+    {
+      "location_name": "Taichung",
+      "country": "Taiwan"
+    }
+  ],
+  "unique_countries": [
+    "China",
+    "Taiwan"
+  ],
+  "number_of_unique_countries": 2
+}

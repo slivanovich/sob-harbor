@@ -1,0 +1,10 @@
+{
+  "actor_name": "Chris Hemsworth",
+  "actor_nationality": "Australian",
+  "film_details": {
+    "title": "Avengers: Age of Ultron",
+    "release_year": 2015,
+    "is_superhero_film": true,
+    "is_mcu_film": true
+  }
+}

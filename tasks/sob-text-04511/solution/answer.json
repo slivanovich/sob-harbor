@@ -1,0 +1,10 @@
+{
+  "final_merged_company_name": "Burlington Northern Railroad",
+  "final_merged_company_description": "a United States-based railroad company formed from a merger of four major U.S. railroads",
+  "final_merger_year": 1980,
+  "intermediate_merger_details": {
+    "subsidiary_name": "St. Louis, San Francisco and Texas Railway",
+    "parent_railroad_name": "St. Louis-San Francisco Railway",
+    "subsidiary_merger_year": 1964
+  }
+}

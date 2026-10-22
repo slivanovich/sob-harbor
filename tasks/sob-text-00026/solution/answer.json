@@ -1,0 +1,11 @@
+{
+  "football_team_name": "UD Las Palmas",
+  "team_location": {
+    "city": "Las Palmas",
+    "autonomous_community": "Canary Islands"
+  },
+  "midfielder_details": {
+    "player_name": "Hernán Santana",
+    "player_position": "midfielder"
+  }
+}

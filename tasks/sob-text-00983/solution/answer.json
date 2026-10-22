@@ -1,0 +1,16 @@
+{
+  "musician_details": {
+    "name": "Bob Wills",
+    "title": "King of Western Swing",
+    "genre": "Western swing"
+  },
+  "song_details": {
+    "title": "Time Changes Everything",
+    "genre": "Western swing standard"
+  },
+  "song_authorship_details": {
+    "writer_name": "Tommy Duncan",
+    "writer_role_in_musician_band": "long-time vocalist",
+    "musician_band_name": "Bob Wills and the Texas Playboys"
+  }
+}

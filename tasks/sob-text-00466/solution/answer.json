@@ -1,0 +1,15 @@
+{
+  "question_asked": "Which company headquarters is located in Texas, American Airlines Group or Illumina?",
+  "companies_evaluated": [
+    {
+      "company_name": "American Airlines Group",
+      "headquarters_location": "Fort Worth, Texas"
+    },
+    {
+      "company_name": "Illumina",
+      "headquarters_location": "San Diego, California"
+    }
+  ],
+  "company_with_texas_headquarters": "American Airlines Group",
+  "is_question_answered": true
+}

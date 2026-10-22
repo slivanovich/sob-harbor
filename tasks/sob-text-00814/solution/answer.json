@@ -1,0 +1,14 @@
+{
+  "person_1": {
+    "name": "John Wellborn Root",
+    "birth_year": 1850
+  },
+  "person_2": {
+    "name": "Daniel Hudson Burnham",
+    "birth_year": 1846
+  },
+  "comparison_result": {
+    "earlier_born_person_name": "Daniel Hudson Burnham",
+    "birth_year_difference_years": 4
+  }
+}

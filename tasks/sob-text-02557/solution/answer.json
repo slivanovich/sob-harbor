@@ -1,0 +1,10 @@
+{
+  "train_name": "The Pride of Africa",
+  "operating_company": "Rovos Rail",
+  "travel_route_details": {
+    "country_name": "Zambia",
+    "is_landlocked": true,
+    "region": "Southern Africa",
+    "borders_drc_to_north": true
+  }
+}

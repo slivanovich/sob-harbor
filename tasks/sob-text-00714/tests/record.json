@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "record_id": "a3a0ac847895b3b7f1924d75d849d69d36843f222aa00b87c69c8e6462d9f12c",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab5b8b0554299494045f042",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Alicia Keys",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Cutting Room Studios: The Cutting Room Recording Studios was opened in 1995 by owner David Crafa.  The company is currently located in Greenwich Village, Manhattan New York City.  Consisting of two fully equipped audio rooms, and multiple leasable spaces, The Cutting Room has remained one of the leaders in the music industry for 19 years.  Services offered at The Cutting Room include tracking, recording, mixing, mastering, music production, voice-over sessions, and remote connections via ISDN, phone patch, and Skype.\n\nIllmatic: Illmatic is the debut studio album by American rapper Nas.  It was released on April 19, 1994, by Columbia Records.  After signing with the label with the help of MC Serch, Nas recorded the album in 1992 and 1993 at Chung King Studios, D&D Recording, Battery Studios, and Unique Recording Studios in New York City.  Its production was handled by DJ Premier, Large Professor, Pete Rock, Q-Tip, L.E.S. and Nas himself.  Styled as a hardcore hip hop album, \"Illmatic\" features multi-syllabic internal rhymes and inner-city narratives based on Nas's experiences in Queensbridge, New York.\n\nAlicia Keys: Alicia Augello Cook (born January 25, 1981), known professionally as Alicia Keys, is an American singer, songwriter, record producer, pianist and actress.  Keys released her debut album with J Records, having had previous record deals first with Columbia and then Arista Records.  Keys' debut album, \"Songs in A Minor\" was released in 2001, producing her first \"Billboard\" Hot 100 number-one single \"Fallin'\", and selling over 12 million copies worldwide.  The album earned Keys five Grammy Awards in 2002.  Her sophomore album, \"The Diary of Alicia Keys\", was released in 2003, spawning successful singles \"You Don't Know My Name\", \"If I Ain't Got You\" and \"Diary\", and selling 8 million copies worldwide.  The duet song \"My Boo\" with Usher scored her a second number-one single in 2004.  The album garnered her an additional four Grammy Awards in 2005.  Later that year, she released her first live album, \"Unplugged\", becoming the first woman to have an \"MTV Unplugged\" album debut at number one.\n\nAtlantic Studios: Atlantic Studios was the recording studio of Atlantic Records.  Although this recording studio was located at 1841 Broadway (at the corner of 60th Street), in New York City, Atlantic Recording Studios was initially located at 234 West 56th Street from November 1947 until mid-1956.  When the Shorty Rogers and His Giants disc of 33.33 rpm called Martians Come Back!  was issued in August 1956, the address of Atlantic Recording Studios had relocated to 157 W 57th Street.  The studio was the first to record in stereo due to the efforts of Tom Dowd.\n\nUnique Recording Studios: Unique Recording Studios was a technologically innovative five room recording studio operating in New York City from 1978 until 2004.  The business got off the ground as a rehearsal studio with a Tascam 8 track recorder in 1978, but soon expanded to 16, and then 24 tracks with the first Otari MTR-90.  Some of the biggest names in the music world recorded at Unique.  The still operating Unique Recording Studio website lists the following among their former clients: Madonna.  Mariah Carey, Tina Turner, Anita Baker, Steve Winwood, Joe Cocker, Billy Ocean, Maniquin, Michael Bolton, Michael McDonald, James Ingram, Donna Summer, Jeff Beck, Eric Clapton, Danny Gatton, Stevie Ray Vaughan, Chaka Khan, David Sanborn, Billy Idol, The Rolling Stones, Aerosmith, Aztec Camera, Marilyn Manson, Nine Inch Nails, Pet Shop Boys, Cheap Trick, James Brown, George Clinton, Bee Gees, Arthur Baker, Stevie Nicks, Miles Davis, McCoy Tyner, Herbie Hancock, Quincy Jones, Al B. Sure!  New Edition, New Kids on the Block, Jimmy Cliff, Queen Latifah, Run–D.M.C., The Notorious B.I.G., 2Pac, Nas, Kanye West and Alicia Keys.\n\nOceans Apart: Oceans Apart is the ninth and final studio album by The Go-Betweens, released in 2005.  All the songs were written by Grant McLennan and Robert Forster.  The album was recorded at the Good Luck Studios in London between November 2004 through to January 2005, except for \"Boundary Rider\" which was recorded at The White Room Recording Studio in Brisbane.\n\nATLiens: ATLiens is the second studio album by American hip hop duo Outkast.  It was released on August 27, 1996, by LaFace Records.  Between from 1995 to 1996, OutKast recorded \"ATLiens\" in sessions at several Atlanta studios—Bosstown Recording Studios, Doppler Recording Studios, PatchWerk Recording Studio, Purple Dragon Studios, and Studio LaCoCo—as well as Chung King Recording Studio and Sound On Sound Recording in New York City.\n\nThe Automatt: The Automatt was a sound recording studio in San Francisco, California, promoted for its early mix automation system.  During its eight active years, 1976 to 1984, it was one of the top recording studios in the region.  The Automatt was founded by producer David Rubinson and opened in an existing studio subleased from Columbia Records, who continued to record in the same building for a few years; thus it was sometimes referred to as CBS/Automatt.  Rubinson leased the whole building in 1978 and from that point, operated three rooms for recording and mixing, a mastering room, a rehearsal room, and offices.  The studio complex was known for its top-notch equipment, for the hit records it produced, and for the famous artists who recorded there.  Under Rubinson and chief engineer Fred Catero it served as the training ground for respected recording engineers such as Leslie Ann Jones and producers such as Scott Mathews.\n\nFinnvox Studios: Finnvox Studios is a recording studio located in Pitäjänmäki, Helsinki, Finland.  It was founded by Erkki Ertesuo, Kurt Juuranto and Lejos Inc. in 1965 and is the longest running studio recording facility in Finland.  The original multi-track recording equipment and continuous technical updates of the studio machines and acoustics soon made Finnvox the most sought after studio in the country.  Finnish artists which recorded at Finnvox in the 1970s include Rauli Somerjoki, M. A. Numminen and their bands, Wigwam, Agit-prop and many others.  Up until the 1990s, Finnvox also operated a vinyl record mastering and pressing facility, which was later converted in new studio rooms and in a mixing and recording room for film and TV productions.  Currently, Finnvox occupy 2000 square feet and has nine studio rooms, five of which are used for recording and mixing, three for mastering and editing and one for film and TV productions.  Finnvox Studios maintained for five decades their importance in the country, remaining the first choice in Finland for all the local record producers and companies.\n\nArcher Records: Archer Records is an independent record label with notoriety in the classical guitar and Americana genres.  The label was founded in 2001 in downtown Memphis by Ward Archer, who founded Cotton Row Recording Studios in 1978 and is a former trustee of the National Academy of Recording Arts and Sciences.  It is housed at Music+Arts Studio in Memphis, Tennessee, formerly Sounds Unreel Studio.  Located at 1902 Nelson Avenue, the building was converted to a recording studio in 1981 and was purchased by Archer Records owner Ward Archer in 2007.  The layout of Music+Arts Studio was designed by George Augsperger and Nashville studio builder David Cherry.",
+    "question": "Unique Recording Studios was a technologically innovative five room recording studio operating in New York City from 1978 until 2004, the still operating Unique Recording Studio website lists which American singer, songwriter, record producer, pianist and actress, born on January 25, 1981?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "artist_name": {
+          "type": "string",
+          "description": "The professional name of the artist."
+        },
+        "artist_birth_date": {
+          "type": "string",
+          "description": "The birth date of the artist."
+        },
+        "artist_professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professions held by the artist."
+        },
+        "recording_studio": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the recording studio."
+            },
+            "location": {
+              "type": "string",
+              "description": "The city where the recording studio operated."
+            },
+            "operating_years": {
+              "type": "object",
+              "properties": {
+                "start_year": {
+                  "type": "integer",
+                  "description": "The year the studio started operating."
+                },
+                "end_year": {
+                  "type": "integer",
+                  "description": "The year the studio ceased operating."
+                }
+              },
+              "required": [
+                "start_year",
+                "end_year"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "location",
+            "operating_years"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "artist_name",
+        "artist_birth_date",
+        "artist_professions",
+        "recording_studio"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "artist_name": "Alicia Keys",
+      "artist_birth_date": "January 25, 1981",
+      "artist_professions": [
+        "singer",
+        "songwriter",
+        "record producer",
+        "pianist",
+        "actress"
+      ],
+      "recording_studio": {
+        "name": "Unique Recording Studios",
+        "location": "New York City",
+        "operating_years": {
+          "start_year": 1978,
+          "end_year": 2004
+        }
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

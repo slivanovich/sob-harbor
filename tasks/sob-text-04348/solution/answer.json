@@ -1,0 +1,16 @@
+{
+  "station_locations": [
+    {
+      "station_call_sign": "WBQC-LD",
+      "city": "Cincinnati",
+      "state": "Ohio"
+    },
+    {
+      "station_call_sign": "WCPO-TV",
+      "city": "Cincinnati",
+      "state": "Ohio"
+    }
+  ],
+  "common_location_city": "Cincinnati",
+  "common_location_state": "Ohio"
+}

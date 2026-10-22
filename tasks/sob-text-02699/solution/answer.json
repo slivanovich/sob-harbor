@@ -1,0 +1,31 @@
+{
+  "film_title": "A Christmas Carol",
+  "release_year": 2009,
+  "film_type": [
+    "3D",
+    "computer animated",
+    "motion-capture",
+    "fantasy"
+  ],
+  "director": "Robert Zemeckis",
+  "main_actors": [
+    "Jim Carrey",
+    "Gary Oldman",
+    "Colin Firth",
+    "Bob Hoskins",
+    "Robin Wright",
+    "Cary Elwes"
+  ],
+  "soundtrack_details": {
+    "soundtrack_title": "A Christmas Carol",
+    "composer": "Alan Silvestri",
+    "theme_song": {
+      "title": "God Bless Us Everyone",
+      "writers": [
+        "Alan Silvestri",
+        "Glen Ballard"
+      ],
+      "performer": "Andrea Bocelli"
+    }
+  }
+}

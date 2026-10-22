@@ -1,0 +1,24 @@
+{
+  "common_occupation": "Comedian",
+  "individuals": [
+    {
+      "name": "Kenny Warren",
+      "occupations": [
+        "Ventriloquist",
+        "Comedian",
+        "Author"
+      ]
+    },
+    {
+      "name": "Jerry Seinfeld",
+      "occupations": [
+        "comedian",
+        "actor",
+        "writer",
+        "producer",
+        "director"
+      ]
+    }
+  ],
+  "occupation_count": 1
+}

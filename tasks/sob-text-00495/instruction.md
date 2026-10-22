@@ -1,0 +1,138 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lucie Šafářová: Lucie Šafářová (] ; born 4 February 1987) is a Czech professional tennis player from Brno.  She is currently the WTA world No. 1 doubles player.  Šafářová has won seven WTA tour singles titles, fifteen doubles titles and reached the quarterfinals of the 2007 Australian Open by upsetting defending champion Amélie Mauresmo in the fourth round.  She reached her first Grand Slam semifinal at the 2014 Wimbledon Championships and her first Grand Slam final at the 2015 French Open.  She also won the 2015 Australian Open, 2015 French Open, 2016 US Open, 2017 Australian Open and 2017 French Open women's doubles titles partnering with Bethanie Mattek-Sands.
+
+Johan Kriek: Johan Kriek (born April 5, 1958) is a South African-American professional male tennis player and founder of the Global Water Foundation, a non-profit organization dedicated to delivering clean water to the world's neediest communities.  Kriek won two Australian Opens and reached the semifinals at the French Open and US Open, as well as the quarterfinals of Wimbledon.  He won 14 professional singles and 8 doubles titles, reaching a career-high singles ranking of World No. 7.  Kriek's most memorable wins include victories over Andre Agassi, Jimmy Connors, John McEnroe, Guillermo Vilas, Stefan Edberg, Michael Chang, Vitas Gerulaitis and Björn Borg.
+
+2006 Wimbledon Championships – Women's Singles: Amélie Mauresmo won her first Wimbledon title, defeating Justine Henin-Hardenne in the final, 2–6, 6–3, 6–4.  It was her second and last Grand Slam title, having won the Australian Open earlier in the year.  Mauresmo also became the first French woman to win Wimbledon since Suzanne Lenglen in 1925.  With her loss, Henin-Hardenne missed the chance of completing a career Grand Slam.
+
+Snauwaert: Snauwaert is Belgian tennis racquet brand and manufacturer of other tennis equipment.  It was founded in 1928 by the brothers-in-law Valler Snauwaert and Eugeen Depla.  The company went out of business in 1994.  Famous tennis players that used Snauwaert include Vitas Gerulaitis, Evonne Goolagong Cawley, Miloslav Mečíř, Mikael Pernfors, Tomáš Šmíd and Brian Gottfried.
+
+Kim Warwick: Kim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.  He defeated over 35 players ranked in the top 10 including Guillermo Vilas, Raul Ramerez, Vitas Gerulaitis, Jan Kodeš, Bob Lutz and Arthur Ashe.  Warwick's career-high singles ranking was World No. 15, achieved in 1981.  He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.  Partnering with Evonne Goolagong, he won the French Open 1972, defeating Françoise Dürr and Jean-Claude Barclay in the final 6–2, 6–4.  Evonne and Kim were finalists in 1972 at Wimbledon against Rosie Casals and Ilie Năstase who won 6–4, 6–4.
+
+Port Washington Tennis Academy: The Port Washington Tennis Academy, located in Long Island, New York, is the largest indoor tennis facility on the U.S. East Coast, with 17 indoor courts.  Founded in 1966 as a non-profit tennis facility, it has an internationally acclaimed junior tennis development program.  John McEnroe (under coaches Tony Palafox and Stanley Matthews) and Vitas Gerulaitis developed their games here, and famed Australian coach Harry Hopman worked at the facility late in his life.
+
+2016 Wimbledon Championships – Women's Singles: Serena Williams was the defending champion and successfully defended her title, defeating Angelique Kerber in the final, 7–5, 6–3.  By winning her seventh Wimbledon title, Williams equaled Steffi Graf's Open Era record of 22 major singles titles.  This was also the first time two women contested two major finals against one another in a single season since Amélie Mauresmo and Justine Henin-Hardenne met in the 2006 Australian Open and Wimbledon finals.
+
+Vitas Gerulaitis: Vytautas Kevin Gerulaitis (July 26, 1954 – September 17, 1994) was an American professional tennis player.  In 1975, Gerulaitis won the men's doubles title at Wimbledon, partnering with Sandy Mayer.  He won the men's singles title at one of the two Australian Open tournaments held in 1977 (Gerulaitis won the tournament that was held in December, while Roscoe Tanner won the earlier January tournament).  Gerulaitis also won two Italian Open titles, in 1977 and 1979, and the WCT Finals in Dallas, in 1978.
+
+Amélie Mauresmo: Amélie Simone Mauresmo ] (born 5 July 1979) is a French former professional tennis player, and a former world No. 1.  Mauresmo won two Grand Slam singles titles at the Australian Open and at Wimbledon, and also won a Silver Medal at the 2004 Summer Olympics.
+
+1977 Italian Open (tennis): The 1977 Italian Open was a combined men's and women's tennis tournament that was played by men on outdoor clay courts at the Foro Italico in Rome, Italy.  The men's tournament was part of the Colgate-Palmolive Grand Prix circuit while the women's tournament was part of the Colgate Series.  The tournament was held from 16 May through 22 May 1977.  The singles titles were won by eight-seeded Vitas Gerulaitis and fifth-seeded Janet Newberry who earned $21,000 and $6,000 first-prize money respectively.  Gerulaitis competed despite being contracted to play for the Indiana Loves World Team Tennis (WTT) franchise and was fined $19,000 for failing to play Björn Borg in the weekend of the final.
+
+Question: Have tennis players Amélie Mauresmo and Vitas Gerulaitis both won titles at Wimbledon?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "question_asked": {
+      "type": "string",
+      "description": "The original question posed."
+    },
+    "player_1_info": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the first tennis player."
+        },
+        "wimbledon_titles_won": {
+          "type": "boolean",
+          "description": "Indicates if the player won any titles at Wimbledon."
+        },
+        "wimbledon_title_details": {
+          "type": "array",
+          "description": "List of Wimbledon titles won by the player.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer",
+                "description": "Year the Wimbledon title was won."
+              },
+              "title_type": {
+                "type": "string",
+                "description": "Type of title won (e.g., 'women_s_singles', 'men_s_doubles')."
+              }
+            },
+            "required": [
+              "year",
+              "title_type"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "name",
+        "wimbledon_titles_won",
+        "wimbledon_title_details"
+      ],
+      "additionalProperties": false
+    },
+    "player_2_info": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the second tennis player."
+        },
+        "wimbledon_titles_won": {
+          "type": "boolean",
+          "description": "Indicates if the player won any titles at Wimbledon."
+        },
+        "wimbledon_title_details": {
+          "type": "array",
+          "description": "List of Wimbledon titles won by the player.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer",
+                "description": "Year the Wimbledon title was won."
+              },
+              "title_type": {
+                "type": "string",
+                "description": "Type of title won (e.g., 'women_s_singles', 'men_s_doubles')."
+              }
+            },
+            "required": [
+              "year",
+              "title_type"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "name",
+        "wimbledon_titles_won",
+        "wimbledon_title_details"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer": {
+      "type": "boolean",
+      "description": "True if both players won titles at Wimbledon, false otherwise."
+    }
+  },
+  "required": [
+    "question_asked",
+    "player_1_info",
+    "player_2_info",
+    "final_answer"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,22 @@
+{
+  "film_title": "Bedknobs and Broomsticks",
+  "film_year": 1971,
+  "film_genre": [
+    "musical",
+    "fantasy"
+  ],
+  "film_origin_countries": [
+    "British",
+    "American"
+  ],
+  "actress_name": "Cindy O'Callaghan",
+  "role_name": "Carrie Rawlins",
+  "source_material": {
+    "type": "books",
+    "author_name": "Mary Norton",
+    "book_titles": [
+      "The Magic Bedknob; or, How to Become a Witch in Ten Easy Lessons",
+      "Bonfires and Broomsticks"
+    ]
+  }
+}

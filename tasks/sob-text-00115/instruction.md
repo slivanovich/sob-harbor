@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2003–04 Denver Nuggets season: The 2003–04 NBA season was the 28th season for the Denver Nuggets in the National Basketball Association, and their 37th season as a franchise.  The season saw the team draft future All-Star Carmelo Anthony with the third overall pick in the 2003 NBA draft.  During the offseason, the team signed free agent Andre Miller, and re-signed former Nuggets guard Voshon Lenard.  Coming off with the worst record of 17–65 the previous season, Anthony led the Nuggets to a fast start winning 13 of their first 19 games.  However, the team struggled down the stretch posting losing records in February and March.  The Nuggets finished sixth in the Midwest Division with a 43–39 record, and made the playoffs for the first time since 1995.  Anthony had a stellar rookie season averaging 21.0 points per game, and being selected to the All-Rookie First Team.  He also finished second behind LeBron James of the Cleveland Cavaliers in Rookie of The Year voting.
+
+1997–98 Cleveland Cavaliers season: The 1997–98 NBA season was the 28th season of the National Basketball Association in Cleveland, Ohio.  In the offseason, the Cavaliers acquired All-Star forward Shawn Kemp from the Seattle SuperSonics in a three-team trade, and Wesley Person from the Phoenix Suns in another three-team trade.  The Cavs went on a ten-game winning streak early into the season, and finished 5th in the Central Division with a 47–35 record, qualifying for the playoffs after a one-year absence.  Kemp led the team in scoring and rebounding and was selected for the 1998 NBA All-Star Game, which would be his sixth and final All-Star appearance.  Zydrunas Ilgauskas and Brevin Knight were both selected to the All-Rookie First Team, while Derek Anderson and Cedric Henderson both made the All-Rookie Second Team.  However, the Cavaliers would lose in four games in the Eastern Conference first round of the playoffs to the Indiana Pacers, and they would not make it back to the postseason until 2006.
+
+1998–99 Boston Celtics season: The 1998–99 NBA season was the 53rd season for the Boston Celtics in the National Basketball Association.  The Celtics continued to build with youth as they selected Paul Pierce out of the University of Kansas with the tenth pick in the 1998 NBA draft, while acquiring second-year center Tony Battie from the Los Angeles Lakers.  Pierce would get off to a fast start as he was named Rookie of The Month in February, after the season was delayed by a four-month lockout.  However, after a 7–7 start to the season, the Celtics struggled losing ten of their next eleven games, as they traded Andrew DeClercq to the Cleveland Cavaliers for Vitaly Potapenko.  The Celtics finished fifth in the Atlantic Division with a 19–31 record, as fans began to get restless with Rick Pitino's slow growth.  Pierce averaged 16.5 points per game and made the All-Rookie First Team.  Following the season, second-year star Ron Mercer was traded to the Denver Nuggets, and Bruce Bowen signed as a free agent with the Philadelphia 76ers.
+
+Edmund Lawrence (basketball): Edmund Lawrence (born December 8, 1952 - died July 16, 2015 in Lake Charles, Louisiana) was a retired professional basketball center who played one season in the National Basketball Association (NBA) as a member of the Detroit Pistons during the 1980–81 season.  He attended McNeese State University where he was selected in the fifth round of the 1976 NBA Draft by the Cleveland Cavaliers, but was waived by them before seeing playing time.  Lawrence signed with the San Antonio Spurs after being placed on waivers by Cleveland.  His tenure in San Antonio did not last long as he was again waived before the start of the 1980–81 season.
+
+1997–98 New Jersey Nets season: The 1997–98 NBA season was the Nets' 31st season in the National Basketball Association, and 22nd season in East Rutherford, New Jersey.  During the offseason, the Nets acquired rookie Keith Van Horn from the Philadelphia 76ers, who drafted him with the second pick in the 1997 NBA draft, then signed free agent Sherman Douglas on the first day of the regular season.  The Nets had a new look and a new logo.  A youth movement began to pay off as the Nets made the playoffs by finishing third in the Atlantic Division with a 43–39 record, as Van Horn shook off an early season injury to lead the team in scoring with 19.7 points per game, while being selected to the All-Rookie First Team.  However, in the first round of the playoffs, the Nets were given a quick exit by the Chicago Bulls in three straight games.  Following the season, Douglas signed as a free agent with the Los Angeles Clippers and Xavier McDaniel retired.
+
+Zydrunas Ilgauskas: Zydrunas Ilgauskas (Lithuanian: "Žydrūnas Ilgauskas" ; ] ; born June 5, 1975) is a Lithuanian retired professional basketball center of the National Basketball Association (NBA).  He played for the Cleveland Cavaliers from 1996 to 2010, and is the team's career leader in games played, rebounds, and blocks.  He also played for the Miami Heat during the 2010–11 season.
+
+1999–2000 Cleveland Cavaliers season: The 1999–2000 NBA season was the 30th season of the National Basketball Association in Cleveland, Ohio.  During the offseason, the Cavaliers acquired Lamond Murray from the Los Angeles Clippers.  Under new head coach Randy Wittman, the Cavaliers played around .500 with a 11–9 record in their first 20 games, but then continued to struggle without Zydrunas Ilgauskas, who missed the entire season due to foot injures.  The team finished 6th in the Central Division with a 32–50 record.  Shawn Kemp led the team in scoring, rebounds and blocks, and top draft pick Andre Miller made the All-Rookie First Team.  The Cavaliers also finished the season with the highest amount of defensive 3-second violations, a record that still stands today.  Following the season, Kemp was traded to the Portland Trail Blazers, Bob Sura was traded to the Golden State Warriors, Andrew DeClercq was dealt to the Orlando Magic, and Danny Ferry signed as a free agent with the San Antonio Spurs.
+
+2001–02 Utah Jazz season: The 2001–02 NBA season was the Jazz's 28th season in the National Basketball Association, and 23rd season in Salt Lake City, Utah.  During the offseason, the Jazz signed free agent John Amaechi.  John Stockton continued to set new standards with 15,000 career assists and 3,000 career steals, as Karl Malone scored his 34,000th career point.  However, the Jazz began to show their age as they played mediocre basketball all season finishing fourth in the Midwest Division with a 44–38 record.  The Jazz also beat the Los Angeles Lakers' record of sixteen consecutive winning seasons, set between 1976–77 and 1991–92.  Malone was selected for the 2002 NBA All-Star Game, but did not play due to an injury.  Rookie Andre Kirilenko was selected to the All-Rookie First Team.  In the first round of the playoffs, they lost in four games to the Sacramento Kings.
+
+1996–97 Philadelphia 76ers season: The 1996–97 NBA season was the 76ers 48th season in the National Basketball Association, and 34th season in Philadelphia.  After two seasons at Georgetown, point guard Allen Iverson was selected first overall by the Philadelphia 76ers in the 1996 NBA draft.  Iverson quickly established himself as one of the premier point guards in the NBA averaging 23.5 points per game.  He was named 1997 Rookie of the Year and was a member of the NBA All-Rookie First Team.  During the offseason, the Sixers acquired Don MacLean from the Denver Nuggets and signed free agents Mark Davis, Lucious Harris and Michael Cage.  The Sixers played around .500 in November with a 7–8 start to the season.  However, they struggled and lost 23 of their next 24 games, including 11 and 13-game losing streaks posted respectively.  The Sixers lost ten of their final eleven games, and finished sixth in the Atlantic Division with a 22–60 record.
+
+1999–2000 Los Angeles Clippers season: The 1999–2000 NBA season was the Clippers' 30th season in the National Basketball Association, and their 16th season in Los Angeles.  During the offseason, the Clippers acquired Derek Anderson from the Cleveland Cavaliers, and began playing in their new arena, the Staples Center.  The Clippers are co-tenants with their crosstown rival, the Los Angeles Lakers.  The team continued to struggle under head coach Chris Ford, as he was replaced with interim Jim Todd after 45 games, while Troy Hudson was released as the team signed free agent Jeff McInnis.  However, the Clippers then suffered a 17-game losing streak in the final two months of the season, finishing last place in the Pacific Division with a league worst record of 15–67.  Top draft pick Lamar Odom provided a bright spot as he averaged a solid 16.6 points per game, and made the All-Rookie First Team.
+
+Question: The 1997–98 NBA season was the 28th season of the National Basketball Association in Cleveland, Ohio, which Lithuanian retired professional basketball center of the National Basketball Association (NBA), and played for the Cleveland Cavaliers from 1996 to 2010, was selected to the All-Rookie First Team?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "season_year": {
+      "type": "string",
+      "description": "The NBA season year."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The name of the team the player was on."
+    },
+    "player_name": {
+      "type": "string",
+      "description": "The name of the player selected to the All-Rookie First Team."
+    },
+    "player_nationality": {
+      "type": "string",
+      "description": "The nationality of the player."
+    },
+    "player_position": {
+      "type": "string",
+      "description": "The primary playing position of the player."
+    },
+    "rookie_team_selection": {
+      "type": "string",
+      "description": "The specific rookie team selection received by the player."
+    }
+  },
+  "required": [
+    "season_year",
+    "team_name",
+    "player_name",
+    "player_nationality",
+    "player_position",
+    "rookie_team_selection"
+  ],
+  "additionalProperties": false
+}

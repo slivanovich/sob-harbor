@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "0921bc41d217c15ae830dbddee566c06286299f4b77b2b679da7fca62c588c1d",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac4e3a15542995c82c4ad7a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "2009",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Domestic Disturbance: Domestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.\n\nMystery Date: Mystery Date is a 1991 American teen comedy film directed by Jonathan Wacks and starring Ethan Hawke, Teri Polo, and Brian McNamara.  Shock-rockers Gwar have a brief cameo in the film.\n\nThe Beacon (film): The Beacon is a 2009 American horror/thriller film.  It is the second film made by Sabbatical Pictures.  It was later officially renamed \"Haunting at the Beacon\".  The film was shot in The Rogers Hotel in Waxahachie, Texas.  The film's theatrical debut is in seven cities in October 2009.  The film debuted at the 2009 Paranoia Film Festival where it won for Best Picture and Best Actress (Teri Polo).  It has been selected to be one of the films for the 2009 LA Femme Film Festival.  The film was directed and written by Michael Stokes.\n\nThe Hole (2009 film): The Hole is a 2009 American 3D fantasy horror film directed by Joe Dante and stars Teri Polo, Chris Massoglia, and Haley Bennett.\n\nSecond String: Second String is a direct-to-TV film from 2002 about the Buffalo Bills football team who find its first string (led by real-life Bills quarterback Doug Flutie, who had left the team by the time the film was released) out for a month after a food poisoning incident, leading the team's head coach, \"Chuck Dichter\" (portrayed by Jon Voight), to hire an insurance salesman named Dan Heller (played by Gil Bellows) as the team's backup quarterback.  Teri Polo also appeared as Heller's wife; Flutie, Mike Ditka, Chris Berman, Van Miller, Bills cornerback Donovan Greer and Ken \"Pinto Ron\" Johnson appear as themselves.  The film originally aired on TNT.\n\nFull Circle (novel): Full Circle is a 1984 romance novel by Danielle Steel.  It was adapted by Karol Ann Hoeffner into a 1996 television film starring Teri Polo.\n\nJoe Dante: Joseph James \"Joe\" Dante, Jr. ( ; born November 28, 1946) is an American film director, producer, editor and actor.  His films—notably \"Gremlins\" (1984)—often mix fantastical storylines with comedic elements.\n\nGremlins 2: The New Batch: Gremlins 2: The New Batch is a 1990 American comedy horror film, and the sequel to the 1984 film \"Gremlins\".  It was directed by Joe Dante and written by Charles S. Haas, with creature designs by Rick Baker.  It stars Zach Galligan, Phoebe Cates, John Glover, Robert Prosky, Haviland Morris, Dick Miller, Jackie Joseph, Robert Picardo and Christopher Lee; additionally, the film features Tony Randall and Frank Welker providing the voices for two gremlins.  The story continues the adventures of the creature Gizmo (once again voiced by Howie Mandel), who spawns numerous small monsters when wet.  In the first film, Gizmo's offspring rampaged through a small fictional town.  In \"Gremlins 2\", Gizmo multiplies within a skyscraper in New York City.  The new creatures thus pose a serious threat to the city should they be able to leave the building, and much of the story involves the human characters' efforts to prevent this disaster.\n\nA Plumm Summer: A Plumm Summer is a 2007 adventure-family film directed by Caroline Zelder.  It stars Owen Pearce, Chris Massoglia (appearing under the name \"Chris J. Kelly\"), Morgan Flynn, William Baldwin, Henry Winkler, and Lisa Guerrero.  The film follows a teenage boy, his young brother, and a new-to-town teenage girl as they try to find a marionette from a local television show which has been stolen and held for ransom.  Meanwhile, the brothers' father struggles with alcoholism and their mother tries to hold her marriage together.\n\nAuthors Anonymous: Authors Anonymous is a 2014 comedy American film directed and produced by Ellie Kanner.  It stars Kaley Cuoco, Chris Klein, Tricia Helfer, Jonathan Banks, Jonathan Bennett, Teri Polo and Dennis Farina in his final film role.  The film was released on March 18, 2014 through video on demand prior to its limited release on April 18, 2014 by Screen Media Films and Starz Digital.",
+    "question": "What is the release date of the film that the director of the 1984 film \"Gremlins\" directed that stared Teri Polo, Chris Massoglia, and Haley Bennett?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "director": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the film's director."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "main_actors": {
+          "type": "array",
+          "description": "A list of the main actors starring in the film.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of an actor."
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        }
+      },
+      "required": [
+        "film_title",
+        "director",
+        "main_actors",
+        "release_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "The Hole",
+      "director": {
+        "name": "Joe Dante"
+      },
+      "main_actors": [
+        {
+          "name": "Teri Polo"
+        },
+        {
+          "name": "Chris Massoglia"
+        },
+        {
+          "name": "Haley Bennett"
+        }
+      ],
+      "release_year": 2009
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

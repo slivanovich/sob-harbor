@@ -1,0 +1,27 @@
+{
+  "documentary_title": "Fire From the Heartland: the Awakening of the Conservative Woman",
+  "documentary_stars": [
+    {
+      "name": "Michele Marie Bachmann",
+      "is_politician": true,
+      "political_office": "United States House of Representatives",
+      "congressional_district": "Minnesota's 6th congressional district",
+      "term_start_year": 2007,
+      "term_end_year": 2015
+    },
+    {
+      "name": "Deneen Borelli",
+      "is_politician": false
+    },
+    {
+      "name": "Ann Coulter",
+      "is_politician": false
+    }
+  ],
+  "identified_politician": {
+    "name": "Michele Marie Bachmann",
+    "congressional_district_represented": "Minnesota's 6th congressional district",
+    "term_start_year": 2007,
+    "term_end_year": 2015
+  }
+}

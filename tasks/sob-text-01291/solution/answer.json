@@ -1,0 +1,14 @@
+{
+  "university_type": "research university",
+  "universities_analyzed": [
+    {
+      "name": "University of Notre Dame",
+      "is_research_university": true
+    },
+    {
+      "name": "Northwestern University",
+      "is_research_university": true
+    }
+  ],
+  "common_type_identified": true
+}

@@ -1,0 +1,25 @@
+{
+  "common_profession": "boxer",
+  "individuals_involved": [
+    {
+      "name": "Dominic Breazeale",
+      "nationality": "American"
+    },
+    {
+      "name": "Anthony Joshua",
+      "nationality": "British"
+    }
+  ],
+  "shared_event": {
+    "event_type": "boxing_match",
+    "participants": [
+      "Anthony Joshua",
+      "Dominic Breazeale"
+    ],
+    "winner": "Anthony Joshua",
+    "loser": "Dominic Breazeale",
+    "title_contested": "IBF world heavyweight title",
+    "year": 2016,
+    "location": "London"
+  }
+}

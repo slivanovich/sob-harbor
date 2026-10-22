@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Agriculture in Bahrain: Despite the low rainfall and poor soil, agriculture in Bahrain historically was an important sector of the economy.  Before the development of the oil industry, date palm cultivation dominated Bahrain's agriculture, producing sufficient dates for both domestic consumption and export.  At least twenty-three varieties of dates are grown, and the leaves, branches, buds, and flowers of the date palm also are used extensively.  From the 1950s through the 1970s, changing food consumption habits, as well as the increasing salinity of the aquifers that served as irrigation sources, led to a gradual decline in date cultivation.  By the 1980s, a significant number of palm groves had been replaced by new kinds of agricultural activities, including vegetable gardens, nurseries for trees and flowers, poultry production, and dairy farms.
+
+Date palm: Phoenix dactylifera, commonly known as date or date palm, is a flowering plant species in the palm family, Arecaceae, cultivated for its edible sweet fruit.  Although its place of origin is unknown because of long cultivation, it probably originated from lands around Iraq.  The species is widely cultivated and is naturalized in many tropical and subtropical regions worldwide.
+
+Rhynchophorus cruentatus: The palmetto weevil ("Rhynchophorus cruentatus") is an insect native to Florida, but has been found as far as southern Texas to the west and South Carolina to the north.  It is the largest weevil in North America and the only kind of palm weevil in the continental United States.  It infests palms and is considered a pest.  Its main target is the Canary Island date palm, but date palms (a different species than the Canary Island date palm), sabal palms (the palmetto weevil's traditional target), saw palmetto (the palmetto weevil's traditional alternative target), "Washingtonia", "Pritchardia", royal palms, "Latania", coconut palms, "Caryota", and "Bismarckia" are also susceptible.  Distressed palm trees are usually attacked, which makes transplanted trees a frequent target.  The Palmetto Weevils mate at the base of the palm branches where the females deposit their eggs.  The grubs then eat into the palm tree, killing it.  After the larvae have turned into adult weevils, the damage can be seen, but by then, it is considered to be too late for the tree.  The life cycle from egg to adult for a palmetto weevil is about 84 days.  For prevention, it is recommended an appropriate insecticidal crown drench is done twice a year for high value palms.
+
+Jeffersonia: Jeffersonia which is also known as twinleaf or rheumatism root, is a small genus of herbaceous perennial plants in the family Berberidaceae.  They are uncommon spring wildflowers, which grow in limestone soils of rich deciduous forests.  "Jeffersonia" was named for United States President Thomas Jefferson, by his contemporary Benjamin Smith Barton.  This genus was formerly grouped in genus "Podophyllum".  Twinleaf is protected by state laws as a threatened or endangered plant in Georgia, Iowa, New York, and New Jersey.
+
+Phoenix canariensis: Phoenix canariensis is a species of flowering plant in the palm family Arecaceae, native to the Canary Islands.  It is a relative of "Phoenix dactylifera", the true date palm.  It is the natural symbol of the Canary Islands, together with the canary "Serinus canaria".  Mature "P. canariensis" are often used in the ornamental landscape and are collected and transplanted to their new planting location.  A Canary Island Date Palm with 30 feet of trunk is approximately 60 years of age.
+
+Phoenix roebelenii: Phoenix roebelenii, with common names of pygmy date palm, miniature date palm or just robellini, is a species of date palm native to southeastern Asia, from southwestern China (Yunnan Province), northern Laos and northern Vietnam, (in Dien Bien Province, Ha Giang Province, Cao Bang Province, Lang Son Province).  The name is sometimes mistakenly cited as "roebelinii".
+
+Judean date palm: The Judean date palm is a date palm ("Phoenix dactylifera") grown in Judea.  It is not clear whether there was ever a single distinct Judean cultivar, but dates grown in the region have had distinctive reputations for thousands of years, and the date palm was anciently regarded as a symbol of the region and its fertility.  Cultivation of dates in the region almost disappeared after the fourteenth century AD from a combination of climate change and infrastructure decay but has been revived in modern times.
+
+Phoenix reclinata: The Wild date palm or Senegal date palm ("Phoenix reclinata", "reclinata" - Latin, reclining) is a species of flowering plant in the palm family native to tropical Africa, the Arabian Peninsula, Madagascar and the Comoro Islands.  It is also reportedly naturalized in Florida, Puerto Rico, Bermuda and the Leeward Islands.  The plants are found from sea level to 3000 m, in rain forest clearings, monsoonal forests and rocky mountainsides.
+
+Phoenix sylvestris: Phoenix sylvestris ("sylvestris" - Latin, of the forest) also known as silver date palm, Indian date, sugar date palm or wild date palm, is a species of flowering plant in the palm family native to southern Pakistan, most of India, Sri Lanka, Nepal, Bhutan, Burma and Bangladesh.  It is also reportedly naturalized in Mauritius, the Chagos Archipelago, Puerto Rico and the Leeward Islands.  Growing in plains and scrubland up to 1300 m above sea level, the fruit from this palm species is used to make wine and jelly.  The sap is tapped and drunk fresh or fermented into toddy.  The fresh sap is boiled to make palm jaggery in West Bengal state of India and Bangladesh.
+
+Coconut sugar: Coconut sugar (also known as coco sugar, coconut palm sugar, coco sap sugar or coconut blossom sugar) is a palm sugar produced from the sap of the flower bud stem of the coconut palm.  Other types of palm sugar are made from the Palmyra palm, the date palm, the sugar date palm, the sago palm or the sugar palm.
+
+Question: In between Date palm and Jeffersonia which one was formerly grouped in genus "Podophyllum"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "plant_name": {
+      "type": "string",
+      "description": "The name of the plant that was formerly grouped under a different genus."
+    },
+    "former_genus": {
+      "type": "string",
+      "description": "The genus under which the plant was formerly grouped."
+    },
+    "context_source": {
+      "type": "string",
+      "description": "The section of the context where the information was found."
+    }
+  },
+  "required": [
+    "plant_name",
+    "former_genus",
+    "context_source"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+{
+  "film_title": "Apocalypto",
+  "release_year": 2006,
+  "director_producer_name": "Mel Gibson",
+  "supporting_actor": {
+    "name": "Israel Contreras",
+    "profession": "boxer",
+    "nationality": "Venezuelan"
+  }
+}

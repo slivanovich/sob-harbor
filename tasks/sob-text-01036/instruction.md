@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jean-Frédéric Edelmann: Jean-Frédéric Edelmann (Johann Friedrich Edelmann, 5 May 1749 – 17 July 1794) was a French classical composer.  He was born in Strasbourg but, after studying law and music, he moved to Paris in 1774 where he played and taught the piano.  It is possible that Edelmann worked for some time in London.  During the French Revolution he was appointed administrator of the Bas-Rhin.  In July 1794 he was arrested and executed by guillotine.
+
+Charlotte Corday: Marie-Anne Charlotte de Corday d'Armont (27 July 1768 – 17 July 1793), known as Charlotte Corday (] ), was a figure of the French Revolution.  In 1793, she was executed by guillotine for the assassination of Jacobin leader Jean-Paul Marat, who was in part responsible for the more radical course the Revolution had taken through his role as a politician and journalist.  Marat had played a substantial role in the political purge of the Girondins, with whom Corday sympathized.  His murder was memorialized in the painting "The Death of Marat" by Jacques-Louis David, which shows Marat's dead body after Corday stabbed him in his medicinal bath.  In 1847, writer Alphonse de Lamartine gave Corday the posthumous nickname "l'ange de l'assassinat" (the Angel of Assassination).
+
+Modérantisme: During the French Revolution, modérantisme (] ) or the faction des modérés ("faction of the moderates") was the name the "Montagnards" gave to their relatively-more-moderate opponents, first the "Girondins" and then the "Dantonistes".  Modérantisme was denounced before the Jacobin and the Cordeliers Clubs, who then led the first attacks on it in 1794.
+
+François Hanriot: François Hanriot (3 September 1761 – 28 July 1794) was a French Jacobin leader and street orator of the Revolution.  He played a vital role in the Insurrection and subsequently the fall of the Girondins.
+
+Jean-Baptiste Clauzel: Jean-Baptiste Clauzel, born in Lavelanet on September 21, 1746 and died in Paris on July 2, 1803, was a French politician.  In 1790, he was elected mayor of his hometown.  In 1791, his countrymen sent him sit in the Legislative Assembly where he was very discreet.  In 1792, he was re-elected to the Convention by the department of Ariege he sided on the Mountain.  At the trial of Louis XVI in January 1793, this "royalist" vote the king's death, without suspension ruled against the appeal of the people.  He did not vote the impeachment of Jean-Paul Marat while claiming to be "far from approving all the principles of the Revolution espoused by his fanatic friend."  Despite his opposition to the Girondins, he vote by MPs maintenance allowances to Members under arrest.  His served as a representative on mission to the Army of the Pyrenees (West) from the end of August 1793 when he was recalled to Paris.  He was among those who organized the downfall of Maximilien Robespierre.  After 9 Thermidor Year II ( 27 July 1794 ) he joined the Committee of General Security, and supported the closing of the Jacobin Clubs.  An active Thermidorian, he showed a readiness during the insurrection of the 1st Prairial ( 20 May 1795 ).  He denounced and arrested the "last Montagnards and called for the arrest of Bertrand Barrere, Jacques Nicolas Billaud-Varenne and Jean-Marie Collot.  Returned to the army of the Pyrenees, he found it disgracefully disorganized and unable to fight.
+
+Girondins: The Girondins (] ) or Girondists were members of a loosely knit political faction during the French Revolution.  From 1791 to 1793, the Girondins were active within the Legislative Assembly and the National Convention.  They were part of the Jacobin movement—though not every Girondin was a member of the actual Jacobin Club—until they were accused of monarchism and purged.
+
+Georges Couthon: Georges Auguste Couthon (22 December 1755 – 28 July 1794) was a French politician and lawyer known for his service as a deputy in the Legislative Assembly during the French Revolution.  Couthon was elected to the Committee of Public Safety on 30 May 1793 and served as a close associate of Maximilien Robespierre and Louis Antoine de Saint-Just until his arrest and execution in 1794 during the period of the Reign of Terror.  Couthon played an important role in the development of the Law of 22 Prairial, which was responsible for a sharp increase in the number of executions of accused counter-revolutionaries.
+
+Muscadin: The term Muscadin (] ), meaning "wearing musk perfume", came to refer to mobs of young men, relatively well-off and dressed in a dandyish manner, who were the street fighters of the Thermidorian Reaction in Paris in the French Revolution.  After the coup against Robespierre and the Jacobins of 9 Thermidor Year II, or 27 July 1794, they took on the remaining Jacobins and sans-culottes, and largely succeeded in suppressing them over the next year or two.  In prints they are often seen carrying large wooden clubs, which they liked to call "constitutions".  They were supposedly organized by the politician and journalist Louis-Marie Stanislas Fréron, and eventually numbered 2,000-3,000.  They in fact seem to have mostly consisted of the lower middle classes, the sons of "minor officials and small shopkeepers", and were quietly encouraged by the shaky new government, who had good reason to fear Jacobin mobs, and wider unrest as the hard winter of 1794-5 saw increasing hunger among the Parisian working class.  The Muscadins are considered to be part of the First White Terror in response to the preceding Reign of Terror of the Jacobins.
+
+First White Terror: The White Terror was a period during the French Revolution in 1795, when a wave of violent attacks swept across much of France.  The victims of this violence were people identified as being associated with the Reign of Terror - followers of Robespierre and Marat, and members of local Jacobin clubs.  The violence was perpetrated primarily by those whose relatives or associates had been victims of the Great Terror, or whose lives and livelihoods had been threatened by the government and its supporters before the Thermidorean Reaction.  Principally these were, in Paris, the Muscadins, and in the countryside, monarchists, supporters of the Girondins, those who opposed the Civil Constitution of the Clergy and those otherwise hostile to the Jacobin political agenda.  The Great Terror had been largely an organised political programme, based on laws such as the Law of 22 Prairial, and enacted through official institutions such as the Revolutionary Tribunal, but the White Terror was essentially a series of unco-ordinated attacks by local activists who shared common perspectives but no central organisation.  In particular locations, there were however more organised counter-revolutionary movements such as the Companions of Jehu in Lyon and the Companions of the Sun in Provence.  The name 'White Terror' derives from the white cockades worn in the hats of royalists.
+
+Fall of Maximilien Robespierre: The fall of Maximilien Robespierre refers to the series of events beginning with Maximilien Robespierre's address at to the National Convention on 8 Thermidor Year II (26 July 1794) and ending with his arrest and execution on 10 Thermidor Year II (28 July 1794).  In the speech of 8 Thermidor, Robespierre spoke of the existence of internal enemies, conspirators and calumniators, within the Convention and the governing Committees.  He refused to name them, which alarmed the deputies who feared Robespierre was preparing another purge of the Convention.
+
+Question:  François Hanriot (3 September 1761 – 28 July 1794) was a French Jacobin leader and street orator of the Revolution, he played a vital role in the Insurrection and subsequently the fall of the Girondins, were members of a loosely knit political faction, during which time period?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entity_name": {
+      "type": "string",
+      "description": "The name of the political faction."
+    },
+    "entity_type": {
+      "type": "string",
+      "description": "The type of entity, e.g., 'political faction'."
+    },
+    "active_period": {
+      "type": "object",
+      "properties": {
+        "start_year": {
+          "type": "integer",
+          "description": "The start year of their active period."
+        },
+        "end_year": {
+          "type": "integer",
+          "description": "The end year of their active period."
+        }
+      },
+      "required": [
+        "start_year",
+        "end_year"
+      ],
+      "additionalProperties": false
+    },
+    "historical_event_context": {
+      "type": "string",
+      "description": "The broader historical event during which the faction was active."
+    }
+  },
+  "required": [
+    "entity_name",
+    "entity_type",
+    "active_period",
+    "historical_event_context"
+  ],
+  "additionalProperties": false
+}

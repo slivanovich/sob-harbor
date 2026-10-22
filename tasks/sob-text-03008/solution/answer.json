@@ -1,0 +1,29 @@
+{
+  "common_attribute": "writer",
+  "person_a_details": {
+    "name": "Alain Robbe-Grillet",
+    "professions": [
+      "writer",
+      "filmmaker"
+    ],
+    "notable_works_or_roles": [
+      "Taxandria (script collaborator)",
+      "Last Year at Marienbad (screenplay)",
+      "N. a pris les dés... (director)"
+    ]
+  },
+  "person_b_details": {
+    "name": "Stanisław Ignacy Witkiewicz",
+    "professions": [
+      "writer",
+      "painter",
+      "philosopher",
+      "playwright",
+      "novelist",
+      "photographer"
+    ],
+    "notable_works_or_roles": [
+      "Insatiability (novel)"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "041baa4613a048d22b3636a4171532b95455139b30184f2bf0f0f526a046fceb",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7f7a755542992097ad2f7f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Thomas Ritter",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Stefan Effenberg: Stefan Effenberg (] ; born 2 August 1968) is a retired German footballer who last managed SC Paderborn.  A midfielder, he possessed leadership skills, fantastic passing range, powerful shooting ability, physical strength, but also a fearsome and controversial character.\n\n2002–03 VfL Wolfsburg season: VfL Wolfsburg finished 8th in Bundesliga, qualifying for the UEFA Intertoto Cup.  The club got into the spotlight signing Bayern Munich star Stefan Effenberg, who finished his career with a season in the Volkswagen-owned club.  Elsewhere, Martin Petrov and Tomislav Marić had successful seasons, being pivotal in the European qualification.\n\nStefan Ritter: Stefan Ritter (born (1998--)13 1998 ) is a Canadian male track cyclist, representing Canada at international competitions.  He won the bronze medal at the 2016 Pan American Track Cycling Championships in the 1 km time trial and in the team sprint.  Ritter is the current (2016) UCI junior world champion in the 1 kilometer time trial.\n\nAugustine of Canterbury: Augustine of Canterbury (born first third of the 6th century – died probably 26 May 604) was a Catholic Benedictine monk who became the first Archbishop of Canterbury in the year 597.  He is considered the \"Apostle to the English\" and a founder of the Catholic Church in England.\n\n1991–92 A.C. Fiorentina season: Associazione Calcio Fiorentina failed to take off under former Brazilian national team coach Sebastião Lazaroni, and ended the season in 12th place.  The result prompted president Cecchi Gori to sign German starlet Stefan Effenberg among others for the coming season, also replacing Lazaroni with Luigi Radice.  The most significant event in Fiorentina's season was the arrival of Argentinian striker Gabriel Batistuta, who was to become Fiorentina's all-time topscorer during his nine years at the club.\n\nList of Lab Rats characters: \"Lab Rats\", also known as \"Lab Rats: Bionic Island\" for its fourth season, is an American television sitcom that premiered on February 27, 2012, on Disney XD.  It focuses on the life of teenager Leo Dooley, whose mother, Tasha, marries billionaire genius Donald Davenport.  He meets Adam, Bree, and Chase, three bionic superhumans, with whom he develops an immediate friendship.  It should be noted that the names of the Lab Rats imply that they were originally known as subjects A, B, C and D. Adam was born first, then Bree, then Chase, and finally Daniel.\n\nDonald &amp; Deborah Ritter: Donald and Deborah Ritter are fictional characters from Marvel Comics.  They are the twin children of Thena, leader of the Eternals, and Kro, sometime leader of the race of Deviants.  The Ritter twins were created by Roy Thomas, Dann Thomas and Mark Texeira.  The twins first appeared in the one-shot special \"Eternals: The Herod Factor\".\n\nThomas Ritter: Thomas Ritter (born 10 October 1967 in Görlitz) is a retired German footballer.  He played one game for Germany on 13 October 1993 in a friendly against Uruguay, as a substitute for Stefan Effenberg.\n\nWale Adebanwi: Professor Wale Adebanwi, (born 1969), is a Nigerian - born first Black African Rhodes Professor at Oxford University\n\nDespoina: In Greek mythology, Despoina, Despoena or Despoine, was the daughter of Demeter and Poseidon and sister of Arion.  She was the goddess of mysteries of Arcadian cults worshipped under the title \"Despoina\", \"the mistress\" alongside her mother Demeter, one of the goddesses of the Eleusinian mysteries.  Her real name could not be revealed to anyone except those initiated to her mysteries.  Pausanias spoke of Demeter as having two daughters; Kore being born first, then later Despoina.  With Zeus being the father of Kore, and Poseidon as the father of Despoina.  Pausanias made it clear that Kore is Persephone, though he wouldn't reveal Despoina's proper name.",
+    "question": "Who was born first, Thomas Ritter or Stefan Effenberg?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_a_name": {
+          "type": "string",
+          "description": "The name of the first person being compared."
+        },
+        "person_a_birth_date": {
+          "type": "string",
+          "description": "The birth date of the first person (YYYY-MM-DD format if possible)."
+        },
+        "person_b_name": {
+          "type": "string",
+          "description": "The name of the second person being compared."
+        },
+        "person_b_birth_date": {
+          "type": "string",
+          "description": "The birth date of the second person (YYYY-MM-DD format if possible)."
+        },
+        "first_born_person_name": {
+          "type": "string",
+          "description": "The name of the person who was born first."
+        }
+      },
+      "required": [
+        "person_a_name",
+        "person_a_birth_date",
+        "person_b_name",
+        "person_b_birth_date",
+        "first_born_person_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_a_name": "Thomas Ritter",
+      "person_a_birth_date": "1967-10-10",
+      "person_b_name": "Stefan Effenberg",
+      "person_b_birth_date": "1968-08-02",
+      "first_born_person_name": "Thomas Ritter"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

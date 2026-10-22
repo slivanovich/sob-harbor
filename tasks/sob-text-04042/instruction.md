@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Manchester by the Sea (film): Manchester by the Sea is a 2016 American drama film written and directed by Kenneth Lonergan, and starring Casey Affleck, Michelle Williams, Kyle Chandler, and Lucas Hedges.  The plot follows a man who looks after his teenage nephew after his brother dies.  The film premiered at the Sundance Film Festival on January 23, 2016 and was soon picked up by Amazon Studios for distribution.  It began a limited release on November 18, 2016, before going wide on December 16, 2016 and grossed $75.8 million worldwide on an $8.5 million budget.
+
+Mary Mallen: Mary Catherine Mallen is an American actress and singer.  Since graduating from The Royal Academy of Dramatic Art, she has appeared in various theatrical productions.  She also acted as Sharon in Kenneth Lonergan’s film "Manchester by the Sea".
+
+Analyze This: Analyze This is a 1999 gangster comedy film directed by Harold Ramis, who co-wrote the screenplay with playwright Kenneth Lonergan and Peter Tolan.  The film stars Robert De Niro as a mafioso and Billy Crystal as his psychiatrist.  A sequel, "Analyze That", was released in 2002.
+
+You Can Count On Me: You Can Count On Me is a 2000 American drama film starring Laura Linney, Mark Ruffalo, Rory Culkin, and Matthew Broderick.  Written and directed by Kenneth Lonergan, it tells the story of Sammy, a single mother living in a small town, and her complicated relationships with family and friends.  The story takes place in the fictionalized Catskill communities of Scottsville and Auburn, New York.  The film was primarily shot in and around Margaretville, New York.
+
+Margaret (2011 film): Margaret is a 2011 drama film written and directed by Kenneth Lonergan.  The film stars Anna Paquin, Jean Reno, Matt Damon, Mark Ruffalo, J. Smith-Cameron, Kieran Culkin, Olivia Thirlby, and Rosemarie DeWitt.  "Margaret" originally was scheduled for release in 2007 by Fox Searchlight Pictures, but was repeatedly delayed while Lonergan struggled to create a final cut he was satisfied with, resulting in multiple lawsuits.  The litigation ended in 2014.
+
+Kieran Culkin: Kieran Kyle Culkin (born September 30, 1982) is an American actor.  He began his career as a child actor, acting alongside his older brother Macaulay in the "Home Alone" franchise (19901992) before going on to feature in films including the 1991 film "Father of the Bride" and its 1995 sequel, "My Summer Story" (1994), the sequel to "A Christmas Story", "The Mighty" (1998), "She's All That", "The Cider House Rules" (1999), "The Dangerous Lives of Altar Boys" (2002), "Scott Pilgrim vs. the World" (2010), and "Movie 43".  His breakout role in "Igby Goes Down" (2002) received critical acclaim and he was nominated for a Best Actor Golden Globe Award, as well as winning a Critics' Choice Movie Award and Satellite Award.  He has also acted on-stage, most notably in several productions of the Kenneth Lonergan play "This Is Our Youth".  In 2015, he portrayed Rye Gerhardt in the second season of the critically acclaimed FX series "Fargo".
+
+J. Smith-Cameron: J. Smith-Cameron (born September 7, 1957) is an American actress best known for her role as Janet Talbot on the critically acclaimed television series "Rectify".
+
+Gangs of New York: Gangs of New York is a 2002 American epic period drama film directed by Martin Scorsese, set in the mid-19th century in the Five Points district of New York City.  The screenplay is by Jay Cocks, Steven Zaillian, and Kenneth Lonergan.  It was inspired by Herbert Asbury's 1927 non-fiction book, "The Gangs of New York".  It was made in Cinecittà, Rome, distributed by Miramax Films and nominated for numerous awards, including the Academy Award for Best Picture, among nine other Oscar nominations.
+
+Kate Lonergan: Helen Catherine "Kate" Lonergan (born 4 January 1962 in Barton-upon-Irwell, Lancashire) is an English former actress, best known for playing the role of Marian in the 1989–94 BBC One children's television series "Maid Marian and her Merry Men".
+
+Howards End (miniseries): Howards End is an upcoming television miniseries directed by Hettie MacDonald.  It is based on the 1910 novel of the same name by E. M. Forster and adapted by Kenneth Lonergan.  It will air on BBC One in the United Kingdom and on Starz in the United States.  The series will consist of four episodes.
+
+Question: an actress who appeared in a film directed by Kenneth Lonergan featured in which television series?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actress_name": {
+      "type": "string",
+      "description": "The name of the actress who appeared in a film directed by Kenneth Lonergan."
+    },
+    "film_directed_by_lonergan": {
+      "type": "string",
+      "description": "The title of the film directed by Kenneth Lonergan in which the actress appeared."
+    },
+    "television_series_name": {
+      "type": "string",
+      "description": "The name of the television series the actress was featured in."
+    },
+    "lonergan_role_in_film": {
+      "type": "string",
+      "description": "Kenneth Lonergan's role in the specified film."
+    }
+  },
+  "required": [
+    "actress_name",
+    "film_directed_by_lonergan",
+    "television_series_name",
+    "lonergan_role_in_film"
+  ],
+  "additionalProperties": false
+}

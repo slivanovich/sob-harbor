@@ -1,0 +1,13 @@
+{
+  "person_a_details": {
+    "name": "Stockwell Day",
+    "birth_date": "1950-08-16"
+  },
+  "person_b_details": {
+    "name": "Richard M. Harris",
+    "birth_date": "1944-09-06"
+  },
+  "older_person_name": "Richard M. Harris",
+  "age_difference_years": 6,
+  "comparison_statement": "Richard M. Harris is 6 years older than Stockwell Day."
+}

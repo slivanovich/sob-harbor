@@ -1,0 +1,16 @@
+{
+  "road_name": "Great Cambridge Road",
+  "alternative_names": [
+    "A10",
+    "Old North Road"
+  ],
+  "southern_end": {
+    "location_name": "London Bridge",
+    "borough_or_town": "London Borough of Southwark"
+  },
+  "northern_end": {
+    "location_name": "King's Lynn",
+    "type_of_location": "Norfolk port town"
+  },
+  "crossed_by_spital_brook": true
+}

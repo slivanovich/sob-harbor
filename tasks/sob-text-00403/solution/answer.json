@@ -1,0 +1,36 @@
+{
+  "item_names": [
+    "Jazz",
+    "Dr Pepper"
+  ],
+  "common_category": "drink",
+  "item_details": [
+    {
+      "name": "Jazz",
+      "item_type": "soda",
+      "attributes": {
+        "full_brand_name": "Diet Pepsi Jazz",
+        "parent_company": "Pepsi",
+        "introduction_year": 2006,
+        "discontinuation_year": 2009,
+        "description_detail": "variant of Pepsi's popular Diet Pepsi product, combining several different flavors"
+      }
+    },
+    {
+      "name": "Dr Pepper",
+      "item_type": "carbonated soft drink",
+      "attributes": {
+        "creator": "Charles Alderton",
+        "creation_location": "Waco, Texas",
+        "first_served_year": 1885,
+        "first_nationally_marketed_year": 1904,
+        "description_detail": "marketed as having a unique flavor",
+        "variants_mentioned": [
+          "Diet Dr Pepper",
+          "a version without high fructose corn syrup",
+          "a line of additional flavors"
+        ]
+      }
+    }
+  ]
+}

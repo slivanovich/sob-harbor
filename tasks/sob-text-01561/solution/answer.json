@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "name": "Amos Oz",
+      "occupation_details": "Israeli writer, novelist, journalist and intellectual. Also a professor of literature."
+    },
+    {
+      "name": "Terry Goodkind",
+      "occupation_details": "American writer, known for epic fantasy and suspense novels."
+    }
+  ],
+  "occupation_industry_similar": true,
+  "reasoning": "Both Amos Oz and Terry Goodkind are described as writers and novelists, indicating they are in the same occupation industry of literature."
+}

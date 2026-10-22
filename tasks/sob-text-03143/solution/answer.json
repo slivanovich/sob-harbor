@@ -1,0 +1,18 @@
+{
+  "entity_names": [
+    "OpenClonk",
+    "Minecraft"
+  ],
+  "shared_entertainment_type": "game",
+  "openclonk_details": {
+    "description": "A free and open-source 2D action game in which the player controls 'clonks', small but witty and nimble humanoid beings.",
+    "genres": [
+      "action",
+      "tactical gameplay"
+    ]
+  },
+  "minecraft_details": {
+    "description": "A sandbox video game created and designed by Swedish game designer Markus \"Notch\" Persson, and later fully developed and published by Mojang.",
+    "game_type": "sandbox video game"
+  }
+}

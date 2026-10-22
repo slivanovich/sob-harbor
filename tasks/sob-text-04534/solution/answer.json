@@ -1,0 +1,23 @@
+{
+  "player_name": "Geoff Ablett",
+  "birth_date": "13 March 1955",
+  "playing_decades": [
+    "1970s",
+    "1980s"
+  ],
+  "primary_club": "Hawthorn",
+  "games_played_for_primary_club": 202,
+  "other_clubs": [
+    "Richmond",
+    "St Kilda"
+  ],
+  "notable_achievements": [
+    "won the Grand Final Sprint competition four times"
+  ],
+  "brother_information": {
+    "brother_name": "Gary Ablett Sr",
+    "brother_relationship": "younger brother",
+    "brother_status": "legendary player",
+    "brother_club": "Geelong Football Club"
+  }
+}

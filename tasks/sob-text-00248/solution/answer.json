@@ -1,0 +1,10 @@
+{
+  "show_title": "Miniverse",
+  "host_details": {
+    "host_name": "Chris Hadfield",
+    "host_nationality": "Canadian",
+    "is_first_canadian_spacewalker": true
+  },
+  "on_demand_service": "CuriosityStream",
+  "service_type": "subscription video on demand service"
+}

@@ -1,0 +1,12 @@
+{
+  "conglomerate": {
+    "name": "Techint Group",
+    "founding_year": 1945,
+    "founding_city": "Milan",
+    "founding_country": "Italy"
+  },
+  "ceo": {
+    "name": "Paolo Rocca"
+  },
+  "relationship": "CEO of"
+}

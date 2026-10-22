@@ -1,0 +1,14 @@
+{
+  "album_name": "Still Da Baddest",
+  "song_name": "I Got a Thang for You",
+  "featured_artist": {
+    "name": "Keyshia Cole",
+    "occupations": [
+      "singer/songwriter",
+      "record producer",
+      "business woman",
+      "television personality"
+    ],
+    "birth_location": "Oakland, California"
+  }
+}

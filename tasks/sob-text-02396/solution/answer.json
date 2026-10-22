@@ -1,0 +1,16 @@
+{
+  "language_name": "Urdu",
+  "language_characteristics": [
+    "Persianised",
+    "standardised register",
+    "Hindustani language register"
+  ],
+  "associated_locations": [
+    "Gulistan",
+    "Punjab"
+  ],
+  "other_associated_languages": [
+    "Punjabi"
+  ],
+  "is_official_language_of_pakistan": true
+}

@@ -1,0 +1,15 @@
+{
+  "player_name": "George Weah",
+  "nationality": "Liberian",
+  "career_roles": [
+    "humanitarian",
+    "politician",
+    "retired professional footballer"
+  ],
+  "club_performance": {
+    "club_name": "Invincible Eleven",
+    "season": "1986/87",
+    "goals_scored": 24,
+    "games_played": 23
+  }
+}

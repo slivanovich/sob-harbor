@@ -1,0 +1,13 @@
+{
+  "actor_details": {
+    "name": "Delroy Lindo",
+    "birth_year": 1952,
+    "nationalities": [
+      "British-American"
+    ]
+  },
+  "film_details": {
+    "title": "The Last Castle"
+  },
+  "starred_in_film": true
+}

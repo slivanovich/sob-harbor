@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+John Whelan Sterling: Sterling was born in Wyoming County, Pennsylvania.  His father, Major Daniel Sterling, had 20 children in two marriages.  John's mother was Daniel's third wife Rachel.  (Daniel's first short marriage produced no children.)  John Sterling attended ordinary grammar schools, and then took preparatory courses at Hamilton Academy and Homer Academy in New York.  He worked in a law office for a year, and in 1837 entered the College of New Jersey (now Princeton) as a sophomore, graduating in 1840.  He then attended the theological seminary in Princeton, afterwards performing missionary work in Pennsylvania.  In 1846 he moved to Wisconsin.  He taught one year at Carroll College and another year at a private school in Waukesha.
+
+And So It Goes (film): And So It Goes is a 2014 American romantic comedy drama film directed by Rob Reiner and written by Mark Andrus.  The film, which stars Michael Douglas, Diane Keaton and Sterling Jerins, was released on July 25, 2014.
+
+J. Sterling Morton High School East: J. Sterling Morton High School East (often called "Morton East") is a public secondary school located in Cicero, Illinois.  Morton East is one of three schools in J. Sterling Morton High School District 201.  Morton East is a sophomore through senior building, with future students attending the "J. Sterling Morton Freshman Center" for one year.  Morton East's sister school, J. Sterling Morton High School West is a four-year secondary school.
+
+Warren Woody: Warren V. Woody, Sr. (October 13, 1897 – December 21, 1982) was an American football coach.  He was the head football coach for Sterling Collegein Sterling, Kansas.  He held that position for 3 seasons, from 1922 until 1924.  His coaching record at Sterling was 16 wins, 8 losses and 2 ties.  As of the conclusion of the 2012 season, this ranks him #8 at Sterling in total wins and #4 at the school in winning percentage ( ).
+
+Sterling 10.5 axle: The Sterling 10.5 axle is an automotive axle manufactured by Ford Motor Company at the Sterling Axle Plant in Sterling Heights, MI.  It was first used in model year 1985 Ford trucks.  The axle was developed to replace the Dana 60 and Dana 70.  The Sterling 10.5 axle is currently only made as a full floating axle.
+
+Warren Central High School (Indiana): Warren Central High School, also known as Warren, WC, or WCHS, is a public high school located in Warren Township on the far east side of Indianapolis, Indiana.  It is the only high school in Warren Township with an enrollment of 3,736 students as of the 2016-2017 school year.  Warren Central is known as "The Pride of the Eastside".  Its school colors are Black and Vegas Gold and the nickname is the Warriors.  The school fight song is Rah, rah for Warren.  The original Warren Central opened on January 12th, 1925 at the corner of 10th Street & Post Road on the far east side of Indianapolis.  It was a consolidation of the Cumberland and Shadeland schools which both had high schools that were too small for the growing township population.  Warren Central was built to house grades 7 to 12 and to give the students a city quality education in a farm community.  By the late 1950s, the population of Warren Township had once again outgrown its high school and, on September 6, 1960, a new Warren Central opened at its present location off of 9500 East 16th Street.  The new school only houses grades 9-12.  Grades 7-8 removed and put in with academy.  In 1976, the Walker Career Center opened on the property of the high school giving students not going on to college an opportunity to train for a career.
+
+The Conjuring: The Conjuring is a 2013 American supernatural horror film directed by James Wan and written by Chad Hayes and Carey W. Hayes.  It is the first installment in "The Conjuring" series.  Patrick Wilson and Vera Farmiga star as Ed and Lorraine Warren, paranormal investigators and authors associated with prominent cases of haunting.  Their purportedly real-life reports inspired "The Amityville Horror" story and film franchise.  The Warrens come to the assistance of the Perron family (Ron Livingston and Lili Taylor), who are experiencing increasingly disturbing events in their farmhouse in Rhode Island in 1971.
+
+Sterling Award: The Sterling Awards are annual baseball awards given to the top players in the New York Mets organization at each level of the minor leagues.  The two principal awards are the Sterling Minor League Organizational Player of the Year and the Sterling Minor League Organizational Pitcher of the Year.  Nine additional awards are given to the most valuable player on each of the Mets-affiliated teams in Minor League Baseball (MiLB).  The award was originally called the Doubleday Award in honor of former Mets co-owner Nelson Doubleday, Jr..  When Doubleday sold his shares of the team to fellow co-owner Fred Wilpon, the name of the award was changed to the Sterling Award.
+
+Sterling Jerins: Sterling Jerins (born June 15, 2004) is an American child actress, known for playing Lily Bowers on the NBC series "Deception", Constance Lane in "World War Z", Judy Warren in "The Conjuring" and "The Conjuring 2", and Lila DuFresne on HBO's comedy series "Divorce".
+
+Warren Consolidated Schools: Warren Consolidated School District is a public school district serving the cities of Warren, Sterling Heights and Troy, Michigan.  It operates 25 schools including two specialized partial-day high schools that draw from the other schools within the district.  Warren Consolidated has about 16,000 students and a student/teacher ratio of 20:1.  The district was led by Superintendent James Clor from 1999 until November 2007.  Dr. Robert D. Livernois took over as superintendent in April 2008 after leaving his former district and district neighbor, Warren Woods School District.
+
+Question: What year did the movie that starred Sterling Jerins as Judy Warren come out?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "movie_title": {
+      "type": "string",
+      "description": "The title of the movie."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the movie was released."
+    },
+    "actress_name": {
+      "type": "string",
+      "description": "The name of the actress who starred in the movie."
+    },
+    "character_name": {
+      "type": "string",
+      "description": "The name of the character played by the actress in the movie."
+    }
+  },
+  "required": [
+    "movie_title",
+    "release_year",
+    "actress_name",
+    "character_name"
+  ],
+  "additionalProperties": false
+}

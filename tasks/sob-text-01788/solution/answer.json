@@ -1,0 +1,11 @@
+{
+  "secret_police_officer": {
+    "name": "Stanislav Redens",
+    "role": "Soviet secret police official"
+  },
+  "dictator_served_under": {
+    "name": "Joseph Stalin",
+    "country_governed": "Soviet Union"
+  },
+  "service_context": "responsible for conducting mass repressions"
+}

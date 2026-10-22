@@ -1,0 +1,11 @@
+{
+  "season_year": 2000,
+  "team_name": "Los Angeles Dodgers",
+  "record_set": "club record for home runs",
+  "record_value": 211,
+  "player_leading_record": {
+    "player_name": "Gary Antonian Sheffield",
+    "player_role": "outfielder",
+    "home_runs_by_player": 43
+  }
+}

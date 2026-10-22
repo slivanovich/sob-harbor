@@ -1,0 +1,19 @@
+{
+  "resort_name": "Perisher",
+  "is_largest_in_southern_hemisphere": true,
+  "location": {
+    "country": "Australia",
+    "mountain_range": "Snowy Mountains"
+  },
+  "amalgamated_villages": [
+    "Perisher Valley",
+    "Smiggin Holes",
+    "Guthega",
+    "Blue Cow"
+  ],
+  "area_km2": 12,
+  "elevations": {
+    "base_elevation_m_ahd": 1720,
+    "summit_elevation_m": 2054
+  }
+}

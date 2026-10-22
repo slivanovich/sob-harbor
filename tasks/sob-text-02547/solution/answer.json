@@ -1,0 +1,17 @@
+{
+  "universities_compared": [
+    {
+      "university_name": "Stevens Institute of Technology",
+      "founding_year": 1870
+    },
+    {
+      "university_name": "Polytechnic University of Bari",
+      "founding_year": 1990
+    }
+  ],
+  "first_founded_university": {
+    "name": "Stevens Institute of Technology",
+    "founding_year": 1870
+  },
+  "comparison_summary": "Stevens Institute of Technology was founded first."
+}

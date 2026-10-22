@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "63a25b4cafaa8f3a22348761d03e4821ff306d07e8024be986da5a27dcb54fb4",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac132ca55429964131be17e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Omizutori: Omizutori (お水取り), or the annual, sacred water-drawing festival, is a Japanese Buddhist festival that takes place in the Nigatsu-dō of Tōdai-ji, Nara, Japan.  The festival is the final rite in observance of the two-week-long Shuni-e ceremony.  This ceremony is to cleanse the people of their sins as well as to usher in the spring of the new year.  Once the Omizutori is completed, the cherry blossoms have started blooming and spring has arrived.\n\nGiovanni Andrea Bontempi: Giovanni Andrea Bontempi (ca. 1624 – 1 July 1705) was an Italian castrato singer, later composer, historian, music theorist, and assistant \"kapellmeister\" to Heinrich Schütz at Dresden from 1657.  He was born Giovanni Andrea Angelini, in Perugia but later took the surname of his patron Cesare Bontempi.  His \"Il Paride\" was the first Italian-language opera to be given in Dresden.  It was first performed in November 1662 at the Dresden Castle to celebrate the marriage of Erdmude Sophia, the daughter of the Elector of Saxony, and Christian Ernst, Count of Brandenburg.  He composed two other operas, both of which also premiered in Dresden: \"Dafne\" performed in 1671 to open the Opernhaus am Taschenberg, and \"Jupiter und Jo\" first performed in 1673.\n\nDafne (Opitz-Schütz): Die Dafne (1627) to a libretto by Martin Opitz (which survives), and music by Heinrich Schütz (which is lost), has traditionally been regarded as the first German opera, though it has also been proposed more recently that it was in fact a spoken drama with inserted song and ballet numbers.\n\nJayadeva: Jayadeva (] , b.  1170 CE ), also known as Jaidev, was a Sanskrit poet during the 12th century.  He is most known for his epic poem \"Gita Govinda\" which concentrates on Krishna's love with the cowherdess, Radha in a rite of spring.  This poem, which presents the view that Radha is greater than Krishna, is considered an important text in the Bhakti movement of Hinduism.\n\nFrühlingsfeier: \"Frühlingsfeier\" (English \"Spring Festival\", or \"Rite of Spring\") is a song composed by Richard Strauss using the text of a poem with the same name by Heinrich Heine (1797-1856), the fifth in his Opus 56 collection, (TrV 220) which was published in 1906.  Originally written for piano and voice, Strauss wrote an orchestral version in 1933.\n\nSam Raphling: Sam Raphling (March 19, 1910, Fort Worth, Texas - January 8, 1988, New York City) was an American composer and pianist.  He studied under Artur Schnabel at the University of Michigan. He wrote in a variety of musical genres, including orchestral works, chamber pieces, and vocal art songs; the latter of which remain his most notable legacy.  Also of note is his orchestral suite \"Dance of the Chassidic\" and his piano arrangement of \"The Rite of Spring\".  He wrote two children's operas with librettist James V. Hatch.  As a pianist he made a number of recording on the RCA Victor label.\n\nThe Rite of Spring (MacMillan): The Rite of Spring is a one-act ballet created by Kenneth MacMillan in 1962 for the Royal Ballet.  The music is Igor Stravinsky's \"The Rite of Spring\" (1913).  The conductor was Colin Davis; the designs were by Sidney Nolan.\n\nPolik-mana: Polik-mana (POE-lick MA-nah) or Butterfly Maiden is a kachina, or spirit being, in Hopi mythology.  Every spring she dances from flower to flower, pollinating the fields and flowers and bringing life-giving rain to the Arizona desert.  She is represented by a woman dancer at the yearly Butterfly Dance, a traditional initiation rite for Hopi girls.  The rite takes place in late summer, before the harvest, to give thanks to Polik-mana for her spring dance.  Hopi girls participating in the Butterfly Dance wear ornate headdresses called kopatsoki.\n\nThe Rite of Spring: The Rite of Spring (French: Le Sacre du printemps ; Весна священная, \"Vesna svyashchennaya\", \"sacred spring\" ) is a ballet and orchestral concert work by the Russian composer Igor Stravinsky.  It was written for the 1913 Paris season of Sergei Diaghilev's Ballets Russes company; the original choreography was by Vaslav Nijinsky, with stage designs and costumes by Nicholas Roerich.  When first performed, at the Théâtre des Champs-Élysées on 29 May 1913, the avant-garde nature of the music and choreography caused a sensation and a near-riot in the audience.  Although designed as a work for the stage, with specific passages accompanying characters and action, the music achieved equal if not greater recognition as a concert piece, and is widely considered to be one of the most influential musical works of the 20th century.\n\nThe Rite of Spring (The Bad Plus album): The Rite of Spring is a 2014 album by jazz trio The Bad Plus.  It is the group's ninth studio album.  It is an interpretation of the Igor Stravinsky orchestral composition.",
+    "question": "Are Dafne and The Rite of Spring both operas? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_topic": {
+          "type": "string",
+          "description": "The main topic of the question being asked."
+        },
+        "item_one": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the first item in the comparison."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The genre of the first item as described in the context."
+            }
+          },
+          "required": [
+            "name",
+            "genre"
+          ],
+          "additionalProperties": false
+        },
+        "item_two": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the second item in the comparison."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The genre of the second item as described in the context."
+            }
+          },
+          "required": [
+            "name",
+            "genre"
+          ],
+          "additionalProperties": false
+        },
+        "are_both_operas": {
+          "type": "boolean",
+          "description": "True if both items are identified as operas, false otherwise."
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Explanation for the answer based on the identified genres."
+        }
+      },
+      "required": [
+        "question_topic",
+        "item_one",
+        "item_two",
+        "are_both_operas",
+        "reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_topic": "genre comparison",
+      "item_one": {
+        "name": "Dafne",
+        "genre": "opera"
+      },
+      "item_two": {
+        "name": "The Rite of Spring",
+        "genre": "ballet and orchestral concert work"
+      },
+      "are_both_operas": false,
+      "reasoning": "Dafne is described as an opera, while The Rite of Spring is a ballet and orchestral concert work, not an opera."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "artist": {
+    "name": "Aelita Andre",
+    "nationality": "Australian"
+  },
+  "art_style": {
+    "name": "Surrealism",
+    "description": "best known for its visual artworks and writings",
+    "movement_start_period": "early 1920s"
+  },
+  "artist_known_for_style": true
+}

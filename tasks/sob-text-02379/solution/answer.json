@@ -1,0 +1,11 @@
+{
+  "student_details": {
+    "name": "Hans Loewald",
+    "studied_philosophy_with": "Martin Heidegger"
+  },
+  "teacher_details": {
+    "name": "Martin Heidegger",
+    "nationality": "German"
+  },
+  "final_answer": "German"
+}

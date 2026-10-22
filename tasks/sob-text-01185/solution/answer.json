@@ -1,0 +1,12 @@
+{
+  "officer_candidate_name": "Robert T. Reimann",
+  "school_attended": "Officer Candidate School",
+  "location": {
+    "city": "Newport",
+    "state": "Rhode Island"
+  },
+  "historical_connection": {
+    "entity_name": "Cruiser Destroyer Force Atlantic (COMCRUDESLANT)",
+    "event_description": "once was the homeport"
+  }
+}

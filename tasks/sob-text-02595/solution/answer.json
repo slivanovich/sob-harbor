@@ -1,0 +1,15 @@
+{
+  "company_name": "InBev",
+  "merger_details": {
+    "merged_companies": [
+      "Interbrew",
+      "AmBev"
+    ],
+    "merger_year": 2004
+  },
+  "nova_scotia_operations": {
+    "location": "Halifax, Nova Scotia",
+    "business_type": "brewing company",
+    "operating_unit": "Oland Brewery"
+  }
+}

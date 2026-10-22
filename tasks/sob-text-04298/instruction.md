@@ -1,0 +1,70 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+8th Canadian Infantry Brigade: The 8th Canadian Infantry Brigade was an infantry brigade of the Canadian Army that saw active service during World War I and World War II as part of the 3rd Canadian Infantry Division.  The brigade fought on the Western Front during World War I from December 1915 to November 1918, and in Normandy and north-west Europe in 1944–1945 during World War II.  It was a square formation of four infantry battalions during World War I, but was reduced to a triangular formation of three battalions during World War II.
+
+Bernières-sur-Mer: Bernières-sur-Mer is a commune in the Calvados department in the Normandy region in northwestern France.  The town was liberated by The Queen's Own Rifles of Canada on the 6th of June, 1944 as part of the leading assault wave of D-Day Operation Overlord which began the liberation of France in World War II.  Later, a French Canadian unit, the Le Régiment de la Chaudière, landed in reserve as part of the 8th Canadian Brigade, 3rd Canadian Division.
+
+3rd Canadian Division: The 3rd Canadian Division is a formation of the Canadian Army.  It was first created as a formation of the Canadian Corps during the First World War.  It was stood down following the war and was later reactivated as the 3rd Canadian Infantry Division during the Second World War.  The second iteration served with distinction from 1941 to 1945, taking part in the D-Day landings of 6 June 1944.  A duplicate of the 3rd Canadian Division was formed in 1945 to serve on occupation duty in Germany, and was disbanded the following year.  In 2013, Land Force Western Area, a peacetime military organization in western Canada, was ordered to be redesignated as 3rd Canadian Division.  On 6 June 2014, the 3rd Canadian Division adopted the insignia, traditions and history of the previous formations.  From the middle of 1916, the division has been identified by a distinctive French-Grey patch worn on the uniforms of its soldiers.
+
+Normandy landings: The Normandy landings (codenamed Operation Neptune) were the landing operations on Tuesday, 6 June 1944 (termed D-Day) of the Allied invasion of Normandy in Operation Overlord during World War II.  The largest seaborne invasion in history, the operation began the liberation of German-occupied northwestern Europe from Nazi control, and contributed to the Allied victory on the Western Front.
+
+4th Canadian Division: The 4th Canadian Division is a formation of the Canadian Army.  The division was first created as a formation of the Canadian Corps during the First World War.  During the Second World War the division was reactivated as the 4th Canadian Infantry Division in 1941 and then converted to armour and redesignated as the 4th Canadian (Armoured) Division.  Beginning in 1916 the division adopted a distinctive green-coloured formation patch as its insignia.  In 2013 it was announced that Land Force Central Area would be redesignated 4th Canadian Division.  It is currently responsible for Canadian Army operations in the Canadian province of Ontario and is headquartered at Denison Armoury.
+
+Operation Dragoon: Operation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944.  The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing.  By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces.  Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops.  As a result, the operation was finally approved in July to be executed in August.
+
+Juno Beach: Juno or Juno Beach was one of five beaches of the Allied invasion of German-occupied France in the Normandy landings on 6 June 1944 during the Second World War.  The beach spanned from Courseulles, a village just east of the British beach Gold, to Saint-Aubin-sur-Mer, just west of the British beach Sword.  Taking Juno was the responsibility of the Canadian Army, with sea transport, mine sweeping, and a naval bombardment force provided by the Royal Canadian Navy and the British Royal Navy as well as elements from the Free French, Norwegian, and other Allied navies.  The objectives of the 3rd Canadian Infantry Division on D-Day were to cut the Caen-Bayeux road, seize the Carpiquet airport west of Caen, and form a link between the two British beaches of Gold and Sword on either side of Juno Beach.
+
+Arthur Tedder, 1st Baron Tedder: Marshal of the Royal Air Force Arthur William Tedder, 1st Baron Tedder, {'1': ", '2': ", '3': ", '4': "} (11 July 1890 – 3 June 1967) was a senior Royal Air Force commander.  He was a pilot and squadron commander in the Royal Flying Corps in the First World War and he went on to serve as a senior officer in the Royal Air Force during the inter-war years when he served in Turkey, Great Britain and the Far East.  During the Second World War, as Air Officer Commanding RAF Middle East Command, Tedder directed air operations in the Mediterranean and North Africa, including the evacuation of Crete and "Operation Crusader" in North Africa.  His bombing tactics became known as the "Tedder Carpet".  Later in the war Tedder took command of Mediterranean Air Command and in that role was closely involved in the planning of the Allied invasion of Sicily and then the Allied invasion of Italy.  When Operation Overlord—the invasion of France—came to be planned, Tedder was appointed Deputy Supreme Commander at Supreme Headquarters Allied Expeditionary Force under General Eisenhower.  After the war he served as Chief of the Air Staff, in which role he advocated increased recruiting in the face of many airmen leaving the service, doubled the size of RAF Fighter Command and implemented arrangements for the Berlin Airlift in 1948.  After the war he held senior positions in business and academia.
+
+21st Army Group: The 21st Army Group was a World War II British headquarters formation, in command of two field armies and other supporting units, consisting primarily of the British Second Army and the First Canadian Army.  Established in London during July 1943, under the command of Supreme Headquarters Allied Expeditionary Force (SHAEF), it was assigned to Operation Overlord, the Western Allied invasion of Europe, and was an important Allied force in the European Theatre.  The 21st Army Group operated in Northern France, Luxembourg, Belgium, the Netherlands and Germany from June 1944 until the end of the war in Europe in May 1945, after which it was redesignated the British Army of the Rhine (BAOR).
+
+9th Canadian Infantry Brigade: The 9th Canadian Infantry Brigade was an infantry brigade of the Canadian Army that saw active service during World War I and World War II as part of the 3rd Canadian Infantry Division.  The brigade fought on the Western Front during World War I from January 1916 to November 1918, and in Normandy and north-west Europe in 1944–1945 during World War II.  It was a square formation of four infantry battalions during World War I, but was reduced to a triangular formation of three battalions during World War II.
+
+Question: The 3rd Canadian Division is a formation of the Canadian Army, the second iteration served with distinction, for taking part in which event that were the landing operations, of the Allied invasion of Normandy in Operation Overlord during World War II? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "event_name": {
+      "type": "string",
+      "description": "The name of the landing operations event."
+    },
+    "participating_division": {
+      "type": "string",
+      "description": "The Canadian Army division that participated in the event."
+    },
+    "overarching_operation": {
+      "type": "string",
+      "description": "The larger operation of which the event was a part."
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date when the landing operations took place."
+    },
+    "event_type": {
+      "type": "string",
+      "description": "The type of military operation."
+    }
+  },
+  "required": [
+    "event_name",
+    "participating_division",
+    "overarching_operation",
+    "event_date",
+    "event_type"
+  ],
+  "additionalProperties": false
+}

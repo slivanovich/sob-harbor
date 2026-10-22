@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "8bd1cf35a4e43486d98d39849acb943cd45d799acb1f8d17f4cf79132133d8a2",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab7285f55429928e1fe381a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1973",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Shrouded Planet: The Shrouded Planet is a 1957 science fiction novel published under the name \"Robert Randall\", actually the collaborative work of American writers Robert Silverberg and Randall Garrett.  It consists of three linked stories, each originally published separately in the magazine \"Astounding Science Fiction\".  Linking chapters were added for book release.  The first book printing, by Gnome Press in New York, was small and did not sell well.  This and the sequel novel, \"The Dawning Light\", were reprinted 25 years later, and well received.\n\nBlindsight (Watts novel): Blindsight is a hard science fiction novel by Canadian writer Peter Watts, published by Tor Books in 2006.  It garnered nominations for a Hugo Award for Best Novel, a John W. Campbell Memorial Award for Best Science Fiction Novel, and a Locus Award for Best Science Fiction Novel.  The novel follows a crew of astronauts sent out as the third wave, following two series of probes, to investigate a trans-Neptunian Kuiper belt comet dubbed 'Burns-Caulfield' that has been found to be transmitting an unidentified radio signal to an as-yet unknown destination elsewhere in the solar system, followed by their subsequent first contact.  The novel explores questions of identity, consciousness, free will, artificial intelligence, neurology, game theory as well as evolution and biology.  \"Blindsight\" is available online under a Creative Commons license.  Its sequel \"Echopraxia\" came out in 2014.\n\nEmbassytown: Embassytown is a science fiction novel by British author China Miéville.  It was published in the UK by Pan Macmillan on 6 May 2011, and in the US by Del Rey Books on 17 May 2011.  A limited edition was released by Subterranean Press.  The plot of the novel surrounds the town of Embassytown, the native alien residents known as Ariekei, their Language, and the human interaction with them.  The novel was well reviewed and won the 2012 Locus Award for Best Science Fiction Novel.\n\nTimescape: Timescape is a 1980 science fiction novel by American writer Gregory Benford (with unbilled co-author Hilary Foister, Benford's sister-in-law, who is credited as having \"contributed significantly to the manuscript\").  It won the 1981 Nebula and 1980 British Science Fiction Award, and the 1981 John W. Campbell Memorial Award for Best Science Fiction Novel.  The novel was widely hailed by both critics of science fiction and mainstream literature for its fusion of detailed character development and interpersonal drama with more standard science fiction fare such as time travel and ecological issues.\n\nRama II (novel): Rama II is a science fiction novel by Gentry Lee and Arthur C. Clarke, first published in 1989.  It recounts humankind's further interaction with the Ramans, first introduced in \"Rendezvous with Rama\".  Written primarily by Lee, \"Rama II\" has a distinctly different writing style than the original, with a more character driven narrative and a closer-to-contemporary mindset, ambience and human relations than the first novel's more futuristic tones.\n\nRendezvous with Rama: Rendezvous with Rama is a science fiction novel by British writer Arthur C. Clarke first published in 1973.  Set in the 2130s, the story involves a 50 km cylindrical alien starship that enters Earth's solar system.  The story is told from the point of view of a group of human explorers who intercept the ship in an attempt to unlock its mysteries.  This novel won both the Hugo and Nebula awards upon its release, and it is regarded as one of the cornerstones in Clarke's bibliography.\n\nPerfect Imperfection: Perfect Imperfection: First third of progress (Polish: Perfekcyjna niedoskonałość.  Pierwsza tercja progresu ; also sometimes translated as \"Ideal Imperfection\") is a science fiction novel published in 2004 by the Polish science fiction writer Jacek Dukaj as the first part of a planned trilogy.  It was published in Poland by Wydawnictwo Literackie.  The novel received the prime Polish award for science-fiction literature, Janusz A. Zajdel Award, in 2004.\n\nDavid Walton (science fiction writer): David Walton (born October 26, 1975) is an American science fiction and fantasy writer living in Philadelphia.  His novel \"Terminal Mind\" won the 2008 Philip K. Dick Award for the best paperback science fiction novel published in the United States, in a tie with Adam-Troy Castro's novel \"Emissaries from the Dead\".\n\nPieprzony los Kataryniarza: Pieprzony los Kataryniarza is a science fiction novel published in 1995 by the Polish science fiction writer Rafał Ziemkiewicz.  It was published in Poland by superNOWA.  The novel received the prime Polish award for science-fiction literature, Janusz A. Zajdel Award, in 1995.\n\nWalc stulecia: Walc Stulecia (Polish for \"Ball of the Century\") is a science fiction novel published in 1998 by the Polish science fiction writer Rafał Ziemkiewicz.  It was published in Poland by superNOWA.  The novel received the prime Polish award for science-fiction literature, Janusz A. Zajdel Award, in 1998.",
+    "question": "Rama II recounts humankind's further interaction with the Ramans, first introduced in a science fiction novel published in what year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "novel_title": {
+          "type": "string",
+          "description": "The title of the novel where the Ramans were first introduced."
+        },
+        "author": {
+          "type": "string",
+          "description": "The author of the novel."
+        },
+        "publication_year": {
+          "type": "integer",
+          "description": "The year the novel was first published."
+        }
+      },
+      "required": [
+        "novel_title",
+        "author",
+        "publication_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "novel_title": "Rendezvous with Rama",
+      "author": "Arthur C. Clarke",
+      "publication_year": 1973
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

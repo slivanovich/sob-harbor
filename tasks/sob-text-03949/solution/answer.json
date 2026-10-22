@@ -1,0 +1,10 @@
+{
+  "frigate_class_name": "Type 26 frigate",
+  "organization_name": "Royal Navy",
+  "country": "United Kingdom",
+  "frigate_purpose": [
+    "anti-submarine warfare",
+    "air defence",
+    "general purpose operations"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "route_name": "U.S. Route 27",
+  "state": "Kentucky",
+  "length_miles": 190.785,
+  "start_point": "Tennessee border",
+  "end_point": "Ohio border at Cincinnati, Ohio",
+  "area_of_entry": "Lake Cumberland area",
+  "lake_cumberland_details": {
+    "lake_name": "Lake Cumberland",
+    "lake_type": "reservoir",
+    "counties_covered": [
+      "Clinton",
+      "Laurel",
+      "McCreary",
+      "Pulaski",
+      "Russell",
+      "Wayne"
+    ]
+  }
+}

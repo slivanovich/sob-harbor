@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "name": "Richard Yates",
+      "is_american": true
+    },
+    {
+      "name": "Ernest J. Gaines",
+      "is_american": true
+    }
+  ],
+  "all_authors_are_american": true,
+  "reasoning": "Richard Yates is identified as an 'American fiction writer'. Ernest J. Gaines is identified as an 'African-American author'. Both are American."
+}

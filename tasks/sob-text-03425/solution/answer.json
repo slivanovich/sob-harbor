@@ -1,0 +1,14 @@
+{
+  "shared_occupation": "director",
+  "occupation_category": "film_production",
+  "individuals": [
+    {
+      "name": "Norm Green",
+      "nationality": "American"
+    },
+    {
+      "name": "M. Night Shyamalan",
+      "nationality": "Indian American"
+    }
+  ]
+}

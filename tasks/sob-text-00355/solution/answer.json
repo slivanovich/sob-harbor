@@ -1,0 +1,10 @@
+{
+  "poker_player_name": "Annie Duke",
+  "nationality": "American",
+  "is_american": true,
+  "apprentice_appearance": {
+    "show_title": "The Celebrity Apprentice 2",
+    "season_number": 8,
+    "outcome": "runner-up"
+  }
+}

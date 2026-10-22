@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "51f5e24e68044bb8101f212f6a3045ab7b856f44138abea08def111f688b5c7c",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab91d4d55429919ba4e23b1",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Diane Julie Abbott",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hackney London Borough Council: Hackney London Borough Council is the local government authority for the London Borough of Hackney, London, England, one of 32 London borough councils.  The council is unusual in the United Kingdom local government system in that its executive function is controlled by a directly elected mayor of Hackney, currently Philip Glanville of the Labour Party.  Hackney comprises 19 wards, each electing three Councillors. Following the May 2014 election, Hackney London Borough Council consists of 50 Labour Party councillors, four Conservative Party councillors and three Liberal Democrat councillors.  The council was created by the London Government Act 1963 whereby it replaced three local authorities: Hackney Metropolitan Borough Council, Shoreditch Metropolitan Borough Council and Stoke Newington Metropolitan Borough Council.\n\nStoke Newington: Stoke Newington is an area occupying the north-west part of the London Borough of Hackney in north-east London.  It is 5 miles north-east of Charing Cross.  Stoke Newington Church Street was the site of the original hamlet of Stoke Newington, which in turn gave its name to Stoke Newington the ancient parish.\n\nDiane Abbott: Diane Julie Abbott (born 27 September 1953) is a British Labour Party politician who was appointed Shadow Home Secretary in October 2016.  She was first elected as the Member of Parliament (MP) for Hackney North and Stoke Newington at the 1987 general election, when she became the first black woman to hold a seat in the House of Commons.\n\nStoke Newington Central (ward): Stoke Newington Central is a ward in the London Borough of Hackney.  It corresponds roughly to Stoke Newington in London, UK and forms part of the Hackney North and Stoke Newington constituency of Diane Abbott MP.\n\nLeabridge (ward): Leabridge is a ward in the London Borough of Hackney and roughly corresponds to the Lea Bridge district of London, and is distinct from the Lea Bridge ward in the neighbouring London Borough of Waltham Forest.  It is part of Hackney North and Stoke Newington constituency.  The ward has existed since the creation of the borough on 1 April 1965 and was first used in the 1964 elections.\n\nStoke Newington Common: Stoke Newington Common is an open space in Stoke Newington in the London Borough of Hackney.  It is east of Stoke Newington High Street, with Northwold Road to the north, and it straddles the busy Rectory Road.  The Common is 2.15 ha in area.\n\nDeath of Colin Roach: Colin Roach was a 21-year-old black British man who died from a gunshot wound inside the entrance of Stoke Newington police station, in the London Borough of Hackney, on 12 January 1983.  Amid allegations of a police cover-up, the case became a cause célèbre for civil rights campaigners and black community groups in the United Kingdom.  Prior to Roach's death, Hackney Black People's Association had been calling for a public inquiry into policing in the area, alleging that there existed a culture of police brutality, wrongful detention of black people, racial harassment, and racially motivated \"stopping and searching.\"  Ernie Roberts, the MP for Hackney North and Stoke Newington, said that there had been \"a complete breakdown of faith and credibility in the police\" in the area and the Commission for Racial Equality called for a full inquiry into both the death of Roach and the policing in Hackney generally.  In June 1983 a coroner's jury returned a majority verdict of suicide.  INQUEST, the United Kingdom pressure group founded following the death of Blair Peach at the hands of a police officer in April 1979, was highly critical of the coroner's directions to the jury, and said that he had wrongly pointed them towards a verdict of suicide.\n\nHackney Downs (ward): Hackney Downs is a ward in the London Borough of Hackney, corresponding roughly to the Hackney Downs area of London, UK and forms part of the Hackney North and Stoke Newington constituency.\n\nBrownswood (ward): Brownswood is a ward in the London Borough of Hackney and forms part of the Hackney North and Stoke Newington constituency.  The ward has existed since the creation of the borough on 1 April 1965 and was first used in the 1964 elections.  The population of the ward in 2011 was 11,091.  The boundaries of the ward from May 2014 are revised.\n\nClissold Park: Clissold Park is a designated community park in Stoke Newington, within the London Borough of Hackney.  It is bounded by Greenway Close (to the north), Stoke Newington Church Street (to the south) and Green Lanes (west) and Queen Elizabeth's Walk (east).  The park derives its name from Metropolitan Borough of Stoke Newington the local authority when it was established.  The park is (22.57 hectares (55.8 acres)) in extent.",
+    "question": "Stoke Newington Central is a ward in the London Borough of Hackney, it corresponds roughly to Stoke Newington in London, UK and forms part of the Hackney North and Stoke Newington constituency of which British Labour Party politician, who was appointed Shadow Home Secretary, in October 2016?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "politician_name": {
+          "type": "string",
+          "description": "The full name of the politician."
+        },
+        "political_party": {
+          "type": "string",
+          "description": "The political party the politician belongs to."
+        },
+        "role": {
+          "type": "string",
+          "description": "The political role held by the politician."
+        },
+        "appointment_date": {
+          "type": "string",
+          "description": "The date of appointment to the specified role."
+        },
+        "constituency": {
+          "type": "string",
+          "description": "The parliamentary constituency represented by the politician."
+        },
+        "associated_ward": {
+          "type": "string",
+          "description": "A ward that forms part of the politician's constituency."
+        }
+      },
+      "required": [
+        "politician_name",
+        "political_party",
+        "role",
+        "appointment_date",
+        "constituency",
+        "associated_ward"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "politician_name": "Diane Julie Abbott",
+      "political_party": "Labour Party",
+      "role": "Shadow Home Secretary",
+      "appointment_date": "October 2016",
+      "constituency": "Hackney North and Stoke Newington",
+      "associated_ward": "Stoke Newington Central"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

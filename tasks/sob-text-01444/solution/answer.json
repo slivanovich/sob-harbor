@@ -1,0 +1,9 @@
+{
+  "movie_title": "What Ever Happened to Aunt Alice?",
+  "movie_year": 1969,
+  "actress": {
+    "name": "Mildred Dunnock",
+    "birth_date": "January 25, 1901"
+  },
+  "director_name": "Lee H. Katzin"
+}

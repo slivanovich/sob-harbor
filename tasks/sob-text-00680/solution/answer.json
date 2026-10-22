@@ -1,0 +1,25 @@
+{
+  "person_names": [
+    "Grażyna Miller",
+    "Richard Fariña"
+  ],
+  "common_occupation": "poet",
+  "occupation_details": [
+    {
+      "person_name": "Grażyna Miller",
+      "occupations": [
+        "poet",
+        "translator"
+      ]
+    },
+    {
+      "person_name": "Richard Fariña",
+      "occupations": [
+        "folksinger",
+        "songwriter",
+        "poet",
+        "novelist"
+      ]
+    }
+  ]
+}

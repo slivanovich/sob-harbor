@@ -1,0 +1,30 @@
+{
+  "shopping_center_name": "The Collection at RiverPark",
+  "center_type": "outdoor lifestyle center",
+  "grand_opening_date": "November 15, 2012",
+  "location_details": {
+    "city": "Oxnard",
+    "state": "California",
+    "freeway_proximity": "east of the 101 Freeway"
+  },
+  "anchor_stores": [
+    {
+      "name": "Target"
+    },
+    {
+      "name": "Whole Foods Market",
+      "is_whole_foods_market": true,
+      "description": "American supermarket chain exclusively featuring foods without artificial preservatives, colors, flavors, sweeteners, and hydrogenated fats"
+    },
+    {
+      "name": "REI"
+    },
+    {
+      "name": "The Container Store"
+    },
+    {
+      "name": "Cinemark cinema",
+      "description": "sixteen-screen Cinemark cinema"
+    }
+  ]
+}

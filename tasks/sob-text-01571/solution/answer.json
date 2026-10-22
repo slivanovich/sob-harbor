@@ -1,0 +1,16 @@
+{
+  "inspired_philosopher": {
+    "name": "José Ortega y Gasset",
+    "philosophy_characterization": "philosophy of life"
+  },
+  "influencing_philosopher": {
+    "name": "William James",
+    "nationality": "American",
+    "professions": [
+      "philosopher",
+      "psychologist",
+      "physician"
+    ]
+  },
+  "aspect_of_inspiration": "pragmatist metaphysics"
+}

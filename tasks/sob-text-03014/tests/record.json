@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "c1c33309f0b5f118c0f2375601142c0a06822cb60a236c679e4befdd05d3cdc7",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5abca78d554299700f9d7919",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Aerangis",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Aerangis gracillima: Aerangis gracillima is a species of plant in the Orchidaceae family.  It is found in Cameroon and Gabon.  Its natural habitat is subtropical or tropical dry forests.\n\nGillenia trifoliata: Gillenia trifoliata (common names Bowman's root and Indian physic) is a species of flowering plant in the Rosaceae family, native to eastern North America from Ontario to Georgia.  It is an erect herbaceous perennial growing to 100 cm tall by 60 cm wide, with 3-palmate leaves and pale pink flowers with narrow petals and reddish calyces above red coloured stems in spring and summer.\n\nGillenia: Gillenia (syn.  \"Porteranthus\") is a genus of two species of perennial herbs in the Rosaceae family.  Common names for plants in this genus include: Bowman's root, Indian-physic, American ipecac.  This genus is endemic to dry open woods with acidic soils in eastern North America.  Both plants are subshrubs with exposed semi-woody branches and serrated leaves; the larger lower leaves are divided into palmately arranged leaflets.  Plants bloom in May, June, or July; blooms are composed of five slender white petals which are loosely arranged and typically appear slightly twisted and limp as if they were wilted.  The flowers mature into small capsules.  These plants are often planted as ornamentals and used in herbal medicine.\n\nAerangis: Aerangis, abbreviated as Aergs in horticultural trade, is a genus of the Orchid family (Orchidaceae).  The name of this genus has been derived from the Greek words 'aer' (air) and 'angos' (urn), referring to the form of the lip.  It is the type genus of the subtribe Aerangidinae.  Approximately 50 species in this genus are known mostly from tropical Africa, but also from the Comoro Islands, Madagascar and Sri Lanka.",
+    "question": "What plant has more species, Aerangis or Gillenia?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "genus_a": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "species_count": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "species_count"
+          ],
+          "additionalProperties": false
+        },
+        "genus_b": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "species_count": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "species_count"
+          ],
+          "additionalProperties": false
+        },
+        "genus_with_more_species": {
+          "type": "string"
+        },
+        "comparison_summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "genus_a",
+        "genus_b",
+        "genus_with_more_species",
+        "comparison_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "genus_a": {
+        "name": "Aerangis",
+        "species_count": 50
+      },
+      "genus_b": {
+        "name": "Gillenia",
+        "species_count": 2
+      },
+      "genus_with_more_species": "Aerangis",
+      "comparison_summary": "Aerangis has 50 species, which is more than Gillenia's 2 species."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

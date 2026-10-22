@@ -1,0 +1,11 @@
+{
+  "dispatcher_details": {
+    "name": "Patrick Vincent Coleman",
+    "role": "train dispatcher"
+  },
+  "disaster_details": {
+    "name": "Halifax Explosion",
+    "date": "6 December 1917"
+  },
+  "warning_action_description": "sent a message to an incoming passenger train to stop out of range of the explosion"
+}

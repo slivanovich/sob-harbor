@@ -1,0 +1,20 @@
+{
+  "identified_person_name": "Fahd bin Abdulaziz Al Saud",
+  "person_details": {
+    "name": "Fahd bin Abdulaziz Al Saud",
+    "relationship_to_king_abdulaziz": "son"
+  },
+  "mother_details": {
+    "name": "Hussa bint Ahmed Al Sudairi",
+    "relationship_to_king_abdulaziz": "spouse"
+  },
+  "brother_king_details": {
+    "name": "Salman bin Abdulaziz Al Saud",
+    "relationship_to_identified_person": "brother",
+    "titles": [
+      "King of Saudi Arabia",
+      "Custodian of the Two Holy Mosques",
+      "head of the House of Saud"
+    ]
+  }
+}

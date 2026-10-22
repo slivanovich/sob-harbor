@@ -1,0 +1,9 @@
+{
+  "prize_name": "Gwen Harwood Poetry Prize",
+  "currency_details": {
+    "currency_name": "Australian dollar",
+    "currency_code": "AUD",
+    "currency_sign": "$"
+  },
+  "prize_amount": 2000
+}

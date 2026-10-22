@@ -1,0 +1,18 @@
+{
+  "artist_details": {
+    "name": "Gianni Blu",
+    "role": "EDM DJ/producer/songwriter"
+  },
+  "collaborator_details": {
+    "name": "King Louie",
+    "type": "Chicago rap artist",
+    "collaboration_context": "early original records"
+  },
+  "fictional_character_details": {
+    "name": "King Louie",
+    "origin_film": "The Jungle Book",
+    "origin_year": 1967,
+    "is_original_kipling_character": false
+  },
+  "answer_summary": "King Louie"
+}

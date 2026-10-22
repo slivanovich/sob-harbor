@@ -1,0 +1,12 @@
+{
+  "are_in_same_province": false,
+  "city_1": {
+    "name": "Baoding",
+    "province": "Hebei"
+  },
+  "city_2": {
+    "name": "Lengshuijiang",
+    "province": "Hunan"
+  },
+  "reasoning": "Baoding is located in Hebei province, while Lengshuijiang is located in Hunan province. These are different provinces."
+}

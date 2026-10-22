@@ -1,0 +1,12 @@
+{
+  "game_one": {
+    "name": "Trouble",
+    "release_year": 1965
+  },
+  "game_two": {
+    "name": "Twilight Imperium",
+    "release_year": 1998
+  },
+  "earlier_released_game_name": "Trouble",
+  "release_year_difference": 33
+}

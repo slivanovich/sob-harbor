@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "3d96243f205554bf2a4488444de2c3a600af6d69326effc5ba29fef1307eb970",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac005d1554299012d1db576",
+    "source_dataset": "hotpotqa",
+    "source_answer": "over 13,000",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Anil Khandelwal: Anil Khandelwal is an author, speaker, corporate advisor and a board member.  Currently he is on the board of GAIL Gas Authority of India Ltd and serves as senior advisor at KPMG, a Maharatna company in the public sector.  He is also advisor to Corporates and also a board member of Centre for Micro Finance, a company promoted by Sir Ratan Tata Trust.  He is also on the governing board of National Institute Securities Market (SEBI).\n\nPaytm: Paytm is an Indian electronic payment and e-commerce brand based out of Delhi NCR, India.  Launched in August 2010, it is a consumer brand of parent company One97 Communications.  The name is an acronym for \"Payment Through Mobile.\"  The company employs over 13,000 employees as of January 2017 and has 3 million offline merchants across India.  It also operates the Paytm payment gateway and the Paytm Wallet.\n\nTed Pietka: Ted Pietka (born May 30, 1967 in Człuchów, Poland) is a businessman.  He graduated from Wilfrid Laurier University, Waterloo, Ontario, Canada and holds Master of Business Administration degree from London Business School, United Kingdom.  Pietka is Supervisory Board Member in Boryszew S.A. (company listed on Warsaw Stock Exchange), Boryszew ERG S.A. and Hygienika S.A. From 2007 to 2009 he served as Managing Director, Strategy & Finance and Board Member of STC Investments.  From 2004 to 2006, Pietka was Vice Chairman of the Management Board of GETIN Holding S.A. (company listed on Warsaw Stock Exchange).\n\nNina Montée Karp: Nina Montée Karp (born January 20, 1963) is an environmental activist, producer, director and entrepreneur.  She is a founding Board Member of Healthy Child Healthy World – a national environmental non-profit organization dedicated to protecting young children from chemical and other ambient threats and promoting safer, healthier environments.  She is a Board Member of The Environmental Working Group, whose mission is to protect public health and the environment.  She serves as the Vice Chair of Childrens Hospital of Los Angeles' Huckleberry Fund to benefit homeless teens and is a Board Member for Breastcancer.org, which has disseminated information and support about breast cancer to over 8 million women.\n\nPiyasvasti Amranand: Piyasvasti Amranand (Thai: ปิยสวัสดิ์ อัมระนันทน์ ; RTGS: Piyasavasti Ammaranan, born 11 July 1953) was Thailand's Energy Minister between 9 October 2006 and 6 February 2008.  He is former Secretary-General of the Thai National Energy Policy Office, Chairman of Kasikorn Asset Management, and Chairman of Panel of Advisors for the CEO of Kasikornbank.  He was President of Thai Airways International between October 2009 and June 2012.  He is currently Chairman of PTT public company limited, board member of Kasikorn Bank, and board member of Pruksa Holding public company limited.  Piyasvasti also plays active roles in 3 non-profit organizations as founding and core member of the Energy Reform for Sustainability Group (ERS); Chairman of the Energy for Environment Foundation, a non-profit organization undertaking renewable energy and energy efficiency projects; and as President of the Ski and Snowboard Association of Thailand.\n\nDavid Dorman: David W. Dorman (born 1954) is an American Telecommunications executive and founding partner of Centerview Capital Technology Partners.  Dorman is currently Non-Executive Chairman of the Board of CVS Health Corporation and serves on the boards of PayPal Holdings, Inc., Yum!  Brands, Inc. and the Georgia Tech Foundation.  Dorman was a board member of Motorola, Inc. since 2006, was elected Non-Executive Chairman of the Board in 2008 and retired from his board position in May 2015.  Dorman also was a board member of Scientific Atlanta until the company was acquired by Cisco Systems in 2006.\n\nWengie: Wendy Ayche (born January 9 1986) known professionally as Wengie, is an Australian YouTube personality and vlogger.  She was born in Guangzhou, China.  She got the nickname \"Wengie\" at a dance class when two people gave her a nickname inspired by her Chinese name, Wén Jié.  Since starting her channel on February 11 2013, her videos have received over 281 million views, and her channel has accumulated over 11 followers In the January 2016 edition of \"ElleGirl Japan\", she was nominated as a channel to watch.  In August 2016, she was ranked the 5th Fastest growing channel in the world.  Ayche was featured in the annual YouTube Rewind in 2016 and was also singled out by Google as one of the top beauty creators in the Asia region.  Ayche reached 5 million YouTube subscribers in January 2017, and her channel is currently in the 12th most subscribed How-To & Style Channel on YouTube.  She is also currently a board member of the Internet Creators Guild, a non-profit focused on providing the protection, representation and guidance to online creators.  Her YouTube channel also recently got awarded with \"Best Channel\" as well as \"Overall Winner\" for the Australian Online Video Awards.\n\nLuigi Ferraris (businessman): Luigi Ferraris (Legnano, 1962) is an Italian executive, Chief Executive Officer of Terna S.p.A. since April 2017.  CEO of Enersis from 2014 to 2015, ex - Chairman of Enel Green Power, CFO of Enel Group and current Chief Financial Officer of Poste Italiane Group.  Luigi Ferraris was also Chairman of Enel Green Power S.p.A. as well as Operating Chairman of Enel Factor S.p.A.  In 2015 Luigi Ferraris was appointed Chief Financial Officer of Poste Italiane Group, in charge of managing its privatization process, one of the largest ever undertaken in Italy.  He has had also the responsibility of implementing the Group’s Risk and Management Control functions, while starting a valorisation and optimization plan for Group’s Real Estate properties.  Luigi Ferraris worked also as non executive Board Member of Banca del Mezzogiorno – Mediocredito Centrale, PSC S.p.A Group.  He was Board Member of Erg S.p.A. a company listed in the Italian stock exchange.  He had a teaching role or “Corporate Strategy” at LUISS University.\n\nMakhdoom Ali Khan: Makhdoom Ali Khan (Urdu: مخدوم علی خان ‎ ) (Barrister Lincoln's Inn, Born 9 January 1954 Karachi), is a practising Senior Advocate Supreme Court.  Makhdoom Ali Khan is a former Attorney General of Pakistan, former chairman Pakistan Bar Council, former member of the Law and Justice Commission of Pakistan, former board member of the Federal Judicial Academy of Pakistan and a former board member of the Sindh Judicial Academy.  He is a serving Member on the Governing Board of the British Pakistan Law Council, an Officer of the Board of the Forum for International Conciliation and Arbitration (FICACIC), a member of the Board of Trustees of the Dubai International Arbitration Centre, a member of the Advisory Board of the Citizens Police Liaison Committee (CPLC), a former member of the court of the London Court of International Arbitration and a member of the International Centre for Settlement of Investment Dispute's (ICSID) Chairman's Panel of Arbitrators.  He has consistently been ranked amongst the top three litigators , in Pakistan over the last two decades both by reputation and in international rankings in legal publications and amongst the top two litigators in the Sindh High Court in Karachi.  Since his return to private practice in 2007 he is globally regarded as the preeminent commercial, taxation and constitutional litigator, arbitrator and arbitration lawyer in Pakistan.\n\nNaveen Tewari: Naveen Tewari is an Indian entrepreneur and the founder and CEO of InMobi, a global mobile advertising and technology platform.  He is the Board member of Paytm.",
+    "question": "The company Naveen Tewari is a board member of employs how many employees as of January 2017?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person mentioned in the question."
+        },
+        "company_name": {
+          "type": "string",
+          "description": "The name of the company the person is a board member of."
+        },
+        "employee_count_details": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "description": "The numerical part of the employee count."
+            },
+            "count_description": {
+              "type": "string",
+              "description": "A descriptive phrase for the count, e.g., 'over', 'approximately'."
+            },
+            "as_of_date": {
+              "type": "string",
+              "description": "The date for which the employee count is valid, in YYYY-MM format."
+            }
+          },
+          "required": [
+            "count",
+            "count_description",
+            "as_of_date"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "person_name",
+        "company_name",
+        "employee_count_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Naveen Tewari",
+      "company_name": "Paytm",
+      "employee_count_details": {
+        "count": 13000,
+        "count_description": "over",
+        "as_of_date": "2017-01"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

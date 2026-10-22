@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of Texas Tech University alumni: Texas Tech University, often referred to as Texas Tech or TTU, is a public, coeducational, research university located in Lubbock, Texas.  Established on February 10, 1923, and originally known as Texas Technological College, it is the leading institution of the Texas Tech University System and has the sixth largest student body in the state of Texas.  It is the only school in Texas to house an undergraduate institution, law school, and medical school at the same location.  Initial enrollment in 1925 was 910 students; as of 2009, the university has 30,049 students from more than 110 countries, all 50 U.S. states and the District of Columbia.  Since the university's first graduating class in 1927 of 26 students, Texas Tech has awarded more than 221,000 degrees, including 45,000 graduate and professional degrees to its alumni.  The Texas Tech Alumni Association, with over 27,000 members, operates more than 120 chapters in cities throughout the United States and the world.
+
+University of California, San Diego: The University of California, San Diego (officially known as the University of California San Diego with no comma or UC San Diego—no longer UCSD because the acronym is similar to that of other San Diego higher education institutions) is a public research university located in the La Jolla neighborhood of San Diego, California, in the United States.  The university occupies 2141 acre near the coast of the Pacific Ocean with the main campus resting on approximately 1152 acre .  Established in 1960 near the pre-existing Scripps Institution of Oceanography, UC San Diego is the seventh oldest of the 10 University of California campuses and offers over 200 undergraduate and graduate degree programs, enrolling about 22,700 undergraduate and 6,300 graduate students.
+
+Texas A&amp;M–Texas Tech football rivalry: The Texas A&M–Texas Tech football rivalry was an American college football rivalry between the Texas A&M Aggies football team of Texas A&M University and Texas Tech Red Raiders football team of Texas Tech University.  The series began in 1927.  The rivalry had continued uninterrupted since 1957 when the two schools became conference rivals.  Texas A&M leads the series 37–32–1.  Texas A&M started the series with a 12–3 advantage while the two teams played each other as non-conference opponents from 1927–1955.  Texas Tech took a 2–1 record during its probationary membership in the Southwest Conference from 1957–59.  Texas A&M led the series during the Southwest Conference years (1960–95) with an 18–17–1 record.  Texas Tech led the series during the Big 12 Conference years (1996–2011) with a 10–6 record.  Both teams are tied with six games each for the longest winning streak.  Texas Tech holds the longest uninterrupted winning streak of the series, six games between 1968 and 1973, while Texas A&M has the longest nonconsecutive winning streak, six games in 1927, 1932 and 1942 through 1945.  Texas A&M currently holds a three-game winning streak but with their departure from the Big 12 Conference in 2012, it is uncertain if the rivalry will continue in the future.
+
+Texas Tech University Health Sciences Center: The Texas Tech University Health Sciences Center (TTUHSC) offers programs in health professions, biomedical sciences, medicine, nursing, and pharmacy.  TTUHSC is a multi-campus institution based in Lubbock with additional campuses located in Abilene, Amarillo, Dallas, El Paso and the Permian Basin.  TTUHSC serves more than 100 counties in the western portion of Texas.  The university is a separate institution from Texas Tech University; both universities are among four universities that are part of the Texas Tech University System.
+
+Texas Tech University: Texas Tech University, often referred to as Texas Tech, Tech, or TTU, is a public research university in Lubbock, Texas.  Established on  10, 1923 (1923--) , and originally known as Texas Technological College, it is the flagship institution of the four-institution Texas Tech University System.  The university's student enrollment is the sixth-largest in Texas as of the Fall 2014 semester.  The university shares its campus with Texas Tech University Health Sciences Center, making it the only campus in Texas to house an undergraduate university, law school, and medical school.
+
+Texas Tech University College of Architecture: Texas Tech University College of Architecture is the college of architecture at Texas Tech University in Lubbock, Texas.  The architecture program has existed at Texas Tech University since 1927.  Many of the college's degree programs are accredited by the National Architectural Accrediting Board.
+
+Texas Tech University System: The Texas Tech University System is a state university system in Texas consisting of four separate universities in the state of Texas, of which two are academic institutions: Angelo State University and Texas Tech University, and two are health institutions: Texas Tech University Health Sciences Center, and Texas Tech University Health Sciences Center at El Paso.  The System is headquartered in the Administration Building on the Texas Tech University campus in Lubbock, Texas.
+
+Kent Hance: Kent Ronald Hance (born November 14, 1942) is the former Chancellor of the Texas Tech University System.  In his role, he oversaw Texas Tech University, Texas Tech University Health Sciences Center and Angelo State University in San Angelo, Texas.  He is also a lobbyist and lawyer who was a Democratic member of the United States House of Representatives from West Texas, having served from 1979 to 1985.  After his congressional service, he switched to the Republican Party and in 1990 made an unsuccessful primary race for governor of Texas.
+
+Texas Tech University Center at Junction: Texas Tech University Center at Junction is an official off-campus teaching site of Texas Tech University in Junction, Texas.  It hosts undergraduate and graduate courses in an intensive three-week period format from May through July.  Additionally, an intersession is held in May; this allows students to earn up to three hours of credit between the spring and summer sessions.  These courses are taught by Texas Tech University faculty members who either travel to Junction or teach via videoconferencing.
+
+Texas Tech University College of Education: Texas Tech University College of Education is a college at Texas Tech University in Lubbock, Texas.  The education program has existed at Texas Tech University since 1925.  The college is accredited by the National Council for Accreditation of Teacher Education.
+
+Question: Which was established first Texas Tech University or University of California, San Diego ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "first_established_university": {
+      "type": "string",
+      "description": "The name of the university that was established first."
+    },
+    "first_established_year": {
+      "type": "integer",
+      "description": "The year the first university was established."
+    },
+    "second_established_university": {
+      "type": "string",
+      "description": "The name of the university that was established second."
+    },
+    "second_established_year": {
+      "type": "integer",
+      "description": "The year the second university was established."
+    },
+    "comparison_result": {
+      "type": "string",
+      "description": "A statement indicating which university was established first."
+    }
+  },
+  "required": [
+    "first_established_university",
+    "first_established_year",
+    "second_established_university",
+    "second_established_year",
+    "comparison_result"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "record_id": "cb84e54c64817c10fa5490537904ece72359c759d5f3cfb5a74ad264f5974f87",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ade8b8a55429939a52fe8ee",
+    "source_dataset": "hotpotqa",
+    "source_answer": "North America",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Lupinus kingii: Lupinus kingii (King's lupine) is a species of Lupinus, family Fabaceae, which can be found in Arizona, Colorado, Nevada, New Mexico, Utah.  Both the leaves and the pods are hairy with the later being 10 mm long.  In Utah, it is found only at Bryce Canyon National Park.\n\nAnagyrine: Anagyrine is a teratogenic alkaloid commonly found in many species of lupinus plants.  The toxin can cause crooked calf disease if a cow ingests the plant during certain periods of pregnancy.\n\nLupinus pilosus: Lupinus pilosus, commonly known as blue lupine, (Hebrew: תורמוס ההרים‎ ‎ , Arabic: ترمس برّي‎ ‎ ) is a species of flowering plant from the order of Lamiales which is endemic to Israel where it is found in Mediterranean scrubland.  It has a 30 - long stem and 3 - long legume.  The species blooms from February to May.  The species have white coloured flowers which are 1 - long and pods the diameter of which is 3 - .  In Israel the Lupinus pilosus has blue flowers with white vertical spot at the middle.\n\nTom Dorman State Nature Preserve: The Palisades harbor many rare species for the Bluegrass due to the unusual landscape.  The state endangered plants found on Tom Dorman's cliffs are starry cleft phlox (\"Phlox bifida\" var.  \"stellaria\"), Eggleston's violet (\"Viola egglestonii\"), and tufted hair-grass (\"Deschampsia cespitosa\"); the latter being one of only two populations known in the state.  The plants listed as state threatened found here are Kentucky viburnum (\"Viburnum molle\") and False melic (\"Schizachne purpurascens\").  The rare Yellowwood tree is also found in this preserve.\n\nHeterotheca: Heterotheca, (common names goldenasters, camphorweed, or telegraph weed) are North American plants in the sunflower family.\n\nLupinus: Lupinus, commonly known as lupin or lupine (North America), is a genus of flowering plants in the legume family, Fabaceae.  The genus includes over 200 species, with centers of diversity in North and South America.  Smaller centers occur in North Africa and the Mediterranean.  Seeds of various species of lupins have been used as a food for over 3000 years around the Mediterranean and for as much as 6000 years in the Andean highland, but they have never been accorded the same status as soybeans or dry peas and other pulse crops.  The pearl lupin of the Andean highlands of South America, \"Lupinus mutabilis\", known locally as \"tarwi\" or \"chocho\", was extensively cultivated, but no conscious genetic improvement other than to select for larger and water-permeable seeds seems to have been made.  Users soaked the seed in running water to remove most of the bitter alkaloids and then cooked or toasted the seeds to make them edible, or else boiled and dried them to make \"kirku\".  Spanish domination led to a change in the eating habits of the indigenous peoples, and only recently has interest in using lupins as a food been renewed.\n\nLupinus subg. Platycarpos: The genus \"Lupinus\" L. and, in particular, its North-American species, were divided by Sereno Watson (1873) into three parts: \"Lupinus\", \"Platycarpos\" and \"Lupinnelus\".  Differences in habit and in the number of ovules were accepted as the basis for this classification.  A majority of perennial and annual species from the American continent described by Watson were referred to \"Lupinus\".  To the \"Platycarpos\" section were attributed some annual species with two ovules in the ovary and two seeds in the pod (\"L. densiflorus\" Benth., \"L. microcarpus\" Sims.  and others).  Section \"Lupinnelus\" consisted of one species (\"L. uncialis\"), with axillary and solitary flowers, scarcely reflexed banner, and also with two ovules in the ovary.  Presently, the existence of such species seems doubtful.\n\nRafflesiaceae: The Rafflesiaceae are a family of rare parasitic plants found in the tropical forests of east and southeast Asia, including \"Rafflesia arnoldii\", which has the largest flowers of all plants.  The plants are endoparasites of vines in the genus \"Tetrastigma\" (Vitaceae) and lack stems, leaves, roots, and any photosynthetic tissue.  They rely entirely on their host plants for both water and nutrients, and only then emerge as flowers from the roots or lower stems of the host plants.\n\nLupinine: Lupinine is a bitter tasting quinolizidine alkaloid present in \"Lupinus\" species (lupins), plants of the family Fabaceae.  The scientific literature contains many reports on the isolation and synthesis of this compound.  The characteristically bitter taste of lupin beans, attributable to the alkaloids which they contain, renders them unsuitable for human and animal consumption.  However, because lupin beans have potential nutritional value due to their high protein content, efforts have been made to reduce their alkaloid content, as well as to develop \"sweet\" varieties of \"Lupinus\".\n\nLupinus sparsiflorus: Lupinus sparsiflorus (Coulter's lupine) is a species of lupin native to North America.  In the United States it occurs in California, Nevada, Arizona and Utah, and in Mexico it is found in Baja California and Sonora.  Other common names include Mojave lupine, a name it shares with \"Lupinus odoratus\".",
+    "question": "On which continent are Heterotheca and Lupinus plants found?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "plant_genera": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "genus_name": {
+                "type": "string"
+              },
+              "found_continents": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "genus_name",
+              "found_continents"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "common_continents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "answer_continent_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "plant_genera",
+        "common_continents",
+        "answer_continent_count"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "plant_genera": [
+        {
+          "genus_name": "Heterotheca",
+          "found_continents": [
+            "North America"
+          ]
+        },
+        {
+          "genus_name": "Lupinus",
+          "found_continents": [
+            "North America",
+            "South America",
+            "North Africa",
+            "Mediterranean"
+          ]
+        }
+      ],
+      "common_continents": [
+        "North America"
+      ],
+      "answer_continent_count": 1
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

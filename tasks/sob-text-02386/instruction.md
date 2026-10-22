@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Chairman of the Workers' Party of Korea: The Chairman of the Workers' Party of Korea is the leader of the Workers' Party of Korea and supreme commander of the armed forces of North Korea and the most powerful person in the government as the Supreme Leader of one-party North Korea.
+
+Kim Jong-un: Kim Jong-un (Chosŏn'gŭl: 김정은 ; ] or ] ] ; born 8 January 1982–84 or 5 July 1984) is the Chairman of the Workers' Party of Korea (WPK) and supreme leader of North Korea.  Kim is the second child of Kim Jong-il (1941–2011) and Ko Yong-hui.  Before taking power, Kim was rarely seen in public, and many of the activities of Kim and his government remain unknown.  Even details such as what year he was born, and whether he did indeed attend a Western school under a pseudonym, are difficult to confirm.
+
+1st Congress of the Workers' Party of North Korea: The 1st Congress of the Workers' Party of North Korea (WPNK) was held in Pyongyang, North Korea, from 28–30 August 1946, and established the WPNK (the forerunner to the Workers' Party of Korea).  The congress is the highest organ of the party, and is stipulated to be held every four years.  A total of 801 delegates represented the party's 336,399 members.  The 1st Central Committee, elected by the congress, elected Kim Tu-bong as WPNK Chairman, Kim Il-sung and Chu Yong-ha as deputy chairmen.
+
+Politburo of the Workers' Party of Korea: The Politburo of the Workers' Party of Korea (officially the Political Bureau of the Central Committee of the Workers' Party of Korea) is the highest leading body of the Workers' Party of Korea.  Article 25 of Party Rules stipulate: "The Political Bureau of the Party Central Committee and its Standing Committee organize and direct all party work on behalf of the party Central Committee between plenary meetings.  The Political Bureau of the Party Central Committee shall meet at least once every month."  The Politburo is elected by the Central Committee of the Workers' Party of Korea.
+
+Workers' Party of Korea: The Workers' Party of Korea (WPK) is the founding and ruling political party of the Democratic People's Republic of Korea (North Korea), and the largest party represented in the Supreme People's Assembly.  The WPK is the sole governing party of North Korea, although it coexists "de jure" with two other legal parties making up the Democratic Front for the Reunification of the Fatherland.  It was founded in 1949 with the merger of the Workers' Party of North Korea and the Workers' Party of South Korea.  The WPK also controls the world's 5th largest armed force – Korean People's Army.  This political party (and all of the other parties in the DPRK) remains illegal in South Korea (officially the Republic of Korea) under South Korea's own National Security Act and is sanctioned by Australia, the European Union, the United Nations and the United States.
+
+Workers' Party of North Korea: The Workers' Party of North Korea (Korean: 북조선로동당 ) was a communist party in North Korea from 1946 to 1949 and was a predecessor of the current Workers' Party of Korea.  It was founded at a congress on 28–30 August 1946, by the merger of the North Korean Branch Bureau of the Communist Party of Korea and the New People's Party of Korea.  Kim Tu-bong, the leader of the New People's Party, was elected Chairman of the party.  Vice Chairmen of the party were Chu Yong-ha and Kim Il-sung.  At the time of establishment, the party is believed to have had about 366 000 members organized in around 12,000 party cells.
+
+Rungra People's Pleasure Ground: The Rungna People's Pleasure Ground is an amusement park located in Pyongyang, North Korea.  It was opened in 2012 in a ceremony with Kim Jong Un and his wife Ri Sol-ju.  It has a dolphinarium, swimming pool, and a mini golf course.
+
+Rodong Sinmun: Rodong Sinmun (Korean: 로동신문 , ] , "Workers' Newspaper") is a North Korean newspaper that is the official newspaper of the Central Committee of the Workers' Party of Korea.  It was first published on November 1, 1945, as Chǒngro (Chosŏn'gŭl: 정로 ; Hancha: 正路 ; "right path"), serving as a communication channel for the North Korea Bureau of the Communist Party of Korea.  It was renamed in September 1946 to its current name upon the steady development of the Workers' Party of Korea.  Quoted frequently by the Korean Central News Agency (KCNA) and international media, it is regarded as a source of official North Korean viewpoints on many issues.
+
+Monument to Party Founding: The Monument to Party Founding (Chosŏn'gŭl: 당창건기념탑 ; MR: "Tangch'anggŏnkinyŏmt'ap " ) is a monument in Pyongyang, the capital of North Korea.  The monument is rich in symbolism: the hammer, sickle and calligraphy brush symbolize the workers, farmers and intellectuals.  The element is 50 meters high to symbolize the 50-year anniversary of the founding of the Workers' Party of Korea.  The number of slabs comprising the belt around the monument and its diameter stand for the date of birth of Kim Jong-il.  The inscription on the outer belt reads: "The organizers of the victory of the Korean people and the leader of the Workers Party of Korea!"  On the inside of the belt are three bronze reliefs with their distinct meanings: the historical root of the party, the unity of people under the party and the party's vision for a progressive future.  Two red flag-shaped buildings with letters forming the words "ever-victorious" surround the monument.
+
+Union of Agricultural Workers of Korea: The Union of Agricultural Workers of Korea (UAWK; or Korean Federation of Agricultural Workers ) is a trade union and mass organization for agricultural workers in North Korea.  It is one of the most important mass organizations in the country.  UAWK was founded in 1946 and reformed in 1965 along the lines of North Korean leader Kim Il-sung's landmark "Theses on the Socialist Rural Question in Our Country".  The organization is a member of the popular front Democratic Front for the Reunification of the Fatherland and is directly controlled by the Central Committee of the ruling Workers' Party of Korea.
+
+Question: Who is the wife of the Chairman of the Workers' Party of Korea?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "chairman_name": {
+      "type": "string",
+      "description": "The name of the Chairman of the Workers' Party of Korea."
+    },
+    "chairman_title": {
+      "type": "string",
+      "description": "The official title of the chairman."
+    },
+    "political_party": {
+      "type": "string",
+      "description": "The name of the political party the chairman leads."
+    },
+    "wife_name": {
+      "type": "string",
+      "description": "The name of the chairman's wife."
+    }
+  },
+  "required": [
+    "chairman_name",
+    "chairman_title",
+    "political_party",
+    "wife_name"
+  ],
+  "additionalProperties": false
+}

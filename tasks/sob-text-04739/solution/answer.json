@@ -1,0 +1,10 @@
+{
+  "team_name": "New York Knicks",
+  "season": "1988–89",
+  "team_record": "52–30",
+  "player_name": "Charles Oakley",
+  "player_acquisition_details": {
+    "event_type": "acquired",
+    "from_team": "Chicago Bulls"
+  }
+}

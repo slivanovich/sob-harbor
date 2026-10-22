@@ -1,0 +1,22 @@
+{
+  "question_asked": "Are Armen Chakmakian and Reuben Nakian both sculptors?",
+  "person_1": {
+    "name": "Armen Chakmakian",
+    "is_sculptor": false,
+    "professions": [
+      "musician",
+      "composer",
+      "recording artist",
+      "producer"
+    ]
+  },
+  "person_2": {
+    "name": "Reuben Nakian",
+    "is_sculptor": true,
+    "professions": [
+      "sculptor",
+      "teacher"
+    ]
+  },
+  "both_are_sculptors": false
+}

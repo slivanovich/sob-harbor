@@ -1,0 +1,17 @@
+{
+  "comparison_result": "Thomas Mann won more Nobel Prizes than T. R. Pearson.",
+  "individual_with_more_prizes": {
+    "name": "Paul Thomas Mann",
+    "nobel_prizes_won": [
+      {
+        "year": 1929,
+        "category": "Literature"
+      }
+    ],
+    "total_prizes": 1
+  },
+  "individual_with_fewer_prizes": {
+    "name": "T. R. Pearson",
+    "total_prizes": 0
+  }
+}

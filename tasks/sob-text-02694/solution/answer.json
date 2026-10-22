@@ -1,0 +1,15 @@
+{
+  "draft_year": 2007,
+  "draft_location": "Nationwide Arena",
+  "city": "Columbus",
+  "state_province": "Ohio",
+  "country": "United States",
+  "player_drafted": {
+    "player_name": "Brett Bellemore",
+    "player_nationality": "Canadian",
+    "player_position": "defenceman",
+    "draft_round": 6,
+    "overall_pick": 162,
+    "drafting_team": "Carolina Hurricanes"
+  }
+}

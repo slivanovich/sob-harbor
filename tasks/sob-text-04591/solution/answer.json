@@ -1,0 +1,16 @@
+{
+  "entity_name": "White House FBI files controversy",
+  "common_term": "Filegate",
+  "key_details": {
+    "administration": "Clinton Administration",
+    "start_year": 1996,
+    "improper_access_years": [
+      1993,
+      1994
+    ],
+    "subject_of_access": "FBI security-clearance documents",
+    "investigator": "Robert William Ray",
+    "investigator_role": "head of the Office of the Independent Counsel",
+    "investigation_period": "1999 to 2002"
+  }
+}

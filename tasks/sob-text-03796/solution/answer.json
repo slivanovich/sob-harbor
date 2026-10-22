@@ -1,0 +1,12 @@
+{
+  "fighter_1": {
+    "name": "Jeremy Horn",
+    "birth_date": "1975-08-25"
+  },
+  "fighter_2": {
+    "name": "Renato Sobral",
+    "birth_date": "1975-09-07"
+  },
+  "older_fighter_name": "Jeremy Horn",
+  "age_comparison_result": "Jeremy Horn was born on August 25, 1975, and Renato Sobral was born on September 7, 1975, making Jeremy Horn older."
+}

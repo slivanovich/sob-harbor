@@ -1,0 +1,15 @@
+{
+  "main_player_name": "Gigi Fernández",
+  "compared_partners": [
+    {
+      "partner_name": "Natasha Zvereva",
+      "grand_slam_doubles_championships_won_with_main_player": 15
+    },
+    {
+      "partner_name": "Raúl Ramírez",
+      "grand_slam_doubles_championships_won_with_main_player": 0
+    }
+  ],
+  "partner_with_most_grand_slam_doubles_championships": "Natasha Zvereva",
+  "number_of_titles_with_winning_partner": 15
+}

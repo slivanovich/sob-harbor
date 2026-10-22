@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "3068325ab5163b0eb4c3a789dc02f8aaa769e68f06071d09001ea383cd888a12",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5ab393c855429969a97a8180",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Asghar Farhadi: Asghar Farhadi (Persian: اصغر فرهادی‎ ‎ ; ]    born 7 May 1972) is an Iranian film director and screenwriter.  Among other awards, he has received a Golden Globe Award as well as two Academy Awards for Best Foreign Language Film for his movies \"A Separation\" and \"The Salesman\" in 2012 and 2017, respectively.  He was named one of the 100 Most Influential People in the world by \"Time\" magazine in 2012.\n\nAhmad Mehranfar: Ahmad Mehranfar Persian: احمد مهرانفر‎ ‎ , is an Iranian film and stage actor.  His most famous film is \"About Elly\", directed by Asghar Farhadi in 2008 and series \"Paytakht\".\n\nA Separation: A Separation (Persian: جدایی نادر از سیمین‎ ‎ \"Jodaí-e Nadér az Simín\", \"The Separation of Nader from Simin\") is a 2011 Iranian drama film written and directed by Asghar Farhadi, starring Leila Hatami, Peyman Moaadi, Shahab Hosseini, Sareh Bayat, and Sarina Farhadi.  It focuses on an Iranian middle-class couple who separate, the disappointment and desperation suffered by their daughter due to the egotistical disputes and separation of her parents, and the conflicts that arise when the husband hires a lower-class caregiver for his elderly father, who suffers from Alzheimer's disease.\n\nSarina Farhadi: Sarina Farhadi (Persian: سارینا فرهادی‎ ‎ ) is an Iranian actress.  She is the daughter of Parisa Bakhtavar and Academy Award-winning director Asghar Farhadi.  She was born in Tehran, Iran.\n\nAbout Elly: About Elly (Persian: درباره الی‎ ‎ , translit.  \"Dar bāre-ye Elly\") is a 2009 Iranian drama film directed by Asghar Farhadi.  It is the fourth film by Farhadi.  The film is about the relationships between some middle class families in Iran.\n\nFireworks Wednesday: Fireworks Wednesday (Persian: چهارشنبه سوری‎ ‎ , Chaharshanbe Suri) is a 2006 Iranian drama film directed by Asghar Farhadi and co-written by Farhadi and Mani Haghighi.  It stars Hedyeh Tehrani, Taraneh Alidousti, and Hamid Farokhnezhad.\n\nMichael Herz (producer): Michael Herz is an American film producer, director and screenwriter.  With Lloyd Kaufman, the two are the co-founders of Troma Entertainment, the world's longest running independent film studio, known for their comedic horror films, including the cult favorite \"Toxic Avenger series and \"Tromeo and Juliet\".\n\nThe Salesman (2016 film): The Salesman (Persian: فروشنده‎ , \"Forušande \" ‎ ) is a 2016 drama film directed and written by Asghar Farhadi and starring Taraneh Alidoosti and Shahab Hosseini.  It is about a married couple who perform Arthur Miller's play \"Death of a Salesman\" on stage, when the wife is assaulted.  Her husband attempts to determine the identity of the attacker, while she struggles to cope with post-trauma stress.  Farhadi chose Miller's play as his story within a story based on shared themes.  The film was shot in Tehran, beginning in 2015.\n\n9th Bengaluru International Film Festival 2017: 9th Bengaluru International Film Festival - 2017 (BIFFES - 2017) was held from 2 to 9 February 2017 in Bengaluru and Mysuru, in the Indian state of Karnataka.  A total of 240 films from 60 countries including Oscar nominees of the year such as The Salesman by Iranian director Asghar Farhadi and A Man Called Ove by Swedish director Hannes Holm were screened over a period of 8 days.\n\nPeyman Moaadi: Payman Moadi (Persian: پیمان مُعادی‎ ‎ ) is an Iranian-American actor, screenwriter and director.  He is best known for starring in the films \"A Separation\" and \"About Elly\" by director Asghar Farhadi and the independent drama film \"Camp X-Ray\".",
+    "question": "Are Michael Herz and Asghar Farhadi both nationals of the same country ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_1_name": {
+          "type": "string",
+          "description": "The name of the first person mentioned in the question."
+        },
+        "person_1_nationality": {
+          "type": "string",
+          "description": "The nationality of the first person."
+        },
+        "person_2_name": {
+          "type": "string",
+          "description": "The name of the second person mentioned in the question."
+        },
+        "person_2_nationality": {
+          "type": "string",
+          "description": "The nationality of the second person."
+        },
+        "are_same_nationality": {
+          "type": "boolean",
+          "description": "True if both individuals share the same nationality, false otherwise."
+        }
+      },
+      "required": [
+        "person_1_name",
+        "person_1_nationality",
+        "person_2_name",
+        "person_2_nationality",
+        "are_same_nationality"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_1_name": "Michael Herz",
+      "person_1_nationality": "American",
+      "person_2_name": "Asghar Farhadi",
+      "person_2_nationality": "Iranian",
+      "are_same_nationality": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

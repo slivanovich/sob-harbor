@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "9dcf26dbe2f8599205a7f611e544c72b8bbcef6a134b716e2f9c5e2a2311d56e",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab2a7c65542997061209680",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1890",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Titon et l'Aurore: Titon et l'Aurore (English: \"Tithonus and Aurora\") is an opera in three acts and a prologue by the French composer Jean-Joseph de Mondonville which was first performed at the Académie royale de musique, Paris on 9 January 1753.  The authorship of the libretto has been subject to debate; Mondonville's contemporaries ascribed the prologue to Antoine Houdar de la Motte and the three acts of the opera to the Abbé de La Marre.  \"Titon et l'Aurore\" belongs to the genre known as the \"pastorale héroïque\".  The work played an important role in the so-called Querelle des Bouffons, a dispute over the relative merits of the French and Italian operatic traditions which dominated the intellectual life of Paris in the early 1750s.  The tremendous success of Mondonville's opera at its premiere was an important victory for the French camp (although their Italian rivals claimed that this was because they had been excluded from their seats by members of the army).  \"Titon\" was one of Mondonville's most popular works and went on to enjoy several revivals during his lifetime.\n\nSwan Lake (1895): The 1917 Petipa/Ivanov/Drigo revival of Swan Lake is a famous version of the ballet \"Swan Lake\", (ru. \" Лебединое Озеро\"), (fr.  \"Le Lac des Cygnes\").  This is a ballet by Pyotr Ilyich Tchaikovsky based on an ancient German legend, presented in either four acts, four scenes (primarily outside Russia and Eastern Europe), three acts, four scenes (primarily in Russia and Eastern Europe) or, more rarely, in two acts, four scenes.  Originally choreographed by Julius Reisinger to the music of Pyotr Ilyich Tchaikovsky (opus 20), it was first presented as \"The Lake of the Swans\" by the Ballet of the Moscow Imperial Bolshoi Theatre on 20 February/4 March 1877 (Julian/Gregorian calendar dates) in Moscow, Russia.  Although the ballet is presented in many different versions, most ballet companies today base their stagings both choreographically and musically on this revival by Marius Petipa and Lev Ivanov, staged for the Imperial Ballet, first presented on 15 January/27 January 1895, at the Imperial Mariinsky Theatre in St. Petersburg, Russia instead of the original version.\n\nThe Sleeping Beauty (ballet): The Sleeping Beauty (Russian: Спящая красавица / \"Spyashchaya krasavitsa\") is a ballet in a prologue and three acts, first performed in 1890.  The music was composed by Pyotr Ilyich Tchaikovsky (his opus 66).  The score was completed in 1889, and is the second of his three ballets.  The original scenario was conceived by Ivan Vsevolozhsky, and is based on Charles Perrault's \"La Belle au bois dormant\".  The choreographer of the original production was Marius Petipa.\n\nSleeping Beauty: \"Sleeping Beauty\" (French: \"La Belle au bois dormant\" \"The Beauty Sleeping in the Wood\") by Charles Perrault, or \"Little Briar Rose\" (German: \"\" ), is a classic fairy tale which involves a beautiful princess, a sleeping enchantment, and a handsome prince.  The version collected by the Brothers Grimm was an orally transmitted version of the originally literary tale published by Charles Perrault in \"Histoires ou contes du temps passé\" in 1697.  This in turn was based on \"Sun, Moon, and Talia\" by Italian poet Giambattista Basile (published posthumously in 1634), which was in turn based on one or more folk tales.  The earliest known version of the story is found in the narrative \"Perceforest\", composed between 1330 and 1344 and first printed in 1528.\n\nValery Lagunov: Lagunov was born on July 2, 1942 in Moscow, Russia.  In 1962 he graduated from the Moscow State Choreographic Academy where his teacher was Aleksey Yermolayev, and same year joined Bolshoi Ballet.  He first appeared in \"Scriabiniana\" as \"Garland\" in 1962 and four next year played in \"Sleeping Beauty\" as \"Prince\".  In 1966 he played as one of the shepherd boys in \"the Nutcracker\" and five years later appeared as \"Archon\" in \"Icarus\".  In 1972 he participated in the \"Swan Lake\" where he played a role of \"Evil genius\" and the same year played a role as a \"dance teacher\" in \"Cinderella\".  Three years later he appeared as \"Albrecht\" in \"Giselle\" and by 1976 played a role of \"black man\" in \"Mozart and Salieri\".  The same year he was named \"Merited Artist of the Russian Federation\" and also appeared as \"Don Juan\" in \"Love for Love\".  In 1979 he graduated from the Russian University of Theatre Arts and retired as a dancer in 1983.  Since 1996 he teaches such future ballet dancers as Mikhail Lobukhin and Vladislav Lantratov.\n\nPas de deux: In ballet, a pas de deux ] (French, literally \"step of two\") is a dance duet in which two dancers, typically a male and a female, perform ballet steps together.  The pas de deux is characteristic of classical ballet and can be found in many well-known ballets, including \"Sleeping Beauty\", \"Swan Lake\", and \"Giselle\".  It is most often performed by a male and a female (a \"danseur\" and a \"ballerina\") though there are exceptions, such as in the film \"White Nights\", in which a pas de deux is performed by Mikhail Baryshnikov and Gregory Hines.\n\nNevada Ballet Theatre: Nevada Ballet Theatre (NBT) is a regional ballet company located in Las Vegas, Nevada, United States.  It is the Resident Ballet Company of The Smith Center for the Performing Arts and is one of the largest performing arts organizations in the state.  Its professional company of dancers possesses a versatile repertoire ranging from well-known story ballets such as \"The Nutcracker\", \"The Sleeping Beauty\", and \"Swan Lake\" to works by George Balanchine, Twyla Tharp, Val Caniparoli, James Canfield, Thaddeus Davis and many more.  The organization also operates an Academy out of its main facility in Summerlin, as well as an education & outreach program, \"Future Dance\", that reaches over 16,000 students each year in schools throughout Southern Nevada.\n\nAlisa Sodoleva: Alisa Sodoleva (Belarusian: \"Аліса Содолева\" ) is a Belarusian dancer who was born in Minsk and was a graduate of the Vaganova Academy of Russian Ballet in 2010.  She joined Mariinsky Ballet the same year and played in such plays as \"La Sylphide\". \" La Bayadère\" and \"Raymonda\".  She also played roles such as \"Monna\" and \"Zulma\" in \"Giselle\" and \"Maid of Honour\" in the Sleeping Beauty\".\n\nOnce Upon a Dream (Sleeping Beauty song): \"Once Upon a Dream\" is a song written in 1959 for the animated musical fantasy film \"Sleeping Beauty\" produced by Walt Disney.  It is based on Tchaikovsky's ballet of the same name, more specifically the piece \"Grande valse villageoise\" (\"The Garland Waltz\").  It is the theme of Princess Aurora and Prince Philip and was performed by a chorus as an overture and third-reprise finale.  Mary Costa and Bill Shirley, who were cast in the roles of Princess Aurora and Prince Philip, performed the song as a duet.\n\nAurora (Disney): Aurora (also known as Sleeping Beauty or by her alias \"Briar Rose\") is a fictional character who appears in Walt Disney Pictures' 16th animated feature film \"Sleeping Beauty\" (1959).  Originally voiced by singer Mary Costa, Aurora is the only daughter of King Stefan and Queen Leah.  As revenge for not being invited to Aurora's christening, an evil fairy named Maleficent curses the newborn princess, foretelling that she will die on her 16th birthday by pricking her finger on a spinning wheel's spindle.  Determined to prevent this, three good fairies raise Aurora as a peasant in order to protect her, patiently awaiting her 16th birthday – the day the spell is to be broken by a kiss from her true love, Prince Phillip.",
+    "question": "Valery Lagunov, was born on July 2, 1942 in Moscow, Russia, he played in \"Sleeping Beauty\" as \"Prince\", a ballet in a prologue and three acts, first performed in which year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "ballet_title": {
+          "type": "string",
+          "description": "The title of the ballet."
+        },
+        "first_performed_year": {
+          "type": "integer",
+          "description": "The year the ballet was first performed."
+        },
+        "number_of_acts": {
+          "type": "integer",
+          "description": "The number of acts in the ballet."
+        },
+        "has_prologue": {
+          "type": "boolean",
+          "description": "Indicates if the ballet includes a prologue."
+        },
+        "composer": {
+          "type": "string",
+          "description": "The composer of the ballet's music."
+        }
+      },
+      "required": [
+        "ballet_title",
+        "first_performed_year",
+        "number_of_acts",
+        "has_prologue",
+        "composer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "ballet_title": "The Sleeping Beauty",
+      "first_performed_year": 1890,
+      "number_of_acts": 3,
+      "has_prologue": true,
+      "composer": "Pyotr Ilyich Tchaikovsky"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

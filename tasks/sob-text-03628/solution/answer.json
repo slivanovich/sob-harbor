@@ -1,0 +1,12 @@
+{
+  "university_name": "Delft University of Technology",
+  "university_location": {
+    "city": "Delft",
+    "country": "Netherlands"
+  },
+  "is_largest_dutch_public_technological_university": true,
+  "is_oldest_dutch_public_technological_university": true,
+  "associated_research_project": {
+    "project_name": "Glaciogenic Reservoir Analogue Studies Project"
+  }
+}

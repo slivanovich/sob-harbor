@@ -1,0 +1,20 @@
+{
+  "bank_name": "Emprise Bank",
+  "cities_with_branches_on_river": [
+    {
+      "city_name": "Iola",
+      "river_name": "Neosho River",
+      "county": "Allen County",
+      "state": "Kansas",
+      "population_2010": 5704
+    },
+    {
+      "city_name": "Humboldt",
+      "river_name": "Neosho River",
+      "county": "Allen County",
+      "state": "Kansas",
+      "population_2010": 1953
+    }
+  ],
+  "identified_river": "Neosho River"
+}

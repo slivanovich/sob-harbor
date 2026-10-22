@@ -1,0 +1,85 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Favela Rising: Favela Rising is a 2005 documentary film by American directors Jeff Zimbalist and Matt Mochary.  It was produced by Sidetrack Films and VOY Pictures.  It debuted at the Tribeca Film Festival on April 24, 2005 where it won the award for "Best New Documentary Filmmaker" for Zimbalist and Mochary.  The film's look at life in Brazil's slums won it further awards such as "Best Documentary Film" from the New York Latino Film Festival and "Best Feature Documentary" from Big Sky Documentary Film Festival.  The film has won over twenty-five international festival awards and was short-listed for an Oscar.
+
+Dee Hibbert-Jones: Dee Hibbert-Jones is a film director, producer and animator.  She is best known for co-producing and co-directing the short-documentary "Last Day of Freedom" (32 mins) for which she received an Academy Award for Best Documentary (Short Subject) nomination at the 88th Academy Awards, with Nomi Talisman, an Emmy Award ( Northern CA) and the IDA Best Short Documentary Award.  Hibbert-Jones is an Associate Professor of Art and Digital Art New Media at the University of California, Santa Cruz, where she is founder and Co-Director of SPARC at UCSC a Social Practice Arts Research Center.  Hibbert-Jones and Talisman were awarded a Guggenheim Fellowship They won an Emmy Award for Last Day of Freedom, at the 45th Annual Northern California Emmy® Awards (News and Program Speciality - Documentary Topical), the Filmmaker Award from the Center for Documentary Studies at Duke, and a Gideon Award for support to Indigent Communities.  Currently they are nominated for the 2016 Congressional Black Caucus Veterans Braintrust Award.  Among Dee Hibbert-Jones' festival awards are: Best Short Full Frame Documentary Film Festival, Best Short Documentary Hamptons International Film Festival, Golden Strands Award, Outstanding Documentary Short, Tall Grass KS, Best Experimental Short, Atlanta Docufest, Impact Award (In) Justice for All, and the 2015 Platinum Award Winner Spotlight Documentary Series.  Hibbert-Jones is a MacDowell Colony Fellow, a Yerba Buena Center for the Arts Fellow and Headlands Center For the Arts Alumni.  She holds an MFA from Mills College Oakland, MA York University, PGCE from Durham University and a BA from London University.  Born in the UK she lives in San Francisco CA.
+
+Of Men and War: Of Men and War (French: Des hommes et de la guerre ) is a 2014 documentary film directed by Laurent Bécue-Renard.  It explores the psychological trauma of war experienced by a group of American Iraq veterans upon their return from the front.  It was presented in the Special Screenings section at the 2014 Cannes Film Festival.  The film won the VPRO IDFA Award for Best Feature-Length Documentary at the 2014 International Documentary Film Festival Amsterdam.  It was nominated for the European Film Award for Best Documentary at the 27th European Film Awards and screened at the Museum of Modern Art's Documentary Fortnight.
+
+Streetwise (1984 film): Streetwise is a 1984 documentary film by director Martin Bell.  It followed in the wake of a July 1983 "Life" magazine article, "Streets of the Lost", by writer Cheryl McCall and photographer Mary Ellen Mark, Bell's wife.
+
+Last Day of Freedom: Last Day of Freedom is a 2015 American black and white and color animated short documentary film about racism, the US Criminal Justice System,and mental health issues.  The documentary was well received by critics and earned numerous awards at various film festivals, and The International Documentary Association Best Short Documentary Award, at the 31st Annual IDA Documentary Awards.  "Last Day of Freedom" was shortlisted with ten other documentaries from 74 entries submitted to 88th Academy Awards in Documentary Short Subject category, and eventually received a nomination in this category.  In June 2016 the film won an Emmy Award for News and Program Specialty -Documentary-Topical, at the 45th Annual Northern California Area Emmy® Awards.  The film was a finalist for a Documentary Short, 59th Cine Eagle Award.
+
+Checkpoint (2003 film): Checkpoint (original title: Machssomim) is a 2003 documentary film by Israeli filmmaker Yoav Shamir, showing the everyday interaction between Israeli soldiers and Palestinian civilians at several of the regions Israel Defense Forces checkpoints.  The film won five awards at various film festivals, including Best International Documentary at the Hot Docs Canadian International Documentary Festival, best feature-length documentary at the International Documentary Film Festival Amsterdam and the Golden Gate Award for Documentary Feature at the San Francisco International Film Festival.  Although the film was generally well received, it was also controversial and reactions from audience members and critics were sometimes very angry.
+
+The Missing Picture (film): The Missing Picture (French: L'Image manquante ) is a 2013 Cambodian-French documentary film directed by Rithy Panh about the Khmer Rouge.  It was screened in the Un Certain Regard section at the 2013 Cannes Film Festival where it won the top prize.  It was also screened in the World Cinema section at the 2013 Cinemanila International Film Festival where it won the Grand Jury Prize.  It won the Lumières Award for Best Documentary at the 21st Lumières Awards and was nominated for the César Award for Best Documentary Film at the 41st César Awards.
+
+Dan Keplinger: Artist Dan Keplinger (born 19 January 1973) was featured in the Oscar-winning documentary short, "King Gimp".  Born January 19, 1973 with cerebral palsy, he lives in Towson, Maryland, where he continues to paint.
+
+King Gimp: King Gimp is a 1999 documentary that was awarded the 2000 Academy Award for Best Short Subject Documentary and 2000 Peabody Award.  "King Gimp" follows the life of artist Dan Keplinger of Towson, Maryland, who has cerebral palsy.  Filmmakers Susan Hannah Hadary and William A. Whiteford, of the University of Maryland Video Press and Tapestry International Productions produced the film.
+
+Ai Weiwei: The Fake Case: Ai Weiwei The Fake Case is a 2013 documentary film about Chinese artist and activist Ai Weiwei, directed by Danish filmmaker Andreas Johnsen.  The film won Best 2014 Documentary in Danish Film Critics Association's 67th Bodil Awards, played in the official selection of 2014 Hot Docs Canadian International Documentary Festival in Toronto and International Documentary Film Festival Amsterdam.
+
+Question: Which documentary film won more awards, King Gimp or Streetwise?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "comparison_result": {
+      "type": "string",
+      "description": "The title of the documentary film that won more awards."
+    },
+    "films_compared": {
+      "type": "array",
+      "description": "Details for each film involved in the comparison.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "film_title": {
+            "type": "string",
+            "description": "The title of the film."
+          },
+          "awards_won_count": {
+            "type": "integer",
+            "description": "The total number of awards won by the film according to the context."
+          },
+          "award_details": {
+            "type": "array",
+            "description": "Specific awards won by the film.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "film_title",
+          "awards_won_count",
+          "award_details"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "A brief explanation of why one film won more awards than the other."
+    }
+  },
+  "required": [
+    "comparison_result",
+    "films_compared",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

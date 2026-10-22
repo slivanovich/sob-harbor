@@ -1,0 +1,22 @@
+{
+  "mozart_opera_identified": true,
+  "mozart_opera": {
+    "title": "Idomeneo",
+    "composer": "Wolfgang Amadeus Mozart",
+    "genre": "Italian language opera seria",
+    "premiere_details": {
+      "date": "29 January 1781",
+      "location": "Cuvilliés Theatre in Munich, Germany"
+    }
+  },
+  "other_opera": {
+    "title": "Pomone",
+    "composer": "Robert Cambert",
+    "genre": "pastoral opera",
+    "premiere_details": {
+      "date": "3 March 1671",
+      "location": "Paris at the Jeu de Paume de la Bouteille theatre"
+    }
+  },
+  "answer": "Idomeneo was written by Wolfgang Amadeus Mozart."
+}

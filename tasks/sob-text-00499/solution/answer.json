@@ -1,0 +1,23 @@
+{
+  "shared_profession": "writer",
+  "person_details": [
+    {
+      "name": "John Dos Passos",
+      "professions_listed": [
+        "novelist",
+        "artist",
+        "writer"
+      ]
+    },
+    {
+      "name": "Joe R. Lansdale",
+      "professions_listed": [
+        "writer",
+        "author",
+        "martial arts expert",
+        "martial arts instructor"
+      ]
+    }
+  ],
+  "number_of_people_sharing_profession": 2
+}

@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+American Choreography Awards: The American Choreography Awards was a ceremony and show that honored outstanding choreographers in the fields of feature film, television, music videos, and commercials.  They were first known as the L.A. Dance Awards (1994–95), then as Bob Fosse Awards, and a.k.a. Fosse’s (1996–97), and eventually the American Choreography Awards (1998-'04).  Each year in the fall, they were held at a different location in Los Angeles, California.  These include places such as the Orpheum Theatre, El Capitan Theatre, Alex Theatre, Wilshire Ebell Theatre, The Hollywood Palace, The Museum of Flying, The Century Club, and Club Tatou.
+
+Where in Time Is Carmen Sandiego? (game show): Where in Time Is Carmen Sandiego?  Is an American half-hour children's television game show loosely based on the computer game of the same name created by Brøderbund Software.  Just like its predecessor, the show was produced by WGBH and WQED.  The program lasted two seasons on PBS, consisting of 115 episodes, which ran from October 7, 1996 to December 12, 1997, with reruns airing until October 2, 1998.  The show starred Lynne Thigpen as "The Chief", Kevin Shinick as "ACME Time Pilot Squadron Leader" and "The Engine Crew" as various informants.  The show replaced "Where in the World Is Carmen Sandiego? ", and was recorded entirely at Kaufman Astoria Studios in Queens, New York City.
+
+James Trittipo: James Trittipo (June 30, 1928 — September 15, 1971) was an American television art director and stage set designer in New York and Hollywood, known for his designs of television variety shows including "The Frank Sinatra Show (CBS)", "", and "An Evening with Fred Astaire".  Trittipo won Art Direction Emmy Awards for the ABC Television variety series "The Hollywood Palace" and "An Evening with Fred Astaire".  He designed a set "evocative of waterfront pilings" for Rod McKuen's May 10, 1969 television special on NBC.  He died of a heart attack at age 43.
+
+Baazi Kiski: Baazi Kiski is a game show on Zee TV channel which premiered on September 2, 2001.  The game show is hosted by popular villain actor Ashutosh Rana, and involves a gender-war between men and women for a total cash prize of Rs 21,000 per contestant.  The show replaced Zee TV's game show Sawaal Dus Crore Ka, which did not meet audiences expectations.
+
+Spin-Off (game show): Spin-Off is an American game show created and produced by Nick Nicholson and E. Roger Muir for CBS in 1975 that was based on the dice game Yahtzee.  The series was hosted by Jim Lange and announced by Johnny Jacobs.  The show replaced "The Joker's Wild" on CBS' daytime schedule and debuted on June 16, 1975, but was cancelled on September 5, 1975.  "Spin-Off" originated in Stages 31, 33 and 41 at CBS Television City in Hollywood, California.
+
+Steve Oedekerk: Steven Brent Oedekerk (born November 27, 1961) is an American comedian, director, editor, producer, screenwriter and actor.  Oedekerk is best known for his collaborations with actor Jim Carrey and director Tom Shadyac (particularly the "Ace Ventura" franchise), his series of "Thumbmation" shorts and his film "" (2002).
+
+Jerry Lewis: Jerry Lewis (born either Jerome Levitch or Joseph Levitch, depending on the source; March 16, 1926 – August 20, 2017) was an American comedian, actor, singer, producer, director, screenwriter, and humanitarian.
+
+Gene Baylos: Gene Baylos (November 16, 1906 – January 10, 2005) was a nightclub comedian.  Not widely known by the general public, Baylos was a favourite of many "celebrity" comedians in New York City.  A modest success on television, he performed his stand-up routine on variety shows, including "The Hollywood Palace" and "The Joey Bishop Show".  Baylos appeared with small roles on "The Dick Van Dyke Show" and "Car 54, Where Are You? ".
+
+The Hollywood Palace: The Hollywood Palace was an hour-long American television variety show that was broadcast weekly (generally on Saturday nights) on ABC from January 4, 1964, to February 7, 1970.  Originally titled "The Saturday Night Hollywood Palace", it began as a midseason replacement for "The Jerry Lewis Show", another variety show, which had lasted only three months.  It was staged in Hollywood at the former Hollywood Playhouse (where Lewis' series had originated, temporarily renamed "The Jerry Lewis Theater" from September through December 1963) on Vine Street, which was renamed the Hollywood Palace during the show's duration and is today known as Avalon Hollywood.  A little-known starlet named Raquel Welch was cast during the first season as the "Billboard Girl", who placed the names of the acts on a placard (similar to that of a vaudeville house).
+
+The Voice Indonesia: The Voice Indonesia is a reality television singing competition created by John de Mol which premiered in Indonesia on 10 February 2013 on Indosiar.  The format is Dutch and the original Dutch version of the programme was broadcast in the Netherlands for the first time in 2010 as "The Voice of Holland".  The show replaced the previous singing contest show Akademi Fantasi Indosiar.  Season 2 will be aired in the RCTI.  RCTI once again appointed Fabian Dharmawan to produce The Voice Indonesia after successful seasons with Indonesian Idol, X Factor Indonesia and Sasuke Ninja Warrior Indonesia.  This program replaces the previous programs singing talent contest, Indonesian Idol because the broadcast is over from 2004 to 2014 and now otherwise been removed from list of programs RCTI.  Indosiar dropped "The Voice Indonesia" after the first season due to poor ratings.  In 2016, the RCTI won the rights to the show, and a second season went into production.  In June 2017, RCTI announced that "Indonesian Idol", another singing talent show seeking to discover the best singer through nationwide auditions, would return in 2018 and that "The Voice Indonesia" would not continue.
+
+Question: What American comedian, actor, singer, producer, director, screenwriter, and humanitarian, had his show replaced by The Hollywood Palace? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person whose show was replaced."
+    },
+    "person_roles": {
+      "type": "array",
+      "description": "A list of roles held by the person.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "replaced_show_name": {
+      "type": "string",
+      "description": "The name of the show that was replaced."
+    },
+    "replacing_show_name": {
+      "type": "string",
+      "description": "The name of the show that replaced it."
+    }
+  },
+  "required": [
+    "person_name",
+    "person_roles",
+    "replaced_show_name",
+    "replacing_show_name"
+  ],
+  "additionalProperties": false
+}

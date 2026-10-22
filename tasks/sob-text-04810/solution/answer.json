@@ -1,0 +1,13 @@
+{
+  "aviator_name": "Charles Augustus Lindbergh",
+  "nickname": "Lucky Lindy",
+  "flight_details": {
+    "flight_type": "nonstop",
+    "origin_location": "Long Island, New York",
+    "destination_location": "Paris",
+    "year_of_flight": 1927,
+    "duration_hours": 33.5,
+    "distance_smi": 3600
+  },
+  "was_hartsook_client": true
+}

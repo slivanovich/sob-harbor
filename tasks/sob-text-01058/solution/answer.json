@@ -1,0 +1,11 @@
+{
+  "first_founded_magazine": {
+    "name": "Railroad Model Craftsman",
+    "founding_year": 1933
+  },
+  "second_magazine": {
+    "name": "Midwest Living",
+    "founding_year": 1986
+  },
+  "comparison_summary": "Railroad Model Craftsman was founded first."
+}

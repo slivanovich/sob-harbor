@@ -1,0 +1,62 @@
+{
+  "politician_name": "Collin Clark Peterson",
+  "political_party": {
+    "name": "Minnesota Democratic–Farmer–Labor Party",
+    "abbreviation": "DFL"
+  },
+  "representative_information": {
+    "role": "U.S. Representative",
+    "state": "Minnesota",
+    "congressional_district": 7,
+    "is_most_senior_representative_from_state": true,
+    "service_start_year": 1991
+  },
+  "represented_locations": [
+    {
+      "name": "Dewey Township",
+      "type": "township",
+      "state": "Minnesota",
+      "county": "Roseau County"
+    },
+    {
+      "name": "Moorhead",
+      "type": "city",
+      "state": "Minnesota"
+    },
+    {
+      "name": "Fergus Falls",
+      "type": "city",
+      "state": "Minnesota"
+    },
+    {
+      "name": "Bemidji",
+      "type": "city",
+      "state": "Minnesota"
+    },
+    {
+      "name": "Detroit Lakes",
+      "type": "city",
+      "state": "Minnesota"
+    },
+    {
+      "name": "Thief River Falls",
+      "type": "city",
+      "state": "Minnesota"
+    },
+    {
+      "name": "Willmar",
+      "type": "city",
+      "state": "Minnesota"
+    },
+    {
+      "name": "Marshall",
+      "type": "city",
+      "state": "Minnesota"
+    },
+    {
+      "name": "Alexandria",
+      "type": "city",
+      "state": "Minnesota"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "68376c1c0049be66bfde2c631e445bdf6385d28bdef12bbc63b95f7685f8f767",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5adf8d7f554299025d62a2b6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Terre Haute Federal Correctional Complex",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Life imprisonment in Ireland: A Life sentence in Ireland may last for the natural life of the convict.  It is not necessarily \"life imprisonment\" in practice, as not all of the life sentence is generally served in prison custody.  The granting of temporary or early release of life sentenced prisoners is a feature of the Irish prison system handled by the Minister for Justice and Equality.\n\nFederal Correctional Institution, Terre Haute: The Federal Correctional Institution, Terre Haute (FCI Terre Haute) is a medium-security United States federal prison for male inmates in Indiana.  It is part of the Terre Haute Federal Correctional Complex (FCC Terre Haute) and is operated by the Federal Bureau of Prisons, a division of the United States Department of Justice.  The facility also has an adjacent satellite prison camp for minimum-security male offenders.\n\nTyrone Werts: Tyrone Werts is an American man who was convicted of a second-degree murder committed in 1975, for which he received a life sentence; however, he was released after 36 years instead.  This was an extremely rare case as the law in Pennsylvania says that if you have been charged with 1st or 2nd degree murder and were given a life sentence, there is no possibility for parole (Gottschalk).  He is most known as an ex-convict who was released from Prison after serving 36 years of what was supposed to be a life sentence.  While serving his time at Graterford Prison, in Perkiomen, Pennsylvania, Werts served as the president of the “Lifers” and made many very influential and positive changes in the prison community.\n\nLife imprisonment in the United States: In the United States, 1 in every 2,000 residents is imprisoned for life.  This is similar to the total imprisonment rate in Japan, which is roughly 51 per 100,000 residents.  There are many U.S. states where a convict can be released on parole after a decade or more has passed.  For example, sentences of \"15 years to life\", \"25 years to life\", or \"life with mercy\" may be given; this is called an \"indeterminate life sentence\", while a sentence of \"life without the possibility of parole\" or \"life without mercy\" is called a \"determinate life sentence\".  Even when a sentence specifically denies the possibility of parole, government officials may have the power to grant amnesty or reprieves, or commute a sentence to time served.\n\nAlvin and Judith Neelley: Alvin Howard Neelley, Jr. (1953–2005) and Judith Ann Adams Neelley (born 1964) are an American couple who committed two torture murders.  They each were convicted of the kidnappings and murders of Lisa Ann Millican and Janice Kay Chatman and attempted to commit a third.  Judith Neelley was sentenced to death by the State of Alabama (1983), but her sentence was commuted to life imprisonment (1999).  She is serving her sentence at the Julia Tutwiler Prison for Women in Wetumpka, Alabama.  Alvin Neelley was serving a life sentence at the Bostick State Prison in Hardwick, Georgia at the time of his death in 2005.\n\nHiroshi Nakamura (dissident): Hiroshi Nakamura (中村 泰 , Nakamura Hiroshi , born 1930) is a Japanese dissident.  After the Korean War broke out, he dropped out of Tokyo University, and decided to fight against Japan.  He was multilingual and became a good shot by training.  On November 23, 1956, he shot a policeman to death and received a life sentence.  He was paroled in 1976.  Following his release, he attempted to found an armed organization and collected guns.  After being arrested for an attempted robbery in 2002, he was sentenced to 15 years in prison for the crime and also received another life sentence for his previous 2001 injury case.  He was also suspected of the 1995 shooting of Takaji Kunimatsu, who was a chief of the National Police Agency.\n\nLife Sentence (TV series): Life Sentence (stylized as l;fe sentence) is an American comedy-drama series that will debut on The CW as a midseason entry during the 2017–18 television season that was created by Erin Cardillo & Richard Keith, who will executive produce with Oliver Goldstick, Bill Lawrence, Jeff Ingold, and director Lee Toland Krieger.  The show is produced by In Good Company, Doozer Productions and Warner Bros.  Television.  The CW officially ordered \"Life Sentence\" to series on May 10, 2017.  In August 2017, star Lucy Hale revealed that the series is set to premiere in January 2018.\n\nMohammed Abdul Qadeer: Abdul Qadeer was the ex-constable of police from Hyderabad, who was convicted for life sentence for killing ACP Sattiah, who was illegally harassing Muslim youth during the Babri Masjid demolition riots in 1992.  Abdul qadeer was illegally detained in jail despite the completion period of his life imprisonment.  Many muslim organizations appealed for the release of Mohammed abdul qadeer on the grounds of his health but previous governments declined the plea.  He was finally released from jail by the Government of Telangana on 29 March 2016. He Passed Away On The Night Of 14 September 2017 In His Hometown Hyderabad,India.  Former Supreme Court judge Markandey Katju sought the release of ex-constable mohammed Abdul qadeer who is serving a life sentence at Cherlapalli jail, on humanitarian grounds.  Katju twitted on social media K Chandrasekhar Rao for the release of ex-constable on humanitarian grounds.\n\nJohn K. Giles: John Knight Giles (February 16, 1895February 8, 1979) was an inmate at Alcatraz prison, most well known for an escape attempt in 1945.  He was originally sentenced to the United States Penitentiary on May 11, 1935 for attempted robbery of the Denver and Rio Grande Western mail train; he had previously been serving a life sentence in Oregon for murder before escaping.  Giles began serving his federal sentence for the attempted train robbery at McNeil Island on June 17, 1935, but due to his escape record and the length of his sentence, was transferred to Alcatraz Island on August 28, 1935.\n\nAldrich Ames: Aldrich Hazen Ames (born May 26, 1941) is a former Central Intelligence Agency (CIA) officer turned KGB mole, who was convicted of espionage in 1994.  He is serving a life sentence without the possibility of parole in the Federal Correctional Institution in Terre Haute, Indiana, United States.  Ames was formerly a 31-year CIA counterintelligence analyst who committed espionage against the U.S. by spying for the Soviet Union and Russia.  At the time of his arrest, Ames had compromised more CIA assets than any other mole in history until Robert Hanssen's arrest seven years later.",
+    "question": "What is the name of the complex where Aldrich Hazen Ames is serving a life sentence?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "prisoner_name": {
+          "type": "string",
+          "description": "The name of the prisoner."
+        },
+        "prison_institution": {
+          "type": "string",
+          "description": "The specific correctional institution where the prisoner is serving their sentence."
+        },
+        "prison_complex": {
+          "type": "string",
+          "description": "The larger correctional complex that the institution is part of."
+        },
+        "sentence_details": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "description": "The type of sentence received."
+            },
+            "parole_possibility": {
+              "type": "boolean",
+              "description": "Indicates if parole is possible for this sentence."
+            }
+          },
+          "required": [
+            "type",
+            "parole_possibility"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "prisoner_name",
+        "prison_institution",
+        "prison_complex",
+        "sentence_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "prisoner_name": "Aldrich Hazen Ames",
+      "prison_institution": "Federal Correctional Institution in Terre Haute",
+      "prison_complex": "Terre Haute Federal Correctional Complex",
+      "sentence_details": {
+        "type": "life sentence",
+        "parole_possibility": false
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

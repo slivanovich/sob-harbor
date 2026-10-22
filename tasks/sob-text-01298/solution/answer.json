@@ -1,0 +1,14 @@
+{
+  "common_profession": "film director",
+  "profession_category": "film industry",
+  "individuals_involved": [
+    {
+      "name": "Carl Theodor Dreyer",
+      "nationality": "Danish"
+    },
+    {
+      "name": "John Sturges",
+      "nationality": "American"
+    }
+  ]
+}

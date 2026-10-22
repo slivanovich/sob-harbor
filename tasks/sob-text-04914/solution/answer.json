@@ -1,0 +1,22 @@
+{
+  "company_name": "Bullhorn, Inc.",
+  "headquarters_location": {
+    "city": "Boston",
+    "state": "Massachusetts"
+  },
+  "additional_operation_locations": [
+    "St. Louis",
+    "London",
+    "Vancouver",
+    "Sydney"
+  ],
+  "identified_location": {
+    "city_name": "Sydney",
+    "is_state_capital_of": "New South Wales",
+    "is_most_populous_in_australia_oceania": true,
+    "population_details": {
+      "count": 5029768,
+      "as_of_date": "June 2016"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "2b153037dac459720ec784f2ed2400d43cdfd656e0df8b8f382eed07c9749bc1",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a88ec4455429938390d3ff6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Germany",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "List of DFB-Pokal top scorers: The list of DFB-Pokal top scorers includes the all-time top scorers of the DFB-Pokal, as well as the top scorers of each season of the competition since its inception as the \"Tschammerpokal\" in 1935.  Gerd Müller is the all-time top scorer in the DFB-Pokal, having scored 78 goals in 62 appearances for Bayern Munich.  So far only Dieter Müller and Hannes Löhr of 1.  FC Köln, along with Claudio Pizarro of Bayern Munich have successfully defended their title as top scorers.  The record for the most seasons as top scorer is held by Hannes Löhr, with four titles.  Dieter Müller holds jointly with Ernst Wilimowski of 1860 Munich the record of the most goals scored in a cup campaign, with 14.\n\n2014 DFL-Supercup: The 2014 DFL-Supercup was the fifth edition of the German Super Cup under the name DFL-Supercup, an annual football match contested by the winners of the previous season's Bundesliga and DFB-Pokal competitions.  It featured Bayern Munich, winners of the 2013–14 Bundesliga and Borussia Dortmund, the runners-up of the 2013–14 Bundesliga who also reached the 2014 DFB-Pokal final.\n\n2005–06 FC Bayern Munich season: FC Bayern Munich won the domestic double, beating Werder Bremen by five points in Bundesliga, and defeating Eintracht Frankfurt 1–0 in the DFB-Pokal final, thanks to a goal from Claudio Pizarro.  The season was in spite of that tainted due to a big defeat to Milan in the UEFA Champions League, losing out 5–2 on aggregate in the Last 16.  At the end of the season, Bayern signed German football's wonderkid Lukas Podolski from Köln.\n\n2009 DFB-Pokal Final: The final of the 2008–09 DFB-Pokal season was held on 30 May 2009 at the Olympiastadion, Berlin.  Werder Bremen won with a 58th-minute goal from midfielder Mesut Özil.  This was the club's sixth DFB-Pokal in its history, after victories in 1961, 1991, 1994, 1999 and 2004.  This was Bayer Leverkusen's DFB-Pokal final loss of the decade, the other occurring in 2002.  Werder Bremen lost the 2009 UEFA Cup final ten days prior to the DFB-Pokal final, losing to Ukrainian side Shakhtar Donetsk.\n\nClaudio Pizarro: Claudio Miguel Pizarro Bosio (] ; born 3 October 1978) is a Peruvian professional footballer who plays as a striker for Bundesliga club 1.  FC Köln and the Peru national team.  He is well renowned for his goal scoring ability, especially when heading the ball.\n\n2012–13 FC Bayern Munich season: The 2012–13 FC Bayern Munich season was the 114th season in the club's history and the 48th consecutive season in the top flight of German football, the Bundesliga, since the promotion of the team from the Regionalliga Süd in 1965.  Before the start of the season, Bayern signed Xherdan Shaqiri, Dante, Claudio Pizarro, Mitchell Weiser, Tom Starke and Mario Mandžukić.  Bayern also added holding midfielder Javi Martínez after the first week of the Bundesliga season at the transfer deadline.  The club started the season with a nine-match winning streak.  The club would end the season claiming the Treble, winning the Bundesliga, the UEFA Champions League and the DFB-Pokal.  Bayern are the first German club to achieve the Treble and are the third European Club to complete the Treble in the last five seasons and seventh ever in European Club competition.\n\nVerbandspokal: The Verbandspokal (English: Association Cup) is a regional football competition in Germany.  There are 21 Verbandspokal competitions which function as qualifying tournaments for the following seasons DFB-Pokal, the premier German Cup competition.  While no Verbandspokal winner has ever gone on to win the German Cup two have reached the final.  Hertha BSC Amateure won the Berlin Cup in 1992 and went on to lose the 1992–93 DFB-Pokal final against Bayer 04 Leverkusen and FC Energie Cottbus won the 1996 Brandenburg Cup and went on to lose the 1996–97 DFB-Pokal final against VfB Stuttgart.\n\nDiego Pizarro: Diego Enrique Pizarro Bosio (born 14 August 1990) is a Peruvian footballer who plays as a striker or winger for Torneo Descentralizado club Cantolao.  He is the younger brother of striker Claudio Pizarro.\n\n1983 DFB-Pokal Final: The 1983 DFB-Pokal Final decided the winner of the 1982–83 DFB-Pokal, the 40th season of Germany's knockout football cup competition.  It was played on 11 June 1983, and was the first and to date the only cup final between two teams from the same city, which was contested between Cologne clubs 1.  FC Köln, playing in the Bundesliga, and Fortuna Köln, playing in the 2.  Bundesliga.  Fittingy, the match took place in Cologne, at the Müngersdorfer Stadion.  1.  FC Köln won the derby match 1–0 to claim their 4th cup title.\n\n2006 DFB-Pokal Final: The 2006 DFB-Pokal Final decided the winner of the 2005–06 DFB-Pokal, the 63rd season of Germany's premier knockout football cup competition.  It was played on 29 April 2006 at the Olympiastadion in Berlin.  Bayern Munich won the match 1–0 against Eintracht Frankfurt via a goal from Claudio Pizarro, giving them their 13th cup title.",
+    "question": "What country shares a connection with the 2006 DFB-Pokal Final and the footballer Claudio Pizarro, who plays as a striker in the Bundesliga?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "connected_country": {
+          "type": "string",
+          "description": "The country that shares a connection with both the DFB-Pokal Final and the footballer."
+        },
+        "dfb_pokal_final_details": {
+          "type": "object",
+          "properties": {
+            "final_year": {
+              "type": "integer",
+              "description": "The year of the DFB-Pokal Final."
+            },
+            "competition_country": {
+              "type": "string",
+              "description": "The country where the DFB-Pokal competition is held."
+            }
+          },
+          "required": [
+            "final_year",
+            "competition_country"
+          ],
+          "additionalProperties": false
+        },
+        "player_details": {
+          "type": "object",
+          "properties": {
+            "player_name": {
+              "type": "string",
+              "description": "The name of the footballer."
+            },
+            "player_nationality": {
+              "type": "string",
+              "description": "The nationality of the footballer."
+            },
+            "current_club_league_country": {
+              "type": "string",
+              "description": "The country of the league where the player's current club plays."
+            },
+            "role_in_2006_final": {
+              "type": "string",
+              "description": "The player's significant action in the 2006 DFB-Pokal Final."
+            }
+          },
+          "required": [
+            "player_name",
+            "player_nationality",
+            "current_club_league_country",
+            "role_in_2006_final"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "connected_country",
+        "dfb_pokal_final_details",
+        "player_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "connected_country": "Germany",
+      "dfb_pokal_final_details": {
+        "final_year": 2006,
+        "competition_country": "Germany"
+      },
+      "player_details": {
+        "player_name": "Claudio Pizarro",
+        "player_nationality": "Peruvian",
+        "current_club_league_country": "Germany",
+        "role_in_2006_final": "scored a goal"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

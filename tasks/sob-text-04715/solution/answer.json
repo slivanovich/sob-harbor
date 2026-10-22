@@ -1,0 +1,12 @@
+{
+  "film_title": "Julius Caesar",
+  "release_year": 1953,
+  "director": "Joseph L. Mankiewicz",
+  "producer": "John Houseman",
+  "studio": "Metro-Goldwyn-Mayer",
+  "based_on_play_by": "Shakespeare",
+  "art_director_contribution": {
+    "name": "Edward Carfagno",
+    "oscar_winning_work": true
+  }
+}

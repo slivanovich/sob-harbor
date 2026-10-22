@@ -1,0 +1,14 @@
+{
+  "individuals": [
+    {
+      "name": "Édouard Roger-Vasselin",
+      "occupation": "male tennis player"
+    },
+    {
+      "name": "Sergi Bruguera",
+      "occupation": "former professional tennis player"
+    }
+  ],
+  "shared_occupation": "tennis player",
+  "occupation_category": "sports professional"
+}

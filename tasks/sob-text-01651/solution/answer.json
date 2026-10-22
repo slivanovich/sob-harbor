@@ -1,0 +1,24 @@
+{
+  "film_title": "The Village Squire",
+  "film_year": 1935,
+  "film_director": "Reginald Denham",
+  "starring_actress": {
+    "name": "Vivien Leigh",
+    "nationality": "English",
+    "professions": [
+      "stage actress",
+      "film actress"
+    ],
+    "academy_awards_won_count": 2,
+    "academy_award_details": [
+      {
+        "award_category": "Best Actress",
+        "film_performance": "Gone with the Wind"
+      },
+      {
+        "award_category": "Best Actress",
+        "film_performance": "A Streetcar Named Desire"
+      }
+    ]
+  }
+}

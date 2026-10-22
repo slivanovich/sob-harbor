@@ -1,0 +1,16 @@
+{
+  "award_details": {
+    "year": 1999,
+    "award_name": "Ballon d'Or"
+  },
+  "awarded_player": {
+    "name": "Rivaldo",
+    "nationality": "Brazilian",
+    "current_club_role": "president of Mogi Mirim Esporte Clube"
+  },
+  "continent_of_award": "Europe",
+  "judging_criteria": {
+    "judging_panel_description": "panel of sports journalists",
+    "judging_body_origin": "UEFA member countries"
+  }
+}

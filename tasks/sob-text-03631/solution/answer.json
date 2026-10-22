@@ -1,0 +1,10 @@
+{
+  "company_name": "Eagle Test Systems",
+  "parent_company_name": "Teradyne",
+  "headquarters_location": {
+    "city": "North Reading",
+    "state": "Massachusetts",
+    "country": "United States"
+  },
+  "country_of_headquarters": "United States"
+}

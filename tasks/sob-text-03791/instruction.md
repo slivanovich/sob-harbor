@@ -1,0 +1,76 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+SKI combinator calculus: SKI combinator calculus is a combinatory logic, a computational system that may be perceived as a reduced version of untyped lambda calculus.  It can be thought of as a computer programming language, though it is not convenient for writing software.  Instead, it is important in the mathematical theory of algorithms because it is an extremely simple Turing complete language.  It was introduced by Moses Schönfinkel and Haskell Curry.
+
+Haskell Curry: Haskell Brooks Curry ( ; September 12, 1900 – September 1, 1982) was an American mathematician and logician.  Curry is best known for his work in combinatory logic; while the initial concept of combinatory logic was based on a single paper by Moses Schönfinkel, much of the development was done by Curry.  Curry is also known for Curry's paradox and the Curry–Howard correspondence.  There are three programming languages named after him, Haskell, Brook and Curry, as well as the concept of "currying", a technique used for transforming functions in mathematics and computer science.
+
+Bernays–Schönfinkel class: The Bernays–Schönfinkel class (also known as Bernays–Schönfinkel-Ramsey class) of formulas, named after Paul Bernays and Moses Schönfinkel (and Frank P. Ramsey), is a fragment of first-order logic formulas where satisfiability is decidable.
+
+Musa Amer Obaid: Musa Amer Obaid (Arabic: موسى عامر عبيد‎ ‎ , born April 18, 1985 in Kenya) is a middle distance runner mainly competing in steeplechase.  He was born Moses Kipkirui, but represents Qatar after changing nationality from his birth country Kenya.  Other runners who have made the same switch include Saif Saeed Shaheen.
+
+Banū Mūsā: The Banū Mūsā brothers ("Sons of Moses"), namely Abū Jaʿfar, Muḥammad ibn Mūsā ibn Shākir (before 803 – February 873), Abū al‐Qāsim, Aḥmad ibn Mūsā ibn Shākir (d. 9th century) and Al-Ḥasan ibn Mūsā ibn Shākir (d. 9th century), were three 9th-century scholars who lived and worked in Baghdad.  Of Persian descent, they are known for their "Book of Ingenious Devices" on automata (automatic machines) and mechanical devices.  Another important work of theirs is the "Book on the Measurement of Plane and Spherical Figures", a foundational work on geometry that was frequently quoted by both Islamic and European mathematicians.
+
+Combinatory logic: Combinatory logic is a notation to eliminate the need for quantified variables in mathematical logic.  It was introduced by Moses Schönfinkel and Haskell Curry, and has more recently been used in computer science as a theoretical model of computation and also as a basis for the design of functional programming languages.  It is based on combinators.  A combinator is a higher-order function that uses only function application and earlier defined combinators to define a result from its arguments.
+
+Moses Schönfinkel: Moses Ilyich Schönfinkel, also known as Moisei Isai'evich Sheinfinkel' (Russian: Моисей Исаевич Шейнфинкель; 4 September 1889–1942), was a Russian logician and mathematician, known for the invention of combinatory logic.
+
+Andrei Okounkov: Andrei Yuryevich Okounkov (Russian: Андре́й Ю́рьевич Окунько́в , "Andrej Okun'kov") (born July 26, 1969) is a Russian mathematician who works on representation theory and its applications to algebraic geometry, mathematical physics, probability theory and special functions.  He is currently a professor at Columbia University and the academic supervisor of HSE International Laboratory of Representation Theory and Mathematical Physics.  In 2006, he received the Fields Medal "for his contributions to bridging probability, representation theory and algebraic geometry."
+
+List of mathematicians born in the 19th century: Mathematicians born in the 19th century listed by nationality.
+
+Maktab, Lahore: Maktab is a private co-educational school (preschool to A-levels) founded in 2012.  The school, catering to the needs of approximately 250 students, is situated on a purpose-built 3.5-acre campus right next to the Lahore Zoo Safari.  It is the only school in Pakistan that caters to the needs of the most talented students in mathematics, sciences and computer science.  The curriculum integrates material developed by mathematicians Israel Gelfand and Andrei Petrovich Kiselyov and universities like Massachusetts Institute of Technology and University of California, Berkeley.
+
+Question: Andrei Okounkov and Moses Schönfinkel, were both mathematicians of which nationality?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "mathematicians": {
+      "type": "array",
+      "description": "List of mathematicians mentioned in the question.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The full name of the mathematician."
+          },
+          "field_of_work": {
+            "type": "string",
+            "description": "The primary field of work for the mathematician."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "shared_nationality": {
+      "type": "string",
+      "description": "The nationality shared by all listed mathematicians."
+    },
+    "nationality_source": {
+      "type": "string",
+      "description": "The source of information for the nationality."
+    }
+  },
+  "required": [
+    "mathematicians",
+    "shared_nationality",
+    "nationality_source"
+  ],
+  "additionalProperties": false
+}

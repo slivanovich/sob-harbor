@@ -1,0 +1,15 @@
+{
+  "stereotype_nationality": "Mexican",
+  "stereotype_origin_country": "Mexico",
+  "characters_details": [
+    {
+      "character_name": "Frito Bandito",
+      "persona_attributes": "spoke broken English and robbed people of their Fritos corn chips",
+      "explicit_stereotype_name": "Mexican bandit"
+    },
+    {
+      "character_name": "Speedy Gonzales",
+      "persona_attributes": "The Fastest Mouse in all Mexico with his major traits being the ability to run extremely fast and speaking with an exaggerated Mexican accent and also speaking Spanish."
+    }
+  ]
+}

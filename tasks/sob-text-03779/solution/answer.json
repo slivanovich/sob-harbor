@@ -1,0 +1,25 @@
+{
+  "actor_details": {
+    "name": "Bruce Campbell",
+    "nationality": "American",
+    "birth_date": "June 22, 1958",
+    "occupations": [
+      "actor",
+      "producer",
+      "writer",
+      "comedian",
+      "director"
+    ]
+  },
+  "films_matching_criteria": [
+    {
+      "title": "Maniac Cop",
+      "year": 1988
+    },
+    {
+      "title": "Bubba Ho-Tep",
+      "year": 2002
+    }
+  ],
+  "final_answer_actor_name": "Bruce Campbell"
+}

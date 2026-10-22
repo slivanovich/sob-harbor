@@ -1,0 +1,15 @@
+{
+  "celebration": {
+    "name": "Orange walks",
+    "type": "parades",
+    "commemorated_event": "Prince William of Orange's victory over King James II at the Battle of the Boyne"
+  },
+  "battle": {
+    "name": "Battle of the Boyne",
+    "year": 1690,
+    "victor_name": "William of Orange"
+  },
+  "victor_prince_wife": {
+    "name": "Mary II"
+  }
+}

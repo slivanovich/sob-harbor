@@ -1,0 +1,12 @@
+{
+  "voice_actor": {
+    "name": "Ken Page",
+    "birth_date": "January 20, 1954",
+    "origin": "St. Louis, Missouri"
+  },
+  "character_details": {
+    "character_name": "Oogie Boogie",
+    "is_main_antagonist": true
+  },
+  "film_title": "The Nightmare Before Christmas"
+}

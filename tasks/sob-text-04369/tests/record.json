@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "record_id": "d18dca0b8319668537725835309f0c8a0379875b8236059263b9eced5861dce7",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8dd88355429917b4a5bccf",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Classic Crime",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "My Mistakes Were Made for You: \"My Mistakes Were Made for You\" is the third single released by The Last Shadow Puppets.  It was released on 20 October 2008 in the United Kingdom on Domino Records, featuring three b-sides: a live version of the album track \"Separate and Ever Deadly\" plus two covers.  The US-only 8-song expanded EP was released in digital format on 21 October and on CD on 4 November 2008.  It was the final release of the band's first period of activity.\n\nThe Dream Synopsis: The Dream Synopsis EP is an extended play by The Last Shadow Puppets, released on 2 December 2016.  It contains re-recordings of two songs from the band's second album, \"Everything You've Come to Expect\", as well as four cover versions that the band played during their 2016 tour.  It was the final release of the band's second period of activity.\n\nAviation (song): \"Aviation\" is the third single by English band The Last Shadow Puppets from their second studio album, \"Everything You've Come to Expect\".  It was released on 16 March 2016 on Domino Records.\n\nThe Classic Crime: The Classic Crime is an American rock band from Seattle, Washington formed in 2004.  The band's current lineup consists of Matt MacDonald (vocals, guitar), Alan Clark (bass), Robert \"Cheeze\" Negrin (guitar), and Paul \"Skip\" Erickson (drums, vocals).  They have released three albums and an EP on Tooth & Nail Records, two of which, \"The Silver Cord\" (2008) and \"Vagabonds\" (2010), charted in the \"Billboard\" 200.  In July 2011, the band left Tooth & Nail to produce a fourth album with the help of fan donations via Kickstarter, called \"Phoenix\" (2012).  In April 2016, The Classic Crime created a Kickstarter to raise funds for a fifth studio album.  Within three hours they acquired the necessary $30,000 for the album.  On April 28th, 2017 they released their fifth studio album titled \"How to Be Human\"(2017).\n\nWhat Went Down: What Went Down is the fourth studio album by British rock band Foals, released on 28 August 2015 via Transgressive Records in the United Kingdom.  The album is produced by James Ford, known for his work with Simian Mobile Disco, The Last Shadow Puppets and Arctic Monkeys amongst others.  According to frontman Yannis Philippakis, it is slated to be their loudest and heaviest record to date.  \"What Went Down\" debuted at #3 on the UK Albums Chart and at #58 on the Billboard 200, making it their highest charting album in the United States to date.\n\nBad Habits (The Last Shadow Puppets song): \"Bad Habits\" is the lead single by English band The Last Shadow Puppets from their second studio album, \"Everything You've Come to Expect\".  It was released on 10 January 2016 on Domino Records, and is the first release of the band's second period of activity, making it their first single since \"My Mistakes Were Made for You\" (2008).\n\nMiracle Aligner: \"Miracle Aligner\" is the fourth single by English band The Last Shadow Puppets from their second studio album, \"Everything You've Come to Expect\".  It was released on 28 March 2016 on Domino Records.\n\nEverything You've Come to Expect (song): \"Everything You've Come to Expect\" is the second single by English band The Last Shadow Puppets from their second studio album, \"Everything You've Come to Expect\".  It was released on 10 March 2016 on Domino Records.\n\nStanding Next to Me: \"Standing Next to Me\" is the second single released by The Last Shadow Puppets.  It was released on 7 July 2008 in the United Kingdom on Domino Records.  The song is the excerpted from the band's debut album \"The Age of the Understatement\".  The song entered the UK Top 40 at #30 on 13 July 2008.\n\nThe Last Shadow Puppets: The Last Shadow Puppets are an English supergroup consisting of Alex Turner (Arctic Monkeys), Miles Kane (The Rascals, solo artist), James Ford (Simian, Simian Mobile Disco, music producer), and Zach Dawes (Mini Mansions).  They are joined live by Loren Humphrey (Guards, music producer, session musician) and Tyler Parkford (Mini Mansions).  The band released their debut album \"The Age of the Understatement\" in 2008.  Following a lengthy hiatus, they returned, releasing second album \"Everything You've Come to Expect\" in 2016.",
+    "question": "As of 2016, which band released more albums, The Last Shadow Puppets or The Classic Crime?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "comparison_year": {
+          "type": "integer",
+          "description": "The year for which the album count comparison is made."
+        },
+        "band_comparison": {
+          "type": "array",
+          "description": "Details for each band in the comparison.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "band_name": {
+                "type": "string",
+                "description": "The name of the band."
+              },
+              "album_count": {
+                "type": "integer",
+                "description": "The number of albums released by the band up to the comparison year."
+              }
+            },
+            "required": [
+              "band_name",
+              "album_count"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "band_with_more_albums": {
+          "type": "string",
+          "description": "The name of the band that released more albums by the comparison year."
+        },
+        "more_albums_count": {
+          "type": "integer",
+          "description": "The number of albums released by the band that released more."
+        }
+      },
+      "required": [
+        "comparison_year",
+        "band_comparison",
+        "band_with_more_albums",
+        "more_albums_count"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "comparison_year": 2016,
+      "band_comparison": [
+        {
+          "band_name": "The Last Shadow Puppets",
+          "album_count": 2
+        },
+        {
+          "band_name": "The Classic Crime",
+          "album_count": 4
+        }
+      ],
+      "band_with_more_albums": "The Classic Crime",
+      "more_albums_count": 4
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

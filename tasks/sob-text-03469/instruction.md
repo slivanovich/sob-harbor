@@ -1,0 +1,62 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Notre Dame–Stanford football rivalry: The Notre Dame–Stanford football rivalry is an American college football rivalry between the Notre Dame Fighting Irish football team of the University of Notre Dame and Stanford Cardinal football team of Stanford University.  As of 2016, the Notre Dame Fighting Irish and Stanford Cardinal have met 31 times, beginning in 1925 (though the modern series began in 1988).  The Notre Dame–Stanford game has been played annually since 1997, with the teams meeting at Notre Dame Stadium earlier in the season (late September to mid-October) in even-numbered years, and at Stanford Stadium on the weekend following Thanksgiving in odd-numbered years since 1999.  The game typically alternates positions in Notre Dame's schedule with its other Pac-12 opponent, USC.
+
+(I'm Settin') Fancy Free: "(I'm Settin') Fancy Free" (sometimes known as "I'm Setting Fancy Free" or simply "Fancy Free") is the title song written by Roy August and Jimbeau Hinson, and recorded by American country music group The Oak Ridge Boys.  It was released in August 1981 as the second single from the album "Fancy Free".  The song reached No. 1 on the "Billboard" Hot Country Singles chart in November 1981, during The Oak Ridge Boys' peak of popularity, and it is considered one of their signature songs.
+
+2009 Notre Dame Fighting Irish football team: The 2009 Notre Dame Fighting Irish football team represented the University of Notre Dame in the 2009 NCAA Division I FBS football season.  The team was coached by Charlie Weis and played its home games at Notre Dame Stadium in South Bend, Indiana.  Weis entered his fifth season as head coach with the expectation from the Notre Dame administration that his team would be in position to compete for a BCS Bowl berth.  Notre Dame started the first part of the season 4-2, with close losses to Michigan and USC but ended the season with four straight losses, including a second loss to Navy loss in three years.  Weis was fired as head coach the Monday after the Stanford loss at the end of the season.  Although Notre Dame was bowl eligible with 6 wins, the University announced on December 4 that the Irish had chosen not to play in a bowl game.  Irish athletic director Jack Swarbrick hired Cincinnati head coach Brian Kelly after a 10-day coaching search.
+
+The Hunchback of Notre Dame (1996 film): The Hunchback of Notre Dame is a 1996 American animated musical drama film produced by Walt Disney Feature Animation for Walt Disney Pictures.  The 34th Disney animated feature film, the film is based on Victor Hugo's novel of the same name.  The plot centers on Quasimodo, the deformed bell-ringer of Notre Dame, and his struggle to gain acceptance into society.  Directed by Kirk Wise and Gary Trousdale and produced by Don Hahn, the film's voice cast features Tom Hulce, Demi Moore, Tony Jay, Kevin Kline, Paul Kandel, Jason Alexander, Charles Kimbrough, David Ogden Stiers, and Mary Wickes in her final film role.
+
+2007 Navy vs. Notre Dame football game: The 2007 Navy vs. Notre Dame football game ended the longest all-time college football consecutive wins streak by one team over another.  On November 3, 2007, the Navy Midshipmen defeated the Notre Dame Fighting Irish 46–44 in triple-overtime at Notre Dame's home field, Notre Dame Stadium in South Bend, Indiana.  Notre Dame came into this annual game with 43 straight wins against Navy since the last loss against Heisman Trophy winner Roger Staubach in 1963.  With the win, Navy improved to 5–4 and Notre Dame fell to 1–8 on the season.
+
+Notre Dame of Midsayap College: Notre Dame of Midsayap College (Tagalog: "Dalubhasaang Notre Dame ng Midsayap" or "Kolehiyong Notre Dame ng Midsayap") (colloquially known as "NDMC" or simply "Notre Dame") is a private, Catholic academic institution run by the Missionary Oblates of Mary Immaculate in Midsayap, Cotabato.  Established on 13 June 1941 making it as the "First Notre Dame School in Asia and in the Philippines", it was the first link in the long chain of Notre Dame Schools in the Philippines that form the Notre Dame Educational Association under the patronage of the Blessed Virgin Mary, the school Patroness and St. Eugene De Mazenod as the school's patron saint.
+
+Notre Dame Fighting Irish football: The Notre Dame Fighting Irish football team is the intercollegiate football team representing the University of Notre Dame in Notre Dame, Indiana.  The team is currently coached by Brian Kelly and plays its home games at the campus's Notre Dame Stadium, which has a capacity of 80,795 fans.  Notre Dame is one of four schools that competes as an Independent at the National Collegiate Athletic Association (NCAA) Football Bowl Subdivision level; however, they play five games a year against opponents from the Atlantic Coast Conference (ACC), which Notre Dame is a member of in all other sports except ice hockey.
+
+Fun and Fancy Free: Fun and Fancy Free is a 1947 American live-action animated musical fantasy comedy package film produced by Walt Disney and released on September 27, 1947 by RKO Radio Pictures.  It is the 9th Disney animated feature film and the fourth of the package films the studio produced in the 1940s in order to save money during World War II.  The Disney package films of the late 1940s helped finance "Cinderella", and subsequent others, such as "Alice in Wonderland" and "Peter Pan".
+
+Notre Dame of Genio Edcor Inc.: Notre Dame of Genio Edcor, Inc. (Old name: "Notre Dame of Edcor" ) is a private, Catholic academic institution run by the Oblates of Notre Dame located in Alamada, Cotabato, Philippines.This school is a member of the Notre Dame Educational Association. Established in 1958,It has been one of the pioneering school under the Notre Dame Educational System run by the Oblates of Notre Dame in the province of North Cotabato, Philippines.
+
+Notre Dame Shakespeare Festival: The Notre Dame Shakespeare Festival (formerly Summer Shakespeare) at the University of Notre Dame is an annual festival that seeks to combine professional productions of the works of William Shakespeare with community outreach and educational programs.  The Notre Dame Shakespeare Festival is a part of the University of Notre Dame's Shakespeare initiative entitled "Shakespeare at Notre Dame", a program that recognizes the centrality of the study of Shakespeare in humanistic pedagogy at the University.  Its fifteenth season (summer of 2014) was known as the 15/150, also celebrating the 450th birthday of William Shakespeare, and the 150th anniversary of the first full production of Shakespeare at the university in 1864 (Records indicate the first performance of Shakespeare at the University of Notre Dame took place in 1847, a collection of scenes also from "Henry IV)."  The anniversary season consisted of the Professional Company production of "Henry IV" (directed by Michael Goldberg), the Young Company performance of "The Merry Wives of Windsor" (directed by West Hyler), and the annual ShakeScenes shows featuring actors of all ages from South Bend and the surrounding community.
+
+Question: Fun and Fancy Free and The Hunchback of Notre Dame were both works from what popular animation and film company?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_titles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The titles of the films mentioned in the question."
+    },
+    "production_company": {
+      "type": "string",
+      "description": "The name of the animation and film company that produced the films."
+    },
+    "company_type": {
+      "type": "string",
+      "description": "A description of the type of company."
+    }
+  },
+  "required": [
+    "film_titles",
+    "production_company",
+    "company_type"
+  ],
+  "additionalProperties": false
+}

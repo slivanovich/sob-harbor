@@ -1,0 +1,16 @@
+{
+  "actress_details": {
+    "name": "Nivetha Thomas",
+    "known_for_film": "Veruthe Oru Bharya"
+  },
+  "malayalam_film_details": {
+    "title": "Romans",
+    "release_year": 2013,
+    "co_star": "Kunchacko Boban"
+  },
+  "original_film_details": {
+    "title": "We're No Angels",
+    "director": "Neil Jordan",
+    "original_release_year": 1989
+  }
+}

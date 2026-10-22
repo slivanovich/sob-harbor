@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Byte (magazine): Byte was an American microcomputer magazine, influential in the late 1970s and throughout the 1980s because of its wide-ranging editorial coverage.  Whereas many magazines from the mid-1980s had been dedicated to the MS-DOS (PC) platform or the Mac, mostly from a business or home user's perspective, "Byte" covered developments in the entire field of "small computers and software", and sometimes other computing fields such as supercomputers and high-reliability computing.  Coverage was in-depth with much technical detail, rather than user-oriented.
+
+The Christian Century: The Christian Century is a Christian magazine based in Chicago, Illinois.  Considered the flagship magazine of U.S. mainline Protestantism, the biweekly reports on religious news; comments on theological, moral, and cultural issues; and reviews books, movies, and music.  The "Century" website hosts blogs by Drew Hart, Carol Howard Merritt, Elizabeth Palmer, and Daniel Camacho, along with a network of more than 100 outside bloggers.
+
+Night Magazine: Established in 1984, and published monthly by Mondiale Publishing Ltd, NIGHT magazine covered operational, technical and design developments within bars, clubs, student unions, casinos and live venues across the UK.  Through its partnership with nightclub association Noctis and research arm CGA the magazine was able to provide legal, political and operational guidance alongside information from installers, manufacturers and service providers working within the nightclub industry.  The magazine also provided an overview of the culture and community of clubbing, conducting interviews with key industry figures and artists, creating features and commissioning its own photography.
+
+4K Disk Monitor System: The PDP-8 Disk Monitor is a discontinued operating system released by Digital Equipment Corporation for their PDP-8 line of mini-computers.  The minimum hardware requirements consisted of a teleprinter, 3 cycle data break (an option on the PDP-8/S model), and a mass storage option of a DF32 disk sub-system or a TC01 DECtape unit, with later releases the additional option of using a RF08 disk drive.  The distribution media was on paper tape, a common means of data storage for computers of that era.  The included user programs consisted mainly of modified versions of the paper tape software library distributed by DEC for their PDP-8 family of small computers, much of this was exported to the TSS-8 and MS/8 operating systems.
+
+Intel 4004: The Intel 4004 is a 4-bit central processing unit (CPU) released by Intel Corporation in 1971.  It was the first commercially available microprocessor by Intel.  The chip design started in April 1970, when Federico Faggin joined Intel, and it was completed under his leadership in January 1971.  The first commercial sale of the fully operational 4004 occurred in March 1971 to Busicom Corp. of Japan for which it was originally designed and built as a custom chip.  In mid-November of the same year, with the prophetic ad ""Announcing a new era in integrated electronics"", the 4004 was made commercially available to the general market.  The 4004 is history’s first monolithic CPU, fully integrated in one small chip.  Such a feat of integration was made possible by the use of the then-new silicon gate technology for integrated circuits, originally developed by Federico Faggin (with Tom Klein) at Fairchild Semiconductor in 1968, which allowed twice the number of random-logic transistors and an increase in speed by a factor of five compared to the incumbent MOS aluminum gate technology .  Faggin also invented the bootstrap load with silicon gate and the “buried contact”, improving speed and circuit density compared with aluminum gate .  The 4004 microprocessor is one of 4 chips constituting the MCS-4 chip-set, which includes the 4001 ROM, 4002 RAM, and 4003 Shift Register.  With these components, small computers with varying amounts of memory and I/O facilities can be built.  Three other CPU chip designs were done at about the same time: the Four-Phase System AL1, done in 1969; the MP944, completed in 1970 and used in the F-14 Tomcat fighter jet; and the Texas Instruments TMS-0100 chip, announced in September 17, 1971.  Both the AL1 and the MP944 use several chips for the implementation of the CPU function.  The TMS0100 chip was presented as a “calculator on a chip” with the original designation TMS1802NC.  This chip contains a very primitive CPU and can only be used to implement various simple 4-function calculators.  It is the precursor of the TMS1000, introduced in 1974, which is considered the first microcontroller i.e., a computer on a chip containing not only the CPU, but also ROM, RAM, and I/O functions.  The MCS-4 family of 4 chips developed by Intel, of which the 4004 is the CPU or microprocessor, is far more versatile and powerful than the single chip TMS1000, allowing the creation of a variety of small computers for various applications.  The MCS-4 was eventually superseded by powerful microcontrollers like the Intel 8048 and the Zilog Z8 in 1978-1979.  Zilog, the first company entirely dedicated to microprocessors and microcontrollers, was started by F. Faggin and Ralph Ungermann, at the end of 1974.  These devices formed the basis for later models of micro-controllers.
+
+Old man (magazine): old man was a bimonthly magazine published by the Union of Swiss Short Wave Amateurs as the membership journal of the organization.  The magazine covered topics related to amateur radio.  The magazine was published with articles in three languages: German, Italian, and French.  The magazine drew its subscription base primarily from Switzerland.  The journal was published in A5 paper size with a full color cover and black-and-white print on un-coated newsprint inside.  The final issue of the magazine was published in November/December 2007, after which the organization discontinued publication in favor of a new membership journal called "HB Radio".
+
+THEOS: THEOS, which translates from Greek as "God", is an operating system which started out as OASIS, a microcomputer operating system for small computers that use the Z80 processor.  Originally written in the late 1970s by Timothy S. Williams as a low-cost alternative to the more expensive mini- and mainframe- computers that were popular in the day, OASIS provided time-sharing multiuser facilities to allow several users to utilise the resources of one computer.  Similar in concept to MP/M or UNIX, THEOS uses external device drivers rather than a kernel, allowing it to be more portable to other environments, though support has been primarily directed towards industry-standard hardware (i.e. PC's).  THEOS is specifically aimed at small business users, with a wide range of vertical-market applications packages being developed and supported by individuals and companies.
+
+Creative Computing: Creative Computing was one of the earliest magazines covering the microcomputer revolution.  Published from October 1974 until October 1985, the magazine covered the whole spectrum of hobbyist/home/personal computing in a more accessible format than the rather technically oriented "BYTE".  "Creative Computing" also published software on cassette tape and floppy disk for the popular computer systems of the time.
+
+Japanese language and computers: In relation to the Japanese language and computers many adaptation issues arise, some unique to Japanese and others common to languages which have a very large number of characters.  The number of characters needed in order to write English is very small, and thus it is possible to use only one byte to encode one English character.  However, the number of characters in Japanese is much more than 256, and hence Japanese cannot be encoded using only one byte, and Japanese is thus encoded using two or more bytes, in a so-called "double byte" or "multi-byte" encoding.  Some problems relate to transliteration and romanization, some to character encoding, and some to the input of Japanese text.
+
+Operation Auca: Operation Auca was an attempt by five Evangelical Christian missionaries from the United States to bring Christianity to the Huaorani people of the rain forest of Ecuador.  The Huaorani, also known by the pejorative Aucas (a modification of "awqa", the Quechua word for "savages"), were an isolated tribe known for their violence, against both their own people and outsiders who entered their territory.  With the intention of being the first Christians to evangelize the previously uncontacted Huaorani, the missionaries began making regular flights over Huaorani settlements in September 1955, dropping gifts, which were reciprocated.  After several months of exchanging gifts, on January 3, 1956, the missionaries established a camp at "Palm Beach", a sandbar along the Curaray River, a few kilometers from Huaorani settlements.  Their efforts came to an end on January 8, 1956, when all five—Jim Elliot, Nate Saint, Ed McCully, Peter Fleming, and Roger Youderian—were attacked and speared by a group of Huaorani warriors.  The news of their deaths was broadcast around the world, and "Life" magazine covered the event with a photo essay.
+
+Question: Which magazine covered developments in the field of small computers and software, Byte or The Christian Century?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "magazine_name": {
+      "type": "string",
+      "description": "The name of the magazine that covered the specified topic."
+    },
+    "magazine_focus_area": {
+      "type": "string",
+      "description": "A description of the magazine's editorial coverage."
+    },
+    "covered_topic": {
+      "type": "string",
+      "description": "The specific topic that was covered by the magazine."
+    },
+    "other_magazine_considered": {
+      "type": "string",
+      "description": "The name of the other magazine mentioned in the question for comparison."
+    },
+    "other_magazine_covered_topic": {
+      "type": "boolean",
+      "description": "Indicates whether the other magazine also covered the specified topic."
+    }
+  },
+  "required": [
+    "magazine_name",
+    "magazine_focus_area",
+    "covered_topic",
+    "other_magazine_considered",
+    "other_magazine_covered_topic"
+  ],
+  "additionalProperties": false
+}

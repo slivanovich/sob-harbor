@@ -1,0 +1,14 @@
+{
+  "logo_name": "I Love New York",
+  "is_trademarked": true,
+  "owner_entity": {
+    "name": "New York State Department of Economic Development",
+    "type": "government department"
+  },
+  "designer_entity": {
+    "name": "Milton Glaser",
+    "profession": "graphic designer"
+  },
+  "primary_purpose": "promote tourism in the state of New York",
+  "first_used_year": 1977
+}

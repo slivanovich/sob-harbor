@@ -1,0 +1,12 @@
+{
+  "king_name": "Charles II",
+  "king_reign_details": {
+    "deposed_in_scotland_year": 1651,
+    "reign_start_scotland_year": 1649
+  },
+  "earl_of_middleton_details": {
+    "earl_name": "Charles",
+    "served_king": true
+  },
+  "final_answer": "Charles II"
+}

@@ -1,0 +1,21 @@
+{
+  "drama_info": {
+    "title": "Master of Destiny",
+    "year": 2015,
+    "origin_countries": [
+      "Hong Kong",
+      "China"
+    ],
+    "type": "epic television drama"
+  },
+  "actor_identified": {
+    "name": "Edwin Siu",
+    "nationality": "Hong Kong",
+    "occupations": [
+      "actor",
+      "singer"
+    ],
+    "former_management_group": "Music Nation Group"
+  },
+  "is_main_cast": true
+}

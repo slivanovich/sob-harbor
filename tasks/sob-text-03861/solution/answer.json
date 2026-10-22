@@ -1,0 +1,11 @@
+{
+  "person_name": "Rafael Nicolás De la Hoz",
+  "birth_city": "Cartagena",
+  "city_attributes": {
+    "is_major_port": true,
+    "founding_year": 1533,
+    "country": "Colombia",
+    "population": 971592,
+    "population_year": 2016
+  }
+}

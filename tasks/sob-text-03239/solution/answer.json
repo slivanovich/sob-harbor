@@ -1,0 +1,15 @@
+{
+  "band_name": "Blue Öyster Cult",
+  "band_genre": "hard rock",
+  "band_origin_country": "American",
+  "covered_song_details": {
+    "song_title": "Godzilla",
+    "covering_bands": [
+      "Racer X",
+      "Fu Manchu",
+      "The Smashing Pumpkins",
+      "Sebastian Bach",
+      "Fighting Gravity"
+    ]
+  }
+}

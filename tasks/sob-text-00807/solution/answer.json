@@ -1,0 +1,18 @@
+{
+  "actor_director_name": "Hampton Del Ruth",
+  "is_director": true,
+  "is_actor": true,
+  "other_known_professions": [
+    "screenwriter",
+    "film producer"
+  ],
+  "compared_person": {
+    "name": "Ryan Murphy",
+    "is_director": true,
+    "is_actor": false,
+    "other_known_professions": [
+      "screenwriter",
+      "producer"
+    ]
+  }
+}

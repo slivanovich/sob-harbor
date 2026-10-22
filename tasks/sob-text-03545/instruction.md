@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Theme Park World: Theme Park World, also known as Theme Park 2, and in North America as Sim Theme Park, is a 1999 construction and management simulation game developed by Bullfrog Productions and released by Electronic Arts.  The direct sequel to "Theme Park" ("Theme Hospital" and "Theme Aquarium" are thematic sequels), the player constructs and manages an amusement park with the aim of making profit and keeping visitors happy.  Initially developed for Windows, it was ported to PlayStation and PlayStation 2 (whose version was titled Theme Park Roller Coaster in North America), as well for Macintosh computers.  The Mac version was published by Feral Interactive.
+
+Tokyo DisneySea: Tokyo DisneySea (東京ディズニーシー , Tōkyō DizunīShī ) is a 176 acre theme park at the Tokyo Disney Resort located in Urayasu, Chiba, Japan, just outside Tokyo.  It opened on 4 September 2001, at a cost of 335 billion yen.  Owned by The Oriental Land Company, which licenses Disney characters and themes from The Walt Disney Company, Tokyo DisneySea attracted an estimated 11 million visitors in 2016, making it the sixth-most-visited theme park in the world.  Tokyo DisneySea was the second theme park to open at the Tokyo Disney Resort and the ninth park of the twelve worldwide Disney theme parks to open.  Tokyo DisneySea was the fastest theme park in the world to reach the milestone of 10 million guests, having done so in 307 days after its grand opening.  The previous record-holder was Universal Studios Japan 338 days after its opening.
+
+Marvel Superheroes Theme Park: Marvel Superheroes Theme Park is a future 100 acre Marvel indoor theme park in Dubailand that was expected to open in November 2014.  This park was originally announced in late 2007 by United-Emirate Based Al Ahli group theme park company and Marvel Entertainment.  On August 31, 2009, The Walt Disney Company bought Marvel for $4.24 billion and now controls the theme park rights to the company's characters.  Since the Universal Studios parks have Marvel-based attractions at Universal's Islands of Adventure Park in Florida and at Universal Studios Japan in Osaka, Japan, Universal owns the rights to have Marvel attractions East of the Mississippi River in the United States and in Japan, but not elsewhere.
+
+Paultons Park: Paultons Family Theme Park | Home of Peppa Pig World is located in the village of Ower, near Romsey, in Hampshire, England.  The theme park has 70 rides and attractions.  The Peppa Pig World theme park area is based on the children’s television series character.  The Lost Kingdom theme park area includes 27 animatronic dinosaurs.  The park name is derived from the former Paultons Estate, on which the park is situated.  The park covers 140 acres of land and features a collection of around 80 species of birds and animals, in addition to the rides.  Most of the theme park rides are designed for children, which is why the park considers itself a family theme park.
+
+Knightmare (Camelot): Knightmare is a Schwarzkopf/Zierer custom roller coaster that is SBNO (standing but not operating) at the now defunct Camelot Theme Park in Chorley, Lancashire, United Kingdom.
+
+Zierer: Zierer Karussell- und Spezialmaschinenbau GmbH & Co.  KG (Short name: Zierer) is a German company located close to Deggendorf.  Zierer manufactures Tivoli and Force line of roller coasters, as well as panoramic wheels, wave swingers, flying carpets, "Hexentanz" and "Kontiki" rides.  The company also has partnered with Schwarzkopf to build "Lisebergbanan" at Liseberg and "Knightmare" at Camelot Theme Park.
+
+PortAventura World: PortAventura World is an entertainment resort in Salou, Tarragona, on the Costa Daurada in Spain.  It was built around the PortAventura theme park, which attracts around 4 million visitors per year, making it the most visited theme park in Spain and the sixth most visited theme park in Europe.  The resort includes a second theme park, Ferrari Land, since 2017 and also includes PortAventura Caribe Aquatic Park and six hotels.  It is the biggest resort in the south of Europe.  It has two airports within 30 minutes of it, including Reus Airport.  There is a train station for PortAventura which has connections to Barcelona and Salou.
+
+Camelot Theme Park: Camelot Theme Park is an abandoned resort and theme park located in the English county of Lancashire.  The park's theme was the well known legend of Camelot, and the park decor incorporated pseudo medieval elements.  It was located on a 140 acre site near the village of Charnock Richard, 3 mi west of Chorley.
+
+Theme Park Inc: Theme Park Inc. (also known as SimCoaster in the United States and Theme Park Manager in Australia) is a construction and management simulation video game.  It is the last game of the Theme Park series that started with "Theme Park" in 1994 and continued with "Theme Park World" in 1999.  "Theme Park Inc." was developed by Bullfrog Productions and published by Electronic Arts.  It was the last game to bear the Bullfrog logo before the company's merger with EA UK in 2004.
+
+Mt. Olympus Water &amp; Theme Park: Mt. Olympus Water and Theme Park is a theme park and water park complex in Wisconsin Dells, Wisconsin.  Mt. Olympus consists of four areas of the park: Zeus' Playground (outdoor theme park), Neptune's Water Kingdom (outdoor waterpark), The Parthenon (indoor theme park), and Medusa's indoor water park.  In 2010 and 2011, the park purchased several smaller nearby independent motels and hotels and renamed them, painting them blue and white to fit the Greek theme for the main hotel.  Many other area hotels and motels offer free or reduced-priced tickets.
+
+Question: Zierer is the company that has built the "Knightmare" at which Lancashire theme park?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "theme_park_name": {
+      "type": "string",
+      "description": "The name of the theme park where the roller coaster is located."
+    },
+    "location": {
+      "type": "string",
+      "description": "The county or region where the theme park is located."
+    },
+    "roller_coaster_name": {
+      "type": "string",
+      "description": "The name of the roller coaster."
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "The company that built or partnered to build the roller coaster."
+    }
+  },
+  "required": [
+    "theme_park_name",
+    "location",
+    "roller_coaster_name",
+    "manufacturer"
+  ],
+  "additionalProperties": false
+}

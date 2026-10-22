@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1635: The Dreeson Incident: 1635: The Dreeson Incident (2008) is a novel in the alternate history 1632 series, written by Virginia DeMarce and Eric Flint, as a sequel to Flint's novella "".
+
+The 1632 Slushpile: "Slushpile" is publishing trade jargon referring to the pile(s) of unsolicited submissions to a periodical.  1632 series main author Eric Flint encouraged fans to contribute to the series, several short stories were published in the online magazine "The Grantville Gazettes".  In the "continuing adventure" of the "Grantville Gazettes", according to Flint, the unsolicited stories began shaping the background thought in the series milieu, and the magazine "idea" was born whilst he tried to recoup some of the time costs involved in examining the fan fiction.  Also, he judged some of the tales to be professional quality, and indeed, incorporated many of them into about half of "Ring of Fire".  The flagship novel was written as a stand-alone literary work, an experiment with the new "Assiti Shards" story premise, and was but one of three such universes planned by Flint in 2000.  However, the sensation and interest engendered by the "1632" novel's publication subsequently caused the other works to be delayed while the "1632" series was developed.  The other books in the overall "Assiti Shard" series currently under contract are:
+
+1636: Commander Cantrell in the West Indies: 1636: Commander Cantrell in the West Indies is a novel in the 1632 series written by Eric Flint and Charles E. Gannon and published on June 3, 2014.  The story follows the adventures of Eddie Cantrell a supporting character in "1633" and "".  Eddie is married to the daughter of the Danish King and is sent to America to set up a colony and to explore for oil in the Gulf of Mexico while defending against the Spanish and even pirates.
+
+1634: The Bavarian Crisis: 1634: The Bavarian Crisis is a novel in the alternate history 1632 series, written by Virginia DeMarce and Eric Flint as sequel to Flint's novella "The Wallenstein Gambit"; several short stories by DeMarce in "The Grantville Gazettes"; ""; and "".  The novel's first draft was completed in 2005, before work on "The Baltic War" began.  Many chapters of that "early draft version" were available on line, but the final production reached print on 1 October 2007.
+
+Charles E. Gannon: Charles E. Gannon is a novelist, and a game designer who has worked primarily on role-playing games.
+
+1636: The Kremlin Games: 1636: The Kremlin Games is a novel in the 1632 series written by Gorg Huff and Paula Goodlett along with Eric Flint.  It is the fourth book in the series to be listed on the New York Times Best Seller list for hardcover fiction.  This book reached number 30 on the NY Times list during a single week in June 2012.  Besides being listed on the NY Times Best Seller list, 1636: The Kremlin Games was also listed on the Locus Hardcovers Bestsellers List for the month of September in 2012 at number 6.
+
+Ring of Fire (anthology): Ring of Fire is the third published book by editor-author-historian Eric Flint of the 1632 series, an alternate history series begun in the novel "1632" (February 2000).  The "Ring of Fire" is both descriptive of the cosmic event as experienced by the series' characters, but also is at times used as the name for the series itself.  The series is set in war-torn Europe during the middle of the Thirty Years' War.
+
+The Grantville Gazette: The Grantville Gazette (Grantville Gazette I or more recently yet, Grantville Gazette, Volume 1) is the first of a series of professionally selected and edited paid fan fiction anthologies set within the 1632 series inspired by Eric Flint's novel "1632".  The electronically published the Grantville Gazettes, which are reaching long novel length with regularity, now make up the majority of the series in terms of words in print.  Flint as series owner and editor accounts all as canonical.  The Science Fiction Writers of America (SFWA) recognizes published stories within the Gazettes as qualified credentials for membership—which membership requires a writer to have three published works as prerequisites.
+
+1633 (novel): 1633 is an alternate history novel co-written by American authors Eric Flint and David Weber published in 2002, and sequel to "1632" in the 1632 series.  "1633" is the second major novel in the series and together with the anthology "Ring of Fire", the two sequels begin the series hallmarks of being a shared universe with collaborative writing being very common, as well as one—far more unusual— which mixes many canonical anthologies with its works of novel length.  This in part is because Flint wrote "1632" as a stand-alone novel, though with enough "story hooks" for an eventual sequel, and because Flint feels "history is messy", and the books reflect that real life is not a smooth polished linear narrative flow from the pen of some historian, but is instead clumps of semi-related or unrelated happenings that somehow sum together where different people act in their own self-interests.
+
+1635: The Papal Stakes: 1635: The Papal Stakes is novel in the 1632 series written by Charles Gannon and Eric Flint.  It was published in 2012 and is the direct sequel to published in 2006.  This book is the third in the South European fork to the main 1632 series storyline.  The story follows the exploits of younger members of the Stone family in Italy and describes the impact of Grantville on the Roman Catholic church and on the patchwork of independent countries in the Italian peninsula.
+
+Question: 636: Commander Cantrell in the West Indies is a novel in the 1632 series written by Eric Flint and Charles E. Gannon, and published on which date?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "book_title": {
+      "type": "string",
+      "description": "The full title of the novel."
+    },
+    "series_name": {
+      "type": "string",
+      "description": "The name of the series the novel belongs to."
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of authors who wrote the novel."
+    },
+    "publication_date": {
+      "type": "string",
+      "description": "The date the novel was published."
+    }
+  },
+  "required": [
+    "book_title",
+    "series_name",
+    "authors",
+    "publication_date"
+  ],
+  "additionalProperties": false
+}

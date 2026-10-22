@@ -1,0 +1,17 @@
+{
+  "politician_details": {
+    "name": "Obdulia Magdalena Torres Abarca",
+    "party_affiliation": "Party of the Democratic Revolution"
+  },
+  "represented_state_info": {
+    "state_name": "Chiapas",
+    "state_capital": "Tuxtla Gutiérrez",
+    "number_of_municipalities": 122
+  },
+  "congressional_term": {
+    "legislature": "LXI",
+    "role": "Deputy",
+    "start_year": 2009,
+    "end_year": 2012
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "highway_name": "U.S. Route 25",
+  "termination_bridge": "Clay Wade Bailey Bridge",
+  "starting_location": {
+    "city": "Brunswick",
+    "state": "Georgia",
+    "is_southern_state": true
+  }
+}

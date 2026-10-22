@@ -1,0 +1,14 @@
+{
+  "country_name": "China",
+  "cities_information": [
+    {
+      "city_name": "Baotou",
+      "parent_administrative_region": "Inner Mongolia Autonomous Region"
+    },
+    {
+      "city_name": "Shouguang",
+      "parent_administrative_region": "Shandong Province"
+    }
+  ],
+  "number_of_cities_mentioned": 2
+}

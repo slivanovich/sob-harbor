@@ -1,0 +1,108 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Francesc Santacruz i Artigas: Francesc Santacruz i Artigas was a Catalan sculptor of Baroque works.  He was active between 1665 and 1721.  From a family of sculptors, he worked in the studio of Pere Serra, which he entered in 1665.  It is known that, with Domènec Rovira, he participated in the legal suit that demanded that a separate guild for sculptors be formed, and in 1680 Charles II of Spain allowed the creation of the "Cofradía de los Santos Mártires escultores", which allowed sculptors to freely receive commissions for their works and expenses.
+
+List of sculptors in the Web Gallery of Art: The List of sculptors in the Web Gallery of Art is a list of the named sculptors in the Web Gallery of Art (WGA).  The online collection contains roughly 34,000 images by 4,000 artists, but only named artists with sculptures in the database are listed alphabetically here.  The sculptor's name is followed by a title of one of their works and its location, which is hosted on the WGA website.  For sculptors with more than one work in the WGA collection, or for works by unnamed or unattributed artists, see the Web Gallery of Art website or the corresponding Wikimedia Commons category.  Of the 623 sculptors in the WGA database, there are only 2 women, namely Properzia de' Rossi, and Marie-Anne Collot.
+
+Epigonus: Epigonus (Greek: Ἐπίγονος ) of Pergamum was the chief among the court sculptors to the Attalid dynasty at Pergamum in the late third century BCE.  Pliny the Elder, who offers the only surviving list of the sculptors of this influential Pergamene school, attributes to him works among the sculptures on the victory monument erected by Attalus I in the sanctuary of Athena at Pergamum to commemorate his victory over the Gauls of Galatia (223 BCE).  Among works there by other sculptors, Pliny attributes to Epigonos a masterful "Trumpeter" and "his infant pitiably engaged in caressing its murdered mother"; the male figure in his group, once part of the dedication of Attalus I at Pergamon, is probably the original of the marble copy known in modern times as "The Dying Gaul", in the Capitoline Museums, Rome.  The "Weeping Child pitifully caressing its murdered mother" is "associated with the so-called "Dead Amazon" in Naples, a copy of a group which was once part of the later, second Gallic dedication of Attalos, at Athens... From drawings of this composition made in the Renaissance, we learn that the child was removed from the Naples statue during the sixteenth century".  Another sculpture from the same monument exists in marble copy of the "Gaul Killing Himself and His Wife", formerly in the Ludovisi collection.  Eight signed bases from the acropolis of Pergamon have lost their sculptures of valuable bronze, which was doubtless laboriously cut apart for the sake of the metal and refounded during Christian times.
+
+Boston Sculptors Gallery: The Boston Sculptors Gallery is a cooperative sculpture gallery in Boston, Massachusetts.  It exhibits contemporary sculpture by local artists.  There are currently 34 exhibiting sculptors in the group.  Each month, two of these artists hold concurrent solo shows in the gallery.  The gallery is located at 486 Harrison Ave. in the SOWA (South of Washington) arts district of Boston.  Boston Sculptors was founded in 1992.  Jean Mineo has been the gallery administrator since 2006.
+
+Reuben Nakian: Reuben Nakian (born August 10, 1897, College Point, New York – died December 4, 1986, Stamford, Connecticut) was an American sculptor and teacher of Armenian extraction.  His recurring themes are from Greek and Roman mythology.  Noted works include "Leda and the Swan", "The Rape of Lucrece", "Hecuba", and "The Birth of Venus".  He was also commissioned to create portraits of Roosevelt's cabinet in the 1930s.
+
+Sculptors Guild: Sculptors Guild, a society of sculptors who banded together to promote public interest in contemporary sculpture, was founded in 1937.  Signatories to the original corporation papers (Sculptors Guild, Inc.) were Sonia Gordon Brown, Berta Margoulies, Aaron J. Goodelman, Chaim Gross (who became the first President), Minna Harkavy, Milton Horn, Concetta Scaravaglione, Warren Wheelock, and William Zorach.  The inaugural exhibit of the Guild was held April 12 - May 31, 1938, on a vacant lot at Park Avenue and 39th St. This outdoor exhibit, the first of its kind in New York City, hosted 40,000 visitors paying an admission price of ten cents to view the work.  Owing to the tremendous success of this first exhibit, the Brooklyn Museum held an exhibit of contemporary American sculpture by Guild members, October 21- November 27, 1938.
+
+Armen Chakmakian: Armen John Chakmakian (Armenian: Արմեն Չաքմաքյան ; born (February 11, 1966) in Glendale, California) is an Armenian-American musician, composer, recording artist, and producer.  Formerly the keyboardist for the GRAMMY® award-winning band Shadowfax, their 1992 CD, "Esperanto" was nominated for a Best New Age Album GRAMMY® Award.  He has released two solo albums on his label TruArt Records: "Ceremonies" (1998); "Caravans" (2004).  Two tracks from "Ceremonies", "Gypsy Rain" and "Distant Lands", also appear on the famed "Buddha Bar" and "Buddha Bar IV" compilation albums, respectively.
+
+Tribe of Reuben: According to the Hebrew Bible, the Tribe of Reuben () was one of the twelve tribes of Israel.  Unlike the majority of the tribes, the land of Reuben, along with that of Gad and half of Manasseh, was on the eastern side of the Jordan.  According to the biblical narrative, the Tribe of Reuben descended from Reuben, the oldest son of the patriarch Jacob.  Reuben, along with nine other tribes, is reckoned by the Bible as part of the northern kingdom of Israel, and disappears from history with the demise of that kingdom in c. 723 BC.
+
+National Sculpture Society: Founded in 1893, the National Sculpture Society (NSS) was the first organization of professional sculptors formed in the United States.  The purpose of the organization was to promote the welfare of American sculptors, although its founding members included several renowned architects.  The founding members included such well known figures of the day as Daniel Chester French, Augustus St. Gaudens, Richard Morris Hunt, and Stanford White as well as sculptors less familiar today, such as Herbert Adams, Paul W. Bartlett, Karl Bitter, J. Massey Rhind, and John Quincy Adams Ward—who served as the first president for the society.
+
+Dictionary of British Sculptors 1660–1851: The Dictionary of British Sculptors 1660–1851 is a biographical dictionary of sculptors active in Britain in the period between the Restoration of Charles II and the Great Exhibition of 1851.  It has appeared in three editions, published in 1953, 1968, and 2009 respectively: the 2009 edition adopts the amended title, A Biographical Dictionary of Sculptors in Britain 1660–1851.  The first two editions were researched and written by Rupert Forbes Gunnis, and were often known simply as Gunnis.  The third edition was edited by Ingrid Roscoe.  The book is a major scholarly work, which rapidly established itself as a standard authority on British sculptors and sculpture.
+
+Question: Are Armen Chakmakian and Reuben Nakian both sculptors?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "question_asked": {
+      "type": "string",
+      "description": "The original question posed."
+    },
+    "person_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the first person."
+        },
+        "is_sculptor": {
+          "type": "boolean",
+          "description": "True if the first person is identified as a sculptor, false otherwise."
+        },
+        "professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professions attributed to the first person in the context."
+        }
+      },
+      "required": [
+        "name",
+        "is_sculptor",
+        "professions"
+      ],
+      "additionalProperties": false
+    },
+    "person_2": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the second person."
+        },
+        "is_sculptor": {
+          "type": "boolean",
+          "description": "True if the second person is identified as a sculptor, false otherwise."
+        },
+        "professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professions attributed to the second person in the context."
+        }
+      },
+      "required": [
+        "name",
+        "is_sculptor",
+        "professions"
+      ],
+      "additionalProperties": false
+    },
+    "both_are_sculptors": {
+      "type": "boolean",
+      "description": "The final answer to whether both individuals are sculptors."
+    }
+  },
+  "required": [
+    "question_asked",
+    "person_1",
+    "person_2",
+    "both_are_sculptors"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "film_title": "Postal",
+  "release_year": 2007,
+  "genre": [
+    "action",
+    "comedy"
+  ],
+  "director": "Uwe Boll",
+  "is_dave_foley_in_cast": true,
+  "other_cast_members": [
+    "Zack Ward",
+    "Chris Coppola",
+    "Jackie Tohn",
+    "J.K. Simmons",
+    "Verne Troyer",
+    "Larry Thomas",
+    "David Huddleston",
+    "Seymour Cassel"
+  ]
+}

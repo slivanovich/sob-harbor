@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Kawasaki Army Type 88 Reconnaissance Aircraft: The Kawasaki Army Type 88 Reconnaissance Aircraft was a Japanese single-engined biplane designed for Kawasaki by Richard Vogt.  Originally known by its company designation KDA-2, it was accepted by the Imperial Japanese Army as the Type 88 Reconnaissance Aircraft.  The Type 88 number was designated for the year the aircraft was accepted, 2588 in the Japanese imperial year calendar, or 1928 in the Gregorian calendar.  The basic design was modified into the Type 88 Light Bomber that used in combat over China in the Second Sino-Japanese War.  The Type 88 was built in large numbers and remained in service until 1940.
+
+Battle of Bir Hakeim: The Battle of Bir Hakeim (] ) took place at Bir Hakeim, an oasis in the Libyan desert south and west of Tobruk, during the Battle of Gazala (26 May – 21 June 1942).  The 1st Free French Brigade ("Général de brigade" Marie Pierre Kœnig) defended the position from 26 May – 11 June against much larger Axis forces of "Panzerarmee Afrika" ("Generaloberst" Erwin Rommel).  The "Panzerarmee" captured Tobruk ten days later but the delay imposed on the Axis offensive by the defence of the fortress influenced the cancellation of Operation Herkules, the plan for an Axis invasion of Malta.  Rommel continued to advance and invaded Egypt, slowed by British delaying actions until the First Battle of El Alamein in July, where the Axis advance was stopped.  Both sides used the battle for propaganda, Winston Churchill renamed the Free French as the Fighting French and Hitler called the French the second best fighters after the Germans.
+
+Investigation Discovery (Europe): Investigation Discovery (abbreviated as ID) is a television channel available in several European nations.  It competes in the same genre as Crime & Investigation Network which is also available in several European nations.  The ID.  channel features crime programming, including "missing persons and murder inquiries, cold cases and historical crime," as well as documentaries on forensic investigations.  One such program is Deadly Women, an investigative series in which former FBI agent and profiler Candice DeLong looks at female killers throughout history.
+
+Candice DeLong: Candice DeLong (born July 16, 1950) is a former FBI criminal profiler.  DeLong was the lead profiler in San Francisco, California, and worked on the Unabomber case.  Currently, she hosts the Investigation Discovery programs "Deadly Women" and "Facing Evil with Candice DeLong".  She has often been compared to the protagonist of the movie "The Silence of the Lambs", Clarice Starling.
+
+Mitsubishi Ki-2: The Mitsubishi Ki-2 (九三式双軽爆撃機 , Kyūsan-shiki sōkei bakugekiki , "Army Type 93 Twin-engine Light Bomber") was a light bomber built by Mitsubishi for the Imperial Japanese Army Air Service (IJAAS) in the 1930s.  Its Allied nickname was "Louise".  Despite its antiquated appearance, the Ki-2 was successfully used in Manchukuo and in North China during the early stages of the Second Sino-Japanese War, in areas where danger from enemy fighter aircraft was minimal.  It was later used in a training role.
+
+At-the-market offering: An at-the-market (ATM) offering is a type of follow-on offering of stock utilized by publicly traded companies in order to raise capital over time.  In an ATM offering, exchange-listed companies incrementally sell newly issued shares into the secondary trading market through a designated broker-dealer at prevailing market prices.  The broker-dealer sells the issuing company's shares in the open market and receives cash proceeds from the transaction.  The broker-dealer then delivers the proceeds to the issuing company where the cash can be used for a variety of purposes.  A higher stock price means a greater amount of money can be raised.  The issuing company is able to raise this kind of capital on an as-needed basis with the option to refrain from offering shares if the available prices on a particular day are unsatisfactory.  ATM offerings can be started and stopped at any point, and they can also become more aggressive by selling more shares and raising more money when there is an opportunity in the market or additional need by the issuing company.  ATMs can be positioned in advance of an upcoming liquidity event or major milestone to take advantage of increased liquidity and a rising stock price.
+
+Facing Evil with Candice DeLong: Facing Evil with Candice DeLong is an American documentary television series on Investigation Discovery that debuted on November 25, 2010, as a two-part special, which later turned into a full series.  "Facing Evil" is hosted by former FBI Profiler Candice DeLong as she visits different women's prisons and talks with female prisoners.  At the end, she states whether or not she believes that someone is being truthful about what they're saying.
+
+Ted Kaczynski: Theodore John Kaczynski ( ; born May 22, 1942), also known as the Unabomber, is an American mathematician, anarchist and domestic terrorist.  A mathematical prodigy, he abandoned a promising academic career in 1969, then between 1978 and 1995 killed 3 people, and injured 23 others, in a nationwide bombing campaign that targeted people involved with modern technology.  In conjunction, he issued a wide-ranging social critique opposing industrialization and advancing a nature-centered form of anarchism.
+
+Yokosuka B4Y: The Yokosuka B4Y, (Navy Type 96 Carrier Attack Bomber), carrier torpedo bomber was used by the Imperial Japanese Navy Air Service from 1936 to 1943.  The B4Y replaced the Mitsubishi B2M2 and was the last biplane bomber used operationally by the Imperial Japanese Navy.  The Allied reporting name was "Jean".
+
+Bristol Blenheim: The Bristol Blenheim is a British light bomber aircraft designed and built by the Bristol Aeroplane Company that was used extensively in the first two years of the Second World War.  It was originally developed as the civil-orientated "Type 142" in response to Lord Rothermere's challenge to produce the fastest commercial aircraft in Europe.  The "Type 142" first flew in April 1935, and the Air Ministry, impressed by its performance, ordered a modified design as the "Type 142M" to serve in the Royal Air Force (RAF) as a bomber.  Deliveries of the newly named Blenheim to RAF squadrons commenced on the 10th of March 1937.
+
+Question: The bomber stopped by Candice DeLong used his crimes to advance what type of anarchism?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "bomber_name": {
+      "type": "string",
+      "description": "The full name of the bomber."
+    },
+    "bomber_alias": {
+      "type": "string",
+      "description": "The alias by which the bomber was known."
+    },
+    "anarchism_type": {
+      "type": "string",
+      "description": "The specific type of anarchism advanced by the bomber."
+    },
+    "connection_to_candice_delong": {
+      "type": "string",
+      "description": "How Candice DeLong was involved with the bomber's case."
+    }
+  },
+  "required": [
+    "bomber_name",
+    "bomber_alias",
+    "anarchism_type",
+    "connection_to_candice_delong"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "station_name": "KLAS-TV",
+  "network_affiliation": "CBS",
+  "location": {
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "city_us_population_rank": 28,
+    "city_state_population_description": "most populated city in the state of Nevada"
+  },
+  "owner": "Nexstar Media Group",
+  "virtual_channel": 8
+}

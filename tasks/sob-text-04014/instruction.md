@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+New York Giants: The New York Giants are a professional American football team based in the New York metropolitan area.  The Giants compete in the National Football League (NFL) as a member club of the league's National Football Conference (NFC) East division.  The team plays its home games at MetLife Stadium in East Rutherford, New Jersey, which it shares with the New York Jets in a unique arrangement.  The Giants hold their summer training camp at the Quest Diagnostics Training Center at the Meadowlands Sports Complex.
+
+Dallas Cowboys: The Dallas Cowboys are a professional American football team based in the Dallas–Fort Worth metroplex.  The Cowboys compete in the National Football League (NFL) as a member club of the league's National Football Conference (NFC) East division.  The team is headquartered in Frisco, Texas, and plays its home games at AT&T Stadium in Arlington, Texas, which opened for the 2009 season.  The stadium took its current name prior to the 2013 season.  The Cowboys joined the NFL as an expansion team in .  The team's national following might best be represented by its NFL record of consecutive sell-outs.  The Cowboys' streak of 190 consecutive sold-out regular and post-season games (home and away) began in 2002.  The franchise has made it to the Super Bowl eight times, tied with the Pittsburgh Steelers, and the Denver Broncos for second most Super Bowl appearances in history, just behind the New England Patriots record nine Super Bowl appearances.  This has also corresponded to eight NFC championships, most in the NFC.  The Cowboys have won five of those Super Bowl appearances, tying them with their NFC rivals, the San Francisco 49ers, and the AFC's Patriots; all three are second to Pittsburgh's record six Super Bowl championships.  The Cowboys are the only NFL team to record 20 straight winning seasons (1966–85), in which they only missed the playoffs twice (1974 and 1984), an NFL record that remains unchallenged.
+
+2014 New York Giants season: The New York Giants season was the franchise's 90th season in the National Football League, the fifth playing their home games at MetLife Stadium and the eleventh under head coach Tom Coughlin.  The team failed to improve on their 7–9 mark from 2013, finishing 6–10.
+
+Ben McAdoo: Benjamin Lee "Ben" McAdoo (born July 9, 1977) is an American football coach who is the head coach of the New York Giants of the National Football League (NFL).
+
+Buffalo Bills: The Buffalo Bills are a professional American football team based in the Buffalo–Niagara Falls metropolitan area.  The Bills compete in the National Football League (NFL), as a member club of the league's American Football Conference (AFC) East division.  The team plays their home games at New Era Field in Orchard Park, New York.  The Bills are the only NFL team that plays its home games in the state of New York (the New York Giants and New York Jets play at MetLife Stadium, located in East Rutherford, New Jersey).  The Bills conduct summer training camp at St. John Fisher College in Pittsford, New York, an eastern suburb of Rochester, New York.
+
+2012 New York Giants season: The New York Giants season was the franchise's 88th season in the National Football League, the ninth under head coach Tom Coughlin and the third playing their home games at MetLife Stadium in East Rutherford, New Jersey.  The Giants began the 2012 season as defending Super Bowl Champions for the fourth time in their history, by virtue of their 21–17 victory in Super Bowl XLVI over the New England Patriots.  The Giants finished 9–7 for the second straight year, but failed to make the playoffs.
+
+2016 New York Giants season: The 2016 season was the New York Giants' 92nd season in the National Football League, their seventh playing their home games at MetLife Stadium and the first under head coach Ben McAdoo.
+
+List of New York Giants seasons: The New York Giants are an American football team based in East Rutherford, New Jersey.  They are a member of the National Football League (NFL) and play in the NFL's National Football Conference (NFC) East division.  In 92 completed seasons, the franchise has won eight NFL championships, including four Super Bowl victories.  The Giants have won more than 600 games and appeared in the NFL playoffs 32 times.  Though the Giants play home games in East Rutherford, they draw fans from throughout the New York metropolitan area.  In 2010, the team began playing in MetLife Stadium, formerly New Meadowlands Stadium.
+
+2017 New York Giants season: The 2017 New York Giants season is the franchise's 93rd season in the National Football League, the eighth playing their home games at MetLife Stadium and the second under head coach Ben McAdoo.  The Giants are hoping to return to the playoffs after going 11-5 the year before and attempt to win their 5th Super Bowl.
+
+Chicago Tigers: The Chicago Tigers of the American Professional Football Association (APFA) played only in the first year of the league (1920) and, because of this, have the distinction of being the first NFL team to fold.  They had a record of 2 wins, 5 losses and 1 tie.  The team played its home games at Chicago's Wrigley Field (then called Cubs Park) and was the first NFL team to do so.  The Tigers were never formally members of the APFA.  However, since the team played seven games against APFA teams in 1920, resulting in a 1–5–1 league record, they are generally included in the league standings.
+
+Question: In what year was the coach of the NFL team that plays their home games at MetLife Stadium born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "team_name": {
+      "type": "string",
+      "description": "The name of the NFL team."
+    },
+    "stadium_name": {
+      "type": "string",
+      "description": "The name of the stadium where the team plays home games."
+    },
+    "coach_name": {
+      "type": "string",
+      "description": "The name of the head coach for the specified team."
+    },
+    "coach_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the head coach."
+    }
+  },
+  "required": [
+    "team_name",
+    "stadium_name",
+    "coach_name",
+    "coach_birth_year"
+  ],
+  "additionalProperties": false
+}

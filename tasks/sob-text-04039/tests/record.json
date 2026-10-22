@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "69e6fe37637340e23b9b42edd2e4022a076c4f0a8136f7896e6aaa181d114ca9",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae692305542991bbc976135",
+    "source_dataset": "hotpotqa",
+    "source_answer": "He is currently in jail in the United States of America.",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hasan Gafoor: Hasan Gafoor (11 December 1950 – 12 March 2012) was the Director General of Police of Maharashtra (Anti Corruption bureau).  Previously he was the Director General of Police of Maharashtra and managing director of the Maharashtra Police Housing & Welfare Corporation.  He was the Police Commissioner of Mumbai, but was promoted as an aftermath of the November 2008 Mumbai attacks.  Prior to being the Police Commissioner, he was the Additional Director General, Anti-Corruption Bureau (ACB) between 15 June 2007 and 29 February 2008.  Gafoor is a 1974 batch IPS officer, and was the second Muslim to become the police chief of Mumbai after Syed Majeedullah, who was the Police Commissioner from 1962 to 1965.\n\nShahid Azmi: Shahid Azmi (1977 – 11 February 2010) was an Indian lawyer, most known for defending innocent people charged with terrorism, including some of accused in the 2008 Mumbai attacks, such as Faheem Ansari, who was later acquitted for lack of evidence.  At age 14, he was arrested during the 1992 Bombay Riots.  He was arrested again under TADA, serving seven years in Delhi's Tihar Jail, on charges of plotting against the state, though he was acquitted later.  He started studies while in jail, and went on to become criminal defence lawyer in Mumbai in 2003, defending cases for those accused of terrorism.  Prevention of Terrorism Act, 2002 (POTA) was later repealed.  He was shot dead by four assailants in his office in Kurla, Mumbai on 11 February 2010 at the age of 32.\n\nAttribution of the 2008 Mumbai attacks: Attribution of the 2008 Mumbai attacks cani made by the Indian authorities who said that the Mumbai attacks cani directed by Lashkar-e-Taiba militants inside Pakistan.  American intelligence agencies also cani with this attribution.  Pakistan initially contested this attribution, but agreed this was the case on 7 January 2009.  To back up its accusations, the Indian government supplied a dossier to Pakistan's high commission in Delhi.  The Pakistan government dismissed the dossier as \"not evidence,\" but also announced that it had detained over a hundred members of Jamaat-ud-Dawa, a charity linked with Lashkar-e-Taiba.  In February 2009, Pakistan's Interior Minister Rehman Malik agreed that \"some part of the conspiracy\" did take place in Pakistan.\n\nRahul Bhatt: Rahul \"Sunny\" Bhatt (born 24 January 1982), is an Indian fitness trainer and an aspiring film actor.  The son of famous film director Mahesh Bhatt and Kiran Bhatt, Rahul gained unwitting notoriety in 2009 following revelations that David Headley, an accused in the 2008 Mumbai attacks, had befriended him.  In an investigative report by PBS, Rahul Bhatt was described as a B-movie actor asking for favors to reveal more details about Headley.  He was a contestant on Bigg Boss 4 in 2010.\n\nZabiuddin Ansari: Sayed Zabiuddin Ansari a.k.a. Abu Hamza or Abu Jundal is an Indian national, Islamic fundamentalist/terrorist belonging to Indian Mujahideen and Lashkar-e-Taiba.  He is accused of being involved in 2008 Mumbai attacks.  Zabiuddin Ansari (Abu Hamza)'s name was listed in the list of \"50 most wanted criminals sheltered in Pakistan\" released by India on 21 May 2011.  He had served as the handler of the 10 LeT terrorists during 2008 Mumbai attacks.\n\nMukesh Bhatt: Mukesh Bhatt (born 5 June 1952 in Mumbai), is an Indian film producer, who has produced several Bollywood films.  He is the younger brother of Mahesh Bhatt, and also the co-owner of the production company Vishesh Films, set up in 1986.  He is the uncle of Pooja Bhatt, Rahul Bhatt, Alia Bhatt, Shaheen Bhatt and Emraan Hashmi.\n\nErroneous reporting on the 2008 Mumbai attacks: During and immediately after the 2008 Mumbai attacks the news media worldwide broadcast incorrect factual information on a scale often seen in a fog of war.  Erroneous reporting on the 2008 Mumbai attacks included false information concerning the number of attackers, their nationality, their organizational affiliations, origins, and the methods of transport they had used.  Theories and speculations were openly aired by various commentators that were later proved to be wrong.  Many such speculations, such as the involvement in the attacks of the \"Deccan Mujahideen\", were widely reported by media worldwide.  Various news outlets carried opinion pieces and unattributed theories about the origins of the attackers which were unfounded.\n\nTukaram Omble: Tukaram Omble AC ( 1954 — 27 November 2008) was an assistant sub-inspector (ASI) of the Mumbai Police, and a retired army man.  He was killed in action while fighting terrorists during the 2008 Mumbai attacks, at Girgaum Chowpatty Mumbai, and was instrumental in apprehending Pakistan national Ajmal Kasab alive.  The lone surviving terrorist Kasab was later convicted and hanged.  The Indian government honoured Omble, on 26 January 2009, with the Ashoka Chakra – the country's highest peace-time gallantry award for extraordinary bravery and valour in the line of duty.\n\n2008 Mumbai attacks: The 2008 Mumbai attacks were a group of terrorist attacks that took place in November 2008, when 10 members of Lashkar-e-Taiba, an Islamic terrorist organisation based in Pakistan, carried out a series of 12 coordinated shooting and bombing attacks lasting four days across Mumbai.  The attacks, which drew widespread global condemnation, began on Wednesday, 26 November and lasted until Saturday, 29 November 2008, killing 164 people and wounding at least 308.\n\nDavid Headley: David Coleman Headley (born Daood Sayed Gilani; 30 June 1960) is an American terrorist of Pakistani origin, and a spy who conspired with the Lashkar-e-Taiba (LeT) in plotting the 2008 Mumbai attacks.  He is currently in jail in the United States of America.",
+    "question": "Where is the friend of Rahul Bhatt, who is accused of the 2008 Mumbai attacks, being held?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the individual whose detention location is being sought."
+        },
+        "role_in_attacks": {
+          "type": "string",
+          "description": "The individual's involvement in the 2008 Mumbai attacks."
+        },
+        "detention_status": {
+          "type": "string",
+          "description": "The current status of the individual regarding their freedom."
+        },
+        "detention_location": {
+          "type": "string",
+          "description": "The country where the individual is currently detained."
+        }
+      },
+      "required": [
+        "person_name",
+        "role_in_attacks",
+        "detention_status",
+        "detention_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "David Headley",
+      "role_in_attacks": "accused in the 2008 Mumbai attacks",
+      "detention_status": "in jail",
+      "detention_location": "United States of America"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "animal_type": "dog",
+  "breeds_identified": [
+    "Majorca Ratter",
+    "Broholmer"
+  ],
+  "number_of_breeds": 2
+}

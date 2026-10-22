@@ -1,0 +1,16 @@
+{
+  "narrator": {
+    "name": "Kayoko Shiraishi",
+    "role": "narrator"
+  },
+  "work_details": {
+    "title": "Oedipus Rex",
+    "type": "opera-oratorio",
+    "original_play_author": "Sophocles",
+    "original_play_performance_year_bc": 429
+  },
+  "film_adaptation": {
+    "director_name": "Julie Taymor",
+    "release_year": 1992
+  }
+}

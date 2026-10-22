@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Arthur Collins (courtier): Arthur Collins CB, MVO, Commander, Hohenzollern Order (26 June 1845 – 21 November 1911), was Equerry and Comptroller for Princess Louise, Queen Victoria's 4th daughter and Gentleman Usher in the households of Queen Victoria and King Edward VII.  He attended Princess Louise in her role as the wife of John Campbell, 9th Duke of Argyll (at that time Marquis of Lorne), who was Governor General and Vice Regent of Canada between 1878 and 1883.  Collins represented Princess Louise at the funerals of Lord Beaconsfield, Benjamin Disraeli, and William Ewart Gladstone, the two competing Prime Ministers during Queen Victoria's reign.  Collins attended as a Gentleman Usher the coronation of King Edward VII and probably Victoria's funeral.
+
+Marie Henriette of Austria: Marie Henriette of Austria (Marie Henriette Anne; 23 August 1836 – 19 September 1902) was Queen of the Belgians as the wife of King Leopold II.
+
+Princess Louise (sidewheeler): Princess Louise was a sidewheel steamboat built in 1869.  From 1869 to 1879 this ship was named "Olympia".  In 1879 the name was changed to "Princess Louise", after Princess Louise, Duchess of Argyll, a daughter of Queen Victoria who was married to Marquess of Lorne (1845-1914), Governor General of Canada from 1878 to 1883.  "Princess Louise" was the last sidewheeler to be operated commercially on the coast of British Columbia.
+
+Princess Louise of Denmark (1750–1831): Princess Louise of Denmark and Norway (Danish: "Louise af Danmark" ; Norwegian: "Louise av Danmark" ) (20 January 1750 – 12 January 1831) was born to Frederick V of Denmark and Louise of Great Britain.  Her eldest daughter, Marie of Hesse-Kassel, was the wife of Frederick VI of Denmark.
+
+Princess Louise of Belgium: Princess Louise of Belgium (18 February 1858 in Brussels – 1 March 1924 in Wiesbaden) was the eldest daughter of Leopold II and his wife, Marie Henriette of Austria.  Louise was named after her paternal grandmother, the Belgian queen Louise of Orleans, and her mother.
+
+Princess Margherita of Bourbon-Parma: Princess Margherita of Bourbon-Parma (Italian: "Margherita Maria Teresa Enrichetta, Principessa di Parma" ) (1 January 1847 – 29 January 1893) was the eldest child and daughter of Charles III, Duke of Parma and Princess Louise Marie Thérèse of France, the eldest daughter of Charles Ferdinand, Duke of Berry and Princess Caroline Ferdinande Louise of the Two Sicilies.  Margherita was thus a great-granddaughter of Charles X of France.  She was born in Lucca, Duchy of Parma.  She was a niece of Henri, comte de Chambord, disputedly King of France and Navarre from 2 to 9 August 1830 and afterwards the Legitimist Pretender to the throne of France from 1844 to 1883.  Through her marriage to Carlos, Duke of Madrid, Carlist claimant to the Spanish throne, Margherita was titular Queen consort of Spain, France, and Navarre.
+
+Princess Louise of Denmark (1875–1906): Princess Louise of Denmark ("Louise Caroline Josephine Sophie Thyra Olga") (17 February 1875 – 4 April 1906) was a Danish princess, the third child and oldest daughter of Frederick VIII of Denmark and his wife, Princess Louise of Sweden and Norway.
+
+Princess Dorothea of Saxe-Coburg and Gotha: Princess Dorothea Maria Henriette Auguste Louise of Saxe-Coburg and Gotha (30 April 1881 – 21 January 1967) was a princess of Saxe-Coburg and Gotha (German: "Prinzessin von Sachsen-Coburg und Gotha" ) by birth and the duchess of Schleswig-Holstein (German: "Herzogin zu Sachsen" ) through her marriage to Ernst Gunther, duke of Schleswig-Holstein.  Dorothea was born in Vienna, Austria, the second child and only daughter of Prince Philipp of Saxe-Coburg and Gotha and Princess Louise of Belgium.
+
+Princess Louise of Belgium (born 2004): Princess Louise of Belgium ("Louise Sophie Mary"; born 6 February 2004 in Woluwe-Saint-Lambert) is the first child and only daughter of Prince Laurent and Princess Claire.  She is currently 13th in the line of succession to the Belgian throne.
+
+Louise d'Orléans, Princess of Bavaria (1869–1952): Princess Louise d'Orléans (Louise Victoire Marie Amélie Sophie; 19 July 1869 – 4 February 1952) was a French princess of the House of Orléans and a member of the Royal Family of Bavaria.  Throughout her life Louise remained very close to her first cousin, the Austrian archduchess Marie Valerie of Habsburg-Lorraine.
+
+Question: When was Princess Louise of Belgium's mother born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "princess_louise_of_belgium_identifier": {
+      "type": "string",
+      "description": "Identifier for the specific Princess Louise of Belgium mentioned in the context."
+    },
+    "mother_name": {
+      "type": "string",
+      "description": "The full name of Princess Louise of Belgium's mother."
+    },
+    "mother_birth_date": {
+      "type": "string",
+      "description": "The birth date of Princess Louise of Belgium's mother in 'DD Month YYYY' format."
+    },
+    "mother_title": {
+      "type": "string",
+      "description": "The primary title held by Princess Louise of Belgium's mother."
+    }
+  },
+  "required": [
+    "princess_louise_of_belgium_identifier",
+    "mother_name",
+    "mother_birth_date",
+    "mother_title"
+  ],
+  "additionalProperties": false
+}

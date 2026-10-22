@@ -1,0 +1,11 @@
+{
+  "author_name": "Laura Ingalls Wilder",
+  "author_nationality": "American",
+  "known_for_series": {
+    "series_name": "Little House on the Prairie",
+    "publication_years": {
+      "start_year": 1932,
+      "end_year": 1943
+    }
+  }
+}

@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Tijani Babangida: Tijani Babangida (born 25 September 1973 in Kaduna) is a retired Nigerian footballer, who played as a winger.  Known for his pace, his playing style was sometimes compared to that of Marc Overmars.  Babangida spent the majority of his playing career at Ajax.  Overall, he played in five different countries on three different continents.  At club level, Babangida spent nine years in Netherlands, playing for VVV-Venlo, Roda JC and Ajax, winning the Eredivisie plus KNVB Cup double with the latter side.
+
+Marc Overmars: Marc Overmars (] , born 29 March 1973) is a Dutch former footballer and the current director of football at Ajax.  During his footballing career, he played as a winger and was renowned for his speed and technical skills.
+
+Women's sport in Australia: Women's sport in Australia started in the colonial era.  Sport made its way into the school curriculum for girls by the 1890s.  World War II had little impact on women's sport in the country.  After the war, women's sport diversified as a result of new immigrants to the country.  In the 1990s, the percentage of media coverage for women's sport on radio, television and in newspapers was not at parity with male sport.  Basketball is nominally professional in Australia but players do not earn enough from the sport to compete full-time.  Some Australians have gone overseas to play professional sport.  Women make up a large number of television spectators for Australian sport.  In person, netball has large percentage of female spectators.  The Australian Federal and State governments have encouraged women to participate in all areas of sport.
+
+Marc Anthony Collection: The Marc Anthony Collection is an American lifestyle brand created by American recording artist Marc Anthony that is sold exclusively at Kohl's department stores and at Kohls.com.  In November 2010, Kohl's announced a partnership with Anthony and his then-wife Jennifer Lopez.  Originally marketed as "the first celebrity couple to simultaneously design collections for one retailer", following Anthony and Lopez's divorce, the lines were marked as two separate brands.  The Marc Anthony Collection consists of sportswear, dress shirts, neckwear, accessories, suit separates, sport coats and shoes, while the Jennifer Lopez Collection includes contemporary sportswear, dresses, handbags, jewelry, shoes and sleepwear along with a home collection of bedding and towels.
+
+Emst: Emst is a town of 3,000 inhabitants, located in the municipality of Epe in the province of Gelderland in the Netherlands.  It is the birthplace of former footballer Marc Overmars.  Emst is located in the forest area of Veluwe.
+
+Adebayo Faleti: He was Africa's first newscaster, Africa's first stage play Director, Africa's first film editor and librarian with the first television station in Africa (WNTV/WNBS), Nigeria's first Yoruba presenter on Television, a Nigerian poet, journalist, writer, Nollywood films Director and actor.  He was also known as a Yoruba translator, a broadcaster, TV exponent and pioneer of the first television station in Africa, Western Nigeria Television (WNTV), now known as the Nigerian Television Authority (NTA).  He was responsible for translating Nigeria's National Anthem from English to Yoruba.  He also translated speeches being made by Nigeria's former Attorney-General of the federation Chief Bola Ige, military president of Nigeria General Ibrahim Babangida, former premier of the Western region of Nigeria, Chief Obafemi Awolowo and Chief Ernest Shonekan - Head of National Interim Government of Nigeria, from English to Yoruba.  Faleti has published a dictionary containing the formal or official use of Yoruba names.  He received many awards, both locally and internationally, including the national honour of Officer of the Order of the Niger (OON), Doctor of Letters (D.Litt), Justice of Peace (JP), Jerusalem Pilgrim (JP).  Adebayo Faleti had received the Festival of Arts award with "Eda Ko L’aropin" in 1995 and the Afro-Hollywood Award for Outstanding Performance in Arts in the United States (2002).  His movie - "Basorun Gaa" also received Breeze Award in London as the best epic movie of the year in 2004.
+
+2004–05 FC Barcelona season: The 2004-05 season saw Fútbol Club Barcelona end their six-year wait for the La Liga title, having not won the league or, indeed, any trophy since the 1998–99 season and thus La Liga trophy returned in Barcelona's trophy room.  Having finished second in La Liga the previous season, Barcelona once again competed in the UEFA Champions League as well as the Copa del Rey.  The squad was restructured significantly following the retirement of key players Luis Enrique and Marc Overmars, as well as the return of Edgar Davids to Juventus and first team regulars Patrick Kluivert and Phillip Cocu moving onto new clubs.  Ronaldinho's and new signing Samuel Eto'o's performances won them places in FIFPro's XI of 2004–05.  Ronaldinho was later named FIFA World Player of the Year for 2005 for the second time in succession and with the highest points total ever; Eto'o came third.  This season was also notable for the debut of Lionel Messi.
+
+2000–01 FC Barcelona season: Barcelona lost their supremacy of Spanish football, finishing just fourth in La Liga, despite having bought Marc Overmars and Emmanuel Petit in total of £54m transfer fee in the summer of 2000.  While Barcelona was controversially sold Luís Figo to arch rivals Real Madrid in July 2000.  New coach Lorenzo Serra Ferrer was not improved well and put under increasing pressure, and when Barcelona narrowly missed out on Champions League qualification in the summer, he was sacked in late April 2001.  Barcelona dramatically sealed Champions League 3rd qualifying spot in the season finale, thanks to Rivaldo bicycle kick goal against Valencia.
+
+Joan Gaspart: Joan Gaspart Solves (] ; born 11 October 1944) is a Spanish businessman and a former FC Barcelona president between July 2000 and February 2003.  He was born in Barcelona.  He is known as one of the best vice presidents of the club (during the presidency of Josep Lluís Nuñez) but one of the worst presidents.  Gaspart spent all the money taken from the sale of Luís Figo to Real Madrid, buying Emmanuel Petit and Marc Overmars from Arsenal and Gerard from Valencia.
+
+National Art Museum of Sport: The National Art Museum of Sport (NAMOS) is a fine art museum that focuses on a sport theme.  Sport art captures emotion: the anxiety of competition, the joy of winning, the agony of defeat.  It depicts internal conflict: the pitting of honor and sportsmanship versus the desire to win, or the struggle to maintain resolve in the face of overwhelming odds, pain and fatigue.  Whether one thinks of the athletic contests portrayed in Greek vase painting and sculpture, the epic hunts that form the subjects of so many great medieval tapestries and manuscript pages, or the elegant horse-racing scenes of Fay Moore and Marilyn Newmark, depicting sport has inspired artists particularly those who want to capture the motion and emotion of sport.  In America, a country celebrated for hard work and hard play, sport art has had an especially vigorous history.  Many of the most renowned artists- Thomas Eakins, Winslow Homer, and George Bellows-were active sports persons themselves and numbered among their friends leading athletes, fishermen and hunters.  For them, as for many others, the multifaceted drama of sport was both a challenge and inspiration, the generating force that led to unforgettable works.
+
+Question: Which sport did both Tijani Babangida and Marc Overmars play?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "sport_name": {
+      "type": "string",
+      "description": "The name of the sport played by both individuals."
+    },
+    "players_involved": {
+      "type": "array",
+      "description": "List of players who played this sport.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the player."
+          },
+          "role": {
+            "type": "string",
+            "description": "The primary playing role or position of the player."
+          }
+        },
+        "required": [
+          "name",
+          "role"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "common_attribute": {
+      "type": "string",
+      "description": "A common playing attribute shared by both players."
+    }
+  },
+  "required": [
+    "sport_name",
+    "players_involved",
+    "common_attribute"
+  ],
+  "additionalProperties": false
+}

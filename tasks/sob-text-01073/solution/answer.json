@@ -1,0 +1,14 @@
+{
+  "musician_name": "Stephen Morris",
+  "wife_name": "Gillian Gilbert",
+  "band_information": [
+    {
+      "band_name": "New Order",
+      "instruments_played_by_wife": [
+        "guitar",
+        "keyboards"
+      ]
+    }
+  ],
+  "instrument_in_question": "keyboards"
+}

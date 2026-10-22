@@ -1,0 +1,23 @@
+{
+  "primary_individuals": [
+    {
+      "name": "Christina Margarethe of Hesse",
+      "title": "Princess"
+    },
+    {
+      "name": "Christoph of Hesse",
+      "title": "Prince"
+    }
+  ],
+  "relevant_family_member": {
+    "name": "Sophie of Greece and Denmark",
+    "title": "Princess",
+    "relationship_to_christina_margarethe": "mother",
+    "relationship_to_christoph": "wife"
+  },
+  "countries_of_family_rule": [
+    "Greece",
+    "Denmark"
+  ],
+  "reasoning": "Princess Christina Margarethe of Hesse was the eldest daughter of Prince Christoph of Hesse and Princess Sophie of Greece and Denmark. Princess Sophie's title directly indicates her family's rule over Greece and Denmark."
+}

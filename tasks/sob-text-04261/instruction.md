@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Last Message Received: The Last Message Received is a submission-based blog on the social networking site Tumblr.  It was created in November 2015 by 16-year-old Ohio native Emily Trunko, a student at the Ohio Virtual Academy.  The blog is composed primarily of text messages, almost always the last ones received from ex-lovers, deceased family members, or former friends.  "I've always been fascinated with glimpses into the lives of other people," Trunko explained in an interview with Buzzfeed.  "I thought that the last message sent before a breakup or before someone passed away would be really poignant."  Messages range from being long and detailed to extremely short.  Some are goodbyes, and others are mundane texts sent by people who didn't know that message would be their last.  As of February 10, 2016, The Last Message Received has over 83,000 followers and 10,000 submissions.  It has been written about by many major publications, including The Guardian, The Huffington Post, Cosmopolitan Magazine, and Teen Vogue.
+
+Asmatullah Rohani: Asmatullah Rohani is son of a prominent judge Hamdullah and he comes from Yousufzia tribe in eastern Kunar Province.  His entire family is known as an intellectual family in eastern Kunar province because his father and his uncles were well educated and they have served as judges in several different provinces of Afghanistan.  His family comes originally from Pashat district in Kunar province.  However, later his immediate family settled in Tanar district of Kunar province.  Asmatullah Rohani was born on August 3, 1937 in city of Balkh when his father was a judge in Northern Mazar-e Sharif province, Afghanistan.  He passed away peacefully in Guelph on September 24, 2017.
+
+Capers-Motte House: The Capers-Motte House is a pre-Revolutionary house at 69 Church Street in Charleston, South Carolina.  The house was likely built before 1745 by Richard Capers.  Later, the house was the home of Colonel Jacob Motte, who served as the treasurer of the colony for 27 years, before passing away in 1770.  His son, also named Jacob Motte, married Rebecca Brewton Motte, sister of Miles Brewton.  In 1778, Colonel James Parsons occupied the house; he was a member of the Continental Congress and had been offered the vice-presidency of South Carolina before the formation of the United States.  From 1800 to 1811, O'Brien Smith, a member of Congress, owned the house.  He passed away in 1779, leaving the house to his widow.  Later it was owned by his sister Honora Smith Pyne.  Mrs. William Mason Smith bought the house in 1869, and her granddaughter, American artist Miss Alice Ravenel Huger Smith lived in the house in the 20th century.  The house was restored to its Georgian and Adam period appearance, with later changes removed, when it was bought by Mr. and Mrs. Anthony Cecil in 1969.
+
+Conference of European Rabbis: The current president of the CER is the chief rabbi of Moscow, Pinchas Goldschmidt, who served as chairman of the Standing Committee for over ten years.  The chairman of the Presidium is associate president Chief Rabbi Ephraim Mirvis.  Before Rabbi Sitruk, the organization was headed by Rabbi Lord Dr Immanuel Jacobovits, Chief Rabbi of Great Britain.  The Executive Director of the CER since inception was Rabbi Maurice (Moshe) Rose, succeeded in the year 2001 by Rabbi Aba Dunner, who passed away in 2011.  In 2017 Mr. Gady Gronich, assumed the position of Chief of Staff to the President of CER and works alongside the Rabbinical Director Rabbi Moshe Lebel ,Secretary Rabbi Aharon Shmuel Baskin and President of Association and Special Adviser of the Board of Patrons Mrs. Shorena Mikava .
+
+The Breeze: An Appreciation of JJ Cale: The Breeze: An Appreciation of JJ Cale is the twenty-second studio album by Eric Clapton.  It consists of covers of songs by J. J. Cale, who had passed away the previous year.  It was named after Cale's 1972 single "Call Me the Breeze".  It was produced by Clapton and Simon Climie.
+
+Blues on Bach: Blues on Bach is an album by American jazz group the Modern Jazz Quartet recorded in 1973 and released on the Atlantic label.  The album includes five compositions based on Johann Sebastian Bach's melodies from "The Old Year Has Now Passed Away" ("Regret?") , "Sleepers Wake" ("Rise Up in the Morning"), "Jesu, Joy of Man's Desiring" ("Precious Joy"), "Klavierbüchlein für Wilhelm Friedemann Bach" (Don't Stop This Train") and "The Well-Tempered Clavier" ("Tears from the Children").
+
+Open information extraction: In natural language processing, open information extraction (OIE) is the task of generating a structured, machine-readable representation of the information in text, usually in the form of triples or n-ary propositions.  A proposition can be understood as truth-bearer, a textual expression of a potential fact (e.g., "Dante wrote the Divine Comedy"), represented in an amenable structure for computers [e.g., ("Dante", "wrote", "Divine Comedy")].  An OIE extraction normally consists of a relation and a set of arguments.  For instance, ("Dante", "passed away in" "Ravenna") is a proposition formed by the relation "passed away in" and the arguments "Dante" and "Ravenna".  The first argument is usually referred as the subject while the second is considered to be the object.
+
+Carlota of Mexico: Princess Charlotte of Belgium, more commonly known as Carlota of Mexico (7 June 1840 – 19 January 1927) was a Belgian princess who became Empress of Mexico as the wife of Maximilian I of Mexico.
+
+Medea de Novara: Medea de Novara (1905–2001) was a Liechtenstein-born actress who appeared in Mexican films.  She was married to the Mexican film director Miguel Contreras Torres.  She was noted for her resemblance to the Empress Carlota of Mexico who she played four times on screen.
+
+Mohammed Abdul Qadeer: Abdul Qadeer was the ex-constable of police from Hyderabad, who was convicted for life sentence for killing ACP Sattiah, who was illegally harassing Muslim youth during the Babri Masjid demolition riots in 1992.  Abdul qadeer was illegally detained in jail despite the completion period of his life imprisonment.  Many muslim organizations appealed for the release of Mohammed abdul qadeer on the grounds of his health but previous governments declined the plea.  He was finally released from jail by the Government of Telangana on 29 March 2016. He Passed Away On The Night Of 14 September 2017 In His Hometown Hyderabad,India.  Former Supreme Court judge Markandey Katju sought the release of ex-constable mohammed Abdul qadeer who is serving a life sentence at Cherlapalli jail, on humanitarian grounds.  Katju twitted on social media K Chandrasekhar Rao for the release of ex-constable on humanitarian grounds.
+
+Question: Medea de Novara was known for her resemblance of an Empress who passed away in which year ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "empress_name": {
+      "type": "string",
+      "description": "The name of the Empress Medea de Novara resembled."
+    },
+    "resemblance_actress_name": {
+      "type": "string",
+      "description": "The name of the actress known for her resemblance to the Empress."
+    },
+    "empress_death_date": {
+      "type": "string",
+      "description": "The full date the Empress passed away."
+    },
+    "empress_death_year": {
+      "type": "integer",
+      "description": "The year the Empress passed away."
+    }
+  },
+  "required": [
+    "empress_name",
+    "resemblance_actress_name",
+    "empress_death_date",
+    "empress_death_year"
+  ],
+  "additionalProperties": false
+}

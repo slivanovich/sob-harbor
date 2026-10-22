@@ -1,0 +1,14 @@
+{
+  "question_asked": "Are Tom Araya and Danny Worsnop of the same nationality?",
+  "musicians": [
+    {
+      "name": "Tom Araya",
+      "nationality": "Chilean American"
+    },
+    {
+      "name": "Danny Worsnop",
+      "nationality": "British"
+    }
+  ],
+  "same_nationality": false
+}

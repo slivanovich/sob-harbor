@@ -1,0 +1,15 @@
+{
+  "person_name": "Johns Hopkins",
+  "person_attributes": [
+    "American entrepreneur",
+    "abolitionist",
+    "philanthropist",
+    "19th-century Baltimore, Maryland"
+  ],
+  "associated_university": {
+    "name": "Johns Hopkins University",
+    "location": "Baltimore, Maryland",
+    "founding_year": 1876
+  },
+  "ilene_busch_vishniac_role_at_university": "Dean of the Faculty of Engineering"
+}

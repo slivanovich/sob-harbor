@@ -1,0 +1,18 @@
+{
+  "karl_otto_koch_details": {
+    "name": "Karl-Otto Koch",
+    "rank": "mid-ranking commander",
+    "role": "first commandant of Buchenwald, Sachsenhausen, and Majdanek concentration camps"
+  },
+  "accomplice_details": {
+    "name": "Ilse Koch",
+    "relationship_to_karl_otto_koch": "wife",
+    "involvement_in_crimes": "took part in the notorious crimes at Buchenwald and Majdanek",
+    "trial_information": {
+      "trial_year": 1947,
+      "prosecuting_body": "U.S. military",
+      "trial_significance": "one of the first prominent Nazis to be tried by the U.S. military"
+    }
+  },
+  "final_answer": "Ilse Koch"
+}

@@ -1,0 +1,14 @@
+{
+  "song_title": "Handlebars",
+  "band_details": {
+    "band_name": "Flobots",
+    "nationality": "American",
+    "formation_year": 2005,
+    "founder": "Jamie Laurie"
+  },
+  "album_details": {
+    "album_title": "Fight with Tools",
+    "album_type": "debut album"
+  },
+  "success_description": "group's largest success, peaking at #3 on the Billboard Modern Rock Tracks"
+}

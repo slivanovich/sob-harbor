@@ -1,0 +1,9 @@
+{
+  "person_name": "Nelson Pizarro",
+  "birth_location": {
+    "city": "Pembroke Pines",
+    "state": "Florida",
+    "county": "Broward County"
+  },
+  "answer": "Broward"
+}

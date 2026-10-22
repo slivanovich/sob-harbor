@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+New Brunswick Route 161: Route 161 is a New Brunswick highway that runs for 5.0 kilometers from a junction with Route 120 at Caron Brook, to the International Bridge at Clair; in Madawaska County.  The route connects to U.S. Route 1 and Maine State Route 161 across the Saint John River in Fort Kent, Maine.
+
+Goodsprings, Nevada: Goodsprings is an unincorporated community in Clark County, Nevada, United States.  The population was 229 at the 2010 census.
+
+California State Route 299: State Route 299 (SR 299) is a state highway in the state of California that runs across the northern part of the state.  At 305.777 mi , it is the third longest California state highway (after Route 1 and Route 99).  Route 299 begins at US 101 at the northern edge of Arcata and continues in an easterly direction through to the Nevada state line.  Between Arcata and Redding, Route 299 intersects with State Route 96, and is briefly co-signed with State Route 3.  In Redding, it intersects with State Route 273, State Route 44, and Interstate 5.  East of Redding, it intersects with State Route 89, and a section is co-signed with State Route 139 before reaching Alturas.  It is then co-signed with U.S. Route 395 northeast of Alturas, and then runs east toward the border with Nevada.  A ghost town, Vya, Nevada, can be reached via this route, which after the border becomes a dirt road, which was formerly Nevada State Route 8A.
+
+Nevada State Route 161: State Route 161 (SR 161) is a state highway in Clark County, Nevada.  It is known as Goodsprings Road, connecting the town of Goodsprings to Interstate 15 at Jean.  The route was part of State Route 53 prior to 1976.
+
+New York State Route 161: New York State Route 161 (NY 161) is an east–west state highway located in eastern Montgomery County, New York, in the United States.  It extends for just over 7 mi from an intersection with NY 30A in the town of Glen to a junction with NY 30 in the town of Florida.  The route is a two-lane highway known as Mill Point Road, named for a small hamlet situated near NY 161's midpoint.  At Mill Point, the road crosses Schoharie Creek.  NY 161 was assigned as part of the 1930 renumbering of state highways in New York and has not been altered since.
+
+Maryland Route 161: Maryland Route 161 (MD 161) is a state highway in the U.S. state of Maryland.  The state highway runs 5.38 mi from MD 155 in Hopewell Village north to U.S. Route 1 (US 1) in Darlington.  MD 161 connects Havre de Grace with Susquehanna State Park and northeastern Harford County.  The state highway was mostly constructed in the late 1920s and early 1930s.
+
+Ohio State Route 29: State Route 29 (SR 29) is an east–west state highway in the west-central portion of the U.S. state of Ohio.  Its western terminus is at the Indiana state line near Celina, where State Road 67 continues west.  It continues east to St. Marys where it junctions with U.S. Route 33.  In that town, it also crosses State Route 66, State Route 116, and State Route 703, which was its former alignment before a divided highway was built.  After turning south it crosses State Route 219 in New Knoxville and then has an interchange with Interstate 75, continuing into Sidney where it meets State Route 47.  Still going southeast, it briefly joins State Route 235 before turning east and then south again to enter Urbana.  Here the route joins U.S. Route 36, and the concurrency intersects with U.S. Route 68 and State Route 54.  From there, State Route 29 leaves U.S. Route 36 and continues to Mutual, intersecting with State Route 161, and State Route 56 shortly after; later, in Mechanicsburg, the route intersects with State Route 4.  The route then intersects with State Route 38, U.S. Route 42, and Interstate 70 before reaching its eastern terminus at U.S. Route 40 on the western edge of West Jefferson.
+
+California State Route 127: State Route 127 (SR 127) is a California state highway that connects Interstate 15 to Nevada State Route 373, passing near Death Valley National Park.
+
+Hatfield, California–Oregon: Hatfield is an unincorporated community in both Siskiyou County, California, and Klamath County, Oregon, in the United States.  Hatfield is located at the junction of Oregon Route 39, California State Route 161, and California State Route 139; all three routes terminate at a four-way junction in the community.  The Lost River also runs through Hatfield.  Hatfield is 3.6 mi northwest of Tulelake, California, and 4.6 mi east-southeast of Merrill, Oregon.
+
+Mottsville, Nevada: Mottsville is an unincorporated community in Douglas County, Nevada, United States.  Mottsville is located at the junction of Nevada State Route 206 and Nevada State Route 207 4 mi west-southwest of Minden.
+
+Question: Nevada State Route 161 connects the unincorporated community in what county to Interstate 15?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "highway_name": {
+      "type": "string",
+      "description": "The name of the state highway."
+    },
+    "connected_community": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the community."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of community (e.g., unincorporated community, town)."
+        },
+        "county": {
+          "type": "string",
+          "description": "The county where the community is located."
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "county"
+      ],
+      "additionalProperties": false
+    },
+    "major_interstate_connection": {
+      "type": "string",
+      "description": "The major interstate highway that the route connects to."
+    }
+  },
+  "required": [
+    "highway_name",
+    "connected_community",
+    "major_interstate_connection"
+  ],
+  "additionalProperties": false
+}

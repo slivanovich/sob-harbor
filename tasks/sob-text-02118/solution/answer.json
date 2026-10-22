@@ -1,0 +1,17 @@
+{
+  "common_category": "documentary film",
+  "entities_identified": [
+    "Blue Vinyl",
+    "High School"
+  ],
+  "entity_details": [
+    {
+      "name": "Blue Vinyl",
+      "type": "documentary film"
+    },
+    {
+      "name": "High School",
+      "type": "documentary film"
+    }
+  ]
+}

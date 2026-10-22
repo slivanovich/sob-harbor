@@ -1,0 +1,13 @@
+{
+  "draft_year": 1984,
+  "draft_annual_number": 37,
+  "draft_location": "Felt Forum",
+  "city": "New York City",
+  "state": "New York",
+  "player_drafted": {
+    "player_name": "Charles Barkley",
+    "draft_pick_number": 5,
+    "drafting_team": "Philadelphia 76ers",
+    "current_role": "analyst on \"Inside the NBA\""
+  }
+}

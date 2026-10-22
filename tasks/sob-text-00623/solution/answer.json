@@ -1,0 +1,15 @@
+{
+  "city": "Istanbul",
+  "country": "Turkey",
+  "landmarks_assessment": [
+    {
+      "name": "Valens Aqueduct",
+      "is_important_landmark": true
+    },
+    {
+      "name": "Veliefendi Race Course",
+      "is_important_landmark": false
+    }
+  ],
+  "all_are_important_landmarks": false
+}

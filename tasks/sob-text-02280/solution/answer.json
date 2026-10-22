@@ -1,0 +1,29 @@
+{
+  "team_details": {
+    "name": "FC Thun",
+    "location": "Bernese Oberland town of Thun",
+    "nationality": "Swiss"
+  },
+  "player_criteria": {
+    "position": "midfielder",
+    "nationality": "Swiss",
+    "current_status": "currently plays"
+  },
+  "matching_players": [
+    {
+      "player_name": "Nicola Sutter",
+      "nationality": "Swiss",
+      "current_position": "midfielder"
+    },
+    {
+      "player_name": "Dennis Hediger",
+      "nationality": "Swiss",
+      "current_position": "midfielder"
+    },
+    {
+      "player_name": "Edmond Lekaj",
+      "nationality": "Albanian, Swiss",
+      "current_position": "midfielder"
+    }
+  ]
+}

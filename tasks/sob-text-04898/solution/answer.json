@@ -1,0 +1,12 @@
+{
+  "country": "Canada",
+  "mines": [
+    {
+      "name": "Beanland Mine"
+    },
+    {
+      "name": "Kanichee Mine"
+    }
+  ],
+  "number_of_mines": 2
+}

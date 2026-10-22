@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "record_id": "9ccd858933005d085c1e46d268a2bc6078e95e2b3dd94052bd764c6c50bced96",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae0092655429942ec259bfe",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ada Foah",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Ada High School (Ohio): Ada High School is a public high school located in Ada, Ohio.  It is the only high school in the Ada Exempted Village School District.\n\nAda, Serbia: Ada (; Hungarian: \"Ada\" ) is a town and municipality located in the North Banat District of the autonomous province of Vojvodina, Serbia.  It is situated near the river Tisa in the geographical region of Bačka.  The town has a population of 9,564, while Ada municipality has 16,991 inhabitants (2011 census).\n\nAda Kasseh: Kasseh is a town in the Ada East district, a district in the Greater Accra Region of Ghana.  It is a major town located between Sege and Sogakope on the Accra-Aflao road.  Kasseh has the biggest market in four districts(Ada West, Ada East, South Tongu and North Tongu) in its area.  Kasseh is connected to almost all the towns and villages in the Ada East district by road or path.  It is the most easily accessible town in the district.  It is connected by road to the district capital town of Ada Foah and the Town called Big Ada.\n\nAda (Ghana parliament constituency): Ada is one of the constituencies represented in the Parliament of Ghana.  It elects one Member of Parliament (MP) by the first past the post system of election.  The Ada constituency is located in the Dangme East District of the Greater Accra Region of Ghana.\n\nAda Ciganlija: Ada Ciganlija (Serbian Cyrillic: Ада Циганлија, ] ), colloquially shortened to Ada, is a river island that has artificially been turned into a peninsula, located in the Sava River's course through central Belgrade, the capital of Serbia.  The name can also refer to the adjoining artificial Lake Sava and its beach.  To take advantage of its central location, over the past few decades, it was turned into an immensely popular recreational zone, most notable for its beaches and sports facilities, which, during summer seasons, can have over 100,000 visitors daily and up to 300,000 visitors over the weekend.  Owing to this popularity, Ada Ciganlija has been commonly nicknamed \"More Beograda\" (\"Belgrade's Sea\"), which was officially accepted as an advertising slogan in 2008, stylised as \"More BeogrADA\".\n\nAda Municipal Airport: Ada Municipal Airport (IATA: ADT, ICAO: KADH, FAA LID: ADH) is a public airport located two miles (3 km) north of the central business district of Ada, a city in Pontotoc County, Oklahoma, United States.  It is owned by the City of Ada, which is located in southeast Oklahoma, 88 mi southeast of Oklahoma City.\n\nDangme East District: The Dangme East District is one of the ten (10) districts in the Greater Accra Region of Ghana, and covers a surface of 909 km².  Major Towns in the district are Big Ada and Ada Kasseh.  Ada Foah, which is the district capital, is located at the beach and river estuary.  Most of the inhabitants (85.9%) belong to the cultural group of the Dangme.  It has a population of 71,671.\n\nBig Ada: Big Ada is a town in the Dangme East district, a district in the Greater Accra Region of Ghana.  The settlement lies along the road from Ada Kasseh to the district capital Ada Foah, just off the Accra-Aflao motorway.\n\nAda Međica: Ada Međica () is an island and an urban neighborhood of Belgrade, the capital of Serbia.  It is located in Belgrade's municipality of Novi Beograd.  Ada Međica is an ovally shaped river island in the Sava river, a 1.5 km long and 200 m wide.  It is located just north of the central part of the much larger Ada Ciganlija.\n\nCentennial High School (Idaho): Centennial High School is a four-year public secondary school in Boise, Idaho.  Although located in Boise, it is part of the West Ada School District; at the time of its construction, CHS was in unincorporated Ada County.  The West Ada district's second of five traditional high schools, Centennial opened in 1987 and serves neighborhoods in northwestern Boise and northeastern Meridian.  The centennial of Idaho statehood was observed in 1990.",
+    "question": "What is the capital of the district where Ada is located?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "district_name": {
+          "type": "string",
+          "description": "The name of the district where an 'Ada' entity is located."
+        },
+        "district_capital": {
+          "type": "string",
+          "description": "The capital city of the identified district."
+        },
+        "ada_locations_in_district": {
+          "type": "array",
+          "description": "A list of 'Ada' related locations found within this district.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "location_name": {
+                "type": "string",
+                "description": "The name of the 'Ada' related location."
+              },
+              "location_type": {
+                "type": "string",
+                "description": "The type of the 'Ada' related location (e.g., town, constituency)."
+              }
+            },
+            "required": [
+              "location_name",
+              "location_type"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "district_name",
+        "district_capital",
+        "ada_locations_in_district"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "district_name": "Dangme East District",
+      "district_capital": "Ada Foah",
+      "ada_locations_in_district": [
+        {
+          "location_name": "Ada Kasseh",
+          "location_type": "town"
+        },
+        {
+          "location_name": "Ada",
+          "location_type": "parliament constituency"
+        },
+        {
+          "location_name": "Big Ada",
+          "location_type": "town"
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

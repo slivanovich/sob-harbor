@@ -1,0 +1,12 @@
+{
+  "grand_prix_year": 2006,
+  "circuit_name": "Melbourne Grand Prix Circuit",
+  "circuit_location_details": {
+    "location_name": "Albert Park",
+    "city": "Melbourne",
+    "city_of_port_phillip": true,
+    "state": "Victoria",
+    "country": "Australia",
+    "distance_from_melbourne_cbd_km": 3
+  }
+}

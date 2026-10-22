@@ -1,0 +1,11 @@
+{
+  "show_name": "Mystère",
+  "creator_director": "Franco Dragone",
+  "is_cirque_du_soleil_production": true,
+  "residency_status": "permanent residence",
+  "location": {
+    "city": "Las Vegas",
+    "state_country": "Nevada, United States"
+  },
+  "is_one_of_six_las_vegas_resident_shows": true
+}

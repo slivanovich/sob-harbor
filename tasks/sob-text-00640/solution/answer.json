@@ -1,0 +1,19 @@
+{
+  "person": {
+    "name": "Conrad Vogt-Svendsen",
+    "role": "assistant seamen's priest"
+  },
+  "operation": {
+    "name": "White Buses",
+    "year": 1945,
+    "purpose": "rescue concentration camp inmates in areas under Nazi control",
+    "organizations_involved": [
+      "Swedish Red Cross",
+      "Danish government"
+    ]
+  },
+  "destination_country": {
+    "name": "Sweden",
+    "status": "neutral"
+  }
+}

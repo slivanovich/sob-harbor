@@ -1,0 +1,15 @@
+{
+  "aircraft_family_name": "Airbus A320 family",
+  "features": [
+    "AIDS print button",
+    "accommodates up to 220 passengers"
+  ],
+  "passenger_capacity": {
+    "max_passengers": 220,
+    "capacity_unit": "passengers"
+  },
+  "system_details": {
+    "system_name": "Aircraft Integrated Data System (AIDS)",
+    "functionality": "allows paper data reports, DAR recordings, or ACARS transmissions of a select amount of parameters to be printed"
+  }
+}

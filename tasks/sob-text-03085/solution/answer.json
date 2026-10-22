@@ -1,0 +1,13 @@
+{
+  "person": {
+    "name": "Kevin Stanley Beeston",
+    "role_at_company": "Non-Executive Director"
+  },
+  "company": {
+    "name": "Marston Group Limited",
+    "type": "British brewery and pub operator",
+    "number_of_pubs_uk": 1700,
+    "distinction": "world's largest brewer of cask ale"
+  },
+  "answer": "Marston Group Limited"
+}

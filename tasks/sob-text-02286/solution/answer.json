@@ -1,0 +1,16 @@
+{
+  "mines_compared": [
+    {
+      "mine_name": "Lupin Mine",
+      "is_locatable_on_map": true,
+      "reason_for_locatability": "Lupin Mine was a gold mine in Nunavut Territory, Canada, and is mentioned as a starting point for a spur of the Tibbitt to Contwoyto Winter Road, indicating a fixed, physical location."
+    },
+    {
+      "mine_name": "Lost Lemon Mine",
+      "is_locatable_on_map": false,
+      "reason_for_locatability": "The Lost Lemon Mine is described as a 'legendary lost mine' and a 'lost treasure legend', implying its exact location is unconfirmed or mythical, despite being 'said to be located' in Alberta."
+    }
+  ],
+  "all_mines_locatable": false,
+  "comparison_summary": "Lupin Mine is a real, locatable place, while the Lost Lemon Mine is a legendary lost mine and therefore not reliably locatable on a map."
+}

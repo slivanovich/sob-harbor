@@ -1,0 +1,7 @@
+{
+  "query_car_model": "Rolls-Royce Wraith",
+  "query_car_year": 2013,
+  "base_car_model": "Rolls-Royce Ghost",
+  "base_car_development_name": "RR04",
+  "chassis_relationship_confirmed": true
+}

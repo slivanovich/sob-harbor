@@ -1,0 +1,18 @@
+{
+  "most_successful_test_captain": {
+    "name": "Misbah-ul-Haq",
+    "test_wins": 26
+  },
+  "replacement_captain": {
+    "name": "Sarfraz Ahmed",
+    "captaincy_format": [
+      "Test",
+      "ODI",
+      "Twenty20 International"
+    ],
+    "captaincy_order_number": 32
+  },
+  "event_details": {
+    "reason_for_replacement": "retirement of Misbah-ul-Haq"
+  }
+}

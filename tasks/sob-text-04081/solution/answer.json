@@ -1,0 +1,56 @@
+{
+  "actress_name": "Lee Bo-young",
+  "network_name": "SBS",
+  "dramas_aired_on_network": [
+    {
+      "title": "I Can Hear Your Voice",
+      "start_year": 2013,
+      "end_year": 2013,
+      "air_days": [
+        "Wednesday",
+        "Thursday"
+      ],
+      "number_of_episodes": 18
+    },
+    {
+      "title": "Whisper",
+      "start_year": 2017,
+      "end_year": 2017,
+      "air_days": [
+        "Monday",
+        "Tuesday"
+      ],
+      "number_of_episodes": 17
+    },
+    {
+      "title": "Ballad of Seodong",
+      "start_year": 2005,
+      "end_year": 2006,
+      "air_days": [
+        "Monday",
+        "Tuesday"
+      ],
+      "number_of_episodes": 55
+    },
+    {
+      "title": "Save the Last Dance for Me",
+      "start_year": 2004,
+      "end_year": 2005,
+      "air_days": [
+        "Saturday",
+        "Sunday"
+      ],
+      "number_of_episodes": 20
+    },
+    {
+      "title": "God's Gift: 14 Days",
+      "start_year": 2014,
+      "end_year": 2014,
+      "air_days": [
+        "Monday",
+        "Tuesday"
+      ],
+      "number_of_episodes": 16
+    }
+  ]
+}

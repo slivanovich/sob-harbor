@@ -1,0 +1,20 @@
+{
+  "person_names": [
+    "Cody Hodges",
+    "Seth Doege"
+  ],
+  "common_school": "Texas Tech University",
+  "school_type": "University",
+  "roles_at_school": [
+    {
+      "person_name": "Cody Hodges",
+      "role": "starting quarterback",
+      "years_active": "2005"
+    },
+    {
+      "person_name": "Seth Doege",
+      "role": "starting quarterback",
+      "years_active": "2011 and 2012"
+    }
+  ]
+}

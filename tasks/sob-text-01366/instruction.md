@@ -1,0 +1,86 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Class of '92: The Class of '92 is a 2013 British documentary film, released on 1 December 2013.  The film centres on the rise of six young Manchester United footballers – David Beckham, Nicky Butt, Ryan Giggs, Gary Neville, Phil Neville and Paul Scholes – and details their careers for Manchester United starting in 1992.
+
+Legimin Raharjo: Legimin Raharjo (born in Medan, North Sumatra 10 May 1981) is an Indonesian footballer, he normally plays as a midfielder and his height is 172 cm.  He used to play for the Indonesia national football team and he currently play for Indonesian military club PS TNI in Indonesia Soccer Championship.  People often called him by his nickname Gimin.  He took part in the Indonesian national team during the 2007 Asian Cup, with most of his time being spent on the bench.  His parents name are Harjo Sunarto (father) and Suharsini (mother).  His footballing influence is Paul Scholes and his favourite club is Manchester United.
+
+2005 FA Cup Final: The 2005 FA Cup Final was a football match played between Arsenal and Manchester United on 21 May 2005 at the Millennium Stadium, Cardiff.  It was the final match of the 2004–05 FA Cup, the 124th season of English football’s primary cup competition, the FA Cup.  Arsenal became the first team to win the FA Cup via a penalty shoot-out, despite being outplayed throughout the game, after neither side managed to score in the initial 90 minutes or in 30 minutes of extra time.  The shoot-out finished 5–4 to Arsenal, with Patrick Vieira scoring the winning penalty after Paul Scholes' shot was saved by Arsenal goalkeeper Jens Lehmann.
+
+Paul Scholes: Paul Scholes ( ; born 16 November 1974) is an English retired footballer who played his entire professional career for Manchester United.  He is currently co-owner of Salford City and a television pundit for BT Sport.  He is the most decorated English footballer of all time, and one of the most successful footballers in history, having won a total of 25 trophies, featuring 11 Premier League titles and two Champions League titles.
+
+Hotel Football: Hotel Football is an upscale football-themed hotel overlooking Old Trafford, the home of Manchester United F.C..  Owned by former players Ryan Giggs, Paul Scholes, Nicky Butt, Phil Neville, and Gary Neville as well as the GG Hospitality Management Company; the hotel was built at a cost of £24m and features 133 rooms, a restaurant called Cafe Football and a five-a-side football pitch on the roof.  the hotel is the first in a planned chain of football-themed hotels to be located near football grounds around the world.
+
+1998–99 FA Cup: The 1998-1999 FA Cup was won by Manchester United, who beat Newcastle United 2–0 in the final at the old Wembley Stadium.  The goals were scored by Teddy Sheringham after 11 minutes, less than two minutes after coming on as a substitute for Roy Keane, and Paul Scholes on 53 minutes.  It was the second leg of an historic Treble for Manchester United; having already won the Premier League title the previous weekend, they went on to win the UEFA Champions League the following Wednesday.
+
+Ball possession: Ball possession is the amount of time a team possesses the ball during a game of football.  Possession is usually expressed as a percentage (for example, 60% for team A, 40% for team B).  Historically, Dutch clubs (especially Ajax) were famous for dominating ball possession, but more recently Barcelona of La Liga became the best in maintaining ball possession; Germany's Bayern Munich came out second.  However, after the arrival of Pep Guardiola at Bayern Munich, the team is considered to dominate possession more than Barcelona, which they did during the semi-final of the 2014–15 UEFA Champions League.  Xavi is considered to be the most possessive player in recent years.  Paul Scholes of Manchester United and England, was also very famous for his passing skills and the ability to dominate ball possession.  Teams that play possession football often try to press their opponents high in the pitch, so to recover the ball rapidly.  As a result, the defensive line of team that play possession football is usually place very high in the pitch, around the halfway line and not unusually, in the opponents half.  When the team loses the ball the defensive line must move rapidly otherwise the team may be subject to dangerous counter-attacks because of their high defensive line.
+
+1999 FA Cup Final: The 1999 FA Cup Final was a football match that took place on 22 May 1999 at the old Wembley Stadium, London, to determine the winner of the 1998–99 FA Cup.  It was contested between Manchester United and Newcastle United, with goals from Teddy Sheringham and Paul Scholes giving Manchester United a 2–0 win to claim their 10th FA Cup title.  It was the second part of the "Treble" of trophies Manchester United won during the 1998–99 season, which was completed four days later, when they won the Champions League.
+
+Bill Foulkes: William Anthony "Bill" Foulkes ( or ; 5 January 1932 – 25 November 2013) was an English footballer who played for Manchester United in the Busby Babes teams of the 1950s, and also in the 1960s.  His favoured position was centre-half.  For Manchester United, he played 688 games which places him at number 4 on the all-time list of appearances behind Ryan Giggs, Bobby Charlton and Paul Scholes.  He made 3 appearances as a substitute.  He also started in every single United game in the 1957–58, 1959–60 and 1964–65 seasons.  He scored a total of 9 goals in his 18 seasons at United and helped the club win four First Division titles, one FA Cup and one European Cup.  He was capped only once for England in 1955.
+
+1995–96 Manchester United F.C. season: The 1995–96 season was Manchester United's fourth season in the Premier League, and their 21st consecutive season in the top division of English football.  United finished the season by becoming the first English team to win the Double (league title and FA Cup) twice.  Their triumph was made all the more remarkable by the fact that Alex Ferguson had sold experienced players Paul Ince, Mark Hughes and Andrei Kanchelskis before the start of the season, and not made any major signings.  Instead, he had drafted in young players like Nicky Butt, David Beckham, Paul Scholes and the Neville brothers, Gary and Phil.
+
+Question: Who is younger Paul Scholes or Legimin Raharjo ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "birth_year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    },
+    "person_2": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "birth_year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    },
+    "younger_person_name": {
+      "type": "string"
+    },
+    "age_difference_years": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "person_1",
+    "person_2",
+    "younger_person_name",
+    "age_difference_years"
+  ],
+  "additionalProperties": false
+}

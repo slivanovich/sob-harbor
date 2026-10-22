@@ -1,0 +1,17 @@
+{
+  "wrestler_name": "Matt Sydal",
+  "real_name": "Matthew Joseph Korklan",
+  "birth_date": {
+    "month": "March",
+    "day": 19,
+    "year": 1983
+  },
+  "nationality": "American",
+  "current_promotion": "Global Force Wrestling",
+  "stable_history": [
+    {
+      "stable_name": "Generation Next",
+      "join_year": 2005
+    }
+  ]
+}

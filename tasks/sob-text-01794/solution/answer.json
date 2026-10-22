@@ -1,0 +1,12 @@
+{
+  "substance_name": "Aurin",
+  "solubility_description": "freely soluble",
+  "solvent": {
+    "name": "Ethanol",
+    "common_name": "alcohol",
+    "other_names": [
+      "ethyl alcohol",
+      "drinking alcohol"
+    ]
+  }
+}

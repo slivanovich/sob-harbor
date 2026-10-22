@@ -1,0 +1,19 @@
+{
+  "album_title": "Loveless",
+  "artist": "My Bloody Valentine",
+  "release_year": 1991,
+  "recording_period": {
+    "start_year": 1989,
+    "end_year": 1991,
+    "duration_years": 2
+  },
+  "key_contributor": {
+    "name": "Kevin Shields",
+    "roles": [
+      "composer",
+      "musician",
+      "producer"
+    ]
+  },
+  "record_label": "Creation Records"
+}

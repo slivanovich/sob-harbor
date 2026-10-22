@@ -1,0 +1,23 @@
+{
+  "show_title": "Who's the Boss?",
+  "actress_in_show": "Alyssa Milano",
+  "actress_in_show_details": {
+    "name": "Alyssa Milano",
+    "prominent_role_in_show": "Samantha Micelli",
+    "other_notable_roles": [
+      "Melrose Place",
+      "Charmed",
+      "My Name is Earl",
+      "Mistresses"
+    ]
+  },
+  "other_actress_mentioned": {
+    "name": "Jamie Luner",
+    "known_for_shows": [
+      "Just the Ten of Us",
+      "Melrose Place",
+      "Profiler",
+      "All My Children"
+    ]
+  }
+}

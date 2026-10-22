@@ -1,0 +1,10 @@
+{
+  "politician_name": "Barack Obama",
+  "politician_role_in_creation": "appointed Vivek Kundra to the office",
+  "senate_service_details": {
+    "served_in_senate": true,
+    "state_represented": "Illinois",
+    "senate_term_start_year": 2005,
+    "senate_term_end_year": 2008
+  }
+}

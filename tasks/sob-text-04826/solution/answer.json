@@ -1,0 +1,14 @@
+{
+  "person_name": "Edmund Burke",
+  "political_party": "Whig Party",
+  "legislative_service": {
+    "body": "House of Commons",
+    "role": "member of parliament (MP)",
+    "duration_description": "many years"
+  },
+  "publication_role": {
+    "publication_title": "The Annual Register",
+    "role": "editor",
+    "start_year": 1758
+  }
+}

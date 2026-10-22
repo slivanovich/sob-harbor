@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Try Me (Jason Derulo song): "Try Me" is a song by American singer Jason Derulo.  It features American singer Jennifer Lopez and Norwegian DJ Matoma, who also produced the song.  It was released as the third single in Europe from his fourth studio album, "Everything Is 4" (2015).  The single was released on October 20, 2015.
+
+Madcon discography: This is a discography of official releases by Madcon, a multi-platinum award winning Norwegian urban duo, consisting of six studio albums, eighteen singles and one compilation album.  "It's All a Madcon", Madcon's debut album was released in 2004. " So Dark the Con of Man", Madcon's second album, was released in December 2007. " an inCONvenient truth", Madcon's third album, was released in December 2008. " Contraband", Madcon's fourth album, was released in December 2010. " Contakt", Madcon's fifth album, was released in June 2012. " Icon", Madcon's sixth album, was released in August 2013.
+
+Still Jennifer Lopez: Still Jennifer Lopez is a women's fragrance endorsed by American entertainer Jennifer Lopez, released by Coty, Inc. in October 2003.  The fragrance contains notes of sake, mandarin, early grey, pink freesia, honeysuckle, orange flower, sandalwood, amber and orris.  Still Jennifer Lopez followed in the footsteps of Glow by JLo, an international success that shaped the fragrance industry and began a trend in the celebrity endorsement of fragrance.  The release of Still Jennifer Lopez was not anticipated due to the negative publicity generated from Lopez's film "Gigli" (2003) and a fall-out with her manager Benny Medina.  Several fragrance industry experts noted that it could ruin the success of Glow by JLo.  It was also noted that her public image at the time would have irreparable effects on the fragrance's performance.
+
+Old Thing Back: "Old Thing Back" is a 2015 single by Norwegian DJ Matoma that is a club remix of the 2007 song "Want That Old Thing Back" by The Notorious B.I.G. featuring Ja Rule and Ralph Tresvant.  "Want That Old Thing Back" appeared on the compilation album "Greatest Hits", and is a remix of the 1995 Notorious B.I.G. single "One More Chance".  "Old Thing Back" is credited to "Matoma and The Notorious B.I.G. featuring Ja Rule & Ralph Tresvant".
+
+Jennifer Lopez Presents: Como Ama una Mujer: Jennifer Lopez Presents: Como Ama una Mujer, simply referred to as Como Ama una Mujer, is an American five-part miniseries based on the lyrics from the Jennifer Lopez album of the same name.  It aired on the Univision Television Network in the fall of 2007.  At the end of each episode, Lopez performs the theme song that inspired that episode.  The five episodes were released as a two disc DVD set on December 18, 2007 in the United States.
+
+Jennifer Lopez: Feelin' So Good: Jennifer Lopez: Feelin' So Good is the first long-form video by American singer Jennifer Lopez.  It was released in the United States on DVD and VHS on November 7, 2000 by SMV Enterprises, the home media division of Sony's music and entertainment label.  With a running time of 60 minutes, the video provides a documentary-style look at the launch of Lopez's music career, through a mixture of interviews, behind-the-scenes footage, music videos and live performances.  The interview segments were conducted by Lopez's sister Lynda, who interviews not only Lopez, but also their mother, Benny Medina and Marc Anthony.
+
+One Direction: One Direction (commonly abbreviated as 1D) are an English-Irish pop boy band based in London, composed of Niall Horan, Liam Payne, Harry Styles, Louis Tomlinson, and previously, Zayn Malik until his departure from the band on 25 March 2015.  The group signed with Simon Cowell's record label Syco Records after forming and finishing third in the seventh series of the British televised singing competition "The X Factor" in 2010.  Propelled to international success by social media, One Direction's five albums, "Up All Night" (2011), "Take Me Home" (2012), "Midnight Memories" (2013), "Four" (2014), and "Made in the A.M." (2015), topped charts in most major markets, and generated hit singles including "What Makes You Beautiful", "Live While We're Young", "Best Song Ever", "Story of My Life", and "Drag Me Down".
+
+Jennifer Lopez Collection: The Jennifer Lopez Collection is an American lifestyle brand created by American entertainer Jennifer Lopez that is sold exclusively at Kohl's department stores and at Kohls.com in the U.S.  In Mexico it is sold at department store Coppel.  In November 2010, Kohl's announced a partnership with Lopez and her then-husband Marc Anthony.  Originally marketed as "the first celebrity couple to simultaneously design collections for one retailer", following Lopez and Anthony's divorce, the lines were marked as two separate brands.  The Jennifer Lopez Collection includes contemporary sportswear, dresses, handbags, jewelry, shoes and sleepwear along with a home collection of bedding and towels, while the Marc Anthony Collection consists of sportswear, dress shirts, neckwear, accessories, suit separates, sport coats and shoes.  The collection "has been a best seller for the retailer since debuting in 2011."
+
+All Night (The Vamps and Matoma song): "All Night" is a song by British band The Vamps and Norwegian DJ Matoma, released on 14 October 2016.  The Vamps released a preview of the song on 12 October 2016.  It was later added to the BBC Radio 1 A-list.  It serves as the first single from their upcoming third studio album "Night & Day", being included on the first part of it, called "Night Edition".  It is also their first Gold-certified release in the UK since their debut single, "Can We Dance".
+
+Hakuna Matoma: Hakuna Matoma is the debut studio album produced and conducted by DJ and record producer Matoma.  It was released on 13 November 2015 through Warner Music Group.  It features collaborations and vocals from the likes of Becky Hill, Dua Lipa, Christopher, Sean Paul, KStewart, Coldplay, Astrid S, Popcaan, Wale, Akon, Madcon, Frenship, Dboy, Jason Derulo, Jennifer Lopez, Nico & Vinz, One Direction, The Notorious B.I.G., Ralph Tresvant and Ja Rule.
+
+Question: What is the name of the album by DJ Matoma with collaboration vocals of Jennifer Lopez, One Direction and Madcon?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The primary artist or producer of the album."
+    },
+    "featured_artists": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of artists who collaborated or provided vocals on the album."
+    },
+    "release_date": {
+      "type": "string",
+      "description": "The release date of the album."
+    },
+    "record_label": {
+      "type": "string",
+      "description": "The record label that released the album."
+    }
+  },
+  "required": [
+    "album_name",
+    "artist",
+    "featured_artists",
+    "release_date",
+    "record_label"
+  ],
+  "additionalProperties": false
+}

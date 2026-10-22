@@ -1,0 +1,14 @@
+{
+  "album_name": "El objeto Antes Llamado Disco",
+  "band_name": "Café Tacuba",
+  "collaborator": {
+    "name": "Gustavo Alfredo Santaolalla",
+    "nationality": "Argentine",
+    "roles": [
+      "musician",
+      "film composer",
+      "producer"
+    ]
+  },
+  "collaboration_role": "music producer"
+}

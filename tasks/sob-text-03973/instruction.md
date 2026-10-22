@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Juan Manuel Márquez vs. Juan Díaz II: Juan Manuel Márquez vs. Juan Diaz was a boxing lightweight title superfight, in a rematch of the 2009 Fight of the Year.  Marquez, went to Diaz's hometown of Houston to face him at the Toyota Center in February 2009 in what turned out to be an all-action slugfest, one that Marquez won via ninth-round knockout.
+
+Rafael Márquez (boxer): Rafael Márquez Méndez (born 25 March 1975) is a Mexican former professional boxer who competed from 1995 to 2013.  He is a two-time world champion in two weight classes, having held the IBF bantamweight title from 2003 to 2007; and the WBC, "Ring" magazine, and lineal super bantamweight titles in 2007.  He also held the IBO bantamweight title from 2005 to 2007, and challenged once for WBO featherweight title in 2011.  Márquez was known for his formidable knockout power and relentless pressure fighting style.  His older brother Juan Manuel Márquez is also a professional boxer and multiple-time world champion.
+
+Derrick Gainer: Derrick "Smoke" Gainer (born August 22, 1972, in Pensacola, Florida) is a US born boxer who started out in the featherweight division and now fights in the lightweight division.  In 2000, he defeated Freddie Norwood to win the World Boxing Association (WBA) featherweight title and after four defenses lost to Juan Manuel Márquez, who became super champion, via technical decision in 2003.  Since his defeat to Marquez, Gainer lost in a challenge to WBA titleholder Chris John via unanimous decision.  Gainer is also a colleague and good friend of Roy Jones Jr., and often fought on his under-cards.
+
+Juan Manuel Márquez vs. Juan Díaz: Juan Manuel Márquez vs. Juan Diaz was a boxing lightweight title superfight, for the vacant WBO/WBA lightweight championship, and Marquez's "The Ring" lightweight title.  The bout was held on February 28, 2009, at the Toyota Center in Houston, Texas, United States.  Marquez won the fight via technical knockout in the ninth round.
+
+Juan Manuel Márquez vs. Joel Casamayor: Juan Manuel Márquez vs. Joel Casamayor was a boxing lightweight superfight.  In 2008 reigning lightweight Champion "El Cepillo" Casamayor met former two-division World Champion Juan Manuel "Dinamita" Márquez at the MGM Grand Garden Arena in Las Vegas for a 12-round championship bout.  Casamayor was the champion of boxing's lightweight division, recognized as the title holder by Ring Magazine, even though he didn't own any of the belts from boxing's four major sanctioning bodies.
+
+Floyd Mayweather Jr. vs. Juan Manuel Márquez: Floyd Mayweather vs. Juan Manuel Márquez, billed as Number One/Número Uno, was a welterweight superfight which took place on September 19, 2009, at the MGM Grand Arena in Las Vegas between five-division world champion Floyd Mayweather Jr. (39–0, 25 KO) and three-division champion Juan Manuel Márquez (50–4–1, 37 KO).  The fight served as a return to the ring for Mayweather, who, after his knock out victory of Ricky Hatton in December 2007, announced he would take a two-year layoff from boxing which later turned into retirement.
+
+Manny Pacquiao vs. Juan Manuel Márquez IV: Manny Pacquiao vs. Juan Manuel Márquez IV, billed as Fight of the Decade, was a professional boxing match.  It was also billed unofficially as deciding the World Boxing Organization's "Champion of the Decade".  This was the fourth and final meeting between Manny Pacquiao and Juan Manuel Marquez.  The bout was held on December 8, 2012, at the MGM Grand in Las Vegas, Nevada and drew 1.15 million pay-per-view buys.
+
+Juan Manuel Márquez: Juan Manuel Márquez Méndez (born August 23, 1973) is a Mexican former professional boxer who competed from 1993 to 2014.  He is the third Mexican boxer (after Érik Morales and Jorge Arce) to become a four-weight world champion, having formerly held nine world championships including the WBA (Super), IBF, and WBO featherweight titles between 2003 and 2007; the WBC super featherweight title from 2007 to 2008; the WBA (Super), WBO, "Ring" magazine, and lineal lightweight titles between 2008 and 2012; and the WBO junior welterweight title from 2012 to 2013.
+
+Chris John (boxer): Yohannes Christian "Chris" John (born September 14, 1979) is an Indonesian former professional boxer and world champion, who competed from 1998 to 2013.
+
+Freddie Norwood: Freddie Norwood (born February 14, 1970 in St. Louis, Missouri) is a boxer in the lightweight division.  Known as "Lil Hagler", Norwood defeated Antonio Cermeño to win the WBA Featherweight Title in 1998.  He successfully defended his title eight times before losing his title by a controversial 11th-round TKO to Smoke Gainer.  Among his notable defenses were a 9th-round KO over former WBC Featherweight Title holder Takashi Koshimoto, a unanimous decision victory over former WBO Featherweight Title holder Julio Pablo Chacón and former IBF and WBA Featherweight title holder Juan Manuel Márquez.  After losing his title to Gainer, Norwood retired from boxing.
+
+Question: What was the nationality of the WBA titleholder that Derrick Gainer lost to in a unanimous decision since his defeat to Juan Manuel Márquez?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "main_boxer_name": {
+      "type": "string",
+      "description": "The name of the boxer whose record is being queried."
+    },
+    "opponent_boxer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the opponent boxer."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the opponent boxer."
+        }
+      },
+      "required": [
+        "name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "fight_details": {
+      "type": "object",
+      "properties": {
+        "outcome_for_main_boxer": {
+          "type": "string",
+          "description": "The outcome of the fight for the main boxer (e.g., 'loss')."
+        },
+        "decision_method": {
+          "type": "string",
+          "description": "The method by which the fight was decided (e.g., 'unanimous decision')."
+        },
+        "title_involved": {
+          "type": "string",
+          "description": "The boxing title that was challenged in the fight."
+        }
+      },
+      "required": [
+        "outcome_for_main_boxer",
+        "decision_method",
+        "title_involved"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "main_boxer_name",
+    "opponent_boxer",
+    "fight_details"
+  ],
+  "additionalProperties": false
+}

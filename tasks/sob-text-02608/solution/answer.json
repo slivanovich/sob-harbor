@@ -1,0 +1,24 @@
+{
+  "player_name": "Damon Stoudamire",
+  "player_status": "retired",
+  "nba_teams_played_for": [
+    "Toronto Raptors",
+    "Portland Trail Blazers",
+    "Memphis Grizzlies",
+    "San Antonio Spurs"
+  ],
+  "coaching_assignment": {
+    "team_name": "Memphis Tigers",
+    "season": "2012–13",
+    "head_coach_name": "Josh Pastner",
+    "role": "assistant coach"
+  },
+  "nba_draft_info": {
+    "draft_year": 1995,
+    "overall_pick": 7,
+    "drafting_team": "Toronto Raptors"
+  },
+  "awards_won": [
+    "1995–96 NBA Rookie of the Year Award"
+  ]
+}

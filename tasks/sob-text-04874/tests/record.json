@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "cab75844cb486b3ea3ff3a065f2343e11e14d3ba20c3e3a7d1131a11ac2b1115",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae29faf554299492dc91c38",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Farrukh Saleem",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Farrukh Saleem: Farrukh Saleem (Urdu: فاروخ سليم; PhD), is a Pakistani political scientist, game and economic theorist, financial analyst writer, and television personality.  Currently working on specialising the discipline of finance and education, he has extensively published articles on geopolitics, economic competition, and education reforms in Pakistan, and the world.  Currently, he is leading the research project on politics and education at the Center for Research and Security Studies (CRSS).\n\nInternality: An internality is the long-term benefit or cost to an individual that they do not consider when making the decision to consume a good or service.  It is related to behavioral economics through the concept of temporal discounting, in which immediate consequences of a decision are disproportionately weighed compared to the future consequences.  A potential cause is lack of access to full information regarding the associated costs and benefits prior to consumption.  This contrasts with traditional economic theory, which makes the assumption that individuals are rational decision makers who take all personal costs into account when paying for goods and services.\n\nPublic Opinion Poll Center: The Public Opinion Poll Center (POPC) is one of Egypt's most outstanding polling centers and is the first center in Egypt as well as the Arab world to use telephones as a data collection tool.  Affiliated to the Cabinet's Information and Decision Support Center (IDSC), the POPC was established in 2003, as the first poll center in Egypt responsible for studying trends of Egyptian public opinion towards different internal social, political and economic affairs.  Such trends are forwarded to decision makers to use them in the preparation of different plans and policies.  The POPC also measures public opinion preferences in order to understand priority issues and put them on the priority list of decision makers.\n\nGame theory: Game theory is \"the study of mathematical models of conflict and cooperation between intelligent rational decision-makers\".  Game theory is mainly used in economics, political science, and psychology, as well as logic, computer science and biology.  Originally, it addressed zero-sum games, in which one person's gains result in losses for the other participants.  Today, game theory applies to a wide range of behavioral relations, and is now an umbrella term for the science of logical decision making in humans, animals, and computers.\n\nSuper-recursive algorithm: In computability theory, super-recursive algorithms are a generalization of ordinary algorithms that are more powerful, that is, compute more than Turing machines.  The term was introduced by Mark Burgin, whose book \"Super-recursive algorithms\" develops their theory and presents several mathematical models.  Turing machines and other mathematical models of conventional algorithms allow researchers to find properties of recursive algorithms and their computations.  In a similar way, mathematical models of super-recursive algorithms, such as inductive Turing machines, allow researchers to find properties of super-recursive algorithms and their computations.\n\nPoint process operation: In probability and statistics, a point process operation or point process transformation is a type of mathematical operation performed on a random object known as a point process, which are often used as mathematical models of phenomena that can be represented as points randomly located in space.  These operations can be purely random, deterministic or both, and are used to construct new point processes, which can be then also used as mathematical models.  The operations may include removing or \"thinning\" points from a point process, combining or \"superimposing\" multiple point processes into one point process or transforming the underlying space of the point process into another space.  Point process operations and the resulting point processes are used in the theory of point processes and related fields such as stochastic geometry and spatial statistics.\n\nSatisficing: Satisficing is a decision-making strategy or cognitive heuristic that entails searching through the available alternatives until an acceptability threshold is met.  The term \"satisficing\", a combination of \"satisfy\" and \"suffice\", was introduced by Herbert A. Simon in 1956, although the concept was first posited in his 1947 book \"Administrative Behavior\".  Simon used satisficing to explain the behavior of decision makers under circumstances in which an optimal solution cannot be determined.  He maintained that many natural problems are characterized by computational intractability or a lack of information, both of which preclude the use of mathematical optimization procedures.  Consequently, he observed in his Nobel Prize speech that \"decision makers can satisfice either by finding optimum solutions for a simplified world, or by finding satisfactory solutions for a more realistic world.  Neither approach, in general, dominates the other, and both have continued to co-exist in the world of management science.\"\n\nTalkback Classroom: Talkback Classroom is best known as a forum for young people to interview politicians and other leading decision makers in forums recorded for broadcast and is also known as a Voice for the Voteless on the basis of its mission to provide an opportunity for young people to take part in civic dialogue.  The forum started as a classroom based project instigated by Alexandra Secondary School teacher Stephen Cutting in 1995 and provided an opportunity for secondary school students to conduct interviews (initially by telephone) with people in the news.  The activity proved very popular with students and in 1996 was first heard as a segment on ABC Regional Radio Albury Wodonga via a three way 'hook up' between students in the classroom, the segment guest or interviewee and the radio program host.  In 1997 the project became a monthly national forum for senior secondary school students, broadcast on ABCyouth network Triple J produced by Stephen Cutting who had taken up a secondment to ABC Radio.  Talkback Classroom ran as a regular segment featuring interviews recorded by student interviewers with leading political figures in Australian politics and other decision makers until 2001 when the segment became a live forum based at the National Museum of Australia and shifted to Radio National as part of the \"Life Matters\" program and ABC's digital network Fly TV.  From 2001 to 2008 the forum was held at the National Museum of Australia, and involved secondary school students from around Australia interviewing various prominent politicians, business and community leaders on current affairs issues.  Guests included two heads of government: John Howard (Australia) and Helen Clark (New Zealand), ministers and shadow ministers and many other decision makers and opinion shapers\n\nIntelligence cycle: The traditional Intelligence cycle is the fundamental cycle of intelligence processing in a civilian or military intelligence agency or in law enforcement as a closed path consisting of repeating nodes.  The stages of the intelligence cycle include the issuance of requirements by decision makers, collection, processing, analysis, and publication of intelligence.  The circuit is completed when decision makers provide feedback and revised requirements.  The intelligence cycle is also called the Intelligence Process by the U.S. Department of Defense (DoD) and the uniformed services.  The intelligence cycle is an effective way of processing information and turning it into relevant and actionable intelligence.\n\nMathematical model: A mathematical model is a description of a system using mathematical concepts and language.  The process of developing a mathematical model is termed mathematical modeling.  Mathematical models are used in the natural sciences (such as physics, biology, Earth science, meteorology) and engineering disciplines (such as computer science, artificial intelligence), as well as in the social sciences (such as economics, psychology, sociology, political science).  Physicists, engineers, statisticians, operations research analysts, and economists use mathematical models most extensively .  A model may help to explain a system and to study the effects of different components, and to make predictions about behaviour.",
+    "question": "Which Pakistani television personality specializes in the study of mathematical models of conflict and cooperation between intelligent rational decision makers?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the individual."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the person."
+        },
+        "specialization_field": {
+          "type": "string",
+          "description": "The specific field of study or theory the person specializes in."
+        },
+        "specialization_description": {
+          "type": "string",
+          "description": "A description of the specialized field, as defined in the context."
+        },
+        "is_television_personality": {
+          "type": "boolean",
+          "description": "Indicates if the person is a television personality."
+        }
+      },
+      "required": [
+        "person_name",
+        "nationality",
+        "specialization_field",
+        "specialization_description",
+        "is_television_personality"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Farrukh Saleem",
+      "nationality": "Pakistani",
+      "specialization_field": "Game theory",
+      "specialization_description": "the study of mathematical models of conflict and cooperation between intelligent rational decision-makers",
+      "is_television_personality": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "broadcaster": {
+    "name": "BBC",
+    "type": "British public service broadcaster",
+    "headquarters": {
+      "building": "Broadcasting House",
+      "city": "London",
+      "country": "British"
+    }
+  },
+  "contributor": {
+    "name": "Robert Banks Stewart",
+    "nationality": "Scottish",
+    "professions": [
+      "screenwriter",
+      "television producer",
+      "former journalist"
+    ]
+  },
+  "contribution_area": "drama"
+}

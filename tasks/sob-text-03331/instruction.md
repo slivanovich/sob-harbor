@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Achabal Gardens: Achabal Garden is one of the most important and splendid tourist places in the state of Kashmir and is about 8 kilometers away from Anantnag.  It was in the state of Kashmir that the Mughal style gardens was brought to perfection and Achabal is one such masterpiece.  This place is famous all over due to an ancient spring surrounded by a terrace garden, which was developed by Mughals.  The historical significance of this place strikes the visitor with awe.Achabal Garden, once the pleasure retreat of the Mughal Empress Noor Jahan is a beautifully created garden in Kashmir with its own special allure and character.  Its picturesque beauty makes it one of the best Mughal gardens of the Indian subcontinent.  It is difficult to describe in words the mesmerizing beauty of this Mughal style garden.  The upper portion of the garden is popularly known as `Bag-e-Begum Abad` and was developed by Malika Noor Jehan Begum in 1620 A.D. Later it became renowned as Sahib Abad in which there was a `Hamam` or treasure of water getting heat from a logical lamp or `tosng`.  The garden was created at the site of a powerful spring, which enters the garden as a waterfall.  The design of this wonderfully created garden is ascribed to the beloved wife of the Mughal Emperor Jahangir.  The Garden of Achabal is located at the foot of a hill covered with dense forest, which is 8 kilometers from Anantnag and 56 kilometers from Srinagar.  The daughter of the Mughal monarch Shah Jahan built the garden in the year 1620 with cascading outpourings and pavilions.  The most beautiful of all springs is Achabal and it gushes out of the Sosanwar Hill.  In the garden of Achabal the water gushes out of the spasm with great vigor throughout the entire year.  In the later ages the Mughal prince Dara Shikoh built a mosque in the garden.  There is also a trout farm for seed fish nearby.  There are tourist bungalows and tourist huts nearby where the tourists can spend some moments in the lap of the beautiful setup.  This garden is universally regarded as a visual treat for the eyes.  This garden is also well adorned with sprawling Chinar trees.  Stepped terraces, ornamental shrubs and conventional elegance, are the added attraction, which not only mesmerizes one but also attracts thousands of tourists from all over the globe every year.  Accommodation is available at the nearby tourist bungalows or rest houses.  Achabal not only serves as a breathtaking splendor but also is a reviving experience for all tourists.
+
+Siege of Bijapur: The Siege of Bijapur began in March 1685 and ended in September 1686 with a Mughal victory.  The siege began when the Mughal Emperor Aurangzeb dispatched his son Muhammad Azam Shah with a force of nearly 50,000 men to capture Bijapur Fort and defeat Sikandar Adil Shah, the then ruler of Bijapur who refused to be a vassal of the Mughal Empire.  The Siege of Bijapur was among the longest military engagements by the Mughals, lasting more than 15 months until the Mughal Emperor Aurangzeb personally arrived to organize a victory.
+
+Siege of Golconda: In January 1687, the Mughal Emperor Aurangzeb led his forces to besiege the Qutb Shahi dynasty at Golconda Fort (also known as the "Diamond Capital" and the only source of diamonds at that time) and was home to the Kollur Mine.  The ruler of Golconda was Abul Hasan Qutb Shah.  Aurangzeb and the Mughal army had successfully conquered two Muslim kingdoms: Nizams of Ahmednagar and the Adilshahis of Bijapur.  It was only a matter of time that the Mughal army arrived at Golconda Fort.  The siege of Golconda lasted 8 months and on various occasions, it had pushed the massive Mughal army to its limits, in fact, the Golconda Fort was probably the most impregnable fort in South Asia.  Aurangzeb and the Mughals entered Golconda through a decisive victory but through the secret treachery of Sarandaz Khan, a military official in the army of the Qutb Shahi dynasty, who was bribed to open one gate and let the Mughals enter the fort.  This battle was important for both sides, because of the place being the only source of diamonds,the fort had good defenses, having spikes on the front gate to defend themselves for the Mughal elephants,and also having corners where the walls were cut like diamonds, and whenever a guard could spot any intrusion, he would clap and the sound of his clapping would echo above and below to alert other guards instantly.
+
+Shah Jahan: Shahab-ud-din Muhammad Khurram (5 January 1592  – 22 January 1666) better known by his regnal name Shah Jahan (Persian: "King of the World"), was the fifth Mughal emperor, who reigned from 1628 to 1658.
+
+Umarkot Fort: Umarkot is a fort located in Umerkot, Sindh, also called Amarkot.  Emperor Akbar was born in Umarkot Fort when his father Humayun fled from the military defeats at the hands of Sher Shah Suri on 15 October 1542.  Rana Parasad of Umarkot, who had risen to power had given refuge to Mughal Emperor Humayun and it was there Hamida Bano Begum gave birth to young Akbar.  Later the Mughal Emperor Akbar became the Shahenshah of Hind and was a popular figure with both Hindus and Muslims.  Umerkot has many sites of historical significance such as Mughal emperor Akbar's birthplace at Umarkot Fort.  In 1746, the Mughal Subahdar, Noor Mohammad Kalhoro, built a fort at the location.  Later the British would take over that area.
+
+Gulrukh Begum: Gulrukh Begum ("The rose-cheeked princess") was a Mughal princess and a daughter of Emperor Babur, the founder of the Mughal Empire and the first Mughal emperor.  She was also the younger half-sister of the second Mughal emperor Humayun and an aunt of third Mughal emperor Akbar.
+
+Kashmiri Gate, Delhi: The Kashmere Gate or Kashmiri Gate is a gate located in Delhi, it is the northern gate to the historic walled city of Delhi.  Built by the Mughal Emperor Shah Jahan, the gate is so named because it used to start a road that led to Kashmir.
+
+Mirza Ghazi Beg: Mirza Ghazi Beg Tarkhan (Persian: میرزا غازى بیگ ترخان‎ ‎ ) of Tarkhan Dynasty in Sindh ruled from the capital city of Thatta.  He was the most powerful Mughal governor who administered Sindh, during whose rule the region had become fiercely loyal to the Mughals.  In Sindh a network of small and large forts manned by cavalry and musketeers further extended Mughal power during the reign of Mughal Emperor Shah Jahan.  He was a descendant of the powerful Mirza clan which had arrived in the region with the Mughal Emperor "Mirza" Babur Beg who had conquered South Asia in 1526.  Mirza Ghazi Beg spoke nearly three languages which include Sindhi (his native-tongue), Persian (the official language of the Mughal Empire) and some Turkic.
+
+Hindal Mirza: Abu'l-Nasir Muhammad (4 March 1519 – 20 November 1551) better known by the sobriquet, Hindal (Turkish: "Taker of India"), was a Mughal prince and the youngest son of Emperor Babur, the founder of the Mughal Empire and the first Mughal emperor.  He was also the older brother of Gulbadan Begum (the author of "Humayun-nama"), the younger half-brother of the second Mughal emperor Humayun, as well as the paternal uncle and father-in-law of the third Mughal emperor Akbar.
+
+Bhati Gate: Bhati Gate (Urdu: ‎ ) is one of six remaining historic gates of the Walled City of Lahore in Lahore, Pakistan.  The gate is located near Data Darbar.  It is similar in design to Kashmiri Gate.  Bhati Gate also serves as Union Council 29 (UC 29) in Tehsil Ravi of Lahore City District.
+
+Question: What number Mughal emperor built the Kashmiri Gate?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "emperor_name": {
+      "type": "string",
+      "description": "The name of the Mughal emperor who built the structure."
+    },
+    "emperor_regnal_number": {
+      "type": "integer",
+      "description": "The regnal number of the Mughal emperor."
+    },
+    "structure_built": {
+      "type": "string",
+      "description": "The name of the gate or structure built."
+    }
+  },
+  "required": [
+    "emperor_name",
+    "emperor_regnal_number",
+    "structure_built"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "question_statement": "Is it true or false that both the Harrier and English Springer Spaniel are hound dogs?",
+  "is_true": false,
+  "reasoning": "The Harrier is described as a 'hound class' dog breed, but the English Springer Spaniel is described as a 'gun dog in the Spaniel family', not a hound dog.",
+  "breeds_evaluated": [
+    {
+      "breed_name": "Harrier",
+      "breed_type": "hound class"
+    },
+    {
+      "breed_name": "English Springer Spaniel",
+      "breed_type": "gun dog"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "artist_name": "Thea Gilmore",
+  "ep_name": "The Threads EP",
+  "tour_details": {
+    "year": 2007,
+    "season": "spring"
+  },
+  "included_traditional_song": true,
+  "traditional_song_info": {
+    "song_title": "The Parting Glass",
+    "origin": "Scottish"
+  }
+}

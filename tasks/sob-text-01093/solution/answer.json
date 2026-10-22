@@ -1,0 +1,15 @@
+{
+  "film_one_details": {
+    "title": "In the Basement",
+    "release_year": 2014,
+    "country_of_origin": "Austrian",
+    "director": "Ulrich Seidl"
+  },
+  "film_two_details": {
+    "title": "(T)ERROR",
+    "release_year": 2015,
+    "country_of_origin": "American",
+    "director": "Lyric R. Cabral and David Felix Sutcliffe"
+  },
+  "shared_category": "documentary film"
+}

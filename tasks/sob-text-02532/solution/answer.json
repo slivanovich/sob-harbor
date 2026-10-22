@@ -1,0 +1,11 @@
+{
+  "theme_park_name": "Universal Studios Beijing",
+  "status": "upcoming",
+  "location": {
+    "city": "Beijing",
+    "country": "China"
+  },
+  "projected_opening_year": 2020,
+  "projected_rank_in_world": 5,
+  "projected_rank_in_asia": 3
+}

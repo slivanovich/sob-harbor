@@ -1,0 +1,13 @@
+{
+  "actress_name": "Rosario Dawson",
+  "birth_details": {
+    "birth_month": "May",
+    "birth_year": 1979
+  },
+  "film_details": {
+    "film_title": "Josie and the Pussycats",
+    "role_in_film": "the Pussycats",
+    "release_year": 2001
+  },
+  "meets_all_criteria": true
+}

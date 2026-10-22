@@ -1,0 +1,22 @@
+{
+  "institution_name": "Pratt Institute",
+  "institution_attributes": {
+    "is_private": true,
+    "is_nonsectarian": true,
+    "location": "Brooklyn, New York, United States"
+  },
+  "associated_artist": {
+    "artist_name": "Swoon",
+    "education_details": {
+      "degree": "BA in fine arts",
+      "year_received": 2002
+    },
+    "major_museum_solo_shows": [
+      {
+        "show_title": "Submerged Motherlands",
+        "museum_name": "Brooklyn Museum",
+        "year": 2014
+      }
+    ]
+  }
+}

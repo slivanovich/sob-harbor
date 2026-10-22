@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Berkeley in the Sixties: Berkeley in the Sixties is a 1990 documentary film by Mark Kitchell.  The film highlights the origins of the Free Speech Movement beginning with the May 1960 House Un-American Activities Committee hearings at San Francisco City Hall, the development of the counterculture of the 1960s in Berkeley, California, and ending with People's Park in 1969.  The film features 15 student activists and archival footage of Mario Savio, Todd Gitlin, Joan Baez, the Rev. Dr. Martin Luther King Jr., Huey Newton, Allen Ginsberg, Gov. Ronald Reagan and the Grateful Dead.  The film is dedicated to Fred Cody, founder of Cody's Books.  It was nominated for an Academy Award for Best Documentary Feature.
+
+List of RAAF inland aircraft fuel depots: In 1939, with the commencement of World War II, the Chief of the Air Staff of the Royal Australian Air Force (RAAF) identified the necessity to increase bulk storage and supply of aviation fuel across Australia for the purpose of defending Australia.  An investigative committee was created to determine the most strategic, safe locations and the design of the storage facilities.  It identified that 31 inland aircraft fuel depots (IAFD's) were required to be constructed for the storage of aircraft fuel, built from brick, concrete and steel.
+
+Bolotnaya Square case: The Bolotnaya Square case is a criminal case by the Investigative Committee of the Russian Federation on the counts of alleged massive riot (article 212 of the Russian Criminal code) and alleged violence against police (article 318 of the Russian Criminal code) during the "March of the Millions" on May 6, 2012 on the Bolotnaya square in Moscow.  The demonstration was one of the biggest protests in Russia since the 1990s.
+
+Edward E. Cox: Edward Eugene "Eugene" or "Goober" Cox (April 3, 1880 – December 24, 1952) served as a U.S. Representative from Georgia for nearly twenty-eight years.  A conservative Democrat who supported segregation and opposed President Franklin Delano Roosevelt's "New Deal," Cox became the most senior Democrat on the House Committee on Rules.  Two special investigative committees that he chaired were heavily criticized as result-oriented persecutions of those Cox did not like.  A failed attempt to create another such committee would turn out to have far-reaching consequences: in 1941, with American entry into World War II seeming inevitable, Cox proposed an investigative committee, similar to the Civil War-era Joint Committee on the Conduct of the War, to deal with matters of national defense.  When Roosevelt learned of Cox's intentions, he pre-empted them by agreeing to a similar proposal from Missouri Senator Harry S. Truman; the Truman Committee would come to be seen as a significant asset to the war effort, and its chairman - a little-known "backbencher" at the time of its founding - would become Roosevelt's Vice President and, after his death in 1945, President of the United States.
+
+Canwell Committee: The Interim Committee on Un-American Activities, most commonly known as the Canwell Committee, (1947-1949) was a special investigative committee of the Washington State Legislature which in 1948 investigated the influence of the Communist Party USA in Washington state.  Named after its chairman, Albert F. Canwell, the committee concentrated upon communist influence in the Washington Commonwealth Federation and its relationship to the Democratic Party in Washington, as well alleged Communist Party membership of certain faculty members at the University of Washington in Seattle.
+
+House Un-American Activities Committee: The House Un-American Activities Committee (HUAC; a.k.a., House Committee on Un-American Activities, HUAC or HCUA) was an investigative committee of the United States House of Representatives.  The HUAC was created in 1938 to investigate alleged disloyalty and subversive activities on the part of private citizens, public employees, and those organizations suspected of having communist ties.  In 1969, the House changed the committee's name to "House Committee on Internal Security".  When the House abolished the committee in 1975, its functions were transferred to the House Judiciary Committee.
+
+Don Lee (politician): Don Lee (born 28 February 1960 in Blue Island, Illinois) was the state representative of District 28, consisting of the Columbine/Ken Caryl area of Jefferson County, Colorado, United States from 1998 to 2005.  Columbine High School is located within the district he represented.  He is best known for assisting victim parents from the Columbine High School Massacre in approving the "Respect Life" license plate, raising funds for victims of the Columbine High School Massacre as well as attempting to form an investigative committee to explore any "unanswered questions" about the attacks on Columbine and its aftermath.  Lee was reelected to his fourth term to the Colorado State House of Representatives in 2004 whereupon he promptly resigned therefore paving the way for a Republican vacancy committee to name Jim Kerr as his replacement.  He currently is vice president of government affairs for K12, Inc.
+
+Law enforcement in Russia: Law enforcement in the Russian Federation is the responsibility of a variety of different agencies.  The Russian police (formerly the "militsiya ") are the primary law enforcement agency, the Investigative Committee of Russia (the "Russian FBI") is the main investigative agency, and the Federal Security Service (formerly the KGB) is the main domestic security agency.
+
+Alexander Bastrykin: Alexander Ivanovich Bastrykin (Russian: Алекса́ндр Ива́нович Бастры́кин , born August 27, 1953 in Pskov) is a Russian official, former First Deputy Prosecutor General of Russia, and former Chairman of The Investigative Committee of the Prosecutor General's Office.  Since January 15, 2011, he is the Head of The Investigative Committee of Russia.
+
+Investigative Committee of Russia: The Investigative Committee of the Russian Federation (Russian: Следственный комитет Российской Федерации ) has since January 2011 been the main federal investigating authority in Russia.  Its name ("Sledstvennyi komitet") is usually abbreviated to "Sledkom".  The agency replaced the Russian Prosecutor General's Investigative Committee and operates as Russia's anti-corruption agency.  It is answerable to the President of Russia and has statutory responsibility for inspecting the police forces, combating police corruption and police misconduct and is responsible for conducting investigations into local authorities and federal governmental bodies.
+
+Question: When was the investigative committee appearing the the 1990 documentary Berkeley in the Sixties abolished?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "documentary_title": {
+      "type": "string",
+      "description": "The title of the documentary film."
+    },
+    "investigative_committee_name": {
+      "type": "string",
+      "description": "The name of the investigative committee featured in the documentary."
+    },
+    "abolition_year": {
+      "type": "integer",
+      "description": "The year the investigative committee was abolished."
+    },
+    "functions_transferred_to": {
+      "type": "string",
+      "description": "The entity to which the committee's functions were transferred upon its abolition."
+    }
+  },
+  "required": [
+    "documentary_title",
+    "investigative_committee_name",
+    "abolition_year",
+    "functions_transferred_to"
+  ],
+  "additionalProperties": false
+}

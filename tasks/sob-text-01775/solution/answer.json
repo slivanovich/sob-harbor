@@ -1,0 +1,9 @@
+{
+  "film_title": "Romeo and Juliet",
+  "production_year": 1968,
+  "producer": {
+    "name": "Franco Zeffirelli",
+    "nationality": "Italian"
+  },
+  "features_moresca": true
+}

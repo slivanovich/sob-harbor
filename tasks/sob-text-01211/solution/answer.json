@@ -1,0 +1,13 @@
+{
+  "volcano_name": "Parícutin",
+  "location": {
+    "country": "Mexico",
+    "state_or_region": "Michoacán"
+  },
+  "origin_event_description": "surged suddenly from the cornfield of local farmer Dionisio Pulido in 1943",
+  "featured_in_movie": {
+    "movie_title": "Captain from Castile",
+    "movie_release_year": 1947,
+    "was_erupting_during_filming": true
+  }
+}

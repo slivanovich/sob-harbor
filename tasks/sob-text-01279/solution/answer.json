@@ -1,0 +1,12 @@
+{
+  "mission_info": {
+    "mission_identifier": "STS-7",
+    "launch_year": 1983,
+    "space_shuttle_orbiter": "Challenger"
+  },
+  "astronaut": {
+    "full_name": "Sally Kristen Ride",
+    "key_achievement": "first American woman in space"
+  },
+  "event_description": "STS-7 carried the first American woman in space."
+}

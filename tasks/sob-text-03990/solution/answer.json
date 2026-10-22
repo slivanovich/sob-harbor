@@ -1,0 +1,14 @@
+{
+  "film_details": {
+    "title": "Up",
+    "release_year": 2009,
+    "animation_studio": "Pixar Animation Studios"
+  },
+  "character_details": {
+    "name": "Carl Fredricksen",
+    "original_voice_actor": "Ed Asner"
+  },
+  "persian_dubbing_details": {
+    "voice_actor": "Mehrdad Raissi Ardali"
+  }
+}

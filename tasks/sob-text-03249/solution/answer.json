@@ -1,0 +1,9 @@
+{
+  "person_name": "Al Clark",
+  "film_title": "Chopper",
+  "connection_details": {
+    "role": "producer",
+    "film_genre": "crime drama",
+    "film_release_year": 2000
+  }
+}

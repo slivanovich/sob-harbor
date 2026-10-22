@@ -1,0 +1,16 @@
+{
+  "person_identified": "Penelope Fitzgerald",
+  "was_also_a_poet": true,
+  "other_professions": [
+    "novelist",
+    "essayist",
+    "biographer"
+  ],
+  "compared_person": "Emma Goldman",
+  "compared_person_was_poet": false,
+  "compared_person_professions": [
+    "anarchist political activist",
+    "writer",
+    "anarchist philosopher"
+  ]
+}

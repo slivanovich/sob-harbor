@@ -1,0 +1,12 @@
+{
+  "church_name": "Reformed Church, Copenhagen",
+  "instigator_role": "consort",
+  "instigator_name": "Charlotte Amalie",
+  "king_name": "Christian V",
+  "king_reign_start_year": 1670,
+  "king_reign_end_year": 1699,
+  "king_countries": [
+    "Denmark",
+    "Norway"
+  ]
+}

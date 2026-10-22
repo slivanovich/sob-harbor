@@ -1,0 +1,17 @@
+{
+  "officer_name": "Tony Hibbert",
+  "officer_nationality": "British",
+  "conflict": "Second World War",
+  "invasion_details": {
+    "name": "Battle of France",
+    "also_known_as": "Fall of France",
+    "start_date": "10 May 1940",
+    "duration_weeks": 6,
+    "countries_invaded": [
+      "France",
+      "Belgium",
+      "Luxembourg",
+      "Netherlands"
+    ]
+  }
+}

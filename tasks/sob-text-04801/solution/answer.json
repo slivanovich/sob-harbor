@@ -1,0 +1,20 @@
+{
+  "actor_name": "Walter Brennan",
+  "film_title": "The North Star",
+  "film_year": 1943,
+  "awards_won_before_film": 3,
+  "award_details": [
+    {
+      "award_year": 1936,
+      "award_category": "Best Supporting Actor"
+    },
+    {
+      "award_year": 1938,
+      "award_category": "Best Supporting Actor"
+    },
+    {
+      "award_year": 1940,
+      "award_category": "Best Supporting Actor"
+    }
+  ]
+}

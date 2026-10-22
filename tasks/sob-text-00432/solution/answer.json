@@ -1,0 +1,31 @@
+{
+  "club_name": "Standard Liège",
+  "season": "2007–08",
+  "league_achievement": {
+    "title_won": "Belgian First Division",
+    "number_of_titles": 9,
+    "matches_lost": 1
+  },
+  "breakthrough_players": [
+    {
+      "player_name": "Marouane Fellaini",
+      "position": "midfielder",
+      "age_group": "teenage"
+    },
+    {
+      "player_name": "Steven Defour",
+      "position": "midfielder",
+      "age_group": "teenage"
+    }
+  ],
+  "other_notable_players": [
+    {
+      "player_name": "Milan Jovanović",
+      "position": "striker"
+    },
+    {
+      "player_name": "Dieumerci Mbokani",
+      "position": "striker"
+    }
+  ]
+}

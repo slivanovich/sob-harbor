@@ -1,0 +1,13 @@
+{
+  "school_name": "Toronto School",
+  "school_type": [
+    "communication theory",
+    "literary criticism"
+  ],
+  "originator_name": "Eric A. Havelock",
+  "originator_nationality": "British",
+  "countries_lived_in": [
+    "Canada",
+    "United States"
+  ]
+}

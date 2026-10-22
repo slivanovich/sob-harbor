@@ -1,0 +1,14 @@
+{
+  "founder": {
+    "name": "Mary Baker Eddy"
+  },
+  "church": {
+    "name": "Church of Christ, Scientist",
+    "founding_year": 1879,
+    "founding_location": "Boston, Massachusetts"
+  },
+  "property_owned": {
+    "name": "Christian Science Center",
+    "location": "Boston, Massachusetts"
+  }
+}

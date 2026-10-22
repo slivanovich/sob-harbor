@@ -1,0 +1,12 @@
+{
+  "series_title": "SpongeBob SquarePants",
+  "season_details": {
+    "season_number": 5,
+    "air_dates": {
+      "start_date": "February 19, 2007",
+      "end_date": "July 19, 2009"
+    },
+    "episode_count": 20
+  },
+  "first_episode_name": "Friend or Foe"
+}

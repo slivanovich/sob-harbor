@@ -1,0 +1,14 @@
+{
+  "shopping_mall": {
+    "name": "Bayshore Shopping Centre",
+    "is_major_mall": true
+  },
+  "transit_station": {
+    "name": "Bayshore station"
+  },
+  "location": {
+    "city": "Ottawa",
+    "province_state": "Ontario",
+    "country": "Canada"
+  }
+}

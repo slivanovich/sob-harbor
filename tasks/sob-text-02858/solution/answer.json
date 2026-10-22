@@ -1,0 +1,15 @@
+{
+  "hospital_name": "The Queen's Medical Center",
+  "founding_year": 1859,
+  "founders": [
+    {
+      "name": "Emma",
+      "title": "Queen"
+    },
+    {
+      "name": "Kamehameha IV",
+      "title": "King"
+    }
+  ],
+  "monarch_ordinal": "fourth"
+}

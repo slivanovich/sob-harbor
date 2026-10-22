@@ -1,0 +1,11 @@
+{
+  "person_name": "Walter Thane Baker",
+  "birth_location": {
+    "city": "Elkhart",
+    "state": "Kansas"
+  },
+  "population_data": {
+    "census_year": 2010,
+    "city_population": 2205
+  }
+}

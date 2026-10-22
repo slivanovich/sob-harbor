@@ -1,0 +1,13 @@
+{
+  "organization_1": {
+    "name": "Israelite School of Universal Practical Knowledge",
+    "type": "non-profit organization",
+    "location_city_state": "Upper Darby, Pennsylvania"
+  },
+  "organization_2": {
+    "name": "Southern Poverty Law Center",
+    "type": "legal advocacy organisation",
+    "location_city_state": "Montgomery, Alabama"
+  },
+  "common_country": "United States"
+}

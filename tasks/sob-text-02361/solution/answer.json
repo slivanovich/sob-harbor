@@ -1,0 +1,17 @@
+{
+  "question_asked": "Are Maurice Maeterlinck and Kingsley Amis both English writers?",
+  "answer": false,
+  "writers": [
+    {
+      "name": "Maurice Maeterlinck",
+      "nationality": "Belgian",
+      "is_english": false
+    },
+    {
+      "name": "Kingsley Amis",
+      "nationality": "English",
+      "is_english": true
+    }
+  ],
+  "reasoning": "Maurice Maeterlinck was a Belgian playwright, while Kingsley Amis was an English novelist. Therefore, they are not both English writers."
+}

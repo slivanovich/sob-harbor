@@ -1,0 +1,23 @@
+{
+  "poem_series_name": "Horae Canonicae",
+  "poet_details": {
+    "name": "W. H. Auden",
+    "nationality": "English-American",
+    "known_for_poem": "Funeral Blues"
+  },
+  "composition_period": {
+    "start_year": 1949,
+    "end_year": 1955
+  },
+  "number_of_poems": 7,
+  "individual_poem_titles": [
+    "Prime",
+    "Terce",
+    "Sext",
+    "Nones",
+    "Vespers",
+    "Compline",
+    "Lauds"
+  ],
+  "title_reference": "canonical hours of the Christian Church"
+}

@@ -1,0 +1,22 @@
+{
+  "common_characteristics": [
+    "flowering plants",
+    "perennials",
+    "genera"
+  ],
+  "shared_botanical_classification": {
+    "is_flowering_plant": true,
+    "is_perennial": true,
+    "is_genus": true
+  },
+  "compared_plant_genera": [
+    {
+      "name": "Dionysia",
+      "family": "Primulaceae"
+    },
+    {
+      "name": "Hesperaloe",
+      "family": "Asparagaceae"
+    }
+  ]
+}

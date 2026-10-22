@@ -1,0 +1,12 @@
+{
+  "film_details": {
+    "title": "The Possession",
+    "release_year": 2012,
+    "genre": "supernatural horror",
+    "inspiration_source": "Dybbuk box"
+  },
+  "producer_info": {
+    "name": "Sam Raimi"
+  },
+  "answer": "Sam Raimi"
+}

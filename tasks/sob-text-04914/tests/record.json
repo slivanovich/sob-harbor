@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "record_id": "f50142e757e7002035f0a799061b8fccfb0266ddc9bbe206647418490719b700",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae01839554299025d62a3ef",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Sydney",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Bullhorn, Inc.: Bullhorn is a cloud computing company headquartered inBoston, Massachusetts.  The company provides customer relationship management (CRM) and operations software for the staffing industry.  As of 2017, the company reported more than 7,000 customers in more than 150 countries.  Besides its Boston headquarters, the company has operations in St. Louis, London, Vancouver and Sydney.\n\nServiceNow: ServiceNow, Inc. is a cloud computing company headquartered in Santa Clara, California.  It was founded in 2004 by Fred Luddy, the previous CTO of software companies Peregrine Systems and Remedy Corporation.  ServiceNow is listed on the New York Stock Exchange and is a constituent of the Russell 1000 index.\n\nSalesforce.com: salesforce.com, inc. (styled in its logo as sales\"ƒ\"orce; abbreviated usually as \"SF\" or \"SFDC\") is an American cloud computing company headquartered in San Francisco, California.  Though its revenue comes from a customer relationship management (CRM) product, Salesforce also capitalizes on commercial applications of social networking through acquisition.  As of early 2016, it is one of the most highly valued American cloud computing companies with a market capitalization above $61 billion.  In August 2017, Salesforce announced that it had breached the $10 billion revenue run rate becoming the first enterprise cloud company to do so.\n\nNew South Wales: New South Wales (abbreviated as NSW) is a state on the east coast of :Australia.  It borders Queensland to the north, Victoria to the south, and South Australia to the west.  Its coast borders the Tasman Sea to the east.  The Australian Capital Territory is an enclave within the state.  New South Wales' state capital is Sydney, which is also Australia's most populous city.  In March 2014 , the estimated population of New South Wales was 7.5 million, making it Australia's most populous state.  Just under two-thirds of the state's population, 4.67 million, live in the Greater Sydney area.  Inhabitants of New South Wales are referred to as \"New South Welshmen\".\n\nVelocify: Velocify, Inc. is a cloud computing company headquartered in El Segundo, California that provides cloud-based intelligent sales automation software designed for fast-paced sales environments.\n\nBatoi Systems: Batoi Systems Private Limited is a global cloud computing company headquartered in Bhubaneswar, India.  Batoi has been profiled as one of the top 20 cloud computing companies by silicon review magazine and profiled among the 50 Most Promising Big Data Companies by CIO Review\n\nAppland: Appland is a cloud computing company headquartered in Gothenburg, Sweden, that develops white label app store solutions for mobile operators, mobile devices, online communities, smart TVs, connected vehicles and internet of things.\n\nAlibaba Cloud: Alibaba Cloud (; literally: Ali Cloud; formerly: Aliyun), a subsidiary of Alibaba Group, is a global cloud computing company headquartered in Hangzhou.  Alibaba Cloud provides a suite of cloud computing services that covers elastic computing, object storage, relational database, big data analysis, and artificial intelligence in eight geographical regions around the globe.  Established in September 2009, Alibaba Cloud began as a private cloud to serve the internal demands of Alibaba's e-commerce businesses, including Taobao, Tmall, and Alipay.\n\nRollbase: Rollbase is a platform as a service (PaaS) software solution.  It was founded by the eponymous software vendor based in Saratoga, California acquired by Progress Software (Nasdaq: PRGS) in June 2013, a global cloud computing company headquartered in Bedford, Massachusetts.  Founded in 2007, the Rollbase platform allows users to create Software as a Service (SaaS) business applications using point and click, drag and drop tools in a standard web browser with minimal programming.  In April 2013 Rollbase was recognized by Gartner as a \"2013 Cool Vendor in PaaS\".\n\nSydney: Sydney ( ) is the state capital of New South Wales and the most populous city in Australia and Oceania.  Located on Australia's east coast, the metropolis surrounds the world's largest natural harbour and sprawls about 70 km on its periphery towards the Blue Mountains to the west, Hawkesbury to the north and Macarthur to the south.  Sydney is made up of 658 suburbs, 40 local government areas and 15 contiguous regions.  Residents of the city are known as \"Sydneysiders\".  As at June 2016 Sydney's estimated population was 5,029,768.",
+    "question": "Bullhorn is a cloud computing company headquartered inBoston, Massachusetts, besides its Boston headquarters, the company has operations in St. Louis, London, Vancouver and which state capital of New South Wales and the most populous city in Australia and Oceania?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "The name of the company."
+        },
+        "headquarters_location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the company is headquartered."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the company is headquartered."
+            }
+          },
+          "required": [
+            "city",
+            "state"
+          ],
+          "additionalProperties": false
+        },
+        "additional_operation_locations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other cities where the company has operations, excluding the headquarters."
+        },
+        "identified_location": {
+          "type": "object",
+          "properties": {
+            "city_name": {
+              "type": "string",
+              "description": "The name of the city that matches the description in the question."
+            },
+            "is_state_capital_of": {
+              "type": "string",
+              "description": "The state or territory for which the city is the capital."
+            },
+            "is_most_populous_in_australia_oceania": {
+              "type": "boolean",
+              "description": "Indicates if the city is the most populous in Australia and Oceania."
+            },
+            "population_details": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "description": "The estimated population of the city."
+                },
+                "as_of_date": {
+                  "type": "string",
+                  "description": "The date as of which the population count was estimated."
+                }
+              },
+              "required": [
+                "count",
+                "as_of_date"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "city_name",
+            "is_state_capital_of",
+            "is_most_populous_in_australia_oceania",
+            "population_details"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "company_name",
+        "headquarters_location",
+        "additional_operation_locations",
+        "identified_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "company_name": "Bullhorn, Inc.",
+      "headquarters_location": {
+        "city": "Boston",
+        "state": "Massachusetts"
+      },
+      "additional_operation_locations": [
+        "St. Louis",
+        "London",
+        "Vancouver",
+        "Sydney"
+      ],
+      "identified_location": {
+        "city_name": "Sydney",
+        "is_state_capital_of": "New South Wales",
+        "is_most_populous_in_australia_oceania": true,
+        "population_details": {
+          "count": 5029768,
+          "as_of_date": "June 2016"
+        }
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

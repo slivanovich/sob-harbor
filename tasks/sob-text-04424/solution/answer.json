@@ -1,0 +1,16 @@
+{
+  "actress": {
+    "name": "Lucy Elizabeth Fry",
+    "nationality": "Australian"
+  },
+  "television_series": {
+    "title": "Wolf Creek",
+    "year_released": 2016,
+    "genre": "horror"
+  },
+  "character": {
+    "name": "Eve",
+    "age": 19,
+    "description": "American tourist"
+  }
+}

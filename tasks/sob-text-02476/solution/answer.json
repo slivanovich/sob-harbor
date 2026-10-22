@@ -1,0 +1,14 @@
+{
+  "earliest_born_writer": "W. E. B. Griffin",
+  "writers_compared": [
+    {
+      "name": "Mary Doria Russell",
+      "birth_year": 1950
+    },
+    {
+      "name": "W. E. B. Griffin",
+      "birth_year": 1929
+    }
+  ],
+  "comparison_result": "W. E. B. Griffin was born in 1929, which is earlier than Mary Doria Russell who was born in 1950."
+}

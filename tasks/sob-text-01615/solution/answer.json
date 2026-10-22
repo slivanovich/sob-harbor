@@ -1,0 +1,19 @@
+{
+  "person_one": {
+    "name": "Rohinton Mistry",
+    "birth_year": 1952,
+    "birth_month": "July",
+    "birth_day": 3
+  },
+  "person_two": {
+    "name": "Gillian Bradshaw",
+    "birth_year": 1956,
+    "birth_month": "May",
+    "birth_day": 14
+  },
+  "comparison_result": {
+    "earlier_birth_person_name": "Rohinton Mistry",
+    "earlier_birth_year": 1952
+  },
+  "final_answer": "Rohinton Mistry"
+}

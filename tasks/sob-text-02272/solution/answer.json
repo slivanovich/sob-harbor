@@ -1,0 +1,15 @@
+{
+  "album_name": "The History of Eric Clapton",
+  "featured_artist": "Eric Clapton",
+  "band_details": {
+    "band_name": "The Yardbirds",
+    "formation_year": 1963,
+    "formation_location": "London",
+    "genre": "English rock band"
+  },
+  "other_bands_on_album": [
+    "Cream",
+    "Blind Faith",
+    "Derek and the Dominos"
+  ]
+}

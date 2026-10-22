@@ -1,0 +1,12 @@
+{
+  "season_year": 2012,
+  "playoff_seed": 6,
+  "conference": "AFC",
+  "team": {
+    "name": "Cincinnati Bengals"
+  },
+  "coach": {
+    "name": "Marvin Lewis",
+    "birth_year": 1958
+  }
+}

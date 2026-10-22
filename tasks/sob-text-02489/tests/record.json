@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "6c1262cf551043e56c79af1ec4561caad598b3d19340606cb55a14628dc63824",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae5eb0f554299546bf82fd3",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1977",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "10 Hronia Mazi: 10 H.M. (Short for 10 Hronia Mazi, Greek: \"10 Χρόνια Μαζί\"; English: \"10 Years Together\") is an album released by Greek singer Despina Vandi starting on December 6, 2007.  It is her 12th album from the beginning of her career, and her 10th album with Phoebus.  It is also her first studio album of new material since her 2004 release of \"Stin Avli Tou Paradisou\".  The album is dedicated to the 10-year collaboration with Phoebus and features a track of the same name.  The album is a triple CD, with the first CD containing pop/rock songs, the second CD containing Modern Laika songs and third CD containing new remixes of older songs.  The album is completely written and produced by Phoebus and released by Heaven Music.  The main sponsor is WIND Hellas.\n\nForever Jolina: Forever is the 5th album of Jolina Magdangal.  It was her 2nd album released under GMA Records.\n\nDischarge (album): Discharge is the fifth studio album by hardcore punk band Discharge released in 2002 on Sanctuary Records.  It is the final album with classic singer Cal Morris.\n\n20:20 Vision: 20:20 Vision is the 5th live album and 20th album overall by Christian parody band ApologetiX.  The name of the album is a parody of the term \"20/20 vision\", a result of the album being the band's 20th album released on their 20th anniversary and that it contains 20 songs.\n\nKawaihae (band): Kawaihae is an island music band formed in the summer 2000 in Japan formed by Tokyo/Yokohama/Nagoya radio personality Vance K who was born and raised on the Big Island of Hawaii.  Since the band formed, they have released three albums and is currently working on a 4th album slated for release in 2009.  The band houses a large fanbase within Japan and Hawaii and has received the Group of the Year award at the 2004 Hawaii Music Awards.\n\nGreatest Hits (Soul City): Greatest Hits is the first compilation album by American pop group The 5th Dimension, released in 1970 by Soul City.  It includes all but two of their charting singles to date: \"Go Where You Wanna Go\", their first Top 20 record in the USA, would appear on the follow-up compilation, The July 5th Album, released later that year, while \"Another Day, Another Heartache\" was not included in either compilation.  Greatest Hits and The July 5th Album were the final 2 album releases for Soul City Records' distribution deal with Liberty Records.  The 5th Dimension subsequently signed with Bell Records.\n\nDischarge (band): Discharge are a British rock band formed in 1977 by Terence \"Tezz\" Roberts and Royston \"Rainy\" Wainwright.  While the band had substantial line-up changes over its history, the classic line-up from the early 1980s featured bassist Wainwright, drummer Gary Maloney, Anthony \"Bones\" Roberts playing guitar, and vocalist Kelvin \"Cal\" Morris.\n\nThe July 5th Album: The July 5th Album is the second compilation album by American pop group The 5th Dimension, released in 1970 by Soul City.  It is composed primarily of album tracks from amongst the group's four albums of original material for Soul City Records, many of which were B-sides to charting singles.  It also includes one A-side single: the group's cover of The Mamas & the Papas hit \"Go Where You Wanna Go\".  The song was originally intended to be the Mamas & the Papas first single but was replaced with the now-iconic \"California Dreamin'\".  Choosing that single, and seeing it become successful, became something of a mixed blessing for The 5th Dimension, as they were frequently referred to in the media as \"The Black Mamas & the Papas\", a label the group sought to escape while creating their own unique identity.\n\nMore Than Words (Mark 'Oh album): More than Words is the 5th album released by Mark 'Oh, and it was released on February 16, 2004, by Home Records GmbH.\n\nP.O.A: Pop on Arrival: P.O.A.: Pop on Arrival is the 5th album released by Japanese band Beat Crusaders, and the 1st full-length album released under the DefSTAR Records Label.  It was released May 11, 2005.  Upon its release, there were two versions available, the Original Version and Limited Edition (初回生産限定盤; The first production limited board).  The Original features 14 tracks, while the Limited Edition includes Bonus Tracks \"Get Up!  Get Up!\"  and \"Say Good-Night\" which differentiate the order of tracks on either CD.",
+    "question": "Discharge is the 5th album released by the rock band formed in what year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "band_name": {
+          "type": "string",
+          "description": "The name of the band that released the album."
+        },
+        "album_name": {
+          "type": "string",
+          "description": "The name of the album in question."
+        },
+        "album_number": {
+          "type": "integer",
+          "description": "The sequential number of the album in the band's discography."
+        },
+        "band_formation_year": {
+          "type": "integer",
+          "description": "The year the band was formed."
+        }
+      },
+      "required": [
+        "band_name",
+        "album_name",
+        "album_number",
+        "band_formation_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "band_name": "Discharge",
+      "album_name": "Discharge",
+      "album_number": 5,
+      "band_formation_year": 1977
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

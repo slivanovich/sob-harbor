@@ -1,0 +1,9 @@
+{
+  "language_name": "Tamasheq",
+  "principal_speaking_area": "Timbuktu area",
+  "location_relative_to_river": {
+    "distance_km": 20,
+    "direction": "north",
+    "river_name": "Niger River"
+  }
+}

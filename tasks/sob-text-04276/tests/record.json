@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "02f712bd7f13d55e04094c2696a2f10b3952e87f661c4733a79ded7efe2e417e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae544b95542992663a4f1b0",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Nick Knowles",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Soccer Saturday: Gillette Soccer Saturday is a weekly television programme broadcast on Sky Sports in the United Kingdom and Ireland during the football season.  The programme updates viewers on the progress of association football games in the United Kingdom on Saturday afternoons.  The current host is Jeff Stelling.  The programme is sponsored by Gillette.\n\nUK Space Agency: The United Kingdom Space Agency (commonly known as the UK Space Agency or UKSA) is an executive agency of the Government of the United Kingdom, responsible for the United Kingdom's civil space programme.  It was established on 1 April 2010 to replace the British National Space Centre (BNSC) and took over responsibility for government policy and key budgets for space exploration, and represents the United Kingdom in all negotiations on space matters.  It \"[brings] together all UK civil space activities under one single management\".  It is based at the former BNSC headquarters in Swindon, Wiltshire.\n\nUnited Kingdom government austerity programme: The United Kingdom government austerity programme is a fiscal policy undertaken in response to the Great Recession.  It is a deficit reduction programme consisting of sustained reductions in public spending and tax rises, intended to reduce the government budget deficit and the welfare state in the United Kingdom.  The National Health Service and education have been \"ringfenced\" and protected from direct spending cuts.  United Kingdom austerity policies have received pointed criticism from left-wing politicians and economists, and have prompted anti-austerity movements among citizens more generally.\n\nNational Lottery (United Kingdom): The National Lottery is the state-franchised national lottery in the United Kingdom.\n\nSyrian Vulnerable Person Resettlement Programme: The Syrian Vulnerable Person Resettlement Programme, sometimes referred to as a Relocation Scheme, is a programme of the United Kingdom government that plans to resettle 20 000 Syrian refugees from refugee camps in Jordan, Lebanon, Iraq, Egypt and Turkey over the period from September 2015 to May 2020.  It was first announced in January 2014 and in September 2015 the expansion to 20,000 refugees was made.  It is run in partnership between the UK Home Office, the Department for International Development, the Department for Communities and Local Government and NGOs such as Refugee Action.  Only 2,659 Syrian refugees were resettled through the programme by the end of June 2016.  The National Audit Office estimated the Programme's cost at £1,112 million.\n\nWho Dares Wins (UK game show): Who Dares Wins is a BBC game show broadcast on BBC One which began on 17 November 2007.  The programme is hosted by Nick Knowles.  It was a BBC National Lottery game show until 21 January 2017.\n\nAbu Bakar bin Abdul Jamal: Admiral (Retired) Tan Sri Dato’ Seri Abu Bakar bin Abdul Jamal was the tenth Chief and the first four-star Admiral of the Royal Malaysian Navy (RMN).  He was born on 13 November 1946 in Johor, Malaysia and received his early education at the Royal Military College in Sungai Besi, Kuala Lumpur.  Admiral Abu Bakar joined the naval service in 1965 and commenced training as a cadet at the Britannia Royal Naval College, United Kingdom.  Admiral Abu Bakar was trained in weapons engineering at HMS \"Excellent\" School of Weapons Engineering, United Kingdom.  He was also trained in Training Technology by the Royal Australian Navy.  Admiral Abu Bakar is also a graduate of the Royal Naval College, Greenwich, United Kingdom and the Naval Postgraduate School, Monterey, California, where he studied Defence Management.  He went on to enrol in a fellowship programme at the Wolfson College, Cambridge and later studied at the Royal College of Defence Studies, United Kingdom.\n\nPob's Programme: Pob's Programme is a children's television programme which was broadcast in the United Kingdom on Channel 4 between October 1985 and November 1987.  The programme is presented by a puppet named Pob (played by puppeteer Robin Stevens), who speaks a primitive version of English and who supposedly lives inside the viewer's TV (the casing and red, green and blue electron guns visible behind him).  Music was composed and performed by Mike Stanley.  The opening titles of the show consist of the character breathing on the camera lens (this breathing was often mistaken for spitting, given the loud noise accompanying it and the thick condensation appearing on screen), and tracing his name in the condensation.  Each week on the programme, a celebrity guest visits Pob's garden, and entertains him — though Pob and the guest never appear on screen together.\n\nAstrophysical Virtual Observatory: The Astrophysical Virtual Observatory (AVO) Project conducted a research and demonstration programme on the scientific requirements and technologies necessary to build a VO for European astronomy.  The AVO has been jointly funded by the European Commission (under FP5 - Fifth Framework Programme) with six European organisations participating in a three year Phase-A work programme, valued at 5 million euro.  The partner organisations were the European Southern Observatory (ESO) in Munich, Germany, the European Space Agency (ESA), AstroGrid (funded by PPARC as part of the UK's E-Science programme), the CNRS-supported Centre de Données Astronomiques de Strasbourg (CDS), the University Louis Pasteur in Strasbourg, France, the CNRS-supported TERAPIX astronomical data centre at the Institut d'Astrophysique in Paris, France, and the Jodrell Bank Observatory of the Victoria University of Manchester, United Kingdom.\n\nSee Hear: See Hear is a monthly magazine programme for deaf and hard-of-hearing people in the United Kingdom, broadcast on Wednesday mornings at 8:00am.  The programme focuses on the British and the worldwide deaf community and covers a broad range of topics from areas such as education, deaf people's rights, technology and language.  The programme is presented entirely in BSL and is broadcast with voice-over and subtitles in English.  Using these methods allow not only deaf, but also hearing people learning sign language to understand the programme, too.",
+    "question": "Who hosts the programme that was state-franchised by the United Kingdom?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "program_name": {
+          "type": "string",
+          "description": "The name of the television programme."
+        },
+        "program_host": {
+          "type": "string",
+          "description": "The host of the television programme."
+        },
+        "franchise_details": {
+          "type": "object",
+          "properties": {
+            "franchise_entity": {
+              "type": "string",
+              "description": "The entity that state-franchised the program."
+            },
+            "franchise_status": {
+              "type": "string",
+              "description": "Describes the program's relationship to the franchise entity."
+            }
+          },
+          "required": [
+            "franchise_entity",
+            "franchise_status"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "program_name",
+        "program_host",
+        "franchise_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "program_name": "Who Dares Wins",
+      "program_host": "Nick Knowles",
+      "franchise_details": {
+        "franchise_entity": "National Lottery",
+        "franchise_status": "was a BBC National Lottery game show"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

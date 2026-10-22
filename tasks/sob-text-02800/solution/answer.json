@@ -1,0 +1,11 @@
+{
+  "person_name": "Srikanth Balachandran",
+  "person_role": "Global CHRO",
+  "company_details": {
+    "name": "Bharti Airtel",
+    "headquarters_city": "New Delhi",
+    "headquarters_country": "India",
+    "service_type": "telecommunications services",
+    "is_global": true
+  }
+}

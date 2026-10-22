@@ -1,0 +1,25 @@
+{
+  "person_names": [
+    "Arthur Koestler",
+    "Kingsley Amis"
+  ],
+  "occupations": [
+    {
+      "person_name": "Arthur Koestler",
+      "roles": [
+        "author",
+        "journalist"
+      ]
+    },
+    {
+      "person_name": "Kingsley Amis",
+      "roles": [
+        "novelist",
+        "poet",
+        "critic",
+        "teacher"
+      ]
+    }
+  ],
+  "common_industry": "literary"
+}

@@ -1,0 +1,14 @@
+{
+  "dog_breeds": [
+    {
+      "breed_name": "Dogo Argentino",
+      "is_large": true
+    },
+    {
+      "breed_name": "Scottish Deerhound",
+      "is_large": true
+    }
+  ],
+  "all_breeds_are_large": true,
+  "total_breeds_evaluated": 2
+}

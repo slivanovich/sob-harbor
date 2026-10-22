@@ -1,0 +1,11 @@
+{
+  "casino_name": "Treasure Island Hotel & Casino",
+  "room_details": {
+    "total_rooms": 2664,
+    "total_suites": 220
+  },
+  "connection_details": {
+    "connected_by_tram_to": "The Mirage"
+  },
+  "is_zen_entertainment_partner": true
+}

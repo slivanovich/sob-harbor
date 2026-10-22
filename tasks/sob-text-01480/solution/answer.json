@@ -1,0 +1,25 @@
+{
+  "question_asked": "Are Thurston Moore and Pharrell Williams both rappers?",
+  "artist_1": {
+    "name": "Thurston Moore",
+    "is_rapper": false,
+    "known_roles": [
+      "musician",
+      "singer",
+      "songwriter",
+      "guitarist"
+    ]
+  },
+  "artist_2": {
+    "name": "Pharrell Williams",
+    "is_rapper": true,
+    "known_roles": [
+      "rapper",
+      "singer",
+      "songwriter",
+      "record producer",
+      "film producer"
+    ]
+  },
+  "both_are_rappers": false
+}

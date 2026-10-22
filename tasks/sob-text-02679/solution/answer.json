@@ -1,0 +1,14 @@
+{
+  "band_1_name": "At the Drive-In",
+  "band_1_origin": {
+    "city": "El Paso",
+    "state": "Texas"
+  },
+  "band_2_name": "Black Stone Cherry",
+  "band_2_origin": {
+    "city": "Edmonton",
+    "state": "Kentucky"
+  },
+  "band_further_north": "Black Stone Cherry",
+  "comparison_reason": "Edmonton, Kentucky is geographically north of El Paso, Texas."
+}

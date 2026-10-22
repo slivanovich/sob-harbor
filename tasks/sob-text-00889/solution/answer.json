@@ -1,0 +1,10 @@
+{
+  "brewery_name": "Mayfield Brewery",
+  "beer_produced": "Steam beer",
+  "beer_characteristics": "highly effervescent",
+  "fermentation_process": {
+    "yeast_type_used": "lager yeasts",
+    "temperature_condition": "warmer",
+    "comparison_temperature_type": "ale yeast fermentation temperatures"
+  }
+}

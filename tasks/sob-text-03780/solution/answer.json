@@ -1,0 +1,17 @@
+{
+  "live_album_details": {
+    "title": "Live from Planet X",
+    "artist": "MF Doom"
+  },
+  "source_album_details": {
+    "title": "Madvillainy",
+    "is_debut_album": true,
+    "is_hip_hop_duo_album": true,
+    "duo_name": "Madvillain",
+    "duo_members": [
+      "MF DOOM",
+      "Madlib"
+    ]
+  },
+  "final_answer": "Madvillainy"
+}

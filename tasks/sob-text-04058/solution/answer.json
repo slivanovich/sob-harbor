@@ -1,0 +1,12 @@
+{
+  "company_name": "TerraTrike",
+  "company_location": {
+    "city": "Grand Rapids",
+    "state": "Michigan"
+  },
+  "geographical_relationship": {
+    "distance_miles": 30,
+    "direction": "east",
+    "reference_point": "Lake Michigan"
+  }
+}

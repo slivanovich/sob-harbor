@@ -1,0 +1,11 @@
+{
+  "weapon_name": "Bazooka",
+  "alternative_names": [
+    "Stovepipe"
+  ],
+  "weapon_type": "man-portable recoilless anti-tank rocket launcher weapon",
+  "developer_details": {
+    "developer_name": "Colonel Leslie Alfred Skinner",
+    "role": "leading role in the development"
+  }
+}

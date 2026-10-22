@@ -1,0 +1,32 @@
+{
+  "album_details": {
+    "title": "Shape Shifter",
+    "artist": "Santana",
+    "studio_album_number": 21,
+    "overall_album_number": 36
+  },
+  "related_music_info": [
+    {
+      "song_title": "Gypsy Queen",
+      "original_artist": "Gábor Szabó",
+      "original_release_year": 1966,
+      "covered_by": "Santana",
+      "cover_year": 1970,
+      "medley_partner_song": "Black Magic Woman"
+    },
+    {
+      "song_title": "Black Magic Woman",
+      "original_artist": "Fleetwood Mac",
+      "original_release_year": 1968,
+      "covered_by": "Santana",
+      "cover_year": 1970,
+      "medley_partner_song": "Gypsy Queen"
+    }
+  ],
+  "band_formation_details": {
+    "band_name": "Fleetwood Mac",
+    "formation_location": "London",
+    "formation_year": 1967,
+    "band_type": "British-American rock band"
+  }
+}

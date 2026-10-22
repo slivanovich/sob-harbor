@@ -1,0 +1,21 @@
+{
+  "musical_group": "Sole Mio",
+  "members": [
+    {
+      "name": "Pene Pati",
+      "role": "operatic tenor"
+    },
+    {
+      "name": "Amitai Pati",
+      "role": "operatic tenor"
+    }
+  ],
+  "descent": "Samoan",
+  "album_details": {
+    "album_name": "eponymous album",
+    "chart_peak_position": 1,
+    "chart_country": "New Zealand",
+    "weeks_at_peak": 5,
+    "chart_year": 2014
+  }
+}

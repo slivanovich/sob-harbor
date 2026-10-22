@@ -1,0 +1,25 @@
+{
+  "person_details": [
+    {
+      "name": "Justin Hawkins",
+      "occupations": [
+        "musician",
+        "singer-songwriter",
+        "lead singer",
+        "lead guitarist"
+      ]
+    },
+    {
+      "name": "Nicole Scherzinger",
+      "occupations": [
+        "recording artist",
+        "actress",
+        "television personality",
+        "singer",
+        "lead singer"
+      ]
+    }
+  ],
+  "common_occupation": "singer",
+  "occupation_category": "music_related"
+}

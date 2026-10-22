@@ -1,0 +1,16 @@
+{
+  "crowdfunding_event": {
+    "campaign_year": 2012,
+    "game_release_year": 2014
+  },
+  "crowdfunding_company": {
+    "name": "Kickstarter",
+    "location": "Brooklyn, New York",
+    "type": "public-benefit corporation"
+  },
+  "crowdfunded_game": {
+    "title": "Defense Grid 2",
+    "developer": "Hidden Path Entertainment",
+    "genre": "tower defense"
+  }
+}

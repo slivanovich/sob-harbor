@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "834c7c3c708e6755432f582478645ae0628a649955e29a66daa8eb776c055f58",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae56f615542990ba0bbb2aa",
+    "source_dataset": "hotpotqa",
+    "source_answer": "10 October 1969",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Gareth Williams (New Zealand actor): Gareth Williams (born 13 July 1984) is a New Zealand born actor of television, film and theatre.  He trained for a year with the Auckland Theatre Company at the prestigious Globe Theater in London.  He then attained his Bachelor of Performing Arts at Toi: Whakaari Dramatic Arts College in 2006.  Williams has since had television roles in Facelift (2007), This Is Not My Life (2009), Legend of the Seeker (2010), as well as some minor feature film roles.\n\nBeta Test (film): Beta Test is a 2016 film co-written, co-produced, and directed by Nicholas Gyeney.  Gyeney described the film as a cross between Die Hard, Gamer, and The Firm.  The film stars Larenz Tate, Manu Bennett, Linden Ashby, and Yuji Okumoto.\n\nDaniella Smith: Daniella Smith (born 30 July 1972, Kaikohe, New Zealand) is a New Zealand former professional boxer, the first International Boxing Federation Women's World Champion and is the second New Zealand born person to win a boxing world title.  Smith is also ranked pound-for-pound number one in New Zealand of all time in the Women's division.\n\nVera James: Vera James (1892-1980) was a New Zealand born actor who worked in theatre and film.  She moved to Australia in 1919 and appeared in two films for Franklyn Barrett.  Her father distributed \"A Girl of the Bush\" in New Zealand.\n\nAndrew Robertt: Andrew Robertt is a New Zealand born actor.\n\nManu Bennett: Jonathan Manu Bennett (born 10 October 1969) is a New Zealand born actor.  He is known for his portrayal as the Gallic gladiator Crixus in the Starz television series \"Spartacus\".  He has also appeared as the orc commander Azog the Defiler in Peter Jackson's three-part film adaptation based on \"The Hobbit\" by J. R. R. Tolkien, and as supervillain Slade Wilson/Deathstroke in The CW TV series \"Arrow\".  Since January 2016, he plays the role of Allanon in the MTV series \"The Shannara Chronicles\", based on the \"Shannara\" novel series by Terry Brooks.\n\nJeremy Brennan: Jeremy John Brennan (born 20 August 1974) is a New Zealand born actor and musician.  He graduated from Australia's National Institute of Dramatic Art (NIDA) in 1998.  His film credits include the 2006 Tropfest finalist \"Tough Crowd\" which he co-wrote with Director Patrick Gillies who also directed him in the soon to be released New Zealand feature film \"The Holy Roller\".\n\nMaurice K. Smith: Maurice Smith (September 1926, Hamilton, New Zealand) is a New Zealand born architect and architectural educator.  Smith's work and teaching builds upon the idea of creating \"habitable three-dimensional fields\" as a working method for his projects.  His 'field theory' has parallels to the work of Charles Olson, William Carlos Williams, and Francis Ponge in poetry, and of György Kepes and Paul Klee in the visual arts.  Smith's published works include the offices of Firth Concrete, Hastings, New Zealand, 1958 (demolished), Indian_Hill_House in Groton, Massachusetts (1962–63), and Blackman House in Manchester-by-the-Sea,_Massachusetts (1992-93).  He left New Zealand to study at MIT in the USA on a Fulbright Scholarship in 1952.  During this time Smith studied under, and worked for, various MIT faculty and visiting faculty, including Carl Koch, Serge Chermayeff, Richard Buckminster Fuller, and György Kepes.\n\nPeter Gutmann (computer scientist): Peter Claus Gutmann is a computer scientist in the Department of Computer Science at the University of Auckland, Auckland, New Zealand.  He has a Ph.D. in computer science from the University of Auckland.  His Ph.D. thesis and a book based on the thesis were about a cryptographic security architecture.  He is interested in computer security issues, including security architecture, security usability (or more precisely the lack thereof), and hardware security, he has discovered assorted flaws in publicly released cryptosystems and protocols.  He is the developer of the cryptlib open source software security library and contributed to PGP version 2.  In 1994 he developed the Secure FileSystem (SFS).  He is also known for his analysis of data deletion on electronic memory media, magnetic and otherwise, and devised the Gutmann method for erasing data from a hard drive more or less securely.  Having lived in New Zealand for some time, he has written on such subjects as wetas, which are peculiar to New Zealand, and the Auckland power crisis of 1998, during which the electrical power system failed completely in the central city for five weeks.  See, for instance, \"Auckland: Your Y2K beta test site\" on Gutmann's Homepage.  He has also written on his career as an \"arms courier\" for New Zealand, detailing the difficulty faced in complying with customs control regulations with respect to cryptographic products, which were once classed as \"munitions\" by various jurisdictions including the United States.\n\nThe Stabilizer: The Stabilizer is a 1984 Indonesian action film directed by Arizal, produced by Parkit Film (The Punjabi Brothers) and distributed by Troma Entertainment.  The movie stars New Zealand born actor Peter O'Brian who plays Peter Goldson, a.k.a.  The Stabilizer.  He is an FBI agent who is sent to Thailand to retrieve a brilliant professor who has been captured by the drug lord Greg Rainmaker.  Goldson and Rainmaker go way back.  Goldson put a bullet in Rainmakers leg during a drug bust, and Rainmaker took revenge a little further by raping and killing his fiance.  Now Goldson takes on Rainmaker's entire Golden Triangle gang in this action packed blockbuster with fighting, explosions and the Indonesian Mr. T!",
+    "question": "When was the New Zealand born actor who starred in \"Beta Test\" born? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the New Zealand born actor."
+        },
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film the actor starred in."
+        },
+        "birth_date": {
+          "type": "string",
+          "description": "The birth date of the actor in 'DD Month YYYY' format."
+        }
+      },
+      "required": [
+        "actor_name",
+        "film_title",
+        "birth_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Manu Bennett",
+      "film_title": "Beta Test",
+      "birth_date": "10 October 1969"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

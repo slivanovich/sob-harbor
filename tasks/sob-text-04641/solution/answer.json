@@ -1,0 +1,9 @@
+{
+  "beer_name": "Budweiser",
+  "beer_type": "American-style pale lager",
+  "is_american_lager": true,
+  "adjunct_details": {
+    "adjunct_name": "rice",
+    "percentage_used": 30
+  }
+}

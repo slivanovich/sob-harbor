@@ -1,0 +1,17 @@
+{
+  "winning_documentary_title": "Taxi to the Dark Side",
+  "documentary_comparison": [
+    {
+      "title": "Taxi to the Dark Side",
+      "academy_awards_won": 1,
+      "release_status": "released",
+      "award_category": "Best Documentary Feature"
+    },
+    {
+      "title": "A Life in the Death of Joe Meek",
+      "academy_awards_won": 0,
+      "release_status": "upcoming"
+    }
+  ],
+  "comparison_conclusion": "Taxi to the Dark Side won 1 Academy Award, while A Life in the Death of Joe Meek is an upcoming film with no awards mentioned."
+}

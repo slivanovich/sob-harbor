@@ -1,0 +1,21 @@
+{
+  "extract_name": "Isochrysis galbana",
+  "attributed_properties": [
+    "cosmetic",
+    "hair-growth"
+  ],
+  "extractants_used": [
+    "hexane",
+    "ethyl acetate",
+    "ethanol",
+    "water",
+    "methanol",
+    "isopropanol"
+  ],
+  "extractant_aliases_mentioned": [
+    {
+      "alias": "dimethyl carbinol",
+      "primary_name": "isopropanol"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "6f274e924f987c495ea209e39dcc27615d8d67003c10f36fa24e68aeea53bfc9",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5adcba045542994ed6169bd6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Astilboides: Astilboides, a genus of the saxifrage family containing only one species, a herbaceous perennial once included in the genus Rodgersia.  It comes from China and differs from its former relatives mainly in its leaf shape.  It is grown for its huge bright green, circular leaves to 36 in (90 cm) across with the stem attached to the center, and large fluffy racemes of tiny white flowers produced in summer.\n\nCallicarpa bodinieri: Callicarpa bodinieri (Bodinier's beautyberry) is a species of flowering plant in the genus \"Callicarpa\" of the family Lamiaceae, native to West and Central China.  Growing to 3 m tall by 2.5 m wide, it is an upright deciduous shrub with dark green leaves turning red in autumn (fall).  In midsummer, small lilac flowers are produced in the leaf axils.  But it is grown in gardens primarily for its small, decorative purple berries in tight clusters in autumn.  While the berries are not poisonous, they are very bitter.  Wildlife will not eat them until there are no other available food sources.  This species is more tolerant of cold than \"C. americana\" (American beautyberry).\n\nCallicarpa tomentosa: Callicarpa tomentosa is a species of beautyberry plant in the Lamiaceae family.  It is found in Western Ghats of India and Sri Lanka.  It is a small tree with about 5m tall.  Leaves simple, opposite; elliptic to broadly elliptic; apex acute or acuminate.  Purplish flowers show branched axillary cymes.  Fruit is 3-4 seeded globose drupe.  Fruits provide food for wildlife.  They are sometimes used to make herbal medicine.  The leaves are also food for wildlife.\n\nCallicarpa: Callicarpa (beautyberry) is a genus of shrubs and small trees in the family Lamiaceae.  They are native to east and southeast Asia (where the majority of the species occur), Australia, Madagascar, southeast North America and South America.\n\nIdiophantis callicarpa: Idiophantis callicarpa is a moth of the Gelechiidae family.  It was described by Meyrick in 1927.  It is found on Samoa.\n\nCallicarpa ampla: Callicarpa ampla, also called the capa rose, is a species of plant in the Lamiaceae family.  It is found in Puerto Rico in the Caribbean region.  It is threatened by habitat loss and is a critically endangered plant species.\n\nEndoclita undulifer: Endoclita undulifer is a species of moth of the family Hepialidae.  It is known from India.  Food plants for this species include \"Alnus\", \"Byttneria\", \"Callicarpa\", \"Cryptomeria\", \"Eucalyptus\", and \"Gmelina\".\n\nCallicarpa maingayi: Callicarpa maingayi is a species of beautyberry plant in the Lamiaceae family.  It is found in Malaysia and Singapore.",
+    "question": "Are Astilboides and Callicarpa in the same family?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "plant_genus_1": {
+          "type": "string",
+          "description": "The name of the first plant genus."
+        },
+        "plant_genus_1_family": {
+          "type": "string",
+          "description": "The family of the first plant genus."
+        },
+        "plant_genus_2": {
+          "type": "string",
+          "description": "The name of the second plant genus."
+        },
+        "plant_genus_2_family": {
+          "type": "string",
+          "description": "The family of the second plant genus."
+        },
+        "are_in_same_family": {
+          "type": "boolean",
+          "description": "True if both plant genera belong to the same family, false otherwise."
+        }
+      },
+      "required": [
+        "plant_genus_1",
+        "plant_genus_1_family",
+        "plant_genus_2",
+        "plant_genus_2_family",
+        "are_in_same_family"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "plant_genus_1": "Astilboides",
+      "plant_genus_1_family": "Saxifragaceae",
+      "plant_genus_2": "Callicarpa",
+      "plant_genus_2_family": "Lamiaceae",
+      "are_in_same_family": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "question_asked": "Which author is English, Studs Terkel or John Braine?",
+  "authors_compared": [
+    {
+      "name": "Studs Terkel",
+      "nationality": "American"
+    },
+    {
+      "name": "John Braine",
+      "nationality": "English"
+    }
+  ],
+  "english_author_name": "John Braine"
+}

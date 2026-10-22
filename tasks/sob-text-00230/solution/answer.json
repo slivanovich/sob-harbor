@@ -1,0 +1,22 @@
+{
+  "artist_comparison": [
+    {
+      "artist_name": "Karen Carpenter",
+      "bands": [
+        "The Carpenters"
+      ],
+      "number_of_bands": 1
+    },
+    {
+      "artist_name": "Tomas Kalnoky",
+      "bands": [
+        "Streetlight Manifesto",
+        "Bandits of the Acoustic Revolution",
+        "Catch 22"
+      ],
+      "number_of_bands": 3
+    }
+  ],
+  "artist_with_more_bands": "Tomas Kalnoky",
+  "comparison_result": "Tomas Kalnoky was a part of more bands than Karen Carpenter."
+}

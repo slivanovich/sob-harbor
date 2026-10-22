@@ -1,0 +1,14 @@
+{
+  "question_topic": "botanical classification",
+  "entity_1": {
+    "name": "Billardiera",
+    "is_genus": true,
+    "type_description": "small vines and shrubs"
+  },
+  "entity_2": {
+    "name": "Calothamnus",
+    "is_genus": true,
+    "type_description": "shrubs"
+  },
+  "both_are_genuses": true
+}

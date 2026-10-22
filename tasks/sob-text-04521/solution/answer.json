@@ -1,0 +1,14 @@
+{
+  "coach_name": "John Tortorella",
+  "coach_nationality": "American",
+  "coach_profession_types": [
+    "ice hockey coach",
+    "former player"
+  ],
+  "birth_date": "June 24, 1958",
+  "release_context": {
+    "team": "New York Rangers",
+    "role": "Head Coach",
+    "season": "2012–13"
+  }
+}

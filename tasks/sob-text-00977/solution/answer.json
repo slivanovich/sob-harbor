@@ -1,0 +1,12 @@
+{
+  "person_name": "Tyronn Lue",
+  "current_role": {
+    "team_name": "Cleveland Cavaliers",
+    "role_type": "head coach"
+  },
+  "past_affiliation": {
+    "team_name": "Houston Rockets",
+    "affiliation_type": "player",
+    "context_season": "2004–05"
+  }
+}

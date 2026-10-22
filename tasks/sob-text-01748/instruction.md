@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Filandia, Quindío: Filandia is a town and municipality in the northern part of the department of Quindío, Colombia.  It is located on the west side of Cordillera Central of the Andes mountain range running through central Colombia, 26 km north of the departmental capital Armenia.  It is the northernmost of twelve municipalities that form Quindío, the second smallest department of Colombia.  It houses a small community economically supported by agriculture and tourism.  Although coffee is the major agricultural product, the municipality's diverse ecosystem makes it perfect for the production of numerous fruits and vegetables.  The population is evenly split between the urban and rural areas, with an urban population in the town of Filandia itself of nearly 7000 inhabitants and a population of around 6500 in the rest of the municipality.  Most of the population is classified as mestizo (63,2%) and the most common religion is Roman Catholic.  The town's architecture, landscapes and the sociability of the locals makes Filandia one of the most beautiful and attractive towns in the department of Quindio and the nation.  The town's best-known tourist attractions are its "mirador" (viewing tower) with its extensive views over the Cauca River valley to the west and the Parque Nacional Natural los Nevados to the east (it is also possible to see both Armenia and Pereira from the top of the tower), and the cafe in the main square where scenes from the popular Colombian telenovela "Cafe, con aroma de mujer" were filmed.
+
+Tafo: Tafo is a town in Kumasi Metropolitan District in the Ashanti Region of Ghana near the regional capital Kumasi.  Tafo is the thirtieth most populous settlement in Ghana, in terms of population, with a population of 60,919 people.  Because of the town's population and housing development in recent years, it is debatable whether Tafo is still regarded as a separate town, or already a suburb of Kumasi, the capital of the Ashanti region.  The town is near Kumasi, with a distance of approximately 3.3 kilometers to the center of a similar name sounding village named New Tafo and must be distinguished from Tafo.  Tarkwa is located just 4.6 km away from Tafo.  The city center of Kumasi is located approximately 9.8 kilometers away.  Tafo is one of the urban constituencies of the Kumasi Metropolitan Assembly, the town's parliamentary candidate shall have one direct seat to the Parliament of Ghana.
+
+Konkomba people: The Konkomba people are a Gur ethnic group residing mainly in the Northern, Brong Ahafo, Volta, Eastern and Greater Accra Regions of Ghana.  Saboba, Chereponi and Nanumba Districts, Gushiegu and Karaga districts, Zabzugu and Tatale-Sanguli districts in the Northern Region and the Nkwanta North and South Districts in the Volta Region are a few examples of administrative districts where Bikpakpaam are seen in huge populations.  Other key towns of Bikpakpaam in Ghana are Atebubu, Kintampo, Techiman and Yeji in the Brong Ahafo Region.  According to the Act 280 of the Anatomy act of Ghana, the Konkomba people (known as Bikpakpaam) are the second largest ethnic group in the Northern Region of Ghana.  The 2010 census data indicates that Bikpakpaam in Ghana number 823,000 and applying the intercensal growth rate would give a population of more than one million now.  CIA The World Factbook reports in Demographics of Ghana that Konkomba people are the 8th largest Ethnic group in Ghana representing 3.5% of the Total population of Ghana.  Saboba (Chabob) in the Northern Region of Ghana is the capital town of all Bikpakpaam in Ghana.  Bikpakpaam are also found in the republic of Togo, a sister West African country to Ghana.  In Togo Bikpakpaam reside mainly in the Kara, Central and Plateaux Regions.  Guerin Kouka (a.k.a. Nanguem Do, the capital of Dankpen district) in the Kara Region is the capital town of Bikpakpaam in Togo.  Dankpen district is located in the north western corridor of Togo.  In Schwartz's (2005) account, Bikpakpaam number about 50,100 in Togo.  The 2011 census in Togo indicates however that the total population of Bikpakpaam in Dankpen district alone was 122,209.  Visit Konkomba language for more information.  Konkomba people speak Konkomba language a.k.a Likpakpaln.  The traditional dance of Konkomba people is Kinachunŋ (pronounced k-i-naa-chung).  All Konkomba settlements are led by a traditional chief called Ubor.  In Bikpakpaam dominant areas, the people have instituted or established their own chieftains who serve as overlords of the settlements.  For instance, the Saboba area has the Uchabob-bor as the overlord.  Bikpakpaam strongly believe in solidarity, determination and hard-work.  Until the turn of the 21st century, their primary occupation was farming and animal husbandry.  In occupational terms, Bikpakpaam are mainly subsistence farmers and rearers of animals such as poultry, small ruminants and cattle.  This, probably, explains their scattered settlement across the West African sub-region.  Indeed, Maasole intimates that Bikpakpaam have always been on the move, in search for fertile farmlands.  Most Konkombas are actively in education today and a recent research projects that Konkombas will become a dominant force in politics, health, education and the civil society by 2025.
+
+Taifa, Accra: Taifa is a town in the Ga East Municipal District, a district in the Greater Accra Region of south-eastern Ghana near the capital Accra.  Taifa is the twenty-sixth largest settlement in Ghana, in terms of population, with a population of 68,459 people.  Taifa is located in the northwest suburbs area of Accra.  It has a breakpoint on a railway line and a small park located on the northern edge of the location of the Taifa Ghana Atomic Energy Commission.  At the Ghana 2000 census of 26 March 2000, the population was 26,145 inhabitants living in the city.  Projections of 1 January 2007 estimated the population to be 48,927 inhabitants.  In the census of 1984 there was only 1,009 inhabitants.  The strong population growth of the Town is influenced by, among other things, a large number of illegal immigrants from west African countries who move to towns and villages near the industrial town of Tema, just to find a job.
+
+Juara: Juara is a municipality located in the state of Mato Grosso in the Central-West Region of Brazil.  It is known as the Cattle Capital.  Its population in 2004 was estimated about 34,510 inhabitants.  The town's economy is based in three field: Wood extraction, cattle rearing and agriculture.  However, the wood is coming to an end.  Because of that, the development has become slow in this place.  Juara is situated about 730 km from the state capital which is Cuiabá, there are two highways of which one is MT 338 that links Juara to Cuiabá and the other is MT 220 that links Juara to Sinop.  In the last years a lot of people have moved away because lack of job and education.  The students who want to go to a good college have to move to other cities, they usually move to Sinop or Cuiabá.  The distance from the capital of Mato Grosso is vast, it takes about 12 hours by bus from Juara to Cuiabá.  For this reason, population prefer to go to Sinop by bus because it is nearer than Cuiabá and then they take an airplane there.  It's possible to go to Juara by plane but it's very expensive, so, just the rich people use the airport of the town.
+
+Icó: Icó ] is a town of in Ceará, Brazil.  It is located in the Microrregião of Salgado in the central part of the state.  Icó borders the municipalities of Umari, Cedro, Iguatu, Orós, Jaguaribe, Pereiro, and the states of Rio Grande do Norte and Paraíba.  The seat of the town, also called Icó, is located 375 km from the state capital, Fortaleza.  The municipality covers 1,872 km2 and has a population of 67,345 with a population density of 36 inhabitants per square kilometer.  It is located 1,872 km from the state capital of Sergipe, Aracaju.
+
+Ainaro: Ainaro is a town in East Timor, the capital of the Ainaro District, and is located in the southwest part of the country.  The Ainaro Subdistrict has a population of approximately 14,130 people (2001).  It contains the small mountain town of Ainaro, the district capital, along with the sucos of Soro, Maununo, Cassa, Suro Craic, Manutassi, and Mau-Ulo.  The town of Ainaro is located 78 km south of Dili, the national capital.
+
+Raza Bokhari: Dr. Raza Bokhari is a Philadelphia-based entrepreneur and international spokesperson of the former president of Pakistan, Pervez Musharraf.  Currently, he serves as the Managing Partner of RBx Capital, LP.
+
+Philadelphia: Philadelphia ( ) is the largest city in the Commonwealth of Pennsylvania and the sixth-most populous city in the United States, with an estimated population of 1,567,872 and more than 6 million in the seventh-largest metropolitan statistical area, as of 2016 .  Philadelphia is the economic and cultural anchor of the Delaware Valleya region located in the Northeastern United States at the confluence of the Delaware and Schuylkill Rivers with 7.2 million people residing in the eighth-largest combined statistical area in the United States.
+
+Gbawe: Gbawe is a town in the Greater Accra Region of southeastern Ghana near the capital Accra.  Gbawe is the twenty-third largest settlement in Ghana, in terms of population, with a population of 74,403 people.  Gbawe is located a few kilometres west of Accra in the Ga South Municipal Assembly .  At the Ghana census of 26 March 2000, the population was 28,989 inhabitants living in the Town.  Projections of 1 January 2007 estimated the population to be 52,910 inhabitants.  In the census of 1984, only 837 residents were listed, and in 1970 it was the 608th largest settlement in Ghana.  The Town was founded more than 100 years ago.  Today the Town has a more rural structure in the large-scale marked suburban development areas.
+
+Question: What is the population of the town where RBx Capital, LP is located? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entity_name": {
+      "type": "string",
+      "description": "The name of the entity in question."
+    },
+    "location_city": {
+      "type": "string",
+      "description": "The city where the entity is located."
+    },
+    "city_population": {
+      "type": "integer",
+      "description": "The estimated population of the city."
+    },
+    "population_as_of_year": {
+      "type": "integer",
+      "description": "The year the population estimate was made."
+    }
+  },
+  "required": [
+    "entity_name",
+    "location_city",
+    "city_population",
+    "population_as_of_year"
+  ],
+  "additionalProperties": false
+}

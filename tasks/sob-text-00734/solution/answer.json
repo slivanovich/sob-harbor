@@ -1,0 +1,16 @@
+{
+  "is_both_directors": true,
+  "person_1_details": {
+    "name": "Michael Caton-Jones",
+    "is_director": true,
+    "nationality": "Scottish"
+  },
+  "person_2_details": {
+    "name": "John Milius",
+    "is_director": true,
+    "other_professions": [
+      "screenwriter",
+      "producer"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "question_asked": "Are both Ryan Harrison and John Peers American professional tennis players?",
+  "player_nationalities": [
+    {
+      "player_name": "Ryan Harrison",
+      "nationality": "American"
+    },
+    {
+      "player_name": "John Peers",
+      "nationality": "Australian"
+    }
+  ],
+  "all_players_are_american": false,
+  "final_answer": false
+}

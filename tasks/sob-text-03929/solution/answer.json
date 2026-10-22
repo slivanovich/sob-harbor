@@ -1,0 +1,9 @@
+{
+  "palace_name": "St James's Palace",
+  "location_details": {
+    "city": "London",
+    "country": "United Kingdom",
+    "specific_district": "City of Westminster"
+  },
+  "council_assembly_event": "death of a monarch"
+}

@@ -1,0 +1,17 @@
+{
+  "emperor_name": "Tiberius",
+  "thrasyllus_connection": {
+    "relationship_type": "personal friend",
+    "mentioned_in_sources": [
+      "Annals by Tacitus",
+      "The Twelve Caesars by Suetonius"
+    ]
+  },
+  "tacitus_connection": {
+    "relationship_type": "historian who examined reign",
+    "works_mentioning_emperor": [
+      "Annals",
+      "Histories"
+    ]
+  }
+}

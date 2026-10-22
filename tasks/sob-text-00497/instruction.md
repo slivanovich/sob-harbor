@@ -1,0 +1,110 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Marguerite (film): Marguerite is a French/Czech/Belgian 2015 comedy and drama film directed by Xavier Giannoli and written by Giannoli and Marcia Romano, loosely inspired by the life of Florence Foster Jenkins.  Set in the Golden Twenties, the film stars Catherine Frot as a socialite and aspiring opera singer who believes she has a beautiful voice.  The film is an international co-production among France, the Czech Republic, and Belgium.  "Marguerite" received eleven nominations at the 41st César Awards, winning for Best Actress, Best Costume Design, Best Sound, and Best Production Design.
+
+Judy Kaye: Judy Kaye (born October 11, 1948) is a Tony Award-winning American singer and actress.  She has appeared in stage musicals, plays, and operas.  Kaye has been in long runs on Broadway in the musicals "The Phantom of the Opera", "Ragtime", "Mamma Mia! ", and "Nice Work If You Can Get It".
+
+Sam Levene: Sam Levene (August 28, 1905 – December 28, 1980) was an American Broadway and film actor.  He made his Broadway debut in 1927 with five lines in a play titled "Wall Street", and over a span of nearly 50 years, appeared on Broadway in 37 Shows, of which 33 were the original Broadway Productions, many now considered legendary.  Levene made his film debut in 1936, recreating the role of Patsy that he had played in the Broadway production of "Three Men on a Horse" in 1935.  He also appeared in the USO Tour of this same Show; the Radio Version; the Musical version that opened on Broadway called "Let It Ride" (1961) as well as the 1969 Broadway Revival of the play directed by George Abbott, the original Broadway Director and co-author.
+
+Florence Foster Jenkins (film): Florence Foster Jenkins is a 2016 biographical comedy-drama film directed by Stephen Frears and written by Nicholas Martin.  The film stars Meryl Streep as Florence Foster Jenkins, a New York heiress who became an opera singer known for her painful lack of singing skill.  Hugh Grant plays her husband and manager, English Shakespearean actor, St. Clair Bayfield.  Other cast members include Simon Helberg, Rebecca Ferguson, and Nina Arianda.
+
+Donald Corren: Donald Corren is an American Broadway and film actor and screenwriter.  He created the role of Cosmé McMoon opposite Judy Kaye's Florence Foster Jenkins in the 2005 Broadway production of "Souvenir".  He also starred on Broadway in "Torch Song Trilogy", for which he received awards from both the Los Angeles and San Francisco Drama Critics Circle while on tour.  He appeared Off Broadway in "The Last Sunday in June", "Saturday Night", and "Tom Foolery".  He played the recurring part of Medill for nine seasons on NBC's "Law & Order" and has also appeared on "Rescue Me", "", and "".  Corren has also written for TV and corporate clients, including Martha Stewart's early weekly television shows and the 2002 Winter Olympics in Salt Lake City, Utah.  Corren received his education at Juilliard.
+
+Christian McKay: Christian Stuart McKay (born 30 December 1973) is an English stage and screen actor.  He is well known for his portrayal of Orson Welles in the 2008 film "Me and Orson Welles", which received international critical acclaim and was nominated for over two dozen awards including the BAFTA Award for Best Supporting Actor.  He also appeared in movies such as "Florence Foster Jenkins", "The Theory of Everything", "Tinker Tailor Soldier Spy" and "Rush".
+
+Florence Foster Jenkins: Florence Foster Jenkins (born Narcissa Florence Foster; July 19, 1868 – November 26, 1944) was an American socialite and amateur soprano who was known and mocked for her flamboyant performance costumes and notably poor singing ability.  The historian Stephen Pile ranked her "the world's worst opera singer".  "No one, before or since," he wrote, "has succeeded in liberating themselves quite so completely from the shackles of musical notation."
+
+The Soap Myth: The Soap Myth is a play by American playwright Jeff Cohen.  The play had a workshop run in July 2009 at the "Dog Run Repertory Company," and had an Off-Broadway run in the Spring of 2012 Off Broadway at The Roundabout Theater's Harold and Mimi Steinberg Theatre Center.  That production was filmed and the film was broadcast nationally on PBS and can be viewed at digitaltheatre.com.  The cast was Greg Mullavey, Andi Potemkin, Dee Pelletier and Donald Corren under the direction of Arnold Mittlelman.
+
+Glorious! (stage comedy): Glorious!  is a 2005 stage comedy by Peter Quilter, telling the story of Florence Foster Jenkins.
+
+St. Clair Bayfield: St. Clair Bayfield (August 2, 1875 – May 19, 1967) was an English stage actor, best known as the long-term companion and manager of amateur operatic soprano Florence Foster Jenkins.
+
+Question: Donald Corren is an American Broadway and film actor and screenwriter, he created the role of who, opposite Judy Kaye's Florence Foster Jenkins in the 2005 Broadway production of "Souvenir"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor in question."
+    },
+    "actor_nationality": {
+      "type": "string",
+      "description": "The nationality of the actor."
+    },
+    "actor_professions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of professions held by the actor."
+    },
+    "production_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the production."
+        },
+        "year": {
+          "type": "integer",
+          "description": "The year the production premiered."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of production (e.g., Broadway production)."
+        }
+      },
+      "required": [
+        "title",
+        "year",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "role_created": {
+      "type": "string",
+      "description": "The name of the role created by the actor."
+    },
+    "co_star_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the co-star."
+        },
+        "role_played": {
+          "type": "string",
+          "description": "The role played by the co-star."
+        }
+      },
+      "required": [
+        "name",
+        "role_played"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actor_name",
+    "actor_nationality",
+    "actor_professions",
+    "production_details",
+    "role_created",
+    "co_star_details"
+  ],
+  "additionalProperties": false
+}

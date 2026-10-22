@@ -1,0 +1,19 @@
+{
+  "film_title": "Street Fighter: The Legend of Chun-Li",
+  "release_year": 2009,
+  "genre": "action",
+  "key_actors": [
+    {
+      "actor_name": "Chris Klein",
+      "role_name": "Charlie"
+    },
+    {
+      "actor_name": "Neal McDonough",
+      "role_name": "M. Bison"
+    },
+    {
+      "actor_name": "Kristin Kreuk",
+      "role_name": "Chun-Li"
+    }
+  ]
+}

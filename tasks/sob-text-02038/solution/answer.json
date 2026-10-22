@@ -1,0 +1,12 @@
+{
+  "game_title": "Annet Futatabi",
+  "game_developer": "Wolf Team",
+  "game_release_year": 1993,
+  "console_add_on": "Sega CD",
+  "target_console": "Sega Genesis",
+  "target_console_attributes": {
+    "bit_architecture": "16-bit",
+    "developer": "Sega Enterprises, Ltd.",
+    "alternative_name_outside_north_america": "Mega Drive"
+  }
+}

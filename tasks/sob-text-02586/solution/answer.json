@@ -1,0 +1,12 @@
+{
+  "actor_name": "Martin Miller",
+  "birth_name": "Rudolph Muller",
+  "role_played": "Mr. Paravinci",
+  "play_details": {
+    "play_title": "The Mousetrap",
+    "author": "Agatha Christie",
+    "opening_year": 1952,
+    "location_opened": "London's West End",
+    "running_continuously_since_opening": true
+  }
+}

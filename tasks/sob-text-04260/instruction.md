@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Plug-in electric vehicles in the United States: The adoption of plug-in electric vehicles in the United States is actively supported by the American federal government, and several state and local governments. s of 2016 , cumulative sales in the U.S. totaled 570,187 highway legal plug-in electric vehicles since the market launch of the Tesla Roadster in 2008, representing 28.1% of the global light-duty plug-in stock.  s of 2016 , the U.S. has the world's third largest stock of plug-in passenger cars after China and Europe.  The U.S. market share of plug-in electric passenger cars increased from 0.14% in 2011 to 0.62% in 2013.  The plug-in segment reached a market share of 0.75% in 2014 and fell to 0.66% in 2015.  The plug-in segment achieved a record market share of 0.90% in 2016.  California is the largest plug-in car regional market in the country, with almost 270,000 plug-in electric vehicles registered through December 2016, and accounts for approximately 48% of cumulative plug-in sales in the American market from 2011 to June 2016.  The other nine states that follow California's Zero Emission Vehicle (ZEV) regulations account for another 10% of cumulative plug-in car sales in the U.S. during the same period.
+
+Limnocharis: Limnocharis is a genus of plants in the family Alismataceae, native to Mexico, Central America, the West Indies and South America) but naturalized in China, India, and Southeast Asia as well.  Two species are recognized as of May 2014:
+
+I'll Share My World with You (song): "I'll Share My World with You" is a song by American country singer George Jones.  It was written by Ben Wilson and reached #2 when it was released by Jones on the Musicor label in 1969.  It also reached #126 on the U.S. pop chart, his first appearance there since "The Race Is On" in 1964.  Its title and sentiments are similar to Jones 1967 #1 song "Walk Through This World with Me."  Wilson was an elderly man who lived in Miami and had made his way through life making souvenirs from seashells before turning to professional songwriting at age fifty-four and, like many country fans, he had gotten swept up in the rumors swirling around about Jones and Tammy Wynette, recalling, "At that time, George was just about to get married to Tammy, and was very much in love with her.  And I was also very much in love with my own wife.  After talking to my wife about this, I wrote 'I'll Share My World with You.'"  Ironically, the only thing that kept the single from the top spot when it was released in early 1969 was Wynette's monster hit "Stand By Your Man."  Jones performed "I'll Share My World with You" live throughout his career, usually as part of a medley of older hits.
+
+Bowley's law: Bowley's law, also known as the law of the constant wage share, is a stylized fact of economics which states that the wage share of a country, i.e., the share of a country's economic output that is given to employees as compensation for their work (usually in the form of wages), remains constant over time.  It is named after the English economist Arthur Bowley.  Research conducted near the start of the 21st century, however, found wage share to have declined since the 1980s in most major economies.
+
+Industry of Colombia: The share of the industry of Colombia in the country's gross domestic product (GDP) has shifted significantly in the last few decades.  Data from the World Bank show that between 1965 and 1989 the share of industry—including construction, manufacturing, and mining—increased from 27 percent to 38 percent of GDP.  However, since then the share has fallen considerably, down to approximately 29 percent of GDP in 2007.  This pattern is about the average for middle-income countries.
+
+Agriculture in Vietnam: In 2004, agriculture and forestry accounted for 21.8 percent of Vietnam's gross domestic product (GDP), and between 1994 and 2004, the sector grew at an annual rate of 4.1 percent.  Agriculture's share of economic output has declined in recent years, falling as a share of GDP from 42% in 1989 to 26% in 1999, as production in other sectors of the economy has risen.  However, agricultural employment was much higher than agriculture’s share of GDP; in 2005, approximately 60 percent of the employed labor force was engaged in agriculture, forestry, and fishing.  Agricultural products accounted for 30 percent of exports in 2005.  The relaxation of the state monopoly on rice exports transformed the country into the world’s second or third largest rice exporter.  Other cash crops are coffee, cotton, peanuts, rubber, sugarcane, and tea.
+
+Railway Clerks' Mountain House: Railway Clerks' Mountain House, also known as the Mountain Home, Clerks' Mountain Home, and Orchard Inn, is a historic country inn located near Saluda, Polk County, North Carolina.  The inn ("home") was built in 1926, and is a two-story, six bay, frame building with Colonial Revival and American Craftsman style design influences.  It has a hipped roof and features a full width hip-roofed one-story porch supported by slender Tuscan order columns.  Also on the property are three contributing guest cottages built about 1926: the "Paulownia" Cottage, "Boxwood" Cottage, and "Twin Poplar" Cottage.  The property was originally developed by the Brotherhood of Railway Clerks of the Southern Railway System as a summer retreat.  The union retained the property until 1962.
+
+Banco de Crédito del Perú: Banco de Crédito del Perú is the largest bank and the leading supplier of integrated financial services in Perú with approximately US$ 39 billion in total assets and a market share of 30.4% in total loans and 33.5% in total deposits.  BCP has more than 127 years of presence in the country and represents Peru’s most valuable brand.  Its network of more than 8,340 points of contact serves its more than 6 million clients.  BCP is the main subsidiary of Credicorp (NYSE: BAP), the largest financial holding in Peru.  BCP’s Wholesale Banking competes with local and foreign banks and provides its customers with short and medium-term loans in local and foreign currencies, foreign trade-related financing, lease financing, underwriting and financial advisory.  Its currently the market leader with a market share of more than 40% in corporate loans.  BCP’s Retail Banking serves individuals and small-sized companies with a wide range of high value-proposition products with a market share of over 20%.  In addition, BCP is the largest capital market and brokerage distribution system in Peru; its main activities include asset management, foreign exchange transactions, treasury, custody and trust, investment advisory services, and research activities.
+
+Olivaria Brewery: Olivaria brewery (also known as Olivaria or Alivaria, Belarusian: ААТ Піўзавод Аліварыя ) is one of the oldest breweries in Belarus, and is the oldest of presently existent breweries in the country.  It was founded in 1864 in Minsk.  The brewery has a 29% market share in the beer market in Belarus, and its primary product, Alivaria-brand beer has a market share of around 18%.  Production increased by 43% in 2008, and in 2011, the brewery was in third place in the market share of beer in Belarus.
+
+Paulownia: Paulownia is a genus of six to 17 species (depending on taxonomic authority) of flowering plants in the family Paulowniaceae, related to and sometimes included in the Scrophulariaceae.  They are present in much of China, south to northern Laos and Vietnam and are long cultivated elsewhere in eastern Asia, notably in Japan and Korea.  They are deciduous trees 12 – tall, with large, heart-shaped leaves 15–40 cm across, arranged in opposite pairs on the stem.  The flowers are produced in early spring on panicles 10–30 cm long, with a tubular purple corolla resembling a foxglove flower.  The fruit is a dry capsule, containing thousands of minute seeds.
+
+Question: What country do both Limnocharis and Paulownia share?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "shared_country": {
+      "type": "string",
+      "description": "The country that is common to the distribution or cultivation of both Limnocharis and Paulownia."
+    },
+    "entities_involved": {
+      "type": "array",
+      "description": "The names of the entities for which the shared country was identified.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limnocharis_status": {
+      "type": "string",
+      "description": "The status of Limnocharis in the shared country (e.g., native, naturalized, cultivated)."
+    },
+    "paulownia_status": {
+      "type": "string",
+      "description": "The status of Paulownia in the shared country (e.g., native, naturalized, cultivated)."
+    }
+  },
+  "required": [
+    "shared_country",
+    "entities_involved",
+    "limnocharis_status",
+    "paulownia_status"
+  ],
+  "additionalProperties": false
+}

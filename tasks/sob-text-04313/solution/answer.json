@@ -1,0 +1,10 @@
+{
+  "american_film_studio": {
+    "name": "20th Century Fox",
+    "location": "Los Angeles"
+  },
+  "british_subsidiary": {
+    "name": "Wembley Studios"
+  },
+  "relationship_description": "Wembley Studios was the British subsidiary of 20th Century Fox."
+}

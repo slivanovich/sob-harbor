@@ -1,0 +1,12 @@
+{
+  "person_a": {
+    "name": "Bertolt Brecht",
+    "birth_year": 1898
+  },
+  "person_b": {
+    "name": "J. K. Rowling",
+    "birth_year": 1965
+  },
+  "earliest_born_person_name": "Bertolt Brecht",
+  "comparison_summary": "Bertolt Brecht was born in 1898, while J. K. Rowling was born in 1965, making Bertolt Brecht the earliest born."
+}

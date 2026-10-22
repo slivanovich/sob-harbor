@@ -1,0 +1,16 @@
+{
+  "target_band_name": "U.K. Subs",
+  "musicians_compared": [
+    {
+      "musician_name": "Jarvis Cocker",
+      "is_lead_singer_of_target_band": false,
+      "primary_band_affiliation": "Pulp"
+    },
+    {
+      "musician_name": "Charlie Harper",
+      "is_lead_singer_of_target_band": true,
+      "primary_band_affiliation": "U.K. Subs"
+    }
+  ],
+  "identified_lead_singer_name": "Charlie Harper"
+}

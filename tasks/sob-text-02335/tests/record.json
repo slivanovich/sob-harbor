@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "c03e3fb3a3d8d9c11ed5342443eb06edcfbee22168658acbab168d739491627a",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac0f0b95542996f0d89cc3b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1660",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Takashi Nagase: Takashi Nagase (永瀬 隆 , Nagase Takashi , c. 1918/19 – 21 June 2011) was an interpreter of the Ministry of War of Japan.  He was born in 1918/19 in Kurashiki, Okayama, Japan.  He learned English from an American Methodist in a college in Tokyo.  He was one of the officers in charge of the construction of the \"Death Railway\" which ran between Thailand and Burma and included the famous bridge over the River Kwai, and is known for the use of forced labour of Allied prisoners of war, though the majority of the labour (and resultant deaths) was incurred by \"romusha\", or local civilians pressed into labour.\n\nPOW (disambiguation): POW is \"prisoner of war\", a person, whether civilian or combatant, who is held in custody by an enemy power during or immediately after an armed conflict.\n\nPrisoner of war: A prisoner of war (POW, PoW, PW, P/W, WP, PsW, enemy prisoner of war (EPW) or \"missing-captured\") is a person, whether combatant or non-combatant, who is held in custody by a belligerent power during or immediately after an armed conflict.  The earliest recorded usage of the phrase \"prisoner of war\" dates to 1660.\n\nHellfire Pass: Hellfire Pass (Thai: ช่องเขาขาด , known by the Japanese as \"Konyu Cutting\") is the name of a railway cutting on the former Burma Railway (\"Death Railway\") in Thailand which was built with forced labour during the Second World War, in part by Allied prisoners of war.  The pass is noted for the harsh conditions and heavy loss of life suffered by its labourers during construction.  Hellfire Pass is so called because the sight of emaciated prisoners labouring at night by torchlight was said to resemble a scene from Hell.\n\nBurma Railway: The Burma Railway, also known as the Death Railway, the Burma–Siam Railway, the Thailand–Burma Railway and similar names, was a 415 km railway between Ban Pong, Thailand, and Thanbyuzayat, Burma, built by the Empire of Japan in 1943 to support its forces in the Burma campaign of World War II.  This railway completed the rail link between Bangkok, Thailand and Rangoon, Burma (now Yangon).  The line was closed in 1947, but the section between Nong Pla Duk and Nam Tok was reopened ten years later in 1957.\n\nSumatra Railway: The Sumatra Railway, also referred to as the Pekanbaru Death Railway, was a railway project of the Imperial Japanese army in Sumatra during the Second World War.  It was designed to connect Pekanbaru to Muaro in an effort to strengthen the military and logistical infrastructure for coal and troop shipments.  The Japanese directed construction of the 220 km long railway to connect Muaro with Pekanbaru which lies close to the coast of the Malacca Straits up the Siak river.  This line included a spur line to a coal mine outside of the village at Petai.  They used forced labour and prisoners of war.  6,500 Dutch, mostly Indo-Europeans, 1000 British prisoners of war along with 300 POWs from America, Australia and New Zealand.  This number of POWs was dwarfed however by the over 120,000 Indonesian, mostly Javanese, forced workers called \"Romusha\" which were put to work by the Japanese army.  By the time the work was completed in August 1945 almost a third of the European POWs had died and only around 16,000 of the 120,000 Indonesian Romusha had survived.\n\nCivilian: A civilian is someone who is not a member of any military group and does not take a direct part of hostilities in times of armed conflict, as defined by the laws of war (and international humanitarian law).  The term \"civilian\" is slightly different from a non-combatant under the laws of war, as some non-combatants are not civilians (for example, military chaplains attached to the belligerent armed forces or neutral military personnel).  Under international law, civilians in the territories of a party to an armed conflict are entitled to certain privileges under the customary laws of war and international treaties such as the Fourth Geneva Convention.  The privileges that they enjoy under international law depends on whether the conflict is an internal one (a civil war) or an international one.\n\nPrisoner-of-war camp: A prisoner-of-war camp is a site for the containment of enemy combatants captured by a belligerent power in time of war.  It should be noted that there are significant differences among POW camps, internment camps, and military prisons. Purpose built prisoner-of-war camps appeared at Norman Cross in England in 1797 and HM Prison Dartmoor, both constructed during the Napoleonic Wars, and they have been in use in all the main conflicts of the last 200 years.  The main camps are used for coast guards, marines, sailors, soldiers, and more recently, airmen of an enemy power who have been captured by a belligerent power during or immediately after an armed conflict.  In addition, non-combatants, such as merchant mariners and civilian aircrews, have been imprisoned in some conflicts.  With the adoption of the Geneva Convention on the Prisoners of War in 1929, later superseded by the Third Geneva Convention, prisoner-of-war camps have been required to be open to inspection by authorized representatives of a neutral power.  Not all belligerents have consistently applied the convention in all conflicts.\n\nPrisoner of War (disambiguation): A prisoner of war is a person, whether combatant or non-combatant, who is held in custody by an enemy power during or immediately after an armed conflict.\n\nForced Labour Convention: The Forced Labour Convention, the full title of which is the Convention Concerning Forced or Compulsory Labour, 1930 (No.29), is one of eight ILO fundamental conventions of the International Labour Organization.  Its object and purpose is to suppress the use of forced labour in all its forms irrespective of the nature of the work or the sector of activity in which it may be performed.  The Convention defines forced labour as \"all work or service which is exacted from any person under the menace of any penalty and for which the said person has not offered himself voluntarily\", with few exceptions like compulsorly military service.  The convention excludes \"adult able-bodied males\", to whom legal imposition of forced labour is allowed.",
+    "question": "Takashi Nagase, was an interpreter of the Ministry of War of Japan, he was one of the officers in charge of the construction of the \"Death Railway\" which ran between Thailand and Burma, and is known for the use of forced labour of Allied prisoners of war, a prisoner of war, enemy prisoner of war (EPW) or \"missing-captured, is a person, whether combatant or non-combatant, who is held in custody by a belligerent power during or immediately after an armed conflict, the arliest recorded usage of the phrase \"prisoner of war\", dates to what year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "phrase_of_interest": {
+          "type": "string",
+          "description": "The specific phrase whose usage date is being inquired about."
+        },
+        "event_description": {
+          "type": "string",
+          "description": "A description of the event related to the phrase, such as its earliest recorded usage."
+        },
+        "year_of_occurrence": {
+          "type": "integer",
+          "description": "The year when the described event for the phrase occurred."
+        }
+      },
+      "required": [
+        "phrase_of_interest",
+        "event_description",
+        "year_of_occurrence"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "phrase_of_interest": "prisoner of war",
+      "event_description": "earliest recorded usage",
+      "year_of_occurrence": 1660
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

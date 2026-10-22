@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Two Futures Project: The Two Futures Project (2FP) is a movement made up of American Christians who support and work towards the abolition of all nuclear weapons.  This organization believes that human beings face two futures and one choice: a world without nuclear weapons or a world ruined by them.  2FP is supportive of concrete and practical steps to reduce nuclear dangers immediately, while pursuing the multilateral, global, irreversible, and verifiable elimination of nuclear weapons, as a biblically-grounded mandate and as a contemporary security imperative.  In order to make these changes in the world they are using a strategy based around the creation of a non-partisan, conscience-driven, enduring majority of Americans who are committed to a nuclear weapons-free world.  Two Futures Project seeks to join together one voice of Christian conscience, to encourage and enable national leaders to make the complete elimination of nuclear weapons the organizing principle of American nuclear weapons policy.  The founder and director of the Two Futures Project is Rev. Tyler Wigg-Stevenson.
+
+Security assurance: A security assurance, in the context of nuclear warfare, is an expression of a political position by a nuclear-armed nation intended to placate other non-nuclear-armed nations.  There are two types of security assurance: positive and negative.  A positive assurance states that the nation giving it will aid any, or a particular, non-nuclear-armed nation in retaliation, should it be a victim of nuclear attack.  A negative assurance is not the opposite of this, but instead means that a nuclear-armed nation has promised not to use nuclear weapons, except in retaliation for a nuclear attack against themselves.  See also No first use.
+
+Green Light Teams: Green Light Teams were Special Forces squads containing members of the U.S. Army, U.S. Navy, and the U.S. Marines during the height of the Cold War with the Soviet Union.  These Green Light Teams, also referred to as Atomic Demolition Munitions Specialists, were trained to advance, arm, and deploy Special Atomic Demolition Munitions behind enemy lines.  These Atomic Demolition Munitions, also known as ADMs and backpack nukes, are smaller, and more portable nuclear weapons created by the United States beginning in 1954.  These initial Atomic Demolition Munitions required large teams of trained soldiers and still weighed hundreds of pounds.  The United States of America’s nuclear weapons developers were encouraging of the Military’s desire for tactical nuclear weapons.  The President of one of these nuclear weapons developers, James McRae of Sandia Corporation, was among those inspiring the further development of tactical nuclear weapons, asserting: “greater emphasis should be placed on small atomic weapons”.  The development of the Davy Crocket nuclear device, an atomic weapon with a sub-kiloton energy yield that can be transported on the back of a jeep, served as a pre-cursor to the eventual final product foreseen by the Military, the Mk-54 Special Atomic Demolition Munition.  The Davy Crocket’s lightweight Mark-54 composition was encouraging to the further production and advancement of smaller Special Atomic Demolition Munitions, such as the W-54 version which could be manned by a single trained soldier.
+
+De-alerting: De-alerting introduces some reversible physical change(s) to nuclear weapons or weapon systems in order to lengthen the time required to use nuclear weapons in combat.  Because thousands of strategic nuclear warheads mounted on ballistic missiles remain on high-alert, launch-ready status, capable of being launched in only a few minutes, de-alerting has been proposed as a means to reduce likelihood that these forces will be used deliberately or accidentally.
+
+Roy A. Roberts: Roy Allison Roberts (1887 - February 23, 1967) was a managing editor, president, editor and general manager of "The Kansas City Star" who guided the paper during its influential period during the Presidencies of Harry S. Truman and Dwight D. Eisenhower.
+
+No first use: No first use (NFU) refers to a pledge or a policy by a nuclear power not to use nuclear weapons as a means of warfare unless first attacked by an adversary using nuclear weapons.  Earlier, the concept had also been applied to chemical and biological warfare.
+
+Treaty on the Prohibition of Nuclear Weapons: The Treaty on the Prohibition of Nuclear Weapons, or the Nuclear Weapon Ban Treaty, is the first legally binding international agreement to comprehensively prohibit nuclear weapons, with the goal of leading towards their total elimination.  It was passed on 7 July 2017.  In order to come into effect, signature and ratification by at least 50 countries is required.  For those nations that are party to it, the treaty prohibits the development, testing, production, stockpiling, stationing, transfer, use and threat of use of nuclear weapons, as well as assistance and encouragement to the prohibited activities.  For nuclear armed states joining the treaty, it provides for a time-bound framework for negotiations leading to the verified and irreversible elimination of its nuclear weapons programme.
+
+Harry S. Truman: Harry S. Truman (May 8, 1884December 26, 1972) was the 33rd President of the United States (1945–53), assuming that office upon the death of Franklin D. Roosevelt during the waning months of World War II.  He is known for launching the Marshall Plan to rebuild the economy of Western Europe, for leading the Cold War against Soviet and Chinese communism by establishing the Truman Doctrine and NATO, and for intervening in the Korean War.  In domestic affairs, he was a moderate Democrat whose liberal proposals were a continuation of Franklin Roosevelt's New Deal, but the conservative-dominated Congress blocked most of them.  He used the veto power 180 times, more than any president since then, and saw 12 overridden by Congress; only Grover Cleveland and Franklin D. Roosevelt used the veto so often, and only Gerald Ford and Andrew Johnson saw so many veto overrides.  He is also the only world leader to have ever used nuclear weapons in war, desegregated the U.S. Armed Forces, supported a newly independent Israel, and was a founder of the United Nations.
+
+Proud Prophet: Proud Prophet was a simulated war game played by the United States in 1983.  With an ongoing arms buildup against the Soviet Union, President Ronald Reagan and his Administration had a great deal of concern for the U.S. nuclear war plan and what may occur if we did not take action.  After being briefed on the strike plan in place, President Reagan was unsatisfied and took measures to simulate a response to the onset of a nuclear war.  The simulation consisted of 200 Military Personnel and Politicians with only twelve days of actual play.  Stretching the twelve days of gameplay over several week periods, Personnel involved in the simulation were forced to make critical strategic and diplomatic decisions to test the effectiveness of the United States strike plan.  Due to heightened tensions with the ongoing Cold War made this simulation the most realistic in United States Military history.  For the first time ever, the Secretary of Defense and the Chairman of the Joint Chiefs of Staff took part in the game, although their participation was concealed.  One of the main purposes of the simulation was to test the response of the National Command Authority's (NCA) decision making when dealing with many different situations at once.  Although Proud Prophet was intended to help senior officials test their nuclear strategies, it was apparent that many of the concepts in place were incompatible with current Military capabilities.  Many important parts of this simulation saw limited use of de-escalation tactics.  If a risk of a war did occur, many Military advisors saw the use of nuclear missiles as the deterring factor when dealing with the Soviet Union.  The idea behind this concept was that Soviet forces would seek ceasefire if the West moved to use nuclear weapons.  The final outcome of the Proud Prophet war game would show the need to resolve global issues in times of war or potential war.  The outcome of an all-out nuclear war is the total destruction of both sides involved, and a death toll nearly reaching half a billion with the remaining dying from starvation or lethal doses of radiation.  The government file for Proud Prophet was not declassified until December 20th, 2012, and was only declassified in part.  While there is no known reason why it was unclassified under the Obama administration.
+
+Nuclear button: The "nuclear button" is a figurative term referring to the power to use nuclear weapons. "Pushing the nuclear button" refers to actually using them.  The actual procedure for using such weapons is more complex than simply pushing a button.  The "nuclear button" may be transferred to another official due to political changes or the incapacitation of a person currently in control of it.
+
+Question: Of the two presidents who served during the heyday of the "Kansas City Star," which one did NOT use nuclear weapons in war?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "president_name": {
+      "type": "string",
+      "description": "The name of the president who did not use nuclear weapons in war."
+    },
+    "nuclear_weapons_use_status": {
+      "type": "boolean",
+      "description": "Indicates whether the president used nuclear weapons in war (false for not used)."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation derived from the context regarding nuclear weapons use by presidents."
+    },
+    "related_context": {
+      "type": "object",
+      "properties": {
+        "newspaper_name": {
+          "type": "string",
+          "description": "The name of the newspaper mentioned in relation to the presidents."
+        },
+        "editor_name": {
+          "type": "string",
+          "description": "The name of the editor who guided the newspaper during the presidencies."
+        }
+      },
+      "required": [
+        "newspaper_name",
+        "editor_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "president_name",
+    "nuclear_weapons_use_status",
+    "reasoning",
+    "related_context"
+  ],
+  "additionalProperties": false
+}

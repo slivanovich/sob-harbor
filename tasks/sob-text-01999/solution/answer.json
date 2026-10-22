@@ -1,0 +1,26 @@
+{
+  "explorer_details": {
+    "name": "Leif Erikson",
+    "origin": "Iceland",
+    "title": "Norse explorer"
+  },
+  "viking_expansion_contribution": {
+    "led_expedition_to": "North America",
+    "settlement_established": "L'Anse aux Meadows, Newfoundland and Labrador, Canada"
+  },
+  "overall_viking_expansion_scope": {
+    "regions_sailed": [
+      "North Atlantic",
+      "North Africa",
+      "Russia",
+      "Constantinople",
+      "Middle East"
+    ],
+    "activities": [
+      "looters",
+      "traders",
+      "colonists",
+      "mercenaries"
+    ]
+  }
+}

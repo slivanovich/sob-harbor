@@ -1,0 +1,10 @@
+{
+  "film_title": "Aashiqui 2",
+  "release_year": 2013,
+  "genre": "romance",
+  "director": "Mohit Suri",
+  "production_company": {
+    "name": "T-Series",
+    "founder": "Gulshan Kumar"
+  }
+}

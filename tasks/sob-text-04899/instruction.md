@@ -1,0 +1,90 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+George G. Finch: Maj. Gen. George G. Finch became the Senior Leader of the US Air National Guard; (Chief of the Air Division National Guard Bureau) (1948-1950) In June 1953 it was reported that Gen. Mark W. Clark would retire and be replaced by Maj. Gen George G. Finch on the UN command delegation to the Korean armistice talks George G. Finch, born April 11, 1902 in Dade City, Florida, is considered one of the pioneers in United States aviation history.  He began his military career during World War 1, enlisting in the Aviation Section of the Army's Signal Corps in 1918.  He remained in the Reserve Corps after the war, and in 1926, became Commander, 27th Pursuit Squadron, 1st Pursuit Group.  In 1940, Georgia Governor Ed Rivers commissioned him to form the first flying unit of the Georgia Air National Guard.  The unit was mobilized into the U.S. Army in September, 1941, with Major Finch as commander.  After World War II, he was a leading critic of efforts to eliminate the air arm of the National Guard during peacetime.  General Finch gained the respect and admiration of Air National Guardsmen throughout the nation with his steadfast support and successful efforts to preserve the Air Guard.  He became the first Chief of the Air Force Division of the National Guard Bureau in 1948.  Under his leadership, the Air National Guard built to combat readiness and was among the first components called into service after the outbreak of the Korean War.  As a result of General Finch's vision and perseverance, 45,000 highly trained officers and airmen of 22 wings and 65 squadrons gave the Air Force the strength it needed in the early, critical phases of the Communist drive down the Korean peninsula.General Finch served as the senior Air Force member of the United Nations negotiating team at the peace talks at Panmunjom, Korea, and received the Legion of Merit for outstanding service in 1955; General Finch assumed command of Fourteenth Air Force, Robins AFB, Georgia, becoming the nation's first Air National Guardsman to head a numbered air force.  General Finch had a career of "firsts" including the US Army's first night landing with a single, five-million-candlepower floodlight in 1927.  He also established and endowed the General John P. McConnell Award at the United States Air Force Academy.  Considered by many as the father of the strong, independent Air National Guard existing today, General Finch retired in 1957.  No man has had greater impact on the Air Force Reserve and National Guard than has General George G. Finch.A graduate of the University of Georgia and a member of the Georgia Bar, General Finch was enshrined in the Georgia Aviation Hall of Fame May 18, 1996.
+
+Missouri National Guard: The Missouri National Guard (1808-present) is a component of the Missouri Department of Public Safety and the National Guard of the United States.  It is composed of Army and Air National Guard units.  Eric Greitens, Governor of Missouri, is Commander in Chief.  The headquarters is in Jefferson City, Missouri.
+
+Eric Greitens: Eric Robert Greitens (born April 10, 1974) is an American politician, author, and former Navy SEAL currently serving as the 56th Governor of Missouri, since January 2017.  He is currently the second youngest Governor in the United States, after New Hampshire's Chris Sununu.
+
+Vice Chief of the National Guard Bureau: The Vice Chief of the National Guard Bureau (VCNGB) is the second highest-ranking officer of the National Guard Bureau, which is a joint activity of the United States Department of Defense.  The Vice Chief of the National Guard Bureau is the second in charge of the National Guard of the United States; which is a joint reserve component of the United States Army and the United States Air Force.  The VCNGB serves as the principal advisor to the Chief of the National Guard Bureau and the Secretary of Defense, through the Chairman of the Joint Chiefs of Staff, on matters involving non-federalized National Guard forces and on other matters as determined by the United States Secretary of Defense.  The VCNGB also serves as the principal adviser to the Secretary of the Army, Secretary of the Air Force, the Chief of Staff of the Army, and the Chief of Staff of the Air Force, on matters relating to federalized forces of the National Guard of the United States and its subcomponents; the Army National Guard of the United States, and the Air National Guard of the United States.
+
+Roger E. Combs: Roger E. Combs is a retired Major General in the Air National Guard.  His last assignment was as the Director of Strategic Plans and Policy (J-5) for the National Guard Bureau.  In this position he was responsible to the chief, National Guard Bureau to develop, promulgate and implement policy, plans, concepts and strategy for the nearly half million citizen soldiers and airmen of the Army and Air National Guard.  His duties touched and concerned war-fighting, peacetime international activities and aspects of the federal and state homeland security and civil support missions of both the National Guard Bureau and the corporate National Guard.  The mission scope of the J-5 Directorate also includes representing the chief of the National Guard Bureau in Department of Defense, inter-agency, intergovernmental and non-governmental forums.  Previously, General Combs was assistant Adjutant General for Air and deputy commander of Joint Forces Headquarters, Missouri.  He also served as the Air National Guard assistant to commander, First Air Force, Tyndall Air Force Base, Florida.
+
+Missouri Reserve Force: The Missouri Reserve Force, originally known as the Military Reserve Military Force, is the official state defense force of Missouri.  As a state defense force, the MRF is a reserve military force which serves parallel to the Missouri National Guard.  MRF members serve as reservists and therefore can hold full-time jobs while serving, like their National Guard counterparts.  As the MRF falls solely under the command of the state of Missouri, it cannot be federalized or deployed outside the borders of Missouri, unlike the National Guard.  Although the MRF and the Missouri National Guard are separate organizations, the MRF's primary scope is to work alongside the National Guard during stateside operations, or in lieu of the National Guard when the National Guard is deployed outside of Missouri.  Along with the Missouri Army National Guard, the Missouri Air National Guard, and the Missouri Naval Militia, the Missouri Reserve Force is recognized under Missouri law as part of the organized militia of Missouri.
+
+Brandon Webb (author): Brandon Tyler Webb (born 1974) is a former United States Navy SEAL and SEAL Sniper Head Instructor, with one combat deployment to Afghanistan and one to Iraq.  He served as the Navy SEAL Sniper Course Manager, where he developed new curricula and trained snipers, including Chris Kyle.  He is the editor in chief of SOFREP and a media commentator on snipers and related Special Operations Forces military issues.  Webb is the co-author of "The 21st Century Sniper: A Complete Practical Guide".  He is the author of "The Red Circle", his memoir, and "The Making of a Navy Seal".
+
+Missouri Air National Guard: The Missouri Air National Guard (MO ANG) is the air force militia of the State of Missouri, United States of America.  It is, along with the Missouri Army National Guard, an element of the Missouri National Guard.
+
+Gabriel E. Gomez: Gabriel Eduardo Gomez (born August 27, 1965) is an American politician, private equity investor and former Navy SEAL.  He was the Republican nominee for the U.S. Senate in the 2013 special election in Massachusetts, to replace U.S. Secretary of State John Kerry.  Gomez was defeated by U.S. Representative Ed Markey.  Gomez has the rare distinction of having served as both an Aircraft Carrier Pilot and a Navy SEAL.
+
+Cade Courtley: Christopher "Cade" Courtley (born December 30, 1969) is a retired American television host and a former Navy SEAL.  He was the host of Spike TV's and Discovery Channel's show "Surviving Disaster" and Sportsman Channel's "America Unplugged".  He was also the author of a book, entitled "SEAL Survival Guide: A Navy SEAL's Secrets to Surviving Any Disaster".
+
+Question: In which city can you find the headquarters of the Missouri National Guard, whose Commander in Chief is politician, author and former Navy SEAL Eric Greitens?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "organization_name": {
+      "type": "string",
+      "description": "The name of the military organization."
+    },
+    "headquarters_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the headquarters is located."
+        },
+        "state": {
+          "type": "string",
+          "description": "The state where the headquarters is located."
+        }
+      },
+      "required": [
+        "city",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "commander_in_chief": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the Commander in Chief."
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Key roles or professions of the Commander in Chief."
+        }
+      },
+      "required": [
+        "name",
+        "roles"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "organization_name",
+    "headquarters_location",
+    "commander_in_chief"
+  ],
+  "additionalProperties": false
+}

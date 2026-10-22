@@ -1,0 +1,65 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Yeezus: Yeezus is the sixth studio album by American rapper Kanye West.  It was released on June 18, 2013, by Def Jam Recordings.  West gathered a number of artists and close collaborators for production on the album, including Mike Dean, Daft Punk, Noah Goldstein, Hudson Mohawke, Arca, and Travis Scott.  "Yeezus" also features guest vocals from Justin Vernon, Chief Keef, Kid Cudi, Assassin, King L, Charlie Wilson and Frank Ocean.  Fifteen days before its release date, West enlisted the help of producer Rick Rubin to strip down the record's sound in favor of a more minimalist approach.
+
+Only Love (Anggun song): "Only Love" (English) / "Mon meilleur amour" (French) / "Hanyalah Cinta" (Indonesian) is a song recorded by Indonesian singer Anggun.  The song was written by the singer alongside Marie Bastide and Gioacchino Maurici for her sixth international album "Echoes".  "Only Love" and "Hanyalah Cinta" were released as the album's lead single in Indonesia and Malaysia.  Both versions were premiered on 100 Indonesian radio stations on 6 April 2012, making Anggun the only Indonesian act in history to enter the local and international charts simultaneously.  "Mon meilleur amour" was originally planned as the lead single for the French album "Échos".  However "Je partirai" was eventually released as the lead single and "Mon meilleur amour" became the second single instead.  The single received Platinum Export Award for selling more than 300.500 copies outside France as of 30 September 2011.
+
+Back in Time (Pitbull song): "Back in Time" is a song by the American rapper Pitbull.  While originally released as the lead single from the soundtrack of sci-fi film "Men in Black 3", it is not featured on the album; instead, it was released as the lead single from Pitbull's seventh studio album, "Global Warming".  The single was released via download on March 27, 2012, before being issued physically in Germany on May 25, 2012.  The single to date has sold over 1.3 million copies digitally. <ref name="Hip Hop Digital Singles Sales: The Week Ending 7/29/2012"> </ref> The song contains a sample from "Love Is Strange", written by Mickey Baker, Sylvia Robinson, and Ellas McDaniel, as performed by Mickey & Sylvia, which was also used in the song Rinky Dink by Bill Justis.
+
+Héctor Acosta (singer): Héctor Elpidio Acosta Restituyo, better known as Héctor Acosta "el Torito" (Héctor Acosta "The Little Bull") or simply Héctor Acosta, is a Dominican performer of merengue and bachata music.  Acosta was the lead singer for the Dominican band Los Toros Band (The Bull Band).  Following his departure from the band, he released his debut album "Sigo Siendo Yo" ("Still Being Me") in 2006.  Its lead single "Me Voy" ("I'm Going") was written by Romeo Santos and it peaked at number 48 on the "Billboard" Hot Latin Songs chart.  In 2008, Acosta released his second album "Mitad/Mitad" ("Half/Half") and it features a cover of Jorge Celedón's song "Sin Perdón" which became a number one hit on the Tropical Songs chart.  In the same year, Acosta and Celedón performed a duet titled "Me Vió Llorar" ("She Saw Me Crying") which also reached number one on the Tropical Songs chart.The album was certified gold by the RIAA for shipping 30,000 copies in the US.  His next albums "Simplemente el Torito" ("Simply the Little Bull") (2009) and "Obligame" ("Obligate Me") (2010) were also certified gold for shipping 50,000 and 30,000 copies respectively.  "Obligame" received a Latin Grammy nomination for Best Contemporary Tropical Album.  In 2012, he released his fifth studio album "Con el Corazon Abierto" ("With the Open Heart") and its lead single "Tu Veneno" ("Your Poison") became his third number-one single on the Tropical Songs chart.
+
+Gesaffelstein: Mike Lévy, better known as Gesaffelstein (born 1985 in Lyon, France), is a French techno artist and DJ.  He has worked alongside, and remixed tracks for such artists as varied as Tiga, Miss Kittin, ASAP Rocky, Lana Del Rey and Phoenix.  He produced two tracks on "Yeezus", the sixth album of American rapper Kanye West, including the lead single "Black Skinhead" and "Send It Up", both tracks produced with Kanye West, Daft Punk, Brodinski and Mike Dean.  Gesaffelstein released his debut album "ALEPH" on October 28, 2013 under Parlophone Records and EMI Music, which had been recorded since 2011.  His remix of "Shockwave" by The Hacker is featured in the 2013 video game "Grand Theft Auto V", on the Soulwax FM radio station.  In 2015 Gesaffelstein released the track Conquistador in collaboration with French electronic music pioneer Jean-Michel Jarre.
+
+Travis Scott discography: American rapper Travis Scott has released two studio albums, three mixtapes, four extended plays (EP) and 12 singles.  In 2012, Scott signed his first major-label deal with Epic Records, before eventually signing to Kanye West's GOOD Music production wing known as Very G.O.O.D. Beats.  In April 2013, it was announced he signed a recording contract with T.I.'s Grand Hustle imprint.  The following years he released the mixtapes "Owl Pharaoh" (2013) and "Days Before Rodeo" (2014).  Scott's debut studio album "Rodeo", was released on September 4, 2015.  His debut album's lead single "3500", featuring Future and 2 Chainz, peaked at number 82 on the US "Billboard" Hot 100 chart.  The album's second single, "Antidote", peaked at number 16 on the "Billboard" Hot 100 and became his highest charting single so far.  Scott's second album, "Birds in the Trap Sing McKnight", was released on September 2, 2016.  His second album's lead single "Pick Up the Phone", with Young Thug featuring Quavo, peaked at number 43 on the "Billboard" Hot 100.
+
+Amir Haddad discography: The discography of Amir Haddad, a French-Israeli singer/songwriter, consists of three studio albums and five singles.  His debut studio album, "Vayehi", was released in 2011. " Au cœur de moi", Haddad's second studio album, was released in April 2016.  The album peaked to number 6 on the French Albums Chart. " Oasis" was released as the lead single from the album on 25 June 2015.  The song has peaked at number 101 on the French Singles Chart.  In 2016 he was selected by France 2 to represent France at the Eurovision Song Contest 2016 in Stockholm, Sweden.  His song, "J'ai cherché" was chosen internally by France 2 by a committee headed by entertainment director Nathalie André and the newly appointed French Head of Delegation for the Eurovision Song Contest Edoardo Grassi after having received 280 submissions.  The entry was formally presented to the public on 12 March 2016 during the France 2 programme "The DiCaire Show", hosted by Véronic DiCaire.  The song finished 6th overall in the grand final with 257 points, France's best placing since 2002 and the country's highest-scoring entry in their contest history. " On dirait" was released as the third single from the album on 29 August 2016.  The song has peaked at number 15 on the French Singles Chart and on 17 June 2017, won the Chanson de l'Année prize at the Fête de la Musique event in Nîmes. " Au cœur de moi" was released as the fourth single from the album on 6 February 2017.  The song has peaked at number 111 on the French Singles Chart. " Addictions", Haddad's third studio album, will be released in October 2017. " États d'Amour" was released as the lead single from the album on 25 August 2017.  The song has peaked at number 40 on the French Singles Chart.
+
+Neon Hitch discography: The discography of British singer and songwriter Neon Hitch.  Neon's debut digital single "Get Over U" was released in February 2011.  Hitch then released her single "Bad Dog", which was intended to be the lead single from her debut album.  Later in 2011, she was featured on Gym Class Heroes' song "Ass Back Home".  In 2012, Neon Hitch released "Fuck U Betta" and Gold" featuring Tyga, her official first and second singles respectively.  Both songs peaked at number one on the "Billboard" Dance/Club Play chart.  Neon then debuted an EP entitled "Happy Neon" in January 2013, which was released online for free.  In October 2013, Neon announced that her debut album "Beg, Borrow & Steal" had been scrapped and she would release a new album that had more of her soul in it.  In January 2014, Neon released the mixtape "301 to Paradise" for free.  In May 2014, it was announced that Hitch had parted ways with her label Warner Bros. and was gearing up to releasing her new debut album "Eleutheromaniac"; she also released "Happy Neon" and "301 to Paradise" to digital retailers independently in the same month.  She premiered the lead single of "Eleutheromaniac", "Yard Sale", in August 2014.  In January 2015, Neon released "Sparks" as the first single from the album.  In March 2015, Hitch released the EP "24:00" for free.  In 2016, it was announced that Hitch had changed the name of her debut album to "Anarchy", which was released on July 22, 2016.  The lead single from the album, "Please", was released on July 8, 2016.  The album did not contain any of the singles intended to be on "Eluetheromaniac", but included a promomotional single she released in 2015, "Freedom".
+
+Wait (Seven Mary Three song): "Wait" is a song by Seven Mary Three and the lead single from their fifth studio album, "The Economy of Sound", released on June 5, 2001.  It also served as the English lead single to the "Crazy/Beautiful" film soundtrack released three weeks later (La Ley's "Every Time/Siempre" was its Spanish lead single).  "Wait" has since become one of the band's most popular songs, having reached #7 on Billboard's Mainstream Rock Tracks.  It also entered radio as the #1 Most Added record of the format in its first two weeks.
+
+List of songs recorded by Kelly Clarkson: American singer Kelly Clarkson has recorded material for her seven studio albums.  After signing a contract in 2002 with RCA Records, a division of then-Bertelsmann Music Group (now Sony Music), 20-year-old Clarkson released the double A-side single "Before Your Love" / "A Moment Like This" and began to record tracks for her debut studio album, "Thankful" (2003).  Its lead single, "Miss Independent", received a nomination for a Grammy Award for Best Female Pop Vocal Performance in 2004.  "Miss Independent" was followed by "Low" and "The Trouble With Love Is", which was featured as a single from the soundtrack of the film "Love Actually".  In 2004, Clarkson recorded the song "Breakaway", which was released as a single from the of the film "".  The song's commercial success inspired Clarkson to name her second studio album "Breakaway".  The album won a Grammy Award for Best Pop Vocal Album in 2006, while its second single, "Since U Been Gone", won for Best Female Pop Vocal Performance.  Subsequent singles, "Behind These Hazel Eyes" (2005), "Because of You" (2005), and "Walk Away" (2006), became successful hits.  Clarkson's third studio album, "My December", was released in 2007.  The album became a subject of a dispute with then RCA Music Group chairman Clive Davis, who criticized the album and suggested that Clarkson reunite with her previous collaborators. " Never Again", the lead single from "My December", became its only hit single.  Succeeding releases from "My December" included "Sober", "One Minute", and "Don't Waste Your Time".
+
+Question: When was the album with the lead single "Black Skinhead" released?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album."
+    },
+    "album_artist": {
+      "type": "string",
+      "description": "The artist who released the album."
+    },
+    "lead_single_name": {
+      "type": "string",
+      "description": "The name of the lead single from the album."
+    },
+    "release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The release date of the album in YYYY-MM-DD format."
+    }
+  },
+  "required": [
+    "album_name",
+    "album_artist",
+    "lead_single_name",
+    "release_date"
+  ],
+  "additionalProperties": false
+}

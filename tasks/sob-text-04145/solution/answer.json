@@ -1,0 +1,14 @@
+{
+  "railroad_name": "Union Pacific Railroad",
+  "operational_details": {
+    "locomotive_count": 8500,
+    "route_miles": 32100,
+    "states_operated_in_count": 23
+  },
+  "associated_community": {
+    "community_name": "Whitsett",
+    "county": "Live Oak County",
+    "state": "Texas",
+    "location_description": "northwestern Live Oak County, Texas, United States, along the Union Pacific Railroad"
+  }
+}

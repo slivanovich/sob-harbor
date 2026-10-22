@@ -1,0 +1,16 @@
+{
+  "actress_details": {
+    "name": "Julie Goodyear",
+    "birth_year": 1942
+  },
+  "character_details": {
+    "name": "Bet Lynch",
+    "role": "pub landlady"
+  },
+  "event_details": {
+    "year_of_event": 1995,
+    "action": "fled",
+    "reason": "unable to pay her debts"
+  },
+  "flee_location": "Weatherfield"
+}

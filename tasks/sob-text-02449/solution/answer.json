@@ -1,0 +1,18 @@
+{
+  "is_both_county_level_cities": true,
+  "entities_checked": [
+    {
+      "city_name": "Jieshou",
+      "is_county_level_city": true,
+      "administrative_parent": "Fuyang City",
+      "province": "Anhui"
+    },
+    {
+      "city_name": "Xuanwei",
+      "is_county_level_city": true,
+      "administrative_parent": "Qujing",
+      "province": "Yunnan"
+    }
+  ],
+  "total_entities_checked": 2
+}

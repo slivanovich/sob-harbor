@@ -1,0 +1,56 @@
+{
+  "organization_name": "New York State Department of Transportation",
+  "formation_details": {
+    "year": 1967,
+    "formed_from_merger": true,
+    "merged_organizations": [
+      "New York State Department of Public Works"
+    ]
+  },
+  "involved_routes": [
+    {
+      "route_name": "U.S. Route 44",
+      "route_designation": "US 44",
+      "role": "maintains",
+      "scope_of_involvement": "entire 65.98 mi length"
+    },
+    {
+      "route_name": "Bronx River Parkway",
+      "route_designation": "NY 907H",
+      "role": "maintains and designates",
+      "scope_of_involvement": "Within the Bronx"
+    },
+    {
+      "route_name": "Mosholu Parkway",
+      "route_designation": "NY 908F",
+      "role": "designates",
+      "scope_of_involvement": "parkway",
+      "actual_maintenance_by_other_entity": "New York City Department of Transportation"
+    },
+    {
+      "route_name": "Prospect Mountain Veterans Memorial Highway",
+      "route_designation": "NY 917A",
+      "role": "designates",
+      "scope_of_involvement": "roadway",
+      "actual_maintenance_by_other_entity": "New York State Department of Environmental Conservation"
+    },
+    {
+      "route_name": "Yonkers Avenue",
+      "route_designation": "NY 983C and NY 984E",
+      "role": "maintains",
+      "scope_of_involvement": "entirety"
+    },
+    {
+      "route_name": "New York State Route 380",
+      "route_designation": "NY 380",
+      "role": "maintains",
+      "scope_of_involvement": "from NY 424 in Stockton to the west end of its overlap with U.S. Route 20 (US 20) in Brocton"
+    },
+    {
+      "route_name": "New York State Route 351",
+      "route_designation": "NY 351",
+      "role": "redesignates",
+      "scope_of_involvement": "all of CR 77"
+    }
+  ]
+}

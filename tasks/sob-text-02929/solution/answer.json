@@ -1,0 +1,17 @@
+{
+  "concert_tour_name": "The Diamond Jubilee World",
+  "main_artist": "Frank Sinatra",
+  "featured_artists": [
+    "Steve Lawrence",
+    "Eydie Gormé"
+  ],
+  "eydie_gorme_details": {
+    "full_name": "Eydie Gormé",
+    "performing_partner_name": "Steve Lawrence",
+    "performing_partner_relationship": "husband",
+    "genres_performed": [
+      "popular ballads",
+      "swing"
+    ]
+  }
+}

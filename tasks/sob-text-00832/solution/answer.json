@@ -1,0 +1,16 @@
+{
+  "question_answer": false,
+  "person_one_details": {
+    "name": "Marguerite Yourcenar",
+    "nationalities_mentioned": [
+      "French",
+      "US"
+    ],
+    "birth_country": "Belgium"
+  },
+  "person_two_details": {
+    "name": "Wyndham Lewis",
+    "nationality": "English"
+  },
+  "reasoning": "Marguerite Yourcenar was a French novelist born in Belgium who became a US citizen, while Wyndham Lewis was an English writer. Their nationalities are different."
+}

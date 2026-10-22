@@ -1,0 +1,20 @@
+{
+  "film_title": "Taken",
+  "film_attributes": {
+    "release_year": 2008,
+    "languages": [
+      "English",
+      "French"
+    ],
+    "genres": [
+      "action",
+      "thriller"
+    ],
+    "director": "Pierre Morel"
+  },
+  "person_of_interest": {
+    "name": "Susan Bissell",
+    "role_in_organization": "Director of the Global Partnership to End Violence Against Children",
+    "relationship_to_film": "voiced her belief that Liam Neeson's work on child abuse, inspired by acting in 'Taken', would be effective"
+  }
+}

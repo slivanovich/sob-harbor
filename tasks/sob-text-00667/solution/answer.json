@@ -1,0 +1,32 @@
+{
+  "is_both_movies": true,
+  "first_title_is_movie": true,
+  "second_title_is_movie": true,
+  "lone_ranger_films": [
+    {
+      "title": "The Lone Ranger (2013 film)",
+      "year": 2013,
+      "description_from_context": "American western action film"
+    },
+    {
+      "title": "The Lone Ranger and the Lost City of Gold",
+      "year": 1958,
+      "description_from_context": "American Western film"
+    },
+    {
+      "title": "The Lone Ranger (1956 film)",
+      "year": 1956,
+      "description_from_context": "Western film"
+    },
+    {
+      "title": "The Lone Ranger (2003 film)",
+      "year": 2003,
+      "description_from_context": "TV-movie"
+    }
+  ],
+  "kidnapped_film": {
+    "title": "Kidnapped (1960 film)",
+    "year": 1960,
+    "description_from_context": "Walt Disney Productions film adaptation"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "person_one": {
+    "name": "KatieJane Garside",
+    "occupations": [
+      "singer",
+      "songwriter",
+      "visual artist",
+      "poet"
+    ]
+  },
+  "person_two": {
+    "name": "Aaron Hall",
+    "occupations": [
+      "soul singer",
+      "songwriter"
+    ]
+  },
+  "shared_occupations": [
+    "singer",
+    "songwriter"
+  ]
+}

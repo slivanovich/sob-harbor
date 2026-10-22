@@ -1,0 +1,27 @@
+{
+  "player_name": "Wendell Edward Tucker",
+  "player_position": "wide receiver",
+  "team_seasons_played": {
+    "team_name": "Los Angeles Rams",
+    "number_of_seasons": 4
+  },
+  "trade_information": {
+    "trade_year": 1971,
+    "traded_from_team": "Los Angeles Rams",
+    "traded_to_team": "Dallas Cowboys",
+    "players_involved": [
+      {
+        "player_name": "Wendell Tucker",
+        "direction": "traded_from_team"
+      },
+      {
+        "player_name": "Billy Truax",
+        "direction": "traded_from_team"
+      },
+      {
+        "player_name": "Lance Rentzel",
+        "direction": "received_by_team"
+      }
+    ]
+  }
+}

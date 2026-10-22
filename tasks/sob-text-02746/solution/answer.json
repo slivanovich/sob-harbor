@@ -1,0 +1,16 @@
+{
+  "question_asked": "Which director is from Japan, René Clément or Ted Sharks?",
+  "directors_compared": [
+    {
+      "name": "René Clément",
+      "nationality": "French",
+      "is_japanese": false
+    },
+    {
+      "name": "Ted Sharks",
+      "nationality": "Japanese",
+      "is_japanese": true
+    }
+  ],
+  "japanese_director_name": "Ted Sharks"
+}

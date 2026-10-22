@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Edward Elgar: Sir Edward William Elgar, 1st Baronet (2 June 1857 – 23 February 1934) was an English composer, many of whose works have entered the British and international classical concert repertoire.  Among his best-known compositions are orchestral works including the "Enigma Variations", the "Pomp and Circumstance Marches", concertos for violin and cello, and two symphonies.  He also composed choral works, including "The Dream of Gerontius", chamber music and songs.  He was appointed Master of the King's Musick in 1924.
+
+Arthur Waugh (priest): Waugh was born in Winchester on 23 November 1842 and educated at Christ's Hospital and Jesus College, Cambridge.  He was then a master at Rossall School, during which period he was also a Curate at Thornton.  He was ordained in 1867 and then held incumbencies in Elmstead and Brighton before his appointment as a Residentiary Canon at Ripon Cathedral in 1891.  He was Archdeacon of Ripon from 1894 to 1905.  In 1895 he was appointed Master of the Ripon Hospitals.
+
+Danielle Wetherup: Danielle Wetherup was President of the Royal Canadian Mint (also known as Master of the Mint) from October 31, 1994 to December 20, 2002.  She was the second woman to be named Master of the Mint.  Her predecessor, Ruth Hubbard, was the first woman to be appointed Master of the Mint.  At the time of the appointment, Wetherup was 53.  Prior to the appointment, she was Associate Deputy Minister of the Environment.
+
+Vice-President of the Civil Division: The Vice-President of the Civil Division is a Lord Justice of Appeal who assists the Master of the Rolls in leading the Civil Division of the Court of Appeal of England and Wales.  The power to appoint a Vice-President was created by the Senior Courts Act 1981, but was not exercised until Lord Phillips of Worth Matravers was appointed Master of the Rolls in 2000.  Because Lord Phillips was in the process of completing the inquiry into the bovine spongiform encephalopathy outbreak, he appointed Sir Martin Nourse the first Vice-President so he could serve as Acting Master of the Rolls.
+
+Frederick John Owen Evans: Evans, son of John Evans, a master in the Royal Navy, was born on 9 March 1815.  He entered the navy as a second-class volunteer in 1828.  After serving in HMS "Rose" and HMS "Winchester" he was transferred in 1833 to HMS "Thunder" , under Captain Richard Owen, and spent three years in surveying the coasts of Central America, the Demerara River, and the Bahama Banks.  Evans subsequently served in the Mediterranean on board HMS "Caledonia" , the flagship of the Mediterranean Fleet, and then on HMS "Asia" , HMS "Rapid" , HMS "Rolla" , HMS "Dido" , and HMS "Wolverine" , passing through the different ranks of the ‘master's’ line, the officers then charged with the duties of navigation.  In 1841 Evans was appointed master of HMS "Fly" , and for the next five years he was employed in surveying the Coral Sea, the Great Barrier Reef of Australia, and Torres Straits.  Joseph Jukes, the geologist, was on board the "Fly", and wrote an account of the expedition.
+
+There are seven that pull the thread: ”There are seven that pull the thread” is a song with words by W. B. Yeats, and music written by the English composer Edward Elgar in 1901.
+
+Gaius Fabius Ambustus (magister equitum 315 BC): Gaius Fabius Ambustus was a general and politician of ancient Rome.  He was the son apparently of Marcus Fabius Ambustus, and brother to Quintus Fabius Maximus Rullianus and to the Marcus Fabius Ambustus who was "magister equitum" in 322 BC.  He himself was appointed Master of the Horse in 315 BC in place of Quintus Aulius Cerretanus, who had fallen in battle while serving as Master of the Horse to Gaius's brother Marcus.
+
+Petrus Aureolus: Petrus Aureolus (c. 1280 – January 10, 1322) was a scholastic philosopher and theologian.  We know little of his life before 1312.  After this time, he taught at the Franciscan convent in Bologna, then at the convent in Toulouse, around 1314.  He went to Paris in 1316 in order to qualify for his doctorate, where he read the Sentences.  In 1318 he was appointed master of theology at the University of Paris.  In 1321, he was appointed by his mentor, Pope John XXII, to the position of Archbishop of Aix-en-Provence, but died not long after in 1322.
+
+Sisto Fabri: Sisto Fabri (4 August 1540 – 1594) was a theologian and canon lawyer of the Dominican Order who was appointed Master of the Sacred Palace by Pope Gregory XIII serving from 1580 to 1583, and Master of the Order of Preachers from 1583 to 1589.
+
+Lord Robert Manners-Sutton: Lord Robert Manners, later Manners-Sutton (21 February 1722 – 19 November 1762) was the second son of John Manners, 3rd Duke of Rutland by his wife the Hon. Bridget Sutton, and younger brother of the famous soldier Lord Granby, under whom he served as Lieutenant-Colonel of the 21st Light Dragoons.  He was appointed Colonel of the 36th Foot in 1751.  A courtier, he was appointed Master of the Staghounds on 26 April 1744, and also served as Master of the Harriers from 11 April 1754 until 13 January 1756.  From 6 July 1747 until his death he was one of the Members of Parliament for Nottinghamshire.  He adopted the additional surname of Sutton on succeeding to the estates of his maternal grandfather the 2nd Lord Lexinton in 1734.  He died without having married, and so the estates passed to his next brother Lord George Manners, who also adopted the name Manners-Sutton.
+
+Question: The writer of the music for the song ”There are seven that pull the thread” was appointed Master of the King's Musick in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "composer_name": {
+      "type": "string",
+      "description": "The name of the composer who wrote the music for the song."
+    },
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song mentioned in the question."
+    },
+    "appointed_role": {
+      "type": "string",
+      "description": "The specific role the composer was appointed to."
+    },
+    "appointment_year": {
+      "type": "integer",
+      "description": "The year in which the composer was appointed to the specified role."
+    }
+  },
+  "required": [
+    "composer_name",
+    "song_title",
+    "appointed_role",
+    "appointment_year"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "record_id": "a7cab61bf76e1a4f60b51f421141b25f086c0c1c4d3baf7a8d1238919bd01cf5",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8760af5542996e4f3087ae",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Washington",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "VAQ-131: Electronic Attack Squadron 131 (VAQ-131), also known as the \"Lancers,\" is a United States Navy tactical jet aircraft squadron specializing in kinetic and non-kinetic Suppression of Enemy Air Defenses (SEAD).  They are based at Naval Air Station Whidbey Island, flying the EA-18G Growler and are part of Carrier Air Wing 8, deploying aboard the USS \"George H.W. Bush\" .  Their radio callsign is \"Skybolt.\"\n\nNaval Air Station Whidbey Island: Naval Air Station Whidbey Island (NASWI) (IATA: NUW, ICAO: KNUW, FAA LID: NUW) is a naval air station of the United States Navy located on two pieces of land near Oak Harbor, on Whidbey Island, in Island County, Washington.",
+    "question": "In what state is VAQ-131 based in?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "squadron_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The official designation of the squadron."
+            },
+            "nickname": {
+              "type": "string",
+              "description": "The common nickname for the squadron."
+            },
+            "callsign": {
+              "type": "string",
+              "description": "The radio callsign of the squadron."
+            }
+          },
+          "required": [
+            "name",
+            "nickname",
+            "callsign"
+          ],
+          "additionalProperties": false
+        },
+        "base_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the naval air station where the squadron is based."
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "county": {
+                  "type": "string",
+                  "description": "The county where the base is located."
+                },
+                "state": {
+                  "type": "string",
+                  "description": "The state where the base is located."
+                }
+              },
+              "required": [
+                "county",
+                "state"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "final_answer_state": {
+          "type": "string",
+          "description": "The state where VAQ-131 is based, as the direct answer to the question."
+        }
+      },
+      "required": [
+        "squadron_details",
+        "base_details",
+        "final_answer_state"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "squadron_details": {
+        "name": "VAQ-131",
+        "nickname": "Lancers",
+        "callsign": "Skybolt"
+      },
+      "base_details": {
+        "name": "Naval Air Station Whidbey Island",
+        "location": {
+          "county": "Island County",
+          "state": "Washington"
+        }
+      },
+      "final_answer_state": "Washington"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "4925d8cca60c6d7e6eeace1da4d081071a2f677651dee87bd38ff87313ec32ef",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac2731855429963665199bb",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Plattsburgh, New York",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "819th Strategic Aerospace Division: The 819th Strategic Aerospace Division is an inactive United States Air Force organization.  Its last assignment was with Second Air Force of Strategic Air Command (SAC) at Dyess Air Force Base, Texas, where it was inactivated on 2 July 1966.\n\n825th Strategic Aerospace Division: The 825th Strategic Aerospace Division is an inactive United States Air Force organization.  Its last assignment was with Strategic Air Command (SAC), assigned to Second Air Force at Little Rock Air Force Base, Arkansas, where it was inactivated on 1 January 1970.\n\n820th Strategic Aerospace Division: The 820th Strategic Aerospace Division is an inactive United States Air Force organization.  Its last assignment was with Strategic Air Command (SAC)'s Eighth Air Force at Plattsburgh Air Force Base, New York, where it was inactivated on 25 June 1965.\n\n4080th Strategic Reconnaissance Wing: The 4080th Strategic Reconnaissance Wing is a discontinued United States Air Force (USAF) wing last assigned to the 12th Strategic Aerospace Division of Strategic Air Command (SAC) at Davis-Monthan AFB, Arizona.  It was SAC's high altitude reconnaissance wing for its existence and was the first USAF wing to operate the Lockheed U-2.  It was discontinued as part of a program to replace operational units controlled by major commands with those controlled by USAF whose lineages could be continued,\n\n818th Strategic Aerospace Division: The 818th Strategic Aerospace Division is an inactive United States Air Force organization.  Its last assignment was with Strategic Air Command at Lincoln Air Force Base, Nebraska, where it was inactivated on 25 March 1965.\n\nPlattsburgh Air Force Base: Plattsburgh Air Force Base is a former United States Air Force Strategic Air Command (SAC) base covering 3,447 acres (13.7 km²) in the extreme northeast corner of New York, 20 miles (32 km) south of the Canada–United States border, located on the western shore of Lake Champlain opposite Burlington, Vermont, in the city of Plattsburgh, New York.\n\n810th Strategic Aerospace Division: The 810th Strategic Aerospace Division is an inactive United States Air Force organization.  Its last assignment was with Strategic Air Command (SAC), assigned to Fifteenth Air Force at Minot Air Force Base, North Dakota, where it was inactivated on 30 June 1971.\n\n395th Strategic Missile Squadron: The 395th Strategic Missile Squadron is an inactive United States Air Force unit.  Its last assignment was with the 1st Strategic Aerospace Division, based at Vandenberg AFB, California.  It was inactivated on 31 December 1969.\n\n450th Bombardment Wing: The 450th Bombardment Wing is an inactive United States Air Force (USAF) unit.  It was last assigned to the 810th Strategic Aerospace Division of Strategic Air Command at Minot Air Force Base, North Dakota.  It was inactivated on 25 July 1968.\n\n556th Strategic Missile Squadron: The 556th Strategic Missile Squadron (551 SMS) is an inactive United States Air Force unit.  It was last assigned to the 820th Strategic Aerospace Division, stationed at Plattsburgh AFB, New York.",
+    "question": "In which city did the 820th Strategic Aerospace Division occur?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "division_name": {
+          "type": "string",
+          "description": "The name of the strategic aerospace division."
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "base_name": {
+              "type": "string",
+              "description": "The name of the Air Force Base."
+            },
+            "city": {
+              "type": "string",
+              "description": "The city where the division was located."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the division was located."
+            }
+          },
+          "required": [
+            "base_name",
+            "city",
+            "state"
+          ],
+          "additionalProperties": false
+        },
+        "inactivation_date": {
+          "type": "string",
+          "description": "The date when the division was inactivated."
+        }
+      },
+      "required": [
+        "division_name",
+        "location",
+        "inactivation_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "division_name": "820th Strategic Aerospace Division",
+      "location": {
+        "base_name": "Plattsburgh Air Force Base",
+        "city": "Plattsburgh",
+        "state": "New York"
+      },
+      "inactivation_date": "25 June 1965"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

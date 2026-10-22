@@ -1,0 +1,13 @@
+{
+  "forum_name": "G20",
+  "forum_purpose": "to discuss policy issues pertaining to the promotion of international financial stability",
+  "member_countries_count": 20,
+  "member_types": [
+    "governments",
+    "central bank governors"
+  ],
+  "participating_countries_in_question": [
+    "Australia",
+    "China"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "common_location": "Somerton Park",
+  "location_country": "Australia",
+  "craig_lahiff_info": {
+    "name": "Craig Lahiff",
+    "role": "Australian film director",
+    "grew_up_in_this_location": true
+  },
+  "sacred_heart_college_info": {
+    "name": "Sacred Heart College",
+    "located_in_this_location": true,
+    "location_type": "suburb"
+  }
+}

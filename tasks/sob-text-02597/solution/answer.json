@@ -1,0 +1,30 @@
+{
+  "tri_state_area_name": "New York metropolitan area",
+  "event_type": "professional wrestling pay-per-view",
+  "milestone_event_name": "SummerSlam (2002)",
+  "milestone_description": "first pay-per-view to have events in the three major indoor venues",
+  "major_venues": [
+    {
+      "venue_name": "Madison Square Garden",
+      "host_years": [
+        1988,
+        1991,
+        1998
+      ]
+    },
+    {
+      "venue_name": "Izod Center",
+      "host_years": [
+        1989,
+        1997,
+        2007
+      ]
+    },
+    {
+      "venue_name": "Nassau Veterans Memorial Coliseum",
+      "host_years": [
+        2002
+      ]
+    }
+  ]
+}

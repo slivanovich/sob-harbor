@@ -1,0 +1,15 @@
+{
+  "primary_artist": {
+    "name": "Taylor Swift",
+    "artist_type": "singer-songwriter"
+  },
+  "song_details": {
+    "title": "Teardrops on My Guitar",
+    "release_date": "February 19, 2007"
+  },
+  "songwriter_collaboration": {
+    "songwriter_name": "Liz Rose",
+    "collaboration_role": "co-writer",
+    "total_songs_co_written_with_artist": 20
+  }
+}

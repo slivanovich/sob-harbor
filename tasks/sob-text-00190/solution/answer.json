@@ -1,0 +1,10 @@
+{
+  "bridge_name": "New River Gorge Bridge",
+  "bridge_type": "steel arch bridge",
+  "location": {
+    "region": "Appalachian Mountains",
+    "state": "West Virginia"
+  },
+  "daily_vehicle_traffic": 16200,
+  "length_comparison_to_lupu_bridge": "Lupu Bridge is longer"
+}

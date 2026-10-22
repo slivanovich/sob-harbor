@@ -1,0 +1,13 @@
+{
+  "actor": {
+    "name": "Busy Philipps",
+    "birth_date": "1979-06-25"
+  },
+  "role": "Laurie Keller",
+  "episode": {
+    "title": "Pilot",
+    "series_title": "Cougar Town",
+    "premiere_date": "2009-09-23",
+    "network": "ABC"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "question_focus": "city_location_verification",
+  "cities_information": [
+    {
+      "city_name": "Yiwu",
+      "province": "Zhejiang",
+      "country": "China"
+    },
+    {
+      "city_name": "Jiaohe",
+      "province": "Jilin",
+      "country": "China"
+    }
+  ],
+  "all_cities_are_in_china": true
+}

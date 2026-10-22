@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "8956ca8ef445b5af4af9bd538d823f855e300287a3eb1c11ce56addbe735fe25",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5adbd40d55429944faac2372",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Soyou",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Blue Sky Black Death: Blue Sky Black Death (abbreviated BSBD) is a production duo based in the San Francisco Bay Area.  It consists of Ryan Maguire, better known by his stage name Kingston, and Ian Taggart, better known by his stage name Young God.  They are known principally for their hip hop and instrumental music, made with a mixture of live instrumentation and sampling.  Their name is \"a skydiving phrase alluding to beauty and death.\"\n\nAnne Spencer: The poet Anne Spencer was born Annie Bethel Bannister (February 6, 1882 – July 27, 1975) in Henry County, Virginia.  A noted American poet, Anne Spencer was also a teacher, civil rights activist, librarian, and gardener.  While a librarian at the all-black Dunbar High School, a position she held for 20 years, she supplemented the original three books by bringing others from her own collection at home.  Though she lived outside New York City, the recognized center of the Harlem Renaissance, also known as the New Negro Movement, she was an important member of this group of intellectuals.  Following her marriage to Edward Spencer in 1901, the couple moved to Lynchburg, Virginia where they raised a family and lived for the reminder of their lives.\n\nSoyou: Kang Ji-hyun (Hangul: 강지현 ; born February 12, 1992), better known by her stage name Soyou (소유 ), is a South Korean singer.  She is best known as a former member of the South Korean girl group Sistar under Starship Entertainment.\n\nIan Astbury: Ian Robert Astbury (born 14 May 1962) is an English singer and songwriter.  He is best known as a founding member and the lead vocalist for the rock band The Cult.\n\nGarnidelia: Garnidelia (ガルニデリア ) (stylized as GARNiDELiA) is a Japanese pop rock duo signed to Sacra Music, consisting of record producer Yoshinori Abe (阿部 尚徳 , Abe Yoshinori , born March 5, 1978) , better known by his stage name toku and vocalist Mai Mizuhashi, better known by her stage name MARiA.\n\nSpace Cowboy (musician): Nicolas Jean-Pierre Dresti (born 5 March 1975), better known by his stage name Space Cowboy, is a French-British singer-songwriter, DJ, and producer.  Born in France and raised in England, Dresti first recorded in 1992 under the name of Vibes (2), and recorded two tracks.  He then changed his stage name to Nicky Fabulous and produced a four track extended play, \"Pussy Galore\" in 1995.  He has recorded under various pseudonyms including: DJ Supreme, Kings of Rhythm, Loop Da Loop, and DJ Chrome.  In 2002, Dresti changed his stage name to Space Cowboy and did a cover of Prince's song, \"I Would Die 4 U.\"  In 2003, Space Cowboy debuted his first studio album \"Across the Sky\".  On 22 June 2005, he released his second full-length album \"Big City Nights\" and his third album, \"Digital Rock\", the next year. \" Digital Rock Star\", a re-release of \"Digital Rock\", debuted as his fourth studio album on 20 October 2009.\n\nBlue Sky Black Death discography: Blue Sky Black Death (abbreviated BSBD) is a production duo based in Seattle, Washington.  It consists of Kingston Maguire, better known mononymously as Kingston, and Ian Taggart, better known by his stage name Young God.  They are known principally for their hip hop and instrumental music, made with a mixture of live instrumentation and sampling.\n\nDerek Minor: Derek Johnson, Jr., better known by his stage name Derek Minor and former stage name PRo, (born December 16, 1984) is an American Christian hip hop artist, record producer, entrepreneur, actor, and screenwriter.  He co-founded the hip-hop record label Reflection Music Group (RMG) with Doc Watson, and signed to Reach Records in a joint venture between the two labels in 2011.  In 2012, Johnson announced that he had changed his stage name from Pro to Derek Minor.  In 2014, he announced that as his two-album contract with Reach was complete, he would no longer be publishing releases through that label.\n\nB.Slade: Anthony Charles Williams II (born (1975--) 16, 1975 ), better known by his stage name B.Slade, formerly known under the gospel moniker Tonéx ( ), is an American singer, songwriter, actor, multi-instrumentalist, rapper, dancer, producer, and activist from San Diego, CA.  He has gone by various names and aliases, but his primary stage name of choice had for years been \"Tonéx\".  In 2010, he began using the stage name B.Slade in order to rebrand himself.\n\nThe Cult: The Cult are a British rock band formed in 1983.  Before settling on their current name in January 1984, the band performed under the name Death Cult, which was an evolution of the name of lead singer Ian Astbury's previous band Southern Death Cult.  They gained a dedicated following in the UK in the mid-1980s as a post-punk/gothic rock band, with singles such as \"She Sells Sanctuary\", before breaking mainstream in the United States in the late 1980s as a hard rock band with singles such as \"Love Removal Machine\" and \"Fire Woman\".  According to music critic Stephen Thomas Erlewine, the band fuse a \"heavy metal revivalist\" sound with the \"pseudo-mysticism ... of The Doors [and] the guitar-orchestrations of Led Zeppelin ... while adding touches of post-punk goth rock\".  Since the initial formation of Southern Death Cult in Bradford in 1981, the band have had various line-ups; the longest-serving members are Astbury and guitarist Billy Duffy, the band's two songwriters.",
+    "question": "Which of the following was better known by a stage name and lived outside of England: Ian Astbury or Soyou?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "chosen_person_full_name": {
+          "type": "string",
+          "description": "The full birth name of the person who meets all criteria."
+        },
+        "stage_name": {
+          "type": "string",
+          "description": "The stage name by which the person is better known."
+        },
+        "is_better_known_by_stage_name": {
+          "type": "boolean",
+          "description": "True if the person is better known by a stage name according to the context."
+        },
+        "country_of_origin": {
+          "type": "string",
+          "description": "The country of origin of the person."
+        },
+        "is_from_england": {
+          "type": "boolean",
+          "description": "True if the person is from England, false otherwise."
+        },
+        "meets_all_conditions": {
+          "type": "boolean",
+          "description": "True if the person meets both conditions: better known by a stage name AND lives outside of England."
+        }
+      },
+      "required": [
+        "chosen_person_full_name",
+        "stage_name",
+        "is_better_known_by_stage_name",
+        "country_of_origin",
+        "is_from_england",
+        "meets_all_conditions"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "chosen_person_full_name": "Kang Ji-hyun",
+      "stage_name": "Soyou",
+      "is_better_known_by_stage_name": true,
+      "country_of_origin": "South Korea",
+      "is_from_england": false,
+      "meets_all_conditions": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

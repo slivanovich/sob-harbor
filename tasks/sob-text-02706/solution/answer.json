@@ -1,0 +1,14 @@
+{
+  "social_secretary": {
+    "name": "Muffie Cabot",
+    "tenure_period": "1980s"
+  },
+  "first_lady": {
+    "name": "Nancy Reagan",
+    "prior_profession": "American film actress"
+  },
+  "president": {
+    "name": "Ronald Reagan",
+    "presidency_years": "1981 to 1989"
+  }
+}

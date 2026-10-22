@@ -1,0 +1,12 @@
+{
+  "mixtape_name": "Male Edition",
+  "girl_group_name": "June's Diary",
+  "covered_male_groups_count": 6,
+  "record_label_name": "So So Def Recordings",
+  "record_label_founder": "Jermaine Dupri",
+  "identified_male_group": {
+    "group_name": "Jagged Edge",
+    "genre": "R&B",
+    "signed_to_so_so_def": true
+  }
+}

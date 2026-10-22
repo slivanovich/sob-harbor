@@ -1,0 +1,12 @@
+{
+  "identified_brother_name": "Michael Laudrup",
+  "sibling_who_matches_description": {
+    "name": "Brian Laudrup",
+    "is_retired": true,
+    "positions_played": [
+      "forward",
+      "midfielder"
+    ]
+  },
+  "relationship_type": "brother"
+}

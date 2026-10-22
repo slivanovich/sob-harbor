@@ -1,0 +1,15 @@
+{
+  "actor_details": {
+    "name": "John Travolta",
+    "appeared_in_grease": true
+  },
+  "miss_usa_1985_details": {
+    "year": 1985,
+    "winner_name": "Laura Harring"
+  },
+  "film_with_both": {
+    "title": "The Punisher",
+    "miss_usa_role_description": "John Travolta's wife"
+  },
+  "final_answer_actor_name": "John Travolta"
+}

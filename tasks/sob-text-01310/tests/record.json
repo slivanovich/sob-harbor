@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "record_id": "1d048dbbca71c914c7cc54452ac5bbdd8c08350bc4cdca5bb0518356a4cda63b",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a9075ba55429916514e74ca",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1999",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Moon of Avellaneda: Moon of Avellaneda (Spanish: \"Luna de Avellaneda\" , also known as \"Avellaneda's Moon\" in English) is a 2004 Argentine film directed by Juan José Campanella, and written by Campanella, Fernando Castets and Juan Pablo Domenech.  The film stars Ricardo Darín in his third collaboration with Campanella and Eduardo Blanco in his fourth collaboration, as well as Mercedes Morán and Valeria Bertuccelli.\n\nSon of the Bride: Son of the Bride (Spanish: El hijo de la novia ) is a 2001 Argentine comedy drama film directed by Juan José Campanella and written by Campanella and Fernando Castets.  The executive producers were Juan Vera and Juan Pablo Galli, and it was produced by Adrián Suar.  It stars Ricardo Darín, Héctor Alterio, Norma Aleandro, Eduardo Blanco and Natalia Verbeke.\n\nEduardo Blanco (actor): Eduardo Blanco is an Argentine actor best known for his roles in the trilogy of films directed by Juan José Campanella, his friend and frequent collaborator: \"El Mismo Amor, la Misma Lluvia\" (1999), \"El Hijo de la Novia\" (2001) and \"Luna de Avellaneda\" (2004).\n\nThe Secret in Their Eyes: The Secret in Their Eyes (Spanish: \"El secreto de sus ojos\" ) is a 2009 Argentine-Spanish crime drama film directed, co-written, produced and edited by Juan José Campanella, based on the novel \"La pregunta de sus ojos\" (\"\"The Question in Their Eyes\"\") by Eduardo Sacheri, who also co-wrote the screenplay.  The film is a joint production of Argentine and Spanish companies.\n\nLove Walked In (1997 film): Love Walked In is a 1997 Argentine-American neo-noir drama/thriller film co-written and directed by Juan José Campanella and starring Denis Leary, Terence Stamp and Aitana Sánchez-Gijón.  It was based on the novel \"Ni el tiro del final\" (\"Not Even The Final Shot\") by Argentine writer José Pablo Feinmann.  The film takes its title from George Gershwin's song \"Love Walked In\".\n\nJuan José Campanella: Juan José Campanella (born July 19, 1959) is an Argentine television and film director, writer and producer.  He is a prominent figure of cinema in his country, and achieved worldwide fame with the release of \"The Secret in Their Eyes\" (2009).\n\nThe Summit (2017 film): The Summit (Spanish: La cordillera ) is a 2017 Argentine political drama film directed by Santiago Mitre and written by Mitre and .  The film stars Ricardo Darín, Dolores Fonzi, Érica Rivas, Elena Anaya, Daniel Giménez Cacho, Alfredo Castro, Gerardo Romano, Leonardo Franco, Paulina García, and Christian Slater.  It was screened in the Un Certain Regard section at the 2017 Cannes Film Festival.  It was released on 17 August 2017 in Argentina.\n\nTruman (2015 film): Truman is a 2015 Spanish-Argentine comedy-drama film directed by Cesc Gay and co-written by Gay and Tomàs Aragay.  The film stars Ricardo Darín, Javier Cámara, and Dolores Fonzi.\n\nRicardo Darín: Ricardo Darín (] ; born January 16, 1957) is an Argentine actor, screenwriter and film director.  Widely considered as one of the best and most prolific actors of Argentine cinema.\n\nSame Love, Same Rain: Same Love, Same Rain (Spanish: El mismo amor, la misma lluvia ) is a 1999 Argentine-American romantic comedy film directed by Juan José Campanella and written by Campanella and Fernando Castets.  It stars Ricardo Darín, Soledad Villamil, Ulises Dumont and Eduardo Blanco.",
+    "question": "Same Love, Same Rain, is an Argentine-American romantic comedy film, released in what year, and directed by Juan José Campanella, it stars Ricardo Darín, an Argentine actor, screenwriter and film director?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the film was released."
+        },
+        "director": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the film's director."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "starring_actors": {
+          "type": "array",
+          "description": "A list of actors starring in the film, with their professions.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the actor."
+              },
+              "professions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "A list of professions for the actor."
+              }
+            },
+            "required": [
+              "name",
+              "professions"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "film_genre": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The genres of the film."
+        },
+        "film_origin": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The countries of origin for the film."
+        }
+      },
+      "required": [
+        "film_title",
+        "release_year",
+        "director",
+        "starring_actors",
+        "film_genre",
+        "film_origin"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "Same Love, Same Rain",
+      "release_year": 1999,
+      "director": {
+        "name": "Juan José Campanella"
+      },
+      "starring_actors": [
+        {
+          "name": "Ricardo Darín",
+          "professions": [
+            "Argentine actor",
+            "screenwriter",
+            "film director"
+          ]
+        }
+      ],
+      "film_genre": [
+        "romantic comedy"
+      ],
+      "film_origin": [
+        "Argentine-American"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

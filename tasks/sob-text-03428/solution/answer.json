@@ -1,0 +1,13 @@
+{
+  "player_one_details": {
+    "name": "Jon Jönsson",
+    "birth_year": 1983
+  },
+  "player_two_details": {
+    "name": "Peter Crouch",
+    "birth_year": 1981
+  },
+  "older_player_name": "Peter Crouch",
+  "older_player_birth_year": 1981,
+  "younger_player_birth_year": 1983
+}

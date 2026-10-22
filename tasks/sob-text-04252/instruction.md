@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Indonesia: Indonesia ( or ; Indonesian: ), officially the Republic of Indonesia (Indonesian: "Republik Indonesia" ), is a unitary sovereign state and transcontinental country located mainly in Southeast Asia, with some territories in Oceania.  Situated between the Indian and Pacific oceans, it is the world's largest island country, with more than seventeen thousand islands.  At 1,904,569 km2 , Indonesia is the world's 14th-largest country in terms of land area and world's 7th-largest country in terms of combined sea and land area.  It has an estimated population of over floor( /1e6) million people and is the world's fourth most populous country, the most populous Austronesian nation, as well as the most populous Muslim-majority country.  The world's most populous island, Java, contains more than half of the country's population.
+
+Woodinville wine country: Woodinville wine country is an area of Western Washington situated around the city of Woodinville, approximately 30 minutes to an hour driving time from downtown Seattle (depending on traffic).  The area is home to more than 130 wineries and tasting rooms, including several of the state's notable wineries, such as Chateau Ste. Michelle, Columbia Winery, Novelty Hill Januik, Silver Lake, Matthews Winery, and Tenor Wines.  While located within the Puget Sound AVA area, the majority of wineries in Woodinville wine country source their grapes from Eastern Washington AVAs like Columbia Valley and Yakima Valley.  In addition to making wine, several of the wineries in Woodinville wine country are open for tours and tastings, with Chateau Ste. Michelle also having a regular summer concert series at its amphitheater.  Woodinville Village, currently under development, will showcase some of the smaller wineries in the area that are not normally open to the public.
+
+Shuswap Country: The Shuswap Country, or simply "the Shuswap" (pronounced /ˈʃuːʃwɑːp/) is a term used in the Canadian province of British Columbia to refer to the environs of Shuswap Lake.  The upper reaches of the Shuswap basin, southeast of Shuswap Lake and northeast of the Okanagan, are generally considered to be part of Okanagan or of the Monashee Country rather than "the Shuswap".  Roughly defined, the Shuswap Country begins on its west at the town of Chase, British Columbia, located on Little Shuswap Lake, west of which is the South Thompson area of the Thompson Country, and includes Adams Lake to the northwest of Shuswap Lake as well as communities in the Eagle River area as far as Craigellachie and/or Three Valley Gap, which is at the summit of Eagle Pass, beyond which eastwards is the Columbia Country.
+
+Tajikistan: Tajikistan ( , , or ; Тоҷикистон ] ; Russian: Таджикистан ), officially the Republic of Tajikistan (Tajik: Ҷумҳурии Тоҷикистон , "Çumhuriji Toçikiston/Jumhuriyi Tojikiston", جمهوری تاجیکستان, Russian: Республика Таджикистан ), also unofficially spelled as Tadzhikistan, is a mountainous, landlocked country in Central Asia with an estimated population of /1e6 round 1 million people as of , and an area of 143100 km2 .  It is bordered by Afghanistan to the south, Uzbekistan to the west, Kyrgyzstan to the north, and China to the east.  Pakistan lies to the south, separated by the narrow Wakhan Corridor.  Traditional homelands of Tajik people included present-day Tajikistan, Afghanistan and Uzbekistan.
+
+Cauca Department: Cauca (] ) is a Department of Colombia.  Located in the south-western part of the country, facing the Pacific Ocean to the west, the Valle del Cauca Department to the north, Tolima Department to the northeast, Huila Department to the east and the Nariño Department to the south, Putumayo and Caqueta Departments are located and bordering the southeast portion of Cauca Department as well.  covering a total area of 29,308 km², the 13th largest in Colombia.  Its capital is the city of Popayán.  The offshore island of Malpelo belongs to the department.  It is located in the southwest of the country near the Andean (between 0°58′54″N and 3°19′04″N latitude, 75°47′36″W and 77°57′05″W longitude).  The area includes 2.56% of the country.
+
+Lung Fu Shan Country Park: Lung Fu Shan Country Park (, established December18, 1998) is a country park located in the Central and Western District of Hong Kong.  It covers the densely vegetated slopes of "Lung Fu Shan", including the disused Pinewood Battery as well as the Pinewood Garden picnic area, providing a scenic backdrop to the residential and commercial districts of Hong Kong Island.  In proximity to residential areas in the Mid-levels and the Western District, Lung Fu Shan area is intensively used by the public, especially by morning walkers and picnickers.  It is situated at the north of Pok Fu Lam Country Park.  Towards the east of Lung Fu Shan Country Park is Hatton Road, to the south is Harlech Road whereas to the north and west is a covered conduit constructed by the Water Supplies Department.  This country park covers an area of about 47 hectares, making it the smallest country park in Hong Kong (not including special areas).  It is also the newest country park, according to the establishment date.
+
+Matsapha: Matsapha is a town in central Swaziland.  The Matsapha urban boundary is defined in the Urban Government Act of 1969, and it was amended in 2012, and it covers an area approximately 2000 hectares.  Matsapha was established as an industrial park in 1965 but was official gazetted as an urban area in 1969.  Matsapha is located in the Upper Middleveld of Swaziland.  It is located in the Manzini region, which is in the centre of the country.  Matsapha is located 11 km from Manzini, which is the country's commercial capital and is located 35 km from Mbabane, the administrative capital of the country.  It is well located as it lies on Swaziland’s main east–west axis between South Africa and Mozambique and 16 km from the junction of the Lavumisa road that leads to Durban and KwaZulu Natal.  It lies at an altitude of 625 m above sea level.
+
+Ismoil: Ismoil is a town and jamoat in north-west Tajikistan.  It is located in Ghafurov District in Sughd province.  The jamoat has a total population of 19,190.
+
+Rock Creek Roadless Area: The Rock Creek Roadless Area (B032) is located northwest of Buffalo, Wyoming, in the Bighorn National Forest.  It comprises roughly 34000 acre of forested timberlands, mountain parks, rugged canyons, and stunning rock formations.  This area represents the entire spectrum of environments found in the Bighorn National Forest and encompasses prairie land to high alpine peaks.  This roadless area is the source of the north, middle, and south forks of Rock Creek, Balm of Gilead Creek, Pheasant Creek, and Ditch Creek.  The area is flanked on the eastern side by the Bud Love Big Game Winter Range and the HF Bar Ranch Historic District.  On the southern side the roadless area is surrounded by the Paradise Guest Ranch.  The roadless area is home to elk, moose, mountain lion, pine marten, blue grouse, ruffed grouse, and raptors.  The Rock Creek area is the largest area of quality elk security habitat outside of the Cloud Peak Wilderness Area and would provide an important corridor from the high country to the Bud Love Habitat Management Unit.  The Rock Creek roadless area is dominated by lodgepole pine, some ponderosa, and aspen stands with low-growing juniper in the undergrowth.  The area has not been opened to roads due to the ruggedness of the landscape and the high costs of implementation.
+
+List of companies of Indonesia: Indonesia is a unitary sovereign state and transcontinental country located mainly in Southeast Asia with some territories in Oceania.  Situated between the Indian and Pacific oceans, it is the world's largest island country, with more than seventeen thousand islands.  At 1,904,569 km2 , Indonesia is the world's 14th-largest country in terms of land area and world's 7th-largest country in terms of combined sea and land area.  It has an estimated population of over 260 million people and is the world's fourth most populous country, the most populous Austronesian nation, as well as the most populous Muslim-majority country.
+
+Question: What is the area of the country in which Ismoil is located?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "country_name": {
+      "type": "string",
+      "description": "The name of the country where the town is located."
+    },
+    "town_name": {
+      "type": "string",
+      "description": "The name of the town in question."
+    },
+    "country_area_km2": {
+      "type": "integer",
+      "description": "The total area of the country in square kilometers."
+    },
+    "area_unit": {
+      "type": "string",
+      "description": "The unit of measurement for the country's area."
+    }
+  },
+  "required": [
+    "country_name",
+    "town_name",
+    "country_area_km2",
+    "area_unit"
+  ],
+  "additionalProperties": false
+}

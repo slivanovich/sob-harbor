@@ -1,0 +1,21 @@
+{
+  "person_1_name": "Yan Zi",
+  "person_2_name": "Tom Okker",
+  "mutual_occupation": "tennis player",
+  "occupation_details": [
+    {
+      "person_name": "Yan Zi",
+      "occupation": "tennis player",
+      "nationality": "Chinese-born Hong Kong",
+      "birth_year": 1984,
+      "status": "retired professional"
+    },
+    {
+      "person_name": "Tom Okker",
+      "occupation": "tennis player",
+      "nationality": "Dutch",
+      "birth_year": 1944,
+      "status": "former"
+    }
+  ]
+}

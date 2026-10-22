@@ -1,0 +1,14 @@
+{
+  "film_title": "Sunshine",
+  "female_stars": [
+    {
+      "name": "Rachel Weisz",
+      "nationality": "British"
+    },
+    {
+      "name": "Flóra Kádár",
+      "nationality": "Hungarian"
+    }
+  ],
+  "primary_star_nationality": "British"
+}

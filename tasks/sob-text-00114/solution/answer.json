@@ -1,0 +1,13 @@
+{
+  "album_name": "Waves",
+  "album_type": "compilation album",
+  "release_year": 2000,
+  "record_label": {
+    "name": "Crydamoure",
+    "owners": [
+      "Guy-Manuel de Homem-Christo",
+      "Éric Chedeville"
+    ]
+  },
+  "is_first_compilation_for_label": true
+}

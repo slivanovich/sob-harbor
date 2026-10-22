@@ -1,0 +1,13 @@
+{
+  "question_asked": "Do Garo Yepremian and Howard Kazanjian both share the same profession ?",
+  "person_1": {
+    "name": "Garo Yepremian",
+    "profession": "American football placekicker"
+  },
+  "person_2": {
+    "name": "Howard Kazanjian",
+    "profession": "American film producer"
+  },
+  "share_same_profession": false,
+  "reasoning": "Garo Yepremian was an American football placekicker, while Howard Kazanjian is an American film producer. These are different professions."
+}

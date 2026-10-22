@@ -1,0 +1,11 @@
+{
+  "person_name": "Paul von Hindenburg",
+  "role": "President of Germany",
+  "country": "Germany",
+  "election_year": 1925,
+  "death_year": 1934,
+  "associated_referendum": {
+    "referendum_year": 1934,
+    "referendum_purpose": "merging the posts of Chancellor and President"
+  }
+}

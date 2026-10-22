@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "6624c1be4afd034a96c468e7833b3239a6a90345dbfca70ae19f02cd96994126",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac42f54554299076e296d89",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Native Americans",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Free, prior and informed consent: The aim of Free Prior Informed consent (FPIC), is to establish bottom up participation and consultation of an Indigenous Population prior to the beginning of a development on ancestral land or using resources within the Indigenous Population's territory.  Indigenous people (IP) have a special connection to their land and resources, they inhabit 20% of the earth's surface, these areas are environmentally rich in both renewable and non-renewable resources.  The collective ownership style of most Indigenous Peoples conflicts with the modern global market and its continuous need for resources and land.  To protect Indigenous peoples rights, international human rights law has created process and standards to safeguard their way of life and to encourage participation in the decision making process.  One of these methods is the process of FPIC.\n\nIntercultural Universities in Mexico: Intercultural Universities in Mexico are higher education institutions which were established in 2004 in response to the lack of enrollment of the indigenous population in Mexico.  While an estimated 10% of the population of Mexico is indigenous, it is the least represented in higher education.  According to estimates, only between 1% and 3% of higher education enrollment in Mexico is indigenous.  In response to this inequality, the General Coordination for Intercultural and Bilingual Education at the Ministry of Education established Intercultural Universities with the active participation of indigenous organizations and academic institutions in each region.  These institutions are located in densely indigenous areas and, though they allow for diversity in enrollment, they are especially intended for the indigenous population.  Founded on the principle of intercultural education, they aim to foster dialogue between different cultures and represent a way of responding to both the historical and more recent demands of indigenous peoples.\n\nPassion for Skiing: Passion for Skiing is a book published in 2010 about the contributions of people from Hanover, New Hampshire and Dartmouth College to winter activities, particularly the sport of downhill skiing and highlights this history of skiing from 1910 to the current era.  It was authored by Dartmouth alumnus Stephen L. Waterhouse (Dartmouth College Class of 1965, Tuck Business School Class of 1967), a native of Sanford Maine and part-time Vail, Colorado resident with the help of other alumni and ski historians.\n\nPomier Caves: The Pomier Caves are a series of 55 caves located north of San Cristobal in the south of the Dominican Republic.  They contain the largest collection of rock art in the Caribbean created since 2,000 years ago primarily by the Taíno people but also the Carib people and the Igneri, the pre-Columbian indigenous inhabitants of the Bahamas, Greater Antilles, and some of the Lesser Antilles.  These caves have been damaged by the uncontrolled mining of limestone nearby.\n\nAaron Carapella: Aaron Carapella is a self-taught cartographer who makes maps of the locations and names of Pre-Columbian Indigenous tribes of North America circa 1490.  He is part Cherokee on his mother's side and his grandparents instilled a deep interest in Native American culture.  At age 19, he began his map-making research and as of 2014, he has made maps of indigenous tribes with their original names for the continental United States, Canada, and Mexico.\n\nCalamari people: The Calamari people are a pre-Columbian indigenous ethnic group of the area that is now Cartagena, Colombia.  It is related to the Puerto Hormiga archaeological site\n\nNage: The Nage are an indigenous people living on the eastern Indonesian island of Flores and Timor.  They descended from the indigenous population of Flores They are largely assimilated by the neighboring people.  They speak Nage language, one of the major languages in the Austronesian languages group.\n\nEleazar Wheelock: Eleazar Wheelock (April 22, 1711 – April 24, 1779) was an American Congregational minister, orator, and educator in Lebanon, Connecticut, for 35 years before founding Dartmouth College in New Hampshire.  He had tutored Samson Occom, a Mohegan who became a Presbyterian minister and the first Native American to publish writings in English.  Before founding Dartmouth, Wheelock had founded and run the Moor's Charity School in Connecticut to educate Native Americans.  The college was primarily for the sons of English colonists.\n\nNative Americans in the United States: In the United States of America, Native Americans (also known as American Indians, Indigenous Americans or simply Indians; see §Terminology differences) are people who belong to one of the over 500 distinct Native American tribes that survive intact today as partially sovereign nations within the country's modern boundaries.  These tribes and bands are descended from the pre-Columbian indigenous population of North America.\n\nDartmouth College: Dartmouth College ( ) is a private Ivy League research university in Hanover, New Hampshire, United States.  Established in 1769 by Eleazar Wheelock, it is the ninth-oldest institution of higher education in the United States and one of the nine colonial colleges chartered before the American Revolution.  Although founded as a school to educate Native Americans in Christian theology and the English way of life, Dartmouth primarily trained Congregationalist ministers throughout its early history before it gradually secularized, emerging at the turn of the 20th century from relative obscurity into national prominence.",
+    "question": "Dartmouth College was founded to educate which group of people descended from the pre-Columbian indigenous population of North America?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "college_name": {
+          "type": "string",
+          "description": "The name of the educational institution."
+        },
+        "founding_year": {
+          "type": "integer",
+          "description": "The year the institution was established."
+        },
+        "primary_educational_target": {
+          "type": "object",
+          "properties": {
+            "group_name": {
+              "type": "string",
+              "description": "The name of the primary group the institution was founded to educate."
+            },
+            "group_origin_description": {
+              "type": "string",
+              "description": "A description of the origin of the target group, linking them to pre-Columbian indigenous populations."
+            },
+            "educational_focus": {
+              "type": "string",
+              "description": "The specific areas of education intended for the target group."
+            }
+          },
+          "required": [
+            "group_name",
+            "group_origin_description",
+            "educational_focus"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "college_name",
+        "founding_year",
+        "primary_educational_target"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "college_name": "Dartmouth College",
+      "founding_year": 1769,
+      "primary_educational_target": {
+        "group_name": "Native Americans",
+        "group_origin_description": "descended from the pre-Columbian indigenous population of North America",
+        "educational_focus": "Christian theology and the English way of life"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "song_details": {
+    "title": "XXX",
+    "album": "Damn",
+    "release_date": "April 14, 2017"
+  },
+  "irish_musician_details": {
+    "name": "Larry Mullen Jr.",
+    "nationality": "Irish",
+    "role_in_band": "drummer"
+  },
+  "band_details": {
+    "name": "U2",
+    "nationality": "Irish",
+    "genre": "rock band"
+  },
+  "answer_band_name": "U2"
+}

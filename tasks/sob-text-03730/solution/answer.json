@@ -1,0 +1,18 @@
+{
+  "film": {
+    "title": "The Book of Life",
+    "release_year": 2014
+  },
+  "actress": {
+    "name": "Christina Applegate",
+    "birth_year": 1971
+  },
+  "sitcom_role": {
+    "character_name": "Kelly Bundy",
+    "sitcom_title": "Married... with Children",
+    "network": "Fox",
+    "start_year": 1987,
+    "end_year": 1997
+  },
+  "final_answer": "Married... with Children"
+}

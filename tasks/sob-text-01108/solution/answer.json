@@ -1,0 +1,18 @@
+{
+  "older_director_name": "Perry Henzell",
+  "directors_compared": [
+    {
+      "name": "Albert Ray",
+      "birth_date": "1897-08-28",
+      "death_date": "1944-02-05",
+      "age_at_death_years": 46
+    },
+    {
+      "name": "Perry Henzell",
+      "birth_date": "1936-03-07",
+      "death_date": "2006-11-30",
+      "age_at_death_years": 70
+    }
+  ],
+  "age_difference_years": 24
+}

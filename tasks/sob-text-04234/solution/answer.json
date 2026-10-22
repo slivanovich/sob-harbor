@@ -1,0 +1,12 @@
+{
+  "magazine_sold": {
+    "name": "Snowboard Magazine",
+    "type": "snowboarding publication",
+    "year_founded": 2004
+  },
+  "acquiring_company": {
+    "name": "Storm Mountain Publishing",
+    "location": "Boulder, Colorado"
+  },
+  "year_of_sale": 2011
+}

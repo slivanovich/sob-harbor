@@ -1,0 +1,13 @@
+{
+  "are_both_plant_types": true,
+  "first_genus_details": {
+    "name": "Ceanothus",
+    "is_plant": true,
+    "plant_type_description": "nitrogen-fixing shrubs or small trees"
+  },
+  "second_genus_details": {
+    "name": "Eulophia",
+    "is_plant": true,
+    "plant_type_description": "orchids"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "park_name": "Hiwassee/Ocoee Scenic River State Park",
+  "river_name": "Ocoee River",
+  "number_of_power_generating_dams": 3,
+  "dam_details": [
+    {
+      "dam_name": "Ocoee Dam No. 1",
+      "dam_type": "hydroelectric"
+    },
+    {
+      "dam_name": "Ocoee Dam No. 2",
+      "dam_type": "hydroelectric"
+    },
+    {
+      "dam_name": "Ocoee Dam No. 3",
+      "dam_type": "hydroelectric"
+    }
+  ]
+}

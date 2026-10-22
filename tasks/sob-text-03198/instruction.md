@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Hardacre Theater: The Hardacre Theater is a historic building located in the central business district of Tipton, Iowa, United States.  The theater was originally built as an opera house and its construction was funded by the estate of Jacob Hardacre.  Hardacre was a member of a fraternal organization, the Independent Order of Odd Fellows (I.O.O.F.), and it was stipulated that the building was to be used for their functions as well.  The theater was opened in 1914, and it was converted into a movie house in 1919.  There is seating for 264 on the main floor and an additional 132 seats in the balcony.  The present marquee was erected by the Iowa Neon Sign Company of Des Moines in 1948.  The I.O.O.F. sold the theater to Louie and Virginia Cook in 1978.  It continued to serve as a movie theater, and it hosted its own film festival until it closed in August 2013.  The Hardacre Theater Preservation Association bought the theater in 2014.  They are renovating the theater to accommodate digital movie equipment, to return it to a live performing arts theater, and to provide space to host community events.  It was listed on the National Register of Historic Places in 2016.
+
+Des Moines, Iowa: Des Moines is the capital and the most populous city in the U.S. state of Iowa.  It is also the county seat of Polk County.  A small part of the city extends into Warren County.  It was incorporated on September 22, 1851, as Fort Des Moines, which was shortened to "Des Moines" in 1857.  It is on and named after the Des Moines River, which likely was adapted from the French colonial name, "Rivière des Moines," meaning "River of the Monks." The city's population was 203,433 as of the 2010 census.  The five-county metropolitan area is ranked 91st in terms of population in the United States with 599,789 residents according to the 2013 estimate by the United States Census Bureau.
+
+Davenport, Iowa: Davenport is the county seat of Scott County in Iowa and is the largest of the Quad Cities, a metropolitan area with a population estimate of 382,630 and a CSA population of 474,226, making it the 90th largest CSA in the nation.  Davenport was founded on May 14, 1836 by Antoine Le Claire and was named for his friend, George Davenport, a colonel during the Black Hawk War stationed at nearby Fort Armstrong.  According to the 2010 census, the city had a population of 99,685 (making it Iowa's third-largest city).  However, the city is currently appealing this figure, arguing that the Census Bureau missed a section of residents that would place the total population over 100,000, and indeed, even the Census Bureau's own "estimate" for Davenport's 2011 population is 100,802.
+
+Murrieta, California: Murrieta is a city in southwestern Riverside County, California, United States.  The population of Murrieta was 103,466 at the 2010 census.  Murrieta experienced a 133.7% population increase between 2000 and 2010, according to the most recent census, making Murrieta one of the fastest growing cities in the state.  This population boom in 2010 surpassed the population of the historically larger and more commercial city of Temecula to the south for the first time since the incorporation of either city.  Temecula and Murrieta together form the southwestern anchor of the Inland Empire region.  The Murrieta-Temecula-Menifee Urban Area had a population of 441,546 at the 2010 Census.  Largely residential in character, Murrieta is typically characterized as a commuter town, with many of its residents commuting to jobs in San Diego County, Orange County, Los Angeles County, Temecula, and Camp Pendleton.
+
+Huaihua: Huaihua () is a prefecture-level city in the south western Hunan, China.  it covers 27,564 km2 and is bordered by Xiangxi to the northern west; Zhangjiajie, Changde to the north; Yiyang, Loudi and Shaoyang to the east; Guilin and Liuzhou of Guangxi to the south; Qiandongnan, Tongren of Guizhou to the southern west.  It has 4,741,948 of population (2010 census), shares 7.22% of the province.  According to 2010 Census, there are 2,909,574 Han Chinese, Han shares 61.4% of the population, 1,832,289 population of minorities, 38.6%; Dong, Miao, Tujia, Yao and Bai are major native minorities.  Huaihua is the central region of Dong ethnic population, there lives 816,481 Dong people (2010 census), it shares 28.35 per centage of Chinese Dong ethnic group.
+
+White House, Tennessee: White House is a city in Robertson and Sumner counties in the United States state of Tennessee.  The population was 7,220 at the 2000 census.  It is approximately twenty-two miles north of downtown Nashville.  According to the city website a special census was conducted in 2008 that placed the city population at 9,891 residents, with 3,587 households within the city limits.  The population was 10,255 at the 2010 census which showed growth of 3,000 people from 2000 to 2010.  The 2013 population was 10,752.
+
+Gaffney, South Carolina: Gaffney is a city in and the seat of Cherokee County, South Carolina, United States, in the Upstate region of South Carolina.  Gaffney is known as the "Peach Capital of South Carolina".  The population was 12,539 at the 2010 census, with an estimated population of 12,597 in 2014.  It is the principal city of the Gaffney, South Carolina, Micropolitan Statistical Area (population 55,662 according to 2012 estimates by the U.S. Census Bureau), which includes all of Cherokee County and which is further included in the greater Greenville-Spartanburg-Anderson, South Carolina Combined Statistical Area (population 1,384,996 according to year 2012 U.S. Census Bureau estimates).
+
+Altoona, Pennsylvania: Altoona is a city in Blair County, Pennsylvania, United States.  It is the principal city of the Altoona Metropolitan Statistical Area (MSA).  The population was 46,320 at the time of the 2010 Census, making it the eleventh most populous city in Pennsylvania.  The Altoona MSA includes all of Blair County and was recorded as having a population of 127,089 at the 2010 Census, around 100,000 of whom live within a 5 mi radius of the Altoona city center according to U.S. Census ZIP Code population data.  This includes the adjacent boroughs of Hollidaysburg and Duncansville, adjacent townships of Logan, Allegheny, Blair, Frankstown, Antis, and Tyrone, as well as nearby boroughs of Bellwood and Newry.
+
+Union, South Carolina: The city of Union is the county seat of Union County, South Carolina, United States.  The population was 8,393 at the 2010 census.  It is the principal city of the Union Micropolitan Statistical Area (population 28,961 according to 2010 Census), an (MSA) which includes all of Union County and which is further included in the greater Greenville-Spartanburg-Anderson, South Carolina Combined Statistical Area (population 1,266,995 according to the 2010 Census).
+
+Religion in Ghana: Christianity is the largest religion in Ghana, with approximately 71.2% of the country's population being members of various Christian denominations as of 2010 census.  The religious composition of Ghana in the first postindependence population census of 1960 was 25 percent Muslim, 23 percent traditionalist, 41 percent Christian, and the rest (about 9 percent) other.  A breakdown of the 1960 population according to Christian sects showed that 25 percent were Protestant (non-Pentecostal); 13 percent, Roman Catholic; 2 percent, Protestant (Pentecostal); and 1 percent, Independent African Churches.  The 1970 population census did not present figures on the religious composition of the nation.
+
+Question: According to the 2010 census, what was the population of the city in which the present marquee of the Hardacre Theater was erected?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "city_name": {
+      "type": "string",
+      "description": "The name of the city where the marquee was erected."
+    },
+    "event_details": {
+      "type": "object",
+      "properties": {
+        "item_erected": {
+          "type": "string",
+          "description": "The item that was erected."
+        },
+        "erection_year": {
+          "type": "integer",
+          "description": "The year the item was erected."
+        }
+      },
+      "required": [
+        "item_erected",
+        "erection_year"
+      ],
+      "additionalProperties": false
+    },
+    "census_year": {
+      "type": "integer",
+      "description": "The year of the census for which the population is requested."
+    },
+    "population": {
+      "type": "integer",
+      "description": "The population of the city according to the specified census year."
+    }
+  },
+  "required": [
+    "city_name",
+    "event_details",
+    "census_year",
+    "population"
+  ],
+  "additionalProperties": false
+}

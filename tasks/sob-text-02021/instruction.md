@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Hamilton Thunder: The Hamilton Thunder were a soccer team located in Hamilton, Ontario, playing in the Western Conference of the Canadian Professional Soccer League.  The team played its home fixtures at Brian Timmis Stadium until a rent dispute with the city caused home games to be moved to Vaughan midway through the 2005 season.  The Thunder won the regular season Western Conference championship each season from 2003 to 2005, but lost in the Rogers Cup semifinal each of those years.
+
+Bobby Gilbert: Bobby Gilbert is a former Irish footballer who played for, among others, Derry City and Shamrock Rovers.  Gilbert scored in European competitions for both City and Rovers.  As an international he also played for the Republic of Ireland.
+
+List of Surrey County Cricket Club grounds: Surrey County Cricket Club was established on 22 August 1845; prior to that an informal county team had existed before, and had occasionally appeared in first-class cricket, occasionally playing in the early part of the nineteenth century as Epsom or Godalming.  It has since played first-class cricket from 1846, List A cricket from 1963 and Twenty20 cricket from 2003, using a number of home grounds during that time.  The Oval in Kennington has played host to the club's first home fixtures in all three formats of the game; in first-class cricket in 1846 against the Marylebone Cricket Club; in List A cricket in 1964 against Gloucestershire; and in Twenty20 cricket against Middlesex in 2003.  Surrey have played home matches at fifteen grounds, but have played the majority of their home fixtures at The Oval, which also holds Test, One Day International and Twenty20 International cricket matches.
+
+Abbey Lawn: The Abbey Lawn in Bourne, Lincolnshire, England, is a centrally located space used as the principal recreation ground in the town.  The cricket, tennis, bowls, pétanque, and football clubs play their home fixtures here.  The hockey club practices here, though it now plays its fixtures on an all-weather pitch elsewhere. " "The Lawn"" is the site of the Bourne Cricket Club (Lincolnshire) and its associated facilities.
+
+Republic of Ireland national football team: The Republic of Ireland National Football Team (Irish: "Foireann peile náisiúnta Phoblacht na hÉireann" ) represents Ireland in association football.  It is governed by the Football Association of Ireland (FAI) and plays its home fixtures at the Aviva Stadium in Dublin.
+
+Elite League (speedway): The Elite League was the top division of speedway league competition in the United Kingdom, governed by the Speedway Control Bureau (SCB), in conjunction with the British Speedway Promoters' Association (BSPA).  It was sponsored by Sky Sports until the end of the 2013 season.  In 2016, the Elite League featured 8 teams, unlike 10 in 2014, during a season which ran between March and October.  Each team had a designated race day on which they normally staged their home fixtures, and they regularly had home and away fixtures scheduled in the same week.
+
+List of Glamorgan County Cricket Club grounds: Glamorgan County Cricket Club was established on 6 July 1888.  The county entered the Minor Counties Championship in 1896 and competed in the competition until 1920, after which it was elevated to first-class status for the 1921 season, and has played first-class cricket since.  Following their elevation to first-class status, Glamorgan alternated their home matches between Cardiff Arms Park in Cardiff and St Helen's in Swansea.  It wasn't until 1966 that Glamorgan began playing at their current home ground, the SWALEC Stadium (known more commonly as Sophia Gardens) in Cardiff.  Cardiff Arms Park played host to Glamorgan's first home fixture in first-class cricket against Sussex in 1921, as well as its first home List A fixture against Worcestershire in 1963.  Forty years later Sophia Gardens played host to the clubs first Twenty20 fixture against Northamptonshire.  Glamorgan have played home matches at nineteen grounds, but have played the majority of their home fixtures since 1966 at the SWALEC Stadium, which also holds Test, One Day International and Twenty20 International cricket matches.
+
+Rathfern Rangers F.C.: Rathfern Rangers Football Club is a Northern Irish,intermediate football club playing in Division 1A of the Northern Amateur Football League.  The club is based in Newtownabbey, County Antrim and was formed in 1974 and began playing matches in the Dunmurry League.  They play their home fixtures at the Diamond, Rathcoole since moving there in 1998.  First team manager for the club is John Logan.  As well as fielding a first team, Rathfern also have a second team which currently plays in NAFL Division 3A.
+
+List of Yorkshire County Cricket Club grounds: Yorkshire County Cricket Club was established on 8 January 1863; prior to that an informal county organisation had existed before, and had occasionally appeared in first-class cricket, typically playing as Sheffield.  It has since played first-class cricket from 1863, List A cricket from 1963 and Twenty20 cricket from 2003, using a different number of home grounds during that time.  Great Horton Road in Bradford played host to the clubs inaugural home first-class fixture in 1863 against Nottinghamshire, while a century later its first home List A fixture was played at Acklam Park in Middlesbrough against the same opponents, and forty years later the clubs first home Twenty20 fixture was played at Headingley against Derbyshire.  Yorkshire have played home matches at 21 grounds, but today play the majority of their home fixtures at Headingley, which also holds Test, One Day International and Twenty20 International cricket matches.  The clubs original home ground at Bramall Lane also held one Test match in 1902.
+
+List of Middlesex County Cricket Club grounds: Middlesex County Cricket Club was established on 2 February 1864; prior to that an informal county team had existed before, and had appeared in first-class cricket from 1787.  It has since played first-class cricket from 1864, List A cricket from 1963 and Twenty20 cricket from 2003, using a number of home grounds during that time.  The Cattle Market Ground in Islington played host to the clubs first home fixture in first-class cricket against Sussex in 1864; Lord's in St John's Wood played host to the clubs first home fixture in List A cricket against Northamptonshire in 1963; while the Old Deer Park in Richmond played host to the clubs first home fixture in Twenty20 cricket against Kent in 2003.  Middlesex have played home matches at fourteen grounds, but have played the majority of their home fixtures at Lord's, which also holds Test, One Day International and Twenty20 International cricket matches.
+
+Question: At which stadium does the international team for which Bobby Gilbert plays, play its home fixtures ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the footballer."
+    },
+    "international_team": {
+      "type": "string",
+      "description": "The international team the player represented."
+    },
+    "home_stadium": {
+      "type": "string",
+      "description": "The name of the stadium where the international team plays its home fixtures."
+    },
+    "stadium_location": {
+      "type": "string",
+      "description": "The city where the home stadium is located."
+    }
+  },
+  "required": [
+    "player_name",
+    "international_team",
+    "home_stadium",
+    "stadium_location"
+  ],
+  "additionalProperties": false
+}

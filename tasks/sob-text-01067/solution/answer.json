@@ -1,0 +1,12 @@
+{
+  "actress_name": "Camilla Luddington",
+  "video_game_role": {
+    "character_voiced": "Lara Croft",
+    "game_title": "Rise of the Tomb Raider"
+  },
+  "medical_drama_role": {
+    "drama_title": "Grey's Anatomy",
+    "network": "ABC",
+    "character_played": "Jo Wilson"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "university_with_more_students": "University of Houston",
+  "universities_compared": [
+    {
+      "university_name": "California State University, Fullerton",
+      "student_enrollment": 40200
+    },
+    {
+      "university_name": "University of Houston",
+      "student_enrollment": 43000
+    }
+  ],
+  "enrollment_difference": 2800,
+  "comparison_statement": "University of Houston has 2800 more students than California State University, Fullerton."
+}

@@ -1,0 +1,12 @@
+{
+  "footballer_name": "Víctor Sánchez del Amo",
+  "nationality": "Spanish",
+  "playing_position": "right midfielder",
+  "current_role": "retired footballer and current manager",
+  "club_departed_from": "Panathinaikos",
+  "departure_year": 2007,
+  "departed_with_notable_players": true,
+  "other_departing_players": [
+    "Igor Bišćan"
+  ]
+}

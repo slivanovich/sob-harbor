@@ -1,0 +1,13 @@
+{
+  "team": {
+    "name": "North Jersey Imperials",
+    "location": "Paramus, New Jersey"
+  },
+  "goalkeeper": {
+    "name": "Tim Howard",
+    "is_us_national_team_member": true,
+    "first_pro_team_was_this_team": true,
+    "birth_year": 1979
+  },
+  "answer_birth_year": 1979
+}

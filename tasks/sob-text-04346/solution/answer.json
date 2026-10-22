@@ -1,0 +1,15 @@
+{
+  "film_title": "Hulk: Where Monsters Dwell",
+  "release_year": 2016,
+  "featured_character": {
+    "name": "Hulk",
+    "physical_attributes": [
+      "green-skinned",
+      "hulking",
+      "muscular humanoid"
+    ],
+    "abilities": [
+      "vast degree of physical strength"
+    ]
+  }
+}

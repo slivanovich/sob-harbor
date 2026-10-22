@@ -1,0 +1,81 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Parade (band): Parade were a British five piece girl group, who were formerly signed to Asylum Records.  The band had five members: Emily Biggs (born 16 March 1990), Lauren Deegan (born 8 June 1989), Bianca Claxton (born 28 November 1989), Jessica Agombar (born 7 August 1990) and Sian Charlesworth (born 17 January 1987).  On 11 February 2013 it was confirmed via the Parade Twitter account the group had split following the departure of Bianca Claxton.  Agombar and Claxton have embarked on solo careers, with Agombar releasing tracks Bam Bam and Bam Bam Pt. 2.  Claxton released her debut EP Hi-5 on May 17, 2015, and entered the selection for the UK Eurovision Song Content entry in 2016.  Agombar is releasing her debut EP later this year; with Claxton releasing her debut album in the not too near future
+
+Apparition (EP): Apparition is the second EP by the progressive metal band, The Contortionist.  It was self-released by the band on September 24, 2009.  The release shows the band's first move towards a more technical death metal sound while their debut EP, "Shapeshifter", showed a more traditional deathcore sound.  It is also the last release with Dave Hoffman on vocals, with Jonathan Carpenter joining afterwards to fill in the spot.  Not long after the release of this EP, the band was signed to Good Fight and released their debut album, "Exoplanet" in the following year.  The EP's artwork is a Hubble Space Telescope mosaic image assembled from 24 individual Wide Field and Planetary Camera 2 exposures taken in October 1999, January 2000, and December 2000 of the Crab Nebula.
+
+Kaleida (band): Kaleida is an English electropop duo from London, England, formed in 2013.  Kaleida released their debut EP, "Think", in 2015.  The group consists of vocalist Christina Wood and keyboardist Cicely Goulder.  In 2014, the band's title track from their debut EP appeared on the soundtrack of action film, "John Wick".
+
+The Coast (EP): The Coast is the debut EP from Toronto, Ontario, Canada-based indie rock group The Coast.  The EP was first self-released in Canada on March 7, 2006, then released in the US by Aporia Records on May 29, 2007.  The EP was produced by the band and Chris Hegge, who also provided backing vocals on "Evening's Heights."  In 2004, when The Coast was known as The July 26th Movement, they released an EP titled "Take a Walk Outside", featuring an early version of the song of the same name found on the self-titled EP.
+
+T.S.O.L. (EP): T.S.O.L. is the eponymously titled debut EP by the American hardcore punk band T.S.O.L. (True Sounds of Liberty), released in 1981 through Posh Boy Records.  Its fast tempos and politically radical lyrics established the band as a major force in the southern California hardcore scene of the time.  T.S.O.L. quickly moved away from leftist political subject matter, however, shifting in a gothic rock direction and changing labels to Frontier Records for their full-length album "Dance with Me" (1981).  This led to a dispute with Posh Boy owner Robbie Fields, who claimed the band owed his label another EP.  The two parties eventually reached a settlement in which Posh Boy gained the rights to T.S.O.L.'s 1982 EP "Weathered Statues", combining it with the debut EP in the 1987 compilation album "".  Nitro Records purchased the master recordings from Posh Boy in 1997 and re-released the two EPs as the compilation "T.S.O.L. / Weathered Statues."
+
+LONGREEF: LONGREEF is an Australian rock band from Sydney, formed in 2010.  The band consists of Josh Barker (vocals/guitar), Nick Miller (guitar), Tristan Davies (drums), and Jim Wark (bass/vocals).  The band released their self-titled debut EP in 2011 and their second EP entitled "Dirty Motel" in 2012, which features their Active Rock radio singles "Dirty Motel" and "She Likes The Ladies" featured on Octane (Sirius XM).  The band performs over 200 shows a year in the United States and was named one of DeliRadio's Hardest Touring Artists of 2013.  The band supports the Ronald McDonald House Charities by donating 10 cents for every mile travelled.
+
+Judah &amp; the Lion: The band started playing in 2011, playing mostly Christian music.  Their debut EP First Fruits was themed around worship.  The album was composed of blended folk and bluegrass styles.
+
+Take It All Back: "Take It All Back" is a song written and recorded by American folk band Judah & the Lion, released as a single from their second studio album "Folk Hop N' Roll".  It was released by the band's label, Cletus the Van Records.
+
+Kossisko: Kossisko (born Kossisko Konan, November 26, 1992), formerly known as 100s, is an American singer from Berkeley, California.  In 2012, Kossisko, as rapper 100s, released his debut mixtape "Ice Cold Perm".  He was signed to Fool's Gold Records in June 2013.  Following the release of the single "Ten Freaky Hoes", it was announced that he would be releasing his second mixtape, an EP titled "Ivry", which was released on March 7, 2014 the shiznik by Fool's Gold.  It featured a greater g-funk and disco influence than his debut mixtape.  He is also well known for his song "Life of a Mack", which appeared on the soundtrack of the video game "Grand Theft Auto V".  At the start of 2015, he retired the 100s persona and now performs under the name Kossisko (which is his birth name).  As Kossisko, he released his first single "This May Be Me" on February 17, 2015.  The track was premiered by The Fader.  Later that year, Kossisko released his debut EP, "Red White N Cruel".  In 2016, Kossisko launched a crowdfunding campaign to help fund his work on a short horror film titled '2037.'
+
+List of songs recorded by Fifth Harmony: Fifth Harmony is an American four-piece girl group, consisting of members Ally Brooke, Normani Kordei, Dinah Jane, Lauren Jauregui and formerly Camila Cabello.  The group began working on their debut EP, "Better Together".  It was released in 2013, following their exit from the second season of the American televised singing competition, "The X Factor".  At this time, the group contributed guest vocals on two covers, "When I Was Your Man" by Bruno Mars and "Mirrors" by Justin Timberlake, for Boyce Avenue's cover EP, "Cover Collaborations, Volume 2".  The first single released from their debut EP, "Better Together", was "Miss Movin' On", a power pop song with a synth-backed chorus written by singer Julia Michaels among other writers.  While the group had very limited songwriting credits in their EP, they are credited as writers on the promotional single, "Me & My Girls" with collaborations from Patrick James Bianco, Beau Alexandrè Dozier and John Ryan.  Their EP was subsequently released four times with an acoustic version, a remixes EP, and two Spanish versions, one standard and one acoustic.
+
+Question: What was the name of the debut EP of the band who performs Take It All Back?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "song_performed": {
+      "type": "string",
+      "description": "The name of the song performed by the band."
+    },
+    "debut_ep_details": {
+      "type": "object",
+      "properties": {
+        "ep_name": {
+          "type": "string",
+          "description": "The name of the band's debut EP."
+        },
+        "ep_theme": {
+          "type": "string",
+          "description": "The theme of the debut EP."
+        },
+        "ep_genre_styles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Musical styles blended in the debut EP."
+        }
+      },
+      "required": [
+        "ep_name",
+        "ep_theme",
+        "ep_genre_styles"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "band_name",
+    "song_performed",
+    "debut_ep_details"
+  ],
+  "additionalProperties": false
+}

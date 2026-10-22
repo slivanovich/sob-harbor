@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "f9e6e16fa9a694c9bf99d1ddd9c31f6772c720416b5fcf5bde397000e3a36541",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abecbb35542997719eab5c4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Alecia Beth Moore",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Public Announcement: Public Announcement is an American R&B group, which was formed in 1991 in Chicago, Illinois, United States.  They teamed with singer R. Kelly for their collaboration album \"Born into the 90's \"(1992).  The group is known for collection of R&B hit songs like \"She's Got That Vibe\", \"Honey Love\", \"Slow Dance (Hey Mr. DJ)\", \"Dedicated\", \"Body Bumpin' (Yippie-Yi-Yo)\", and \"Mamacita\".\n\nMichael Marshall (singer): Michael Marshall (born October 6, 1965), also known and credited as Mike Marshall and Mike Meezy, is the former lead singer of American R&B group Timex Social Club.  In 1986, he had taken an offer to join Run DMC's Raising Hell Tour, before leaving the group.  In the 1990s, Marshall worked with the group called Mo'fessionals.  In 1995, he did a feature for rap group Luniz and sang the chorus on their hit \"I Got 5 On It\", which samples Club Nouveau's \"Why You Treat Me So Bad\" from 1987.  Marshall is the only currently active member of the Timex Social Club.  He completed the album \"K.I.M.\" with rapper Equipto in 2004.  He also had an international top 10 dance hit, \"Your Body\", with DJ Tom Novy in 2005.  He released a solo album, \"Love, Lies & Life\" with the hit song \"So Young\" featuring San Quinn in 2006.  In 2008, Psychopathic Records sub-label Hatchet House released the \"Tunnel Runners\" compilation featuring Marshall alongside Bay Area horrorcore rap artist Mars on the song \"They Watchin Me\".  The compilation entered the Top 25 rap albums on \"Billboard\" in its first week.  Michael Marshall still tours and has completed his second solo R&B album, \"Right Where I'm 'posed 2 Be\".\n\nKimberly Scott (singer): Kimberly Scott (born 1986 in Landover, Maryland) is an American R&B singer.  She first performed in public when she was five years old and won the amateur-night contest five times at the Apollo Theater.  After opening up for R&B group Immature, Kimberly got a record deal at the age of eleven.  In early 1998, Kimberly's first single \"Tuck Me In\" became her biggest hit to date, peaking at #58 on the Billboard Hot 100 and #21 on Billboard's Hot R&B\\Hip-Hop Singles & Tracks chart.  Her self-titled debut album, released by Columbia Records in 1998, peaked at #95 on Billboard's Top R&B\\Hip-Hop Albums chart.\n\nB5 (album): B5 is the self-titled debut album by American R&B group B5.  It was released on July 19, 2005, in the United States and ever since its release, the album has sold over 200,000 copies.  The album managed to debut and peak at #19 on the \"Billboard\" 200, while peaking at #7 on Billboard's Top R&B/Hip-Hop Albums.  The album managed to spawn only one charting single, \"All I Do\", a Jackson 5 cover, which peaked at #71 on the Billboard Hot R&B/Hip-Hop Singles & Tracks.\n\nRhythm Nation World Tour 1990: The Rhythm Nation World Tour 1990 was the first headlining concert tour by American recording artist Janet Jackson.  It was launched in support of her fourth studio album \"Janet Jackson's Rhythm Nation 1814\" (1989), and also contained material from her third studio album \"Control\" (1986).  Jackson's record label A&M announced plans for the world tour in fall of 1989, following the release of \"Rhythm Nation 1814\".  Managed by Roger Davies and Rusty Hooker, the tour was developed by musical director Chuckii Booker, choreographer Anthony Thomas, stage designer Roy Bennett, stage manager Chris Tervit, production manager Benny Collins, and Jackson herself.\n\nPink (singer): Alecia Beth Moore (born September 8, 1979), known professionally as Pink (stylized as P!nk ), is an American singer, songwriter, dancer and actress.  She was signed to her first record label with original R&B girl group Choice in 1995.  The label, LaFace Records, only saw potential in Pink, offering her a solo deal.  Choice disbanded in 1998.  Pink rose as an artist with her debut solo album, \"Can't Take Me Home\" (2000).  It was certified double-platinum in the United States and spawned two \"Billboard\" Hot 100 top-ten hits: \"There You Go\" and \"Most Girls\".  She gained further recognition with the \"Moulin Rouge! \" soundtrack \"Lady Marmalade\", which gave Pink her first Grammy Award as well as her first number-one single on the \"Billboard\" Hot 100.  Pink took more artistic control and pursued a pop rock direction for her second album, \"Missundaztood\" (2001).  It sold more than 12 million copies worldwide and yielded three US top-ten singles, \"Get the Party Started\", \"Don't Let Me Get Me\", and \"Just Like a Pill\".\n\nJim Beanz: James David Washington (born August 26, 1980), better known under his stage name Jim BEANZ, is an American vocal producer, songwriter, musician, singer and record producer from Harrisburg, Pennsylvania, now working out of Philadelphia, signed to Timbaland Productions and Sunset Entertainment Group.  He got his start working under the tutelage of Jazz from the hit R&B group, Dru Hill, when he was an artist in the R&B group \"Tresan\".  In 2005, Beanz started working alongside Timbaland as a vocal producer and more recently, as a song producer.  He co-wrote the winning entry of the Eurovision Song Contest 2008, \"Believe\" by Dima Bilan.  Jim Beanz also wrote and produced songs on the first season of the mega hit television series on FOX called \"Empire\", and portrayed the rapper \"Titan\" on the show.\n\nRoger Davies (manager): Roger Davies (born 1952) is an Australian artist manager, business manager, and music producer, with a long established career in the music industry.  His began by working as a roadie in Australia in the early 1970s to managing pop, rock performers including Sherbet (1970 – 79), Olivia Newton-John (1979 – 86), Tina Turner (1980 to date), James Reyne (1986 - 1990), Tony Joe White (1989 - 2000), Dalbello (1984), Cher (1999 to date), Janet Jackson (1989 - 2002), Joe Cocker (1991 to date), Sade (1991 to date), M People (1997 - 2000), and Pink (2001 to date).\n\nIn My Bed: \"In My Bed\" is a number-one platinum-selling R&B single by R&B group Dru Hill.  It is the second single from their eponymous debut album.  The single spent three weeks at number-one on the US R&B chart and peaked at number four on the US pop chart.  The song is performed by group leader Mark \"Sisqó\" Andrews.  The music video focuses on Sisqó's girlfriend, who cheats on him with another man and the other members of the group, but Sisqó doesn't know anything about it.  At the end of the video, Sisqó goes to his house with a bouquet of flowers for his girlfriend when he sees a guy walking out.  He goes inside and sadly finds her in bed with a woman and drops the flowers in heartbreak.  He leaves the house for a few seconds and goes back in.  The remix features Jermaine Dupri, who also produced the track, and Da Brat.  It was a hit single.  The remix sampled Le Pamplemousse's \"Gimme What You Got\" (1976).\n\nThe Midnighters: The Midnighters were an American R&B group from Detroit, Michigan.  They were an influential group in the 1950s and early 1960s, with many R&B hit records.  They were also notable for launching the career of lead singer Hank Ballard and the worldwide dance craze the Twist.  Between 1953 and 1962 the Midnighters had almost two dozen hits on the U.S. Pop & R&B charts.  Their big hits included the million-selling Billboard Top 10 pop hits \"Finger Popping Time\" (for which they received a 1961 Grammy Award nomination), and \"Let's Go, Let's Go, Let's Go\".  The Midnighters also had 13 Top 10 R&B hits, including three that reached number 1.  Their Top 10 R&B hits included \"Work with Me, Annie\", \"It's Love Baby (24 Hours a Day)\", \"Annie Had a Baby\", \"The Hoochi Coochi Coo\", \"Teardrops on Your Letter\", \"Get It\", \"The Float\" and \"Nothing but Good\".  They received the Rhythm and Blues Foundation's prestigious Pioneer Award in 1992 and were inducted into the Vocal Group Hall of Fame in 1999.  The group's lead singer, Hank Ballard, was inducted into the Rock and Roll Hall of Fame in 1990.  The Midnighters as a \"group\" were inducted into the Rock and Roll Hall of Fame on April 14, 2012.",
+    "question": "Roger Davies: managed which singer and actress who got her start with an R&B group in 1995?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "managed_artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The professional name of the artist."
+            },
+            "full_name": {
+              "type": "string",
+              "description": "The full birth name of the artist."
+            },
+            "start_year_with_rb_group": {
+              "type": "integer",
+              "description": "The year the artist started with an R&B group."
+            },
+            "rb_group_name": {
+              "type": "string",
+              "description": "The name of the R&B group the artist started with."
+            }
+          },
+          "required": [
+            "name",
+            "full_name",
+            "start_year_with_rb_group",
+            "rb_group_name"
+          ],
+          "additionalProperties": false
+        },
+        "manager_name": {
+          "type": "string",
+          "description": "The name of the manager."
+        },
+        "manager_start_year_with_artist": {
+          "type": "integer",
+          "description": "The year the manager started managing this specific artist."
+        }
+      },
+      "required": [
+        "managed_artist",
+        "manager_name",
+        "manager_start_year_with_artist"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "managed_artist": {
+        "name": "Pink",
+        "full_name": "Alecia Beth Moore",
+        "start_year_with_rb_group": 1995,
+        "rb_group_name": "Choice"
+      },
+      "manager_name": "Roger Davies",
+      "manager_start_year_with_artist": 2001
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

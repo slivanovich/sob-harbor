@@ -1,0 +1,10 @@
+{
+  "game_identified": "Scrabble",
+  "game_characteristics": {
+    "tile_objective": "words",
+    "arrangement_style": "crossword fashion",
+    "lexicon_dependency": true
+  },
+  "other_game_considered": "Take It Easy",
+  "other_game_type": "abstract strategy board game"
+}

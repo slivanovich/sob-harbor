@@ -1,0 +1,14 @@
+{
+  "question_asked": "Are either Bruce Dickinson or Bob Geldof American?",
+  "persons_checked": [
+    {
+      "name": "Bruce Dickinson",
+      "nationality": "English"
+    },
+    {
+      "name": "Bob Geldof",
+      "nationality": "Irish"
+    }
+  ],
+  "are_any_american": false
+}

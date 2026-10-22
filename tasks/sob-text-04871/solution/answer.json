@@ -1,0 +1,13 @@
+{
+  "person_name": "Aaron Carter",
+  "relationship_to_other_person": "younger brother",
+  "other_person": {
+    "name": "Nick Carter",
+    "discography_summary": {
+      "studio_albums_count": 2,
+      "compilation_albums_count": 1,
+      "singles_count": 5,
+      "music_videos_count": 4
+    }
+  }
+}

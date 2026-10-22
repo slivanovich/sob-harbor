@@ -1,0 +1,16 @@
+{
+  "book_title": "Blackwood Farm",
+  "author": "Anne Rice",
+  "series_information": [
+    {
+      "series_name": "The Vampire Chronicles",
+      "series_position": "ninth"
+    },
+    {
+      "series_name": "The Mayfair Witches",
+      "series_position": "fifth"
+    }
+  ],
+  "character_mentioned": "Lestat",
+  "reason_for_character_inclusion": "The book is part of 'The Vampire Chronicles' series, which revolves around Lestat, and it continues a unified story that brings together Rice's vampires and Mayfair Witches."
+}

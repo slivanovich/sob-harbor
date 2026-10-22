@@ -1,0 +1,16 @@
+{
+  "player_details": {
+    "name": "Samuel E. Jones",
+    "nationality": "Welsh",
+    "position": "outside left",
+    "is_amateur": true
+  },
+  "club_details": {
+    "name": "Newport County",
+    "location": {
+      "city": "Newport",
+      "region": "South Wales"
+    }
+  },
+  "question_match": true
+}

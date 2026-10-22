@@ -1,0 +1,12 @@
+{
+  "city_name": "Sydney",
+  "city_details": {
+    "is_state_capital_of_new_south_wales": true,
+    "is_most_populous_in_australia_and_oceania": true,
+    "estimated_population": 5029768
+  },
+  "location_relative_to_goulburn_river_national_park": {
+    "distance_km": 213,
+    "direction_from_goulburn_river_national_park": "southeast"
+  }
+}

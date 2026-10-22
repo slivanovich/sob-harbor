@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Gailard Sartain: Gailard Sartain (born September 18, 1946) is a former American actor, often playing characters with roots in the South.  He was a regular on the country music variety series "Hee Haw".  His best known role is Chuck in "Ernest Saves Christmas" and "Ernest Goes to Jail" as well as on "Hey Vern, It's Ernest" and "The Outsiders".  He is also an accomplished and successful painter and illustrator.
+
+Z Grill: The Benjamin Franklin Z Grill, or simply "Z-Grill", is a 1-cent postage stamp issued by the United States Postal Service in February 1868 depicting Benjamin Franklin.  While stamps of this design were the common 1-cent stamps of the 1860s, the Z-Grill is distinguished by having the so-called "Z" variety of a grill pressed into the stamp, creating tiny indentations in the paper.  Although the 1-cent Z-Grill is generally cited as the rarest and most valuable of all US postage stamps, the 15-cent Lincoln Z-Grill is just as rare and the 10-cent Washington Z-Grill scarcely less so.  All three of these stamps were produced at the same time, along with more common Z-grill versions of the contemporary 2-cent, 3-cent, 5-cent and 12-cent stamps (The earliest known postmarks on Z-grill stamps date from January 1868).  The "Z" pattern, unique among grill templates used by the Post Office because it incises horizontal ridges into the stamp rather than vertical ridges, was replaced within a very short time, for stamps with the D- and E-Grills were already being postmarked in mid-February.
+
+Will O' the Wisp (album): Will O' the Wisp is the sixth studio album by Leon Russell.  The album was released in 1975 on Shelter Records.  It peaked at No. 30 on the "Billboard" albums chart and remained on the chart for 40 weeks.  The album cover was designed and illustrated by artist/actor Gailard Sartain.
+
+Ernest Saves Christmas: Ernest Saves Christmas is a 1988 Christmas comedy film directed by John R. Cherry III and starring Jim Varney.  This is the first film to feature Gailard Sartain's character, Chuck along with Bill Byrge as his brother, Bobby.  They made their first appearance in the television series "Hey Vern, It's Ernest! " which was in production at the same time as this film.  It is the third film to feature the character Ernest P. Worrell, and chronicles Ernest's attempt to find a replacement for an aging Santa Claus.  Unlike the other "Ernest" movies, "Ernest Saves Christmas" is the only one that does not feature a villain.
+
+The Spitfire Grill: The Spitfire Grill is a 1996 American film written and directed by Lee David Zlotoff and starring Alison Elliott, Ellen Burstyn, Marcia Gay Harden, Will Patton, Kieran Mulroney and Gailard Sartain.  It tells a story of a woman who was just released from prison and goes to work in a small-town café known as The Spitfire Grill.  The film won the Audience Award at the 1996 Sundance Film Festival, prompting several distributors to enter into a bidding war in response to the positive buzz, but when the movie was finally released, audiences and critics as a whole responded less favorably than they had at Sundance.
+
+Fred Alley: Fred Alley (1962–2001) was an American musical theatre lyricist and librettist who died unexpectedly just as his work gained national recognition.  His collaboration on the musical "The Spitfire Grill" with composer James Valcq won the American Academy of Arts and Letters' prestigious Richard Rodgers Production Award for 2001.  Premiered at the George Street Playhouse in New Jersey and produced Off-Broadway by Playwrights Horizons, it received Best Musical nominations from the Outer Critics Circle and Drama League, as well as two Drama Desk nominations.  The cast album was released on Triangle Road Records.
+
+The Spitfire Grill (musical): The Spitfire Grill is an American musical with music and book by James Valcq and lyrics and book by Fred Alley, based on the 1996 film of the same name by Lee David Zlotoff.  The Off-Broadway production by Playwrights Horizons began previews at the Duke Theatre on 42nd Street on September 7, 2001 and concluded its scheduled run on October 14, 2001.  It won the Richard Rodgers Production Award, administered by The American Academy of Arts and Letters.  The musical depicts the journey of a young woman just released from prison who decides to start her life anew in a rural Wisconsin town.  She participates in a journey within the town itself toward its own tenuous reawakening.
+
+Alison Elliott: Alison A. Elliott (born May 19, 1970) is an American actress.  She was nominated for a Screen Actors Guild Award for the 1997 film "The Wings of the Dove".  Her other film appearances include "The Spitfire Grill" (1996), "Birth" (2004), "The Assassination of Jesse James by the Coward Robert Ford" (2007) and "20th Century Women" (2016).
+
+The Last Generation in England: "The Last Generation in England" is a non-fiction article by Elizabeth Gaskell, published in the American "Sartain's Union Magazine" in July 1849, relating memories of a small country town in the generation prior to her own.  As such, it is seen as the real-life background for her novel "Cranford".  Feeling she was living through a time of great and rapid change, she was inspired to write it by reading that a history of English domestic life had once been considered by the author Robert Southey.
+
+Houlihan's: Houlihan's is a Leawood, Kansas-based American casual restaurant & bar with locations operating throughout the country, 60% of which are franchised.  The first Houlihan's opened on April 1, 1972 in Kansas City's Country Club Plaza, and there are now 84 restaurants in 18 states.  It was originally named Houlihan's Old Place, because it was first located in the space of Houlihans Clothing Store.Houlihan's is privately owned by Houlihan's Restaurants, Inc., a company that developed and owns several restaurant concepts including Bristol Seafood Grill, Devon Seafood Grill and J. Gilbert's Wood-Fired Steaks.
+
+Question: What country of origin does The Spitfire Grill and Gailard Sartain have in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entity_1_name": {
+      "type": "string",
+      "description": "The name of the first entity."
+    },
+    "entity_1_origin_country": {
+      "type": "string",
+      "description": "The country of origin for the first entity."
+    },
+    "entity_2_name": {
+      "type": "string",
+      "description": "The name of the second entity."
+    },
+    "entity_2_origin_country": {
+      "type": "string",
+      "description": "The country of origin for the second entity."
+    },
+    "common_origin_country": {
+      "type": "string",
+      "description": "The country of origin that both entities have in common."
+    },
+    "is_common_origin": {
+      "type": "boolean",
+      "description": "Indicates whether both entities share a common country of origin."
+    }
+  },
+  "required": [
+    "entity_1_name",
+    "entity_1_origin_country",
+    "entity_2_name",
+    "entity_2_origin_country",
+    "common_origin_country",
+    "is_common_origin"
+  ],
+  "additionalProperties": false
+}

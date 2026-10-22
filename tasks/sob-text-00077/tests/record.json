@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "record_id": "ad45ce0abf993af9cc4350fa13b0d15768da61a4d8d834599bddcb5d44dd3a8e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a89b0b05542992e4fca8371",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Hwang Dong-hyuk",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Money Game (film): Money Game () is a 2015 Chinese comedy film directed by Huang Wei.  It was released on January 23, 2015.\n\nDéjà Vu (2015 film): Déjà Vu () is a 2015 Chinese comedy film directed by Huang Wei.  It was released on January 23, 2015.\n\n20 Once Again: 20 Once Again (Chinese: 重返20岁 \"Chóng fǎn èrshí suì\") is a 2015 Chinese comedy film directed by Leste Chen and starring Yang Zishan, Gua Ah-leh, Bolin Chen and Lu Han.  The film is a remake of the South Korean movie \"Miss Granny\".  It was released on January 8, 2015.\n\nHot Blood Band: Hot Blood Band () is a 2015 Chinese comedy film directed by Zha Muchun.  It was released on January 29, 2015.\n\nMiss Granny: Miss Granny (; lit.  \"Suspicious Girl\") is a 2014 South Korean comedy-drama film directed by Hwang Dong-hyuk.  Na Moon-hee stars as a woman in her 70s who magically finds herself in the body of her 20-year-old self (Shim Eun-kyung) after having her picture taken at a mysterious photo studio.  After opening in theaters on January 22, 2014, it became a huge box office hit, with 8.65 million tickets sold.\n\nUnforgettable Blast: Unforgettable Blast () is a 2015 Chinese comedy film directed by Yan Tinglu.  It was released in China on May 22, 2015.\n\nOnion From the Boot of a Benz: Onion From the Boot of a Benz () is a 2015 Chinese comedy film directed by Guo Minger.  It was released on January 27, 2015.\n\nDevil and Angel: Devil and Angel () is a 2015 Chinese comedy film directed by Yu Baimei and Deng Chao and starring Deng Chao and Sun Li.  It was released in China on December 24, 2015.\n\nGoodbye Mr. Loser: Goodbye Mr. Loser () is a 2015 Chinese comedy film directed by Yan Fei and Peng Damo, and starring Shen Teng, Ma Li, Yin Zheng, Ai Lun, Wang Zhi, Tian Yu, Song Yang, Chang Yuan and Li Ping.  The film is based on a play of the same name.  It was released on September 30, 2015.  Some critics have accused the film of containing similar plot elements as the 1986 American film \"Peggy Sue Got Married\".  The directors later denied these allegations.\n\nHeart for Heaven: Heart for Heaven is a 2015 Chinese comedy film directed by Zhang Cheng.  It was released in China on December 31, 2015.",
+    "question": "Who directed the original South Korean version of the 2015 Chinese comedy film, 20 Once Again?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "remake_film": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "release_year": {
+              "type": "integer"
+            },
+            "country_of_origin": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "release_year",
+            "country_of_origin"
+          ],
+          "additionalProperties": false
+        },
+        "original_film": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "country_of_origin": {
+              "type": "string"
+            },
+            "director": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "title",
+            "country_of_origin",
+            "director"
+          ],
+          "additionalProperties": false
+        },
+        "relationship_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "remake_film",
+        "original_film",
+        "relationship_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "remake_film": {
+        "title": "20 Once Again",
+        "release_year": 2015,
+        "country_of_origin": "Chinese"
+      },
+      "original_film": {
+        "title": "Miss Granny",
+        "country_of_origin": "South Korean",
+        "director": {
+          "name": "Hwang Dong-hyuk"
+        }
+      },
+      "relationship_type": "remake"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

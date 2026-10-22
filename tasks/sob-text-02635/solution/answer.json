@@ -1,0 +1,16 @@
+{
+  "universities": [
+    {
+      "name": "North Dakota State University",
+      "location_city": "Fargo",
+      "location_state": "North Dakota"
+    },
+    {
+      "name": "University of Maryland, Baltimore County",
+      "location_city": "Baltimore County",
+      "location_state": "Maryland"
+    }
+  ],
+  "country": "United States",
+  "total_universities_found": 2
+}

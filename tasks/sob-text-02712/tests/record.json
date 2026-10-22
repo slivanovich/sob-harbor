@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "86864bdb3c8fababf47d5b36a0e9c9aaf95b31ab9c6789976c753dd86ac60bec",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae7fde2554299321098400f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Love Story",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Fifteen (song): \"Fifteen\" is a country pop song performed by American singer-songwriter Taylor Swift.  Swift self-penned the song and co-produced it along with Nathan Chapman.  \"Fifteen\" was released on August 30, 2009 by Big Machine Records, as the fourth single from Swift's second studio album, \"Fearless\" (2008).  The song was inspired by Swift's freshman year of high school at Hendersonville High School, where she first encountered heartbreak, along with her best friend Abigail Anderson.  After writing it, Swift asked Anderson for authorization to record the song (due to personal references in the song); Anderson affirmed and it was ultimately included on \"Fearless\".  \"Fifteen\" is a ballad, which has Swift reminiscing on events that occurred to her and her best friend at the age of 15 and cautioning teenagers to not fall in love easily.\n\nFearless (Taylor Swift album): Fearless is the second studio album by the American singer-songwriter Taylor Swift.  The album was released on November 11, 2008, by Big Machine Records.  As with her first album, \"Taylor Swift\", Swift wrote or co-wrote all thirteen tracks on \"Fearless\".  Most of the songs were written as the singer promoted her first album as the opening act for numerous country artists.  Due to the unavailability of collaborators on the road, eight songs were written by Swift.  Other songs were co-written with Liz Rose, Hillary Lindsey, Colbie Caillat, and John Rich.  Swift also made her debut as a record producer, co-producing all songs on the album with Nathan Chapman.\n\nFearless (Taylor Swift song): \"Fearless\" is a country pop song performed by American singer-songwriter Taylor Swift.  The song was co-written by Swift in collaboration with Liz Rose and Hillary Lindsey and produced by Nathan Chapman and Swift.  \"Fearless\" was released on January 3, 2010 by Big Machine Records as the fifth and final single from Swift's second studio album of the same name (2008).  Swift composed the song while traveling on tour to promote her eponymous debut album, \"Taylor Swift\" (2006).  She wrote \"Fearless\" in regard to the fearlessness of falling in love and eventually titled her second studio album after the song.  Musically, it contains qualities commonly found in country pop music and, lyrically, is about a perfect first date.\n\nDavid Chapman (journalist): David Chapman (born April 1, 1976) is an entertainment writer/producer covering various pop culture interests, particularly the video game and comic book industries.  Chapman's freelance work has appeared in a variety of outlets, including \"GameSpy\" and the US version of \"Play Magazine\".  Chapman produced a number of segments for the video game television show \"The Electric Playground\", including most of the show's popular \" 'Comic of the Week' \" segments, and continues to occasionally write and produce content for the show and its website.  Chapman was the News Editor for the video game website, Game Almighty, and has been a regular writer for TeamXbox, GameSpy, and Crispy Gamer.  Chapman also wrote regular weekly articles for USA Network's Character Arcade, covering the interactive entertainment industry and writing monthly \"Character Spotlight\" articles showcasing biographies of various video game characters.\n\nSara Smile (album): Sara Smile is the third studio album by American country music singer Jimmy Wayne.  It was released on November 23, 2009 by Valory Music Group, an imprint of Big Machine Records.  The album's title track is a cover of Hall & Oates' 1976 single, as well as the first single from it.  Dann Huff, Mark Bright and Nathan Chapman produced the album.\n\nThe Story of Us (song): \"The Story of Us\" is a song written and recorded by American singer-songwriter Taylor Swift for her third studio album, \"Speak Now\" (2010).  Produced by Swift alongside Nathan Chapman, the song was sent to mainstream radio in the United States on April 19, 2011, as the fourth single from \"Speak Now\".  Swift composed \"The Story of Us\" regarding the time when she encountered an ex-boyfriend of hers at the 2010 CMT Music Awards.  At the event, the two attempted to ignore each other, which inspired Swift to compose the song.\n\nTaylor Swift videography: American singer-songwriter Taylor Swift has released four video albums and has appeared in thirty-eight music videos, five films and three television shows.  From her eponymous debut album (2006), she released music videos for the singles \"Tim McGraw\", \"Teardrops on My Guitar\", \"Our Song\", and \"Picture to Burn\", all directed by Trey Fanjoy and released from 2006–08.  For the second of these, she earned an MTV Video Music Award for Best New Artist nomination.  She followed with three other music videos in 2008—\"Beautiful Eyes\" from her extended play of the same name, \"Change\" from the \"AT&T Team USA Soundtrack\" and \"Love Story\" from her second album \"Fearless\" (2008).  The latter was nominated for two awards at the 2009 CMT Music Awards—Video of the Year and Female Video of the Year.  For the video of \"You Belong with Me\" she won Best Female Video at the 2009 MTV Video Music Awards.  During her acceptance speech, she was interrupted by rapper Kanye West, which sparked controversy and received much media attention.\n\nLove Story (Taylor Swift song): \"Love Story\" is a song performed by American singer-songwriter Taylor Swift.  The song was written by Swift and produced by Nathan Chapman, alongside Swift.  It was released on September 12, 2008 by Big Machine Records, as the lead single from Swift's second studio album \"Fearless\" (2008).  The song was written about a love interest of Swift's who was not popular among Swift's family and friends.  Because of the scenario, Swift related to the plot of William Shakespeare's \"Romeo and Juliet\" (1597) and used it as a source of inspiration to compose the song.  However, she replaced \"Romeo and Juliet\"' s original tragic conclusion with a happy ending.  It is a midtempo song with a dreamy soprano voice, while the melody continually builds.  The lyrics are from the perspective of Juliet.\n\nChris Hicky: Chris Hicky is a Grammy-nominated music video director from Forrest City, Arkansas, United States, best known for directing many of Keith Urban's videos.  Hicky has also directed videos for many other artists in the country music genre, including Dierks Bentley, Maddie & Tae, Kellie Pickler, Deana Carter, Thomas Rhett, Carrie Underwood, Hunter Hayes, Kelsea Ballerini, Lady Antebellum, Cassadee Pope, Faith Hill, and Danielle Bradbery, Florida Georgia Line, Miranda Lambert.  He has won awards including 2010 ACM Video of the Year, 2010 CMT Female Video of the Year, and 2005 CMT Video of the Year.  His Grammy nomination came in 2010 for Keith Urban's \"Love, Pain, and the Whole Crazy World\" live concert DVD.\n\nYou Belong with Me: \"You Belong with Me\" is a song performed by American singer-songwriter Taylor Swift.  The song was co-written by Swift and Liz Rose and produced by Nathan Chapman with Swift's aid.  It was released on April 18, 2009, by Big Machine Records as the third single from Swift's second studio album, \"Fearless\" (2008).  Swift was inspired to write \"You Belong with Me\" after overhearing a male friend of hers arguing with his girlfriend through a phone call; she continued to develop a story line afterward.  The song contains many pop music elements and its lyrics have Swift desiring an out-of-reach love interest.",
+    "question": "What Nathan Chapman produced song off the Fearless album was nominated for CMT Video of the Year in 2009?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "song_title": {
+          "type": "string",
+          "description": "The title of the song."
+        },
+        "album_name": {
+          "type": "string",
+          "description": "The name of the album the song is from."
+        },
+        "producer": {
+          "type": "string",
+          "description": "The name of the producer of the song."
+        },
+        "award_nomination": {
+          "type": "object",
+          "properties": {
+            "award_name": {
+              "type": "string",
+              "description": "The name of the award the song was nominated for."
+            },
+            "award_year": {
+              "type": "integer",
+              "description": "The year the award nomination occurred."
+            }
+          },
+          "required": [
+            "award_name",
+            "award_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "song_title",
+        "album_name",
+        "producer",
+        "award_nomination"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "song_title": "Love Story",
+      "album_name": "Fearless",
+      "producer": "Nathan Chapman",
+      "award_nomination": {
+        "award_name": "CMT Music Awards—Video of the Year",
+        "award_year": 2009
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

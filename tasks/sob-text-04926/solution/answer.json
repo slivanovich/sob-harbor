@@ -1,0 +1,16 @@
+{
+  "author": {
+    "name": "Daniel P. Mannix"
+  },
+  "novel": {
+    "title": "The Fox and the Hound"
+  },
+  "film_adaptation": {
+    "title": "The Fox and the Hound",
+    "release_year": 1981,
+    "double_bill_partner": {
+      "title": "Once Upon a Mouse",
+      "release_year": 1981
+    }
+  }
+}

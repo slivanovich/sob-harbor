@@ -1,0 +1,27 @@
+{
+  "actress_name": "Rita Wilson",
+  "excluded_film_title": "Now and Then",
+  "film_roles": [
+    {
+      "film_title": "Sleepless in Seattle",
+      "release_year": 1993
+    },
+    {
+      "film_title": "Now and Then",
+      "release_year": 1995
+    },
+    {
+      "film_title": "Jingle All the Way",
+      "release_year": 1996
+    },
+    {
+      "film_title": "The Story of Us",
+      "release_year": 1999
+    },
+    {
+      "film_title": "Runaway Bride",
+      "release_year": 1999
+    }
+  ],
+  "answer_film_title": "Sleepless in Seattle"
+}

@@ -1,0 +1,17 @@
+{
+  "film_title": "The Happiness of the Katakuris",
+  "release_year": 2001,
+  "country_of_origin": "Japanese",
+  "genres": [
+    "musical",
+    "comedy",
+    "horror"
+  ],
+  "director": "Takashi Miike",
+  "original_film_details": {
+    "title": "The Quiet Family",
+    "release_year": 1998,
+    "country_of_origin": "South Korean",
+    "plot_summary_key_element": "story centers on a family who owns a hunting lodge in a remote area, whose customers always happen to end up dying"
+  }
+}

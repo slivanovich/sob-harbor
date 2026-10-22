@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Towne West Square: Towne West Square is an enclosed shopping mall located in Wichita, Kansas, United States.  Opened in 1980, it comprises more than 100 stores in 951447 sqft of gross leasable area.  The mall's five anchor stores include Convergys, Dick's Sporting Goods, two Dillard's locations and JCPenney.  Sears (the sixth anchor store) closed in December 2014, leaving one anchor space vacant.  The original anchor stores in the mall were: Dillard's, Henry's, JC Penney, Montgomery Ward and Service Merchandise.  Sears opened in 1994 (14 years after the rest of the mall) moving a store from the open air Twin Lakes Shopping Center.  There is a drop in daycare closest to JCPenny that opened in May 2015 called the Kiddie Klubhouse.
+
+Richard Warren Sears: Richard Warren Sears (December 7, 1863 – September 28, 1914) was a manager, businessman, and the founder of Sears, Roebuck and Company with his partner Alvah Curtis Roebuck.
+
+Rolling Acres Mall: Rolling Acres Mall was a retail mall located in the Rolling Acres area of Akron, Ohio, United States.  Built in 1975 and expanded several times in its history, it once comprised more than 140 stores, including five anchor stores, a movie theater and a food court.  The mall closed on October 31, 2008, leaving only two of its anchor stores in operation, Sears and JCPenney.  In January 2011, Sears announced their store would close: the Sears store closed in April 2011, while JCPenney converted remaining outlets to "JC's 5 Star Outlet" stores.  In 2013, JCPenney announced that it would close all remaining "JC's Five Star Outlet" stores, including the store at Rolling Acres.  The store shut its doors on December 31, 2013, leaving the mall vacant of retail stores.  The mall currently houses Storage of America and Pinnacle Recycling.  One of the mall's dilapidated entrances appears as the cover art to The Black Keys' single "Gold on the Ceiling".  The mall has been nicknamed "Rotting Acres Mall" during its years of abandonment, in reference to the large amount of black mold growing throughout the mall, and the deterioration of the mall since it closed down.
+
+The Summit (Wheatfield, New York): The Summit, formerly Summit Park Mall, was an enclosed shopping mall in Wheatfield, New York.  Opened in 1972, the mall became largely vacant by the late 1990s.  It underwent renovations in 2004 and 2005 which added new anchor stores and tenants, but after the mall's developers filed for bankruptcy protection in 2009, the complex was closed except for three anchor stores: Sears, The Bon-Ton and Save-A-Lot, with two more vacant anchors last occupied by Steve & Barry's and a Macy's closeout store.  As of September 2017, Save-A-Lot has closed permanently, leaving only Sears and The Bon-Ton still open in the mall.
+
+Southlake Mall (Indiana): Southlake Mall is a shopping mall in Merrillville, Indiana.  The tract of land on which it sits was annexed from unincorporated Ross Township in 1993.  It lies in the Chicago metropolitan area.  Southlake Mall is the only enclosed super regional mall in Northwest Indiana, as well as one of largest in the state overall along with Castleton Square in Indianapolis and Glenbrook Square in Fort Wayne.  Anchor stores include Carson's, Kohl's, JCPenney, Macy's, Dick's Sporting Goods and Sears.  The Macy's store was previously an L. S. Ayres prior to September 9, 2006.  The mall first opened with only two anchor stores - JCPenney and Sears - and the north and south anchor wings were added later.  Carson's once housed the cafeteria-style "The Garden Restaurant" next to the entrance near the security garage on the south side of the mall from 1975-89
+
+Southwest Plaza: Southwest Plaza is an enclosed shopping mall located in unincorporated Jefferson County, Colorado, United States, immediately south of Denver. " Littleton" is commonly indicated in the mall's postal address because its ZIP code is primarily associated with that city, which lies some two miles west.  The mall has two levels with over 150 stores, plus a food court.  Anchor stores include Dillard's, JCPenney, Macy's, and Sears, with Dick's Sporting Goods and Steve & Barry's added in late 2007, although the latter closed in 2009.  General Growth Properties owns and manages Southwest Plaza.
+
+Globe Building (Minneapolis): The Globe Building was an 8 floor building in Minneapolis.  It was the first recorded tallest building in Minnesota.  It was built in 1889 to house the offices of the St. Paul Globe newspaper (which occupied part of several floors) while the remainder of the building was rented as office space.  Richard Warren Sears was among its early tenants.
+
+Sears: Sears, short name for Sears, Roebuck & Company, is an American chain of department stores founded by Richard Warren Sears and Alvah Curtis Roebuck in 1886.  Formerly based at the Sears Tower in Chicago and currently headquartered in Hoffman Estates, Illinois, it began as a mail ordering catalog company and began opening retail locations in 1925.  The company was bought by the American big box chain Kmart in 2005, which renamed itself Sears Holdings upon completion of the merger.  In terms of domestic revenue, Sears was the largest retailer in the United States until October 1989, when Walmart surpassed the record.  It is currently the fifth-largest American department store company by sales as of October 2013 (behind Walmart, Target, Best Buy, and The Home Depot), and the twelfth-largest retailer in the country overall.  Sears operates divisions in Canada and Mexico, as well as several other subsidiaries within its brand.
+
+Raleigh Springs Mall: Raleigh Springs Mall was an enclosed shopping mall serving the city of Memphis, Tennessee, USA.  The site is located on the north side of Memphis, on Austin Peay Hwy.  just north of Interstate 40.  Opened in 1971 as one of the city's first two shopping malls (the other being Southland Mall), owned and managed by Angela Whichard, Inc., Raleigh Springs Mall originally featured about seventy stores later to be remodeled and feature a twelve-screen multiplex, with four anchor stores, formerly occupied by Sears, JCPenney, Goldsmith's and Dillard's.  The theater closed in December 2011, Sears closed in April 2011, and the other three anchors closed in 2003.  The mall was later seized by the City of Memphis in favor to build a city Civic Center.  The mall closed with 3 business still operating, City Trends, World Diamond Center, and a church.  Some of the anchor stores JCPenney and Sears have been demolished leaving the movie theater, Dillard's, and the main building left.  As of the end of 2016, the remaining buildings were surrounded by gates.
+
+Alvah Curtis Roebuck: Alvah Curtis Roebuck (January 9, 1864 – June 18, 1948) was the co-founder of Sears, Roebuck and Company with his partner Richard Warren Sears.
+
+Question: Who founded one of the anchor stores in Southwest Plaza besides Richard Warren Sears?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "founder_name": {
+      "type": "string",
+      "description": "The name of the co-founder of an anchor store."
+    },
+    "founded_company": {
+      "type": "string",
+      "description": "The name of the company co-founded by the individual."
+    },
+    "company_type": {
+      "type": "string",
+      "description": "The type of business the company is."
+    },
+    "mall_name": {
+      "type": "string",
+      "description": "The name of the mall where the company is an anchor store."
+    }
+  },
+  "required": [
+    "founder_name",
+    "founded_company",
+    "company_type",
+    "mall_name"
+  ],
+  "additionalProperties": false
+}

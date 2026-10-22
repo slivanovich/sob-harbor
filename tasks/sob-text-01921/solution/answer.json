@@ -1,0 +1,16 @@
+{
+  "are_both_directors": true,
+  "individuals_involved": [
+    {
+      "name": "Giorgio Simonelli",
+      "is_a_director": true,
+      "known_profession": "film director"
+    },
+    {
+      "name": "Peter Weir",
+      "is_a_director": true,
+      "known_profession": "film director"
+    }
+  ],
+  "reasoning_summary": "The context explicitly states that Giorgio Simonelli made his directorial debut in 1928 and reprised his activity as a director since 1940. It also states that Peter Weir is an Australian film director. Therefore, both are directors."
+}

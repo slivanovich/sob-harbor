@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "9a0e320f51b10a3a707d3920f79d9d5b1cfb5962c0d60a8c21ab2aa89d346109",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8990fe5542993b751ca945",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Circa Survive",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Listener (band): Listener is a spoken word rock band from Fayetteville, Arkansas.  Initially an underground hip hop project by Dan Smith, who used the moniker \"Listener\", the project evolved into a full-fledged rock band.  The current lineup consists of vocalist, trumpeter, and bassist Dan Smith, guitarist Jon Terrey, and drummer Kris Rochelle.\n\nCirca Survive: Circa Survive is an American rock band from the Philadelphia suburb of Doylestown, formed in 2004.  The band, led by Anthony Green, consists of former members from Saosin, This Day Forward, and Taken.\n\nAvalon (Anthony Green album): Avalon is the debut solo album by current Saosin and current Circa Survive, vocalist Anthony Green.  It was released August 5, 2008 on Photo Finish Records, with a US tour to coincide with its release.  Keith Goodwin, Tim Arnold, and Dan Schwartz (also known as the band Good Old War) have guest appearances on this record.  The album leaked in its entirety on August 1, 2008.  Anthony Green's Avalon is being made available on vinyl LP.  The package includes the limited Vinyl LP and Digital Remix CD of Avalon, remixes created by Colin Frangicetto of Circa Survive.\n\nBastille discography: The discography of Bastille, a British indie rock group, consists of two studio albums, three extended plays, ten singles and eight music videos. Originally a solo project by Dan Smith, Bastille was formed in 2010.  The band released its debut single \"Flaws\" / \"Icarus\" in July 2011 on the independent record label Young and Lost Club.  An extended play titled \"Laura Palmer\" followed later that year.  The critical success of the EP and extensive touring brought the group to the attention of Virgin Records, which signed them in December 2011.\n\nViolent Waves: Violent Waves is the fourth studio album by the American rock band Circa Survive.  It was released on August 28, 2012.  As Circa Survive wanted a record that would capture the band's live sound, where they felt the magic of the band lay, they recorded the album in one week and produced it themselves.  Violent Waves is also Circa Survive's first and only album released without a record label.\n\nDan Smith (artist): Dan Smith is an American illustrator and graphic artist known for his distinctive \"SMIF\" signature, and his work for Wizards of the Coast, FASA, White Wolf, Steve Jackson Games, Iron Crown, Hasbro, Nintendo, Namco and others.  While known primarily as an illustrator, Dan Smith is also a designer of family card games, including \"Battle of the Bands\", Portable Adventures and the upcoming King of Crime.\n\nThe Amulet (album): The Amulet is the sixth studio album by American rock band Circa Survive, released on September 22, 2017.  The Amulet is Circa Survive's first album released through Hopeless Records, after departing their previous label, Sumerian Records.  As with previous Circa Survive albums, Esao Andrews created the album artwork.\n\nDescensus (album): Descensus is the fifth studio album by the American rock band Circa Survive, released on November 24, 2014.  Descensus is Circa Survive's first album released through Sumerian Records, aside from the Deluxe CD/DVD version of the band's previous album, \"Violent Waves\" which was released on August 28, 2012.  As with Circa Survive's previous albums, Esao Andrews created the album artwork.\n\nAppendage (EP): Appendage is Circa Survive's second EP.  It was released on November 30, 2010 through Atlantic Records.  It contains b-sides from the Blue Sky Noise sessions, as well as a demo of \"Sleep Underground\".  As with Circa Survive's previous three albums and EP, Esao Andrews created the artwork.\n\nBastille (band): Bastille (stylised as BΔSTILLE) are a British indie band formed in 2010.  The group began as a solo project by lead vocalist Dan Smith, but later expanded to include keyboardist Kyle Simmons, bassist and guitarist Will Farquarson, and drummer Chris Wood.  The name of the band derives from Bastille Day, which is celebrated on 14 July, the date of Smith's birthday.",
+    "question": "Which of the following groups is lead by vocalist Dan Smith: Circa Survive or Bastille?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "vocalist_in_question": {
+          "type": "string",
+          "description": "The name of the vocalist mentioned in the question."
+        },
+        "bands_evaluated": {
+          "type": "array",
+          "description": "A list of bands from the question, with details about their lead vocalist.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "band_name": {
+                "type": "string",
+                "description": "The name of the band."
+              },
+              "is_led_by_vocalist_in_question": {
+                "type": "boolean",
+                "description": "True if this band is led by the vocalist in question, false otherwise."
+              },
+              "actual_lead_vocalist": {
+                "type": "string",
+                "description": "The name of the actual lead vocalist for this band."
+              }
+            },
+            "required": [
+              "band_name",
+              "is_led_by_vocalist_in_question",
+              "actual_lead_vocalist"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "answer_band_name": {
+          "type": "string",
+          "description": "The name of the band from the question that is led by the specified vocalist."
+        }
+      },
+      "required": [
+        "vocalist_in_question",
+        "bands_evaluated",
+        "answer_band_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "vocalist_in_question": "Dan Smith",
+      "bands_evaluated": [
+        {
+          "band_name": "Circa Survive",
+          "is_led_by_vocalist_in_question": false,
+          "actual_lead_vocalist": "Anthony Green"
+        },
+        {
+          "band_name": "Bastille",
+          "is_led_by_vocalist_in_question": true,
+          "actual_lead_vocalist": "Dan Smith"
+        }
+      ],
+      "answer_band_name": "Bastille"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

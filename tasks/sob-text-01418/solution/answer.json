@@ -1,0 +1,9 @@
+{
+  "building_name": "Empire State Building",
+  "owner_name": "Henry Crown",
+  "ownership_period": {
+    "start_year": 1951,
+    "end_year": 1961
+  },
+  "total_height_feet": 1454
+}

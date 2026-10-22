@@ -1,0 +1,11 @@
+{
+  "player_name": "Paul George",
+  "nationality": "American",
+  "nba_all_star_appearances": 4,
+  "associated_game": {
+    "game_title": "NBA 2K17",
+    "role_in_game": "cover athlete",
+    "developer": "Visual Concepts",
+    "publisher": "2K Sports"
+  }
+}

@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+International Harvester: The International Harvester Company (abbreviated first IHC and later IH) (now known as Navistar International Corporation) was a United States manufacturer of agricultural machinery, construction equipment, trucks, and household and commercial products.  In 1902, J.P. Morgan merged the McCormick Harvesting Machine Company and Deering Harvester Company, along with three smaller agricultural equipment firms, to form International Harvester.  In 1985, International Harvester sold off most of its agricultural division to Tenneco, Inc., which merged it into its subsidiary J.I. Case under the Case IH brand.  Following the terms of IH's agreement with Tenneco, International Harvester renamed itself Navistar International Corporation in 1986.
+
+Mallika Srinivasan: Mallika Srinivasan (born 1959) is the Chairman and Chief Executive Officer of Tractors and Farm Equipment Limited, a tractor major incorporated in 1960 at Chennai, India.  She is on the Board of AGCO Corporation - United States, Tata Steel Limited and Tata Global Beverages Limited.  She is a member of the Executive Board of the Indian School of Business, Hyderabad, the Governing Board (Rural Technology And Business Incubator of the Indian Institute of Technology, Chennai and the Bharathidasan Institute of Management, Trichy.
+
+AGCO: AGCO Corporation is an American agricultural equipment manufacturer based in Duluth, Georgia, United States.
+
+Massey Ferguson: Massey Ferguson Limited is an American-owned major manufacturer of agricultural equipment until recently based in Brantford, Ontario, Canada.  Massey transferred its headquarters to Buffalo, New York in 1997 before it was acquired by AGCO new owner of former competitor Allis-Chalmers.  The current business was formed by the 1953 merger of farm machinery manufacturers Massey Harris of Canada and Britain's Ferguson Company under the new name Massey Harris Ferguson.  In 1958, the name was shortened to Massey Ferguson.  Today Massey Ferguson is one of several brands produced by AGCO and remains a major seller around the world.
+
+Fendt: Fendt is a German manufacturer of agricultural tractors and machines, manufacturing and marketing a full line of tractors, combine harvesters and balers.  It is part of the AGCO Corporation.  It was founded in 1937 by Xaver Fendt and purchased by AGCO in 1997.
+
+Valtra: Valtra is a manufacturer of tractors and agricultural machinery and forms part of the AGCO Corporation.  Valtra tractors are manufactured in Suolahti, Finland, and Mogi das Cruzes, Brazil.  Valtra’s products in the Brazilian market also include combine harvesters, sugar cane harvesters, self-propelled sprayers and seed drills.
+
+Allis-Chalmers: Allis-Chalmers was a U.S. manufacturer of machinery for various industries.  Its business lines included agricultural equipment, construction equipment, power generation and power transmission equipment, and machinery for use in industrial settings such as factories, flour mills, sawmills, textile mills, steel mills, refineries, mines, and ore mills.  The first Allis-Chalmers Company was formed in 1901 as an amalgamation of the Edward P. Allis Company (steam engines and mill equipment), Fraser & Chalmers (mining and ore milling equipment), the Gates Iron Works (rock and cement milling equipment), and the industrial business line of the Dickson Manufacturing Company (engines and compressors).  It was reorganized in 1912 as the Allis-Chalmers Manufacturing Company.  During the next 70 years its industrial machinery filled countless mills, mines, and factories around the world, and its brand gained fame among consumers mostly from its farm equipment business's orange tractors and silver combine harvesters.  In the 1980s and 1990s a series of divestitures transformed the firm and eventually dissolved it.  Its successors today are Allis-Chalmers Energy and AGCO.
+
+Agricultural machinery: Agricultural machinery is machinery used in farming or other agriculture.  There are many types of such equipment, from hand tools and power tools to tractors and the countless kinds of farm implements that they tow or operate.  Diverse arrays of equipment are used in both organic and nonorganic farming.  Especially since the advent of mechanised agriculture, agricultural machinery is an indispensable part of how the world is fed.
+
+White Farm Equipment: White Farm Equipment is a brand of agricultural machinery, now discontinued except for planter, and owned by AGCO.
+
+Cma Sampo: Cma Sampo Spa is a join venture company specialised in the development of agricultural machinery.  It was created in 2010 after an agreement between the Algerian brand Cma and the Finnish Group Sampo-rRsenlew based in Sidi Bel Abbès, owned by the company Construction Agricultural Equipment (CMA) and the Algerian firm for agricultural equipment manufacturing Pmat (62%) and Finnish partners (38%).
+
+Question: White Farm Equipment is a brand of agricultural machinery, now discontinued except for planter, and owned by AGCO, AGCO Corporation is an American agricultural equipment manufacturer based in Duluth, Georgia, in which country?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "The name of the agricultural equipment manufacturer."
+    },
+    "company_type": {
+      "type": "string",
+      "description": "The type of products the company manufactures."
+    },
+    "headquarters_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the company is based."
+        },
+        "state": {
+          "type": "string",
+          "description": "The state where the company is based."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the company is based."
+        }
+      },
+      "required": [
+        "city",
+        "state",
+        "country"
+      ],
+      "additionalProperties": false
+    },
+    "owned_brand": {
+      "type": "string",
+      "description": "The name of the brand owned by the company."
+    },
+    "brand_status": {
+      "type": "string",
+      "description": "The current status of the owned brand."
+    }
+  },
+  "required": [
+    "company_name",
+    "company_type",
+    "headquarters_location",
+    "owned_brand",
+    "brand_status"
+  ],
+  "additionalProperties": false
+}

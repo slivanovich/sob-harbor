@@ -1,0 +1,21 @@
+{
+  "album_title": "Endless Road, 7058",
+  "artist_name": "Auryn",
+  "artist_origin": "Spanish",
+  "album_type": "debut studio album",
+  "deluxe_edition_features": [
+    "acoustic performances",
+    "interviews",
+    "music videos",
+    "covers"
+  ],
+  "covered_artists": [
+    "Coldplay",
+    "Katy Perry"
+  ],
+  "katy_perry_details": {
+    "katy_perry_name": "Katy Perry",
+    "katy_perry_first_label": "Red Hill Records",
+    "katy_perry_debut_album": "Katy Hudson"
+  }
+}

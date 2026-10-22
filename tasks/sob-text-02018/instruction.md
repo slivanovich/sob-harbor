@@ -1,0 +1,80 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Chvrches discography: Scottish synthpop band Chvrches have released two studio albums, three extended plays (EPs), 14 singles, one promotional single and 11 music videos. Chvrches was formed in Glasgow in 2011 and consists of Lauren Mayberry (lead vocals, additional synthesisers, samplers), Iain Cook (synthesisers, guitar, bass, vocals), and Martin Doherty (synthesisers, samplers, vocals).
+
+Chvrches: Chvrches (pronounced and written as "churches" in Roman form and stylised as CHVRCHΞS) are a Scottish synth-pop band from Glasgow, formed in September 2011.  The band consists of Lauren Mayberry (lead vocals, drums, additional synthesisers, samplers), Iain Cook (synthesisers, guitar, bass, vocals) and Martin Doherty (synthesisers, samplers, vocals).
+
+Gibson Robot Guitar: The Gibson Robot Guitar (a.k.a. GOR) is a limited-edition self-tuning Gibson guitar, typically a Les Paul.  The first run of limited edition Robot Guitars was exclusively made up of Les Paul bodies.  Five different Gibson models were available (2008-2011, Robot X-plorer 2008-2012)) with Robot Guitar features: The Robot Les Paul Studio, Robot SG, Robot Flying V, Robot X-plorer, and a Robot Les Paul Junior.  Developed by Chris Adams, its most notable feature is that it uses an onboard computer to automatically tune itself.  This is not the first guitar to be able to tune itself, but it is regarded as the most modern, unique, and non-invasive self-tuning model available, because it does not employ cams or cantilevers throughout the body of the guitar.  The non-limited edition SG and Les Paul Studio are available in a variety of finishes.  The Flying V and Explorer are only available in metallic red.  The price can range from about $1,000-$3,000 or more for custom options.  In the case of the "Original 1st Production" Robot guitar the only finish available was Blue Silverburst nitrocellulose, a color which Gibson has stated will never be used on any other Gibson guitar (see photo to the right).  The original Robot guitar also featured headstock and neck binding which are not standard on any current Les Paul Robot as well as a chrome truss rod cover with "Robot Guitar" engraved.  The production version featured 22-fret rosewood-bound (standard finishes) or white-bound (metallic finishes) ebony fingerboard with figured acrylic tapezoid inlays, white-bound headstock with MOP Gibson logo and flowerpot inlay (metallic finishes) or unbound headstock with screened logo (standard finishes), three-per-side robotic Powerhead Locking tuners, tune-o-matic Powertune bridge, Powertune stop tailpiece, two chrome covered humbucker pickups (490R, 498T), four knobs (three normal, and one Master Control Knob that controls the robotic actions of the guitar), three-way pickup switch, Neutrik jack on side of guitar, chrome hardware.
+
+Michael Nicolella: Michael Nicolella (born December 31, 1963 in Providence, RI) is an American classical guitarist and composer.  Described as an iconoclast, he is known for his versatile, adventurous and eclectic approach to repertoire, including the incorporation of electric guitar into his concert programs and recordings.  Nicolella's repertoire ranges from the Baroque to the present.  His most recent recording is his own arrangement of the complete cello suites of Johann Sebastian Bach; while his past four recordings focused on contemporary music, including his own compositions, alongside those of Toru Takemitsu, Elliott Carter, Luciano Berio, Hans Werner Henze and Steve Reich.  He has championed music by such emerging composers as Laurence Crane and Jacob ter Veldhuis and has premiered many works written for him by other composers, including: Joshua Kohl, (of the Degenerate Art Ensemble), David Mesler, Christopher DeLaurenti and John Fitz Rogers, who in 2001 wrote the forty-five-minute piece "Transit" for Nicolella, scored for electric guitar and computer generated sound.  His own compositions include works for solo guitar, chamber music with guitar, a classical guitar concerto ("Guitar Concerto"), and an electric guitar concerto ("Ten Years Passed").  His most recent major composition for soprano, guitar (electric and classical) and orchestra, "The Flame of the Blue Star of Twilight", was premiered by the Northwest Symphony Orchestra and soprano Alexandra Picard in April 2012.  He has performed and collaborated with a wide range of groups and artists including: violinist Gil Shaham, rock singer Jon Anderson, best known for his work as lead vocalist in the progressive rock band Yes, broadway legends Bernadette Peters and Brian Stokes Mitchell, the Seattle Guitar Trio, jazz singer Johnaye Kendrick, classical music comedians Igudesman and Joo and is a frequent guest with the Seattle Symphony.  Nicolella is a graduate of Yale University, Berklee College of Music and the Accademia Musicale Chigiana.  He is currently based in Seattle, where he serves on the music faculty of Cornish College of the Arts.  He is married to the painter Ann Gale.
+
+The Mark of Cain (band): The Mark of Cain (also seen as the initialism, TMOC) are a hard rock, alternative metal band from Adelaide, South Australia.  Their style has been likened to that of Helmet and Rollins Band, yet this band pre-dates both groups and was influenced by the early work of Joy Division, Big Black and United States hardcore groups.  The Mark of Cain were formed in mid-1984 by brothers, John (guitar) and Kim Scott (bass guitar), with Rod Archer on vocals and Gavin Atkinson playing drums.  Before long, Archer had left the group and John Scott took on the lead vocal role and the group has remained a trio ever since.  The Scotts have been the core of the band which has featured 15 different drummers.  Since January 2001, former Helmet member John Stanier has been their drummer; he is also concurrently with Tomahawk and Battles.  Australian musicologist, Ian McFarlane, described the group's sound as "Gloomy, monotonous vocals and bleak slabs of metallic guitar did battle over a lurching rhythm section to arrive at a harsh sound."  Rod Archer died on 26 February 2016.
+
+Stand As One – Live at Glastonbury 2016: Stand As One – Live at Glastonbury 2016 is a 2016 compilation album of live music performances at Glastonbury Festival 2016, released on 29 July 2016 as a digital download.  A physical release followed on 12 August.  Details of the album were announced by the international humanitarian charity Oxfam on 20 June, and following the death of British Labour Party Member of Parliament Jo Cox a few days earlier.  Cox had worked for Oxfam for a number of years before entering politics, and Oxfam announced that the album would be released in her memory, with proceeds going to help their work with refugees.  Artists and groups scheduled to appear on the compilation include Muse, Coldplay, Jeff Lynne's ELO, Laura Mvula, Jack Garratt, The 1975, Editors, Years & Years, Fatboy Slim, Wolf Alice and Chvrches.
+
+Iain Cook: Iain Andrew Cook (born 2 November 1974) is a Scottish musician, composer, and record producer who is currently a member of Glasgow-based electronic trio Chvrches.  He played guitar for the Scottish post-rock band Aereogramme until their breakup in 2007.  Cook also composes music for film and television and is a member of the rock band The Unwinding Hours.
+
+List of ethnic groups in Vietnam: Vietnam is a multiethnic country with over fifty distinct groups (54 are recognized by the Vietnamese government), each with its own language, lifestyle, and cultural heritage.  Many of the local ethnic groups residing in mountain areas are known collectively in the West as Montagnard or Degar.  The largest ethnic groups are: Kinh (Viet) 85.7%, Tay 1.9%, Tai Ethnic 1.8%, Mường 1.5%, Khmer Krom (Khơ Me Crộm) 1.5%, Hmong 1.2%, Nùng 1.1%, Hoa 1%, others 4.3% (2009 census).  The Vietnamese term for ethnic group is người thiểu số or dân tộc thiểu số (literally "minority people").  One distinctive feature of highland ethnic minority groups in Vietnam is that they are in colorful attires whether at home, in the farm, on travel or in the town.  Many of the ethnic groups elsewhere such as southern part of Vietnam, Cambodia, Laos, Myanmar, China, Papua New Guinea, and many other countries do not wear attractive clothes while engaged in their day-to-day activities.  The clothes of one group is quite different from that of other groups that adds color to the social landscape.
+
+Anavae: Anavae (often abbreviated ae, Æ or æ) are an English rock duo from London.  Formed late 2011, the group consists of Rebecca Need-Menear and Jamie Finch.  Following their self-released EP "Into the Aether", the band signed with English indie label LAB Records in 2013, releasing a second EP entitled "Dimensions" soon after.  Their live members consist of Seb Gee (drums), Josh Platt (guitar), Shane Britton (guitar) and Kris Hodges (bass and synths).
+
+Jason Krause: Jason Krause is an American guitar player for Kid Rock's Twisted Brown Trucker Band.  He is Kid Rock's lead guitarist.  His audition was actually the most important show in Kid Rock's career, his famed 1997 Atlantic Records showcase show at Detroit's State Theater.  Krause started out as the groups metalhead, as he had played in two underground metal groups before hand, Black Anthem and Aftermass, but has devolved his skills on acoustic guitar in recent years, he can also play the drums and piano.  Krause plays guitar on all of Kid Rock's songs since 1997.  He started out as a carpenter.  Krause uses many guitars including Firebirds and Les Pauls.  He played in many Detroit area rock/metal bands over the 1980s with bandmates Darren McEwan, and brother Scott Krause.
+
+Question: Do both groups, Chvrches and Anavae, feature a guitar?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "question_asked": {
+      "type": "string",
+      "description": "The original question posed by the user."
+    },
+    "chvrches_features_guitar": {
+      "type": "boolean",
+      "description": "Indicates whether the band Chvrches features a guitar."
+    },
+    "chvrches_guitar_players": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Names of members in Chvrches who play guitar."
+    },
+    "anavae_features_guitar": {
+      "type": "boolean",
+      "description": "Indicates whether the band Anavae features a guitar."
+    },
+    "anavae_guitar_players": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Names of members in Anavae who play guitar."
+    },
+    "both_groups_feature_guitar": {
+      "type": "boolean",
+      "description": "The final answer to whether both groups feature a guitar."
+    }
+  },
+  "required": [
+    "question_asked",
+    "chvrches_features_guitar",
+    "chvrches_guitar_players",
+    "anavae_features_guitar",
+    "anavae_guitar_players",
+    "both_groups_feature_guitar"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,35 @@
+{
+  "person_roles": {
+    "person_name": "Sir David Cunningham of Robertland",
+    "roles": [
+      {
+        "title": "Master of Work to the Crown of Scotland",
+        "start_year": 1602,
+        "end_year": 1607
+      },
+      {
+        "title": "Surveyor of the King's Works in England",
+        "start_year": 1604,
+        "end_year": 1606
+      }
+    ]
+  },
+  "identified_place": {
+    "name": "Castle and Barony of Robertland",
+    "geographical_context": {
+      "nearby_town": "Stewarton",
+      "road": "B769",
+      "old_district": "Cunninghame",
+      "parish": "Stewarton",
+      "current_region": "East Ayrshire",
+      "country": "Scotland"
+    }
+  },
+  "main_answers": {
+    "sir_david_cunningham_titles": [
+      "Master of Work to the Crown of Scotland",
+      "Surveyor of the King's Works in England"
+    ],
+    "location_name": "Castle and Barony of Robertland"
+  }
+}

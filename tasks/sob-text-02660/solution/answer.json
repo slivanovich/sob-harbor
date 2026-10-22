@@ -1,0 +1,15 @@
+{
+  "event_a": {
+    "name": "Battle of the Ch'ongch'on River",
+    "start_date": "November 25, 1950",
+    "end_date": "December 2, 1950",
+    "year": 1950
+  },
+  "event_b": {
+    "name": "First Battle of Guam",
+    "start_date": "December 8, 1941",
+    "end_date": "December 10, 1941",
+    "year": 1941
+  },
+  "earlier_event_name": "First Battle of Guam"
+}

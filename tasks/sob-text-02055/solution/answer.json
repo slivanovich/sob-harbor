@@ -1,0 +1,16 @@
+{
+  "founder_name": "Thomas Coleman du Pont",
+  "founder_professions": [
+    "American engineer",
+    "politician"
+  ],
+  "founder_origin_city": "Greenville",
+  "founded_entity": {
+    "name": "Wilmington Trust",
+    "founding_date": "1903-07-08"
+  },
+  "founder_other_roles": [
+    "President of E. I. du Pont de Nemours and Company",
+    "United States Senator from Delaware"
+  ]
+}

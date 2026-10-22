@@ -1,0 +1,22 @@
+{
+  "person_names": [
+    "Julien Benneteau",
+    "Pete Sampras"
+  ],
+  "mutual_occupation_found": true,
+  "mutual_occupation": "tennis player",
+  "individual_occupations": [
+    {
+      "person_name": "Julien Benneteau",
+      "occupations": [
+        "professional tennis player"
+      ]
+    },
+    {
+      "person_name": "Pete Sampras",
+      "occupations": [
+        "retired American tennis player"
+      ]
+    }
+  ]
+}

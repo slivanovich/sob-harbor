@@ -1,0 +1,10 @@
+{
+  "film_title": "Gosford Park",
+  "director_name": "Robert Altman",
+  "film_genre": "mystery film",
+  "actor_from_soap_opera": {
+    "actor_name": "Ryan Phillippe",
+    "soap_opera_title": "One Life to Live",
+    "film_appearance_confirmed": true
+  }
+}

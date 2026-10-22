@@ -1,0 +1,11 @@
+{
+  "person_name": "George Naea",
+  "relationship": "father_of",
+  "child": {
+    "name": "Queen Emma of Hawaii",
+    "full_name": "Emma Kalanikaumakaʻ amano Kaleleonālani Naʻ ea Rooke of Hawaiʻ i",
+    "title": "queen consort",
+    "birth_year": 1836,
+    "death_year": 1885
+  }
+}

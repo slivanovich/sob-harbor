@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are both Jim Sharman and Miguel Arteta Puerto Rican?",
+  "individuals_checked": [
+    {
+      "name": "Jim Sharman",
+      "is_puerto_rican": false,
+      "stated_nationality": "Australian"
+    },
+    {
+      "name": "Miguel Arteta",
+      "is_puerto_rican": true,
+      "stated_nationality": "Puerto Rican"
+    }
+  ],
+  "all_individuals_are_puerto_rican": false
+}

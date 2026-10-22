@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+When Daylight's Gone: When Daylight's Gone is the debut studio album by the symphonic black metal band Graveworm, released originally in 1997 through Serenades Records but was later re-released in 2001 through Last Episode with bonus tracks taken from the entirety of Underneath the Crescent Moon, the cover of which is the covers of the albums faded together in the middle.
+
+Adam Again (album): Adam Again is the second solo album by Michael Omartian, released originally in 1976, on Myrrh Records as both the original single album and as a compilation of "White Horse" and "Adam Again".  It was released overseas under the title "Onward", along with a different cover.
+
+Los Lonely Boys (album): Los Lonely Boys is the eponymous debut album by the American rock trio Los Lonely Boys, released originally by Or Music, and re-released in 2004 by Epic Records.  It features their breakthrough single "Heaven", a number one hit on the "Billboard" Adult Contemporary charts.  The album was certified 2× Platinum by the RIAA on February 22, 2005.
+
+Pigpile: Pigpile is a live recording from July 24, 1987 during the post-hardcore band Big Black's final European tour, released originally as a VHS tape (it was their second video release, following the 'Live' tape on Atavistic Records.)  and later issued as an audio-only CD.  The recordings were made at the Hammersmith Clarendon concert hall, London.  A 5" transparent thick vinyl record was included away free with all copies of the VHS tape and some copies of the soundtrack album, featuring a cover version of the Mary Jane Girls song "In My House".
+
+Pain (video game): Pain is a 2007 action video game for PlayStation 3, developed by Idol Minds.  It was released as a downloadable title available from the PlayStation Store and was released in North America on November 29, 2007 and in Europe on March 20, 2008 and became the most popular downloadable game on the PlayStation Store.  In June 2009, SCEE announced that the game was to be released on Blu-ray Disc.  It was launched in Europe on June 24, 2009, in Australia on June 25, 2009 and in the UK on June 26, 2009.  The Blu-ray version includes the original game as well as several other levels and features released as downloadable content for the PSN version.  It is available in a collection which is available to download from the PlayStation Store called the 3D Collection.  On November 26, 2013, the game's online features were disabled.
+
+Everybody Wants to Rule the World: "Everybody Wants to Rule the World" is a song by English band Tears for Fears.  Originally released in the UK on 22 March 1985 it was the band's ninth single release in the United Kingdom and the third from their second LP "Songs from the Big Chair".  It was their seventh UK Top 30 chart hit, peaking at number two in April 1985, and thus becoming the group's highest-charting UK single.  In the US, it was the lead single from the album and gave the band their first "Billboard" Hot 100 number-one hit on 8 June 1985, remaining there for two weeks.  It also reached number one on both the Hot Dance Club Play and Hot Dance Music/Maxi-Singles Sales charts in the US.  The song has since become the pinnacle of Tears for Fears' chart success.
+
+Fig.5: Fig.5 is the fifth studio album by the American experimental rock band Jackie-O Motherfucker.  Released originally in the year 2000 on Road Cone, and later reissued by ATP Recordings in 2005.  The album is highly improvisational and features among its track list, free jazz inspired reworkings of tradition songs such as Amazing Grace.  In addition to the Folk sound, the album also incorporates elements of drone, post rock and gospel.  The album was met with critical acclaim, especially on its reissue.
+
+Hot Cars and Spent Contraceptives: Hot Cars and Spent Contraceptives is the first full-length album by the Norwegian band Turbonegro, released in March, 1992 on Big Ball Records.  Only 1,000 copies were released originally in Norway.  A different version (with five extra tracks) of the album was released early 1993 in Germany by Repulsion Records, titled "Helta Skelta" with a painted portrait of Sirhan Sirhan on the cover (several people have mistaken it for Charles Manson) and a 20-plus minute audio-play about a young man being raped by a policeman called "A Career In Indie Rock".  This version left out the song "Prima Moffe".  Only 1,500 copies were made of this version.  When Bitzcore Records started to re-release the earlier Turbonegro records the album was remastered and came with a new artwork by Dimitri 'from Oslo' Kayiambakis.  It was released in June, 2000 titled "Hot Cars and Spent Contraceptives", it contained all the tracks from the original version and had the same bonus tracks as "Helta Skelta".
+
+A Swag of Aussie Poetry: A Swag of Aussie Poetry, originally Out of the Bluegums (150 Years of Australian Verse), is a mid-1980s recording project with celebrity voices reciting or singing Australian poetry.  The compilation consists of 53 works of prose and verse from writers across Australia’s literary landscape, and features 31 narrators delivering a mix of folk ballads and bush poetry from the 1800s through to 20th century prose, and lyrical songs reflecting on life in their country.  It was released originally as a double album and a double cassette on J&B Records in 1984 with 50 tracks.  The compilation was produced by Gene Pierson – born as Giancarlo Salvestrin,
+
+Prog (album): Prog is the fifth studio album recorded by jazz trio The Bad Plus.  Like previous Bad Plus recordings, "Prog" features several covers including "Everybody Wants to Rule the World" by Tears for Fears, "Life on Mars? " by David Bowie, and "Tom Sawyer" by Rush.  It was released on 8 May 2007.
+
+Question: When was the cover which "Prog" features released originally 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "covered_song_title": {
+      "type": "string",
+      "description": "The title of the song that was covered."
+    },
+    "original_artist": {
+      "type": "string",
+      "description": "The original artist of the covered song."
+    },
+    "original_release_date": {
+      "type": "string",
+      "description": "The original release date of the covered song."
+    },
+    "album_featuring_cover": {
+      "type": "string",
+      "description": "The album that features the cover version of the song."
+    }
+  },
+  "required": [
+    "covered_song_title",
+    "original_artist",
+    "original_release_date",
+    "album_featuring_cover"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "person_1": {
+    "name": "Ibn al-Shatir",
+    "occupations": [
+      "astronomer",
+      "muwaqqit"
+    ]
+  },
+  "person_2": {
+    "name": "Al-Battani",
+    "occupations": [
+      "astronomer",
+      "astrologer",
+      "mathematician"
+    ]
+  },
+  "mutual_occupation": "astronomer",
+  "number_of_shared_occupations": 1
+}

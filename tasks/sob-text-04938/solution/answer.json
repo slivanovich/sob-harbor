@@ -1,0 +1,27 @@
+{
+  "television_actor_identified": "David Hedison",
+  "is_television_actor": true,
+  "professions": [
+    "film actor",
+    "television actor",
+    "stage actor"
+  ],
+  "television_appearances": [
+    {
+      "title": "Five Fingers",
+      "type": "series",
+      "role": "Victor Sebastian",
+      "year_info": "cast in 1959"
+    },
+    {
+      "title": "Voyage to the Bottom of the Sea",
+      "type": "series",
+      "role": "Captain Lee Crane"
+    },
+    {
+      "title": "The ABC Afternoon Playbreak",
+      "type": "anthology_series",
+      "year_info": "1973 to 1975"
+    }
+  ]
+}

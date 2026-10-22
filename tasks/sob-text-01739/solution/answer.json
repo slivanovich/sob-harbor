@@ -1,0 +1,14 @@
+{
+  "election_details": {
+    "year": 2012,
+    "office": "Missouri Attorney General"
+  },
+  "winner": {
+    "name": "Chris Koster",
+    "party": "Democrat"
+  },
+  "opponent": {
+    "name": "Edward Robert Martin Jr.",
+    "description": "American politician and attorney from the state of Missouri"
+  }
+}

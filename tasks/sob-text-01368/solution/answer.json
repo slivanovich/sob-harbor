@@ -1,0 +1,15 @@
+{
+  "howlin_maggie_info": {
+    "entity_name": "Howlin Maggie",
+    "is_a_band": true,
+    "founding_year": 1994,
+    "founding_location": "Columbus, OH"
+  },
+  "ugly_casanova_info": {
+    "entity_name": "Ugly Casanova",
+    "is_a_band": true,
+    "genre": "indie rock",
+    "record_label": "Sub Pop Records"
+  },
+  "both_entities_are_bands": true
+}

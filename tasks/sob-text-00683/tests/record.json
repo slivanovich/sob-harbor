@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "86507b1fb59cb4bc7e346bfc0213d3b41f93f2edeb28a781541dc9483c49bac6",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7b683d5542997c3ec97150",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Michael Bruce Ross",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Capital punishment in Papua New Guinea: In Papua New Guinea (PNG), also officially known as the Independent State of Papua New Guinea, capital punishment (also called the \"death penalty\" or \"execution\") is a legal form of punishment.  Despite its legality, capital punishment has not been imposed in PNG in over sixty years.  The last known execution took place under the colonial administration of Australia.  The last execution is understood to have been done by way of hanging and took place in the capital city of PNG, Port Moresby, in November 1954.\n\nCapital and corporal punishment in Judaism: Capital and corporal punishment in Judaism has a complex history which has been a subject of extensive debate.  While the Bible and the Talmud specify capital and corporal punishments, including death by stoning, decapitation, burning, and strangulation for some crimes, these punishments were substantially modified during the rabbinic era, primarily by adding additional requirements for conviction.  The Mishnah states that a sanhedrin that executes one person in seven years — or seventy years, according to Eleazar ben Azariah — is considered bloodthirsty.  During the Late Antiquity, the tendency of not applying the death penalty at all became predominant in Jewish courts.  According to Talmudic law, the competence to apply capital punishment ceased with the destruction of the Second Temple.  In practice, where medieval Jewish courts had the power to pass and execute death sentences, they continued to do so for particularly grave offenses, although not necessarily the ones defined by the law.  While it was recognized that the use of capital punishment in the post-Second Temple era went beyond the biblical warrant, the Rabbis who supported it believed that it could be justified by other considerations of Jewish law.  Whether Jewish communities ever practiced capital punishment according to rabbinical law and whether the Rabbis of the Talmudic era ever supported its use even in theory has been a subject of historical and ideological debate.  The 12th-century Jewish legal scholar Maimonides stated that \"It is better and more satisfactory to acquit a thousand guilty persons than to put a single innocent one to death.\"  The position of Jewish Law on capital punishment often formed the basis of deliberations by Israel's Supreme Court.  It has been carried out by Israel's judicial system only once, in the case of Adolf Eichmann.\n\nJoseph &quot;Mad Dog&quot; Taborsky: Joseph \"Mad Dog\" Taborsky (March 23, 1924 – May 17, 1960) was a murderer who was sentenced to death after a string of brutal robberies and murders in Connecticut during the 1950s.  Six people were killed during these events, which became known as the \"Mad Dog Killings.\"  A number of others were shot, beaten, or pistol-whipped but survived.  Taborsky earned his nickname due to the savagery of the killings that condemned him to death.  In 1957 Connecticut package store hours were modified to close at 8:00 pm from 11:00 pm due in part as a response to the crimes of Taborsky and his partner Arthur \"Meatball\" Culombe.  He was executed by electric chair at the age of 36.  His execution in 1960 was the last in Connecticut (and in New England) until that of Michael Bruce Ross in 2005.  Taborsky donated his body to Yale School of Medicine, and his ashes were later buried in the garden of Christ Church Cathedral.\n\nCapital punishment in Europe: The death penalty has been completely abolished in all European countries except for Belarus and Russia, the latter of which has a moratorium and has not conducted an execution since 1999.  The absolute ban on the death penalty is enshrined in both the Charter of Fundamental Rights of the European Union (EU) and the European Convention on Human Rights of the Council of Europe, and is thus considered a central value.  Of all modern European countries, San Marino and Portugal were the first to abolish capital punishment, whereas only Belarus still practice capital punishment in some form or another.  In 2012, Latvia became the last EU Member State to abolish capital punishment in wartime.\n\nMichael Bruce Ross: Michael Bruce Ross (July 26, 1959 – May 13, 2005) was an American serial killer.  In 2005, he was executed by the state of Connecticut, making it the first execution in Connecticut (and the whole of New England) since 1960, and the last execution in Connecticut before the state repealed capital punishment in 2012.\n\nCapital punishment in Montenegro: Capital punishment in Montenegro was first prescribed by law in 1798.  It was abolished on 19 June 2002.  The last execution, by shooting, took place on 29 January 1981, and the two last death sentences were pronounced on 11 October 2001.  Montenegro is bound by the following international conventions prohibiting capital punishment (dates of ratification are given in parentheses): Second Optional Protocol to the International Covenant on Civil and Political Rights (6 September 2001), as well as Protocols No. 6 and No. 13 to the European Convention on Human Rights (3 March 2004).  According to Art. 26 of the Montenegrin Constitution (2007): „In Montenegro, capital punishment is forbidden”.\n\nCapital punishment in Hong Kong: Capital punishment in Hong Kong was formally abolished in 1993 by the repeal the Corporal Punishment Ordinance.  Before then, capital punishment was the usual sentence given since the establishment of the Crown Colony of Hong Kong for offences such as murder, kidnapping ending in death, and piracy.\n\nCapital punishment in New York: Capital punishment is not in force in the State of New York.  The last execution took place in 1963, when Eddie Mays was electrocuted at Sing Sing Prison.  The state was the first to adopt the electric chair as a method of execution, which replaced hanging.  Following the U.S. Supreme Court's ruling declaring existing capital punishment statutes unconstitutional in \"Furman v. Georgia\" (1972), New York was without a death penalty until 1995, when then-Governor George Pataki signed a new statute into law, which provided for execution by lethal injection.\n\nRepeal the repeal: Repeal the repeal is the name of a campaign pushed by Bernalillo County Sheriff Darren White to reinstate the death penalty in the state of New Mexico following the repeal of capital punishment by the state legislature, signed into law by Governor Bill Richardson on March 18, 2009.\n\nList of people executed in New Mexico: A total of 103 executions have been recorded in New Mexico: four during the Spanish Colonial era (1598–1821), none during the Mexican era (1821–1846), 51 during the Territorial era (1846–1913), 20 by the U.S. Military during the Taos Rebellion (1847), 27 between 1913 and 1960, when the death penalty was removed except for the murder of a police officer, and one since 1976, when the death penalty was reinstated; it remained until March 18, 2009, when Governor Bill Richardson signed a bill abolishing capital punishment into law after many struggles with the issues in previous weeks.   Following this repeal, Bernalillo County Sheriff Darren White began a campaign to repeal the repeal by referendum.",
+    "question": "After the execution of which individual did Conneticut repeal capital punishment in 2012?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "executed_individual": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the individual who was executed."
+            },
+            "execution_year": {
+              "type": "integer",
+              "description": "The year the individual was executed."
+            }
+          },
+          "required": [
+            "name",
+            "execution_year"
+          ],
+          "additionalProperties": false
+        },
+        "state_information": {
+          "type": "object",
+          "properties": {
+            "state_name": {
+              "type": "string",
+              "description": "The name of the state where the execution and repeal occurred."
+            },
+            "repeal_year": {
+              "type": "integer",
+              "description": "The year capital punishment was repealed in the state."
+            }
+          },
+          "required": [
+            "state_name",
+            "repeal_year"
+          ],
+          "additionalProperties": false
+        },
+        "execution_significance": {
+          "type": "string",
+          "description": "Describes the significance of this execution in relation to the state's repeal of capital punishment."
+        }
+      },
+      "required": [
+        "executed_individual",
+        "state_information",
+        "execution_significance"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "executed_individual": {
+        "name": "Michael Bruce Ross",
+        "execution_year": 2005
+      },
+      "state_information": {
+        "state_name": "Connecticut",
+        "repeal_year": 2012
+      },
+      "execution_significance": "The last execution in Connecticut before the state repealed capital punishment."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

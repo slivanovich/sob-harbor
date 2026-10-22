@@ -1,0 +1,13 @@
+{
+  "person_1": {
+    "name": "J. Lee Thompson",
+    "is_director": true,
+    "nationality": "British"
+  },
+  "person_2": {
+    "name": "Ryūichi Hiroki",
+    "is_director": true,
+    "nationality": "Japanese"
+  },
+  "both_are_directors": true
+}

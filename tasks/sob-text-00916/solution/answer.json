@@ -1,0 +1,12 @@
+{
+  "memorial_name": "Hatfield War Memorial",
+  "nearby_landmark": {
+    "type": "country house",
+    "name": "Hatfield House"
+  },
+  "location": {
+    "town": "Hatfield",
+    "county": "Hertfordshire",
+    "country": "England"
+  }
+}

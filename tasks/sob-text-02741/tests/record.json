@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "776eb8c5ecc61cf3bb4e34bc7a09e7fc3895570271498ab9755f9b876ea9c78e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab7c5fe5542991d322237bf",
+    "source_dataset": "hotpotqa",
+    "source_answer": "John George O'Hurley",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Pitts and Todd: Pitts and Todd were a comedy duo from the 1930s, put together by Hal Roach as the female counterpart to Laurel and Hardy.  The duo consisted of actresses Zasu Pitts and Thelma Todd.  The team changed members over the years, becoming Todd and Kelly, then Kelly and Kelton, followed by Kelly and Roberti, then finally coming full circle with Pitts and Kelly.\n\nJohn O'Hurley: John George O'Hurley (born October 9, 1954) is an American actor, voice actor, author and television personality.  He is known for the role of J. Peterman on the NBC sitcom \"Seinfeld\", and was host of the game show \"Family Feud\" from 2006 to 2010.\n\nCockeyed Cavaliers: Cockeyed Cavaliers is a 1934 American Pre-Code comedy film starring the comedy duo of Wheeler & Woolsey.  Directed by Mark Sandrich from a screenplay by Edward Kaufman, Grant Garrett, Ralph Spence and Ben Holmes.  Also featured in the cast were Dorothy Lee and Thelma Todd.\n\nPatsy Kelly: Patsy Kelly (January 12, 1910 – September 24, 1981) was an American stage, radio, film and television actress.  She is known for her role as the brash, wisecracking sidekick to Thelma Todd in a series of short comedy films produced by Hal Roach in the 1930s.  Known as the \"Queen of Wisecracks\", Kelly's career continued after Todd's death in 1935 in similar roles.\n\nWhite Hot Peach: White Hot Peach is the Primitive Radio Gods' follow-up to Rocket, and was released on October 24, 2000.  Quite different in sound from the debut album, White Hot Peach features much less of the sampling that made the band famous.  Most of the material from this album is from \"Mellotron On\", the album the band planned on releasing through Sire Records in 1999, but could not due to that label's bankruptcy.\n\nWhite Hot Odyssey (album): White Hot Odyssey is the debut album by American hard rock band White Hot Odyssey, released on Mojo/Jive Records in 2004.  The album was produced by lead singer-songwriter Steve Perry.\n\nCorsair (film): Corsair is a 1931 American pre-Code crime drama written, produced and directed by Roland West.  The film is based on the 1931 novel \"Corsair, a Pirate in White Flannels\" by Walton Green and takes place in and was shot during the era of Prohibition in the United States.  The film stars Chester Morris and Thelma Todd (credited as Alison Loyd).\n\nWhite Hot: The Mysterious Murder of Thelma Todd: White Hot: The Mysterious Murder of Thelma Todd is a 1991 television film in the biographical film genre, based on the life of the 1930s comedian actress Thelma Todd.  The film stars Loni Anderson as Todd, Maryedith Burrell, Robert Davi, Paul Dooley, Linda Kelsey, and John O'Hurley.\n\nFading Out: Fading Out is the Primitive Radio Gods' first and only officially released EP.  It doubles as an extended single for the song of the same name from the \"White Hot Peach\" album.  Aside from the title track, the EP contains two songs from \"Mellotron On! \" that did not make the cut for \"White Hot Peach\", a remix of \"Fading Out\", and a new track called \"Rope\".\n\nThe Maltese Falcon (1931 film): The Maltese Falcon is a 1931 American pre-Code crime film, based on the novel of the same name by Dashiell Hammett and directed by Roy Del Ruth.  The film stars Ricardo Cortez as private detective Sam Spade and Bebe Daniels as Ruth Wonderly.  Maude Fulton, Brown Holmes, and Lucien Hubbard (who went uncredited) wrote the screenplay.  The supporting cast features Dudley Digges, Thelma Todd, Walter Long, Una Merkel, and Dwight Frye.  The film is based on the 1929 novel \"The Maltese Falcon\" by Dashiell Hammett published by Alfred A. Knopf, Inc.",
+    "question": "White Hot: The Mysterious Murder of Thelma Todd stars which cast member from \"Seinfeld\"?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film being discussed."
+        },
+        "year_of_film_release": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "actor_details": {
+          "type": "object",
+          "properties": {
+            "actor_name": {
+              "type": "string",
+              "description": "The name of the actor who starred in both the film and Seinfeld."
+            },
+            "seinfeld_role": {
+              "type": "string",
+              "description": "The role the actor played in the sitcom Seinfeld."
+            },
+            "seinfeld_connection_present": {
+              "type": "boolean",
+              "description": "Indicates if a cast member from the film also had a role in Seinfeld."
+            }
+          },
+          "required": [
+            "actor_name",
+            "seinfeld_role",
+            "seinfeld_connection_present"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "film_title",
+        "year_of_film_release",
+        "actor_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "White Hot: The Mysterious Murder of Thelma Todd",
+      "year_of_film_release": 1991,
+      "actor_details": {
+        "actor_name": "John O'Hurley",
+        "seinfeld_role": "J. Peterman",
+        "seinfeld_connection_present": true
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Italian National Time Trial Championships: The Italian National Time Trial Championships are held annually to decide the Italian time trial champions across several categories of rider.  The first winner was Massimiliano Lelli in 1995, Imelda Chiappa took the women's title.  Marco Pinotti has the most wins with 6 (4 in row).  Marco Velo also had 3 wins in a row.  Gabriella Pregnolato and Giovanna Troldi also have 3 consecutive victories in the women's event.
+
+Bob Ladouceur: Robert Eugene "Bob" Ladouceur (born July 3, 1954) is a retired American football coach.  He began coaching the De La Salle High Spartans in Concord, California in 1979, when he was 25 years old.  He took over a program that had never enjoyed a winning season since the school's establishment in 1965.  His first season as head coach resulted in their first winning season.  His second season resulted in their first appearance in the California Prep Football State Rankings and began De La Salle's evolution into a perennial champion.  From 1992 to 2004, he guided the team to 12-consecutive undefeated seasons, setting a national winning streak record for high school football of 151 consecutive wins—a record in US amateur sports matched only by the 159-game winning streak of Passaic High School in men's basketball, and the 459 match win streak of Brandon High School in men's wrestling.  Ladouceur was enshrined to the National High School Hall of Fame in 2001.  His team has topped the USA Today rankings five times and he is a three-time coach of the year.  He retired on January 4, 2013 with a career record of 399–25-3.  His .934 winning percentage is a record among coaches with 200 or more wins.  Ladouceur is the all-time winningest coach in California high school football and has led the De La Salle program to numerous championships.
+
+Italian National Road Race Championships: The Italian National Road Race Championships are held annually.  They are a cycling race which decides the Italian cycling champion in the road racing discipline, across several categories of rider.  The event was first held in 1906 and was won by Giovanni Cuniolo.  At the beginning there were often back-to-back wins from many riders.  Costante Girardengo made the remarkable achievement of 9 wins between 1913 and 1925.  Perhaps if it were not for the First World War, which blocked the running of the championship for four years, from 1915 until 1918, Girardengo would have gained additional victories.  Despite this, he also holds the record for most consecutive wins, with 7.  After his winning streak ended, another Italian cycling legend, Alfredo Binda, won 4 races in a row.  Learco Guerra succeeded him with 5 consecutive wins.  Since then the event has not been dominated to the same extent, although Fausto Coppi claimed 4 victories.  Recent multiple victors have included Giovanni Visconti, Paolo Bettini, Salvatore Commesso, Massimo Podenzana and Gianni Bugno.  None of the road champions have also managed to win the time trial race.
+
+Captain Joy: Captain Joy is a Standardbred pacing racehorse whose wins include 6 Group 1 victories including three Derbies, 13 consecutive wins as a 2 and 3 year old and a total of 26 wins through to the end of his 6 year old season.
+
+Mount Union Purple Raiders football: The Mount Union Purple Raiders football program is the intercollegiate American football team for the University of Mount Union located in the U.S. state of Ohio.  They compete in the National Collegiate Athletic Association (NCAA) at the Division III level and are members of the Ohio Athletic Conference (OAC).  The team was established in 1893 and plays its home games at the 5,600 seat Mount Union Stadium.  They are coached by Vince Kehres.  Through the 2015 season, Mount Union football has won 12 Division III National Championships and 27 OAC titles, which includes a streak of 24 consecutive conference titles from 1992 through 2015.  Additionally, the Purple Raiders own the NCAA football record for consecutive victories with 55, set from 2000 to 2003, which broke their previous record of 54, set from 1996 to 1999.  The team has also had notable winning streaks of 110 consecutive wins in the regular season from 1994 to 2005 and 112 from 2005 to 2016, along with a 98-game winning streak at home that also ended in 2016.  With the Purple Raiders' success, former head coach Larry Kehres holds the record for highest winning percentage ( ) for coaches with minimum 200 career wins over his 27 seasons (1986–2012) as coach at Mount Union.
+
+Stacey King: Ronald Stacey King (born January 29, 1967) is an American announcer, former National Basketball Association (NBA) center who won three consecutive championships with the Chicago Bulls from 1991 to 1993.  He is currently the lead color commentator for Chicago Bulls television broadcasts.
+
+1971 Trans-American Sedan Championship: The 1971 Trans-American Championship was the sixth running of the Sports Car Club of America's Trans-Am Series.  The format was altered to an over 2500cc class and an under 2500cc class, up 500cc from past years.  All races used split classes except where noted.  The year marked the rise of Datsun as a competitive brand, with the Japanese company winning several races throughout the season.  American Motors, led by Mark Donohue's 7 wins, and Datsun, led by John Morton's 6 wins, won the manufacturers' championships.
+
+Petar Stoychev: Petar Stoychev (Bulgarian: Петър Стойчев ; born 24 October 1976 in Momchilgrad) is a Bulgarian swimmer who is one of the most successful long distance marathon swimmers of the last decade.  He is one of the greatest marathon swimmers of all time and an honor swimmer in the International Marathon Swimming Hall of Fame.  Stoychev has 11 consecutive wins of a major international open water marathon swimming FINA series since 2001 (World Cup winner 2001–2006, Grand Prix winner 2007–2011) with more than 60 wins in individual swimming marathons.  So far, he has swum over 60,000 km in pools, rivers, lakes, seas and oceans.  Petar Stoychev has won 11 consecutive victories at the Traversée Internationale du Lac Memphrémagog in Magog, Canada (34 km) and at Lac Saint-Jean in Roberval, Canada (32 km).  Also, he has won the Ohrid Lake, Macedonia swimming marathon 11 consecutive times (30 km).  His swimming achievements include swimming around the Manhattan Island in 2010 and winning the extreme Cadiz Freedom Swim in 2011.
+
+1993–94 Chicago Bulls season: The 1993–94 NBA season was the Bulls' 28th season in the National Basketball Association.  In the offseason, the Bulls signed free agents Steve Kerr, Bill Wennington and Pete Myers, who would become the team's starting shooting guard.  Despite the retirement of star guard Michael Jordan, the Bulls, who were now led by Scottie Pippen, continued to play solid basketball winning ten straight games after an 8–8 start.  Midway through the season, they traded Stacey King to the Minnesota Timberwolves for Luc Longley.  The Bulls posted another 10-game winning streak between March and April finishing second overall in the Central Division, and third overall in the Eastern Conference with a 55–27 record.  However, they would not be able to win a fourth consecutive NBA championship.  After sweeping the Cleveland Cavaliers in three straight games in the first round, they would lose in the second round of the 1994 NBA Playoffs to the New York Knicks in seven games.
+
+1886 Navy Midshipmen football team: The 1886 Navy Midshipmen football team represented the United States Naval Academy in the 1886 college football season.  The team marked the second time that the school played a multiple-game season.  The squad was captained by halfback Clarence Stone.  The year began with consecutive wins over rivals St. John's College and Johns Hopkins, but then reversed with a loss to the former and a close victory over the latter.  The year concluded with shutout losses to the Princeton reserve squad and Gallaudet.  The season was the program's longest until 1890, when that year's team played seven games.
+
+Question: What year marked 3 consecutive wins for Stacey king?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the player."
+    },
+    "team": {
+      "type": "string",
+      "description": "The team the player won championships with."
+    },
+    "championship_type": {
+      "type": "string",
+      "description": "The type of championship won."
+    },
+    "number_of_consecutive_wins": {
+      "type": "integer",
+      "description": "The number of consecutive wins achieved."
+    },
+    "start_year_of_streak": {
+      "type": "integer",
+      "description": "The starting year of the consecutive win streak."
+    },
+    "end_year_of_streak": {
+      "type": "integer",
+      "description": "The ending year of the consecutive win streak."
+    }
+  },
+  "required": [
+    "player_name",
+    "team",
+    "championship_type",
+    "number_of_consecutive_wins",
+    "start_year_of_streak",
+    "end_year_of_streak"
+  ],
+  "additionalProperties": false
+}

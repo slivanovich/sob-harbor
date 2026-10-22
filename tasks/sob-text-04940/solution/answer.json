@@ -1,0 +1,14 @@
+{
+  "actress_name": "Gemma Whelan",
+  "productions": [
+    {
+      "title": "Game of Thrones",
+      "role_description": "Yara Greyjoy"
+    },
+    {
+      "title": "The Moorside",
+      "role_description": "stars in"
+    }
+  ],
+  "common_productions_count": 2
+}

@@ -1,0 +1,10 @@
+{
+  "film_title": "The Promise",
+  "protagonist_name": "Jens Söring",
+  "conviction_details": {
+    "crime_type": "first-degree murder",
+    "count": 2,
+    "year_of_conviction": 1990,
+    "location_of_conviction": "Virginia, United States"
+  }
+}

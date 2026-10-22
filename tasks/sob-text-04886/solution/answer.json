@@ -1,0 +1,14 @@
+{
+  "comparison_result": "Fallopia",
+  "compared_genera": [
+    {
+      "genus_name": "Fallopia",
+      "species_count": 12
+    },
+    {
+      "genus_name": "Zigadenus",
+      "species_count": 1
+    }
+  ],
+  "comparison_statement": "Fallopia has more species (12-15) compared to Zigadenus (1)."
+}

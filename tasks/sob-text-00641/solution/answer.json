@@ -1,0 +1,11 @@
+{
+  "person_name": "Anna Katharina von Offen",
+  "served_for_person_name": "Sophia of Hanover",
+  "primary_role_for_served_person": "Oberhofmeisterin",
+  "other_related_roles": [
+    {
+      "role_name": "governess",
+      "role_recipient": "Sophia of Hanover's children"
+    }
+  ]
+}

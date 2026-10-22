@@ -1,0 +1,23 @@
+{
+  "query_context_film": {
+    "title": "Hard Boiled Sweets",
+    "actors_associated": [
+      {
+        "name": "Ian Hart",
+        "is_target_actor": false
+      },
+      {
+        "name": "Paul Freeman",
+        "is_target_actor": true
+      }
+    ]
+  },
+  "target_actor_details": {
+    "name": "Paul Freeman",
+    "nationality": "English",
+    "best_known_role_character": "René Belloq",
+    "best_known_role_film_title": "Raiders of the Lost Ark",
+    "best_known_role_film_year": 1981
+  },
+  "final_answer": "Raiders of the Lost Ark"
+}

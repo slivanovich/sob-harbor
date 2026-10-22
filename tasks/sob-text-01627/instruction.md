@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jing Jiang Rou Si: Jing Jiang Rou Si (simplified Chinese:; traditional Chinese:; pinyin: Jīng jiàng ròu sī), Sauteed Shredded Pork in Sweet Bean Sauce, is a traditional dish in Beijing.  Its main ingredient is pork tenderloin.  Stir-fry the ingredient with soya paste or sweet soya paste to season the flavour.  The dish is served with shredded leek (only using its white stalk) and "doupi" (dried tofu layer) to wrap.  Vegetarian dish uses fried tofu puffs in substitute for pork.  It may be prepared and consumed wrapped in "doupi"， or rarely with bing.  Some versions are prepared using hoisin sauce.
+
+Lindsborg, Kansas: Lindsborg is a city in McPherson County, Kansas, United States.  As of the 2010 census, the city population was 3,458.  Lindsborg is known for its association with Swedish heritage and the biennial Svensk Hyllningsfest.
+
+Succotash: Succotash (from Narragansett "sohquttahhash", "broken corn kernels") is a food dish consisting primarily of sweet corn with lima beans or other shell beans.  Other ingredients may be added including tomatoes, green or sweet red peppers, and okra.  Combining a grain with a legume provides a dish that is high in all essential amino acids.  Because of the relatively inexpensive and more readily available ingredients, the dish was popular during the Great Depression in the United States.  It was sometimes cooked in a casserole form, often with a light pie crust on top as in a traditional pot pie.  Succotash is a traditional dish of many Thanksgiving celebrations in New England as well as in Pennsylvania and other states.  In some parts of the American South, any mixture of vegetables prepared with lima beans and topped with lard or butter is called succotash.  Corn (maize), American beans, tomatoes, and peppers are New World foods.
+
+Kiribath: Kiribath (milk rice) is a traditional Sri Lankan dish made from rice.  The word is a compound with a transparent meaning in the Sinhala language, where "kiri" (කිරි) means "milk" and "bath" ( බත්) means "rice".  Kiribath can be considered a form of rice pudding.  The dish is prepared by cooking rice with coconut milk, hence this name.  In Tamil, the dish is called "paalchoru" (பாட்சோறு).  The origins of Kiribath are not clear although it has now become a traditional dish and is common in almost every household in Sri Lanka, be it rich or poor.
+
+Lutefisk: Lutefisk (Norwegian) or lutfisk (Swedish) (pronounced ] in Northern and Central Norway, ] in Southern Norway, ] in Sweden and in Finland (Finnish: "lipeäkala" )) is a traditional dish of some Nordic countries.  It is traditionally part of the Swedish julbord and Norwegian julebord.
+
+Samay Baji: Samay Baji (Nepal Bhasa: समय् बजि) is an authentic traditional dish of Newar community in Nepal.  In recent years this food has become one of the main attractions of Nepal.  It is considered as a typical dish of the Nepalese people.  This dish has been passed down from many generations and is still much appreciated by the people.  There are no specific seasons for this dish to be served but, mostly served during auspicious occasion, in family get-together and Newari Festivals.  Samay baji is taken as starter in every festival, every religious activities and pujas.  This is served in Sharada(death anniversary rituals) as well.  It is taken throughout the year because of its simplicity; it is easy to make and can be stored for a long time.  The Samay Baji is also taken during the major festivals of Nepal like Indra Jatra, Dashain, Tihar (Laxmi Puja, Bhai Tika).  This dish is served in almost all the activities of Newari people.
+
+Attiéké: Attiéké (also spelled acheke) is a side dish made from cassava that is a part of the cuisine of Côte d'Ivoire in Africa.  The dish is prepared from fermented cassava pulp that has been grated or granulated.  Dried attiéké is also prepared, which is similar in texture to couscous.  It's a common and traditional dish in Côte d'Ivoire that originated in the southern part of the country, and methods for its production are well known in Côte d'Ivoire and also in Benin.  In Côte d'Ivoire, the dish is often served with Kedjenou, a slow-cooked stew.  Fresh attiéké can spoil quickly, and should generally be consumed within 24 hours after preparation.  Its short-term perishability has created some problems in its mass distribution from rural areas to urban environments.
+
+Guriev porridge: Guryev porridge (Guriev kasha) is a Russian porridge (kasha) dessert dish prepared from semolina and milk with the addition of nuts (hazelnut, walnuts, almonds), kaimak (creamy foams) and dried fruits.  Traditional preparation of the dish involves preparing milk skins and separating the dish's ingredients by layers with the skin between each layer.  It is considered a traditional dish of Russian cuisine, but it was invented only at the beginning of the 19th century.
+
+List of Palestinian records: List of Palestinian records lists national and international records achieved by people, groups or institutions from the Palestinian territories.  For Example, The largest Qatayef ever made had a net weight of 104.75 kg (230 lb), which was organized by the Bethlehem Chamber of Commerce and Industry and cooked by the DANA bakery (Palestine) in Bethlehem, Palestine, on 27 August 2010.  Also, Three dedicated women in the West Bank are hoping to break the Guinness World Record for the biggest straw tray ever constructed in history.  The project, which the women have been working on for over two years, was begun by Rose Hamad, a resident of a small village near the city of Ramallah.  The straw tray is already the largest such tray in Palestine, and its construction continues.  Also, Palestinian chefs were able to get into the Guinness Book of World Records as the world’s largest salad when they have prepared a large bowl of the traditional Arabic dish Tabouleh at the Friend’s School in the Palestinian city of Ramallah, Friday, 9 June 2006.  The traditional dish made of lettuce, tomato, olive oil, cracked wheat and mint is a new record for the dish, according to organisers of the culinary achievement.  Also, a group of Palestinian seamstresses in Hebron have produced the largest traditional dress ever sewn.  About 150 women helped make the dress which is 32.6m (107ft) long and 18.1m (59.4ft) wide.  It is hoped that the dress will secure a place in the Guinness Book of World records and promote local handicrafts.
+
+Svensk Hyllningsfest: Svensk Hyllningsfest (] , "Swedish Honoring Festival") is a biennial celebration held in Lindsborg, Kansas, in October of odd-numbered years since 1941 to celebrate the town's Swedish heritage.  The festival includes Swedish dancing, foods including "lutfisk", cooking demonstrations, arts and crafts, entertainment by local artists and musicians, a parade, and a smörgåsbord.
+
+Question: The dish lutfisk is a traditional dish of which country which could be found at the Svensk Hyllningsfest?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "dish_name": {
+      "type": "string",
+      "description": "The name of the traditional dish."
+    },
+    "associated_countries": {
+      "type": "array",
+      "description": "A list of countries where the dish is traditional.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "festival_name": {
+      "type": "string",
+      "description": "The name of the festival where the dish can be found."
+    },
+    "festival_heritage_country": {
+      "type": "string",
+      "description": "The country whose heritage the festival celebrates."
+    },
+    "country_matching_criteria": {
+      "type": "string",
+      "description": "The country that is traditional for the dish and is celebrated by the festival."
+    }
+  },
+  "required": [
+    "dish_name",
+    "associated_countries",
+    "festival_name",
+    "festival_heritage_country",
+    "country_matching_criteria"
+  ],
+  "additionalProperties": false
+}

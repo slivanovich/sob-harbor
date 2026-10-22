@@ -1,0 +1,18 @@
+{
+  "film_title": "Untold Scandal",
+  "release_year": 2003,
+  "director": "E J-yong",
+  "starring_actress": {
+    "name": "Lee Mi-sook",
+    "description_keywords": [
+      "best-known actresses",
+      "1980s Korean cinema"
+    ]
+  },
+  "based_on_novel": {
+    "title": "Les Liaisons dangereuses",
+    "origin_country": "French",
+    "century": "18th century"
+  },
+  "genre": "romantic drama"
+}

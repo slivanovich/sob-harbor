@@ -1,0 +1,15 @@
+{
+  "film_title": "Goal!",
+  "release_year": 2006,
+  "genre": "sports drama film",
+  "director": "Danny Cannon",
+  "main_actor": "Kuno Becker",
+  "character_name": "Santiago Muñez",
+  "is_part_of_trilogy": true,
+  "trilogy_name": "Goal!",
+  "trilogy_directors": [
+    "Danny Cannon",
+    "Jaume Collet-Serra",
+    "Andrew Morahan"
+  ]
+}

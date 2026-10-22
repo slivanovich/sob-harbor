@@ -1,0 +1,18 @@
+{
+  "person": {
+    "name": "Margaret Brown",
+    "roles": [
+      "philanthropist",
+      "socialite",
+      "activist"
+    ]
+  },
+  "house": {
+    "primary_name": "Molly Brown House Museum",
+    "alternate_name": "House of Lions"
+  },
+  "disaster_survived": {
+    "name": "RMS Titanic",
+    "year": 1912
+  }
+}

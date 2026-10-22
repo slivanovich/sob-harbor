@@ -1,0 +1,12 @@
+{
+  "club_name": "Chester City Football Club",
+  "club_location": "Chester",
+  "founded_as_name": "Chester F.C.",
+  "football_league_entry_year": 1931,
+  "club_active_period": {
+    "start_year": 1885,
+    "end_year": 2010
+  },
+  "player_who_played_for_club": "Jonathan Neil Cross",
+  "player_position": "full back"
+}

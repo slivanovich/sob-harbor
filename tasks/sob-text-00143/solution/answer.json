@@ -1,0 +1,16 @@
+{
+  "is_concerned_with_marine_conservation": true,
+  "films_analyzed": [
+    {
+      "film_name": "Chasing Coral",
+      "primary_focus": "disappearance of coral reefs",
+      "conservation_impact_or_goal": "documenting the disappearance of coral reefs"
+    },
+    {
+      "film_name": "Sharkwater",
+      "primary_focus": "sharks and shark-hunting industries",
+      "conservation_impact_or_goal": "helping to protect sharks, changing government policy, and inspiring the creation of shark conservation groups, resulting in shark finning being banned worldwide"
+    }
+  ],
+  "marine_conservation_definition": "the protection and preservation of ecosystems in oceans and seas. Marine conservation focuses on limiting human-caused damage to marine ecosystems, restoring damaged marine ecosystems, and preserving vulnerable species of the marine life."
+}

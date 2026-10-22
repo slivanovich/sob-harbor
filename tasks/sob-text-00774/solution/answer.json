@@ -1,0 +1,8 @@
+{
+  "airline_name": "ValuJet Airlines",
+  "flight_number": "ValuJet Flight 592",
+  "headquarters_location": {
+    "county": "Clayton County",
+    "state": "Georgia"
+  }
+}

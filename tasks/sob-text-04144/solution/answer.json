@@ -1,0 +1,23 @@
+{
+  "river_names": [
+    "First East Branch Magalloway River",
+    "Kennebec River"
+  ],
+  "common_state": "Maine",
+  "river_details": [
+    {
+      "name": "First East Branch Magalloway River",
+      "length_miles": 7.0,
+      "location_states": [
+        "Maine"
+      ]
+    },
+    {
+      "name": "Kennebec River",
+      "length_miles": 170.0,
+      "location_states": [
+        "Maine"
+      ]
+    }
+  ]
+}

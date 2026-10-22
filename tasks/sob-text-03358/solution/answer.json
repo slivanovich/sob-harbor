@@ -1,0 +1,13 @@
+{
+  "season_year": 1999,
+  "team_name": "St. Louis Rams",
+  "regular_season_record": {
+    "wins": 13,
+    "losses": 3
+  },
+  "division_championship_won": true,
+  "offensive_coordinator": {
+    "name": "Mike Martz",
+    "role_description": "Offensive coordinator behind the St. Louis Rams high-powered 1999 team which won the Super Bowl."
+  }
+}

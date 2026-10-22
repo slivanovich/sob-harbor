@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Battle of Columbia: The Battle of Columbia was a series of military actions that took place November 24–29, 1864, in Maury County, Tennessee, as part of the Franklin-Nashville Campaign of the American Civil War.  It concluded the movement of Lt. Gen. John Bell Hood's Confederate Army of Tennessee from the Tennessee River in northern Alabama to Columbia, Tennessee, and across the Duck River.  A Union force under Maj. Gen. John M. Schofield skirmished with Hood's cavalry, commanded by Maj. Gen. Nathan Bedford Forrest, and fortified a defensive line south of Columbia, but soon withdrew north across the Duck River, abandoning the town.  Hood's invasion of Tennessee continued as he attempted to intercept Schofield's retreating army at Spring Hill.
+
+Battle of Nashville: The Battle of Nashville was a two-day battle in the Franklin-Nashville Campaign that represented the end of large-scale fighting west of the coastal states in the American Civil War.  It was fought at Nashville, Tennessee, on December 15–16, 1864, between the Confederate Army of Tennessee under Lieutenant General John Bell Hood and Federal forces under Major General George H. Thomas.  In one of the largest victories achieved by the Union Army during the war, Thomas attacked and routed Hood's army, largely destroying it as an effective fighting force.
+
+John Bell Hood: John Bell Hood (June 1 or June 29, 1831 – August 30, 1879) was a Confederate general during the American Civil War.  Hood had a reputation for bravery and aggressiveness that sometimes bordered on recklessness.  Arguably one of the best brigade and division commanders in the Confederate States Army, Hood gradually became increasingly ineffective as he was promoted to lead larger, independent commands late in the war; his career and reputation were marred by his decisive defeats leading an army in the Atlanta Campaign and the Franklin–Nashville Campaign.
+
+Battle of Peachtree Creek: The Battle of Peachtree Creek was fought in Georgia on July 20, 1864, as part of the Atlanta Campaign in the American Civil War.  It was the first major attack by Lt. Gen. John Bell Hood since taking command of the Confederate Army of Tennessee.  The attack was against Maj. Gen. William T. Sherman's Union army which was perched on the doorstep of Atlanta.  The main armies in the conflict were the Union Army of the Cumberland, commanded by Maj. Gen. George Henry Thomas, and two corps of the Confederate Army of Tennessee, commanded by Lt. Gen. John B. Hood.  The battle of Peachtree Creek was the first battle fought by Hood as commander of the Army of Tennessee.
+
+Battle of Shiloh: The Battle of Shiloh, also known as the Battle of Pittsburg Landing, was a major battle in the Western Theater of the American Civil War, fought April 6–7, 1862, in southwestern Tennessee.  A Union force known as the Army of the Tennessee under Major General Ulysses S. Grant had moved via the Tennessee River deep into Tennessee and was encamped principally at Pittsburg Landing, Tennessee on the west bank of that river, where the Confederate Army of Mississippi, under General Albert Sidney Johnston and second-in-command P. G. T. Beauregard, launched a surprise attack on Grant's army from its base in Corinth, Mississippi.  Johnston was mortally wounded during the fighting; Beauregard, who thus succeeded to command of the army, decided against pressing the attack late in the evening.  Overnight Grant was reinforced by one of his own divisions stationed further north and was joined by three divisions from another Union army under Maj. Gen. Don Carlos Buell.  This allowed them to launch an unexpected counterattack the next morning which completely reversed the Confederate gains of the previous day.
+
+A Slight Demonstration: A Slight Demonstration is a 2007 book about the 1864 Civil War Battle of Decatur, a pivotal event in Confederate General John B. Hood's disastrous Tennessee Campaign late in the war, in which a Union force of only 2-5,000 soldiers prevented Hood's 23,000 strong army from crossing the Tennessee River.  It was written by Noel Carpenter, a former Decatur native and Air Force officer.  The book is published by Legacy Books & Letters of Austin, Texas.  It is the first book solely devoted to the Battle of Decatur.
+
+Battle of Spring Hill: The Battle of Spring Hill was fought November 29, 1864, at Spring Hill, Tennessee, as part of the Franklin-Nashville Campaign of the American Civil War.  The Confederate Army of Tennessee, commanded by Lt. Gen. John Bell Hood, attacked a Union force under Maj. Gen. John M. Schofield as it retreated from Columbia through Spring Hill.  Because of a series of command failures, the Confederates were unable to inflict serious damage on the Federals and could not prevent their safe passage north to Franklin during the night.  The next day, Hood pursued Schofield and attacked his fortifications in the Battle of Franklin, resulting in severe Confederate casualties.
+
+Franklin–Nashville Campaign: The Franklin–Nashville Campaign, also known as Hood's Tennessee Campaign, was a series of battles in the Western Theater, conducted from September 18 to December 27, 1864, in Alabama, Tennessee, and northwestern Georgia during the American Civil War.  The Confederate Army of Tennessee under Lt. Gen. John Bell Hood drove north from Atlanta, threatening Maj. Gen. William T. Sherman's lines of communications and central Tennessee.  After a brief attempt to pursue Hood, Sherman returned to Atlanta and began his March to the Sea, leaving Union forces under Maj. Gen. George H. Thomas to deal with Hood's threat.
+
+6th Florida Infantry Regiment: The 6th Florida Infantry Regiment' was raised by the Confederate State of Florida for service to the Provisional Army of the Confederate States of America.  Organized and released from state service in mid-April 1862, the regiment would leave the state in mid-June, 1862.  It was assigned from June through August 1862 to the Army of East Tennessee (Department of East Tennessee), General Edmund Kirby Smith commanding.  The Army of East Tennessee was redesignated as the Confederate Army of Kentucky on August 25, 1862, when General Smith led it into eastern Kentucky during the Confederate Heartland Offensive.  On November 20, 1862, the Army of Mississippi, General Braxton Bragg commanding, and the Army of Kentucky, General E. Kirby Smith commanding, became the Army of Tennessee.  General Bragg assumed command, and General Smith was reassigned to the Department of East Tennessee.  The 6th Florida would remain assigned to the Army of Tennessee until its surrender at Bentonville, North Carolina on April 26, 1865.
+
+18th Arkansas Infantry Regiment (Marmaduke's): The 18th Arkansas Infantry (Marmaduke's) (1861–1865) was a Confederate Army infantry regiment during the American Civil War.  The unit was also briefly identified as the 1st Arkansas Infantry Battalion.  The unit was most often referred to as the 3rd Confederate Infantry Regiment.  The designation "Confederate Infantry Regiment" was intended to convey the difference between Provisional Confederate Army units and Regular Confederate Army Units, with Provisional units being those regiments who received a state designation such as "XX Arkansas Infantry Regiment".  In practice, the designation was most often utilized when Regiments were assembled utilizing companies from more than one confederate state.  The "3rd Confederate Infantry Regiment" is occasionally misidentified as the 3rd Arkansas Infantry Regiment commanded by Colonel Van H. Manning.
+
+Question: When did the leader of the Confederate Army of Tennessee during Hood's Tennessee Campaign die?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "deceased_person_name": {
+      "type": "string",
+      "description": "The name of the person who died."
+    },
+    "military_role": {
+      "type": "string",
+      "description": "The military role or command held by the person."
+    },
+    "associated_campaign": {
+      "type": "string",
+      "description": "The name of the campaign the person was leading during the specified period."
+    },
+    "death_date": {
+      "type": "string",
+      "description": "The date of death of the person."
+    }
+  },
+  "required": [
+    "deceased_person_name",
+    "military_role",
+    "associated_campaign",
+    "death_date"
+  ],
+  "additionalProperties": false
+}

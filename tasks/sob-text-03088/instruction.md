@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Beck v. Ohio: Beck v. Ohio, 379 U.S. 89 (1964) , is a United States Supreme Court decision concerning evidence obtained as part of an unlawful arrest.  Reversing the Ohio Supreme Court's decision, the U.S. Supreme Court held that Ohio police arrested defendant without probable cause, so the criminally-punishable evidence found on his person during an incidental search was inadmissible.  Accordingly, the U.S. Supreme Court vacated defendant's conviction.
+
+Michigan v. Long: Michigan v. Long, 463 U.S. 1032 (1983), was a decision by the United States Supreme Court that extended "Terry v. Ohio", 392 U.S. 1 (1968) to allow searches of car compartments during a stop with "reasonable suspicion".  The case also clarified and narrowed the extent of adequate and independent state ground, allowing U.S. Supreme Court review of state supreme court decisions unless they explicitly appealed to state laws.
+
+Supreme Court Case Selections Act: The Supreme Court Case Selections Act of 1988 (Pub.L.  100–352 , 102 Stat.  662 , enacted  27, 1988 , codified at ) is an act of Congress that eliminated appeals as of right from state court decisions to the Supreme Court of the United States.  After the Act took effect, in most cases, the only avenue by which a litigant could obtain review of most lower court decisions was through the writ of certiorari, which was granted at the discretion of the Supreme Court, rather than available to the litigant as a matter of right.
+
+Taney Court: The Taney Court refers to the Supreme Court of the United States from 1836 to 1864, when Roger Taney served as the fifth Chief Justice of the United States.  Taney succeeded John Marshall as Chief Justice after Marshall's death in 1835.  Taney served as Chief Justice until his death in 1864, at which point Salmon P. Chase took office.  Taney had been an important member of Andrew Jackson's administration, an advocate of Jacksonian democracy, and had played a major role in the Bank War, during which Taney wrote a memo questioning the Supreme Court's power of judicial review.  However, the Taney Court did not strongly break from the decisions and precedents of the Marshall Court, as it continued to uphold a strong federal government with an independent judiciary.  Most of the Taney Court's holdings are overshadowed by the "Dred Scott" decision, in which the court ruled that African-Americans could not be citizens. However, the Taney Court's decisions regarding economic issues and separation of powers set important precedents, and the Taney Court has been lauded for its ability to adapt regulatory law to a country undergoing remarkable technological and economic progress.
+
+Supreme Court of the Virgin Islands: The Supreme Court of the Virgin Islands is the highest court in the territory of the United States Virgin Islands.  The Supreme Court assumed jurisdiction over all appeals from the Superior Court of the Virgin Islands, a trial level court, on January 29, 2007.  There are three Supreme Court justices who are each appointed by the Governor and confirmed by the Legislature for a ten-year term.  Appointments are for life.  The Supreme Court consists of a Chief Justice and two Associate Justices.  There is no intermediate court of appeals, and the Supreme Court does not have discretion in hearing appeals.  Appeals of Supreme Court decisions were heard by writ of certiorari by the United States Court of Appeals for the Third Circuit until December 29, 2012, but since then they have been heard by the United States Supreme Court.
+
+Indian Country Jurisdiction: Indian country jurisdiction, or the extent which tribal powers apply to legal situations in the United States, has undergone many drastic shifts since the beginning of European settlement in America.  Over time, federal statutes and Supreme Court rulings have designated more or less power to tribal governments, depending on federal policy toward Indians.  Numerous Supreme Court decisions have created important precedents in Indian country jurisdiction, such as "Worcester v. Georgia", "Oliphant v. Suquamish Tribe", and "Montana v. United States".
+
+Rooker–Feldman doctrine: The "Rooker-Feldman" doctrine is a rule of civil procedure enunciated by the United States Supreme Court in two cases, "Rooker v. Fidelity Trust Co.", 263 U.S. 413 (1923) and "District of Columbia Court of Appeals v. Feldman", 460 U.S. 462 (1983).  The doctrine holds that lower United States federal courts—i.e., federal courts other than the Supreme Court—should not sit in direct review of state court decisions unless Congress has specifically authorized such relief.  In short, federal courts below the Supreme Court must not become a court of appeals for state court decisions.  The state court plaintiff has to find a state court remedy, or obtain relief from the U.S. Supreme Court.
+
+Jeffrey Skilling: Jeffrey Keith "Jeff" Skilling (born November 25, 1953) is the former CEO of Enron Corporation.  In 2006, he was convicted of federal felony charges relating to Enron's collapse and is currently serving 14 years of a 24-year, four-month prison sentence at the Federal Prison Camp (FPC) – Montgomery in Montgomery, Alabama.  The Supreme Court of the United States heard arguments in the appeal of the case March 1, 2010.  On June 24, 2010, the Supreme Court vacated part of Skilling's conviction and transferred the case back to the lower court for resentencing.  During April 2011, a three-judge 5th Circuit Court of Appeals panel ruled that the verdict would have been the same despite the legal issues being discussed, and Skilling's conviction was confirmed; however, the court ruled Skilling should be resentenced.  Skilling appealed this new decision to the Supreme Court, but the appeal was denied.  In 2013, the United States Department of Justice reached a deal with Skilling, which resulted in ten years being cut from his sentence.
+
+Tom Goldstein: Thomas C. Goldstein, known as simply Tom Goldstein, is an American attorney known for his advocacy before and blogging about the Supreme Court of the United States.  He was a founding partner of Goldstein and Howe (now Goldstein & Russell), a Washington, D.C. firm specializing in Supreme Court litigation, and was, until the end of 2010, a partner at Akin Gump, where he was co-head of the litigation and Supreme Court practices.  In 2003, he co-founded SCOTUSblog, the most widely read blog covering the Supreme Court, and remains the publisher and occasional contributor, providing analyses and summaries of Supreme Court decisions and cert petitions.  He previously taught Supreme Court Litigation at Harvard Law School, and Stanford Law School from 2004-2012.
+
+Worcester v. Georgia: Worcester v. Georgia, 31 U.S. (6 Pet.)  515 (1832), was a case in which the United States Supreme Court vacated the conviction of Samuel Worcester and held that the Georgia criminal statute that prohibited non-Native Americans from being present on Native American lands without a license from the state was unconstitutional.
+
+Question: What was a case in which the United States Supreme Court vacated the conviction of Samuel Worcester , that is an example of Numerous Supreme Court decisions created important precedents in the extent which tribal powers apply to legal situations?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "case_name": {
+      "type": "string",
+      "description": "The name of the Supreme Court case."
+    },
+    "citation": {
+      "type": "string",
+      "description": "The legal citation for the case."
+    },
+    "defendant_conviction_vacated": {
+      "type": "string",
+      "description": "The name of the defendant whose conviction was vacated."
+    },
+    "area_of_law": {
+      "type": "string",
+      "description": "The area of law where the case set an important precedent."
+    }
+  },
+  "required": [
+    "case_name",
+    "citation",
+    "defendant_conviction_vacated",
+    "area_of_law"
+  ],
+  "additionalProperties": false
+}

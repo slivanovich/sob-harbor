@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Sean Harris: Sean Harris (born January 7, 1966) is an English actor best known for his roles as Ian Curtis in "24 Hour Party People", as Stretch in "Harry Brown", as Micheletto Corella in "The Borgias", as Fifield in "Prometheus" and as Solomon Lane in "" and will reprise his role in the upcoming sequel "".
+
+Hot in Cleveland (season 1): The first season of the "Hot in Cleveland", an American situation comedy television series, aired in the United States on TV Land.  The series was the channel's first venture into scripted television series.  Created by television producer and writer Suzanne Martin, the show was produced by Hazy Mills Productions, SamJen Productions, TV Land Original Productions while Martin, Sean Hayes, Todd Milliner, Lynda Obst, Larry W. Jones, and Keith Cox served as executive producers.  The show focuses on three women from Los Angeles who unexpectedly crash land in Cleveland, Ohio and, enthralled by the attention the receive, decide to move there.  The series stars Valerie Bertinelli, Wendie Malick and Jane Leeves as the three Los Angeles women Melanie Moretti, Victoria Chase, and Joy Scroggs.  Veteran actress Betty White also stars in the series as Elka Ovstrosky, the women's sassy caretaker.  The season also featured numerous guest stars, including John Schneider, Susan Lucci, Carl Reiner and Joe Jonas.
+
+The Breaks (TV series): The Breaks is an American drama television series created by Dan Charnas and Seith Mann that serves as a continuation of the 2016 television film of the same name.  The series stars Afton Williamson, Wood Harris, Tristan Wilds, Antoine Harris, David Call, Evan Handler and Melonie Diaz.  The series premiered on February 20, 2017, on VH1.  On April 27, 2017, the series was renewed for a second season that will air on BET.
+
+Bret Maverick: Faith, Hope and Clarity: Bret Maverick: Faith, Hope, and Clarity starring James Garner is a two-part episode of the 1981-82 television series "Bret Maverick" edited together and released to local television stations as a TV-movie.  The show involves a religious cult that swindles the townspeople out of a tract of land and Maverick winds up straightening everything out.  The episodes were directed by Leo Penn (father of Sean Penn) and the film is sometimes entitled simply Bret Maverick.  The same thing was done with the two-hour series premiere, slightly condensed and marketed to television stations as "".  The "Bret Maverick" television series was a sequel to the 1957 series "Maverick", created by Roy Huggins, in which Garner had played the same character two decades earlier.
+
+Jared Leto filmography: Jared Leto is an American entertainer who has had an extensive career in film, music, and television.  He made his debut with minor roles in the television shows "Camp Wilder" (1992) and "Almost Home" (1993).  He achieved recognition in 1994 for his role as Jordan Catalano in the teen drama television series "My So-Called Life".  The show was praised for its portrayal of adolescence and gained a cult following, despite being canceled after only one season.  The same year, he made his television film debut starring alongside Alicia Silverstone in "Cool and the Crazy".  Leto's first film role was in the 1995 drama "How to Make an American Quilt".  He later co-starred with Christina Ricci in "The Last of the High Kings" (1996) and received a supporting role in "Switchback" (1997).  In 1997, Leto starred in the biopic "Prefontaine" in which he played the role of Olympic hopeful Steve Prefontaine.  His portrayal received positive reviews from critics and is often considered his breakthrough role.  The following year, Leto starred together with Alicia Witt in the horror "Urban Legend".  He then acted alongside Sean Penn and Adrien Brody in the war film "The Thin Red Line" (1998).  After playing supporting roles in "Black and White" and "Girl, Interrupted", Leto portrayed Angel Face in "Fight Club" (1999), which has since became a cult film.
+
+List of Jake and the Never Land Pirates episodes: "Jake and the Never Land Pirates" (also known as "Captain Jake and the Never Land Pirates" in the fourth season and associated merchandise) is an Annie Award-winning musical and interactive animated television series shown on Disney Junior.  It is based on Disney's "Peter Pan" franchise, which in turn is based on the famous book and play by British author J.M. Barrie.  It is the first Disney Junior original show following the switch from Playhouse Disney.  It stars Sean Ryan Fox from "Henry Danger", Megan Richie, Jadon Sand, David Arquette, Corey Burton, Jeff Bennett, and Loren Hoskins.  The titular character Captain Jake was previously voiced by Colin Ford, and then later by Cameron Boyce, and finally by Sean Ryan Fox, while Izzy was voiced for the first three seasons by Madison Pettis and Cubby was voiced by Jonathan Morgan Heit.  The series is created by Disney veteran Bobs Gannaway, whose works include another Disney Junior series, "Mickey Mouse Clubhouse", and films such as "Secret of the Wings", "The Pirate Fairy", and "".
+
+The X-Files Season 10 (comics): The X-Files Season 10 is a 25-issue comic book series published by IDW Publishing.  The title serves as a continuation of the television series "The X-Files".  Chris Carter, who created the television series, is the Executive Producer of the comic book series and also contributed to several elements to the comics' stories.  The issues are written by Joe Harris.  In addition to the main title, several miniseries and one-shots written by Harris and Karl Kesel, take place during the Season 10 storyline and supplement it.  These include "The X-Files: Year Zero" and "The X-Files: X-Mas Special".
+
+The Borgias (2011 TV series): The Borgias is a historical-fiction drama television series created by Neil Jordan; it debuted in 2011 and was canceled in 2013.
+
+Accused (TV series): Accused is a British television anthology series created by Jimmy McGovern.  The drama series first aired on 15 November 2010 on BBC One and has run for two series.  Each episode follows a different character as they await their verdict in court, and tells the story behind how they find themselves accused.  The series has featured actors and actresses such as Christopher Eccleston, Benjamin Smith, Juliet Stevenson, Andy Serkis, Marc Warren, Naomie Harris, Sean Bean and Anne-Marie Duff as the accused in each episode.
+
+Victor Fresco: Victor Fresco (born January 9, 1958) is an American television writer, producer and show creator.  He is credited with creating the critically acclaimed television series "Better Off Ted", which ran for two seasons on ABC.  Fresco also created the FOX show "Andy Richter Controls the Universe", for which he was nominated for a writing Emmy.  Additionally, Fresco wrote for three years on NBC's "My Name Is Earl" and created the FOX series "Life on a Stick" and the ABC Series "The Trouble With Normal".  He was also nominated for an Emmy for his work on "Mad About You".  He is credited as an executive producer on the Burt Reynolds CBS series "Evening Shade."  He created the 2013 NBC series "Sean Saves the World", starring Sean Hayes.  In 2017, he served as creator, showrunner and executive producer on the Netflix comedy series "Santa Clarita Diet" starring Drew Barrymore and Timothy Olyphant.
+
+Question: Who created the television series in which Sean Harris had the role of Micheletto Corella ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor."
+    },
+    "role_name": {
+      "type": "string",
+      "description": "The specific role played by the actor."
+    },
+    "series_name": {
+      "type": "string",
+      "description": "The name of the television series."
+    },
+    "series_creator": {
+      "type": "string",
+      "description": "The creator of the television series."
+    },
+    "series_genre": {
+      "type": "string",
+      "description": "The genre of the television series."
+    }
+  },
+  "required": [
+    "actor_name",
+    "role_name",
+    "series_name",
+    "series_creator",
+    "series_genre"
+  ],
+  "additionalProperties": false
+}

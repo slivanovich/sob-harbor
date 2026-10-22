@@ -1,0 +1,16 @@
+{
+  "common_category": "animal breed",
+  "breed_type": "dog",
+  "breeds": [
+    {
+      "name": "Cão Fila de São Miguel",
+      "origin": "São Miguel Island in the Azores, an island chain which is one of the autonomous regions of Portugal",
+      "primary_use": "working with cattle"
+    },
+    {
+      "name": "Treeing Cur",
+      "origin": "mid-west",
+      "primary_use": "hunter, guardian, and stock dog"
+    }
+  ]
+}

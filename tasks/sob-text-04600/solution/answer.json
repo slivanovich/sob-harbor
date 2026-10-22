@@ -1,0 +1,16 @@
+{
+  "questioned_cities": [
+    {
+      "city_name": "Huaihua",
+      "is_located_in_hunan": true,
+      "actual_province": "Hunan"
+    },
+    {
+      "city_name": "Qitaihe",
+      "is_located_in_hunan": false,
+      "actual_province": "Heilongjiang"
+    }
+  ],
+  "answer_city_name": "Huaihua",
+  "answer_city_province": "Hunan"
+}

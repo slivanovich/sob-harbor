@@ -1,0 +1,13 @@
+{
+  "agreement_name": "Nordic Passport Union",
+  "purpose": "Allows citizens to travel and reside in another Nordic country without travel documentation or a residence permit",
+  "countries_involved": [
+    "Iceland",
+    "Denmark",
+    "Norway",
+    "Sweden",
+    "Finland"
+  ],
+  "border_example_mentioned": "Finland–Sweden border",
+  "is_part_of_schengen_area": true
+}

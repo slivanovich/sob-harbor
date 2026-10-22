@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Big Sky Brewing Company: Big Sky Brewing Company is a brewery located in Missoula, Montana, USA.  It brews six different styles of beer: Moose Drool (a brown ale), Scape Goat (Pale Ale), Big Sky (India Pale ale), Powder Hound (Winter Ale), Summer Honey (Seasonal Ale), and Trout Slayer Ale.
+
+Rye IPA: Rye India Pale Ale is a style of Rye Beer that has a strong hoppy character comparable to the India Pale Ale.  The Rye India Pale Ale is a Beer style that uses malted rye grains in the mash ingredients.  The addition of rye adds a tangy or spicy character to the beer.  Its use has recently grown in popularity among American Craft Brewers but has been a traditional brewing grain for many eastern European breweries for many years.
+
+Corsendonk: Corsendonk is a Belgian beer brand.  The brandname refers to the Priory of Corsendonk in Oud-Turnhout; which was in operation from 1398 to 1784, and was rebuilt in 1968 as a hotel complex by new owners Corsendonk Hotels.  In 1982, on the 125th anniversary of the Oud-Turnhout municipality, Jef Keersmaekers, grandson of Antonius Keersmaekers who had founded a brewery in 1906, was approached by the local tourist office to use the Corsendonk name for its abbey association, as an abbey beer marketing technique.  He launched "Pater Noster", now called "Corsendonk Pater" (or ""Abbey Brown Ale"" when marketed in America), and "Agnus Dei", now called "Corsendonk Agnus" (or ""Abbey Pale Ale"" when marketed in America).  As the family brewery had closed down in 1953, the beers were contracted out to other breweries, including Brasserie Du Bocq, who now brew all the brands.  Other brands include "Corsendonk Blond", "Corsendonk Bruin" and "Corsendonk Christmas Ale".
+
+Bass Brewery: The Bass Brewery was founded in 1777 by William Bass in Burton-upon-Trent, England.  The main brand was Bass Pale Ale, once the highest-selling beer in the UK.  By 1877, Bass had become the largest brewery in the world, with an annual output of one million barrels.  Its pale ale was exported throughout the British Empire, and the company's distinctive red triangle became the UK's first registered trademark.
+
+Tripel: Tripel is a term used by brewers or people mainly in the Low Countries, some other European countries, and the U.S. to describe a strong pale ale, loosely in the style of "Westmalle Tripel".  The origin of the term is unknown, though the main theory is that it indicates strength in some way.  It was used in 1956 by the Trappist brewery, Westmalle, to rename the strongest beer in their range, though both the term Tripel and the style of beer associated with the name (strong pale ale), were in existence before 1956.  The style of Westmalle's "Tripel" and the name was widely copied by the breweries of Belgium, and in 1987 another Trappist brewery, the Koningshoeven in the Netherlands, expanded their range with a beer called "La Trappe Tripel", though they also produced a stronger beer they termed "La Trappe Quadrupel".  The term spread to the U.S. and other countries, and is applied by a range of secular brewers to a strong pale ale in the style of "Westmalle Tripel".
+
+Duvel Moortgat Brewery: Duvel Moortgat Brewery (Brouwerij Duvel Moortgat) is a Flemish family-controlled brewery founded in 1871.  Its strong golden pale ale, Duvel, is exported to more than forty countries.  Duvel is Brabantian, Ghent and Antwerp dialect for "devil", the standard Dutch word being "duivel" ] .
+
+Brasserie d'Achouffe: The Brasserie d'Achouffe is a Belgian brewery based in Achouffe.  It was founded in 1982 by two brothers-in-law, Pierre Gobron and Christian Bauweraerts, as a hobby.  In September 2006, the brewery was bought by the brewery group Duvel Moortgat.
+
+Heavy Seas Beer: Heavy Seas Beer is brewed by Clipper City Brewing Company, in Baltimore, Maryland.  The brewery was established by Hugh Sisson in 1995.  Previously, Sisson operated Maryland's first brewpub, Sisson's.  In 2010, the brewery rebranded.  While the name of the company remains Clipper City Brewing Company, all of its beer falls under the Heavy Seas brand.  Heavy Seas hosts tours on most weekends.  It is located at 4615 Hollins Ferry Road, Suite B, in the Halethorpe section of Baltimore.  Heavy Seas currently offers a variety of beer styles in approx. 18 states within the United States.  Several Heavy Seas beers have been awarded and include the following: Cutlass Amber Lager (a repeat medal winner at the Great American Beer Festival from 2006-2010, bronze medal winner at the 2010 World Beer Cup and silver medal winner at the 2012 World Beer Cup as Heavy Seas Märzen), Powder Monkey Pale Ale (silver medal winner at the 2008 Great American Beer Festival and bronze medal winner at the 2010 World Beer Cup as Heavy Seas Pale Ale), Small Craft Warning Uber Pils (bronze medal winner at the 2004 Great American Beer Festival), Gold Ale (gold medal winner at the 2010 World Beer Cup, bronze medal winner at the 2010 Great American Beer Festival and bronze medal winner at the 2014 Great American Beer Festival as Heavy Seas Gold Ale) and Winter Storm Imperial ESB (gold medal winner at the 2008 World Beer Cup).
+
+Gilroy’s Brewery: Gilroy’s Brewery is a microbrewery and restaurant in Muldersdrift, Gauteng, South Africa.  The brewery was founded in 2000 by Stephen Gilroy at his pharmaceutical printing company in Roodepoort, Gauteng.  Gilroy’s Brewery was one of the first microbreweries in South Africa, along with Mitchell's Brewery, Nottingham Road Brewery, and Drayman’s Brewery.  In 2008 the operation was relocated to the current premises at Ngwenya Glass Village in Muldersdrift, where it expanded to include the restaurant, beer garden, and a gift shop.  The brewery produces 5 styles of beer – a lager, pale ale, ruby ale, and a dark ale.  The brewery has recently introduced a ginger beer.
+
+India pale ale: India pale ale (IPA) is a hoppy beer style within the broader category of pale ale.  It has also been referred to as "pale ale as prepared for India", "India ale", "pale India ale", or "pale export India ale".
+
+Question: When was Brasserie d'Achouffe bought by the brewery known for its "Duvel" pale ale?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "acquired_brewery": {
+      "type": "string",
+      "description": "The name of the brewery that was acquired."
+    },
+    "acquiring_brewery": {
+      "type": "string",
+      "description": "The name of the brewery that made the acquisition."
+    },
+    "acquisition_year": {
+      "type": "integer",
+      "description": "The year of the acquisition."
+    },
+    "acquisition_month": {
+      "type": "string",
+      "description": "The month of the acquisition."
+    }
+  },
+  "required": [
+    "acquired_brewery",
+    "acquiring_brewery",
+    "acquisition_year",
+    "acquisition_month"
+  ],
+  "additionalProperties": false
+}

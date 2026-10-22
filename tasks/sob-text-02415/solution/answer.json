@@ -1,0 +1,14 @@
+{
+  "focused_entities": [
+    {
+      "name": "Concrete masonry unit",
+      "main_focus_description": "used in building construction"
+    },
+    {
+      "name": "Synergy Group OJSC",
+      "main_focus_description": "large-scale investments in construction and construction materials, hospitality management, ICT, industry and agriculture"
+    }
+  ],
+  "common_main_focus": "building construction",
+  "number_of_entities_considered": 2
+}

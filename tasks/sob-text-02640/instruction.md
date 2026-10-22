@@ -1,0 +1,82 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Adtalem Global Education: Adtalem Global Education Inc., formerly DeVry Education Group, is a United States corporation based in Downers Grove, Illinois, that operates several for-profit higher education institutions, including Advanced Academics, Becker Professional Education, Carrington College, Chamberlain College of Nursing, DeVry Brasil, DeVry University, American University of the Caribbean, and Ross University Schools of Medicine and Veterinary Medicine.
+
+Carter Career Center: Howard P. Carter Career Center was a high school located in the Fifth Ward area of Houston, Texas, United States.  The school, serving grades 6 through 12, is a part of the Houston Independent School District.  The school served as a vocational school and pregnant girls' school.  Carter Career Center had many students who are single parents.  It had a day-care center that is supported by corporations, the state, the federal government, and foundations.  After the closure of Carter, the building housed the DeVry Advantage Academy.
+
+DeVry University: DeVry University ( ) is an American for-profit college.  The school was founded in 1931 as DeForest Training School, and officially became DeVry University in 2002.
+
+Contemporary Learning Center: Contemporary Learning Center (CLC) was a secondary school located in Houston, Texas, United States.  CLC closed in 2011.  It was replaced by DeVry Advantage Academy, operated in association with DeVry University.
+
+Cyprus College: Cyprus College is a for-profit college in Nicosia, Cyprus.  It has an enrolment of 3,500, and was founded in 1961 by Ioannis Gregoriou as a business school, but has since expanded into a number of other fields, including computer science, graduate studies, and social sciences.  In 2005, Laureate Education, Inc. purchased a 45% stake in the college.  The network of for-profit colleges owned by Laureate Education has infused the college with technical and academic support.  As a result, the College has already submitted an application to the Cypriot Ministry of Education and Culture to establish a private university with the name Cyprus International University.  Approval for this came in September 2007 and the college has changed its name to European University Cyprus.
+
+DeVry Advantage Academy (Texas): DeVry Advantage Academy and CLC at H.P. Carter was a high school in the Fifth Ward of Houston, Texas, operated in conjunction with DeVry University.  It is in the former Carter Career Center/Wheatley High School/E.O. Smith Education Center building.  The school offered students the opportunity to receive a high school diploma and a degree in web graphic design at the same time.  It opened in 2011 and closed in 2012.
+
+Career Education Colleges and Universities: Career Education Colleges and Universities is a Washington, D.C. based trade organization that represented about 1,500 for-profit colleges as of January 2011.  From 2010 to July 2016, it was known as the Association of Private Sector Colleges and Universities, also known by the acronym APSCU; before that, it was called the Career College Association, but changed its name in 2010.  As of July 2015, most large for-profit college chains had left the group in the previous year.
+
+DeVry Advantage Academy (Illinois): DeVry University Advantage Academy is a 2-year, dual degree high school located in Chicago, Illinois.  Operated by partnership with Chicago Public Schools and DeVry University, the program offers students an opportunity to graduate with a high school diploma and an associate degree in either Networking System Administration or Web Graphic Design.  Both high school and college classes are taken at DeVry University Chicago Campus at 3300 N. Campbell Ave.
+
+DeVry Advantage Academy: DeVry Advantage Academy can refer to DeVry University-affiliated high schools in three cities:
+
+For-profit higher education in the United States: For-profit higher education in the United States (known as for-profit college or proprietary education in some instances) refers to higher education educational institutions operated by private, profit-seeking businesses.  Historically, most colleges and universities in the US have been non-profit, but for-profit institutions rapidly grew in number and size from 1972 to 2009.  This also includes culinary arts schools and certain vocational for-profit schools.
+
+Question: What for-profit college operated in conjunction with DeVry Advantage Academy?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "college_name": {
+      "type": "string",
+      "description": "The name of the for-profit college."
+    },
+    "college_type": {
+      "type": "string",
+      "description": "The type of educational institution, e.g., 'for-profit college'."
+    },
+    "associated_academies": {
+      "type": "array",
+      "description": "Details about the DeVry Advantage Academies operated in conjunction with the college.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "academy_identifier": {
+            "type": "string",
+            "description": "A specific identifier or name for the academy instance."
+          },
+          "location": {
+            "type": "string",
+            "description": "The city and state/country where the academy was located."
+          },
+          "operation_details": {
+            "type": "string",
+            "description": "How the academy was operated in relation to the college (e.g., 'in conjunction with', 'by partnership with')."
+          }
+        },
+        "required": [
+          "academy_identifier",
+          "location",
+          "operation_details"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "college_name",
+    "college_type",
+    "associated_academies"
+  ],
+  "additionalProperties": false
+}

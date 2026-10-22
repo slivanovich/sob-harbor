@@ -1,0 +1,11 @@
+{
+  "restaurant_name": "Liberty Tree Tavern",
+  "location_details": {
+    "themed_land": "Liberty Square",
+    "theme_park": "Magic Kingdom",
+    "resort": "Walt Disney World Resort",
+    "city": "Lake Buena Vista",
+    "state": "Florida"
+  },
+  "restaurant_theme": "colonial theme, specifically that of New England"
+}

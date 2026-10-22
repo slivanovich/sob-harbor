@@ -1,0 +1,16 @@
+{
+  "question_topic": "film_genres",
+  "film_comparison": {
+    "film_1": {
+      "title": "Burden of Dreams",
+      "year": 1982,
+      "is_documentary": true
+    },
+    "film_2": {
+      "title": "A Boy Named Sue",
+      "year": 2001,
+      "is_documentary": true
+    }
+  },
+  "both_are_documentaries": true
+}

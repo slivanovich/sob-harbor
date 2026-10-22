@@ -1,0 +1,23 @@
+{
+  "film_title": "Same Love, Same Rain",
+  "release_year": 1999,
+  "director": {
+    "name": "Juan José Campanella"
+  },
+  "starring_actors": [
+    {
+      "name": "Ricardo Darín",
+      "professions": [
+        "Argentine actor",
+        "screenwriter",
+        "film director"
+      ]
+    }
+  ],
+  "film_genre": [
+    "romantic comedy"
+  ],
+  "film_origin": [
+    "Argentine-American"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "person": {
+    "name": "Alyson Cambridge",
+    "profession": "American operatic soprano",
+    "company_of_performance": "Metropolitan Opera",
+    "roles_performed": [
+      {
+        "role_name": "Giannetta",
+        "opera_title": "L'elisir d'amore"
+      },
+      {
+        "role_name": "Flower Maiden",
+        "opera_title": "Parsifal"
+      },
+      {
+        "role_name": "Karolka",
+        "opera_title": "Jenůfa"
+      },
+      {
+        "role_name": "Crobyle",
+        "opera_title": "Thaïs"
+      },
+      {
+        "role_name": "Bianca",
+        "opera_title": "La Rondine"
+      }
+    ]
+  },
+  "opera_details_from_question_constraint": {
+    "opera_title": "Thaïs",
+    "premiere_date": "1894-03-16",
+    "premiere_venue": "Opéra Garnier",
+    "premiere_location": "Paris"
+  },
+  "role_in_constrained_opera_by_person": {
+    "person_name": "Alyson Cambridge",
+    "role_name": "Crobyle",
+    "opera_title": "Thaïs"
+  }
+}

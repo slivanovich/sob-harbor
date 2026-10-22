@@ -1,0 +1,15 @@
+{
+  "film_adaptation": {
+    "title": "Twelfth Night",
+    "year": 1996,
+    "director": {
+      "name": "Trevor Nunn",
+      "role_at_royal_shakespeare_company": "Artistic Director"
+    }
+  },
+  "source_play": {
+    "title": "Twelfth Night: Or What You Will",
+    "author": "William Shakespeare"
+  },
+  "final_answer_author": "William Shakespeare"
+}

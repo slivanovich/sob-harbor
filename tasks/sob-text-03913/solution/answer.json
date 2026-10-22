@@ -1,0 +1,14 @@
+{
+  "species_compared": [
+    {
+      "species_name": "Arundina"
+    },
+    {
+      "species_name": "Guzmania",
+      "max_elevation_meters": 3500
+    }
+  ],
+  "species_with_highest_elevation": "Guzmania",
+  "highest_elevation_value_meters": 3500,
+  "comparison_conclusion": "Guzmania is found at altitudes of up to 3500 m in the Andean rainforests, while no specific elevation information is provided for Arundina in the context."
+}

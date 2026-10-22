@@ -1,0 +1,21 @@
+{
+  "question_topic": "Authors and their profession",
+  "authors_analyzed": [
+    {
+      "name": "John le Carré",
+      "is_novelist": true,
+      "nationality": "British",
+      "birth_year": 1931
+    },
+    {
+      "name": "Philip Roth",
+      "is_novelist": true,
+      "nationality": "American",
+      "birth_year": 1933
+    }
+  ],
+  "conclusion": {
+    "all_authors_are_novelists": true,
+    "reasoning": "The context explicitly states that John le Carré is a 'British author of espionage novels' and Philip Roth is an 'American novelist'."
+  }
+}

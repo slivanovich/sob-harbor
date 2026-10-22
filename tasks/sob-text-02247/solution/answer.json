@@ -1,0 +1,16 @@
+{
+  "common_ground_description": "Boosie Badazz is an American rapper who is featured on the album 'Seen It All: The Autobiography', which is by another American rapper, Jeezy.",
+  "boosie_badazz_details": {
+    "artist_name": "Boosie Badazz",
+    "artist_nationality": "American",
+    "artist_genre": "hip hop"
+  },
+  "album_details": {
+    "album_title": "Seen It All: The Autobiography",
+    "primary_artist_name": "Jeezy",
+    "primary_artist_nationality": "American",
+    "primary_artist_genre": "hip hop",
+    "is_boosie_badazz_featured": true,
+    "featured_as_name": "Lil Boosie"
+  }
+}

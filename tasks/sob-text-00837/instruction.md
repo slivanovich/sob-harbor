@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Missouri Tigers: The Missouri Tigers athletics programs include the extramural and intramural sports teams of the University of Missouri, located in Columbia, Missouri, United States.  The name comes from a band of armed guards called the Fighting Tigers of Columbia who, in 1864, protected Columbia from guerrillas during the Civil War.
+
+1923 Missouri Tigers football team: The 1923 Missouri Tigers football team was an American football team that represented the University of Missouri in the Missouri Valley Intercollegiate Athletic Association (Missouri Valley) during the 1923 college football season.  The team compiled a 2–3–3 record (1–3–2 against Missouri Valley opponents), finished in eighth place in the Missouri Valley conference, and was outscored by all opponents by a combined total of 40 to 31.  Gwinn Henry was the head coach for the first of nine seasons.  The team played its home games at Rollins Field in Columbia, Missouri.
+
+Ed Lindenmeyer: Ed Lindenmeyer (born Edgar William Lindenmeyer; July 18, 1901 – July 24, 1981) was an American football player.  Lindenmeyer attended the Missouri Military Academy (MMA) before enrolling at the University of Missouri (MU).  He played college football at the tackle position for the Missouri Tigers football team from 1924 to 1926.  He was selected by the International News Service (INS), Newspaper Enterprise Association (NEA) and several others as a first-team player on the 1925 College Football All-America Team.  The Associated Press and All-American Board named a second-team All-American.  Lindenmeyer was the University of Missouri's first All-American athlete.  He later became a physical education teacher and the head football coach at Lake Forest High School in Lake Forest, Illinois he served as head football coach from 1935 to 1951 and compiled a 96–27–10 record.
+
+Bert Coan: Elroy Bert Coan III (born July 2, 1940 in Timpson, Texas) is a former American football player.  He is most notable because of his extraordinary speed (9.4 in the 100-yard dash) and size (6'4", 215 lbs) and because he was the central figure in a dispute over the 1960 college football game between the University of Kansas Jayhawks and the University of Missouri Tigers, the second-longest-running rivalry in college football (known as the "Border War").  Coan played for Kansas - and helped the Jayhawks win the 1960 game by a score of 23-7 over Missouri, then-ranked #1.  But later, the Big Eight declared Coan ineligible, due to a recruiting violation by Bud Adams while Coan was still at Texas Christian University (TCU) and forfeited the game to Missouri—thus erasing Missouri's only loss on the field that year.  Missouri counts the 1960 game as a win by forfeit, thus giving it the only undefeated and untied season in school history.  The Big Eight also credited the 1960 game to Missouri.  However, Kansas (and the NCAA) count the game as a Kansas victory.  Ever since, the two universities have disputed the overall win-loss record in the long-running series.
+
+Sam Britts: Sam Britts (born February 28, 1950) is a retired Canadian football player who played for the Edmonton Eskimos, Detroit Wheels, Hamilton Tiger-Cats and BC Lions.  He played college football at the University of Missouri.  He was inducted, along with the 1969 University of Missouri Tigers Football team, into the Missouri Sports Hall of Fame on January 25, 2015.  He is a graduate of Rosary High School in St. Louis, Missouri.
+
+1921 Missouri Tigers football team: The 1921 Missouri Tigers football team was an American football team that represented the University of Missouri in the Missouri Valley Intercollegiate Athletic Association (Missouri Valley) during the 1921 college football season.  The team compiled a 6–2 record (4–2 against Missouri Valley opponents), finished in a tie for second place in the Missouri Valley conference, and outscored all opponents by a combined total of 136 to 50.  James Phelan was the head coach for the second of two seasons.  The team played its home games at Rollins Field in Columbia, Missouri.
+
+1919 Missouri Tigers football team: The 1919 Missouri Tigers football team was an American football team that represented the University of Missouri in the Missouri Valley Intercollegiate Athletic Association (Missouri Valley) during the 1919 college football season.  The team compiled a 5–1–2 record (4–0–1 against Missouri Valley opponents), won the Missouri Valley championship, and outscored all opponents by a combined total of 91 to 42.  John F. Miller was the head coach for his first and only season.  The team played its home games at Rollins Field in Columbia, Missouri.
+
+List of Missouri Tigers head football coaches: The Missouri Tigers football program is a college football team that represents the University of Missouri in the East Division of the Southeastern Conference (SEC) in the National Collegiate Athletic Association (NCAA).  The team has had 31 head coaches since it started playing organized football in 1890 with the nickname "Tigers".  Missouri joined the Western Interstate University Football Association in December 1891, later winning the conference championship three years in a row.  The conference disbanded after the 1897 season and Missouri remained independent until joining the Missouri Valley Intercollegiate Athletic Association in 1907.  After several changes, the conference eventually became the Big Eight Conference.  The Tigers became a charter member of the Big 12 in 1996 when the Big Eight disbanded.  Missouri subsequently left the Big 12 following the 2011 season and joined as the 14th member of the SEC effective for the 2012 season.  The Tigers have played 1,180 games during their 119 seasons.  In those seasons, seven coaches have led Missouri to postseason bowl games: Don Faurot, Chauncey Simpson, Dan Devine, Al Onofrio, Warren Powers, Larry Smith, and Gary Pinkel.  Nine coaches have also won conference championships with the Tigers: Harry Orman Robinson, C. D. Bliss, Bill Roper, Chester Brewer, John F. Miller, Gwinn Henry, Faurot, Simpson and Devine.
+
+1922 Missouri Tigers football team: The 1922 Missouri Tigers football team was an American football team that represented the University of Missouri in the Missouri Valley Intercollegiate Athletic Association (Missouri Valley) during the 1922 college football season.  The team compiled a 5–3 record (4–3 against Missouri Valley opponents), finished in fourth place in the Missouri Valley conference, and outscored all opponents by a combined total of 98 to 90.  Thomas Kelley was the head coach for his first and only season.  The team played its home games at Rollins Field in Columbia, Missouri.
+
+Zach Ville: Zach Ville (born April 24, 1982) is a former American football defensive end.  He played college football for the Missouri Tigers.  He was signed by the Kansas City Chiefs as an undrafted free agent in 2005, and participated in training camp with the team before being released.  He was allocated to the NFL Europa by the Chiefs in January 2006.  He played two seasons (2006–07) for the NFL Europa's Rhein Fire, totaling five sacks and 37 tackles for loss from the defensive end position.  He played for the Saskatchewan Roughriders of the Canadian Football League in 2007.  Prior to the start of the 2008 Arena football season he was signed by the Grand Rapids Rampage.
+
+Question: Zach Ville played college football for the Missouri Tigers named for a band of guards called what? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the football player."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The name of the college football team."
+    },
+    "team_nickname_origin": {
+      "type": "object",
+      "properties": {
+        "origin_entity_name": {
+          "type": "string",
+          "description": "The name of the entity from which the team's nickname originated."
+        },
+        "origin_entity_type": {
+          "type": "string",
+          "description": "The type of entity that inspired the team's nickname."
+        },
+        "origin_event_year": {
+          "type": "integer",
+          "description": "The year the event related to the nickname's origin occurred."
+        },
+        "origin_event_description": {
+          "type": "string",
+          "description": "A description of the event related to the nickname's origin."
+        }
+      },
+      "required": [
+        "origin_entity_name",
+        "origin_entity_type",
+        "origin_event_year",
+        "origin_event_description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "player_name",
+    "team_name",
+    "team_nickname_origin"
+  ],
+  "additionalProperties": false
+}

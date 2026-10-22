@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "record_id": "86cc51d7d29180e1bb47942eaf1f0ca80333639119a602a698f508a4c54aa9d1",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a734cf75542992359bc32f0",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ohio and Erie Canal",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Indiana Central Canal: The Indiana Central Canal was a canal intended to connect the Wabash and Erie Canal to the Ohio River.  It was funded by the Mammoth Internal Improvement Act, Indiana's attempt to take part in the canal-building craze, started by the Erie Canal.  $3.5 million was allocated for the project, the largest piece of the entire $10 million Act.  However, due to the Panic of 1837, Indiana suffered financial difficulties and had to turn over the canal to the state's creditors, and building of the canal was stopped in 1839.  The canal was supposed to extend 296 mi , from Peru, Indiana, to Evansville, Indiana, where it would reach the Ohio River.  It was originally divided into two sections, North and South.  Later, a third section was designated, called the Indianapolis section.  Only eight miles were completed, with eighty additional miles between Anderson, Indiana, and Martinsville, Indiana, having been partially built.\n\nJunction Canal: The Junction Canal was a canal in the states of New York and Pennsylvania in the United States.  The canal was also called the Arnot Canal, after the name of its principal stockholder, John Arnot of Elmira, New York.  The canal was built and operated by a private stock company.  The canal was partly open in 1854, but the entire length was not finished until 1858.  The completed canal was 18 mi long and had 11 locks.  Then intent was to lengthen the reach of the Chemung Canal deeper into Pennsylvania in order to connect to the canal systems there.  Competition with railroads led to diminished use of the canal.  In 1865 the canal was severely damaged by a flood.  In 1866, the stock company was authorized to change its name to the \"Junction Canal and Railroad Company,\" and work commenced in constructing a railroad on its right of way.  The canal was last used in 1871, and was then abandoned.\n\nLow Bridge (song): The popular song \"Low Bridge, Everybody Down\" was written in 1905 by Thomas S. Allen after Erie Canal barge traffic was converted from mule power to engine power, raising the speed of traffic.  Also known as \"Fifteen Years on the Erie Canal\", \"Fifteen Miles on the Erie Canal\", \"Erie Canal Song\", and \"Mule Named Sal\", the song memorializes the years from 1825 to 1880 when the mule barges made boomtowns out of Utica, Rome, Syracuse, Rochester, and Buffalo, and transformed New York into the Empire State.  The tune is sadly nostalgic.\n\nMiami and Erie Canal: The Miami and Erie Canal was a canal in Ohio that ran about 274 mi ; it was constructed from Cincinnati to Toledo to create a water route from the Ohio River to Lake Erie.  Construction on the canal began in 1825 and was completed in 1845 at a cost to the state government of $8,062,680.07.  At its peak, it included 19 aqueducts, three guard locks, 103 canal locks, multiple feeder canals, and a few man-made water reservoirs.  The canal climbed 395 ft above Lake Erie and 513 ft above the Ohio River to reach a topographical peak called the Loramie Summit, which extended 19 mi between New Bremen, Ohio to lock 1-S in Lockington, north of Piqua, Ohio.  Boats up to 80 feet long were towed along the canal by mules, horses, or oxen walking on a prepared towpath along the bank, at a rate of four to five miles per hour.\n\nPennsylvania and Ohio Canal: The Pennsylvania and Ohio Canal, also known as the P & O Canal, the Cross Cut Canal and the Mahoning Canal was a shipping canal which operated from 1840 until 1877 (though the canal was completely abandoned by 1872).  It was unique in that it served to connect canals in two states (the Ohio and Erie Canal in Ohio and the Beaver and Erie Canal in Pennsylvania) and was funded by private interests.\n\nTinkers Creek Aqueduct: Tinkers Creek Aqueduct is an aqueduct that was constructed to bridge the Ohio and Erie Canal over Tinkers Creek near its confluence with the Cuyahoga River in Valley View, Ohio.  It is a relatively rare surviving example of an Ohio and Erie Canal aqueduct.  It was originally constructed in 1825-1827 by, and re-built due to flood damage in 1845 and 1905.  Tinkers Creek Aqueduct was included in a National Historic Landmark district established in 1966, and it was separately listed on the National Register of Historic Places in 1979.  The original Tinkers Creek Aqueduct was a wood plank, steel truss, and Ashlar-sandstone structure constructed in 1827, south of the present aqueduct's location.  Cuyahoga River and Tinkers Creek flooding caused continual damage to the original aqueduct, so successive structures were built in 1845 and 1905 in the present location.  Today, Tinkers Creek Aqueduct is the only aqueduct which remains of the four original aqueducts in the Cuyahoga Valley.  Of Furnace Run Aqueduct, Mill Creek Aqueduct, Peninsula Aqueduct, and (?  Yellow Creek ?)  Aqueduct; Mill Creek Aqueduct, of newer construction, is the only aqueduct which still carries Ohio and Erie Canal water.  After 102 years of flooding, weathering, and deterioration, Tinkers Creek Aqueduct was removed in 2007.  The National Park Service is currently working on Phase II of the project to reconstruct it from newer materials.\n\nErie Canal Lock 52 Complex: Erie Canal Lock 52 Complex is a national historic district located at Port Byron and Mentz in Cayuga County, New York.  The district includes two contributing buildings (the Erie House and the blacksmith shop / mule barn); three contributing engineering structures (Erie Canal Lock 52, culvert, and canal prism of the enlarged Erie Canal); and archaeological sites associated with the canal operations.  Lock 52 was constructed 1849-1853 as part of the Enlarged Erie Canal program.  It remained in operation until the rerouting of the canal under the New York State Barge Canal System in 1917.  The Erie House was built in 1894 and is a two story frame structure that housed a saloon and hotel.\n\nWalhonding Canal: The Walhonding Canal was a canal in Coshocton County, Ohio that was used as a feeder canal for the Ohio and Erie Canal.  A small canal, at only 25 mi long, it was wholly contained within Coshocton County, following the Mohican River from Cavallo south to the confluence with the Kokosing River, which together with the Mohican forms the Walhonding River.  The canal followed the Walhonding River southeast toward Coshocton where it met the Ohio and Erie Canal in Roscoe Village.\n\nOhio and Erie Canal: The Ohio and Erie Canal was a canal constructed during the 1820s and early 1830s in the U.S. state of Ohio.  It connected Akron, Summit County, with the Cuyahoga River near its outlet on Lake Erie in Cleveland, Cuyahoga County, and a few years later, with the River Ohio near Portsmouth, Scioto County, and then connections to other canal systems in Pennsylvania.\n\nSuwannee Canal: The Suwannee Canal (also seen as the Suwanee Canel) was an attempt to drain large portions of the Okefenokee Swamp in Georgia via a canal.  The spelling of the Suwannee River has changed over time.  The single n variant was more common in the past, but the double n spelling is the standard today.",
+    "question": "Does the Suwannee Canal or the Ohio and Erie Canal connect to other canal systems in Pennsylvania?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_canals": {
+          "type": "array",
+          "description": "The canals mentioned in the question.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "canal_connection_status": {
+          "type": "array",
+          "description": "Details about each canal's connection status to Pennsylvania canal systems.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "canal_name": {
+                "type": "string",
+                "description": "The name of the canal."
+              },
+              "connects_to_pennsylvania_systems": {
+                "type": "boolean",
+                "description": "True if the canal connects to other canal systems in Pennsylvania, false otherwise."
+              },
+              "connection_description": {
+                "type": "string",
+                "description": "A description of the connection to Pennsylvania systems, if applicable."
+              }
+            },
+            "required": [
+              "canal_name",
+              "connects_to_pennsylvania_systems"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "canal_with_pennsylvania_connection": {
+          "type": "string",
+          "description": "The name of the canal that connects to other canal systems in Pennsylvania."
+        }
+      },
+      "required": [
+        "question_canals",
+        "canal_connection_status",
+        "canal_with_pennsylvania_connection"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_canals": [
+        "Suwannee Canal",
+        "Ohio and Erie Canal"
+      ],
+      "canal_connection_status": [
+        {
+          "canal_name": "Suwannee Canal",
+          "connects_to_pennsylvania_systems": false
+        },
+        {
+          "canal_name": "Ohio and Erie Canal",
+          "connects_to_pennsylvania_systems": true,
+          "connection_description": "connections to other canal systems in Pennsylvania"
+        }
+      ],
+      "canal_with_pennsylvania_connection": "Ohio and Erie Canal"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "club_name": "Linfield Football Club",
+  "club_type": "semi-professional",
+  "base_location": {
+    "city": "Belfast",
+    "country": "Northern Ireland"
+  },
+  "league_name": "NIFL Premiership"
+}

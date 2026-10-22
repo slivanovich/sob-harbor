@@ -1,0 +1,29 @@
+{
+  "discovery_event": {
+    "model_agent": {
+      "name": "Cindy Kauanui"
+    },
+    "fashion_model": {
+      "name": "Leilani Bishop",
+      "nationality": "American",
+      "modeled_for_companies": [
+        {
+          "company_name": "Esprit",
+          "company_type_description": "publicly owned manufacturer of clothing, footwear, accessories, jewellery and housewares",
+          "is_publicly_owned": true,
+          "product_categories": [
+            "clothing",
+            "footwear",
+            "accessories",
+            "jewellery",
+            "housewares"
+          ],
+          "number_of_retail_stores_worldwide": 900,
+          "number_of_wholesale_locations_globally": 8500
+        }
+      ]
+    }
+  },
+  "question_asked": "What model agent discovered an American fashion model who modeled for a publicly owned manufacturer of clothing, footwear, accessories, jewellery and housewares under the Esprit label that owns 900 retail stores worldwide and distributes products to more than 8,500 wholesale locations around the globe?",
+  "final_answer": "Cindy Kauanui"
+}

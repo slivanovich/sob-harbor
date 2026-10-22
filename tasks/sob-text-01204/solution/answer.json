@@ -1,0 +1,16 @@
+{
+  "television_series_name": "Afro Samurai",
+  "soundtrack_album_title": "Afro Samurai OST",
+  "founding_member_answer": {
+    "name": "GZA",
+    "full_name": "Gary Grice",
+    "role_on_soundtrack": "featured artist",
+    "specific_contribution": "featured on 'Cameo Afro'"
+  },
+  "other_founding_members_involved": [
+    {
+      "name": "RZA",
+      "role_on_soundtrack": "producer"
+    }
+  ]
+}

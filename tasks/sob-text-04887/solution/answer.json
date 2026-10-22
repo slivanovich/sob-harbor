@@ -1,0 +1,11 @@
+{
+  "film_title": "Doctor Strange",
+  "release_year": 2016,
+  "film_type": "superhero film",
+  "producer": "Marvel Studios",
+  "distributor": "Walt Disney Studios Motion Pictures",
+  "actor_information": {
+    "actor_name": "Michael Stuhlbarg",
+    "character_played": "Nicodemus West"
+  }
+}

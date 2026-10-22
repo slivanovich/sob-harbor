@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "e767abf83698be936ed5a78cd02610310b18a098976b425f26816afb60656e4a",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac00ea2554299012d1db58f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Finnish",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Nightwish discography: The discography of the Finnish symphonic metal band Nightwish consists of eight studio albums, one extended play, four live albums, seven compilations, thirteen music videos and twenty one singles.  The band was formed in 1996 by songwriter and keyboardist Tuomas Holopainen, guitarist Emppu Vuorinen, and former vocalist Tarja Turunen; Nightwish's current line-up has six members although Turunen has been replaced by Anette Olzon, and the original bassist, Sami Vänskä, has been replaced by Marco Hietala, who also took over the male vocalist part.  Olzon left the band in 2012 and was replaced by Floor Jansen.\n\nGhanaian nationality law: Ghana amended its nationality law in 2000, to the 2000 Ghana Citizen Act Dual Citizenship Scheme, which came into effect from Friday, 1 November 2002, in accordance with the provisions of the Citizenship Act 2002.  Applicants eligible for dual citizenship are those who hold citizenship of any country in addition to the citizenship of Ghana.  In these instances, all applicants are required by law to provide evidence of their Ghanaian nationality or their country of birth.  Its intention was to increase immigration of skilled labour, but the law has been criticised for not giving full citizens rights as native-born citizens.\n\nEnd of an Era (album): End of an Era is a DVD and double CD from Finnish symphonic metal band Nightwish.  Nuclear Blast recorded their live performance at the Hartwall Areena in Helsinki, Finland, on October 21, 2005, the final concert of a long worldwide tour for their album \"Once\".  During the concert the band was joined on-stage by Lakota musician John Two-Hawks, who performed \"Stone People\" from his album \"Honor\" as an introduction to \"Creek Mary's Blood\", which featured his voice and cedar flutes.  \"End of an Era\" is the final Nightwish production to feature Tarja Turunen on vocals.  She was dismissed by a letter after this concert.\n\nThe First Tour of the Angels: The First Tour of the Angels was a concert tour by Finnish symphonic power metal band Nightwish from December 31, 1997, to November 13, 1998.  Nightwish played only 8 gigs since Jukka Nevalainen and Emppu Vuorinen were waylaid by their mandatory military draft and Tarja Turunen had not finished her studies.  The male vocals in \"Beauty and the Beast\", \"The Carpenter\" and \"Astral Romance\" were sung by Tuomas Holopainen, beside Tarja.  The band was supported by bassist Samppa Hirvonen and the keyboardist Marianna Pellinen during the tour; in 1998, Samppa was replaced by Sami Vänskä.  There is a bootleg of the Helsinki gig called Live at The Tavastia.\n\nTarot (band): Tarot is a heavy metal band from Finland.  They are most famous for the song “Wings of Darkness” from the 1986 album \"Spell of Iron\".  While having enjoyed a broad underground popularity in Finland, the band has never been very famous elsewhere until gaining new success in recent years when their singer and bassist Marco Hietala joined Nightwish in 2002.\n\nAustralian nationality law: Australian nationality law determines who is and who is not an Australian citizen.  The status of Australian nationality or Australian citizenship was created by the \"Nationality and Citizenship Act 1948\", (in 1973 renamed the \"Australian Citizenship Act 1948\") which came into force on 26 January 1949.  The 1948 Act was amended many times, notably in 1973, 1984, 1986 and 2002.  The \"Australian Citizenship Act 2007\" replaced the 1948 Act, commencing on 1 July 2007.\n\nWorld Tour of the Century: World Tour of the Century was a concert tour by Nightwish in 2002 and 2003 to promote their fourth album, \"Century Child\", released on June 24, 2002.  The tour was the debut of Marco Hietala, that replaced Sami Vänskä as bassist in 2001.  A subsequent tour DVD was released, \"End of Innocence\", with a limited release of a live CD made during a concert at Summer Breeze Open Air Festival, in Germany.\n\nJames McIlroy (athlete): James McIlroy (born 30 December 1976) is a British middle distance runner.  He initially represented Ireland before changing his nationality.  When he was 21 years old he showed great promise by finishing fourth over 800 metres in the 1998 European Athletics Championship having taken 14 seconds off his personal best in only 13 months.  Serving a 1-year ban for changing nationality McIlroy still produced the 3rd fastest British All - time 1000 metres behind Sebastian Coe and Steve Cram when finishing 4th in Rieti, (Italy).  In 2000 he won his first of five British Championships and representing Great Britain made the Sydney Olympics semi - final .  Representing Northern Ireland McIlroy managed 6th at the 2002 Manchester Commonwealth Final after getting badly boxed in.  From 2002 onwards McIlroy spent considerable time in South Africa training and after being injured for most of the 2003 - 4 season he again finished 4th at the European Indoor Championships in Valencia in 2005.\n\nBless the Child (song): \"Bless the Child\" is the ninth single by Finnish symphonic metal band Nightwish, released as the second single from their album \"Century Child\".  It is one of two songs which were filmed from the \"Century Child\" album, with other one being \"End of All Hope\".  It was also the first song bassist/vocalist Marco Hietala worked on after he joined the band replacing Sami Vänskä.\n\nMarco Hietala: Marko Tapani \"Marco\" Hietala (born 14 January 1966) is a Finnish heavy metal vocalist, bass guitarist and songwriter.  Internationally, he is most known as the current bass guitarist, male vocalist and secondary composer to Tuomas Holopainen, of the symphonic metal band Nightwish.  He is also the vocalist and bassist as well as composer and lyricist for the heavy metal band Tarot.",
+    "question": "What nationality is the bassist who joined Nightwish in 2002?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "bassist_name": {
+          "type": "string",
+          "description": "The name of the bassist."
+        },
+        "band_name": {
+          "type": "string",
+          "description": "The name of the band the bassist joined."
+        },
+        "year_joined": {
+          "type": "integer",
+          "description": "The year the bassist joined the band."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the bassist."
+        }
+      },
+      "required": [
+        "bassist_name",
+        "band_name",
+        "year_joined",
+        "nationality"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "bassist_name": "Marco Hietala",
+      "band_name": "Nightwish",
+      "year_joined": 2002,
+      "nationality": "Finnish"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

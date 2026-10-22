@@ -1,0 +1,10 @@
+{
+  "station_name": "WKBA",
+  "station_type": "radio station",
+  "station_format": "Religious",
+  "service_areas": [
+    "Roanoke",
+    "Roanoke Valley"
+  ],
+  "region_of_virginia": "southwest Virginia"
+}

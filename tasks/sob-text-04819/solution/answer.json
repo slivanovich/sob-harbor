@@ -1,0 +1,26 @@
+{
+  "person_name": "Barry Orton",
+  "person_professions": [
+    "actor",
+    "musician",
+    "former professional wrestler"
+  ],
+  "has_son_named_bob_orton": false,
+  "known_family_members": [
+    {
+      "name": "Bob Orton Sr.",
+      "relationship_to_barry": "father",
+      "profession": "professional wrestler"
+    },
+    {
+      "name": "Bob Orton Jr.",
+      "relationship_to_barry": "brother",
+      "profession": "professional wrestler"
+    },
+    {
+      "name": "Randy Orton",
+      "relationship_to_barry": "nephew",
+      "profession": "professional wrestler"
+    }
+  ]
+}

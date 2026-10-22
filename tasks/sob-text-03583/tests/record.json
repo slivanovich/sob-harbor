@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "3d5cbe33b72c4859c6e3ef3f13ef6c9ae690ef4202862f7c5b22b303cc623482",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a83229155429940e5e1a978",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Giannis Antetokounmpo",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Dimitris Cheilaris: Dimitris Cheilaris (Greek: Δημήτρης Χείλαρης , ] ; born August 18, 1990) is a Greek professional basketball player playing for Apollon Patras in the Greek A2.  Born in Leonidio, he started his professional career with Amyntas.  Subsequently, he moved to Filathlitikos, where he was a teammate with Giannis Antetokounmpo.  He played one season of top-tier basketball with Rethymno BC, before returning to the second-tier to play for Iraklis Thessaloniki.\n\nJohnny Newman: John Sylvester Newman, Jr. (born November 28, 1963) is an American retired professional basketball player.  A 6' 7\" and 210 lb shooting guard/small forward, Newman starred at the University of Richmond, before going on to play in the National Basketball Association.  In his 16 seasons (1986–2002) in the NBA, he was a member of the Cleveland Cavaliers, New York Knicks, Charlotte Hornets, New Jersey Nets, Milwaukee Bucks, Denver Nuggets, and Dallas Mavericks.\n\nRuben Patterson: Ruben Nathaniel Patterson (born July 31, 1975) is an American former professional basketball player.  During his career, he played as a small forward and shooting guard.  During his college career at the University of Cincinnati, Patterson earned third-team All-American honors and helped lead the Bearcats to Conference USA titles in both of his seasons there.  Drafted by the Los Angeles Lakers in 1998, Patterson began his career with the Greek team AEK Athens BC before joining the Lakers in his rookie season.  Later, he played for the NBA teams Seattle SuperSonics, Portland Trail Blazers, Denver Nuggets, Milwaukee Bucks, and Los Angeles Clippers before ending his career with the Lebanese team Champville SC.\n\nGiannis Antetokounmpo: Giannis Antetokounmpo (Greek: Γιάννης Αντετοκούνμπο , ] ; born December 6, 1994) is a Greek professional basketball player for the Milwaukee Bucks of the National Basketball Association (NBA).  He stands at 6 ft , and while he primarily plays the small forward position, he is equally as effective as a guard due to his sound ball-handling skills.  During the 2015–16 season, he began to shine as the Bucks' primary playmaker.  Antetokounmpo blossomed into an all-round superstar in 2016–17, as he led the Bucks in all five major statistical categories and became the first player in NBA history to finish a regular season in the top 20 in total points, rebounds, assists, steals, and blocks.  He is of Nigerian descent.\n\n1970–71 Milwaukee Bucks season: The 1970–71 Milwaukee Bucks season was the third season for the Bucks.  Milwaukee posted a 66–16 record in only its third year of existence, and its second since getting Kareem Abdul-Jabbar, then named Lew Alcindor.  Key part of the championship season was the acquisition of Oscar Robertson.  Other role players on the Bucks included players such as Bob Dandridge (18.4 ppg) and Jon McGlocklin (15.8 ppg), power forward Greg Smith and key reserves Lucius Allen, Bob Boozer and Dick Cunningham completing the nucleus.  The season included a 20-game winning streak, the NBA's longest at the time, and still ranked fifth all-time.\n\nDavid Thirdkill: David Thirdkill (born April 12, 1960) is an American retired basketball player who was selected by the Phoenix Suns in the first round (15th overall) of the 1982 NBA draft.  A 6 ft small forward from the College of Southern Idaho and Bradley University, Thirdkill played in five NBA seasons from 1982 to 1987.  Born in St. Louis, Missouri and nicknamed \"The Sheriff\", he played for the Suns, Detroit Pistons, Milwaukee Bucks, San Antonio Spurs and Boston Celtics.  He earned a championship ring with the 1985-86 Celtics.\n\nPaul Pressey: Paul Matthew Pressey (born December 24, 1958) is an American former professional basketball player who previously was an assistant coach for the Los Angeles Lakers of the National Basketball Association (NBA).  Pressey is widely, though unofficially, credited with being the originator of the point forward position, combining the attributes of a point guard and forward.  While playing small forward for the Milwaukee Bucks in the 1980s, Pressey took on many of the ball handling duties, even leading the team in assists for five straight years.  He participated in the 1986 NBA Slam Dunk Contest, finishing in 6th place out of 8.\n\nMACC Fund: The MACC Fund - Midwest Athletes Against Childhood Cancer, Inc.- was founded on December 10, 1976, during the retirement of Jon McGlocklin from the Milwaukee Bucks.  Jon's friend, Longtime Milwaukee Bucks Broadcaster Eddie Doucette, and his wife, Karen, had a son, Brett, who was diagnosed with cancer at the age of 2.  Brett's diagnosis coincided with the timing of Jon's retirement.  It was decided to use Jon's departure from professional basketball to announce the start of the MACC Fund.  During a half-time on the floor of the Milwaukee Arena, the MACC Fund came into being.\n\nMarques Johnson: Marques Kevin Johnson (born February 8, 1956) is an American retired professional basketball player.  The small forward played in the National Basketball Association (NBA) from 1977–1989, where was a five-time All-Star.  He spent a majority of his career with the Milwaukee Bucks.\n\nSteve Novak: Steven Michael Novak (born June 13, c. 1983) is an American professional basketball player who last played for the Milwaukee Bucks of the National Basketball Association (NBA).  He is listed as 6'10\", 225 lbs.  He played college basketball at Marquette University.  Novak splits time at both small forward and power forward.  He was the NBA regular season leader in three point percentage during the 2011–12 season.",
+    "question": "Dimitris Cheilaris was a teammate of which Milwaukee Bucks small forward early on in his career?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "teammate_name": {
+          "type": "string",
+          "description": "The name of the Milwaukee Bucks small forward who was a teammate of Dimitris Cheilaris."
+        },
+        "teammate_team": {
+          "type": "string",
+          "description": "The NBA team the identified teammate plays for."
+        },
+        "teammate_position": {
+          "type": "string",
+          "description": "The primary playing position of the identified teammate."
+        },
+        "early_career_team_of_cheilaris": {
+          "type": "string",
+          "description": "The team where Dimitris Cheilaris and the identified teammate played together."
+        }
+      },
+      "required": [
+        "teammate_name",
+        "teammate_team",
+        "teammate_position",
+        "early_career_team_of_cheilaris"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "teammate_name": "Giannis Antetokounmpo",
+      "teammate_team": "Milwaukee Bucks",
+      "teammate_position": "small forward",
+      "early_career_team_of_cheilaris": "Filathlitikos"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

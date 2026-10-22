@@ -1,0 +1,18 @@
+{
+  "magazines_compared": [
+    {
+      "name": "Yankee Magazine",
+      "base_city": "Dublin",
+      "base_state": "New Hampshire",
+      "base_country": "United States"
+    },
+    {
+      "name": "Inc. magazine",
+      "base_city": "New York City",
+      "base_state": "New York",
+      "base_country": "United States"
+    }
+  ],
+  "are_locations_same": false,
+  "comparison_reason": "Yankee Magazine is based in Dublin, New Hampshire, while Inc. magazine is based in New York City, New York. These are different cities."
+}

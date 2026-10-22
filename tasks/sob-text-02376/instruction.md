@@ -1,0 +1,90 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Alexander Emelianenko: Alexander Vladimirovich Emelianenko (Russian: Александр Владимирович Емельяненко , "Aleksandr Vladimirovich Emel'janenko" ] ; born (1981--) 02, 1981 ) is a Russian mixed martial artist.  He is a three-time Russian national Combat Sambo champion and three-time world Combat Sambo champion in the absolute division.  Emelianenko was convicted of aggravated sexual assault in May 2015 and was released early on parole on October 26, 2016.  He is the younger brother of Fedor Emelianenko.
+
+Rustam Khabilov: Rustam Mikailovich Khabilov (Russian: Рустам Микаилович Хабилов ; Kumyk: Гьабилланы Рустам Микаилны уланы ; born November 4, 1986 in Dagestan) is a Russian mixed martial artist and Combat Sambo World Champion of Kumyk descent.  He is a former bodyguard for Eric Brown, member of the Legion Sport Club fight team in Rostov-on-Don and also trains with Jackson's Submission Fighting in Albuquerque, New Mexico.  He fights in the Lightweight division of the Ultimate Fighting Championship.
+
+Magomedrasul Gazimagomedov: Magomedrasul Mukhtarovich Gazimagomedov (Russian: Магомедрасул Мухтарович Газимагомедов ; born April 8, 1991 in Dagestan) is a Russian of Tindian heritage freestyle wrestler.  Grand Master of Sports in Freestyle Wrestling.  He is winner Russian National Freestyle Wrestling Championships 2015.  In the quarterfinals match he beat to World Champion Khetag Tsabolov of North Ossetia–Alania.  European Games champion, who competed in the men's freestyle 70 kg category at the 2015 European Games and won the gold medal.  In preseason he trains with MMA stars Rustam Khabilov and Khabib Nurmagomedov.  He won gold medal at the 2015 World Wrestling Championships at Men's freestyle 70 kg.
+
+Ramazan Emeev: Ramazan Dadaevich Emeev (Russian: Рамазан Дадаевич Эмеев ; born May 20, 1987) is a Russian mixed martial artist of Avar heritage.  He is Combat Sambo World Champion who currently fights in the Middleweight division of the Ultimate Fighting Championship.  Former M-1 Global middleweight champion.
+
+Sergej Grecicho: Sergej Grecicho is a Lithuanian Combat Sambo practitioner, and mixed martial artist who has won a gold medal three times at the Sambo World Championships.  He also is World Pankration Champion.
+
+Islam Makhachev: Islam Ramazanovich Makhachev (Russian: Ислам Рамазанович Махачев ; born October 27, 1991 in Dagestan) is a Russian mixed martial artist, judoka and sambist of Lak origin.  He is a Combat Sambo World Champion, and currently fights in the lightweight division of the Ultimate Fighting Championship.
+
+Igor Yakimov: Igor Yakimov is a World Masters Judo champion, as well as a World Masters sport sambo champion and a medallist at the Combat Sambo world championships.  He is the author of the "Russian Judo" video series and for his "Sambo Leglocks" video series.
+
+Abubakar Nurmagomedov: Abubakar Magomedovich Nurmagomedov (Russian: Абубакар Магомедович Нурмагомедов ; Avar: АбубакIар МухӀамадович НурмухӀамадов ; born November 13, 1989) is a Russian mixed martial artist of Avar heritage, who currently fights in the Welterweight division of the World Series of Fighting.  He is a Combat Sambo World Championships bronze medalist and Russian national combat sambo champion.
+
+Khabib Nurmagomedov: Khabib Abdulmanapovich Nurmagomedov (Russian: Хабиб Абдулманапович Нурмагомедов ; Avar: ХIабиб ГӀабдулманапил НурмухӀамадов ; born September 20, 1988) is an undefeated Russian mixed martial artist of Avar heritage.  He is a two time Combat Sambo World Champion, a wrestler and a judo black belt who currently fights in the Lightweight division of the Ultimate Fighting Championship.  He currently holds one of the longest undefeated streaks in MMA with 24 wins.  As of 17 November 2016, he is ranked the #1 contender in the UFC Lightweight division and #12 in official UFC pound-for-pound rankings and numerous other publications.
+
+Rosen Dimitrov: Rosen Dimitrov (Bulgarian: Росен Димитров ; born May 10, 1982) is a Bulgarian Sambo practitioner who is three times world champion in Combat Sambo.  He is the trainer of the Bulgarian national team of combat sambo.  He is also a mixed martial artist.  He has more than 20 MMA fights.  With his twin brother Rumen Dimitrov they founded the organization TWINS MMA and they have enormous success by producing live events and by giving chance for all young fighters to participate and to show what they can do.
+
+Question: Magomedrasul Gazimagomedov trains in the preseason with which Russian Combat Sambo World Champion?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "main_athlete": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "primary_sport": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "primary_sport"
+      ],
+      "additionalProperties": false
+    },
+    "training_partner": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "championship_title": {
+          "type": "string"
+        },
+        "championship_sport": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "nationality",
+        "championship_title",
+        "championship_sport"
+      ],
+      "additionalProperties": false
+    },
+    "training_period": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "main_athlete",
+    "training_partner",
+    "training_period"
+  ],
+  "additionalProperties": false
+}

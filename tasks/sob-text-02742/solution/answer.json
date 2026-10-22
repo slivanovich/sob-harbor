@@ -1,0 +1,17 @@
+{
+  "both_worked_silent_era": false,
+  "james_tinling_details": {
+    "worked_during_silent_era": true,
+    "earliest_known_silent_film_year": 1928,
+    "silent_era_roles": [
+      "prop boy",
+      "stuntman",
+      "director"
+    ]
+  },
+  "fred_savage_details": {
+    "worked_during_silent_era": false,
+    "birth_year": 1976,
+    "first_notable_work_year": 1988
+  }
+}

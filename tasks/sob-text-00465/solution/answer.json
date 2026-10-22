@@ -1,0 +1,13 @@
+{
+  "query_subject_1": {
+    "name": "Elizabeth Bowen",
+    "spoke_german": false,
+    "evidence": "The context describes Elizabeth Bowen as an Irish novelist and short story writer but provides no information about her speaking German."
+  },
+  "query_subject_2": {
+    "name": "Robert Walser",
+    "spoke_german": true,
+    "evidence": "Robert Walser (writer): Robert Walser ... was a German-speaking Swiss writer."
+  },
+  "final_answer_person": "Robert Walser"
+}

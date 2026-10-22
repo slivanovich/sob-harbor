@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "record_id": "945e3d22c91568e73edd04caae854a0542cc447b9820dcfa96732a0c85d498c4",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae3f00c5542995dadf24266",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Un ballo in maschera",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Un ballo in maschera: Un ballo in maschera \"(A Masked Ball)\" is an opera in three acts by Giuseppe Verdi with text by Antonio Somma.  However, Somma's libretto was itself based on the five act libretto which playwright Eugène Scribe had written for Daniel Auber's 1833 opera, \"Gustave III, ou Le bal masqué\".\n\nAntonio Somma: Antonio Somma (born Udine, 28 August 1809 - died Venice, 8 August 1864) was an Italian playwright who is most well known for writing the libretto of an opera which ultimately became Giuseppe Verdi's \"Un ballo in maschera\" in 1859.  While a student, his tragedy, \"Parisina\", gave him quite a success.\n\nEllen Shade: Ellen Shade is an American operatic soprano from New York.  Her repertoire includes the Kaiserin in \"Die Frau ohne Schatten\", the Marschallin \"Der Rosenkavalier\", Chrysothemis \"Elektra\", Ariadne \"Ariadne auf Naxos\", Arabella, Katya Kabanova, Aida, Desdemona \"Otello\", Amelia \"Un ballo in Maschera\", Amelia \"Simon Boccanegra\", Sieglinde \"Die Walkure\", Elsa \"Lohengrin\", Elisabeth \"Tannhauser\", Eva \"Die Meistersinger von Nurnberg\".  In Europe she has appeared at La Scala Milan, the Royal Opera House, Covent Garden, the Bastille and the Chatelet in Paris and in Vienna, Salzburg Festival, Berlin, Hamburg, Frankfurt [Article Reference], Stuttgart, Amsterdam, Brussels, Geneva and Athens.  In North America she has performed with virtually all the major opera companies, including the Metropolitan Opera New York, Chicago, San Francisco, Los Angeles, Houston, Dallas, Seattle, Santa Fe, and the Canadian Opera in Toronto.\n\nMelodramma: Melodramma (plural: \"melodrammi\") is a 17th-century Italian term for a text to be set as an opera, or the opera itself.  In the 19th-century, it was used in a much narrower sense by English writers to discuss developments in the early Italian libretto, e.g., \"Rigoletto\" and \"Un ballo in maschera\".  Characteristic are the influence of French bourgeois drama, female instead of male protagonists, and the practice of opening the action with a chorus.\n\nMirjana Bohanec: Mirjana Bohanec-Vidović (born October 2, 1939) is a Croatian operatic soprano.  She studied singing at the Academy of Music, University of Zagreb and with Emmy Loose in Vienna.  She made her professional opera debut in 1966 at the Croatian National Theatre in Zagreb, remaining there as a resident artist for two years.  From 1968-1969 she was committed to the Vienna Volksoper.  She returned to the Croatian National Opera in 1970 where she remained for the rest of her career.  Her repertoire mainly consisted of soubrette and lyric coloratura soprano roles, including Adina in Gaetano Donizetti's \"L'elisir d'amore\", Nedda in Ruggero Leoncavallo's \"Pagliacci\", Norina in Donizetti's \"Don Pasquale\", Oscar in Giuseppe Verdi's \"Un ballo in maschera\", Susanna in Wolfgang Amadeus Mozart's \"The Marriage of Figaro\", Violetta in Verdi's \"La Traviata\", and Zerlina in Mozart's \"Don Giovanni\".  She is married to Dr. Ivo Vidović, director of home health in Runjanin street in Zagreb.\n\nGiancarlo Monsalve: Giancarlo Monsalve Leyton (born 4 March 1982) is a Chilean Spinto Tenor.  He is the Cultural Ambassador of Valparaíso UNESCO World Heritage.  He is known for his portrayal as Don José in \"Carmen\", Cavaradossi in \"Tosca\", Turiddu in \"Cavalleria Rusticana\", the title role in \"Don Carlos\", Riccardo in \"Un Ballo in Maschera\", prince Calaf in \"Turandot\" and Don Alvaro in \"La Forza del Destino\"\n\nDer Zwerg: Der Zwerg (\"The Dwarf\"), Op.  17, is an opera in one act by Austrian composer Alexander von Zemlinsky to a libretto by Georg Klaren, freely adapted from the short story \"The Birthday of the Infanta\" by Oscar Wilde.\n\nMargherita Roberti: Margherita Roberti (b. 1925) is an American operatic soprano who had an active international career that spanned from 1948 to 1988.  Although she performed throughout the world, Roberti achieved her greatest success and popularity in Italy.  A dramatic soprano, Roberti drew particular acclaim for her portrayals of Verdi heroines.  Among her signature roles are Amelia in \"Un ballo in maschera\", Elisabetta in \"Don Carlos\", Elena in \"I vespri siciliani\", Odabella in \"Attila\", and the title role in \"Luisa Miller\".  In 1970 she was awarded Order of knight by the Italian government president Giuseppe Sargat\n\nIsabella d'Aspeno: Isabella d'Aspeno is an opera in three acts composed by Pavlos Carrer.  The author of its Italian-language libretto is credited only with the initials \"R.G.S.\".  The opera premiered at the Teatro San Giacomo in Corfu on 7 February 1854.  The following year, the opera had its Italian premiere at Milan's Teatro Carcano where it achieved considerable success with multiple performances over two seasons.  Set in Westphalia during the 14th Century, the plot of \"Isabella d'Aspeno\" bears several thematic similarities to Verdi's later opera, \"Un ballo in maschera\".  Both involve the assassination of a sovereign by his political and romantic rival during a masquerade ball.\n\nLoretta Di Franco: Loretta Di Franco is an American operatic soprano who is chiefly known for her more than 900 performances at the Metropolitan Opera from 1961-1995.  Originally a member of the Met's opera chorus, she eventually was promoted to singing small comprimario roles beginning with one of the pages in Wagner's \"Tannhäuser\" and the peasant girl in \"The Marriage of Figaro\" in 1961.  She went on to win the Metropolitan Opera National Council Auditions in 1965 which led to her first substantial role, Chloe in \"The Queen of Spades\".  She continued to appear annually at the Met for the next 30 years, performing both leading and supporting roles.  Some of the parts she performed at the Met included Annina in \"La traviata\", both the Aunt and Barena in Janáček's \"Jenůfa\", Barbarina and Marcellina in \"The Marriage of Figaro\", Berta in \"The Barber of Seville\", Countess Ceprano in \"Rigoletto\", the Dew Fairy and the Sandman in \"Hansel and Gretel\", Feklusa in \"Káťa Kabanová\", the First Lady in \"The Magic Flute\", the Flower Seller in Britten's \"Death in Venice\", Frasquita in \"Carmen\", Gerhilde in \"Die Walküre\", Giannetta in \"L'elisir d'amore\", Helen in \"Mourning Becomes Electra\", Ines in \"Il trovatore\", Jouvenot in \"Adriana Lecouvreur\", Kate Pinkerton in \"Madama Butterfly\", Laura in \"Luisa Miller\", Lauretta in \"Gianni Schichi\", Lisa in \"La sonnambula\", Marianne in \"Der Rosenkavalier\", Marthe in \"Faust\", Musetta in \"La bohème\", Oscar in \"Un ballo in maschera\", Samaritana in \"Francesca da Rimini\", Woglinde in both \"Das Rheingold\" and \"Götterdämmerung\", Xenia in \"Boris Godunov\", Zerlina in \"Don Giovanni\", and title role in \"Lucia di Lammermoor\".  In 1991 she created the role of the Woman with Child in the world premiere of John Corigliano's \"The Ghosts of Versailles\".",
+    "question": "Does Un ballo in maschera or Der Zwerg have more acts?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "opera_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "number_of_acts": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "number_of_acts"
+          ],
+          "additionalProperties": false
+        },
+        "opera_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "number_of_acts": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "number_of_acts"
+          ],
+          "additionalProperties": false
+        },
+        "comparison_result": {
+          "type": "string",
+          "description": "States which opera has more acts or if they have an equal number."
+        },
+        "opera_with_more_acts": {
+          "type": "string",
+          "description": "The name of the opera that has more acts."
+        }
+      },
+      "required": [
+        "opera_1",
+        "opera_2",
+        "comparison_result",
+        "opera_with_more_acts"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "opera_1": {
+        "name": "Un ballo in maschera",
+        "number_of_acts": 3
+      },
+      "opera_2": {
+        "name": "Der Zwerg",
+        "number_of_acts": 1
+      },
+      "comparison_result": "Un ballo in maschera has more acts than Der Zwerg.",
+      "opera_with_more_acts": "Un ballo in maschera"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

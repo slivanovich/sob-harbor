@@ -1,0 +1,19 @@
+{
+  "event_name": "41st Annual Grammy Awards",
+  "event_year": 1999,
+  "event_date": "February 24, 1999",
+  "event_location": "Shrine Auditorium",
+  "artist_name": "Alanis Morissette",
+  "artist_nationalities": [
+    "Canadian",
+    "American"
+  ],
+  "artist_professions": [
+    "alternative rock singer-songwriter",
+    "musician",
+    "multi-instrumentalist",
+    "record producer",
+    "actress"
+  ],
+  "awards_won_count": 2
+}

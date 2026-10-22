@@ -1,0 +1,12 @@
+{
+  "founding_surgeon": {
+    "name": "René Favaloro",
+    "birth_date": "July 12, 1923",
+    "birth_year": 1923
+  },
+  "university_founded": {
+    "name": "Favaloro University",
+    "founding_year": 1998
+  },
+  "relationship_type": "founded"
+}

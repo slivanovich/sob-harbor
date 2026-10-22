@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Royal House of Boureh Gnilane Joof: The Royal House of Boureh Gnilane Joof (variation : Mbin Boureh Gnilane in Serer) was a royal house founded in the 14th century by Jaraff Boureh Gnilane Joof (var : "Bouré Gnilane Diouf" or "Buré Ñilaan").  He was a member the Serer tribe, from the pre-colonial Kingdom of Sine now part of independent Senegal.  It was the first royal house founded by the Joof family during the Guelowar period (1350 - 1969).  Boureh Gnilane Joof was a royal prince and a Jaraff (var : "Diaraf"), a with the powers of a Prime Minister.  He was neither a Maad a Sinig (king of Sine) nor a Maad Saloum (king of Saloum) but a royal prince who had the title "Jaraff" bestowed upon him by his cousin and brother-in-law - Maad a Sinig Diessanou Faye (king of Sine).  His father Maad Patar Kholleh Joof (the conqueror) was the king of Laa and Teigne of Baol (king of Baol).  Boureh's brothers were the first from this house to have succeeded to the throne of Sine during the Guelowar period.  His name was adopted in his honour to refer to the first royal house founded by the Joof family during this dynastic period.  The Joof family of Sine, from this royal house also ruled in the Kingdom of Saloum (the Joof paternal dynasty of Sine and Saloum) The Joof family also ruled in Baol (the Joof paternal dynasty of Baol).  From the date of its foundation up to the abolition of the Serer monarchies of Sine and Saloum in 1969, at least ten kings from this house had succeeded to the throne of Sine.  As the first royal house of Sine founded by the Joof family in this dynastic period, the Royal House of Boureh Gnilane Joof holds great significance in Senegambian, Joof family and , because all the subsequent royal houses founded by the Joof family (who ruled in three Senegambian kingdoms) branched out from this royal house.
+
+Viscount Downe: Viscount Downe is a title that has been created twice in the Peerage of Ireland.  The first creation came in 1675 for William Ducie.  However, the title became extinct on his death in 1679.  The second creation came in 1680 for John Dawnay.  He had earlier represented Yorkshire and Pontefract in the English House of Commons.  His son, the second Viscount, also represented these constituencies in the House of Commons.  His grandson, the third Viscount, sat as a Member of Parliament for Yorkshire but died from wounds received at the Battle of Campen in 1760.  He was succeeded by his younger brother, the fourth Viscount, who represented Cirencester and Malton in Parliament.
+
+Henry V of England: Henry V (9 August 1386 – 31 August 1422) was King of England from 1413 until his death at the age of 36 in 1422.  He was the second English monarch who came from the House of Lancaster.
+
+Brazilian imperial family: The Brazilian Imperial Family is a royal family and cadet branch of the Portuguese Royal House of Braganza that ruled the Empire of Brazil for 67 years, between 1822 and 1889, after the proclamation of independence by Prince Pedro of Braganza who was later acclaimed as Pedro I, "Constitutional Emperor and Perpetual Defender of Brazil".  The members of the family are dynastic descendants of Emperor Pedro I. Claimants to headship of the post-monarchic Brazilian Imperial legacy descend from Emperor Pedro II, including the senior agnates of two branches of the House of Orléans-Braganza; the so-called "Petrópolis" and "Vassouras" lines.  Prince Pedro Carlos of Orléans-Braganza (born 1945) heads the "Petrópolis" line, while the "Vassouras" branch is led by his second cousin, Prince Luiz of Orléans-Braganza.  Rivalry within the family erupted in 1946 when "Dom" Pedro Gastão (1913–2007) repudiated the renunciation to the throne of his late father, Pedro de Alcântara, Prince of Grão-Pará (1875–1940), for himself and his future descendants, when he made a non-dynastic marriage in 1908.  Pedro de Alcântara was the eldest son of the Princess Imperial Isabel (1846–1921) who, as Pedro II's elder daughter and heir presumptive when he was dethroned, became the last undisputed head of the family after her father's death in exile in 1891.  Pedro Carlos is "Dom" Pedro Gastão's eldest son.  "Dom" Luiz descends from Isabel's younger son, Prince Luís (1878–1920) who, by a Bourbon princess, fathered Prince Pedro Henrique (1909–1981).  Dom Luiz is Pedro Henrique's son by a Bavarian princess and upholds his dynastic claim to the same legacy.
+
+Dunstable Swan Jewel: The Dunstable Swan Jewel is a gold and enamel brooch in the form of a swan made in England or France in about 1400 and now in the British Museum, where it is on display in Room 40.  It was excavated in 1965 on the site of Dunstable Friary, and is presumed to have been intended as a livery badge given by an important figure to his supporters; the most likely candidate is probably the future Henry V of England, who was Prince of Wales from 1399.
+
+Burgess (title): Burgess originally meant a freeman of a borough (England, Wales, Ireland) or burgh (Scotland).  It later came to mean an elected or unelected official of a municipality, or the representative of a borough in the English House of Commons.
+
+William English House: The William English House is a historic farmhouse in the far western portion of the U.S. state of Ohio.  Located along State Route 47 northeast of the village of Versailles in the northeastern corner of Darke County, the house was built in 1881 as the residence of William English, an astronomically-inclined farmer.  English was a native of Ireland who immigrated to the United States in 1823.  Besides farming, English operated a brickworks on his property, and his employees generally lived in the same house as his family.  Consequently, the house is significantly larger than was necessary for the family members alone.
+
+John Trevor (speaker): Sir John Trevor ("c." 1637 – 20 May 1717) was a Welsh lawyer and politician.  He was Speaker of the English House of Commons from 1685 to 1687 (the Loyal Parliament) and from 1689 to 1695.  Trevor also served as Master of the Rolls from 1685 to 1689 and from 1693 to 1717.  His second term as Speaker came to an end when he was expelled from the House of Commons for accepting a substantial bribe.  He remained the most recent Speaker to be forced out of office until Michael Martin resigned in 2009.
+
+Order of Prince Danilo I: The Order of Prince Danilo I of Montenegro (Montenegrin: Орден Књаза Данила I, Orden Knjaza Danila I) was an order of the Principality, and later Kingdom, of Montenegro.  It is currently granted as a dynastic honor by the undisputed head of the House of Petrović-Njegoš, Nicholas Petrović Njegoš II.  Although no longer a state order, recognition is indicated by the acceptance of the former President of Montenegro, Filip Vujanović.  More formal recognition by the Republic of Montenegro is implicit in the 2011 "Law on the Status of the Descendants of the Petrović Njegoš Dynasty", which recognizes the current crown prince as head of the Royal Family and specifically sanctions the use of the royal family's heraldic symbols.  The act also provides the Crown Prince housing and a pension and has been noted as conferring a sort of "quasi restoration" of the throne.  In a May 15th "Pobjeda" newspaper interview, Prince Nikola cited Article 3 of this law as the basis for his May 5th re-institution of the Order, which he emphasized was "historically an extremely valuable Montenegrin decoration."  He went on to explain that the order can be awarded to Montenegrin nationals and worthy foreigners on two general grounds: (1), for support and affirmation of Montenegrin independence and the royal tradition of the Petrovic Njegos dynasty, and (2) to those whose "scientific or social work contributed to the development of culture, art and science."  The Order has since been bestowed on a number of high dignitaries internationally.  In an April 17, 2016 visit to Rome, HRH Prince Nikola II Petrovic Njegoš met with Pope Francis and other high Vatican officials bestowing the dynastic honor on the Cambodian ambassador, His Highness Prince Sisowath Ravivaddhana Monipong, the Montenegrin ambassador to the Holy See Veselin Šuković, as well as the U.S. Ambassador to the Holy See Kenneth Francis Hackett, and the ambassador of Hungary HIRH Eduard von Habsburg-Lothringen, among several other Vatican officials and Italian nobles.  The official Representative of the Royal House and the order is H.E. Giuseppe Tedischi GCDO, who also has the Vatican charge "Addetto di Anticamera di Sua Santità," or Officer of Antechamber of His Holiness.
+
+Caleb Pusey House: The Caleb Pusey House, built in 1683, is the second oldest English house in Pennsylvania open to the public (Wall House in Cheltenham Township is the oldest).  Built in a vernacular English yeoman's style, it is the only remaining house where William Penn is known to have visited.  It stands on the 100 acre near Chester Creek which Penn granted Pusey, a plantation which the latter named "Landing Ford".  It is located in what is now Upland, near Chester.  Since the 1950s, the building and grounds have been owned by the Friends of the Caleb Pusey House, Inc.  The house was restored and the property is operated as a historic house museum.
+
+Question: The man who was Prince of Wales in 1399 came from what dynastic English house?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person who held the title."
+    },
+    "title_held": {
+      "type": "string",
+      "description": "The title held by the person."
+    },
+    "year_title_held": {
+      "type": "integer",
+      "description": "The year the title was held."
+    },
+    "dynastic_house": {
+      "type": "string",
+      "description": "The dynastic house the person belonged to."
+    }
+  },
+  "required": [
+    "person_name",
+    "title_held",
+    "year_title_held",
+    "dynastic_house"
+  ],
+  "additionalProperties": false
+}

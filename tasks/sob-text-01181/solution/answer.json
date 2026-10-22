@@ -1,0 +1,14 @@
+{
+  "player_name": "Pete Sampras",
+  "player_nickname": "Pistol Pete",
+  "tournament_details": {
+    "name": "Paris Open",
+    "year": 1998,
+    "event": "Singles"
+  },
+  "match_result": {
+    "opponent_name": "Greg Rusedski",
+    "outcome": "lost in the final",
+    "score": "6–4, 7–6, 6–3"
+  }
+}

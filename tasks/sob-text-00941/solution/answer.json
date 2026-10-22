@@ -1,0 +1,10 @@
+{
+  "species_name": "Antelope",
+  "is_even_toed_ungulate": true,
+  "habitat_continent": "Africa",
+  "game_reserve_info": {
+    "name": "Mavuradona",
+    "country": "Zimbabwe",
+    "status_declared_year": 1988
+  }
+}

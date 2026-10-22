@@ -1,0 +1,24 @@
+{
+  "actor_name": "Hans \"Dolph\" Lundgren",
+  "nationality": "Swedish",
+  "professions": [
+    "actor",
+    "director",
+    "screenwriter",
+    "producer",
+    "martial artist"
+  ],
+  "film_details": {
+    "title": "The Minion",
+    "release_year": 1998,
+    "director": "Jean-Marc Piché",
+    "genres": [
+      "action",
+      "supernatural horror"
+    ],
+    "countries_of_origin": [
+      "American",
+      "Canadian"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "television_show_name": "SeaChange",
+  "run_details": {
+    "number_of_episodes": 39,
+    "start_year": 1998,
+    "end_year": 2000,
+    "network": "ABC"
+  },
+  "award_winning_actress": {
+    "actress_name": "Kerry Armstrong",
+    "number_of_awards_won_in_same_year": 2,
+    "award_year": 2001,
+    "awards_details": [
+      {
+        "award_category": "Best Actress in a Leading Role",
+        "production_title": "Lantana"
+      },
+      {
+        "award_category": "Best Actress in a Leading Role in a Television Drama",
+        "production_title": "SeaChange"
+      }
+    ]
+  }
+}

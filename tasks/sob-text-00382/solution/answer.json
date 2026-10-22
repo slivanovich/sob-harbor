@@ -1,0 +1,12 @@
+{
+  "film_title": "Dumb and Dumber",
+  "release_year": 1994,
+  "main_actors": [
+    "Jim Carrey",
+    "Jeff Daniels"
+  ],
+  "soundtrack_details": {
+    "song_title": "Crash",
+    "version_on_soundtrack": "The 95 mix"
+  }
+}

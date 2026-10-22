@@ -1,0 +1,15 @@
+{
+  "coach_details": {
+    "name": "Patrick Vieira",
+    "current_role": "head coach",
+    "current_team": "New York City FC"
+  },
+  "player_details": {
+    "name": "An Sung-hun"
+  },
+  "playing_interaction": {
+    "played_for_coach": true,
+    "capacity": "temporary France national team player",
+    "team_played_for": "France national team"
+  }
+}

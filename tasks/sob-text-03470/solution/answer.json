@@ -1,0 +1,10 @@
+{
+  "source_album_name": "Led Zeppelin IV",
+  "source_album_release_date": {
+    "day": 8,
+    "month": "November",
+    "year": 1971
+  },
+  "number_of_outtakes": 3,
+  "destination_album_name": "Physical Graffiti"
+}

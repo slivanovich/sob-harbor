@@ -1,0 +1,12 @@
+{
+  "person_name": "John P. Buchanan",
+  "person_role": "Governor of Tennessee",
+  "marring_event": {
+    "name": "Coal Creek War",
+    "type": "labor uprising",
+    "primary_location": {
+      "county": "Anderson County",
+      "state": "Tennessee"
+    }
+  }
+}

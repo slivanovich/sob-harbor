@@ -1,0 +1,17 @@
+{
+  "author": {
+    "name": "Sun Tzu",
+    "title": "Master Sun",
+    "roles": [
+      "Chinese general",
+      "military strategist",
+      "philosopher"
+    ]
+  },
+  "book": {
+    "title": "The Art of War",
+    "status_in_classics": "lead text",
+    "formalization_year": 1080
+  },
+  "collection_name": "Seven Military Classics"
+}

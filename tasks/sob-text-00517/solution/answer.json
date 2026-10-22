@@ -1,0 +1,15 @@
+{
+  "school_name": "University Preparatory Charter Academy",
+  "founding_year": 2001,
+  "founder_name": "Isaac Haqq",
+  "founding_location_details": {
+    "location_name": "Eastmont Town Center",
+    "location_type": "shopping mall and social services hub",
+    "area_acres": 33,
+    "boundaries": [
+      "Foothill Boulevard",
+      "Bancroft and 73rd Avenues",
+      "Church Street"
+    ]
+  }
+}

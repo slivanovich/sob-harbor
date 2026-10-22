@@ -1,0 +1,14 @@
+{
+  "band_name": "The Human League",
+  "album_details": {
+    "album_name": "Dare",
+    "album_release_year": 1981,
+    "album_studio_position": 3
+  },
+  "single_details": {
+    "single_name": "Don't You Want Me",
+    "single_release_date": "27 November 1981",
+    "single_from_album_position": 4,
+    "chart_performance": "UK/US number one hit"
+  }
+}

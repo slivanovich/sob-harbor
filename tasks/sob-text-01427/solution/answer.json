@@ -1,0 +1,15 @@
+{
+  "film_details": {
+    "title": "Zootopia",
+    "release_year": 2016,
+    "genre": "comedy-adventure",
+    "animation_type": "3D computer-animated",
+    "production_studio": "Walt Disney Animation Studios",
+    "release_company": "Walt Disney Pictures"
+  },
+  "actress_details": {
+    "name": "Octavia Lenora Spencer",
+    "received_acclaim_for_role": true
+  },
+  "question_answer": 2016
+}

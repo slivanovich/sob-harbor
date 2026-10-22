@@ -1,0 +1,19 @@
+{
+  "person_1": {
+    "name": "Cethlenn",
+    "language_origin": "Old Irish",
+    "roles": [
+      "prophetess"
+    ]
+  },
+  "person_2": {
+    "name": "Balor",
+    "title": "king",
+    "associated_group": "Fomorians",
+    "divine_interpretation": "god or personification of drought and blight"
+  },
+  "relationship": {
+    "type": "wife",
+    "description": "Cethlenn was the wife of Balor."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "director": {
+    "name": "Niels Arden Oplev",
+    "nationality": "Denmark",
+    "profession": "writer-director"
+  },
+  "film_remake": {
+    "title": "Flatliners",
+    "release_year": 2017,
+    "original_film_title": "Flatliners"
+  },
+  "relationship": "directed"
+}

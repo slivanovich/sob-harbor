@@ -1,0 +1,14 @@
+{
+  "temple_name": "Birla Mandir",
+  "temple_location": "Shahad, Ulhasnagar Taluka, Maharashtra, India",
+  "film_details": {
+    "film_title": "Tere Naam",
+    "release_year": 2003,
+    "director": "Satish Kaushik",
+    "is_remake": true,
+    "original_film_details": {
+      "original_film_title": "Sethu",
+      "original_film_release_year": 1999
+    }
+  }
+}

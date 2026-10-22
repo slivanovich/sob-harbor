@@ -1,0 +1,11 @@
+{
+  "film": {
+    "title": "Barking Dogs Never Bite",
+    "genre": "dark comedy-drama",
+    "is_directorial_debut": true
+  },
+  "director": {
+    "name": "Bong Joon-ho"
+  },
+  "actor_involved": "Lee Sung-jae"
+}

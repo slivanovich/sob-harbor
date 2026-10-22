@@ -1,0 +1,16 @@
+{
+  "defeated_politician": {
+    "name": "Jim Sasser",
+    "party": "Democratic"
+  },
+  "defeating_politician": {
+    "name": "Bill Frist",
+    "party": "Republican",
+    "birth_year": 1952
+  },
+  "election_details": {
+    "year": 1994,
+    "office": "United States Senator",
+    "location": "Tennessee"
+  }
+}

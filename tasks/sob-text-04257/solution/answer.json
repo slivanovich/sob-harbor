@@ -1,0 +1,15 @@
+{
+  "trumpet_player_name": "Manfred Moch",
+  "orchestra_leader": {
+    "common_name": "Bert Kaempfert",
+    "full_name": "Berthold Heinrich Kämpfert",
+    "nationality": "German",
+    "profession": [
+      "orchestra leader",
+      "music producer",
+      "songwriter"
+    ]
+  },
+  "role_in_orchestra": "featured solo trumpet player",
+  "time_period": "1960s"
+}

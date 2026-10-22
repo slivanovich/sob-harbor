@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Head on the Door: The Head on the Door is the sixth studio album by British alternative rock band the Cure, released in August 1985 on record label Polydor.  Preceded by the single "In Between Days" which had reached No. 15 on the UK Singles Chart, "The Head on the Door" was described by "Melody Maker" as "a collection of pop songs", while "PopMatters" declared that it defined alternative rock.  With its variety of styles, it allowed the group to reach a wider audience in both Europe and North America.  In the United Kingdom, it quickly became their most successful album to date, climbing to No. 7 on the albums chart.
+
+The Cure: 'Reflections': The Cure: "Reflections" refers to a set of shows in which The Cure played their first three albums "Three Imaginary Boys", "Seventeen Seconds" and "Faith" in full at the VividLive festival at the Sydney Opera House on 31 May and 1 June 2011.  All three albums were played in their entirety on both nights, along with several other tracks from the same era.
+
+Twisted Logic Tour: The Twisted Logic Tour was a global concert tour by British alternative rock band Coldplay in support of their third studio album, "X&Y" (2005).  The year-long tour took the band across Europe and their native United Kingdom, as well as to the United States and Canada.  The main legs of the tour concluded in July 2006 after shows in Asia & Australia, with the band resting for a lengthly period of time, and beginning production of their fourth studio album "Viva La Vida or Death and All His Friends" in November.  In the beginning of 2007, a final leg in Latin America concluded the tour entirely in March, after about a dozen shows.  Pollstar reported that the 2005 North American leg grossed an estimated $24.1 million.  The second leg of the North American tour ended 6 April 2006 at the Wachovia Center in Philadelphia.
+
+The Top (album): The Top is the fifth studio album by British alternative rock band the Cure, released on 22 May 1984 by record label Fiction.  Shortly after its release, the Cure embarked on a major UK tour culminating with a three-night residency at the Hammersmith Odeon in London.
+
+Seventeen Seconds: Seventeen Seconds is the second studio album by British alternative rock band the Cure, recorded at Morgan Studio and released on 22 April 1980 by Fiction Records.  For "Seventeen Seconds", Robert Smith co-produced for the first time with Mike Hedges.  After the departure of original bassist Michael Dempsey, Simon Gallup became an official member along with keyboardist Matthieu Hartley.  Single "A Forest" was the band's first entry in the Top 40 of the UK Singles Chart.
+
+Trilogy: Dawn: Trilogy: Dawn is the sixth album from British alternative rock band InMe.  The album was released in the UK on 4 May 2015.  The album is the first instalment of three albums in a trilogy.  The second instalment, Trilogy: Sentience, is set to be released in 2017.  The third and final instalment will be entitled Trilogy: Quietus.
+
+Faith (The Cure album): Faith is the third studio album by British alternative rock band the Cure, released on 14 April 1981 by record label Fiction.  Preceded by the single "Primary", the album was a commercial success in the UK, peaking at number 14 and staying in the albums chart for 8 weeks.  It was mostly well received by critics.
+
+The Cure (The Cure album): The Cure is the twelfth studio album by British alternative rock band The Cure.  The album was released on 29 June 2004 by record label Geffen, and promoted with the single "The End of the World".  The album was entirely produced by American producer Ross Robinson, known for his work with bands like Korn, Slipknot, and Limp Bizkit.
+
+Pornography (album): Pornography is the fourth studio album by British alternative rock band the Cure, released on 4 May 1982 by the record label Fiction.  Preceded by the non-album single "Charlotte Sometimes" late the previous year, "Pornography" was the band's first album with a new producer, Phil Thornalley, and was recorded at RAK Studios from January to April.  The sessions saw the group on the brink of collapse, with heavy drug use, band in-fighting and group leader Robert Smith's depression fuelling the album's musical and lyrical content.  "Pornography" represents the conclusion of the group's early dark, gloomy musical phase which began with "Seventeen Seconds" in 1980.
+
+Train discography: American pop rock band Train has released ten studio albums, two live albums, one video album, four extended plays, 30 singles, four promotional singles, and 26 music videos.  The band independently released their eponymous debut studio album in 1996, two years after their formation.  In February 1998, the band signed to Aware Records and Columbia Records and re-released the album under the two labels.  Three singles were released from "Train"; the album's second single, "Meet Virginia", peaked at number 20 on the US "Billboard" Hot 100.  The album peaked at number 76 on the US "Billboard" 200 and was certified platinum by the Recording Industry Association of America (RIAA).  In the period following the release of "Train", producer Brendan O'Brien started working with the band in a partnership that would last for three albums.  The band released their second studio album "Drops of Jupiter" in March 2001; it was preceded by the release of its lead single, "Drops of Jupiter (Tell Me)".  The single became a commercial success, peaking at number five on the US "Billboard" Hot 100 and also becoming a top ten hit in Australia, the Netherlands and the United Kingdom.  "Drops of Jupiter (Tell Me)" also won an award for Best Rock Song at the 44th Grammy Awards.  The album peaked at number six on the "Billboard" 200, earning a double platinum certification from the RIAA. " She's on Fire", the third single from "Drops of Jupiter", achieved moderate success in Australia and the UK.  Train's third studio album, "My Private Nation", was released in June 2003.  It peaked at number six on the "Billboard" 200 and was certified platinum by the RIAA.  The album's first two singles, "Calling All Angels" and "When I Look to the Sky", peaked at numbers 19 and 74 respectively on the "Billboard" Hot 100.  The band released their fourth studio album "For Me, It's You" in January 2006.  The album peaked at number 10 on the "Billboard" 200 and spawned three singles.
+
+Question: The Cure: 'Reflections, refers to a set of shows in which The Cure played their first three albums, which is the third studio album, by British alternative rock band?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "event_name": {
+      "type": "string",
+      "description": "The name of the event where the albums were played."
+    },
+    "album_details": {
+      "type": "object",
+      "properties": {
+        "album_title": {
+          "type": "string",
+          "description": "The title of the third studio album."
+        },
+        "album_number": {
+          "type": "integer",
+          "description": "The sequential number of the album in the band's studio discography."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the album was released."
+        },
+        "record_label": {
+          "type": "string",
+          "description": "The record label that released the album."
+        }
+      },
+      "required": [
+        "album_title",
+        "album_number",
+        "release_year",
+        "record_label"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "band_name",
+    "event_name",
+    "album_details"
+  ],
+  "additionalProperties": false
+}

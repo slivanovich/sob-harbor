@@ -1,0 +1,30 @@
+{
+  "person_name": "Gustaf Dalén",
+  "nationality": "Swedish",
+  "birth_year": 1869,
+  "death_year": 1937,
+  "nobel_prize_winner": true,
+  "invented_products": [
+    {
+      "product_name": "AGA cooker",
+      "invention_year": 1922
+    },
+    {
+      "product_name": "Dalén light"
+    }
+  ],
+  "company_affiliations": [
+    {
+      "company_name": "AGA company",
+      "role": "founder"
+    },
+    {
+      "company_name": "AGA AB",
+      "role": "instrumental in the success"
+    },
+    {
+      "company_name": "Swedish AGA company",
+      "role": "chief engineer"
+    }
+  ]
+}

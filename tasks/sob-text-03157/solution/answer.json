@@ -1,0 +1,14 @@
+{
+  "movie": {
+    "english_title": "The Taming of the Shrew",
+    "italian_title": "La Bisbetica domata",
+    "release_year": 1967
+  },
+  "director": {
+    "name": "Franco Zeffirelli",
+    "nationality": "Italian",
+    "political_role": "senator",
+    "relationship_to_leonardo_da_vinci": "distant relative"
+  },
+  "final_answer": "La Bisbetica domata"
+}

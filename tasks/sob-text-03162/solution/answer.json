@@ -1,0 +1,15 @@
+{
+  "musical_acts": [
+    {
+      "name": "APB",
+      "active_start_year": 1979
+    },
+    {
+      "name": "Hozier",
+      "active_start_year": 2013
+    }
+  ],
+  "first_active_act_name": "APB",
+  "first_active_year": 1979,
+  "comparison_successful": true
+}

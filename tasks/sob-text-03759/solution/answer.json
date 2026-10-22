@@ -1,0 +1,18 @@
+{
+  "union_year": 1603,
+  "union_details": {
+    "union_type": "personal union",
+    "kingdoms_involved": [
+      "Scotland",
+      "England",
+      "Ireland"
+    ],
+    "accession_monarch": "James VI of Scotland"
+  },
+  "related_monarch_death": {
+    "monarch_name": "Elizabeth I",
+    "death_year": 1603,
+    "monarch_role": "Queen of England and Ireland"
+  },
+  "is_death_year_same_as_union_year": true
+}

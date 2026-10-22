@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "bbb5b3d720cf5ac01945cdf9f368c43e6e21e44611bced9fb1570593ad1d8b63",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a763ef5554299109176e6dc",
+    "source_dataset": "hotpotqa",
+    "source_answer": "the Morrison Bowmore Distillers facility at Springburn Bond, Glasgow",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Drambuie: Drambuie is a golden coloured, 40% ABV liqueur made from scotch whisky, honey, herbs and spices.  The brand had been owned by the MacKinnon family for a hundred years but was bought by William Grant & Sons in 2014.  It has been produced under contract at the Morrison Bowmore Distillers facility at Springburn Bond, Glasgow since 2010.\n\nRusty Nail (cocktail): A Rusty Nail is made by mixing Drambuie and Scotch whisky.  The drink was included in Difford's Guide Top 100 Cocktails.\n\nCashew pie: Cashew pie is a pie prepared with cashews as a primary ingredient.  Whole or chopped cashews may be used, or both.  It may be prepared with a sweet filling base prepared with corn syrup, sugar and eggs, similar to how pecan pie filling is prepared.  It may be prepared using chocolate and fruits such as raspberry as an ingredient, and may be served topped with whipped cream or caramel.  It may be served hot.\n\nList of banana dishes: This is a list of banana dishes and foods in which banana or plantain is used as a primary ingredient.  Foods prepared with banana or plantain as a primary ingredient are also included in this list.  A banana is an edible fruit produced by several kinds of large herbaceous flowering plants in the genus \"Musa\".  (In some countries, bananas used for cooking may be called plantains.)  The fruit is variable in size, color and firmness, but is usually elongated and curved, with soft flesh rich in starch covered with a rind which may be green, yellow, red, purple, or brown when ripe.  The fruits grow in clusters hanging from the top of the plant.\n\nBean dip: Bean dip is a type of dipping sauce made using beans or refried beans as a primary ingredient.  It is typically served with tortilla chips, and can also be served with other foods such as crackers and crudités.  Various types of beans are used, and fresh-cooked, canned or flaked beans can be used.  Various additional ingredients are used in its preparation, such as onion, garlic, chili peppers and spices, and it is sometimes garnished with some ingredients.  Bean dip can be served cold, at room temperature, or hot.  Bean dip is sometimes used as an ingredient in the preparation of other dishes such as burritos and quesadillas.\n\nAnchovy paste: Anchovy paste is a fish paste food product prepared using anchovies as a primary ingredient.  It is used as a condiment and as an ingredient in various dishes, such as Scotch woodcock, and is a mass-produced product.  It has been used for centuries to provide flavor to foods and as a source of nutrients, and it is a part of the cuisines of Great Britain, Italy, the Philippines and Vietnam.  It is a major export product of Morocco.\n\nList of coffee dishes: This is a list of coffee dishes, which includes foods that use coffee as a primary ingredient, and for which coffee is an essential ingredient.  Coffee beverages are omitted from this list.\n\nList of strawberry dishes: This is a list of strawberry dishes, foods and beverages, which use strawberry as a primary ingredient.  Several desserts use strawberries as a main ingredient, and strawberries are also used as a topping on some foods, such as French toast, waffles and pastries.\n\nMushroom ketchup: Mushroom ketchup is a style of ketchup (also spelled \"catsup\") that is prepared with mushrooms as its primary ingredient.  Originally, ketchup in the United Kingdom was prepared with mushrooms as a primary ingredient, instead of tomato, the main ingredient in contemporary preparations of ketchup.  Historical preparations involved packing whole mushrooms into containers with salt.  It is used as a condiment and may be used as an ingredient in the preparation of other sauces and other condiments.  Several brands of mushroom ketchup were produced and marketed in the United Kingdom, some of which were exported to the United States, and Geo Watkins Mushroom Ketchup continues to exist in contemporary times as a commercially mass-produced product.\n\nList of fruit dishes: This is a list of fruit dishes.  Fruit dishes are those that use fruit as a primary ingredient.  Condiments prepared with fruit as a primary ingredient are also included in this list.",
+    "question": "Where has the Rusty Nail's primary ingredient, Drambuie, been produced since 2010?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "product_name": {
+          "type": "string",
+          "description": "The name of the product being produced."
+        },
+        "production_location": {
+          "type": "object",
+          "properties": {
+            "facility_name": {
+              "type": "string",
+              "description": "The name of the production facility."
+            },
+            "specific_address_detail": {
+              "type": "string",
+              "description": "Specific detail about the address or area within the city."
+            },
+            "city": {
+              "type": "string",
+              "description": "The city where the production facility is located."
+            }
+          },
+          "required": [
+            "facility_name",
+            "specific_address_detail",
+            "city"
+          ],
+          "additionalProperties": false
+        },
+        "production_start_year": {
+          "type": "integer",
+          "description": "The year production started at this location."
+        },
+        "is_cocktail_ingredient": {
+          "type": "boolean",
+          "description": "Indicates if the product is an ingredient in a cocktail mentioned in the context."
+        },
+        "cocktail_name": {
+          "type": "string",
+          "description": "The name of the cocktail for which this product is an ingredient."
+        }
+      },
+      "required": [
+        "product_name",
+        "production_location",
+        "production_start_year",
+        "is_cocktail_ingredient",
+        "cocktail_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "product_name": "Drambuie",
+      "production_location": {
+        "facility_name": "Morrison Bowmore Distillers facility",
+        "specific_address_detail": "Springburn Bond",
+        "city": "Glasgow"
+      },
+      "production_start_year": 2010,
+      "is_cocktail_ingredient": true,
+      "cocktail_name": "Rusty Nail"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

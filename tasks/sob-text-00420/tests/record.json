@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "record_id": "8fa9fb259d34cc6bf4f79bdcd6039052bccbdb160b6ebd65a7e44764ceb25a62",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a79d2cf554299148911fa65",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Maxine Waters",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Maxine Waters: Maxine Moore Waters (born August 15, 1938) currently serves as the U.S. Representative for California 's 43 congressional district , and previously served the 35th and 29th districts, serving in Congress since 1991.  A member of the Democratic Party, she is the most senior of the 12 black women currently serving in the United States Congress, and is a member and former chair of the Congressional Black Caucus.  Before becoming a member of Congress she served in the California Assembly, to which she was first elected in 1976.  As an Assembly member, Waters advocated for divestment from South Africa's apartheid regime.  In Congress, she is an outspoken opponent of the Iraq War and Donald Trump.\n\nCalifornia's 43rd congressional district: California's 43rd congressional district is a congressional district in the U.S. state of California that is represented by Democrat Maxine Waters .  The district is centered in South Los Angeles County and includes portions of the Cities of Los Angeles, Carson, Gardena and Torrance.  It includes the entirety of the cities of Hawthorne, Lawndale, Inglewood and Lomita.\n\nKaren Bass: Karen Ruth Bass (born October 3, 1953) is an American Democratic politician.  She represents California's 37th congressional district in the United States House of Representatives; she was first elected in 2010.  In redistricting following the 2010 census, the district was renumbered from  to  .  Bass represented the 47th district in the California State Assembly 2004–2010, and was Speaker of the California State Assembly 2008–2010 (second woman, third African American speaker).\n\nNew York's 43rd congressional district: The 43rd Congressional District of New York was a congressional district for the United States House of Representatives in New York.  It was created in 1913 as a result of the 1910 Census.  It was eliminated in 1963 as a result of the 1960 Census.  It was last represented by Charles E. Goodell who was redistricted into the 38th District.\n\nAshwin Madia: Jigar Ashwin Madia, known as Ashwin Madia (born March 3, 1978), is an American attorney and Iraq War veteran who ran for the United States Congress in Minnesota's 3rd congressional district in 2008.  He won the endorsement of the Minnesota Democratic Farmer Labor Party (DFL) against other candidates including State Senator Terri Bonoff (DFL); the only announced candidate for the Republican nomination was Erik Paulsen.\n\n43rd Battalion (Australia): The 43rd Battalion was an Australian Army infantry unit that was originally formed during the First World War as part of the all-volunteer Australian Imperial Force.  Raised in early 1916, the battalion subsequently fought in the trenches of the Western Front from late 1916 until the end of the war in November 1918.  After the war, the 43rd was re-raised as a part-time unit in South Australia, serving until 1930 when it was merged with the 48th Battalion.  During the Second World War, the 43rd was briefly re-raised between 1942 and 1944, but did not see action before it was disbanded.  After the war, the 43rd and 48th were once again merged, existing until 1960 when they became part of the Royal South Australia Regiment.\n\nJoe Heck: Joseph John “Joe” Heck (born October 30, 1961) is an American politician, physician, and U.S. Army Brigadier General who had served as the U.S. Representative for Nevada's 3rd congressional district from 2011 to 2017.  Heck, a member of the Republican Party, is a board-certified physician and served as a Nevada State Senator from 2004-08.  He ran unsuccessfully against Democrat Catherine Cortez Masto in the general election for the open Nevada United States Senate seat in 2016.  In the same year, Heck made headlines by joining a long list of Republicans who opposed the GOP nominee for President, Donald Trump.\n\nRico Oller: Thomas \"Rico\" Oller (born July 16, 1958) is a Republican U.S. politician from California.  He served in the California State Assembly, representing the 4th District from 1996 to 2000, and the California State Senate, representing the 1st district from 2000 to 2004.  In 2004, Oller ran for Congress in California's 3rd congressional district, but narrowly lost the Republican primary to former California Attorney General Dan Lungren.  On January 10, 2008, Oller again ran for Congress, this time in California's 4th congressional district, for a seat being vacated by retiring Congressman John Doolittle.  He faced opposition from former Congressman Doug Ose.  On March 4, 2008, Oller dropped out of the race when California State Senator Tom McClintock (R-Thousand Oaks) announced that he was running for Doolittle's seat.  In a statement, Oller said his decision was \"a bitter pill indeed for me to swallow.\"  But, he said he was endorsing McClintock to prevent the election of Ose, whom he labeled as \"an unarguably liberal Republican.\"  Oller ran for the newly former 5th Assembly District in 2012 facing Madera County Supervisor Frank Bigelow in the November general election.  Oller lost to Bigelow by 5.7%.\n\nElan Carr: Elan Sherod Carr (born November 25, 1968) is an American attorney, criminal gang prosecutor at the Los Angeles County District Attorney's office.  He is also a JAG Corps officer in the U.S. Army Reserve and a Iraq War veteran.  He was the 2014 Republican nominee in the general election to succeed retiring U.S. Rep. Henry Waxman in California's 33rd congressional district in the United States House of Representatives.\n\nBrad Sherman: Bradley James Sherman (born October 24, 1954) is an American politician.  He has been a Democratic member of the United States House of Representatives since 1997.  He currently represents California's 30th congressional district within the San Fernando Valley, in Los Angeles County, California.",
+    "question": "Who represents California's 43rd congressional district and is outspoken against the Iraq War and Donald Trump?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "representative_name": {
+          "type": "string",
+          "description": "The full name of the U.S. Representative."
+        },
+        "congressional_district": {
+          "type": "string",
+          "description": "The specific congressional district represented."
+        },
+        "state": {
+          "type": "string",
+          "description": "The U.S. state the district is in."
+        },
+        "political_party": {
+          "type": "string",
+          "description": "The political party the representative belongs to."
+        },
+        "opposes_iraq_war": {
+          "type": "boolean",
+          "description": "Indicates if the representative is an outspoken opponent of the Iraq War."
+        },
+        "opposes_donald_trump": {
+          "type": "boolean",
+          "description": "Indicates if the representative is an outspoken opponent of Donald Trump."
+        },
+        "years_in_congress_since": {
+          "type": "integer",
+          "description": "The year the representative began serving in Congress."
+        }
+      },
+      "required": [
+        "representative_name",
+        "congressional_district",
+        "state",
+        "political_party",
+        "opposes_iraq_war",
+        "opposes_donald_trump",
+        "years_in_congress_since"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "representative_name": "Maxine Waters",
+      "congressional_district": "43rd",
+      "state": "California",
+      "political_party": "Democratic Party",
+      "opposes_iraq_war": true,
+      "opposes_donald_trump": true,
+      "years_in_congress_since": 1991
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

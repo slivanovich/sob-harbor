@@ -1,0 +1,10 @@
+{
+  "movie_title": "Schindler's List",
+  "release_year": 1993,
+  "subject_person": {
+    "name": "Oskar Schindler",
+    "relationship_to_emilie_schindler": "husband"
+  },
+  "based_on_novel": "Schindler's Ark",
+  "director": "Steven Spielberg"
+}

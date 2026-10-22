@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+United Arab Emirates: The United Arab Emirates ( ; UAE; Arabic: دولة الإمارات العربية المتحدة‎ ‎ "Dawlat al-Imārāt al-'Arabīyah al-Muttaḥidah "), sometimes simply called the Emirates (Arabic: الإمارات‎ ‎ "al-Imārāt "), is a federal absolute monarchy in Western Asia at the southeast end of the Arabian Peninsula on the Persian Gulf, bordering Oman to the east and Saudi Arabia to the south, as well as sharing maritime borders with Qatar to the west and Iran to the north.  In 2013, the UAE's population was 9.2 million, of which 1.4 million are Emirati citizens and 7.8 million are expatriates.
+
+Persian Gulf: The Persian Gulf (Persian: خلیج فارس‎ , "Xalij-e Fârs ", 'Gulf of Fars' ‎ ) is a mediterranean sea in Western Asia.  The body of water is an extension of the Indian Ocean (Gulf of Oman) through the Strait of Hormuz and lies between Iran to the northeast and the Arabian Peninsula to the southwest.  The Shatt al-Arab river delta forms the northwest shoreline.
+
+List of companies of Qatar: Qatar is a sovereign country located in Western Asia, occupying the small Qatar Peninsula on the northeastern coast of the Arabian Peninsula.  Its sole land border is with Saudi Arabia to the south, with the rest of its territory surrounded by the Persian Gulf.  A strait in the Persian Gulf separates Qatar from the nearby island country of Bahrain, as well as sharing maritime borders with the United Arab Emirates and Iran.
+
+Qatar: Qatar ( , , or ; Arabic: قطر‎ ‎ "Qatar " ] ; local vernacular pronunciation: ] ), officially the State of Qatar (Arabic: دولة قطر‎ ‎ "Dawlat Qatar "), is a sovereign country located in Western Asia, occupying the small Qatar Peninsula on the northeastern coast of the Arabian Peninsula.  Its sole land border is with Saudi Arabia to the south, with the rest of its territory surrounded by the Persian Gulf.  An arm of the Persian Gulf separates Qatar from the nearby island country of Bahrain.
+
+Minister of State for Happiness (UAE): Minister of State for Happiness (Arabic: وزارة السعادة‎ ‎ ) is a Minister of State in the United Arab Emirates Cabinet, which oversees the UAE plans, programs and policies to achieve a happier society.
+
+List of companies of Bahrain: Bahrain is a small Arab monarchy in the Persian Gulf.  Bahrain consists of a group of islands between the Qatar peninsula and the north eastern coast of Saudi Arabia.  It is an island country situated near the western shores of the Persian Gulf in the Middle East.  It is a small archipelago centered on Bahrain Island, its largest land mass.  It is just 23 km east off Saudi Arabia, connected to it through the King Fahd Causeway.  The peninsula of Qatar is also nearby, about 50 km to the southeast across the Gulf of Bahrain.  Iran lies 200 km to the north across the Persian Gulf.  The population in 2010 stood at 1,234,567, including 666,172 non-nationals.  It is 780 km in size, making it the third smallest nation in Asia after the Maldives and Singapore.
+
+Oman: Oman ( ; Arabic: عمان‎ ‎ "ʻumān " ] ), officially the Sultanate of Oman (Arabic: سلطنة عُمان‎ ‎ "Salṭanat ʻUmān" ), is an Arab absolute monarchy country on the southeastern coast of the Arabian Peninsula.  Holding a strategically important position at the mouth of the Persian Gulf, the country shares land borders with the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen to the southwest, and shares marine borders with Iran and Pakistan.  The coast is formed by the Arabian Sea on the southeast and the Gulf of Oman on the northeast.  The Madha and Musandam exclaves are surrounded by the UAE on their land borders, with the Strait of Hormuz (which it shares with Iran) and Gulf of Oman forming Musandam's coastal boundaries.
+
+List of Arabian Peninsula tropical cyclones: The Arabian Peninsula is a peninsula between the Red Sea, the Arabian Sea, and the Persian Gulf.  There are 57 known tropical cyclones that affected the peninsula, primarily Yemen and Oman.  For convenience, storms are included that affected the Yemeni island of Socotra.  Most of the tropical cyclones originated in the Arabian Sea, the portion of the Indian Ocean north of the equator and west of India.  The remainder formed in the Bay of Bengal off India's east coast.  Collectively, the 57 storms have caused at least US$5.7 billion in damage and 1,662 deaths.  The strongest and most damaging cyclone was Cyclone Gonu, which caused US$4 billion in damage and 50 fatalities when it struck Oman in 2007.  Tropical cyclone damage in the Arabian Peninsula is chiefly due to flooding.
+
+Persian Gulf Basin: The Persian Gulf Basin, is found between the Eurasian and the Arabian Plates.  The Persian Gulf is described as a shallow marginal sea of the Indian Ocean that is located between the south western side of Iran and the Arabian Peninsula and south and southeastern side of Oman and the United Arab Emirates.  Other countries that border the Persian Gulf basin include; Saudi Arabia, Qatar, Kuwait, Bahrain and Iraq.  The Gulf extends a distance of 1000 km with an area of 240,000 square km.  The Persian Gulf basin is a wedge-shaped foreland basin which lies beneath the western Zagros thrust and was created as a result of the collision between the Arabian and Eurasian plates.
+
+Geography of Saudi Arabia: The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen.  Its extensive coastlines on the Persian Gulf and Red Sea provide great leverage on shipping (especially crude oil) through the Persian Gulf and Suez Canal.  The kingdom occupies 80% of the Arabian Peninsula.  Most of the country's boundaries with the United Arab Emirates (UAE), Oman, and the Republic of Yemen (formerly two separate countries: the Yemen Arab Republic or North Yemen; and the People's Democratic Republic of Yemen or South Yemen) are undefined, so the exact size of the country remains unknown.  The Saudi government estimate is at 2,217,949 square kilometres, while other reputable estimates vary between 2,149,690 and 2,240,000 sq. kilometres.  Less than 1% of the total area is suitable for cultivation, and in the early 1990s, population distribution varied greatly among the towns of the eastern and western coastal areas, the densely populated interior oases, and the vast, almost empty deserts.
+
+Question: Minister of State for Happiness is a Minister of State in which ederal absolute monarchy in Western Asia at the southeast end of the Arabian Peninsula on the Persian Gulf?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "country_name": {
+      "type": "string",
+      "description": "The name of the country where the ministerial position exists."
+    },
+    "government_type": {
+      "type": "string",
+      "description": "The type of government of the country."
+    },
+    "geographical_location": {
+      "type": "string",
+      "description": "A description of the country's geographical location."
+    },
+    "ministerial_position": {
+      "type": "string",
+      "description": "The specific ministerial position in question."
+    }
+  },
+  "required": [
+    "country_name",
+    "government_type",
+    "geographical_location",
+    "ministerial_position"
+  ],
+  "additionalProperties": false
+}

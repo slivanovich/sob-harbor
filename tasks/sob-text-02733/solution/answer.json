@@ -1,0 +1,16 @@
+{
+  "actor_name": "Mike Farrell",
+  "actor_nationality": "American",
+  "best_known_role": {
+    "character_name": "Captain B.J. Hunnicutt",
+    "series_name": "M*A*S*H"
+  },
+  "related_story_arc": {
+    "story_arc_name": "Welcome to Korea",
+    "episode_count": 2,
+    "key_events": [
+      "departure of Captain Trapper John McIntyre",
+      "replacement by Captain B.J. Hunnicutt"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "question_answer": true,
+  "individuals_analyzed": [
+    {
+      "name": "Richard Elfman",
+      "is_american": true,
+      "is_director": true
+    },
+    {
+      "name": "Drew Renaud",
+      "is_american": true,
+      "is_director": true
+    }
+  ],
+  "summary": {
+    "number_of_individuals_checked": 2,
+    "number_of_american_directors": 2
+  }
+}

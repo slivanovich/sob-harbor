@@ -1,0 +1,12 @@
+{
+  "person_a_details": {
+    "name": "Christopher Marlowe",
+    "death_year": 1593
+  },
+  "person_b_details": {
+    "name": "Robert Poley",
+    "activity_end_year": 1602
+  },
+  "first_to_pass_away_name": "Christopher Marlowe",
+  "comparison_reasoning": "Christopher Marlowe died in 1593. Robert Poley's floruit (period of activity) is listed as 1568–1602, indicating he was active and alive until at least 1602, which is after Marlowe's death."
+}

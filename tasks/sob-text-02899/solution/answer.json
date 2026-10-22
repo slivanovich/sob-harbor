@@ -1,0 +1,19 @@
+{
+  "song_title": "Clarity",
+  "producer": {
+    "name": "Zedd",
+    "nationality": [
+      "Russian-German"
+    ],
+    "music_genre": "electronic dance music"
+  },
+  "featured_vocalist": {
+    "name": "Foxes",
+    "nationality": "British"
+  },
+  "video_game_featuring_song": {
+    "title": "F1 2013",
+    "feature_context": "opening video features the song"
+  },
+  "final_answer": "Zedd"
+}

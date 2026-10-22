@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "a31fd717e6e15756e34a57e1abb75bd9bf22f63df4641abb9ee48c175b8a159b",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab587575542992aa134a34a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1974",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "HHL Leipzig Graduate School of Management: HHL Leipzig Graduate School of Management, formerly known as Handelshochschule Leipzig, is a private business school based in Saxony, Germany.  Established in 1898, it is one of the world's oldest business schools.  The school is accredited internationally by AACSB and locally by ACQUIN.  HHL Leipzig graduate school of management is authorized to award doctoral and postdoctoral degrees.\n\nDeakin University: Deakin University is an Australian public university with approximately 53,000 higher education students in 2016.  Established in 1974, the University was named after the leader of the Australian federation movement and the nation's second Prime Minister, Alfred Deakin.  Its main campuses are in Melbourne's Burwood suburb, Geelong Waurn Ponds, Geelong Waterfront and Warrnambool, as well as the online Cloud Campus.  Deakin also has learning centres in Dandenong, Craigieburn and Werribee, all in the state of Victoria.  It was formally established in 1974 with the passage of the \"Deakin University Act 1974\".  Deakin is one of Australia's fastest growing research universities.  89% of Deakin's research is rated at or above world class.  Its combined research funding increased from A$4.5 million in 1997 to A$47.2 million in 2015.\n\nFrontier Nursing University: Frontier Nursing University, formerly Frontier School of Midwifery and Family Nursing is a private non-profit graduate school located in Hyden, Kentucky, United States.  The Leslie County school was established by the Frontier Nursing Service in 1939.  Mrs. Mary Breckinridge, the driving force of the graduate school, founded the Frontier Nursing Service in 1925 as a demonstration project in the care of mother and child.  The Frontier Graduate School of Midwifery graduated its first class in 1940.  In 1970, the school was renamed the Frontier School of Midwifery and Family Nursing with the opening of the nation's first family nurse practitioner education program.  In 1989/1990, as a joint effort of the Frontier Nursing Service, Case Western Reserve University, the Maternity Center Association, and the National Association of Childbearing Centers, the Community-based Nurse-midwifery Education Program was born.  Hence, Frontier became the first graduate school of nurse-midwifery to offer distance education.  In 2005, the Community-Based Women's Health Care Nurse Practitioner option was added.  In 2011, Frontier School of Midwifery and Family Nursing became Frontier Nursing University to underscore the distinct graduate level programs while reflecting the institution's history and vision.  In that same year, FNU was ranked nationally by U.S. News & World Report as 1st among graduate schools of nurse-midwifery and 14th among family nurse practitioner programs.\n\nGraduate School of Duke University: The Graduate School of Duke University is one of ten graduate and professional schools that make up the university.  Established in 1926, the Graduate School offers the degrees of Master of Arts, Master of Science, Master of Arts in Teaching, Master of Public Policy, and the Doctor of Philosophy, as well as various certificate programs.  The current dean of The Graduate School is Paula D. McClain.\n\nLiautaud Graduate School of Business: The UIC Liautaud Graduate School of Business is the graduate business school of the University of Illinois at Chicago.  The campus is located just west of downtown Chicago.  Degrees granted by the UIC Liautaud Graduate School of Business include the Master of Business Administration (MBA), Master of Science in Accounting (MSA), Master of Science in Business Analytics, Master of Science in Finance, and a Master of Science in Management Information Systems (MSMIS).  The UIC Liautaud Graduate School of Business is an entity operating alongside the undergraduate programs within College of Business Administration.\n\nJoseph M. Katz Graduate School of Business: The Joseph M. Katz Graduate School of Business is the graduate business school of the University of Pittsburgh located in Pittsburgh, Pennsylvania.  Although business education had its origins at the university in 1907, the Graduate School of Business was established in 1960 from a merger of its predecessors, the School of Business Administration and the Graduate School of Retailing.  It was renamed in 1987 after businessman and university alumnus benefactor Joseph Katz.  The school offers a traditional, accelerated, part-time, and executive Master of Business Administration (MBA) degrees as well as Master of Science in Accounting (MAcc) and several PhD programs in business.\n\nUniversity of Texas at Austin Graduate Studies: The Graduate School at The University of Texas at Austin was established in 1910.  The school offers advanced degrees in nearly 100 fields of study and has more than 12,000 students.  According to the school's website, \"[The Graduate School] awards the second highest number of doctoral degrees in the United States.\"  Additionally, a number of the school's programs rank among the highest in the nation.  Below is a table indicating rankings awarded to various programs in The Graduate School from 2005 to 2008:\n\nPeking University Shenzhen Graduate School: The Peking University Shenzhen Graduate School (PKU Shenzhen) is a public research university established as a satellite graduate school of Peking University in 2001 via a joint venture with the Shenzhen Municipal Government.  It is situated inside the University Town of Shenzhen, along with the graduate schools of Tsinghua University and the Harbin Institute of Technology.  The present chancellor of Peking University Shenzhen Graduate School is Dr. Wu Yundong.\n\nJohn Rickard (academic): John Anthony Rickard (born 12 July 1945) is an economist, and Chair of Higher Education Governing Council of Melbourne Institute of Technology, Australia.  Previously, he has been Vice Chancellor at Central Queensland University and the University of Southern Queensland, Dean at Monash University, Director of the Graduate School of Management at Deakin University and Foundation Professor (Financial Economics) at the University of Melbourne.\n\nRutgers University–New Brunswick: Rutgers University – New Brunswick in New Jersey is the oldest campus of Rutgers University, the others being in Camden and Newark.  It is primarily located in New Brunswick and Piscataway.  The campus is composed of several smaller campuses: \"College Avenue\", \"Busch\", \"Livingston,\" \"Cook\", and \"Douglass\", the latter two sometimes referred to as \"Cook/Douglass,\" as they are adjacent to each other.  Rutgers – New Brunswick also includes several buildings in downtown New Brunswick.  The New Brunswick campuses include 19 undergraduate, graduate and professional schools, including the School of Arts and Sciences, School of Environmental and Biological Sciences, School of Communication, Information and Library Studies, the Edward J. Bloustein School of Planning and Public Policy, School of Engineering, the Ernest Mario School of Pharmacy, the Graduate School, the Graduate School of Applied and Professional Psychology, the Graduate School of Education, School of Management and Labor Relations, the Mason Gross School of the Arts, the College of Nursing, the Rutgers Business School and the School of Social Work.",
+    "question": "The school where John Rickard served as Director of the Graduate School of Management was established in what year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "university_name": {
+          "type": "string",
+          "description": "The name of the university where John Rickard served as Director."
+        },
+        "john_rickard_role": {
+          "type": "string",
+          "description": "The specific role John Rickard held at the university."
+        },
+        "establishment_year": {
+          "type": "integer",
+          "description": "The year the university was established."
+        },
+        "university_type": {
+          "type": "string",
+          "description": "The type of university (e.g., public, private)."
+        }
+      },
+      "required": [
+        "university_name",
+        "john_rickard_role",
+        "establishment_year",
+        "university_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "university_name": "Deakin University",
+      "john_rickard_role": "Director of the Graduate School of Management",
+      "establishment_year": 1974,
+      "university_type": "public"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

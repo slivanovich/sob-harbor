@@ -1,0 +1,13 @@
+{
+  "show_name": "The Simpsons",
+  "setting_location": "Springfield",
+  "voice_actor_name": "Yeardley Smith",
+  "is_animated_series": true,
+  "main_characters": [
+    "Homer",
+    "Marge",
+    "Bart",
+    "Lisa",
+    "Maggie"
+  ]
+}

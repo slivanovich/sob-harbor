@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "f898f503508c1b07e6489bef08cd56910e9dcc499bef20dbd6a26e398beea0e8",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5add52055542990dbb2f7e29",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Malcolm in the Middle",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "6 Balloons: 6 Balloons is an upcoming American drama film written and directed by Marja-Lewis Ryan.  It stars Abbi Jacobson, Dave Franco, Tim Matheson and Jane Kaczmarek.\n\nJane Kaczmarek: Jane Frances Kaczmarek (born December 21, 1955) is an American actress.  She is best known for playing the character of Lois on the television series \"Malcolm in the Middle\" (2000–06).  Kaczmarek is a three-time Golden Globe and seven-time Emmy Award nominee.\n\nValor (TV series): Valor is an upcoming American drama television series, created by Kyle Jarrow.  The show is produced by CBS Television Studios and Warner Bros.  Television, with Anna Fricke and Kyle Jarrow serving as showrunners.  The series is set to premiere on The CW on October 9, 2017 as part of the 2017–18 U.S. television season.\n\nAlice Hirson: Alice Hirson (born March 10, 1929) is an American actress best known for her roles on television.  She began her career on stage, before roles on the daytime soap operas.  She is best known for her roles as Mavis Anderson in the CBS prime time soap opera, \"Dallas\", and as Lois Morgan, the mother of the title character on the ABC sitcom, \"Ellen\".\n\nReverie (TV series): Reverie is an upcoming American drama television series set to be broadcast on NBC.  The series was commissioned on May 12, 2017.  The first season will contain only 10 episodes, for creative and scheduling reasons.\n\nThe Front Runner (film): The Front Runner is an upcoming American drama film directed by Jason Reitman, based on the book \"All the Truth Is Out: The Week Politics Went Tabloid\" by Matt Bai.  Reitman co-wrote the screenplay with Bai and Jay Carson.  The film stars Hugh Jackman as politician Gary Hart, with Vera Farmiga, Kaitlyn Dever, Sara Paxton, Molly Ephraim, and J. K. Simmons also starring.\n\nPose (TV series): Pose is an upcoming American drama television series.  The series was launched by FX in early 2017 and will premiere on FX in early 2018.  The first season will be executive produced by Ryan Murphy, Nina Jacobson, and Brad Simpson, and will be written by Murphy, Brad Falchuk, and newcomer Stephen Canals.\n\nTiger (upcoming American film): Tiger is an upcoming American drama film directed by Alister Grierson, with a screenplay by Prem Singh and Michael Pugliese based on the true story of Sikh boxer Pardeep \"Tiger\" Nagra.  The film introduces Singh as Nagra, with Mickey Rourke and Janel Parrish also starring.\n\nThora Bjorg Helga: Thora Bjorg Helga (born 16 April 1989) is an Icelandic actress best known for starring in Ragnar Bragason's \"Metalhead\".  Helga won the 2014 Icelandic Academy Award for Best Actress for her role in the film which premiered at the Toronto International Film Festival in September 2013.  She also starred in Baltasar Kormákur's film The Deep in 2013, earning her a 2013 Icelandic Academy Award Best Supporting Actress nomination.  Helga also stars in the upcoming American film Autumn Lights.\n\nRise (TV series): Rise (formerly known as Drama High) is an upcoming American drama television series created by Jason Katims and Jeffrey Seller based on the young adult novel \"Drama High\" by Michael Sokolove, starring Josh Radnor in the lead role as Lou Mazzuchelli, based on real-life teacher Lou Volpe.  The pilot was ordered to series by NBC on May 4, 2017 along with \"The Brave\", making both series the first regular series orders by the network for the 2017–18 United States network television schedule.  The first season will consist of 10 episodes.",
+    "question": "6 Balloons is an upcoming American drama film starring an actress best known for playing the character of Lois on what television series?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film mentioned in the question."
+        },
+        "film_genre": {
+          "type": "string",
+          "description": "The genre of the film."
+        },
+        "actress_name": {
+          "type": "string",
+          "description": "The name of the actress starring in the film."
+        },
+        "known_for_role": {
+          "type": "string",
+          "description": "The character role the actress is best known for."
+        },
+        "television_series_title": {
+          "type": "string",
+          "description": "The title of the television series where the actress played the known role."
+        }
+      },
+      "required": [
+        "film_title",
+        "film_genre",
+        "actress_name",
+        "known_for_role",
+        "television_series_title"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "6 Balloons",
+      "film_genre": "drama",
+      "actress_name": "Jane Kaczmarek",
+      "known_for_role": "Lois",
+      "television_series_title": "Malcolm in the Middle"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

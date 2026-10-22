@@ -1,0 +1,14 @@
+{
+  "person_name": "Pat Knight",
+  "coaching_details": {
+    "team_name": "Lamar Cardinals",
+    "role": "head coach",
+    "year_in_role": 2
+  },
+  "scouting_details": {
+    "team_name": "Indiana Pacers",
+    "role": "scout",
+    "scout_type": "college scout",
+    "region": "West Coast Region"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "film_title": "Highlander",
+  "film_release_year": 1986,
+  "director": {
+    "name": "Russell Mulcahy",
+    "nationality": "Australian"
+  },
+  "mtv_show_directed": "Teen Wolf"
+}

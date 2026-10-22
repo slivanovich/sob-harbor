@@ -1,0 +1,10 @@
+{
+  "film_title": "Under Capricorn",
+  "film_release_year": 1949,
+  "film_director": "Alfred Hitchcock",
+  "screen_adapter": "Hume Cronyn",
+  "preceding_film": {
+    "title": "Rope",
+    "release_year": 1948
+  }
+}

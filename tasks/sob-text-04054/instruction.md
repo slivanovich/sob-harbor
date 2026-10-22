@@ -1,0 +1,75 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ruth de Krivoy: Ruth Osterreicher de Krivoy is a Venezuelan leading economist and national authority on political, monetary and fiscal dynamics.  During the early 1970s, she had been vice president of research at the Central Bank of Venezuela, where she played an active role in strengthening economic research as a major instrument of support for monetary policy.  In 1992, two months after an attempted coup d'état by Hugo Chavez, she became president of the Central Bank of Venezuela.  Her appointment seemed a natural choice, given both her extensive experience and her firm belief in Central Bank independence.  She resigned in 1994, amid the Venezuelan banking crisis.  De Krivoy wrote a book about the crisis, and has continued to voice concerns about the loss of political independence of the Central Bank's governors.
+
+Financial Stability Forum: The Financial Stability Forum (FSF) was a group consisting of major national financial authorities such as finance ministries, central bankers, and international financial bodies.  The Forum was founded in 1999 to promote international financial stability.  Its founding resulted from discussions among Finance Ministers and Central Bank Governors of the G7 countries, and a study which they commissioned.  The Forum facilitated discussion and co-operation on supervision and surveillance of financial institutions, transactions and events.  FSF was managed by a small secretariat housed at the Bank for International Settlements in Basel, Switzerland.  The FSF membership included about a dozen nations who participate through their central banks, financial ministries and departments, and securities regulators, including: the United States, Japan, Germany, the United Kingdom, France, Italy, Canada, Australia, the Netherlands and several other industrialized economies as well as several international economic organizations.  At the G20 summit on November 15, 2008 it was agreed that the membership of the FSF will be expanded to include emerging economies, such as China.  The 2009 G-20 London summit decided to establish a successor to the FSF, the Financial Stability Board.  The FSB includes members of the G20 who were not members of FSF.
+
+Basel Committee on Banking Supervision: The Basel Committee on Banking Supervision (BCBS) is a committee of banking supervisory authorities that was established by the central bank governors of the Group of Ten countries in 1974.  It provides a forum for regular cooperation on banking supervisory matters.  Its objective is to enhance understanding of key supervisory issues and improve the quality of banking supervision worldwide.  The Committee frames guidelines and standards in different areas – some of the better known among them are the international standards on capital adequacy, the Core Principles for Effective Banking Supervision and the Concordat on cross-border banking supervision.  The Committee's Secretariat is located at the Bank for International Settlements (BIS) in Basel, Switzerland.  However, the BIS and the Basel Committee remain two distinct entities.
+
+Governor of the Central Bank of Sri Lanka: The Governor of the Central Bank of Sri Lanka (CBSL) functions as the chief executive of the Sri Lankan central bank.  The post is the "ex-officio" chairperson of the Monetary Board of Central Bank of Sri Lanka.  Since its establishment in 1950, the CBSL has been headed by 14 governors.  The governor has two deputies and several assistant governors.  The inaugural officeholder was the American John Exter who served the Government of Sri Lanka in helping found the central bank.  Arjuna Mahendran, although born in Sri Lanka, held Singaporean citizenship during his term of office.  The position is currently held by economist Indrajit Coomaraswamy, who took over from Arjuna Mahendran, who stepped down on 2 July 2016.  The term of office last for 6 years.
+
+Central Bank of the Republic of China (Taiwan): The Central Bank of the Republic of China (CBC; ), known in English from 1924 to 2007 as the Central Bank of China, is the central bank of the Republic of China, now commonly known as Taiwan.  Its legal and common name in Chinese is literally translated as the "Central Bank".  The central bank is administered under the Executive Yuan of the ROC government.
+
+List of salaries of central bank governors: This is a list of salaries of central bank governors, displaying the salary of the chair of a state's central bank.
+
+Australia–China relations: Australia–China relations, often known as Sino–Australian relations, refers to the relations between the Commonwealth of Australia and China.  The first Chinese consulate in Australia was established in 1909, and diplomatic relations were established in 1941.  Australia continued to recognise the Republic of China government after it lost the Chinese Civil War and retreated to Taiwan in 1949, but switched recognition to the People's Republic of China on 21 December 1972.  The relationship between China and Australia has grown considerably over the years.  Both countries are actively engaged economically, culturally and politically which spans numerous organizations such as APEC, East Asia Summit and the G20.  China is Australia's largest trading partner, and has invested in Australian mining companies to help meet the needs of its growing economy.
+
+Argentina–Indonesia relations: Argentina–Indonesia relations refers to the bilateral relations of Argentina and Indonesia.  Since the diplomatic relations established in 1956, the bilateral relations between Argentina and Indonesia have become increasingly more strategic.  According to Argentine Ambassador to Indonesian Javier A. Sanz de Urquiza, Indonesia has been a "true friend of Argentina" over the Falkland Islands sovereignty dispute.  Argentina has an embassy in Jakarta, while Indonesia has an embassy in Buenos Aires.  Both countries say they share the same values regarding the international order, and the same aspiration to defend the developing nations' interest in international forum.  Both countries are members of Group of 77, the G-20 major economies, the G20 developing nations, and Forum of East Asia-Latin America Cooperation.
+
+Global Relations Forum: Global Relations Forum (GRF) is an independent, non-profit membership association founded on May 11, 2009 in Turkey with the committed support of 40 Turkish men and women who have assumed prominent roles in international fora and have received international recognition for their efforts throughout their careers.  The founding members include former secretaries of state, university presidents, central bank governors, ECHR justice and retired ambassadors as well as leading business leaders, scholars, artists, and journalists.  GRF is committed to being a platform for engaging, informing and stimulating its members and all interested individuals in all matters related to international affairs and global issues.
+
+G20: The G20 (or G-20 or Group of Twenty) is an international forum for the governments and central bank governors from 20 major economies.  Currently, these are Argentina, Australia, Brazil, Canada, China, France, Germany, India, Indonesia, Italy, Japan, Mexico, Russia, Saudi Arabia, South Africa, South Korea, Turkey, United Kingdom, United States, and the European Union.  Founded in 1999, the G20 aims to discuss policy issues pertaining to the promotion of international financial stability.  It seeks to address issues that go beyond the responsibilities of any one organization.  The G20 heads of government or heads of state have periodically conferred at summits since their initial meeting in 2008, and the group also hosts separate meetings of finance ministers and foreign ministers due to the expansion of its agenda in recent years.
+
+Question: The Commonwealth of Australia and China are currently large trading partners as well as active members of the international forum for the governments and central bank governors from 20 major economies, known as what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "forum_name": {
+      "type": "string",
+      "description": "The name of the international forum."
+    },
+    "forum_purpose": {
+      "type": "string",
+      "description": "The primary objective of the forum."
+    },
+    "member_countries_count": {
+      "type": "integer",
+      "description": "The number of major economies that are members of the forum."
+    },
+    "member_types": {
+      "type": "array",
+      "description": "Types of entities that represent the member economies in the forum.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "participating_countries_in_question": {
+      "type": "array",
+      "description": "Specific countries mentioned in the question that are members of this forum.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "forum_name",
+    "forum_purpose",
+    "member_countries_count",
+    "member_types",
+    "participating_countries_in_question"
+  ],
+  "additionalProperties": false
+}

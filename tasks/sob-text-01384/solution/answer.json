@@ -1,0 +1,16 @@
+{
+  "aria_details": {
+    "title": "Der Hölle Rache kocht in meinem Herzen",
+    "opera": "The Magic Flute",
+    "character_singing": "Queen of the Night"
+  },
+  "legendary_singer": {
+    "name": "Maria Ivogün",
+    "nationality": "Hungarian"
+  },
+  "daughter_depicted": {
+    "name": "Pamina",
+    "relationship_to_character": "daughter"
+  },
+  "question_answer": "Pamina"
+}

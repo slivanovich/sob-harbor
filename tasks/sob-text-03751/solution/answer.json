@@ -1,0 +1,15 @@
+{
+  "case_a": {
+    "name": "Gomillion v. Lightfoot",
+    "year": 1960
+  },
+  "case_b": {
+    "name": "Snyder v. Phelps",
+    "year": 2011
+  },
+  "earlier_case": {
+    "name": "Gomillion v. Lightfoot",
+    "year": 1960
+  },
+  "comparison_statement": "Gomillion v. Lightfoot happened before Snyder v. Phelps."
+}

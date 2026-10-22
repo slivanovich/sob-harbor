@@ -1,0 +1,18 @@
+{
+  "media_type": "magazine",
+  "publications": [
+    {
+      "name": "Signs of the Times (Australian magazine)",
+      "description_snippet": "Signs of the Times is a monthly subscription magazine"
+    },
+    {
+      "name": "Signs of the Times (magazine)",
+      "description_snippet": "Signs of the Times is a monthly magazine"
+    },
+    {
+      "name": "Nickelodeon Magazine",
+      "description_snippet": "Nickelodeon Magazine is an American children's magazine"
+    }
+  ],
+  "number_of_publications": 3
+}

@@ -1,0 +1,14 @@
+{
+  "entities_analyzed": [
+    {
+      "name": "Allium",
+      "contextual_description_of_type": "genus of monocotyledonous flowering plants"
+    },
+    {
+      "name": "Hyssopus",
+      "contextual_description_of_type": "genus of herbaceous or semi-woody plants"
+    }
+  ],
+  "shared_classification": "plants",
+  "classification_level": "organism_type"
+}

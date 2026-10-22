@@ -1,0 +1,24 @@
+{
+  "movie_title": "Now, Voyager",
+  "release_year": 1942,
+  "main_actors": [
+    "Bette Davis",
+    "Paul Henreid",
+    "Claude Rains"
+  ],
+  "crew_members": [
+    {
+      "name": "Warren Low",
+      "role": "film editor"
+    },
+    {
+      "name": "Irving Rapper",
+      "role": "director"
+    },
+    {
+      "name": "Casey Robinson",
+      "role": "screenwriter"
+    }
+  ],
+  "reasoning": "The film 'Now, Voyager' stars Bette Davis, Paul Henreid, and Claude Rains. Warren Low is explicitly mentioned as having worked on 'Now, Voyager' as a film editor."
+}

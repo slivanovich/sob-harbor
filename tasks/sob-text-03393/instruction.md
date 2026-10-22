@@ -1,0 +1,132 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+K. B. V. Sc. Chandrasekaran: K. Chandrasekaran is an Indian politician and incumbent Member of the Legislative Assembly of Tamil Nadu.  He was elected to the Tamil Nadu legislative assembly as a Dravida Munnetra Kazhagam candidate from Alangudi constituency in 1989 election.  He also became the minister for animal husbandry during that period.He was a veterinary physician before he became the minister.  He is now contesting in Alangudi constituency for the Tamil Nadu elections-2016 for Makkal Nala Koottani, also known as the People Welfare Front.
+
+Tamil Nadu Telugu Makkal Katchi: Tamil Nadu Telugu Makkal Katchi (TTMK) is a political party formed in Tamil Nadu to support the Telugu-speaking people of Tamil Nadu.  C. J. Raj Kumar is the founder and General Secretary of the party.  Tamil Nadu Telugu Makkal Katchi was launched in Coimbatore during the time of 2014 General Assembly elections, though it did not contest the elections at that time.  It was launched under the guidance of S. Ramdoss to protect the interests of Telugus living in Kongu Nadu particularly and in Tamil Nadu generally.
+
+Vijay Sethupathi: Vijaya Gurunatha Sethupathi (born 16 January 1978), best known as Vijay Sethupathi, is an Indian film actor, producer, lyricist, and dialogue writer who stars in Tamil films.  He is also refereed to as "Makkal Selvan" ("People's Actor") in Tamil Nadu.
+
+Idharkuthane Aasaipattai Balakumara: Idharkuthane Aasaipattai Balakumara (English: "Isn't this what you wished for, Balakumara?") , also referred to as Idhaaba, is an Indian Tamil comedy film, written and directed by Gokul of "Rowthiram" fame.  Produced by Leo Visions, the film features Vijay Sethupathi, Ashwin Kakumanu, Swati Reddy and Nandita in the lead roles.  The film upon release received highly positive reviews from critics.  The film got remade into Kannada language as "Jackson" starring Duniya Vijay in the lead.  The title of the film is inspired by the novel with the same name written by Balakumaran.
+
+T. Velmurugan: T. Velmurugan is a Tamil Nadu(India) politician and Former Member of the Legislative Assembly of Tamil Nadu.  He was elected to the Tamil Nadu legislative assembly as a Pattali Makkal Katchi candidate from Panruti constituency in 2001, and 2006 elections.  He is often considered to be Tamil Nationalist.
+
+Katha Screenplay Darsakatvam Appalaraju: Katha Screenplay Darsakatvam Appalaraju (English: Story Screenplay Direction Appalaraju ) is a 2011 Indian Telugu language comedy film written and directed by Ram Gopal Varma.  It stars comical actor Sunil and Swati Reddy in the lead roles alongside Brahmanandam and Kota Srinivasa Rao.  Sudhakar Reddy has handled the camera and Koti has composed the music.
+
+Controversies related to Vishwaroopam: The 2013 Indian film "Vishwaroopam" was in the news for several critically viewed controversies.  The first of this kind was the title naming issue, where the Hindu Makkal Katchi party demanded the change from its current Sanskrit title to a purely Tamil one.  When Kamal Haasan announced a direct-to-home (DTH) premiere of the film, theatre owners demanded a rollback of this plan, as they feared major revenue losses to DTH companies.  Threatened by a complete theatre boycott of "Vishwaroopam", Haasan agreed to release the film first in theatres.  Later, Muslim groups in Tamil Nadu demanded the ban of the film and claimed, that the film would hurt Muslim sentiments.  Although the film was cleared by Central Board of Film Certification of India, district collectors in the state of Tamil Nadu gave orders to the theatre owners to not show "Vishwaroopam", citing law and order problems, however the film released in other states with greater Muslim populations than in Tamil Nadu.  The ban in Tamil Nadu triggered the stop of screenings in neighbouring Indian states as well as a few foreign markets.
+
+Melanmai Ponnusamy: Melanmai Ponnusamy (Tamil: மேலாண்மை பொன்னுசாமி , born 1951) is a Tamil writer from Tamil Nadu, India.  He was born in Mela Marainadu village in Virudhunagar District.  He is a farmer by profession who also runs a grocery shop in his village.  He is a Marxist by political orientation and a member of Communist Party of India (Marxist) (CPI-M).  His first short story was published in 1972 in the literary journal "Semmalar" (lit.  Red flower.  CPI-M's literary publication).  His works have since appeared in mainstream Tamil magazines like "Ananda Vikatan" and "Kalki".  He credits Soviet literature as a major influence in his writing style and choice of subjects.  His works are set in rural Tamil Nadu and deal with the lives of peasants.  As of 2009, he has written 23 short story collections, six novellas, six novels and an essay collection.  He was awarded the 2008 Sahitya Akademi Award for Tamil his short story "Minsarapoo" (lit.  the electric flower).  He was also awarded the 2009 Makkal TV award for his contributions to Tamil Literature.  He is a founder member and the current general secretary of the Marxist writers' organisation - "Tamil Nadu Progressive Writers Association" (TNPWA).  He is married to Ponnuthai and has three children.
+
+Makkal Tamil Desam Katchi: Makkal Tamil Desam Katchi (People's Tamil Land Party, in Tamil: மக்கள் தமிழ் தேசம் கட்சி), generally just called Makkal Tamil Desam (MTD) is a political party in the Indian state of Tamil Nadu.  MTD was founded on August 22, 2000.  MTD has its base amongst the Yadava(Konar) caste in the north and southern parts of the state.  The Tamil Nadu Yadava Mahasabai supported the formation of the party.  The party leader is S. Kannappan, a former All India Anna Dravida Munnetra Kazhagam (AIADMK) minister.  Kannappan had been expelled from AIADMK before the foundation of MTD.
+
+Karthikeya (film): Karthikeya is a 2014 bilingual mystery thriller written & directed by Chandoo Mondeti shot in Telugu & Tamil languages simultaneously.  It was produced by Venkat Srinivas on Magnus Cine Prime Pvt. Ltd. and featured Nikhil Siddharth, Swati Reddy, Tanikella Bharani and Rao Ramesh in important roles.  Shekhar Chandra composed the film's music while Karthik Ghattamaneni and Karthika Srinivas were its cinematographer and editor respectively.  The film revolves around a closed Kartikeya temple on the border of Andhra Pradesh and Tamil Nadu and showcases the life of a curious medico Karthik and his nexus with the temple.
+
+Question: The actor referred to as  "Makkal Selvan" in Tamil Nadu stars with Ashwin Kakumanuand Swati Reddy in what comedy film?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the comedy film."
+    },
+    "film_genre": {
+      "type": "string",
+      "description": "The genre of the film."
+    },
+    "director": {
+      "type": "string",
+      "description": "The director of the film."
+    },
+    "producer": {
+      "type": "string",
+      "description": "The producer of the film."
+    },
+    "lead_actors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "actor_name": {
+            "type": "string",
+            "description": "Name of a lead actor in the film."
+          },
+          "known_alias": {
+            "type": "string",
+            "description": "An alias or nickname for the actor, if mentioned."
+          }
+        },
+        "required": [
+          "actor_name"
+        ],
+        "additionalProperties": false
+      },
+      "description": "List of lead actors in the film."
+    },
+    "remake_details": {
+      "type": "object",
+      "properties": {
+        "remake_language": {
+          "type": "string",
+          "description": "The language the film was remade into."
+        },
+        "remake_title": {
+          "type": "string",
+          "description": "The title of the remade film."
+        },
+        "remake_star": {
+          "type": "string",
+          "description": "The lead star of the remade film."
+        }
+      },
+      "required": [
+        "remake_language",
+        "remake_title",
+        "remake_star"
+      ],
+      "additionalProperties": false
+    },
+    "title_inspiration": {
+      "type": "object",
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "description": "The type of source that inspired the film's title (e.g., novel)."
+        },
+        "source_name": {
+          "type": "string",
+          "description": "The name of the source that inspired the film's title."
+        },
+        "source_author": {
+          "type": "string",
+          "description": "The author of the source that inspired the film's title."
+        }
+      },
+      "required": [
+        "source_type",
+        "source_name",
+        "source_author"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "film_title",
+    "film_genre",
+    "director",
+    "producer",
+    "lead_actors"
+  ],
+  "additionalProperties": false
+}

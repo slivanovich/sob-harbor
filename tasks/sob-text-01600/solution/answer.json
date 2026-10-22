@@ -1,0 +1,10 @@
+{
+  "team_year": 1999,
+  "team_name": "San Diego State Aztecs",
+  "head_coach": "Ted Tollner",
+  "university": {
+    "name": "San Diego State University",
+    "founding_year": 1897,
+    "type": "public research"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "artists_and_bands": [
+    {
+      "name": "Richard Ashcroft",
+      "genres": [
+        "alternative rock"
+      ]
+    },
+    {
+      "name": "Galaxie 500",
+      "genres": [
+        "alternative rock",
+        "dream pop"
+      ]
+    }
+  ],
+  "all_unique_genres": [
+    "alternative rock",
+    "dream pop"
+  ],
+  "genre_summary": "Richard Ashcroft is associated with alternative rock. Galaxie 500 plays alternative rock and dream pop."
+}

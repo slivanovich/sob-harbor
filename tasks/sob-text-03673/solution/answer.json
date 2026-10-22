@@ -1,0 +1,12 @@
+{
+  "director_name": "William A. Seiter",
+  "film_details": {
+    "title": "Sally, Irene and Mary",
+    "release_year": 1938,
+    "genre": "comedy"
+  },
+  "actor_details": {
+    "actor_name": "Tony Martin",
+    "relationship_to_cyd_charisse": "husband"
+  }
+}

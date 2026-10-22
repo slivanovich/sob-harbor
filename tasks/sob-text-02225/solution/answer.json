@@ -1,0 +1,12 @@
+{
+  "are_both_flowering_plants": false,
+  "pellaea_details": {
+    "is_flowering_plant": false,
+    "plant_type": "fern"
+  },
+  "veronica_details": {
+    "is_flowering_plant": true,
+    "plant_type": "flowering plant",
+    "family": "Plantaginaceae"
+  }
+}

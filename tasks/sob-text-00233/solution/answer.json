@@ -1,0 +1,17 @@
+{
+  "organization_founded": "Center for UFO Studies",
+  "founder": {
+    "name": "J. Allen Hynek",
+    "profession": "astronomer",
+    "nationality": "American"
+  },
+  "advisor_role": {
+    "advised_entity": "U.S. Air Force",
+    "area_of_advice": "UFO studies",
+    "related_projects": [
+      "Project Sign",
+      "Project Grudge",
+      "Project Blue Book"
+    ]
+  }
+}

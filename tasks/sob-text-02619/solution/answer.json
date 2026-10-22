@@ -1,0 +1,13 @@
+{
+  "owner_name": "Shooter Jennings",
+  "owner_relationship_to_waylon_jennings": "son",
+  "owned_entity": {
+    "name": "Black Country Rock Media",
+    "type": "record label",
+    "established_year": 2010,
+    "locations": [
+      "Nashville, Tennessee",
+      "Los Angeles, California"
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "2568a28319bba93cbf03a2f800c969bec1c91a617b05c6922b02b5233768dfc9",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab9096955429916710eb0e8",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1884",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Martin W. Littleton: Martin Wiley Littleton (January 12, 1872 – December 19, 1934) was an American attorney known for his involvement in a number of high-profile trials during the early 1900s, including serving as chief defense counsel for Harry Kendall Thaw at his second trial in 1908 for the murder of renowned architect Stanford White, and defending Harry Ford Sinclair, the head of Sinclair Oil, from criminal charges resulting from the Teapot Dome scandal.  Littleton also served one term as United States Representative from New York from 1911 to 1913, and was borough president of Brooklyn.\n\nDharhara, Bhagalpur: Dharhara is a village in the Bhagalpur District of Bihar, India.  there is a tradition of plantation when girl born in any family of this village.  this tradition help to save trees and girl both.\n\nAlice Delysia: Alice Henriette Lapize (3 March 1889 – 10 February 1979), better known by her stage name, Alice Delysia and sometimes Elise Delisia, was a French actress and singer who made her career in English musical theatre.  After performing in the chorus at the Moulin Rouge and other theatres in Paris from the age of 14, she became a chorus girl in Edwardian musical comedies, briefly on Broadway in 1905, then in London for several years and back in Paris in 1912.\n\nChorus Equity Association: The Chorus Equity Association was created on August 12, 1919, in New York City during the strike by the Actors' Equity Association.  After Florenz Ziegfeld revealed that he was joining the Producing Managers' Association, the chorus girls in his Ziegfeld Follies created their own union, with the help of a substantial donation from the superstar actress and former chorus girl Lillian Russell.\n\nEvelyn Nesbit: Florence Evelyn Nesbit (December 25, 1884 – January 17, 1967), known professionally as Evelyn Nesbit, was a popular American chorus girl, an artists' model, and an actress.\n\nWilliam Lewis Shurtleff: William Lewis Shurtleff, K.C., LL.D. , (March 29, 1864 – January 1, 1954) was a Quebec lawyer and newspaper owner.  He was the defense lawyer for Harry Kendall Thaw in 1913.  The \"Buffalo Morning Express\" calls him \"one of the leading lawyers in Canada\".\n\nThe Unwritten Law (1907 film): The Unwritten Law: A Thrilling Drama Based on the Thaw-White Case is a 1907 film produced by the Lubin Manufacturing Company, based on the true crime story of Harry Kendall Thaw's murder of Stanford White over his involvement with model and actress Evelyn Nesbit.  Produced and released concurrently with Thaw's trial, its depiction of a recent sexual scandal led to widespread controversy, becoming \"the first film in the United States to be widely construed as 'scandalous.'\"\n\nDetroit Regional Yacht-racing Association: The Detroit Regional Yacht-racing Association (DRYA) was established in 1912 as the Detroit River Yachting Association by the Commodores of the Detroit Boat Club and the Detroit Yacht Club, Commodore Harry Austin and Commodore Harry Kendall, respectively.\n\nChorus Girl (album): Chorus Girl was the first \"chorus\" compilation album made and released by Atomic Records.  The album contains various songs from the 1980s, mainly new wave.  It was succeeded by a second album, entitled \"Chorus 2\".\n\nHarry Kendall Thaw: Harry Kendall Thaw (February 12, 1871 – February 22, 1947) was the son of Pittsburgh coal and railroad baron William Thaw, Sr. Heir to a multimillion-dollar mine and railroad fortune, Thaw had a history of severe mental instability and led a profligate life.  His historical legacy rests on one notorious act: on June 25, 1906, on the rooftop of Madison Square Garden, Thaw murdered renowned architect Stanford White, who was having an affair with Thaw's wife, model/chorus girl Evelyn Nesbit.",
+    "question": "Harry Kendall Thaw's wife was a chorus girl born in what year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person who was Harry Kendall Thaw's wife."
+        },
+        "relationship_to_thaw": {
+          "type": "string",
+          "description": "The relationship of the person to Harry Kendall Thaw."
+        },
+        "profession": {
+          "type": "string",
+          "description": "One of the professions of the person."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The birth year of the person."
+        }
+      },
+      "required": [
+        "person_name",
+        "relationship_to_thaw",
+        "profession",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Evelyn Nesbit",
+      "relationship_to_thaw": "wife",
+      "profession": "chorus girl",
+      "birth_year": 1884
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

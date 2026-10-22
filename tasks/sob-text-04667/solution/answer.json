@@ -1,0 +1,17 @@
+{
+  "historical_society_name": "Lexington Historical Society",
+  "historical_society_founding_year": 1886,
+  "historical_society_location": {
+    "city": "Lexington",
+    "state": "Massachusetts",
+    "metro_area": "Greater Boston Area"
+  },
+  "historical_society_focus_areas": [
+    "Lexington's history",
+    "American Revolution"
+  ],
+  "associated_battles": [
+    "Battle of Lexington",
+    "Battle of Lexington and Concord"
+  ]
+}

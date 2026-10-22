@@ -1,0 +1,10 @@
+{
+  "musician_name": "Jon Fratelli",
+  "is_scottish": true,
+  "nationality": "Scottish",
+  "reasoning": "Jon Fratelli was born in Glasgow, Scotland, and is described as a Scottish musician.",
+  "other_musician_details": {
+    "name": "David Glen Eisley",
+    "nationality": "American"
+  }
+}

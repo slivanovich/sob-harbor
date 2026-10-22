@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "record_id": "6e6da29227720fa93b1198a57070b4e354ac7a73e31e14a2f04ac5c1e50f50b1",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5aba436455429901930fa793",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Qingzhen: Qingzhen (Chinese: 清镇; Pinyin: Qīngzhèn) is a county-level city under the administration of Guiyang in Guizhou province, China.\n\nGongzhuling: Gongzhuling (, literally \"Princess Ridge\") is a city in western Jilin province of Northeast China located halfway between Siping City and Changchun, along the main railway line in the Northeast.  Major employers in the city include Jilin Academy of Agricultural Sciences, located on the north side of the railway and several factories which manufacture auto parts.  There is major military presence in the area, including a PLA base and a military airport.\n\nGongzhuling South Railway Station: Gongzhuling South Railway Station is a railway station of the Harbin–Dalian section of the Beijing–Harbin High-Speed Railway.  It is located in Gongzhuling, in the Jilin province of China.",
+    "question": "Are both Gongzhuling and Qingzhen located in the same province ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "are_cities_in_same_province": {
+          "type": "boolean",
+          "description": "True if both cities are located in the same province, false otherwise."
+        },
+        "city_locations": {
+          "type": "array",
+          "description": "Details about the location of each city mentioned.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "city_name": {
+                "type": "string",
+                "description": "The name of the city."
+              },
+              "province_name": {
+                "type": "string",
+                "description": "The name of the province where the city is located."
+              }
+            },
+            "required": [
+              "city_name",
+              "province_name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "comparison_summary": {
+          "type": "string",
+          "description": "A summary of the comparison result regarding their provinces."
+        }
+      },
+      "required": [
+        "are_cities_in_same_province",
+        "city_locations",
+        "comparison_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "are_cities_in_same_province": false,
+      "city_locations": [
+        {
+          "city_name": "Qingzhen",
+          "province_name": "Guizhou"
+        },
+        {
+          "city_name": "Gongzhuling",
+          "province_name": "Jilin"
+        }
+      ],
+      "comparison_summary": "Qingzhen is in Guizhou province, and Gongzhuling is in Jilin province. They are not in the same province."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

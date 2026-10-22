@@ -1,0 +1,68 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Authorization bill: An authorization bill is a type of legislation used in the United States to authorize the activities of the various agencies and programs that are part of the federal government of the United States.  Authorizing such programs is one of the powers of the United States Congress.  Authorizations give those things the legal power to operate and exist.  Authorization bills must be passed in both the United States House of Representatives and the United States Senate before being signed by the President of the United States in order to become law.  They may originate in either chamber of Congress, unlike appropriations bills, which must originate in the House.  They can also be considered at any time during the year.
+
+Nashville Convention: The Nashville Convention was a political meeting held in Nashville, Tennessee, on June 3 – 11, 1850.  Delegates from nine slave holding states met to consider a possible course of action if the United States Congress decided to ban slavery in the new territories being added to the country as a result of Westward Expansion and the Mexican-American War.  The compromises worked out in Nashville paved the way for the Compromise of 1850, and for a time, averted the dissolution of the United States.
+
+Fugitive slave laws: The fugitive slave laws were laws passed by the United States Congress in 1793 and 1850 to provide for the return of slaves who escaped from one state into another state or territory.  The idea of the fugitive slave law was derived from the Fugitive Slave Clause which is in the United States Constitution (Article IV, Section 2, Paragraph 3).  It was thought that forcing states to deliver escaped slaves to slave owners violated states' rights due to state sovereignty and was believed that seizing state property should not be left up to the states.  The Fugitive Slave Clause states that escaped slaves "shall be delivered up on Claim of the Party to whom such Service or Labour may be due", which abridged state rights because retrieving slaves was a form of retrieving private property.  After the Compromise of 1850, the Supreme Court made slavery a protected institution and arranged a series of laws that allowed slavery in the new territories and forced officials in Free States to give a hearing to slaveholders without a jury.
+
+Fugitive Slave Act of 1850: The Fugitive Slave Law or Fugitive Slave Act was passed by the United States Congress on September 18, 1850, as part of the Compromise of 1850 between Southern slave-holding interests and Northern Free-Soilers.
+
+80th United States Congress: The Eightieth United States Congress was a meeting of the legislative branch of the United States federal government, composed of the United States Senate and the United States House of Representatives.  It met in Washington, DC from January 3, 1947, to January 3, 1949, during the third and fourth years of Harry Truman's presidency.  The apportionment of seats in this House of Representatives was based on the Sixteenth Census of the United States in 1940.  Republicans gained a majority in both chambers for this Congress having gained thirteen Senate seats and fifty-seven House seats.  Although the 80th Congress passed a total of 906 public bills, President Truman nicknamed it the "Do Nothing Congress" and, during the 1948 election, campaigned as much against it as against his formal opponent, Thomas Dewey.  The 80th Congress passed several significant pro-business bills, most famously the Taft–Hartley Act, but it opposed most of Truman's Fair Deal bills.  Truman's campaign strategy worked, and the Republicans lost nine Senate seats and seventy-three seats in the House, allowing the Democrats to begin the 81st Congress with twenty-one more seats than they had at the end of the 79th Congress.
+
+Compromise of 1850: The Compromise of 1850 was a package of five separate bills passed by the United States Congress in September 1850, which defused a four-year political confrontation between slave and free states on the status of territories acquired during the Mexican–American War (1846–1848).  The compromise, drafted by Whig Senator Henry Clay of Kentucky and brokered by Clay and Democratic Senator Stephen Douglas of Illinois, reduced sectional conflict.  Controversy arose over the Fugitive Slave provision.  The Compromise was greeted with relief, but each side disliked some of its specific provisions:
+
+Height of Buildings Act of 1910: The Height of Buildings Act of 1910 was an Act of Congress passed by the 61st United States Congress on June 1, 1910 to limit the height of buildings in Washington, D.C. The original act was passed on March 1, 1899 when the 55th United States Congress approved the Height of Buildings Act of 1899.  The original act restricted the heights of any type of building in the United States capital city of Washington, D.C., to be no higher than 110 ft .  In 1910, the 61st United States Congress enacted a new height restriction law limiting building heights to 130 ft , or the width of the right-of-way of the street or avenue on which a building fronts, whichever is shorter.  That is the main law presented by this act.
+
+Three-Fifths Compromise: The Three-Fifths Compromise was a compromise reached between delegates from southern states and those from northern states during the 1787 United States Constitutional Convention.  The debate was over whether, and if so, how, slaves would be counted when determining a state's total population for legislative representation and taxing purposes.  The issue was important, as this population number would then be used to determine the number of seats that the state would have in the United States House of Representatives for the next ten years.  The effect was to give the southern states a third more seats in Congress and a third more electoral votes than if slaves had been ignored, but fewer than if slaves and free persons had been counted equally, allowing the slaveholder interests to largely dominate the government of the United States until 1861.  The compromise was proposed by delegates James Wilson and Roger Sherman.
+
+Bell Trade Act: The Bell Trade Act of 1946, also known as the Philippine Trade Act, was an act passed by the United States Congress specifying policy governing trade between the Philippines and the United States following independence of the Philippines from the United States.  The United States Congress offered $800 million for post World War II rebuilding funds if the Bell Trade Act was ratified by the Philippine Congress.  The specifics of the act required the 1935 Constitution of the Philippines be amended.  The Philippine Congress approved the measure on July 2, two days before independence from the United States of America, and on September 18, 1946 approved a plebiscite to amend the Constitution of the Philippines.
+
+List of legislation sponsored by Ron Paul: Ron Paul, a Republican United States Congressman from Lake Jackson, Texas, has sponsored many bills in the United States House of Representatives, such as those that would abolish the income tax or the Federal Reserve.  Except where indicated, all named bills below were originally authored and sponsored by Paul.
+
+Question: How many bills were passed by the United States Congress on September 18, 1850, as part of the Compromise of 1850 between Southern slave-holding interests and Northern Free-Soilers?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "compromise_name": {
+      "type": "string",
+      "description": "The name of the legislative compromise."
+    },
+    "date_passed": {
+      "type": "string",
+      "format": "date",
+      "description": "The date when the bills were passed as part of the compromise."
+    },
+    "number_of_bills": {
+      "type": "integer",
+      "description": "The total number of bills passed as part of the compromise."
+    },
+    "parties_involved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The groups or interests involved in the compromise."
+    }
+  },
+  "required": [
+    "compromise_name",
+    "date_passed",
+    "number_of_bills",
+    "parties_involved"
+  ],
+  "additionalProperties": false
+}

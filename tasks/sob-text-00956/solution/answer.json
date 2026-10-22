@@ -1,0 +1,13 @@
+{
+  "person_of_interest": {
+    "name": "Jim French",
+    "role": "former chairman and CEO"
+  },
+  "airline_details": {
+    "name": "Flybe",
+    "type": "regional airline",
+    "base_city": "Exeter",
+    "base_country": "UK"
+  },
+  "answer": "Exeter"
+}

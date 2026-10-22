@@ -1,0 +1,12 @@
+{
+  "prime_minister": {
+    "name": "Narendra Modi",
+    "country": "India",
+    "is_current": true
+  },
+  "committee_headed": {
+    "name": "Cabinet Committee on Economic Affairs",
+    "meeting_date": "1 July 2015"
+  },
+  "answer": "Narendra Modi"
+}

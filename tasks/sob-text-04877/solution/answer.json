@@ -1,0 +1,10 @@
+{
+  "film_comparison": {
+    "first_film_title": "Fantasia",
+    "first_film_sequence_number": 3,
+    "second_film_title": "Brother Bear",
+    "second_film_sequence_number": 44
+  },
+  "later_film_title": "Brother Bear",
+  "later_film_sequence_number": 44
+}

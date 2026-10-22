@@ -1,0 +1,11 @@
+{
+  "actor_name": "Jon-Erik Hexum",
+  "film_starred_in": "The Bear",
+  "death_details": {
+    "is_accidental": true,
+    "is_self_inflicted": true,
+    "injury_type": "gunshot",
+    "weapon_used": "blank cartridge",
+    "body_part_affected": "head"
+  }
+}

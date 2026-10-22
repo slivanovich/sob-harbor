@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+How Much Love (Survivor song): How Much Love is a song by an American rock band Survivor.  It was the opening track and the second single released from their 1986 album "When Seconds Count".
+
+When Seconds Count: When Seconds Count is the sixth album by the American rock band Survivor, released in October 1986.  It is the second album featuring vocalist Jimi Jamison.  The album included the hit single, "Is This Love", which peaked at #9 in the US on the "Billboard" Hot 100 chart in early 1987.  The album reached #49 on the "Billboard" 200 album chart.
+
+Survivor (band): Survivor is an American rock band formed in Chicago in 1978 by guitarist/songwriter Jim Peterik.  The band achieved its greatest success in the 1980s, producing many charting singles, especially in the United States.  The band is best known for its double platinum-certified 1982 hit "Eye of the Tiger", the theme song for the motion picture "Rocky III" (US number 1 for 6 weeks).  Singles like "Burning Heart" (US number 2), "The Search Is Over" (US number 4), "High on You" (US number 8), "Is This Love" (US number 9) and "I Can't Hold Back" (US number 13) continued to chart in the mid-1980s.
+
+The Stage (album): The Stage is the seventh studio album by American heavy metal band Avenged Sevenfold, released on October 28, 2016 by Capitol Records after a live stream event on the band's Facebook page.  It's the first Avenged Sevenfold album to feature Brooks Wackerman on drums, who joined the band in late 2014 but wasn't revealed as Arin Ilejay's official replacement until Ilejay's departure in 2015, because the band wanted to find a drummer that would "fit in".  "The Stage" is also the band's first album to be released through Capitol Records.  It is also the band's longest studio album at 73 minutes and 35 seconds, thus beating "City of Evil" by almost a minute.  The album also features their longest song to date, "Exist", with a run-time of 15 minutes and 41 seconds.
+
+F-Minus (band): F-Minus was a hardcore punk band formed in 1995 in Huntington Beach, California, started by Jen Johnson and Brad Logan.  F-Minus was known for their dueling male and female vocals in songs that were sometimes as short as 12 seconds ("Fuck You O.C.").  Before breaking up in 2004, their last album was recorded by Steve Albini.  Throughout their career, they covered such bands as Antidote, Black Randy and the Metro Squad, 7 Seconds, Negative Approach, and Agnostic Front.  Brad Logan currently runs his own record label Blacknoise, and is also member of the New York band Leftöver Crack.  Jen Johnson currently is the designer and owner of clothing label E.C. Star, and also is a member of the California band Ammunition Affair.
+
+Thirty Seconds to Mars discography: American rock band Thirty Seconds to Mars has released four studio albums, three extended plays, fourteen singles, four promotional singles, one video album and thirteen music videos.  The band was formed in Los Angeles, California, in 1998 by brothers Jared Leto and Shannon Leto, with Tomo Miličević joining the band later.  The band's debut album, "30 Seconds to Mars", was released through Immortal and Virgin Records in August 2002 and peaked at number 107 on the US "Billboard" 200 and number one on the US Top Heatseekers, selling more than two million copies worldwide as of March 2011.  The album produced two singles, "Capricorn (A Brand New Name)" and "Edge of the Earth".
+
+Man Against the World: "Man Against the World" is a song by American rock band Survivor.  It was the fourth track and the third single released from their 1986 album "When Seconds Count".  The song was originally to be included on the soundtrack to the 1985 film "Rocky IV" but was cut.  The song did appear as a bonus track on the 2006 reissue of the "Rocky IV soundtrack" album, along with Survivor's two other Rocky-related singles - the #1 hit "Eye of the Tiger" (the smash hit from "Rocky III") and "Burning Heart," which was the song ultimately chosen for the "Rocky IV" soundtrack and peaked at #2.
+
+List of songs recorded by Thirty Seconds to Mars: American rock band Thirty Seconds to Mars has recorded material for four studio albums.  The band was formed in Los Angeles, California, in 1998 by brothers Jared and Shannon Leto.  The duo later expanded to a four-piece when they added guitarist Solon Bixler and bassist Matt Wachter to the line-up.  After signing a contract with record label Immortal Records in 1998, the band began to work with producers Bob Ezrin and Brian Virtue on their debut album, "30 Seconds to Mars", which was released in August 2002.  The album produced two singles, "Capricorn (A Brand New Name)" and "Edge of the Earth".  In early 2003, Bixler left the band due to issues primarily related to touring and was replaced by Tomo Miličević.  Thirty Seconds to Mars released their second studio album, "A Beautiful Lie", in August 2005.  The record, produced by Josh Abraham, was preceded by the single "Attack" and spawned two Kerrang!  Award-winning singles, "The Kill" and "From Yesterday".  The album's title track, "A Beautiful Lie", was released as the fourth single in selected territories. " Hunter", a song originally performed by Björk, was covered by the band and added to the track listing of the album.  In March 2007, Wachter left the group to spend more time with his family and was replaced by Tim Kelleher, performing live only.
+
+The Count Bishops: The Count Bishops were a British rock band, formed in 1975 in London and which broke up in 1980.  The Count Bishops had limited commercial success, but forged an important stylistic and chronological link between the root rhythm and blues band Dr. Feelgood and the proto punk sound of Eddie and the Hot Rods; together forming the foundation of the pub-rock scene, which influenced the emergence of punk rock.  The group made history in England by releasing the first record from independent label Chiswick Records.  They splintered following the death of guitarist Zenon DeFleur on 18 March 1979.
+
+Bring Me the Horizon discography: The discography of Bring Me the Horizon, a British rock band, consists of five studio albums, two live albums, one compilation album, one remix album, two extended plays (EPs), one demo album, 12 singles, two video albums, 23 music videos and one other appearance.  Formed in Sheffield in 2004 by vocalist Oliver Sykes, guitarists Lee Malia and Curtis Ward, bassist Matt Kean and drummer Matt Nicholls, the band released their debut EP "This Is What the Edge of Your Seat Was Made For" on Thirty Days of Nights Records in 2005, which reached number number 41 on the UK Budget Albums Chart.  After signing with British independent record label Visible Noise, the group released their debut full-length studio album "Count Your Blessings" in 2006, which reached the top 100 of the UK Albums Chart and the top ten of the UK Rock & Metal Albums Chart.  The 2008 follow-up "Suicide Season" reached the UK top 50 and charted in the US for the first time when it reached number 107 on the "Billboard" 200.  In November 2009 an expanded version of the album titled "Suicide Season Cut Up!"  was released, featuring remixes and videos.
+
+Question: The band that made the album When Seconds Count was formed in what city?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album mentioned in the question."
+    },
+    "formation_city": {
+      "type": "string",
+      "description": "The city where the band was formed."
+    },
+    "formation_year": {
+      "type": "integer",
+      "description": "The year the band was formed."
+    }
+  },
+  "required": [
+    "band_name",
+    "album_name",
+    "formation_city",
+    "formation_year"
+  ],
+  "additionalProperties": false
+}

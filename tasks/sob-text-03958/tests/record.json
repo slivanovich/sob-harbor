@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "945d34677b48dfc972422958f588eee91a01b418547214ce2fe83a3087f385c9",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a888a0d5542997e5c09a5ff",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1950",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Ralph Garcia: Ralph \"Rafael\" Garcia (born December 14, 1948 in Los Angeles, California) is a former Major League Baseball pitcher.  Garcia played for the San Diego Padres in and .  He batted and threw right-handed.  He then played in the Mexican League from 1976 through 1988, mainly for the Indios de Ciudad Juarez.  He was inducted into the Mexican Baseball Hall of Fame in 2005.\n\nFernando Alfredo Maldonado: Fernando Alfredo Maldonado Hernández (born 8 January 1966) is a Mexican politician and lawyer affiliated with the PRI.  He currently serves as Deputy of the LXII Legislature of the Mexican Congress representing the State of Mexico.\n\nFrank Garcia (basketball): Frank F. Garcia (  1918 – January 24, 1956) was an American professional basketball player and minor league baseball player.  In basketball, Cihlar played in the National Basketball League for the Cleveland Chase Brassmen / Allmen Transfer between 1943 and 1946.  In baseball, Garcia played the Butler Yankees (1939) and Leaksville-Draper-Spray Triplets (1946).\n\nFernando Seguignol: Fernando Alfredo Seguignol Garcia (born January 19, 1975 in Bocas Del Toro, Panama) is a former Major League Baseball first baseman and outfielder.  Seguignol also played 8 years in Nippon Professional Baseball.  A switch hitter, Seguignol is regarded as the best switch-hitter ever to play in Japan, along with Orestes Destrade.\n\nTeddy Garcia: Alfonso Teddy Garcia (born June 4, 1964) is a former American professional football player who was a placekicker in the National Football League (NFL) and the World League of American Football (WLAF).  He played for the New England Patriots, Minnesota Vikings and Houston Oilers of the NFL, and the San Antonio Riders and Barcelona Dragons of the WLAF.  Garcia played collegiately at the University of Louisiana at Monroe.\n\nLuis García (shortstop): Luis Rafael Garcia (born May 20, 1975 in San Francisco de Macorís, Dominican Republic) is a retired Major League Baseball shortstop.  He played during one season at the major league level for the Detroit Tigers.  He was signed by the Tigers as an amateur free agent in .  Garcia played his first professional season (in American baseball) with their Rookie league Bristol Tigers in , and split his last season with the Triple-A teams of the Baltimore Orioles (Rochester Red Wings) and Pittsburgh Pirates (Nashville Sounds) in .\n\nJoe Spinks: Joseph \"Joe\" Spinks (born June 20, 1972) is an American retired basketball player and coach.  He played 8 years for ABC Amsterdam in the Netherlands, and was head coach and assistant coach for the team for 2 years.  Spink's nickname was \"The Bull\".  In 2010, he was inducted into the Campbell Sports Hall of Fame.\n\nFreddy García (infielder): Freddy Adrian Garcia Felix (born August 1, 1972) is a Dominican retired Major League Baseball infielder.  He played during four seasons at the major league level for the Pittsburgh Pirates and Atlanta Braves.  He was signed by the Toronto Blue Jays as an amateur free agent in .  Garcia played his first professional season (in American baseball) with their Rookie league Medicine Hat Blue Jays in , and his last season with the Boston Red Sox's Triple-A Pawtucket Red Sox in .\n\nFernando Kanapkis: Fernando Alfredo Kanapkis García (born June 6, 1966 in Montevideo) is a Uruguayan retired football defender of Greek and Spanish descent, who obtained twenty international caps for his national team, scoring five goals.  He made his debut on April 30, 1992, in a friendly against Brazil (2–1), and played his last international match for his native country on October 13, 1993, against Germany (0–5).\n\nNippon Professional Baseball: Nippon Professional Baseball (日本野球機構 , Nippon Yakyū Kikō ) or NPB is the highest level of baseball in Japan.  Locally, it is often called Puro Yakyū (プロ野球 ) , meaning \"Professional Baseball\".  Outside Japan, it is often just referred to as \"Japanese baseball\".  The roots of the league can be traced back to the formation of the \"Greater Japan Tokyo Baseball Club\" (大日本東京野球倶楽部 , Dai-Nippon Tōkyō Yakyū Kurabu ) in 1934 and the original Japanese Baseball League.  NPB was formed when that league reorganized in 1950.",
+    "question": "When did the league where Fernando Alfredo Seguignol Garcia played 8 years reorganize?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The full name of the player."
+        },
+        "league_name": {
+          "type": "string",
+          "description": "The name of the professional baseball league."
+        },
+        "years_played_in_league": {
+          "type": "integer",
+          "description": "The number of years the player played in the specified league."
+        },
+        "league_reorganization_year": {
+          "type": "integer",
+          "description": "The year the specified league reorganized."
+        }
+      },
+      "required": [
+        "player_name",
+        "league_name",
+        "years_played_in_league",
+        "league_reorganization_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Fernando Alfredo Seguignol Garcia",
+      "league_name": "Nippon Professional Baseball",
+      "years_played_in_league": 8,
+      "league_reorganization_year": 1950
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

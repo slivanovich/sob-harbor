@@ -1,0 +1,12 @@
+{
+  "stadium_name": "Las Vegas Stadium",
+  "stadium_location": {
+    "city": "Paradise",
+    "state": "Nevada"
+  },
+  "team_relocating": {
+    "team_name": "Las Vegas Raiders",
+    "league": "National Football League"
+  },
+  "expected_season_start": "2020 NFL season"
+}

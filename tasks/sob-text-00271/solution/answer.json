@@ -1,0 +1,11 @@
+{
+  "are_in_same_province": false,
+  "city_1_details": {
+    "city_name": "Leshan",
+    "province_name": "Sichuan Province"
+  },
+  "city_2_details": {
+    "city_name": "Pizhou",
+    "province_name": "Jiangsu province"
+  }
+}

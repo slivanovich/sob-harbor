@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jimmy Smits: Jimmy Smits (born July 9, 1955) is an American actor.  He played attorney Victor Sifuentes on the 1980s legal drama "L.A. Law", NYPD Detective Bobby Simone on the 1990s police drama "NYPD Blue", and Matt Santos on the 1999-2006 serial political drama "The West Wing".  He also appeared as Bail Organa in the "Star Wars" Prequel trilogy and "Rogue One", and as ADA Miguel Prado in "Dexter".  From 2012 to 2014, he joined the main cast of "Sons of Anarchy" as Nero Padilla.
+
+Prey (TV series): Prey is a science-fiction television series that aired for one season (13 episodes) in 1998 on ABC.  The series starred Debra Messing, Adam Storke, Larry Drake, Frankie Faison, James Morrison, and Vincent Ventresca.
+
+William B. Keene: William B. Keene (born February 23, 1925 in Youngstown) was a Los Angeles County Superior Court judge from 1965 to 1984.  He is perhaps best known as a judge in the reality series "Divorce Court."  He also appeared as Judge Herman Keene in the episode "Whistle Stop" in the legal drama "L.A. Law".  During his judicial career he was originally assigned to the trial of Charles Manson but was later replaced after Manson filed an affidavit of prejudice.  Keene graduated from the UCLA School of Law in 1952, where he was a member of the first graduating class.
+
+Diana Muldaur: Diana Charlton Muldaur (born August 19, 1938) is an American film and television actress.  Muldaur's television roles include "L.A. Law"s Rosalind Shays and Dr. Katherine Pulaski in the second season of "".  She has been nominated for an Emmy three times: twice for "L.A. Law" and once for "Born Free".  She was also nominated twice for a Q award for "L.A. Law."
+
+Ray Girardin: Ray Girardin (born January 23, 1953 in Wakefield, Massachusetts) is an American actor.  he studied acting at Boston University on the GI Bill, got his Equity card at the Charles Playhouse, then went off to New York where he did a lot of stage work and met his wife Marlene.  With a move to Hollywood, he found himself in front of cameras at MGM working with Julie Andrews on the movie "Star!" .  In the next 30 years, Ray directed, taught acting, and appeared in more than 200 films, television series and commercials as well as starring as the naughty Howie Dawson on ABC's "General Hospital" from 1968 to 1974.  Other television appearances include "Law & Order", "Cosby", "L.A. Law", "Murder, She Wrote" (as Lt. Casey), "St. Elsewhere", "Hill Street Blues", "Dallas", "Newhart", "Benson", "Happy Days", "Barney Miller" (as Vince Licori) and "The Man from U.N.C.L.E.".
+
+Rebecca Forstadt: Rebecca Lynn Forstadt (born December 16, 1953), also known as Reba West, is an American voice actress, best known for playing young female roles in various animated series.  After studying theater at Orange Coast College, in Costa Mesa, California, Forstadt began her acting career by working at Knott's Berry Farm's Bird Cage Theater, performing melodramas, often as the damsel in distress character.  Later, she went to Hollywood where she worked as a wardrobe mistress on such television shows as "The White Shadow" and "Hill Street Blues", as well as for the film "S.O.B.".  She also spent several years doing live theater in the Los Angeles area.  Most notably, she won some recognition for her portrayal of the character Josette in the world premiere of Eugène Ionesco's "Tales for People Under 3 Years of Age" at the Stages Theatre Center in 1982.  She starred in several low-budget movies such as "Mugsy's Girls", with Ruth Gordon and Laura Branigan, and "Round Numbers" with Kate Mulgrew, Samantha Eggar, and Shani Wallis.  She also appeared as a television actress in "Hill Street Blues", "St. Elsewhere", and "L.A. Law".  Her voice acting breakthrough came when she landed the leading role of Lynn Minmei in the English version of "Robotech", the popular anime series of the 1980s.  Since then, she has voiced hundreds of other anime characters like Nunnally Lamperouge in "Code Geass" and Tima from "Metropolis" and has branched into non-anime cartoons, live-action shows (such as "Masked Rider" and ""), commercials and radio work, and has performed background voices for movies such as "Antz", "Dr. Dolittle", and "The Santa Clause".
+
+Larry Drake: Larry Richard Drake (February 21, 1950 – March 17, 2016) was an American actor, voice artist, and comedian best known as Benny Stulwicz in "L.A. Law", Robert G. Durant in both "Darkman" and "" and the voice of Pops in "Johnny Bravo".
+
+Duane Davis: Duane Davis, the son of NFL Hall of Fame defensive end Willie Davis and Ann Davis, is an American actor who has been in such films as "Ghosts of Mars" and "Paparazzi".  He has made something of a career of playing athletes - famous or not.  He played Joe Louis in a made-for-TV movie about "Rocky Marciano", James "Buster" Douglas in the HBO original movie "Tyson", Bo Kimble in and as ESU football star Alvin Mack in the 1993 film "The Program".  Davis played Duke DePalma, a former boxer-turned-crime fighter in "Team Knight Rider", a short-lived spin-off series of the original "Knight Rider" TV series.  He played a recurring character in "Sisters", and has been in other TV shows such as "M.A.N.T.I.S.", "L.A. Law", "A Different World", "What's Happening Now", "Head of the Class", "Little Big League", and "Necessary Roughness".  He played a boxer in the movie "Diggstown" and also had a small role in Carl Reiner's 1987 comedy film, "Summer School."
+
+Darrell Larson: Darrell Ray Larson (born December 13, 1950) is an American film and television actor perhaps who appeared in the 1990 action/comedy film "Men at Work".  His work included roles in such films as "The Student Nurses" (1970), "Kotch" (1971), "The Magnificent Seven Ride" (1972), "Futureworld" (1976) and "Partners" (1982).  He had a prominent role in the 1984 film "Mike's Murder", and a small part in the 1996 film "Eye for an Eye".  Larson's television guest star appearances include "Matlock", "Designing Women", "L.A. Law", "Morningstar/Eveningstar", and "Diagnosis Murder".  He also appeared in "".
+
+Lesbian kiss episode: The "lesbian kiss episode" is a subgenre of the media portrayal of lesbianism in American television media, created in the 1990s.  Beginning in 1991 with a kiss on the American "L.A. Law" series' episode "He's a Crowd" between C.J. Lamb and Abby Perkins, David E. Kelley, who wrote the episode in question, went on to use the trope in at least two of his other shows.  Subsequent television series included an episode in which a seemingly heterosexual female character engages in a kiss with a possibly lesbian or bisexual character.  In most instances, the potential of a relationship between the women does not survive past the episode and the lesbian or suspected lesbian never appears again.
+
+Question: A Prey star also played what character in L.A. Law?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "prey_star_name": {
+      "type": "string",
+      "description": "The name of the actor who starred in 'Prey'."
+    },
+    "la_law_character_name": {
+      "type": "string",
+      "description": "The name of the character played by the actor in 'L.A. Law'."
+    },
+    "la_law_show_title": {
+      "type": "string",
+      "description": "The title of the legal drama series."
+    }
+  },
+  "required": [
+    "prey_star_name",
+    "la_law_character_name",
+    "la_law_show_title"
+  ],
+  "additionalProperties": false
+}

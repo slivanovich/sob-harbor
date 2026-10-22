@@ -1,0 +1,17 @@
+{
+  "destroyer_class": "Buckley-class",
+  "named_person": {
+    "name": "Hallsted L. Hopping",
+    "rank": "Lieutenant Commander",
+    "cause_of_death": "killed in action during the February 1, 1942 Marshall Islands Raid",
+    "embarked_on_carrier": {
+      "name": "Enterprise",
+      "designation": "CV-6",
+      "order_of_commissioning": 6
+    }
+  },
+  "destroyer_details": {
+    "name": "Hopping",
+    "designation": "DE-155/APD-51"
+  }
+}

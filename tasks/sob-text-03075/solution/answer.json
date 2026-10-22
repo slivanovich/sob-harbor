@@ -1,0 +1,17 @@
+{
+  "person_1": {
+    "name": "Gerina Dunwich",
+    "birth_date": "1959-12-27"
+  },
+  "person_2": {
+    "name": "Erich Maria Remarque",
+    "birth_date": "1898-06-22"
+  },
+  "comparison_result": {
+    "earlier_born_person_name": "Erich Maria Remarque",
+    "earlier_birth_date": "1898-06-22",
+    "later_born_person_name": "Gerina Dunwich",
+    "later_birth_date": "1959-12-27"
+  },
+  "final_answer": "Erich Maria Remarque"
+}

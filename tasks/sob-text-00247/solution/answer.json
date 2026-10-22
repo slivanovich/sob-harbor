@@ -1,0 +1,26 @@
+{
+  "championship_name": "European Under-23 Baseball Championship",
+  "championship_year": 2017,
+  "host_countries": [
+    {
+      "country_name": "Austria",
+      "cities_hosted": [
+        "Wels"
+      ]
+    },
+    {
+      "country_name": "Czech Republic",
+      "cities_hosted": [
+        "Blansko",
+        "Brno"
+      ]
+    },
+    {
+      "country_name": "Slovakia",
+      "cities_hosted": [
+        "Trnava"
+      ]
+    }
+  ],
+  "city_in_upper_austria": "Wels"
+}

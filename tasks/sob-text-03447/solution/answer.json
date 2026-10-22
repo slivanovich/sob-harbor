@@ -1,0 +1,15 @@
+{
+  "target_playwright": {
+    "name": "Christopher Marlowe",
+    "era": "Elizabethan"
+  },
+  "fictionalized_musical": {
+    "title": "Marlowe",
+    "year_released": 1981
+  },
+  "person_born_in_same_year": {
+    "name": "William Shakespeare",
+    "relationship_detail": "born in the same year as Marlowe"
+  },
+  "final_answer": "William Shakespeare"
+}

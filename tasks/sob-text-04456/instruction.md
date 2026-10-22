@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Stan Shih: Stan Shih (; born December 18, 1944), is the founder, president, and chairman of Acer Inc. In 1976, after receiving bachelor's and master's degrees in electronic engineering from National Chiao Tung University, Shih founded Multitech with his wife Carolyn Yeh and five partners.  Shih chaired Multitech through to 1987, when the company was renamed Acer, continuing as Acer chairman until his retirement in late 2004, having seen the company grow from a tiny start-up to a billion-dollar worldwide brand.  Shih remained active in charity work during his retirement, including serving as a special representative of President Chen Shui-bian to the APEC Australia 2007.  In November 2013, Shih returned to Acer after being reinstated as president and chairman.
+
+The Dukes of Hazzard (video game): The Dukes of Hazzard is a 1984 racing video game developed and published by Coleco for their ColecoVision game console and Coleco Adam computer.  Elite Systems released their own version of the game for the ZX Spectrum computer on February 23, 1985.  Both versions are based on the television series of the same name.
+
+Acer neoTouch S200: The Acer neoTouch S200 (also known as Acer neoTouch F1) is a Windows Mobile 6.5 - smartphone by Acer Inc designed for a business use.  The Acer neoTouch was launched in October 2009 and is the second phone on the market, after the Toshiba TG01, with a 1 GHz Snapdragon processor.
+
+Acer Aspire 8920: The Acer Aspire 8920 is a series of notebooks released in 2008 Q1 by Acer Inc. and it was a part of the Gemstone series.  It is the first 18.4 inch screen notebook created by Acer, and it is part of the Desktop replacement computer category.  It was often described as the flagship of Acer Aspire models until it was surpassed by other 8900s series Desktop replacement computer laptop, such as the Acer Aspire 8930G, 8940 and 8942.
+
+List of Coleco Adam games: Below are a list of Coleco Adam games compatible with the Home Computer system or the ColecoVision Expansion port 3.  Some of these games are exclusive only on the Coleco Adam, while others are released for both the Coleco Adam and ColecoVision.  In this case, the Coleco Adam version may have additional features or use more memory for more advanced graphics.  An example of this would be "".  The Coleco Adam has a total of 43 games, 24 only being playable on the Adam, 19 being superior ports of ColecoVision titles.
+
+Acer Inc.: Acer Inc. ( or ; , lit.  "Hongqi Corporation Ltd."; commonly known as Acer, stylised as acer, or formerly as acer & AceR) is a Taiwanese multinational hardware and electronics corporation specializing in advanced electronics technology and is headquartered in Xizhi, New Taipei City, Taiwan.  Acer's products include desktop PCs, laptop PCs (Which can be further subdivided into clamshell, 2-in-1, convertible and Chromebook), tablets, servers, storage devices, Virtual Reality devices, displays, smartphones and peripherals.
+
+Coleco Adam: The Coleco Adam is a home computer, and expansion for the ColecoVision (port 3), released in 1983 by American toy and video game manufacturer Coleco Industries, Inc..  It was an attempt to follow on the success of the company's ColecoVision video game console.  The Adam was not very successful, partly because of early production problems, and was orphaned in early 1985.
+
+Acer Liquid E: The Acer Liquid E is a touchscreen smartphone developed and marketed by Acer Inc..  It is the second handset designed by Acer that uses Android 2.1 (Eclair).  It was introduced in February, 2010 succeeding the Acer Liquid A1.
+
+Acer Aspire: Acer Aspire (stylized as Λspire or ΛSPIRE) is a series of personal computers by Acer Inc. aimed at the casual household user or for small business use.  The Aspire series covers both desktop computers and laptops. Acer developed the series to range from essentials to high performance.  The Aspire mainly competes against computers such as Asus' Transformer Book Flip, VivoBook and Zenbook, Dell's Inspiron and XPS, HP's Pavilion and Envy, Lenovo's IdeaPad and Toshiba's Satellite.
+
+Acer neoTouch P400: The Acer neoTouch P400 is a smartphone designed by Acer Inc. After using Android on phones such as the Acer beTouch E110 and Liquid A1, Acer has returned to Microsoft’s operating system.  It shares the hardware and design with the Acer beTouch E400 but it runs Microsoft Windows Mobile 6.5.3 operating system that brings a more finger-friendly user interface.  The neoTouch P400 was first introduced at the Mobile World Congress 2010 in Barcelona.
+
+Question: Were both Acer Inc. and Coleco Adam started in the same country?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entities": {
+      "type": "array",
+      "description": "Details about the entities mentioned in the question.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the entity."
+          },
+          "origin_country": {
+            "type": "string",
+            "description": "The country where the entity or its founding company originated."
+          }
+        },
+        "required": [
+          "name",
+          "origin_country"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "same_country_of_origin": {
+      "type": "boolean",
+      "description": "Indicates whether both entities originated in the same country."
+    },
+    "final_answer": {
+      "type": "boolean",
+      "description": "The final answer to the question: Were both Acer Inc. and Coleco Adam started in the same country?"
+    }
+  },
+  "required": [
+    "entities",
+    "same_country_of_origin",
+    "final_answer"
+  ],
+  "additionalProperties": false
+}

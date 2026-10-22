@@ -1,0 +1,15 @@
+{
+  "question_asked": "Did Lewis Mumford and Truman Capote share the same nationality?",
+  "shared_nationality": true,
+  "person_details": [
+    {
+      "name": "Lewis Mumford",
+      "nationality": "American"
+    },
+    {
+      "name": "Truman Capote",
+      "nationality": "American"
+    }
+  ],
+  "common_nationality": "American"
+}

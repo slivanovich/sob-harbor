@@ -1,0 +1,10 @@
+{
+  "university_name": "Salem International University",
+  "founding_year": 1888,
+  "university_details": {
+    "is_for_profit": true,
+    "location": "Salem, West Virginia",
+    "adjacent_landmark": "Fort New Salem",
+    "founder_denomination": "Seventh Day Baptist Church"
+  }
+}

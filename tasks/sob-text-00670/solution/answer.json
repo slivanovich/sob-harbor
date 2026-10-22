@@ -1,0 +1,13 @@
+{
+  "event_name": "Corrective Movement",
+  "alternative_event_name": "Corrective Revolution",
+  "event_type": "coup d'état",
+  "event_country": "Syria",
+  "leader": {
+    "name": "Hafez al-Assad",
+    "title_at_event": "General",
+    "presidency_start_year": 1971,
+    "presidency_end_year": 2000
+  },
+  "event_date": "13 November 1970"
+}

@@ -1,0 +1,12 @@
+{
+  "town_name": "Freeport",
+  "state": "Maine",
+  "route_details": {
+    "state_route_number": 136,
+    "junction_us_route": 1
+  },
+  "population_info": {
+    "census_year": 2010,
+    "population": 7879
+  }
+}

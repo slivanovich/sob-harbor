@@ -1,0 +1,18 @@
+{
+  "actor": {
+    "name": "Samuel West",
+    "nationality": "English",
+    "profession": [
+      "actor",
+      "director"
+    ]
+  },
+  "miniseries": {
+    "title": "Over Here",
+    "number_of_parts": 2
+  },
+  "role_played": {
+    "character_name": "Archie Bunting",
+    "role_description": "RAF pilot"
+  }
+}

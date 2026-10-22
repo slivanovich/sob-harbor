@@ -1,0 +1,12 @@
+{
+  "criminal_organization_details": {
+    "name": "Los Zetas",
+    "formation_year": 2010,
+    "formation_month": "February"
+  },
+  "victim_details": {
+    "name": "Jaime Zapata",
+    "agency": "Immigration and Customs Enforcement, Homeland Security Investigations"
+  },
+  "event_type": "murder"
+}

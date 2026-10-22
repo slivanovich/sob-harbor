@@ -1,0 +1,19 @@
+{
+  "actor_name": "Kurtwood Larson Smith",
+  "character_played": "Clarence Boddicker",
+  "film_details": {
+    "title": "RoboCop",
+    "year": 1987,
+    "genres": [
+      "cyberpunk",
+      "science fiction",
+      "superhero",
+      "action"
+    ],
+    "director": "Paul Verhoeven",
+    "writers": [
+      "Edward Neumeier",
+      "Michael Miner"
+    ]
+  }
+}

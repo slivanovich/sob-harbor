@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "record_id": "2b5d6647e7121ca263d8a6f3d69b72ecf12d57570bf1cb1c7717306ea0a85364",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8d1afc5542994ba4e3dbf9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Castro",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Charley Ross: Charles Brewster \"Charley\" Ross (May 4, 1870 – disappeared July 1, 1874) was the primary victim of the first kidnapping for ransom in United States history to receive widespread attention from the media.\n\nBall J: Albert Ayeh-Hanson (born November 8, 1984), known by his stage name Ball J or Ball J Beat, is a Ghanaian rapper, sound engineer, record producer and entrepreneur from Accra.  He spent most of his formative years in the U.S State of California.  Ball J is the CEO and founder of Nu Afrika Records.\n\nDisappearance of Amy Wroe Bechtel: Amy Joy Wroe Bechtel (August 4, 1972 – disappeared July 24, 1997; declared legally dead 2004) is an American woman who disappeared while jogging in the Wind River Mountains approximately 15 mi south of Lander, Wyoming.  Despite extensive investigative work and media portrayals, her case remains unsolved as of 2017.  She was declared dead in absentia by her husband, rock climber Steve Bechtel, in 2004.\n\nHouse Afrika Records: House Afrika Records is a deep and Afro house label owned by Tim White and Vinny Da Vinci and is one of the longest standing house music labels in South Africa.\n\nAmelia Earhart: Amelia Mary Earhart ( , born July 24, 1897; disappeared July 2, 1937) was an American aviation pioneer and author.  Earhart was the first female aviator to fly solo across the Atlantic Ocean.  She received the U.S. Distinguished Flying Cross for this accomplishment.  She set many other records, wrote best-selling books about her flying experiences and was instrumental in the formation of The Ninety-Nines, an organization for female pilots.  In 1935, Earhart became a visiting faculty member at Purdue University as an advisor to aeronautical engineering and a career counselor to women students.  She was also a member of the National Woman's Party and an early supporter of the Equal Rights Amendment.\n\nNu Afrika Records: Nu Afrika Records, LLC is a Ghanaian entertainment company established by rapper/record producer Ball J.  The company is located at Spintex road, Accra-Ghana.  It is a full service entertainment company housing a record label and a video production company called 36 Men.  The company has worked with almost all the top music and movie stars in Ghana and across Africa such as Guru, Kwaw Kese, Sarkodie, Patoranking, Castro, Stonebwoy, Stay J, EL, Joey B, Nhyiraba Kojo, R2Bees, Obour, Yaa Pono, Praye, King Ayisoba, Rocky Dawuni, Ben Brako, Kojo Antwi, Hammer, Reggie Rockstone, Eddie Watson, Ingride Alabi, Ivan Quashigah etc.\n\nCastro (musician): Theophilus Tagoe (born 1 May 1982, disappeared 6 July 2014), popularly known as Castro or Castro Under Fire, was a Ghanaian hiplife recording artist and musician.\n\nSusan Walsh (missing person): Susan Walsh (February 18, 1960 – disappeared July 16, 1996) was an American writer and freelance journalist who disappeared outside her home in Nutley, New Jersey on July 16, 1996.  Walsh's disappearance was widely publicized into the late 1990s, especially after several newspapers and media outlets published articles alluding that her disappearance was potentially linked to the Russian mafia, as well as New York City's underground vampire community, both subjects that Walsh had investigated while writing for \"The Village Voice\".\n\nJimmy Hoffa: James Riddle Hoffa (February 14, 1913 – disappeared July 30, 1975) was an American labor union leader who served as the President of the International Brotherhood of Teamsters (IBT) union from 1958 until 1971.  He vanished in late July 1975, at age 62.\n\nChekannur Maulavi: Chekannur Maulavi (born Chekannur P. K. Mohammed Abul Hassan Maulavi on 1936, disappeared July 29, 1993) was a progressive Islamic cleric who lived in Edappal, in the Malappuram district of Kerala, India.  He was noted for his controversial and unconventional interpretation of Islam based on Quran.  He disappeared on 29 July 1993 under mysterious circumstances and is now widely believed to be dead.",
+    "question": "What artist that Nu Afrika Records worked with disappeared July 6, 2014?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "disappeared_person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the person who disappeared."
+            },
+            "disappearance_date": {
+              "type": "string",
+              "format": "date",
+              "description": "The date the person disappeared."
+            },
+            "occupation": {
+              "type": "string",
+              "description": "The occupation of the disappeared person."
+            }
+          },
+          "required": [
+            "name",
+            "disappearance_date",
+            "occupation"
+          ],
+          "additionalProperties": false
+        },
+        "record_label": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the record label."
+            },
+            "location": {
+              "type": "string",
+              "description": "The location of the record label."
+            }
+          },
+          "required": [
+            "name",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "relationship_confirmed": {
+          "type": "boolean",
+          "description": "Indicates if the disappeared person worked with the record label."
+        }
+      },
+      "required": [
+        "disappeared_person",
+        "record_label",
+        "relationship_confirmed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "disappeared_person": {
+        "name": "Castro",
+        "disappearance_date": "2014-07-06",
+        "occupation": "hiplife recording artist and musician"
+      },
+      "record_label": {
+        "name": "Nu Afrika Records",
+        "location": "Spintex road, Accra-Ghana"
+      },
+      "relationship_confirmed": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

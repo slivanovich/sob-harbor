@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "record_id": "90711920bdc2dfca1545753b632a84ec490ce06cd0c75740c1c6fdd649bedfcf",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a84767c554299123d8c2260",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Kayserispor",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Equatorial Guinea national football team: The Equatorial Guinea national football team, nicknamed \"Nzalang Nacional\", is the national team of Equatorial Guinea and is controlled by the Federación Ecuatoguineana de Fútbol.  It is a member of Confederation of African Football (CAF).  Though Equatorial Guinea has traditionally been one of the lowest ranked teams in Africa, the recent influx of Spanish-born players of Equatoguinean heritage has strengthened the national team and resulted in some solid performances.  They qualified as co-hosts for the 2012 Africa Cup of Nations.  The hosting of the tournament lead to the construction of two new football stadia in the country: Estadio de Bata in Bata on the mainland, and Estadio de Malabo in Malabo.  The national team managed a creditable fourth place at the 2015 Africa Cup of Nations, which held in Equatorial Guinea.\n\nMariana Kovacevic: Mariana Kovacevic is a Serbian traditional healer who has specialized in the use of horse placenta treatment to heal athletes.  During the duration of the 2012 African Cup of Nations in Gabon and Equatorial Guinea she used the horse placenta treatment to heal Ghana's Asamoah Gyan, who had been injured and was supposed to be off football for four weeks.  She is reported to have nursed him back to health in four hours.  She was also reportedly enlisted by the Serbia during the world of 2010 in south Africa.  Other footballers who are reported to have been treated by Mariana include Pablo Zabaleta, Vincent Kompany, Nigel de Jong and Robin Van Persie of Manchester United.  There has been some doubt as to whether Mariana's therapies work.  But more footballers are turning to her for help.\n\nMohamed Ahmed Bashir: Mohammed Ahmed Bashir, also known as Bisha, (born 23 May 1987) is a Sudanese footballer who plays for the Sudanese club Al-hilal Omdurman.  He plays as a striker and also a winger.  He is a member of the Sudan national football team.  He was brought from Al-Mourada SC to Al-Hilal in December 2010.  After having a brilliant season with Al-Hilal in 2011, he was linked with Leyton Orient and Arsenal.He scored Sudan first goal in 36 years in the 2012 African Cup Of Nations against Angola in the group B which ended in a 2 : 2 .  He was transferred to Saudi club Al-Wehda in June 2012.  He scored his first goal for Al-Wehda against Al-Ahli in a friendly match which Al-Wehda won 0 : 4.  Bisha later scored his first league, competitive goal for his new side with a beauty against the Saudi League champions Al-Shabab but the team lost 2: 5.  He has been a fan favourite in Makkah and in Sudan as he scored his national team since playing his trade in Saudi Arabia against Ethiopia which Sudan won the match 5:3 in a qualifier match for the 2013 AFCON to be helding in South Africa.\n\nCentral African Republic national football team: The Central African Republic national football team, nicknamed \"Les Fauves\", is the national team of the Central African Republic and is controlled by the Fédération Centrafricaine de Football.  They are a member of CAF.  Despite being traditionally one of the weakest teams in Africa and the world, they recently achieved success.  They won the 2009 CEMAC Cup by beating Gabon in the semi-finals and Equatorial Guinea in the final 3–0.  Their ranking rose from 202 in August 2010 to 89 by July 2011.  On 10 October 2010 they earned a shock 2012 Africa Cup of Nations qualification win at home against Algeria 2–0, which put them top of their qualification group.  The team won its first FIFA World Cup qualifier on 2 June 2012 after beating Botswana 2–0 at home.\n\nAsamoah Gyan: Asamoah Gyan ( , , born 22 November 1985 in Accra) is a Ghanaian professional footballer who plays as a striker for Kayserispor and captains the Ghanaian national team.\n\nChristian Atsu: Christian Atsu Twasam (born 10 January 1992) is a Ghanaian professional footballer who plays for Premier League club Newcastle United, and the Ghanaian national team.  He primarily plays as a winger, although he has also been deployed as an attacking midfielder.\n\n2015 Africa Cup of Nations Group A: Group A of the 2015 Africa Cup of Nations was played from 17 January until 25 January in Equatorial Guinea.  The group consisted of the hosts Equatorial Guinea, Burkina Faso, Gabon, and Congo.  Congo and Equatorial Guinea advanced as group winners and runners-up respectively, while Gabon and Burkina Faso were eliminated.\n\n2012 Africa Cup of Nations qualification: This page details the process of the 2012 Africa Cup of Nations qualification phase.  Forty-six African nations, including hosts Gabon and Equatorial Guinea, entered the competition.  Gabon and Equatorial Guinea automatically qualified as host countries.  The other 44 nations were drawn into eleven groups, each containing 4 teams.  Togo was later added to Group K after its reinstatement.\n\nStade de Franceville: The Stade de Franceville is a stadium in Franceville, Gabon.  The 22,000 capacity stadium was opened in January 2012, in time for its use in the 2012 African Cup of Nations.  The opening game was a friendly between Gabon and Sudan.\n\nFootball in Equatorial Guinea: Association football (soccer) is the most popular sport in Equatorial Guinea.  It was during the Spanish colonialism that football arrived to Equatorial Guinea.  Football is now a very popular sport in the country.  Recently the national team has made a few surprising results.  In the qualification for the FIFA World Cup in 2006 Togo (who later qualified for the World Cup) was beaten 1-0, and in the qualification for the African Cup of Nations they beat Cameroon 1-0.",
+    "question": "Mariana Kovacevic is a Serbian traditional healer who has specialized in the use of horse placenta treatment to heal athletes, during the duration of the 2012 African Cup of Nations in Gabon and Equatorial Guinea she used the horse placenta treatment to heal Asamoah Gyan, a Ghanaian professional footballer who plays as a striker for which team, and captains the Ghanaian national team?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "healer_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "specialization": {
+              "type": "string"
+            },
+            "treatment_method": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "specialization",
+            "treatment_method"
+          ],
+          "additionalProperties": false
+        },
+        "athlete_treated": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "position": {
+              "type": "string"
+            },
+            "club_team": {
+              "type": "string"
+            },
+            "is_national_team_captain": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "position",
+            "club_team",
+            "is_national_team_captain"
+          ],
+          "additionalProperties": false
+        },
+        "treatment_event": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "host_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "name",
+            "year",
+            "host_countries"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "healer_details",
+        "athlete_treated",
+        "treatment_event"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "healer_details": {
+        "name": "Mariana Kovacevic",
+        "nationality": "Serbian",
+        "specialization": "traditional healer",
+        "treatment_method": "horse placenta treatment"
+      },
+      "athlete_treated": {
+        "name": "Asamoah Gyan",
+        "nationality": "Ghanaian",
+        "position": "striker",
+        "club_team": "Kayserispor",
+        "is_national_team_captain": true
+      },
+      "treatment_event": {
+        "name": "African Cup of Nations",
+        "year": 2012,
+        "host_countries": [
+          "Gabon",
+          "Equatorial Guinea"
+        ]
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

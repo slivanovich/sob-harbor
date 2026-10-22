@@ -1,0 +1,20 @@
+{
+  "mesquite_details": {
+    "genus_name": "Prosopis",
+    "native_regions": [
+      "southwestern United States",
+      "Mexico"
+    ],
+    "origin_continent": "North America"
+  },
+  "kaempferia_details": {
+    "plant_family": "ginger family",
+    "native_regions": [
+      "China",
+      "India",
+      "Southeast Asia"
+    ],
+    "origin_continent": "Asia"
+  },
+  "are_from_same_continent": false
+}

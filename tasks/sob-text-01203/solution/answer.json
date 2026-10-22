@@ -1,0 +1,13 @@
+{
+  "person_1": {
+    "name": "Thierry Zéno",
+    "is_filmmaker": true,
+    "nationality": "Belgian"
+  },
+  "person_2": {
+    "name": "Maya Deren",
+    "is_filmmaker": true,
+    "nationality": "Russian-American"
+  },
+  "both_are_filmmakers": true
+}

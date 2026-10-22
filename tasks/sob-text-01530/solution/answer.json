@@ -1,0 +1,19 @@
+{
+  "directors_involved": [
+    {
+      "name": "Kenji Mizoguchi",
+      "birth_year": 1898
+    },
+    {
+      "name": "Alain Tanner",
+      "birth_year": 1929
+    }
+  ],
+  "comparison_summary": {
+    "director_born_first": "Kenji Mizoguchi",
+    "year_born_first": 1898,
+    "director_born_second": "Alain Tanner",
+    "year_born_second": 1929
+  },
+  "answer": "Kenji Mizoguchi"
+}

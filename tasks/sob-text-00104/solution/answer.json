@@ -1,0 +1,12 @@
+{
+  "film_title": "Shackleton",
+  "release_year": 2001,
+  "director": "Charles Sturridge",
+  "expedition_depicted": {
+    "year": 1914,
+    "ship": {
+      "name": "Endurance",
+      "type": "three-masted barquentine"
+    }
+  }
+}

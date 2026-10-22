@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Physical Graffiti: Physical Graffiti is the sixth studio album by the English rock band Led Zeppelin, released as a double album on 24 February 1975 by their newly founded imprint label Swan Song Records.  The band wrote and recorded eight new songs for the album at Headley Grange, which stretched the total time of the record beyond the typical length of a single LP, so the band decided to make "Physical Graffiti" a double album by including unreleased tracks from earlier recording sessions: one outtake from "Led Zeppelin III," three from "Led Zeppelin IV," and three from "Houses of the Holy", including the unused title track from the latter album.
+
+How Many More Times: "How Many More Times" is the ninth and final track on English rock band Led Zeppelin's 1969 debut album "Led Zeppelin".  The song is credited in the album liner to Jimmy Page, John Paul Jones, and John Bonham, but Robert Plant was later added to the ASCAP credits.
+
+Led Zeppelin Deluxe Edition: The Led Zeppelin Deluxe Edition is a series of albums reissued by English rock group Led Zeppelin, distributed by Atlantic Records.  It contains all nine of the original Led Zeppelin studio albums remastered from the original analog tapes.  Along with the remastered albums, there is a companion disc with each album, consisting of previously unreleased audio tracks and alternate mixes of released tracks.  Many of these are described as work-in-progress or alternate mixes made during the original production rather than new remixes generated to highlight discarded recording elements (as did the remixes made for "The Beatles Anthology").  The first companion album consists of the 10 October 1969 concert in Paris.  The albums were released in chronological order, each with inverted album covers.
+
+Immigrant Song: "Immigrant Song" is a 1970 song by the English rock band Led Zeppelin.  It is built on a repeating riff and features lyrical references to Norse mythology, with singer Robert Plant's howling vocals mentioning war-making and Valhalla .  The song was included on their third studio album, "Led Zeppelin III", and was released as a single, which charted in several countries.  Several live recordings have also been issued on Led Zeppelin concert albums and other artists have recorded renditions of the song.
+
+Wearing and Tearing: "Wearing and Tearing" is a song by English rock group Led Zeppelin.  It is the eighth and final track on their final studio album, "Coda".  It was recorded at Polar Studios in Stockholm, Sweden during the "In Through the Out Door" sessions on 21 November 1978.
+
+Ozone Baby: "Ozone Baby" is a song by English rock group Led Zeppelin.  They recorded it in November 1978 at Polar Studios in Stockholm, Sweden, during the sessions for the band's final studio album "In Through the Out Door".  However, it was not released until the album of studio outtakes in 1982 titled "Coda".
+
+Coda (album): Coda is the ninth and final studio album by the English rock band Led Zeppelin, released in 1982.  The album is a collection of unused tracks from various sessions during Led Zeppelin's twelve-year career.  It was released two years after the group had officially disbanded following the death of drummer John Bonham.  The word "coda", meaning a passage that ends a musical piece following the main body, was therefore chosen as the title.
+
+Led Zeppelin discography: The discography of the English rock band Led Zeppelin consists of nine studio albums, four live albums, nine compilation albums, 16 singles and eight music downloads. Formed in London in 1968, the group consisted of guitarist Jimmy Page, singer Robert Plant, bass player John Paul Jones, and drummer John Bonham.  The band pioneered the concept of album-oriented rock and often refused to release popular songs as singles.  Nevertheless, four of their ten songs that reached the Hot 100 had no mention of the title in the lyrics: "Immigrant Song", "Black Dog", "Over the Hills and Far Away", "D'yer Mak'er".  Their debut album, "Led Zeppelin" (1969), released by Atlantic Records, charted at number six on the UK Albums Chart and at number ten on the United States "Billboard" 200.  It received several sales certifications, including an 8 times multi-platinum from the Recording Industry Association of America (RIAA) and Diamond from the Music Canada.  Led Zeppelin's second studio album, "Led Zeppelin II", recorded when the band were on tour, was released a few months after the first.  It reached number one in several countries, including the UK and the US, where it was certified 12 times multi-platinum.  The album produced Led Zeppelin's most successful single, "Whole Lotta Love", which peaked at several music charts in the top 10. " Led Zeppelin III" (1970) was a softer, more folk-based effort compared to the hard rock of the band's previous releases.  It also peaked at number one in the UK and in the US.
+
+Led Zeppelin II: Led Zeppelin II is the eponymous second studio album by the English rock band Led Zeppelin, released on 22 October 1969 in the United States and on 31 October 1969 in the United Kingdom by Atlantic Records.  Recording sessions for the album took place at several locations in both the United Kingdom and North America from January to August 1969.  The album's production was credited to the band's lead guitarist and songwriter Jimmy Page, and it also served as Led Zeppelin's first album to utilise the recording techniques of the engineer Eddie Kramer.  Incorporating several elements of blues and folk music, "Led Zeppelin II" exhibited the band's evolving musical style of blues-derived material and their guitar riff-based sound.  It has been described as the band's heaviest album.
+
+Led Zeppelin Boxed Set 2: Led Zeppelin Boxed Set 2 is a double album released by Atlantic Records on 21 September 1993.  This box set features the rest of the English rock band Led Zeppelin's catalogue not included in the 1990 4-CD box set "Led Zeppelin", all digitally remastered, including the previously unreleased studio track "Baby Come On Home".  A 54-page booklet was also included with the release.  Between this box set and the 4-CD box set every track from the band's nine studio albums are featured along with two BBC live recordings; the band's only non-LP b-side; and one studio outtake.
+
+Question: "Wearing and Tearing" is a song by English rock group Led Zeppelin, it's the eighth and final track on their final studio album, "Coda", the ninth and final studio album by the English rock band Led Zeppelin, released in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album."
+    },
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band that released the album."
+    },
+    "album_type": {
+      "type": "string",
+      "description": "The type of album (e.g., studio, live, compilation)."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the album was released."
+    },
+    "track_count": {
+      "type": "integer",
+      "description": "The total number of tracks on the album."
+    }
+  },
+  "required": [
+    "album_name",
+    "band_name",
+    "album_type",
+    "release_year",
+    "track_count"
+  ],
+  "additionalProperties": false
+}

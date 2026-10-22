@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+John Bacon (judge): Bacon is first mentioned as acting in the capacity of attorney to Queen Eleanor in 1278-9, and is described in certain indentures of the exchequer, dated 1288, as 'clericus Regis' and 'custos rotulorum et brevium de Banco' and 'Regis thesauriarius et camerarius,' his business being to keep a list of the cases argued in the common pleas, and to transmit records thereof, and also 'pedes chirographorum,' i.e. memoranda of fines levied throughout the country, to the treasurers and chamberlains of the exchequer, of the receipt of which the indentures already mentioned were acknowledgments.  The 'chirographa,' or fines in question, were fictitious suits, by means of which it was the custom to bar entails and convey the landed property of married women.  Bacon seems to have held this post as late as 1309.  In 1291 he was entrusted with the charge of Leeds Castle in Kent (a royal residence).  In 1313 he was appointed to a justiceship of the common pleas, and in the same year we read of his being retained in London to advise the king upon some important matters.  In 1314 he was made one of the commissioners of oyer and terminer for the counties of Norfolk and Suffolk, to try certain assessors and collectors of the revenue charged with breach of trust.  In 1315 William de Beresford, the chief justice of the common pleas, being suddenly summoned to the king, the business of the court devolved upon Thrikingham and Bacon exclusively.  We may conjecture that it was not very promptly or efficiently despatched, for it was but a short time since he had been enjoined to pay a more diligent attention to duty.  In 1317 he was summoned with the rest of the judges to parliament at Lincoln, but the invasion of the Scots in that year caused the postponement of the parliament sine die.  In 1320 he was placed on a commission to try certain persons charged with debasing and counterfeiting the coinage in the counties of Essex, Norfolk, and Suffolk, and in 1321 upon another directed to inquire into offences committed by sheriffs and other legal functionaries under colour of their official duties in the counties of Norfolk, Suffolk, Cambridge, and Huntingdon.  He appears to have died in this year, Stonore being appointed justice of the common pleas in his place.  He had landed property in Reston, Hemingston, Cleydon, and Akenham, places all of them in the county of Suffolk, and also in Essex, and at Shouldham in Norfolk.
+
+Wilma King: Wilma King (born 1942) is a historian and the Arvarh E. Strickland Distinguished Professor of History at the University of Missouri.  She holds a B.A. in American history from Jackson State University, and both an M.A. and Ph.D. in Recent U.S. History from Indiana University.  She came to the University of Missouri in 1999 and was the first to receive appointment to the Arvarh E. Strickland chair in Black History and Culture, established when Strickland retired.
+
+Stolen Childhood: Stolen Childhood: Slave Youth in Nineteenth-Century America is a 1995 history book about nineteenth century slave children in America by Wilma King.  As the first full-length book on the subject, it began the scholarship of slave childhood.  The book uses historical documents to argue that enslaved children were deprived of experiences now understood to constitute childhood, due to early work responsibilities, frequent bodily and emotional trauma, and separations from family.  The book covers themes of the children's education, leisure, religion, transitions to freedmen, and work expectations.  It was published in the Indiana University Press's Blacks in the Diaspora series, and a revised edition was released in 2011.
+
+Wilma Newhoudt-Druchen: Wilma Newhoudt-Druchen is a South African politician, and the country's first deaf female Member of Parliament.  She attended Gallaudet University and was elected the vice-president of the World Federation of the Deaf in 2011.
+
+David Henry Hickman: David Henry Hickman was a businessman, educator, and legislator from Columbia, Missouri, United States.  He was a member of the Missouri State Assembly from 1838 to 1842 and helped compose legislation requiring the state to support public 'common schools' with at least twenty-five percent of the state's revenue.  He was also instrumental in the founding and development of Stephens College and served as a curator of the University of Missouri.  David H. Hickman High School was built on his country estate in 1927 and named after him.
+
+Missouri S&amp;T Miners: Missouri S&T Miners (variously S&T or Missouri Miners) refers to the students, graduates, and sports teams of Missouri University of Science and Technology.  The nickname "Miner", or a variation of it, is common at mining schools in many states.  The teams compete in Division II of NCAA sports.  Missouri S&T was a long-time member (since 1935) of the Mid-America Intercollegiate Athletics Association (MIAA) until they joined the Great Lakes Valley Conference (GLVC) in 2005.  Missouri S&T's official school colors are silver and gold.  Men's teams are referred to as Miners and women's teams the Lady Miners.
+
+University of Missouri School of Law: The University of Missouri School of Law (Mizzou Law or MU Law) is the law school of the University of Missouri.  It is located on the university's main campus in Columbia, forty minutes from the Missouri State Capitol in Jefferson City. <ref Name="LSAC/ABA">LSAC/ABA School Overview</ref> The school was founded in 1872 by the Curators of the University of Missouri, making it one of the oldest law schools west of the Mississippi River.  Its alumni include governors, legislators, judges, attorneys general, and law professors across the country.  According to Mizzou Law's 2016 ABA-required disclosures, 82% of the 2016 Class obtained full-time, long-term, JD-required employment nine months after graduation.
+
+University of Missouri–St. Louis: The University of Missouri–St. Louis (UMSL) is public research university located in St. Louis, Missouri, United States.  Established in 1963, it is one of four universities in the University of Missouri System and its newest.  UMSL's campus is located on the former grounds of the Bellerive Country Club in St. Louis County, in the U.S. state of Missouri, stretching into the municipalities of Bellerive, Bel-Nor and Normandy.  Additional facilities are located at the former site of Marillac College and at Grand Center, both in St. Louis city.
+
+University of Missouri: The University of Missouri (also, Mizzou, or MU) is a public land-grant research university located in Columbia, Missouri, U.S.  It was founded in 1839 as the first public institution of higher education west of the Mississippi River.  As the largest university in the state, it enrolled 32,266 students in 2016, offering over 300 degree programs in 20 academic colleges.  It is the flagship campus of the University of Missouri System, which also maintains campuses in Kansas City, Rolla, and St. Louis.
+
+University of Missouri–Kansas City: The University of Missouri–Kansas City (UMKC) is a public research university serving the greater Kansas City metropolitan area.  Located in Kansas City, Missouri, UMKC is one of four system campuses that collectively constitute the University of Missouri.  UMKC is spread across multiple locales; the main Volker Campus, home to the majority of university operations, is located in Kansas City's Rockhill neighborhood, east of the Country Club Plaza, and adjacent to both the Stowers Institute for Medical Research and the world-renowned Linda Hall Library.  In 2017 the University, in collaboration with Truman Medical Center, Children's Mercy Hospital, the Missouri Health Department, the Jackson County Medical Examiners Office, and the Missouri Department of Mental Health Behavioral Medicine, formed the UMKC Health Sciences District on Hospital Hill.  This district is a first-in-the-nation partnership between local and state governments, the university, and these nationally recognized healthcare faculties, designed to promote collaboration in research, innovation, education, grant funding, and community outreach, for the advancement of health and wellness in the greater Kansas City metropolitan area.  Also in 2017, the university announced plans to expand its metropolitan identity with the construction of a downtown Campus for the Arts, located near the Kauffman Center for the Performing Arts.  The university's enrollment as of 2015 exceeded more than 16,600 students.
+
+Question: What country does Wilma King and University of Missouri have in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entities_involved": {
+      "type": "array",
+      "description": "List of entities mentioned in the question and their country association.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity_name": {
+            "type": "string",
+            "description": "The name of the entity."
+          },
+          "country_context": {
+            "type": "string",
+            "description": "The specific phrase from the context linking the entity to the country."
+          }
+        },
+        "required": [
+          "entity_name",
+          "country_context"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "common_country_name": {
+      "type": "string",
+      "description": "The full name of the country that both entities have in common."
+    },
+    "country_abbreviation": {
+      "type": "string",
+      "description": "The abbreviation of the common country, if available in the context."
+    }
+  },
+  "required": [
+    "entities_involved",
+    "common_country_name",
+    "country_abbreviation"
+  ],
+  "additionalProperties": false
+}

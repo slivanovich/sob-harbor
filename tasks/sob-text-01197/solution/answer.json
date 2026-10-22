@@ -1,0 +1,14 @@
+{
+  "former_municipality": {
+    "name": "Pizy"
+  },
+  "merged_into_municipality": {
+    "name": "Aubonne",
+    "country": "Switzerland",
+    "location_details": {
+      "canton": "Vaud",
+      "district": "Morges"
+    }
+  },
+  "merger_date": "July 1, 2011"
+}

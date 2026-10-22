@@ -1,0 +1,13 @@
+{
+  "character": {
+    "name": "Mark McCormick",
+    "tv_series": "Santa Barbara"
+  },
+  "actor": {
+    "name": "Jon Lindstrom",
+    "role_start_date": "November 14, 1985",
+    "role_end_date": "July 30, 1986",
+    "birth_year": 1957
+  },
+  "answer": 1957
+}

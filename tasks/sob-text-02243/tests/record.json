@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "record_id": "46a8b28d6396e67f6eb7941beaaacd4cbe03dd7ac32906dbebb6f510b2d61c89",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ade3978554299728e26c682",
+    "source_dataset": "hotpotqa",
+    "source_answer": "magazine",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Count of Crow's Nest: The Count of Crow's Nest is a short story by Willa Cather.  It was first published in \"Home Monthly\" in October 1896.\n\nA Resurrection: \"A Resurrection\" is a short story by American writer Willa Cather.  It was first published in \"Home Monthly\" in April 1897.\n\nTommy, the Unsentimental: Tommy, the Unsentimental is a short story by Willa Cather.  It was first published in \"Home Monthly\" in August 1896.\n\nHome Monthly: Home Monthly was a monthly women's magazine published in Pittsburgh, Pennsylvania in the late 19th century.\n\nThe Princess Baladina – Her Adventure: The Princess Baladina is a short story by Willa Cather.  It was first published in \"Home Monthly\" in 1896 under the pseudonym of Charles Douglass.\n\nThe Way of the World (short story): \"The Way of the World\" is a short story by Willa Cather.  It was first published in \"Home Monthly\" in April 1898.\n\nNanette: An Aside: \"Nanette: An Aside\" is a short story by Willa Cather.  It was first published in \"Courier\" on 31 July 1897 and one month later in \"Home Monthly\".\n\nThe Prodigies: \"The Prodigies\" is a short story by Willa Cather.  It was first published in \"Home Monthly\" in July 1897.\n\nRedbook: Redbook is an American women's magazine published by the Hearst Corporation.  It is one of the \"Seven Sisters\", a group of women's service magazines.\n\nThe Strategy of the Were-Wolf Dog: \"The Strategy of the Were-Wolf Dog\" is a short story by Willa Cather.  It was first published in \"Home Monthly\" in December 1896.",
+    "question": "What are both Redbook and Home Monthly?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "entities_analyzed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "type_identified": {
+                "type": "string"
+              },
+              "is_women_focused": {
+                "type": "boolean"
+              },
+              "publication_frequency": {
+                "type": "string"
+              },
+              "publisher": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "century_of_publication": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "type_identified",
+              "is_women_focused"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "common_classification": {
+          "type": "string"
+        },
+        "classification_attributes": {
+          "type": "object",
+          "properties": {
+            "is_periodical": {
+              "type": "boolean"
+            },
+            "target_audience_gender": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "is_periodical",
+            "target_audience_gender"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "entities_analyzed",
+        "common_classification",
+        "classification_attributes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "entities_analyzed": [
+        {
+          "name": "Redbook",
+          "type_identified": "magazine",
+          "is_women_focused": true,
+          "publisher": "Hearst Corporation"
+        },
+        {
+          "name": "Home Monthly",
+          "type_identified": "magazine",
+          "is_women_focused": true,
+          "publication_frequency": "monthly",
+          "location": "Pittsburgh, Pennsylvania",
+          "century_of_publication": "late 19th century"
+        }
+      ],
+      "common_classification": "magazine",
+      "classification_attributes": {
+        "is_periodical": true,
+        "target_audience_gender": "women"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "tornado_event": {
+    "name": "2013 Moore tornado",
+    "date": "May 20, 2013",
+    "intensity": "EF5"
+  },
+  "school_impact": {
+    "school_name": "Plaza Towers Elementary School",
+    "destruction_status": "destroyed",
+    "student_fatalities": 7
+  },
+  "overall_human_impact": {
+    "total_fatalities": 24,
+    "total_injuries": 377
+  },
+  "answer": 377
+}

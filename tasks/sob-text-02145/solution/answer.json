@@ -1,0 +1,17 @@
+{
+  "comparison_result": "Sarpino's Pizzeria",
+  "chains_compared": [
+    {
+      "chain_name": "Sarpino's Pizzeria",
+      "has_international_operations": true,
+      "international_headquarters_location": "Singapore",
+      "domestic_locations_summary": "U.S. operations headquartered in the Chicago suburb of Lincolnshire, Illinois."
+    },
+    {
+      "chain_name": "Donatos Pizza",
+      "has_international_operations": false,
+      "domestic_locations_summary": "nearly 200 locations in eight states, with the majority of locations in Ohio."
+    }
+  ],
+  "reasoning": "Sarpino's Pizzeria has international operations headquartered in Singapore, while Donatos Pizza is described as having locations only within the United States."
+}

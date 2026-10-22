@@ -1,0 +1,14 @@
+{
+  "film_comparison": {
+    "film_1": {
+      "title": "Air Force, Incorporated",
+      "release_year": 2006
+    },
+    "film_2": {
+      "title": "Fires Were Started",
+      "release_year": 1943
+    }
+  },
+  "earlier_film_title": "Fires Were Started",
+  "release_difference_years": 63
+}

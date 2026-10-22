@@ -1,0 +1,21 @@
+{
+  "radio_show_name": "Opie and Anthony",
+  "broadcast_period": {
+    "start_year": 1995,
+    "end_year": 2014
+  },
+  "hosts_involved": [
+    {
+      "host_name": "Gregg \"Opie\" Hughes"
+    },
+    {
+      "host_name": "Anthony Cumia",
+      "birth_year": 1961
+    },
+    {
+      "host_name": "Jim Norton",
+      "birth_year": 1968
+    }
+  ],
+  "identified_host_name": "Gregg \"Opie\" Hughes"
+}

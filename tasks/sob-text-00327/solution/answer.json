@@ -1,0 +1,26 @@
+{
+  "coach_details": {
+    "name": "Robert Joseph Cousy",
+    "is_retired_player": true,
+    "playing_career_stints": [
+      {
+        "team_name": "Boston Celtics",
+        "position": "point guard",
+        "start_year": 1950,
+        "end_year": 1963
+      },
+      {
+        "team_name": "Cincinnati Royals",
+        "position": "point guard",
+        "start_year": 1969,
+        "end_year": 1970
+      }
+    ]
+  },
+  "team_season_performance": {
+    "season": "1970–71",
+    "team_name": "Cincinnati Royals",
+    "opposing_points_per_game_allowed": 119.2
+  },
+  "question_answer": "Robert Joseph Cousy"
+}

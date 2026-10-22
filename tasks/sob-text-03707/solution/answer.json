@@ -1,0 +1,10 @@
+{
+  "question_asked": "Do both Gerard Way and Ben Kweller write comic books?",
+  "gerard_way_writes_comics": true,
+  "ben_kweller_writes_comics": false,
+  "comic_books_by_gerard_way": [
+    "The True Lives of the Fabulous Killjoys",
+    "The Umbrella Academy"
+  ],
+  "both_write_comics": false
+}

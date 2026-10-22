@@ -1,0 +1,25 @@
+{
+  "common_entertainment_form": "film",
+  "number_of_items": 2,
+  "entertainment_details": [
+    {
+      "title": "Sacred Planet",
+      "specific_type": "documentary",
+      "release_year": 2004,
+      "directors": [
+        "Jon Long",
+        "Hairul Salleh Askor"
+      ],
+      "production_company": "Walt Disney Pictures"
+    },
+    {
+      "title": "The Three Lives of Thomasina",
+      "specific_type": "fantasy film",
+      "release_year": 1963,
+      "directors": [
+        "Don Chaffey"
+      ],
+      "production_company": "Disney"
+    }
+  ]
+}

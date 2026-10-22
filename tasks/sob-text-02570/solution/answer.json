@@ -1,0 +1,11 @@
+{
+  "event_name": "Breeders' Stakes",
+  "racecourse_details": {
+    "name": "Morphettville Racecourse",
+    "location": "Adelaide, Australia",
+    "is_main_state_track": true
+  },
+  "horse_age_category": "two-year-olds",
+  "prize_money": 120000,
+  "currency": "A$"
+}

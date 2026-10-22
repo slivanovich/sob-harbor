@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lakuarriaga Station: Fifteen years ago, the old bus station of Vitoria-Gasteiz, Spain was demolished.  Then some years later, Artium Museum was built in the place where the old bus station had been built.  After demolishing the old bus station, a new one was built in Los Herran street.  However, the current bus station in Vitoria, the one in Los Herran street, is just working temporarily, because in May 2011 the construction of the new bus station was going to begin.  Some months prior, the town hall organized a competition in which the participants, taking in account some requirements, were asked to design an intermodal bus station in Vitoria.  Eight companies presented their jobs, and the town hall decided that the project designed by Fernando Ruiz de Ocenda, Iñaki Usandizaga and Francisco Javier Garcia de Acilu (in contribution with trakteplan engineries) was the most appropriate.
+
+Carmel Beach Central Bus Station: Carmel Beach Central Bus Station (Hebrew: מֶרְכָּזִית חוֹף הַכַּרְמֵל‎ , "Merkazit Hof HaKarmel") is the main bus station in Haifa, Israel, replacing the Haifa Bat Galim Central Bus Station.  The former station is now only used to store Egged buses and for Egged office space and innercity buses now only stop there on the road rather than inside on the route between Haifa Hof HaCarmel Central Bus Station and the Mifratz Central Bus Station.  Carmel Beach Central Bus Station opened in August 19, 2003.  Since then, all buses coming from the South which formerly ended at Haifa Bat Galim Central Bus Station terminate at Carmel Beach Central Bus Station and new more frequent lines operate between the three stations.  Passengers can get a free transfer to urban buses when they buy their inter-city ticket to continue from one central bus station to the other one, or into the city.
+
+Middleton bus station: Middleton bus station is a bus station located in the town of Middleton in Greater Manchester.  The bus station is found next to the Middleton Arndale shopping centre on the site of the old bus station.  The new bus station was opened in 2005 and is run by TfGM.
+
+Dwaraka bus station: Dwaraka Bus Station Complex is a bus station located at the eastern side of Visakhapatnam city.  The bus station is owned by Andhra Pradesh State Road Transport Corporation (APSRTC).  This is one of the major bus stations in Andhra Pradesh.  Many buses from other states like Karnataka, Tamil Nadu, Odissa, Chhattisgarh and Telangana arrive at the station.  Buses provide their services to all the major cities, towns in the state and also within the city as well.  The city services has a city bus terminus on south-east of the bus station.
+
+Swansea bus station: Swansea bus station, or Swansea city bus station, is a bus station serving Swansea, Wales.  It lies immediately to the west of the Quadrant Shopping Centre.  The bus station also has a taxi rank to the south.
+
+Garden City bus station: Garden City bus station is located in Brisbane, Australia serving the suburb of Upper Mount Gravatt and Westfield Garden City.  It opened on 22 April 1999.
+
+Pentagon Shopping Centre: The Pentagon Shopping Centre (known locally as 'The Pentagon') is a shopping centre in Chatham in Kent.  The shopping centre is located next to the Waterfront bus station which replaces the Pentagon bus station, which 80% of services use.  The shopping centre contains over 70 shops and 7 leisure facilities, many high street names in fashion, homeware and food stores.  There are also cafes, restaurants and a bowling alley.  As is common with some other 1970's era town centre shopping centres, The Pentagon does not feature a food court or any dedicated dining area.  Instead, there are various food outlets scattered throughout the centre.  Built as part of the redevelopment of Chatham town centre in the 1970s, the Pentagon also features the high rise Mountbatten House office block, which has controversially stood empty or part-used for most of its history.  The Pentagon, Mountbatten House and the Brook multi-storey carpark are built in a distinctive orange-red brick with grey concrete.
+
+Ashton-under-Lyne bus station: Ashton-under-Lyne bus station is a bus station that is located in the town of Ashton-under-Lyne in Greater Manchester, run by Transport for Greater Manchester.  The bus station is situated on Wellington Road and adjoins the Arcades Shopping Centre.  The bus station was opened in 1994 and replaced the previous bus station that was built on the current site.
+
+Westfield Garden City: Westfield Garden City, better known as Garden City, is one of Brisbane's major shopping centres, located in the suburb of Upper Mount Gravatt.  The centre is operated by Westfield, and previously operated by AMP Limited before the takeover in 2003.  The shopping centre currently has 440 specialty stores, cafes, restaurants and other services and food vendors.
+
+Nizamabad bus station: Nizamabad Bus Station (NZB) is a bus station located at the center of Nizamabad city in the state of Telangana, India.  The bus station is owned by Telangana State Road Transport Corporation (TSRTC) and is one of the major bus stations in the newly formed state of Telangana.  The bus station is well connected to most of the cities and towns in the Telangana state erstwhile Andhra Pradesh.  There are a total of 30 platforms.  A waiting hall for reserved passengers is provided by TSRTC.  There is an old bus stop (old bus station) & 2 bus depots (NZB1 & NZB2) located in the city.
+
+Question: When did the bus station serving one of Brisbane's major shopping centres open?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "bus_station_name": {
+      "type": "string",
+      "description": "The name of the bus station."
+    },
+    "shopping_centre_served": {
+      "type": "string",
+      "description": "The name of the major shopping centre served by the bus station."
+    },
+    "city": {
+      "type": "string",
+      "description": "The city where the bus station is located."
+    },
+    "opening_date": {
+      "type": "string",
+      "description": "The full opening date of the bus station."
+    },
+    "opening_year": {
+      "type": "integer",
+      "description": "The year the bus station opened."
+    }
+  },
+  "required": [
+    "bus_station_name",
+    "shopping_centre_served",
+    "city",
+    "opening_date",
+    "opening_year"
+  ],
+  "additionalProperties": false
+}

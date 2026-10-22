@@ -1,0 +1,18 @@
+{
+  "question_asked": "Are Cake and The Darling Buds both from America?",
+  "answer": false,
+  "bands_information": [
+    {
+      "band_name": "Cake",
+      "is_from_america": true,
+      "origin_country": "America",
+      "origin_city_or_region": "Sacramento, California"
+    },
+    {
+      "band_name": "The Darling Buds",
+      "is_from_america": false,
+      "origin_country": "Wales",
+      "origin_city_or_region": "Newport, South Wales"
+    }
+  ]
+}

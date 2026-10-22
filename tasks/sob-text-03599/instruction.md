@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Rodríguez v. Popular Democratic Party: Rodríguez v. Popular Democratic Party, 457 U.S. 1 (1982) , was a case in which the Supreme Court of the United States heard on appeal from the Supreme Court of Puerto Rico whether Puerto Rico may by statute vest in a political party the power to fill an interim vacancy in the Puerto Rico Legislature.  The Supreme Court of Puerto Rico held that such a procedure did not violate the United States Constitution, and the US Supreme Court upheld the decision of the Supreme Court of Puerto Rico.  The case was of some interest to close followers of the Court as it featured the one and only return of former associate justice, Abe Fortas, now in private practice, at oral argument on behalf of the appellee.
+
+Oliver Wendell Holmes Jr.: Oliver Wendell Holmes Jr. ( ; March 8, 1841 – March 6, 1935) was an American jurist who served as an Associate Justice of the Supreme Court of the United States from 1902 to 1932, and as Acting Chief Justice of the United States from January–February 1930.  Noted for his long service, his concise and pithy opinions and his deference to the decisions of elected legislatures, he is one of the most widely cited United States Supreme Court justices in history, particularly for his "clear and present danger" opinion for a unanimous Court in the 1919 case of "Schenck v. United States", and is one of the most influential American common law judges, honored during his lifetime in Great Britain as well as the United States.  Holmes retired from the Court at the age of 90 years, making him the oldest Justice in the Supreme Court's history.  He also served as an Associate Justice and as Chief Justice on the Massachusetts Supreme Judicial Court, and was Weld Professor of Law at the Harvard Law School, of which he was an alumnus.
+
+Harry S. Truman Supreme Court candidates: During his two terms in office, President Harry S. Truman appointed four members of the Supreme Court of the United States: Chief Justice Fred M. Vinson, Associate Justice Harold Burton, Associate Justice Tom C. Clark, and Associate Justice Sherman Minton.
+
+Neil Gorsuch Supreme Court nomination: After his nomination on January 31, 2017, Neil Gorsuch was confirmed by the Senate on April 7, 2017.  Gorsuch, age 49, is the youngest sitting Supreme Court justice since Clarence Thomas.  In February 2016, U.S. Supreme Court Associate Justice Antonin Scalia died, leaving a vacancy on the highest federal court in the United States.  Article II of the U.S. Constitution requires the president to nominate justices to the Supreme Court, subject to the "advice and consent" of the United States Senate.  President Barack Obama, a Democrat, nominated Merrick Garland to fill the vacancy.  U.S. Senate majority leader Mitch McConnell, a Republican, arguing that the presidential election cycle having already commenced made the appointment of the next justice a political issue to be decided by voters, refused to bring the Garland nomination to the Senate floor for a vote.  McConnell's action held the Supreme Court vacancy open through the end of President Obama's tenure.
+
+Albert C. Baker: Albert Cornelius Baker (February 15, 1845 – August 31, 1921) was an American jurist and politician who was the only person to serve on both the Arizona Territorial Supreme Court and the Arizona Supreme Court.  As a judge he served four years as Chief Justice of the Supreme Court of Arizona Territory and two-and-a-half years as an Associate Justice of the Arizona Supreme Court.  Politically he was a member of the Arizona Territorial Legislature and a delegate to Arizona's constitutional convention.
+
+Elena Kagan: Elena Kagan (pronounced ; born April 28, 1960) is an Associate Justice of the Supreme Court of the United States.  Kagan is the Court's fourth female justice.
+
+Richard C. Watts: Richard Cannon Watts was an associate justice on the South Carolina Supreme Court.  He was born on March 15, 1853.  Following an amendment to the South Carolina Constitution, a fourth seat on the South Carolina Supreme Court was added, and Richard Watts was elected by the South Carolina General Assembly to the position on January 10, 1912.  Justice Watts was the first person appointed to the newly created fifth seat on the state supreme court.  He had previously been serving as a state trial judge.  He was married to Littie McIver, a daughter of South Carolina Supreme Court chief justice Henry McIver.  Watts died on October 13, 1930, and is buried at the Laurens City Cemetery.
+
+Frank I. Osborne: Francis "Frank" Irwin Osborne (1853–1920) was the Attorney General of North Carolina from 1893 to 1896.  Osborne was born in Charlotte, North Carolina and attended the University of Virginia before reading law for 2 years in the offices of Richmond Mumford Pearson, Chief Justice of the North Carolina Supreme Court.  Osborne was admitted to the North Carolina Bar in 1875.  At age 25, he was elected mayor of Charlotte, North Carolina and served in the office from 1879-1880.  He was elected Attorney General of North Carolina in 1893, but, defeated for reelection to the same office in 1896.  Osborne served a term as a state senator from Mecklenburg County, North Carolina in the North Carolina General Assembly from 1898-1899.  He served on 9 standing Senate Committees.  After 1899, Osborne resumed his legal practice at the law firm of Osborne, Maxwell & Kearn.  Though, himself, a Democrat, in 1901 Osborne defended both North Carolina Supreme Court Chief Justice David M. Furches and North Carolina Supreme Court Associate Justice Robert Martin Douglas during their impeachment hearings.  Osborne was of the opinion that the Republican judges’ impeachments were unwarranted and an attempted political purge.  Osborne’s brilliant speech before the North Carolina General Assembly in closing defense of the justices caused both to be acquitted.  As reward for his successful defense of the justices, Theodore Roosevelt in the same year appointed Osborne an associate justice of the United States Court of Private Land Claims.
+
+Newsical: Newsical (styled "NEWSical") is a musical with music, lyrics and book written by Rick Crom.  In ever-changing songs and sketches it lampoons current events, hot topics, celebrities, politicians and other well-known entities.  Everyone from President Barack Obama, Lady Gaga, Nancy Grace and Oprah Winfrey to Christina Aguilera, Elena Kagan, Dr.Phill and Sarah Palin are skewered.  New songs are added on a continual basis to keep up with the headlines.
+
+Associate Justice: Associate Justice or Associate Judge is the title for a member of a judicial panel who is not the Chief Justice in some jurisdictions.  The title "Associate Justice" is used for members of the Supreme Court of the United States and some state supreme courts, and for some other courts in Commonwealth countries, as well as for members of the Supreme Court of the Federated States of Micronesia, a former United States Trust Territory.  In other common law jurisdictions, the equivalent position is called "Puisne Justice".
+
+Question: Which person skewered in "Newsical" is an Associate Justice of the Supreme Court of the United States?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person identified."
+    },
+    "judicial_role": {
+      "type": "string",
+      "description": "The specific judicial role held by the person."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court the person serves on."
+    },
+    "is_skewered_in_newsical": {
+      "type": "boolean",
+      "description": "Indicates whether the person is mentioned as being skewered in 'Newsical'."
+    }
+  },
+  "required": [
+    "person_name",
+    "judicial_role",
+    "court_name",
+    "is_skewered_in_newsical"
+  ],
+  "additionalProperties": false
+}

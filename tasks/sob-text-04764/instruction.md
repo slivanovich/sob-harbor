@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Vilify (song): "Vilify" is the first single from American industrial metal band Device's studio debut album of the same name"."  It was released through Warner Bros.  Records on February 19, 2013, and it was produced by David Draiman, who is also the current lead singer of Disturbed, and Geno Lenardo, who is originally the lead guitarist of Filter.
+
+The Lost Children (album): The Lost Children is a B-sides compilation album by American metal band Disturbed.  It was released on November 8, 2011.  The album was announced in August 2011 by David Draiman via Twitter, where he answered several questions regarding the album.
+
+Vices and Virtues (Art of Dying album): Vices and Virtues is the second studio album by Canadian rock band Art of Dying.  It is the band's major label debut after signing under David Draiman and Dan Donegan's Intoxication records.  Coincidentally, alternative rock band Panic!  at the Disco released their third album, also titled "Vices & Virtues" (not counting the ampersand), four days prior.  As of September 2014, "Vices and Virtues" has sold over 50,000 copies.
+
+David Draiman: David Michael Draiman (born March 13, 1973) is an American songwriter and the vocalist for the band Disturbed as well as for the band Device.  Draiman is known for his distorted voice and percussive singing style.  In November 2006, Draiman was voted number 42 on the "Hit Parader"’s ""Top 100 Metal Vocalists of All Time"".  Draiman has written some of Disturbed's most successful singles, such as "Stupify", "Down with the Sickness", "Indestructible", and "Inside the Fire".
+
+Asylum (Disturbed album): Asylum is the fifth studio album by American metal band Disturbed.  "Asylum" is meant to take a fresh direction in the band's music career, while remaining consistent with the band's previous albums.  Most of the lyrical content was inspired by aspects of frontman David Draiman's life prior to making the album.  The album was released on August 31, 2010 in the United States through Reprise Records.  A tour in support of the album, titled the Asylum Tour, started in late August 2010.  "Asylum" is also the third consecutive Disturbed album to not feature the Parental Advisory label (although the deluxe version on iTunes is marked explicit for live versions of their earlier material from "The Sickness").
+
+Device (metal band): Device was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed.  Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material.  The two started work on a debut album in June 2012.  The result of those sessions, "Device", was released on April 9, 2013.  The first single and third track, "Vilify" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown.  The second single and the introductory track, "You Think You Know", was released on June 11, 2013, alongside its music video, directed once again by Brown.
+
+Paul Young (singer, born 1947): Paul Young (17 June 1947 – 15 July 2000) was an English singer and songwriter.  He achieved success in the bands Sad Café and Mike + The Mechanics.
+
+Disturbed (band): Disturbed is an heavy metal band from Homer Glen, Illinois, formed in 1996.  The band includes vocalist David Draiman, bassist John Moyer, guitarist Dan Donegan, and drummer Mike Wengren.  Former band members are bassist Steve Kmak and vocalist Erich Awalt.
+
+Prayer (song): "Prayer" is a song released on August 14, 2002 by the American heavy metal band Disturbed as the first single from their second album, "Believe".  It was inspired by the death of vocalist David Draiman's grandfather as well as various circumstances after the September 11 attacks, and is about a conversation between Draiman and God.  Upon release, many media outlets refused to air the "Prayer" music video, citing supposed similarities between the imagery of the music video and that of the September 11 attacks.  "Prayer" peaked at number-three on two United States airplay charts, "Billboard"'s Mainstream Rock Tracks and Modern Rock Tracks charts, as well as peaking at number-fifty-eight on "Billboard"'s Hot 100 and number-fourteen on the Canadian Singles Chart.  "Prayer" is Disturbed's second highest charting single on the Billboard Hot 100 and their highest charting single on the Modern Rock Tracks chart, and 1 of only 2 of their songs to reach the top 5 on the chart (the other being "Inside the Fire", which peaked at No. 4).
+
+Device (Device album): Device is the eponymous debut album from American industrial metal band Device, featuring David Draiman of Disturbed and former Filter guitarist Geno Lenardo.  It was released on April 9, 2013, with their first single, "Vilify", out on digital download in February 19, 2013.  Their second single, "You Think You Know", was released in June 11, 2013.
+
+Question: Paul Young and David Draiman, share which mutual occupation?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_1_name": {
+      "type": "string",
+      "description": "The name of the first person mentioned."
+    },
+    "person_2_name": {
+      "type": "string",
+      "description": "The name of the second person mentioned."
+    },
+    "mutual_occupation": {
+      "type": "string",
+      "description": "The occupation shared by both individuals."
+    },
+    "person_1_other_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Other roles or occupations of the first person, if any."
+    },
+    "person_2_other_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Other roles or occupations of the second person, if any."
+    }
+  },
+  "required": [
+    "person_1_name",
+    "person_2_name",
+    "mutual_occupation"
+  ],
+  "additionalProperties": false
+}

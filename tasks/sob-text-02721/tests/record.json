@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "record_id": "b0b15d8d9d44ce6f5c759cf41dd6b6f90dc34ebff296f038a151f68d02c577f1",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5adfa02c5542995ec70e9058",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Zora Neale Hurston",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Serpent and the Rainbow (book): The Serpent and the Rainbow: A Harvard Scientist's Astonishing Journey into the Secret Societies of Haitian Voodoo, Zombies, and Magic is a 1985 book by anthropologist and researcher Wade Davis.  He investigated Haitian Vodou and the process of making zombies.  He studied ethnobotanical poisons, discovering their use in a reported case of a contemporary zombie, Clairvius Narcisse.\n\nThe Gilded Six Bits: \"The Gilded Six-Bits\" is a 1933 short story by Zora Neale Hurston, who is considered one of the pre-eminent writers of 20th-century African-American literature and a leading prose writer of the Harlem Renaissance.  Hurston was a relative newcomer on the literary scene when this short story was published, but eventually had greater success with her highly acclaimed novel, \"Their Eyes Were Watching God\".  \"The Gilded Six-Bits\" is now published in Hurston's compilation of short stories entitled \"Spunk\" in which it is now considered one of her best stories.  \"The Gilded Six-Bits\" is a story full of love, betrayal, and forgiveness.  It portrays the life of two happy newlyweds who both test their relationship and their love for one another when a charismatic outsider comes into their community and into their home.  The story embodies Hurston's typical writing style in which it focuses on the common African-American lifestyle, represented by regional dialect and metaphors, and is set in her native town Eatonville, FL where it reflects the traditions of the community.  \"The Gilded Six-Bits\" symbolizes the meaning of a true marriage and the truth that lies underneath its meaning.\n\nHarlem Renaissance: The Harlem Renaissance was a cultural, social, and artistic explosion that took place in Harlem, New York, spanning the 1920s.  During the time, it was known as the \"New Negro Movement\", named after the 1925 anthology by Alain Locke.  The Movement also included the new African-American cultural expressions across the urban areas in the Northeast and Midwest United States affected by the African-American Great Migration, of which Harlem was the largest.  The Harlem Renaissance was considered to be a rebirth of African-American arts.  Though it was centered in the Harlem neighborhood of the borough of Manhattan in New York City, many francophone black writers from African and Caribbean colonies who lived in Paris were also influenced by the Harlem Renaissance.\n\nClaude McKay: Festus Claudius \"Claude\" McKay (September 15, 1889 – May 22, 1948) was a Jamaican writer and poet, who was a seminal figure in the Harlem Renaissance.  He wrote four novels: \"Home to Harlem\" (1928), a best-seller that won the Harmon Gold Award for Literature, \"Banjo\" (1929), \"Banana Bottom\" (1933), and in 1941 a manuscript called \"Amiable With Big Teeth: A Novel of the Love Affair Between the Communists and the Poor Black Sheep of Harlem\" which remained unpublished until 2017.  McKay also authored collections of poetry, a collection of short stories, \"Gingertown\" (1932), two autobiographical books, \"A Long Way from Home\" (1937) and \"My Green Hills of Jamaica\" (published posthumously), and a non-fiction, socio-historical treatise entitled \"Harlem: Negro Metropolis\" (1940).  His 1922 poetry collection, \"Harlem Shadows\", was among the first books published during the Harlem Renaissance.  His \"Selected Poems\" was published posthumously, in 1953.\n\nRhoda Bubendey Métraux: Rhoda Bubendey Metraux (18 October 1914, New York City – 26 November 2003, Barton, Vermont), was a prominent anthropologist in the area of cross-cultural studies, specializing in Haitian voodoo and the Iatmul people of the middle Sepik River in Papua New Guinea.  She collaborated with Alfred Metraux, on mutual studies of Voodoo in Haiti.  During World War II, Metraux headed the section on German morale for the US Office of Strategic Services (OSS).\n\nZora Neale Hurston: Zora Neale Hurston (January 7, 1891 – January 28, 1960) was an African-American novelist, short story writer, folklorist, and anthropologist known for her contributions to African-American literature, her portrayal of racial struggles in the American South, and works documenting her research on Haitian voodoo.  Of Hurston's four novels and more than 50 published short stories, plays, and essays, she is best known for her 1937 novel \"Their Eyes Were Watching God\".\n\nCreole Renaissance: The Creole Renaissance is a movement which established Creole as legitimate literary language, started in large part by authors like Felix Morisseau-Leroy, who struggled successfully to make Haitian Creole the literary, educational, and official language of Haiti.  This grew, in part, out of the Negritude and Haitian Indigenism movements and the Harlem Renaissance.\n\nVirginia Houston: Virginia Houston was a poet of the Harlem Renaissance.  Her poetry often used overtly erotic images.  One of her poems, Class Room, was included in the first edition of \"Shadowed Dreams: Women's Poetry of the Harlem Renaissance\" (1989), edited by Maureen Honey, which was a groundbreaking anthology that brought to notice women poets of the Harlem Renaissance.  She was the model for the character Clara in Ruth Seid's book \"The Changelings\".  She was a friend of Seid throughout her life and helped her write \"The Changelings\" by confirming the truth of the black characters in it.  She also worked as a social worker.\n\nGwendolyn B. Bennett: Gwendolyn B. Bennett (July 8, 1902 – May 30, 1981) was an American artist, writer, and journalist who contributed to \"\", which chronicled cultural advancements during the Harlem Renaissance.  Though often overlooked, she herself made considerable accomplishments in poetry and prose.  She is perhaps best known for her short story \"Wedding Day\", which was published in the first issue of \"Fire!! \" Bennett contributed a lot within her lifetime.  She was a dedicated and self-preserving woman, respectfully known for being a strong influencer of African-American women rights during the Harlem Renaissance.  Throughout her dedication and perseverance, Bennett raised the bar when it came to women's literature, and education.  One of her contributions to the Harlem Renaissance was her literary acclaimed short novel \"Poets Evening\", it helped the understanding within the African-American communities, resulting in many African-Americans coming to terms with identifying and accepting themselves.\n\nChicago Black Renaissance: The Chicago Black Renaissance (also known as the Black Chicago Renaissance) was a creative movement that blossomed out of the Chicago Black Belt on the city's South Side and spanned the 1930s and 1940s before a transformation in art and culture in the mid-1950s through the turn of the century.  The movement included such famous African-American writers as Richard Wright, Margaret Walker, Gwendolyn Brooks, Arna Bontemps, and Lorraine Hansberry, as well as musicians Thomas A. Dorsey, Louis Armstrong, and Earl Hines.  During the Great Migration, which brought tens of thousands of African-Americans to Chicago's South Side, African-American writers, artists, and community leaders began promoting racial pride and a new black consciousness, similar to that of the Harlem Renaissance in New York City.  Unlike the Harlem Renaissance, the Chicago Black Renaissance did not receive the same amount of publicity on a national setting.  This was due to several factors, including the lower profile participants in the movement, the lack of wealthy patrons investing in the movement, and a geographical distance from New York as a publishing center.",
+    "question": "Who is known for her research on Haitian voodoo and was a leading prose writer of the Harlem Renaissance?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The full name of the person."
+        },
+        "primary_contribution_type": {
+          "type": "string",
+          "description": "The main field of contribution (e.g., literature, anthropology)."
+        },
+        "research_area": {
+          "type": "string",
+          "description": "The specific area of research the person is known for."
+        },
+        "harlem_renaissance_role": {
+          "type": "string",
+          "description": "The specific role or title held by the person within the Harlem Renaissance."
+        },
+        "notable_works": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of notable literary works by the person."
+        }
+      },
+      "required": [
+        "person_name",
+        "primary_contribution_type",
+        "research_area",
+        "harlem_renaissance_role",
+        "notable_works"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Zora Neale Hurston",
+      "primary_contribution_type": "literature and anthropology",
+      "research_area": "Haitian voodoo",
+      "harlem_renaissance_role": "leading prose writer",
+      "notable_works": [
+        "Their Eyes Were Watching God",
+        "The Gilded Six-Bits",
+        "Spunk"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

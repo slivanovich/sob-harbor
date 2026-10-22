@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "ba3b5e155341473fc1cdab7c013636701eadbf8dba5dcdbeb23218eec77a921d",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a88d4fc55429938390d3fc7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "pinyin and Wade–Giles",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Li (surname 李): Li () is the second most common surname in China, behind only Wang.  It is one of the most common surnames in the world, shared by 92.76 million people in China, and more than 100 million worldwide.  It is the fourth name listed in the Song dynasty classic text \"Hundred Family Surnames\".\n\nJi (surname 计): Jì is the Mandarin pinyin romanization of the Chinese surname written 计 in simplified Chinese and 計 in traditional Chinese.  It is romanized as Chi in Wade–Giles, and Kai or Gai in Cantonese.  Ji is listed 113th in the Song Dynasty classic text \"Hundred Family Surnames\".  Relatively uncommon, it is not among the top 300 surnames in China.\n\nLi (surname): Li is the pinyin and Wade–Giles romanization (spelled Lí, Lǐ, or Lì when pinyin tone diacritics are used) of several distinct Chinese surnames that are written with different characters in Chinese.  Li 李 is by far the most common among them, shared by 93 million people in China, and more than 100 million worldwide.  It is the second most common Chinese surname behind Wang and the most common surname in Canada .\n\nBing (Chinese surname): Bing is the Mandarin pinyin romanization of the Chinese surname written 邴 in Chinese character.  It is romanized Ping in Wade–Giles.  Bing is listed 214th in the Song dynasty classic text \"Hundred Family Surnames\".  It is not among the 300 most common surnames in China.\n\nJi (surname 籍): Jí is the Mandarin pinyin romanization of the Chinese surname written 籍 in Chinese character.  It is romanized as Chi in Wade–Giles, and Zik in Cantonese.  Ji is listed 275th in the Song dynasty classic text \"Hundred Family Surnames\".  It is not among the 300 most common surnames in China.\n\nBan (surname): Ban is the Mandarin pinyin romanization of the Chinese surname written 班 in Chinese character.  It is romanized Pan in Wade–Giles.  Ban is listed 235th in the Song dynasty classic text \"Hundred Family Surnames\".  It is not among the 300 most common surnames in China.\n\nJi (surname 汲): Jí is the Mandarin pinyin romanization of the Chinese surname written 汲 in Chinese character.  It is romanized as Chi in Wade–Giles, and Kap in Cantonese.  Ji is listed 213th in the Song dynasty classic text \"Hundred Family Surnames\".  It is not among the 300 most common surnames in China.\n\nJi (surname 暨): Jì is the Mandarin pinyin romanization of the Chinese surname written 暨 in Chinese character.  It is romanized as Chi in Wade–Giles and Kei in Cantonese.  Ji is listed 345th in the Song dynasty classic text \"Hundred Family Surnames\".  It is not among the 300 most common surnames in China.\n\nRui (surname): Rui is the Mandarin pinyin romanization of the Chinese surname written 芮 in Chinese characters.  It is romanized Jui in Wade–Giles.  Rui is listed 209th in the Song dynasty classic text \"Hundred Family Surnames\".  It is not among the 300 most common surnames in China.\n\nJi (surname 蓟): Jì is the Mandarin pinyin romanization of the Chinese surname written 蓟 in simplified Chinese and 薊 in traditional Chinese.  It is romanized as Chi in Wade–Giles and Gai or Kai in Cantonese.  Ji is listed 263rd in the Song Dynasty classic text \"Hundred Family Surnames\".  It is not among the 300 most common surnames in China.",
+    "question": "What type of romanization is the fourth name listed in the Song dynasty classic text \"Hundred Family Surnames\"?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "surname_name": {
+          "type": "string",
+          "description": "The name of the surname."
+        },
+        "hundred_family_surnames_rank": {
+          "type": "integer",
+          "description": "The rank of the surname in the Song dynasty classic text 'Hundred Family Surnames'."
+        },
+        "romanization_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of romanization systems used for the surname."
+        }
+      },
+      "required": [
+        "surname_name",
+        "hundred_family_surnames_rank",
+        "romanization_types"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "surname_name": "Li",
+      "hundred_family_surnames_rank": 4,
+      "romanization_types": [
+        "pinyin",
+        "Wade–Giles"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

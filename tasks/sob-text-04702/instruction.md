@@ -1,0 +1,106 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Tobe Levin: Tobe Levin Freifrau von Gleichen (*Feb 16, 1948), a multi-lingual scholar, translator, editor and activist, is an Associate of the Hutchins Center for African and African American Research at Harvard University; a Visiting Research Fellow at the International Gender Studies Centre, Lady Margaret Hall, University of Oxford; an activist against female genital mutilation (FGM) and professor of English Emerita at the University of Maryland, University College.  Having received her PhD in 1979 from Cornell University, she is most known for combining her advocacy against FGM with her academic scholarship in comparative literature.  She has published peer-reviewed and popular articles and book chapters, edited four books, launched UnCUT/VOICES Press in 2009 and founded "Feminist Europa Review of Books" (1998-2010).  Her most notable works to date are "Empathy and Rage.  Female Genital Mutilation in African Literature" and " Waging Empathy.  Alice Walker, Possessing the Secret of Joy, and the Global Movement to Ban FGM."  Alice Walker expressed appreciation for the text that shows worldwide solidarity with the novelist's literary abolition efforts in the early nineties.  Levin has also teamed up with Maria Kiminta and photographer Britta Radike to publish a memoir and sourcebook, "Kiminta.  A Maasai's Fight against Female Genital Mutilation."
+
+Three Brothers (1981 film): Three Brothers (Italian: "Tre fratelli" ) is a 1981 Italian film based on a work by Andrei Platonov.  It was directed by Francesco Rosi and stars Philippe Noiret, Vittorio Mezzogiorno, Michele Placido and Charles Vanel.
+
+Samuel Eliot Morison: Samuel Eliot Morison, (July 9, 1887 – May 15, 1976) was an American historian noted for his works of maritime history and American history that were both authoritative and popular.  He received his Ph.D. from Harvard University in 1912, and taught history at the university for 40 years.  He won Pulitzer Prizes for "Admiral of the Ocean Sea" (1942), a biography of Christopher Columbus, and "John Paul Jones: A Sailor's Biography" (1959).  In 1942, he was commissioned to write a history of United States naval operations in World War II, which was published in 15 volumes between 1947 and 1962.  Morison wrote the popular "Oxford History of the American People" (1965), and co-authored the classic textbook "The Growth of the American Republic" (1930) with Henry Steele Commager.  Over the course of his distinguished career, Morison received eleven honorary doctoral degrees, and garnered numerous literary prizes, military honors, and national awards from both foreign countries and the United States, including two Pulitzer Prizes, two Bancroft Prizes, the Balzan Prize, the Legion of Merit, and the Presidential Medal of Freedom.
+
+Andrei Platonov: Andrei Platonov (Russian: Андре́й Плато́нов , ] ; August 28 [O.S. August 16] 1899 – January 5, 1951) was the pen name of Andrei Platonovich Klimentov (Russian: Андре́й Плато́нович Климе́нтов ), a Soviet Russian writer, playwright, and poet, whose works anticipate existentialism.  Although Platonov was a Communist, most of his works were banned in his own lifetime for their skeptical attitude toward collectivization and other Stalinist policies, as well as for its experimental, avant-garde form.  His famous works include the novels "The Foundation Pit" (Котлован) and "" (Чевенгур)
+
+2011 Pulitzer Prize: The 2011 Pulitzer Prizes were announced on Monday, April 18, 2011. " The Los Angeles Times" won two prizes, including the highest honor for Public Service. " The New York Times" also won two awards.  No prize was handed out in the Breaking News category. " The Wall Street Journal" won an award for the first time since 2007.  Jennifer Egan's "A Visit From the Goon Squad" picked up the Fiction prize after already winning the 2010 National Book Critics Circle Award.  Photographer Carol Guzy of "The Washington Post" became the first journalist to win four Pulitzer Prizes.
+
+Alice Walker: Alice Malsenior Walker (born February 9, 1944) is an American novelist, short story writer, poet, and activist.  She wrote the critically acclaimed novel "The Color Purple" (1982) for which she won the National Book Award and the Pulitzer Prize for Fiction.  She also wrote the novels "Meridian" (1976) and "The Third Life of Grange Copeland" (1970), among other works.
+
+Alexander Vvedensky (poet): Alexander Ivanovich Vvedensky (Russian: Алекса́ндр Ива́нович Введе́нский ; 1904–1941) was a Russian poet and dramatist with formidable influence on "unofficial" and avant-garde art during and after the times of the Soviet Union.  Vvedensky is widely considered (among contemporary Russian writers and literary scholars) as one of the most original and important authors to write in Russian in the early Soviet period.  He is placed on par with writers such as Andrei Platonov for innovation in the language.  Vvedensky considered his own poetry "a critique of reason more powerful than Kant's."
+
+The Cow (1989 film): The Cow (Russian: Корова Korova) is a 1989 Soviet animated short film directed by Aleksandr Petrov.  It tells the story of a boy who recalls how his family lost its cow.  The film is based on a short story by Andrei Platonov and was made using paint-on-glass animation.
+
+The Lonely Voice of Man: The Lonely Voice of Man (Russian: Одинокий голос человека ), also known as The Lonely Human Voice, is the first full-feature film by Alexander Sokurov.  It was originally filmed in 1978 and reconstructed in 1987 at the Lenfilm studios.  The film is largely based on Andrei Platonov's "River Potudan" and "Origin of the Master", although it is not a direct film adaptation in the traditional sense but rather a recreation of the spiritual nature of Platonov's prose.
+
+Alice Walker: Beauty in Truth: Alice Walker: Beauty in Truth is a documentary film directed by Pratibha Parmar, made by Kali Films production company.  The film follows the life of the Pulitzer Prize-winning author, poet and activist Alice Walker.  Shooting began in May 2011.  It was aired on the BBC on Monday July 8, 2013, and on PBS on February 7, 2014.
+
+Question: Did Andrei Platonov or Alice Walker win more Pulitzer prizes?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "comparison_subject_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "pulitzer_prizes_won": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "pulitzer_prizes_won"
+      ],
+      "additionalProperties": false
+    },
+    "comparison_subject_2": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "pulitzer_prizes_won": {
+          "type": "integer"
+        },
+        "prize_details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "prize_name": {
+                "type": "string"
+              },
+              "work_title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "prize_name",
+              "work_title"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "name",
+        "pulitzer_prizes_won",
+        "prize_details"
+      ],
+      "additionalProperties": false
+    },
+    "winner_name": {
+      "type": "string"
+    },
+    "winner_pulitzer_count": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "comparison_subject_1",
+    "comparison_subject_2",
+    "winner_name",
+    "winner_pulitzer_count"
+  ],
+  "additionalProperties": false
+}

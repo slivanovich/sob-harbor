@@ -1,0 +1,9 @@
+{
+  "college_name": "Dartmouth College",
+  "founding_year": 1769,
+  "primary_educational_target": {
+    "group_name": "Native Americans",
+    "group_origin_description": "descended from the pre-Columbian indigenous population of North America",
+    "educational_focus": "Christian theology and the English way of life"
+  }
+}

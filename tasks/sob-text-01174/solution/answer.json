@@ -1,0 +1,15 @@
+{
+  "physicist_name": "Ernest Rutherford",
+  "nationality_or_origin": [
+    "New Zealand-born",
+    "British"
+  ],
+  "key_roles_or_titles": [
+    "father of nuclear physics"
+  ],
+  "directed_experiment": {
+    "name": "Geiger–Marsden experiment",
+    "alternative_name": "Rutherford gold foil experiment",
+    "performance_period": "1908-1913"
+  }
+}

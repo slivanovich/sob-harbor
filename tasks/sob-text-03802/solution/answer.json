@@ -1,0 +1,8 @@
+{
+  "olympic_event": "1972 Summer Olympics",
+  "host_city": {
+    "name": "Munich",
+    "is_capital_of_most_populated_city_in": "the German state of Bavaria"
+  },
+  "answer": "the German state of Bavaria"
+}

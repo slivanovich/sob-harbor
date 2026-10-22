@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "7b1a29fba030c57cc661c03bcf1e4cf9eedab12f9a32a088b744e975cdba2644",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac0e66e5542992a796dedb6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1905",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "1966 Australian Championships: The 1966 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the White City Tennis Club, Sydney, Australia from 21 to 31 January.  It was the 54th edition of the Australian Championships (now known as the Australian Open), the 15th held in Sydney, and the first Grand Slam tournament of the year.  The singles titles were won by Australians Roy Emerson and Margaret Smith.\n\n1961 Australian Championships: The 1961 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the Kooyong Lawn Tennis Club, Melbourne, Australia from 17 January to 27 January.  It was the 49th edition of the Australian Championships (now known as the Australian Open), the 14th held in Melbourne, and the first Grand Slam tournament of the year.  The singles titles were taken by Roy Emerson and Margaret Smith.\n\n1937 Australian Championships: The 1937 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the White City Tennis Club, Sydney, Australia from 22 January to 30 January.  It was the 30th edition of the Australian Championships (now known as the Australian Open), the 8th held in Sydney, and the first Grand Slam tournament of the year.  The singles titles were won by Australians Vivian McGrath and Nancye Wynne.\n\n1958 Australian Championships: The 1958 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the White City Tennis Club, Sydney, Australia from 17 January to 27 January.  It was the 46th edition of the Australian Championships (now known as the Australian Open), the 13th held in Sydney, and the first Grand Slam tournament of the year.  The singles titles were taken by Ashley Cooper and Angela Mortimer.\n\n1934 Australian Championships: The 1934 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the White City Tennis Club, Sydney, Australia from 18 January to 27 January.  It was the 27th edition of the Australian Championships (now known as the Australian Open), the 7th held in Sydney, and the first Grand Slam tournament of the year.  The singles titles were won by British Fred Perry and Australian Joan Hartigan Bathurst.\n\nAustralian Open: The Australian Open is a major tennis tournament held annually over the last fortnight of January in Melbourne, Australia.  First held in 1905, the tournament is chronologically the first of the four Grand Slam tennis events of the year – the other three being the French Open, Wimbledon and the US Open.  It features men's and women's singles; men's, women's and mixed doubles and junior's championships; as well as wheelchair, legends and exhibition events.  Prior to 1988 the tournament had been played on grass courts, but since then two types of hardcourt surfaces have been used at Melbourne Park – green coloured Rebound Ace up to 2007 and, afterwards, blue Plexicushion.\n\n1931 Australian Championships: The 1931 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the White City Tennis Club, Sydney, Australia from 27 February to 8 March.  It was the 24th edition of the Australian Championships (now known as the Australian Open), the 6th held in Sydney, and the first Grand Slam tournament of the year.  The singles titles were won by Australians Jack Crawford and Coral McInnes Buttsworth.\n\n1951 Australian Championships: The 1951 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the White City Tennis Club, Sydney, Australia from 20 January to 31 January.  It was the 39th edition of the Australian Championships (now known as the Australian Open), the 11th held in Sydney, and the first Grand Slam tournament of the year.  The singles titles were won by American Dick Savitt and Australian Nancye Wynne Bolton.\n\nJoyce Fitch: Joyce Fitch Rymer (born 3 April 1922) is a former tennis player from Australia who reached the women's singles final of the 1946 Australian Championships, losing to Nancye Wynne Bolton 6–4, 6–4.  She teamed with Mary Bevis Hawton to win the women's doubles title at the 1946 Australian Championships, defeating Bolton and Thelma Coyne Long in the final 9–7, 6–4.  Rymer and Hawton reached the women's doubles final at the 1947 and 1951 Australian Championships, losing both years to the Bolton-Long team.  In 1946, 1947 and 1949 she reached the finals of the Australian Championships in mixed doubles with partner, John Bromwich and again in 1950 with Eric Sturgess, losing all four times.\n\n1962 Australian Championships: The 1962 Australian Championships was a tennis tournament that took place on outdoor Grass courts at the White City Tennis Club, Sydney, Australia from 5 January to 15 January.  It was the 50th edition of the Australian Championships (now known as the Australian Open), the 14th held in Sydney, and the first Grand Slam tournament of the year.  The singles titles were taken by Rod Laver and Margaret Smith.  Laver's win was the first step towards his first Grand Slam.",
+    "question": "When was the tennis tournament which has 1951 Australian Championships as the 39th edition first held? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "tournament_series_name": {
+          "type": "string",
+          "description": "The current name of the tennis tournament series."
+        },
+        "first_held_year": {
+          "type": "integer",
+          "description": "The year the tournament series was first held."
+        },
+        "referenced_championship": {
+          "type": "object",
+          "properties": {
+            "year": {
+              "type": "integer",
+              "description": "The year of the specific championship referenced in the question."
+            },
+            "edition_number": {
+              "type": "integer",
+              "description": "The edition number of the referenced championship."
+            }
+          },
+          "required": [
+            "year",
+            "edition_number"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tournament_series_name",
+        "first_held_year",
+        "referenced_championship"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "tournament_series_name": "Australian Open",
+      "first_held_year": 1905,
+      "referenced_championship": {
+        "year": 1951,
+        "edition_number": 39
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

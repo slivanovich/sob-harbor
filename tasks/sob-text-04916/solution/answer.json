@@ -1,0 +1,10 @@
+{
+  "airport_name": "Coastal Carolina Regional Airport",
+  "airport_type": "public airport",
+  "location": {
+    "city": "New Bern",
+    "county": "Craven County",
+    "state": "North Carolina",
+    "country": "United States"
+  }
+}

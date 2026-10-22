@@ -1,0 +1,25 @@
+{
+  "summary_of_shared_profession": "Both Jeff Celentano and Hugh Hudson were film directors.",
+  "individuals_identified": [
+    {
+      "name": "Jeff Celentano",
+      "primary_role": "film director",
+      "all_roles_mentioned": [
+        "actor",
+        "screenwriter",
+        "director",
+        "acting teacher",
+        "Executive Director of Drama"
+      ]
+    },
+    {
+      "name": "Hugh Hudson",
+      "primary_role": "film director",
+      "all_roles_mentioned": [
+        "film director",
+        "writer"
+      ]
+    }
+  ],
+  "count_of_individuals": 2
+}

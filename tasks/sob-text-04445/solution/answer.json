@@ -1,0 +1,13 @@
+{
+  "person_of_interest": {
+    "name": "Justo Pastor Lynch",
+    "role": "son"
+  },
+  "father_details": {
+    "name": "Patrick Lynch",
+    "is_irish_emigrant": true,
+    "birth_place": "Galway",
+    "settlement_location": "Rio de la Plata, Argentina"
+  },
+  "relationship_description": "father of Justo Pastor Lynch"
+}

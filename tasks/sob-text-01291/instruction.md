@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+University of Notre Dame: The University of Notre Dame du Lac (or simply Notre Dame ) is a Catholic research university located adjacent to South Bend, Indiana, in the United States.  Notre Dame is a large, four-year, highly residential research university.  The main campus covers 1250 acre in a suburban setting and it contains a number of recognizable landmarks, such as the Golden Dome, the "Word of Life" mural (commonly known as Touchdown Jesus), and the Basilica.  The school was founded on November 26, 1842, by Father Edward Sorin, CSC, who was also its first president.
+
+Northwestern University: Northwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.
+
+Eric Hansen (sportswriter): Eric C. Hansen is an American sportswriter with the "South Bend Tribune".  The University of Notre Dame football beat writer and an assistant sports editor for the newspaper, Hansen has also written two books on Notre Dame football.  "Stadium Stories: Notre Dame Fighting Irish: Colorful Tales of the Blue and Gold" (2004) won a first-place prize for non-fiction books from the Indiana chapter of the Society of Professional Journalists.  The book recounted many tales of Notre Dame's football history.  In 2005 Hansen published "Notre Dame Fighting Irish: Where Have You Gone?" , a collection of stories and interviews about former Notre Dame football players.  Hansen has won a number of national writing awards from the Football Writers Association of America, and was a member of the FWAA committee that chose the 2006 college All-American team.
+
+Notre Dame Fighting Irish football: The Notre Dame Fighting Irish football team is the intercollegiate football team representing the University of Notre Dame in Notre Dame, Indiana.  The team is currently coached by Brian Kelly and plays its home games at the campus's Notre Dame Stadium, which has a capacity of 80,795 fans.  Notre Dame is one of four schools that competes as an Independent at the National Collegiate Athletic Association (NCAA) Football Bowl Subdivision level; however, they play five games a year against opponents from the Atlantic Coast Conference (ACC), which Notre Dame is a member of in all other sports except ice hockey.
+
+William Beauchamp: Rev. E. William Beauchamp, CSC, J.D., was named the University of Portland's 19th president by the Board of Regents on November 20, 2003.  Prior to his appointment as president, he had served as the University's senior vice president since August 2002.  Beauchamp joined the University from the University of Notre Dame where he served as executive vice president for 13 years, and special assistant to the president for two years.  He has taught at the Notre Dame Law School and the Mendoza College of Business Administration.  He holds bachelor of science and MBA degrees in accounting from the University of Detroit.  He also holds a master of divinity from Notre Dame, as well as a law degree from the Notre Dame Law School.  Beauchamp was awarded an honorary doctorate from the University of Notre Dame Australia in 2005.  He was ordained a Holy Cross priest in 1982.
+
+Notre Dame of Midsayap College: Notre Dame of Midsayap College (Tagalog: "Dalubhasaang Notre Dame ng Midsayap" or "Kolehiyong Notre Dame ng Midsayap") (colloquially known as "NDMC" or simply "Notre Dame") is a private, Catholic academic institution run by the Missionary Oblates of Mary Immaculate in Midsayap, Cotabato.  Established on 13 June 1941 making it as the "First Notre Dame School in Asia and in the Philippines", it was the first link in the long chain of Notre Dame Schools in the Philippines that form the Notre Dame Educational Association under the patronage of the Blessed Virgin Mary, the school Patroness and St. Eugene De Mazenod as the school's patron saint.
+
+Notre Dame–Stanford football rivalry: The Notre Dame–Stanford football rivalry is an American college football rivalry between the Notre Dame Fighting Irish football team of the University of Notre Dame and Stanford Cardinal football team of Stanford University.  As of 2016, the Notre Dame Fighting Irish and Stanford Cardinal have met 31 times, beginning in 1925 (though the modern series began in 1988).  The Notre Dame–Stanford game has been played annually since 1997, with the teams meeting at Notre Dame Stadium earlier in the season (late September to mid-October) in even-numbered years, and at Stanford Stadium on the weekend following Thanksgiving in odd-numbered years since 1999.  The game typically alternates positions in Notre Dame's schedule with its other Pac-12 opponent, USC.
+
+1889 Northwestern Purple football team: The 1889 Northwestern Purple football team was an American football team that represented Northwestern University during the 1889 college football season.  The team compiled a 2–3 record.  Only one of the five games was an intercollegiate game, a 9–0 loss to Notre Dame on November 14, 1889, in Evanston.  The game was the first meeting in the Northwestern–Notre Dame football rivalry.  Northwestern's other four games in 1889 matched Northwestern against an alumni team (0–25 loss), Evanston High School (18–4 victory), the University Club of Chicago (0–28 loss), and the Chicago Wanderers Athletic Club (22–0 victory).
+
+Notre Dame Shakespeare Festival: The Notre Dame Shakespeare Festival (formerly Summer Shakespeare) at the University of Notre Dame is an annual festival that seeks to combine professional productions of the works of William Shakespeare with community outreach and educational programs.  The Notre Dame Shakespeare Festival is a part of the University of Notre Dame's Shakespeare initiative entitled "Shakespeare at Notre Dame", a program that recognizes the centrality of the study of Shakespeare in humanistic pedagogy at the University.  Its fifteenth season (summer of 2014) was known as the 15/150, also celebrating the 450th birthday of William Shakespeare, and the 150th anniversary of the first full production of Shakespeare at the university in 1864 (Records indicate the first performance of Shakespeare at the University of Notre Dame took place in 1847, a collection of scenes also from "Henry IV)."  The anniversary season consisted of the Professional Company production of "Henry IV" (directed by Michael Goldberg), the Young Company performance of "The Merry Wives of Windsor" (directed by West Hyler), and the annual ShakeScenes shows featuring actors of all ages from South Bend and the surrounding community.
+
+2009 Notre Dame Fighting Irish football team: The 2009 Notre Dame Fighting Irish football team represented the University of Notre Dame in the 2009 NCAA Division I FBS football season.  The team was coached by Charlie Weis and played its home games at Notre Dame Stadium in South Bend, Indiana.  Weis entered his fifth season as head coach with the expectation from the Notre Dame administration that his team would be in position to compete for a BCS Bowl berth.  Notre Dame started the first part of the season 4-2, with close losses to Michigan and USC but ended the season with four straight losses, including a second loss to Navy loss in three years.  Weis was fired as head coach the Monday after the Stanford loss at the end of the season.  Although Notre Dame was bowl eligible with 6 wins, the University announced on December 4 that the Irish had chosen not to play in a bowl game.  Irish athletic director Jack Swarbrick hired Cincinnati head coach Brian Kelly after a 10-day coaching search.
+
+Question: University of Notre Dame and Northwestern University, are both which type of university?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "university_type": {
+      "type": "string",
+      "description": "The common type of university shared by both institutions."
+    },
+    "universities_analyzed": {
+      "type": "array",
+      "description": "Details of the universities analyzed for their type.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the university."
+          },
+          "is_research_university": {
+            "type": "boolean",
+            "description": "Indicates if the university is described as a research university in the context."
+          }
+        },
+        "required": [
+          "name",
+          "is_research_university"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "common_type_identified": {
+      "type": "boolean",
+      "description": "True if a common university type was identified for both institutions."
+    }
+  },
+  "required": [
+    "university_type",
+    "universities_analyzed",
+    "common_type_identified"
+  ],
+  "additionalProperties": false
+}

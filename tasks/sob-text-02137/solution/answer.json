@@ -1,0 +1,12 @@
+{
+  "musician_name": "Sully Erna",
+  "band_name": "Godsmack",
+  "musician_roles": [
+    "vocalist",
+    "guitarist"
+  ],
+  "solo_album_details": {
+    "title": "Hometown Life",
+    "release_date": "September 30, 2016"
+  }
+}

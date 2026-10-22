@@ -1,0 +1,91 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Prince of Persia: The Sands of Time (film): Prince of Persia: The Sands of Time is a 2010 American action fantasy film directed by Mike Newell.  The film was written by Jordan Mechner, Boaz Yakin, Doug Miro, and Carlo Bernard, produced by Jerry Bruckheimer, and released by Walt Disney Pictures on May 28, 2010.  The film stars Jake Gyllenhaal as Prince Dastan, Gemma Arterton as Princess Tamina, Ben Kingsley as Nizam, and Alfred Molina as Sheik Amar.  The film has the same title as the video game "", and is primarily based on it.  Elements from "" and "", the two other titles from the "Sands of Time" trilogy of the "Prince of Persia" video game franchise, are also incorporated.  The film was premiered in London on May 5, 2010 and was officially released on May 28, 2010 in the United States.  It received mixed reviews from critics, and grossed over $336 million against a production budget of $150–200 million.
+
+Zhang Junzhao: Zhang Junzhao (; born 1952) is a Chinese film director and screenwriter who was mainly active in the 1980s.  A graduate of the Beijing Film Academy and a contemporary of such acclaimed directors as Zhang Yimou, Chen Kaige, and Tian Zhuangzhuang, Zhang Junzhao was a prominent early member of China's Fifth Generation filmmakers.  His 1984 film "One and Eight" ("Yi ge he ba ge") is well known as a film that marked the advent of the Fifth Generation, while "The Shining Arc" (弧光; "Hu guang", 1988) was nominated for the Golden St. George award at the 1989 Moscow International Film Festival.
+
+Kong: Skull Island: Kong: Skull Island is a 2017 American monster film that is a reboot of the "King Kong" franchise and serves as the second film in Legendary's franchise MonsterVerse.  The film stars an ensemble cast consisting of Tom Hiddleston, Samuel L. Jackson, John Goodman, Brie Larson, Jing Tian, Toby Kebbell, John Ortiz, Corey Hawkins, Jason Mitchell, Shea Whigham, Thomas Mann, Terry Notary, and John C. Reilly.  "Kong" follows a team of scientists and Vietnam War soldiers who travel to an uncharted island in the Pacific and encounter terrifying creatures and the mighty Kong.  The film is directed by Jordan Vogt-Roberts and written by Dan Gilroy, Max Borenstein and Derek Connolly, from a story by John Gatins.
+
+List of Narcos episodes: Narcos is an American crime web television series created and produced by Chris Brancato, Carlo Bernard, and Doug Miro.  Season 1, comprising 10 episodes, originally aired on August 28, 2015, as a Netflix exclusive.
+
+To Live (1994 film): To Live, also titled Lifetimes in some English versions, is a Chinese film directed by Zhang Yimou in 1994, starring Ge You, Gong Li, and produced by the Shanghai Film Studio and ERA International.  It is based on the novel of the same name by Yu Hua.  Having achieved international success with his previous films ("Ju Dou" and "Raise the Red Lantern"), director Zhang Yimou's "To Live" came with high expectations.  It is the first Chinese film that had its foreign distribution rights pre-sold.
+
+The Road Home (1999 film): The Road Home () is a 2000 Chinese romantic drama film directed by Zhang Yimou.  It also marked the cinematic debut of the Chinese actress Zhang Ziyi.  "The Road Home" was written by author Bao Shi, who adapted the screenplay from his novel, "Remembrance".
+
+Lü Yue: Lü Yue () (born 1957) is a Chinese cinematographer and film director.  Born in Tianjin, Lü is today among the most important cinematographers of recent Chinese cinema, and is particularly well known for his collaborations with director Zhang Yimou with whom he served as director of photography in three films.  Lü was nominated for an Academy Award for best cinematographer for Zhang's film "Shanghai Triad".  He has also served as cinematographer for other Fifth Generation directors such as Tian Zhuangzhuang (for 1985's "On the Hunting Ground") as well as for older directors, such as Huang Shuqin (for 1994's "A Soul Haunted by Painting").  More recently he served as cinematographer for actress Joan Chen's directorial effort, "", a film in which he also played a small part as the titular character's father.
+
+Narcos (season 2): The second season of Narcos, an American crime thriller drama web television series produced and created by Chris Brancato, Carlo Bernard, and Doug Miro, follows the story of notorious drug kingpin Pablo Escobar, who became a billionaire through the production and distribution of cocaine, while also focusing on Escobar's interactions with drug lords, DEA agents, and various opposition entities.
+
+The Great Wall (film): The Great Wall () is a 2016 monster film directed by Zhang Yimou and written by Tony Gilroy, Doug Miro and Carlo Bernard.  The US–China co-production stars Matt Damon, Jing Tian, Pedro Pascal, Willem Dafoe, and Andy Lau.  It is Zhang's first English-language film.
+
+Jing Tian: Jing Tian (born 21 July 1988) is a Chinese actress.  She graduated from the Beijing Dance Academy and Beijing Film Academy.  She is known for her roles in war epic "The Warring States" (2011) and the action films "Special ID" and "Police Story 2013" (both in 2013).  She is part of the cast for three Legendary Pictures films, including a prominent role in "The Great Wall" (2016) as well as "" (2017) and the upcoming "".
+
+Question: Jing Tian, is a Chinese actress, she is part of the cast for three Legendary Pictures films, including a prominent role in "The Great Wall", released in which year, a monster film directed by Zhang Yimou and written by Tony Gilroy, Doug Miro and Carlo Bernard?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the film was released."
+    },
+    "director": {
+      "type": "string",
+      "description": "The director of the film."
+    },
+    "writers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of writers for the film."
+    },
+    "main_actress": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the actress."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the actress."
+        }
+      },
+      "required": [
+        "name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "film_genre": {
+      "type": "string",
+      "description": "The genre of the film."
+    }
+  },
+  "required": [
+    "film_title",
+    "release_year",
+    "director",
+    "writers",
+    "main_actress",
+    "film_genre"
+  ],
+  "additionalProperties": false
+}

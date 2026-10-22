@@ -1,0 +1,11 @@
+{
+  "car_name": "Sauber C36",
+  "competition_season": 2017,
+  "team_name": "Sauber",
+  "drivers": [
+    "Marcus Ericsson",
+    "Pascal Wehrlein"
+  ],
+  "primary_driver_from_question": "Marcus Ericsson",
+  "co_driver_answer": "Pascal Wehrlein"
+}

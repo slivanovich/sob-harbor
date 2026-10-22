@@ -1,0 +1,17 @@
+{
+  "race_event_name": "1990 Tooheys 1000",
+  "event_date": "30 September 1990",
+  "location_details": {
+    "circuit_name": "Mount Panorama Circuit",
+    "city": "Bathurst",
+    "state": "New South Wales",
+    "country": "Australia"
+  },
+  "running_number": 31,
+  "parent_race_series_name": "Bathurst 1000",
+  "race_regulations": [
+    "CAMS Group 3A regulations",
+    "Group A Touring Cars"
+  ],
+  "is_supercars_event": false
+}

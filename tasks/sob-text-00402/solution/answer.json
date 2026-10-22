@@ -1,0 +1,20 @@
+{
+  "question_context": "Are Anisodontea and Catasetum both genus of plants ?",
+  "genera_information": [
+    {
+      "genus_name": "Catasetum",
+      "is_identified_as_genus": true,
+      "is_part_of_plant_kingdom": true,
+      "family_name": "Orchidaceae"
+    },
+    {
+      "genus_name": "Anisodontea",
+      "is_identified_as_genus": true,
+      "is_part_of_plant_kingdom": true,
+      "family_name": "Malvaceae"
+    }
+  ],
+  "overall_conclusion": {
+    "all_mentioned_are_plant_genera": true
+  }
+}

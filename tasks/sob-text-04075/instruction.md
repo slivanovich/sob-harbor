@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mark Gallagher: Mark Henry Gallagher (born 9 March 1962) is a dual nationality Irish/British author, public speaker, media commentator, and director.  He is currently the managing director for CMS Motor Sport Ltd and is the co-owner of Status Grand Prix.  He began working as a journalist and broadcaster for Formula One F1 in 1987 and later started working as a media consultant for major sponsors.  He joined Eddie Jordan’s fledgling F1 team for its debut season in 1991, returning to the team in 1995 where he became head of marketing.  Gallagher joined Jaguar Racing in 2004 remaining with the team when it become Red Bull Racing and in 2009, took over the running of the Cosworth F1 engine business.  He commentates on Formula One on BBC 5 Live makes regular appearances on Sky Sports News and has contributed to a wide range of media channels including BBC News, Channel 4 News, CNN, CNBC and Al Jazeera News.
+
+1968 New Zealand Grand Prix: It was the 15th New Zealand Grand Prix, and doubled as the opening round of the 1968 Tasman Series.  Chris Amon became the third New Zealander to win his home GP, joining Bruce McLaren and original GP winner John McMillan.
+
+CRG (kart manufacturer): CRG is a kart chassis manufacturer of recent years, with world champions from 2001-2003.  Famous alumni include Alex Zanardi and F1 racer Vitantonio Liuzzi and F1 GP Winner Max Verstappen.
+
+Max Verstappen: Max Emilian Verstappen (] ; born 30 September 1997) is a Belgian-Dutch racing driver who competes under the Dutch flag in Formula One with Red Bull Racing.  Aged , he became the youngest driver to compete in Formula 1 at the 2015 Australian Grand Prix for Scuderia Toro Rosso.  He is also the youngest driver to lead a lap during a Formula One Grand Prix, youngest driver to set the fastest lap during a Formula One Grand Prix, youngest driver to score points, youngest driver to secure a podium and youngest Formula One Grand Prix winner in history.
+
+Trulli GP: Trulli GP (officially Trulli Formula E Team) was a Swiss motor racing team founded by former Formula One driver and Monaco Grand Prix winner Jarno Trulli to compete in the inaugural FIA Formula E Championship for electric cars.  The team competed in a technical partnership with Drayson Racing Technologies.  It was announced on 1 July 2014 that the team was operating with Super Nova Racing.  Trulli announced that he would drive for the team, while later Italian Auto GP driver Michela Cerruti was announced as the second driver for the team.
+
+Brawn GP: Brawn GP Formula One Team, then the trading name of Brawn GP Limited, was a Formula One world championship-winning motor racing team and constructor, created by a management buyout of Honda Racing F1 Team led by Ross Brawn, but using a Mercedes engine.
+
+Bryan Schouten: Bryan Schouten (born 10 September 1994) is a Dutch motorcycle racer.  He currently competes in the IDM Superstock 600 Championship aboard a Yamaha YZF-R6.  Schouten is a former winner of the Dutch ONK 125GP Championship and the Dutch ONK Moto3 Championship, and has also competed in the German IDM 125GP Championship, the German IDM Moto3 Championship, the Spanish CEV Moto3 series and the European Superstock 600 Championship.  He won the IDM Superstock 600 Championship in 2016.
+
+Vitaly Petrov: Vitaly Aleksandrovich Petrov (Russian: Вита́лий Алекса́ндрович Петро́в ; ] , born 8 September 1984) is a Russian racing driver who drove in Formula One for Renault F1 Team in 2010, Lotus Renault GP in 2011 and Caterham F1 Team in 2012.  Born in Vyborg, he is known as the "Vyborg Rocket" (Russian: Вы́боргская Раке́та ; ] ) in Russia.  He was the first Russian to compete in the Formula One World Championship.
+
+Narain Karthikeyan: Kumar Ram Narain Karthikeyan (born 14 January 1977, in Coimbatore) is a racing driver who was the first Formula One driver from India.  He has previously competed in A1GP, and the Le Mans Series.  He made his Formula One debut in with the Jordan team, and was a Williams F1 test driver in and .  Like several other former F1 drivers, Karthikeyan moved to stock car racing and drove the #60 Safe Auto Insurance Company Toyota Tundra for Wyler Racing in the 2010 NASCAR Camping World Truck Series.  In 2011 he returned to F1 with the HRT team, continued with the team in 2012 and was expected to drive for them in the 2013 season as well.  However, HRT was not included in the FIA's 2013 entry list, and thus Karthikeyan was left without a drive.  In 2013, Karthikeyan raced in the Auto GP series, securing 5 wins and 4 pole positions with Super Nova Racing.  For 2014, Karthikeyan has signed up with Team Impul, to race in the Japanese Super Formula series.
+
+Niccolò Antonelli: Niccolò Antonelli (born 23 February 1996 in Cattolica) is an Italian Grand Prix motorcycle racer, and the 2011 winner of the Italian 125GP Championship.  Antonelli has also competed in the Red Bull MotoGP Rookies Cup and the Spanish 125GP Championship.
+
+Question: What nationality was the CRG F1 GP Winner?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "f1_gp_winner_name": {
+      "type": "string",
+      "description": "The name of the Formula One Grand Prix winner associated with CRG."
+    },
+    "nationality": {
+      "type": "string",
+      "description": "The nationality of the F1 GP winner."
+    },
+    "associated_manufacturer": {
+      "type": "string",
+      "description": "The kart chassis manufacturer mentioned in the context."
+    }
+  },
+  "required": [
+    "f1_gp_winner_name",
+    "nationality",
+    "associated_manufacturer"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "company_name": "H-E-B",
+  "headquarters_location": {
+    "city": "San Antonio",
+    "state": "Texas"
+  },
+  "product_sold": {
+    "name": "Manzanita Sol",
+    "is_available": true
+  },
+  "company_attributes": {
+    "is_privately_held": true,
+    "stores_in_texas_count_description": "more than 350 stores",
+    "stores_in_mexico_count": 51
+  }
+}

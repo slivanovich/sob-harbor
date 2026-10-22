@@ -1,0 +1,10 @@
+{
+  "naval_officer_name": "William \"Bull\" Nelson",
+  "officer_role_in_battle": "Union major general",
+  "battle_details": {
+    "battle_name": "Battle of Richmond, Kentucky",
+    "battle_date": "August 29–30, 1862",
+    "location_description": "on and around what is now the grounds of the Blue Grass Army Depot"
+  },
+  "depot_name": "Blue Grass Army Depot"
+}

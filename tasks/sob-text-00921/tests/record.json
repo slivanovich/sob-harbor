@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "b56f605868233588d5a46e9c8e1d422b452e9dbbbb633df2f256518834e1a3b8",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac28edf5542992f1f2b3903",
+    "source_dataset": "hotpotqa",
+    "source_answer": "charitable trust",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Chico Basin Ranch: The Chico Basin Ranch is a working cattle ranch thirty minutes southeast of Colorado Springs, Colorado.  The Chico Basin is owned by the Colorado State Land Board, and managed by Ranchlands, Duke and Janet Phillips' family based ranch management company.  The cattle raised on the ranch are grass fed and no hormones added.  Working cowboys tend to the cattle primarily using quarter horses born and trained on the ranch.  The Chico Basin now has a horse sanctuary for old or injured horses.  Not only is the Chico Basin a working cattle ranch, it is also a wildlife preserve.  The Chico Basin works with the Rocky Mountain Bird Observatory to band migratory birds.  This activity is also open to schools and universities to come and learn about birds.  Free programs are offered to all ages of children and adults to learn about wildlife and ranch life.\n\nAdena Springs Ranch: Adena Springs Ranch is the former name of a 30,000-acre cattle ranch in Florida's Marion County now known as Sleepy Creek Ranch Lands.  Adena Ranches is a related cattle ranch property in Levy County.  Both are owned by Canadian billionaire Frank Stronach.\n\nJohn Palmer Parker (rancher): John Palmer Parker (May 1, 1790 – August 20, 1868) was the founder of the Parker Ranch on the island of Hawaiʻ i in Hawaii.\n\nMiller Brothers 101 Ranch: The Miller Brothers 101 Ranch was a 110000 acre cattle ranch in the Indian Territory of Oklahoma before statehood.  Located near modern-day Ponca City, it was founded by Colonel George Washington Miller, a veteran of the Confederate Army, in 1893.  The 101 Ranch was the birthplace of the 101 Ranch Wild West Show and one of the early focal points of the oil rush in northeastern Oklahoma.  It was the largest diversified farm and ranch in America at the time.  Bill Pickett's grave and the White Eagle Monument are located on the ranch grounds.  The location of the former working cattle ranch was subdivided and all of its buildings destroyed.  An 82 acre area of the ranch is a National Historic Landmark.\n\nObudu Mountain Resort: Obudu Mountain Resort (formerly known as the Obudu Cattle Ranch) is a ranch and resort on the Obudu Plateau in Cross River State, Nigeria.  It was developed in 1951 by M. McCaughley, a Scot who first explored the mountain ranges in 1949.  He camped on the mountaintop of the Oshie Ridge on the Sankwala Mountains for a month before returning with Mr. Hugh Jones a fellow rancher in 1951.  Together with Dr Crawfeild, they developed the Obudu Cattle Ranch.  Although the ranch has been through troubles since, it has been rehabilitated to its former glory.\n\nWhitehorse Ranch: The Whitehorse Ranch is a historic cattle ranch in Harney and Malheur counties in the southeastern corner of Oregon, United States.  The ranch was started in 1869 by John S. Devine, a well-known 19th-century cattle baron.  It was originally the headquarters for the \"Todhunter and Devine Cattle Company\".  The ranch has been in the cattle business continuously since it was founded.  Today, the Whitehorse Ranch includes 63222 acre of deeded property and grazing rights on an additional 287205 acre of public range land administered by the Bureau of Land Management.\n\nStowers Ranch: Stowers Ranch is a cattle ranch in Kerr County, Texas, in the Texas Hill Country.  Founded by G.A. Stowers in 1904 as a cattle ranch, game management area and hunting preserve, it is now owned and operated by Stowers' grandchildren and great-grandchildren.  The ranch provides outdoor recreation opportunities throughout the year, including hunting for whitetail deer, exotic bucks and wild turkey, as well as birdwatching, game viewing, nature photography, and hiking.  The 11250 acre ranch is located at the headwaters of the north fork of the Guadalupe River, approximately 13 mi west of Hunt, Texas.  On its north side it is adjacent to the Kerr Wildlife Management Area.\n\nCross S Ranch Headquarters: The Cross S Ranch Headquarters is a historic building located in farmland 5 mi south of Olustee, Oklahoma.  The two-story stone building served as the headquarters of the Cross S Ranch, a cattle ranch founded in 1891.  As a major cattle trail passed through the area, the ranch took advantage of the open land to raise free-range cattle.  By 1902, the ranch had decreased in size due to homesteaders and raised horses rather than cattle.  The ranch eventually became a wheat farm, reflecting a broader shift in Jackson County agricultural production.  A larger wheat farm purchased the ranch in the 1970s, and the headquarters building is all that remains of the original property.\n\nJohn Parker (English cricketer): John Palmer Parker (29 November 1902 – 9 August 1984) was an English cricketer.  Parker was a right-handed batsman.\n\nParker Ranch: Parker Ranch is a working cattle ranch on the Island of Hawaii in the U.S. state of Hawaii, now run by a charitable trust.",
+    "question": "John Palmer Parker was the founder of this cattle ranch that is now run by who?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "ranch_name": {
+          "type": "string",
+          "description": "The name of the cattle ranch."
+        },
+        "founder_name": {
+          "type": "string",
+          "description": "The name of the founder of the ranch."
+        },
+        "current_management_type": {
+          "type": "string",
+          "description": "The type of entity currently managing the ranch."
+        },
+        "location": {
+          "type": "string",
+          "description": "The island and state where the ranch is located."
+        }
+      },
+      "required": [
+        "ranch_name",
+        "founder_name",
+        "current_management_type",
+        "location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "ranch_name": "Parker Ranch",
+      "founder_name": "John Palmer Parker",
+      "current_management_type": "charitable trust",
+      "location": "Island of Hawaii, Hawaii"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

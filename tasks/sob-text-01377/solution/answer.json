@@ -1,0 +1,14 @@
+{
+  "broader_market_company": "Pizza Corner",
+  "companies_compared": [
+    {
+      "company_name": "Pizza Corner",
+      "market_description": "international franchise of pizzeria chains"
+    },
+    {
+      "company_name": "Round Table Pizza",
+      "market_description": "large chain of pizza parlors in the western United States"
+    }
+  ],
+  "reasoning": "Pizza Corner is described as an 'international franchise', indicating a global presence, whereas Round Table Pizza is a 'large chain of pizza parlors in the western United States', which is a more geographically limited market."
+}

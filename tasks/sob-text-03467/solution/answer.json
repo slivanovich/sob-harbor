@@ -1,0 +1,14 @@
+{
+  "cloned_machine_gun_name": "M1917 Browning machine gun",
+  "cloned_machine_gun_conflicts_used_in": [
+    "World War I",
+    "World War II",
+    "Korea",
+    "Vietnam"
+  ],
+  "cloning_machine_gun_details": {
+    "name": "Ckm wz. 30",
+    "country_of_origin": "Polish",
+    "relationship_type": "clone"
+  }
+}

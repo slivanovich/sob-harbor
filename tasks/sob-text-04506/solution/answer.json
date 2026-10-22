@@ -1,0 +1,14 @@
+{
+  "person_comparison": {
+    "person_1": {
+      "name": "Carl Sandburg",
+      "birth_year": 1878
+    },
+    "person_2": {
+      "name": "Evelyn Waugh",
+      "birth_year": 1903
+    }
+  },
+  "earlier_born_person_name": "Carl Sandburg",
+  "comparison_result": "Carl Sandburg was born in 1878, which is before Evelyn Waugh who was born in 1903."
+}

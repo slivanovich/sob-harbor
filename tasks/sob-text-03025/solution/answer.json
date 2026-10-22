@@ -1,0 +1,12 @@
+{
+  "monarch": {
+    "name": "Henry III",
+    "house": "House of Valois",
+    "reign_end_year": 1589
+  },
+  "barber_surgeon": {
+    "name": "Ambroise Paré",
+    "birth_year": 1510
+  },
+  "relationship_description": "Ambroise Paré served as barber surgeon for King Henry III."
+}

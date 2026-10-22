@@ -1,0 +1,10 @@
+{
+  "player_name": "Jamal Crawford",
+  "nationality": "American",
+  "current_nba_team": "Minnesota Timberwolves",
+  "trade_event": {
+    "traded_from_team": "Chicago Bulls",
+    "traded_to_team": "New York Knicks",
+    "trade_season_context": "Following the 2003–04 NBA season"
+  }
+}

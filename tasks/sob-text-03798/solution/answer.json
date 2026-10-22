@@ -1,0 +1,17 @@
+{
+  "show_details": {
+    "show_name": "O",
+    "residency_hotel_name": "Bellagio"
+  },
+  "hotel_operator_information": {
+    "hotel_name": "Bellagio",
+    "operator_name": "MGM Resorts International",
+    "location": "Las Vegas, Nevada",
+    "hotel_types": [
+      "resort",
+      "luxury hotel",
+      "casino"
+    ]
+  },
+  "final_answer": "MGM Resorts International"
+}

@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Piracuí: Piracuí is traditionally known in the Amazon region as "farinha de peixe" (fish flour) and is traditionally made from crushed or shredded dried salted fish.  The most common fishes are acari and tamuatá, but piracuí can be made from other species of fish, such as bodó.  It is eaten mixed with olive oil, onion and cassava flour.  It also serves to make fried dumplings.
+
+Tanka in English: The composition and translation of tanka in English begins at the end of the nineteenth century in England and the United States.  Translations into English of classic Japanese tanka (traditionally known as "waka") date back at least to the 1865 translation of the classic "Ogura Hyakunin Isshu" (c. early 13th century); an early publication of originally English tanka dates to 1899.  In the United States, the publication of tanka in Japanese and in English translation acquires extra impetus after World War II, and is followed by a rise of the genre's popularity among native speakers of English.
+
+The Hale: The Hale is an area and ward within the London Borough of Barnet.  It comprises the eastern part of Edgware and centres on the small retail centre at the junction of Deans Lane, Hale Lane and Selvage Lane.  This centre constitutes Upper Hale, but is much better known locally as the 'Green Man' after the erstwhile pub of the same name that stood at the site from at least the early 18th century.  A smaller area that was traditionally known as Lower Hale centres on the junction of Hale Lane, Farm Road and the nearby bridge over Deans Brook; this area is generally regarded as being within Edgware.  The traditional area known as The Hale extends northwards from the 'Green Man' to the A41 and Apex Corner and the southern end is traditionally marked by the disused Edgware and Highgate railway line just south of West Way and Hale Drive; beyond lies Burnt Oak.  Today's borough ward has slightly larger boundaries.
+
+Sápmi: Sápmi (), in English commonly known as Lapland ( ), is the cultural region traditionally inhabited by the Sami people, traditionally known in English as Lapps.  Sápmi is located in Northern Europe and includes the northern parts of Fennoscandia.  The region stretches over four countries: Norway, Sweden, Finland, and Russia.  On the north it is bounded by the Barents Sea, on the west by the Norwegian Sea and on the east by the White Sea.
+
+Transformers (toy line): The Transformers (トランスフォーマー , Toransufōmā ) is a line of toys produced by the American toy company Hasbro and Japanese company Takara (now known as Takara Tomy) The Transformers toyline was created from toy molds mostly produced by Japanese company Takara in the toylines Diaclone and Microman.  Other toy molds from other companies such as Bandai were used as well.  In 1984, Hasbro bought the distribution rights to the molds and rebranded them as the Transformers for distribution in North America.  The designs for the original 28 figures were made by Kojin Ono, Takashi Matsuda, Hideaki Yoke, Hiroyuki Obara, and Satoshi Koizumi.  Hasbro would go on to buy the entire toy line from Takara, giving them sole ownership of the Transformers toy-line, branding rights, and copyrights, while in exchange, Takara was given the rights to produce the toys and the rights to distribute them in the Japanese market.  The premise behind the Transformers toyline is that an individual toy's parts can be shifted about to change it from a vehicle, a device, or an animal, to a robot action figure and back again.  The taglines "More Than Meets The Eye" and "Robots In Disguise" reflect this ability.
+
+Zenrin: Zenrin Co. Ltd. (Japanese: 株式会社ゼンリン , ) is a Japanese map publisher.  Founded in 1948, the company is known as a maker of residential maps and software used in personal computers and Automotive navigation systems.  It is a leading Japanese company in the production of mapping software.
+
+Seiko Epson: Seiko Epson Corporation (セイコーエプソン株式会社 , Seikō Epuson Kabushiki-gaisha ) (Epson being an abbreviation for "Son of Electronic Printer"), or simply Epson, is a Japanese electronics company and one of the world's largest manufacturers of computer printers, and information and imaging related equipment.  Headquartered in Suwa, Nagano, Japan, the company has numerous subsidiaries worldwide and manufactures inkjet, dot matrix and laser printers, scanners, desktop computers, business, multimedia and home theatre projectors, large home theatre televisions, robots and industrial automation equipment, point of sale docket printers and cash registers, laptops, integrated circuits, LCD components and other associated electronic components.  It is one of three core companies of the Seiko Group, a name traditionally known for manufacturing Seiko timepieces since its founding.
+
+Hi Izuru Tokoro no Tenshi: Hi Izuru Tokoro no Tenshi (Japanese: 日出処の天子 ) is a Japanese manga written and illustrated by Ryoko Yamagishi.  It tells a fictionalised account of Prince Shōtoku, a political figure of sixth-century Japan who spread Buddhism, and his unrequited love for Soga no Emishi, which is very unlike the traditionally known stories of these people.  It was serialized in Hakusensha's "LaLa" from 1980 to 1984.  The individual chapters were published in 11 "tankōbon" under the "Hana to Yume Comics" imprint, which were released between 1981 and 1984.  "Hi Izuru Tokoro no Tenshi" received the 1983 Kodansha Manga Award for the shōjo category.
+
+Camelia: Camelia (born 20 June 1974, as Dayang Noor Camelia Abang Khalid) is a Malaysian singer and model.  She was the first Malaysian to be signed to Universal Music.  Her first album, "Camelia", won the Best New Artist and Best Vocal Performance in an Album awards from Anugerah Industri Muzik (AIM).  From 2003, she was the Malaysian spokesmodel for L'Oréal.  She has also been the spokesmodel for TAG Heuer, Wacoal, Epson, Pantene and Omega.
+
+Open Interface North America: Open Interface North America (OINA) is a privately owned embedded Bluetooth software provider based in Seattle, Washington and was incorporated in 2000 as a division of the Japanese company Open Interface, Inc., which had formed in 1992.  Akemi Sagawa, a Microsoft product manager at the time, was hired to run it.  Another former Microsoft employee, Greg Burns, was brought in as chief technology officer.
+
+Question: What is the japanese company who hired Camelia as a spokesmodel traditionally known for?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "The name of the Japanese company that hired the spokesmodel."
+    },
+    "spokesmodel_name": {
+      "type": "string",
+      "description": "The name of the individual who was a spokesmodel for the company."
+    },
+    "traditional_product": {
+      "type": "string",
+      "description": "What the company is traditionally known for manufacturing."
+    }
+  },
+  "required": [
+    "company_name",
+    "spokesmodel_name",
+    "traditional_product"
+  ],
+  "additionalProperties": false
+}

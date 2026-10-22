@@ -1,0 +1,60 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+OSS 117: Lost in Rio: OSS 117: Lost in Rio released in France as OSS 117: Rio ne répond plus (stylized as OSS 117: Rio ne répond plus...), is a 2009 French spy comedy film directed and co-written by Michel Hazanavicius.  It is a sequel to Hazanavicius' "", and see Jean Dujardin reprising his role as French secret agent Hubert Bonisseur de La Bath / OSS 117.  Set in 1967, "Lost in Rio" sees OSS 117 sent to Brazil in order to retrieve a microfilm list of French Nazi sympathizers, only to once again unknowingly set foot into a bigger international intrigue.
+
+Christian Broadcasting Association: The Christian Broadcasting Association (CBA) is a New Zealand non-profit radio production company, set up to produce Christian programmes for secular radio stations and non-Christian audiences.  It predominantly produces programmes for Newstalk ZB and Radio Sport.  According to the association's website, it aims to "communicate the essentials of the Christian faith" to people who do not identify as Christians and "would never set foot inside a church", and produced 4000 programmes between 2000 and 2015.
+
+Impact (miniseries): During a meteor shower said to be the most spectacular in 10,000 years, an asteroid hidden by the meteor field strikes the Moon.  Fragments of the asteroid and of the Moon itself penetrate Earth's atmosphere and make impact.  The initial damage is minimal, though significant physical damage to the lunar surface can be seen from Earth.  Experts believe that the Moon has stabilized into a slightly closer orbit.  Then strange anomalies begin to manifest themselves on Earth, including cell phone disruptions, unusual static discharges and odd tidal behavior.  The world's leading scientists, including Alex Kittner, Maddie Rhodes, and Roland Emerson, begin piecing together evidence that suggests the moon's properties have been permanently altered because the asteroid that hit the Moon was actually a fragment of a brown dwarf; the fragment is highly magnetized and more massive than the Earth despite being only 19 kilometers across, and it is still inside the moon.  When the Moon's new, more elliptical orbit brings it closer to Earth, electromagnetic surges begin affecting the surface, causing people, vehicles, and other objects to levitate at random, worldwide.  Alex, Maddie, Roland and the rest of their team soon discover that the Moon's new orbit will cause it to collide with the Earth in 39 days, completely destroying the planet.  After a failed attempt by the United States to destroy the Moon with nuclear weapons, the three scientists plan an international mission to the Moon, where astronauts must construct a device to magnetize the Moon's core, causing it to disgorge the embedded brown dwarf fragment, eliminating the magnetic effects and restoring the Moon to a stable orbit.  Because of their unique expertise, Alex and Roland must join an American astronaut and a Russian cosmonaut on the mission, which is expected to be a one-way trip.
+
+Armstrong Air and Space Museum: The Armstrong Air and Space Museum is a museum in Wapakoneta, Ohio, United States, the hometown of Neil Armstrong, first man to set foot on the Moon.  The museum chronicles Ohio's contributions to the history of space flight.  Among the items on display are an F5D Skylancer, the Gemini 8 spacecraft in which Armstrong flew (and in which he made the first space docking), Apollo 11 artifacts and a moon rock.  In the museum's Astro-theater, multimedia presentations of the sights and sounds of space unfold against a starry background.
+
+A.J. Smith (writer): A.J. (Tony) Smith is a British fantasy author, known for his "The Long War" series of dark fantasy novels.  His books are published by House of Zeus, an imprint set up in 2012 by established publisher Anthony Cheetham, and has been reviewed by "SciFiNow".
+
+Mount Lowe (California): Mount Lowe is a mountain on the southern fold of the San Gabriel Mountains.  Originally named Oak Mountain, it was renamed for Professor Thaddeus S.C. Lowe, who is credited for being the first man to set foot on and plant the American flag at its peak, and who built the Mount Lowe Railway to its foot in 1896.  The record of the naming was made official by Andrew McNally, the famous Chicago map printer and summertime resident of Altadena, who promised to print "Mount Lowe" on all his maps.  Mt. Lowe was established as an alternate route for the Mount Lowe Railway when attempts to procure rights of way to the more prominent Mount Wilson had failed.
+
+Gibbs Point: Gibbs Point, a rock point on the Antarctic Peninsula, the most northern area of the continent of Antarctica, was named for African American Antarctic explorer, George W. Gibbs, Jr. on September 2, 2009.  On that date, the Advisory Committee on Antarctic Names (U.S. Board on Geographic Names) confirmed the place name in Antarctica for Gibbs as the first black explorer to set foot on the continent.  Gibbs Point is a rock point forming the northwest entrance to Gaul Cove, on the northeast of Horseshoe Island, Marguerite Bay, Antarctic Peninsula.
+
+Buzz Aldrin: Buzz Aldrin (born Edwin Eugene Aldrin Jr.; January 20, 1930) is an American engineer and former astronaut.  As the Lunar Module Pilot on Apollo 11, he was one of the first two humans to land on the Moon, and the second person to walk on it.  He set foot on the Moon at 03:15:16 on July 21, 1969 (UTC), following mission commander Neil Armstrong.  He is a former U.S. Air Force officer with the Command Pilot rating.  He also went into orbit on the Gemini 12 mission, finally achieving the goals for EVA (space-walk work) that paved the way to the Moon and success for the Gemini program; he spent over five hours on EVA on that mission.
+
+Apogee Books: Apogee Books is an imprint of Canadian publishing house Collector's Guide Publishing.  The Apogee imprint began with "Apollo 8 The NASA Mission Reports" in November 1998 at the request of astronaut Buzz Aldrin, second man on the moon.  The first publication by Apogee was printed to celebrate the 30th anniversary of the first manned flight around the moon.  A limited edition print run of this Apollo 8 book led to Aldrin suggesting that the imprint continue with further anniversary publications.
+
+OpenLuna: OpenLuna is a program for the exploration of the Moon, based on open source ideologies.  It is run by the OpenLuna Foundation, which was founded to set foot on the moon through private enterprise since the Apollo program in the late 1960s through the 1970s.  OpenLuna is part of the emerging new-space industry, which is one of the few growing industries in the current economy.
+
+Question: On what date did the astronaut who influenced the Apogee imprint set foot on the moon?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "astronaut_name": {
+      "type": "string",
+      "description": "The name of the astronaut who influenced the Apogee imprint."
+    },
+    "moon_landing_mission": {
+      "type": "string",
+      "description": "The name of the mission during which the astronaut landed on the moon."
+    },
+    "date_set_foot_on_moon": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the astronaut set foot on the moon."
+    }
+  },
+  "required": [
+    "astronaut_name",
+    "moon_landing_mission",
+    "date_set_foot_on_moon"
+  ],
+  "additionalProperties": false
+}

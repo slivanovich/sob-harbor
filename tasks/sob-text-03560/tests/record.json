@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "record_id": "f84532cb39d6879536d00f4d63fddc4b3a80cc6585d1902f89c626bfdaec7594",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac2ceb8554299657fa29074",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Korean War",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "1992–93 South-West Indian Ocean cyclone season: The 1992–93 South-West Indian Ocean cyclone season lasted longer than normal, with the first storm Aviona forming on September 27 and the final storm Konita not dissipating until May 7.  It was an above-average season, with four tropical cyclones – the equivalent of a minimal hurricane – along with six tropical storms, one subtropical depression, and several depressions including one that was named.  The basin is defined as the area west of 90°E and south of the Equator in the Indian Ocean, which includes the waters around Madagascar westward to the east coast of Africa.  Tropical cyclones in this basin are monitored by the Regional Specialised Meteorological Centre in Réunion (MFR), as well as by the Joint Typhoon Warning Center (JTWC).\n\nJames Lesslie (publisher): James Lesslie (November 22, 1802 – April 19, 1885) was an Ontario bookseller, reform politician and newspaper publisher.  His career was closely associated with - and somewhat overshadowed by - William Lyon Mackenzie, the Reform agitator, mayor of Toronto, and Rebellion leader.  However, as a leader himself, Lesslie took a prominent role in founding the Mechanics Institute (for adult education), the House of Refuge & Industry (a shelter for the unemployed), the Bank of the People, as well as the political parties known as the Canadian Alliance Society and Clear Grits.  In many way, he defined the Reform movement in Upper Canada without having reverted to the violent methods of Mackenzie.  His legacy may thus have lasted longer.\n\nWinter of 1894–95 in the United Kingdom: The winter of 1894–95 was severe for the British Isles with a CET of 1.27 C .  Many climatologists have come to view this winter as the end of the Little Ice Age and the culmination of a decade of harsh winters in Britain.  Whereas the average CET for the ten winters from 1885–86 to 1894–95 was 2.87 C , no winter with a CET under 3.0 C followed for twenty-two years and no month as cold as February or January 1895 until 1940.  In contrast, between 1659 and 1894 no spell with every winter CET above 3.0 C had lasted longer than twelve winters.\n\nList of M.A.S.K. toys &amp; characters: The following is a list of characters and vehicles from \"M.A.S.K.\", its television adaption, and its associated toyline.  The toyline actually lasted longer than the cartoon series itself.\n\nKate Mullany House: The Kate Mullany House was the home of Kate Mullany (1845–1906), an early female labor leader who started the all-women Collar Laundry Union in Troy, New York in February 1864.  It was one of the first women's unions that lasted longer than the resolution of a specific issue.\n\nBattle of Leyte: The Battle of Leyte in the Pacific campaign of World War II was the amphibious invasion of the Gulf of Leyte in the Philippines by American forces and Filipino guerrillas under the command of General Douglas MacArthur, who fought against the Imperial Japanese Army in the Philippines led by General Tomoyuki Yamashita from 17 October - 26 December 1944.  The operation code named \"King Two\" launched the Philippines campaign of 1944–45 for the recapture and liberation of the entire Philippine Archipelago and to end almost three years of Japanese occupation.\n\nKorean War: The Korean War (in South Korean Hangul: 한국전쟁 ; Hanja: 韓國戰爭 ; RR: \"Hanguk Jeonjaeng \" , \"Korean War\"; in North Korean Chosŏn'gŭl: 조국해방전쟁 ; Hancha: 祖國解放戰爭 ; MR: \"Choguk haebang chǒnjaeng \" , \"Fatherland Liberation War\"; 25 June 1950 – 27 July 1953) was a war between North Korea (with the support of China and the Soviet Union) and South Korea (with the principal support of the United States).  The war began on 25 June 1950 when North Korea invaded South Korea.  The United Nations, with the United States as the principal force, came to the aid of South Korea.  China came to the aid of North Korea, and the Soviet Union also gave some assistance to the North.\n\nList of UK Albums Chart number ones of the 2000s: The UK Albums Chart is a weekly record chart based on album sales from Sunday to Saturday in the United Kingdom; during the 2000s, a total of 274 different albums by 170 artists reached number one.  The chart was compiled weekly by the Official Charts Company (OCC) on behalf of the British music industry—it listed only physical album sales until 2007, after which it also included albums sold digitally.  The OCC defined an \"album\" to be any music release that featured more than four tracks or lasted longer than 25 minutes.  Each week's new number one was first announced on Sunday evenings by BBC Radio 1 on their weekly chart show.\n\nZhou dynasty: The Zhou dynasty ( ) was a Chinese dynasty that followed the Shang dynasty and preceded the Qin dynasty.  The Zhou dynasty lasted longer than any other dynasty in Chinese history.  The military control of China by the royal house, surnamed Ji (), lasted initially from 1046 until 771 BC for a period known as the Western Zhou and the political sphere of influence it created continued well into Eastern Zhou for another 500 years.\n\nLetter to Women: Letter to Women is a pastoral letter written by Pope John Paul II to \"all\" women, and deals most essentially with the rights and dignity of women, the many challenges that women in the modern era had to face, and ways in which the \"cause\" of woman could be forwarded in the world.  Written and distributed on June 29, 1995, this letter was written in anticipation of the Fourth World Conference on Women in September 1995, hosted by the United Nations in Beijing.  This letter was an affirmation to the continuing thought of Pope John Paul II on the importance of women in the Church, and the special roles in which only they can contribute in the realms of the family, the Church, and the world.  In his pontificate which lasted longer than 26 years, he continuously upheld the dignity and honor of women, and this letter was a significant contribution to his corpus of works on the importance of women within the Church.  Through this letter not only was the dignity and honor of women affirmed but of \"all\" people.",
+    "question": "What lasted longer, the Korean War or the Battle of Leyte?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "event_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the first event being compared."
+            },
+            "start_date": {
+              "type": "string",
+              "format": "date",
+              "description": "The start date of the event in YYYY-MM-DD format."
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date",
+              "description": "The end date of the event in YYYY-MM-DD format."
+            },
+            "duration_days": {
+              "type": "integer",
+              "description": "The total duration of the event in days."
+            }
+          },
+          "required": [
+            "name",
+            "start_date",
+            "end_date",
+            "duration_days"
+          ],
+          "additionalProperties": false
+        },
+        "event_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the second event being compared."
+            },
+            "start_date": {
+              "type": "string",
+              "format": "date",
+              "description": "The start date of the event in YYYY-MM-DD format."
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date",
+              "description": "The end date of the event in YYYY-MM-DD format."
+            },
+            "duration_days": {
+              "type": "integer",
+              "description": "The total duration of the event in days."
+            }
+          },
+          "required": [
+            "name",
+            "start_date",
+            "end_date",
+            "duration_days"
+          ],
+          "additionalProperties": false
+        },
+        "longer_lasting_event_name": {
+          "type": "string",
+          "description": "The name of the event that lasted for a longer duration."
+        },
+        "duration_difference_days": {
+          "type": "integer",
+          "description": "The difference in duration between the longer and shorter event, in days."
+        }
+      },
+      "required": [
+        "event_1",
+        "event_2",
+        "longer_lasting_event_name",
+        "duration_difference_days"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "event_1": {
+        "name": "Korean War",
+        "start_date": "1950-06-25",
+        "end_date": "1953-07-27",
+        "duration_days": 1128
+      },
+      "event_2": {
+        "name": "Battle of Leyte",
+        "start_date": "1944-10-17",
+        "end_date": "1944-12-26",
+        "duration_days": 70
+      },
+      "longer_lasting_event_name": "Korean War",
+      "duration_difference_days": 1058
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

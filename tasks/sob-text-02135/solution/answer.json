@@ -1,0 +1,17 @@
+{
+  "common_attribute": "type",
+  "attribute_value": "documentary film",
+  "films_compared": [
+    {
+      "title": "A Closer Walk",
+      "director": "Robert Bilheimer",
+      "subject": "global AIDS epidemic"
+    },
+    {
+      "title": "Mr. Big",
+      "release_year": 2007,
+      "director": "Tiffany Burns",
+      "subject": "Mr. Big undercover methods used by the Royal Canadian Mounted Police (RCMP)"
+    }
+  ]
+}

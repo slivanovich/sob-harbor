@@ -1,0 +1,10 @@
+{
+  "religion_name": "Aztec religion",
+  "is_polytheistic": true,
+  "mythological_figure": "Ometochtli",
+  "figure_description": "collective or generic name of various individual deities and supernatural figures associated with pulque",
+  "associated_cults": [
+    "pulque cult",
+    "octli cult"
+  ]
+}

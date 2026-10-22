@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "28fee1b19accf1b8e6764a26faa38ac46afe63152df410b43c32b80b9305254f",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5adeefdd5542993344016bc2",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "800 Two Lap Runners: 800 Two Lap Runners is a 1994 Japanese film directed by Ryūichi Hiroki starring Shunsuke Matsuoka and Eugene Nomura.  For director Hiroki, the film marks a transition from his early work in \"pink film\" to mainstream cinema.\n\nOtoko no Isshō: Otoko no Isshō (娚の一生 ) is a slice of life romance \"josei\" manga series written and illustrated by Keiko Nishi.  It was published by Shogakukan on \"Flowers\" magazine and in four volumes compiling the chapters.  A live action romantic drama film adaptation was released on February 14, 2015.  It's directed by Ryūichi Hiroki and written by Hiroshi Saitō.  It stars Nana Eikura and Etsushi Toyokawa.\n\nJ. Lee Thompson: John Lee Thompson (1 August 1914 – 30 August 2002) was a British film director, active in London and Hollywood, best known for such movies as \"Ice Cold in Alex\" and \"The Guns of Navarone\".\n\nIt's Only Talk: It's Only Talk is a Japanese film, released in 2005 and is based on the prizewinning novel of the same title written by Akiko Itoyama and directed by Ryūichi Hiroki.\n\nKiiroi Zou: Kiiroi Zou (きいろいゾウ ) is a 2013 Japanese film directed by Ryūichi Hiroki.\n\nMurder Without Crime: Murder Without Crime is a 1950 British crime film directed by J. Lee Thompson (his first film) and starring Dennis Price, Derek Farr and Patricia Plunkett.  J. Lee Thompson also wrote the screenplay adapted from \"Double Error\", his own successful West End play.\n\nNorth West Frontier (film): North West Frontier (USA: Flame Over India; Australia: Empress of India) is a 1959 British adventure film starring Kenneth More, Lauren Bacall, Herbert Lom, Wilfrid Hyde-White and I. S. Johar.  The Cinemascope film, which was produced by Marcel Hellman, was directed by J. Lee Thompson.  It was a commercial success at the British box office in 1959.  The film's achievement led to J. Lee Thompson beginning his American career as a director.  In 1961, he made \"The Guns of Navarone\", which was also noted for the cinematography of Geoffrey Unsworth. .\n\nRiver (2011 film): River is a 2011 Japanese drama film based on the 2008 Akihabara massacre incident.  The film is written and directed by Ryūichi Hiroki.  The film stars actress Misako Renbutsu, who will play the role of a person who lost her love interest in the attacks.\n\nVibrator (film): Vibrator (ヴァイブレータ ) is a 2003 Japanese film directed by Ryūichi Hiroki.\n\nRyūichi Hiroki: Ryūichi Hiroki (廣木 隆一 , Hiroki Ryūichi , born January 1, 1954) is a Japanese film director.  He won critical acclaim for \"800 Two Lap Runners\".  Film critic and researcher Alexander Jacoby has described Hiroki as \"one of the modern Japanese cinema's most intelligent students of character\".",
+    "question": "Were J. Lee Thompson and Ryūichi Hiroki both film directors?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the first person."
+            },
+            "is_director": {
+              "type": "boolean",
+              "description": "Indicates if the first person is a film director."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the first person."
+            }
+          },
+          "required": [
+            "name",
+            "is_director",
+            "nationality"
+          ],
+          "additionalProperties": false
+        },
+        "person_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the second person."
+            },
+            "is_director": {
+              "type": "boolean",
+              "description": "Indicates if the second person is a film director."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the second person."
+            }
+          },
+          "required": [
+            "name",
+            "is_director",
+            "nationality"
+          ],
+          "additionalProperties": false
+        },
+        "both_are_directors": {
+          "type": "boolean",
+          "description": "True if both individuals are film directors, false otherwise."
+        }
+      },
+      "required": [
+        "person_1",
+        "person_2",
+        "both_are_directors"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_1": {
+        "name": "J. Lee Thompson",
+        "is_director": true,
+        "nationality": "British"
+      },
+      "person_2": {
+        "name": "Ryūichi Hiroki",
+        "is_director": true,
+        "nationality": "Japanese"
+      },
+      "both_are_directors": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

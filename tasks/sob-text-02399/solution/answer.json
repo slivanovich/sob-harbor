@@ -1,0 +1,9 @@
+{
+  "student_name": "Ashan Pillai",
+  "attended_school": "The Juilliard School",
+  "school_details": {
+    "school_name": "The Juilliard School",
+    "is_located_in_lincoln_center": true,
+    "location_description": "The Juilliard School is located in the Lincoln Center for the Performing Arts on the Upper West Side of Manhattan, New York City."
+  }
+}

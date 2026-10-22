@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "700194e687b7b5e0eb2c11b16de564a7d69455977c6928573ca8a8d1582f81d0",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac531ee5542994611c8b41a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Rakhadrak Hermitage: Rakhadrak Hermitage (\"Ra kha brag ri khrod\") is a historical hermitage, belonging to the Sera Monastery.  It is located to the northeast of Sera and to the north of Lhasa in Tibet Autonomous Region.  It is located just up the mountain from the Keutsang Hermitage.\n\nNational Trust for Nature Conservation: The National Trust for Nature Conservation (NTNC), (राष्ट्रिय प्रकृति संरक्षण कोष) previously known as King Mahendra Trust for Nature Conservation is a Nepalese non-governmental organization working in the field of nature conservation. It was established in 1982 as an autonomous non profit organization by legislative law of Nepal.  NTNC's mission is to conserve nature and natural resources in Nepal while meeting the needs of the people in sustainable way.  Geographically, the Trust activities have spread from the sub-tropical plains of Chitwan, Bardia and Kanchanpur in the lowlands to the Annapurna and Manaslu region of the high Himalayas, including the trans-Himalayan region of Upper Mustang and Manang.  Currently, the projects of Trust are divided into three geographical areas - the lowland, the mid-hills (Kathmandu Valley) and the high mountains.  The Trust’s activities in the lowlands are based in and around the Chitwan National Park, the Bardia National Park and the Shuklaphanta Wildlife Reserve located in the central, western and far-western development regions of Nepal, through the Biodiversity Conservation Center (BCC) in Chitwan, the Bardia Conservation Program (BCP) in Bardia and the Suklaphanta Conservation Program (SCP) in Kanchanpur.  Similarly, the Annapurna Conservation Area Project (ACAP), the Manaslu Conservation Area Project (MCAP) and Gaurishankar Conservation Area Project (GCAP) are three protected areas managed by the Trust in the mountain region.  The Central Zoo is the only project of the Trust in Kathmandu Valley.  As a new initiative, the Trust has established an Energy and Climate Change Unit to address the emerging issues of climate change through mitigation and adaptation approach and renewable energy technologies.  The Trust has also started work on urban environment conservation with the Bagmati River Conservation Project.\n\nKeshan hong ri: Keshan Hong Ri (《柯山红日》\"Red Sun over Mount Ke\") is a 1959 six-act Chinese-language western-style opera produced by the Opera Troupe of the People's Liberation Army's General Political Department.  The music was composed by Zhuang Ying and Lu Ming.  The opera tells of the PLA's actions in Tibet at the pseudonymous \"Mount Ke\".  The following year it was made into a musical film \"Keshan hong ri\" \"The Red Sun over Ke Mountains\" 1960 directed by Dong Zhaoqi.\n\nManaslu: Manaslu (Nepali: मनास्लु, also known as Kutang) is the eighth highest mountain in the world at 8163 m above sea level.  It is located in the Mansiri Himal, part of the Nepalese Himalayas, in the west-central part of Nepal.  Its name, which means \"mountain of the spirit\", comes from the Sanskrit word \"manasa\", meaning \"intellect\" or \"soul\".  Manaslu was first climbed on May 9, 1956 by Toshio Imanishi and Gyalzen Norbu, members of a Japanese expedition.  It is said that \"just as the British consider Everest their mountain, Manaslu has always been a Japanese mountain\".\n\nPargo Kaling: Pargo Kaling was a famous chorten located at foot of Potala's Red Hill (Marpo Ri) and Iron Hill (Chagpo Ri) forming the western entrance to the city of Lhasa, Tibet.\n\nGokyo Ri: Gokyo Peak (Nepali: Gokyo Ri) is a -high peak in the Khumbu region of the Nepal Himalayas.  It is located on the west side of the Ngozumpa glacier, which is the largest glacier in Nepal and reputed to be the largest in the whole Himalayas.  Gokyo (4,750 m, 15,583 ft above sea level), at the base of Gokyo Ri, is a small hamlet of a few stone houses and one of the highest settlements in the world.  From Gokyo Ri it is possible to see four 8,000-metre peaks: Mount Everest, Lhotse, Makalu, and Cho Oyu.  The Gokyo Lakes are in the area.\n\nLangtang Ri: Langtang Ri is a mountain in the Langtang Himal of the Himalayas.  At an elevation of 7205 m it is the 106th highest mountain in the world.  Located on the border between the Bagmati Zone of Nepal and Tibet, China, it is part of a group of high peaks that include Shishapangma (8,013 m) and Porong Ri (7,292 m).\n\nTingri (town): Gangga (or \"Tingri\" according to name of region) (Tibetan: སྒང་དགའ་ , Wylie: sgang dga', Chinese: 岗嘎镇 ; Pinyin: gǎnggā zhèn) is a town in southern Tibet.  It is in Tingri County, Shigatse Prefecture with a population of around 523.  It is often used as a base by mountain climbers preparing to ascend Mount Everest or Cho Oyu.  Tingri Shelkar (Dring ri Shel dkar) is a small town approximately 60 km north-west of Mount Everest and just over 50 km from the Nepali border in the Tibet Autonomous Region of China.  It is at an altitude of about 4,300 metres (approx. 14,107 feet).  The old Shekar Dorje \"Dzong\", or fort, is above the new town and used to enclose Shekar Chode, a Gelug monastery which was completely destroyed but is being restored.  It is known for its spectacular views of Mount Everest, Mount Lhotse, Mount Makalu, and Cho Oyu, which comprise four of the six highest mountains in the world.\n\nTibet Museum (Dharamsala): The Tibet Museum is the official museum of the Central Tibetan Administration's Department of Information and International Relations and is located near the main temple of the 14th Dalai Lama, Tsuglag Khang, in the Dharamshala suburb of McLeod Ganj.  The Tibet Museum aims to disseminate knowledge of Tibetan history and culture while raising awareness of the occupation of Tibet and the ongoing human rights abuses committed by China.  Established in 1998, the Tibet Museum now has a collection comprising over 30,000 photographs, a traveling exhibition, and a permanent exhibition that documents the Tibetan journey into exile across the Himalayan ranges.\n\nSiguang Ri: Siguang Ri is a mountain in the Mahalangur Himalayas of Tibet, China.  At an elevation of 7308 m it is the 83rd highest peak on Earth.  It is located approximately 6 kilometers NNE of Cho Oyu, the world's 6th highest mountain.",
+    "question": "Are Manaslu and Siguang Ri both located in Tibet?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "are_both_in_tibet": {
+          "type": "boolean",
+          "description": "True if both mountains are located in Tibet, false otherwise."
+        },
+        "mountains_information": {
+          "type": "array",
+          "description": "Details about each mountain mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the mountain."
+              },
+              "is_located_in_tibet": {
+                "type": "boolean",
+                "description": "True if the mountain is located in Tibet, false otherwise."
+              },
+              "primary_location": {
+                "type": "string",
+                "description": "The primary country or region where the mountain is located."
+              }
+            },
+            "required": [
+              "name",
+              "is_located_in_tibet",
+              "primary_location"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "conclusion_reasoning": {
+          "type": "string",
+          "description": "A brief explanation for the 'are_both_in_tibet' answer."
+        }
+      },
+      "required": [
+        "are_both_in_tibet",
+        "mountains_information",
+        "conclusion_reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "are_both_in_tibet": false,
+      "mountains_information": [
+        {
+          "name": "Manaslu",
+          "is_located_in_tibet": false,
+          "primary_location": "Nepal"
+        },
+        {
+          "name": "Siguang Ri",
+          "is_located_in_tibet": true,
+          "primary_location": "Tibet, China"
+        }
+      ],
+      "conclusion_reasoning": "Manaslu is located in Nepal, while Siguang Ri is located in Tibet, China. Since only one of the two mountains is in Tibet, the answer is false."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

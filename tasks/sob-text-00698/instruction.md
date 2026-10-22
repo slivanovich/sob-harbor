@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Vincent Gigante: Vincent Louis Gigante ( ; March 29, 1928 – December 19, 2005), also known as "Chin", was a New York Italian-American mobster in the American Mafia who was boss of the Genovese crime family from 1981 to 2005.  Gigante started out as a professional boxer who fought 25 bouts between 1944 and 1947.  He then started working as a Mafia enforcer for what was then the Luciano crime family.  Gigante was one of five brothers: Mario, Pasquale, Ralph and he all became mobsters in the Luciano family, forerunner of the Genovese family.  Only one brother, Louis, stayed out of the crime family, instead becoming a priest.  Gigante was the shooter in the failed assassination of longtime Luciano boss Frank Costello in 1957.  After sharing a prison cell with Costello's rival, Vito Genovese, following Vito's conviction for heroin trafficking, Gigante became a caporegime, overseeing his own crew of Genovese soldiers and associates that operated out of Greenwich Village.  Gigante was one of Genovese's most loyal supporters, siding with him throughout the struggle for power with Costello.
+
+Ernest Rupolo: Ernest "the Hawk" Rupolo (1908 – August 24, 1964) was a low-level New York mobster and hitman for the Luciano crime family, now the Genovese crime family.  Rupolo would later turn informant and testify against then-capo and future boss Vito Genovese.
+
+East Harlem Purple Gang: The East Harlem Purple Gang was a semi-independent gang of Italian American hit-men and heroin dealers who, according to federal prosecutors, dominated heroin distribution in East Harlem and the Bronx during the late 1970s and early 1980s in New York City.  Though mostly independent of the Italian-American Mafia and not an official Italian-American Mafia crew, the gang was originally affiliated with and worked with the Lucchese crime family and later with the Bonanno crime family and Genovese crime family.  It developed its "closest ties" with the Genovese family, and its remnants or former members are now part of the Genovese family's 116th Street Crew.
+
+Thomas Principe: Thomas Principe, also known as the ".22 Caliber Killer", was an Italian-American Gambino crime family street soldier and close friend of John Gotti from New York City Alleged to have been part of a special hit squad that would order executions with silencer-equipped .22 caliber pistols, earning them the title in the newspapers as "the .22 Caliber hitters".  alleged members considered to make up the team of executioners were thought by the Federal Bureau of Investigation (FBI) to be Vincent Gigante, John DiGilio, Salvatore Briguglio and Tommy.  The team of "hitters" were suspected of being responsible for at least twenty gangland executions since 1976, including six FBI informants and potential witnesses.  The most publicized murder, claimed to have been the team's 21st victim was former Manhattan assistant District Attorney Gino Gallina.  Gallina had become a lawyer, defending major crime figures including East Coast Genovese crime family members.  He was gunned down in gangland style on a Greenwich Village street.  Seven bullets riddled Gallina and he died ninety minutes later.  At the time, Gallina was a key witness before a Newark, New Jersey grand jury, testifying, among other things, on Mafia executions performed by the suspected ".22 Caliber Hitters".  He was claimed a victim of the team of executioners even though the bullets that killed him were from a .38-caliber handgun.  Federal officials blamed his slaying on a leak from the grand jury.
+
+Steven Franse: Steven Franse (October 13, 1902 – June 18, 1953) was a New York mobster with the Genovese crime family who was a close associate of mob bosses Charles "Lucky" Luciano and Vito Genovese.
+
+Vito Genovese: Vito "Don Vitone" Genovese (November 27, 1897 – February 14, 1969) was an Italian-American mobster who rose to power during Prohibition as an enforcer in the American Mafia.  A long time associate of Charles Luciano, Genovese took part in the Castellammarese War and helped shape the rise of the Mafia and organized crime in the United States.  He would later lead Luciano's crime family, which was renamed the Genovese crime family, for 12 years.
+
+Mario Gigante: Mario R. Gigante (born November 4, 1923 in Greenwich Village, Manhattan) is a New York City mobster who served as caporegime for the Genovese crime family.  He is the older brother of late family boss Vincent "The Chin" Gigante.
+
+Michael James Genovese: Michael James Genovese (April 9, 1919 – October 31, 2006) was an alleged boss of the Pittsburgh crime family.  References to Michael Genovese as the brother of Vito Genovese are to a different Michael Genovese; Michael James Genovese was first cousin to New York mob boss Vito Genovese.
+
+Greenwich Village Crew: The Greenwich Village Crew is a crew within the Genovese crime family, active in the Greenwich Village area of Manhattan.  It was originally controlled by Don Vito Genovese from the early 1920s until his arrest in the late 1950s.  In the early 1980s Capo Vincent Gigante, was made the "new boss" of the Genovese crime family.  He continued to operate from and with the "Greenwich Village Crew" members.  Today the crew is still active, but after the death of Dominick Canterino, it is uncertain who is controlling the crew.
+
+Michael &quot;Trigger Mike&quot; Coppola: Michael "Trigger Mike" Coppola (July 2, 1900, New York City – October 1, 1966, Boston, Massachusetts) was a New York City mobster who became a caporegime of the 116th Street Crew, with the Genovese crime family.  Coppola headed many Genovese family criminal operations from the late 1930s until the early 1960s.  He should not be confused with the Michael "Mikey Cigars" Coppola, a current mobster of the Genovese crime family.
+
+Question: Name the New York Italian-American mobster, also known as Chin, in the American Mafia who was boss of the Genovese crime family from 1981 to 2005, replacing Don Vito Genovese but continuing to operate from and with the Greenwich Village Crew?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "mobster_name": {
+      "type": "string",
+      "description": "The full name of the mobster."
+    },
+    "nickname": {
+      "type": "string",
+      "description": "The known nickname of the mobster."
+    },
+    "crime_family": {
+      "type": "string",
+      "description": "The crime family the mobster was boss of."
+    },
+    "boss_tenure_start_year": {
+      "type": "integer",
+      "description": "The start year of the mobster's tenure as boss."
+    },
+    "boss_tenure_end_year": {
+      "type": "integer",
+      "description": "The end year of the mobster's tenure as boss."
+    },
+    "operated_with_crew": {
+      "type": "string",
+      "description": "The name of the crew the mobster operated with."
+    },
+    "replaced_boss_name": {
+      "type": "string",
+      "description": "The name of the previous boss who was replaced."
+    }
+  },
+  "required": [
+    "mobster_name",
+    "nickname",
+    "crime_family",
+    "boss_tenure_start_year",
+    "boss_tenure_end_year",
+    "operated_with_crew",
+    "replaced_boss_name"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "car_name": "DeLorean DMC-12",
+  "manufacturer": "DeLorean Motor Company",
+  "founder": "John DeLorean",
+  "features": [
+    "gull-wing doors",
+    "fiberglass body structure with a steel backbone chassis",
+    "external brushed stainless steel body panels"
+  ],
+  "movie_franchise": "Back to the Future",
+  "role_in_movie": "time machine"
+}

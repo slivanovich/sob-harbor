@@ -1,0 +1,23 @@
+{
+  "film_title": "Aladdin",
+  "release_year": 1992,
+  "disney_feature_number": 31,
+  "genre_tags": [
+    "comedy",
+    "musical",
+    "romantic",
+    "fantasy",
+    "adventure"
+  ],
+  "primary_production_studio": "Walt Disney Feature Animation",
+  "additional_animation_facility": {
+    "name": "Creative Capers Entertainment",
+    "founding_year": 1989,
+    "founders": [
+      "Terry Shakespeare",
+      "Sue Shakespeare",
+      "David Molina"
+    ],
+    "contribution_type": "uncredited additional animation facility"
+  }
+}

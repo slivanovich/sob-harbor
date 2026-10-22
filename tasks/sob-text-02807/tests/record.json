@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "record_id": "ecae16a65656e1e63a20969cd6b1a3d98b6249e3a2046a108f4b975841dd5bc2",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8a41c65542996c9b8d5e78",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Baiju Bawra",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Filmfare Award for Best Actor – Malayalam: The Filmfare Best Actor Award is given by the \"Filmfare\" magazine as part of its annual Filmfare Awards South for lead actors in Malayalam cinema.  The award was first given in 1972 to Madhu, who was the first recipient.\n\nFilmfare Award for Best Music Director: The Filmfare Best Music Album Award is given by the \"Filmfare\" magazine as part of its annual Filmfare Awards for Hindi films, to the best composer/arranger of a soundtrack.  This category was first presented in 1954.  Naushad Ali was the first recipient of this award for his song \"Tu Ganga Ki Mauj\" from the film \"Baiju Bawra\".  For the first two years, it was awarded to the composer for a particular song and not the entire album.  From 1956 onwards, awards in this category have been given for the entire soundtrack.From 2017,the name this category changed from best music direction to music album.\n\nFilmfare Award for Best Choreography: The Filmfare Best Choreography Award is given by the \"Filmfare\" magazine as part of its annual Filmfare Awards for Hindi films.\n\nFilmfare Award for Best Special Effects: The Filmfare Best Special Effects Award is given by the Filmfare magazine as part of its annual Filmfare Awards for Hindi films.\n\nFilmfare Critics Award for Best Film: Filmfare Critics Award for Best Film is award during annual Filmfare Awards, given by the Filmfare magazine.  The awards are the oldest and most prominent film awards given for Hindi films in India.  The yearly awards started in 1954.  Movie awards were first given by popular vote.  Many complained that films of artistic merit rather than commercial appeal were being overlooked, hence a new award category was added, the Critics Award for Best Film.\n\nBaiju Bawra: Baijnath Mishra, better known as Baiju Bawra (\"Baiju the Crazy\"), was a dhrupad musician from medieval India.  Nearly all the information on Baiju Bawra comes from legends, and lacks historical authenticity.  According to the most popular legends, he lived in the Mughal period during the 15th and 16th centuries.  He was one of the court musicians of Raja Mansingh Tomar of Gwalher (now Gwalior).\n\nFilmfare Award for Best Costume Design: The Filmfare Best Costumes Award is given by the \"Filmfare\" magazine as part of its annual Filmfare Awards for Hindi films.\n\nFilmfare Award for Best Dialogue: The Filmfare Best Dialogue Award is given by the \"Filmfare\" as part of its annual Filmfare Awards for Hindi films.  Here is a list of the award winners since 1958 and the films for which they won.\n\nList of awards and nominations received by Asin: This is a list of awards and nominations of Asin Thottumkal, an Indian actress who has worked in Malayalam, Telugu, Tamil and Hindi movies.  Asin has won a number of awards for her performance in various films in the Tamil, Telugu and Hindi industries, including the most coveted Kalaimamani award by the Chief Minister of Tamil Nadu in 2009.  She has won various Filmfare awards and other prominent awards for her acting skills in all three major industries which she has been part of in her career.  The three Filmfare awards, she has won so far includes, Filmfare Best Telugu Actress Award for Amma Nanna O Tamila Ammayi, Filmfare Best Tamil Actress Award for Ghajini and Filmfare Best Female Debut Award for her Hindi debut in Ghajini.\n\nFilmfare Award for Best Screenplay: The Filmfare Best Screenplay Award is given by the \"Filmfare\" magazine as part of its annual Filmfare Awards for Hindi films.",
+    "question": "The Filmfare Best Music Album Award is given by the \"Filmfare\" magazine as part of its annual Filmfare Awards for Hindi films, to the best composer/arranger of a soundtrack, Naushad Ali was the first recipient of this award for his song \"Tu Ganga Ki Mauj\" from which film, a dhrupad musician from medieval India, better known as what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "award_category": {
+          "type": "string",
+          "description": "The name of the Filmfare award category."
+        },
+        "first_recipient_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the first recipient of the award."
+            },
+            "song_awarded_for": {
+              "type": "string",
+              "description": "The title of the song for which the award was first given."
+            }
+          },
+          "required": [
+            "name",
+            "song_awarded_for"
+          ],
+          "additionalProperties": false
+        },
+        "film_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the film associated with the awarded song."
+            },
+            "associated_musician": {
+              "type": "object",
+              "properties": {
+                "alternative_name": {
+                  "type": "string",
+                  "description": "The name the dhrupad musician from medieval India is better known as."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "A brief description of the musician."
+                }
+              },
+              "required": [
+                "alternative_name",
+                "description"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "title",
+            "associated_musician"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "award_category",
+        "first_recipient_details",
+        "film_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "award_category": "Filmfare Best Music Album Award",
+      "first_recipient_details": {
+        "name": "Naushad Ali",
+        "song_awarded_for": "Tu Ganga Ki Mauj"
+      },
+      "film_details": {
+        "title": "Baiju Bawra",
+        "associated_musician": {
+          "alternative_name": "Baiju Bawra",
+          "description": "dhrupad musician from medieval India"
+        }
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

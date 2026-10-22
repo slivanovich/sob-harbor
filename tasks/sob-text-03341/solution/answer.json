@@ -1,0 +1,15 @@
+{
+  "honoree_details": {
+    "name": "James B. Bell",
+    "rank": "Sergeant"
+  },
+  "award_details": {
+    "name": "Medal of Honor",
+    "type": "U.S. military's highest decoration"
+  },
+  "action_context": {
+    "conflict_name": "American Civil War",
+    "battle_name": "Battle of Missionary Ridge",
+    "action_date": "November 25, 1863"
+  }
+}

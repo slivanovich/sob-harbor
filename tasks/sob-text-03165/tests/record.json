@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "6640f3f464f660e0c21e0d582b590e5c95665445f78947b008c0b323e5f607f7",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae699bb55429908198fa64e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Sigourney Weaver",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Second warrant officer: Second warrant officer (2WO) is a warrant officer rank in the Singapore Armed Forces.  It was the most junior of the warrant officers until the rank of third warrant officer (3WO) was brought into effect on 1 April 2010.\n\nArmy Staff Senior Warrant Officer: The Army Staff Senior Warrant Officer (ARSTAF SWO) provides the Chief of Staff of the United States Army (CSA) with subject matter expertise on warrant officer training and development, to include proper balance of training, education and professional experience for warrant officers.  Additionally, the ARSTAF SWO communicates with commanders and warrant officers throughout the United States Army to ensure their concerns and recommendations are considered in decisions that will impact the future of the warrant officer corps.\n\nWarrant Officer Basic Course: Warrant Officer Basic Course (WOBC) is the technical training program a newly appointed U.S. Army Warrant Officer receives after attending Warrant Officer Candidate School.  WOBC is designed to certify warrant officers as technically and tactically competent to serve in a designated military occupation specialty.  WOBC is the first major test a newly appointed officer must pass to continue serving in the Army as a warrant officer, as WO1 appointments and award of a Warrant Officer MOS are contingent upon successfully completing WOBC.\n\nAlien (creature in Alien franchise): The \"Alien\" (also referred to as \"Xenomorph XX121\") is a fictional endoparasitoid extraterrestrial species that is the eponymous antagonist of the \"Alien\" film series.  The species made its debut in the film \"Alien\" (1979), and reappeared in the sequels \"Aliens\" (1986), \"Alien 3\" (1992), and \"\" (1997), as well as the crossover franchise \"Alien vs. Predator\" (2004) and \"\" (2007).  A similar creature of a slightly different design named the \"Deacon\" makes a brief appearance in the Ridley Scott film \"Prometheus\" (2012).  Two species, one being a different but similar creature called a \"Neomorph\" and the other being a variation of the Xenomorph XX121 species appear in the sequel to \"Prometheus\", \"\" (2017), which reveals the potential origin of the species.  In addition, the Alien appears in various literature and video game spin-offs from the franchises.\n\nMustang (military officer): A mustang is slang term in the United States Armed Forces, referring to a warrant officer or commissioned officer who began his or her career as an enlisted service member.  \"Mustang\" officers are generally older and more experienced than their peers-in-grade who entered the military, without prior enlisted service, via commissioning from one of the service academies (such as the United States Merchant Marine Academy, United States Military Academy, United States Air Force Academy, United States Naval Academy, or United States Coast Guard Academy), Officer Candidate School, or the Reserve Officer Training Corps.  During the Vietnam War, however, when some Army warrant officer pilots were offered a direct commission to 2nd or 1st Lieutenant, they were usually younger than 25 at the time of commission.  Department of Defense military pay tables authorize approximately ten percent pay premiums for officers in grades O-1, O-2 and O-3 who have credit for over four years of enlisted or warrant officer service prior to commissioning (Grades O-1E, O-2E, O-3E).\n\nCanadian Forces Chief Warrant Officer: The Canadian Forces Chief Warrant Officer or CFCWO is the senior non-commissioned member appointment in the Canadian Forces.  The post was created in 1978, with the first appointment of CWO Robert Osside.  Chief Warrant Officer Robert Osside was the first Canadian Forces Chief Warrant Officer – a position created by the Chief of the Defence Staff in 1978 to assist the CDS in his duties and advise him on all issues relating to non-commissioned members.\n\nKevin West: Chief Warrant Officer Kevin Charles West, {'1': \", '2': \", '3': \", '4': \"} is a warrant officer of the Royal Canadian Air Force.  He is the current Canadian Forces Chief Warrant Officer and therefore the most senior non-commissioned member of the Canadian Forces.  He was previously the Chief Warrant Officer of the RCAF.\n\nFirst warrant officer: First warrant officer (1WO) is a warrant officer rank in the Singapore Armed Forces.  It is senior to second warrant officer but junior to master warrant officer.\n\nAlien (franchise): Alien is a British-American science-fiction horror media franchise centered on the film series depicting Warrant Officer Ellen Ripley (played by Sigourney Weaver) and her battles with an extraterrestrial lifeform, commonly referred to as \"the Alien\", and depicting android David 8 (portrayed by Michael Fassbender) and his experimentation in creating said lifeform.\n\nThird warrant officer: Third warrant officer (3WO) is a warrant officer rank in the Singapore Armed Forces.  It is the most junior of the warrant officers, and holders of this rank are given appointments such as company sergeant major.  The rank was newly introduced on 14 May 2009, and went into effect on 1 April 2010, as part of a revised career structure for warrant officers.  The rank insignia is similar to the one for second warrant officer, although the former has a finer chevron.",
+    "question": "Xenomorph XX121 is a fictional species from a science-fiction horror media franchise centered on the battles of a warrant officer played by who?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "franchise_name": {
+          "type": "string",
+          "description": "The name of the media franchise."
+        },
+        "fictional_species_name": {
+          "type": "string",
+          "description": "The name of the fictional species."
+        },
+        "character_role": {
+          "type": "string",
+          "description": "The military role of the central character."
+        },
+        "character_name": {
+          "type": "string",
+          "description": "The name of the central character."
+        },
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor who played the central character."
+        }
+      },
+      "required": [
+        "franchise_name",
+        "fictional_species_name",
+        "character_role",
+        "character_name",
+        "actor_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "franchise_name": "Alien",
+      "fictional_species_name": "the Alien",
+      "character_role": "Warrant Officer",
+      "character_name": "Ellen Ripley",
+      "actor_name": "Sigourney Weaver"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

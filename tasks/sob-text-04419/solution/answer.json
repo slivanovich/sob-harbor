@@ -1,0 +1,13 @@
+{
+  "mayor": {
+    "name": "Rahm Emanuel",
+    "city": "Chicago",
+    "mayoral_term_number": 44,
+    "political_party": "Democratic Party"
+  },
+  "mhub_details": {
+    "name": "mHUB",
+    "kickstarted_year": 2017
+  },
+  "action": "kickstarted"
+}

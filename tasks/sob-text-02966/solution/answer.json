@@ -1,0 +1,23 @@
+{
+  "common_occupation": "novelist",
+  "individuals": [
+    {
+      "name": "Augusto Roa Bastos",
+      "occupations": [
+        "novelist",
+        "short story writer",
+        "journalist",
+        "screenwriter",
+        "professor"
+      ]
+    },
+    {
+      "name": "William Styron",
+      "occupations": [
+        "novelist",
+        "essayist"
+      ]
+    }
+  ],
+  "reasoning": "Both Augusto Roa Bastos and William Styron are explicitly described as 'novelist' in the provided context."
+}

@@ -1,0 +1,16 @@
+{
+  "astronaut_name": "Eugene Cernan",
+  "professions": [
+    "American astronaut",
+    "naval aviator",
+    "electrical engineer",
+    "aeronautical engineer",
+    "fighter pilot"
+  ],
+  "mission_details": {
+    "mission_name": "Apollo 17",
+    "landing_location_relative_to_mackin": "north of it",
+    "year_of_landing": 1972
+  },
+  "walked_on_moon": true
+}

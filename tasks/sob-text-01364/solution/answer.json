@@ -1,0 +1,17 @@
+{
+  "band_name": "Mates of State",
+  "formation_year": 1997,
+  "genre": "indie pop",
+  "members": [
+    {
+      "name": "Jason Hammel",
+      "role": "drums",
+      "is_part_of_duo": true
+    },
+    {
+      "name": "Kori Gardner",
+      "role": "vocals, keyboard",
+      "is_part_of_duo": true
+    }
+  ]
+}

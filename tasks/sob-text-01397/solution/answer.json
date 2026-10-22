@@ -1,0 +1,18 @@
+{
+  "person_a_name": "H. L. Mencken",
+  "person_b_name": "Joe R. Lansdale",
+  "shared_profession": "writer",
+  "person_a_professions": [
+    "journalist",
+    "satirist",
+    "cultural critic",
+    "scholar of American English",
+    "writer"
+  ],
+  "person_b_professions": [
+    "writer",
+    "author",
+    "martial arts expert",
+    "martial arts instructor"
+  ]
+}

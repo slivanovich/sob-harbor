@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ron Larson: Roland "Ron" Edwin Larson (born October 31, 1941) is a professor of mathematics at Penn State Erie, The Behrend College, Pennsylvania.  He is best known for being the author of a series of widely used mathematics textbooks ranging from middle school through the second year of college.
+
+Martha Jefferson: Martha Wayles Skelton Jefferson (born Martha Wayles; October 30, 1748 – September 6, 1782) was the wife of Thomas Jefferson.  She was a widow at her second wedding, as her first husband had died young.  When her second husband, Jefferson, was Governor of Virginia, she served as First Lady of Virginia from 1779 to 1781.  She would have been the third First Lady of the United States, but she died in 1782 well before her husband Thomas Jefferson's presidential term from 1801 to 1809.  She also died before the United States Constitution was adopted.
+
+Joseph Goebbels: Paul Joseph Goebbels (] ; 29 October 1897 – 1 May 1945) was a German politician and Reich Minister of Propaganda of Nazi Germany from 1933 to 1945.  He was one of Adolf Hitler's close associates and most devoted followers, and was known for his skills in public speaking and his deep, virulent antisemitism, which was evident in his publicly voiced views.  He advocated progressively harsher discrimination, including the extermination of the Jews in the Holocaust.
+
+Lady Apache: Sandra González Calderón (born June 26, 1970) is a Mexican professional wrestler or "luchadora", best known under the ring name Lady Apache.  González's ring name comes from the "family name" of Mario Balbuena González who wrestles under the name Gran Apache; whom she was married to when she made her wrestling debut in 1986 but later divorced.  Through her marriage to Gran Apache she was the step mother of Faby Apache and Mari Apache, both professional wrestlers.  González' second husband was Jesus Alvarado Nieves, better known as "Brazo de Oro", a professional wrestler, head of the wrestlers union and CMLL booker.  Her third and current husband is Edgar Luna Pozos, AAA's Electroshock, she is also the sister-in-law to Charly Manson (Jesus Luna Pozos).  As Lady Apache, González has mainly worked for Consejo Mundial de Lucha Libre (CMLL) and Asistencia Asesoría y Administración (AAA), Mexico's two largest professional wrestling promotions during her career, switching back and forth several times.  González is a three time CMLL World Women's Champion, a two time Mexican National Women's Champion, two time "AAA Reina de Reinas" (Spanish for "Queen of Queens") and one half of the AAA World Mixed Tag Team Championship with husband Electroshock.  On August 20, 2010 it was announced that Lady Apache was pregnant and for that reason had to stop wrestling for at least seven months.  She made her return to the wrestling ring at a CMLL event on July 31, 2011.
+
+Nelli Rokita: Nelli Rokita (née Nelli Arnold, June 26, 1957) is a Polish politician who was elected an MP as a Law and Justice candidate.  Her husband Jan Rokita was a prominent activist of a Civic Platform who retreated in September 2007 when Rokita started her political career.  She was born in the Soviet Union in an ethnic German family, lived in Germany, where she obtained a university degree in Slavic studies.  Rokita first visited Poland in the 1980s on a scholarship to the Jagiellonian University to study the language of political propaganda in the People's Republic of Poland.  There she met Jan Rokita, whom she married on July 26, 1994.  He is her second husband.  Before their wedding, Rokita converted to Catholicism, and her future husband became her godfather.  She also has a daughter, Kasia, from her previous marriage.
+
+Hugh D. Auchincloss: Hugh Dudley Auchincloss Jr. (August 15, 1897 – November 20, 1976) was an American stockbroker and lawyer who became the second husband of Nina S. Gore, mother of Gore Vidal, and also the second husband of Janet Lee Bouvier, the mother of First Lady Jacqueline Bouvier Kennedy (wife of President John F. Kennedy) and Caroline Lee Bouvier.
+
+Harald Quandt: Harald Quandt (1 November 1921 – 22 September 1967) was a German industrialist, the son of industrialist Günther Quandt and Magda Behrend Rietschel.  His parents divorced and his mother was later married to Joseph Goebbels.  After World War II, Quandt and his older half-brother Herbert Quandt ran the industrial empire that was left to them by their father and that continues today, the family owning about 46% of Germany's luxury car manufacturer BMW.
+
+Baron Greenwich: Baron Greenwich is a title that has been created twice in British history.  The first creation came in the Peerage of Great Britain in 1767 when Lady Caroline Townshend was made Baroness Greenwich, in the County of Kent, with remainder to the male issue by her second husband, Charles Townshend.  She was the daughter of Field Marshal John Campbell, 2nd Duke of Argyll, who had been created Earl of Greenwich in 1715 and Duke of Greenwich in 1719, titles which became extinct on his death in 1743.  As Caroline's two sons by her second husband predeceased her, the title became extinct upon her death in 1794.
+
+Cleopatra’s Second Husband: Cleopatra's Second Husband is a 1998 psychological drama written, produced and directed by Jon Reiss.  Paul Hipp (The Funeral) and Bitty Schram (Kissing a Fool) play Robert and Hallie Marrs, a young LA couple, who go on vacation, leaving their house in the hands of strangers.  They return to find their fish as dead as the plants, everything in disarray, and housesitters, clad in the couple's clothes, refusing to leave.  Zack (Boyd Kestner) and Sophie (Radha Mitchell), the charismatic house sitting couple, soon infuse the repressed Robert with their erotically perverse irresponsibility.  Robert, browbeaten and seemingly devoid of personality (with even his sex life regulated by his domineering wife's ovulation cycle), is easily seduced by the sexy Sophie.  When Hallie discovers the dalliance and leaves, Robert literally becomes the couples slave.  He gives them control of his home, his credit cards, practically his entire identity, until one day, driven to the darkest edge of his psyche, he snaps.  Partially inspired by a true incident, this gripping thriller is equal parts black comedy and psychological power play.  The films title "Cleopatra's Second Husband," derives from Hallie and Robert's relationship which is a parallel to that of Cleopatra and Marc Antony.
+
+Baron Mount Temple: Baron Mount Temple was a title that was created twice in British history, both times in the Peerage of the United Kingdom.  The first creation came on 25 May 1880 when the Liberal politician the Honourable William Cowper-Temple was made Baron Mount Temple, of Mount Temple in the County of Sligo.  He was born William Cowper, the second son of Peter Clavering-Cowper, 5th Earl Cowper (see Earl Cowper for earlier history of the family) by his wife the Honourable Emily, sister of The 2nd Viscount Melbourne.  Emily married as her second husband The 3rd Viscount Palmerston, a man who would serve as British Prime Minister.  Lord Palmerston, an Anglo-Irish peer, died in 1865 when the viscountcy and his junior title of Baron Temple, of Mount Temple, became extinct.  Emily died 11 September 1869, leaving her second husband's estates, including Broadlands in Hampshire, to her second son, William, who thereupon adopted by Royal licence the surname Cowper-Temple, in whose favour the Mount Temple title was revived in 1880.
+
+Question: What year was Magda Behrend Rietschel's second husband born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person whose second husband's birth year is being queried."
+    },
+    "second_husband_name": {
+      "type": "string",
+      "description": "The name of the person's second husband."
+    },
+    "second_husband_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the second husband."
+    }
+  },
+  "required": [
+    "person_name",
+    "second_husband_name",
+    "second_husband_birth_year"
+  ],
+  "additionalProperties": false
+}

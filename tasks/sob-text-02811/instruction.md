@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+United Senior High School (Illinois): United High School or UHS, is a public four-year high school located at 1905 100th Street near Monmouth, Illinois, a city of Warren County, Illinois, in the Midwestern United States.  UHS is part of United Community Unit School District 304, which also includes United Junior High School, United North Elementary School, and United West Elementary School.  Despite the Alexis United misnomer sometimes used to describe the high school, the campus is actually located 2 miles east of Monmouth, IL, though the district's north campus and one of the elementary schools is located in Alexis, Illinois.  The misnomer is due to the district office previouly being located in Alexis, Illinois.  It has since been moved to the high school campus.  The school serves a mixed city fringe, village, and rural residential community on the outskirts of the city of Monmouth, in the villages of Alexis, Kirkwood, Little York, North Henderson, and the unincorporated communities of Cameron and Gerlaw.  Much of the school district is within the Galesburg micropolitan statistical area.  United High School was formed by the consolidation of Alexis High School and Monmouth Warren High School in 2004.  In 2007 Monmouth Yorkwood High School deactivated and was annexed into United High School.
+
+Strawberry Crest High School: Strawberry Crest High School is a public high school in East Hillsborough County, Florida.  It opened on August 25, 2009 with students from Armwood High School, Durant High School and Plant City High School.  It was built to relieve the over-population of the students in these high schools.  Along with Steinbrenner High School, it is the most recently constructed high school in Hillsborough County.  Strawberry Crest is the 4th high school in Hillsborough County to be certified as an International Baccalaureate high school.  A number of the instructors for the IB courses come from the International Baccalaureate Program at the older C. Leon King High School, in Tampa.
+
+Derby High School (Kansas): Derby High School is a public high school in Derby, Kansas, United States, serving students in grades 9-12.  The current principal is Tim Hamblin.  The school colors are green and white.  It is the only public high school in the USD 260 school district.  The total enrollment for the 2015-2016 school year was 2,087 students.
+
+Wethersfield High School (Illinois): Wethersfield High School, also known as Kewanee (Wethersfield) High School, is a public four-year high school located at 439 Willard St. in Kewanee, Illinois, a city in Kewanee and Wethersfield Townships of Henry County, Illinois, in the Midwestern United States.  Wetherfield High School is part of Wethersfield Community Unit School District 230, which also includes Wethersfield Junior High School, and Wethersfield Elementary School.  The school is combined with the Wethersfield Junior High School to form Wethersfield Junior-Senior High School.  Furthermore, Wethersfield Junior-Senior High School is co-located with Wethersfield Elementary School.  Because all students attend the same academic center the school prides itself in getting to know the students over their 13 years of attendance.  However, academics, athletics, and activities remain mostly separate and inline with comparable elementary, middle, and high school curriculum.  The campus is 40 miles northeast of Galesburg, Illinois, 44 miles southeast of Moline, Illinois, and serves a mixed village and rural residential community.  The school is one of two high schools in the city of Kewanee, the other being Kewanee High School.  The school is within the Davenport-Moline-Rock Island, IA-IL metropolitan statistical area.
+
+Herndon High School (Kansas): Herndon High School is a former high school located in Herndon, Kansas, USA, which served students in grades 9-12.  Herndon High School was the only high school within the city limits of Herndon, Kansas.  The school colors were blue and yellow and the school mascot was a Beaver.  The average annual enrollment was approximately 200 students from several communities.  Herndon High School was established in either 1912 or 1915.  A new building was erected in the spring of 1917 because of the growing population of the city.  In 1923, Herndon High School became Herndon Rural High School District #2.  The school was rebuilt in 1949 and classes were held at St. Mary's High School.  Classes resumed at the rebuilt high school in 1950.  This remained until the fall of 2003 when the decision was made to consolidate with Atwood USD #318.  The new district that was formed is now Unified School District #105 and Rawlins County Junior-Senior High School.
+
+Derby High School, Bury: Derby High School or "The Derby" as it is known locally, is a secondary school, located on Radcliffe Road, Bury, Greater Manchester, England.  It opened in September 1959 as the Derby School, a new school that offered both a grammar and a technical education.  Some of the pupils moved from Bury High School, on nearby Parliament Street, which closed when the Derby opened.  They had gone there having passed the Eleven Plus examination.  Other pupils came from Bury Junior Technical School having attended that school from the age of 13 years.  The school was formed by merging those two schools into a grammar-technical school.  In September 1979 it became a comprehensive school and its sixth form was closed.  There are extensive playing fields to the front of the school and the school is easily recognised with its distinctive tower.
+
+Derby High School, Derby: Derby High School is an independent day school for girls aged 3 to 18 and boys up to age 11 in the suburb of Littleover in Derby, it is a member of the Girls' Schools Association.
+
+Derby, Kansas: Derby is a city in Sedgwick County, Kansas, United States and the largest suburb of Wichita.  As of the 2010 census, the city population was 22,158.
+
+Derby High School: Derby High School could refer to several high schools:
+
+Ridge Community High School: Ridge Community High School or RCHS is a public high school located on the Davenport, Florida and Haines City, Florida Line.  RCHS was established in 2005 in Polk County.  It currently serves 2,600 students and has 106 teachers on campus.  Ridge Community High School is one of many schools with a separate 9th Grade campus with its own front office.  The main campus holds students in 10th, 11th, and 12th grade with some exceptions.  Ridge Community High School sits on 76 acre of land.  Ridge Community High School is zoned for Davenport and Haines City.  Ridge Community High School's rivals include Haines City High School, Lake Wales High School and others in Polk County.  The principal of RCHS is currently Russell Donnelly who replaced Sherry Wells, the acting principal between the school's opening in 2005 and 2015 and has a few assistant principals.  Ridge Community High School is part of the Polk County School Board.  RCHS's mascot is the Bolt, and the school motto is Once a Bolt, always a Bolt.
+
+Question: Derby High School is a school in the city in what Kansas county?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "school_name": {
+      "type": "string",
+      "description": "The name of the high school."
+    },
+    "city_name": {
+      "type": "string",
+      "description": "The city where the high school is located."
+    },
+    "county_name": {
+      "type": "string",
+      "description": "The county in which the city is located."
+    },
+    "state": {
+      "type": "string",
+      "description": "The state where the high school is located."
+    }
+  },
+  "required": [
+    "school_name",
+    "city_name",
+    "county_name",
+    "state"
+  ],
+  "additionalProperties": false
+}

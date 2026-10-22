@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of songs recorded by Kelly Clarkson: American singer Kelly Clarkson has recorded material for her seven studio albums.  After signing a contract in 2002 with RCA Records, a division of then-Bertelsmann Music Group (now Sony Music), 20-year-old Clarkson released the double A-side single "Before Your Love" / "A Moment Like This" and began to record tracks for her debut studio album, "Thankful" (2003).  Its lead single, "Miss Independent", received a nomination for a Grammy Award for Best Female Pop Vocal Performance in 2004.  "Miss Independent" was followed by "Low" and "The Trouble With Love Is", which was featured as a single from the soundtrack of the film "Love Actually".  In 2004, Clarkson recorded the song "Breakaway", which was released as a single from the of the film "".  The song's commercial success inspired Clarkson to name her second studio album "Breakaway".  The album won a Grammy Award for Best Pop Vocal Album in 2006, while its second single, "Since U Been Gone", won for Best Female Pop Vocal Performance.  Subsequent singles, "Behind These Hazel Eyes" (2005), "Because of You" (2005), and "Walk Away" (2006), became successful hits.  Clarkson's third studio album, "My December", was released in 2007.  The album became a subject of a dispute with then RCA Music Group chairman Clive Davis, who criticized the album and suggested that Clarkson reunite with her previous collaborators. " Never Again", the lead single from "My December", became its only hit single.  Succeeding releases from "My December" included "Sober", "One Minute", and "Don't Waste Your Time".
+
+Europop (album): Europop is the debut album by Italian electronic group Eiffel 65.  The album was released in 1999 as under Bliss Corporation and Universal Records and Republic Music (Universal and Republic would merge to Universal Republic).  The album is most notable for the group's two biggest hits: "Blue (Da Ba Dee)" and "Move Your Body", which topped the charts worldwide.
+
+Blue (Da Ba Dee): "Blue (Da Ba Dee)" is a song by the Italian music group Eiffel 65.  It was released on 15 January 1999 as the lead single from their debut album "Europop".  The song is the group's most popular single, reaching number one in many countries such as Ireland, the United Kingdom, the Netherlands, France, Sweden, Switzerland, New Zealand, Finland, Norway, Australia, and Germany, as well as reaching number six on the "Billboard" Hot 100 in the United States.  In the United Kingdom, the song originally entered the top 40 purely on import sales.  It was only the third single to do this.
+
+Grace Street (album): Grace Street is the fifth studio album by Canadian rock band Big Wreck, released on February 3, 2017.  The album's lead single "One Good Piece Of Me" was released on November 4, 2016, following several teasers on the band's official Instagram page.  The single proved more successful than the previous album's lead single "Ghosts", charting high on two different rock charts in Canada in its first week of airplay.  The teasers were 40-second clips of instrumental music, which put together make a 7-minute epic which later was revealed as "Skybunk Marché", Big Wreck's first and only instrumental to date.  The album was officially announced on November 18, 2016.  "Grace Street" is also the first Big Wreck album to be released on vinyl.  The album was released internationally on February 3, 2017.
+
+Yeah 3x: "Yeah 3x" (pronounced "Yeah three times" or "Yeah Yeah Yeah"; sometimes stylized as "Yeah 3X") is a song by American recording artist Chris Brown, released as the lead single from his fourth studio album "F.A.M.E." on October 25, 2010.  It was written by Brown, DJ Frank E, Kevin McCall, Amber Streeter and Calvin Harris, and was produced by DJ Frank E. Brown recorded the song for his pop audience as he had been doing a lot of mixtapes and urban records.  "Yeah 3x" is an uptempo dance-pop, Europop, and electro house song; it uses a video game-type beat and features a thick bassline and big synth chords.  The song uses elements of Harris' 2009 single "I'm Not Alone".
+
+Neon Hitch discography: The discography of British singer and songwriter Neon Hitch.  Neon's debut digital single "Get Over U" was released in February 2011.  Hitch then released her single "Bad Dog", which was intended to be the lead single from her debut album.  Later in 2011, she was featured on Gym Class Heroes' song "Ass Back Home".  In 2012, Neon Hitch released "Fuck U Betta" and Gold" featuring Tyga, her official first and second singles respectively.  Both songs peaked at number one on the "Billboard" Dance/Club Play chart.  Neon then debuted an EP entitled "Happy Neon" in January 2013, which was released online for free.  In October 2013, Neon announced that her debut album "Beg, Borrow & Steal" had been scrapped and she would release a new album that had more of her soul in it.  In January 2014, Neon released the mixtape "301 to Paradise" for free.  In May 2014, it was announced that Hitch had parted ways with her label Warner Bros. and was gearing up to releasing her new debut album "Eleutheromaniac"; she also released "Happy Neon" and "301 to Paradise" to digital retailers independently in the same month.  She premiered the lead single of "Eleutheromaniac", "Yard Sale", in August 2014.  In January 2015, Neon released "Sparks" as the first single from the album.  In March 2015, Hitch released the EP "24:00" for free.  In 2016, it was announced that Hitch had changed the name of her debut album to "Anarchy", which was released on July 22, 2016.  The lead single from the album, "Please", was released on July 8, 2016.  The album did not contain any of the singles intended to be on "Eluetheromaniac", but included a promomotional single she released in 2015, "Freedom".
+
+Omarion: Omari Ishmael Grandberry (born November 12, 1984, known by his stage name Omarion) is an American singer, songwriter, rapper, actor and dancer.  He is best known as being the lead singer of the American R&B boy band B2K; the group achieved success with singles like "Bump, Bump, Bump", "Uh Huh", and "Girlfriend", which all reached success on the "Billboard" Hot 100.  After the group's disbandment, Omarion released his debut solo album, "O" (2005), which debuted atop the "Billboard" 200 and received a Grammy Award nomination for Best Contemporary R&B Album at the 48th Grammy Awards.  His second solo album, "21" (2006), contained his second highest-charting single to date, "Ice Box", which reached the top 20 on the "Billboard" Hot 100.  His third solo album, "Ollusion" (2010), was released on January 12, 2010, with the lead single, "I Get It In".  His fourth solo album, "Sex Playlist" (2014), spawned the single, "Post to Be", which was certified 3x platinum and reached number 13 on the Hot 100 chart in May 2015, and became his highest charting single to date.
+
+Back in Time (Pitbull song): "Back in Time" is a song by the American rapper Pitbull.  While originally released as the lead single from the soundtrack of sci-fi film "Men in Black 3", it is not featured on the album; instead, it was released as the lead single from Pitbull's seventh studio album, "Global Warming".  The single was released via download on March 27, 2012, before being issued physically in Germany on May 25, 2012.  The single to date has sold over 1.3 million copies digitally. <ref name="Hip Hop Digital Singles Sales: The Week Ending 7/29/2012"> </ref> The song contains a sample from "Love Is Strange", written by Mickey Baker, Sylvia Robinson, and Ellas McDaniel, as performed by Mickey & Sylvia, which was also used in the song Rinky Dink by Bill Justis.
+
+Sun of a Gun: "Sun of a Gun" is the major-label debut song recorded by Danish recording artist Oh Land.  It is taken from her self-titled second studio album "Oh Land" (2011).  It was released as the album's lead single on 4 October 2010 by Fake Diamond Records and Sony Music Entertainment.  Elsewhere, the single was released on 24 April 2011 as a CD single and 7-inch single.  A Europop and synth-pop song, its lyrics describe a troubled relationship by comparing its effects to the orbit of the sun.  The track was written by Jimmy Harry and Nanna Øland Fabricius, with Dave McCracken solely producing it.
+
+Dancing Queen: "Dancing Queen" is a Europop song by the Swedish group ABBA, and the lead single from their fourth studio album, "Arrival".  It was written by Benny Andersson, Björn Ulvaeus and Stig Anderson.  Andersson and Ulvaeus also produced the song.  "Dancing Queen" was released as a single in Sweden on 15 August 1976, followed by a UK release and the rest of Europe a few days later.  It was a worldwide hit.  It became ABBA's only number one hit in the United States, and topped the charts in Australia, The Netherlands, Belgium, Ireland, Mexico, New Zealand, Norway, South Africa, Spain, Sweden, the United Kingdom, West Germany and Zimbabwe.  "Dancing Queen" also reached the Top 5 in many other countries.
+
+Question: Europop included the lead single, released on what date?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The artist or group who released the album."
+    },
+    "lead_single": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the lead single from the album."
+        },
+        "release_date": {
+          "type": "string",
+          "description": "The release date of the lead single."
+        }
+      },
+      "required": [
+        "title",
+        "release_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "album_name",
+    "artist",
+    "lead_single"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "band_name": "Coke Weed",
+  "album_details": {
+    "album_title": "Nice Dreams",
+    "album_number": 2
+  },
+  "recording_location": {
+    "city": "Bar Harbor",
+    "state": "Maine",
+    "is_home_to_cadillac_mountain": true
+  }
+}

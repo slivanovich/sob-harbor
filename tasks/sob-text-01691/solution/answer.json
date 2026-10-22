@@ -1,0 +1,14 @@
+{
+  "hospitals": [
+    {
+      "name": "MedStar National Rehabilitation Hospital",
+      "is_located_in_city": true
+    },
+    {
+      "name": "MedStar Washington Hospital Center",
+      "is_located_in_city": true
+    }
+  ],
+  "common_location_city": "Washington, D.C.",
+  "number_of_hospitals_found_in_city": 2
+}

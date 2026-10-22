@@ -1,0 +1,18 @@
+{
+  "event_details": {
+    "name": "Two-man bobsleigh at the 1964 Winter Olympics",
+    "dates": [
+      "31 January",
+      "1 February"
+    ],
+    "venue": "Bob und Rodelbahn Igls",
+    "city": "Innsbruck",
+    "country": "Austria"
+  },
+  "innsbruck_geographical_context": {
+    "city_name": "Innsbruck",
+    "capital_of_region": "Tyrol",
+    "region_location_in_country": "western Austria"
+  },
+  "answer_region": "Tyrol"
+}

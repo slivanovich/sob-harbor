@@ -1,0 +1,15 @@
+{
+  "film_title": "Peter Rabbit",
+  "release_year": 2018,
+  "character_name": "Peter Rabbit",
+  "creator": {
+    "full_name": "Helen Beatrix Potter",
+    "nationality": "English",
+    "occupations": [
+      "writer",
+      "illustrator",
+      "natural scientist",
+      "conservationist"
+    ]
+  }
+}

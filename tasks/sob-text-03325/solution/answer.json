@@ -1,0 +1,12 @@
+{
+  "person_1_name": "Tim Roth",
+  "person_2_name": "Howard Hawks",
+  "shared_occupation": "director",
+  "person_1_other_occupations": [
+    "actor"
+  ],
+  "person_2_other_occupations": [
+    "producer",
+    "screenwriter"
+  ]
+}

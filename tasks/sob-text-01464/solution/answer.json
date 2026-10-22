@@ -1,0 +1,16 @@
+{
+  "film_title": "October Sky",
+  "film_genre": "biographical",
+  "director": "Joe Johnston",
+  "release_year": 1999,
+  "actor_of_interest": {
+    "name": "Chad Lindberg",
+    "is_in_film": true
+  },
+  "other_notable_actors": [
+    "Jake Gyllenhaal",
+    "Chris Cooper",
+    "Chris Owen",
+    "Laura Dern"
+  ]
+}

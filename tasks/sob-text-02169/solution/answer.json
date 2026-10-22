@@ -1,0 +1,22 @@
+{
+  "comparison_summary": "4 World Trade Center is taller than Marine Midland Building.",
+  "building_comparison": [
+    {
+      "building_name": "Marine Midland Building",
+      "height_feet": 688,
+      "height_meters": 209.7
+    },
+    {
+      "building_name": "4 World Trade Center",
+      "height_feet": 978
+    }
+  ],
+  "taller_building": {
+    "name": "4 World Trade Center",
+    "height_feet": 978
+  },
+  "shorter_building": {
+    "name": "Marine Midland Building",
+    "height_feet": 688
+  }
+}

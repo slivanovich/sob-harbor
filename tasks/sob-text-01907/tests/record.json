@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "record_id": "d89413a41ee8245c3c392797269f26bcaa5253960db07a6a4d391af8b157580c",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac176d75542994ab5c67d50",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Photinia",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Photinia: Photinia ( ) is a genus of about 40–60 species of small trees and large shrubs, but the taxonomy has recently varied greatly, with the genera \"Heteromeles\", \"Stranvaesia\" and \"Aronia\" sometimes included in \"Photinia\".\n\nNandina: Nandina domestica ( ) commonly known as nandina, heavenly bamboo or sacred bamboo, is a species of flowering plant in the family Berberidaceae, native to eastern Asia from the Himalayas to Japan.  It is the only member of the monotypic genus Nandina.",
+    "question": "Which genus has more species, Nandina or Photinia ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "comparison_result": {
+          "type": "object",
+          "properties": {
+            "genus_with_more_species": {
+              "type": "string",
+              "description": "The name of the genus identified as having more species."
+            },
+            "more_species_count_range": {
+              "type": "string",
+              "description": "The range of species count for the genus with more species, as stated in the context."
+            },
+            "less_species_genus": {
+              "type": "string",
+              "description": "The name of the genus identified as having fewer species."
+            },
+            "less_species_count": {
+              "type": "integer",
+              "description": "The exact species count for the genus with fewer species."
+            }
+          },
+          "required": [
+            "genus_with_more_species",
+            "more_species_count_range",
+            "less_species_genus",
+            "less_species_count"
+          ],
+          "additionalProperties": false
+        },
+        "photinia_details": {
+          "type": "object",
+          "properties": {
+            "genus_name": {
+              "type": "string"
+            },
+            "species_count_range": {
+              "type": "string",
+              "description": "The stated range of species for Photinia."
+            }
+          },
+          "required": [
+            "genus_name",
+            "species_count_range"
+          ],
+          "additionalProperties": false
+        },
+        "nandina_details": {
+          "type": "object",
+          "properties": {
+            "genus_name": {
+              "type": "string"
+            },
+            "species_count": {
+              "type": "integer",
+              "description": "The exact species count for Nandina."
+            }
+          },
+          "required": [
+            "genus_name",
+            "species_count"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "comparison_result",
+        "photinia_details",
+        "nandina_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "comparison_result": {
+        "genus_with_more_species": "Photinia",
+        "more_species_count_range": "40–60",
+        "less_species_genus": "Nandina",
+        "less_species_count": 1
+      },
+      "photinia_details": {
+        "genus_name": "Photinia",
+        "species_count_range": "40–60"
+      },
+      "nandina_details": {
+        "genus_name": "Nandina",
+        "species_count": 1
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

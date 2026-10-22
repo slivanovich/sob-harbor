@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Edzell Castle: Edzell Castle is a ruined 16th-century castle, with an early-17th-century walled garden.  It is located close to Edzell, and is around 5 mi north of Brechin, in Angus, Scotland.  Edzell Castle was begun around 1520 by David Lindsay, 9th Earl of Crawford, and expanded by his son, Sir David Lindsay, Lord Edzell, who also laid out the garden in 1604.  The castle saw little military action, and was, in its design, construction and use, more of a country house than a defensive structure.  It was briefly occupied by English troops during Oliver Cromwell's invasion of Scotland in 1651.  In 1715 it was sold by the Lindsay family, and eventually came into the ownership of the Earl of Dalhousie.  It was given into state care in the 1930s, and is now a visitor attraction run by Historic Scotland (open all year; entrance charge).  The castle consists of the original tower house and building ranges around a courtyard.  The adjacent Renaissance walled garden, incorporating intricate relief carvings, is unique in Scotland.  It was replanted in the 1930s, and is considered to have links to esoteric traditions, including Rosicrucianism and Freemasonry.
+
+John Kennedy, 6th Earl of Cassilis: John Kennedy, 6th Earl of Cassilis, PC (d. April 1668) was a Scottish peer, the grandson of Gilbert Kennedy, 4th Earl of Cassilis, and nephew of John Kennedy, 5th Earl of Cassilis.  He succeeded to the titles of 8th Lord Kennedy and 6th Earl of Cassilis on 25 July 1616.  He was a non-sitting member of Cromwell's House of Lords, and was invested as a Privy Counsellor of Scotland on 13 February 1660/61.  He held the office of Justice-general 1649-1651 and of an Extraordinary Lord of Session for Scotland June 1661-July 1662.
+
+Charles II of England: Charles II (29 May 1630 – 6 February 1685) was king of England, Scotland and Ireland.  He was king of Scotland from 1649 until his deposition in 1651, and king of England, Scotland and Ireland from the restoration of the monarchy in 1660 until his death.
+
+Troops of Horse Guards: In the British Army, the Horse Guards comprised several independent troops raised initially on the three different establishments.  In the late 1660s, there were thus three troops in England, one in Ireland, and two in Scotland of which one was ceremonial for attendance of Lord High Commissioner (named after John Middleton, 1st Earl of Middleton and after John Leslie, 7th Earl of Rothes).  In 1707, there were four troops of Horse Guards (the three original English and one Scots), and two troops of Horse Grenadiers.
+
+English Civil War: The English Civil War (1642–1651) was a series of armed conflicts and political machinations between Parliamentarians ("Roundheads") and Royalists ("Cavaliers") over, principally, the manner of England's government.  The first (1642–1646) and second (1648–1649) wars pitted the supporters of King Charles I against the supporters of the Long Parliament, while the third (1649–1651) saw fighting between supporters of King Charles II and supporters of the Rump Parliament.  The war ended with the Parliamentarian victory at the Battle of Worcester on 3 September 1651.
+
+Interregnum (1649–1660): The "interregnum" in England, Scotland, and Ireland started with the execution of Charles I in January 1649 (September 1651 in Scotland) and ended in May 1660 when his son Charles II was restored to the thrones of the three realms, although he had been already acclaimed king in Scotland since 1650.
+
+Treaty of Berwick (1639): The Treaty of Berwick (also known as the Peace of Berwick or the Pacification of Berwick) was signed on 18 June 1639 between England and Scotland.  Archibald Johnston was involved in the negotiations before King Charles was forced to sign the treaty.  The agreement, overall, officially ended the First Bishops' War even though both sides saw it only as a temporary truce.  After the treaty was signed, King Charles immediately began to gather the resources he needed in order to strengthen his armies.  At the beginning of the Second Bishops' War, the agreement was broken.  After a disastrous skirmish at Kelso between the English advance guard and the Scottish Covenanter Army, the Earl of Holland fled back to the king’s headquarters at Berwick-upon-Tweed.  The Earl of Antrim failed to establish negotiations in order to bring the Irish army over.  This, along with the unsuccessful English naval campaign at Hamilton, meant that Charles was forced to sign a truce.  He conceded to the Scots the right to a free church assembly and a free parliament.  These rights were asserted (with the right to keep the existing legal structure instead of a separate parliament) along with the extension to Scotland of The Bill of Rights (which set out the conditions and powers of a monarch) in the Treaty of Union, 1707, which united England and Wales with Scotland.
+
+Earl of Middleton: Earl of Middleton was a title in the Peerage of Scotland.  It was created 1 October 1656 for army officer John Middleton, together with the subsidiary title Lord Clermont and Fettercairn, also in the Peerage of Scotland.  In 1674, he was succeeded by his son, Charles, who served in political offices under Charles II and James II & VI.  In 1693 the second earl joined the exiled king in France and was subsequently tried for treason "in absentia" on 23 July 1694 and the titles attainted by act of Parliament on 2 July 1695.  Charles was made Earl of Monmouth and Viscount Clermont in the Jacobite Peerage of England in 1701.
+
+John Balliol: John Balliol (  1249 – late 1314), known derisively as "Toom Tabard" (meaning "empty coat") was King of Scots from 1292 to 1296.  Little is known of his early life.  After the death of Margaret, Maid of Norway, Scotland entered an interregnum during which several competitors for the Crown of Scotland put forward claims.  Balliol was chosen from among them as the new King of Scotland by a group of selected noblemen headed by King Edward I of England.  Edward used his influence over the process to subjugate Scotland and undermined Balliol's personal reign by treating Scotland as a vassal of England.  Edward's influence in Scottish affairs tainted Balliol's reign and the Scottish nobility deposed him and appointed a council of twelve to rule instead.  This council signed a treaty with France known as the Auld Alliance.
+
+Earl of Dunfermline: Earl of Dunfermline was a title in the Peerage of Scotland.  It was created in 1605 for Alexander Seton, 1st Lord Fyvie, fourth son of George Seton, 7th Lord Seton (see Earl of Winton for earlier history of the family).  Seton had already been created Lord Fyvie in the Peerage of Scotland, in 1598, with remainder to his elder brother, John Seton.  He was succeeded by his son, the second Earl.  He was Keeper of the Privy Seal of Scotland between 1661 and 1672.  His younger son, the fourth Earl (who succeeded his childless elder brother), was a supporter of the deposed James II and had his titles forfeited by parliament in 1690.  He died in France in 1694 when the male line of the first Earl died out.
+
+Question: Under which king of England, Scotland and Ireland who was deposed in Scotland in 1651 did Earl of Middleton, Charles, serve?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "king_name": {
+      "type": "string",
+      "description": "The name of the king of England, Scotland, and Ireland."
+    },
+    "king_reign_details": {
+      "type": "object",
+      "properties": {
+        "deposed_in_scotland_year": {
+          "type": "integer",
+          "description": "The year the king was deposed in Scotland."
+        },
+        "reign_start_scotland_year": {
+          "type": "integer",
+          "description": "The year the king's reign in Scotland started."
+        }
+      },
+      "required": [
+        "deposed_in_scotland_year",
+        "reign_start_scotland_year"
+      ],
+      "additionalProperties": false
+    },
+    "earl_of_middleton_details": {
+      "type": "object",
+      "properties": {
+        "earl_name": {
+          "type": "string",
+          "description": "The name of the Earl of Middleton who served the king."
+        },
+        "served_king": {
+          "type": "boolean",
+          "description": "Indicates if this Earl served the specified king."
+        }
+      },
+      "required": [
+        "earl_name",
+        "served_king"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer": {
+      "type": "string",
+      "description": "The name of the king who meets all the criteria."
+    }
+  },
+  "required": [
+    "king_name",
+    "king_reign_details",
+    "earl_of_middleton_details",
+    "final_answer"
+  ],
+  "additionalProperties": false
+}

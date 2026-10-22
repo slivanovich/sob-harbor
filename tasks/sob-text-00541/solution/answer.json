@@ -1,0 +1,11 @@
+{
+  "band_name": "Manassas",
+  "featured_member": {
+    "member_name": "Stephen Stills",
+    "previous_band_name": "Crosby, Stills, Nash & Young"
+  },
+  "album_details": {
+    "album_title": "Pieces",
+    "album_type": "compilation"
+  }
+}

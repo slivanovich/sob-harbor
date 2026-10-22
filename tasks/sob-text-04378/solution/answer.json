@@ -1,0 +1,13 @@
+{
+  "event_name": "Vienna Opera Ball",
+  "event_description": "annual Austrian society event",
+  "location": {
+    "building_name": "Vienna State Opera",
+    "city": "Vienna",
+    "country": "Austria"
+  },
+  "featured_in_film": {
+    "film_title": "Opernball",
+    "film_type": "made-for-TV movie"
+  }
+}

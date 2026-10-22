@@ -1,0 +1,10 @@
+{
+  "album_title": "Crystal Castles",
+  "band_name": "Crystal Castles",
+  "primary_genre": "electronic music",
+  "additional_genre_information": {
+    "genre_name": "chiptune style",
+    "described_by": "multiple journalists",
+    "intended_by_band": false
+  }
+}

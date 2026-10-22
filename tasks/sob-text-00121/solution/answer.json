@@ -1,0 +1,19 @@
+{
+  "emperor_name": "Honorius",
+  "imperial_title": "Western Roman Emperor",
+  "reign_period": {
+    "start_year": 393,
+    "end_year": 423
+  },
+  "family_details": {
+    "father_name": "Theodosius I",
+    "mother_name": "Aelia Flaccilla",
+    "sibling_name": "Arcadius",
+    "sibling_relationship": "brother",
+    "birth_order_description": "younger son"
+  },
+  "official_who_served_him": {
+    "official_name": "Flavius Dexter",
+    "service_role": "praetorian prefect"
+  }
+}

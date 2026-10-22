@@ -1,0 +1,12 @@
+{
+  "air_station_name": "Marine Corps Air Station Yuma",
+  "is_superfund_site": true,
+  "reason_for_designation": "a number of soil and groundwater contaminants",
+  "contaminated_media": [
+    "soil",
+    "groundwater"
+  ],
+  "specific_contaminants": [
+    "asbestos"
+  ]
+}

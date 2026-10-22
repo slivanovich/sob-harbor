@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "836a700af7793e101023c36ccc2f2b89aeafb1555d943f296f9b69498cee0c25",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abe99955542993f32c2a17e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Insidious",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Dead Girl: The Dead Girl is a 2006 American film written and directed by Karen Moncrieff, starring Brittany Murphy, Toni Collette, Rose Byrne and Marcia Gay Harden.  The film was nominated for several 2007 Independent Spirit Awards including Best Feature and Best Director.  It is the story of a young woman's death and the people linked to her murder.  It also features Mary Beth Hurt, Kerry Washington, James Franco, Giovanni Ribisi, Josh Brolin, Mary Steenburgen and Piper Laurie.  The film was premiered at the AFI Film Festival (7 November 2006), and was given a limited US theatrical release on 29 December 2006.  It was generally well received.  It only ran for two weeks in US first-run theaters, and earned nearly all its revenue from overseas release.\n\nRose Byrne: Mary Rose Byrne (born 24 July 1979) is an Australian actress.  Byrne made her screen debut in 1992 with a small role in the film \"Dallas Doll\".  In 2000, she played a leading role in the Australian film \"The Goddess of 1967\", which brought her the Volpi Cup for Best Actress.  From 2007 to 2012, she played Ellen Parsons in the cable television series \"Damages\", which earned her two Golden Globe Award and two Primetime Emmy Award nominations.  Along with co-star Glenn Close, she appeared in all of the show's fifty-nine episodes.  Byrne has also starred in the films \"Troy\", \"28 Weeks Later\", \"Knowing\", \"Insidious\", \"\", \"\", as well as the comedies \"Get Him to the Greek\", \"Bridesmaids\", \"Neighbors\", \"\", and \"Spy.\"\n\nThe Night We Called It a Day (film): The Night We Called It a Day, also known as All the Way, is a 2003 Australian-American comedy drama film directed by Paul Goldman and starring Dennis Hopper as Frank Sinatra and Melanie Griffith as Barbara Marx.  It also features Portia de Rossi, Joel Edgerton, Rose Byrne and David Hemmings.  The movie is based on the true events surrounding Sinatra's 1974 tour in Australia.  When the singer calls a local reporter (de Rossi) a \"two-bit hooker\", every union in the country black-bans the star until he issues an apology.\n\nRebecca Skloot: Rebecca L. Skloot (born September 19, 1972) is a freelance science writer who specializes in science and medicine.  Her first book, \"The Immortal Life of Henrietta Lacks\" (2010), was one of the best-selling new books of 2010, staying on \"The New York Times\" Bestseller list for over 2 years and eventually reaching #1.  It was made into a movie by Oprah Winfrey, which premiered on HBO on April 22, 2017 and starred Rose Byrne as Skloot.\n\nInsidious (film): Insidious is a 2010 American-Canadian supernatural horror film directed by James Wan, written by Leigh Whannell, and starring Patrick Wilson, Rose Byrne and Barbara Hershey.  It is the first (chronologically, the third) installment in the \"Insidious\" franchise.  The story centers on a couple whose son inexplicably enters a comatose state and becomes a vessel for ghosts in an astral dimension who want to inhabit his body, in order to live once again.  The film was released in theaters on April 1, 2011, and was FilmDistrict's first theatrical release.  The film is followed by a sequel, \"\" (2013) and two prequels, \"\" (2015) and \"\" (2018).\n\nTake Away: Take Away is a 2003 Australian comedy movie, written by Dave O'Neil, who also features as a minor character, and Mark O'Toole.  It stars Vince Colosimo, Stephen Curry, Rose Byrne, John Howard and Nathan Phillips.  The film starts in 19th century Victoria with the invention of the ever great \"Take away\".\n\nNeighbors (2014 film): Neighbors (released in some countries as Bad Neighbours) is a 2014 American comedy film directed by Nicholas Stoller and written by Andrew J. Cohen and Brendan O'Brien.  The film stars Seth Rogen, Zac Efron, Rose Byrne, Dave Franco and Christopher Mintz-Plasse.  The plot follows a couple who come into conflict with a fraternity that has recently moved in next door.\n\nWicker Park (film): Wicker Park is a 2004 American psychological drama/romantic mystery film directed by Paul McGuigan and starring Josh Hartnett, Rose Byrne, Diane Kruger and Matthew Lillard.  The film is a remake of the 1996 French movie \"L'Appartement\", which in turn is loosely based on Shakespeare's \"A Midsummer's Night Dream\".  It was nominated for the at the Film Festival of Montreal, the city in which the movie was partially filmed.\n\nAnnie (2014 film): Annie is a 2014 American musical comedy-drama film directed by Will Gluck and produced by Village Roadshow Pictures and Will Smith's Overbrook Entertainment for Sony Pictures' Columbia Pictures.  A contemporary adaptation of the 1977 Broadway musical of the same name, the film stars Quvenzhané Wallis, Jamie Foxx, Rose Byrne, Bobby Cannavale, and Cameron Diaz.  The third film adaptation, following Columbia's 1982 theatrical film and Disney's 1999 television film, \"Annie\" began production in August 2013 and opened on December 19, 2014 to generally negative reviews, and was not a box office success, grossing only $133 million against a below-line production cost of over $65 million.\n\nAdam (2009 film): Adam is an 2009 American romantic drama film written and directed by Max Mayer, starring Hugh Dancy and Rose Byrne.  The film follows the relationship between a young man named Adam (Dancy) with Asperger syndrome, and Beth (Byrne).  Mayer was inspired to write the film's script when he heard a radio interview with a man who had Asperger's.",
+    "question": "Rose Byrne starred in what movie?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "movie_title": {
+          "type": "string",
+          "description": "The title of the movie."
+        },
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor who starred in the movie."
+        },
+        "movie_details": {
+          "type": "object",
+          "properties": {
+            "genre": {
+              "type": "string",
+              "description": "The genre of the movie."
+            },
+            "director": {
+              "type": "string",
+              "description": "The director of the movie."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The year the movie was produced or released."
+            },
+            "other_stars": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Other prominent actors starring in the movie."
+            }
+          },
+          "required": [
+            "genre",
+            "director",
+            "release_year",
+            "other_stars"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "movie_title",
+        "actor_name",
+        "movie_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "movie_title": "Insidious",
+      "actor_name": "Rose Byrne",
+      "movie_details": {
+        "genre": "supernatural horror film",
+        "director": "James Wan",
+        "release_year": 2010,
+        "other_stars": [
+          "Patrick Wilson",
+          "Barbara Hershey"
+        ]
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "co_owner_name": "Dr. Dre",
+  "album_details": {
+    "album_name": "The Chronic",
+    "release_year": 1992,
+    "featured_group": "Tha Dogg Pound"
+  },
+  "featured_group_debut_album": {
+    "album_name": "Dogg Food",
+    "release_year": 1995
+  },
+  "years_before_debut": 3
+}

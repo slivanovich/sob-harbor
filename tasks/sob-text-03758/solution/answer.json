@@ -1,0 +1,12 @@
+{
+  "location_name": "Greyabbey",
+  "distance_from_reference": 7,
+  "distance_unit": "mi",
+  "reference_location": {
+    "name": "Newtownards",
+    "type": "civil parish",
+    "county": "County Down",
+    "country_region": "Northern Ireland"
+  },
+  "answer_county": "County Down"
+}

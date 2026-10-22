@@ -1,0 +1,24 @@
+{
+  "comparison_subject_1": {
+    "name": "Athol Fugard",
+    "professions": [
+      "playwright",
+      "novelist",
+      "actor",
+      "director",
+      "adjunct professor",
+      "Wells Scholar Professor"
+    ],
+    "profession_count": 6
+  },
+  "comparison_subject_2": {
+    "name": "Storm Jameson",
+    "professions": [
+      "journalist",
+      "author"
+    ],
+    "profession_count": 2
+  },
+  "individual_with_greatest_scope": "Athol Fugard",
+  "reasoning": "Athol Fugard is described as a playwright, novelist, actor, director, adjunct professor, and Wells Scholar Professor, totaling 6 distinct professions. Storm Jameson is described as a journalist and author, totaling 2 distinct professions. Therefore, Athol Fugard has the greatest scope of profession."
+}

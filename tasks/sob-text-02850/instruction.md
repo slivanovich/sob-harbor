@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Bangerz Tour: The Bangerz Tour was the fourth concert tour by American singer Miley Cyrus.  It was launched in support of her fourth studio album, "Bangerz" (2013).  The tour visited the Americas, Europe, and Oceania through 5 legs.  It spanned from February 14 to October 23, 2014.  Cyrus performed all songs from the album excluding "Hands in the Air", among covers of songs by other artists.  Cyrus' allergic reaction along with logistical issues led to 4 cancellations in the tour's scheduled dates.  A show at Santo Domingo was banned by the government citing moral grounds.
+
+Crazy Love Tour: Crazy Love Tour was the fourth concert tour by Canadian singer Michael Bublé.  The tour supported his sixth studio album, "Crazy Love".  Visiting the Americas, Europe, Australia, Asia, and Africa, the tour has played to over one million spectators in nearly 21 countries.  The tour has received remarkable praise from both music critics and spectators of the show.  In 2010, Pollstar announced the trek became the sixth highest grossing tour worldwide, earning over $100 million with 99 sold out shows.  Additionally was the fourth highest grossing tour in North America—bringing in over $60 million in revenue with 50 sold out shows.  The tour ranked 16th in Pollstar's "Top 50 Worldwide Tour (Mid-Year)", earning over 30 million dollars in 2011.  At the conclusion of 2011, the tour placed eleventh on Billboard's annual "Top 25 Tours", earning nearly $50 million with 57 shows in 2011.
+
+Ahoi Tour: Ahoi Tour was the fourth concert tour by German Industrial Metal band Rammstein, in support of their fourth studio album "Reise, Reise".  This was Rammstein last tour until the release of their sixth album Liebe ist für alle da.  The tour started in Berlin, Germany on October 11, 2004 and was due to end in Bogotá, Colombia on October 22, 2005 (6 days from the release of Rammstein's fifth studio album, Rosenrot) but the tour was cut short due to lead singer Till Lindemann being accidentally injured by keyboardist Christian "Flake" Lorenz during the Göteborg, Sweden concert on July 30, 2005.  The supporting acts for this tour were Exilia (2004), Apocalyptica (February 1, 2005 to February 28, 2005), AqME (AqME stood in for Apocalyptica on February 12, 2005 concert), Devil Sold His Soul (was due to play July 14–18 but dropped out), and Torgull (July 23, 2005).
+
+Viva la Vida Tour: The Viva la Vida Tour was the fourth concert tour by British band Coldplay.  The tour was in support their fourth studio album "Viva la Vida or Death and All His Friends" (2008).  The tour was a massive commercial and critical success visiting Europe, Asia, the Americas and Australasia.  The tour further established the band as one the concert industry's biggest draws and as one of the world's most popular bands.  According to Pollstar from 2008 to 2010, the tour grossed $209.4 million
+
+Mi Plan Tour: The Mi Plan Tour was the fourth concert tour by Canadian singer-songwriter Nelly Furtado.  The tour supports her fourth studio album, "Mi Plan".  Since the album was recorded in Spanish, the tour primarily focused on hispanophone countries in the Americas.  Dates in Europe and Asia were scheduled as well.  This tour marks the first concert appearances from Furtado in South America.
+
+Ronan (song): "Ronan" is a charity single released on September 8, 2012, by American singer Taylor Swift to the iTunes Store.  Swift's lyrics are based on a blog she read about a four-year-old boy, Ronan Thompson, who died from neuroblastoma in 2011.  Swift wrote the song by putting together quotes from blog creator Maya Thompson, Ronan's mother.  Thompson is credited as a co-writer of the song.  Swift first performed the song live for Stand Up to Cancer in September 2012, and has only performed it publicly one other time, at the Glendale, Arizona stop of The 1989 World Tour, at which Thompson was in attendance.  All proceeds from sales of the single go to help fight cancer.
+
+PopOdyssey: PopOdyssey was the fourth concert tour by American boy band NSYNC.  Sponsored by Verizon Long Distance and Chili's, the tour promoted the band's third studio album, "Celebrity".  The tour's name is defined as "an adventurous journey towards popularity, beginning as just a dream and ending in reality".  The tour became the biggest production in pop music, beating U2's PopMart Tour.  The 2001 tour earned over $90 million, becoming one of the biggest tours of the year.  It was also nominated for "Most Creative Stage Production" for Pollstar's "Concert Industry Awards".  The tour primarily visited North America with dates in Japan proposed, but never realized.
+
+Tangled Up Tour: The Tangled Up Tour was the fourth concert tour by British all-female pop group Girls Aloud.  It supported their fourth studio album "Tangled Up".  Tour dates were announced in November 2007.  Girls Aloud performed twenty-four shows at arenas across the United Kingdom and Ireland, making this tour their third to reach arenas.  The tour commenced in Belfast on 3 May 2008 and concluded in Birmingham on 4 June.  Girls Aloud also performed eleven open-air concerts over the summer.
+
+The 1989 World Tour: The 1989 World Tour was the fourth concert tour by American singer-songwriter Taylor Swift, in support of her fifth studio album, "1989" (2014).  The tour's European and North American dates, as well as two shows in Japan, were announced in November 2014, followed by the Oceania dates in December 2014.  Additional dates for Singapore and Shanghai were announced in June 2015 with a third and final Melbourne show announced in July 2015.  The tour began on May 5, 2015, in Tokyo, Japan and concluded on December 12, 2015 in Melbourne, Australia, the day before her 26th birthday.  The tour became Swift's highest grossing and most attended tour to date, mobilizing 2,278,647 fans and $250,733,097 revenue.  It was the highest grossing tour in the world in 2015.
+
+Freedom Tour: The Freedom Tour was the fourth concert tour by American singer-songwriter Alicia Keys in support of her fourth studio album, "The Element of Freedom".  The tour commenced at the Scotiabank Place in Ottawa on February 26, 2010.  The tour continued onto North America visiting Europe as well.  In June, Keys will headline one concert in Johannesburg, giving the singer in first performances in South Africa.  According to Pollstar, the tour grossed $29.4 million worldwide, with 43 shows.
+
+Question: Ronan has only been performed twice, once during the fourth concert tour of her album released in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_name": {
+      "type": "string",
+      "description": "The name of the song in question."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The artist who performed the song."
+    },
+    "performance_details": {
+      "type": "object",
+      "properties": {
+        "tour_name": {
+          "type": "string",
+          "description": "The name of the concert tour where the song was performed."
+        },
+        "tour_number": {
+          "type": "integer",
+          "description": "The sequential number of the concert tour for the artist."
+        },
+        "album_supported": {
+          "type": "string",
+          "description": "The name of the album supported by the tour."
+        },
+        "album_release_year": {
+          "type": "integer",
+          "description": "The release year of the album supported by the tour."
+        }
+      },
+      "required": [
+        "tour_name",
+        "tour_number",
+        "album_supported",
+        "album_release_year"
+      ],
+      "additionalProperties": false
+    },
+    "total_performances": {
+      "type": "integer",
+      "description": "The total number of times the song has been performed publicly."
+    }
+  },
+  "required": [
+    "song_name",
+    "artist",
+    "performance_details",
+    "total_performances"
+  ],
+  "additionalProperties": false
+}

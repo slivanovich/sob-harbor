@@ -1,0 +1,80 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Indian Hill High School: Indian Hill High School is a public high school near Cincinnati, Ohio.  It is the only high school in the Indian Hill Exempted Village School District.  In 2007, Indian Hill High School was ranked 48th in the nation in U.S. News and World Report Top 100 High Schools, placing it ahead of Walnut Hills High School and Wyoming High School as the top public high school in the Tri-State area, though Wyoming High School overtook Indian Hill once again in the most recent state rankings.  In addition, it placed 116th on Newsweek Magazine's 2009 Top 1500 High School Rankings and was named a 2007 U.S. Blue Ribbon School.
+
+B/E/A/T/B/O/X: B/E/A/T/B/O/X is the second studio album by American electronic music duo Glass Candy, released in November 2007 by Italians Do It Better.  The album received two limited-edition vinyl pressings in 2008, both including a bonus 7″ (featuring the previously unreleased tracks "High B" and "The Gate"), and one of them pressed on pink vinyl.  A new blue vinyl edition was released in April 2010, including the same bonus 7".
+
+Blue Sky Mining: Blue Sky Mining is an album by Australian alternative rock band Midnight Oil which was released on 25 February 1990 under the Columbia Records label.  It received high ratings from critics.  In March the album peaked at number one on the ARIA Albums Chart for two weeks.  A limited release of the record featured clear blue vinyl.  The lead single "Blue Sky Mine" reached #1 on Modern Rock Tracks.
+
+Patrick Henry High School (Ashland, Virginia): Patrick Henry High School is a high school in Ashland, Virginia in Hanover County.  Patrick Henry is one of four high schools in Hanover County, and the only High school in the western half of the county.  In 1959, after years of deliberation, Patrick Henry High School began with the consolidation of Beaverdam, Henry Clay, Montpelier, and Rockville high schools.  The western Hanover County high school enrolled students in grades eight through twelve.  The name of the school, as well as the name of its literary publications, The Voice, The Spark, and The Orator, reference the history of Patrick Henry, Hanover County's most illustrious citizen.  Even the school colors of red, white, and blue are a patriotic symbol of history.  In 1969, Patrick Henry High and John M. Gandy High School merged to form one Integrated student body.  Also in 1969, a new junior high school was built, and Patrick Henry opened that school year as a senior high school serving students in grades ten through twelve.  When the junior high school was changed to a middle school in 1988, Patrick Henry became a high school enrolling students in grades nine through twelve.  The school campus of West Patrick Henry Road, which consists of a complex of buildings, began as a campus style school.  Additions of an auditorium, classrooms, cafeteria, new gymnasium, and renovations to the media center and administrative offices resulted in an all-enclosed facility in 1992.  As the population and the needs of the school have changed, so have the dimensions of the school.  A new addition/renovation was added to the facility in the fall of 2001 providing state-of-the-art career and technical education opportunities.  This addition consisted of a broadcasting studio, a bio-technology lab, a communication technology center, a computer-assisted drafting lab, and three classrooms.  Patrick Henry celebrated its 50th anniversary in September 2009.  Patrick Henry High has an International Baccalaureate program, as well as a NJROTC program.  Patrick Henry High is especially known for its NJROTC program that is consistently ranked among the top in the state of Virginia.  During the 2010-2011 school year, a program called Rachel's Challenge was introduced.  Patrick Henry High is also noted for its theatre program, being the best in the county, and taken most seriously.
+
+High School (1968 film): High School is a 1968 American documentary film directed by Frederick Wiseman that shows a typical day for a group of students at Northeast High School in Philadelphia, Pennsylvania.  It was one of the first direct cinema (or cinéma vérité) documentaries.  It was shot over five weeks in March and April 1968.  The film was not shown in Philadelphia at the time of its release, due to Wiseman's concerns over what he called "vague talk" of a lawsuit.
+
+Toms River High School North: Toms River High School North is a four-year comprehensive public high school, and was the second public high school established in Toms River, in Ocean County, New Jersey, United States, operating as part of the Toms River Regional Schools.  The school opened in 1969 when the original high school (now called Toms River High School South) was found to be too small to accommodate the fast-growing community.  However, the first class to graduate wasn't until 1971, since all of the seniors were kept at TRHSS for the class of 1970.  Toms River High School North is the largest of all schools in the Toms River Regional School district.  The TRHSN mascot is the Mariner, and the school colors are navy blue and gold.  The other high schools in the district are Toms River High School East and Toms River High School South.
+
+Herndon High School (Kansas): Herndon High School is a former high school located in Herndon, Kansas, USA, which served students in grades 9-12.  Herndon High School was the only high school within the city limits of Herndon, Kansas.  The school colors were blue and yellow and the school mascot was a Beaver.  The average annual enrollment was approximately 200 students from several communities.  Herndon High School was established in either 1912 or 1915.  A new building was erected in the spring of 1917 because of the growing population of the city.  In 1923, Herndon High School became Herndon Rural High School District #2.  The school was rebuilt in 1949 and classes were held at St. Mary's High School.  Classes resumed at the rebuilt high school in 1950.  This remained until the fall of 2003 when the decision was made to consolidate with Atwood USD #318.  The new district that was formed is now Unified School District #105 and Rawlins County Junior-Senior High School.
+
+Blue Vinyl: Blue Vinyl is a 2002 documentary film directed by Daniel B. Gold and Judith Helfand.  With a lighthearted tone, the film follows one woman's quest for an environmentally sound cladding for her parents' house in Merrick, Long Island, New York.  It also investigates the many negative health effects of polyvinyl chloride in its production, use and disposal, focusing on the communities of Lake Charles and Mossville, Louisiana, and Venice, Italy.  Filming for "Blue Vinyl" began in 1994.
+
+Nazareth Area High School: Nazareth High School is a public high school located in Nazareth, Pennsylvania, in the United States.  It is the only high school in the Nazareth Area School District and serves grades 9 through 12.  Its mascot is the Blue Eagle and school colors are blue and white.  Student enrollment for the 2010-2011 school year was approximately 1,600 students.  In a 2006 study conducted by the school district, 43% of households within the district's boundaries reported having one or more children in the high school.  As of the 2009-2010 school year, the high school was fully accredited by the Middle States Association of Colleges and Schools.  In 2012, Nazareth Area High School received the Keystone Award from the Pennsylvania Department of Education for achieving Annual Yearly Progress for two consecutive years as measured by the Pennsylvania State System of Assessment (PSSA) tests.  Nazareth Area High School has also appeared on the College Boards Advanced Placement Honor Roll for the last four consecutive years, out of the five it has been awarded, one of just two Pennsylvania schools to do so.  Nazareth Area High School has an AP test passing rate of 87%, above state average of 69% and global average of 61%.
+
+Ross High School (Hamilton, Ohio): Ross High School is a public high school in Ross Township, Butler County, Ohio.  It is the only high school in the Ross Local School District.  Recently, a new high school was built.  Ross High School has an enrollment of around 900 students.  In 2005, the new high school was finished and the old high school became the middle school.  The current high school is two stories tall.  The school's mascot is the Ram.  Known for being the top school in Butler County.  At the beginning of the school year of 2015, Ross High School received the National Blue Ribbon Award.
+
+Question: Blue Vinyl and High School are both what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "common_category": {
+      "type": "string",
+      "description": "The common category or type shared by the entities."
+    },
+    "entities_identified": {
+      "type": "array",
+      "description": "A list of the entities mentioned in the question.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "entity_details": {
+      "type": "array",
+      "description": "Details for each identified entity, including its name and specific type.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the entity."
+          },
+          "type": {
+            "type": "string",
+            "description": "The specific type of the entity."
+          }
+        },
+        "required": [
+          "name",
+          "type"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "common_category",
+    "entities_identified",
+    "entity_details"
+  ],
+  "additionalProperties": false
+}

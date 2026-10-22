@@ -1,0 +1,10 @@
+{
+  "championship_year": 1988,
+  "championship_division": "Division I",
+  "stadium_name": "Franklin Field",
+  "host_university": "University of Pennsylvania",
+  "stadium_location": {
+    "city": "Philadelphia",
+    "state": "Pennsylvania"
+  }
+}

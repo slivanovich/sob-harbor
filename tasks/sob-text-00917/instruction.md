@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Magic Door (album): The Magic Door is the second studio album by American blues rock band Chris Robinson Brotherhood.  It was released on 11 September 2012.  It was recorded at the same time as their previous album, "Big Moon Ritual", and features a cover of Hank Ballard's "Let's Go, Let's Go, Let's Go", which the band has frequently performed live.  "Appaloosa" and "Little Lizzie Mae" are versions of recent Black Crowes songs (from "Before the Frost...Until the Freeze" and "Cabin Fever", respectively), and "Someday Past the Sunset" was previously released on the Robinson brothers' live album, "".
+
+Steve Miller Band: The Steve Miller Band is an American rock band formed in 1966 in San Francisco, California.  The band is led by Steve Miller on guitar and lead vocals.  It is best known today for a string of (mainly) mid-1970s hit singles that are staples of classic rock radio, as well as several earlier acid rock albums.  Miller left his first band to move to San Francisco and form the Steve Miller Blues Band.  Shortly after Harvey Kornspan negotiated the band’s landmark contract with Capitol Records in 1967, the band shortened its name to the Steve Miller Band.  In February 1968, the band recorded its debut album, "Children of the Future".  It went on to produce the albums "Sailor", "Brave New World", "Your Saving Grace", "Number 5", "Rock Love" and more.  The band's "Greatest Hits 1974–78", released in 1978, sold over 13 million copies.  The band continued to produce more albums and in 2014 toured with the rock band Journey.  In 2016, Steve Miller was inducted as a solo artist in the Rock and Roll Hall of Fame.
+
+Chris Robinson Brotherhood: Chris Robinson Brotherhood is an American blues rock band formed in 2011 by Black Crowes singer Chris Robinson while The Black Crowes were on hiatus.  The band has released four studio albums: "Big Moon Ritual", "The Magic Door", "Phosphorescent Harvest", and "Any Way You Love, We Know How You Feel".  The band consists of Robinson, guitarist Neal Casal, keyboardist Adam MacDougall, bassist Jeff Hill (who replaced original bassist Mark Dutton in 2016), and drummer Tony Leone (who replaced original drummer George Sluppick in January 2015).
+
+The Honeymoon Killers (American band): The Honeymoon Killers were an American noise rock band from New York City, formed in 1983.  Their name is taken from the 1970 crime film "The Honeymoon Killers".  The Honeymoon Killers' sound is deeply rooted in the blues earning them comparisons to The Cramps, whose music was highly influential to Teel.  The nucleus of the band was Jerry Teel and Lisa Wells, with Sally Edroso serving as the longest standing drummer between 1985 and 1990.  The group's rotating line-ups would consist of members belonging to like-minded bands such as Pussy Galore, Boss Hog, Ritual Tension and the Jon Spencer Blues Explosion.  Their first three albums were independent releases issued by the band's label Fur Records.  The group disbanded in 1994, with its leader Jerry Teel forming The Chrome Cranks with drummer Bob Bert and guitarist William Gilmore Weber.
+
+Styx (band): Styx is an American rock band from Chicago that formed in 1972 and became famous for its albums released in the late 1970s and early 1980s.  They are best known for melding the style of pop rock and hard rock with the power of a hard-rock guitar balanced with acoustic guitar, synthesizers mixed with acoustic piano, upbeat tracks with power ballads, and incorporating elements of international musical theatre.
+
+Ritual Tension: Ritual Tension was an American experimental rock band that formed in 1983 in New York City.  They released two studio albums and an EP, all recorded at Martin Bisi's BC Studio in Brooklyn, and a live album taken from shows at CBGB, before their dissolution in 1990.  At the same time, various configurations of the band members took part in art performances around Manhattan such as Pyramid Club and PS 122.
+
+Witchcraft Destroys Minds &amp; Reaps Souls: Witchcraft Destroys Minds & Reaps Souls is the debut studio album by the American psychedelic rock band Coven.  Released in 1969, it was unusual in that it dealt with overtly occult and satanic themes, and was removed, in the past time, from the market soon after its release due to controversy.  However, it remains a classic of its genre, and in some ways set groundbreaking trends for later rock bands.  This album marked the first appearance in music of the sign of the horns, inverted crosses, and the phrase Hail Satan.  Today, these are characteristics of the occult and heavy metal genres.  According to rock journalist Lester Bangs, "in England lie unskilled laborers like Black Sabbath, which was hyped as a rockin' ritual celebration of the Satanic mass, something like England's answer to Coven".  As a further coincidence, Coven's bass guitarist and co-writer (Mike Osborne) is credited as "Oz Osborne", and the opening track is "Black Sabbath".
+
+Love Is the Ritual: "Love Is the Ritual" is the first single released from "Edge of the Century" by Styx.
+
+Echo of Miles: Scattered Tracks Across the Path: Echo of Miles: Scattered Tracks Across the Path is a 3-CD compilation album by the American rock band Soundgarden.  It was released on November 24, 2014.  The album is a collection of rarities, live tracks, and unreleased material spanning the group's history.  It includes previously released songs, such as "Live to Rise", "Black Rain", "Birth Ritual", and others, as well as a newly recorded rendition of a song from the band's pre-Matt Cameron 1985 demo, "The Storm", now simply titled "Storm", which was produced by Jack Endino.
+
+Strays (Jane's Addiction album): Strays is the third studio album by American rock band Jane's Addiction, released on July 22, 2003 on Capitol Records.  Released 13 years after "Ritual de lo habitual" (1990), the album marks the band's longest gap between full studio albums, although the group had recorded and released a handful of new songs 6 years earlier on the compilation album "Kettle Whistle" (1997).  "Strays" is the first album to feature bassist Chris Chaney.  Regarding the decision to record a new studio album after such a long hiatus, drummer Stephen Perkins stated that the band had already completed two reunion tours performing old material, and that Jane's was ready for "a new challenge."
+
+Question: The rock band who released Love is the Ritual is from what American city?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band that released the song."
+    },
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song in question."
+    },
+    "origin_city": {
+      "type": "string",
+      "description": "The American city where the band is from."
+    },
+    "country_of_origin": {
+      "type": "string",
+      "description": "The country where the band is from."
+    }
+  },
+  "required": [
+    "band_name",
+    "song_title",
+    "origin_city",
+    "country_of_origin"
+  ],
+  "additionalProperties": false
+}

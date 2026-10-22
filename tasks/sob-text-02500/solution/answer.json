@@ -1,0 +1,16 @@
+{
+  "manager_name": "Brian Epstein",
+  "managed_entities": [
+    {
+      "entity_name": "Billy J. Kramer",
+      "entity_type": "singer"
+    },
+    {
+      "entity_name": "The Beatles",
+      "entity_type": "band",
+      "formation_location": "Liverpool",
+      "formation_year": 1960
+    }
+  ],
+  "management_period_description": "1960s"
+}

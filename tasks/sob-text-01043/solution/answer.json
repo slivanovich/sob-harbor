@@ -1,0 +1,9 @@
+{
+  "soda_name": "Diet Rite",
+  "distributor_name": "RC Cola",
+  "is_diet_soda": true,
+  "options_considered": [
+    "Diet Rite",
+    "Izze"
+  ]
+}

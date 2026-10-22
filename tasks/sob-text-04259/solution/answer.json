@@ -1,0 +1,10 @@
+{
+  "battle_name": "Battle of Midway",
+  "is_decisive": true,
+  "war_theater": "Pacific Theater of World War II",
+  "ship_involvement": {
+    "ship_name": "Zuihō",
+    "role_in_battle": "secondary role",
+    "engaged_enemy": false
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "b8ab0517e4d5e10ce73f57d813d84f2c97cb4a8161943dda9e22a4fe8b0acf7c",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab3ebb65542992ade7c6ee1",
+    "source_dataset": "hotpotqa",
+    "source_answer": "William IV, Prince of Orange-Nassau",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "René Descartes: René Descartes ( ; ] ; Latinized: Renatus Cartesius; adjectival form: \"Cartesian\"; 31 March 159611 February 1650) was a French philosopher, mathematician, and scientist.  Dubbed the father of modern western philosophy, much of subsequent Western philosophy is a response to his writings, which are studied closely to this day.  A native of the Kingdom of France, he spent about 20 years (1629–49) of his life in the Dutch Republic after serving for a while in the Dutch States Army of Maurice of Nassau, Prince of Orange and the Stadtholder of the United Provinces.  He is generally considered one of the most notable intellectual representatives of the Dutch Golden Age.\n\nDutch ship Brederode: Brederode was a ship of the line of the navy of the United Provinces of the Netherlands, and the flagship of the Dutch fleet in the First Anglo-Dutch War.  Throughout her career, she carried from 53-59 guns.  She was named after Johan Wolfert van Brederode, the brother-in-law of stadtholder Frederick Henry, Prince of Orange.\n\nJohan van den Sande: Johan van den Sande (or Jan van Sande, in short) (June 28, 1568 in Arnhem – November 17, 1638 in Leeuwarden) was a prominent writer of the common law of Friesland, one of the Dutch provinces, as well as a historian.  He was born in Arnhem in the province of Gelderland and studied at the Universities of Wittenberg and Leiden.  At the age of thirty he became professor at Franeker (Friesland).  He later became a member of the Court of Friesland.  His \"Decisiones Curiae Frisiccae\" is a treatise on the law in force in Friesland illustrated with decisions of the Frisian court.  He quoted from a number of other sources and a wide variety of European writers.\n\nLand's Advocate of Holland: The Land's Advocate (Dutch: \"landsadvocaat\" ) of Holland acted as the chairman of the States of Holland.  The office started in the early 14th century and ended in 1619, when the title was renamed into Grand Pensionary.  He was the speaker of the nobility of Holland and had the first say on a subject during a meeting of the Estates.  A decision of the Estates was made by a summarizing of all the statements of the other delegates by the Land's Advocate.  The Land's Advocate of Holland was the most powerful man of the United Provinces when there was no Stadtholder in Holland (because two-thirds of the tax income of the republic came from the county of Holland).\n\nWilliam IV, Prince of Orange: William IV, Prince of Orange-Nassau (Willem Karel Hendrik Friso; 1 September 1711 – 22 October 1751) was the first hereditary Stadtholder of all the United Provinces.\n\nDouwe Sirtema van Grovestins: Jonkheer Douwe Sirtema van Grovestins (Leeuwarden, Brussels, 1710 – February 26, 1778) was a Frisian courtier at the court of stadtholder William IV, Prince of Orange, and later at the court of his widow Anne, Princess Royal and Princess of Orange.  He was first Chamberlain, later Equerry to the stadtholder, and equerry to the Princess after her husband's death.\n\nGrand pensionary: The grand pensionary (Dutch: \"raad(s)pensionaris\") was the most important Dutch official during the time of the United Provinces.  In theory he was only a civil servant of the Estates of the dominant province among the Seven United Provinces: the county of Holland.  In practice the grand pensionary of Holland was the political leader of the entire Dutch Republic when there was no stadtholder (in practice the Prince of Orange) at the centre of power.\n\nAct of Seclusion: The Act of Seclusion was an Act of the States of Holland, required by a secret annex in the Treaty of Westminster (1654) between the United Provinces and the Commonwealth of England in which William III, Prince of Orange, was excluded from the office of Stadtholder.  The First Stadtholderless Period had been heralded in January 1651 by States Party \"Regenten\", among whom the republican-minded brothers Cornelis and Andries de Graeff and their cousins Andries and Cornelis Bicker, during the \"Grote Vergadering\" (Great Assembly) in The Hague, a meeting of representatives of the States of each of the United Provinces.  This meeting was convened after the death of stadtholder William II on November 6, 1650, when the States of Holland decided to leave the office of Stadtholder vacant in their province.\n\nAnne, Princess Royal and Princess of Orange: Anne, Princess Royal and Princess of Orange (2 November 1709 – 12 January 1759) was the second child and eldest daughter of King George II of Great Britain and his consort, Caroline of Ansbach.  She was the spouse of William IV, Prince of Orange, the first hereditary stadtholder of all the 7 provinces of the Northern Netherlands.  Princess Anne was the second daughter of a British sovereign to hold the title Princess Royal.  She was Regent of the Netherlands from 1751 until her death in 1759, exercising extensive powers on behalf of her son William V.  She was known as an Anglophile due to her English upbringing and family connections, but was unable to convince the Dutch Republic to enter the Seven Years' War on the side of the British.\n\nStates of Holland and West Friesland: The States of Holland and West Frisia (Dutch: \"Staten van Holland en West-Friesland\" ) were the representation of the two Estates (\"standen\") (Nobility and Commons) to the court of the Count of Holland.  After the United Provinces were formed — and there no longer was a count, but only his \"lieutenant\" (the stadtholder) — they continued to function as the government of the County of Holland.",
+    "question": "Jonkheer Douwe Sirtema van Grovestins (Leeuwarden, Brussels, 1710 – February 26, 1778) was a Frisian courtier at the court of which stadtholder, that was the first hereditary Stadtholder of all the United Provinces?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "courtier_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the courtier."
+            },
+            "role": {
+              "type": "string",
+              "description": "The role of the individual at the court."
+            }
+          },
+          "required": [
+            "name",
+            "role"
+          ],
+          "additionalProperties": false
+        },
+        "stadtholder_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of the stadtholder."
+            },
+            "titles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Titles held by the stadtholder."
+            },
+            "historical_distinction": {
+              "type": "string",
+              "description": "A significant historical attribute of the stadtholder."
+            }
+          },
+          "required": [
+            "name",
+            "titles",
+            "historical_distinction"
+          ],
+          "additionalProperties": false
+        },
+        "answer_stadtholder_name": {
+          "type": "string",
+          "description": "The name of the stadtholder who is the answer to the question."
+        }
+      },
+      "required": [
+        "courtier_details",
+        "stadtholder_details",
+        "answer_stadtholder_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "courtier_details": {
+        "name": "Douwe Sirtema van Grovestins",
+        "role": "Frisian courtier"
+      },
+      "stadtholder_details": {
+        "name": "William IV, Prince of Orange-Nassau",
+        "titles": [
+          "Prince of Orange",
+          "Prince of Orange-Nassau"
+        ],
+        "historical_distinction": "first hereditary Stadtholder of all the United Provinces"
+      },
+      "answer_stadtholder_name": "William IV, Prince of Orange-Nassau"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

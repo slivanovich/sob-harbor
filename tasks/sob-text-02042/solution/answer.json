@@ -1,0 +1,9 @@
+{
+  "person_1_name": "Hans Behrendt",
+  "person_2_name": "Scott Sanders",
+  "mutual_occupations": [
+    "screenwriter",
+    "film director"
+  ],
+  "number_of_mutual_occupations": 2
+}

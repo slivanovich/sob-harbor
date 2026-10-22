@@ -1,0 +1,10 @@
+{
+  "fighter_name": "Desmond Green",
+  "nationality": "American",
+  "current_promotion": "Ultimate Fighting Championship",
+  "fighting_division": "featherweight",
+  "wrestling_achievements": {
+    "mac_champion": true,
+    "ncaa_division_1_qualifier_count": 3
+  }
+}

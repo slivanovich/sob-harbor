@@ -1,0 +1,9 @@
+{
+  "theatre_name": "The Old Vic",
+  "seat_capacity": 1000,
+  "board_member": "Joyce Hytner",
+  "theatre_attributes": {
+    "is_not_for_profit": true,
+    "location": "London, England"
+  }
+}

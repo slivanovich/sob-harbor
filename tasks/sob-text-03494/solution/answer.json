@@ -1,0 +1,15 @@
+{
+  "question_asked": "Which rock band, Larrikin Love or Electrasy,.came out of Dorset, UK?",
+  "bands_evaluated": [
+    {
+      "band_name": "Larrikin Love",
+      "origin_location": "London"
+    },
+    {
+      "band_name": "Electrasy",
+      "origin_location": "Dorset, UK"
+    }
+  ],
+  "answer_band_name": "Electrasy",
+  "answer_origin_location": "Dorset, UK"
+}

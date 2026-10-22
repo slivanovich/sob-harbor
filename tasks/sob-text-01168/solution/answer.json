@@ -1,0 +1,10 @@
+{
+  "actor_name": "Hugh Grant",
+  "character_name": "Michael Felgate",
+  "film_title": "Mickey Blue Eyes",
+  "nationality": "English",
+  "nationality_applies_to": [
+    "actor",
+    "character"
+  ]
+}

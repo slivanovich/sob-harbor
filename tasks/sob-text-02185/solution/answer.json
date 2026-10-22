@@ -1,0 +1,22 @@
+{
+  "superhero_identified": {
+    "name": "Bart Allen",
+    "aliases": [
+      "Impulse",
+      "Kid Flash",
+      "The Flash"
+    ],
+    "flash_incarnation_number": 4
+  },
+  "villain_identified": {
+    "name": "Captain Cold"
+  },
+  "event_details": {
+    "killed_by_villain": true
+  },
+  "first_full_appearance_details": {
+    "comic_series": "The Flash",
+    "issue_number": "92",
+    "year": 1994
+  }
+}

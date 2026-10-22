@@ -1,0 +1,16 @@
+{
+  "question_entities": [
+    {
+      "name": "Changtse",
+      "type": "mountain",
+      "is_mountain_related": true
+    },
+    {
+      "name": "Teram Kangri",
+      "type": "mountain massif",
+      "is_mountain_related": true
+    }
+  ],
+  "all_entities_are_mountain_related": true,
+  "reasoning": "Changtse is explicitly described as a mountain. Teram Kangri is described as a mountain massif and the high point of the Siachen Muztagh, a subrange of the Karakoram range."
+}

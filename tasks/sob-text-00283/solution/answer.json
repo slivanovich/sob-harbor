@@ -1,0 +1,12 @@
+{
+  "event_of_interest": {
+    "victim_name": "Eddie Hutch Snr",
+    "event_date": "2016-02-08"
+  },
+  "related_person_details": {
+    "name": "Gerry Hutch",
+    "relationship_to_victim": "brother",
+    "was_assassinated_in_context": false
+  },
+  "duration_calculable": false
+}

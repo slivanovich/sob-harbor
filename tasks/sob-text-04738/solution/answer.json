@@ -1,0 +1,14 @@
+{
+  "common_company_name": "Walt Disney Pictures",
+  "films_involved": [
+    {
+      "film_title": "G-Force",
+      "company_relationship": "produced by"
+    },
+    {
+      "film_title": "Up",
+      "company_relationship": "released by"
+    }
+  ],
+  "number_of_films": 2
+}

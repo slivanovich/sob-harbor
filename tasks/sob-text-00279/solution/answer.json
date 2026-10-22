@@ -1,0 +1,18 @@
+{
+  "film_title": "Shall We Dance",
+  "song_details": {
+    "song_title": "They Can't Take That Away from Me",
+    "song_genre": "jazz song",
+    "year_introduced": 1937
+  },
+  "composers": [
+    {
+      "first_name": "George",
+      "last_name": "Gershwin"
+    },
+    {
+      "first_name": "Ira",
+      "last_name": "Gershwin"
+    }
+  ]
+}

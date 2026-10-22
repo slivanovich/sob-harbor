@@ -1,0 +1,15 @@
+{
+  "comparison_summary": "Solanum contains more species than Coelia.",
+  "genus_with_more_species": "Solanum",
+  "genera_details": [
+    {
+      "genus_name": "Solanum",
+      "species_count": 800
+    },
+    {
+      "genus_name": "Coelia",
+      "species_count": 5
+    }
+  ],
+  "solanum_has_more_species_than_coelia": true
+}

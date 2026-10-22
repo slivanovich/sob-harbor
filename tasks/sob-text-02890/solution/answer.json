@@ -1,0 +1,10 @@
+{
+  "theatre_name": "Studio 54",
+  "current_status": "Broadway theatre",
+  "former_status": "nightclub",
+  "designer_details": {
+    "name": "Paul Marantz",
+    "role": "architectural lighting designer"
+  },
+  "location_city": "New York City"
+}

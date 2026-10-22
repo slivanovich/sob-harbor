@@ -1,0 +1,20 @@
+{
+  "person_one": {
+    "name": "Virgil Widrich",
+    "occupations": [
+      "director",
+      "screenwriter",
+      "filmmaker",
+      "multimedia artist"
+    ]
+  },
+  "person_two": {
+    "name": "Bernard Rose",
+    "occupations": [
+      "film director"
+    ]
+  },
+  "mutual_occupations": [
+    "director"
+  ]
+}

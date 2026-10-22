@@ -1,0 +1,11 @@
+{
+  "group_of_people": "ancient Hellenic tourists",
+  "list_of_constructions_name": "Seven Wonders of the Ancient World",
+  "temple_details": {
+    "temple_name": "Temple of Artemis",
+    "goddess_dedicated_to": "Artemis",
+    "rebuild_count": 3,
+    "final_destruction_year": 401,
+    "is_one_of_seven_wonders": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "film_title": "The Natural",
+  "film_year": 1984,
+  "film_genre": "American sports drama film",
+  "film_director": "Barry Levinson",
+  "source_novel_details": {
+    "novel_title": "The Natural",
+    "novel_author": "Bernard Malamud",
+    "novel_publication_year": 1952
+  },
+  "actress_performance": {
+    "actress_name": "Kim Basinger",
+    "character_name": "Memo Paris",
+    "award_nomination": "Golden Globe nomination"
+  }
+}

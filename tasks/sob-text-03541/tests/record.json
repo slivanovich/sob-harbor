@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "record_id": "37b250a0a55b878db42f16e657c2eed599503b72bc1f4dcca1595add20e51c2c",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae0e2d755429924de1b71cb",
+    "source_dataset": "hotpotqa",
+    "source_answer": "November 11, 1926",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Arizona State Route 66: State Route 66 (SR 66) is a surface road in the U.S. state of Arizona in Mohave and Coconino Counties.  In 1914, the road was designated \"National Old Trails Highway\" but in 1926 was re-designated as U.S. Route 66.  In 1985, U.S. Route 66 was dropped from the highway system.  Parts of the highway were either absorbed into I-40, turned over to the state (SR 66), or turned over to Yavapai County.\n\nU.S. Route 66: U.S. Route 66 (US 66 or Route 66), also known as the Will Rogers Highway, the Main Street of America or the Mother Road, was one of the original highways within the U.S. Highway System.  US 66 was established on November 11, 1926, with road signs erected the following year.  The highway, which became one of the most famous roads in the United States, originally ran from Chicago, Illinois, through Missouri, Kansas, Oklahoma, Texas, New Mexico, and Arizona before ending at Santa Monica, California, covering a total of 2448 mi .  It was recognized in popular culture by both the hit song \"(Get Your Kicks on) Route 66\" and the \"Route 66\" television show in the 1960s.\n\nU.S. Route 66 in Arizona: U.S. Route 66 (US 66, Route 66) covered 401 mi as part of a former United States Numbered Highway in the state of Arizona.  The highway ran from west to east, starting in Needles, California, through Kingman and Seligman to the New Mexico state line as part of the historic US 66 from Santa Monica, California, to Chicago, Illinois.  The highway was decommissioned in 1985, although portions remain as State Route 66 (SR 66).\n\nInterstate 66 (Kansas–Kentucky): Interstate 66 (I-66) was a proposed Interstate Highway designated in the Intermodal Surface Transportation Efficiency Act (ISTEA) of 1991 as the East–West TransAmerica Corridor and High Priority Corridor 3.  The United States Department of Transportation originally planned to extend the current I-66 from its western terminus at Middletown, Virginia, across the country to California.  The route west of Kansas was not favored by any of the related state highway departments, and as a result I-66 west of Wichita, Kansas, through New Mexico, Arizona, Nevada and California was cancelled.  Among the reasons for this were lack of interest from any of the state highway departments, and the insufficient projected traffic did not justify an Interstate, especially since many segments had no pre-existing highway.  The National Park Service was strongly opposed to building I-66 across the Death Valley National Park.  The choice for the number I-66 was a hope to capitalize on the decommissioned U.S. Route 66 (US 66).  The case for westward expansion of I-66 was started by businesspeople in Wichita.  Furthermore, there were no plans to build I-66 across the West Virginia–Virginia state line, leaving it as a non-contiguous highway.  The I-66 concept was supported in Kentucky mainly because of the efforts of Congressman Hal Rogers, however the Kentucky Transportation Cabinet completed its feasibility study in 2005 and concluded that building I-66 was too costly and of little traffic benefit with high potential environmental impact and cancelled the project in that state.  The only remaining study of I-66 was conducted by the Federal Highway Administration (FHWA) and the Illinois Department of Transportation (IDOT) under the 66 Corridor Study, a Tier 1 environmental impact study (EIS).  This study was cancelled August 6, 2015, by IDOT, and subsequently the FHWA announced the cancellation of the EIS in the Federal Register, ending the last I-66 project and therefore officially cancelling the I-66 Trans America Highway.\n\nU.S. Route 66 in Kansas: U.S. Route 66 (US 66, Route 66), the historic east–west US highway between Chicago, Illinois and Santa Monica, California, passed through one brief segment in the southeastern corner of Kansas.  It entered the state south of Baxter Springs and continued north until it crossed the Brush Creek, from where it turned east and left the state in Galena.  After the decertification of the highway in 1985, this road segment was numbered as US-69 (alternate) from Quapaw, Oklahoma north to Riverton, Kansas and as K-66 (Kansas highway) from Riverton east to Route 66 in Missouri.\n\nDavid King Dunaway: David King Dunaway is Professor of English at the University of New Mexico and Distinguished Professor of Broadcasting and Documentary Studies, San Francisco State University (2009-2015).  He is a national radio producer/podcaster, biographer, and an international expert in American studies specializing in oral history, folk music, and Route 66.\n\nU.S. Route 66 in Missouri: U.S. Route 66 (US 66, Route 66) is a former east–west United States Numbered Highway, running from Santa Monica, California to Chicago, Illinois.  In Missouri, the highway ran from downtown St. Louis at the Mississippi River to the Kansas state line west of Joplin.  The highway was originally Route 14 from St. Louis to Joplin and Route 1F from Joplin to Kansas.  It underwent two major realignments (in the St. Louis and Joplin areas) and several lesser realignments in the cities of St. Louis, Springfield, and Joplin.  Current highways covering several miles of the former highway include Route 100, Route 366, Route 266, Route 96, and Route 66.  Interstate 44 (I-44) approximates much of US 66 between St. Louis and Springfield.\n\nColfax Avenue: Colfax Avenue is the main street that runs east–west through the Denver-Aurora metropolitan area in Colorado.  As U.S. Highway 40, it was one of two principal highways serving Denver before the Interstate Highway System was constructed.  In the local street system, it lies 15 blocks north of the zero meridian (Ellsworth Avenue, one block south of 1st Avenue), and would thus otherwise be known as 15th Avenue.  The street was named for the 19th-century politician Schuyler Colfax.  From west to east, it starts at Heritage Road in Golden as U.S. Highway 40 and the Business Route of I-70, and continues east through Lakewood and enters Denver at Sheridan Boulevard.  U.S. Highway 287 is routed along Colfax Avenue as well, which continues east through Denver and Aurora.  In the eastern outskirts of Aurora, Colfax Avenue meets I-70 and the two U.S. highways follow the I-70 route eastward; signage at Picadilly Road and frontage road the frontage road is labeled Colfax Avenue; while appearing to be interrupted at the I-70 and Colfax Avenue interchange; Colfax Avenue has signage in the complex E-470 interchange, appearing as a frontage road of I-70 on most maps; this frontage road starts just west of the Colfax Avenue and I-70 interchange, and at an interchange (I-70 Exit 292), Colfax Avenue becomes State Highway 36 and continues east from Aurora through Bennett to end at Headlight Road in Strasburg.\n\nK-66 (Kansas highway): K-66 is a 5+1/2 mi state highway in the southeastern corner of the state.  Its eastern terminus is on the Missouri state line near Galena (where it continues as Route 66), while its western terminus is at Alternate U.S. Highway 69 and U.S. Route 400 at Riverton.  This road is noteworthy in the fact that it used to be part of the famed U.S. Route 66.  After 1961, the nearby Interstate 44 offered a more direct route between Missouri and Oklahoma.  In 1985, US 66 was decommissioned nationally.  Kansas replaced the US-66 designation with K-66 on that portion of historic highway not numbered as U.S. Route 69 Alternate.\n\nColorado State Highway 66: State Highway 66 is a 22.7 mi long east-west state highway in Boulder and Weld counties in Colorado.  The highway extends from the foothills of the Rocky Mountains at a junction with U.S. Highway 36 southeast of Lyons, proceeding east through the northern edge of Longmont, to Platteville where it ends at U.S. Highway 85.  Although a number of western states retain their \"state highway 66\" as the decommissioned U.S. Route 66, the \"Mother Road\" did not run through Colorado, and State Highway 66 has no connection to the famed Historic Route 66.",
+    "question": "David King Dunaway is Professor of English at the University of New Mexico, he is a national radio producer/podcaster, biographer, and an international expert in American studies specializing in oral history, folk music, and U.S. Route 66, also known as the Will Rogers Highway, the Main Street of America or the Mother Road, was one of the original highways within the U.S. Highway System, US 66 was established on which date?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "highway_name": {
+          "type": "string",
+          "description": "The primary name of the highway."
+        },
+        "alternative_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other names by which the highway is known."
+        },
+        "establishment_date": {
+          "type": "string",
+          "description": "The date when the highway was established."
+        },
+        "original_system_status": {
+          "type": "string",
+          "description": "The highway's status within the U.S. Highway System upon establishment."
+        }
+      },
+      "required": [
+        "highway_name",
+        "alternative_names",
+        "establishment_date",
+        "original_system_status"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "highway_name": "U.S. Route 66",
+      "alternative_names": [
+        "US 66",
+        "Route 66",
+        "Will Rogers Highway",
+        "Main Street of America",
+        "Mother Road"
+      ],
+      "establishment_date": "November 11, 1926",
+      "original_system_status": "one of the original highways within the U.S. Highway System"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

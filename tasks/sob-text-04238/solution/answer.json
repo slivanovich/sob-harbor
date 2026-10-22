@@ -1,0 +1,13 @@
+{
+  "author_name": "Mark Powell",
+  "novel_title": "The Dark Corner",
+  "college_name": "Lincoln Memorial University",
+  "college_attributes": {
+    "is_private": true,
+    "is_four_year": true,
+    "is_coeducational": true,
+    "college_type": "liberal arts",
+    "location": "Harrogate, Tennessee, United States"
+  },
+  "author_role_at_college": "fiction workshop leader"
+}

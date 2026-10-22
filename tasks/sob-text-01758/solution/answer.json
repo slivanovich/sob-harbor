@@ -1,0 +1,15 @@
+{
+  "cartoon_name": "Johnny Bravo",
+  "producer_details": {
+    "producer_name": "Brian A. Miller",
+    "role": "executive in charge of production"
+  },
+  "controversy_details": {
+    "is_controversial": true,
+    "reasons": [
+      "adult humor",
+      "pop culture references",
+      "sly adult-oriented jokes"
+    ]
+  }
+}

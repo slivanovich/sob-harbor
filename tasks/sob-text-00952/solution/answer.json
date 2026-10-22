@@ -1,0 +1,13 @@
+{
+  "footballer": {
+    "name": "Steve von Bergen",
+    "nationality": "Swiss",
+    "position": "defender"
+  },
+  "former_club": {
+    "name": "Hertha BSC",
+    "country": "German",
+    "location": "Charlottenburg, Berlin"
+  },
+  "current_club_name": "Young Boys"
+}

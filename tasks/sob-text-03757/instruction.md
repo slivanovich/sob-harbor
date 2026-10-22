@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Alex Sanderson: Alexander Sanderson (born 7 October 1979 in Chester) is a former English rugby union footballer who played in the back row for Saracens and Sale Sharks.  He is the brother of Pat Sanderson who also played rugby for Littleborough RUFC.
+
+Kane Epati: Kane Epati (born 13 August 1981 in Samoa) is a rugby league player.  Originally a rugby union player in his native Samoa, he now plays Rugby league for Dewsbury Rams in Championship 1 in England following stints at Doncaster Lakers, Hull Kingston Rovers, where he was part of the Northern Rail Cup–winning squad in 2005 and French rugby union side Castres.  He started out as a winger, but he has now moved into the centres and can also play fullback.  He has played for the Cook Islands national rugby league team and also on the international rugby union 7's circuit.
+
+Waisale Sukanaveita: Waisale Sukanaveita (born 19 July 1984) is a rugby league/union player for the Terrigal Sharks.  He is a Fijian international.  In rugby league he plays at hooker and in rugby union he is a utility back (halfback/center).  Sukanaveita is currently plying his trade in rugby union with French club Lyon.  He was named in the Fiji 7s team for the Rugby World Cup 7s (rugby union) tournament being held in Dubai.
+
+Lloyd Williams (rugby union, born 1933): Lloyd Hugh Williams (19 October 1933 – 25 February 2017) was a Welsh international rugby union player.  He captained the Wales national rugby union team on three occasions in 1961-62.  Williams played his club rugby for Cardiff RFC and was the younger brother of another Welsh international rugby union player and captain, Bleddyn Williams.  Lloyd Williams died in February 2017 aged 83.
+
+Pat Sanderson: Pat Sanderson (born 6 September 1977 in Chester) is a former England international rugby union player and a former flanker for Worcester.  He is the brother of the former England player Alex Sanderson.
+
+Sergio Parisse: Sergio Parisse (] ; born 12 September 1983) is an Italian rugby union player.  He was the first Italian rugby union player to be nominated for the IRB International Player of the Year.  He has captained French team Stade Français and is current captain of the Italy national rugby union team.  Parisse is widely considered one of the greatest number eights of modern rugby.
+
+Andy Powell (rugby): Andrew "Andy" Powell (born 23 August 1981) is a retired Welsh rugby union player, who last played for Merthyr RFC.  He is a former international rugby union player having played for both the Wales sevens team and the Wales national rugby union team as well as touring with the British and Irish Lions (uncapped).  His regular rugby union position was either No. 8 or blindside flanker in the back row.
+
+Matt Saunders (rugby union, born 1988): Matt Saunders is a rugby union player for the Philippines national rugby union team.  His rugby union position is at outside center and is the top try scorer in the Philippines.  Saunders is a former rugby league footballer with Sydney Roosters and Rugby Union player fot NTT Communications in Japan.  Saunders currently plays for Kubota Spears.
+
+Jason Jones-Hughes: Jason Jones-Hughes (born 13 September 1976 in Sydney) is an Australian born rugby union player who played for the Wales national rugby union team.  The fact that he represented Wales caused friction between the two national rugby unions as he had played for the Australian Barbarians and was part of the Australian team that toured Argentina in 1997 before representing Wales.  The International Rugby Board ruled he was eligible to play for Wales as he had not played a full international match for Australia national rugby union team and he had a Welsh qualification through his parents.  In 2000 he was initially implicated in the "grannygate" scandal before being exonerated.
+
+Arthur Bassett (rugby): Arthur Bassett (28 June 1914 – 30 1999(1999--) (aged 85 ) ) was a Welsh dual-code international rugby union and professional rugby league footballer who played in the 1930s, and 1940s, playing representative level rugby union (RU) for Wales, and at club level for Maesteg, Neath, Glamorgan Police RFC, Aberavon RFC, Cardiff, switching to professional football in 1939, playing representative level rugby league (RL) for Great Britain, and Wales, and at club level for Halifax, and York, as a wing , i.e. number 2 or 5.  His older brother, Jack Bassett, was also an international rugby union player.
+
+Question: Rugby union player Pat Sanderson has a brother who played for which team
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of Pat Sanderson's brother."
+    },
+    "relationship_to_pat_sanderson": {
+      "type": "string",
+      "description": "The relationship of this player to Pat Sanderson."
+    },
+    "sport_played": {
+      "type": "string",
+      "description": "The type of rugby sport the player played."
+    },
+    "teams_played_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of teams the player played for."
+    }
+  },
+  "required": [
+    "player_name",
+    "relationship_to_pat_sanderson",
+    "sport_played",
+    "teams_played_for"
+  ],
+  "additionalProperties": false
+}

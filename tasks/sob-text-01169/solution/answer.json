@@ -1,0 +1,10 @@
+{
+  "tax_name": "Goods and Services Tax",
+  "tax_type": "indirect tax",
+  "country_of_introduction": "India",
+  "introduction_date": "2017-07-01",
+  "chairman_details": {
+    "chairman_name": "Navin Kumar",
+    "role": "first Chairman of Goods and Services Tax Network (GSTN)"
+  }
+}

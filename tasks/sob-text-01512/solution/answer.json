@@ -1,0 +1,9 @@
+{
+  "film_title": "Somewhere in Time",
+  "director_name": "Jeannot Szwarc",
+  "actor_details": {
+    "actor_name": "Bill Erwin",
+    "role_in_film": "Arthur",
+    "seinfeld_award_status": "Emmy Award-nominated"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "crowned_by_person": {
+    "name": "Olivia Jordan",
+    "occupation": [
+      "actress",
+      "model",
+      "beauty pageant titleholder"
+    ],
+    "crowned_miss_usa_year": 2015,
+    "represented_state": "Oklahoma"
+  },
+  "pageant_details": {
+    "pageant_year": 2016,
+    "pageant_number": 65,
+    "crowned_person_name": "Deshauna Barber",
+    "crowned_person_represented_state": "District of Columbia"
+  },
+  "event_location": {
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "T-Mobile Arena"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "is_answer_true": true,
+  "directors_identified": [
+    {
+      "name": "Michael Anderson",
+      "is_director": true,
+      "nationality": "English",
+      "birth_year": 1920
+    },
+    {
+      "name": "Spike Lee",
+      "is_director": true,
+      "nationality": "American",
+      "birth_year": 1957
+    }
+  ],
+  "total_directors_found": 2
+}

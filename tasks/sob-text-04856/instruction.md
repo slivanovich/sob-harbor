@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+History of the Philadelphia 76ers: This is a history of the Philadelphia 76ers.  The Philadelphia 76ers are an American basketball team currently playing in the Atlantic Division of the Eastern Conference in the National Basketball Association (NBA).  The 76ers are third in NBA history in wins and playoff appearances.
+
+1983–84 Philadelphia 76ers season: The 1983–84 NBA season was the 76ers' 35th season in the NBA and 21st season in Philadelphia.  The 76ers entered the season as the defending NBA Champions, having won the NBA Championship the year prior, sweeping the Los Angeles Lakers in four games.  The team would start fast posting 21 wins in their first 26 games but finished with a 52-30 record.  The major difference was that they were just around .500 on the road for the year, unlike the previous season, where they won 30 regular season games away from Philadelphia.  The 76ers would lose in the first round of the newly expanded playoff format to the New Jersey Nets, who had never won a playoff series in their NBA history to that point.  The 76ers lost all three post season games at The Spectrum.
+
+2016–17 Philadelphia 76ers season: The 2016–17 Philadelphia 76ers season is the 78th season of the franchise in the National Basketball Association (NBA).  The 2016–17 season would have been the rookie season for number 1 overall pick in the 2016 NBA draft Ben Simmons, but a broken foot injury sidelined him for the whole season.  It would be the team's fourth straight season where a top prospect of theirs would be sidelined for an entire season due to an injury (the 76ers previously dealt with former center Nerlens Noel being out in the 2013–14 NBA season and Joel Embiid being out for two straight seasons before this one).  However, Joel Embiid, who was previously drafted 3rd in the 2014 draft, played in his first season after suffering multiple foot injuries before later being out for the rest of the season after playing a promising 31 games throughout the season.  Also, it was the first season of draft and stash prospect Dario Šarić, who was also taken in the 2014 NBA draft.  The 2016 season was also the first time in three years the Sixers made a splash in NBA free agency by adding guards Jerryd Bayless, Sergio Rodríguez and veteran Gerald Henderson Jr. to the team.
+
+Joel Embiid: Joel Hans Embiid ( ; born 16 March 1994) is a Cameroonian professional basketball player for the Philadelphia 76ers of the National Basketball Association (NBA).  After one year of college basketball at the University of Kansas, he was drafted with the third overall pick in the 2014 NBA draft by the 76ers.  He has nicknamed himself "The Process" in response to a refrain from 76ers fans during the Sam Hinkie-era to "trust the process".
+
+List of Philadelphia 76ers head coaches: The Philadelphia 76ers are an American professional basketball team based in Philadelphia, Pennsylvania.  They are a member of the Atlantic Division of the Eastern Conference in the National Basketball Association (NBA).  Formerly known as the Syracuse Nationals, the 76ers joined the NBA when it was founded in 1949.  The Nationals had a record of 51–13 in their first NBA season under coach Al Cervi and won the Eastern Division crown.  The franchise were purchased by Philadelphian Irv Kosloff and Ike Richma in the spring of 1963; the NBA approved their franchise shift on May 22 and name change to the Philadelphia 76ers on August 6.  This brought professional basketball back to the city, which had been without a team since the Golden State Warriors left Philadelphia in 1962.  After coaching the 76ers since , Doug Collins resigned as head coach on April 18, 2013 following the 2012–13 season.  Brett Brown was hired to be the head coach of the 76ers on August 15, 2013 prior to the start of the 2013-14 season.
+
+2015–16 Philadelphia 76ers season: The 2015–16 Philadelphia 76ers season was the 77th season of the franchise in the National Basketball Association (NBA).  It was also the second straight season that Joel Embiid, their third pick in the 2014 NBA draft, would not suit up for the 76ers due to a leg injury.  Philadelphia broke the record for the longest losing streak in American professional sports history with 27 straight losses over this season and last season with a 114–116 loss to the Houston Rockets.  The losing streak would reach to 28 games (with the 18 straight losses tying the record for longest opening season losing streak with the 2009–10 New Jersey Nets) before getting their first victory at home against the Los Angeles Lakers, which was also Kobe Bryant's last game against the 76ers in Philadelphia.  Philadelphia would also hire former Phoenix Suns owner, coach, general manager, and four-time NBA Executive of the Year winner Jerry Colangelo on December 7, 2015 as their Chairman of Basketball Operations.  Eleven days later, former Denver Nuggets, Phoenix Suns, New York Knicks, and Los Angeles Lakers head coach Mike D'Antoni would join the team as an associate head coach.  Near the end of the season, general manager Sam Hinkie would announce his resignation from his position, being replaced by Jerry's son Bryan Colangelo before the end of the season.  Jerry would also announce his personal demotion from his original position afterwards.  They finished just one game shy of tying the NBA record for most losses in a season set by themselves during their 1972–73 season when they went 9–73.  However, it would be the season where Sam Hinkie's goal of "The Process" came into full fruition since they'd later earn the #1 selection in the 2016 NBA draft.
+
+1997–98 Detroit Pistons season: The 1997–98 NBA season was the Pistons' 50th season in the National Basketball Association, and 41st season in the city of Detroit.  Despite signing free agents Brian Williams and Malik Sealy during the offseason, the Pistons got off to a slow start with a 6–11 record as Joe Dumars missed ten games due to hamstring and shoulder injuries.  In late December, they traded Theo Ratliff and Aaron McKie to the Philadelphia 76ers for Jerry Stackhouse and Eric Montross.  At midseason, head coach Doug Collins was fired after a 21–24 start, and was replaced with Alvin Gentry.  Collins would later on get a job as color analyst for the "NBA on NBC".  Despite another stellar season from Grant Hill, who was selected for the 1998 NBA All-Star Game, the Pistons missed the playoffs finishing sixth in the Central Division with a 37–45 record.  Following the season, Sealy signed as a free agent with the Minnesota Timberwolves, Grant Long re-signed with the Atlanta Hawks, and Rick Mahorn re-signed with the Philadelphia 76ers.
+
+2000–01 Indiana Pacers season: The 2000–01 NBA season was the Pacers' 25th season in the National Basketball Association, and 34th season as a franchise.  During the offseason, the Pacers hired former Indiana University and Detroit Pistons star Isiah Thomas as Head Coach, while acquiring Jermaine O'Neal from the Portland Trail Blazers.  With the departures of veteran players from the team that reached the Finals last year, the Pacers struggled playing mediocre basketball for most of the season, and finished fourth in the Central Division with a record of 41–41.  To qualify for the playoffs, the Pacers needed to win 9 of their final 11 games to secure the #8 seed in the Eastern Conference.  Last year's Most Improved Player Jalen Rose continued to lead the team in scoring averaging 20.5 points per game.  In the playoffs, the top-seeded Philadelphia 76ers would need only four games to eliminate the Pacers.  Following the season, Sam Perkins retired and Derrick McKey signed as a free agent with the Philadelphia 76ers.
+
+1975–76 Philadelphia 76ers season: The 1975–76 NBA season was the 76ers 27th season in the NBA and 13th season in Philadelphia.  The Philadelphia 76ers posted a 46–36 regular-season record, and returned to the NBA Playoffs for the first time since 1971, ending a string of four consecutive losing seasons.  The team had acquired forward George McGinnis from the ABA's Indiana Pacers, and also drafted shooting guard Lloyd Free (later changed name to World B. Free).  The Sixers, however, lost to the Buffalo Braves, two games to one in the first round of the Eastern Conference playoffs.  This season would also be the last as a player for Billy Cunningham, who suffered an injury early in the season.
+
+1973 NBA draft: The 1973 NBA draft was the 27th annual draft of the National Basketball Association (NBA).  The draft was held on April 24 and May 5, 1973, before the 1973–74 season.  In this draft, 17 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Philadelphia 76ers won the coin flip and were awarded the first overall pick, while the Portland Trail Blazers were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Prior to the draft, the Baltimore Bullets relocated to Landover, Maryland, and became the Capital Bullets.  The Philadelphia 76ers were awarded an extra first-round draft pick as compensation when the Seattle SuperSonics signed John Brisker.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 11 college underclassmen were declared eligible for selection under the "hardship" rule.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 20 rounds comprising the selection of 211 players.
+
+Question: How many games did the player known as "The Process" play in his first season for the Philadelphia 76ers?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The full name of the player known as 'The Process'."
+    },
+    "nickname": {
+      "type": "string",
+      "description": "The nickname used to refer to the player."
+    },
+    "draft_details": {
+      "type": "object",
+      "properties": {
+        "draft_year": {
+          "type": "integer",
+          "description": "The year the player was drafted."
+        },
+        "overall_pick": {
+          "type": "integer",
+          "description": "The overall pick number in the draft."
+        }
+      },
+      "required": [
+        "draft_year",
+        "overall_pick"
+      ],
+      "additionalProperties": false
+    },
+    "first_playing_season": {
+      "type": "string",
+      "description": "The NBA season string when the player first played for the 76ers."
+    },
+    "games_played_in_first_season": {
+      "type": "integer",
+      "description": "The total number of games the player played in their first season."
+    },
+    "reason_for_delayed_debut": {
+      "type": "string",
+      "description": "The reason why the player's debut was delayed after being drafted."
+    }
+  },
+  "required": [
+    "player_name",
+    "nickname",
+    "draft_details",
+    "first_playing_season",
+    "games_played_in_first_season",
+    "reason_for_delayed_debut"
+  ],
+  "additionalProperties": false
+}

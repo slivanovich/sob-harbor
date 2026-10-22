@@ -1,0 +1,9 @@
+{
+  "plant_name": "Sorghum × drummondii",
+  "plant_type": "grass",
+  "harvested_for_purpose": [
+    "forage",
+    "grain"
+  ],
+  "edible_fruit_type": "caryopsis"
+}

@@ -1,0 +1,10 @@
+{
+  "player_name": "Bobby Hurley",
+  "draft_year": 1993,
+  "cause_of_derailment": "car accident",
+  "impact_on_career": "career was derailed by a car accident in December of his rookie year",
+  "related_player_draft_year": {
+    "name": "Rich Manning",
+    "draft_year": 1993
+  }
+}

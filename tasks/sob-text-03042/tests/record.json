@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "record_id": "f1f9879c12f8fd0bcd0998220c91044fa46e8d61507c251a2a97413fe4e458ca",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae245365542994d89d5b3af",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Peter F. Paul",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Peter F. Paul: Peter Franklin Paul (born September 2, 1948) is a former lawyer and entrepreneur who was convicted for conspiracy and drug dealing, and later for securities fraud in connection with his business dealings with \"Spider-Man\" co-creator Stan Lee.  He has repeatedly brought suit against Hillary Clinton, accusing her of lying about donations he solicited on behalf of her 2000 senatorial campaign.\n\nThe Hunting of the President: The Hunting of the President is a 2004 English language documentary film about Bill Clinton.  Clinton and his wife Hillary Clinton appear in archived footage.  The film is based on the book The Hunting of the President: The Ten Year Campaign to Destroy Bill and Hillary Clinton, written by investigative journalists Joe Conason and Gene Lyons, and published by Thomas Dunne Books in 2000.  Narrated by Morgan Freeman, the film premiered at the 2004 Sundance Film Festival.\n\nClinton family: The Clinton family is a prominent American political family related to Bill Clinton, the 42nd President of the United States (1993–2001), and his wife Hillary Clinton, the 67th United States Secretary of State (2009–13), Senator from New York (2001–09) and the First Lady of the United States (1993–2001).  Their immediate family was the First Family of the United States from 1993 to 2001.  In 2016, Hillary Clinton became the first female presidential nominee from a major political party in United States history.  The Clintons (Bill and Hillary) are the first married couple to each be nominated for president.  She was defeated in the election by businessman Donald Trump.\n\nCheryl Mills: Cheryl D. Mills (born 1965) is an American lawyer and corporate executive.  She first came into public prominence while serving as deputy White House Counsel for President Bill Clinton, whom she defended during his 1999 impeachment trial.  She has worked for New York University as Senior Vice President, served as Senior Adviser and Counsel for Hillary Clinton's 2008 presidential campaign, and is considered a member of Hillary Clinton's group of core advisers, self-designated as \"Hillaryland\".  She served as Counselor and Chief of Staff to Hillary Clinton during her whole tenure as United States Secretary of State.  After leaving the State Department in January, 2013, she founded BlackIvy Group, which builds businesses in Africa.\n\nPaul v. Clinton: Paul v. Clinton was a civil suit filed in 2004 held in Los Angeles County Superior Court.  The plaintiff, Peter F. Paul, alleged that President Bill Clinton and his wife, First Lady Hillary Clinton, deceived him into paying for the Gala Hollywood Farewell Salute to President Clinton, during Hillary Clinton's first Senate race in 2000, by making a promise that the President would work for Paul's company, Stan Lee Media, after his presidential term was over.  Paul alleged that the President broke his promise and stole his business partner, causing his business to crumble and, further, that his contributions to Hillary Clinton's campaign were falsely reported to the Federal Election Commission.  Besides the Clintons, three other individuals who were involved in fundraising for the gala, were named as defendants in the suit.\n\nVast right-wing conspiracy: \"Vast right-wing conspiracy\" is a conspiracy theory first described in a 1995 memo by political opposition researcher Chris Lehane and then referenced in 1998 by the then First Lady of the United States Hillary Clinton, in defense of her husband, President Bill Clinton, characterizing the continued allegations of scandal against her and her husband, including the Lewinsky scandal, as part of a long campaign by Clinton's political enemies.  The term has been used since, including in a question posed to Bill Clinton in 2009 to describe verbal attacks on Barack Obama during his early presidency.  Hillary Clinton mentioned it again during her 2016 presidential campaign.\n\nLambdin P. Milligan: Lambdin Purdy Milligan (March 24, 1812 – December 21, 1899) was a lawyer and farmer who was known for his extreme opinions on states' rights and his opposition to the Lincoln administration's conduct of the American Civil War.  Believing that the Confederate states of the South had the power under the U.S. Constitution to secede from the Union, he opposed the war to reunite the nation.  Milligan became a leader of the secret Order of American Knights (formerly the Knights of the Golden Circle, and later the Sons of Liberty, and advocated violent revolution against the U.S. government.  U.S. Army forces arrested him at his home and tried him and other conspirators by military commission for disloyalty and conspiracy.  Found guilty, he was sentenced to death.  A habeas corpus appeal made its way from the federal circuit court in Indianapolis to the U.S. Supreme Court, which in 1866 ruled that the application of military tribunals to citizens when civil courts are open and operating was unconstitutional.  See \"Ex parte Milligan\" 71 U.S. (4 Wall. ) 2 (1866) .  Following the Court's ruling on April 3, 1866, Milligan and the others were released from custody.  He returned home and practiced law in Huntington, Indiana, where he later filed a civil suit claiming damages for the military arrest and trial.  On May 30, 1871, the jury found in Milligan's favor, but federal and state statutes limited the award for damages to five dollars plus court costs.\n\nMacedonia Baptist Church arson: The Macedonia Baptist Church is a centuries-old historically black church located in rural Clarendon County, South Carolina.  It was destroyed by arsonists following direction from the local Ku Klux Klan chapter and later rebuilt.  Four klansmen were convicted for the crime, and a subsequent civil suit effectively closed the Klan chapter's operation in the county.  The successful civil suit was called a \"wake-up call\" indicating that racial violence would not be tolerated.\n\nLife imprisonment: Life imprisonment (also known as imprisonment for life, a life sentence, lifelong incarceration, or life incarceration) is any sentence of imprisonment for a crime under which convicted persons are to remain in prison on unlimited time, traditionally for the rest of their life or until paroled. Crimes for which a person could receive this sentence include murder, attempted murder, conspiracy to commit murder, blasphemy, terrorism, severe child abuse, rape, espionage, treason, high treason, drug dealing, drug trafficking, drug possession, human trafficking, severe cases of fraud, severe cases of financial crimes, aggravated criminal damage in English law, and aggravated cases of arson, kidnapping, burglary, or robbery which result in death or grievous bodily harm, piracy, aircraft hijacking, and in certain cases genocide, ethnic cleansing, crimes against humanity, certain war crimes or any three felonies in case of three strikes law.\n\nHillary 1984: Hillary 1984 is the title of the viral video that combines the footage of the 2008 presidential campaign web announcement by Hillary Clinton with the 1984 Super Bowl commercial by Apple Inc. for the launch of Macintosh.  The video shows the same blond female athlete from the 1984 Super Bowl commercial updated with an iPod.  The Big Brother image that she throws the sledgehammer at is replaced with Hillary Clinton announcing that she is running for president.  It ends with the original text replaced with, \"On Jan. 14, the Democratic primary will begin.  And you'll see why 2008 won't be like 1984.\"  The Apple symbol is a morphed into an \"O\", which is followed by a logo for Barack Obama's presidential campaign website.  Barack Obama's presidential spokesman Bill Burton has said \"Hillary 1984\" was not created by the Obama campaign.  \"It's somebody else's creation,\" he said.",
+    "question": "Which former lawyer and entrepreneur who was convicted for conspiracy and drug dealing was involved in a civil suit against Bill and Hillary Clinton?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The full name of the individual."
+        },
+        "professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professions held by the individual."
+        },
+        "convictions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of crimes the individual was convicted for."
+        },
+        "legal_actions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action_type": {
+                "type": "string",
+                "description": "The type of legal action, e.g., 'civil suit'."
+              },
+              "against_parties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "The parties against whom the legal action was taken."
+              },
+              "suit_name": {
+                "type": "string",
+                "description": "The name of the civil suit."
+              },
+              "year_filed": {
+                "type": "integer",
+                "description": "The year the legal action was filed."
+              }
+            },
+            "required": [
+              "action_type",
+              "against_parties"
+            ],
+            "additionalProperties": false
+          },
+          "description": "A list of legal actions involving the individual."
+        }
+      },
+      "required": [
+        "person_name",
+        "professions",
+        "convictions",
+        "legal_actions"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Peter F. Paul",
+      "professions": [
+        "lawyer",
+        "entrepreneur"
+      ],
+      "convictions": [
+        "conspiracy",
+        "drug dealing",
+        "securities fraud"
+      ],
+      "legal_actions": [
+        {
+          "action_type": "civil suit",
+          "against_parties": [
+            "Hillary Clinton"
+          ]
+        },
+        {
+          "action_type": "civil suit",
+          "against_parties": [
+            "Bill Clinton",
+            "Hillary Clinton"
+          ],
+          "suit_name": "Paul v. Clinton",
+          "year_filed": 2004
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

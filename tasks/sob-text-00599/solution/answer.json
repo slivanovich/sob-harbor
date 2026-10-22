@@ -1,0 +1,11 @@
+{
+  "series_name": "Ender's Game series",
+  "series_genre": "science fiction books",
+  "genre_justification": {
+    "has_sentient_ai_character": true,
+    "ai_character_details": {
+      "character_name": "Jane",
+      "character_description": "artificial sentience"
+    }
+  }
+}

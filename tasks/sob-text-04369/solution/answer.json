@@ -1,0 +1,15 @@
+{
+  "comparison_year": 2016,
+  "band_comparison": [
+    {
+      "band_name": "The Last Shadow Puppets",
+      "album_count": 2
+    },
+    {
+      "band_name": "The Classic Crime",
+      "album_count": 4
+    }
+  ],
+  "band_with_more_albums": "The Classic Crime",
+  "more_albums_count": 4
+}

@@ -1,0 +1,32 @@
+{
+  "company_name": "Wang Laboratories",
+  "founding_year": 1951,
+  "founders": [
+    "An Wang",
+    "G. Y. Chu"
+  ],
+  "headquarters_locations": [
+    {
+      "city": "Cambridge",
+      "state": "Massachusetts",
+      "start_year": 1954,
+      "end_year": 1963
+    },
+    {
+      "city": "Tewksbury",
+      "state": "Massachusetts",
+      "start_year": 1963,
+      "end_year": 1976
+    },
+    {
+      "city": "Lowell",
+      "state": "Massachusetts",
+      "start_year": 1976,
+      "end_year": 1997
+    }
+  ],
+  "band_mention_details": {
+    "band_name": "The Talking Propellerheads",
+    "mention_context": "documented the fall of the minicomputer industry of the 1980s with their songs about Wang"
+  }
+}

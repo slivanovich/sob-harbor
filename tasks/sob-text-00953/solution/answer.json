@@ -1,0 +1,17 @@
+{
+  "earthquake_details": {
+    "name": "1989 Loma Prieta earthquake",
+    "occurrence_date": {
+      "year": 1989,
+      "month": "October",
+      "day": 17
+    },
+    "magnitude": 6.9
+  },
+  "fireboat_contribution": {
+    "fireboat_name": "Phoenix",
+    "action_description": "helping to save buildings from further destruction by fire",
+    "target_area": "Marina District"
+  },
+  "final_answer_day": 17
+}

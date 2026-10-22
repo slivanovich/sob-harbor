@@ -1,0 +1,12 @@
+{
+  "question_asked": "Do Victoria Larimore and James Cameron share the same nationality?",
+  "person_1": {
+    "name": "Victoria Larimore",
+    "nationality": "American"
+  },
+  "person_2": {
+    "name": "James Cameron",
+    "nationality": "Canadian"
+  },
+  "share_same_nationality": false
+}

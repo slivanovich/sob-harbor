@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "record_id": "8aacbab62bb23491ec7309e67517d54d79d52f579895e3542d6472583912fb0b",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab9703755429970cfb8eaec",
+    "source_dataset": "hotpotqa",
+    "source_answer": "St Albans City railway station",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Clarence Park (St Albans): Clarence Park is a Victorian park used for sports and leisure in St Albans, England.  It is still largely in its original form and has a rich variety of trees and planting.  It is close to St Albans City railway station.\n\nHatfield and St Albans Railway: The Hatfield & St Albans Railway was a branch of the Great Northern Railway which connected the Hertfordshire towns of St Albans and Hatfield.  It opened in 1865 with the principal aim of allowing St Albans traffic to access the Great Northern's main line to London at , but soon came into difficulties when the Midland Railway inaugurated a direct route to London through St Albans.  Passenger receipts declined in the 1930s, resulting in the temporary withdrawal of services in 1939.  Passenger services were permanently withdrawn in 1951, leaving goods traffic to linger on until December 1968.  Much of the route of the line is now incorporated into the Alban Way, a footpath and cycleway.\n\nBrighton main line: The Brighton Main Line (also known as the South Central Main Line) is a divided in the north into two sections running from London Victoria and London Bridge to Brighton.  It is about 51 miles (81 km) long, and is electrified throughout.  Nearly all passenger trains are provided by Govia Thameslink Railway which operates the Southern, Gatwick Express and Thameslink brands.  A small section has Great Western Railway services, currently sole operator of the line from Gatwick Airport to Reading, Berkshire known as the North Downs Line.  The many Sussex services to Central London use the line and generally its branches as do south London, East Surrey and Tonbridge, Kent services.\n\nSt Albans Abbey railway station: St Albans Abbey railway station in St Albans, Hertfordshire, England is about 0.6 mi south of the city centre in the St Stephen's area.  It is the terminus of the Abbey Line from Watford Junction, part of the London Midland franchise.  It is one of two stations in St Albans, the other being the much larger and busier St Albans City.\n\nAbbey line: The Abbey line, also called the St Albans Abbey branch line, is a railway line from Watford Junction to St Albans Abbey.  The 6.5 mi route passes through town and countryside in the county of Hertfordshire, just outside the boundaries of the Oyster Card and London fare zones.  Its northern terminus in St Albans Abbey is located in the south of the city, around 1.2 km away from the larger St Albans City railway station on the Thameslink line.\n\nSt Albans City railway station: St Albans City railway station, also shortened to St Albans, is one of two railway stations in St Albans, Hertfordshire, England, the other being St Albans Abbey railway station.  City station is the more important of the two stations, as it serves London, Gatwick Airport, Luton Airport and Brighton.  It is located 0.5 mi east of the city centre, on the Midland Main Line and served by Thameslink trains on the Thameslink route.\n\nGatwick Airport railway station: Gatwick Airport station is the railway station at London Gatwick Airport which provides a direct rail connection to London 26+3/4 mi away.  The station platforms are located about 70 metres to the east of the airport's South Terminal, with the ticket office above the platforms.  The station was one of 18 in the United Kingdom to be managed by Network Rail, but on 29 January 2012 day-to-day management was transferred to Southern.\n\nGatwick Airport Up sidings: Gatwick Airport Up sidings are located near London Gatwick Airport, Crawley, England, situated on the Brighton Main Line south of Gatwick Airport station.  The sidings are accessed from the Up Platform Loop line.\n\nLuton Airport Parkway railway station: Luton Airport Parkway railway station is on the Midland Main Line in England, serving Luton Airport in Bedfordshire.  It is 29 mi down-line from London St Pancras and is situated between to the south and to the north.  Its three-letter station code is LTN, the IATA code for Luton Airport.\n\nSouth (Luton ward): South is the name for a ward in the southern part of Luton, England.  The ward includes New Town, Park Town, Chapel Langley and most of Luton town centre.  Junction 10 of the M1 is just outside the ward.  Both Luton Airport Parkway and Luton railway station are located within the ward.  London Luton Airport is close by.",
+    "question": "Which railway station in St Albans, England services London, Gatwick Airport, Luton Airport, and Brighton?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "station_name": {
+          "type": "string",
+          "description": "The name of the railway station."
+        },
+        "city": {
+          "type": "string",
+          "description": "The city where the railway station is located."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the railway station is located."
+        },
+        "is_major_station": {
+          "type": "boolean",
+          "description": "Indicates if this is considered the more important or major station in its city."
+        },
+        "served_destinations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of key destinations served by this railway station."
+        },
+        "other_stations_in_city": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Names of other railway stations located in the same city."
+        }
+      },
+      "required": [
+        "station_name",
+        "city",
+        "country",
+        "is_major_station",
+        "served_destinations",
+        "other_stations_in_city"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "station_name": "St Albans City railway station",
+      "city": "St Albans",
+      "country": "England",
+      "is_major_station": true,
+      "served_destinations": [
+        "London",
+        "Gatwick Airport",
+        "Luton Airport",
+        "Brighton"
+      ],
+      "other_stations_in_city": [
+        "St Albans Abbey railway station"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

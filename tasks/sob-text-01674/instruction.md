@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Stabilizing selection: Stabilizing selection (not to be confused with negative or purifying selection) is a type of natural selection in which the population mean stabilizes on a particular non-extreme trait value.  This is thought to be the most common mechanism of action for natural selection because most traits do not appear to change drastically over time.  Stabilizing selection commonly uses negative selection (a.k.a. purifying selection) to select against extreme values of the character, leading to a decrease in genetic diversity.  Stabilizing selection is the opposite of disruptive selection.  Instead of favoring individuals with extreme phenotypes, it favors the intermediate variants.  It reduces phenotypic variation and maintains the status quo.  Natural selection tends to remove the more severe phenotypes, resulting in the reproductive success of the norm or average phenotypes.  Because most traits change little over time, stabilizing selection is thought to be the most common type of selection in most populations.  However, a meta-analysis of studies that measured selection in the wild failed to find an overall trend for stabilizing selection.  The reason can be that methods for detecting stabilizing selection are complex.  They can involve studying the changes that causes natural selection in the mean and variance of the trait, or measuring fitness for a range of different phenotypes under natural conditions and examining the relationship between these fitness measurements and the trait value, but analysis and interpretation of the results is not straightforward.
+
+Natural Selection (video game): Natural Selection is a modification for the video game "Half-Life".  Its concept is a mixture of the first-person shooter and real-time strategy game genres.  The game was created by Charlie "Flayra" Cleveland, who later founded the company Unknown Worlds Entertainment.  Natural Selection v1 was first publicly released on Halloween 2002, and is now at version 3.2. " Natural Selection 2" was released in late 2012.
+
+Mechanism (biology): In the science of biology, a mechanism is a system of casually interacting parts and processes that produce one or more effects.  Scientists explain phenomena by describing mechanisms that could produce the phenomena.  For example, natural selection is a mechanism of biological evolution; other mechanisms of evolution include genetic drift, mutation, and gene flow.  In ecology, mechanisms such as predation and host-parasite interactions produce change in ecological systems.  In practice, no description of a mechanism is ever complete because not all details of the parts and processes of a mechanism are fully known.  For example, natural selection is a mechanism of evolution that includes countless, inter-individual interactions with other individuals, components, and processes of the environment in which natural selection operates.
+
+The Genetical Theory of Natural Selection: The Genetical Theory of Natural Selection is a book by Ronald Fisher which combines Mendelian genetics with Charles Darwin's theory of natural selection, with Fisher being the first to argue that "Mendelism therefore validates Darwinism" and stating with regard to mutations that "The vast majority of large mutations are deleterious; small mutations are both far more frequent and more likely to be useful", thus refuting orthogenesis.  First published in 1930 by The Clarendon Press, it is one of the most important books of the modern synthesis, and helped define population genetics.  It is commonly cited in biology books, outlining many concepts that are still considered important such as Fisherian runaway, Fisher's principle, reproductive value, Fisher's fundamental theorem of natural selection, Fisher's geometric model, the sexy son hypothesis, mimicry and the evolution of dominance.  It was dictated to his wife in the evenings as he worked at Rothamsted Research in the day.
+
+Darwin and women: Charles Darwin's views on women were based on his view of natural selection.  Darwin believed that the difference between males and females were partly due to "sexual selection."  Darwin's theory of sexual selection, which can be found in his book "The Descent of Man and Selection in Relation to Sex," states that women, and some men, will choose to mate with someone that is most suitable to culture.  This proposition of sexual selection readily tied into his theory of natural selection in the way that evolution will have different outcomes depending on the traits of the suitor the females chooses to reproduce with.  This also supports his principle of "survival of the fittest" in the human species.
+
+Lineage selection: Lineage selection, occurs when the frequency of one biological lineage changes in frequency relative to another lineage.  Lineage selection is a generalization of individual based natural selection; the stating that an allele is favored by natural selection is equivalent to stating that the lineage bearing the allele is favored by natural selection.  For alleles with simple positive or negative fitness effects, lineage and individual based selection are equivalent.  However, lineage selection can accommodate a wider array of evolutionary phenomena, such as the adaptive evolution of evolvability, altruism, and recombination.  Additionally, lineage selection is useful in determining the effects of mutations in highly structured environments such as tumors.
+
+Charles Darwin: Charles Robert Darwin, {'1': ", '2': ", '3': ", '4': "} ( ; 12 February 1809 – 19 April 1882) was an English naturalist, geologist and biologist, best known for his contributions to the science of evolution.  He established that all species of life have descended over time from common ancestors and, in a joint publication with Alfred Russel Wallace, introduced his scientific theory that this branching pattern of evolution resulted from a process that he called natural selection, in which the struggle for existence has a similar effect to the artificial selection involved in selective breeding.
+
+Price equation: In the theory of evolution and natural selection, the Price equation (also known as Price's equation or Price's theorem) describes how a trait or gene changes in frequency over time.  The equation uses a covariance between a trait and fitness to give a mathematical description of evolution and natural selection.  It provides a way to understand the effects that gene transmission and natural selection have on the proportion of genes within each new generation of a population.  The Price equation was derived by George R. Price, working in London to re-derive W.D. Hamilton's work on kin selection.  The Price equation also has applications in economics.  Examples of the Price equation can be found here: Price equation examples.
+
+Edinburgh Seven: The Edinburgh Seven were the first group of matriculated undergraduate female students at any British university.  They began studying medicine at the University of Edinburgh in 1869 and although they were ultimately prevented from graduating and qualifying as doctors, the campaign they fought gained national attention and won them many supporters, including Charles Darwin.  Their campaign put the rights of women to a university education on the national political agenda, which eventually resulted in legislation to ensure that women could study medicine at university in 1876 (UK Medical Act 1876).
+
+Patrick Matthew: Patrick Matthew (20 October 1790 – 8 June 1874) was a Scottish grain merchant, fruit farmer, forester, and landowner, who contributed to the understanding of horticulture, silviculture, and agriculture in general, with a focus on maintaining the British navy and feeding new colonies.  He published the basic concept of natural selection as a mechanism in evolutionary adaptation and speciation (i.e. resulting from "positive" natural selection, in contrast to its already, widely known, "negative" rôle in removal of individuals in the Struggle for Survival), but failed to develop or publicise his ideas.  Consequently, when Charles Darwin published "On the Origin of Species", he and Alfred Russel Wallace were regarded by their scientific peers as having originated (independently of each other) the theory of evolution by natural selection; it has been suggested that Darwin and/or Wallace had encountered Matthew's earlier work, but there is no hard evidence of this.  After the publication of "On the Origin of Species", Matthew contacted Darwin, who in subsequent editions of the book acknowledged that the principle of natural selection had been anticipated by Matthew's brief statement, mostly contained in the appendices and "addendum" of his 1831 book, "On Naval Timber and Aboriculture".
+
+Question: One of the supporters of the Edinburgh Seven released a joint publication detailing natural selection with which man?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "supporter_name": {
+      "type": "string",
+      "description": "The name of the individual who supported the Edinburgh Seven."
+    },
+    "supported_group": {
+      "type": "string",
+      "description": "The name of the group that was supported."
+    },
+    "joint_publication_partner": {
+      "type": "string",
+      "description": "The name of the person with whom the supporter released a joint publication."
+    },
+    "publication_topic": {
+      "type": "string",
+      "description": "The main topic of the joint publication."
+    }
+  },
+  "required": [
+    "supporter_name",
+    "supported_group",
+    "joint_publication_partner",
+    "publication_topic"
+  ],
+  "additionalProperties": false
+}

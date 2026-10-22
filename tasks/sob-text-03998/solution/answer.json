@@ -1,0 +1,18 @@
+{
+  "person_1_name": "Ronnie James Dio",
+  "person_1_band_count": 5,
+  "person_1_bands": [
+    "Elf",
+    "Rainbow",
+    "Black Sabbath",
+    "Dio",
+    "Heaven & Hell"
+  ],
+  "person_2_name": "Luca Prodan",
+  "person_2_band_count": 1,
+  "person_2_bands": [
+    "Sumo"
+  ],
+  "person_with_more_bands": "Ronnie James Dio",
+  "comparison_summary": "Ronnie James Dio is affiliated with more bands than Luca Prodan."
+}

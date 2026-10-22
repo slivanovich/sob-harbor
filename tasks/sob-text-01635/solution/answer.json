@@ -1,0 +1,14 @@
+{
+  "comparison_result": "Never a Dull Moment",
+  "films_compared": [
+    {
+      "title": "Never a Dull Moment",
+      "release_year": 1950
+    },
+    {
+      "title": "National Treasure",
+      "release_year": 2004
+    }
+  ],
+  "earliest_release_year": 1950
+}

@@ -1,0 +1,32 @@
+{
+  "question_criteria": {
+    "release_year": 2006,
+    "director_name": "Spike Lee",
+    "subject_keywords": [
+      "devastation",
+      "New Orleans"
+    ],
+    "film_type": "documentary"
+  },
+  "candidate_films": [
+    {
+      "title": "American Movie",
+      "director": "Chris Smith",
+      "release_year": 1999,
+      "is_documentary": true,
+      "is_about_new_orleans_devastation": false
+    },
+    {
+      "title": "When the Levees Broke",
+      "director": "Spike Lee",
+      "release_year": 2006,
+      "is_documentary": true,
+      "is_about_new_orleans_devastation": true
+    }
+  ],
+  "identified_film": {
+    "title": "When the Levees Broke",
+    "director": "Spike Lee",
+    "release_year": 2006
+  }
+}

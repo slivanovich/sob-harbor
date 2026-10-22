@@ -1,0 +1,20 @@
+{
+  "game_title": "EA Sports UFC 2",
+  "cover_athletes": [
+    {
+      "name": "Ronda Rousey",
+      "nationality": "American",
+      "professions": [
+        "mixed martial artist",
+        "judoka",
+        "actress"
+      ],
+      "is_answer_to_question": true
+    },
+    {
+      "name": "Conor McGregor",
+      "is_answer_to_question": false
+    }
+  ],
+  "answer_athlete_name": "Ronda Jean Rousey"
+}

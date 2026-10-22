@@ -1,0 +1,15 @@
+{
+  "film_title": "ATL",
+  "film_release_year": 2006,
+  "actor_stage_name": "Big Boi",
+  "actor_band_membership": {
+    "band_name": "Outkast",
+    "band_role": "member"
+  },
+  "featured_track_details": {
+    "track_title": "Git Up, Git Out",
+    "track_artist": "Outkast",
+    "track_album": "Southernplayalisticadillacmuzik"
+  },
+  "answer_band_name": "Outkast"
+}

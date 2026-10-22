@@ -1,0 +1,12 @@
+{
+  "tour_name": "Harajuku Lovers Tour",
+  "artist": {
+    "name": "Gwen Stefani",
+    "is_also_band_member": true
+  },
+  "band": {
+    "name": "No Doubt",
+    "origin_city": "Anaheim",
+    "origin_state": "California"
+  }
+}

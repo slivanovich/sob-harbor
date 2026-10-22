@@ -1,0 +1,17 @@
+{
+  "bands_compared": [
+    {
+      "name": "Jesus Jones",
+      "formation_year": 1988
+    },
+    {
+      "name": "TV on the Radio",
+      "formation_year": 2001
+    }
+  ],
+  "band_formed_first": {
+    "name": "Jesus Jones",
+    "formation_year": 1988
+  },
+  "comparison_statement": "Jesus Jones was formed first."
+}

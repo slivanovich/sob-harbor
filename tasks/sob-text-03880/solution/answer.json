@@ -1,0 +1,13 @@
+{
+  "actress_information": {
+    "name": "Mary Frann",
+    "known_for_role": "Joanna Loudon",
+    "known_for_show": "Newhart"
+  },
+  "film_co_starring_details": {
+    "film_title": "Nashville Rebel",
+    "release_year": 1966,
+    "other_main_star": "Waylon Jennings"
+  },
+  "answer_year": 1966
+}

@@ -1,0 +1,14 @@
+{
+  "bands_compared": [
+    {
+      "band_name": "Kaizers Orchestra",
+      "origin_country": "Norway"
+    },
+    {
+      "band_name": "Fake Problems",
+      "origin_country": "USA"
+    }
+  ],
+  "are_from_same_country": false,
+  "reasoning": "Kaizers Orchestra is a Norwegian band, while Fake Problems is from Naples, Florida, USA. Therefore, they are not from the same country."
+}

@@ -1,0 +1,16 @@
+{
+  "politician_name": "R. T. Rybak",
+  "nationality": "American",
+  "professions": [
+    "politician",
+    "journalist",
+    "businessperson",
+    "activist"
+  ],
+  "mayoral_terms_won": 3,
+  "third_term_election_details": {
+    "election_year": 2009,
+    "vote_percentage": 73.6,
+    "city": "Minneapolis"
+  }
+}

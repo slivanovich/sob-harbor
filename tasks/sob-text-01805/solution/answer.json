@@ -1,0 +1,11 @@
+{
+  "film_title": "Waiting for Guffman",
+  "canadian_actor": {
+    "name": "Eugene Levy",
+    "nationality": "Canadian"
+  },
+  "co_star_actor": {
+    "name": "Catherine O'Hara",
+    "nationality": "Canadian-American"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "theme_park_name": "Disney California Adventure",
+  "has_pixar_themed_areas": true,
+  "themed_areas": [
+    {
+      "area_name": "A Bug's Land",
+      "themed_after_film": "A Bug's Life",
+      "film_details": {
+        "film_title": "A Bug's Life",
+        "production_studio": "Pixar Animation Studios",
+        "release_year": 1998
+      }
+    },
+    {
+      "area_name": "Radiator Springs",
+      "themed_after_film": "Cars",
+      "film_details": {
+        "film_title": "Cars",
+        "production_studio": "Pixar",
+        "release_year": 2006
+      }
+    }
+  ]
+}

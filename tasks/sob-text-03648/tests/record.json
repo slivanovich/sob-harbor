@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "a50e157ae96c7fbd171d4a03895caea82eb6ca016f4249b3fac89f5e7650ae02",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7a912b55429941d65f26b3",
+    "source_dataset": "hotpotqa",
+    "source_answer": "two and a half millennia",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Odonatoptera: The Odonatoptera are a superorder (sometimes treated as an order) of ancient winged insects, placed in the Palaeoptera which probably form a paraphyletic group however.  The dragonflies and damselflies are the only living members of this group, which was far more diverse in the late Paleozoic and contained gigantic species, including the griffinflies (colloquially called \"giant dragonflies\", although they were not dragonflies in the strict sense) of the order Protodonata.  This lineage dates back at least to the Bashkirian, not quite 320 million years ago.\n\nAltis: The Altis (Greek: Ἄλτις) also referred to as the sanctuary to the gods, is the name of a location most well known for being a place of significant religious importance to the Ancient Greeks, considered to be a sacred precinct that was constructed and used from around 776 BCE to fourth century BCE and used for the worship of several Greek gods and goddesses.  Though the architects are not definitively known, it is generally attributed to be partially the work of Libon of Elis.  Located in the wide valley of the Alfeiós River (also Romanized as Alpheus, Alpheios) in the western part of Peloponnesus, around 18 kilometers away from the Ionian Sea, the name Altis was derived from a corruption of the Elean word alsos meaning “the grove” because the area was thickly wooded with oaks, plane trees, poplars, and olives.  The structure itself was an irregular quadrangular area more than 200 yards (183 meters) on each side and walled except to the North where it was bounded by the Kronion (Mount Kronos).  Inside were sanctuaries, the centers of religious worship, where the Greeks built over 70 temples, treasuries, altars, statues, and other structures in dedication to their gods.  The site was continuously inhabited from Mycenaean times until the 6th century BCE, where cult activity apparently first began at the foot of the hill of Kronos where altars to the goddesses Rhea, Gaia, and Eileithyia have left their traces.  Some other cults found here were devoted to figures like the hero cult of Pelops and Hippodameia (arguably the oldest shrine there) important mythological figures that are generally known for the founding myth of the Olympic Games.  During the time of the Dorian Invasion settlers from northwestern Greece inhabited the Altis whereby they introduced the worship of two major Greek deities in the Greek pantheon Hera and Zeus as well as constructing the most memorable things there, the Sanctuary and altar of Zeus, where to this day the ruins of the two principal temples: the Temple of Hera (6th century BCE) and the Temple of Zeus (5th century BCE) still remain.  Throughout Antiquity this Temple was considered the most perfect example of the Doric order.  This sanctuary also contained one of the highest concentrations of masterpieces of the ancient Mediterranean world though many have since been lost.  In connection with the cult of Zeus the Altis was then given the name Olympia, with famous Olympia, Greece being built on this site where also the first Olympic Games took place here, once every four years.\n\nAncient Greek boxing: Ancient Greek boxing (Greek: πυγμαχία \"pygmachia\", \"fist fighting\") dates back to at least the 8th century BCE (Homer's \"Iliad\"), and was practiced in a variety of social contexts in different Greek city-states.  Most extant sources about ancient Greek boxing are fragmentary or legendary, making it difficult to reconstruct the rules, customs and history surrounding this activity in great detail.  Still, it is clear that gloved boxing bouts were a significant part of ancient Greek athletic culture throughout the early classical period.\n\nAncient maritime history: Maritime history dates back thousands of years.  In ancient maritime history, evidence of maritime trade between civilizations dates back at least two millennia.  The first prehistoric boats are presumed to have been dugout canoes which were developed independently by various stone age populations.  In ancient history, various vessels were used for coastal fishing and travel.  A mesolithic boatyard has been found from the Isle of Wight in Britain\n\nAz-Zeeb: Az-Zeeb (Arabic: الزيب‎ ‎ , also spelled \"al-Zib\") was a Palestinian Arab village located 13.5 km north of Acre on the coast of the Mediterranean Sea.  Mentioned in the Bible by its ancient name \"Achzib\", evidence of human settlement at the site dates back to the 18th century BCE.  By the 10th century BCE, it was a prosperous and fortified Phoenician town.  Conquered by the Assyrian empire in the 8th century BCE, it was subsequently ruled by the Persians.  During the rule of the Roman Empire, it was known as \"Ecdippa\".  Arab geographers were referring to it as \"az-Zeeb\" by the early Middle Ages.\n\nChinese philosophy: Chinese philosophy originates in the Spring and Autumn period and Warring States period, during a period known as the \"Hundred Schools of Thought\", which was characterized by significant intellectual and cultural developments.  Although much of Chinese philosophy begins in the Warring States period, elements of Chinese philosophy have existed for several thousand years; some can be found in the Yi Jing (the \"Book of Changes\"), an ancient compendium of divination, which dates back to at least 672 BCE.  It was during the Warring States era that what Sima Tan termed the major philosophical schools of China: Confucianism, Legalism, and Daoism, arose, along with philosophies that later fell into obscurity, like Agriculturalism, Mohism, Chinese Naturalism, and the Logicians.\n\nI Ching: The I Ching ( in Mandarin), also known as Classic of Changes or Book of Changes, is an ancient Chinese divination text and the oldest of the Chinese classics.  Possessing a history of more than two and a half millennia of commentary and interpretation, the \"I Ching\" is an influential text read throughout the world, providing inspiration to the worlds of religion, psychoanalysis, business, literature, and art.  Originally a divination manual in the Western Zhou period (1000750), over the course of the Warring States period and early imperial period (500200) it was transformed into a cosmological text with a series of philosophical commentaries known as the \"Ten Wings.\"  After becoming part of the Five Classics in the 2nd century BC, the \"I Ching\" was the subject of scholarly commentary and the basis for divination practice for centuries across the Far East, and eventually took on an influential role in Western understanding of Eastern thought.\n\nRaisin cake: Raisin cake is a type of cake that is prepared using raisins as a main ingredient.  Additional ingredients are sometimes used, such as chocolate and rum.  Raisin cake dates back to at least the time of the reign of David, circa 1010–970 BCE.  Boiled raisin cake is prepared by boiling various ingredients and then baking the mix in an oven.  It dates back to at least the time of the American Civil War (1861–1865).\n\nIndian logic: The development of Indian logic dates back to the \"anviksiki\" of Medhatithi Gautama (c. 7th century BCE) the Sanskrit grammar rules of Pāṇini (c. 5th century BCE); the Vaisheshika school's analysis of atomism (c. 2nd century BCE); the analysis of inference by Gotama (c. 2nd century), founder of the Nyaya school of Hindu philosophy; and the tetralemma of Nagarjuna (c. 2nd century CE).  Indian logic stands as one of the three original traditions of logic, alongside the Greek and the Chinese logic.  The Indian tradition continued to develop through to early modern times, in the form of the Navya-Nyāya school of logic.\n\nHistory of Mars observation: The recorded history of Mars observation dates back to the era of the ancient Egyptian astronomers in the 2nd millennium BCE.  Chinese records about the motions of Mars appeared before the founding of the Zhou Dynasty (1045 BCE).  Detailed observations of the position of Mars were made by Babylonian astronomers who developed arithmetic techniques to predict the future position of the planet.  The ancient Greek philosophers and Hellenistic astronomers developed a geocentric model to explain the planet's motions.  Measurements of Mars' angular diameter can be found in ancient Greek and Indian texts.  In the 16th century, Nicolaus Copernicus proposed a heliocentric model for the Solar System in which the planets follow circular orbits about the Sun.  This was revised by Johannes Kepler, yielding an elliptic orbit for Mars that more accurately fitted the observational data.",
+    "question": "How many years of commentary and interpretation are contained in an ancient compendium of divination, which dates back to at least 672 BCE?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "item_name": {
+          "type": "string",
+          "description": "The name of the ancient compendium of divination."
+        },
+        "item_type": {
+          "type": "string",
+          "description": "The type of the item, e.g., 'divination text' or 'compendium'."
+        },
+        "earliest_known_date_bce": {
+          "type": "integer",
+          "description": "The earliest known date of the item in BCE."
+        },
+        "commentary_duration_description": {
+          "type": "string",
+          "description": "The description of the duration of commentary and interpretation."
+        },
+        "commentary_duration_years": {
+          "type": "integer",
+          "description": "The duration of commentary and interpretation in years."
+        }
+      },
+      "required": [
+        "item_name",
+        "item_type",
+        "earliest_known_date_bce",
+        "commentary_duration_description",
+        "commentary_duration_years"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "item_name": "I Ching",
+      "item_type": "ancient Chinese divination text",
+      "earliest_known_date_bce": 672,
+      "commentary_duration_description": "more than two and a half millennia",
+      "commentary_duration_years": 2500
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

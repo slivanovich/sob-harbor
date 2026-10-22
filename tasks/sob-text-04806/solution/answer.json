@@ -1,0 +1,17 @@
+{
+  "artist": {
+    "name": "David Allan Coe",
+    "birth_date": "1939-09-06",
+    "roles": [
+      "songwriter",
+      "outlaw country music singer",
+      "guitarist"
+    ],
+    "popularity_period": "1970s and 1980s"
+  },
+  "song_details": {
+    "title": "Longhaired Redneck",
+    "artist_contribution": "co-written and recorded by"
+  },
+  "question_focus": "artist's birth date"
+}

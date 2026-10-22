@@ -1,0 +1,13 @@
+{
+  "sausage_name": "Cervelat",
+  "latin_origin": "cerebrus",
+  "production_locations": [
+    "Switzerland",
+    "France",
+    "Germany"
+  ],
+  "specific_regions": [
+    "Alsace",
+    "Lyon"
+  ]
+}

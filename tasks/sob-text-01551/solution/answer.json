@@ -1,0 +1,15 @@
+{
+  "courtier_details": {
+    "name": "Douwe Sirtema van Grovestins",
+    "role": "Frisian courtier"
+  },
+  "stadtholder_details": {
+    "name": "William IV, Prince of Orange-Nassau",
+    "titles": [
+      "Prince of Orange",
+      "Prince of Orange-Nassau"
+    ],
+    "historical_distinction": "first hereditary Stadtholder of all the United Provinces"
+  },
+  "answer_stadtholder_name": "William IV, Prince of Orange-Nassau"
+}

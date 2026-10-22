@@ -1,0 +1,11 @@
+{
+  "mixed_martial_artist": {
+    "name": "Tim Boetsch",
+    "nationality": "American",
+    "birth_date": "1981-01-28"
+  },
+  "trainer": {
+    "name": "Matt Hume"
+  },
+  "relationship_description": "trained by"
+}

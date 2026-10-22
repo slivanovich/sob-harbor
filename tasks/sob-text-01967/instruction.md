@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+International Bright Young Thing: "International Bright Young Thing" is a song by the British alternative dance band Jesus Jones.  It was released as the third single from their second album "Doubt", and was a top-ten hit in Britain.  It followed "Real Real Real" and "Right Here, Right Now".  All three singles were included on a Jesus Jones compilation album "" released in 2002.
+
+Flashed Junk Mind: "Flashed Junk Mind" is a song performed by German duo Milky Chance.  It was released as a digital download on 29 August 2014 through Lichtdicht as the third and final single from their debut studio album "Sadnecessary" (2013).  The song was written and produced by Milky Chance.
+
+Cocoon (Milky Chance song): "Cocoon" is a song performed by German duo Milky Chance.  It was released as a digital download on 11 November 2016 through Lichtdicht as the lead single from their second studio album "Blossom".  The song was also written and produced by Milky Chance.
+
+Milky Chance: Milky Chance is a German folk group originating from Kassel.  It consists of lead vocalist and guitarist Clemens Rehbein, DJ and producer Philipp Dausch, and guitarist Antonio Greger.
+
+Perverse (album): Perverse is the third studio album by British rock band Jesus Jones, released in 1993 on Food Records.  After their international success following the release of "Doubt" (1991), Jesus Jones, especially band leader Mike Edwards, conceived "Perverse" as a darker, more contemporary album.  Fusing rave and techno music into more traditional rock and pop song structures, the album is heavier than its predecessors and features lyrics that concern the future.  Edwards wrote the lyrics of the album during the band's 1991 tour, using a Roland W-30 sampler to conceive songs in their earliest stages.
+
+Stolen Dance: "Stolen Dance" is a song by German duo Milky Chance, released in 2013 in Germany.  The single has reached number one in Austria, France, Belgium (Wallonia), Switzerland, Poland, Czech Republic and Hungary.  A 4-track Stolen Dance EP (including the single "Down by the River") was released by Lichtdicht Records and Republic Records on 9 May 2014.  The song also placed at number 4 in Triple J's Hottest 100, 2014.
+
+Culture Vulture (EP): Culture Vulture !  is an EP by the British rock band Jesus Jones.  Though considered by some to be an album due only to its length, it is an EP, since only the first four tracks are meant to be heard as fully produced songs.  The remaining seven tracks are the "stems" of the title track, meaning that each one is the composite of all the singular recordings that are combined to make up every individual instrumental or vocal performance used in the song; these were added in order to give listeners the opportunity to remix the song themselves, and were not intended for casual listening.  Fans were also encouraged to submit their remixes to the band, who then selected 24 of them which were hosted on the official Jesus Jones site for a period of time.
+
+Jesus Jones: Jesus Jones are a British alternative rock band from Bradford-on-Avon in Wiltshire, formed in late 1988, recorded and performed in the late 1980s into the 2000s.  Their track "Right Here, Right Now" was an international hit which was subsequently globally licensed for promotional and advertising campaigns.  They also achieved chart success with the songs "Real Real Real", "International Bright Young Thing" and "Info Freako".
+
+Never Enough: The Best of Jesus Jones: Never Enough: The Best of Jesus Jones is a compilation album/greatest hits album by British alternative rock/dance band Jesus Jones, released by the band's former record label EMI on 27 May 2002.
+
+How's This Even Going Down?: How's This Even Going Down?  is an EP single released by Jesus Jones in June, 2016.  The single was released in electronic format as well as two different versions of a limited-edition 2-disc vinyl record.  One version, available from the Jesus Jones website, came in neon yellow and solid purple colors (150 copies), whereas the other was available at the Speedowax website and came in blue and clear discs (350 copies).
+
+Question: In between Milky Chance and Jesus Jones which bands track is "Right Here, Right Now" ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "track_name": {
+      "type": "string",
+      "description": "The name of the track in question."
+    },
+    "identified_band": {
+      "type": "string",
+      "description": "The band identified as performing the track."
+    },
+    "other_bands_considered": {
+      "type": "array",
+      "description": "Other bands mentioned in the question for comparison.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasoning_source": {
+      "type": "string",
+      "description": "A direct quote from the context supporting the identified band."
+    }
+  },
+  "required": [
+    "track_name",
+    "identified_band",
+    "other_bands_considered",
+    "reasoning_source"
+  ],
+  "additionalProperties": false
+}

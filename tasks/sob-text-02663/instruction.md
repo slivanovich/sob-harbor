@@ -1,0 +1,106 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Damien Chazelle: Damien Sayre Chazelle ( ; born January 19, 1985) is an American director, screenwriter and producer.  Chazelle made his directorial debut with the musical film "Guy and Madeline on a Park Bench" (2009).  He rose to prominence for writing and directing his second feature film, "Whiplash" (2014), which received five Academy Award nominations, including Best Picture and Best Adapted Screenplay.  His 2016 film "La La Land" was a critical and commercial success, winning all seven of its Golden Globe nominations, including Best Picture, Best Director and Best Screenplay.  It also received a record-tying fourteen Academy Award nominations, winning six including Best Director, making Chazelle the youngest person in history to win the Oscar for Best Director and to win the Golden Globe for Best Director.
+
+Cainan Wiebe: Cainan Wiebe (born August 27, 1995) is a Canadian actor.  Beginning his professional career as a child actor at the age of eight, Wiebe is a two-time Young Artist Award winner and five-time nominee, perhaps best known for his feature film roles in the "Air Bud" series, "", "Diary of a Wimpy Kid", "16 Wishes" and "The Boy Who Cried Werewolf", as well as for his various guest-starring roles on such television series as "Sanctuary", "Tin Man", "Supernatural", "Falling Skies", and "R.L. Stine's The Haunting Hour".
+
+Robert Altman: Robert Bernard Altman ( ; February 20, 1925 – November 20, 2006) was an American film director, screenwriter, and film producer.  A five-time nominee of the Academy Award for Best Director and an enduring figure from the New Hollywood era, Altman was considered a "maverick" in making films with a highly naturalistic but stylized and satirical aesthetic, unlike most Hollywood films.  He is consistently ranked as one of the greatest and most influential filmmakers in American cinema.
+
+Rob Marshall: Rob Marshall (born October 17, 1960) is an American theater director, film director, and choreographer.  His most noted work is the 2002 Academy Award for Best Picture winner "Chicago", for which he won a Directors Guild of America Award, as well as Academy Award, BAFTA, and Golden Globe nominations for Best Director.  A five-time Tony Award nominee, he also won a Primetime Emmy Award for his choreography in the TV movie "Annie" (1999).
+
+Fernando Meirelles: Fernando Ferreira Meirelles (born November 9, 1955) is a Brazilian film director, producer and screenwriter.  His best known film is "City of God", released in 2002 in Brazil and in 2003 in the U.S. by Miramax Films, which received international critical acclaim.  For his work in the film, he was eventually nominated for an Academy Award for Best Director.  He was also nominated for a Golden Globe Award for Best Director in 2005 for "The Constant Gardener", which garnered the Academy Award for Best Supporting Actress to Rachel Weisz.  He also directed the 2008 adaptation of José Saramago's novel "Blindness", and the 2011 film "360".
+
+Afrodiziak: Afrodiziak was a British singing group composed of Caron Wheeler, Claudia Fontaine, and later Naomi Thompson, that was active in the 1980s.  As a duo, Wheeler and Fontaine were best known for performing backing vocals on The Jam's final single "Beat Surrender" in 1982 (with whom they also performed on their final tour) and Elvis Costello's 1983 album "Punch the Clock", especially its single, the international hit "Everyday I Write the Book".  After the addition of a third member, Naomi Thompson, they went on to sing for acts such as Heaven 17 and Howard Jones.  Afrodiziak performed backing vocals on the hit single Free Nelson Mandela, including the a cappella intro, staging it at The Tube (Channel4) in March 1984.  Heaven 17's 1984 album, "How Men Are", featured them prominently, especially on the singles "Sunset Now" and "And That's No Lie".  In 1984 and 1985 they performed on Madness's albums "Keep Moving" and "Mad Not Mad" respectively, also appearing in the video for the Madness single "Sweetest Girl".  Also in 1985, they performed backing vocals on the first two songs on Howard Jones' second album, "Dream Into Action", both of which ("Things Can Only Get Better" and "Life in One Day") became worldwide hit singles; later that year, they went on tour as part of Jones' band.  Other acts the group sang backup for include Japan, Ian Gillan, Aztec Camera, Maxi Priest, Aswad, Sam Brown, and Julia Fordham.  Besides "The Tube", Afrodiziak also appeared on "Top of the Pops", "The Old Grey Whistle Test", "Solid Gold", and "American Bandstand".  They performed live at the Montreux Jazz Festival, Live Aid Japan, Red Nose Day of Charity, and the first Free Nelson Mandela Concert.
+
+Diane Ladd: Diane Ladd (born November 29, 1932) is an American actress, film director, producer and author.  She has appeared in over 120 film and television roles.  For the 1974 film "Alice Doesn't Live Here Anymore", she won the BAFTA Award for Best Actress in a Supporting Role and was nominated for the Academy Award for Best Supporting Actress.  She went on to win the Golden Globe Award for Best Supporting Actress on Television for "Alice" (1980–81), and to receive Academy Award nominations for "Wild at Heart" (1990) and "Rambling Rose" (1991).  Her other film appearances include "Chinatown" (1974), "Ghosts of Mississippi" (1996), "Primary Colors" (1998), "28 Days" (2000), and "American Cowslip" (2008).  Ladd is the mother of actress Laura Dern, with her ex-husband, actor Bruce Dern.
+
+Joseph Valentine: Joseph A. Valentine (July 24, 1900 in New York City, as "Giuseppe Valentino" – May 18, 1949 in (Cheviot Hills, California) was an Italian-American cinematographer, five-time nominee for the Academy Award for Best Cinematography, and co-winner once in 1949.
+
+Oliver Stone: William Oliver Stone (born September 15, 1946) is an American screenwriter, film producer, and director of motion pictures and documentaries.  Stone won an Academy Award for Best Adapted Screenplay as writer of "Midnight Express" (1978).  He also wrote the acclaimed gangster movie "Scarface" (1983).  As a director, Stone achieved prominence as director/writer of the war drama "Platoon" (1986), for which Stone won the Academy Award for Best Director; the film was awarded Best Picture.  "Platoon" was the first in a trilogy of films based on the Vietnam War, in which Stone served as an infantry soldier.  He continued the series with "Born on the Fourth of July" (1989)—for which Stone won his second Best Director Oscar—and "Heaven & Earth" (1993).  Stone's other notable works include the Salvadoran Civil War-based drama "Salvador" (1986); the financial drama "Wall Street" (1987) and its 2010 sequel ""; the Jim Morrison biopic "The Doors" (1991); and a trilogy of films based on the American Presidency—"JFK" (1991), "Nixon" (1995) and "W." (2008).  His latest film is "Snowden" (2016).
+
+Thieves Like Us (song): "Thieves Like Us" is a single by British group New Order, released in April 1984 by Factory Records, catalogue number FAC 103.  It is named after the 1974 film "Thieves Like Us", directed by Robert Altman.  Bernard Sumner states during a TV interview in 1984, that the song title was suggested by John 'Jellybean' Benitez (an associate of the song's co-writer, Arthur Baker).
+
+Question: What British singing group released a single in 1984 based on a 1974 film directed by a five-time nominee of the Academy Award for Best Director?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "group_name": {
+      "type": "string",
+      "description": "The name of the British singing group."
+    },
+    "single_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the single released by the group."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the single was released."
+        }
+      },
+      "required": [
+        "title",
+        "release_year"
+      ],
+      "additionalProperties": false
+    },
+    "film_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the film the single was named after."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the film was released."
+        },
+        "director": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the film's director."
+            },
+            "academy_award_nominations_best_director": {
+              "type": "integer",
+              "description": "The number of Academy Award for Best Director nominations the director received."
+            }
+          },
+          "required": [
+            "name",
+            "academy_award_nominations_best_director"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "title",
+        "release_year",
+        "director"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "group_name",
+    "single_details",
+    "film_details"
+  ],
+  "additionalProperties": false
+}

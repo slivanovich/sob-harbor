@@ -1,0 +1,11 @@
+{
+  "person_name": "Jimmy Floyd Hasselbaink",
+  "nationality": "Dutch",
+  "birth_date": "27 March 1972",
+  "current_role": "manager",
+  "former_role": "professional footballer",
+  "sibling_relationship": {
+    "sibling_name": "Carlos Hasselbaink",
+    "relationship_type": "younger brother"
+  }
+}

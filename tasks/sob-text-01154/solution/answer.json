@@ -1,0 +1,9 @@
+{
+  "film_title": "Wasteland",
+  "star_name": "Lily Carter",
+  "star_birth_details": {
+    "birth_month": "April",
+    "birth_day": 15,
+    "birth_year": 1990
+  }
+}

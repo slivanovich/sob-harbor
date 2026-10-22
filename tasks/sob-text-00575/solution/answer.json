@@ -1,0 +1,18 @@
+{
+  "musician_name": "Stephen Pearcy",
+  "bands_associated": [
+    "Ratt",
+    "Firedome",
+    "Crystal Pystal",
+    "Arcade",
+    "Vicious Delite",
+    "Vertex"
+  ],
+  "collaborations": [
+    {
+      "collaborator_name": "Dario Seixas Filho",
+      "collaboration_type": "toured with"
+    }
+  ],
+  "role_in_ratt": "founder, singer, and songwriter"
+}

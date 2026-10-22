@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "14f28254e5c4ccc29933f992a2038322f0ed5e4b0629916cbad5f1efd65d8652",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8da50d5542994ba4e3dce1",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Massachusetts Bay Colony",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2008 SunTrust Indy Challenge: The 2008 SunTrust Indy Challenge was the ninth round of the 2008 IndyCar Series season and took place on June 28, 2008 at the 0.750 mi Richmond International Raceway, in Henrico County, Virginia.  At the start, Ryan Hunter-Reay spun just before the start/finish line, which brought the yellow out immediately.  The first 7 laps were run under yellow with Tony Kanaan leading from the pole position.  On lap 8, the green came out, but only one lap was completed before the next yellow.  Will Power was driving below Hélio Castroneves, lost control, and crashed in turn 4.  The race finally got going on lap 21, when the green came out once again.  On lap 31, A. J. Foyt IV touched wheels with John Andretti, and Foyt crashed in the wall in turn 2.  His Vision Racing teammate Ed Carpenter ran over debris from the crash, and both cars were sidelined.  During the caution, a handful of cars pitted, including Danica Patrick and rookie Jaime Camara, but most of the leaders stayed on the track.\n\nJohn Winthrop: John Winthrop (12 January 1587/88 – 26 March 1649) was an English Puritan lawyer and one of the leading figures in founding the Massachusetts Bay Colony, the second major settlement in New England, following Plymouth Colony.  Winthrop led the first large wave of immigrants from England in 1630 and served as governor for 12 of the colony's first 20 years.  His writings and vision of the colony as a Puritan \"city upon a hill\" dominated New England colonial development, influencing the governments and religions of neighboring colonies.\n\nSamuel Green (printer): Samuel Green (c.1614 – January 1, 1702) was an American printer and progenitor of the Green family of printers, which included Bartholomew Green, Bartholomew Green, Jr. and Joseph Dennie.  Born in England, he came to Cambridge, Massachusetts with John Winthrop in 1630.  He was one of the first American printers; while he arrived in America eight years before Stephen Daye, there is no record of him being a printer until ten years after Daye's business began.  Green was also Cambridge's town clerk, and captain of the town militia.  Green had nineteen children by two wives, and his descendants were printers in Connecticut, Maryland, Pennsylvania and Nova Scotia, among other places.\n\nSamuel Chidley: Samuel Chidley (1616–c. 1672) was an English Puritan activist and controversialist.  A radical separatist in London before and during the English Civil War, he became a leading Leveller, a treasurer of the movement.  A public servant and land speculator under the Commonwealth and Protectorate, he became rich and campaigned for social, moral and financial reform.  He was ruined by the Restoration and returned to live in relative poverty in his native Shrewsbury.\n\nThe Godly Man's Picture: The Godly Man's Picture is a work of systematic theology by Thomas Watson, a 17th century English Puritan preacher.  The full title is The Godly Man's Picture Drawn with a Scripture Pencil, or, Some Characteristic Marks of a Man who is Going to Heaven.  The book is a work of English Puritan spirituality.\n\nJohn Humphrey (Massachusetts): John Humphrey (also spelled Humfrey or Humfry, c. 1597–1661) was an English Puritan and an early funder of the English colonisation of North America.  He was the treasurer of the Dorchester Company, which established an unsuccessful settlement on Massachusetts Bay in the 1620s, and was deputy governor of the Massachusetts Bay Company from 1629 to 1630.  He came to Massachusetts in 1634, where he served as a magistrate and was the first sergeant major general of the Ancient and Honorable Artillery Company.  He became involved in English attempts to settle Providencia Island in the late 1630s, and returned to England in 1641 after financial reverses and probable religious differences with other members of the Massachusetts ruling elite.  He then became involved in an attempt to settle The Bahamas in the late 1640s, and had some involvement in the politics of the English Civil War.\n\nEdward Howell (died 1655): Edward Howell, Gent.  (1584–1655), born in Marsh Gibbon, Buckinghamshire, was an English Puritan who settled at Lynn, Massachusetts in 1635.  He was known for the founding of Southampton, New York with Edward Howell, Edmond Farrington, Edmund Needham, Abraham Pierson the Elder, Thomas Sayre, Josiah Stanborough, George Welbe, Henry Walton, Job Sayre, and Thomas Halsey in 1639/40.\n\nHistory of Massachusetts: Massachusetts was first colonized by principally English Europeans in the early 17th century, and became the Commonwealth of Massachusetts in the 18th century.  Prior to English colonization of the area, it was inhabited by a variety of mainly Algonquian language indigenous tribes.  The first permanent English settlement in New England came in 1620 with the founding of Plymouth Colony by the Pilgrims who sailed on the \"Mayflower\".  It set precedents but never grew large.  A large-scale Puritan migration began in 1630 with the establishment of the Massachusetts Bay Colony, and spawned the settlement of other New England colonies.  Friction with the natives erupted in the high-casualty King Philip's War in the 1670s.  Puritanism was the established religion and was strictly enforced; dissenters were exiled.  The Colony clashed with Anglican opponents in England over its religious intolerance and the status of its charter.  Most people were farmers.  Businessmen established wide-ranging trade links, sending ships to the West Indies and Europe, and sometimes shipping goods in violation of the Navigation Acts.  These political and trade issues led to the revocation of the Massachusetts charter in 1684.\n\nEdward Howell Family Association: The Edward Howell Family Association (EHFA) is a lineage society for descendants of Edward Howell (1584–1655).  Howell, a native of Marsh Gibbon, Buckinghamshire, was an English Puritan who settled at Lynn, Massachusetts in 1635.  In the 1640s, he was instrumental in the founding of Southampton, New York.\n\nNathaniel Bacon (politician): Nathaniel Bacon (12 December 1593 – 1660) was an English Puritan lawyer, writer and politician who sat in the House of Commons at various times between 1645 and 1660.",
+    "question": "Samuel Green came to Massachusetts with an English Puritan lawyer who was one of the leading figures in founding what settlement?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "puritan_lawyer": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the English Puritan lawyer."
+            },
+            "role_in_founding": {
+              "type": "string",
+              "description": "Description of the lawyer's role in founding the settlement."
+            }
+          },
+          "required": [
+            "name",
+            "role_in_founding"
+          ],
+          "additionalProperties": false
+        },
+        "settlement_founded": {
+          "type": "string",
+          "description": "The name of the settlement founded by the Puritan lawyer."
+        },
+        "year_of_arrival_with_green": {
+          "type": "integer",
+          "description": "The year Samuel Green came to Massachusetts with the lawyer."
+        }
+      },
+      "required": [
+        "puritan_lawyer",
+        "settlement_founded",
+        "year_of_arrival_with_green"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "puritan_lawyer": {
+        "name": "John Winthrop",
+        "role_in_founding": "one of the leading figures"
+      },
+      "settlement_founded": "Massachusetts Bay Colony",
+      "year_of_arrival_with_green": 1630
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "journalist_name": "Cliff Taylor",
+  "role": "managing editor",
+  "newspaper": {
+    "name": "The Irish Times",
+    "launch_year": 1859,
+    "country_of_origin": "Ireland"
+  }
+}

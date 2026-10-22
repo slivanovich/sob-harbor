@@ -1,0 +1,18 @@
+{
+  "unusual_venue_characteristic": "one of the teams played in its home stadium",
+  "finals_with_characteristic": [
+    {
+      "year": 1957,
+      "stadium": "Santiago Bernabéu Stadium",
+      "city": "Madrid",
+      "home_team": "Real Madrid"
+    },
+    {
+      "year": 2012,
+      "stadium": "Allianz Arena",
+      "city": "Munich",
+      "home_team": "Bayern Munich"
+    }
+  ],
+  "number_of_finals_with_characteristic": 2
+}

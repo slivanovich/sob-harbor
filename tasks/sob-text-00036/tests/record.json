@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "5207d7cf5a722d38e1c4d0c4b0f84f0612aea84d6e9bfbd179cc55f0e3d3d0f4",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac2bcc2554299218029db0b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "United States Army officer and military historian",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "John A. Moaney: John A. Moaney, Jr. (1914-1978) was born in Easton, Maryland.  He joined the United States Army in October 1941 and was sent to England after the start of World War II where he served with the 751 Quartermaster Company.  In August 1942, when Dwight D. Eisenhower was in England to plan the invasion of North Africa, Moaney transferred to Eisenhower’s personal staff.  For the next twenty seven years Moaney served as Eisenhower’s valet.\n\nSusan Eisenhower: Susan Elaine Eisenhower (born December 31, 1951) is a consultant, author, and expert on international security, space policy, energy, and relations between the Russian Federation and the United States of America.  She is the daughter of John Eisenhower, and the granddaughter of President Dwight D. Eisenhower.\n\nRaymond F. Chandler: Raymond F. Chandler III (born August 25, 1962) was the 14th Sergeant Major of the Army in the United States.  He was sworn in on March 1, 2011 and active on duty until January 30, 2015.  Chandler served in all tank crewman positions and has had multiple tours as a troop, squadron and regimental master gunner.  He has served in the 1st Infantry Division (FWD), 2nd Infantry Division, 4th Infantry Division, 1st Cavalry Division, 3rd Armored Division, 2nd Armored Cavalry Regiment, 3rd Armored Cavalry Regiment, United States Army Armor School, and the United States Army Sergeants Major Academy.  He also served as First Sergeant in four different detachments, troops and companies.  As a Sergeant Major, he served as Operations SGM in 1/2 ACR and as CSM in 1/7 Cavalry, 1st Cavalry Division, United States Army Garrison Fort Leavenworth, Kansas and the United States Army Armor School CSM.  Chandler was assigned as the United States Army Sergeants Major Academy CSM in December 2007.  In June 2009, Chandler became the 19th Commandant of USASMA and the first enlisted commandant in USASMA history.\n\nRonald E. Neumann: Ronald E. Neumann (born September 30, 1944) is an American diplomat who served as the United States Ambassador to Afghanistan (2005–2007), Bahrain (2001–2004) and Algeria (1994–1997).  He is the son of former ambassador Robert G. Neumann and traveled extensively after college in Afghanistan while his father was ambassador there.  Both he and his father served in diplomatic posts in Afghanistan precedented only by one other father/son pair, John Adams and his son John Quincy Adams who both served as Ministers to Britain.  He pronounces his last name Newmann (without the Germanic \"neu\") and his name is sometimes seen spelled that way.\n\nJohn Eisenhower: John Sheldon Doud Eisenhower (August 3, 1922 – December 21, 2013) was a United States Army officer and military historian.  As a son of President Dwight D. Eisenhower, he ended his military career as a decorated brigadier-general.  In the administration of President Richard Nixon (his father’s vice-president), he served as United States Ambassador to Belgium.\n\nClayton Fountain: Clayton Anthony Fountain (September 12, 1955 – July 12, 2004) was a federal prisoner, member of the Aryan Brotherhood, and convicted murderer.  Clayton was born on September 12, 1955, at the U.S. Army Hospital in Fort Benning, Georgia.  Clayton was the oldest of six children, having one brother and four sisters, and was named after his father, Clayton Raleigh Fountain.  The family moved every 1½ to 2 years.  While his father served combat tours in Korea and Vietnam and his mother was working, Clayton, as the oldest child in family, became a surrogate for both parents when he was very young.  He recalled maternal responsibilities for cooking, ironing, serving, cleaning, and caring for his young siblings.  It was the male/paternal role, however, for which his father had carefully trained him.  While serving in the Marines, he was convicted of murdering his staff sergeant in 1974, while stationed in the Philippines.  He was sentenced to life imprisonment, and was ultimately sent to the United States Penitentiary, Marion, which was at the time the highest-security prison in the nation.  Fountain used his military training to murder three prisoners and one correctional officer with a homemade knife while serving time at Marion, and was labeled the \"Most Dangerous Prisoner\" in the federal system.\n\nJames A. Helis: Dr. James A. Helis, Rear Admiral (United States Maritime Service), is the twelfth Superintendent of the United States Merchant Marine Academy.  A 1979 graduate of the United States Military Academy at West Point, New York, and a decorated Afghanistan War veteran, Helis served thirty years in the US Army, retiring at the rank of Colonel (United States Army).  In 2012, Helis was commissioned a United States Maritime Service Rear Admiral and appointed Superintendent of the United States Merchant Marine Academy by US Secretary of Transportation Ray LaHood.  Helis served his last eight years with the U.S. Army as an academic, culminating as Chair of the Department of National Security and Strategy at the United States Army War College, Carlisle, Pennsylvania.  Helis earned a Master of Arts in political science from the University of Pennsylvania, a Master of Military Affairs from the United States Army Command and General Staff College, School of Advanced Military Studies at Fort Leavenworth, Kansas, and a Doctor of Philosophy in international relations from the Fletcher School of Law and Diplomacy at Tufts University.  An airborne United States Army Ranger, Helis was awarded the Army Master Parachutist Badge.  Helis and his wife Jan have two sons, Dr. Corbin Helis, a physician and West Point graduate, and Ian Helis.\n\nFrank Maxwell Andrews: Lieutenant General Frank Maxwell Andrews (February 3, 1884 – May 3, 1943) was a senior officer of the United States Army and one of the founders of the United States Army Air Forces, which was later to become the United States Air Force.  In leadership positions within the Army Air Corps, he succeeded in advancing progress toward a separate and independent Air Force where predecessors and allies such as Billy Mitchell had failed.  Andrews was the first head of a centralized American air force and the first air officer to serve on the Army's general staff.  In early 1943, he took the place of General Dwight D. Eisenhower as commander of all U.S. troops in the European Theater of Operations.\n\nAlcide M. Lanoue: Alcide Moodie Lanoue (born November 2, 1934) is a retired lieutenant general in the United States Army.  He was Surgeon General of the United States Army from September 1992 to September 1996.  He attended The Medical Field Service School and the United States Army Command and General Staff College.  He is also an alumnus of Harvard University and Yale University School of Medicine.  He is an orthopedic surgeon.  Prior to his stint as Surgeon General, Lanoue was Commander of the Eisenhower Army Medical Center, Commandant of the United States Army Academy of Health Sciences, Deputy Surgeon General of the Army, and Commanding General of the United States Army Health Services Command.\n\nAndrew Dufur: Andrew J. Dufur, Jr. (August 29, 1847 – June 19, 1914) was the founder of the town of Dufur, Oregon, in the United States.  He was involved in stock-raising.  He was born in Williamstown, Vermont, on August 29, 1847.  His father was a native of New Hampshire, as were his parents.  His father served through the entire War of 1812 and drew a pension for a partial disability.  Andrew Jr.'s great grandfather was a French Huguenot, a refugee from France at the time of the historic French Revolution.  They were of the aristocratic element whose lives were forfeited through the edict of the leaders of the Sans Cullottes, Marat and Robspierre.  Andrew J. Dufur, Sr., crossed the plains to California in 1859.  His wife, Lois (Burnham) Dufur, was a native of Williamstown, Vermont, descendant of an old and distinguished New England family.  She died at Dufur in 1895.  She and her son went to Portland, Oregon, via Panama, arriving in April, 1860.  They had been preceded by the father, Andrew J., Sr.  For 12 years the family lived 6 mi from Portland, on a farm owned jointly by father and sons, comprising 800 acre .  This property they disposed of in 1871.  The father of our subject died at Dufur, in June, 1897.",
+    "question": "Susan Eisenhower's father served in what capacity for the United States Army?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person whose father's service is being described."
+        },
+        "father_name": {
+          "type": "string",
+          "description": "The name of the father."
+        },
+        "army_service_roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of capacities or roles in which the father served in the United States Army."
+        },
+        "highest_military_rank": {
+          "type": "string",
+          "description": "The highest military rank achieved by the father."
+        }
+      },
+      "required": [
+        "person_name",
+        "father_name",
+        "army_service_roles",
+        "highest_military_rank"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Susan Eisenhower",
+      "father_name": "John Eisenhower",
+      "army_service_roles": [
+        "United States Army officer",
+        "military historian"
+      ],
+      "highest_military_rank": "brigadier-general"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

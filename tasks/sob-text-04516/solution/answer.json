@@ -1,0 +1,14 @@
+{
+  "movie": {
+    "title": "Shrek Forever After",
+    "release_year": 2010,
+    "series_name": "Shrek",
+    "installment_number": 4,
+    "production_company": "DreamWorks Animation"
+  },
+  "person_known_for_work": {
+    "name": "Yong Duk Jhun",
+    "role": "cinematographer and animator"
+  },
+  "reasoning": "Yong Duk Jhun is best known for his work on 'Shrek Forever After' (2010), and 'Shrek Forever After' is explicitly stated to be the fourth installment in the 'Shrek' series, produced by DreamWorks Animation."
+}

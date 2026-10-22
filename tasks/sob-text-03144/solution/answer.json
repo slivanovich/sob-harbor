@@ -1,0 +1,11 @@
+{
+  "mine_name": "Camlaren Mine",
+  "mine_type": "gold",
+  "location_details": {
+    "distance_from_yellowknife_km": 80,
+    "direction_from_yellowknife": "north-east",
+    "specific_lake_location": "Gordon Lake",
+    "territory": "Northwest Territories",
+    "country": "Canada"
+  }
+}

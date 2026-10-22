@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "record_id": "bbec5d257abe93cef8331ba80c8e91adc698ee8580c7e63d5c291109ac734250",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5adf68b05542995ec70e8ff5",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Spain",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Sonia Prim: Sonia Prim Fernández (born 5 November 1984) is a Spanish football defender who is the captain of Primera División club Levante UD.  She previously played for CF Pozuelo and Atlético Madrid.\n\nAlexandra López: Alexandra López Rosillo (born 26 February 1989), commonly known as Ale, is a Spanish football defender who plays for Atlético Madrid in Spain's Primera División.  She previously played for Sevilla FC.\n\nSonia Bermúdez: Sonia Bermúdez Tribano (born 18 November 1984 in Vallecas, Madrid), commonly known as Sonia or Soni, is a Spanish footballer who plays as a forward for Primera División club Atlético Madrid and the Spain women's national football team.  With previous passages for Rayo Vallecano, FC Barcelona and NWSL club Western New York Flash, she won the women's Primera División seven consecutive times (three with Rayo Vallecano and four with Barcelona) from 2008–09 until 2014–15.\n\nGeorgina Carreras: Georgina Carreras Caner (born 9 June 1989), commonly known as Gio, is a Spanish football midfielder who plays for Valencia CF of Spain's Primera División.  She previously played for UE L'Estartit, Atlético Madrid and CE Sant Gabriel.\n\nClaudia Barea: Claudia Barea Moreno (born 19 January 1994), commonly known as Congui, is a Spanish football midfielder who plays for Sporting Plaza de Argel of the Segunda División.  She previously played for Primera División clubs Valencia CF and Sevilla FC.  In summer 2013 she joined Sporting Plaza de Argel.\n\nEsther González: Esther González Rodríguez (born 8 December 1992) is a Spanish football striker who plays for Atlético Madrid of Spain's Primera División and the Spain Spain national team.  At club level she previously played for Levante UD, Atlético Málaga, and Sporting Huelva.\n\nCristina Pizarro: Cristina Pizarro Mingo, also known as Chini, is a Spanish football defender, currently playing for Real Sociedad in Spain's Primera División.  She previously played for Atlético Madrid and Rayo Vallecano.\n\nSevilla FC: Sevilla Fútbol Club, S.A.D. (] ), or simply Sevilla, is Spain’s oldest sporting club solely devoted to football.  Sevilla FC is based in Seville, capital and largest city of the autonomous community of Andalusia.  Sevilla FC is one of the teams that play in Spain’s top flight, La Liga.  The club was formed on 25 January 1890, Scot Mr. Edward Farquharson Johnston being their first president.  A few years later, on October 14, 1905, the club’s articles of association were registered in the Civil Government of Seville under the presidency of the Jerez-born José Luis Gallegos Arnosa.\n\nMarta Carro: Marta Carro Nolasco is a Spanish football defender who plays for AGSM Verona in Italy's women's Serie A.  She previously played in Spain's women Primera División for Atlético Madrid.\n\nSandra García: Sandra García Giraldez is a Spanish football defender, currently playing for Sporting Huelva in Spain's Primera División.  She previously played for Estudiantes Huelva, Sevilla FC.  and Sporting Plaza de Argel.",
+    "question": "Alexandra López Rosillo, commonly known as Ale, is a Spanish football defender who plays for Atlético Madrid in Spain's Primera División, and previously played for Sevilla FC, which country's oldest sporting club solely devoted to football?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "club_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of the football club."
+            },
+            "country": {
+              "type": "string",
+              "description": "The country where the club is based."
+            },
+            "is_oldest_football_club_in_country": {
+              "type": "boolean",
+              "description": "Indicates if the club is the oldest sporting club solely devoted to football in its country."
+            },
+            "league": {
+              "type": "string",
+              "description": "The name of the top-flight league the club plays in."
+            }
+          },
+          "required": [
+            "name",
+            "country",
+            "is_oldest_football_club_in_country",
+            "league"
+          ],
+          "additionalProperties": false
+        },
+        "player_details": {
+          "type": "object",
+          "properties": {
+            "full_name": {
+              "type": "string",
+              "description": "The full name of the player mentioned in the question."
+            },
+            "common_name": {
+              "type": "string",
+              "description": "The commonly known name of the player."
+            },
+            "previous_club_name": {
+              "type": "string",
+              "description": "The name of the player's previous club relevant to the question."
+            }
+          },
+          "required": [
+            "full_name",
+            "common_name",
+            "previous_club_name"
+          ],
+          "additionalProperties": false
+        },
+        "answer": {
+          "type": "string",
+          "description": "The country that is the answer to the question."
+        }
+      },
+      "required": [
+        "club_details",
+        "player_details",
+        "answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "club_details": {
+        "name": "Sevilla FC",
+        "country": "Spain",
+        "is_oldest_football_club_in_country": true,
+        "league": "La Liga"
+      },
+      "player_details": {
+        "full_name": "Alexandra López Rosillo",
+        "common_name": "Ale",
+        "previous_club_name": "Sevilla FC"
+      },
+      "answer": "Spain"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

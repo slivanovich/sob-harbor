@@ -1,0 +1,17 @@
+{
+  "team_identified": {
+    "name": "Carolina Hurricanes",
+    "location": "Raleigh, North Carolina"
+  },
+  "player_selected_by_team": {
+    "name": "Keegan Lowe",
+    "position": "defenceman",
+    "draft_round": 3,
+    "draft_overall_pick": 73,
+    "draft_year": 2011
+  },
+  "father_of_player": {
+    "name": "Kevin Lowe",
+    "description": "longtime Oilers executive and former player"
+  }
+}

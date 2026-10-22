@@ -1,0 +1,9 @@
+{
+  "village_name": "Abbots Langley",
+  "is_large_village": true,
+  "domesday_book_details": {
+    "mentioned_in_domesday_book": true,
+    "name_in_domesday_book": "Langelai"
+  },
+  "servicing_railway_station": "Kings Langley railway station"
+}

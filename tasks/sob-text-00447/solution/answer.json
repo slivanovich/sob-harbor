@@ -1,0 +1,21 @@
+{
+  "entity_1": {
+    "name": "Jersey Budd",
+    "type": "solo artist",
+    "bandmate_count": 0
+  },
+  "entity_2": {
+    "name": "The Go-Betweens",
+    "type": "band",
+    "bandmate_count": 5,
+    "bandmate_names": [
+      "Robert Forster",
+      "Grant McLennan",
+      "Lindy Morrison",
+      "Robert Vickers",
+      "Amanda Brown"
+    ]
+  },
+  "comparison_result": "The Go-Betweens had more bandmates than Jersey Budd.",
+  "entity_with_more_bandmates": "The Go-Betweens"
+}

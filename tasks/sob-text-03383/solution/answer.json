@@ -1,0 +1,13 @@
+{
+  "country_name": "Italy",
+  "supermarket_group": {
+    "name": "Coop",
+    "headquarters_location": "Casalecchio di Reno, Province of Bologna"
+  },
+  "mobile_network_operator": {
+    "name": "CoopVoce",
+    "launch_date": "June 1, 2007",
+    "owner": "Coop",
+    "type": "Mobile virtual network operator"
+  }
+}

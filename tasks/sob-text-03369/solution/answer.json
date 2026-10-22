@@ -1,0 +1,14 @@
+{
+  "player_name": "Lamar Joseph Odom",
+  "player_nationality": "American",
+  "player_status": "retired professional basketball player",
+  "birth_date": "November 6, 1979",
+  "award_details": {
+    "award_name": "NBA Sixth Man of the Year Award",
+    "award_year": 2011,
+    "other_winners_mentioned_for_award": [
+      "Manu Ginóbili",
+      "Jason Terry"
+    ]
+  }
+}

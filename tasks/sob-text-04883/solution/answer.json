@@ -1,0 +1,20 @@
+{
+  "question_asked": "Were Bedhead and Hinder both rock bands?",
+  "band_names": [
+    "Bedhead",
+    "Hinder"
+  ],
+  "band_details": [
+    {
+      "band_name": "Bedhead",
+      "is_rock_band": true,
+      "genre_description": "indie rock band"
+    },
+    {
+      "band_name": "Hinder",
+      "is_rock_band": true,
+      "genre_description": "American rock band"
+    }
+  ],
+  "all_are_rock_bands": true
+}

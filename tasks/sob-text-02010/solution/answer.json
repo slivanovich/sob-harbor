@@ -1,0 +1,18 @@
+{
+  "comparison_result": "Verbascum",
+  "genera_compared": [
+    {
+      "genus_name": "Verbascum",
+      "species_count": 250
+    },
+    {
+      "genus_name": "Jasmine",
+      "species_count": 200
+    }
+  ],
+  "comparison_details": {
+    "comparison_type": "species_count",
+    "higher_count_genus": "Verbascum",
+    "higher_count_value": 250
+  }
+}

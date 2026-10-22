@@ -1,0 +1,11 @@
+{
+  "jewish_center_name": "Rego Park Jewish Center",
+  "location": {
+    "neighborhood": "Rego Park",
+    "city": "New York City",
+    "state": "New York"
+  },
+  "city_attributes": {
+    "land_area_sqmi": 302.6
+  }
+}

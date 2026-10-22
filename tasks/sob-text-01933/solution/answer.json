@@ -1,0 +1,16 @@
+{
+  "ancestral_home": {
+    "name": "Moore Hall",
+    "owner_name": "George Henry Moore",
+    "burning_details": {
+      "year": 1923,
+      "perpetrator": "anti-Treaty IRA"
+    }
+  },
+  "related_conflict": {
+    "name": "Irish Civil War",
+    "start_date": "28 June 1922",
+    "end_date": "24 May 1923"
+  },
+  "final_answer": "24 May 1923"
+}

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "e229f85cd09b112f6632d95b19aba61add90d403eb291921123d4910f560d594",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a764b7a5542992d0ec06090",
+    "source_dataset": "hotpotqa",
+    "source_answer": "No Reservations",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Beginners: Beginners is a 2010 American romantic comedy-drama film written and directed by Mike Mills.  It tells the story of Oliver, a man reflecting on the life and death of his father, Hal, while trying to forge a new romantic relationship with a woman, Anna, dealing with father issues of her own.  The film is based on the true-life coming out of Mills' father at the age of 75, five years before his death.\n\nZoë Kravitz: Zoë Isabella Kravitz (born December 1, 1988) is an American actress, singer, and model.  She is the daughter of musician Lenny Kravitz and actress Lisa Bonet.  She first appeared in the films \"No Reservations\" (2007) and \"The Brave One\" (2007), and played Angel Salvadore in the Marvel Comics film \"\" (2011).\n\nForgetting Sarah Marshall: Forgetting Sarah Marshall is a 2008 American romantic comedy-drama film directed by Nicholas Stoller and starring Jason Segel, Kristen Bell, Mila Kunis and Russell Brand.  The film, which was written by Segel and co-produced by Judd Apatow, was released by Universal Studios.  Filming began in April 2007 at the Turtle Bay Resort on the North Shore of Oahu Island in Hawaii.  The film was released for North American theaters on April 18, 2008 and in the UK a week later on April 25, 2008.\n\nThe Art of Getting By: The Art of Getting By is a 2011 American romantic comedy-drama film starring Freddie Highmore, Emma Roberts, Michael Angarano, Elizabeth Reaser, Sam Robards, Rita Wilson and Blair Underwood.  It is the first feature by writer-director Gavin Wiesen.  The film premiered under the title Homework at the 2011 Sundance Film Festival.\n\nDaddy's Little Girls: Daddy's Little Girls is a 2007 American romantic comedy-drama film written and directed by Tyler Perry and produced by Perry and Reuben Cannon.  It stars Gabrielle Union and Idris Elba.  The film was released on February 14, 2007 by Lions Gate Entertainment.  This is one of only three films directed by Perry that he does not appear in (the other two being \"For Colored Girls\" and \"\") as well as the first of Perry's films to not be based on any of the filmmaker's stage plays.\n\nNaomi and Ely's No Kiss List: Naomi and Ely's No Kiss List is a 2015 American romantic comedy-drama film written by Amy Andelson and Emily Meyer, and directed by Kristin Hanggi.  It is based on the 2007 book of the same name by Rachel Cohn and David Levithan.  The film stars Victoria Justice, Pierson Fodé, and Matthew Daddario.  It had its world premiere at the Outfest Film Festival on July 17, 2015.  It was then released on September 18, 2015, through video on demand.\n\nYou've Got Mail: You've Got Mail is a 1998 American romantic comedy-drama film directed by Nora Ephron, co-written by Nora and Delia Ephron, and starring Tom Hanks and Meg Ryan.  The film is about two people in an online romance who are unaware that they are also business rivals.  It marks the third coupling of stars Tom Hanks and Meg Ryan, who had previously appeared together in \"Joe Versus the Volcano\" (1990) and \"Sleepless in Seattle\" (1993).\n\nIn the Land of Women: In the Land of Women is a 2007 American romantic comedy-drama film directed and written by Jon Kasdan.  The film premiered in the United States on April 20, 2007.\n\nAll the Days Before Tomorrow: All the Days Before Tomorrow is a 2007 American romantic comedy-drama film written and directed by François Dompierre and starring Alexandra Holden and Joey Kern.\n\nNo Reservations (film): No Reservations is a 2007 American romantic comedy-drama film directed by Scott Hicks.  Starring Catherine Zeta-Jones, Aaron Eckhart and Abigail Breslin, the screenplay by Carol Fuchs is an adaptation of an original script by Sandra Nettelbeck, which served as the basis for the 2001 German film \"Mostly Martha\", and revolves around a hard-edged chef whose life is turned upside down when she decides to take in her young niece following a tragic accident that killed her sister.  Patricia Clarkson, Bob Balaban and Jenny Wade co-star, with Brían F. O'Byrne, Lily Rabe, and Zoe Kravitz—appearing in her first feature film—playing supporting roles.",
+    "question": "Zoë Isabella Kravitz, is an American actress, singer, and model, she first appeared, in which 2007 American romantic comedy-drama film?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actress_name": {
+          "type": "string",
+          "description": "The full name of the actress."
+        },
+        "film_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the film."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The year the film was released."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The primary genre of the film."
+            },
+            "country_of_origin": {
+              "type": "string",
+              "description": "The country where the film was produced."
+            }
+          },
+          "required": [
+            "title",
+            "release_year",
+            "genre",
+            "country_of_origin"
+          ],
+          "additionalProperties": false
+        },
+        "appearance_type": {
+          "type": "string",
+          "description": "Describes the nature of the actress's appearance in the film (e.g., 'first feature film appearance')."
+        }
+      },
+      "required": [
+        "actress_name",
+        "film_details",
+        "appearance_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actress_name": "Zoë Isabella Kravitz",
+      "film_details": {
+        "title": "No Reservations",
+        "release_year": 2007,
+        "genre": "romantic comedy-drama",
+        "country_of_origin": "American"
+      },
+      "appearance_type": "first feature film appearance"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

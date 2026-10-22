@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "ee27ced3ca9fa6a9091dbf9a4d5e9547836e7b62ed1ab749c0c9987bb2560d8b",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab6bf6055429953192ad371",
+    "source_dataset": "hotpotqa",
+    "source_answer": "St. Mary's City",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "History of Newfoundland and Labrador: The first brief European contact with Newfoundland and Labrador came about 1000 AD when the Vikings briefly settled in L'Anse aux Meadows.  Around 1500 AD, European explorers and fishermen from England, Portugal, France, and Spain (mainly Basques) began exploration.  Fishing expeditions came seasonally; the first small permanent settlements appeared around 1630 AD.  Catholic-Protestant religious tensions were high but mellowed after 1860.  The British colony voted against joining Canada in 1869 and became an independent dominion in the early 20th century.  Fishing was always the dominant industry, but the economy collapsed in the Great Depression of the 1930s and the people voluntarily relinquished their independence to become a British colony again.  Prosperity and self-confidence returned during the Second World War, and after intense debate the people voted to join Canada in 1949.\n\nColony of Natal: The Colony of Natal was a British colony in south-eastern Africa.  It was proclaimed a British colony on 4 May 1843 after the British government had annexed the Boer Republic of Natalia, and on 31 May 1910 combined with three other colonies to form the Union of South Africa, as one of its provinces.  It is now the KwaZulu-Natal province of South Africa.\n\nCape Colony: The Cape of Good Hope, also known as the Cape Colony (Dutch: \"Kaapkolonie\" ), was a British colony in present-day South Africa and Namibia, named after the Cape of Good Hope.  The British colony was preceded by an earlier Dutch colony of the same name, the \"Kaap de Goede Hoop\", established in 1652 by the Dutch East India Company.  The Dutch lost the colony to Britain following the 1795 Battle of Muizenberg, but had it returned following the 1802 Peace of Amiens.  It was re-occupied by the British following the Battle of Blaauwberg in 1806, and British possession affirmed with the Anglo-Dutch Treaty of 1814.\n\nPrince Edward Island general election, 1873: The 1873 Prince Edward Island election was held on 1 April 1873 to elect members of the House of Assembly of the British colony of Prince Edward Island.  It was won by the Conservative party.  This was Prince Eward Island's last general election as a British colony, as it joined Canada on July 1, 1873 as a province.\n\nAlfred A. Thorne: Alfred Athiel Thorne (August 14, 1871–April 23, 1956) was a statesman, educator, advocate, and key contributor to the history of human rights in the Americas.  He became famous for championing human rights during the late nineteenth century, establishing the first free secondary school for poor children in British Guiana in 1894, serving as Mayor of British Guiana's capital city Georgetown, and authoring editorial columns for the British colony's influential newspapers \"Echo\" and \"Outlook\".\n\nCharles W. Chappelle: Charles Ward Chappelle (1872-1941) was an early 1900s African-American aviation pioneer and medal winner, electrical engineer, and businessman who was president of the USA’s African Union Company, Inc., whose mission in the early 1900s was to create small, modernized African cities for blacks with leased land from the Gold Coast (British colony) of West Africa.  Several hundred thousand dollars in capital was raised during that time period for construction and modernization on the Gold Coast (British colony) through the stock market, and infrastructure metal deals were made with companies such as U.S. Steel.  In the beginning of Chappelle's business, he was reported to have made contracts with 82 tribal chiefs in Gold Coast, West Africa, for the exportation of gold, cocoa, rubber, and mahogany.  The money was to be used to develop 440 miles with the African Central Railroad and the West Coast Steam and Harbor Company, both African-American and African joint ventures.\n\n1959 British West Indies Championships: The 1959 British West Indies Championships was the third edition of the track and field competition between British colony nations in the Caribbean.  It was held in Georgetown in British Guiana.  A total of 27 events were contested, twenty-one by men and six by women.  This was the first time that women had been able to compete at the event.  Three new men's events were added to the programme: 3000 metres steeplechase, half marathon, and the 3000 metres walk.  The latter two were the first road running and racewalking events to be included.\n\nProvince of Maryland: The Province of Maryland was an English and later British colony in North America that existed from 1632 until 1776, when it joined the other twelve of the Thirteen Colonies in rebellion against Great Britain and became the U.S. state of Maryland.  Its first settlement and capital was St. Mary's City, in the southern end of St. Mary's County, which is a peninsula in the Chesapeake Bay and is also bordered by four tidal rivers.\n\nGeorgetown (Washington, D.C.): Georgetown is a historic neighborhood, commercial, and entertainment district located in northwest Washington, D.C., situated along the Potomac River.  Founded in 1751 in the Province of Maryland, the port of Georgetown predated the establishment of the federal district and the City of Washington by 40 years.  Georgetown remained a separate municipality until 1871, when the United States Congress created a new consolidated government for the whole District of Columbia.  A separate act passed in 1895 specifically repealed Georgetown's remaining local ordinances and renamed Georgetown's streets to conform with those in the City of Washington.\n\nSpencer Matthews King: Spencer Matthews King (August 11, 1917 in San Juan, Puerto Rico – January 20, 1988) is a former U.S. Ambassador to Guyana.  Appointed by President Richard Nixon on May 27, 1969, he presented his credentials to Governor-General Sir Richard Edmonds Luyt on October 15, 1969, in the capital city of Georgetown.  After Guyana declared itself a republic in 1970, Ambassador King had to be reaccredited as ambassador, this time presenting his credentials to the republic's new president, Sir Edward Victor Luckhoo on February 23, 1970.  He represented the United States and its interests in this former British colony until March 8, 1974, when he left the post.  A longtime resident of Maine, he retired from the foreign service after his ambassadorship came to an end.  He died on January 20, 1988.",
+    "question": "What was the original capital of the British colony that included Georgetown?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "colony_name": {
+          "type": "string",
+          "description": "The name of the British colony."
+        },
+        "original_capital": {
+          "type": "string",
+          "description": "The original capital city of the specified colony."
+        },
+        "georgetown_location": {
+          "type": "string",
+          "description": "The specific location of Georgetown within the colony."
+        },
+        "colony_status": {
+          "type": "string",
+          "description": "The status of the entity (e.g., British colony)."
+        }
+      },
+      "required": [
+        "colony_name",
+        "original_capital",
+        "georgetown_location",
+        "colony_status"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "colony_name": "Province of Maryland",
+      "original_capital": "St. Mary's City",
+      "georgetown_location": "northwest Washington, D.C.",
+      "colony_status": "British colony"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

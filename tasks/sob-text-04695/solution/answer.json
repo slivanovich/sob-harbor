@@ -1,0 +1,15 @@
+{
+  "film_details": {
+    "title": "Me and My Brother",
+    "director_name": "Robert Frank"
+  },
+  "director_nationality": [
+    "Swiss",
+    "American"
+  ],
+  "director_professions": [
+    "photographer",
+    "documentary filmmaker"
+  ],
+  "final_answer": "Swiss-American"
+}

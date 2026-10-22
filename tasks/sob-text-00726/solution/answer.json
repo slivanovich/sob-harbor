@@ -1,0 +1,23 @@
+{
+  "film_details": {
+    "title": "Secret Love",
+    "release_year": 2010,
+    "country_of_origin": "South Korea",
+    "media_type": "film"
+  },
+  "starring_actors": [
+    {
+      "actor_name": "Yoo Ji-tae"
+    },
+    {
+      "actor_name": "Yoon Jin-seo"
+    }
+  ],
+  "collaboration_details": {
+    "previous_collaboration_film_title": "Oldboy",
+    "actors_involved_in_collaboration": [
+      "Yoo Ji-tae",
+      "Yoon Jin-seo"
+    ]
+  }
+}

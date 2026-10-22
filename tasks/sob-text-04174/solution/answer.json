@@ -1,0 +1,28 @@
+{
+  "comparison_subjects": [
+    {
+      "name": "Jonathan Kellerman",
+      "nationality": "American",
+      "primary_profession": "psychologist and author",
+      "notable_achievements": [
+        "Edgar and Anthony Award-winning author of numerous bestselling suspense novels"
+      ],
+      "influence_on_spanish_literature_description": "No information provided regarding influence on Spanish literature."
+    },
+    {
+      "name": "Rubén Darío",
+      "nationality": "Nicaraguan",
+      "primary_profession": "poet",
+      "notable_achievements": [
+        "Initiated the Spanish-American literary movement 'modernismo'",
+        "Praised as the 'Prince of Castilian Letters'",
+        "Undisputed father of the 'modernismo' literary movement",
+        "Regarded as the most important literary figure in Nicaragua"
+      ],
+      "influence_on_spanish_literature_description": "Had a great and lasting influence on 20th-century Spanish literature and journalism, and initiated the 'modernismo' literary movement."
+    }
+  ],
+  "field_of_comparison": "Spanish literature",
+  "more_influential_person_name": "Rubén Darío",
+  "reasoning_summary": "Rubén Darío is explicitly stated to have had a great and lasting influence on 20th-century Spanish literature and initiated the 'modernismo' movement. Jonathan Kellerman is an American author with no mentioned influence on Spanish literature in the provided context."
+}

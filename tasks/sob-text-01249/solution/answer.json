@@ -1,0 +1,15 @@
+{
+  "actress_name": "Kristen Stewart",
+  "films_compared": [
+    {
+      "film_title": "Adventureland",
+      "release_year": 2009
+    },
+    {
+      "film_title": "Panic Room",
+      "release_year": 2002
+    }
+  ],
+  "first_film_by_release": "Panic Room",
+  "first_film_release_year": 2002
+}

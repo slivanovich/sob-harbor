@@ -1,0 +1,16 @@
+{
+  "vocalist_in_question": "Dan Smith",
+  "bands_evaluated": [
+    {
+      "band_name": "Circa Survive",
+      "is_led_by_vocalist_in_question": false,
+      "actual_lead_vocalist": "Anthony Green"
+    },
+    {
+      "band_name": "Bastille",
+      "is_led_by_vocalist_in_question": true,
+      "actual_lead_vocalist": "Dan Smith"
+    }
+  ],
+  "answer_band_name": "Bastille"
+}

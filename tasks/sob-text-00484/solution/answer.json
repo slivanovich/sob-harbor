@@ -1,0 +1,17 @@
+{
+  "actor": {
+    "name": "Balthazar Getty",
+    "is_member_of_band": true,
+    "band_memberships": [
+      {
+        "band_name": "Ringside"
+      }
+    ]
+  },
+  "film": {
+    "title": "Slingshot",
+    "release_year": 2005,
+    "stars_actor": true
+  },
+  "final_answer_actor_name": "Balthazar Getty"
+}

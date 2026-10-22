@@ -1,0 +1,18 @@
+{
+  "comparison_subject_1": {
+    "name": "Andrei Platonov",
+    "pulitzer_prizes_won": 0
+  },
+  "comparison_subject_2": {
+    "name": "Alice Walker",
+    "pulitzer_prizes_won": 1,
+    "prize_details": [
+      {
+        "prize_name": "Pulitzer Prize for Fiction",
+        "work_title": "The Color Purple"
+      }
+    ]
+  },
+  "winner_name": "Alice Walker",
+  "winner_pulitzer_count": 1
+}

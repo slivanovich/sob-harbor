@@ -1,0 +1,20 @@
+{
+  "woman_details": {
+    "name": "Margaret Brown",
+    "broadway_musical_title": "The Unsinkable Molly Brown"
+  },
+  "ghost_town_details": {
+    "name": "Hecla",
+    "state": "Montana"
+  },
+  "murder_details": {
+    "murderer_name": "Theodore Durrant",
+    "victims_count": 2,
+    "victim_connections_to_town": [
+      {
+        "victim_name": "Blanche Lamont",
+        "connection_to_town": "taught at Hecla's one-room schoolhouse"
+      }
+    ]
+  }
+}

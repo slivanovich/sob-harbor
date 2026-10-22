@@ -1,0 +1,16 @@
+{
+  "event_1": {
+    "name": "Korean War",
+    "start_date": "1950-06-25",
+    "end_date": "1953-07-27",
+    "duration_days": 1128
+  },
+  "event_2": {
+    "name": "Battle of Leyte",
+    "start_date": "1944-10-17",
+    "end_date": "1944-12-26",
+    "duration_days": 70
+  },
+  "longer_lasting_event_name": "Korean War",
+  "duration_difference_days": 1058
+}

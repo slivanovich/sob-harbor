@@ -1,0 +1,12 @@
+{
+  "series_name": "Lone Wolf",
+  "series_details": {
+    "number_of_books": 29,
+    "creator": "Joe Dever",
+    "initial_illustrator": "Gary Chalk"
+  },
+  "book_in_question": {
+    "title": "The Chasm of Doom",
+    "series_position": 4
+  }
+}

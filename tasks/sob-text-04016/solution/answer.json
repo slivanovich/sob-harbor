@@ -1,0 +1,14 @@
+{
+  "actress_name": "Téa Leoni",
+  "birth_details": {
+    "year": 1966,
+    "month": "February",
+    "day": 25
+  },
+  "nationality": "American",
+  "film_details": {
+    "title": "The Smell of Success",
+    "director": "Michael Polish",
+    "original_title": "Manure"
+  }
+}

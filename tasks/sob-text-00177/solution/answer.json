@@ -1,0 +1,13 @@
+{
+  "street_name": "Collins Street",
+  "transportation_type": "trams",
+  "builder_entity": "Melbourne & Metropolitan Tramways Board",
+  "transportation_details": {
+    "class_name": "Y1-class",
+    "number_built": 4,
+    "initial_routes": [
+      "East Preston",
+      "West Preston"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "television_series": {
+    "name": "The Last Kingdom",
+    "nationality": "British"
+  },
+  "role_details": {
+    "role_name": "Brida"
+  },
+  "actress_details": {
+    "name": "Emily Cox",
+    "nationality": "British"
+  },
+  "co_starring_film": {
+    "title": "Rammbock",
+    "genre": "horror",
+    "nationality": "German"
+  }
+}

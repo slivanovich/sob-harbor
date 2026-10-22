@@ -1,0 +1,23 @@
+{
+  "nobel_prize_winner": {
+    "name": "Miguel Ángel Asturias Rosales",
+    "nationality": "Guatemalan",
+    "professions": [
+      "poet-diplomat",
+      "novelist",
+      "playwright",
+      "journalist"
+    ],
+    "won_nobel_prize": true
+  },
+  "other_person": {
+    "name": "James Lafayette Dickey",
+    "nationality": "American",
+    "professions": [
+      "poet",
+      "novelist"
+    ],
+    "won_nobel_prize": false
+  },
+  "comparison_result": "Miguel Ángel Asturias Rosales was a Nobel Prize winner."
+}

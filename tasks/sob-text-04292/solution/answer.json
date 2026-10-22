@@ -1,0 +1,17 @@
+{
+  "rescuer_details": {
+    "name": "Oskar Schindler",
+    "nationality": "German",
+    "roles_and_affiliations": [
+      "industrialist",
+      "spy",
+      "member of the Nazi Party"
+    ]
+  },
+  "factory_details": {
+    "original_name": "Rekord factory",
+    "original_owner_name": "Abraham Bankier"
+  },
+  "jews_saved_count": 1200,
+  "historical_event": "Holocaust"
+}

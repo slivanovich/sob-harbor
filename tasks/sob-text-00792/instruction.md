@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Platinum Collection (David Bowie album): The Platinum Collection is a compilation album by David Bowie, released in 2005.  The period from 1969 to 1987 is summarised over three discs.  The first disc is the same as the compilation "The Best of David Bowie 1969/1974", which was released in 1997, and the second disc is the same as the 1998 compilation "The Best of David Bowie 1974/1979".  The third disc, original to this collection upon its release in 2005, was later re-released separately as an independent compilation "The Best of David Bowie 1980/1987" by EMI on 19   2007 (2007--) .  This 2007 release was part of EMI's two-disc Sight & Sound series of releases and features a DVD of 1980s videos on the second disc.
+
+Loving the Alien: "Loving the Alien" is a song written and recorded by David Bowie.  It was the opening track to his sixteenth studio album "Tonight" (1984) and the album's final single.  The song explored Bowie's "intense dislike" of organized religion.  Commercially, "Loving the Alien" peaked at No. 19 in the UK Singles Chart, and was used the title of Christopher Sandford's 1997 biography of Bowie.
+
+The World of David Bowie: The World of David Bowie is an album by David Bowie, released in 1970.  It contains material from his first album "David Bowie", as well as previously unreleased songs.  The track listing was chosen by Bowie himself.  The sleeve photo is by Ian Dickson.
+
+Speed of Life (David Bowie song): "Speed of Life" is the first instrumental by David Bowie.  It is the opening track for his album "Low" from 1977.
+
+Space Oddity: "Space Oddity" is a song written and recorded by David Bowie.  It was first released as a 7-inch single on 11 July 1969.  It was also the opening track of his second studio album, "David Bowie".  It became one of Bowie's signature songs and one of four of his songs to be included in The Rock and Roll Hall of Fame's 500 Songs that Shaped Rock and Roll.
+
+Day-In Day-Out: "Day-In Day-Out" is a song recorded by English singer David Bowie, serving as the opening track for his seventeenth studio album, "Never Let Me Down" (1987).  It was issued as a single on 23 March 1987 ahead of the record's release.  The recording was solely written by Bowie, while production was handled by him along with David Richards.  An R&B track, "Day-In Day-Out" criticizes the treatment of the homeless in the United States at that time, and deals with the depths a young mother has to sink to feed her child.
+
+David Bowie (1969 album): David Bowie is the second studio album by the English musician David Bowie, released under that title by Philips in the UK, and as Man of Words/Man of Music by Mercury in the US, on 14 November 1969.  It was reissued in 1972 by RCA Records as Space Oddity (the title of the opening track, which had reached No. 5 in the UK Singles Chart).  "Space Oddity" was the name used for CD releases of the album in 1984, 1990 and 1999, but it reverted to the original, eponymous title for 2009 and 2015 reissues.
+
+Nashville Terminal Subdivision: The Nashville Terminal Subdivision is a railroad line owned by CSX Transportation in the U.S. State of Tennessee.  The Subdivision is broken up into 5 sections all in Nashville, Tennessee.  The northern part of the Terminal is in Madison, Tennessee at milepost 000/0BA 174 on the southern end of the Ex-L&N Mainline Subdivision at Monfort.  Disptach for the Mainline Sub is known as "LD" which is part of the Cincinnati Division.  From here in Madison begins the double track that stays for another 22 miles south to Brentwood, Tennessee.  At milepost 000/0BA/00H 176.6, the famous Johnny Cash "Amqui" location where the Ex-L&N Evansville, Indiana line, the Henderson Subdivision meets with the Terminal.  Dispatch for the Henderson Sub is known as "SA" and operates on AAR58.  There are two crossings near each other, Williams Ave and Nesbitt Lane at Amqui.  From here the Terminal goes south about 2 miles to the Nashville National Cemetery to the first major location, known as Ekin, 000179, where there is a cross over track from number 1 to number 2 track (left to right track).  There is also the first EDD (Defect Detector) at 000179.1.  Few more miles southward, the next major location appears.  At 000181.0, Maplewood is a major location for the Terminal.  From here the regular Terminal goes south to swap crews at Kayne Ave, and the right side, Radnor Cutoff, detours the city and gives yard departures and arrivals direct access to and from Radnor yard to cities like Louisville and Chicago.  The Cutoff runs from Maplewood to Shelby Park double track.  From Shebly the track converges into one to pass the historic Shelby bridge, then it opens back to double track.  From there, the cutoff hits the Intermediates at 0BA187.0 known as Chicken Pike.  The Radnor Cutoff carries the L&N mainline classification of "0BA" but meets the main at the same milepost from the Terminal.  At Chicken Pike, trains are staged to await arrival to Radnor yard.  Once they get clearance, speed is decreased to 15, and at 0BA188.1 the EDD (Defect Detector) sounds for departures and arrivals.  This location is known as North Radnor.  The right track diverging from the #2 is known as A-1, it is for departure trains to Chattanooga and Atlanta.  The left track which goes west from the #1 is known as A-2, and serves as a departure track to Memphis, and if the cutoff is out of service, all northbound departures.  The interesting piece of Maplewood is the crossovers that are there to move trains from the Cutoff to the Main.  Both lines remain double track for a while.  The main runs south for 2 more miles until the Intermediate signals at 000183.0.  Commonly trains will stop before Delmas Ave when Kayne Ave is at capacity and await dispatch permission before moving south.  From here, the main continues south until the CR Cumberland River Swingbridge, where the main converges into a single track shortly to cross the bridge.  At this point, trains had been running at track speed of around 40.  From the drawbridge into town, speed is reduced to around 10.  After the bridge is passed, the main returns to double track in downtown.  On the #1 track about a half a mile south, another connecting track is present.  This is the Wye track that connects the main with the Bruceton side, while rarely used for mainline trains, locals and river jobs use it.  The location is known as 8th Avenue or 8th Avenue Wye.  The main then runs down to Kayne Ave, the central hotbed of all Nashville thru traffic.  The Memphis, Tennessee Ex-L&N Bruceton Subdivision meets with the Terminal.  The Bruceton Sub begins at Church Street at 00N0.0.  The line then runs single track until 00N0.7 "11th Avenue" where it turns into double track and also meets the aforementioned, Wye track.  The Bruceton line then goes southwest a while to the next signals, at "Shops".  Now speed has been increased.  The line is still double track until "Sellars", where speed is increased to 40 and jurisdiction transferred to the SD Dispatcher.  For a short time, 4 main tracks are present and an additional fifth track for switchers and yard movements.  The tracks from left to right in Kayne Ave are as follows: 100, 99, 98, 12, 3.  The Kayne Ave yard is also here in this area, which houses some frieght and some switcher engines.  The tracks to the old shed are covered and removed.  The Union Station is not an active station, but a historic hotel.  Crew change usually occurs at the "walkway" which is under the Demombreun St bridge by the Kayne Ave Tower.  This is also where the Ex-NC&StL Chattanooga Subdivision begins.  Then tracks run south to Fogg St/South End where things get complicated.  At milepost 000/0BA/00J187 the 98 track merges into the 12 track, making for 3 tracks now.  There is a crossover from 99 to 12, also a crossover from 12 to 3.  About 2/10ths of a mile down the 99 merges into the 12 track reducing the tracks back to the regular double.  About 4/10ths of a mile down the line from Fogg St, 000187.4, Oak St, is a crossover track from #2 to #1 (the track names are no longer 3 and 12, but are back to regular names).  When trains use this crossover northbound, such as Memphis bound trains from the A-2 line, they refer to it as "Long Lead".  And now, the Terminal splits into two parts.  The right side turns into a single track shortly, and will become the Chattanooga Subdivision, and the left side runs south to Brentwood.  The right track runs single shortly until double track for a while.  This begins part of the Chattanooga Sub or J-Line.  The #2 meets with the A-2 connection track at 00J2.2 known as A-2.  Speed is now increased to 40.  Commonly northbounds will stage at 4th Ave on the #1 to await clearance.  Now about a mile down the #1 meets the A-1 connection line.  At 00J3.6 known as A-1.  Further down the double track ends at Glencliff (00J4.9).  Now it runs single for three miles until it hits Danley, which has the D Line connection track, which is an arrival track for incoming Radnor trains from the J Line.  At Danley, the Terminal ends but the same dispatcher handles traffic, "SC".  At Oak Street, our main terminal line goes south two miles to 000189.0 known as Criaghead or Vine Hill.  There is a crossover here from #1 to #2 track.  And there is also a connection/delivery track to the Nashville and Eastern Railroad which connects the Tennessee Central Railroad Museum to a major railroad.  Trains sometimes stop on the #2 before Craighead if they are waiting to enter Radnor yard.  Sometimes trains wait on the #1 at the Berry Road crossing if they await arrival to Kayne Ave. At this point, speed has been increased to 30 from 10.  Moving south, the line hits Radnor Yard at 000192.  The #2 track meets the E-Line arrival track which most Memphis trains and locals use.  The B-Line which meets the #1 track is used for departures out of the C yard and local jobs.  At Mayton, 000192.3, the B line meets the #1 track, and there is a crossover track from #2 to #1.  Speed is now at 40.  2 miles south, at 000194.0, South Radnor, the next intersection is present.  This is where the Radnor A yard meets the main.  There is a single departure/arrival track that meets the #2 track along with a crossover from #1 to #2 track.  Commonly, the #2 track south of the signals is used to halt trains.  This location is known as TVA, because of the power station that is adjacent.  From here the Terminal runs about 2.5 miles south until we hit the southern tip.  The tracks converge onto one single main, at 000/0BA196.6 known as Brentwood.  Speed is increased to 50 and jurisdiction to the S.E. dispatcher.  The right track is the main, S&NA North, while the left track is the Nashville Subdivision which runs to Columbia and exchanges freight with the TSRR.  The Nashville Terminal Subdivision is one of the busiest locations on the CSX network, and one of the most important.
+
+Time (David Bowie song): "Time" is a song by David Bowie.  Written in New Orleans in November 1972 during the American leg of Bowie's first Ziggy Stardust tour, it was recorded in London in January 1973 and released as the opening track on side two of the album "Aladdin Sane" that April.  An edited version of the song supplanted the release of the single "Drive-In Saturday" in the United States and Japan.
+
+Low (David Bowie album): Low is the eleventh studio album by English musician David Bowie, released on RCA Records on 14 January 1977.  Recorded following Bowie's move to West Berlin after a period of drug addiction and personal instability, "Low" became the first of three collaborations with musician Brian Eno and producer Tony Visconti, later termed the "Berlin Trilogy".  The album was in fact recorded largely in France, and marked a shift in Bowie's musical style toward an electronic and avant-garde approach that would be further explored on subsequent albums ""Heroes"" (1977) and "Lodger" (1979).
+
+Question: What new departure did "Speed of Life", opening track of his 11th album "Low", mark for David Bowie?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song."
+    },
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album the song is on."
+    },
+    "album_release_year": {
+      "type": "integer",
+      "description": "The release year of the album."
+    },
+    "departure_marked": {
+      "type": "string",
+      "description": "The new departure or significance the song marked for David Bowie."
+    },
+    "is_instrumental": {
+      "type": "boolean",
+      "description": "Indicates if the song is an instrumental."
+    }
+  },
+  "required": [
+    "song_title",
+    "album_title",
+    "album_release_year",
+    "departure_marked",
+    "is_instrumental"
+  ],
+  "additionalProperties": false
+}

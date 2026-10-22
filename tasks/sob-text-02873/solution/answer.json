@@ -1,0 +1,17 @@
+{
+  "successor_library": {
+    "name": "INSPIRE-HEP",
+    "type": "digital library",
+    "field": "high energy physics",
+    "access_type": "open access"
+  },
+  "predecessor_system": {
+    "name": "Stanford Physics Information Retrieval System",
+    "type": "database management system",
+    "developer": "Stanford University"
+  },
+  "first_website_details": {
+    "continent_of_creation": "North America",
+    "purpose": "allow remote users access to its database"
+  }
+}

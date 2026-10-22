@@ -1,0 +1,25 @@
+{
+  "is_in_film_industry": true,
+  "individuals": [
+    {
+      "name": "Sydney Pollack",
+      "nationality": "American",
+      "roles": [
+        "film director",
+        "producer",
+        "actor"
+      ]
+    },
+    {
+      "name": "Ginny Stikeman",
+      "nationality": "Canadian",
+      "roles": [
+        "filmmaker",
+        "director",
+        "producer",
+        "editor"
+      ]
+    }
+  ],
+  "reasoning": "Sydney Pollack is described as an 'American film director, producer and actor'. Ginny Stikeman is described as a 'Canadian filmmaker' who has 'directed, produced and edited many films'. Both are clearly involved in the film industry."
+}

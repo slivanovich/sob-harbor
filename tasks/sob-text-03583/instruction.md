@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Dimitris Cheilaris: Dimitris Cheilaris (Greek: Δημήτρης Χείλαρης , ] ; born August 18, 1990) is a Greek professional basketball player playing for Apollon Patras in the Greek A2.  Born in Leonidio, he started his professional career with Amyntas.  Subsequently, he moved to Filathlitikos, where he was a teammate with Giannis Antetokounmpo.  He played one season of top-tier basketball with Rethymno BC, before returning to the second-tier to play for Iraklis Thessaloniki.
+
+Johnny Newman: John Sylvester Newman, Jr. (born November 28, 1963) is an American retired professional basketball player.  A 6' 7" and 210 lb shooting guard/small forward, Newman starred at the University of Richmond, before going on to play in the National Basketball Association.  In his 16 seasons (1986–2002) in the NBA, he was a member of the Cleveland Cavaliers, New York Knicks, Charlotte Hornets, New Jersey Nets, Milwaukee Bucks, Denver Nuggets, and Dallas Mavericks.
+
+Ruben Patterson: Ruben Nathaniel Patterson (born July 31, 1975) is an American former professional basketball player.  During his career, he played as a small forward and shooting guard.  During his college career at the University of Cincinnati, Patterson earned third-team All-American honors and helped lead the Bearcats to Conference USA titles in both of his seasons there.  Drafted by the Los Angeles Lakers in 1998, Patterson began his career with the Greek team AEK Athens BC before joining the Lakers in his rookie season.  Later, he played for the NBA teams Seattle SuperSonics, Portland Trail Blazers, Denver Nuggets, Milwaukee Bucks, and Los Angeles Clippers before ending his career with the Lebanese team Champville SC.
+
+Giannis Antetokounmpo: Giannis Antetokounmpo (Greek: Γιάννης Αντετοκούνμπο , ] ; born December 6, 1994) is a Greek professional basketball player for the Milwaukee Bucks of the National Basketball Association (NBA).  He stands at 6 ft , and while he primarily plays the small forward position, he is equally as effective as a guard due to his sound ball-handling skills.  During the 2015–16 season, he began to shine as the Bucks' primary playmaker.  Antetokounmpo blossomed into an all-round superstar in 2016–17, as he led the Bucks in all five major statistical categories and became the first player in NBA history to finish a regular season in the top 20 in total points, rebounds, assists, steals, and blocks.  He is of Nigerian descent.
+
+1970–71 Milwaukee Bucks season: The 1970–71 Milwaukee Bucks season was the third season for the Bucks.  Milwaukee posted a 66–16 record in only its third year of existence, and its second since getting Kareem Abdul-Jabbar, then named Lew Alcindor.  Key part of the championship season was the acquisition of Oscar Robertson.  Other role players on the Bucks included players such as Bob Dandridge (18.4 ppg) and Jon McGlocklin (15.8 ppg), power forward Greg Smith and key reserves Lucius Allen, Bob Boozer and Dick Cunningham completing the nucleus.  The season included a 20-game winning streak, the NBA's longest at the time, and still ranked fifth all-time.
+
+David Thirdkill: David Thirdkill (born April 12, 1960) is an American retired basketball player who was selected by the Phoenix Suns in the first round (15th overall) of the 1982 NBA draft.  A 6 ft small forward from the College of Southern Idaho and Bradley University, Thirdkill played in five NBA seasons from 1982 to 1987.  Born in St. Louis, Missouri and nicknamed "The Sheriff", he played for the Suns, Detroit Pistons, Milwaukee Bucks, San Antonio Spurs and Boston Celtics.  He earned a championship ring with the 1985-86 Celtics.
+
+Paul Pressey: Paul Matthew Pressey (born December 24, 1958) is an American former professional basketball player who previously was an assistant coach for the Los Angeles Lakers of the National Basketball Association (NBA).  Pressey is widely, though unofficially, credited with being the originator of the point forward position, combining the attributes of a point guard and forward.  While playing small forward for the Milwaukee Bucks in the 1980s, Pressey took on many of the ball handling duties, even leading the team in assists for five straight years.  He participated in the 1986 NBA Slam Dunk Contest, finishing in 6th place out of 8.
+
+MACC Fund: The MACC Fund - Midwest Athletes Against Childhood Cancer, Inc.- was founded on December 10, 1976, during the retirement of Jon McGlocklin from the Milwaukee Bucks.  Jon's friend, Longtime Milwaukee Bucks Broadcaster Eddie Doucette, and his wife, Karen, had a son, Brett, who was diagnosed with cancer at the age of 2.  Brett's diagnosis coincided with the timing of Jon's retirement.  It was decided to use Jon's departure from professional basketball to announce the start of the MACC Fund.  During a half-time on the floor of the Milwaukee Arena, the MACC Fund came into being.
+
+Marques Johnson: Marques Kevin Johnson (born February 8, 1956) is an American retired professional basketball player.  The small forward played in the National Basketball Association (NBA) from 1977–1989, where was a five-time All-Star.  He spent a majority of his career with the Milwaukee Bucks.
+
+Steve Novak: Steven Michael Novak (born June 13, c. 1983) is an American professional basketball player who last played for the Milwaukee Bucks of the National Basketball Association (NBA).  He is listed as 6'10", 225 lbs.  He played college basketball at Marquette University.  Novak splits time at both small forward and power forward.  He was the NBA regular season leader in three point percentage during the 2011–12 season.
+
+Question: Dimitris Cheilaris was a teammate of which Milwaukee Bucks small forward early on in his career?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "teammate_name": {
+      "type": "string",
+      "description": "The name of the Milwaukee Bucks small forward who was a teammate of Dimitris Cheilaris."
+    },
+    "teammate_team": {
+      "type": "string",
+      "description": "The NBA team the identified teammate plays for."
+    },
+    "teammate_position": {
+      "type": "string",
+      "description": "The primary playing position of the identified teammate."
+    },
+    "early_career_team_of_cheilaris": {
+      "type": "string",
+      "description": "The team where Dimitris Cheilaris and the identified teammate played together."
+    }
+  },
+  "required": [
+    "teammate_name",
+    "teammate_team",
+    "teammate_position",
+    "early_career_team_of_cheilaris"
+  ],
+  "additionalProperties": false
+}

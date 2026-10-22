@@ -1,0 +1,16 @@
+{
+  "person_one": {
+    "name": "John Berberian",
+    "birth_year": 1941,
+    "birth_month": 10,
+    "birth_day": 9
+  },
+  "person_two": {
+    "name": "Paul Robert Ignatius",
+    "birth_year": 1920,
+    "birth_month": 11,
+    "birth_day": 11
+  },
+  "older_person_name": "Paul Robert Ignatius",
+  "age_difference_years": 21
+}

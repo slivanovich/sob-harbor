@@ -1,0 +1,19 @@
+{
+  "person_name": "Howard M. Mitchell",
+  "role_details": {
+    "actor_details": {
+      "appeared_in_films_count": 270,
+      "acting_career_start_year": 1910,
+      "acting_career_end_year": 1952
+    },
+    "director_details": {
+      "directed_silent_films_count": 38,
+      "directing_silent_films_start_year": 1915,
+      "directing_silent_films_end_year": 1927
+    }
+  },
+  "other_known_roles": [
+    "actor",
+    "film director"
+  ]
+}

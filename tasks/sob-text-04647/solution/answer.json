@@ -1,0 +1,14 @@
+{
+  "universities_compared": [
+    {
+      "name": "University of California, San Diego",
+      "total_degree_programs": 200
+    },
+    {
+      "name": "California Polytechnic State University",
+      "total_degree_programs": 103
+    }
+  ],
+  "comparison_result": "University of California, San Diego offers more degree programs than California Polytechnic State University.",
+  "university_with_more_programs": "University of California, San Diego"
+}

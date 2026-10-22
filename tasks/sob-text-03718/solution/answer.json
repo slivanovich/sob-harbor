@@ -1,0 +1,14 @@
+{
+  "documentaries_compared": [
+    {
+      "title": "Tintin and I",
+      "release_year": 2003
+    },
+    {
+      "title": "Racing Extinction",
+      "release_year": 2015
+    }
+  ],
+  "earliest_released_documentary_title": "Tintin and I",
+  "earliest_release_year": 2003
+}

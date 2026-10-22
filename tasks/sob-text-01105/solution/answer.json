@@ -1,0 +1,19 @@
+{
+  "film_title": "Who's Minding the Store?",
+  "release_year": 1963,
+  "director": {
+    "name": "Frank Tashlin"
+  },
+  "starring_actor": {
+    "name": "Jerry Lewis",
+    "professions": [
+      "comedian",
+      "actor",
+      "singer",
+      "producer",
+      "director",
+      "screenwriter",
+      "humanitarian"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of Los Angeles Rams first-round draft picks: The Los Angeles Rams, a professional American football team based in Los Angeles, joined the National Football League (NFL) as Cleveland Rams in 1937.  The Rams began playing in 1936 as a charter member of the second American Football League.  Although the NFL granted membership to the same owner, the NFL considers it a separate entity.  In 1946, Rams' owner Dan Reeves, fed up with poor attendance at Cleveland Stadium, moved the Rams to Los Angeles, and the team played there from 1946 to 1979.  Before his death in 1979, later Rams owner Carroll Rosenbloom planned a move within the Los Angeles metropolitan area to Anaheim, using the venue now known as Angel Stadium, and his widow and successor Georgia Frontiere went through with the move in 1980, with the team still officially representing Los Angeles.  The Rams moved to St. Louis in 1995 and renamed the team St. Louis Rams.  In January 2016, the Rams and the NFL announced that the team would return to Los Angeles.  The team now plays in its original L.A. venue, the Los Angeles Memorial Coliseum, while awaiting the 2020 opening of its new stadium in suburban Inglewood.
+
+Lance Rentzel: Thomas Lance Rentzel (born October 14, 1943) is a former American football flanker in the National Football League (NFL) for the Minnesota Vikings, Dallas Cowboys and the Los Angeles Rams.  He played college football at the University of Oklahoma.
+
+Tommy McDonald (American football): Thomas Franklin McDonald (born July 26, 1934) is a former American football flanker in the National Football League (NFL), where he played for the Philadelphia Eagles, Dallas Cowboys, Los Angeles Rams, Atlanta Falcons, and Cleveland Browns.  He played college football for the Oklahoma Sooners football team.  He is a member of the Pro Football Hall of Fame and College Football Hall of Fame.
+
+Jim Doran: James Robert Doran (August 11, 1927 – June 29, 1994) was a former American football wide receiver in the National Football League (NFL) for the Detroit Lions (1951–1959) and the Dallas Cowboys (1960–1961).  He played college football at Iowa State University.  He was a two-way player, playing both on offense and defense.  He played 94 games as a defensive lineman, usually defensive end, and 115 games as a tight end.  Injuries to teammates forced him to also become a tight end during Detroit's 1953 championship season, and he scored from that position in the 1953 NFL Championship Game.  He was left unprotected in the 1960 NFL Expansion Draft, and Dallas drafted him.  He was the first Pro Bowl player for the Cowboys.
+
+Victor Hicks: Victor Lonell Hicks (born January 19, 1957) is a former American football tight end who played one season with the Los Angeles Rams of the National Football League.  He was drafted by the Los Angeles Rams in the fifth round of the 1979 NFL Draft.  He played college football at the University of Oklahoma and attended Estacado High School in Lubbock, Texas.  He was also member of the New Jersey Generals and Denver Gold of the United States Football League.
+
+Billy Truax: William Frederick Truax (born July 15, 1943) is a former professional American football tight end in the National Football League (NFL) from 1964 to 1973 for the Los Angeles Rams and the Dallas Cowboys.  He played in high school at Holy Cross in New Orleans and college football at Louisiana State University and was drafted in the second round of the 1964 NFL draft.  Following the 1970 NFL season, Truax was traded by the Rams to the Cowboys for wide receiver Lance Rentzel.  He was part of the Cowboys' Super Bowl VI championship team in 1971.
+
+Wendell Tucker: Wendell Edward Tucker (born September 4, 1943) is a former professional American football player who played wide receiver for four seasons for the Los Angeles Rams.  Tucker spent most of his first season on the "taxi-squad" while learning behind the Rams' starting flanker Bernie Casey.  Tucker saw action in 10 of the team's 14 games in 1968 (catching only 7 passes but 4 of them went for touchdowns), and then became the starting flanker after Casey's retirement.  The 1969 season would prove to be his most productive as, playing opposite wide receiver Jack Snow, he caught 38 passes for 629 yards and 7 touchdowns, including a 93 yarder vs. the 49ers for the Coastal Division champion Rams.  Tucker returned in 1970 but was hampered by injuries and caught only 12 passes in 12 games.  In May 1971, Tucker was traded along with Billy Truax to the Dallas Cowboys for receiver Lance Rentzel.  However, unable to regain his trademark speed because of a knee injury, Tucker retired before the start of the 1971 season.
+
+Charley Cowan: Charles Edward Cowan (June 19, 1938 in Braeholm, West Virginia – April 29, 1998 in Los Angeles, California) was a former American football offensive tackle who played fifteen seasons in the National Football League with the Los Angeles Rams from 1961 to 1975.  Cowan was a huge intimidating presence on the left of Tom Mack, a member of the Pro Football Hall of Fame, from 1966 to 1975, forming a potent left side of the offensive line, with help from Ken Iman at center from 1965 to 1975.  In that 1961 to 1975 span, the Rams made the playoffs 5 times (1967,1969,1973,1974,1975), reaching the NFC championship game of the 1974-75 NFL playoffs and the 1975-76 NFL playoffs, but losing to the Minnesota Vikings and to the Dallas Cowboys, respectively.  In the 1974 divisional round, the Rams defeated the Washington Redskins, as Cowan was successful against the opposing the right defensive end Verlon Biggs.  In the 1975 divisional round, Doug France started in his place as the Rams defeated the St. Louis Cardinals.  Cowan came back to play against the Cowboys, his final game, as the Rams could not get past them.  Cowan was replaced by Doug France in 1976.
+
+History of the Cleveland Rams: The professional American football team now known as the Los Angeles Rams was established in Cleveland, and played there from 1936 to 1945.  This article chronicles the team's history during their time as the Cleveland Rams.  The Rams competed in the second American Football League (AFL) for the 1936 season and the National Football League (NFL) from 1937–1945, winning the NFL championship in 1945, before moving to Los Angeles in 1946 to become the only NFL champion ever to play the following season in another city.  The move of the team to Los Angeles helped to jump-start the reintegration of pro football by African-American players and opened up the West Coast to professional sports.  After being based in Los Angeles for 49 years, the Rams franchise moved again after the 1994 NFL season to St. Louis.  In 2016, the team moved back to Los Angeles after 21 seasons in St. Louis.
+
+Jim Price (tight end): James Price (born October 2, 1966 in Englewood, New Jersey) is a former American football tight end in the National Football League for the Los Angeles Rams, Dallas Cowboys and the St. Louis Rams.  He played college football at Stanford University.
+
+Question: William Frederick Truax, is a former professional American football tight end in the National Football League (NFL) from 1964 to 1973 for the Los Angeles Rams and the Dallas Cowboys, following the 1970 NFL season, Truax was traded by the Rams to the Cowboys for wide receiver Lance Rentzel, a former American football flanker, in which organization?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the player."
+        },
+        "position": {
+          "type": "string",
+          "description": "The primary playing position of the player."
+        }
+      },
+      "required": [
+        "name",
+        "position"
+      ],
+      "additionalProperties": false
+    },
+    "league_information": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the professional sports league."
+        },
+        "abbreviation": {
+          "type": "string",
+          "description": "The abbreviation of the professional sports league."
+        }
+      },
+      "required": [
+        "name",
+        "abbreviation"
+      ],
+      "additionalProperties": false
+    },
+    "teams_played_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of teams the player played for within the specified league."
+    }
+  },
+  "required": [
+    "player_details",
+    "league_information",
+    "teams_played_for"
+  ],
+  "additionalProperties": false
+}

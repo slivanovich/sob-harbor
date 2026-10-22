@@ -1,0 +1,14 @@
+{
+  "director_name": "Mike Newell",
+  "award_details": {
+    "award_name": "BAFTA Award",
+    "award_category": "Best Direction",
+    "winning_film_title": "Four Weddings and a Funeral",
+    "award_year": 1994
+  },
+  "other_film_in_question": {
+    "film_title": "Pushing Tin",
+    "directed_by_newell": true,
+    "award_status": "not mentioned"
+  }
+}

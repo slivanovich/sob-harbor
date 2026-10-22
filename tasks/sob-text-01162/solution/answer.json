@@ -1,0 +1,23 @@
+{
+  "plant_genera": [
+    {
+      "genus_name": "Heterotheca",
+      "found_continents": [
+        "North America"
+      ]
+    },
+    {
+      "genus_name": "Lupinus",
+      "found_continents": [
+        "North America",
+        "South America",
+        "North Africa",
+        "Mediterranean"
+      ]
+    }
+  ],
+  "common_continents": [
+    "North America"
+  ],
+  "answer_continent_count": 1
+}

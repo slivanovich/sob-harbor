@@ -1,0 +1,16 @@
+{
+  "sports_organization": {
+    "name": "Major League Baseball"
+  },
+  "players_noted_for_height": [
+    {
+      "player_name": "Eric Hillman",
+      "height_achievement_description": "was tied with fellow former pitcher Randy Johnson and current pitchers Andrew Sisco of the New York Yankees organization and Chris Young of the New York Mets, for the tallest player in the league, at 6 ft , before later being passed by 6 ft Jon Rauch of the Toronto Blue Jays"
+    },
+    {
+      "player_name": "Jon Rauch",
+      "height_achievement_description": "At 6 ft , he is the tallest player in Major League Baseball history"
+    }
+  ],
+  "note_on_question_premise": "The context indicates Eric Hillman was tied for tallest at one point, but was later surpassed by Jon Rauch, who became the tallest player in Major League Baseball history. They were not tied with each other for the absolute tallest player simultaneously."
+}

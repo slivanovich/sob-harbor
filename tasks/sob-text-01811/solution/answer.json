@@ -1,0 +1,9 @@
+{
+  "actress_name": "Taylor Spreitler",
+  "worked_on_days_of_our_lives": true,
+  "worked_with_melissa_joan_hart_on_sitcom": {
+    "sitcom_name": "Melissa & Joey",
+    "actress_role_on_sitcom": "Lennox Scanlon",
+    "melissa_joan_hart_role_on_sitcom": "Melanie \"Mel\" Burke"
+  }
+}

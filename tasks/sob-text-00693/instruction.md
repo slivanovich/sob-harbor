@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Venom (comics): Venom, or the Venom Symbiote, is a fictional character appearing in American comic books published by Marvel Comics, commonly in association with Spider-Man.  Venom made his first appearance in "The Amazing Spider-Man" #300 (May 1988).  Venom was originally conceived as a supervillain, but has since become more of an antihero.  Venom is a Symbiote, a sentient alien, with a gooey, almost liquid-like form.  As with real-world symbiotes, it requires a host, usually human, to bond with for its survival.  After bonding, the Symbiote endows its enhanced powers upon the host.  When the Venom Symbiote bonds with a human, that new dual-life form refers to itself as "Venom".
+
+The Superior Spider-Man: The Superior Spider-Man was a superhero comic book series that was published by Marvel Comics that ran between January 2013 and June 2014.  The series was written by Dan Slott with artwork by Ryan Stegman, Humberto Ramos, and Giuseppe Camuncoli.  It features a reformed Otto Octavius who has taken over Peter Parker's body, and, having allowed Peter to die in Octavius' body but being affected by Peter's memories, is determined to be a better Spider-Man than Peter ever was, and a better man than Otto Octavius.  The title replaced the long running series "The Amazing Spider-Man", after the conclusion of the "Dying Wish" storyline, as the core Spider-Man book.  The Superior Spider-Man also crosses over into other Spider-man titles such as Avenging Spider-Man and its superseding title Superior Spider-Man Team-Up, as well as many other Marvel titles.  The series ended with issue 31, which determined the fate of Otto Octavius' mind, and was followed by the next volume of "The Amazing Spider-Man", in which Peter Parker has regained his body and the Spider-Man mantle.
+
+Spider-Man and Venom: Maximum Carnage: Spider-Man and Venom: Maximum Carnage is a side-scrolling beat 'em up game for the Super Nintendo Entertainment System and Mega Drive/Genesis, developed by Software Creations and published by Acclaim Entertainment and its subsidiary LJN in 1994.  The game, based on the comic book story arc of the same name, features numerous heroes, including Spider-Man, Venom, and their allies from the Marvel Comics fictional universe like Captain America, Black Cat, Iron Fist, Cloak and Dagger, Deathlok, Morbius and Firestar, all teaming up to battle an onslaught of villains led by Carnage, including Shriek, Doppelganger, Demogoblin and Carrion.
+
+Spider-Man: Big Time: Big Time is the title of a run of comic book storylines in "The Amazing Spider-Man", published by Marvel Comics starting in 2010 and ending in 2011.  It follows the 102 consecutive issues of the "" publishing scheme and is the first shift in publishing for "The Amazing Spider-Man" since "Brand New Day" began.  The frequency of publication dropped from three issues monthly to two issues, but the length of the comic book expanded from 22 to 30 pages.  This extra length is sometimes used for back-up stories and sometimes for a longer main story.  Concurrently with the story going in "The Amazing Spider-Man", Marvel also started the new series "Spider-Girl" vol.  2, "Osborn", and "Carnage", which are considered part of "Big Time."  All nine issues of "Big Time" have sold out at Diamond Comic Distributors and have a second printing with a variant cover.
+
+Avenging Spider-Man: Avenging Spider-Man is the title of an American comic book series published monthly by Marvel Comics, featuring the adventures of the fictional superhero Spider-Man.  The events in the story take place in the primary continuity of the mainstream Marvel Universe along with the events of "The Amazing Spider-Man" and later "The Superior Spider-Man".  This was the first ongoing series to feature Spider-Man as the main character besides "The Amazing Spider-Man" since the cancellation of "Friendly Neighborhood Spider-Man" and the second volume of "Sensational Spider-Man" in December 2008 following the conclusion of the "" storyline.  "Avenging Spider-Man" has also been instrumental in Marvel's shift towards including codes to receive free digital copies of the comic with purchased print comic books.
+
+Eddie Brock: Eddie Brock is a fictional character appearing in American comic books published by Marvel Comics.  The character was created by David Michelinie and Todd McFarlane, and his earliest appearance was a cameo in "Web of Spider-Man" #18 (September 1986), before making his first full appearance in "The Amazing Spider-Man" #300 (May 1988) as the original and most well-known incarnation of Venom.  The character has since appeared in many Marvel Comics publications, including his own series "Venom".  Introduced as a villain of Spider-Man, the character becomes an anti-hero, working with and against superheroes.
+
+Dying Wish: "Dying Wish" is a three-issue comic book storyline in "The Amazing Spider-Man", first published by Marvel Comics between November and December 2012 and featuring the fictional superhero Spider-Man.  Starting with a prologue in "The Amazing Spider-Man" #698 and ending in "The Amazing Spider-Man" #700, "Dying Wish" brought over fifty years of Marvel's publication of "The Amazing Spider-Man" comic series to an end, and ushered in the new series "The Superior Spider-Man" in January 2013.  The story concluded a storyline started in "The Amazing Spider-Man" #600 where it is revealed that the Spider-Man villain Doctor Octopus is terminally ill from his years of crime and fighting superheroes.  Aware of his impending death, Doctor Octopus sets in motion a series of plans to create his legacy, that ran through the March 2012 story "Ends of the Earth" and finished in "Dying Wish", where the villain successfully swapped consciousnesses with Spider-Man's alter ego Peter Parker, thrusting the hero into his decaying body.
+
+Maximum Carnage: Maximum Carnage is a fourteen-part comic book crossover published in Marvel Comics' "Spider-Man" family of titles in 1993.  It featured Spider-Man, Venom, and a host of other superheroes teaming up to face Venom's murderous offspring Carnage and his team of supervillains.
+
+List of Spider-Man storylines: The superhero Spider-Man has appeared in many American comic books published by Marvel Comics since he first appeared in "Amazing Fantasy" #15 (August 1962).  The character has since been featured in various storylines, forming longer story arcs.  These particular arcs have been given special names and have gone through reprints over the years.  During the 1960s and 1970s, these story arcs normally only lasted three issues or less (sometimes only one, such as the classic story "Spider-Man No More! ") and would appear in Spider-Man's main comic book title "The Amazing Spider-Man". " The Death of Jean DeWolff" was the first popular story arc outside of "The Amazing Spider-Man", as appeared in the third monthly ongoing series of "The Spectacular Spider-Man".
+
+Carnage (comics): Carnage (Cletus Kasady) is a fictional supervillain appearing in American comic books published by Marvel Comics, usually as an enemy of Spider-Man.  The character first appeared as Kasady in "The Amazing Spider-Man" #344 (March 1991) and as Carnage in "The Amazing Spider-Man" #360.  Carnage was created by writer David Michelinie and artists Erik Larsen and Mark Bagley, based on elements of the precursor character Venom.  Along with Venom, the character belongs to a race of amorphous extraterrestrial parasites known as the Symbiotes.  In 2009, Carnage was ranked as IGN's 90th Greatest Comic Book Villain of All Time.
+
+Question: Spider-Man and Venom: Maximum Carnage features a battle involving what villain who first appeared in "The Amazing Spider-Man" #344?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "villain_name": {
+      "type": "string",
+      "description": "The name of the villain."
+    },
+    "first_appearance": {
+      "type": "object",
+      "properties": {
+        "comic_title": {
+          "type": "string",
+          "description": "The title of the comic book where the villain first appeared."
+        },
+        "issue_number": {
+          "type": "integer",
+          "description": "The issue number of the comic book where the villain first appeared."
+        }
+      },
+      "required": [
+        "comic_title",
+        "issue_number"
+      ],
+      "additionalProperties": false
+    },
+    "featured_in_storyline": {
+      "type": "string",
+      "description": "The name of the storyline or game where the villain is featured."
+    }
+  },
+  "required": [
+    "villain_name",
+    "first_appearance",
+    "featured_in_storyline"
+  ],
+  "additionalProperties": false
+}

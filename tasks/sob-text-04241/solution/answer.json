@@ -1,0 +1,14 @@
+{
+  "athlete_details": {
+    "name": "Caster Semenya",
+    "nationality": "South African",
+    "specialization": "middle-distance runner",
+    "olympic_gold_medal_year": 2016
+  },
+  "championship_details": {
+    "name": "African Junior Athletics Championships",
+    "year": 2009,
+    "location": "Bambous, Mauritius"
+  },
+  "action_performed": "broke championships records"
+}

@@ -1,0 +1,13 @@
+{
+  "fish_details": {
+    "name": "Schelly",
+    "water_preference": "freshwater",
+    "conservation_status": "endangered"
+  },
+  "habitat_details": {
+    "name": "Red Tarn",
+    "formation_method": "melted glacier",
+    "location": "English Lake District, Cumbria"
+  },
+  "conclusion_water_type": "freshwater"
+}

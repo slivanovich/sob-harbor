@@ -1,0 +1,22 @@
+{
+  "band_names": [
+    "Zwan",
+    "Noir Désir"
+  ],
+  "common_genre": "rock",
+  "band_genre_details": [
+    {
+      "band_name": "Zwan",
+      "genres_identified": [
+        "alternative rock"
+      ]
+    },
+    {
+      "band_name": "Noir Désir",
+      "genres_identified": [
+        "rock",
+        "alternative rock"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "common_category": "magazine",
+  "entity_count": 2,
+  "entities": [
+    {
+      "name": "Claudia",
+      "type": "magazine",
+      "publisher_or_origin": "Warsaw, Poland"
+    },
+    {
+      "name": "Women's Health",
+      "type": "magazine",
+      "publisher_or_origin": "Rodale in Emmaus, Pennsylvania"
+    }
+  ]
+}

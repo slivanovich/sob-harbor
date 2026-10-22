@@ -1,0 +1,20 @@
+{
+  "person_of_interest": {
+    "name": "Edoardo Agnelli",
+    "birth_date": "9 June 1954",
+    "death_date": "15 November 2000",
+    "relationship_to_gianni_agnelli": "eldest child and only son"
+  },
+  "mother_details": {
+    "name": "Marella Agnelli",
+    "birth_date": "4 May 1927",
+    "other_roles": [
+      "Italian noblewoman",
+      "art collector",
+      "socialite",
+      "style icon",
+      "widow of former Fiat chairman Gianni Agnelli"
+    ]
+  },
+  "query_resolved": true
+}

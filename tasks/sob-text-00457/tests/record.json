@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "record_id": "a781080a63f6a5c38b096118e28b4e122491ef0ce5fb1035d66c5512eb31afe6",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a7b52935542992d025e67fe",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ray Enright",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Jaws of Steel: Jaws of Steel is a 1927 silent film family adventure directed by Ray Enright and featuring dog star Rin Tin Tin and Jason Robards, Sr..  Warner Bros. produced and distributed the film.  Darryl Zanuck, under the alias Gregory Rogers, wrote the story.\n\nScott Pembroke: Scott Pembroke (September 13, 1889 – February 21, 1951) was an American director, actor and screenwriter.  He directed 73 films between 1920 and 1937.  He was born in San Francisco, California and died in Pasadena, California.\n\nVideograms of a Revolution: Videograms of a Revolution is a 1992 documentary film compiled by Harun Farocki and Andrei Ujică from over 125 hours of amateur footage, news footage, and excerpts from the Bucharest TV studio overtaken by demonstrators as part of the December 1989 Romanian Revolution.\n\nNew German Cinema: New German Cinema (German: \"Neuer Deutscher Film\" ) is a period in German cinema which lasted from the late 1960s into the 1980s.  It saw the emergence of a new generation of directors.  Working with low budgets, and influenced by the French New Wave, such directors as Rainer Werner Fassbinder, Werner Herzog, Alexander Kluge, Harun Farocki, Volker Schlöndorff, Helma Sanders-Brahms, Hans-Jürgen Syberberg, Margarethe von Trotta and Wim Wenders made names for themselves and produced a number of 'small' motion pictures that caught the attention of art house audiences, and enabled these directors (particularly Wenders and Schlöndorff) to create better-financed productions which were backed by the big US studios.  However, most of the films were commercial failures and, by 1977, 80% of a budget for a typical German film was ensured by a subsidy.\n\nJess Robbins: Jess Robbins (April 30, 1886 – March 11, 1973) was an American film director, writer and producer.  He directed 73 films between 1913 and 1927.  He was the first director to direct Laurel and Hardy in the same motion picture, namely \"The Lucky Dog\".\n\nGhosts (2005 film): Gespenster is a 2005 German film directed by Christian Petzold.  Petzold also cowrote the screenplay with Harun Farocki.  The film was presented at the 2005 Berlin International Film Festival, where it was officially entered into competition.\n\nHarun Farocki: Harun Farocki (9 January 1944 – 30 July 2014) was a German filmmaker, author, and lecturer in film.\n\nRay Enright: Ray Enright (March 25, 1896 – April 3, 1965) was an American film director.  He directed 73 films between 1927--53, many of them for Warner Bros. He oversaw comedy films like Joe E. Brown vehicles, and five of the six informal pairings of Joan Blondell and Glenda Farrell.  Enright was born in Anderson, Indiana, and died in Hollywood, California, from a heart attack.\n\nRaven Row: Raven Row is a free art exhibition centre in Spitalfields.  It was constructed from numbers 56 and 58, Artillery Lane.  These properties were built about 1690.  The area was formerly used for testing artillery and this portion of the lane was known as Raven Row until 1895.  The buildings have previously been used as shops of Huguenot silk weavers and traders.  They were converted into a gallery in 2009 by Alex Sainsbury who established a charity to run it.  The inaugural exhibition was of work by New York artist Ray Johnson.  Raven Row has held exhibitions by K.P. Brehmer, Iain Baxter, Adam Chodzko, Suzanne Treister, Peter Kennard, Hilary Lloyd, Harun Farocki, Eduardo Paolozzi, Stephen Willats and Yvonne Rainer.  Other exhibitions have been curated by Richard Grayson, Lars Bang Larsen and Alice Motard.\n\nTracked by the Police: Tracked by the Police is a 1927 silent film produced and distributed by the Warner Bros. with a story written by Darryl Zanuck.  It stars dog actor Rin Tin Tin.  Ray Enright directed with 'Rinty's' costars being Jason Robards, Sr. and Virginia Brown Faire.  The film may have had a Vitaphone sound effects/music track that is now lost.  The film is preserved at the Library of Congress.",
+    "question": "Who directed 73 films between 1927--53, Ray Enright or Harun Farocki?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "matching_director": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the director who matches the criteria."
+            },
+            "films_directed_count": {
+              "type": "integer",
+              "description": "The number of films directed by this person."
+            },
+            "direction_period": {
+              "type": "string",
+              "description": "The period during which the films were directed."
+            }
+          },
+          "required": [
+            "name",
+            "films_directed_count",
+            "direction_period"
+          ],
+          "additionalProperties": false
+        },
+        "non_matching_director_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Names of directors mentioned in the question who did not match the criteria."
+        },
+        "criteria_summary": {
+          "type": "string",
+          "description": "A summary of the criteria used to identify the director."
+        }
+      },
+      "required": [
+        "matching_director",
+        "non_matching_director_names",
+        "criteria_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "matching_director": {
+        "name": "Ray Enright",
+        "films_directed_count": 73,
+        "direction_period": "1927--53"
+      },
+      "non_matching_director_names": [
+        "Harun Farocki"
+      ],
+      "criteria_summary": "Directed 73 films between 1927 and 1953."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

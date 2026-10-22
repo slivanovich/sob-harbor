@@ -1,0 +1,23 @@
+{
+  "person_name": "Molly Brown",
+  "person_attributes": {
+    "full_name": "Molly Brown",
+    "other_known_names": [
+      "Margaret Brown"
+    ],
+    "is_rms_titanic_survivor": true,
+    "is_wife_of_james_joseph_brown": true,
+    "roles": [
+      "philanthropist",
+      "socialite",
+      "activist"
+    ]
+  },
+  "lodge_information": {
+    "name": "Avoca Lodge",
+    "known_as_alternative": "The Molly Brown Summer House",
+    "location_description": "Registered Historic Place in southwest Denver, Colorado near Bear Creek",
+    "purpose": "summer retreat",
+    "is_registered_historic_place": true
+  }
+}

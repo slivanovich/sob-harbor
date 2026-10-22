@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "f1acc60e75b141a168a2f6b94cfe082c0673aa971c0bcd7650c742250f85ddbb",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae6e8035542992ae0d163a8",
+    "source_dataset": "hotpotqa",
+    "source_answer": "eight",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2013 Morocco Tennis Tour – Kenitra – Singles: Dominic Thiem became the inaugural champion when Teymuraz Gabashvili retired 7–6, 5–1.\n\n2016 Karshi Challenger – Singles: Teymuraz Gabashvili was the defending champion but chose not to participate.\n\n2016 Open 13 – Singles: Gilles Simon was the defending champion, but lost in the first round to Teymuraz Gabashvili.\n\nDominic Thiem: Dominic Thiem (] ; born 3 September 1993) is an Austrian professional tennis player who has an ATP high ranking of world No. 7 which he first achieved on 6 June 2016.  He has won eight singles titles on the ATP Tour.\n\n2014 Samarkand Challenger – Singles: Teymuraz Gabashvili was the defending champion but decided not to participate.\n\n2016 Fergana Challenger – Men's Singles: Teymuraz Gabashvili was the defending champion, but decided not to defend his title.\n\n2009 Baden Open – Singles: Teymuraz Gabashvili was the defending champion; however, he chose not to play this year.\n\n2014 Tashkent Challenger – Doubles: Mikhail Elgin and Teymuraz Gabashvili were the defending champions, but Gabashvili chose not to compete this year.  Elgin played alongside Alexander Kudryavtsev and lost in the first round to Frank Moser and Alexander Satschko.\n\n2014 Karshi Challenger – Singles: Teymuraz Gabashvili was the defending champion, but decided not to compete.\n\nNino Serdarušić: Nino Serdarušić (born 13 December 1996) is a Croatian tennis player.  Serdarušić had a career high junior ranking of 21, and partnering Petros Chrysochos, made the doubles semifinals of the 2014 Wimbledon Championships boys' doubles.  He made his ATP main draw debut at the 2014 ATP Vegeta Croatia Open Umag in the doubles event, partnering Dino Marcan, losing in the first round to the second seeds Pablo Cuevas and Horacio Zeballos in three sets.  In 2016, he made his first appearance in an ATP singles final - also in the Croatia Open - losing in straight sets to Teymuraz Gabashvili.",
+    "question": "How many singles titles on the ATP tour have been won by the person who replaced Teymuraz Gabashvili as inaugural champion?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The name of the tennis player identified as the inaugural champion."
+        },
+        "event_details": {
+          "type": "object",
+          "properties": {
+            "event_name": {
+              "type": "string",
+              "description": "The name of the event where the player became the inaugural champion."
+            },
+            "event_year": {
+              "type": "integer",
+              "description": "The year the event took place."
+            },
+            "opponent_name": {
+              "type": "string",
+              "description": "The name of the opponent in the final match of the event."
+            },
+            "opponent_outcome": {
+              "type": "string",
+              "description": "The outcome for the opponent in the final match."
+            }
+          },
+          "required": [
+            "event_name",
+            "event_year",
+            "opponent_name",
+            "opponent_outcome"
+          ],
+          "additionalProperties": false
+        },
+        "singles_titles_count": {
+          "type": "integer",
+          "description": "The total number of singles titles won by the identified player on the ATP Tour."
+        }
+      },
+      "required": [
+        "player_name",
+        "event_details",
+        "singles_titles_count"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Dominic Thiem",
+      "event_details": {
+        "event_name": "2013 Morocco Tennis Tour – Kenitra – Singles",
+        "event_year": 2013,
+        "opponent_name": "Teymuraz Gabashvili",
+        "opponent_outcome": "retired"
+      },
+      "singles_titles_count": 8
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "f5bbdcbebcebc84344cf2eeac86a719d81e0ddbcaa2233fe8e910a900007edfa",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a81ebd05542995ce29dcc80",
+    "source_dataset": "hotpotqa",
+    "source_answer": "\"Dharma Wheel Practice\"",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Falun Gong: Falun Gong or Falun Dafa (Standard Mandarin Chinese: ; literally, \"Dharma Wheel Practice\" or \"Law Wheel Practice\") is a Chinese spiritual practice that combines meditation and qigong exercises with a moral philosophy centered on the tenets of truthfulness, compassion, and ().  The practice emphasizes morality and the cultivation of virtue, and identifies as a qigong practice of the Buddhist school, though its teachings also incorporate elements drawn from Taoist traditions.  Through moral rectitude and the practice of meditation, practitioners of Falun Gong aspire to eliminate attachments, and ultimately to achieve spiritual enlightenment.\n\nFazhengnian: Fazhengnian (; literally \"sending forth righteous thoughts\") is a meditation ritual practiced in Falun Gong (or Falun Dafa).  The practice of sending forth righteous thoughts was initiated by Falun Gong’s founder, Mr. Li Hongzhi, on May 19, 2001, a few years after the start of the persecution of Falun Gong by authorities of the People's Republic of China (PRC).  Sending forth righteous thoughts is one of the three requirements for Falun Dafa practitioners during this period of time called \"Fa-rectification,\" along with studying the Fa, and clarifying the truth.\n\nBhagatji Maharaj: Bhagatji Maharaj (Gujarati: ભગતજી મહારાજ ) (20 March 1829 – 7 November 1897), born as Pragji Darji, was the second spiritual successor of Swaminarayan in the BAPS Swaminarayan Sanstha, a Hindu denomination.  Through his spiritual discourses he was instrumental in propagating the knowledge that Swaminarayan was Purushottam, the Supreme Being, and that his own guru, Gunatitanand Swami, was Akshar, the divine abode of God.  His spiritual realization and elevated spiritual practice as a low-caste householder set new precedents and acted as a bulwark against the idea that spiritual elevation was confined to upper castes.  He passed on the knowledge of the Akshar-Purshottam Upasana to his closest disciple, Shastriji Maharaj, who later founded BAPS Swaminarayan Sanstha in 1907.  His extraordinary spiritual service and unflinching devotion towards Gunatitanand Swami elevated him to an exalted status among devotees of the Swaminarayan sect both past and present.\n\nBig moon peyotism: Big moon peyotism was introduced as a variant of the Peyote Religion in the 1880s that incorporated Christian, Caddo, and Deleware religious symbols with the consumption of peyote intertwined from Caddo and Deleware rituals.  The plant itself, peyote, had been used for spiritual practice by the Mescalero Apache in the 1880, and their use of it influenced other tribes like the Comanche and Kiowa.  Peyotism inquires all of the same traits found in other religions such as a doctrine, a ritual, and ethics.  The doctrine includes the belief of the actuality of power, incarnation, and spirits.  It soon spread all over the Indian Territory while its native people were searching for spiritual help.  Peyotism at this point, was a spiritual path that was soon to be taken in Indian Territory.  Around 1890, the Caddo, Deleware and Quapaw tribes became the first practitioners of peyote.  Black Wolf, a practitioner from the Caddo tribe, brought the religion of little moon peyotism to the Osage people.  Black Wolf had intrigued enough of the tribe that his peyote prayers and rituals had truth and value, so the people sent him to heal a sick person in their tribe.  His prayers and rituals could not save their life, so peyotism was not being spread for a while.  After the native people's dry spell towards peyotism, it returned to the Osage tribe around 1898\n\nTapovan: Tapovan (Sanskrit) comes from the two root words \"tapas\" - meaning penance and by extension religious mortification and austerity, and more generally spiritual practice, and \"vana,\" meaning forest or thicket.  \"Tapovan\" then translates as \"forest of austerities or spiritual practice\".\n\nUpakarma: Upākarma \"Beginning\" (Sanskrit: उपाकर्म ), also called Āvaṇi Aviṭṭam (Tamil: ஆவணி அவிட்டம் ) and Janivārada Huṇṇime (Kannada: ಜನಿವಾರದ ಹುಣ್ಣಿಮೆ ),Gamha Purnima (Odia: ଗହ୍ମା ପୂର୍ଣିମା ), is a Vedic ritual practiced by Hindus of the Brahmin caste.  This ritual is also practiced by the Kshatriya and Vaishya community, who are dvijas and therefore have the rights to do Sandhyavandanam, the daily ablution ritual.\n\nSpiritual practice: A spiritual practice or spiritual discipline (often including spiritual exercises) is the regular or full-time performance of actions and activities undertaken for the purpose of inducing spiritual experiences and cultivating spiritual development.  A common metaphor used in the spiritual traditions of the world's great religions is that of walking a path.  Therefore, a spiritual practice moves a person along a path towards a goal.  The goal is variously referred to as salvation, liberation or union (with God).  A person who walks such a path is sometimes referred to as a wayfarer or a pilgrim.\n\nBisha'a: Bisha'a or Bisha (ordeal by fire, trial by fire or fire test) is a ritual practiced by Bedouin tribes of the Judean, Negev and Sinai deserts for the purpose of lie detection.  It is also practiced, and is said to have originated among, some Bedouin tribes of Saudi Arabia.  It is the best-known of various forms of trial by ordeal which are practiced by the Bedouin, which are now dying out.  It is one of the rituals in the Bedouin justice dispensary system for maintaining Sharaf - the Bedouin honor code.\n\nExorcism: Exorcism (from Greek εξορκισμός, \"exorkismós\" \"binding by oath\") is the religious or spiritual practice of evicting demons or other spiritual entities from a person, or an area, they are believed to have possessed.  Depending on the spiritual beliefs of the exorcist, this may be done by causing the entity to swear an oath, performing an elaborate ritual, or simply by commanding it to depart in the name of a higher power.  The practice is ancient and part of the belief system of many cultures and religions.\n\nAttunement: Attunement is a form of energy medicine originally developed by Lloyd Arthur Meeker (1907 – 1954) and his colleagues.  Meeker taught and practiced Attunement as a central feature of his spiritual teaching and ministry, Emissaries of Divine Light.  Attunement is taught as a personal spiritual practice and as a healing modality offered through the hands.  Emissaries of Divine Light believe that Attunement is a pivotal factor in the conscious evolution of humanity.",
+    "question": "Fazhengnian is a mediation ritual practiced in a spiritual practice whose name translates to what in English?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "ritual_name": {
+          "type": "string",
+          "description": "The name of the ritual mentioned in the question."
+        },
+        "ritual_type": {
+          "type": "string",
+          "description": "The type of ritual, e.g., meditation ritual."
+        },
+        "associated_spiritual_practice": {
+          "type": "string",
+          "description": "The name of the spiritual practice with which the ritual is associated."
+        },
+        "spiritual_practice_english_translation": {
+          "type": "string",
+          "description": "The English translation of the associated spiritual practice's name."
+        }
+      },
+      "required": [
+        "ritual_name",
+        "ritual_type",
+        "associated_spiritual_practice",
+        "spiritual_practice_english_translation"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "ritual_name": "Fazhengnian",
+      "ritual_type": "meditation ritual",
+      "associated_spiritual_practice": "Falun Gong",
+      "spiritual_practice_english_translation": "Dharma Wheel Practice"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

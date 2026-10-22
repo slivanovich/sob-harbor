@@ -1,0 +1,10 @@
+{
+  "artist_name": "Ed Sheeran",
+  "organization_attended": "Academy of Contemporary Music",
+  "organization_location": {
+    "city": "Guildford",
+    "county": "Surrey"
+  },
+  "attendance_role": "undergraduate",
+  "attendance_start_year": 2009
+}

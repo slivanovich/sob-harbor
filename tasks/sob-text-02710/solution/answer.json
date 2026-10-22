@@ -1,0 +1,13 @@
+{
+  "sequel_film_title": "The Jungle Captive",
+  "original_film_details": {
+    "title": "Jungle Woman",
+    "year": 1944,
+    "genre": "horror film"
+  },
+  "actor_details": {
+    "name": "Milburn Stone",
+    "best_known_role": "Doc",
+    "series_name": "Gunsmoke"
+  }
+}

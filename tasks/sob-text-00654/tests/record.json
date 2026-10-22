@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "df275028018253f226304c25b4393d42b3bc0642984f82b7848194629ccf3547",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7f21415542993067513653",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Fulton County",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Yolanda Martín: Yolanda Martin Franco (born February 16, 1954 in Guipúzcoa) is a boccia player from Spain.  She has a physical disability: She has cerebral palsy and is a BC3 type athlete.  She works as an administrator.  She competed at the 1996 Summer Paralympics.  She finished second in the BC1 one person event.  She competed at the 2000 Summer Paralympics.  She finished second in the two person BC3 event.  She competed at the 2004 Summer Paralympics.  She competed at the 2008 Summer Paralympics.  She finished second in the two person BC3 event.\n\nRoberto Abenia: Roberto Abenia Uliaque (born November 8, 1972 in Zaragoza) is a goalball athlete from Spain.  He played goalball at the 1996 Summer Paralympics.  His team was third.  He played goalball at the 2000 Summer Paralympics.  His team was third.  He played goalball at the 2004 Summer Paralympics.  His team was six.\n\nSara Carracelas García: Sara Carracelas Garcia (born September 15, 1981 in Guipúzcoa) is an S2 swimmer from Spain.  She has cerebral palsy.  She started swimming when she was four years old.  She competed at the 1996 Summer Paralympics, winning a gold medal in the 50 meter backstroke and the 50 meter freestyle.  She also won a bronze in the 100 meter freestyle.  She competed at the 2000 Summer Paralympics, winning a gold medal in the 50 meter backstroke a bronze in the 50 meter freestyle and a silver in the 100 meter freestyle.  She competed at the 2004 Summer Paralympics.  She finished first in the 50 meter backstroke, the 50 meter freestyle and in the 100 meter freestyle.  She raced at the 2008 Summer Paralympics, winning a bronze in the 50 meter backstroke.  In 2010, she competed at the Tenerife International Open.\n\nDaniel Llambrich Gabriel: Daniel Llambrich Gabriel (born March 14, 1975 in Barcelona) is a vision impaired S12/B2 swimmer from Spain.  His job in 2008 was working as a coupon seller.  He competed at the 1996 Summer Paralympics and the 2000 Summer Paralympics, where he did not medal.  He swam at the 2004 Summer Paralympics, winning a silver medal in the 4 x 100 meter 49 points medley relay.  He raced at the 2008 Summer Paralympics.\n\nAtlanta: Atlanta is the capital of and the most populous city in the U.S. state of Georgia, with an estimated 2016 population of 472,522.  Atlanta is the cultural and economic center of the Atlanta metropolitan area, home to 5,710,795 people and the ninth-largest metropolitan area in the United States.  Atlanta is the county seat of Fulton County, and a small portion of the city extends eastward into DeKalb County.\n\nAntonio García Martínez: Antonio Garcia Martinez (born December 24, 1956 in Sevilla) is a Spanish cyclist from.  He is LC3 type cyclist.  He is a chemical engineer.  He competed at the 1996 Summer Paralympics, the 2000 Summer Paralympics, the 2004 Summer Paralympics, and the 2008 Summer Paralympics.  He finished first in the Combined Road (Pursuit / Time Trial) LC3 race.\n\nFrancisco Ángel Soriano San Martin: Francisco Ángel Soriano San Martin (born March 28, 1949 in Las Tejeras-Langreo, Asturias) is a SH1 shooter from Spain.  In 2012, he was retired and a pensioner.  Soriano competed at the 1988 Summer Paralympics, 1992 Summer Paralympics, 1996 Summer Paralympics, 2000 Summer Paralympics, 2004 Summer Paralympics, 2008 Summer Paralympics and 2012 Summer Paralympics.  In 1996, he won a gold medal in the Free Pistol .50 P4, Mixed SH1 competition.  In 2000, he won a bronze in the Free Pistol .50 P4, Mixed SH1 competition.\n\nAnita Chapman: Anita Chapman MBE (born 3 July 1952 in Doncaster) is a British Paralympic archer.  In individual medals she won silver at the 1996 Summer Paralympics and gold at the 2000 Summer Paralympics.  In team medals she was on the bronze medal team at the 1996 Summer Paralympics, the silver medalist team at the 2000 Summer Paralympics, and the gold medal winning team at the 2004 Summer Paralympics.\n\nAna García-Arcicollar Vallejo: Ana Garcia-Arcicollar Vallejo (born May 28, 1982 in Madrid) is a teacher and a vision impaired B2/S12 swimmer from Spain.  She has a vision impairment because of a congenital disease.  She competed at the 1996 Summer Paralympics, winning a bronze in the 4 X 100 meter medley 49 points S11 - S13 race, the 200 meter breaststroke race and the 100 meter backstroke race.  She competed at the 2000 Summer Paralympics in Sydney, Australia, winning a silver in the 400 meter freestyle race, and a bronze in the 100 meter butterfly race.  She competed at the 2004 Summer Paralympics, winning a gold in the 400 meter freestyle race, and a bronze in the 100 meter butterfly race.  She competed at the 2008 Summer Paralympics, winning a silver in the 100 meter butterfly race.  She also raced at the IBSA World Games in Sao Paulo, Brazil.  She raced at the 2006 World Swimming Championship in Durban, South Africa and the II IBSA World Blind Championships in 2003 in Quebec, Canada.  She set world records in the 2003 races in the 4 X 50 meter Freestyle S11 - S13 race, the 800 meter freestyle S12 race and the 4 X 50 meter medley S11 - S13 race.\n\nIran at the 1996 Summer Paralympics: Athletes from the Islamic Republic of Iran competed at the 1996 Summer Paralympics in Atlanta, United States.",
+    "question": "The city that hosted the 1996 Summer Paralympics is the seat of what county?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "paralympic_year": {
+          "type": "integer",
+          "description": "The year of the Summer Paralympics."
+        },
+        "host_city": {
+          "type": "string",
+          "description": "The city that hosted the Summer Paralympics."
+        },
+        "county_seat_of_host_city": {
+          "type": "string",
+          "description": "The county that the host city is the seat of."
+        }
+      },
+      "required": [
+        "paralympic_year",
+        "host_city",
+        "county_seat_of_host_city"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "paralympic_year": 1996,
+      "host_city": "Atlanta",
+      "county_seat_of_host_city": "Fulton County"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

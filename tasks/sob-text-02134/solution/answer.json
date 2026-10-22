@@ -1,0 +1,17 @@
+{
+  "film_title": "Mickey's Once Upon a Christmas",
+  "release_year": 1999,
+  "award_details": {
+    "award_name": "Award for Best Animated Feature Film",
+    "festival_name": "Kecskemét Animation Film Festival",
+    "festival_edition": 5,
+    "award_year": 1999
+  },
+  "voice_actress_details": {
+    "actress_name": "Diane Michelle",
+    "nationality": "American",
+    "character_voiced": [
+      "Daisy Duck"
+    ]
+  }
+}

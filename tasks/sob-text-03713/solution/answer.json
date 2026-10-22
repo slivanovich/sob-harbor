@@ -1,0 +1,9 @@
+{
+  "astronaut_name": "Gordon Cooper",
+  "project_mercury_status": "one of the seven original astronauts in Project Mercury",
+  "endurance_record_details": {
+    "mission_name": "Gemini 5",
+    "duration_days": 8,
+    "co_pilot_name": "Pete Conrad"
+  }
+}

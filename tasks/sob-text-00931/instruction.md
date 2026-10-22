@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2011–12 Miami Heat season: The 2011–12 Miami Heat season is the franchise's 24th season in the National Basketball Association (NBA).  They came into the season as the defending Eastern Conference champions, the second season playing with the "Big Three" of Dwyane Wade, LeBron James, and Chris Bosh, and the fourth season under head coach Erik Spoelstra.  Prior to the beginning of the season, they looked to bounce back from their disappointing finish to the previous year where they lost to the Dallas Mavericks in the NBA Finals.  Following the 2011 NBA lockout the Heat played only 66 games this season.  They won their division for the 9th time and appeared in the Eastern Conference Finals for the 5th time.  For the second year in a row, Dwyane Wade, LeBron James, and Chris Bosh were all selected to the NBA All-Star Game, tying the record for the most Heat players in an All-Star game in franchise history.
+
+2005–06 Detroit Pistons season: The 2005–06 Detroit Pistons season was the 65th season of the franchise, the 58th in the National Basketball Association (NBA), and the 49th in the Detroit area.  They Pistons began the season hoping to improve upon their 54–28 output from the previous season and have another chance of going to the NBA Finals after losing to the San Antonio Spurs in last season's NBA Finals in seven games.  They bested it by ten games, finishing 64–18—their best record in franchise history—and qualifying for the playoffs for the fifth straight season.  The Pistons defeated the Milwaukee Bucks in five games in the first round, and the Cleveland Cavaliers in a tough hard fought seven game series to reached the Eastern Conference Finals for the fourth consecutive year before losing to the eventual NBA champions Miami Heat, whom they had beaten in a seven-game playoff series the year before.  Detroit's offseason was soon marked by the departure of star defensive player Ben Wallace, who signed a free-agent deal with the Chicago Bulls.
+
+1998 NBA All-Star Game: The 1998 NBA All-Star Game was the 48th edition of the North American National Basketball Association All-Star Game.  The event was held at Madison Square Garden in New York City.  The East won the game 135–114.  This game was the All-Star Game debut of Kobe Bryant, the youngest all-star in NBA history at 19 years of age, and rookie Tim Duncan.  Bryant had a team-high 18 points.  Michael Jordan earned MVP honors, scoring 23 points, grabbing 6 rebounds, and dishing out 8 assists despite having the flu.  This was Jordan's third MVP award.The Game featured four all-stars from the Los Angeles Lakers.  The Western Conference was coached by George Karl from the Seattle SuperSonics and the Eastern Conference was coached by Larry Bird of the Indiana Pacers.  This marks the only All-Star game to feature both Kobe Bryant, who was the youngest player in NBA history to be in the all-star game and Michael Jordan in which Jordan was with the Chicago Bulls.  Jordan came out of retirement one final time in 2001 and played two more seasons (and selected to the All-Star team both years) for the Washington Wizards.  Grant Hill and Michael Jordan shot the best field goal percentages this game when comparing players who shot ten or more shots.  Grant Hill was 7/11 from the field and he knocked down a three (.636%).  Michael Jordan was 10/18 from the field and he also knocked down one three (.556%).
+
+2006 NBA All-Star Game: The 2006 NBA All-Star Game was played on Sunday, February 19, 2006 at the Toyota Center in Houston, Texas, home of the Houston Rockets.  The game was the 55th annual All-Star game.  The theme song was by Houston native Chamillionaire who made a new version of his hit "Turn It Up."  Trailing by 21 points, the East rode the hot shooting of LeBron James and the teamwork of the four All-Stars from the Detroit Pistons to a 122–120 victory over the West.  The 21-year-old James, who scored 29 points and grabbed six rebounds, became the youngest player to win MVP.  With the score tied, Dwyane Wade, who finished with 20 points, hit the game-winning layup with 16 seconds left.  Tracy McGrady of the Houston Rockets led all players with a game-high 36 points.  The Detroit Pistons tied a record with the 1962 Boston Celtics (Sam Jones, Bill Russell, Bob Cousy, Tom Heinsohn), 1975 Celtics (John Havlicek, JoJo White, Dave Cowens, Paul Silas), 1983 Philadelphia 76ers (Julius Erving, Moses Malone, Andrew Toney and Maurice Cheeks), 1998 Lakers (Kobe Bryant, Shaquille O'Neal, Eddie Jones and Nick Van Exel), 2011 Boston Celtics (Rajon Rondo, Kevin Garnett, Paul Pierce and Ray Allen), 2015 Atlanta Hawks (Al Horford, Jeff Teague, Paul Millsap and Kyle Korver), and 2017 Golden State Warriors (Stephen Curry, Kevin Durant, Klay Thompson, and Draymond Green) by sending four players to the All-Star game.
+
+2005–06 Miami Heat season: The 2005–06 Miami Heat season was the 18th National Basketball Association season for the Miami Heat basketball franchise.  During the offseason, the Heat acquired Jason Williams and James Posey from the Memphis Grizzlies, and All-Star forward Antoine Walker from the Boston Celtics, while signing free agent All-Star point guard Gary Payton.  Early into the season, after a 15-12 start to the year, head coach Stan Van Gundy resigned, citing the desire to spend more time with his family, and Pat Riley resume coaching the Heat.  The Heat went 39-23 the rest of the way, finishing with a 52-30 record, good enough for first place in the Southeast Division and second place in the Eastern Conference overall.  Dwayne Wade and Shaquille O'Neal were both selected for the 2006 NBA All-Star Game.
+
+2002–03 New Jersey Nets season: The 2002–03 NBA season was the Nets' 36th season in the National Basketball Association, and 27th season in East Rutherford, New Jersey.  During the offseason, the Nets acquired All-Star center Dikembe Mutombo from the Philadelphia 76ers, and signed free agent Rodney Rogers.  However, Mutombo only played just 24 games due to a wrist injury.  The Nets got off a solid start with a 26–9 record, while posting a ten-game winning streak between December and January.  The team finished their season first place in the Atlantic Division with a 49–33 record, while posting a successful 33–8 home record.  Jason Kidd was selected for the 2003 NBA All-Star Game, leading the Nets with 18.7 points, 8.9 assists and 2.2 steals per game.  In the first round of the playoffs, they defeated the Milwaukee Bucks in six games, then swept the 6th-seeded Boston Celtics in four straight games in the semifinals, and then defeated the top-seeded Detroit Pistons in another four-game sweep in the Eastern Conference Finals.
+
+2007–08 Detroit Pistons season: The 2007–08 Detroit Pistons season was the 67th season of the franchise, the 60th in the National Basketball Association (NBA), and the 51st in the Detroit area.  The Central Division Pistons finished the regular season with a 59–23 record, 14 games ahead of the second place Cavaliers.  Their 59 wins were the third most in franchise history.  In the NBA Playoffs, Detroit advanced to the Eastern Conference Finals for the sixth consecutive time since 2003, making them the first team since the 1986–87 Los Angeles Lakers to appear that many consecutive times in their respective Conference Finals.  The Pistons lost to the eventual NBA champions Boston Celtics in the Eastern Conference Finals four games to two.
+
+2001–02 Milwaukee Bucks season: The 2001–02 NBA season was the Bucks' 34th season in the National Basketball Association.  During the offseason, the Bucks signed free agent Anthony Mason to shore up their front line.  After advancing to the Eastern Conference Finals last year, the Bucks got off to a solid start winning nine of their first ten games, then posted an 8-game winning streak with a division-leading record of 26–13 as of January 21.  Scoring leader Ray Allen was selected for the 2002 NBA All-Star Game.  At midseason, the team signed free agent Greg Anthony, who was released by the Chicago Bulls.  However, with a 35–25 record as of March 6, the Bucks would struggle and proceed to lose 16 of their final 22 games and miss the playoffs, finishing fifth in the Central Division with a 41–41 record, thanks to an embarrassing 123–89 road loss to the Detroit Pistons to close out the season.  This was one of the biggest late-season collapses for a team that was contending for a Division title in March.  Following the season, Glenn Robinson was traded to the Atlanta Hawks, and Anthony retired.
+
+2001–02 Boston Celtics season: The 2001–02 NBA season was the 56th season for the Boston Celtics in the National Basketball Association.  This season saw the Celtics select future All-Star Joe Johnson with the tenth pick in the 2001 NBA draft, but later on traded him at midseason to the Phoenix Suns for Rodney Rogers and Tony Delk.  The Celtics struggled with a 5–6 start to the season, but then won 12 of their next 14 games.  They won eight of their final nine games finishing second in the Atlantic Division with a 49–33 record, making their first playoff appearance since 1995.  Paul Pierce averaged 26.1 points per game and was selected along with Antoine Walker for the 2002 NBA All-Star Game, which marked his first All-Star appearance.  In the first round of the playoffs, the Celtics defeated the Philadelphia 76ers in five games, advancing to the second round for the first time since 1992.  In the semifinals, they defeated the 2nd-seeded Detroit Pistons four games to one, reaching the Conference Finals also for the first time since 1988.  However, they would lose in six games to the New Jersey Nets in the Eastern Conference Finals after taking a 2–1 series lead.
+
+2003–04 Detroit Pistons season: The 2003–04 NBA season was the 63rd season for the Pistons, the 56th in the National Basketball Association, and the 47th in the Detroit area.  Despite a solid year last season, the Pistons received the second overall pick in the 2003 NBA draft, which they obtained from the Memphis Grizzlies.  They selected Darko Miličić as their top pick, but only used him as a reserve as he played limited minutes off the bench.  After their first trip to the Conference Finals since 1991, the Pistons hired Larry Brown as head coach.  Under Brown, the Pistons were once again a tough defensive team as they went on a 13-game winning streak between December and January.  However, after a solid 33–16 start, they struggled in February losing six straight games.  At midseason, the team acquired All-Star forward Rasheed Wallace from the Atlanta Hawks after playing just one game for them.  With the addition of Wallace, the Pistons won 16 of their final 19 games finishing second in the Central Division with a 54–28 record.  Ben Wallace was selected for the 2004 NBA All-Star Game.
+
+Question: What players from the team who knocked the Detroit Pistons out of the Eastern Conference Finals in 2006 were selected for the 2006 NBA All-Star Game?  
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "eliminating_team": {
+      "type": "string",
+      "description": "The name of the team that eliminated the Detroit Pistons from the Eastern Conference Finals."
+    },
+    "season_year": {
+      "type": "string",
+      "description": "The NBA season year in which the elimination occurred."
+    },
+    "all_star_game_year": {
+      "type": "integer",
+      "description": "The year of the NBA All-Star Game for which players were selected."
+    },
+    "all_star_players": {
+      "type": "array",
+      "description": "A list of players from the eliminating team who were selected for the specified All-Star Game.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "eliminating_team",
+    "season_year",
+    "all_star_game_year",
+    "all_star_players"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "67167ffb237769071a0ca8c62b3c8b23864768deed8d3e6a775b63159d0b739e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac1ae8055429963665198e6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Merrimack County",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "J. Metzler: J. Metzler was a German artist of the Düsseldorf school.  His works were made between the last decades of the 19th century and the first decades of the 20th century and were very popular at that time.  He was specialised in Landscape art and painted mostly the Rhine valleys (especially the Lower Rhine near Düsseldorf) but also landscapes everywhere in Germany.  Until today the identity of this famous painter of the past remains unknown.\n\nFranklin Falls Historic District: The Franklin Falls Historic District is a 75 acre historic district encompassing most of the civic and industrial heart of Franklin, New Hampshire, which saw its most significant development in the second half of the 19th century and the first decades of the 20th.  The district is focused on Central Street (U.S. Route 3) between two crossings of the Winnipesaukee River, and includes Odell Park along with industrial properties along the bend in the river north of those two crossings, as well as a number of properties on adjacent streets south of Central Street.  The district was listed on the National Register of Historic Places in 1982.\n\nBrazilian sculpture: The roots of Brazilian sculpture have been traced back to the late 16th century, emerging soon after the first settlements in the newly discovered land.  Through the following century, most of the sculpture in Brazil was brought from Portugal and displayed Baroque features.  The Baroque style would flourish within the religious culture of the country and would remain predominant until the first decades of the 19th century.  In the 19th century, sculptural activity decreased, but it later revived when both the government and the public took a new interest in the art.  Modernism fomented a period of intense research into a new language of sculpture, with great achievements, and the contemporary sculpture of Brazil enjoys worldwide respect.\n\nAaron S. French: Aaron Samuel French (March 23, 1823 – March 24, 1902) was an American industrialist and philanthropist.  French left school at an early age, and the first decades of his life were characterized by working a variety of jobs and recovering from prolonged illness.  After co-founding a successful vehicular spring company, French gained prominence as a businessman and philanthropist in Pittsburgh during the second half of the 19th century.\n\nWinthrop Center/Metcalf Square Historic District: The Winthrop Center/Metcalf Square Historic District encompasses the historic center of the city of Winthrop, Massachusetts.  Although the area was settled early in Massachusetts history (c. 1637), the Winthrop peninsula remained sparsely populated until the 19th century.  Its central area did not begin significant development until there was some industrial development in the first half of the 19th century, and accelerated with the arrival of the railroad later in the 19th century.  It is centered on Metcalf Square, at the junction of Pauline, Hermon, and Winthrop Streets; the district extends northward along Hermon and Winthrop, and also includes properties as far east as Cross Street.\n\nDenny Regrade, Seattle: The Denny Regrade is a neighborhood in Seattle, Washington, USA, that stretches north of the central business district to the grounds of Seattle Center.  Its generally flat terrain was originally a steep hill, taken down as part of a mammoth construction project in the first decades of the 20th century.  The neighborhood is named after that project.  The northeastern portion of the Denny Regrade is sometimes known as the Denny Triangle, a term that has gained currency as this neighborhood has seen increasing development in the first decades of the 21st Century.\n\nRiley J. Wilson: Riley Joseph Wilson (November 12, 1871 – February 23, 1946) was a Louisiana educator, attorney, and legislator in the first half of the late 19th century and the first decades of the 20th century.  A Democrat, Wilson served in the United States House of Representatives from 1915 until 1937.  He was defeated for renomination in 1936 by Newt V. Mills.\n\nHistory of ecology: Ecology is a new science and considered as an important branch of biological science, having only become prominent during the second half of the 20th century.  Ecological thought is derivative of established currents in philosophy, particularly from ethics and politics.  Its history stems all the way back to the 4th century.  One of the first ecologists whose writings survive may have been Aristotle or perhaps his student, Theophrastus, both of whom had interest in many species of animals and plants.  Theophrastus described interrelationships between animals and their environment as early as the 4th century BC.  Ecology developed substantially in the 18th and 19th century.  It began with Carl Linnaeus and his work with the economy of nature.  Soon after came Alexander von Humboldt and his work with botanical geography.  Alfred Russel Wallace and Karl Möbius then contributed with the notion of biocoenosis.  Eugenius Warming’s work with ecological plant geography led to the founding of ecology as a discipline.  Charles Darwin’s work also contributed to the science of ecology, and Darwin is often attributed with progressing the discipline more than anyone else in its young history.  Ecological thought expanded even more in the early 20th century.  Major contributions included: Eduard Suess’ and Vladimir Vernadsky’s work with the biosphere, Arthur Tansley’s ecosystem, Charles Elton's \"Animal Ecology\", and Henry Cowles ecological succession.  Ecology influenced the social sciences and humanities.  Human ecology began in the early 20th century and it recognized humans as an ecological factor.  Later James Lovelock advanced views on earth as a macro-organism with the Gaia hypothesis.  Conservation stemmed from the science of ecology.  Important figures and movements include Shelford and the ESA, National Environmental Policy act, George Perkins Marsh, Theodore Roosevelt, Stephen A. Forbes, and post-Dust Bowl conservation.  Later in the 20th century world governments collaborated on man’s effects on the biosphere and Earth’s environment.\n\nBoxborough Old Town Center: Boxborough Old Town Center is a historic district encompassing the historic center of Boxborough, Massachusetts.  It consists of a cluster of properties that lie primarily along Hill Road, extending from point a short way north of its junction with Schoolhouse Lane to a bend in road just south Middle Street.  The 52 contributing properties range in date from the 1770s to the early 20th century, spanning much of the town's history.  The town was bypassed by significant economic development in the 19th century, and has retained much of its rural charm, despite growing suburbanization in the second half of the 20th century.  This particular area constituted the civic heart of the town until about 1900, when the current town hall was built in a more central location.  It includes the town's oldest cemetery, adjacent to the site of its first meeting house.  It also has one the town's five surviving one-room schoolhouses, including a privy which was used into the mid-20th century.  The district was listed on the National Register of Historic Places in 2006.\n\nFranklin, New Hampshire: Franklin is a city in Merrimack County, New Hampshire, United States.  At the 2010 census, the population was 8,477, the lowest of any of New Hampshire's 13 cities.  Franklin includes the village of West Franklin.",
+    "question": "In what county in New Hampshire had significant development in the second half of the 19th century and first decades of the 20th?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "county_name": {
+          "type": "string",
+          "description": "The name of the county in New Hampshire."
+        },
+        "city_name": {
+          "type": "string",
+          "description": "The name of the city within the county that experienced significant development."
+        },
+        "development_period": {
+          "type": "object",
+          "properties": {
+            "start_century": {
+              "type": "integer",
+              "description": "The century when significant development began."
+            },
+            "start_period_description": {
+              "type": "string",
+              "description": "Description of the start period (e.g., 'second half')."
+            },
+            "end_century": {
+              "type": "integer",
+              "description": "The century when significant development continued into."
+            },
+            "end_period_description": {
+              "type": "string",
+              "description": "Description of the end period (e.g., 'first decades')."
+            }
+          },
+          "required": [
+            "start_century",
+            "start_period_description",
+            "end_century",
+            "end_period_description"
+          ],
+          "additionalProperties": false
+        },
+        "is_historic_district": {
+          "type": "boolean",
+          "description": "Indicates if the area of development is part of a historic district."
+        }
+      },
+      "required": [
+        "county_name",
+        "city_name",
+        "development_period",
+        "is_historic_district"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "county_name": "Merrimack County",
+      "city_name": "Franklin",
+      "development_period": {
+        "start_century": 19,
+        "start_period_description": "second half",
+        "end_century": 20,
+        "end_period_description": "first decades"
+      },
+      "is_historic_district": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

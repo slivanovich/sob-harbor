@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "924ffdb8fe3e5e5a6325fb5aa803f113981acbcc720089e822f09bca1b1d068f",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a72353555429971e9dc9355",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Great Blizzard of 1888",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "December 2015 North American storm complex: The December 2015 North American storm complex was a major storm complex that produced a tornado outbreak, a winter storm, a blizzard and an ice storm in areas ranging from the Southwestern United States to New England.  Tornadoes impacted areas around Dallas, Texas.  Several states, especially Missouri, were hit with heavy rain and snow causing severe floods.  As the system moved through the Great Lakes region, heavy rain, ice pellets and heavy snow fell in the entire region.  Wintry mix moved through southern Ontario and Quebec had significant snowfall on December 29.  Almost 60 people were killed in the storm system and its aftermath, which made it one of the deadliest of such systems of 2015 in the United States.\n\nGreat Blizzard of 1888: The Great Blizzard of 1888 or Great Blizzard of '88 (March 11 – March 14, 1888) was one of the most severe recorded blizzards in the history of the United States of America.  The storm, referred to as the Great White Hurricane, paralyzed the East Coast from the Chesapeake Bay to Maine, as well as the Atlantic provinces of Canada.  Snowfalls of 20 - fell in parts of New Jersey, New York, Massachusetts, Rhode Island, and Connecticut, and sustained winds of more than 45 mph produced snowdrifts in excess of 50 ft .  Railroads were shut down and people were confined to their houses for up to a week.  Railway and telegraph lines were disabled, and this provided the impetus to move these pieces of infrastructure underground.  Emergency services were also affected.\n\nNor'easter: A nor'easter (also northeaster; see below) is a macro-scale cyclone.  The name derives from the direction of the strongest winds—as an offshore air mass rotates counterclockwise, winds tend to blow northeast-to-southwest over the region covered by the northwest quadrant of the cyclone.  Use of the term in North America is associated with several different types of storms, some of which can form in the North Atlantic Ocean and some of which form as far south as the Gulf of Mexico.  The term is most often used in the coastal areas of New England and the Mid-Atlantic states.  Typically, such storms originate as a low-pressure area that forms within 100 mi of the shore between North Carolina and Massachusetts.  The precipitation pattern is similar to that of other extratropical storms. Nor'easters are usually accompanied by very heavy rain or snow, and can cause severe coastal flooding, coastal erosion, hurricane-force winds, or blizzard conditions.  Nor'easters are usually most intense during winter in New England and Atlantic Canada.  They thrive on converging air masses—the cold polar air mass and the warmer air over the water—and are more severe in winter when the difference in temperature between these air masses is greater.\n\nMarch 2017 North American blizzard: The March 2017 North American blizzard was a major late-season blizzard that affected the Northeastern United States, New England and Canada, dumping up to 3 ft of snow in the hardest hit areas, mainly New York, Vermont, New Hampshire and Southern Quebec.  Forming out of an extratropical cyclone near the Northwest, the storm system dived into the northern portions of the United States, dropping light to moderate snow across the Great Lakes, Upper Midwest on March 11–12 before reaching the Ohio Valley the next day.  It later coalesced into a powerful nor'easter off the East Coast, producing a swath of heavy snowfall across a large portion of the Northeast.  The storm was given various unofficial names, such as \"Winter Storm Stella\", \"Blizzard Eugene\", and \"Blizzard of 2017\".\n\nJanuary 25–27, 2011 North American blizzard: The January 25–27, 2011 North American blizzard was a major Mid-Atlantic nor'easter and winter storm, and a New England blizzard that affected portions of the northeastern United States and Canada.  This storm came just two weeks after a previous major blizzard had already affected most of these same areas earlier on the same month of January 2011.  The storm also came just one month after a previous major blizzard that affected the entire area after Christmas in December 2010.  This storm was the third significant snowstorm to affect the region during the 2010–11 North American winter storm season.  It was followed a few days later by another massive storm that blanketed much of the United States and Canada.\n\nNortheastern United States blizzard of 1978: The Northeastern United States blizzard of 1978 was a catastrophic, historic nor'easter that struck New England, New Jersey, and the New York metropolitan area.  The \"Blizzard of '78\" formed on Sunday, February 5, 1978, and broke up on February 7.  The storm was primarily known as \"Storm Larry\" in Connecticut, following the local convention promoted by the Travelers Weather Service on television and radio stations there.  Snow fell mostly from Monday morning, February 6, to the evening of Tuesday, February 7.  Connecticut, Rhode Island, and Massachusetts were hit especially hard by this storm.\n\nFebruary 25–27, 2010 North American blizzard: The February 25–27, 2010 North American blizzard (also known as the \"Snowicane\") was a winter storm and severe weather event that occurred in the Mid-Atlantic and New England regions of the United States between February 24–26, 2010.  The storm dropped its heaviest snow of 12 to (locally as much as 36 in ) across a wide area of interior New England, New York, and Pennsylvania.  The storm also brought flooding rains to coastal sections of New England, with some areas experiencing as much as 4 in .  Aside from precipitation, the Nor'easter brought hurricane-force sustained winds to coastal New England.\n\nEarly February 2016 nor'easter: The Early February 2016 nor'easter was a potent nor'easter moved up the east coast, causing more snow to the already-weary Northeast United States after the leading edge of the previous system and the historic blizzard of January 21–23.  The storm dropped up to 12 in of snow in parts of New England.  Strong wind gusts were also reported along the eastern edge of New England.\n\nNorth American blizzard of 2006: The North American Blizzard of 2006 was a nor'easter that began on the evening of February 11, 2006.  It dumped heavy snow across the Mid-Atlantic and New England states, from Virginia to Maine through the early evening of February 12, and ended in Atlantic Canada on February 13.  The major cities from Baltimore to Boston received at least a foot of snow, with a second-highest amount of 26.9 inches (68.3 cm) in New York City, the (at the time) most since at least 1869, the start of record keeping, only broken by the January 2016 United States blizzard nearly 10 years later.\n\nThe Great Snow of 1717: The Great Snow of 1717 was a series of snowstorms between February 27 and March 7, 1717 (Gregorian calendar) that blanketed the colony of New York and the New England colonies with five or more feet (1.5 or more meters) of snow, and much higher drifts.  Snowfall may have occurred elsewhere, but settler population was sparse outside of New England at that time.  The Great Snow is considered one of the benchmark storms in New England, often compared to the Great Blizzard of 1888 in severity.",
+    "question": "The Great Snow of 1717 is often compared to what Blizzard, in New England?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "primary_storm_name": {
+          "type": "string",
+          "description": "The name of the storm being compared."
+        },
+        "compared_storm_name": {
+          "type": "string",
+          "description": "The name of the blizzard to which the primary storm is compared."
+        },
+        "comparison_region": {
+          "type": "string",
+          "description": "The geographical region where the comparison is noted."
+        },
+        "reason_for_comparison": {
+          "type": "string",
+          "description": "The specific attribute or characteristic for which the storms are compared."
+        }
+      },
+      "required": [
+        "primary_storm_name",
+        "compared_storm_name",
+        "comparison_region",
+        "reason_for_comparison"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "primary_storm_name": "The Great Snow of 1717",
+      "compared_storm_name": "The Great Blizzard of 1888",
+      "comparison_region": "New England",
+      "reason_for_comparison": "severity"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

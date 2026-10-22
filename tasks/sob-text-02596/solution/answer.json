@@ -1,0 +1,11 @@
+{
+  "american_director": {
+    "name": "Alan Crosland",
+    "nationality": "American"
+  },
+  "other_director": {
+    "name": "Pedro Almodóvar",
+    "nationality": "Spanish"
+  },
+  "question_answered": true
+}

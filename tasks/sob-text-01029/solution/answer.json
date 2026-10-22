@@ -1,0 +1,14 @@
+{
+  "performer": {
+    "name": "Geeta Novotny"
+  },
+  "venue": {
+    "name": "Carnegie Hall",
+    "address": "881 Seventh Avenue",
+    "city": "New York City",
+    "country": "United States"
+  },
+  "performance_details": {
+    "role_or_type": "classical singer"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "genre_name": "Electronicore",
+  "genre_description": "a stylistic fusion of metalcore with elements of various electronic music genres, such as trance, electronica, dubstep, or others",
+  "portmanteau_components": [
+    "electronic",
+    "metalcore"
+  ],
+  "example_band": {
+    "band_name": "Fail Emotions",
+    "origin_city": "Yaroslavl",
+    "origin_country": "Russian"
+  }
+}

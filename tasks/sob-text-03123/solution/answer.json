@@ -1,0 +1,31 @@
+{
+  "prequel_details": {
+    "title": "Traction City",
+    "is_novella": true,
+    "prequel_to_series": "Mortal Engines Quartet"
+  },
+  "main_series_books": [
+    {
+      "order_in_series": 1,
+      "title": "Mortal Engines",
+      "publication_year": 2001
+    },
+    {
+      "order_in_series": 2,
+      "title": "Predator's Gold",
+      "publication_year": 2003
+    },
+    {
+      "order_in_series": 3,
+      "title": "Infernal Devices",
+      "publication_year": 2005
+    },
+    {
+      "order_in_series": 4,
+      "title": "A Darkling Plain",
+      "publication_year": 2006
+    }
+  ],
+  "combined_sequence_position": 3,
+  "answer_book_title": "Predator's Gold"
+}

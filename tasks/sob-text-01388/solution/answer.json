@@ -1,0 +1,27 @@
+{
+  "rapper_name": "Tory Lanez",
+  "norwegian_dj_producer_name": "Cashmere Cat",
+  "songs_produced": [
+    {
+      "song_title": "Trust Nobody",
+      "release_date": "September 30, 2016",
+      "other_producers": [
+        "Benny Blanco",
+        "Frank Dukes"
+      ],
+      "album_details": {
+        "album_name": "9",
+        "album_artist": "Cashmere Cat"
+      }
+    },
+    {
+      "song_title": "LA Confidential",
+      "release_date": "January 29, 2016",
+      "other_producers": [
+        "Benny Blanco",
+        "Pop",
+        "Toro"
+      ]
+    }
+  ]
+}

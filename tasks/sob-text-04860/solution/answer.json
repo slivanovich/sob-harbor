@@ -1,0 +1,16 @@
+{
+  "matching_university": {
+    "name": "University of Victoria",
+    "founding_year": 1963,
+    "is_non_denominational": true
+  },
+  "question_criteria": {
+    "required_founding_year": 1963,
+    "required_denomination_status": "non-denominational"
+  },
+  "other_candidate_universities": [
+    {
+      "name": "University of Greenwich"
+    }
+  ]
+}

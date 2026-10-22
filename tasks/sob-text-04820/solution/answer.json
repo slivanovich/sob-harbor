@@ -1,0 +1,13 @@
+{
+  "player_information": {
+    "name": "John Mahaffy",
+    "role": "centre",
+    "nhl_games_played": 37
+  },
+  "team_information": {
+    "name": "New York Rangers",
+    "league": "National Hockey League",
+    "base_city": "New York City"
+  },
+  "answer": "New York City"
+}

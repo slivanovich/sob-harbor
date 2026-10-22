@@ -1,0 +1,15 @@
+{
+  "city_name": "Istanbul",
+  "country": "Turkey",
+  "entities_found": [
+    {
+      "entity_name": "Molla Çelebi Mosque",
+      "entity_type": "Mosque"
+    },
+    {
+      "entity_name": "Rahmi M. Koç Museum",
+      "entity_type": "Museum"
+    }
+  ],
+  "number_of_entities_found": 2
+}

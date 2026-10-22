@@ -1,0 +1,14 @@
+{
+  "filmmakers": [
+    {
+      "name": "Arthur Penn",
+      "nationality": "American"
+    },
+    {
+      "name": "James P. Hogan",
+      "nationality": "American"
+    }
+  ],
+  "common_nationality": "American",
+  "all_share_nationality": true
+}

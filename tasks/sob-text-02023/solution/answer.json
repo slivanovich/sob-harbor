@@ -1,0 +1,15 @@
+{
+  "opera_cycle_name": "Der Ring des Nibelungen",
+  "composer": "Richard Wagner",
+  "operas_considered": [
+    {
+      "opera_title": "The Love for Three Oranges",
+      "is_part_of_wagner_ring_cycle": false
+    },
+    {
+      "opera_title": "Götterdämmerung",
+      "is_part_of_wagner_ring_cycle": true
+    }
+  ],
+  "last_opera_in_cycle": "Götterdämmerung"
+}

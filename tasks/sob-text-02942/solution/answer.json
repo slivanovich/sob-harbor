@@ -1,0 +1,21 @@
+{
+  "director_name": "Robert N. Bradbury",
+  "reasoning": "Robert N. Bradbury is explicitly stated to be 'most famous for directing early Western films starring John Wayne in the 1930s' and directed 125 movies, many of which were Westerns. Rob Schneider is known for comedy films and has no mention of directing Westerns.",
+  "films_directed_count": 125,
+  "notable_western_films": [
+    "Riders of Destiny",
+    "Westward Ho",
+    "Sitting Bull at the Spirit Lake Massacre",
+    "Headin' for Danger",
+    "The Man from Hell's Edges"
+  ],
+  "other_director_comparison": {
+    "name": "Rob Schneider",
+    "known_for_genre": "comedy",
+    "notable_films": [
+      "The Hot Chick",
+      "The Benchwarmers",
+      "Grown Ups"
+    ]
+  }
+}

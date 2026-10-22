@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "49480d4a422f9c729dc9815dd6fcc273518de80e883edbb8b08b15bc4d35f9da",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7a633c5542990783324f3d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Neha Kakkar",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Jaan Atki: \"Jaan Atki\" is a Punjabi song recorded by English singer Mumzy Stranger.  It was released on 1 April 2016 by Timeless London.\n\nDeepali Kishore: Deepali Kishore (: दीपाली किशोर ) (born 6 January 1989 in Patna, Bihar) is an Indian singer.  She was a finalist of \"Indian Idol 3\".  She also appeared along with Bollywood actor John Abraham and performed a group song from film \"Goal\".  She has sung a song for movie \"Don Muthuswami\".  The song is \"I Love You\", composed by Anu Malik.  She has hosted the auditions and the Roobaroos with Meiyang Chang in \"Indian Idol\" season 4.  She has hosted a music show \"\" on DD National, with Abhas Joshi.  Deepali is acting in the Bhojpuri soap \"Badki Malkayen\" on Mahua TV.\n\nNeha Kakkar: Neha Kakkar is an Indian singer.  She competed on the television reality show \"Indian Idol\" season 2 in 2006 .  Headinng through which she also appeared in \"Comedy Circus Ke Taansen\" in 2014 on Sony Tv.  At present, she is judging a singing reality show on Zee Tv named Sa Re Ga Ma Pa\n\nBaby Doll (2014 song): \"Baby Doll\" is a Punjabi song by Indian Bollywood playback singer Kanika Kapoor for the Bollywood movie \"Ragini MMS 2\" pictured on the lead actress of the film, Sunny Leone.  For this song Kapoor won Filmfare Awards of best female playback singer.\n\nIndian Idol: Indian Idol is the Indian version of the Pop Idol format.  It started airing in India with the first season in 2004–2005 and was followed by second (2005–2006), third (2007) and fourth (2008–2009) seasons.  The fifth season of Indian aired on Sony TV in 2010.  It was launched by the programming team at SET of Tarun Katial and Anupawinner modi\n\nChitta Kukkad: \"Chitta Kukkad\" is a wedding-themed Punjabi dance song by Bollywood composer, producer and singer Parichay, with lyrics written by rapper and lyricist The Gunsmith.  The track has been sung by Neha Kakkar and Gippy Grewal and is the 3rd song released from the film Loveshhuda by Tips Industries Limited, starring Girish Kumar and Navneet Kaur Dhillon.  This festive song is based on the classic folk song \"Chitta Kukkad Banere Te\" by Pakistani singer Musarrat Nazir, but has been revamped with fresh production, composition and new lyrics.\n\nPurva Mantri: Purva Mantri is an Indian playback singer.  At age 13, she competed on the second season of \"Indian Idol\", which aired from 2005 to 2006.\n\nAnweshaa: Anweshaa (born Anweshaa Dattagupta; 15 December 1993, Changed Her Name to Anwesshaa) is an Indian singer who made her presence felt in the Indian music scene at the age of 13 through the reality show \"Amul STAR Voice of India\", Chhote Ustaad.  Anweshaa was runner-up in the finals, where the outcome was solely decided on the number of votes polled.  She was the favorite of judges throughout the contest and had the sole distinction of winning a Sarvottam for all her performance.  Anwesha is known for starring in Amul Music ka maha muqqabla at the age of 16.  She not only had the sole distinction of '6 Singer of the Day awards' for seven performances, but also won the 'Singer of the Series award'.  In spite of being the youngest in the show, she defeated the winners and participants of various shows (Indian idol, JJWS, SVOI, SAREGAMAPA) who participated in 'music ka maha muqqabla' and received the award.  She was hugely applauded in this show for her flawless and rocking performances, which helped her team to the finals.  Also one of the opposite teams captain in the show, Shankar Mahadevan said that '\"she was the best singer that ever emerged from a reality show after Shreya Ghoshal in the 90s\".  She has also made her debut in commercial playback singing in a Hindi movie Golmaal Returns.  Anweshaa has sung the song \"Tha Karke\", which is said to be the most expensive song to ever be shot in Bollywood.  Apart from few Bollywood songs, She has sung many Bengali songs, albums, two Tamil songs and one Telugu song for the movie (Uu Kodathara?  Ulikki Padathara?)  and a Telugu album song to her credit.  Anwesha made her Kannada debut with the film Santheyalli Nintha Kabira in 2016.  She also appeared in Coke Studio aside Papon.  Along with other awards, she won \"Best female playback singer\" award for Bengali song in Tele Cine Awards 2011 (nominations included Shreya Ghoshal, Richa Sharma, June Banerjee).\n\nRavi K. Tripathi: Ravi K. Tripathi (born on February 4) is an Indian playback singer, composer and music director.  He competed on the television music reality show Indian Idol season 2 in 2006.  Tripathi was the only Indian artist to have been invited to perform and represent India at the closing ceremony of Asian games 2010, in Guangzhou, China.\n\nLahore Lahore Aye: Lahore Lahore Aye (Punjabi: ! لہور لہور ﺍﮰ, Urdu: ! لاہور لاہور ہے, English: \"Lahore is Lahore! \"in Pakistan) is a Punjabi song by Pakistani-Punjabi singer Tariq Tafu.  The track reflects the unique culture of Lahore describing the life in Lahore, the people, the food, and the most famous spots in the city of Lahore, Pakistan.  It was produced by Tariq Tafu for his album \"Naiyn Reesan Pakistan Diyan\" on January 1, 2004.",
+    "question": "Which singer who competed on Indian Idol in 2006 has recorded a version of the wedding-themed Punjabi song \"Chitta Kukkad?\"",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "singer_name": {
+          "type": "string",
+          "description": "The name of the singer."
+        },
+        "reality_show_competition": {
+          "type": "object",
+          "properties": {
+            "show_name": {
+              "type": "string",
+              "description": "The name of the reality show the singer competed in."
+            },
+            "season": {
+              "type": "integer",
+              "description": "The season number of the reality show."
+            },
+            "year_of_competition": {
+              "type": "integer",
+              "description": "The year the singer competed in the reality show."
+            }
+          },
+          "required": [
+            "show_name",
+            "season",
+            "year_of_competition"
+          ],
+          "additionalProperties": false
+        },
+        "recorded_song": {
+          "type": "object",
+          "properties": {
+            "song_title": {
+              "type": "string",
+              "description": "The title of the song recorded by the singer."
+            },
+            "song_theme": {
+              "type": "string",
+              "description": "The theme of the song."
+            },
+            "song_language": {
+              "type": "string",
+              "description": "The language of the song."
+            }
+          },
+          "required": [
+            "song_title",
+            "song_theme",
+            "song_language"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "singer_name",
+        "reality_show_competition",
+        "recorded_song"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "singer_name": "Neha Kakkar",
+      "reality_show_competition": {
+        "show_name": "Indian Idol",
+        "season": 2,
+        "year_of_competition": 2006
+      },
+      "recorded_song": {
+        "song_title": "Chitta Kukkad",
+        "song_theme": "wedding-themed",
+        "song_language": "Punjabi"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

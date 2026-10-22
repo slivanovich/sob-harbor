@@ -1,0 +1,17 @@
+{
+  "plants_evaluated": [
+    {
+      "plant_name": "Macropidia",
+      "is_flowering_plant": true
+    },
+    {
+      "plant_name": "Crescentia",
+      "is_flowering_plant": true,
+      "other_reproductive_structures": [
+        "fruits"
+      ]
+    }
+  ],
+  "only_produce_flowers": false,
+  "reasoning": "Crescentia is described as producing large spherical fruits, which means it does not only produce flowers. Macropidia is a flowering plant, but the context does not explicitly state it only produces flowers, and flowering plants typically produce seeds/fruits."
+}

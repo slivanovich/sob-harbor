@@ -1,0 +1,16 @@
+{
+  "mountains_compared": [
+    {
+      "name": "K2",
+      "height_meters": 8611
+    },
+    {
+      "name": "Gasherbrum III"
+    }
+  ],
+  "taller_mountain": {
+    "name": "K2",
+    "height_meters": 8611
+  },
+  "comparison_conclusion": "K2 is taller than Gasherbrum III. The height of Gasherbrum III is not provided in the context, but K2's height is 8611 m."
+}

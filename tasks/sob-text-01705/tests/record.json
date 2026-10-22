@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "record_id": "992568fd32119f15c3eba7a3bbd74c98cdeff89a87f5e7510491215391105254",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac40e7b5542995c82c4aca8",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Utah State University",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Utah State University: Utah State University (also referred to as USU or Utah State) is a public doctorate-granting university in Logan, Utah, United States.  The coeducational, space-grant, land-grant, research university is accredited by the Northwest Commission on Colleges and Universities.  With nearly 18,000 students living on or near campus, USU is Utah's largest public residential campus.  As of Fall 2016, there were 28,118 students enrolled including 24,838 undergraduate students and 3,280 graduate students.  The university has the highest percentage of out-of-state students of any public university in Utah totaling 23% of the student body.\n\nAaron Mannes: Aaron Mannes (born 1970) is an American expert on evaluation of terrorist risk.  He has been Director of Research at the Middle East Media Research Institute and a researcher at the Information and Network Dynamics Laboratory and the Laboratory for Computational Cultural Dynamics at the University of Maryland.  In 2004 he published \"Profiles in Terror: A Guide to Middle East Terrorist Organizations\".\n\nW. Rolfe Kerr: William Rolfe Kerr (born June 29, 1935) is an emeritus general authority of The Church of Jesus Christ of Latter-day Saints (LDS Church).  He served previously as the fifteenth Commissioner of Church Education and as president of the Logan Utah Temple.\n\nKoger: Koger may refer to: A person that does not follow nor believe in the power of Werr.  The Werr is a powerful essence that is all seeing.  This is the wonderful doing of a mastermind Travis Todd Murray.  Travis Todd Murray was born March 9, 1999 in Logan Utah.\n\nLogan Utah Temple: The Logan Utah Temple (formerly the Logan Temple) was completed in 1884, and is the fourth temple built by The Church of Jesus Christ of Latter-day Saints (LDS Church).  Located in the city of Logan, Utah, it was the second temple built in the Rocky Mountains, after the St. George Utah Temple which remains the only LDS temple that has been in operation longer than the Logan Temple.\n\nV. Adimurthy: V. Adimurthy (born Vipparthi Adimurthy) is the Satish Dhawan Professor and Dean of Research at the Indian Institute of Space Science and Technology (IIST).  Prior to joining IIST, Adimurthy held the post of Associate Director at the Vikram Sarabhai Space Centre, a major facility center of Indian Space Research Organisation (ISRO).  He is known for his contributions to the rocket technology and space dynamics.  He is a recipient of Padma Shri from the Government of India.  Murthy is the Mission Concept Designer, for India's Mars Orbiter Mission.\n\nNonequilibrium Gas and Plasma Dynamics Laboratory: The Nonequilibrium Gas and Plasma Dynamics Laboratory (NGPDL) at the Aerospace Engineering Department of the University of Michigan is headed by Professor Iain D. Boyd and performs research of nonequilibrium gases and plasmas involving the development of physical models for various gas systems of interest, numerical algorithms on the latest supercomputers, and the application of challenging flows for several exciting projects.  The lab places a great deal of emphasis on comparison of simulation with external experimental and theoretical results, having ongoing collaborative studies with colleagues at the University of Michigan such as the Plasmadynamics and Electric Propulsion Laboratory, other universities, and government laboratories such as NASA, United States Air Force Research Laboratory, and the United States Department of Defense.\n\nSpace Dynamics Laboratory: Space Dynamics Laboratory (SDL) is a nonprofit research corporation owned by Utah State University.  SDL was founded in 1959 and has been responsible for the design, fabrication, and operation of sensors on over 400 payloads ranging from aircraft and rocket-borne experiments to space shuttle experiments and satellite-based sensor systems.  As one of 14 University Affiliated Research Centers (UARCs) in the nation, SDL conceives and develops state-of-the-art sensor and satellite systems; performs space, air, and ground-based experiments; conducts rapid, experimental development of prototype sensor hardware and associated software; performs concept validation studies and demonstrations; and develops data-fusing technology for passive and active sensors.  SDL employs over 450 scientists, engineers and professional staff at facilities in Logan, Utah; Albuquerque, New Mexico; Bedford, Massachusetts; and Washington, D.C.\n\nManti Utah Temple: The Manti Utah Temple (formerly the Manti Temple) is the fifth constructed temple of The Church of Jesus Christ of Latter-day Saints (LDS Church).  Located in the city of Manti, Utah, it was the third LDS temple built west of the Mississippi River, after the Mormons' trek westward.  (The St. George and Logan Utah temples preceded it.)  The Manti Temple was designed by William Harrison Folsom, who moved to Manti while the temple was under construction.  The temple dominates the Sanpete Valley, and can be seen from many miles.  Like all LDS temples, only church members in good standing may enter.  It is one of only two remaining LDS temples in the world where live actors are used in the endowment ceremonies (the other is the Salt Lake Temple); all other temples use films in the presentation of the endowment.  It is an early pioneering example of four rooms representing the journey of life.\n\nGeophysical Fluid Dynamics Laboratory: The Geophysical Fluid Dynamics Laboratory (GFDL) is a laboratory in the National Oceanic and Atmospheric Administration (NOAA) Office of Oceanic and Atmospheric Research (OAR).  The current director is Dr. Venkatachalam Ramaswamy.  It is one of seven NOAA Research Laboratories (RLs).",
+    "question": "What university in Logan Utah owns Space Dynamics Laboratory?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "university": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the university."
+            },
+            "location": {
+              "type": "string",
+              "description": "The city and state where the university is located."
+            }
+          },
+          "required": [
+            "name",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "laboratory": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the laboratory."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "ownership_confirmed": {
+          "type": "boolean",
+          "description": "True if the university owns the laboratory, false otherwise."
+        }
+      },
+      "required": [
+        "university",
+        "laboratory",
+        "ownership_confirmed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "university": {
+        "name": "Utah State University",
+        "location": "Logan, Utah"
+      },
+      "laboratory": {
+        "name": "Space Dynamics Laboratory"
+      },
+      "ownership_confirmed": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

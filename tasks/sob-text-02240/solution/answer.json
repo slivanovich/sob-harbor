@@ -1,0 +1,13 @@
+{
+  "game_series_name": "Dishonored",
+  "character_involved": "Emily Kaldwin",
+  "setting": {
+    "description": "fictional, plague-ridden industrial city of Dunwall",
+    "location_type": "city",
+    "attributes": [
+      "fictional",
+      "plague-ridden",
+      "industrial"
+    ]
+  }
+}

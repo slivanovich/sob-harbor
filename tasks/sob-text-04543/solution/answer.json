@@ -1,0 +1,17 @@
+{
+  "cartridge_name": ".50 BMG",
+  "development_details": {
+    "developed_for_weapon": "Browning .50 caliber machine gun",
+    "development_period": "late 1910s"
+  },
+  "ban_information": {
+    "banning_legislation": ".50 Caliber BMG Regulation Act",
+    "ban_year": 2004,
+    "ban_location": "California"
+  },
+  "alternative_cartridge_adopted": {
+    "name": ".510 DTC EUROP",
+    "developer": "Eric Danis",
+    "origin": "French"
+  }
+}

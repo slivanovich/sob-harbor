@@ -1,0 +1,13 @@
+{
+  "person_name": "Jill Tracy Biden",
+  "occupation": "American educator",
+  "marital_status": true,
+  "spouse_details": {
+    "name": "Joe Biden",
+    "former_role": "47th Vice President of the United States"
+  },
+  "chief_of_staff_details": {
+    "name": "Sheila Nix",
+    "start_date": "April, 2013"
+  }
+}

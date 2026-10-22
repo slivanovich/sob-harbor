@@ -1,0 +1,13 @@
+{
+  "person_from_question": {
+    "name": "Mary Jackson",
+    "portrayed_by_actor": "Janelle Monáe",
+    "role_in_film": "NASA engineer"
+  },
+  "supervisor_event_details": {
+    "event_description": "Became acting supervisor of the West Area Computers",
+    "actual_supervisor_name": "Dorothy Vaughan",
+    "year_of_supervision": 1949
+  },
+  "clarification_note": "The context indicates that Janelle Monáe portrayed Mary Jackson, who was a NASA engineer. Dorothy Vaughan, not Mary Jackson, became acting supervisor of the West Area Computers in 1949."
+}

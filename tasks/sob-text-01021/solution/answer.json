@@ -1,0 +1,15 @@
+{
+  "station_name": "St Albans City railway station",
+  "city": "St Albans",
+  "country": "England",
+  "is_major_station": true,
+  "served_destinations": [
+    "London",
+    "Gatwick Airport",
+    "Luton Airport",
+    "Brighton"
+  ],
+  "other_stations_in_city": [
+    "St Albans Abbey railway station"
+  ]
+}

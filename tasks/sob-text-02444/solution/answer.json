@@ -1,0 +1,16 @@
+{
+  "artist_identified": {
+    "name": "BoA",
+    "full_name": "Kwon Bo-ah",
+    "nationality": "South Korean",
+    "professions": [
+      "singer",
+      "actress"
+    ]
+  },
+  "songwriter_details": {
+    "name": "Erik Lidbom",
+    "contribution_type": "wrote songs for"
+  },
+  "final_answer": "BoA"
+}

@@ -1,0 +1,9 @@
+{
+  "event_name": "UFC on Fox: Weidman vs. Gastelum",
+  "event_type": "mixed martial arts event",
+  "location_details": {
+    "venue_name": "Nassau Veterans Memorial Coliseum",
+    "city": "Uniondale",
+    "state": "New York"
+  }
+}

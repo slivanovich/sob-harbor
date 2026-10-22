@@ -1,0 +1,14 @@
+{
+  "parent_company_name": "Republic Airways Holdings",
+  "parent_company_headquarters": "Indianapolis, Indiana",
+  "subsidiaries_with_matching_headquarters": [
+    {
+      "subsidiary_name": "Republic Airline",
+      "subsidiary_headquarters": "Indianapolis, Indiana"
+    },
+    {
+      "subsidiary_name": "Chautauqua Airlines",
+      "subsidiary_headquarters": "Indianapolis, Indiana"
+    }
+  ]
+}

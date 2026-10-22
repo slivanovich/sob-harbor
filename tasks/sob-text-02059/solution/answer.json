@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are Phacelia and Podraneaboth flowering vines?",
+  "is_both_flowering_vines": false,
+  "genera_comparison": [
+    {
+      "genus_name": "Phacelia",
+      "is_flowering_vine": false,
+      "plant_type_description": "annual or perennial herbaceous plants"
+    },
+    {
+      "genus_name": "Podranea",
+      "is_flowering_vine": true,
+      "plant_type_description": "African flowering vines"
+    }
+  ]
+}

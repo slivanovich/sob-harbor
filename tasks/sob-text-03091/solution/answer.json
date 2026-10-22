@@ -1,0 +1,9 @@
+{
+  "person_name": "Jonathan Kellerman",
+  "is_american": true,
+  "is_psychologist": true,
+  "birth_date": "August 9, 1949",
+  "other_notable_roles": [
+    "author"
+  ]
+}

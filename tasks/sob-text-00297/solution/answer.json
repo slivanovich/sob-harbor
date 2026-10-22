@@ -1,0 +1,13 @@
+{
+  "question_topic": "genre comparison",
+  "item_one": {
+    "name": "Dafne",
+    "genre": "opera"
+  },
+  "item_two": {
+    "name": "The Rite of Spring",
+    "genre": "ballet and orchestral concert work"
+  },
+  "are_both_operas": false,
+  "reasoning": "Dafne is described as an opera, while The Rite of Spring is a ballet and orchestral concert work, not an opera."
+}

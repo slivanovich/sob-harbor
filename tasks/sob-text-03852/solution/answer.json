@@ -1,0 +1,22 @@
+{
+  "person_one": {
+    "name": "Grace Metalious",
+    "occupations": [
+      "author",
+      "writer"
+    ]
+  },
+  "person_two": {
+    "name": "Max Jacob",
+    "occupations": [
+      "poet",
+      "painter",
+      "writer",
+      "critic"
+    ]
+  },
+  "mutual_occupations": [
+    "writer"
+  ],
+  "mutual_occupation_count": 1
+}

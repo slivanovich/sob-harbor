@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "1e38174b2edde6a4c4c2188d9fe461a85ef8f886f0db5dc82f9e62a6fc434318",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abc0efb5542996583600419",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Seito Shokun!",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hero Heel: Hero Heel (HERO・HEEL -英雄と悪漢- , Hero Heel - Eiyū to Akkan ) is a Japanese manga written and illustrated by Makoto Tateno.  It is licensed in North America by Digital Manga Publishing, which released the manga through its imprint, Juné, on April 8, 2008.  Biblos released the manga on August 10, 2005 before it went bankrupt in 2006.  Libre Publishing took over publication in Japan and released the manga's three \"tankōbon\" between June 30, 2007 and March 10, 2007, publishing the last two volumes first then the first volume.  The manga is licensed in Taiwan by Egmont Manga & Anime and in Germany by AnimePro.\n\nAqua Bless: Aqua Bless (アクアブレス , Akua Buresu ) is an erotic one-shot Japanese manga written and illustrated by Yamatogawa.  The manga was serialized in Akane Shinsha's manga magazine \"Comic Tenma\".  Akaneshinsha released the manga in Japan in February 2007.  The manga is licensed and licensed in North America by Icarus Publishing, which released the manga on November 4, 2008.  Digital Manga, under its Project-H imprint, has licensed the manga in North America for both digital and print release in 2014.\n\nSeito Shokun!: Seito Shokun!  (Japanese: 生徒諸君!  , lit.  \"Attention Students!\")  is a Japanese manga written and illustrated by Yōko Shōji.  It is serialized in Kodansha's \"Shōjo Friend\" from 1977 to 1984.  The individual chapters were published into 24 \"tankōbon\" by Kodansha between February 1978 and June 1985.  \"Seito Shokun!\"  won the second Kodansha Manga Award in 1978 for the shōjo category.\n\nYōko Shōji: Yōko Shōji (庄司 陽子 , Shōji Yōko , born 4 June 1950, in Mobara, Chiba) is a Japanese manga artist.  She is best known for writing \"Seito Shokun! \" (\"Attention Students!\") , for which she won the Kodansha Manga Award for shōjo in 1978.\n\nRuff Love: Ruff Love (Japanese: シバといっしょ。 , Hepburn: Shibato Issho. )  is a one-shot Japanese manga written and illustrated by Tamaki Kirishima.  The manga was serialized in Nihonbungeisha's manga magazine, \"Nichibun Comics\".  Nihonbungeisha released the manga's \"tankōbon\" volume on December 28, 2006.  It is licensed in North America by Aurora Publishing, which released the manga through its yaoi imprint, Deux Press, on August 8, 2008.  The manga is licensed in Taiwan by Ever Glory Publishing, which released the manga on October 5, 2007.\n\nDragon Eye (manga): Dragon Eye (Japanese: 龍眼－ドラゴンアイ－ , Hepburn: Ryū Gan -Doragon Ai- ) is a Japanese manga written and illustrated by Kairi Fujiyama.  The manga was serialized in Kodansha's manga magazine, \"Monthly Shōnen Sirius\".  The manga is licensed in North America by Del Rey Manga.  Since early 2008, the series has been on hiatus in Japan, apparently due to the creator's illness.  The manga features a squadron of fighters (called VIUS)who are immune to \"D-virus\" and the Dracule which is a group of creatures who spread the \"D-virus\".\n\nSexy Commando Gaiden: Sugoi yo!! Masaru-san: Sexy Commando Gaiden: Sugoi yo!!  Masaru-san (Japanese: セクシーコマンドー外伝 すごいよ!! マサルさん , Hepburn: Sekushī Komandō Gaiden: Sugoi yo!!  Masaru-san , lit.  Sexy Commando Side Story: That's Amazing!!  Mr. Masaru) is a Japanese manga written and illustrated by Kyosuke Usuta.  The manga (79 chapters in total) appeared in \"Weekly Shōnen Jump\" from 1995 to 1997.  In 1998, it was turned into an animation by the Japanese network TBS and ran 48 seven-minute episodes as part of the television show block \"Wonderful\".  The anime follows the first 48 chapters of the manga nearly word for word, for the dialogue used in the series and the scenes drawn were lifted directly from the manga panels.\n\nThe Four Immigrants Manga: The Four Immigrants Manga, also known as Manga of the Four Students (漫画四人書生 , Manga Yonin Shosei ) , is a Japanese manga written and illustrated by Henry Yoshitaka Kiyama.  The manga was published as 52 \"episodes\", with each episode as a two-page-spread with the intention of serialization in a Japanese language newspaper.  The individual episodes were self published by Kiyama as a one-shot manga in 1931.  It was republished in Japan by Shimpu in August 2012.  It was translated into English by Frederik L. Schodt and was published by Stone Bridge Press as \"The Four Immigrants Manga: A Japanese Experience in San Francisco 1904–1924\" in October 1998.\n\nMy Generation/Understand: \"My Generation/Understand\" is the ninth single by the Japanese artist Yui.  Even though this is a double-A single, \"Understand\" is not included on the album \"I Loved Yesterday\", but the song is included in the B-side compilation album, \"My Short Stories\".  \"My Generation\" was used as the theme song for the drama Seito Shokun! .\n\nShōji Satō (artist): Shōji Satō (佐藤 ショウジ , Satō Shōji ) is a Japanese manga artist who does hentai and non-hentai artwork.  He has also published various \"dōjinshi\" under the pen name Inazuma and runs a hentai genre manga artist group called Digital Accel Works.  He is responsible for the character design and illustration for the \"Highschool of the Dead\" manga.  He is the former assistant of manga artist Kōshi Rikudō, the creator of the popular manga series \"Excel Saga\".",
+    "question": " My Generation/Understand was used as the theme song for what Japanese manga written and illustrated by Yōko Shōji",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "manga_title": {
+          "type": "string",
+          "description": "The title of the Japanese manga."
+        },
+        "author_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the manga artist."
+            },
+            "role": {
+              "type": "string",
+              "description": "The role of the artist (e.g., writer and illustrator)."
+            }
+          },
+          "required": [
+            "name",
+            "role"
+          ],
+          "additionalProperties": false
+        },
+        "theme_song_details": {
+          "type": "object",
+          "properties": {
+            "song_title": {
+              "type": "string",
+              "description": "The title of the theme song."
+            },
+            "artist": {
+              "type": "string",
+              "description": "The artist of the theme song."
+            }
+          },
+          "required": [
+            "song_title",
+            "artist"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "manga_title",
+        "author_details",
+        "theme_song_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "manga_title": "Seito Shokun!",
+      "author_details": {
+        "name": "Yōko Shōji",
+        "role": "writer and illustrator"
+      },
+      "theme_song_details": {
+        "song_title": "My Generation/Understand",
+        "artist": "Yui"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

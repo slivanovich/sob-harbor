@@ -1,0 +1,16 @@
+{
+  "documentaries_compared": [
+    {
+      "title": "Baraka",
+      "release_year": 1992,
+      "is_documentary": true
+    },
+    {
+      "title": "Born Rich",
+      "release_year": 2003,
+      "is_documentary": true
+    }
+  ],
+  "earlier_release_film_title": "Baraka",
+  "year_difference": 11
+}

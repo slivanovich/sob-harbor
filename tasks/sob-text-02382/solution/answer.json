@@ -1,0 +1,13 @@
+{
+  "musician_name": "Liam Gallagher",
+  "birth_year": 1972,
+  "current_band_info": {
+    "band_name": "Beady Eye",
+    "formation_year": 2009,
+    "role_in_band": "lead vocalist"
+  },
+  "fame_origin_band": {
+    "band_name": "Oasis",
+    "role_in_band": "lead singer"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "actor_name": "Michael Shannon",
+  "film_starred_in": "What They Had",
+  "award_nomination": {
+    "award_name": "Tony Award",
+    "award_category": "Best Featured Actor in a Play",
+    "nomination_year": 2016,
+    "production_name": "Long Day's Journey into Night",
+    "production_type": "play"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "film_details": {
+    "title": "Funny Games",
+    "year": 1997
+  },
+  "directors_in_question": [
+    {
+      "name": "H. Bruce Humberstone",
+      "worked_on_film": false
+    },
+    {
+      "name": "Michael Haneke",
+      "worked_on_film": true
+    }
+  ],
+  "both_directors_worked_on_film": false
+}

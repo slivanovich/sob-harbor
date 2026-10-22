@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "119e5a321176a5dbc12054fa7cb616772b89c7a395fdffec8cab333d0ff4606b",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac3e2025542995c82c4ac7e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Zoey",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Vampire Academy (film): Vampire Academy (also known as Vampire Academy: Blood Sisters) is a 2014 American fantasy comedy film based on Richelle Mead's 2007 best-selling novel of the same name, directed by Mark Waters, and scripted by Daniel Waters.  The film stars Zoey Deutch, Danila Kozlovsky, Lucy Fry, and Dominic Sherwood in lead roles.  It was released in North America on February 7, 2014 and globally between March and July of the same year.  It was distributed in the United States by The Weinstein Company.\n\nLast Sacrifice: Last Sacrifice is the sixth book in the #1 \"New York Times\" bestselling series, \"Vampire Academy\" by Richelle Mead.  It is the last book in the original storyline, but Mead will continue writing more \"Vampire Academy\" books in a spinoff series.\n\nVampire Academy (novel): Vampire Academy is the first out of six books in the worldwide bestselling series \"Vampire Academy\" by the American author Richelle Mead.\n\nLucy Fry: Lucy Elizabeth Fry (born 13 March 1992) is an Australian actress.  She is known for portraying Zoey in \"Lightning Point\", Lyla in \"\", and Vasilisa Dragomir in the film \"Vampire Academy\".  Fry was also cast in Hulu's eight part miniseries \"11.22.63\" as Marina Oswald, wife of Lee Harvey Oswald, and played the lead in the 2016 Australian horror television series \"Wolf Creek\".\n\nVampire Academy: Vampire Academy is an American best-selling series of six young adult paranormal romance novels by author Richelle Mead.  It tells the story of Rosemarie \"Rose\" Hathaway, a seventeen/eighteen-year-old Dhampir girl, who is training to be a guardian of her Moroi best friend, Vasilisa \"Lissa\" Dragomir.  In the process of learning how to defeat Strigoi (the evil undead vampires) in St. Vladimir's Academy, Rose finds herself caught in a forbidden romance with her instructor, Dimitri Belikov, while having an unbreakable psychic bond with Lissa.\n\nBloodlines (series): Bloodlines is a book series by Richelle Mead.  It is a spin-off of Mead's \"Vampire Academy\" series.  The books follow alchemist Sydney Sage.\n\nShadow Kiss: Shadow Kiss is a vampire novel written by Richelle Mead.  It is the third novel in the \"Vampire Academy\" series, and was preceded by \"Frostbite\".  The release of the book pushed the Vampire Academy series into the \"New York Times\" Best Seller list for the first time, making its debut at #4.  \"Shadow Kiss\" continues the story of the main character, Rose Hathaway and her education in becoming a Guardian.\n\nFrostbite (Mead novel): Frostbite is a vampire novel written by Richelle Mead.  It is the second novel in the #1 \"New York Times\" bestselling series, \"Vampire Academy\".  \"Frostbite\" continues the story of the main character, Rose Hathaway including her bond with Princess Vasilisa \"Lissa\" Dragomir, her budding romance with her instructor Dimitri Belikov, and her education in becoming a Guardian.\n\nRichelle Mead: Richelle Mead (born November 12, 1976) is a bestselling American fantasy author.  She is known for the \"Georgina Kincaid\" series, \"Vampire Academy\", \"Bloodlines\" and the \"Dark Swan\" series.\n\nBlood Promise (novel): Blood Promise is the fourth book in the \"Vampire Academy\" series by Richelle Mead.  Previously in the series, the main character, Rose, and her true love Dimitri made a pact that if either of them were turned into strigoi, the other would kill them rather than let them roam as an evil vampire.  \"Blood Promise\" follows Rose's emotional struggle as she travels to Russia to hunt down Dimitri and fulfill this promise.",
+    "question": "Vampire Academy, is a 2014 American fantasy comedy film based on Richelle Mead's 2007 best-selling novel of the same name, the film stars Lucy Fry, an Australian actress, and known for portraying who, in \"Lightning Point\"?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film mentioned in the question."
+        },
+        "film_release_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "actress_name": {
+          "type": "string",
+          "description": "The name of the actress starring in the film."
+        },
+        "actress_nationality": {
+          "type": "string",
+          "description": "The nationality of the actress."
+        },
+        "character_in_lightning_point": {
+          "type": "string",
+          "description": "The name of the character portrayed by the actress in 'Lightning Point'."
+        }
+      },
+      "required": [
+        "film_title",
+        "film_release_year",
+        "actress_name",
+        "actress_nationality",
+        "character_in_lightning_point"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "Vampire Academy",
+      "film_release_year": 2014,
+      "actress_name": "Lucy Fry",
+      "actress_nationality": "Australian",
+      "character_in_lightning_point": "Zoey"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

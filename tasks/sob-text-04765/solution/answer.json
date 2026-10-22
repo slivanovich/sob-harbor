@@ -1,0 +1,17 @@
+{
+  "canals_compared": [
+    {
+      "canal_name": "Washington City Canal",
+      "construction_start_year": 1815,
+      "construction_end_year": 1850
+    },
+    {
+      "canal_name": "Whitewater Canal",
+      "construction_start_year": 1836,
+      "construction_end_year": 1847
+    }
+  ],
+  "earlier_canal_name": "Washington City Canal",
+  "earlier_canal_start_year": 1815,
+  "question_canal_one_came_first": true
+}

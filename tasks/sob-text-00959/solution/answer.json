@@ -1,0 +1,12 @@
+{
+  "song_name": "Finest Worksong",
+  "album_details": {
+    "album_title": "Document",
+    "release_date": "September 1, 1987",
+    "studio_album_number": 5
+  },
+  "single_details": {
+    "single_number": 3,
+    "is_final_single": true
+  }
+}

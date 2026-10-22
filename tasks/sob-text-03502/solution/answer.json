@@ -1,0 +1,12 @@
+{
+  "aircraft_name": "Concorde",
+  "aircraft_type": "supersonic passenger jet airliner",
+  "aircraft_nationalities": [
+    "British",
+    "French"
+  ],
+  "power_source": "turbojet-powered",
+  "chef_who_prepared_food": "Paul Bocuse",
+  "event_context": "maiden flight",
+  "event_year": 1969
+}

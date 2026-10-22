@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "record_id": "3df59ce3417080d12852635e2b4a343cf08cc50d9bf1c5ae9a999402c20ee607",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a77c1015542995d831812a3",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Timothée Chalamet",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Mighty Aphrodite: Mighty Aphrodite is a 1995 American romantic comedy film written, directed by, and co-starring Woody Allen, alongside Mira Sorvino, Helena Bonham Carter, Michael Rapaport, and F. Murray Abraham.  The screenplay was inspired by the story of \"Pygmalion\" and is about Lenny Weinrib's (Allen) search for his genius adopted son's biological mother, ultimately finding that she is a dim-witted prostitute named Linda Ash (Sorvino).\n\nUntitled Woody Allen Project: Woody Allen is directing an untitled drama film from a screenplay he wrote.  It stars Timothée Chalamet, Selena Gomez, Elle Fanning, Jude Law, Diego Luna, and Liev Schreiber.\n\nAlden Ehrenreich: Alden Caleb Ehrenreich ( ; born November 22, 1989) is an American actor.  He made his feature film debut in Francis Ford Coppola's independent film \"Tetro\" (2009) and appeared in Coppola's subsequent film \"Twixt\" (2011).  In 2013, he appeared in Woody Allen's \"Blue Jasmine\", Park Chan-wook's \"Stoker\" and starred in Richard LaGravenese's \"Beautiful Creatures\".  In 2016, he starred as Hobie Doyle in the Coen brothers comedy \"Hail, Caesar! \" and as Frank Forbes in Warren Beatty's \"Rules Don't Apply\".  In 2018, he will star as Han Solo in an as of yet untitled \"Star Wars\" spin-off film revolving around the character's younger years.\n\nWoody Allen filmography: Woody Allen is an American film director, writer, actor, and comedian.  He contributed to many films as either actor, director, writer or sometimes both.  Allen wrote four plays for the stage, and has written sketches for the Broadway revue \"From A to Z\", and the Broadway productions \"Don't Drink the Water\" (1966) and \"Play It Again, Sam\" (1969).\n\nHusbands and Wives: Husbands and Wives is a 1992 American comedy-drama film written and directed by Woody Allen.  The film stars Allen, Mia Farrow, Sydney Pollack, Judy Davis, Juliette Lewis, and Liam Neeson.  It was nominated for two Academy Awards, Best Supporting Actress (Judy Davis) and Best Original Screenplay (Woody Allen).  The film debuted shortly after the end of Allen and Farrow's romantic and professional partnership, and was their final of 13 films together.  The movie is filmed by Carlo Di Palma with a handheld camera style and features documentary-like one-on-one interviews with the characters interspersed with the story.\n\nAnnie Hall: Annie Hall is a 1977 American romantic comedy film directed by Woody Allen from a screenplay he co-wrote with Marshall Brickman.  Produced by Allen's manager, Charles H. Joffe, the film stars the director as Alvy \"Max\" Singer, who tries to figure out the reasons for the failure of his relationship with the film's eponymous female lead, played by Diane Keaton in a role written specifically for her.\n\nAnne Byrne (actress): Anne Byrne Hoffman (born September 28, 1943) is an American actress.  She had a small role as the wife of Woody Allen's philandering best friend in \"Manhattan\" (1979), and also appeared in \"Why Would I Lie? \" (1980) and \"A Night Full of Rain\" (1978).  She was the first wife of actor Dustin Hoffman, having one child, Jenna Byrne (born October 15, 1970), by him.  Hoffman adopted Byrne's daughter from a previous marriage, Karina Hoffman-Birkhead (born 1966).  Byrne and Hoffman divorced in 1980 and both remarried that same year, Byrne to Ivan Kronenfeld, who also had a small role in a major Woody Allen film: Barbara Hershey's husband in \"Hannah and Her Sisters\".\n\nManhattan (film): Manhattan is a 1979 American romantic comedy film directed by Woody Allen and produced by Charles H. Joffe.  The screenplay was written by Allen and Marshall Brickman.  Allen co-stars as a twice-divorced 42-year-old comedy writer who dates a 17-year-old girl (Mariel Hemingway) but falls in love with his best friend's (Michael Murphy) mistress (Diane Keaton).  Meryl Streep and Anne Byrne also star.\n\nTimothée Chalamet: Timothée Chalamet ( ; born December 26, 1995) is an American stage and film actor.  Chalamet started his acting career in two short films before appearing in the acclaimed series \"Homeland\".  He made his feature film debut in Jason Reitman's \"Men, Women & Children\" (2014) and appeared in Christopher Nolan's \"Interstellar\" (2014).  Chalamet starred in a number of independent films before his breakthrough role as the lead in Luca Guadagnino's film \"Call Me by Your Name\" (2017), for which he received critical acclaim.\n\nSam B. Girgus: Sam B. Girgus (born c. 1942) is an American film and literature scholar, professor of English at Vanderbilt University.  He is well known for his analysis of the works of Woody Allen in his books such as \"The Films of Woody Allen\" (2002) and \"A Companion to Woody Allen\" (2013) with Peter J. Bailey.  He believes ultimately that Allen's films undermine the world in which we live.",
+    "question": "Woody Allen is directing an untitled drama film from a screenplay he wrote, it stars which American stage and film actor, born December 26, 1995?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "film_type": {
+          "type": "string",
+          "description": "The genre or type of the film."
+        },
+        "director": {
+          "type": "string",
+          "description": "The director of the film."
+        },
+        "screenwriter": {
+          "type": "string",
+          "description": "The screenwriter of the film."
+        },
+        "starring_actor": {
+          "type": "object",
+          "properties": {
+            "actor_name": {
+              "type": "string",
+              "description": "The name of the actor."
+            },
+            "birth_date": {
+              "type": "string",
+              "description": "The birth date of the actor in 'Month Day, Year' format."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the actor."
+            },
+            "profession": {
+              "type": "string",
+              "description": "The profession of the actor."
+            }
+          },
+          "required": [
+            "actor_name",
+            "birth_date",
+            "nationality",
+            "profession"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "film_title",
+        "film_type",
+        "director",
+        "screenwriter",
+        "starring_actor"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "Untitled Woody Allen Project",
+      "film_type": "drama film",
+      "director": "Woody Allen",
+      "screenwriter": "Woody Allen",
+      "starring_actor": {
+        "actor_name": "Timothée Chalamet",
+        "birth_date": "December 26, 1995",
+        "nationality": "American",
+        "profession": "stage and film actor"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

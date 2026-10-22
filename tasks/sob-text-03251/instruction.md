@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Dutch East India Company: The United East India Company or the United East Indian Company, also known as the United East Indies Company (Dutch: Vereenigde Oost-Indische Compagnie ; or Verenigde Oostindische Compagnie in modern spelling; VOC), referred to by the British as the Dutch East India Company, or sometimes known as the Dutch East Indies Company, was originally established as a chartered company in 1602, when the Dutch government granted it a 21-year monopoly on the Dutch spice trade.  A pioneering early model of the multinational corporation in its modern sense, the company is also often considered to be the world's first true transnational corporation.  In the early 1600s, the VOC became the first company in history to issue bonds and shares of stock to the general public.  In other words, the VOC was the world's first formally listed public company, because it was the first corporation to be ever actually listed on an official (formal) stock exchange.  As the first historical model of the quasi-fictional concept of the megacorporation, the VOC possessed quasi-governmental powers, including the ability to wage war, imprison and execute convicts, negotiate treaties, strike its own coins, and establish colonies.
+
+Ramshorn Dude Ranch Lodge: The Ramshorn Dude Ranch Lodge in Grand Teton National Park was built after 1935 by mountaineers Paul Petzoldt, founder of the National Outdoor Leadership School, and Gustav Koven.  The property that became the Ramshorn Ranch was originally established by Ransom Adams at the mouth of Gros Ventre Canyon near Ditch Creek.  By 1921 the property was acquired by Jack and Dollye Woodsman, who established the Flying V dude ranch, featuring a large central lodge.  In 1932 the lodge burned, prompting the Woodsmans to sell the ranch to Koven and Petzoldt in 1935, who planned to expand the dude ranch as a climbing school and hunting camp.  Petzoldt withdrew from the partnership in 1937 after suggesting the name be changed to the Ramshorn Ranch.  The present lodge was completed in 1937 by the Woodward brothers, who took over operation.  A variety of owners and partners ensued until 1956, when the ranch was sold to the National Park Service.  The Park Service then leased the ranch back to concessioners who operated it as the Elbo Ranch until 1973, replacing the former Elbo Ranch purchased by the Park Service.  The Teton Science School was established on the property in 1974 under a special use permit.
+
+Madisonville Community College: Madisonville Community College (MCC), located in Madisonville, KY, is one of 16 two-year, open-admissions colleges of the Kentucky Community and Technical College System (KCTCS).  MCC was originally established as a member of the University of Kentucky's Community College System in 1968.  In 2001, the college consolidated with Madisonville Technical College, itself originally established in 1937 as the Madisonville Area Trade School.  MCC offers associate degree programs, as well as technical diplomas and certificates, with the overall purpose of making postsecondary educational opportunities available to Kentucky's citizens and workforce.  MCC is accredited by the Southern Association of Colleges and Schools (SACS).  In 2011, it was ranked among the nation's top 10% of community colleges by the Aspen Institute.
+
+The Electrician: The Electrician, published in London from 1861 to 1952, was the earliest and foremost electrical engineering periodical and scientific journal.  Originally established in 1861, it was discontinued after about three years until 1878 when it was revived and hence published weekly.  The initial volumes of "The Electrician" published in the early 1860s advertised themselves as being "a weekly journal of Telegraphy, Electricity, and Applied Chemistry" and were published by Thomas Piper.  After being relaunched in the late 1870s, the periodical changed focus and publishers, being published by James Gray on behalf of the proprietors and advertising itself as "a weekly illustrated journal of electrical engineering, industry and science" and also featured more theoretical aspects of electrical engineering such as electromagnetism.  This method of publication also allowed for other types of publications and sometime in the late nineteenth century, The Electrician Printing and Publication Company Limited was established and began publishing shorter electrical engineering texts including well-known early electrical engineering titles such as Oliver Heaviside's "Electromagnetic theory" (1893-1912), Oliver Lodge's "The work of Hertz and some of his successors" (1894), and many others.  Some of these publications were based on papers presented elsewhere and published in full in "the Electrician".  After its second reincarnation, "The Electrician" quickly established itself in the field of electrical engineering and was regularly quoted and cited in "Nature" and elsewhere.
+
+Filson (company): C.C. Filson is a Seattle, Washington,-based, privately owned outfitter and manufacturer of goods for outdoor enthusiasts.  The company designs, manufactures, distributes and sells men's and women's outdoor clothing, accessories and luggage.  Filson sells its products via company-owned retail stores, catalogs and the Filson website as well as through authorized dealers in the United States and international distributors.  The company was originally established in Seattle in 1897 as C.C. Filson's Pioneer Alaska Clothing and Blanket Manufacturers to meet the needs of prospectors passing through Seattle on their way to the Klondike Gold Rush; as of 2012 the brand is owned by Bedrock Manufacturing founder Tom Kartsotis, who also owns Shinola.
+
+Sobey School of Business: The Sobey School of Business is the top-ranked, AACSB-Accredited business school of Saint Mary's University (SMU), located in Halifax, Nova Scotia, Canada.  Originally established in 1934 as the Saint Mary's University Faculty of Commerce, the program was one of the first business programs in Canada.  The school is consistently ranked as one of the top business schools in Canada.  Currently it ranks sixth for finance professionals on LinkedIn's rankings, and in the top ten for sales professionals in the same ranking.  It is the most comprehensive business school in Atlantic Canada.  In 1992, the Faculty of Commerce was renamed the Sobey School of Business after Frank H. Sobey, the founder of Empire Company Limited and Sobeys.  The Sobey School of Business offers a well-respected Bachelor of Commerce program, with a wide range of specialties, including finance, accounting, computing and information systems and human resource management and industrial relations, graduate-level programs including a business administration master's degree, a master of finance and a well-respected Ph.D. program.
+
+Thomas Bignold: Thomas Bignold (1761–1835) was the founder of Norwich Union, now known as Aviva plc, one of the United Kingdom's largest insurance businesses.
+
+Norwich Union: Norwich Union was the name of insurance company Aviva's British arm before June 2009.  It was originally established in 1797.  It was listed on the London Stock Exchange and was once a constituent of the FTSE 100 Index.
+
+John Gildred: John Taylor Gildred (born August 23, 1970) is an American entrepreneur and business executive known for his work in consumer electronics and online media technology.  Gildred originally established his reputation in 1994 at OpenSoft, an Internet communications software company.  Later in 1999, Gildred became well known as the founder of Indrema, a consumer electronics company which developed, but ultimately never released, a highly anticipated Linux-based game console for independent game developers.  Gildred cited a receding market for venture capital in 2001 as a primary factor in the decision to cancel mass production of the game system.  After Indrema, Gildred joined Pioneer Electronics to head product development for digital television and Blu-ray as well as Pioneer's Advanced Technology Group.  While at Pioneer, he formed a subsidiary named SyncTV, a multi-CE company initiative to provide over-the-top television service to all TV manufacturers.  In 2009 SyncTV was sold to Intertrust Technologies.
+
+ZoomInfo: ZoomInfo is a subscription-based software as a service (SaaS) company based in Waltham, Massachusetts that sells access to its database of information about business people and companies to sales, marketing and recruiting professionals.  The company was originally established in 2000 as Eliyon Technologies by founder and CEO, Yonatan Stern.
+
+Question: Thomas Bignold was the founder of a company that was originally established in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "founder_name": {
+      "type": "string",
+      "description": "The name of the company's founder."
+    },
+    "company_name": {
+      "type": "string",
+      "description": "The name of the company founded."
+    },
+    "establishment_year": {
+      "type": "integer",
+      "description": "The year the company was originally established."
+    }
+  },
+  "required": [
+    "founder_name",
+    "company_name",
+    "establishment_year"
+  ],
+  "additionalProperties": false
+}

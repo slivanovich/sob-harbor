@@ -1,0 +1,12 @@
+{
+  "airline_name": "Feel Air",
+  "airport_details": {
+    "airport_name": "Suvarnabhumi Airport",
+    "airport_iata_code": "BKK",
+    "location": {
+      "city": "Bangkok",
+      "country": "Thailand"
+    }
+  },
+  "flight_type": "intercontinental flights"
+}

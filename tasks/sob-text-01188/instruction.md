@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Evropa 2: Evropa 2 is a private, commercial radio station in the Czech Republic.  It was the first private station since 1989, beginning broadcasting on 21 March 1990.
+
+WGMN: WGMN is a Sports formatted broadcast radio station licensed to and serviing Roanoke, Virginia.  WGMN is owned and operated by Three Daughters Media .  Prior to its 1998 takeover by ESPN, WGMN was known as WROV-AM and had been a Golden Oldies format station since 1989, prior to which it had operated as a Contemporary hit radio broadcaster.
+
+The Sean Hannity Show: The Sean Hannity Show is a talk radio show hosted by Sean Hannity on Cumulus Media Networks (formerly ABC Radio Networks) and Premiere Radio Networks.  The program is broadcast live every weekday, 3 p.m. to 6 p.m. ET.  The show is produced in the New York City studios of radio station WOR or sometimes transmitted via ISDN from Hannity's home in Centre Island, New York.  The show is syndicated by Cumulus Media Networks on terrestrial radio affiliates across the United States and the Sirius XM Patriot channel found on both XM Satellite Radio and Sirius Satellite Radio Monday through Friday from 3-6 p.m. (Eastern Time).  The primary focus is the politics of the day, with regular interviews of liberal commentators, such as Leslie Marshall and Bob Beckel, as well as noted conservatives.  "The Sean Hannity Show" is the second most-listened to commercial radio show with millions of listeners, behind only "The Rush Limbaugh Show".
+
+La Tremenda 106.5: La Tremenda (branded as La Tremenda de los Dos Laredos) was an international contemporary music FM radio station that served the Nuevo Laredo, Tamaulipas and Laredo, Texas area of the Mexico – United States border.  From May 2006 through June 2008, the radio station broadcast as a pirate FM radio station since it did not have a permit or license to broadcast.  In June 2008, the station was shut down and a month later the station was back on air for a few days later, only to go silent again.  Today, 106.5 FM occupied by another pirate radio station known as Radio Voz 106.5.  This new pirate station is likely related, as it has the same logo.
+
+Radioresepsjonen: Radioresepsjonen (Eng.  "lit."  "The radio reception") is a Norwegian radio show.  From 2006 to 2013, it was broadcast on NRK P3, a radio station targeting the youth.  Since 2014, it has been broadcast on NRK P13, which is aimed at a more adult audience than NRK P3.  The show is hosted by brothers Steinar Sagen (host) and Tore Sagen (technician), and Bjarte Tjøstheim (sidekick).  The show is very popular in Norway, and has developed cult status amongst a broad audience.  The show is the most podcasted radio show in Norway, with over 200.000 downloads each month.  Besides their radio show the trio has also had success with other live shows, TV-shows and podcasts.
+
+WEFUNK Radio: WEFUNK is an award-winning weekly radio show held on Montreal's CKUT 90.3, McGill University's radio station since 1996 and online since 1999.  The show is usually very light on talk as both DJs Professor Groove and DJ Static play a symbiotic mix of Funk, Soul, R&B and Rap, both old and new.  The name of the radio show comes from the Parliament song "P. Funk (Wants To Get Funked Up)", in which WEFUNK is a fictional radio station broadcasting "directly from the Mothership, top of the Chocolate Milky Way, 500,000 kilowatts of P Funk-power."
+
+WSYY-FM: WSYY-FM (94.9 FM) is a radio station broadcasting for approximately 18¼ hours per day, 7 days a week (from 4:55AM through 11:10PM ET) under the slogan, ""Radio With An Attitude"".  Playing a mix of oldies/classic hits, adult contemporary, rock music, and some country crossovers, the station broadcasts an Adult Hits/Full-Service format for approximately 16 hours per day, from 6:00AM through 10:00PM ET (reserving the first and, also, the final hour of their broadcast day to "When Radio Was").  "The Mountain 94.9" carries local high school sports in season.  "The Mountain 94.9" had also carried the complete schedule of Red Sox Baseball (from 1997 through 2015, prior to becoming a Former Affiliate in 2016, which was when Millinocket's affiliation with the Red Sox Baseball would ultimately be transferred over to co-owned WSYY-AM, thus concluding the frequent interruptions to the music on "The Mountain 94.9" during Baseball season).  The station currently features programming from CBS Radio and carries CBS Radio News at the top of every hour (and has been an affiliate of that network for many decades).  Licensed to Millinocket, Maine, United States, the station's broadcast signal serves the Central Penobscot County, Eastern Piscataquis County, and Southern Aroostook County Maine areas, and the station is licensed to serve the town of Millinocket, Maine, the very town where its studios/offices and tower site are located.  The station is currently owned by Katahdin Communications, Inc.  WSYY-FM originally went on the air in 1978 on 97.7 FM as WKTR, upgrading to its current facilities in 1984 on 94.9.  Prior to their "The Mountain 94.9" branding, WSYY-FM used to be referred to as "North Country 95", airing a full-time Country Music format.  The current format, branding, and slogan was probably adopted around March 1, 2004, when Katahdin Communications, Inc. assumed control of WSYY-FM & WSYY-AM from Katahdin Timberlands, LLC (as a result of the radio station facing increasing land disputes), initially as a short term lease agreement but the transfer of ownership ultimately became permanent.  Those same land disputes would eventually lead to a loss of WSYY-FM's 23,500 watt transmitter location (featuring an antenna HAAT of 211 meters); as a result, WSYY-FM may have been operating under a Special Temporary Authority License (a 12,000 watt facility with an antenna HAAT of 68 meters via Hammond Ridge on Lake Road, about two miles from Millinocket Municipal Airport), ever since as long ago as late 2007, pending a planned permanent move to a 22,000 watt facility with an antenna HAAT of 198.4 meters (from just off Nicatou Road in Medway, well east of WSYY-FM's old or current transmitter tower location).  On November 23th, 2016, the CP for this proposed move was modified to a 45,000 watt facility with an antenna HAAT of 146.7 meters, the first time this proposed move has ever received official approval from the FCC.  WSYY-FM is one of the two Maine affiliates—apart from WLOB—of When Radio Was (7 days a week from 5:00AM through 6:00AM ET and also from 10:00PM through 11:00PM ET), is one of the two Maine affiliates (WWMJ) of The Acoustic Storm (Saturdays from 9:00AM through 12:00PM ET), is Maine's only affiliate of the Crook & Chase syndicated Country Music countdown programming (Sunday afternoons from 2:00PM through 6:00PM ET), and is an affiliate of the Blues Deluxe radio show.  WSYY-FM/WSYY-AM are unusual in that while these stations are authorized to broadcast 24 hours a day, the stations both have sign-offs every day (WSYY-AM signing off at sun-down, broadcasting only on Weekends (but not between Monday-through-Friday) and WSYY-FM broadcasting for approximately 18¼ hours per day, 7 days a week, WSYY-FM's broadcast day concluding with the 11:00PM ET Top-of-the-Hour CBS Radio newscast and then a Nightly Sign-Off Announcement and then an instrumentation of the American national anthem, followed by Dead Air amidst a Transmitter Power-Down, not Signing Back Onto The Air until 4:55AM ET).  In Old Town and also Bangor (and continuing southward and/or southwestward), the station has strong FM co-channel interference with Portland-market WHOM (which transmits from atop Mount Washington in New Hampshire, the tallest peak in the Northeast and had for a long time claimed on its website that it has the largest coverage area of any FM station in the United States, its signal spanning five states: NH, ME, VT, MA, NY and also parts of Southern Quebec Province, Canada), this matter being especially problematic before dawn or after dusk.  In favorable atmospheric conditions, a very weak signal of WHOM can be DX-ed in Millinocket during overnight hours (when WSYY-FM is off-the-air).
+
+WGBB: WGBB (1240 AM) is a radio station licensed to Freeport, New York and serves the South Shore of Nassau County and the South Shore of Babylon Town in Suffolk County, New York.  It is Long Island's oldest radio station, founded in 1924 It broadcasts the Mandarin-language Chinese Radio Network on weekdays, and various English language religious and ethnic programs on weekends.  The studio is located in West Babylon, NY.  The broadcasting tower remains in Freeport, former location of the studio.
+
+WSTU: WSTU (1450 AM) is a radio station broadcasting a talk radio format.  Licensed to Stuart, Florida, United States, the station is currently owned by Treasure Coast Broadcasters, Inc.  WSTU went on the air in December 1954.  Les Combs was the original owner.  In 1969 the station was sold to Harvey L Glascock, whose family owned the station until 1997 when it was sold to American Radio.  After a brief ownership by a Broward County businessman, it was sold to Barry Grant Marsh and David Pomerance.  Marsh had been Operations Manager of WSTU for many years under the Glasscock family.  The station was purchased by Treasure Coast Broadcasters in 2001.  When WSTU went on the air, Stuart went from the biggest city on Florida's east coast without its own radio station to the smallest city on Florida's east coast with its own radio station.  WSTU had a strong local news commitment from the very first, and continues that to this day under News Director Tom Teter, who has been with the station since 1980.  Teter has won many awards for news excellence from UPI and AP including Best Newscast in Florida and Best Spot News Reporting.  From the earliest days the Martin County community viewed the station as more of a public utility than a privately owned radio station.  WSTU was also one of the first radio stations in Florida to broadcast high school sports on a regular basis and continues to broadcast high school football, basketball and baseball.  Hamp Elliot did the play-by-play for many years followed by Teter who handled the play-by-play for more than 20 years.  Rick McGuire now does much of the play-by-play.  This summary written by Tom Teter.
+
+Joyce Keller: Joyce Keller is an American television and radio host, author, and psychic medium.  She has hosted a live radio show "The Joyce Keller Show" since 1989 on New York's WGBB.  She has also authored 7 international best-selling books, including the Angel Series books, "Seven Steps to Heaven", "Calling All Angels", and "Complete Book of Numerology".
+
+Question: Joyce Keller has hosted a radio show on what Freeport, New York-licensed radio station since 1989?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "radio_station_name": {
+      "type": "string",
+      "description": "The call sign of the radio station."
+    },
+    "license_location": {
+      "type": "string",
+      "description": "The city and state where the radio station is licensed."
+    },
+    "show_host": {
+      "type": "string",
+      "description": "The name of the host of the radio show."
+    },
+    "show_name": {
+      "type": "string",
+      "description": "The name of the radio show."
+    },
+    "start_year": {
+      "type": "integer",
+      "description": "The year the radio show began broadcasting on this station."
+    }
+  },
+  "required": [
+    "radio_station_name",
+    "license_location",
+    "show_host",
+    "show_name",
+    "start_year"
+  ],
+  "additionalProperties": false
+}

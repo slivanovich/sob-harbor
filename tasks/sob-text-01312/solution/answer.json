@@ -1,0 +1,12 @@
+{
+  "person_a": {
+    "name": "Lev Vasilevsky",
+    "death_year": 1979
+  },
+  "person_b": {
+    "name": "Klaus Fuchs",
+    "death_year": 1988
+  },
+  "more_recent_death_person_name": "Klaus Fuchs",
+  "more_recent_death_year": 1988
+}

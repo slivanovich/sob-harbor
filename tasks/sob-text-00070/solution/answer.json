@@ -1,0 +1,17 @@
+{
+  "cities_compared": [
+    "Xinzhou",
+    "Binzhou"
+  ],
+  "common_features": [
+    {
+      "feature_type": "country",
+      "feature_value": "People's Republic of China"
+    },
+    {
+      "feature_type": "administrative_level",
+      "feature_value": "prefecture-level city"
+    }
+  ],
+  "number_of_common_features": 2
+}

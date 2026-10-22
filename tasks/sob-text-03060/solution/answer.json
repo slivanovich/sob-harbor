@@ -1,0 +1,20 @@
+{
+  "author_name": "Frances Hodgson Burnett",
+  "anime_series_details": {
+    "title": "Strain: Strategic Armored Infantry",
+    "studio": "Studio Fantasia",
+    "genre": "mecha anime"
+  },
+  "literary_inspirations": {
+    "inspired_novels": [
+      "A Little Princess",
+      "Little Lord Fauntleroy",
+      "The Secret Garden"
+    ],
+    "serialized_work": {
+      "title": "Sara Crewe: or, What Happened at Miss Minchin's",
+      "magazine_name": "St. Nicholas Magazine",
+      "serialization_start_date": "December 1887"
+    }
+  }
+}

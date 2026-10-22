@@ -1,0 +1,21 @@
+{
+  "common_animal_type": "dog",
+  "queried_breeds": [
+    "Great Pyrenees",
+    "Thai Ridgeback"
+  ],
+  "breed_information": [
+    {
+      "breed_name": "Great Pyrenees",
+      "animal_category": "dog",
+      "is_ridgeback_breed": false,
+      "origin_country_or_region": "Pyrenees mountains"
+    },
+    {
+      "breed_name": "Thai Ridgeback",
+      "animal_category": "dog",
+      "is_ridgeback_breed": true,
+      "origin_country_or_region": "Thailand"
+    }
+  ]
+}

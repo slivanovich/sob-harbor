@@ -1,0 +1,19 @@
+{
+  "film_title": "The Sense of an Ending",
+  "release_year": 2017,
+  "genre": [
+    "mystery",
+    "drama"
+  ],
+  "starring_actors": [
+    {
+      "actor_name": "Michelle Dockery",
+      "is_featured_in_film": true,
+      "nationality": "English",
+      "profession": [
+        "actress",
+        "singer"
+      ]
+    }
+  ]
+}

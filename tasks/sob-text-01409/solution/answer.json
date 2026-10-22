@@ -1,0 +1,11 @@
+{
+  "film_title": "Supergirl",
+  "release_year": 1984,
+  "director_name": "Jeannot Szwarc",
+  "starring_actors": [
+    "Maureen Jane Teefy",
+    "Helen Slater"
+  ],
+  "film_genre": "superhero",
+  "is_spin_off": true
+}

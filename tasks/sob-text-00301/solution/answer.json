@@ -1,0 +1,12 @@
+{
+  "replaced_senator_details": {
+    "name": "Daniel Inouye",
+    "state_represented": "Hawaii"
+  },
+  "successor_details": {
+    "name": "Brian Schatz",
+    "appointment_year": 2012,
+    "ethnicity_descriptor": "non-Asian American"
+  },
+  "succession_type": "appointed"
+}

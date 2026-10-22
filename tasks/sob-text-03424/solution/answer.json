@@ -1,0 +1,22 @@
+{
+  "are_both_writers": true,
+  "person_1": {
+    "name": "Mervyn Peake",
+    "is_writer": true,
+    "nationality": "English",
+    "other_professions": [
+      "artist",
+      "poet",
+      "illustrator"
+    ]
+  },
+  "person_2": {
+    "name": "Margaret Laurence",
+    "is_writer": true,
+    "nationality": "Canadian",
+    "writer_types": [
+      "novelist",
+      "short story writer"
+    ]
+  }
+}

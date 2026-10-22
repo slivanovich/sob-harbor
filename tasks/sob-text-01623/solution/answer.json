@@ -1,0 +1,36 @@
+{
+  "movie_title": "Alice in Wonderland",
+  "release_year": 1985,
+  "film_type": "made-for-television film",
+  "is_two_part": true,
+  "adaptation_details": {
+    "adapted_from_author": "Lewis Carroll",
+    "source_books": [
+      "Alice's Adventures in Wonderland",
+      "Through the Looking-Glass"
+    ]
+  },
+  "main_cast_member": {
+    "actress_name": "Natalie Gregory",
+    "role_played": "Alice",
+    "other_notable_role": {
+      "movie_title": "Spot Marks the X",
+      "role_name": "Kathy"
+    }
+  },
+  "broadcast_information": [
+    {
+      "part_number": 1,
+      "broadcast_date": "1985-12-09",
+      "broadcast_time": "8:00pm EST",
+      "network": "CBS"
+    },
+    {
+      "part_number": 2,
+      "broadcast_date": "1985-12-10",
+      "broadcast_time": "8:00pm EST",
+      "network": "CBS"
+    }
+  ],
+  "first_broadcast_date": "1985-12-09"
+}

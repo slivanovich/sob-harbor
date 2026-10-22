@@ -1,0 +1,12 @@
+{
+  "person_born_first": {
+    "name": "Edward Sloman",
+    "birth_date": "1886-07-19"
+  },
+  "person_born_second": {
+    "name": "Phil Rosen",
+    "birth_date": "1888-05-08"
+  },
+  "earliest_birth_year": 1886,
+  "answer": "Edward Sloman"
+}

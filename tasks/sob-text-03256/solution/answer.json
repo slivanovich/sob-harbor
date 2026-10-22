@@ -1,0 +1,20 @@
+{
+  "is_both_operas": true,
+  "opera_count": 2,
+  "operas_information": [
+    {
+      "title": "Così fan tutte",
+      "is_opera": true,
+      "composer": "Wolfgang Amadeus Mozart",
+      "librettist": "Lorenzo Da Ponte",
+      "number_of_acts": 2
+    },
+    {
+      "title": "Iphigénie en Aulide",
+      "is_opera": true,
+      "composer": "Christoph Willibald Gluck",
+      "librettist": "François-Louis Gand Le Bland Du Roullet",
+      "number_of_acts": 3
+    }
+  ]
+}

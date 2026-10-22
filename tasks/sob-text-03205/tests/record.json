@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "e02f9f10ba1a65484d25d8d65a32661b57b5c35bbd9d6e02bfca1204229ff32e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a77e41e5542995d83181321",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Billiken",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Kitty Collier: Kitty Collier is a doll created by Robert Tonner and is marketed to mainstream doll collectors.\n\nGay Bob: Gay Bob is a doll created in 1977 and billed as the world's first openly gay doll.  Bob was created by former advertising executive Harvey Rosenberg and marketed through his company, Gizmo Development.  Gay Bob was bestowed with an \"Esquire\" magazine \"Dubious Achievement Award\" for 1978.\n\nTyler Wentworth: Tyler Wentworth is a 16\" fashion doll created by Robert Tonner produced by the Tonner Doll Company, Inc. for adult collectors.  Tyler Wentworth dolls are constructed of vinyl and hard plastic and have rooted hair or wigs.  The Tonner Doll Company produces an extensive selection of ensembles and boutique pieces for the Tyler Wentworth doll made from the finest silks, French lace, chiffon, wool and scale knits.  The Tonner Doll Company strongly encourages adult collectors to play with their dolls.\n\nTammy (doll): Tammy was a 12\" fashion doll created by the Ideal Toy Company that debuted at the 1962 International Toy Fair.  Advertised as \"The Doll You Love to Dress\", Tammy was portrayed as a young American teenager, more \"girl next door\" than the cosmopolitan image of Mattel's Barbie, or American Character's Tressy.\n\nDollfie: Dollfie is a brand of vinyl doll created by the Japanese company Volks in 1997.  It is a highly poseable hybrid of fashion doll and action figure.  A Dollfie doll is about the size of a Barbie doll, 1/6 or , though there are variants in different heights ranging from 23 – .  Dollfie dolls generally come blank, i.e., their heads are not painted.  When an artist paints a Dollfie, the technique is referred to as a \"face-up\" or \"make-up\".  Dollfie dolls are much more flexible than typical Barbie-style western fashion dolls of the same size, because of the much larger number of joints in the body.\n\nSindy: Sindy is a British fashion doll created by Pedigree Dolls & Toys in 1963.  A rival to Barbie, Sindy's wholesome look and range of fashions and accessories made it the best-selling toy in the United Kingdom in 1968 and 1970.  After Marx Toys' unsuccessful attempt to introduce Sindy in the United States in the late 1970s, Hasbro bought the rights to Sindy and remodelled the doll to look more American.  As a result, the doll's popularity declined and Barbie manufacturer Mattel filed a lawsuit for copyright infringement, which was settled when Hasbro agreed to remodel Sindy's face.  During the 1990s, Barbie's share of the doll market continued to grow while Sindy's diminished, which led to Sindy being delisted from major retailers in 1997.  Hasbro returned the doll's licence to Pedigree, and the doll was relaunched in 1999, manufactured by Vivid Imaginations.  Sindy's 40th anniversary in 2003 saw a new manufacturer, New Moons, and another relaunch and redesign.\n\nBilliken: The Billiken is a charm doll created by an American art teacher and illustrator, Florence Pretz of Kansas City, Missouri, who is said to have seen the mysterious figure in a dream.  It is believed that Pretz found the name Billiken in Bliss Carman's 1896 poem \"Mr. Moon: A Song Of The Little People\".  In 1908, she obtained a design patent on the ornamental design of the Billiken, which she sold to the Billiken Company of Chicago.  The Billiken was elephant-like with pointed ears, a mischievous smile and a tuft of hair on his pointed head.  His arms were short and he was generally sitting with his legs stretched out in front of him.  Billiken is known as \"The God of Things As They Ought to Be.\"\n\nSasha Morgenthaler: Sasha dolls are a type and series of doll created by Swiss artist and dollmaker Sasha Morgenthaler (1893–1975), produced in Germany and the United Kingdom beginning in the late 1960s.  Popular with collectors, Sasha dolls are characterized by their individualism, their realistic expressions, their unique color, and the extreme attention to detail in the manufacture of the dolls as well as their clothes.  It is said by Juliette Peers that: \"Sasha dolls are renowned for possessing a solid intellectuality.\"  Morgenthaler created face sculpts for her dolls with subtle expressions, not artificially exaggerated smiles: her concern was that children surviving the horrors of WWII would not relate to such happy dolls in times of terror.  It was said of Morgenthaler herself, as a child, that \"When she was sad, she did not like her dolls uncompromising smiles.  Once she grabbed a nail file and scraped off her doll's false grin...\" In her own words, \"No grotesque caricature can awaken a child's true feelings.  A piece of wood, barely carved, is far superior to a conventional doll with an exaggerated smile.\"\n\nPullip: Pullip (Korean: 풀잎 ) is a fashion doll created by Cheonsang Cheonha of South Korea in 2003.  Pullip has a jointed plastic body (1:6 scale) and a relatively oversized head (1:3 scale), with eyes that can move from side to side and eyelids that can blink.  Pullip was first marketed by Jun Planning out of Japan; but the company underwent management changes in early 2009 and, since then, has operated out of South Korea under the name Groove.  Since the release of the original female doll, other companion dolls have been added: male dolls Namu (나무, tree) and Taeyang (태양, sun); Taeyang's younger sister, Dal (달, moon); Dal's best friend, Byul (별, star); and Pullip's younger brother, Isul (이슬, dew).  In February 2013, a new member of the Pullip family was introduced, called Yeolume (열매, berry/fruit), who is Pullip's future daughter.  There is also a miniature line called Little Pullip, with 1:12 scale bodies and 1:6 scale heads.  Pullip and her counterpart dolls are often customized by collectors, with the most common customizations including wig changes, eye color changes, and rebodying.\n\nHijitus: Hijitus is an Argentine comic superhero created by Manuel García Ferré.  He made his debut in September 1955 in the comic strip \"The Adventures of Pi-Pío\", published in \"Billiken\" magazine.  He was only a side character then, but became the protagonist of his own action-comedy animated series \"The Adventures of Hijitus\" which was broadcast in Argentina between 1967 and 1974.  The TV series is frequently re-transmitted on Argentinian television as many Argentinians perceive it as nostalgic.",
+    "question": "What is the name of the charm doll created by Florence Pretz, that shares a name with a magazine that features Argentine comic superhero Hijitus?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "doll_name": {
+          "type": "string",
+          "description": "The name of the doll."
+        },
+        "doll_creator": {
+          "type": "string",
+          "description": "The creator of the doll."
+        },
+        "doll_type": {
+          "type": "string",
+          "description": "The type or classification of the doll."
+        },
+        "magazine_name_shared": {
+          "type": "string",
+          "description": "The name of the magazine that shares the doll's name."
+        },
+        "superhero_featured_in_magazine": {
+          "type": "string",
+          "description": "The name of the superhero featured in the shared-name magazine."
+        }
+      },
+      "required": [
+        "doll_name",
+        "doll_creator",
+        "doll_type",
+        "magazine_name_shared",
+        "superhero_featured_in_magazine"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "doll_name": "Billiken",
+      "doll_creator": "Florence Pretz",
+      "doll_type": "charm doll",
+      "magazine_name_shared": "Billiken",
+      "superhero_featured_in_magazine": "Hijitus"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

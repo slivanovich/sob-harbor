@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jerry York (businessman): Jerome Bailey York (June 22, 1938 – March 18, 2010), commonly known as Jerry York, was an American businessman, and the Chairman, President and CEO of Harwinton Capital.  He was the former CFO of IBM and Chrysler, and was CEO of Micro Warehouse.  He was a chief aide to Kirk Kerkorian and his Tracinda investment company.  In February 2006, Kerkorian helped elect York to the board of directors of General Motors, from which he had previously resigned.
+
+Lee MacPhail: Leland Stanford MacPhail, Jr. (October 25, 1917 – November 8, 2012) was an American front-office executive in Major League Baseball.  MacPhail was a baseball executive for 45 years, serving as the director of player personnel for the New York Yankees, the president and general manager of the Baltimore Orioles, chief aide to Commissioner of Baseball William Eckert, executive vice president and general manager of the Yankees, and president of the American League.
+
+President's Management Advisory Board: The President's Management Advisory Board is a council of 17 corporate executives from leading American companies.  Its purpose is to provide the administration of the executive branch advice and recommendations on effective strategies for the implementation of the best business practices on matters related to federal government's management and operations, with focus on productivity, the implementation of innovative methods, customer service, and technology.  The board will be chaired by former Sirius/XM Satellite Radio Director Jeffrey Zients as part of the General Services Administration of the Executive Office.  On March 10, 2011, board appointees were announced, including Greg Brown, president and chief executive officer of Motorola Solutions, Inc.; Sam Gilliland, Chairman and CEO of Sabre Holdings; Debra L. Lee, Chairman and CEO of BET Networks; Shantanu Narayen, president and CEO of Adobe Systems, Inc.; and Tim Solso, Chairman and CEO of Cummins, Inc.
+
+Tracinda: Tracinda Corporation is an American private investment corporation that was owned by the late Kirk Kerkorian.  Its major investments include a minority interest of MGM Resorts International.  Tracinda is headquartered in Las Vegas, Nevada.  The company was named after Kerkorian's daughters, Tracy and Linda.
+
+Jürgen Schreiber (businessman): Jürgen Schreiber (born 1962) is a German-born businessman.  He is the CEO of Rexall Health Prior to joining Katz Group, Schreiber served for four years as President and CEO of Edcon Group, the largest non-food retailer in South Africa, with 1,400 stores and approximately 20,000 employees across Africa.  Previously he was CEO and President of Shoppers Drug Mart Corp., also known as "Pharmaprix" in the Quebec province, from March 30, 2007 until his resignation on January 26, 2011.  Schreiber joined Shoppers Drug Mart/Pharmaprix as its Chairman and Chief Executive Officer in June 2001.  Schreiber was replaced by David M. Williams, the Chairman of the board of Shoppers Drug Mart Corporation, as Interim President & Chief Executive Officer after his resignation was announced.
+
+Kirk Kerkorian: Kerkor "Kirk" Kerkorian (June 6, 1917 – June 15, 2015) was an Armenian-American businessman, investor, and philanthropist.  He was the president and CEO of Tracinda Corporation, his private holding company based in Beverly Hills, California.  Kerkorian is known for having been one of the important figures in the shaping of Las Vegas and, with architect Martin Stern, Jr. described as the "father of the mega-resort".  He built the world's largest hotel in Las Vegas three times: the International Hotel (opened in 1969), the MGM Grand Hotel (1973) and the MGM Grand (1993).  He purchased the Metro-Goldwyn-Mayer movie studio in 1969.
+
+Michael Capellas: Michael David Capellas (born August 19, 1955) is an American executive in the computer and telecommunication industries.  Capellas served as chairman and CEO of First Data Corporation, acting CEO of Serena Software, chairman and CEO of Compaq Computer Corporation until its merger with Hewlett-Packard where he became president of the post-merger company briefly, and president and CEO of WorldCom (later MCI) where he led its merger with Verizon.
+
+Bobby Mehta: Siddharth N. "Bobby" Mehta was former CEO and vice chairman of HSBC North America.  Mehta served as an Advisor of TransUnion since December 31, 2012.  Mehta serves as consultant of TransUnion.  He served the chief executive officer and president of TransUnion from August 2007 to December 31, 2012, and Transunion Financing Corp. until December 31, 2012.  From May 2007 to July 2007, he served as a consultant to the board of directors at TransUnion.  He served as the chief executive officer and president of TransUnion until December 31, 2012.  He served as the chief executive officer of TransUnion LLC.  He served as chairman of the board and chief executive officer of HSBC Finance Corporation from April 2005 to February 2007.  He served as chief executive officer and president of TransUnion LLC from 2007 to 2012.  From 1998 to 2007, he held a variety of positions with HSBC Finance Corporation and HSBC North America Holdings, Inc.  Mehta served as chief executive officer of HSBC North America until February 2007.  Mehta served as consultant of TransUnion since May 2007 until July 2007.  Mehta served as group managing director of HSBC Holdings PLC of HSBC Finance Corp. since April 30, 2005, and its unit chief executive officer since March 2005.  He served as the chief executive of HS BC North America Holdings Inc., of HSBC Finance Corp., from March 2005 to February 15, 2007.  He served as an executive chairman of HSBC Financial Corporation Limited since April 2005 and served as its chief executive officer from April 2005 to February 15, 2007.  He served as the chief executive officer of HSBC Bank USA, N.A. until February 2007.  He served as the chief executive officer of HSBC North America Holdings Inc. since March 2005.  He served as chairman and chief executive officer of HSBC Financial Corp., Ltd.  He oversaw HSBC's global credit card services, its North American consumer lending and mortgage services businesses and its first mortgage operation.  He was also responsible for corporate marketing, strategic planning and corporate development for HSBC North America Holdings Inc. and had responsibility for the strategic management of credit cards throughout the HSBC Group.  Mehta served as group executive of Credit Card Services, Auto Finance and Canada of Household International Inc., since July 2002.  He worked at MasterCard’s U.S. region board since March 2000.  Mehta joined Household International Inc., in 1998.  He served as senior vice president of The Boston Consulting Group in Los Angeles and co-leader of Boston Consulting Group Financial Services Practice in the United States.  Mehta served as a director of Global Board of MasterCard Incorporated since March 17, 2005.  He served as unit chairman of HSBC Holdings PLC and served as its board member since March 2005.  He served as vice chairman and director of HSBC Financial Corporation Limited., (Formerly Household International Inc.).  He has been a director of Avant Credit Corporation since December 18, 2014.  He has been an independent director of The Allstate Corporation since February 19, 2014.  He serves as a member of the advisory board at Core2 Group, Inc.  He has been non-executive independent director at Piramal Enterprises Ltd since April 1, 2013.  He serves on the boards of Datacard, Chicago Public Education Fund, University of Chicago Laboratory Schools, The Economic Club of Chicago, The Field Museum and Myelin Repair Foundation.  He serves as a director of TransUnion Corp. and TransUnion LLC.  He served as a director of MasterCard International Inc. (also known as MasterCard Worldwide) (formerly, MasterCard Inc.), since March 17, 2005.  He served as a director of HSBC Financial Corp.  Ltd.  He has been a director of TransUnion since April 2012.  Mehta serves on the board of international advisors for the Monterey, California, Institute of International Studies and is a member of the Financial Services Roundtable.  He also serves on the board of advisors for the Myelin Repair Foundation.  Mehta holds a Bachelor of Arts in economics from the London School of Economics and Masters of Business Administration from the University of Chicago.  He stepped down as head of the North American unit after the lender raised its forecast for bad loans in the U.S.  He is of Indian descent.
+
+Betsy Atkins: Betsy Atkins (born 1953) is an American business executive and entrepreneur.  She was an early investor in Yahoo and eBay in association with the venture capital firm, Baja LLC.  She was the Former Chairman and Chief Executive Officer (CEO) of Clear Standards, Inc, a leading provider of SaaS Software enterprise carbon management and sustainability solutions.  In 2010, Clear Standards was acquired by SAP.  In addition she is President and Chief Executive Officer (CEO) of Baja Corp, a venture capital investment firm, which she founded in 1993.  Atkins is on the Board of Directors of Cognizant, HD Supply, SL Green Realty Corp, Schneider Electric and Volvo Car Corporation.  She served as Chairman of the SAP AG Advisory Board and is a member of the ZocDoc Advisory Board.  She was a member of the NASDAQ LLC Exchange Board of Directors and is a member of Florida International University's Health Care Network Board of Directors.  Atkins is a member of the Council on Foreign Relations.
+
+Jerry Grundhofer: Jerry Grundhofer (born 1945) is the former CEO and Chairman of U.S. Bancorp.  He graduated from Seattle University in 1965.  In 1993, he became the president of Star Banc Corporation and held that position until 1998, when it merged with Firstar Corporation.  He had been the CEO of U.S. Bancorp since February 2001, and had been Chairman of the Board since 2002.  Jerry Grundhofer stepped down as CEO on December 12, 2006 and was replaced by his longtime lieutenant Richard K. Davis who assumed the position of CEO in addition to his current role as President.  Jerry Grundhofer was to remain as Chairman of the Board of Directors until the end of 2007 when he was scheduled to retire.  Jerry was a former Vice-President of Security Pacific Bank and Bank of America when that institution bought out Security Pacific Bank in the early 1990s.  He left Bank of America to join Star Banc Corporation in 1993.
+
+Question: What  president and CEO of Tracinda Corporation has a chief aide who was  the Chairman, President and CEO of Harwinton Capital?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "tracinda_ceo_name": {
+      "type": "string",
+      "description": "The name of the President and CEO of Tracinda Corporation."
+    },
+    "tracinda_ceo_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The roles held by the Tracinda CEO at Tracinda Corporation."
+    },
+    "chief_aide": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the chief aide."
+        },
+        "previous_roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of previous roles held by the chief aide."
+        }
+      },
+      "required": [
+        "name",
+        "previous_roles"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "tracinda_ceo_name",
+    "tracinda_ceo_roles",
+    "chief_aide"
+  ],
+  "additionalProperties": false
+}

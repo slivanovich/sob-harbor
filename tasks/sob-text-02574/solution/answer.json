@@ -1,0 +1,17 @@
+{
+  "film_title": "Shrek",
+  "release_year": 2001,
+  "composer_details": {
+    "composer_name": "John Powell",
+    "composition_type": "co-composed",
+    "co_composers": [
+      "Harry Gregson-Williams"
+    ]
+  },
+  "main_voice_actors": [
+    "Mike Myers",
+    "Eddie Murphy",
+    "Cameron Diaz",
+    "John Lithgow"
+  ]
+}

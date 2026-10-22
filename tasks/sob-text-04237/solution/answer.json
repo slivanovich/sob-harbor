@@ -1,0 +1,17 @@
+{
+  "common_vegetation_type": "flowering plants",
+  "genera_involved": [
+    "Lythrum",
+    "Erythrina"
+  ],
+  "description_sources": [
+    {
+      "genus_name": "Lythrum",
+      "vegetation_description": "Lythrum is a genus of 38 species of flowering plants native to the temperate world."
+    },
+    {
+      "genus_name": "Erythrina",
+      "vegetation_description": "Erythrina is a genus of flowering plants in the pea family, Fabaceae."
+    }
+  ]
+}

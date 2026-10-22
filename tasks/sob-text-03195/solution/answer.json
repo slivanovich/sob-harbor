@@ -1,0 +1,12 @@
+{
+  "film_title": "Brewster's Millions",
+  "release_year": 1985,
+  "film_details": {
+    "director": "Walter Hill",
+    "genre": "comedy",
+    "starring_actors": [
+      "Richard Pryor",
+      "John Candy"
+    ]
+  }
+}

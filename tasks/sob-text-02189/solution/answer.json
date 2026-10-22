@@ -1,0 +1,26 @@
+{
+  "common_category": "plants",
+  "category_type": "biological_classification",
+  "classified_entities": [
+    {
+      "entity_name": "Mesquite",
+      "entity_type": "genus",
+      "description_summary": "Mesquite is the common name for the genus 'Prosopis', containing over 40 species of small leguminous trees.",
+      "number_of_species": 40,
+      "native_regions": [
+        "southwestern United States",
+        "Mexico"
+      ]
+    },
+    {
+      "entity_name": "Bruckenthalia",
+      "entity_type": "genus",
+      "description_summary": "Bruckenthalia is a genus of plants consisting of only one species, Bruckenthalia spiculifolia (spike heath) an evergreen shrub native to southeastern Europe and Asia Minor.",
+      "number_of_species": 1,
+      "native_regions": [
+        "southeastern Europe",
+        "Asia Minor"
+      ]
+    }
+  ]
+}

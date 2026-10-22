@@ -1,0 +1,14 @@
+{
+  "question_asked": "Are Aptenia and Gladiolus both flowering plants?",
+  "genus_1": {
+    "name": "Gladiolus",
+    "is_flowering_plant": true,
+    "family": "Iridaceae"
+  },
+  "genus_2": {
+    "name": "Aptenia",
+    "is_flowering_plant": true,
+    "family": "Aizoaceae"
+  },
+  "both_are_flowering_plants": true
+}

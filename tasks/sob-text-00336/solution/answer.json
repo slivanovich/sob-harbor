@@ -1,0 +1,11 @@
+{
+  "source_location": {
+    "name": "Padiham",
+    "type": "town"
+  },
+  "target_location": {
+    "name": "Pendle Hill",
+    "type": "hill"
+  },
+  "relative_direction": "south"
+}

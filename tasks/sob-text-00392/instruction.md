@@ -1,0 +1,95 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Leon Shamroy: Leon Shamroy, A.S.C. (July 16, 1901 – July 7, 1974) was an American film cinematographer.  He and Charles Lang share the record for most number of Academy Award nominations for Cinematography.  During his five-decade career, he gained eighteen nominations with four wins.
+
+Jack Lemmon: John Uhler "Jack" Lemmon III (February 8, 1925 – June 27, 2001) was an American actor and musician.  Lemmon was an eight time Academy Award nominee, with two wins.  He starred in over 60 films, such as "Some Like It Hot", "The Apartment", "Mister Roberts" (for which he won the 1955 Academy Award for Best Supporting Actor), "Days of Wine and Roses", "The Great Race", "Irma la Douce", "The Odd Couple" and its sequel 30 years later, "The Odd Couple II", (and other frequent collaborations with "Odd Couple" co-star Walter Matthau), "Save the Tiger" (for which he won the 1973 Academy Award for Best Actor), "The Out-of-Towners", "The China Syndrome", "Missing" (for which he won Best Actor at the 1982 Cannes Film Festival), "Glengarry Glen Ross", "Tuesdays with Morrie", "Grumpy Old Men", and "Grumpier Old Men".
+
+Shea Kerry: Shea Kerry is an American writer and producer.  He played the role of "Steve" in the thriller "Dark Honeymoon" (2008), starring Academy Award nominee Roy Scheider ("All That Jazz", "The French Connection"), Academy Award nominee Eric Roberts ("Runaway Train"), Steve Wilder, and Daryl Hannah.
+
+Ronald Neame: Ronald Elwin Neame CBE BSC (23 April 1911 – 16 June 2010) was an English film cinematographer, producer, screenwriter and director.  As cinematographer for the British war film "One of Our Aircraft Is Missing" (1943), he received an Academy Award nomination for Best Special Effects.  During a partnership with director David Lean, he produced "Brief Encounter" (1945), "Great Expectations" (1946), and "Oliver Twist" (1948), receiving two Academy Award nominations for writing.
+
+Vincent Arcaro: Vincent Arcaro (born February 22, 1953) is an American film, television, and commercial producer based in Los Angeles.  He is best known for executive producing some of the works of directors Caleb Deschanel, Michael Lehmann, Brad Silberling, Andy Garcia, and Conrad Hall.
+
+Michael Flessas: Michael C. Flessas (born June 2, 1959 in Miami, Florida), is the birth name of American actor Michael Flessas, who is of Greek ancestry.  Flessas' most notable film role was "Angry Man" in the Cannes Film Festival 2000 Palme d'Or winning film "Dancer in the Dark" directed by Danish film director Lars von Trier.  Originally, the director himself considered playing the role but, instead, the role was given to Flessas.  "Dancer in the Dark" starred Icelandic singer/actress Björk who won the Best Actress award at Cannes for her role.  French film icon, César Award winner, and Academy Award nominee Catherine Deneuve, and other noteworthy artists such as Academy Award and Tony Award winner Joel Grey, Peter Stormare, David Morse, and Stellan Skarsgård also performed in the multiple prize winning film.  One of Björk's songs for the film received an Academy Award nomination for Best Song.
+
+Kyle Townsend: Kyle Townsend (born September 21, 1978) is an American record producer, musician and composer.  He has produced songs for such acclaimed recording artists as 5-time GRAMMY Award winner Celine Dion, 8-time Academy Award nominated songwriter Diane Warren, as well as Mary J Blige, Lady Gaga, Jessie J, and Academy Award winner Jennifer Hudson among others.  He has produced songs for five feature film releases including the 2012 Academy Award nominee for Best Picture, and he produced and arranged music for the 2015 Academy Awards Ceremony.  His contributions have earned 2 GRAMMY Award Nominations.
+
+Resurrection: The J.R. Richard Story: Resurrection: The J.R. Richard Story is a 2005 American independent film, directed by Greg Carter and Benjamin O. Jimerson-Phillips, Executive Producers Charlie Bellinger, J.R. Richard & Larry Johnson; and Produced by Benjamin O. Jimerson-Phillips, and Bruce Dalton, starring David Ramsey and Charles Durning two time Academy Award Nominee.  The film is a biopic tale of the Houston Astros baseball Pitcher J. R. Richard, his life high points struggles.  It was shot by Bellinger-7 Films, which is owned by Ms. Charlie Bellinger-Bethea, former wife of NFL Hall of Fame Inductee Elvin Bethea, and done in association with Nexus Films & Adept Films Inc.
+
+Jonathan Tammuz: Jonathan Tammuz is a British-Canadian film director, best known for directing the short film "The Childeater" and the feature film "Rupert's Land".  "The Childeater" was a shortlisted Academy Award nominee for Best Live Action Short Film at the 62nd Academy Awards, and "Rupert's Land" which was a Genie Award nominee for Best Picture at the 19th Genie Awards, with Tammuz also nominated for Best Director.
+
+Caleb Deschanel: Joseph Caleb Deschanel, A.S.C., (born September 21, 1944) is an American film cinematographer and film/television director.  He has been nominated for the Academy Award for Best Cinematography five times.  He is a member of the National Film Preservation Board of the Library of Congress, representing the American Society of Cinematographers.  The actresses Emily and Zooey Deschanel are his daughters by his wife, the former Mary Jo Weir, whom he married in 1972.
+
+Question: Which American film cinematographer and director, has been a five time Academy Award nominee, and has had some works executivly produced by Vincent Arcaro?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The full name of the individual."
+    },
+    "professions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of the individual's professions."
+    },
+    "academy_award_details": {
+      "type": "object",
+      "properties": {
+        "nominations_count": {
+          "type": "integer",
+          "description": "The total number of Academy Award nominations received."
+        },
+        "nomination_category": {
+          "type": "string",
+          "description": "The specific category for which the individual was nominated."
+        }
+      },
+      "required": [
+        "nominations_count",
+        "nomination_category"
+      ],
+      "additionalProperties": false
+    },
+    "executive_producer_connection": {
+      "type": "object",
+      "properties": {
+        "producer_name": {
+          "type": "string",
+          "description": "The name of the executive producer connected to the individual's works."
+        },
+        "relationship_description": {
+          "type": "string",
+          "description": "A description of the relationship between the individual and the executive producer."
+        }
+      },
+      "required": [
+        "producer_name",
+        "relationship_description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "professions",
+    "academy_award_details",
+    "executive_producer_connection"
+  ],
+  "additionalProperties": false
+}

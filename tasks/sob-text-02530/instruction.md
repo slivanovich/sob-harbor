@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+George P. Taylor: Lieutenant General George Peach Taylor Jr.  USAF (Ret.)  (born 1953) was the 18th Surgeon General of the United States Air Force, Headquarters U.S. Air Force, Washington, D.C. General Taylor served as the senior Air Force officer responsible for comprehensive management of the Air Force Medical Service.  In this capacity, he advises the Secretary of the Air Force and Air Force Chief of Staff, as well as the Assistant Secretary of Defense for Health Affairs, on matters pertaining to the medical aspects of the air expeditionary force and the health care of 2.6 million Air Force beneficiaries.  The Surgeon General has authority to commit resources for the Air Force Medical Service, to make decisions affecting the delivery of medical services, and to develop plans, programs and procedures to support worldwide medical service missions.  The Surgeon General exercises direction, guidance and technical management of more than 42,000 people assigned to 74 medical treatment facilities worldwide.  From September 7, 2010 - December 22, 2010 he served as the acting Assistant Secretary of Defense for Health Affairs
+
+United States Air Force: The United States Air Force (USAF) is the aerial and space warfare service branch of the United States Armed Forces and one of the seven American uniformed services.  Initially part of the United States Army, the USAF was formed as a separate branch of the U.S. Armed Forces on 18 September 1947 under the National Security Act of 1947.  It is the most recent branch of the U.S. Armed Forces to be formed.  The USAF is the largest and one of the most technologically advanced air forces in the world.  The service articulates its core functions as Nuclear Deterrence Operations, Air Superiority, Space Superiority, Cyberspace Superiority, Command and Control, Global Integrated ISR, Global Precision Attack, Special Operations, Rapid Global Mobility, Personnel Recovery, Agile Combat Support, and Building Partnerships.
+
+Patricia Rose: On April 21, 2013, USAF Major General Patricia A. "Trish" Rose became the first openly LGBT officer to be promoted to the rank of Major General.  She was nominated to the rank on December 7, 2012 and pinned on May 31, 2013 in a ceremony led by her direct supervisor, General Janet C. Wolfenbarger, the first female four-star general in the United States Air Force.  At the time, Maj Gen Rose was assigned as Mobilization Assistant to the Commander, Air Force Materiel Command, Wright-Patterson Air Force Base.  Her last active duty assignment was as Mobilization Assistant to the Deputy Chief of Staff for Logistics, Engineering and Force Protection, Headquarters U.S. Air Force, Washington, D.C.  In that capacity, she supported the Deputy Chief of Staff in leadership, management and integration of Air Force logistics readiness, aircraft and missile maintenance, civil engineering and security forces, as well as setting policy and preparing budget estimates that reflected enhancements to productivity, combat readiness and quality of life for Air Force members.
+
+Ronald J. Bath: Ronald Jay Bath (born November 4, 1944) is a retired United States Air Force Major General who directed U.S. Air Force Strategic Planning for the service's Deputy Chief of Staff for Plans and Programs at service headquarters in the Pentagon.
+
+Judith Fedder: Judith Ann Fedder (born 1958) is a retired United States Air Force lieutenant general who most recently served as the Deputy Chief of Staff for Logistics, Installations and Mission Support, Headquarters U.S. Air Force, The Pentagon, Washington, D.C.  General Fedder was responsible to the Chief of Staff for leadership, management and integration of Air Force logistics readiness, aircraft and missile maintenance, civil engineering and security forces, as well as setting policy and preparing budget estimates that reflect enhancements to productivity, combat readiness and quality of life for Air Force people.
+
+Roger P. Scheer: Roger P. Scheer (born November 13, 1934) was a major general in the United States Air Force who served as Commander of the United States Air Force Reserve Command, Headquarters U.S. Air Force, Washington D.C., and commander, Headquarters Air Force Reserve, a separate operating agency located at Robins Air Force Base, Georgia.  As chief of Air Force Reserve, he served as the principal adviser on Reserve matters to the Air Force Chief of Staff.  As commander of AFRES, he had full responsibility for the supervision of U.S. Air Force Reserve units around the world.
+
+Gregory A. Feest: Gregory A. Feest (born 1956) is a United States Air Force Air Force major general who is currently serving as the Chief of Safety of the United States Air Force, Headquarters U.S. Air Force, Washington, D.C., and Commander, Air Force Safety Center, Kirtland Air Force Base, New Mexico.  He develops, executes and evaluates all Air Force aviation, ground, weapons, space and system mishap prevention, and nuclear surety programs to preserve combat readiness.  Additionally, he directs research to promote safety awareness and mishap prevention, oversees mishap investigations, evaluates corrective actions, and ensures implementation.  Finally, he manages, develops and directs all Air Force safety and risk management courses.
+
+James G. Roudebush: Lieutenant General James Gordon Roudebush, USAF, (born February 24, 1948) was the 19th Surgeon General of the United States Air Force, Headquarters U.S. Air Force, Washington, D.C. General Roudebush served as functional manager of the U.S. Air Force Medical Service.  In this capacity, he advised the Secretary of the Air Force and Air Force Chief of Staff, as well as the Assistant Secretary of Defense for Health Affairs on matters pertaining to the medical aspects of the air expeditionary force and the health of Air Force people.  General Roudebush had authority to commit resources worldwide for the Air Force Medical Service, to make decisions affecting the delivery of medical services, and to develop plans, programs and procedures to support worldwide medical service missions.  He exercised direction, guidance and technical management of more than 42,400 people assigned to 74 medical facilities worldwide.
+
+Carrol Chandler: Carrol Howard "Howie" Chandler (born March 16, 1952), is a retired United States Air Force four-star general.  He last served as the 35th Vice Chief of Staff of the Air Force from August 27, 2009 to January 14, 2011.  He previously served as Commander of Pacific Air Forces from November 2007 to August 20, 2009 and Deputy Chief of Staff for Operations, Plans and Requirements from October 23, 2005 to November 29, 2007.  As Vice Chief, he presides over the Air Staff and serves as a member of the Joint Chiefs of Staff Requirements Oversight Council and Deputy Advisory Working Group.  He assists the Chief of Staff with organizing, training, and equipping of 680,000 active-duty, Guard, Reserve and civilian forces serving in the United States and overseas.  He retired from the Air Force by March 1, 2011.  In 2012 he joined Pratt & Whitney Military Engines as Vice President, Military Business Development and International Programs.
+
+Michelle D. Johnson: Michelle D. Johnson is a Lieutenant General in the United States Air Force and was the 19th Superintendent of the United States Air Force Academy.  She is the first woman to lead a United States Department of Defense Service Academy.  Her previous position was the Deputy Chief of Staff, Operations and Intelligence, Supreme Headquarters Allied Powers Europe in Casteau, Belgium.  She was formerly the Director, Strategy, Policy, Programs and Logistics, U.S. Transportation Command at Scott Air Force Base.  She also served as the deputy director for information and cyberspace policy, Strategic Plans and Policy Directorate at the Pentagon.  As an Air Force cadet, she was the first woman to serve as Cadet Wing Commander (the senior ranking cadet) at the United States Air Force Academy.  Johnson played basketball for the Air Force Falcons women's basketball team.  She was twice named an Academic All-American and was inducted into the Academic All-American Hall of Fame in 2007, making her the first woman from the Academy and one of only six graduates with that distinction.  Also, she was selected as the Academy's first woman Rhodes Scholar in her First Class (Senior) Year.  Johnson was recognized as an Honorary Fellow of Brasenose College in 2013.  She received the 2014 American Legion Auxiliary Woman of the Year Award.  Lt. General Johnson was awarded a star (#42) on The Flag for Hope on June 18, 2016 in recognition of her outstanding military service.
+
+Question: Ronald Jay Bath (born November 4, 1944) is a retired United States Air Force Major General who directed U.S. Air Force Strategic Planning for the service's Deputy Chief of Staff for Plans and Programs at service headquarters in the Pentagon, The United States Air Force (USAF) is the aerial and space warfare service branch of the United States Armed Forces and one of how many American uniformed services?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The full name of the person mentioned."
+    },
+    "person_rank": {
+      "type": "string",
+      "description": "The military rank of the person."
+    },
+    "person_role": {
+      "type": "string",
+      "description": "The specific role or position held by the person."
+    },
+    "usaf_context": {
+      "type": "object",
+      "properties": {
+        "is_service_branch": {
+          "type": "boolean",
+          "description": "Indicates if the USAF is a service branch of the US Armed Forces."
+        },
+        "parent_organization": {
+          "type": "string",
+          "description": "The larger organization the USAF is a part of."
+        },
+        "number_of_uniformed_services": {
+          "type": "integer",
+          "description": "The total number of American uniformed services."
+        }
+      },
+      "required": [
+        "is_service_branch",
+        "parent_organization",
+        "number_of_uniformed_services"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "person_rank",
+    "person_role",
+    "usaf_context"
+  ],
+  "additionalProperties": false
+}

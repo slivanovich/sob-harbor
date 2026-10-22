@@ -1,0 +1,94 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Kutché: Kutché is a studio album from Algerian artists Cheb Khaled and Safy Boutella.  It is the only collaboration between the two artists.  Khaled would later rise to be one of the most famous raï artists outside Algeria, while Safy Boutella would continue his career as a jazzman in Europe.
+
+Sanjeev Kumar: Sanjeev Kumar (born Harihar Jethalal Jariwala 9 July 1938 – 6 November 1985) was a noted Indian film actor.  He won several major awards including two National Film Awards for Best Actor for his performances in the movies "Dastak" (1971) and "Koshish" (1973).  He acted in genres ranging from romantic dramas to thrillers.  Kumar did not mind playing roles that were non-glamorous, such as characters well beyond his age.  Movies like "Arjun Pandit", "Sholay" and "Trishul", along with the remakes of Tamil films into Hindi like "Yehi Hai Zindagi", "Naya Din Nayi Raat", "Devta", and "Ram Tere Kitne" exemplify his talents.  He also did suspense-thriller films like "Qatl", "Shikar", "Uljhan" and "Trishna".  Kumar also proved his ability to do comedy in films like "Manchali", "Itni Si Baat", "Pati Patni aur Woh", "Angoor", "Biwi O Biwi" and "Hero".  He is well remembered for his versatility and genuine portrayal of his characters.
+
+Geto Boys: Geto Boys (originally spelled Ghetto Boys) is a rap group from Fifth Ward, Houston, Texas, currently consisting of Willie D and Bushwick Bill.  The Geto Boys have earned notoriety for their lyrics covering controversial topics such as misogyny, gore, psychotic experiences, and necrophilia.
+
+A History of Violence (album): A History of Violence is the sixth album by Philadelphia hip hop group Jedi Mind Tricks, released on November 11, 2008 on Babygrande Records.  The album followed multiple summer releases from the Jedi Mind Tricks camp, including the group's first DVD, titled "Divine Fire: The Story of Jedi Mind Tricks", and the Vinnie Paz-executive produced projects "Jedi Mind Tricks presents Doap Nixon: Sour Diesel", "Jedi Mind Tricks presents King Syze: The Labor Union", and "Jedi Mind Tricks presents OuterSpace: God's Fury".  The album's first single "Monolith" was released on October 2, 2008 and is available free at Babygrande's official website.  Their second single "Godflesh" was released on their website and it featured King Magnetic and Block McCloud too.  The album features former Jedi Mind Tricks member Jus Allah's return to the group.
+
+The Best of Van Morrison Volume 3: The Best of Van Morrison Volume 3 is a compilation album by Northern Irish singer-songwriter Van Morrison, that was released on 11 June 2007 in the UK with a digital version released in the U.S. on iTunes Store, on 12 June 2007.  Manhattan/EMI Music Catalog Marketing released the CD version of the album on 19 June 2007 in the United States.  This new two-disc collection of 31 tracks has been compiled by Morrison himself.  It offers an overview of his large volume of material since the release of "The Best of Van Morrison Volume Two" in 1993.  The album's thirty-one tracks include previously unreleased collaborations with Tom Jones ("Cry For Home") and Bobby Bland ("Tupelo Honey") as well as duets with John Lee Hooker, B.B. King and Ray Charles.  The 2003 duet with Ray Charles is "Crazy Love" a song originally recorded on Morrison's 1970 album "Moondance".  "Blue and Green" was previously donated to be used on the charity album "", which raised money for relief efforts intended for Gulf Coast victims devastated by hurricane Katrina.  The duet with Tom Jones, "Cry For Home" was taken from the same recording sessions that produced the "Sometimes We Cry" duet between the two artists, which featured on Jones' successful album "Reload".  "Cry for Home" was released as a single on 4 June 2007 in the UK, and was followed by "Blue and Green" on 27 August.
+
+Kool Thing: "Kool Thing" was the first major label single from American alternative rock band Sonic Youth's 1990 album "Goo".  It was released in June 1990 on Geffen Records.  The song was inspired by an interview bassist/singer Kim Gordon conducted with LL Cool J for "Spin" in which the two artists clashed.  Although he is never mentioned by name, the song's lyrics contain several references to LL Cool J. Gordon's lyrics make reference to several of the rapper's works, including the single "I Can't Live Without My Radio" and the album "Walking With a Panther".  She also repeats the line "I don't think so", which appears in LL Cool J's "Going Back to Cali".  Chuck D also contributed some vocals to the song.
+
+Mind Playing Tricks on Me: "Mind Playing Tricks on Me" is a single by the Geto Boys, featured on their 1991 album "We Can't Be Stopped".
+
+CMT Cross Country: CMT Cross Country is a television show broadcast on Country Music Television and Palladia that pairs two country music artists together.  Each episode of CMT Cross Country features a different set of stars playing together.  It is similar in format to "CMT Crossroads", except that in this series, both of the two artists are predominantly known for their country music contributions, as opposed to "Crossroads", where one of the two artists is from outside the traditional country genre.
+
+I Finally Found Someone (album): I Finally Found Someone is a studio album released by country music artists Lorrie Morgan and Sammy Kershaw, who were then married to each other.  It was released in 2001 by RCA Records Nashville, and it is largely composed of duets between the two artists.  Six of the songs are duets, while the other six are solo efforts (three from each artist).  The only chart single from this album was "He Drinks Tequila", one of the duets, which peaked at #39 on the "Billboard" country charts.  The title track is a cover of the Barbra Streisand/Bryan Adams duet.  "What a Wonderful World", a cover of a song made famous by Louis Armstrong, is also included here.
+
+In Concert 1972: In Concert 1972 is a double live album by sitar virtuoso Ravi Shankar and sarodya Ali Akbar Khan, released in 1973 on Apple Records.  It was recorded at the Philharmonic Hall, New York City, in October 1972, and is a noted example of the two Hindustani classical musicians' celebrated "jugalbandi" (duet) style of playing.  With accompaniment from tabla player Alla Rakha, the performance reflects the two artists' sorrow at the recent death of their revered guru, and Khan's father, Allauddin Khan.  The latter was responsible for many innovations in Indian music during the twentieth century, including the call-and-response dialogue that musicians such as Shankar, Khan and Rakha popularised among Western audiences in the 1960s.
+
+Question: Mind Playing Tricks on Me is a single off an album by what two artists?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "single_name": {
+      "type": "string",
+      "description": "The name of the single."
+    },
+    "album_details": {
+      "type": "object",
+      "properties": {
+        "album_name": {
+          "type": "string",
+          "description": "The name of the album the single is from."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the album."
+        }
+      },
+      "required": [
+        "album_name",
+        "release_year"
+      ],
+      "additionalProperties": false
+    },
+    "performing_artists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_name": {
+            "type": "string",
+            "description": "The name of the group."
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Individual members of the group."
+          }
+        },
+        "required": [
+          "group_name",
+          "members"
+        ],
+        "additionalProperties": false
+      },
+      "description": "The artists or group performing the single and album."
+    }
+  },
+  "required": [
+    "single_name",
+    "album_details",
+    "performing_artists"
+  ],
+  "additionalProperties": false
+}

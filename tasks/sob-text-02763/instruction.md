@@ -1,0 +1,85 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Stephen Full: Stephen Full (born November 13, 1969) is an American actor and comedian, known for his voice role as Stan on the Disney Channel show "Dog with a Blog".  Previously, Full starred as Ash on I'm in the Band, which aired on Disney Channel's sister network, Disney XD.
+
+Good Morning, Mickey!: Good Morning, Mickey!  is a television series that aired on The Disney Channel.  It was first aired on April 18, 1983, when The Disney Channel launched.  It was one of The Disney Channel's first original programs, and the first program aired at the channel's launch.  It featured classic Disney animated shorts.  Although Mickey Mouse shorts were the primary programming, additional cartoons featuring Goofy, Donald Duck, Chip 'n' Dale, Pluto, and others were also shown.  Its time-slot for its early run was at 7 a.m. Eastern/Pacific Time, making it the first program of The Disney Channel's 16 (later 18) hour programming day.  Later on, its time-slot was changed to 7:30 a.m. ET/PT, making it the second program of the channel's programming day.  A similar show that premiered later on The Disney Channel was "Donald Duck Presents".  "Good Morning, Mickey!"  was replaced by "Mickey's Mouse Tracks" in 1992.
+
+Flash Forward: Flash Forward is a Disney Channel Original Series produced in Canada for preteens and teenagers which aired on both Disney Channel and ABC from 1995 to 1997.  The series first aired as a 4-episode limited-run preview on The Disney Channel from December 14, 1995 to January 6, 1996. <ref name="August/September 1996">"The Disney Channel Magazine", Vol.  14, no. 4, August/September 1996: p. 4. </ref> Starting on September 14, 1996, the series aired as a special nationwide preview-run on ABC's Saturday morning lineup. <ref name="December 1996/January 1997">"The Disney Channel Magazine", Vol.  14, no. 6, December 1996/January 1997: pp. 18, 23, 36, 39, 47. </ref> On January 1, 1997, the series joined The Disney Channel with a special New Year's Day 5-hour, 10-episode marathon, and on January 5, the series moved to its regular time slot on Saturdays and Sundays.
+
+Twitches Too: Twitches Too is a 2007 Disney Channel Original Movie.  It is the sequel to the Disney Channel Original Movie "Twitches", released in 2005.  The film began production in late April 2007 and was released on October 12.  It aired during "Disney Channel's Halloween Month".  The Disney Channel Original Series, "Wizards of Waverly Place", premiered following the film's premiere.  The first trailer was released during the premiere of "High School Musical 2".  On its premiere night, the movie brought in 6.96 million viewers.  To date, it is the last sequel to a Disney Channel Original Movie that is not a musical.
+
+So Weird: So Weird is an American-Canadian television series that aired on the Disney Channel as a mid-season replacement from January 18, 1999, to September 28, 2001.  The series was shot in Vancouver, British Columbia.  One of the first Disney Channel Original Series to be shot in .  In the first two seasons, the series centered on teenage girl Fiona Phillips (Cara DeLizia) who toured with her rock-star mom (Mackenzie Phillips), while encountering paranormal activity along the way.  The series was compared to the Fox TV series "The X-Files" since it took a darker tone than any other Disney Channel show at the time.  For the third and final season, Disney replaced DeLizia (due to her wanting to pursue future projects outside of Disney) with actress Alexz Johnson playing Annie Thelen.  Production ceased after 65 episodes.
+
+Good Luck Charlie, It's Christmas!: Good Luck Charlie, It's Christmas!  (also known as Good Luck Charlie: The Road Trip Movie in the United Kingdom and Ireland) is a 2011 Christmas film based on the Disney Channel Original Series "Good Luck Charlie".  The film was directed by Arlene Sanford and written by Geoff Rodkey, and stars Bridgit Mendler, Leigh-Allyn Baker, Bradley Steven Perry, Mia Talerico, Eric Allan Kramer, and Jason Dolley as the Duncan family.  The Disney Channel Original Movie follows the Duncan family on their road trip to Amy Duncan's parents' house for Christmas.  It premiered on December 2, 2011 on Disney Channel ten years after Disney Channel's last Christmas-themed original movie, "'Twas the Night" in 2001.
+
+Jason Dolley: Jason Scott Dolley (born July 5, 1991) is an American actor and musician, known for his roles in Disney Channel shows and movies.  These include Newton "Newt" Livingston III on "Cory in the House", Virgil Fox in "Minutemen", Connor Kennedy in "Read It and Weep", Pete Ivey in "Hatching Pete", and PJ Duncan on "Good Luck Charlie".
+
+Cory in the House: Cory in the House is a television show, which aired on the Disney Channel from January 12, 2007, to September 12, 2008, and was a spin-off from the Disney show "That's So Raven".  The show focuses on Cory Baxter, who moves from San Francisco, California to Washington, D.C. with his father, after Victor Baxter gets a new job in the White House as the official head chef.  The series marks a Disney Channel first, as it is the channel's first spin-off.  This is also the only Disney Channel spin-off series to be broadcast in standard definition for the entire length of the show.  Reruns of the series have not been produced on Disney Channel, or on Disney XD; however they continue to air on the Family channel in Canada.  Raven-Symoné guest-starred, reprising her role as Raven Baxter in one episode.  In 2014 Disney Channel started airing a weekly block called "Disney Replay" on Wednesdays nights, during which episodes of "Cory in the House" air alongside "That's So Raven" and "Kim Possible", among others.
+
+List of Cory in the House episodes: "Cory in the House" is a spin-off of the Disney Channel Original Series, "That's So Raven".  It aired on the Disney Channel Network from January 12, 2007 to September 12, 2008.  A total of 34 episodes were produced, spanning 2 seasons.  The show was about a teenager named Cory Baxter who moves from San Francisco to Washington, D.C. with his father Victor Baxter, who gets a job as head chef in the White House.
+
+Donald's Quack Attack: Donald's Quack Attack is an American television series which ran on The Disney Channel and was later rerun on Toon Disney.  It premiered on November 2, 1992, along with "Mickey's Mouse Tracks", on The Disney Channel.  It featured Disney animated short films, especially those with Mickey Mouse, Donald Duck, and Goofy.  Each episode lasted about 22–28 minutes, leaving some time for commercials. .  A similar Mickey Mouse version was called "Mickey's Mouse Tracks", however, unlike "Mouse Tracks", "Quack Attack" was run with a manic energy.  In between the cartoon shorts, a screen would appear with a random background color (pink, blue, green, etc.) With a clip in the corner from a random Donald Duck cartoon.  There was a thermometer with Donald's head on the bottom.  When the clip showed Donald getting angry, the head on the thermometer would go up and make a dinging sound.  This was called the "Quack Attack Meter."  This 10-25 second clip would appear 2 to 4 times per show, depending on how long the shorts were.  The credits for the show did not name anyone.  Instead, it stated, "The cartoons in this program are the work of the animators from THE WALT DISNEY COMPANY over the past 60 years."  When the show premiered in 1992, it was meant to replace "Donald Duck Presents".  It was not possible to know what episode was going to be shown on any given day, but the show did feature showings of some shorts that do not show up on "The Ink and Paint Club" along with some shorts made by the "Fleischer" brothers, and clips from the animated features, such as "Snow White and the Seven Dwarfs", "Pinocchio", "Peter Pan", and "Lady and the Tramp".  "Donald's Quack Attack" aired on The Disney Channel from 1992 to 2000, and on Toon Disney from 1998 to December 2002.  From April 2001 to December 2002, "Quack Attack" usually aired weekdays at 5 a.m., and every night at midnight.  When "Quack Attack" aired on Toon Disney, there were short commercial breaks in between each cartoon, unlike the airings on The Disney Channel.  On some episodes, the first cartoon was cut from the episode to make room for commercial breaks.
+
+Question: Jason Scott Dolley played Newton "Newt" Livingston III on what Disney Channel show that aired from January 12, 2007 to September 12, 2008?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "show_name": {
+      "type": "string",
+      "description": "The name of the Disney Channel show."
+    },
+    "character_played": {
+      "type": "string",
+      "description": "The name of the character played by the actor in the show."
+    },
+    "actor_name": {
+      "type": "string",
+      "description": "The full name of the actor."
+    },
+    "network": {
+      "type": "string",
+      "description": "The television network the show aired on."
+    },
+    "air_dates": {
+      "type": "object",
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date the show first aired."
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date the show last aired."
+        }
+      },
+      "required": [
+        "start_date",
+        "end_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "show_name",
+    "character_played",
+    "actor_name",
+    "network",
+    "air_dates"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "author_name": "John Michael Crichton",
+  "author_nationality": "American",
+  "author_professions": [
+    "author",
+    "screenwriter",
+    "film director",
+    "producer"
+  ],
+  "author_primary_genres": [
+    "science fiction",
+    "medical fiction",
+    "thriller"
+  ],
+  "novel_title": "The Andromeda Strain",
+  "novel_publication_year": 1969,
+  "miniseries_title": "The Andromeda Strain",
+  "miniseries_release_year": 2008
+}

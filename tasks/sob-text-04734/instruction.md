@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+York, Maine: York is a town in York County, Maine, United States, near the southern tip of the state.  The population in the 2010 census was 12,529.  Situated beside the Atlantic Ocean on the Gulf of Maine, York is a well-known summer resort town.  It is home to three 18-hole golf clubs, four sandy beaches, and Mount Agamenticus.  It includes the villages of York Village, York Harbor, York Beach and Cape Neddick.
+
+Vail Resorts: Vail Resorts, Inc. runs four ski resorts in Colorado (Vail Ski Resort, Beaver Creek Resort, Keystone Resort, and Breckenridge Ski Resort), three in Lake Tahoe (Heavenly Mountain Resort, Kirkwood Mountain Resort, Northstar California), one in Utah (Park City Mountain Resort in Park City), one in Vermont (Stowe Mountain Resort), one in Minnesota (Afton Alps), one in Michigan (Mount Brighton), one in Wisconsin (Wilmot Mountain), one in New South Wales, Australia (Perisher Ski Resort), one in British Columbia (Whistler Blackcomb), and a summer resort in Wyoming.  They also own luxury resort hotels throughout the world.  The company trades on the New York Stock Exchange, symbol MTN.  The company is headquartered in Broomfield, Colorado.
+
+Sunder Nagar: Sunder Nagar is a region in the suburban area of Malad–Goregaon in Mumbai, India.  It lies in west of the arterial Swami Vivekanand Road and is mostly a residential neighbourhood.  It was built up in the 1970s during the city's population and construction boom.  The name "Sunder Nagar" means "beautiful place" in Hindi.  There was a community called "Vijaykar Wadi" before 1970 and its name was changed to "Sunder Nagar".  "Wadi" means group of trees, there were many "Mango" and "Chikoo" trees in the area, still some can be seen in the park maintained by "The Sunder Nagar Welfare Association".
+
+Ogunquit: Ogunquit is a town in York County, Maine, United States.  As of the 2010 census its population was 892.  The summer resort's name means "beautiful place by the sea".
+
+Olimp, Romania: Olimp is a summer resort on the Romanian seacoast, on the Black Sea, 7 km north of Mangalia. The Comorova forest is near the summer resort.
+
+Bauneg Beg Mountain: Bauneg Beg Mountain is a mountain summit located in the town of North Berwick, in York County in the state of Maine.  Bauneg Beg Mountain climbs to 860 ft above sea level.  Bauneg Beg Mountain is taller than Mount Agamenticus, and has been used by mariners to navigate the Maine Coast.  This area is characterized by rolling forested hills, broad stream valleys, and numerous swamps.
+
+Baabdat: Baabdat (Arabic: بعبدات) is a town located in the Matn District of Mount Lebanon, 22 km from Beirut at an altitude ranging between 800 and 1100 meters above sea level.  The lush pine forests that surround the town make it a very popular summer resort for those escaping the busy coastal cities of Lebanon, especially the capital, Beirut.  The town's proximity to Brummana, one of Mount Lebanon's most active summer destinations, makes Baabdat a major tourist destination in the summer.
+
+Šventoji, Lithuania: Šventoji is a small resort town on the coast of the Baltic Sea in Lithuania.  Administratively it is part of Palanga city.  The total population of Šventoji as of 2012 was 2631.  The town is located about 12 km north of Palanga center and close to the border with Latvia.  Further north of the town is Būtingė and its oil terminal.  Šventoji River flows into the Baltic sea at the town.  The town also has a famous lighthouse, which is located 780 meters from the sea.  Its height is 39 meters.  The town is a popular summer resort for families, during summer it has many cafes, restaurants and various attractions for the visitors.
+
+Agamenticus: The Mount Agamenticus region covers nearly 30,000 acres (121 km²) in the southern Maine towns of Eliot, Ogunquit, South Berwick, Wells and York.  It is now a park reservation which provides habitat for wildlife and a venue for recreation.  At the mountain peak is the burial place of Mi'kmaq Chief St. Aspinquid.
+
+Malika Dhuri: Malika Dhuri is a mountain peak in Myagdi District, Nepal.  The name is derived from two words Malika (the name of place) and Dhuri ( in local language “Dhuri” means Mountain).  It is the beautiful place of Myagdi District.  Its most of the region lies in muna-village of myagdi district, Nepal.  (Muna is the village which is situated in the western part of myagdi district, Nepal).  It touches the border line of Baglung District.  Its height is about 3000 m above sea level.  It touches the border line of Dhorpatan hunting reserve.  Almost all the villages around the Myagdi River (also called "myagdi khola" in the local language) and few parts of Baglung District can be seen from this place.  It is the peak place of Muna village and also of the Myagdi District.  It is taller than other mountains in Myagdi District as well as in Baglung District.  As it lies on the border of Myagdi and Baglung; it may also be known by the name of “joint view point of myagdi and baglung”.
+
+Question: What town does the Mount Agamenticus region covers has the summer resort's name means "beautiful place by the sea"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "town_name": {
+      "type": "string",
+      "description": "The name of the town."
+    },
+    "county": {
+      "type": "string",
+      "description": "The county where the town is located."
+    },
+    "state": {
+      "type": "string",
+      "description": "The state where the town is located."
+    },
+    "country": {
+      "type": "string",
+      "description": "The country where the town is located."
+    },
+    "is_summer_resort": {
+      "type": "boolean",
+      "description": "Indicates if the town is a summer resort."
+    },
+    "name_meaning": {
+      "type": "string",
+      "description": "The meaning of the town's name."
+    },
+    "covered_by_region": {
+      "type": "string",
+      "description": "The name of the region that covers the town."
+    }
+  },
+  "required": [
+    "town_name",
+    "county",
+    "state",
+    "country",
+    "is_summer_resort",
+    "name_meaning",
+    "covered_by_region"
+  ],
+  "additionalProperties": false
+}

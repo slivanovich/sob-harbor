@@ -1,0 +1,13 @@
+{
+  "player_name": "Julius Foust \"June\" Greene",
+  "team_name": "Philadelphia Phillies",
+  "team_location": {
+    "city": "Philadelphia",
+    "state": "Pennsylvania"
+  },
+  "league_affiliation": "Major League Baseball",
+  "years_played_for_team": [
+    1928,
+    1929
+  ]
+}

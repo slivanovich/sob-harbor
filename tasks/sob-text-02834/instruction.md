@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Covered Market, Oxford: The Covered Market is a historic market with permanent stalls and shops in a large covered structure in central Oxford, England.
+
+Covered Market, Metz: The Metz Covered Market (French: "Marché Couvert de Metz" ) is a historic market with permanent stalls and shops in a large covered structure in the historical centre of Metz, capital of the Lorraine region in France.  The Covered Market is one of the oldest, most grandiose in France and is home to traditional local food producers and retailers.
+
+Grand Arcade (Leeds): The Grand Arcade is a shopping arcade in Leeds, West Yorkshire, England.  It was built by "New Briggate Arcade Company Ltd" in 1897, with "Smith & Tweedal" as architects.  The arcade originally consisted of two parallel rows of shops, although one of these has now been converted into a nightclub venue.
+
+Wayfarers Arcade: Wayfarers Arcade (previously the Leyland Arcade and Burton Arcade) is a Grade II listed structure located in the seaside town of Southport, Merseyside on the famous boulevard of Lord Street in the town centre.  The arcade is a near untouched building with the glass dome and Victorian shop fronts below it, creating a shopping arcade.
+
+Covered passages of Paris: The Covered Passage of Paris (French: "Passages couverts de Paris" ) are an early form of shopping arcade built in Paris, France primarily during the first half of the 19th century.  By the 1850s there were approximately 150 covered passages in Paris but this decreased greatly as a result of Haussmann's renovation of Paris.  Only a couple of dozen passages remain in the 21st century, all on the Right Bank.  The common characteristics of the covered passages are that they are: pedestrianised; glass-ceilings; artificially illuminated at night (initially with gas lamps); privately owned; highly ornamented and decorated; lined with small shops on the ground floor; connecting two streets.  Originally, to keep the "passages" clean, each would have an "artiste de décrottage" (a shit-removal artist) at the entrance to clean the shoes of visitors.
+
+Burlington Arcade: The Burlington Arcade is a covered shopping arcade in London, that runs behind Bond Street from Piccadilly through to Burlington Gardens.  It is one of the precursors of the mid-19th-century European shopping gallery and the modern shopping centre.  The Burlington Arcade was built "for the sale of jewellery and fancy articles of fashionable demand, for the gratification of the public".  It was one of the London's earliest arcades, built at a time when the arcade was a new form of retail shopping designed to serve the growing middle classes.
+
+Golden Cross, Oxford: Golden Cross (also previously known as the Cross Inn) is a shopping arcade at 5 Cornmarket Street in central Oxford, England.  The original structure on the site dates from 1193, when it was called Maugershall after the then owner, and consisted of shops with an inn on the upper storeys.  The building structures now on the site date from the late 15th century, when they were used as a traditional coaching inn, as is clear from its layout and historical documents.  It has been redeveloped as a number of small upmarket shops from a collection of the historic buildings in the Golden Cross courtyard to the east off Cornmarket Street, one of Oxford's main shopping streets.  Golden Cross is now used as Oxford's branch of Pizza Express, while a path underneath leads through to the historic Covered Market.
+
+Borough Market, Halifax: Borough Market is a Victorian covered market in Halifax, West Yorkshire, England.  The market occupies a town centre site between Southgate, Albion Street and Market Street.  The glass and wrought iron covered marketplace, surrounded by stone built shops and accommodation, was built between 1891 and 1896 and opened by the future King George V and Queen Mary.  The design included three public houses on the Market Street side and fishmongers' shops on Albion Street with the remaining exterior shops all being butchers' shops.  The award winning market is open six days a week with some 125 market stalls.
+
+Piccadilly Theatre and Arcade: The Piccadilly Cinema Centre (formerly Piccadilly Theatre) and Piccadilly Arcade are located at 700-704 Hay Street, Perth, Western Australia.  It is an art deco style cinema and shopping arcade, designed by architect William T. Leighton for mining entrepreneur Claude de Bernales.  The theatre and arcade opened in 1938, with the arcade connecting Hay Street through to Murray Street.  In 1984 the theatre and arcade underwent a significant refurbishment, with the refurbishment winning an architectural award from the Royal Australian Institute of Architecture (WA Chapter) in 1986.  The theatre and arcade are classified by the National Trust of Australia and are included on the State Heritage Register.  The Piccadilly Cinema was the last remaining operating cinema in the Perth central business district before its closure in 2013.
+
+Flying Horse Walk: The Flying Horse Walk is an shopping arcade located at the heart of Nottingham City Centre in Nottingham, England.  The arcade houses a variety of fashion boutiques and other retailers.  It is situated just off the city's Old Market Square on The Poultry.  The arcade takes its name from a fifteenth-century public house, the Flying Horse Inn, that is located at the Market Square end of the walk.  The facade of the public house has been retained and is Grade II listed building.  It was extensively restored in 1935 and converted in 1989 as an entrance to the shopping centre.
+
+Question: Name the historic market with permanent stalls and shops in a large covered structure in central Oxford which can be reached by means of an underpass beneath the Golden Cross shopping arcade?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "market_name": {
+      "type": "string",
+      "description": "The name of the historic market."
+    },
+    "location": {
+      "type": "string",
+      "description": "The city and country where the market is located."
+    },
+    "is_historic": {
+      "type": "boolean",
+      "description": "Indicates if the market is historic."
+    },
+    "has_permanent_stalls_and_shops": {
+      "type": "boolean",
+      "description": "Indicates if the market has permanent stalls and shops."
+    },
+    "is_covered_structure": {
+      "type": "boolean",
+      "description": "Indicates if the market is in a large covered structure."
+    },
+    "connection_to_arcade": {
+      "type": "object",
+      "properties": {
+        "arcade_name": {
+          "type": "string",
+          "description": "The name of the shopping arcade it is connected to."
+        },
+        "connection_type": {
+          "type": "string",
+          "description": "The type of connection to the arcade (e.g., underpass, path)."
+        }
+      },
+      "required": [
+        "arcade_name",
+        "connection_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "market_name",
+    "location",
+    "is_historic",
+    "has_permanent_stalls_and_shops",
+    "is_covered_structure",
+    "connection_to_arcade"
+  ],
+  "additionalProperties": false
+}

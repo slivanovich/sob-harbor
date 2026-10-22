@@ -1,0 +1,12 @@
+{
+  "car_name": "Williams FW34",
+  "car_details": {
+    "launch_date": "7 February 2012",
+    "season": 2012,
+    "team_name": "Williams F1"
+  },
+  "driver_details": {
+    "driver_name": "Bruno Senna",
+    "nationality": "Brazilian"
+  }
+}

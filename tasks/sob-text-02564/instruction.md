@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Profugus Mortis (album): Profugus Mortis is the second album by Canadian melodic death metal band Blackguard.  This is their first release under the name "Blackguard", and it uses their old band name "Profugus Mortis" as the album title.  This is also their last album to have a very strong folk metal influence since they have gotten into a more power metal sound.  Paul Ablaze uses the term "Epic Metal" when he describes the genre of Blackguard as a whole.  It combines the elements of folk, symphonic, power, black, and death metal to create the "Epic Metal" sound that they produce.  Capitalizing on the best moments offered up on So It Begins, the new album is a folk metal onslaught that redefines the genre and raises the bar to an all-time high.
+
+Integrating ADC: An integrating ADC is a type of analog-to-digital converter that converts an unknown input voltage into a digital representation through the use of an integrator.  In its basic implementation, the dual-slope converter, the unknown input voltage is applied to the input of the integrator and allowed to ramp for a fixed time period (the run-up period).  Then a known reference voltage of opposite polarity is applied to the integrator and is allowed to ramp until the integrator output returns to zero (the run-down period).  The input voltage is computed as a function of the reference voltage, the constant run-up time period, and the measured run-down time period.  The run-down time measurement is usually made in units of the converter's clock, so longer integration times allow for higher resolutions.  Likewise, the speed of the converter can be improved by sacrificing resolution.
+
+Saltatio Mortis: Saltatio Mortis is a German medieval metal group.  The Latin name means "dance of death".  It's an allusion to the Danse Macabre, and a motto of the band is: "He who dances does not die."
+
+Zirkus Zeitgeist: Zirkus Zeitgeist is the tenth studio album by German medieval metal group Saltatio Mortis.
+
+List of Florida hurricanes (1950–74): The list of Florida hurricanes from 1950 to 1974 encompasses 85 Atlantic tropical or subtropical cyclones that affected the U.S. state of Florida.  Collectively, tropical cyclones in Florida during the time period resulted in about $7.04 billion (2017 USD) in damage, primarily from Hurricanes Donna and Dora.  Additionally, tropical cyclones in Florida were directly responsible for 93 fatalities during the period, as well as responsible for 23 indirect deaths.  Several tropical cyclones produced over 20 inches (500 mm) of rainfall in the state, including Hurricane Easy which is the highest total during the time period.  The 1969 season was the year with the most tropical cyclones affecting the state, with a total of 8 systems.  The 1954 and 1967 seasons were the only years during the time period in which a storm did not affect the state.
+
+Name Taken: Name Taken was an American rock band from Orange, California.  They were originally known as All That's Left in October 1999 until they discovered that the name was already taken; thus the name "Name Taken".  The band started in the eighth grade where they would play shows in their amphitheatre at lunch.  They later succeeded to record for such compilations as Atticus I and Warped Tour 2002.
+
+Danse Macabre: The Danse Macabre (from the French language), also called the Dance of Death , is an artistic genre of allegory of the Late Middle Ages on the universality of death: no matter one's station in life, the Dance Macabre unites all.
+
+Das Schwarze Einmaleins: Das Schwarze Einmaleins is the ninth studio album by German medieval metal group Saltatio Mortis.
+
+Population change: Human population change is the difference between the size of the population from the beginning to the end of a certain time period.  In other words, population change refers to change in the number of people during a specific time period.  As a whole,the world population has not been stable; it has increased manifold.  Due to this constant changing population, the subject of demographics, the statistics of how many people there are in a given population, was created.  Demography can also be defined as the study of populations, and the factors that cause the most amount of population growth or decline.  The main measurements of demography include: birth rates, death rates, sex ratios, life expectancy, and migration rates.  All of these measures are found by a series of surveys and censuses conducted over a time period in order to compare how the population is changing.  Other ways to measure population demographics include the use of historical maps, aerial photographs, and census statistics.  One of the reasons why demographers use statistics about population change is because of the social and demographic transformations that the world experiences; significant challenges for the government and businesses will take effect depending on the degree of the population change.
+
+List of Florida hurricanes (1900–49): The list of Florida hurricanes from 1900 to 1949 encompasses 108 Atlantic tropical cyclones that affected the U.S. state of Florida.  Collectively, tropical cyclones in Florida during the time period resulted in about $4 billion (2008 USD) in damage.  Additionally, tropical cyclones in Florida were directly responsible for about 3,550 fatalities during the time period, most of which from the 1928 Okeechobee Hurricane.  The 1947 season was the year with the most tropical cyclones affecting the state, with a total of 6 systems.  The 1905, 1908, 1913, 1927, 1931, 1942, and 1943 seasons were the only years during the time period in which a storm did not affect the Floridian coasts.
+
+Question: Saltatio Mortis has a name taken from an allusion to the genre of allegory from what time period?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "name_meaning": {
+      "type": "string",
+      "description": "The meaning of the band's name."
+    },
+    "allusion_source": {
+      "type": "string",
+      "description": "The specific artistic genre or concept the band's name alludes to."
+    },
+    "allusion_genre_type": {
+      "type": "string",
+      "description": "The type of genre for the allusion source."
+    },
+    "time_period": {
+      "type": "string",
+      "description": "The historical time period associated with the genre of allegory."
+    }
+  },
+  "required": [
+    "band_name",
+    "name_meaning",
+    "allusion_source",
+    "allusion_genre_type",
+    "time_period"
+  ],
+  "additionalProperties": false
+}

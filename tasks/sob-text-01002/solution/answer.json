@@ -1,0 +1,19 @@
+{
+  "question_entities": [
+    "Editors",
+    "Working for a Nuclear Free City"
+  ],
+  "nationality": "English",
+  "bands": [
+    {
+      "name": "Editors",
+      "origin_city": "Birmingham",
+      "origin_country": "England"
+    },
+    {
+      "name": "Working for a Nuclear Free City",
+      "origin_city": "Manchester",
+      "origin_country": "England"
+    }
+  ]
+}

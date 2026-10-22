@@ -1,0 +1,12 @@
+{
+  "common_rate_type": "speed",
+  "honda_bali_rate_details": {
+    "rate_description": "top speed",
+    "rate_value": 80,
+    "rate_unit": "km/h"
+  },
+  "disc_brake_rate_details": {
+    "rate_description": "rotational speed",
+    "action_on_rate": "reduce"
+  }
+}

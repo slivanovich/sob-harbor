@@ -1,0 +1,12 @@
+{
+  "person_name": "Steven L. Abrams",
+  "location_of_mayorship": {
+    "name": "Palm Beach County",
+    "type": "county",
+    "state": "Florida"
+  },
+  "population_data": {
+    "year": 2010,
+    "value": 1320134
+  }
+}

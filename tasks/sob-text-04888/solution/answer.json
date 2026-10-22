@@ -1,0 +1,11 @@
+{
+  "film_details": {
+    "title": "Halloween",
+    "release_year": 1978,
+    "main_character": "Michael Myers"
+  },
+  "soundtrack_information": {
+    "composer": "John Carpenter"
+  },
+  "answer": "John Carpenter"
+}

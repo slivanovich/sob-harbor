@@ -1,0 +1,16 @@
+{
+  "evaluated_characteristic": "home computer status",
+  "computer_models_evaluated": [
+    {
+      "name": "IBM PS/1",
+      "is_identified_as_home_computer": true,
+      "introduction_year": 1990
+    },
+    {
+      "name": "Aamber Pegasus",
+      "is_identified_as_home_computer": true,
+      "introduction_year": 1981
+    }
+  ],
+  "all_models_are_home_computers": true
+}

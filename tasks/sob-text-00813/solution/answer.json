@@ -1,0 +1,11 @@
+{
+  "founder_of_qin_dynasty": {
+    "name": "Qin Shi Huang",
+    "title": "First Emperor"
+  },
+  "grandfather": {
+    "name": "King Xiaowen of Qin",
+    "reign_period": "250 BC"
+  },
+  "relationship_description": "King Xiaowen of Qin was the grandfather of Emperor Qin Shi Huang."
+}

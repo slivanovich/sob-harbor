@@ -1,0 +1,10 @@
+{
+  "house_name": "Rietveld Schröder House",
+  "year_built": 1924,
+  "architect": {
+    "name": "Gerrit Rietveld",
+    "de_stijl_role": "principal member"
+  },
+  "location": "Utrecht",
+  "is_unesco_world_heritage_site": true
+}

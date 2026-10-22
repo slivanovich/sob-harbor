@@ -1,0 +1,16 @@
+{
+  "beverage_category": "alcoholic",
+  "beverages": [
+    {
+      "name": "Herbsaint",
+      "is_alcoholic": true,
+      "description_excerpt": "Herbsaint is a brand name of anise-flavored liqueur originally created as an absinthe-substitute"
+    },
+    {
+      "name": "Jagertee",
+      "is_alcoholic": true,
+      "description_excerpt": "Jagertee (also Jägertee) is an alcoholic beverage made by mixing overproof rum with black tea, red wine, plum brandy, orange juice and various spices."
+    }
+  ],
+  "reasoning": "Both Herbsaint and Jagertee are explicitly described in the context as types of alcoholic beverages or containing alcohol."
+}

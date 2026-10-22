@@ -1,0 +1,19 @@
+{
+  "movie_details": {
+    "title": "Dharmatma",
+    "release_year": 1975,
+    "genre": "Hindi thriller movie",
+    "director": "Feroz Khan",
+    "is_first_bollywood_film_shot_in_country": true
+  },
+  "shooting_location_country": "Afghanistan",
+  "title_character_inspiration": {
+    "name": "Ratan Khatri",
+    "role": "matka king"
+  },
+  "matka_gambling_details": {
+    "description": "form of lottery",
+    "original_betting_subject": "opening and closing rates of cotton",
+    "original_source_of_rates": "New York Cotton Exchange"
+  }
+}

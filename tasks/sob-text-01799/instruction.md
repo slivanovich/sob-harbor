@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+67th Army (Soviet Union): The 67th Army was a field army of the Soviet Union's Red Army.  The 67th Army was formed in October 1942 on the Leningrad Front from the Neva Operational Group.  It defended the right bank of the Neva River, holding the Nevsky Pyatachok and covering the Road of Life.  In January 1943 the army fought in Operation Iskra.  In late December, the army was combined with 55th Army.  The 67th Army headquarters was disbanded and 55th Army headquarters was renamed 67th Army headquarters.  Between January and March 1944 67th Army fought in the Leningrad–Novgorod Offensive, in which it captured Mga and Luga.  In April the army became part of the 3rd Baltic Front and fought in the Pskov-Ostrov Offensive in July and the Tartu Offensive in August and September.  The army fought in the Riga Offensive in September and October.  The army then fought to eliminate the Courland Pocket.  After the end of the war the army was disbanded during the summer of 1945.
+
+Webcrossing: WebCrossing, also known as Webx forum software, Webx and Web Crossing is an object-oriented, scriptable web-based collaboration server with forums, post-by-email, built-in web server, email server and an ftp server.  It includes a native object-oriented NoSQL database and server-side scripting.
+
+CommuniGate Pro: CommuniGate Pro (CGP) is a scalable carrier grade email server, unified communications server, true FMC solutions as well as development platform all integrated into one.
+
+Hillary Clinton email controversy: In March 2015, it became publicly known that Hillary Clinton, during her tenure as United States Secretary of State, had used her family's private email server for official communications, rather than official State Department email accounts maintained on federal secure servers.  Those official communications included over 100 emails which contained classified information at the time they were sent, as well as nearly 2,100 emails which were not marked classified but would retroactively be ranked as classified by the State Department.
+
+Bynari: Bynari is a company based in Dallas, developing server and email software mainly known for its Insight Family containing a cheap email server being able to use similar to a Microsoft Exchange Server with Outlook.
+
+Bush White House email controversy: During the 2007 Congressional investigation of the dismissal of eight U.S. attorneys, it was discovered that administration officials had been using a private Internet domain, called gwb43.com, owned by and hosted on an email server run by the Republican National Committee, for various official communications.  The domain name is an abbreviation for "George W. Bush, 43rd" President of the United States.  The use of this email domain became public when it was discovered that J. Scott Jennings, the White House's deputy director of political affairs, was using a gwb43.com email address to discuss the firing of the U.S. attorney for Arkansas.  Communications by federal employees were also found on georgewbush.com (registered to "Bush-Cheney '04, Inc.") and rnchq.org (registered to "Republican National Committee").  Congressional requests for administration documents while investigating the dismissals of the U.S. attorneys required the Bush administration to reveal that not all internal White House emails were available.  Conducting governmental business in this manner is a possible violation of the Presidential Records Act of 1978.  Over 5 million emails may have been lost.  Greg Palast claims to have come up with 500 of the Karl Rove emails, leading to damaging allegations.  In 2009, it was announced that as many as 22 million emails may have been lost.
+
+David E. Kendall: David Evan Kendall (born 1944 ) is an American attorney, a graduate of Yale Law School and Oxford University, who clerked with Supreme Court Justice Byron White, worked as associate counsel at the NAACP Legal Defense Fund, and has been a partner at Williams & Connolly LLP of Washington, DC since 1981, where he has provided legal counsel to individuals and corporations on high-profile business and political matters.  He is well known for his roles in the "Coker v. Georgia, Gilmore v. Utah," and other death penalty cases; in the "MGM et al. v. Grokster, et al." and "Tasini et al v. AOL" copyright and contract cases; as well as for various First Amendment cases, including for "The Washington Post."  In addition, he is known for having advised President Bill Clinton during the Lewinsky scandal, and representing him during his impeachment trial.  He served as defense attorney in the successful defense of retired General David Petraeus, and currently represents the former Secretary of State, Hillary Clinton, including in the matter of her use of a private email server while serving as U.S. Secretary of State.
+
+Hillary Clinton's tenure as Secretary of State: Hillary Clinton served as the 67th United States Secretary of State, under President Barack Obama, from 2009 to 2013, overseeing the department that conducted the Foreign policy of Barack Obama.
+
+Joachim Posener: Joachim Ralph Posener, (born 17 January 1964 in Lidingö) is a Swedish financier and author.  Posener is a lawyer by educated who was active in the Swedish finance trade from the late 1980s to the end of the 1990s.  He became publicly known in November 1997 after having been accused by the media as being the mastermind behind Lord Moynes acquisition of the Swedish publicly traded company Trustor AB.  The company acquisition, which later become known as the Trustor affair eventually ended with one of Lord Moynes "Team" members, Thomas Jisander, being sent to a prison term.  When Swedish police acted against Lord Moyne and his "team" in October 1997 Posener happened to be abroad, and he chose then according to his own statements to not return to Sweden.  This became very well publicized in Swedish media and also led to Posener being hand down an international arrest warrant.  According to his own statements he was at first for some time in Spain, and later he is supposed to have lived in Argentina.  In spite of the International Arrest Warrant Posener was never found by the police and the crimes the police had suspected him of were no longer actionable against Mr Posener due to the Swedish law on statute of limitations.  No one of Lord Moynes "team" could be accused in any court of law with regard to the Trustor Affair after the 20 June 2007.
+
+Katharine Gun: Katharine Teresa Gun ("née" Harwood, born 1974) is a British former translator for the Government Communications Headquarters (GCHQ), a British intelligence agency.  In 2003, she became publicly known for leaking top-secret information to the press concerning illegal activities by the United States of America in their push for the 2003 invasion of Iraq.  Some of these activities include the US National Security Agency's eavesdropping operation on countries tasked with passing a second United Nations resolution on the invasion of Iraq.
+
+Question: In what year became publicly known that the 67th Unitades States Secretary of States had used her family's private email server for official communications?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "secretary_of_state_name": {
+      "type": "string",
+      "description": "The name of the United States Secretary of State involved in the controversy."
+    },
+    "secretary_of_state_number": {
+      "type": "integer",
+      "description": "The ordinal number of the Secretary of State's tenure."
+    },
+    "controversy_description": {
+      "type": "string",
+      "description": "A brief description of the email controversy."
+    },
+    "email_server_type_used": {
+      "type": "string",
+      "description": "The type of email server used for official communications."
+    },
+    "year_publicly_known": {
+      "type": "integer",
+      "description": "The year the use of the private email server became publicly known."
+    }
+  },
+  "required": [
+    "secretary_of_state_name",
+    "secretary_of_state_number",
+    "controversy_description",
+    "email_server_type_used",
+    "year_publicly_known"
+  ],
+  "additionalProperties": false
+}

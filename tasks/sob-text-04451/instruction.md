@@ -1,0 +1,66 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Durrani (disambiguation): Durrani (Pashto: دراني‎ ) or Abdali (Pashto: ابدالی‎ ) is the name of a chief Sarbani Pashtun tribal confederation in Afghanistan and Pakistan.  It is a surname found in Afghanistan, India, and Pakistan.
+
+Abdul Rahim Ghafoorzai: Abdul Rahim Ghafoorzai (d. August 21, 1997) was a politician and diplomat of Afghanistan.  He was an ethnic Pashtun, a member of the Barakzai Mohammadzai tribe.  During the 1970s he entered the Afghan foreign service.  He was sent to the United States to represent the political administration supported by the Soviet Union.  As the Ambassador to the UN, Mr. Ghafoorzai thought it his duty to call on the global partners to denounce the Soviet invasion in 1979.  From then until 1992, he worked as a representative official to trigger international support against the regime that the Soviets had set up in Afghanistan.  When the communist government fell in 1992, Ghafoorzai acted as an intermediary to unite the factions of Afghanistan.  He worked in the United Nations until 1995, and then became deputy foreign minister.  He became foreign minister in July 1996.  in September 1996 the government troops withdrew from Kabul and the Taliban captured Afghanistan's capital, Kabul, The International community did not recognize the Taliban as Afghanistan legitimate government except Pakistan, United Arab Emirates and Saudi Arabia, the Islamic State of Afghanistan government established the new cabinet in Mazar e Sharif in the north of Afghanistan, meanwhile the Afghanistan Embassies and the Permanent Mission of Afghanistan to the United Nations was in control of Islamic State of Afghanistan as legitimate representative of Afghanistan.  Ghafoorzai continued as Afghanistan Foreign Minister until August 11, 1997, just 10 days before his death, he was appointed prime minister of the Islamic State of Afghanistan government.  He was killed in a plane crash in Bamyan Province when he was going to negotiate to form his cabinet with their allies.
+
+Pashtun tribes: The Pashtun tribes or Afghan tribes (Pashto: پښتانه ټبرونه يا پښتانه قبايل‎ ) are the large family units of the Eastern Iranian ethnic groups who use the Pashto language and follow Pashtunwali code of conduct.  They are found primarily in Afghanistan and Pakistan and form the world's largest tribal society, comprising over 49 million people and between 350 and 400 tribes and clans.  They are traditionally divided into four tribal confederacies: the Sarbani (سربڼي ), the Bettani (بېټني ), the Gharghashti (غرغښتي ), and the Karlani (کرلاڼي ).
+
+Durrani: Durrani (Pashto: دراني‎ ) or Abdali (Pashto: ابدالی‎ ) is the name of a prominent Sarbani Pashtun tribal confederation in Afghanistan and Pakistan.  They have been called "Durrani" since the beginning of the Durrani Empire in 1747.  Durrani are found throughout Afghanistan and Pakistan; although large concentrations are found in southern Afghanistan, they are also found to a lesser extent in east, west and central Afghanistan.  Many Durranis are found in Khyber Pakhtunkhwa and Punjab provinces of Pakistan.  The Durrani Pashtuns of the Afghan capital Kabul are usually bilingual in Pashto and Dari Persian.  The ruling Sadozai and Barakzai dynasties of Afghanistan were originally from the Durrani.
+
+Muhammadzai (Hashtnagar): The Muhammadzai (also Mohammadzai, Mohammedzai, Mohmandzai, Mamanzai, etc.) are a Sarbani Pashtun tribe.  There should not be confused with the Muhammadzai of the Barakzai Durrani, who were for many years the ruling family of Afghanistan.
+
+Karlani: Karlāṇī (Pashto: کرلاڼي‎ ) is a Pashtun tribal confederacy.  The others being Sarbani, Gharghashti and Ghilji.  They primarily inhabit the FATA region of North West Pakistan and certain parts of eastern Afghanistan.In the 16th century the Karlani founded the Karrani dynasty, the last dynasty to rule the Bengal Sultanate.
+
+Alakozai: Alakozai (Pashto: الکوزی‎ - meaning "descendant of Alako" in Pashto) is the name of a Pashtun tribe in Afghanistan.  Spelling variations include Alakoozi, Alekozai, Alekuzei, Alikozai, Alokozay, Alokozay, Alkozai, Alokzai, Hulakozai, Alecozay, Alikusi,and Alakuzei.
+
+Kharshbun: Kharshbun and Sharkhbun are brothers son of Sarban, the first son of the legendary Pashtun ancestor Qais Abdur Rashid.  The Sarbani tribes, all supposed descendants of Sarban, form one of the major lineage branches of the Pashtun tribes.  Kharshbun's progeny compose the Eastern Pashtuns, found primarily in Pakistan, and he had three sons Kand, Zamand, Kasi, whereas his brother Sharkhbun's progeny compose the Western Pashtuns, generally found in Afghanistan, the most famous of these latter Pashtuns being the Durrani or Abdali tribes.  The following is a genealogical breakdown of Kharshbun's sons and the tribes that are said to be their descendants, as found in Olaf Caroe's history, "The Pathans".
+
+Kheshgi: The Kheshgi or Kheshki is a Sarbani Pashtun tribe in Afghanistan and Pakistan.
+
+Sarbani: Sarbaṇī (Pashto: سربڼي‎ ) are the largest tribal group of Pashtuns.  They are situated in Afghanistan and Pakistan.  The Sarbani include many Pashtun tribes, among whom the most numerous are the Tareen, Durrani historically Abdali, Barakzai, Alakozai, Achakzai, Gigyani, Yusufzai, Momand, Khalil, Ghoryakhel, Shinwari, Kasi, and Muhammadzai (Hashtnagar).  According to the Pashtun legend of origins, the members of the Sarbani group all descend from Sarban, who was the first son of the legendary founding father of the Pashtun people, Qais Abdur Rashid.
+
+Question: What is the name of an Afghanistan Sarbani tribe?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "tribe_name": {
+      "type": "string",
+      "description": "The name of the Pashtun tribe."
+    },
+    "tribal_confederacy": {
+      "type": "string",
+      "description": "The larger tribal confederacy the tribe belongs to."
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Countries where the tribe is primarily found."
+    },
+    "meaning_in_pashto": {
+      "type": "string",
+      "description": "The meaning of the tribe's name in Pashto, if available."
+    }
+  },
+  "required": [
+    "tribe_name",
+    "tribal_confederacy",
+    "locations"
+  ],
+  "additionalProperties": false
+}

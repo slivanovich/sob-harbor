@@ -1,0 +1,16 @@
+{
+  "operator_name": "Alliant Techsystems",
+  "operated_facilities": [
+    {
+      "facility_name": "Allegany Ballistics Laboratory",
+      "location": "Rocket Center, West Virginia"
+    },
+    {
+      "facility_name": "Rocket Center",
+      "location": "Rocket Center, West Virginia"
+    }
+  ],
+  "contract_details": {
+    "contracting_authority": "Naval Sea Systems Command"
+  }
+}

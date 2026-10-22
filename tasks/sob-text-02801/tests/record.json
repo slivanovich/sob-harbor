@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "41b87994cf8a7cc75ad082887d8728e531d1dc6b17b5a0f874700df79d3d4764",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a735aed55429901807dafe6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Robert Walser",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Oskar Aichinger: Oskar Aichinger is an Austrian avant-garde jazz pianist who has collaborated with musicians such as Stefan Németh, Franz Koglmann, Hannes Enzlberger, Steinaich Irrding, Burkhard Stangl, Oswald Eggers, Achim Tang, Franz Koglmann and Paul Skrepek Jun, among many others.\n\nHeinrich Schnee: Heinrich Albert Schnee (Albert Hermann Heinrich Schnee; 4 February 1871 – 23 June 1949) was a German lawyer, colonial civil servant, politician, writer, and association official.  He served as the last Governor of German East Africa.\n\nUlrich Boner: Ulrich Boner, or Bonerius, (fl.  early 14th century), was a German-speaking Swiss writer of fable.\n\nNeel Jani: Neel Jani (born 8 December 1983) is a Swiss professional racing driver of Indian Gujarati origin.  His father is from India and his mother is German-speaking Swiss.\n\nDieb13: Dieb13 is the performing name of Dieter Kovačič, a Viennese-based avant-garde musician.  He has also performed under the names Takeshi Fumimoto, Echelon, Dieter Bohlen, and dieb14.  After appearing on several compilations documenting the burgeoning Viennese avant-garde scene of the late 1990s, he released his first solo album in 2000.  He has gone on to perform in a number of collaborations with other notable performers, including Burkhard Stangl, erikm, Mats Gustafsson and the John Butcher Group.\n\nMikroton Recordings: Mikroton Recordings is an independent record label for free improvisation, mostly its electroacoustic direction, founded by the artist and producer Kurt Liedwart and based in Moscow, Russia.  Mikroton works with improvisers who used to be active in the field of electroacoustic improvisation like percussionist Günter Müller, laptop improviser , percussionist Jason Kahn, guitarist Keith Rowe, turntablists Dieb13 and eRikm, clarinettist Kai Fagaschinski, homemade electronics performer , guitarist Burkhard Stangl and others.  It usually published electroacoustic, electronic and mixed works, trying to research a land between electronic and acoustic fields, pairing unorthodox instruments and materials.  The label released two seminal compilation recordings for Austrian electroacoustic, experimental and improv group of artists known as klingt.org and Berlin Echtzeitmusik scene.  Mikroton Recordings also hosts concerts in Moscow and St. Petersburg and runs Teni Zvuka festival.\n\nBurkhard Stangl: Burkhard Stangl (born 6 November 1960 in Eggenburg, Lower Austria) is a composer and musician, currently residing in Vienna, Austria.  Playing primarily guitar and electronics, he is a prolific performer in the world of electro-acoustic improvisation, having participated in over 50 recordings.  One of his most noted recordings is \"schnee\", a duet with Cristof Kurzmann, inspired by four films and a quote from writer Robert Walser.  It has been recorded live, as \"schnee_live\", and has spawned a similarly themed \"meta-song suite,\" \"neuschnee\".  His 1997 opera \"Der Venusmond\" was recorded partially on the observation deck of the Empire State Building.\n\nGertrud Leutenegger: Gertrud Leutenegger (born 7 December 1948) is a German-speaking Swiss poet, novelist, playwright and theatre director.\n\nRobert Walser (writer): Robert Walser (15 April 1878 – 25 December 1956) was a German-speaking Swiss writer.\n\nKatharina Klement: Katharina Klement (born December 1, 1963 in Graz), is an Austrian composer and performer, currently residing in Vienna, Austria.  She studied piano, electroacoustic music and composition, with Dieter Kaufmann at Universität für Musik und darstellende Kunst in Vienna.  Her work is connecting the fields of notated and improvised, instrumental and electronic music.  Particular interest lays on the piano and its extended playing techniques.  She also does sound installations and is the founder and member of numerous ensembles for improvised music: \"subshrubs\" (Angélica Castelló, Maja Osojnik, Tamara Wilhelm, Katharina Klement), \"Klement-Siewert\" (duo with Martin Siewert), \"deepseafish-K\" (juun, Manon Liu Winter, Katharina Klement), \"REDOX\" (Annette Giesriegl, Kaja Farszky, Katharina Klement), \"LEFT\" (Isabelle Duthoit, Matija Schellander, Katharina Klement), \"Ernst-Klement-Stangl\" (Katharina Ernst, Burkhard Stangl, Katharina Klement), \"t(w)o wanderers\" (duo with Lynn Book).",
+    "question": "Which German-speaking Swiss writer inspired Burkhard Stangl to create the famed \"schnee\" duet?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "musical_work": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the musical work."
+            },
+            "type": {
+              "type": "string",
+              "description": "The type of the musical work, e.g., duet, opera."
+            }
+          },
+          "required": [
+            "title",
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        "main_artist": {
+          "type": "string",
+          "description": "The primary artist or composer of the work."
+        },
+        "collaborator": {
+          "type": "string",
+          "description": "The collaborating artist on the work."
+        },
+        "inspired_by_writer": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the writer who inspired the work."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the writer."
+            },
+            "language": {
+              "type": "string",
+              "description": "The primary language of the writer's work."
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "language"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "musical_work",
+        "main_artist",
+        "collaborator",
+        "inspired_by_writer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "musical_work": {
+        "title": "schnee",
+        "type": "duet"
+      },
+      "main_artist": "Burkhard Stangl",
+      "collaborator": "Cristof Kurzmann",
+      "inspired_by_writer": {
+        "name": "Robert Walser",
+        "nationality": "Swiss",
+        "language": "German-speaking"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

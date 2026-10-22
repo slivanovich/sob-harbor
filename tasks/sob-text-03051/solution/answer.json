@@ -1,0 +1,11 @@
+{
+  "eufemio_zapatas_brother": {
+    "name": "Emiliano Zapata",
+    "role_in_revolution": "leading figure in the Mexican Revolution"
+  },
+  "agrarian_movement": {
+    "name": "Zapatismo",
+    "inspiration_source": "Emiliano Zapata"
+  },
+  "movement_description": "The agrarian movement called 'Zapatismo' was inspired by Emiliano Zapata, who was the main leader of the peasant revolution in the state of Morelos."
+}

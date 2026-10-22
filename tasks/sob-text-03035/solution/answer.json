@@ -1,0 +1,16 @@
+{
+  "actress_name": "Elizabeth Taylor",
+  "career_start_details": {
+    "started_as_child_actress": true,
+    "child_career_start_period": "early 1940s"
+  },
+  "film_appearance": {
+    "film_title": "Boom!",
+    "film_year": 1968,
+    "film_genre": "British drama film",
+    "other_starring_actors": [
+      "Richard Burton",
+      "Noël Coward"
+    ]
+  }
+}

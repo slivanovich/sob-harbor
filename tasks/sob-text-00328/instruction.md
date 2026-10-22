@@ -1,0 +1,101 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Attic Records: Attic Records was a Canadian independent record label, founded in 1974 by Alexander Mair and Tom Williams.  The label was known for developing Canadian talent, including Anvil, Lee Aaron, Maestro Fresh Wes, The Nylons, Teenage Head, and Triumph.  The company was also active in distributing international acts not affiliated with a major label, most successfully with Jennifer Warnes, "Weird Al" Yankovic, Katrina and the Waves, and Creed.
+
+Fresh Sound: Fresh Sound, or Fresh Sound New Talent, is a jazz record label established in Barcelona, Spain, by Jordi Pujol.  The label was initially founded as a reissue label.
+
+Mailboat Records: Mailboat Records is an independent record label established in 1999 by American singer-songwriter Jimmy Buffett after his vanity label Margaritaville Records was absorbed by Island Records when they were sold to Universal Music Group, owner of Buffett's previous label MCA Records.  Mailboat's first release was Buffett's "".  In addition to Buffett, the label's roster includes Dan Fogelberg, Bret Michaels, Boz Scaggs, Def Leppard (North America only), Walter Becker, Jim Mayer, and , a compilation CD featuring Jimmy Buffett as Huckleberry Finn, Clint Eastwood as Mark Twain, and narration by Garrison Keillor.  Other featured artists on the Twain project include Brad Paisley, Sheryl Crow, Emmylou Harris, Vince Gill, Ricky Skaggs, and Joe Diffie.  The Twain project is a benefit for the Mark Twain Boyhood Home & Museum in Hannibal, Missouri.
+
+Él Records: él is an English independent record label based in London that was founded by Mike Alway, later becoming a subsidiary of Cherry Red Records.  Their musicians were characterized by a strong English sensibility, as well as the French influence stemming from in-house writer/producer Louis Philippe.  During its original run, él received much press interest, but little sales—except in Japan, where the label became an enormous influence on J-pop acts like Cornelius and Pizzicato Five.  The label closed in 1989.  In 2005, it was revived as a reissue label.
+
+Heartbeat Records: Heartbeat Records is an independent record label based in Burlington (formerly Cambridge), Massachusetts.  The label specializes in Jamaican music.  Founded by reggae music enthusiasts Bill Nowlin and Duncan Brown, the label's first release was a vinyl LP reissue of Linton Kwesi Johnson's "Dread Beat an' Blood" (1981).  In 1983, Chris Wilson was hired as VP of A&R and the label began their association with Studio One label founder Clement Dodd and released "Best of Studio One", a compilation of Dodd-produced music by artists including Dennis Brown, Alton Ellis, The Gladiators, Marcia Griffiths, The Heptones, Slim Smith, Sugar Minott, and Johnny Osbourne, among others.  Heartbeat has released over 60 Studio One albums.  The label licensed music from a number of different Jamaican producers including Lee "Scratch" Perry, Joe Gibbs, Sonia Pottinger, Clancy Eccles, Alvin Ranglin, Duke Reid, Niney the Observer, Sly & Robbie, Steely & Clevie, and Lloyd Daley.  The label financed and booked the Heartbeat Culture Splash Tour, consisting of Michael Rose, Sister Carol, the Meditations, Derrick Morgan, and the S.A.N.E. band, that toured the United States in 1996.  In 2000, Heartbeat Records received a Grammy Award for Burning Spear's Heartbeat album entitled "Calling Rastafari" (1999) which has since been deleted from the catalog.  Heartbeat Records won Boston magazine's Best of Boston 2000 award for Best Record Label.  In January 2007, Heartbeat relocated to Burlington, Massachusetts.  The same year, Heartbeat launched the web site and podcast entitled the Heartbeat Reggae Podcast.
+
+BMG Heritage Records: BMG Heritage Records was the record label of the BMG Strategic Marketing Group reissue division of Sony BMG Music Entertainment which handled the reissue of recordings first issued on the RCA Victor, Arista, Buddah, Windham Hill as well as other labels BMG or predecessor companies acquired over the years.  It was founded on November 2001 and formally established on January 1, 2002 as the successor company to the Buddha Records reissue label.  In 2005, Sony BMG folded BMG Heritage into Legacy Recordings.
+
+Light in the Attic Records: Light In The Attic Records is an independent record label established in 2002 in Seattle, Washington by Matt Sullivan, known for its roster of reissue projects, and for its distribution catalog.  As reissue label, Light In The Attic has re-released works by artists such as Betty Davis, Serge Gainsbourg, Jim Sullivan, Jane Birkin, The Free Design, and many more.  The record label has also released albums by contemporary bands like The Black Angels and Nicole Willis and The Soul Investigators.
+
+Jim Sullivan (singer-songwriter): James Anthony Sullivan (August 13, 1940 – disappeared March 6, 1975) was an American singer-songwriter and guitarist who released two albums before he disappeared without a trace in New Mexico.
+
+John Mayer discography: The discography of American singer-songwriter and guitarist John Mayer consists of seven studio albums, seven live albums, three compilation albums, two video albums, four extended plays, twenty-four singles and seventeen music videos. Born in Bridgeport, Connecticut, Mayer moved to Atlanta, Georgia and began playing in local clubs in 1998.  He released the extended play "Inside Wants Out" in September of the following year.  "Inside Wants Out", as well as continued performances, brought Mayer to the attention of independent record label Aware Records.  Aware later signed Mayer and released his full-length debut studio album, "Room for Squares", in June 2001.  When Columbia Records acquired Aware, the album was re-released in September and promoted as a major label release.  Following its re-release, "Room for Squares" peaked at number eight on the United States "Billboard" 200.  The album has since sold over four million copies in the United States, and was certified four times platinum by the Recording Industry Association of America (RIAA).  Three singles were released from "Room for Squares", two of which became top 40 hits on the US "Billboard" Hot 100: "No Such Thing" and "Your Body Is a Wonderland". " Heavier Things", Mayer's second studio album, was released in September 2003.  It topped the "Billboard" 200 and attained a double platinum certification from the RIAA.  "Heavier Things" produced three singles: "Bigger Than My Body", "Clarity" and "Daughters".  "Daughters" later won the award for Song of the Year at the 47th Grammy Awards.
+
+The Hunger (band): The Hunger is an industrial rock band from Houston, Texas formed by brothers Jeff and Thomas Wilson along with Brian Albritton.  During the initial year of putting the band together and working on new material the band wrote and independently released the single, "Shock" in 1991 which rose to the top of the dance charts.  Industrial dance music ruled the charts in Europe along with strong ties to Chicago, Wax Trax Records, and Houston.  Subsequent releases of "Cut the Skin" and "Shoot to Kill" gained national exposure on the dance charts and club scene.  "Never Again" was self-released as a radio single and quickly rose to the top of Houston Radio Station's 93Q and 96.5 attracting the attention of independent record label Alpha International.  Stephen Bogle produced the single of "Never Again".  The band wrote and produced the album "Leave Me Alone" but due to the bankruptcy of Alpha International the record sat idle.  It was released but there were no marketing efforts behind it.  After the release of the album, the band sought out drummer Max Schuldberg and they played their first concert as a foursome opening for Peter Murphy at Southern Star Amphitheater.  They played concerts in Texas as a foursome for two years.  Along with the three founders and newest member Max Schuldberg, the band added producer Stephen Bogle as guitarist to complete the line up.  The band recorded and produced "Grip" under their own start up label, Gut Records.  "Grip" went on to sell 15,000 units with the help of a crafty rework of Bad Company's "Feel like Makin Love".  Universal Records, at the time a brand new start up label, heard of the success of "Grip" and signed the band as their second artist ever.  "Devil Thumbs a Ride", the 3rd album, had already been recorded and mastered and was about to be manufactured for another self-release when Universal stepped in to sign the band and release the album as-is.  The Hunger had a hit song in 1996, "Vanishing Cream", from the "Devil Thumbs a Ride" CD, which received heavy airplay on rock stations and reached No. 4 on the Mainstream Rock charts.  After two years of constant touring, the band finally stopped to record their second release with Universal Records, "Cinematic Superthug".  After only moderate success with the single, "Moderation", the band asked to be and was granted a release from their contract from Universal Records.  Two songs, "Shoot to Kill", also from "Devil Thumbs a Ride", and "If", from "Grip", reached No. 42 on Billboard's Dance/Club Play chart.  The band has released six albums: two on Universal Records and four on independent labels. Former original drummer (1991-2003) Max Schuldberg (voted 2002's Best Drummer by the Houston Press Music Awards) parted with the band after the five albums in 2003 and moved to Los Angeles.  Former guitarist and two time Grammy Award nominee (remixer, for his work with D.J. Cubanito) Stephen Bogle now Produces artists in the Metal, Electronic, and Pop genres.  In late 2005 Stephen Bogle parted ways with the band, and Tim Huston was quickly picked up.  With having only a few practices with the band they headed on tour with Ten Years.  Tim Huston Stayed with the band from late '05 til 2013.  "The lifestyle was just getting to overwhelming for me to handle".  "If I would have stayed, who knows what would have happened to me.  There was just no off button".  In 2013, guitarist Raf Rivera joined the lineup, and the band is currently in the process of recording their first new material in over 8 years.
+
+Question: Light In The Attic Records is an independent record label established in which year, in Seattle, as a reissue label, it had been re-released works by artists such as Jim Sullivan, an n American singer-songwriter and guitarist who released two albums before he disappeared without a trace in New Mexico?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "label_name": {
+      "type": "string",
+      "description": "The name of the record label."
+    },
+    "established_year": {
+      "type": "integer",
+      "description": "The year the record label was established."
+    },
+    "established_city": {
+      "type": "string",
+      "description": "The city where the record label was established."
+    },
+    "established_state": {
+      "type": "string",
+      "description": "The state where the record label was established."
+    },
+    "is_reissue_label": {
+      "type": "boolean",
+      "description": "Indicates if the label is known for reissue projects."
+    },
+    "reissued_artist_info": {
+      "type": "object",
+      "properties": {
+        "artist_name": {
+          "type": "string",
+          "description": "The name of the reissued artist."
+        },
+        "artist_occupations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Occupations of the reissued artist."
+        },
+        "albums_released_before_disappearance": {
+          "type": "integer",
+          "description": "Number of albums released by the artist before their disappearance."
+        },
+        "disappearance_location": {
+          "type": "string",
+          "description": "The location where the artist disappeared."
+        }
+      },
+      "required": [
+        "artist_name",
+        "artist_occupations",
+        "albums_released_before_disappearance",
+        "disappearance_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "label_name",
+    "established_year",
+    "established_city",
+    "established_state",
+    "is_reissue_label",
+    "reissued_artist_info"
+  ],
+  "additionalProperties": false
+}

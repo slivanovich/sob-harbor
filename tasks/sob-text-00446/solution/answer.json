@@ -1,0 +1,16 @@
+{
+  "person_name": "Alexander Kolchak",
+  "person_titles": [
+    "ruler of Russia",
+    "commander in the Imperial Russian Navy",
+    "polar explorer",
+    "lieutenant of the Russian Navy"
+  ],
+  "expedition_participated_in": {
+    "name": "Russian polar expedition of 1900–02",
+    "years": "1900–1902",
+    "purpose": "study the Arctic Ocean north of New Siberian Islands and search for the legendary Sannikov Land",
+    "leader": "Baron Eduard Toll"
+  },
+  "area_of_study": "Arctic Circle"
+}

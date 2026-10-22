@@ -1,0 +1,20 @@
+{
+  "album_title": "Machine Music",
+  "album_release_year": 1978,
+  "album_release_number": 8,
+  "record_label": "Obscure Records",
+  "record_label_owner": {
+    "name": "Brian Eno",
+    "nationality": "English",
+    "known_for_genres": [
+      "rock",
+      "ambient",
+      "pop",
+      "electronic music"
+    ]
+  },
+  "album_authors": [
+    "John White",
+    "Gavin Bryars"
+  ]
+}

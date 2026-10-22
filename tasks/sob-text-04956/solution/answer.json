@@ -1,0 +1,14 @@
+{
+  "prime_minister": {
+    "name": "Viktor Mihály Orbán",
+    "current_title": "Prime Minister",
+    "country_of_service": "Hungary",
+    "term_start_year": 2010
+  },
+  "related_official": {
+    "name": "Tamás László Fellegi",
+    "role_in_government": "Minister of National Development",
+    "prime_minister_served_under": "Viktor Orbán"
+  },
+  "final_answer": "Hungary"
+}

@@ -1,0 +1,15 @@
+{
+  "artist_name": "Dr. Alban",
+  "album_details": {
+    "title": "One Love",
+    "type": "second studio album",
+    "number": 2
+  },
+  "single_details": {
+    "title": "It's My Life",
+    "release_year": 1992,
+    "release_month": "April",
+    "order_in_album": "first single"
+  },
+  "backing_duo_identified": false
+}

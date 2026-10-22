@@ -1,0 +1,20 @@
+{
+  "common_profession": "director",
+  "individuals": [
+    {
+      "name": "Izu Ojukwu",
+      "professions": [
+        "film director"
+      ]
+    },
+    {
+      "name": "Fred Savage",
+      "professions": [
+        "actor",
+        "television director",
+        "producer"
+      ]
+    }
+  ],
+  "reasoning": "Izu Ojukwu is identified as a 'film director'. Fred Savage is identified as an 'actor, television director, and producer'. Both share the profession of 'director'."
+}

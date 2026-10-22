@@ -1,0 +1,13 @@
+{
+  "conference_name": "Mid-American Conference",
+  "team_year": 1962,
+  "full_member_schools_count": 12,
+  "membership_details": {
+    "schools_in_ohio_and_michigan": 9,
+    "single_member_states": [
+      "Illinois",
+      "Indiana",
+      "New York"
+    ]
+  }
+}

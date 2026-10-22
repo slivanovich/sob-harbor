@@ -1,0 +1,13 @@
+{
+  "are_both_founders": true,
+  "david_coverdale_founding_details": {
+    "is_founder": true,
+    "band_name": "Whitesnake",
+    "founding_year": 1978
+  },
+  "burton_c_bell_founding_details": {
+    "is_founder": true,
+    "is_co_founder": true,
+    "band_name": "Fear Factory"
+  }
+}

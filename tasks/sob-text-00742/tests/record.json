@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "record_id": "cff52ba206df5cf135a96bae08c71eccd25d79e1ee5c08bc533f65377e059624",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5add316c5542992ae4cec4e4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Kaizers Orchestra: Kaizers Orchestra was a Norwegian alternative rock band formed on 1 January 2000.  They are notable for being among the first non-black metal Norwegian artists singing in their native language to become popular beyond Scandinavia.  To other Norwegians, the band is instantly recognizable both because of their unique, unpredictable style, and because of vocalist Ottesen's distinctive Jæren dialect, shared by four of the other band members.\n\nGeir Zahl: Geir Zahl (born 19 May 1975) is a Norwegian musician.  He is known for playing guitar in the Norwegian rock group Kaizers Orchestra.  The band was founded by Geir Zahl and Janove Ottesen who had both played together in some other bands, namely Blod, snått & juling and gnom.  Geir Zahl is the composer and main vocalist on several songs, both on the recordings and live at concerts.\n\nRock music in Norway: Norway has produced a number of famous rock bands, including Titanic, a-ha and Kaizers Orchestra.\n\nFake Problems: Fake Problems is a four-piece indie rock from Naples, Florida.  They released their first full-length album, \"How Far Our Bodies Go\", on Sabot Productions on April 27, 2007.  Their second record, \"It's Great to Be Alive\", was released through Side One Dummy Records on February 17, 2009.  Their third record \"Real Ghosts Caught On Tape\" was released September 21, 2010, also on Sideonedummy.  They are currently on an indefinite hiatus.\n\nVåre demoner: Våre demoner (English: Our Demons ) is the fifth studio album by Norwegian alternative rock group Kaizers Orchestra.  Recorded during early 2009, it was released in limited quantities on 27 April 2009.  Unlike their four previous albums, the material on \"Våre demoner\" consists of re-recorded versions of old material that was never released officially for various reasons.  The album's liner notes contain information about how the lyrics relate to one another within the \"universe\" of the band's songs as well as lyrics.\n\nØyvind Storesund: Øyvind Storesund (born March 9, 1975 in Bø i Telemark, Norway) is a Norwegian Rock and jazz musician (upright bass) known from playing in the Norwegian bands Cloroform and Kaizers Orchestra.\n\nLive i Oslo Spektrum: Live i Oslo Spektrum is a live album released on CD, DVD and Blu-ray featuring Norwegian alternative rock band Kaizers Orchestra.  It features their concert at Oslo Spektrum in Oslo, Norway on 9 April 2011, the official celebration of Kaizers Orchestra's tenth anniversary.  The album is expected to be released on 11 November 2011 (coinciding with the release date of their eighth studio album, \"Violeta Violeta Vol.  II\", and the stage premiere of their musical, \"Sonny\").  The live CD of the same concert, bundled with both releases, omits a certain number of songs due to capacity constraints.\n\nJanove Ottesen: Janove Ottesen (born Jan Ove Ottesen, 1975) is a Norwegian musician, born in Stord, Hordaland, Norway.  He specializes in vocals, guitar and barrels, and is a leading member of the Norwegian band Kaizers Orchestra.\n\nViva la Vega: Viva La Vega is a Live DVD featuring the Norwegian alternative rock band Kaizers Orchestra produced by the Norwegian company Amazon Film.  It features their concert at Vega in Copenhagen, Denmark on 6 October 2005, as well as documentaries, music videos, a biography, and stills.  The DVD features all the songs Kaizers recorded in 2005, whether as part of the concert itself or as background music for the extras.\n\nErlend Skomsvoll: Erlend Fredrik Skomsvoll (born 12 May 1969 in Bærum, Norway) is a Norwegian jazz musician (piano, keyboards, accordion, and tuba), band leader, composer and arranger, known from his own band Skomsork and the band Wibutee with Live Maria Roggen, Madrugada, and Kaizers Orchestra.  He has also cooperated with Nils Petter Molvær, Chick Corea and Pat Metheny.",
+    "question": "Are Fake Problems and Kaizers Orchestra from the same country?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "bands_compared": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "band_name": {
+                "type": "string"
+              },
+              "origin_country": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "band_name",
+              "origin_country"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "are_from_same_country": {
+          "type": "boolean"
+        },
+        "reasoning": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "bands_compared",
+        "are_from_same_country",
+        "reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "bands_compared": [
+        {
+          "band_name": "Kaizers Orchestra",
+          "origin_country": "Norway"
+        },
+        {
+          "band_name": "Fake Problems",
+          "origin_country": "USA"
+        }
+      ],
+      "are_from_same_country": false,
+      "reasoning": "Kaizers Orchestra is a Norwegian band, while Fake Problems is from Naples, Florida, USA. Therefore, they are not from the same country."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

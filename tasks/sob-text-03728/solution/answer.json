@@ -1,0 +1,11 @@
+{
+  "plant_name": "Valerian",
+  "scientific_name": "Valeriana officinalis",
+  "family": "Caprifoliaceae",
+  "name_origin_details": {
+    "related_given_name": "Valeria",
+    "given_name_meaning": "to be strong",
+    "latin_root": "valere"
+  },
+  "is_perennial_flowering_plant": true
+}

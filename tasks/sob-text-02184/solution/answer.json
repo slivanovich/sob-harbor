@@ -1,0 +1,14 @@
+{
+  "astronauts_compared": [
+    {
+      "name": "Franco Egidio Malerba",
+      "birth_year": 1946
+    },
+    {
+      "name": "Colin Michael Foale",
+      "birth_year": 1957
+    }
+  ],
+  "first_born_astronaut_name": "Franco Egidio Malerba",
+  "first_born_astronaut_birth_year": 1946
+}

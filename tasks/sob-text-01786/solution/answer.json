@@ -1,0 +1,16 @@
+{
+  "actress_name": "Maggie Gyllenhaal",
+  "film_title": "Stranger than Fiction",
+  "parents": [
+    {
+      "name": "Stephen Gyllenhaal",
+      "relationship": "father",
+      "occupation": "filmmaker"
+    },
+    {
+      "name": "Naomi Achs",
+      "relationship": "mother",
+      "occupation": "filmmaker"
+    }
+  ]
+}

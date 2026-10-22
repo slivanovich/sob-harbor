@@ -1,0 +1,12 @@
+{
+  "first_film_details": {
+    "title": "Hercules",
+    "release_year": 1997
+  },
+  "second_film_details": {
+    "title": "The Pacifier",
+    "release_year": 2005,
+    "release_month": "March"
+  },
+  "earlier_release_film_title": "Hercules"
+}

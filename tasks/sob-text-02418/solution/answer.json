@@ -1,0 +1,17 @@
+{
+  "cities_in_question": [
+    {
+      "name": "Lanxi",
+      "administrative_type": "county-level city"
+    },
+    {
+      "name": "Zhangzhou",
+      "administrative_type": "prefecture-level city"
+    }
+  ],
+  "question_analysis": {
+    "question_text": "Lanxi, Zhejiang and Zhangzhou are both what type of city?",
+    "common_type_exists": false,
+    "reasoning": "According to the context, Lanxi is a 'county-level city' and Zhangzhou is a 'prefecture-level city'. These are distinct administrative types, therefore, there is no single common type that applies to both cities based on the provided information."
+  }
+}

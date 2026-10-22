@@ -1,0 +1,45 @@
+{
+  "identified_term": "Neutering",
+  "term_definition": "the removal of an animal's reproductive organ, either all of it or a considerably large part",
+  "etymology": {
+    "language": "Latin",
+    "root_word": "neuter",
+    "root_meaning": "of neither sex"
+  },
+  "gender_applicability": "applies to both sexes",
+  "related_terminology": [
+    {
+      "term": "castration",
+      "applies_to": "male animals",
+      "colloquial_use": false
+    },
+    {
+      "term": "spaying",
+      "applies_to": "female animals",
+      "colloquial_use": false
+    },
+    {
+      "term": "fixing",
+      "applies_to": "both sexes",
+      "colloquial_use": true
+    },
+    {
+      "term": "gelding",
+      "applies_to": "male animals",
+      "specific_animal": "horses",
+      "colloquial_use": false
+    },
+    {
+      "term": "de-sexing",
+      "applies_to": "both sexes",
+      "modern_veterinary_term": true,
+      "colloquial_use": false
+    }
+  ],
+  "specializing_organization": {
+    "name": "International Animal Rescue",
+    "program_focus": "comprehensive sterilization and vaccination programs",
+    "target_animals": "stray dogs and cats",
+    "target_regions": "developing countries"
+  }
+}

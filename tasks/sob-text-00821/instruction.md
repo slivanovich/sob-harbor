@@ -1,0 +1,76 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Scotch Whisky Association: The Scotch Whisky Association is a trade organisation that represents the Scotch whisky industry.  The Scotch whisky industry is an important part of the Scottish economy, and particularly the Scottish export market.
+
+Passport Scotch: Passport Scotch, also called Passport Blended Scotch Whisky, is a brand of whisky exported from Scotland by Seagram Distillers, PLC, and currently owned by Pernod Ricard.  According to "Classic Blended Scotch" by Jim Murray, Passport is a blend of more flavored highland malts with lighter and sweet lowland whiskies, made at Seagram's Speyside distilleries.  The particular blend used in Passport Scotch was first produced in the 1960s by master blender Jimmy Lang, of Seagram’s Scottish subsidiary Chivas Brothers, and started being sold in 1965.  The blend recipe for Passport was developed by Chivas Brothers’ blender Jimmy Lang during the 1960s.  It sold 1.7 million bottles in 2015, being a strong performer in Brazil (where it is second on the Scotch whisky market), Angola, Mexico, Spain, Portugal and Poland.
+
+Rusty Nail (cocktail): A Rusty Nail is made by mixing Drambuie and Scotch whisky.  The drink was included in Difford's Guide Top 100 Cocktails.
+
+ScotlandWhisky: ScotlandWhisky, also known as the Scotch Whisky Tourism Initiative, was launched in 2003 by Jim Wallace MSP, the then Deputy First Minister of Scotland, and Ian Good, Chairman of the Scotch Whisky Association.  The project is a partnership between the public and private sectors, with the aim of exploring where the tourism and Scotch whisky industries can work together to realize mutual commercial benefits.  It is financed by the Scotch Whisky Association, The Scotch Whisky Experience, Scottish Enterprise, Highlands and Islands Enterprise, and VisitScotland.
+
+Black Dog Scotch Whisky: Black Dog is a brand of Scotch Whisky that is distilled, aged and blended in Scotland, and bottled and marketed in India by United Spirits Limited (USL), a subsidiary of Diageo PLC.  In 2013, Black Dog was reported to be the world's fastest growing Scotch Whisky by volume, according to International Wine and Spirits Research (IWSR).  The whiskies used in the blend come from Scotland.  Black Dog Scotch Whisky sold in India is bottled in Parmori District Nasik in Maharashtra, by importing the undiluted spirits from Scotland, a strategy that avoids the import duties imposed on liquor imports to India that are bottled prior to import.  (Import duties may be as high as 150% for liquor bottled prior to import, but only about 30% when bottled in India.)  The brand's main competitors outside the Diageo family are Ballantine’s 12 YO Finest Blended Scotch, 100 Pipers 12 YO Blended Scotch, both owned by Pernod Ricard and two expressions from the Teachers' family, Teacher’s 50, a premium 12 year old Scotch whisky, blended and matured in Scotland but bottled in India starting August 1997 to celebrate India’s 50 years of independence and Teacher's Highland Cream, both owned by Beam Suntory.
+
+Singapore Sling: The Singapore Sling is a gin-based cocktail from Singapore.  This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore.  It was initially called the gin sling – a "sling" was originally an North American drink composed of spirit and water, sweetened and flavored.
+
+Scotch Whisky Act 1988: The Scotch Whisky Act 1988 (citation 1988 c.22) is an Act to the Parliament of the United Kingdom, passed during the reign of Queen Elizabeth II on 28 June 1988, with the long title "An Act to make provision as to the definition of Scotch whisky and as to the production and sale of whisky; and for connected purposes." .  It has since been superseded by the Scotch Whisky Regulations 2009 which came into effect on 23 November 2009.
+
+Scotch Whisky Regulations 2009: The Scotch Whisky Regulations 2009 (Citation 2009, No. 2890) is a Statutory Instrument that regulates the production, labelling, advertising and packaging of Scotch whisky.  The regulations were laid before the Parliament of the United Kingdom on 30 October 2009, and came into force on 23 November 2009.  They repealed the Scotch Whisky Act 1988 and The Scotch Whisky (Northern Ireland) Order 1988.
+
+Singapore Sling (1990 film): Singapore Sling: The Man Who Loved a Corpse (Greek: "Singapore Sling: Ο Άνθρωπος που Αγάπησε ένα Πτώμα" , tr.  "Singapore Sling: O Anthropos pou Agapise ena Ptoma") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus.  Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990.  Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America.  The film was officially selected for screening at the Rimini Film Festival.
+
+Glen Grant distillery: Glen Grant is a distillery founded in 1840 in Rothes, Speyside, that produces single malt Scotch whisky.  Previously owned by "Chivas Brothers Ltd", best known for their Chivas Regal blended scotch whisky, Glen Grant was purchased by the Italian company Campari Group in December 2005.  It is the biggest selling single malt Scotch whisky in Italy.
+
+Question: The Singapore Sling is gin-based, while the Rusty Nail contains Scotch whisky and what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "cocktail_name": {
+      "type": "string",
+      "description": "The name of the cocktail being described."
+    },
+    "main_ingredients": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of the main ingredients in the cocktail."
+    },
+    "comparison_cocktail": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the cocktail used for comparison."
+        },
+        "base_spirit": {
+          "type": "string",
+          "description": "The base spirit of the comparison cocktail."
+        }
+      },
+      "required": [
+        "name",
+        "base_spirit"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "cocktail_name",
+    "main_ingredients",
+    "comparison_cocktail"
+  ],
+  "additionalProperties": false
+}

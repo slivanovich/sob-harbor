@@ -1,0 +1,12 @@
+{
+  "film_name": "Sky High",
+  "actress_details": {
+    "name": "Kelly Preston",
+    "film_role_description": "starred in the films",
+    "married_to_actor": {
+      "name": "John Travolta",
+      "relationship_status": "married to"
+    }
+  },
+  "answer": "John Travolta"
+}

@@ -1,0 +1,16 @@
+{
+  "question_asked": "Were Margaret Storm Jameson and Joseph Conrad both known for their reviews?",
+  "answer": false,
+  "individuals_involved": [
+    {
+      "name": "Margaret Storm Jameson",
+      "known_for_reviews": true,
+      "primary_known_for": "novels and reviews"
+    },
+    {
+      "name": "Joseph Conrad",
+      "known_for_reviews": false,
+      "primary_known_for": "novelist"
+    }
+  ]
+}

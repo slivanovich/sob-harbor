@@ -1,0 +1,17 @@
+{
+  "deity_name": "Shani",
+  "deity_iconography": {
+    "main_weapon": "sword",
+    "main_mount": "buffalo",
+    "other_mounts": [
+      "crow",
+      "vulture"
+    ]
+  },
+  "temple_details": {
+    "temple_name": "Shaneshwar Sansthan",
+    "temple_location": "Dombivli",
+    "nearby_city": "Mumbai"
+  },
+  "is_temple_in_specified_location": true
+}

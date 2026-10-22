@@ -1,0 +1,11 @@
+{
+  "company_name": "AGCO Corporation",
+  "company_type": "agricultural equipment manufacturer",
+  "headquarters_location": {
+    "city": "Duluth",
+    "state": "Georgia",
+    "country": "United States"
+  },
+  "owned_brand": "White Farm Equipment",
+  "brand_status": "discontinued except for planter"
+}

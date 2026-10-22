@@ -1,0 +1,13 @@
+{
+  "musical_work": {
+    "title": "schnee",
+    "type": "duet"
+  },
+  "main_artist": "Burkhard Stangl",
+  "collaborator": "Cristof Kurzmann",
+  "inspired_by_writer": {
+    "name": "Robert Walser",
+    "nationality": "Swiss",
+    "language": "German-speaking"
+  }
+}

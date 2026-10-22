@@ -1,0 +1,15 @@
+{
+  "group_name": "New Order",
+  "single_details": {
+    "title": "Thieves Like Us",
+    "release_year": 1984
+  },
+  "film_details": {
+    "title": "Thieves Like Us",
+    "release_year": 1974,
+    "director": {
+      "name": "Robert Altman",
+      "academy_award_nominations_best_director": 5
+    }
+  }
+}

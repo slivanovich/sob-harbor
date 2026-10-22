@@ -1,0 +1,24 @@
+{
+  "film_title": "Asterix at the Olympic Games",
+  "release_year": 2008,
+  "is_adaptation": true,
+  "adaptation_source": "Astérix comic series",
+  "series_information": {
+    "film_number_in_series": 3,
+    "total_films_in_series": 4,
+    "other_films_in_series": [
+      {
+        "title": "Asterix & Obelix vs Caesar",
+        "year": 1999
+      },
+      {
+        "title": "",
+        "year": 2002
+      },
+      {
+        "title": "Asterix and Obelix: God Save Britannia",
+        "year": 2012
+      }
+    ]
+  }
+}

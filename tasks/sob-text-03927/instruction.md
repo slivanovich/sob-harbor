@@ -1,0 +1,102 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lifshitz Theory of Van der Waals Force: In condensed matter physics and physical chemistry, the Lifshitz theory of Van der Waals forces, sometimes called the macroscopic theory of Van der Waals forces, is a method proposed by Evgeny Mikhailovich Lifshitz in 1954 for treating Van der Waals forces between bodies which does not assume pairwise additivity of the individual intermolecular forces; that is to say, the theory takes into account the influence of neighboring molecules on the interaction between every pair of molecules located in the two bodies, rather than treating each pair independently.
+
+Molecular models of DNA: Molecular models of DNA structures are representations of the molecular geometry and topology of deoxyribonucleic acid (DNA) molecules using one of several means, with the aim of simplifying and presenting the essential, physical and chemical, properties of DNA molecular structures either "in vivo" or "in vitro".  These representations include closely packed spheres (CPK models) made of plastic, metal wires for "skeletal models", graphic computations and animations by computers, artistic rendering.  Computer molecular models also allow animations and molecular dynamics simulations that are very important for understanding how DNA functions "in vivo".
+
+Van der Waals (crater): Van der Waals is a lunar crater on the far side of the Moon.  It is a heavily eroded feature with an irregular outer rim.  The edge is lowest along the southern side where it is little more than a circular crest along the ground.  It is more developed along the northern side, but the rim is notched and rugged.  The satellite crater Van der Waals W is attached to the exterior of the northeast, and Van der Waals H intrudes into the rim along the southeast.  The interior floor is relatively even and featureless, with only a few tiny craterlets to mark the surface.
+
+Linus Pauling: Linus Carl Pauling (February 28, 1901 – August 19, 1994) was an American chemist, biochemist, peace activist, author, and educator.  He published more than 1,200 papers and books, of which about 850 dealt with scientific topics. " New Scientist" called him one of the 20 greatest scientists of all time, and as of 2000, he was rated the 16th most important scientist in history.
+
+Molecular solid: A molecular solid is a solid consisting of discrete molecules.  The cohesive forces that bind the molecules together are van der Waals forces, dipole-dipole interactions, quadrupole interactions, π-π interactions, hydrogen bonding, halogen bonding, London dispersion forces, and in some molecular solids, coulombic interactions.  Van der Waals, dipole interactions, quadrupole interactions, π-π interactions, hydrogen bonding, and halogen bonding (2-127 kJ mol) are typically much weaker than the forces holding together other solids: metallic (metallic bonding, 400-500 kJ mol), ionic (Coulomb’s forces, 700-900 kJ mol), and network solids (covalent bonds, 150-900 kJ mol).  Intermolecular interactions, typically do not involve delocalized electrons, unlike metallic and certain covalent bonds.  Exceptions are charge-transfer complexes such as the tetrathiofulvane-tetracyanoquinodimethane (TTF-TCNQ), a radical ion salt.  These differences in the strength of force (i.e. covalent vs. van der Waals) and electronic characteristics (i.e. delocalized electrons) from other types of solids give rise to the unique mechanical, electronic, and thermal properties of molecular solids.
+
+Van der Waals equation: The van der Waals equation (or van der Waals equation of state; named after Johannes Diderik van der Waals) is based on plausible reasons that real gases do not follow the ideal gas law.  The ideal gas law treats gas molecules as point particles that do not interact except in elastic collisions.  In other words, they do not take up any space, and are not attracted or repelled by other gas molecules.
+
+Van der Waals surface: The van der Waals surface of a molecule is an abstract representation or model of that molecule, illustrating where, in very rough terms, a surface might reside for the molecule based on the hard cutoffs of van der Waals radii for individual atoms, and it represents a surface through which the molecule might be conceived as interacting with other molecules.  Also referred to as a "van der Waals envelope," the van der Waals surface is named for Johannes Diderik van der Waals, a Dutch theoretical physicist and thermodynamicist who developed theory to provide a liquid-gas equation of state that accounted for the non-zero volume of atoms and molecules, and on their exhibiting an attractive force when they interacted (theoretical constructions that also bear his name).  van der Waals surfaces are therefore a tool used in the abstract representations of molecules, whether accessed, as they were originally, via hand calculation, or via physical wood/plastic models, or now digitally, via computational chemistry software.  Practically speaking, CPK models, developed by and named for Robert Corey, Linus Pauling, and Walter Koltun, were the first widely used physical molecular models based on van der Waals radii, and allowed broad pedagogical and research use of a model showing the van der Waals surfaces of molecules.
+
+Van der Waals strain: In chemistry, van der Waals strain is strain resulting from van der Waals repulsion when two substituents in a molecule approach each other with a distance less than the sum of their van der Waals radii.  Van der Waals strain is also called van der Waals repulsion and is related to steric hindrance.  One of the most common forms of this strain is eclipsing hydrogen, in Alkanes.
+
+Van der Waals force: In physical chemistry, the van der Waals forces, named after Dutch scientist Johannes Diderik van der Waals, are distance-dependent interactions between atoms or molecules.  Unlike ionic or covalent bonds, these attractions are not a result of any chemical electronic bond, and they are comparatively weak and more susceptible to being perturbed.  Van der Waals forces quickly vanish at longer distances between interacting molecules.
+
+Van der Waals radius: The van der Waals radius, "r" , of an atom is the radius of an imaginary hard sphere representing the distance of closest approach for another atom.  It is named after Johannes Diderik van der Waals, winner of the 1910 Nobel Prize in Physics, as he was the first to recognise that atoms were not simply points and to demonstrate the physical consequences of their size through the van der Waals equation of state.
+
+Question: Who published more than 1,200 papers and books, of which about 850 dealt with scientific topics, and developed and named the CPK models that were the first widely used physical molecular models based on van der Waals radii ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The full name of the person."
+    },
+    "publication_details": {
+      "type": "object",
+      "description": "Details about the person's publications.",
+      "properties": {
+        "total_papers_and_books": {
+          "type": "integer",
+          "description": "The total number of papers and books published (minimum)."
+        },
+        "scientific_topics_count": {
+          "type": "integer",
+          "description": "The number of publications dealing with scientific topics."
+        }
+      },
+      "required": [
+        "total_papers_and_books",
+        "scientific_topics_count"
+      ],
+      "additionalProperties": false
+    },
+    "model_development": {
+      "type": "object",
+      "description": "Information about the molecular models developed by the person.",
+      "properties": {
+        "model_name": {
+          "type": "string",
+          "description": "The name of the molecular model."
+        },
+        "model_type": {
+          "type": "string",
+          "description": "Description of the model type, e.g., 'physical molecular models'."
+        },
+        "basis_of_model": {
+          "type": "string",
+          "description": "The scientific concept or measurement the model is based on."
+        },
+        "co_developers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other individuals who co-developed the model."
+        }
+      },
+      "required": [
+        "model_name",
+        "model_type",
+        "basis_of_model",
+        "co_developers"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "publication_details",
+    "model_development"
+  ],
+  "additionalProperties": false
+}

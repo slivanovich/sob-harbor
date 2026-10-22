@@ -1,0 +1,15 @@
+{
+  "person_name": "Rick Rescorla",
+  "military_service": {
+    "branch": "United States Army",
+    "officer_status": true
+  },
+  "security_role": {
+    "type": "private security officer",
+    "origin_country": "British"
+  },
+  "funeral_details": {
+    "song_read": "The White Rose",
+    "year": 2001
+  }
+}

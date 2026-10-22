@@ -1,0 +1,14 @@
+{
+  "war_name": "Indo-Pakistani War of 1971",
+  "duration_days": 13,
+  "start_date": "3 December 1971",
+  "end_date": "16 December 1971",
+  "involved_parties": [
+    "India",
+    "Pakistan",
+    "Bengali nationalist forces"
+  ],
+  "contained_battles": [
+    "Battle of Hilli"
+  ]
+}

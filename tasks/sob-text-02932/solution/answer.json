@@ -1,0 +1,23 @@
+{
+  "healer_details": {
+    "name": "Mariana Kovacevic",
+    "nationality": "Serbian",
+    "specialization": "traditional healer",
+    "treatment_method": "horse placenta treatment"
+  },
+  "athlete_treated": {
+    "name": "Asamoah Gyan",
+    "nationality": "Ghanaian",
+    "position": "striker",
+    "club_team": "Kayserispor",
+    "is_national_team_captain": true
+  },
+  "treatment_event": {
+    "name": "African Cup of Nations",
+    "year": 2012,
+    "host_countries": [
+      "Gabon",
+      "Equatorial Guinea"
+    ]
+  }
+}

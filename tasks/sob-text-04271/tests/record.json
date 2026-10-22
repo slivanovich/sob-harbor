@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "record_id": "a039d355cedf520c4a7b8bfc6efe360616c4c300b2a1a9cbf7dc38cbd39c6e4e",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a7bcb1455429927d897c046",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Kevin Ullyett",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2017 Western &amp; Southern Open – Men's Doubles: Ivan Dodig and Marcelo Melo were the defending champions, but chose not to participate together.  Dodig teamed up with Rohan Bopanna, but lost in the quarterfinals to Melo who partnered Łukasz Kubot.  Kubot and Melo lost in the semifinals to Jamie Murray and Bruno Soares.\n\n2006 Rogers Masters – Doubles: Wayne Black and Kevin Ullyett were the defending champions, but Black retired in 2006, and only Ullyett competed that year.\n\n2010 Tennislife Cup – Doubles: Frederico Gil and Ivan Dodig were the defending champions, but Dodig decided not to participate.\n\n2016 BNP Paribas Masters – Doubles: Ivan Dodig and Marcelo Melo were the defending champions, but Dodig chose not to participate this year.  Melo played alongside Vasek Pospisil, but lost to John Peers and Henri Kontinen in the semifinals.\n\n2009 If Stockholm Open – Doubles: Jonas Björkman and Kevin Ullyett were the defending champion, but Björkman was retired in November 2008. Ullyett partnered up with Bruno Soares, and they won in the final 6–4, 7–6 against Simon Aspelin and Paul Hanley.\n\n2011 Alessandria Challenger – Doubles: Ivan Dodig and Lovro Zovko were the defending champions but Dodig not to participate. <br>\n\nKevin Ullyett: Kevin Ullyett (born 23 May 1972 in Salisbury, now Harare) is a former professional tennis player from Zimbabwe.  His primary success on the tour was in men's doubles.\n\n2017 Rogers Cup – Men's Doubles: Ivan Dodig and Marcelo Melo were the defending champions, but chose not to participate together.  Melo played alongside Łukasz Kubot, but lost in the second round to Fabrice Martin and Édouard Roger-Vasselin.  Dodig teamed up with Rohan Bopanna, but lost in the final to Pierre-Hugues Herbert and Nicolas Mahut, 4–6, 6–3, [6–10].\n\nIvan Dodig: Ivan Dodig (born 2 January 1985) is a Croatian tennis player.  His career-high ATP rankings are world No. 29 in singles and world No. 4 in doubles.  Dodig is a Grand Slam champion after winning the 2015 French Open men's doubles title with Marcelo Melo.\n\n2009 Zagreb Open – Doubles: Ivan Dodig and Júlio Silva were the defending champions, however only Dodig chose to play this year.  He competed with Lovro Zovko.  They lost to Brian Dabul and Leonardo Mayer in the first round.",
+    "question": "Who is older, Ivan Dodig or Kevin Ullyett?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "birth_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        },
+        "person_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "birth_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        },
+        "older_person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "birth_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        },
+        "age_difference_years": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "person_1",
+        "person_2",
+        "older_person",
+        "age_difference_years"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_1": {
+        "name": "Ivan Dodig",
+        "birth_year": 1985
+      },
+      "person_2": {
+        "name": "Kevin Ullyett",
+        "birth_year": 1972
+      },
+      "older_person": {
+        "name": "Kevin Ullyett",
+        "birth_year": 1972
+      },
+      "age_difference_years": 13
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

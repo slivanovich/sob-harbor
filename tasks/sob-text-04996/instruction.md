@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Markelle Fultz: Markelle N'Gai Fultz (born May 29, 1998) is an American professional basketball player for the Philadelphia 76ers of the  National Basketball Association (NBA).  After playing college basketball for one season with the Washington Huskies, he was drafted with the first overall pick of the 2017 NBA draft by the 76ers.
+
+List of Philadelphia 76ers head coaches: The Philadelphia 76ers are an American professional basketball team based in Philadelphia, Pennsylvania.  They are a member of the Atlantic Division of the Eastern Conference in the National Basketball Association (NBA).  Formerly known as the Syracuse Nationals, the 76ers joined the NBA when it was founded in 1949.  The Nationals had a record of 51–13 in their first NBA season under coach Al Cervi and won the Eastern Division crown.  The franchise were purchased by Philadelphian Irv Kosloff and Ike Richma in the spring of 1963; the NBA approved their franchise shift on May 22 and name change to the Philadelphia 76ers on August 6.  This brought professional basketball back to the city, which had been without a team since the Golden State Warriors left Philadelphia in 1962.  After coaching the 76ers since , Doug Collins resigned as head coach on April 18, 2013 following the 2012–13 season.  Brett Brown was hired to be the head coach of the 76ers on August 15, 2013 prior to the start of the 2013-14 season.
+
+History of the Philadelphia 76ers: This is a history of the Philadelphia 76ers.  The Philadelphia 76ers are an American basketball team currently playing in the Atlantic Division of the Eastern Conference in the National Basketball Association (NBA).  The 76ers are third in NBA history in wins and playoff appearances.
+
+Damone Brown: Damone Lamar Brown (born June 28, 1979) was an American professional basketball player, formerly in the National Basketball Association (NBA).  He is a 6'9" and 212 lb forward.  After playing college basketball at Syracuse University, he was selected by the Philadelphia 76ers in the second round of the 2001 NBA draft.  Throughout his NBA career he has played for the 76ers, the Toronto Raptors, the New Jersey Nets and the Washington Wizards while averaging 2.8 points and 1.3 rebounds per game.  He played seven games with the Indiana Pacers in the 2005–06 preseason.
+
+Willie Green: Willie J. Green (born July 28, 1981) is an American retired professional basketball player and current assistant coach with the Golden State Warriors of the National Basketball Association (NBA).  During his professional career, Green has previously played for the Philadelphia 76ers, New Orleans Hornets, Atlanta Hawks, Los Angeles Clippers and Orlando Magic of the National Basketball Association (NBA).  He was selected in the second round (41st pick overall) of the 2003 NBA draft by the Seattle SuperSonics and later acquired by the Philadelphia 76ers from Seattle in a draft-night trade for the draft rights to Paccelis Morlende (50th pick overall) and cash considerations.
+
+2014 McDonald's All-American Boys Game: The 2014 McDonald's All-American Boys Game is an All-star basketball game that was played on April 2, 2014 at the United Center in Chicago, home of the Chicago Bulls.  It was the 37th annual McDonald's All-American Game for high school boys.  The game's rosters featured the best and most highly recruited blue chip boys high school basketball players graduating in 2014.  Chicago, which became the first city to host the game in back-to-back years in 2012, will continue to host the game annually at least until 2015.  The rosters for the game were announced at 6:00 PM ET on January 29 on ESPNU.  At the time of the announcement 22 of the 24 players had committed to Division I basketball programs.  Duke and Kentucky led the field with four commits each.  One of the game's major storylines was that local big men Jahlil Okafor (McDonald's Morgan Wootten Player of the Year) and Cliff Alexander (Naismith Player of the Year) opposed each other.
+
+Jahlil Okafor: Jahlil Okafor (pronounced ; born December 15, 1995) is an American professional basketball player for the Philadelphia 76ers of the National Basketball Association (NBA).  He played his freshman season of college for the 2014–15 Duke national championship team.
+
+Greg Stokes: Gregory Lewis "Greg" Stokes (born August 5, 1963) is a retired American professional basketball player who was selected by the Philadelphia 76ers in the 2nd round (33rd overall) of the 1985 NBA Draft.  A 6'10" forward-center from the University of Iowa, Stokes played in 2 NBA seasons for the 76ers and Sacramento Kings.  In his NBA career, Stokes played in 42 games and scored a total of 130 points.  He played at Hamilton High School in Hamilton, Ohio in 1980-1981 and help lead team to a 25-1 record and regional finals appearance.  He also played professionally in Italy and Australia.  His daughter Kiah Stokes played college basketball at the University of Connecticut from 2011-2015.  Kiah now plays professional basketball for the WNBA team the New York Liberty.
+
+2015–16 Philadelphia 76ers season: The 2015–16 Philadelphia 76ers season was the 77th season of the franchise in the National Basketball Association (NBA).  It was also the second straight season that Joel Embiid, their third pick in the 2014 NBA draft, would not suit up for the 76ers due to a leg injury.  Philadelphia broke the record for the longest losing streak in American professional sports history with 27 straight losses over this season and last season with a 114–116 loss to the Houston Rockets.  The losing streak would reach to 28 games (with the 18 straight losses tying the record for longest opening season losing streak with the 2009–10 New Jersey Nets) before getting their first victory at home against the Los Angeles Lakers, which was also Kobe Bryant's last game against the 76ers in Philadelphia.  Philadelphia would also hire former Phoenix Suns owner, coach, general manager, and four-time NBA Executive of the Year winner Jerry Colangelo on December 7, 2015 as their Chairman of Basketball Operations.  Eleven days later, former Denver Nuggets, Phoenix Suns, New York Knicks, and Los Angeles Lakers head coach Mike D'Antoni would join the team as an associate head coach.  Near the end of the season, general manager Sam Hinkie would announce his resignation from his position, being replaced by Jerry's son Bryan Colangelo before the end of the season.  Jerry would also announce his personal demotion from his original position afterwards.  They finished just one game shy of tying the NBA record for most losses in a season set by themselves during their 1972–73 season when they went 9–73.  However, it would be the season where Sam Hinkie's goal of "The Process" came into full fruition since they'd later earn the #1 selection in the 2016 NBA draft.
+
+Joel Embiid: Joel Hans Embiid ( ; born 16 March 1994) is a Cameroonian professional basketball player for the Philadelphia 76ers of the National Basketball Association (NBA).  After one year of college basketball at the University of Kansas, he was drafted with the third overall pick in the 2014 NBA draft by the 76ers.  He has nicknamed himself "The Process" in response to a refrain from 76ers fans during the Sam Hinkie-era to "trust the process".
+
+Question: What McDonald's honor was given to an American professional basketball player for the Philadelphia 76ers?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the professional basketball player."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The NBA team the player plays for."
+    },
+    "mcdonalds_honor": {
+      "type": "string",
+      "description": "The specific McDonald's honor received by the player."
+    },
+    "honor_year": {
+      "type": "integer",
+      "description": "The year the McDonald's honor was awarded."
+    }
+  },
+  "required": [
+    "player_name",
+    "team_name",
+    "mcdonalds_honor",
+    "honor_year"
+  ],
+  "additionalProperties": false
+}

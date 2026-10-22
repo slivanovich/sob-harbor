@@ -1,0 +1,14 @@
+{
+  "country_of_interest": "Italy",
+  "event_description": "first citizen to travel to space",
+  "first_citizen_details": {
+    "name": "Franco Egidio Malerba",
+    "nationality": "Italian",
+    "profession": "astronaut"
+  },
+  "other_candidate_details": {
+    "name": "Philippe Perrin",
+    "nationality": "French",
+    "reason_for_exclusion": "not Italian"
+  }
+}

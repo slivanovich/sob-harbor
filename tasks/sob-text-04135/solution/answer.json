@@ -1,0 +1,16 @@
+{
+  "actress_details": {
+    "name": "Rotraut Richter",
+    "profession": "German stage and film actress"
+  },
+  "politician_details": {
+    "name": "Joseph Goebbels",
+    "title": "Reich Minister of Propaganda"
+  },
+  "film_details": {
+    "title": "Hitlerjunge Quex",
+    "year": 1933,
+    "type": "Nazi propaganda film"
+  },
+  "role_played": "Gerda"
+}

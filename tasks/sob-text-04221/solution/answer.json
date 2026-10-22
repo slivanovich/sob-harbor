@@ -1,0 +1,25 @@
+{
+  "thriller_movie": {
+    "title": "Samay: When Time Strikes",
+    "release_year": 2003,
+    "genre": "thriller",
+    "main_actors": [
+      "Sushmita Sen",
+      "Sushant Singh"
+    ]
+  },
+  "inspired_by_movie": {
+    "title": "Seven",
+    "release_year": 1995,
+    "director": "David Fincher",
+    "main_actors": [
+      "Brad Pitt",
+      "Morgan Freeman",
+      "Gwyneth Paltrow",
+      "John C. McGinley",
+      "R. Lee Ermey",
+      "Kevin Spacey"
+    ]
+  },
+  "relationship_type": "inspired by"
+}

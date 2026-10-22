@@ -1,0 +1,14 @@
+{
+  "entities_compared": [
+    {
+      "name": "Boğaziçi University",
+      "location_side": "European"
+    },
+    {
+      "name": "Süreyya Opera House",
+      "location_side": "Asian"
+    }
+  ],
+  "strait_name": "Bosphorus strait",
+  "are_on_same_side": false
+}

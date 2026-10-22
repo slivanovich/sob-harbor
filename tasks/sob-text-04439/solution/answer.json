@@ -1,0 +1,23 @@
+{
+  "defendant_name": "Scott Peterson",
+  "case_status": "on appeal",
+  "appealing_court": "Supreme Court of California",
+  "conviction_details": {
+    "crimes_convicted_of": [
+      "first degree murder",
+      "second degree murder"
+    ],
+    "victims": [
+      {
+        "name": "Laci Peterson",
+        "relationship_to_defendant": "pregnant wife"
+      },
+      {
+        "name": "Connor",
+        "relationship_to_defendant": "unborn son"
+      }
+    ],
+    "current_sentence": "awaiting execution on death row",
+    "prison_location": "San Quentin State Prison"
+  }
+}

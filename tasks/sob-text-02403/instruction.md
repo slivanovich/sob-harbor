@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Yugoslav government-in-exile: The Yugoslav government-in-exile was an official government of Yugoslavia, headed by King Peter II.  It evacuated from Belgrade in April 1941, after the Axis invasion of the country, and went first to Greece, then to Palestine, then to Egypt and finally, in June 1941, to the United Kingdom.
+
+Yugoslavia and the Allies: In 1941 when the Axis invaded Yugoslavia, King Peter II formed a Government in exile in London, and in January 1942 the royalist Draža Mihailović became the Minister of War with British backing.  But by June or July 1943, British Prime Minister Winston Churchill had decided to withdraw support from Mihailović and the Chetniks he led, and support the Partisans headed by Josip Broz Tito, even though this would result in "complete communist control of Serbia" (sic).  The main reason for the change was not the reports by Fitzroy Maclean or William Deakin, or as later alleged the influence of James Klugmann in Special Operations Executive (SOE) headquarters in Cairo or even Randolph Churchill, but the evidence of Ultra decrypts from the Government Code and Cipher School in Bletchley Park that Tito's Partisans were a ""much more effective and reliable ally in the war against Germany"".  Nor was it due to claims that the Chetniks were collaborating with the enemy, though there was some evidence from decrypts of collaboration with Italian and sometimes German forces.
+
+Randolph Churchill: Randolph Frederick Edward Spencer-Churchill {'1': ", '2': ", '3': ", '4': "} (28 May 1911 – 6 June 1968) was a journalist and a Conservative Member of Parliament (MP) for Preston from 1940 to 1945.
+
+Operation Bullseye: Operation Bullseye was the code-name of the first Special Operations Executive (SOE) mission to Yugoslavia since its occupation by the Axis forces.  It was led by Capt D.T. Bill Hudson with the objective to discover what was happening in Yugoslavia and co-ordinate all forces of resistance there.  The mission also included three Royal Yugoslav Army (RYA) officers: Maj Mirko Lalatović, Maj Zaharije Ostojić and Sgt Veljko Dragičević the wireless transmitter (W/T) operator.  The group boarded the submarine HMS Triumph in Malta and reached Petrovac on the Montenegrin coast on 20th Sep 1941.
+
+Jacques Vaillant de Guélis: Major Jacques Theodore Paul Marie Vaillant de Guélis {'1': ", '2': ", '3': ", '4': "} (6 April 1907 - 7 August 1945) was a Wales-born French Special Operations Executive (SOE) agent during the Second World War.  De Guélis was initially in the British Expeditionary Force in France in 1940 and later joined SOE and parachuted into France to organise resistance networks.  He was badly injured in a motor accident in August 1945 and later died of his injuries in hospital.  He is buried in his home town of Cardiff.
+
+Alexander, Crown Prince of Yugoslavia: Alexander, Crown Prince of Yugoslavia, also named Alexander II Karađorđević (Serbian Cyrillic: ; born 17 July 1945), was the last heir-apparent or heir-presumptive to the defunct throne of the Kingdom of Yugoslavia, and is currently the claimant to the abolished throne of the precursor Kingdom of Serbia.  He is the head of the House of Karađorđević.  Alexander is the only child of former King Peter II and his wife, Alexandra of Greece and Denmark.  He held the position of crown prince in the Democratic Federal Yugoslavia for the first four-and-a-half months of his life, from his birth until his father's deposition by Yugoslavia's communist authorities in late November of the same year.
+
+Zaharije Ostojić: Zaharije Ostojić (; 1907 – April 1945) was a Montenegrin Serb military officer who served as the chief of the operational, organisational and intelligence branches of the Chetnik Supreme Command led by Draža Mihailović in Yugoslavia during World War II.  He was a major in the Yugoslav Royal Air Force prior to the Axis invasion of Yugoslavia, and was involved in the coup that deposed Prince Paul of Yugoslavia on 27 March 1941.  After the coup, he escorted Prince Paul to exile in Greece, and was in Cairo at the time of the invasion in April.  In September 1941, he was landed on the Italian-occupied Montenegrin coast along with a British Special Operations Executive (SOE) liaison officer and two companions.  He escorted the SOE officer to the Territory of the Military Commander in Serbia and introduced him to the Yugoslav Partisan leader Josip Broz Tito then Mihailović.  Ostojić soon became Mihailović's chief of staff, and after the German attempt to capture the Chetnik leader during Operation Mihailović in December 1941, brought the Chetnik Supreme staff to Montenegro where they were re-united with Mihailović in June 1942.  During the remainder of 1942, Ostojić launched a counter-attack against Ustaše troops of the Independent State of Croatia returning to the eastern Bosnian town of Foča where they were expected to continue their genocidal anti-Serb policies.  As many as 2,000 local Muslims were subsequently killed in the town by forces under Ostojić's command.  Ostojić later oversaw large-scale massacres of civilians and burning of Muslim villages in the border region between Montenegro and the Sandžak.
+
+Jezdimir Dangić: Jezdimir Dangić (; 4 May 1897 – 22 August 1947) was a Bosnian Serb Chetnik commander during World War II.  Born in the town of Bratunac, he was imprisoned during World War I for his membership of the revolutionary movement Young Bosnia.  He subsequently completed a law degree and became an officer in the gendarmerie of the Kingdom of Serbs, Croats and Slovenes at the beginning of 1928.  In 1940 he was appointed to lead the gendarmerie detachment stationed at the Yugoslav royal palace.  With the Axis invasion of Yugoslavia in 1941, Dangić commanded the gendarmerie unit that escorted King Peter II out of the country.  In August of that year, General Draža Mihailović appointed him commander of the Chetnik forces in eastern Bosnia.  Here, Dangić and his men launched several attacks against the forces of the Independent State of Croatia (NDH).  In August, Dangić's Chetniks captured the town of Srebrenica.  Afterwards, they became largely inactive in fighting the Germans, choosing instead to avoid confrontation.  In December, Chetniks under Dangić's command massacred hundreds of Bosnian Muslims in the town of Goražde.  In December, his Chetniks captured five nuns and took them with them through Romanija to Goražde, where they later committed suicide to avoid being raped.
+
+Karađorđević dynasty: The Karađorđević (, Karađorđevići / Карађорђевићи, ] ) is a Serbian dynastic family, founded by Karađorđe Petrović, the "Veliki Vožd" ("Grand Leader") of Serbia in the early 1800s during the First Serbian Uprising.  The relatively short-lived dynasty had an ongoing blood feud with the Obrenović dynasty after Karađorđe's assassination in 1817, which was authorized by Miloš Obrenović.  The two houses subsequently traded the throne for several generations.  In 1903, the Serbian Parliament chose Karađorđe's grandson, Peter Karađorđević, then living in exile, for the throne of the Kingdom of Serbia.  He was duly crowned as King Peter I, and shortly before the end of World War I, representatives of the three peoples proclaimed a Kingdom of the Serbs, Croats and Slovenes with Peter I as sovereign.  In 1929, the Kingdom was renamed Yugoslavia, under Alexander I, the son of Peter I.  In November 1945, the throne was lost when the League of Communists of Yugoslavia seized power, during the reign of Peter II.
+
+W. Stanley Moss: Ivan William Stanley "Billy" Moss MC (15 June 1921 – 9 August 1965), was a British army officer in World War II, and later a successful writer, broadcaster, journalist and traveller.  He served with the Coldstream Guards and the Special Operations Executive (SOE) and is best known for the Kidnap of General Kreipe.  He was a best-selling author in the 1950s, based both on his novels and books about his wartime service.  His SOE years are featured in "Ill Met by Moonlight: The Abduction of General Kreipe", (also adapted as a British film released under the main title) and "A War of Shadows".  Moss travelled around the world and went to Antarctica to meet the Commonwealth Trans-Antarctic Expedition.
+
+Question: In 1941 when the Axis invaded Yugoslavia, King Peter II formed a Government in exile in London, the main reason for the change was, or as later alleged the influence of James Klugmann in Special Operations Executive (SOE) headquarters in Cairo or even who, he was a journalist and a Conservative Member of Parliament (MP) for Preston from 1940 to 1945?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person identified."
+    },
+    "roles": {
+      "type": "array",
+      "description": "A list of roles or professions held by the person.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "political_affiliation": {
+      "type": "string",
+      "description": "The political party the person was affiliated with."
+    },
+    "parliamentary_constituency": {
+      "type": "string",
+      "description": "The constituency the person represented as an MP."
+    },
+    "parliamentary_term_start_year": {
+      "type": "integer",
+      "description": "The start year of the person's term as an MP."
+    },
+    "parliamentary_term_end_year": {
+      "type": "integer",
+      "description": "The end year of the person's term as an MP."
+    }
+  },
+  "required": [
+    "person_name",
+    "roles",
+    "political_affiliation",
+    "parliamentary_constituency",
+    "parliamentary_term_start_year",
+    "parliamentary_term_end_year"
+  ],
+  "additionalProperties": false
+}

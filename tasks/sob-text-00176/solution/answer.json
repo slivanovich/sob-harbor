@@ -1,0 +1,11 @@
+{
+  "mountain_range_name": "Granite Range",
+  "associated_cdp": {
+    "name": "Absarokee",
+    "population": 1234,
+    "census_year": 2000,
+    "county": "Stillwater County",
+    "state": "Montana"
+  },
+  "mountain_range_location_relative_to_cdp": "southwest"
+}

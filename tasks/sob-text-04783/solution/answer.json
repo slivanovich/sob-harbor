@@ -1,0 +1,11 @@
+{
+  "novelist_name": "Christopher Isherwood",
+  "nationality": "English-American",
+  "known_works": [
+    "The Berlin Stories"
+  ],
+  "hotel_residence": {
+    "hotel_name": "George Washington Hotel",
+    "hotel_address": "23 Lexington Avenue"
+  }
+}

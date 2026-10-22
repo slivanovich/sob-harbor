@@ -1,0 +1,9 @@
+{
+  "lake_name": "Chautauqua Lake",
+  "region": "Western New York",
+  "steamboat_details": {
+    "name": "Chautauqua Belle",
+    "style": "Mississippi River-style sternwheel",
+    "operator": "U.S. Steam Lines Ltd"
+  }
+}

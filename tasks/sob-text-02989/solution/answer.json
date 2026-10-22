@@ -1,0 +1,24 @@
+{
+  "artist_information": {
+    "name": "Todrick Hall",
+    "role_on_rupauls_drag_race": "judge",
+    "american_idol_achievement": "made it to the semi-finals on the ninth season",
+    "other_prominent_roles": [
+      "rapper",
+      "singer",
+      "actor",
+      "dancer",
+      "director",
+      "choreographer",
+      "YouTuber",
+      "Broadway veteran",
+      "YouTube star"
+    ]
+  },
+  "album_information": {
+    "title": "Straight Outta Oz",
+    "release_date": "23 June 2016",
+    "type": "third solo studio album and original musical"
+  },
+  "release_date_answer": "23 June 2016"
+}

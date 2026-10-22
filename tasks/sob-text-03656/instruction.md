@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Bohemia, New York: Bohemia is a hamlet (and census-designated place) in Suffolk County, New York, United States.  The population was 10,180 at the 2010 census.
+
+Michael F. Nozzolio: Michael F. Nozzolio (born April 10, 1951) is the former New York State Senator for the 54th district.  He is a Republican.  He was first elected in 1992.  The 54th district includes parts of the city of Auburn, New York, Geneva, New York, and part or all of the following counties, Wayne County, Ontario County, Cayuga County, Tompkins County, Seneca County, and Monroe County.  Nozzolio did not seek re-election in 2016, and was succeeded by Pam Helming.
+
+John J. McNulty, Jr.: John J. McNulty, Jr. ("Jack" or "Big Jack") (1922–2009) was a Northern New York State, U.S.A. political power broker, who held a series of local political offices in Albany County, New York from 1949 and in 6 ensuing decades until the year 2002 and whose crowning political achievement was succeeding at having his son Michael R. McNulty elected to several successive terms as a United States Congressman.  Jack McNulty is said to have been a "co-congressman" for the 2 decades that his son served in the U.S. Congress, before his retirement from the U.S. House of Representatives in 2008.  A fellow Democrat, Jack was a staunch opponent of the entrenched old guard Albany County Democratic political machine Democratic Party (U.S.A.), which was run by Dan O’Connell and which in a political in-fight had unseated his father John J. McNulty, Sr. as Sheriff of Albany County, New York back in 1937.  The high point of Jack's personal political career was when he recaptured that Sheriff's office, being, himself, elected Sheriff of the County of Albany, New York in 1973.  In later life, Jack was a beloved and respected elder statesman of Northern New York State.  The mention of his name at a year 2000 Democratic convention at the Times Union Center caused the full arena crowd of 11,000 people to rise in a spontaneous standing ovation.  "Jack McNulty's word was his bond."  – Democratic New York State Senator Neil Breslin, "For being 87, Jack knew how to change with the time.  Jack connected to people in their 20s."  – Albany County Democratic Chairman Dan McCoy, "the man I often introduced at Democratic Party events as the greatest Democrat I know."  – Rensselaer County Democratic Chairman Thomas Wade
+
+Albany Health and Human Services Corporation: The Albany Health and Human Services Corporation (AHHSC) is a proposed public benefit corporation (PBC) of Albany County, New York, and New York State.  On May 11, 2009, Albany County Comptroller Michael Conners in his "2009 State of Fisc" proposed a PBC for health in Albany County.  On June 9, 2009, the Albany County, Legislature adopted Resolution 205, which directs the County Executive to develop a plan for the long-term care of the elderly in Albany County.
+
+Janet DiFiore: Janet Marie DiFiore (born August 9, 1955) is an American judge who since 2016 has been the Chief Judge of the State of New York.  A New York native, DiFiore graduated from Long Island University and St. John's University School of Law.  As a practicing attorney, DiFiore worked in a law firm and in the Westchester District Attorney's Office.  DiFiore then was elected a judge of the Westchester County Court, and was subsequently named a justice on the New York Supreme Court (the state trial court in New York), serving in that post from 2003 to 2005.  DiFiore left the bench to become district attorney of Westchester County, New York in 2006; she stayed in that position nearly a decade, until Governor Andrew Cuomo appointed her to the New York Court of Appeals.
+
+Dennis T. Gorski: Dennis T. Gorski (born July 20, 1944) is a politician in New York and a former Marine.  A resident of Cheektowaga, New York, Gorski is a former County Executive of Erie County, New York, which includes Buffalo, New York and many of its suburbs.  He was the first Democrat elected Erie County Executive and the first Erie County Executive elected to three four-year terms.  Gorski was an Erie County Legislator and a member of the New York State Assembly prior to three-term service as county executive.  During his second term as County Executive, he ran for Congress to succeed Democrat Henry Nowak, but he was defeated in the general election by Republican Jack Quinn.
+
+District Attorney of Richmond County (New York): The Richmond County District Attorney is the elected district attorney for Richmond County, coterminous with the Borough of Staten Island, in New York City.  The office is responsible for the prosecution of violations of New York state laws. (Violations of federal law in Richmond County are prosecuted by the U.S. Attorney for the Eastern District of New York).  The current District Attorney is Michael E. McMahon.
+
+Michael Behonick: Michael Behonick (born January 3, 1981 in Bohemia, New York) is a retired American soccer player who last played for the Puerto Rico Islanders of the USL First Division.  Behonick is now an assistant coach at for the Pittsburgh Panthers men's soccer team.
+
+Joseph Mondello: Joseph Nestor Mondello (born 1938) is an American politician who served as Chairman of the New York Republican State Committee until September 2009.  Mondello continues to serve as the head of the Nassau County Republican Committee, a post he has held since 1983.  He is a lawyer with the firm of Berkman, Henoch, Peterson and Peddy of Garden City, New York, and holds the rank of Major General in the New York Guard.  Prior to being elected state chairman, he served as the head of the Nassau County Republican Committee for twenty three years.  He is a former Town supervisor of Hempstead, New York, as well as an attorney, college professor, high school teacher and probation officer.  He served as deputy commander of the New York Guard, and also served in the United States Army, Navy, and Air Force.
+
+Hiram Bond: Hiram Bond was born May 10, 1838 in Farmersville, Cattaraugus County, New York and died in Seattle March 29, 1906.  He was a corporate lawyer, investment banker and an investor in various businesses including gold mining.  His family are descended from William Bond (Massachusetts) an early 17th-century immigrant from Bury St. Edmunds in East Anglia.  He was the son of Hiram Bond M.D. and Almeda Slusser and was married to Laura Ann Higgins.  He had two children- Louis Whitford Bond born in New York City, New York in 1865 and Marshall Latham Bond born in Orange, Virginia in 1867.  He attended Rushford Academy, Rushford, New York, and earned a bachelor's degree from Hamilton College.  He earned much of the money for his own education as a distributor of maps and atlases.  Among his successes were becoming a publisher, and taking over the rights to a map of the United States which had been prepared by Matthew Fontaine Maury, a Southerner who was a United States cartography officer .  Maury, who decided to join the Confederacy, had left the work unpaid for in New York.  He matriculated at Harvard Law School, but before graduation he was hired as a law clerk by Chauncey Depew, a friend and neighbor of his father in law Michael Dunning Higgins of Peekskill.
+
+Question: What county of New York was Michael Behonick born in?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person."
+    },
+    "birth_place": {
+      "type": "string",
+      "description": "The specific town or hamlet where the person was born."
+    },
+    "birth_county": {
+      "type": "string",
+      "description": "The county where the person was born."
+    },
+    "state": {
+      "type": "string",
+      "description": "The state where the birth county is located."
+    }
+  },
+  "required": [
+    "person_name",
+    "birth_place",
+    "birth_county",
+    "state"
+  ],
+  "additionalProperties": false
+}

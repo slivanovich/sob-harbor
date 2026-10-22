@@ -1,0 +1,10 @@
+{
+  "author_name": "Frank Schaeffer",
+  "parent_name": "Edith Schaeffer",
+  "relationship_to_parent": "son",
+  "acclaimed_novels": [
+    "Portofino",
+    "Zermatt",
+    "Saving Grandma"
+  ]
+}

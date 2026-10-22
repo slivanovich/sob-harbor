@@ -1,0 +1,26 @@
+{
+  "film_details": {
+    "title": "The 36th Chamber of Shaolin",
+    "release_year": 1978,
+    "director": "Liu Chia-liang",
+    "studio": "Shaw Brothers"
+  },
+  "starring_actor": {
+    "name": "Gordon Liu",
+    "nationality": "Chinese",
+    "professions": [
+      "martial arts film actor",
+      "martial artist"
+    ],
+    "role_in_film": "San Te",
+    "famous_for_role_in_sequels": true
+  },
+  "film_series_info": {
+    "series_name": "36th Chamber",
+    "first_film_title": "The 36th Chamber of Shaolin",
+    "sequel_titles": [
+      "Return to the 36th Chamber",
+      "Disciples of the 36th Chamber"
+    ]
+  }
+}

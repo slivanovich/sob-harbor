@@ -1,0 +1,11 @@
+{
+  "road_name": "A18",
+  "distance_from_priory_to_road_miles": 1,
+  "priory_name": "West Ravendale Priory",
+  "linked_towns": [
+    "Doncaster",
+    "Ludborough",
+    "Scunthorpe"
+  ],
+  "destination_town_from_doncaster": "Ludborough"
+}

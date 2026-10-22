@@ -1,0 +1,12 @@
+{
+  "city_name": "Piscataway",
+  "peninsula_name": "New Jersey",
+  "state_name": "New Jersey",
+  "location_details": {
+    "country": "United States",
+    "regions": [
+      "Northeastern",
+      "mid-Atlantic"
+    ]
+  }
+}

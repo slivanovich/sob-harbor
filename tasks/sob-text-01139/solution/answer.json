@@ -1,0 +1,10 @@
+{
+  "comedian_name": "Chelsea Handler",
+  "stand_up_special_name": "Uganda Be Kidding Me: Live",
+  "late_night_talk_show": {
+    "title": "Chelsea Lately",
+    "network": "E!",
+    "start_year": 2007,
+    "end_year": 2014
+  }
+}

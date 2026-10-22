@@ -1,0 +1,11 @@
+{
+  "film_title": "Thor: The Dark World",
+  "requested_actors": [
+    "Chris Hemsworth",
+    "Natalie Portman"
+  ],
+  "co_star_details": {
+    "actor_name": "Adewale Akinnuoye-Agbaje",
+    "nationality": "English"
+  }
+}

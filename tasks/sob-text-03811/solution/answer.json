@@ -1,0 +1,14 @@
+{
+  "river_names": [
+    "Toccoa River",
+    "Ocoee River"
+  ],
+  "location": {
+    "region": "southern Appalachian Mountains",
+    "state": "Tennessee"
+  },
+  "byway_association": {
+    "byway_name": "Ocoee Scenic Byway",
+    "feature_provided": "scenic bluffs"
+  }
+}

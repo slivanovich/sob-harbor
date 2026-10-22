@@ -1,0 +1,13 @@
+{
+  "reference_game": {
+    "title": "Zork Zero: The Revenge of Megaboz",
+    "publication_year": 1988,
+    "narrative_placement_description": "Zork Zero takes place before the previous eight Zork games."
+  },
+  "identified_game": {
+    "title": "Zork I",
+    "publication_year": 1980,
+    "reason_for_selection": "Zork I is one of the 'previous eight games' that narratively occur after Zork Zero, and it is the earliest published among them."
+  },
+  "answer_publication_year": 1980
+}

@@ -1,0 +1,13 @@
+{
+  "president_name": "Stephen Grover Cleveland",
+  "political_party": "Democrat",
+  "related_actions_in_context": [
+    {
+      "action_description": "Created the Teton Forest Reserve, which included a portion of northern Jackson Hole.",
+      "date": "February 22, 1897"
+    },
+    {
+      "action_description": "Expanded forest reserves by proclamation."
+    }
+  ]
+}

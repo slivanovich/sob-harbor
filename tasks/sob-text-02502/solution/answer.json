@@ -1,0 +1,24 @@
+{
+  "entity_names": [
+    "Dixit",
+    "Fanorona"
+  ],
+  "common_category": "game",
+  "games": [
+    {
+      "name": "Fanorona",
+      "type": "strategy board game",
+      "origin_or_creator": "Madagascar",
+      "number_of_players": 2
+    },
+    {
+      "name": "Dixit",
+      "type": "card game",
+      "origin_or_creator": "Jean-Louis Roubira",
+      "publisher": "Libellud",
+      "introduction_year": 2008,
+      "award_won": "Spiel des Jahres",
+      "award_year": 2010
+    }
+  ]
+}

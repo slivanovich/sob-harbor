@@ -1,0 +1,84 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Carlton J. H. Hayes: Carlton Joseph Huntley Hayes (May 16, 1882 – September 2, 1964) was an American educator, diplomat, devout Catholic and academic.  A student of European history, he was a leading and pioneering specialist on the study of nationalism.  He was elected as president of the American Historical Association over the opposition of liberals and the more explicit Anti-Catholic bias that defined the academic community of his era.  He served as United States Ambassador to Spain in World War II, but he came under attack from the CIO, communists and other forces on the left that rejected any dealings with the Spain of Francisco Franco.  Historian Holly Cowan Shulman wrote:Hayes, whom President Franklin Roosevelt appointed in March 1942, was a choice necessitated by Spanish politics.  The Franco regime would not have tolerated either a non-Catholic or a liberal.  Hayes was an active Catholic who believed that Franco's government should not be ideologically grouped with the Axis countries.  Put more bluntly, Hayes believed that Francisco Franco was less repressive and totalitarian than either Adolf Hitler or Benito Mussolini, and that Franco could be converted into an American ally.
+
+Goebbels Diaries: The Goebbels Diaries are a collection of writings by Joseph Goebbels, a leading member of the German Nazi Party (NSDAP) and the Reich Minister of Public Enlightenment and Propaganda in Adolf Hitler's government from 1933 to 1945.  The diaries, which have only recently been published in full in German and are available only in part in English, are a major source for the inner history of the Nazi Party and of its twelve years in power in Germany.  The British historian Ian Kershaw wrote in the preface to his biography of Hitler: "For all the caution which must naturally be attached to Goebbels's regularly reported remarks by Hitler ... the immediacy as well as the frequency of the comments makes them a vitally important source of insight into Hitler's thinking and action. "
+
+Censorship in Francoist Spain: Censorship in Francoist Spain was mandated by Francisco Franco during his reign, between 1936-1975.  Under his regime, primary subjects of censorship included public display of liberal political ideology, art forms such as literature and film, as well as symbols of foreign, non-conservative ideologies.  This censorship was primarily driven by Franco's vision for ideological unity in Spain.  As a result, Franco called for the censorship of materials that promoted liberal ideas from abroad, particular those of European origin.  Aside from censorship of foreign ideology, symbols of Spanish identity, such as Catalonia, also became primary targets of censorship.  Under his authoritarian regime, censorship was imposed primarily through systemic political repression.  Franco's regime repressed expression of liberal social and political ideology among the Spanish public.
+
+List of Nazis: A list of notable people who were at some point a member of the defunct Nazi Party (NSDAP).  This is not meant to be a list of every person who was ever a member of the Nazi Party.  This is a list of notable figures who were active within the party and did something significant within it that is of historical note or who were members of the Nazi Party according to multiple reliable publications.  For a list of the main leaders and most important party figures see: List of Nazi Party leaders and officials.
+
+Francoist Spain: "Francoist Spain" (also historically "Nationalist Spain" during the Spanish Civil War) refers to the period of Spanish history between 1939, when Francisco Franco took control of Spain from the government of the Second Spanish Republic after winning the civil war, and 1975, when Franco died and Prince Juan Carlos was proclaimed King of Spain.  During the Second World War, its entry into the war on the Axis side was prevented largely, as was much later revealed, by British Secret Intelligence Service (MI-6) efforts that included up to $200 million in bribes for Spanish officials to keep the regime from getting involved.  Franco was also able to take advantage of the resources of the Axis Powers and chose to avoid becoming heavily involved in the Second World War.  Franco's regime evolved into a more classic autocratic regime.
+
+Jewish Archive (Francoist Spain): The Jewish Archive (Archivo Judaico) was the name given to a collection of documents compiled by the regime of Francisco Franco in Spain during the Second World War.  In accordance with instructions passed down from the Directorate of General Security ("Dirección General de Seguridad", DGS) the provincial governors of Spain assembled records of all Jews living in Spain, Spanish or not.  The resulting list, which recorded 6,000 Jews living in Spain, was handed to the SS under Heinrich Himmler in 1941 and was included in Adolf Eichmann's Jewish Population Census, tabled at the Wannsee Conference chaired by Reinhard Heydrich in January 1942.
+
+Heinrich Himmler: Heinrich Luitpold Himmler (] ; 7 October 1900 – 23 May 1945) was "Reichsführer" of the "Schutzstaffel" (Protection Squadron; SS), and a leading member of the Nazi Party (NSDAP) of Germany.  Nazi leader Adolf Hitler briefly appointed him a military commander and later Commander of the Replacement (Home) Army and General Plenipotentiary for the administration of the entire Third Reich ("Generalbevollmächtigter für die Verwaltung").  Himmler was one of the most powerful men in Nazi Germany and one of the people most directly responsible for the Holocaust.
+
+Otto Strasser: Otto Johann Maximilian Strasser (also German: "Straßer" , see ß; 10 September 1897 – 27 August 1974) was a German politician and an early member of the Nazi Party.  Otto Strasser, together with his brother Gregor Strasser, was a leading member of the party's left-wing faction, and broke from the party due to disputes with the dominant ‘Hitlerite’ faction.  He formed the Black Front, a group intended to split the Nazi Party and take it from the grasp of Hitler.  This group also functioned during his exile and World War II as a secret opposition group.
+
+List of Nazis (S–Z): A list of notable people who were at some point a member of the defunct Nazi Party (NSDAP).  This is not meant to be a list of every person who was ever a member of the Nazi Party.  This is a list of notable figures who were active within the party and did something significant within it that is of historical note or who were members of the Nazi Party according to multiple reliable publications.  For a list of the main leaders and most important party figures see: List of Nazi Party leaders and officials.
+
+Iraqi Jewish Archive: Iraqi Jewish Archive is a collection of 2,700 books and tens of thousands of Jewish history documents found by the United States Army in the basement of Saddam Hussein's intelligence headquarters during the invasion of Iraq in 2003.  The collection includes a wide variety of books and rare documents, ranging from 500-year-old commentaries on the Talmud to personal letters sent during the 1950s.  The Intelligence Agency of the Iraqi regime gathered the books and documents from synagogues and Jewish community institutions after almost all Iraqi Jews made Aliyah to Israel in Operation Ezra and Nehemiah.  Upon leaving to Israel, Iraqi Jews were forced by the Iraqi government to leave most of their belongings behind, and thus the archive was created from the books and papers that were left behind.
+
+Question: The Jewish Archive was handed by the regime of Francisco Franco to a leading member of the Nazi Party who was born on which day ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the leading Nazi Party member to whom the archive was handed."
+    },
+    "role_in_party": {
+      "type": "string",
+      "description": "The primary role or title of the person within the Nazi Party or related organizations."
+    },
+    "birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The birth date of the person in YYYY-MM-DD format."
+    },
+    "event_details": {
+      "type": "object",
+      "properties": {
+        "archive_name": {
+          "type": "string",
+          "description": "The name of the archive that was handed over."
+        },
+        "handed_over_by_regime": {
+          "type": "string",
+          "description": "The name of the regime that handed over the archive."
+        },
+        "year_handed_over": {
+          "type": "integer",
+          "description": "The year the archive was handed over."
+        }
+      },
+      "required": [
+        "archive_name",
+        "handed_over_by_regime",
+        "year_handed_over"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "role_in_party",
+    "birth_date",
+    "event_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "9f394e5860039d0cd280160908d60654e9a40048d2cbb8b5ec8131d8d3da09e2",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab69b6c554299710c8d1ee4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "India",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Phulwa Khamkar: Phulwa Khamkar also spelt as Phulawa Khamkar (born 17 September 1974) is an Indian choreographer and dancer, who works in Bollywood and Marathi films.  She is the winner of India's first dance reality show Boogie Woogie, Season 1 in 1997 and was among 5 finalist in Dance India Dance Super Moms in 2013.  She has choreographed Hindi and Marathi films like, Happy New Year (2014), Julie 2 (2016), Natarang (2010), Kuni Mulgi Deta Ka Mulgi (2012), and Mitwaa (2015).\n\nDance Premier League: Dance Premier League is an Indian dance reality show that premiered on Sony TV on October 9, 2009.  The series is judged by the known Bollywood film actress Rani Mukerji, and famous Indian choreographer Shiamak Davar who guides all six teams as an 'umpire'.  The series replaced Sony TV's long running dance show Boogie Woogie.\n\nShiamak Style: Shiamak Style is a dance form originated in India by choreographer and dance guru Shiamak Davar.  It is a blend of Indo Contemporary and Modern movement with a strong Ballet grounding and performance-based visuals.  A dancer performing this style can be compared to a peaceful warrior who is strong and yet peaceful and graceful in his movement.\n\nShiamak Davar: Shiamak Davar (born 19 October 1961) is an Indian choreographer, noted as one of the first to bring contemporary jazz and western forms of dance to India.  He is known as the guru of contemporary dance in India.  He is responsible for modernizing India’s dance scene especially in the film and theatre industries.  He is respected for his ever-evolving and very popular \"Shiamak Style\" of dance.  He was the director of choreography for the Commonwealth Games, Melbourne and Commonwealth Games, Delhi.  In 2011 he choreographed the dance sequences for the movie .\n\nPrasad (film): Prasad is a 2012 Indian Kannada family drama film directed by Manoj Sati and produced by Ashok Kheny, won the best film state award.  The film stars Arjun Sarja who won the Karnataka State Award 2012 for the Best Actor category and Madhuri Bhattacharya in the lead roles.  The film's music is scored by Meastro Ilaiyaraja.  The film is simultaneously made in Tamil and Telugu languages.  The dance choreographer for the movie was Shiamak Davar.\n\nDharmesh Yelande: Dharmesh Yelande (born October 31, 1983) is an Indian dancer, actor and choreographer.  He participated in \"Dance India Dance (season 2)\", \"Dance India Dance Li'l Masters\"(as a skipper), and Dance Ke Superstars, all of which aired on Zee TV.  After his experience in these shows, he was hired by Farah Khan to choreograph the movie \"Tees Maar Khan\".  He has worked in the 3D dance-based Indian film ABCD - Anybody Can Dance and its sequel ABCD 2 with Shraddha Kapoor and Varun Dhawan directed by Remo D'souza and produced by UTV Motion Pictures.  He runs his own dance academy in Vadodara (AKA Baroda) known as the \"D'virus Dance Academy\". , Dharmesh also worked as a dancer in Marathi movie \"Angarki\" in 2013.  He has been a mentor in all the three seasons of the dance reality show Dance plus along with Shakti Mohan and Punit Pathak .\n\nDance India Dance: Dance India Dance is an Indian dance competition show that airs on Zee TV, produced by Essel Vision Productions.  The show is the national TV version of the Zee Bangla dance reality show \"Dance Bangla Dance\" which also has Mithun Chakraborty as the Grandmaster.\n\nBoogie Woogie (TV series): Boogie Woogie was an Indian dance competition television series created and directed by Naved Jaffrey and Ravi Behl for Sony Entertainment Television and Sony Entertainment Television Asia.  Debuting in 1996, the show was judged by Indian film actor and Television host Javed Jaffrey who was the permanent judge, while his brother Naved, also the director and producer of the show, co hosted the show along with film actor Ravi Behl.  The early episodes were shot in Mehta Industrial Estate in Andheri, Mumbai and later, was also shot at other film studios in Mumbai including Natraj, Filmalaya, Filmistaan, Famous, Film City among others.  It is the oldest dance reality show on Indian TV and it has become the longest show in India.  In the earlier seasons, the judges assigned various themes to episodes, including Bollywood, Horror, Friendship among others.  It was also co-hosted by Kadambari Shantshri Desai in season 1 and 2.\n\nShakti Mohan: Shakti Mohan is a contemporary dancer from India.  She was the winner of Zee TV's dance reality show \"Dance India Dance\" season 2.  She is currently appearing as a judge on popular Dance reality show Dance plus season 1 and 2 and 3 on Star plus .  Shakti has been a judge on international show Dance Singapore dance in 2015.  She is featuring in Remo D Souza's next dance movie as a lead opposite Salman Yusuf khan.\n\nPunit Pathak: Punit J Pathak is an Indian choreographer and film actor.  He made his career as a dancer in dance reality show \"Dance India Dance\".  Later he started his acting career with 2013's Hindi film \"\".  He has worked in dance reality show \"Jhalak Dikhhla Jaa\" as choreographer.  He has judged Dance India Dance Season 5 on Zee TV.  Currently he is mentor on Dance Plus 3 on Star Plus.",
+    "question": "Dance Premier League is an Indian dance reality show, the series is judged by Shiamak Davar, a famous Indian choreographer, noted as one of the first to bring contemporary jazz and western forms of dance to which country?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person being discussed."
+        },
+        "person_role": {
+          "type": "string",
+          "description": "The primary role or profession of the person."
+        },
+        "dance_forms_introduced": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of dance forms the person is noted for introducing."
+        },
+        "country_of_introduction": {
+          "type": "string",
+          "description": "The country to which the dance forms were introduced."
+        },
+        "final_answer": {
+          "type": "string",
+          "description": "The specific country that is the answer to the question."
+        }
+      },
+      "required": [
+        "person_name",
+        "person_role",
+        "dance_forms_introduced",
+        "country_of_introduction",
+        "final_answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Shiamak Davar",
+      "person_role": "choreographer",
+      "dance_forms_introduced": [
+        "contemporary jazz",
+        "western forms of dance"
+      ],
+      "country_of_introduction": "India",
+      "final_answer": "India"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

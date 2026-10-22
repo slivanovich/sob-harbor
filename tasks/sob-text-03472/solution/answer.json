@@ -1,0 +1,14 @@
+{
+  "retailer_name": "Hancock Fabrics",
+  "business_type": "specialty retailer of crafts and fabrics",
+  "headquarters_location": {
+    "city": "Baldwyn",
+    "state": "Mississippi",
+    "country": "United States"
+  },
+  "former_store_location": {
+    "shopping_center_name": "Metcalf South Shopping Center",
+    "city": "Overland Park",
+    "state": "Kansas"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "actor_name": "Eddie Izzard",
+  "actor_nationality": "English",
+  "actor_birth_date": "7 February 1962",
+  "film_appearance": {
+    "title": "My Super Ex-Girlfriend",
+    "year": 2006
+  },
+  "tv_series_appearance": {
+    "title": "The Riches",
+    "role": "Wayne Malloy"
+  }
+}

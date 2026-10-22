@@ -1,0 +1,9 @@
+{
+  "person_name": "Adam Johnson",
+  "legal_status": "convicted sex offender",
+  "profession": "footballer",
+  "departure_details": {
+    "destination_club": "Middlesbrough",
+    "departure_date": "11 November 2007"
+  }
+}

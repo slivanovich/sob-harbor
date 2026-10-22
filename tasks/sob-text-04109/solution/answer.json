@@ -1,0 +1,11 @@
+{
+  "entity_names": [
+    "Yıldız Park",
+    "Endem TV Tower"
+  ],
+  "location_type": "district",
+  "districts": [
+    "Beşiktaş",
+    "Beylikdüzü"
+  ]
+}

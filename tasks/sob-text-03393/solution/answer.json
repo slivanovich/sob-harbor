@@ -1,0 +1,31 @@
+{
+  "film_title": "Idharkuthane Aasaipattai Balakumara",
+  "film_genre": "comedy",
+  "director": "Gokul",
+  "producer": "Leo Visions",
+  "lead_actors": [
+    {
+      "actor_name": "Vijay Sethupathi",
+      "known_alias": "Makkal Selvan"
+    },
+    {
+      "actor_name": "Ashwin Kakumanu"
+    },
+    {
+      "actor_name": "Swati Reddy"
+    },
+    {
+      "actor_name": "Nandita"
+    }
+  ],
+  "remake_details": {
+    "remake_language": "Kannada",
+    "remake_title": "Jackson",
+    "remake_star": "Duniya Vijay"
+  },
+  "title_inspiration": {
+    "source_type": "novel",
+    "source_name": "Idharkuthane Aasaipattai Balakumara",
+    "source_author": "Balakumaran"
+  }
+}

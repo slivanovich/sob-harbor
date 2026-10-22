@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Colombo East Electoral District: Colombo East electoral district was an electoral district of Sri Lanka between July 1977 and February 1989.  The district was named after the city of Colombo in Colombo District, Western Province.  The district was created by the division of the Colombo South Electoral District into Colombo East and Colombo West electoral districts in July 1977.  The 1978 Constitution of Sri Lanka introduced the proportional representation electoral system for electing members of Parliament.  The existing 160 mainly single-member electoral districts were replaced with 22 multi-member electoral districts. Colombo East electoral district was replaced by the Colombo multi-member electoral district at the 1989 general elections, the first under the PR system, though Colombo East continues to be a polling division of the multi-member electoral district.
+
+Rose Park, South Australia: Rose Park is a suburb with a population of 1,293 in the South Australian capital city of Adelaide.  It is located one kilometre east of Adelaide's central business district (CBD).  Rose Park is a leafy, tree-lined and wealthy inner suburb containing a number of historical and contemporary attractions.  Much of the area's 19th Century housing stock has been recognised with heritage protection.
+
+Colombo West Electoral District: Colombo West electoral district was an electoral district of Sri Lanka between July 1977 and February 1989.  The district was named after the city of Colombo in Colombo District, Western Province.  The district was created by the division of the Colombo South Electoral District into Colombo East and Colombo West electoral districts in July 1977.  The 1978 Constitution of Sri Lanka introduced the proportional representation electoral system for electing members of Parliament.  The existing 160 mainly single-member electoral districts were replaced with 22 multi-member electoral districts. Colombo West electoral district was replaced by the Colombo multi-member electoral district at the 1989 general elections, the first under the PR system, though Colombo West continues to be a polling division of the multi-member electoral district.
+
+Division of Adelaide: The Division of Adelaide is an Australian electoral division in South Australia and is named for the city of Adelaide, South Australia's capital.  The 76 km² seat is centred on the Adelaide city centre and spans from Grand Junction Road in the north to Cross Road in the south and from Portrush Road in the east to South Road in the west, taking in suburbs including Ashford, Clarence Park, Enfield, Goodwood, Kent Town, Keswick, Kilburn, Maylands, Northgate, Norwood, Parkside, Prospect, Rose Park, St Peters, Toorak Gardens, Unley and Walkerville.
+
+Fitzroy, South Australia: Fitzroy is an inner northern suburb of Adelaide 4 km from the Adelaide city centre, in the state of South Australia, Australia within the City of Prospect.  It is adjacent to North Adelaide, Prospect, Ovingham and Thorngate.  The post code for Fitzroy is 5082.  It is bounded to the west by Cotton Street, to the south by Fitzroy Terrace, in the east by Prospect Road and the north by Avenue Road.  Fitzroy is essentially a residential suburb, overlooking the North Adelaide Parklands.
+
+Dulwich, South Australia: Dulwich is a suburb in the City of Burnside, Adelaide, South Australia with a census area population of 2,663 people.  The suburb is adjacent to Adelaide's east parklands, and forms part of the western boundary of the City of Burnside.  Dulwich is a mix of residential housing and commercial activity–corporate offices and businesses line Fullarton and Greenhill Roads.  The suburb is bordered by Rose Park to the north, Toorak Gardens to the east, Glenside to the south and the Adelaide Parklands to the west.
+
+Frome Road, Adelaide: Frome Road ( ) is a connecting road in the South Australian capital city of Adelaide.  It starts from North Terrace in the Adelaide city centre, running in a northerly direction past the University of South Australia, the Royal Adelaide Hospital, the Institute of Medical and Veterinary Science and the University of Adelaide, and then through the Adelaide Parklands to the Adelaide Zoo where it turns northeasterly, crosses the River Torrens via Albert Bridge, and continues through the parklands to the intersection with Melbourne Street and Brougham Place in North Adelaide.
+
+Salisbury, South Australia: Salisbury is a northern suburb in Adelaide, South Australia.  It is the seat of the City of Salisbury, and in the South Australian Legislative Assembly electoral district of Ramsay and the Australian House of Representatives divisions of Wakefield and Port Adelaide.  The suburb is a service area for the City of Salisbury district, with an abundance of parklands, shops, cafes and restaurants.  Parabanks Shopping Centre is also located in Salisbury, which includes Harris Scarfe and Big W as its signature retailers. .
+
+Electoral district of Bragg: Bragg is an electoral district of the House of Assembly in the Australian state of South Australia.  The seat of Bragg is named after the eminent physicists Bragg – William Henry and his son, William Lawrence.  The electorate is largely urban and encompasses a significant portion of the City of Burnside, stretching from the east parklands of Adelaide into the Adelaide Hills.  After a redistribution following the 2006 election, the boundary moved eastwards to include suburbs that had formerly been in the seat of Heysen and now borders Kavel.  Bragg currently includes the metropolitan suburbs of Beaumont, Burnside, Dulwich, Erindale, Hazelwood Park, Heathpool, Kensington Park, Leabrook, Linden Park, Rose Park, Marryatville, Skye, St Georges, Stonyfell, Toorak Gardens, Tusmore, Wattle Park and parts of Glen Osmond, and in the hills it includes Crafers, Cleland, Greenhill, Mount Osmond, Piccadilly, Summertown and parts of Ashton, Basket Range, Carey Gully, Horsnell Gully, Leawood Gardens and Uraidla.
+
+Cleland, South Australia: Cleland is a suburb in South Australia located in the Adelaide metropolitan area about 10 km south-east of the Adelaide city centre.  Its boundaries were created in October 2001, with additional land being added in 2010 from the adjoining suburb of Crafers.  Its name is derived from the Cleland Conservation Park.  The principal land use within the locality is conservation with the majority of its land area being occupied by the Cleland Conservation Park.  Places within its extent include the summit of Mount Lofty.  Cleland is located within the federal Division of Mayo, the state electoral district of Bragg and the local government area of the Adelaide Hills Council.
+
+Question: Which suburb of Adelaide, South Australia is included in the Electoral district of Bragg and is bordered by Rose Park to the north and Adelaide Parklands to the west?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "suburb_name": {
+      "type": "string",
+      "description": "The name of the suburb."
+    },
+    "city": {
+      "type": "string",
+      "description": "The city the suburb is located in."
+    },
+    "state": {
+      "type": "string",
+      "description": "The state the suburb is located in."
+    },
+    "country": {
+      "type": "string",
+      "description": "The country the suburb is located in."
+    },
+    "electoral_district": {
+      "type": "string",
+      "description": "The electoral district the suburb is part of."
+    },
+    "bordering_features": {
+      "type": "array",
+      "description": "A list of features bordering the suburb and their direction.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the bordering suburb or feature."
+          },
+          "direction": {
+            "type": "string",
+            "description": "The direction relative to the suburb (e.g., north, west)."
+          }
+        },
+        "required": [
+          "name",
+          "direction"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "suburb_name",
+    "city",
+    "state",
+    "country",
+    "electoral_district",
+    "bordering_features"
+  ],
+  "additionalProperties": false
+}

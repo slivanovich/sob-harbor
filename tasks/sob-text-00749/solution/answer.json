@@ -1,0 +1,14 @@
+{
+  "are_both_bands_canadian": false,
+  "finger_eleven_details": {
+    "band_name": "Finger Eleven",
+    "origin_country": "Canada",
+    "is_canadian": true
+  },
+  "the_badgeman_details": {
+    "band_name": "The Badgeman",
+    "origin_city": "Salisbury",
+    "origin_region": "Wiltshire",
+    "is_canadian": false
+  }
+}

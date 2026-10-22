@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Selfish brain theory: The “Selfish Brain” theory describes the characteristic of the human brain to cover its own, comparably high energy requirements with the utmost of priorities when regulating energy fluxes in the organism.  The brain behaves selfishly in this respect.  The "Selfish brain" theory amongst other things provides a possible explanation for the origin of obesity, the severe and pathological form of overweight.  The Luebeck obesity and diabetes specialist Achim Peters developed the fundamentals of this theory between 1998 and 2004.  The interdisciplinary “Selfish Brain: brain glucose and metabolic syndrome” research group headed by Peters and supported by the German Research Foundation (DFG) at the University of Luebeck has in the meantime been able to reinforce the basics of the theory through experimental research.
+
+Kenneth Kwong: Kenneth Kin Man Kwong is an American scientist born in Hong Kong.  He is a pioneer in human brain imaging.  He received his bachelor's degree in Political Science in 1972 from the University of California, Berkeley.  He went on to receive his Ph.D. in physics from the University of California, Riverside studying photon-photon collision interactions.  In 1985 he worked as a nuclear medicine physicist at the VA hospital in Loma Linda, California, establishing his work in medical science.  After one year he was invited to a research fellowship at the Massachusetts General Hospital (MGH) in the field of PET (positron emission tomography) imaging.  Following his work in PET, he began his involvement in magnetic resonance imaging (MRI).
+
+Galileo Galilei: Galileo Galilei (] ; 15 February 1564 – 8 January 1642) was an Italian polymath: astronomer, physicist, engineer, philosopher, and mathematician.  He has been called the "father of observational astronomy", the "father of modern physics", the "father of the scientific method", and the "father of science".  Galileo studied speed and velocity, gravity and free fall, the principle of relativity, inertia, projectile motion and also worked in applied science and technology, describing the properties of pendulums and "hydrostatic balances", inventing the thermoscope and various military compasses, and using the telescope (a Dutch optical instrument) for scientific observations of celestial objects.
+
+Duncan Steel: Duncan I. Steel FRAS (born 1955), is a British scientist born in Midsomer Norton, Somerset.  Currently he lives in Wellington, New Zealand, but holds visiting positions as a Professor of Astrobiology at the University of Buckingham in England; as a Space Scientist at NASA-Ames Research Center in California; and as an Astronomer at Armagh Observatory in Northern Ireland.  Duncan is a space science authority who has worked with NASA to assess the threat of comet and asteroid collisions and investigate technologies to avert such impacts.  He is also the author of four popular-level science books on space, and regularly writes for "The Guardian" and various other newspapers and magazines.  He is a discoverer of minor planets including the main-belt asteroid 9767 Midsomer Norton.
+
+James Herndon (media psychologist): James Neil Herndon (born May 16, 1952 in Oklahoma City, Oklahoma) is a media psychologist.  He received his Ph.D. in Educational Technology from Arizona State University.  His early experimental research focused on new methods of personalizing training materials.  More recent work explores the use of media psychology research in digital public relations.  His qualitative research tool, Affective Encryption Analysis, has received press notice as a trend analysis methodology.  He writes for LewRockwell.com, primarily on the topics of Ron Paul, United States presidential politics and the Federal Reserve System.  He is coauthor of the book, "Ron Paul: A Life of Ideas" (2008), where he explores Paul in the modern media landscape.  He has also authored two books on depression (mood), which he views as primarily a media-driven phenomenon.  His company is Media Psychology Affiliates.
+
+Verbal Behavior: Verbal Behavior is a 1957 book by psychologist B. F. Skinner, in which he inspects human behavior, describing what is traditionally called linguistics.  The book "Verbal Behavior" is almost entirely theoretical, involving little experimental research in the work itself.  It was an outgrowth of a series of lectures first presented at the University of Minnesota in the early 1940s and developed further in his summer lectures at Columbia and William James lectures at Harvard in the decade before the book's publication.  A growing body of research and applications based on "Verbal Behavior" has occurred since its original publication, particularly in the past decade.
+
+Völkerpsychologie: Völkerpsychologie a method of psychology that was discovered in the nineteenth century by the famous psychologist, Wilhelm Wundt.  Wundt is widely known for his work with experimental psychology.  Up until this time in history, psychologists were using experiments as a source of researching information.  Wilhelm thought that there must be a different method for research and came up with the idea of Völkerpsychologie.  Experimentation was too limited for studying individual consciousness, especially with the application to mental processes, such as language.  Wundt’s idea was that language was distinguished among the collective human processes and since it seemed to be crucial to the entire upper mental functions, those functions were concluded as exempt to experimental research.  All of this led to the design of Völkerpsychologie, which Wundt created as a branch of psychology which would work best for the use of historical and comparative methods instead of experiments alone.
+
+Troland Research Awards: The Troland Research Awards are an annual prize given by the United States National Academy of Sciences to two researchers under the age of 40 in recognition of psychological research on the relationship between consciousness and the physical world.  The areas where these award funds are to be spent include but are not limited to areas of experimental psychology, the topics of sensation, perception, motivation, emotion, learning, memory, cognition, language, and action.  The award preference is given to experimental work with a quantitative approach or experimental research seeking physiological explanations.
+
+History of experiments: The history of experimental research is long and varied.  Indeed, the definition of an experiment itself has changed in responses to changing norms and practices within particular fields of study.  This article documents the history and development of experimental research from its origins in Galileo's study of gravity into the diversely applied method in use today.
+
+Pierre Geneves: Pierre Genevès is a French computer scientist born in 1980.  He is research scientist at CNRS and recipient of the 2013 CNRS Bronze medal.
+
+Question: In what year was the scientist born, whose work was the origin of experimental research?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "scientist_name": {
+      "type": "string",
+      "description": "The name of the scientist whose work was the origin of experimental research."
+    },
+    "field_of_origin": {
+      "type": "string",
+      "description": "The specific area of study where the scientist's work originated experimental research."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the scientist."
+    }
+  },
+  "required": [
+    "scientist_name",
+    "field_of_origin",
+    "birth_year"
+  ],
+  "additionalProperties": false
+}

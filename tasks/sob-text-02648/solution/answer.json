@@ -1,0 +1,16 @@
+{
+  "film_title": "Loot",
+  "reasoning": "The film 'Loot' follows two US war veterans, Darrel Ross and Andrew Seventy, who were responsible for burying treasure from World War II, indicating they were active military during that conflict. 'The War at Home' focuses on the anti-war movement participants.",
+  "military_personnel_featured": [
+    {
+      "name": "Darrel Ross",
+      "role": "US war veteran",
+      "conflict_involved_in": "World War II"
+    },
+    {
+      "name": "Andrew Seventy",
+      "role": "US war veteran",
+      "conflict_involved_in": "World War II"
+    }
+  ]
+}

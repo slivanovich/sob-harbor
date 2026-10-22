@@ -1,0 +1,22 @@
+{
+  "are_both_stars": true,
+  "number_of_stars_identified": 2,
+  "individuals": [
+    {
+      "name": "Lyudmil Kirkov",
+      "is_film_or_tv_star": true,
+      "roles": [
+        "actor"
+      ]
+    },
+    {
+      "name": "Bob Saget",
+      "is_film_or_tv_star": true,
+      "roles": [
+        "actor",
+        "voice actor",
+        "television host"
+      ]
+    }
+  ]
+}

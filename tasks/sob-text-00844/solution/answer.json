@@ -1,0 +1,18 @@
+{
+  "are_both_directors": true,
+  "directors_involved": [
+    {
+      "name": "Hugh Hudson",
+      "is_film_director": true,
+      "nationality": "English",
+      "birth_date": "25 August 1936"
+    },
+    {
+      "name": "Jean-Marc Vallée",
+      "is_film_director": true,
+      "nationality": "Canadian",
+      "birth_date": "March 9, 1963"
+    }
+  ],
+  "reasoning": "The context explicitly states that Hugh Hudson is an 'English film director' and Jean-Marc Vallée is a 'film director, screenwriter, and film editor from Québec, Canada'."
+}

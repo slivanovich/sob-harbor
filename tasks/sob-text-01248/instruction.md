@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+11th AVN Awards: The 11th AVN Awards ceremony, organized by Adult Video News (AVN), honored pornographic films released in 1993 and took place on January 8, 1994, at Bally’s Hotel and Casino in Paradise, Nevada beginning at 7:45 p.m. PST / 10:45 p.m. EST.  During the ceremony, AVN presented AVN Awards in 78 categories.  The ceremony was produced by Gary Miller.  Actor Randy West hosted the show for the third time; his co-hosts were actresses Summer Knight and Janine Lindemulder.
+
+17th AVN Awards: The 17th AVN Awards ceremony, presented by Adult Video News (AVN), took place January 8, 2000 at the Venetian Hotel Grand Ballroom, at Paradise, Nevada, U.S.A.  During the ceremony, AVN presented AVN Awards (often dubbed the "Academy Awards Of Porn") in 77 categories honoring the best pornographic films released between Oct. 1, 1998 and Sept. 30, 1999.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Adult film star Juli Ashton hosted the show.
+
+16th AVN Awards: The 16th AVN Awards ceremony, organized by "Adult Video News" (AVN) honored the best of 1998 in pornographic movies and took place on January 9, 1999, at Bally's Las Vegas, Las Vegas, Nevada.  During the ceremony, AVN presented AVN Awards in 68 categories.  The ceremony, televised by Playboy TV, was produced by Gary Miller and directed by Mark Stone.  Comedian Robert Schimmel returned as host and actresses Alisha Klass, Midori and Serenity co-hosted the award show.  Five weeks earlier in a ceremony held at the Westin Bonaventure in Los Angeles, California, on December 4, 1998, the awards for gay pornographic movies were presented in a new separate ceremony known as the GayVN Awards.
+
+12th AVN Awards: The 12th AVN Awards ceremony, organized by Adult Video News (AVN) took place on January 7, 1995, at Bally’s Hotel and Casino, Paradise, Nevada beginning at 7:45 p.m. PST / 10:45 p.m. EST.  During the ceremony, AVN presented AVN Awards (commonly referred to as the Oscars of porn) in 89 categories honoring the movies released during the period December 1, 1993 to November 30, 1994.  The ceremony was produced by Gary Miller, Mark Stone and Marco Polo.  Actor Steven St. Croix hosted the show for the first time, with co-hosts Dyanna Lauren and Tera Heart.
+
+14th AVN Awards: The 14th AVN Awards ceremony, organized by Adult Video News (AVN), took place January 11, 1997 at Riviera Hotel & Casino, Winchester, Nevada, beginning at 7:45 p.m. PST / 10:45 p.m. EST.  During the show, AVN presented AVN Awards (the industry's equivalent of the Academy Awards) in 41 categories honoring the best pornographic films released released between Oct. 1, 1995 and Sept. 30, 1996.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Comedian Bobby Slayton returned as host, with actresses Nici Sterling and Kylie Ireland as co-hosts.  At a pre-awards event held the previous evening, 60 more AVN Awards, mostly for technical achievements, were given out by hostess Dyanna Lauren and comedy ventriloquist Otto of Otto & George, however, the pre-awards event was neither televised nor distributed on VHS tapes as was the main evening’s ceremony.
+
+15th AVN Awards: The 15th AVN Awards ceremony, organized by Adult Video News (AVN), took place January 10, 1998 at Caesars Palace, in Paradise, Nevada, U.S.A.  During the show, AVN presented AVN Awards (the industry's equivalent of the Academy Awards) in 54 categories honoring the best pornographic films released released between Oct. 1, 1996 and Sept. 30, 1997.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Comedian Robert Schimmel hosted, with adult film actresses Racquel Darrian and Misty Rain as co-hosts.  At a pre-awards cocktail reception held the previous evening, 50 more AVN Awards, mostly for behind-the-scenes achievements, were given out by hosts Nici Sterling and Dave Tyree, however, this event was neither televised nor distributed on VHS tapes as was the main evening's ceremony.  Both events included awards categories for gay movies; the final year the show included both gay and heterosexual awards.  The gay awards were subsequently spun off into a separate show, the GayVN Awards.
+
+19th AVN Awards: The 19th AVN Awards ceremony, presented by Adult Video News (AVN), took place January 11, 2002 at the Venetian Hotel Grand Ballroom, at Paradise, Nevada, U.S.A.  During the ceremony, AVN presented AVN Awards in more than 80 categories honoring the best pornographic films released between Oct. 1, 2000 and Sept. 30, 2001.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Comedian Bobby Slayton hosted the show for the third time; his co-host was adult film star Teri Weigel.
+
+20th AVN Awards: The 20th AVN Awards ceremony, presented by Adult Video News (AVN), took place January 11, 2003 at the Venetian Hotel Grand Ballroom, at Paradise, Nevada, U.S.A.  During the ceremony, AVN presented AVN Awards in nearly 90 categories honoring the best pornographic films released between Oct. 1, 2001 and Sept. 30, 2002.  The ceremony was produced by Gary Miller and directed by Mark Stone.  Comedian Doug Stanhope co-hosted the show for the first time with adult film star Chloe.
+
+30th AVN Awards: The 30th AVN Awards ceremony, or XXX AVN Awards, was an event during which "Adult Video News" ("AVN") presented its annual AVN Awards to honor the best pornographic movies and adult entertainment products of 2012.  Movies or products released between October 1, 2011 and September 30, 2012 were eligible.  The ceremony was held on January 19, 2013 at The Joint in the Hard Rock Hotel and Casino, Paradise, Nevada.  Comedian April Macie, AVN Hall of Fame inductee Jesse Jane and Asa Akira, who won Female Performer of the Year, hosted the AVN Awards.  The awards show was held immediately after the Adult Entertainment Expo at the same venue.
+
+Bally's Las Vegas: Bally's Las Vegas (formerly MGM Grand Hotel and Casino) is a hotel and casino on the Las Vegas Strip in Paradise, Nevada.  It is owned and operated by Caesars Entertainment Corporation.  The hotel features 2,814 extra-sized guestrooms that are 450 sqft or larger and over 175000 sqft of banquet and meeting space.  The casino occupies 66187 sqft .  About 75% of the rooms are in the Indigo Tower, and were renovated in 2004.  The remaining rooms are located in the Jubilee Tower, constructed in 1981.
+
+Question: What was the former name of the location of the 11th AVN awards ceremony?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "award_ceremony_number": {
+      "type": "integer",
+      "description": "The ordinal number of the AVN Awards ceremony."
+    },
+    "current_venue_name": {
+      "type": "string",
+      "description": "The name of the venue where the ceremony took place at the time."
+    },
+    "former_venue_name": {
+      "type": "string",
+      "description": "The former name of the venue where the ceremony took place."
+    },
+    "venue_city": {
+      "type": "string",
+      "description": "The city where the venue is located."
+    },
+    "venue_state": {
+      "type": "string",
+      "description": "The state where the venue is located."
+    }
+  },
+  "required": [
+    "award_ceremony_number",
+    "current_venue_name",
+    "former_venue_name",
+    "venue_city",
+    "venue_state"
+  ],
+  "additionalProperties": false
+}

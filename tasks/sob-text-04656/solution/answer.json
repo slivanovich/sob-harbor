@@ -1,0 +1,16 @@
+{
+  "is_both_plants": true,
+  "plant_entities": [
+    {
+      "entity_name": "Podalyria",
+      "is_identified_as_plant": true,
+      "contextual_description": "Podalyria is a genus of flowering plants in the legume family, Fabaceae."
+    },
+    {
+      "entity_name": "Weldenia",
+      "is_identified_as_plant": true,
+      "contextual_description": "Weldenia is a monotypic genus of flowering plant in the Commelinaceae family, first described in 1829."
+    }
+  ],
+  "conclusion_reasoning": "Both Podalyria and Weldenia are explicitly described as genera of flowering plants in the provided context."
+}

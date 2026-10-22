@@ -1,0 +1,16 @@
+{
+  "question_topic": "nationality",
+  "authors": [
+    {
+      "name": "Morris West",
+      "origin_country": "Australian",
+      "is_american": false
+    },
+    {
+      "name": "Tayeb Salih",
+      "origin_country": "Sudanese",
+      "is_american": false
+    }
+  ],
+  "answer": false
+}

@@ -1,0 +1,16 @@
+{
+  "question_asked": "Do both Leon Danielian and Howard Kazanjian do ballet?",
+  "answer": false,
+  "individuals_involved": [
+    {
+      "name": "Leon Danielian",
+      "is_involved_in_ballet": true,
+      "primary_profession": "ballet dancer, teacher, choreographer, and educator"
+    },
+    {
+      "name": "Howard Kazanjian",
+      "is_involved_in_ballet": false,
+      "primary_profession": "film producer"
+    }
+  ]
+}

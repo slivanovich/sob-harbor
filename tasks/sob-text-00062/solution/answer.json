@@ -1,0 +1,9 @@
+{
+  "query_subject_name": "Mark Jung",
+  "related_person": {
+    "name": "Andrea Jung",
+    "relationship_to_query_subject": "older sister",
+    "birth_year": 1958
+  },
+  "answer_birth_year": 1958
+}

@@ -1,0 +1,11 @@
+{
+  "film_title": "Scrooged",
+  "release_year": 1988,
+  "genre": "American Christmas comedy film",
+  "director": "Richard Donner",
+  "reina_king_role": "Lanell Cooley",
+  "related_cast_member": {
+    "name": "Alfre Woodard",
+    "relationship": "oldest daughter's mother"
+  }
+}

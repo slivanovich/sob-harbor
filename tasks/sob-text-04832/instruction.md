@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Antidune: An antidune is a bedform found in fluvial and other channeled environments.  Antidunes occur in supercritical flow, meaning that the Froude number is greater than 1.0 or the flow velocity exceeds the wave velocity; this is also known as upper flow regime.  In antidunes, sediment is deposited on the upstream (stoss) side and eroded from the downstream (lee) side, opposite lower flow regime bedforms.  As a result, antidunes migrate in an upstream direction, counter to the current flow.  Antidunes are called in-phase bedforms, meaning that the water surface elevation mimics the bed elevation; this is due to the supercritical flow regime.  Antidune bedforms evolve rapidly, growing in amplitude as they migrate upstream.  The resultant wave at the water's surface also increases in amplitude.  When that wave becomes unstable, breaks and washes downstream, much of the antidune bedform may be destroyed.
+
+Reservoir capacitor: A reservoir capacitor is a capacitor that is used to smooth the pulsating DC from an AC rectifier.  The reservoir capacitor releases its stored energy during the part of the AC cycle when the AC source does not supply any power, that is, when the AC source changes its phase resulting in change in 'direction of flow of current'.  The change in 'direction of flow of current' of the AC source takes a very small amount of time.  In this short gap of time, the continuous flow of current gradually moves to the state when it ceases.  Using a reservoir capacitor, we fill this gap; since the capacitor releases its stored energy (gets discharged) in that gap of time.  This allows the load to be powered at all times without any interruption.
+
+Against the Current (band): Against the Current (often abbreviated as ATC) is an American pop rock band based in Poughkeepsie, New York and formed in 2011.  The band currently consists of lead vocalist Chrissy Costanza, guitarist Dan Gow, and drummer Will Ferri.  The group gained a sizable YouTube following after posting their covers of popular songs from a variety of different artists.
+
+East Australian Current: The East Australian Current (EAC) is the southward western boundary current that is formed from the South Equatorial Current (SEC) crossing the Coral Sea and reaching the eastern coast of Australia.  At around 15° S near the Australian coast the SEC divides forming the southward flow of the EAC.  It is the largest ocean current close to the shores of Australia.  The EAC reaches a maximum velocity at 30° S where its flow can reach 90 cm/s.  As it flows southward it splits from the coast at around 31° to 32° S. By the time it reaches 33° S it begins to undergo a southward meander while another portion of the transport turns back northward in a tight recirculation.  At this location the EAC reaches its maximum transport of nearly 35 Sv.  The majority of the EAC flow that does not recirculate will move eastward into the Tasman Front crossing the Tasman Sea just north of the cape of New Zealand.  The remaining will flow south on the EAC Extension until it reaches the Antarctic Circumpolar Current.  The Tasman Front transport is estimated at 13 Sv.  The eastward movement of the EAC through the Tasman Front and reattaching to the coastline of New Zealand forms the East Auckland Current.  The EAC also acts to transport tropical marine fauna to habitats in sub-tropical regions along the south east Australian coast.
+
+Liquefied flow: Liquified flows and fluidized flows are types of sediment-gravity flows in which grains within the flow are kept suspension by the upward movement of fluid.  They form in granular substances where the concentration of suspended mud is too low to develop cohesive forces within the flow.  As grains at the base of the suspension settle out, fluid that is displaced upward by the settling generates pore fluid pressures that can help suspend grains in the upper part of the flow.  Application of an external pressure to the suspension will initiate flow.  This external pressure can be applied by a seismic shock, which may turn transform loose sand into a highly viscous suspension as in quicksand.  Generally as soon as the flow begins to move, fluid turbulence results and the flow rapidly evolves into a turbidity current.  Flows and suspensions are said to be liquefied when the grains settle downward through the fluid and displace the fluid upwards.  By contrast, flows and suspensions are said to fluidized when the fluid moves upward through the grains, thereby temporarily suspending them.  Most flows are liquefied, and many references to fluidized sediment gravity flows are in fact incorrect and actually refer to liquified flows.  Because fluid is displaced upward in these types of flows, dewatering features such as dish structures, pillars, pipes and dikes are common.
+
+Electrical polarity: Electrical polarity (positive and negative) is the direction of current flow in an electrical circuit.  Current flows from the positive pole (terminal) to the negative pole.  Electrons flow from negative to positive.  In a direct current (DC) circuit, current flows in one direction only, and one pole is always negative and the other pole is always positive.  In an alternating current (AC) circuit the two poles alternate between negative and positive and the direction of the current (electron flow) reverses periodically.
+
+Geostrophic current: A geostrophic current is an oceanic flow in which the pressure gradient force is balanced by the Coriolis effect.  The direction of geostrophic flow is parallel to the isobars, with the high pressure to the right of the flow in the Northern Hemisphere, and the high pressure to the left in the Southern Hemisphere.  This concept is familiar from weather maps, whose isobars show the direction of geostrophic flow in the atmosphere.  Geostrophic flow may be either barotropic or baroclinic.  A geostrophic current may also be thought of as a rotating shallow water wave with a frequency of zero.  The principle of geostrophy is useful to oceanographers because it allows them to infer ocean currents from measurements of the sea surface height (by combined satellite altimetry and gravimetry) or from vertical profiles of seawater density taken by ships or autonomous buoys.  The major currents of the world's oceans, such as the Gulf Stream, the Kuroshio Current, the Agulhas Current, and the Antarctic Circumpolar Current, are all approximately in geostrophic balance and are examples of geostrophic currents.
+
+Flow (band): Flow is a Japanese rock band, formed in 1998 and signed on to Sony Music Japan's Ki/oon Music label.  Flow is a five-piece band made up of two vocalists, a drummer, a bassist, and a guitarist.  As of February 2017, the band has released 31 singles and 10 studio albums.  Their songs have been featured in the opening sequences of several anime series.
+
+Direct current: Direct current (DC) is the unidirectional flow of electric charge.  A battery is a good example of a DC power supply.  Direct current may flow in a conductor such as a wire, but can also flow through semiconductors, insulators, or even through a vacuum as in electron or ion beams.  The electric current flows in a constant direction, distinguishing it from alternating current (AC).  A term formerly used for this type of current was galvanic current.
+
+Turbidity current: A turbidity current is most typically an underwater current of usually rapidly moving, sediment-laden water moving down a slope.  Turbidity currents can also occur in other fluids besides water.  In the most typical case of oceanic turbidity currents, sediment laden waters situated over sloping ground will flow down-hill because they have a higher density than the adjacent waters.  The driving force behind a turbidity current is gravity acting on the high density of the sediments temporarily suspended within a fluid.  These semi-suspended solids make the average density of the sediment bearing water greater than that of the surrounding, undisturbed water.  As such currents flow, they often have a "snow-balling-effect", as they stir up the ground over which they flow, and gather even more sedimentary particles in their current.  Their passage leaves the ground over which they flow scoured and eroded.  Once an oceanic turbidity current reaches the calmer waters of the flatter area of the abyssal plain (main oceanic floor), the particles borne by the current settle out of the water column.  The sedimentary deposit of a turbidity current is called a turbidite.
+
+Question: Are the bands Flow and Against the Current from the same country?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "question_asked": {
+      "type": "string",
+      "description": "The original question posed."
+    },
+    "band_1_name": {
+      "type": "string",
+      "description": "The name of the first band mentioned in the question."
+    },
+    "band_1_country_of_origin": {
+      "type": "string",
+      "description": "The country of origin for the first band."
+    },
+    "band_2_name": {
+      "type": "string",
+      "description": "The name of the second band mentioned in the question."
+    },
+    "band_2_country_of_origin": {
+      "type": "string",
+      "description": "The country of origin for the second band."
+    },
+    "are_from_same_country": {
+      "type": "boolean",
+      "description": "True if both bands are from the same country, false otherwise."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation for why the bands are or are not from the same country."
+    }
+  },
+  "required": [
+    "question_asked",
+    "band_1_name",
+    "band_1_country_of_origin",
+    "band_2_name",
+    "band_2_country_of_origin",
+    "are_from_same_country",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

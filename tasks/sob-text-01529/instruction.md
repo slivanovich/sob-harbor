@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Clement Attlee: Clement Richard Attlee, 1st Earl Attlee, {'1': ", '2': ", '3': ", '4': "} (3 January 1883 – 8 October 1967) was a British Labour politician who served as Prime Minister of the United Kingdom from 1945 to 1951 and Leader of the Labour Party from 1935 to 1955.  In 1940, Attlee took Labour into the wartime coalition government and served under Winston Churchill, becoming the first person to hold the office of Deputy Prime Minister of the United Kingdom.  He went on to lead the Labour Party to an unexpected landslide victory at the 1945 general election; forming the first Labour majority government, and a mandate to implement its postwar reforms.  The 12.0% national swing from the Conservatives to Labour was unprecedented at that time and remains the largest ever achieved by any party at a general election in British electoral history.  He was re-elected with a narrow majority at the 1950 general election.  In the following year, Attlee called a snap general election, hoping to increase his parliamentary majority.  However, he was narrowly defeated by the Conservatives under the leadership of Winston Churchill; despite winning the most votes of any political party in any general election in British political history until the Conservative Party's fourth consecutive victory in 1992.  Attlee remains the longest-ever serving Leader of the Labour Party.
+
+Independent American Party: The Independent American Party (IAP) is a constitutionally based political party in the United States.  It began as the Utah Independent American Party.  The founders claim to have been inspired by a 1968 speech given by Ezra Taft Benson, former United States Secretary of Agriculture and later president of the LDS Church, entitled "The Proper Role of Government".  The party's first platform was based on Benson's beliefs.  These 15 principles for the proper role of government, taken from his speech, are held as the IAP's foundational principles.  The IAP is a political party which has placed itself in the center of the political spectrum--like the U.S Constitution--right in the middle between the extremes of zero government or anarchy on the far right, and total government or tyranny on the far left.  The Independent American Party of Nevada is affiliated with the Constitution Party of the United States.  The IAP of Nevada has elected several candidates to local office, such as District Attorney, County Commissioner,County Clerk, and other local offices.  (Officers elected in other States on the Independent American Party ticket or the U.S. Constitution Party need to be added here by party members in other states.)
+
+Whig Party (United States): The Whig Party was a political party active in the middle of the 19th century in the United States.  Four US presidents belonged to the party while in office.  It emerged in the 1830s as the leading opponent of Jacksonians, pulling together former members of the National Republican (one of the successors of the Democratic-Republican Party) and Anti-Masonic Parties.  It had distant links to the upscale traditions of the Federalist Party.  Along with the rival Democratic Party, it was central to the Second Party System from the early 1840s to the mid-1860s.  It originally formed in opposition to the policies of President Andrew Jackson (in office 1829–37) and his Democratic Party.  In particular, the Whigs supported the supremacy of the US Congress over the Presidency and favored a program of modernization, banking, and economic protectionism to stimulate manufacturing.  It appealed to entrepreneurs, planters, reformers and the emerging urban middle class, but had little appeal to farmers or unskilled workers.  It included many active Protestants, and voiced a moralistic opposition to the Jacksonian Indian removal.  Party founders chose the "Whig" name to echo the American Whigs of the 18th century who fought for independence.  The underlying political philosophy of the American Whig Party was not directly related to the British Whig party.  Historian Frank Towers has specified a deep ideological divide:
+
+Democratic Labor Party (South Korea): The Democratic Labor Party (DLP) was a left-wing nationalist political party in South Korea.  It was founded in January 2000, in the effort to create a political wing for the Korean Confederation of Trade Unions and was considered more left-wing and more independent of the two union federations in South Korea.  Its party president was Lee Jung-hee and its assembly leader Kang Gi-gap, who is twice-elected congressman.  In December 2011, the party merged into the Unified Progressive Party.
+
+Philadelphia municipal election, 1957: Philadelphia's municipal election of November 5, 1957, involved the election of the district attorney, city controller, and the remainder of a term for one city council seat, as well as several row offices and judgeships.  Democrats were successful citywide, continuing a run of victories racked up after the passage of a new city charter in 1951 despite growing divisions between factions of the party.  Victor H. Blanc, the incumbent district attorney, led the Democratic ticket to victory.  They held the city council seat and took two citywide offices that Republicans had won in 1953.  In the judges' elections, most were endorsed by both parties but in the one race that pitted a Democratic candidate against a Republican, the Democrats were successful in seating their candidate, former Congressman Earl Chudoff.
+
+Darrell Issa: Darrell Edward Issa ( ; born November 1, 1953) is the Republican U.S. Representative for California's 49th congressional district, serving since 2001.  The district (numbered the 48th District during his first term) covers the northern coastal areas of San Diego County, including cities such as Oceanside, Vista, Carlsbad and Encinitas, as well as a small portion of southern Orange County.  From January 2011 to January 2015 he served as Chairman of the House Oversight and Government Reform Committee.
+
+Your Political Party of British Columbia: Your Political Party of British Columbia, OR "Your Party", is a minor political party in British Columbia, Canada.  The party is registered with Elections BC and has participated in the 2005, 2009, and 2013 general elections.  The party advocates more transparency and accountability in government.  It nominated one candidate in 2005, two in 2009 and 2013, and 10 in 2017, all in the Tri-Cities area.  No Your Party candidate has been elected to office as of 2017.  Its best result was a fourth-place finish with 442 votes (1.68%) in Port Moody-Westwood in 2005.
+
+Earl Krugel: Earl Leslie Krugel (November 24, 1942 – November 4, 2005) was the West Coast coordinator of the Jewish Defense League.  In 2005, he was sentenced to prison on charges of terrorism after he confessed plotting, with the group's leader Irv Rubin, to blow up the office of Arab-American congressman Darrell Issa and the King Fahd mosque in Culver City, California.  He was kept in protective custody for three years for the 2001 bomb plot.  He was transferred to a medium security federal prison following his sentencing where he was then murdered three days later by a fellow inmate, who struck him in the head with a block of concrete.
+
+Partido Magdalo: Partido Magdalo is one of the political parties in the Philippines founded by Former Governor Juanito Remulla Sr. and Former Congressman Renato P. Dragon.  It is a local political party in Cavite. The new leaders of this party is Incumbent Cavite Governor Juanito Victor "Jonvic" Remulla, Jr. and Cavite Congressman Jesus "Boying" Remulla (7th District).
+
+National Union (Italy, 1923): National Union ("Unione Nazionale") was a pro-fascist Italian Catholic political party during the 1920s, the first of several "Clerico-Fascist" political organizations established within the decade.  The party was established with the permission of Pope Pius XI, dealing the final blow to the anti-fascist Catholic Italian People's Party.
+
+Question: What is the political party of the congressman Earl Krugel plotted to blow up the office of?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "congressman_name": {
+      "type": "string",
+      "description": "The name of the congressman targeted in the plot."
+    },
+    "congressman_political_party": {
+      "type": "string",
+      "description": "The political party of the targeted congressman."
+    },
+    "plotter_name": {
+      "type": "string",
+      "description": "The name of the individual who plotted against the congressman."
+    },
+    "plot_target_type": {
+      "type": "string",
+      "description": "The specific part of the congressman's assets that was targeted."
+    }
+  },
+  "required": [
+    "congressman_name",
+    "congressman_political_party",
+    "plotter_name",
+    "plot_target_type"
+  ],
+  "additionalProperties": false
+}

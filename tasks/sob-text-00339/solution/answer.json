@@ -1,0 +1,14 @@
+{
+  "entity_type": "magazine",
+  "entities": [
+    {
+      "name": "Modern Drummer",
+      "description_snippet": "Modern Drummer is a monthly publication targeting the interests of drummers and percussionists. The magazine features interviews, equipment reviews, and columns offering advice on technique, as well as information for the general public."
+    },
+    {
+      "name": "Entertainment Weekly",
+      "description_snippet": "Entertainment Weekly (sometimes abbreviated as EW) is an American magazine, published by Time Inc., that covers film, television, music, Broadway theatre, books and popular culture."
+    }
+  ],
+  "count_of_entities": 2
+}

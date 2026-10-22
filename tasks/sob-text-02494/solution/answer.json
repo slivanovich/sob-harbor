@@ -1,0 +1,16 @@
+{
+  "investigator": {
+    "name": "Bobbi Bacha",
+    "profession": "Private Investigator",
+    "location": "Texas"
+  },
+  "millionaire": {
+    "name": "Robert Durst",
+    "primary_known_for": "being suspected of foul play against three individuals in different states",
+    "origin_city": "New York City"
+  },
+  "case_details": {
+    "involved_in_case": true,
+    "case_subject_name": "Robert Durst"
+  }
+}

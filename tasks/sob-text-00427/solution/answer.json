@@ -1,0 +1,12 @@
+{
+  "band_name": "Shadows Fall",
+  "origin_city": "Springfield",
+  "origin_state": "Massachusetts",
+  "formation_year": 1995,
+  "genre": "heavy metal",
+  "demo_appearance": {
+    "album_name": "The Spore",
+    "album_release_date": "April 26, 2005",
+    "demo_track_count": 5
+  }
+}

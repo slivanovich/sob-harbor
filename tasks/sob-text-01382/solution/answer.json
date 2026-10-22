@@ -1,0 +1,20 @@
+{
+  "film_title": "The Muppets",
+  "film_release_year": 2011,
+  "film_director": "James Bobin",
+  "film_writers": [
+    "Jason Segel",
+    "Nicholas Stoller"
+  ],
+  "film_starring_actors": [
+    "Jason Segel",
+    "Amy Adams",
+    "Chris Cooper",
+    "Rashida Jones"
+  ],
+  "contributor_details": {
+    "name": "Bret McKenzie",
+    "role_in_film": "music supervisor",
+    "known_for_band": "Flight of the Conchords"
+  }
+}

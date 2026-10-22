@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Running mate: A running mate is a person running together with another person on a joint ticket during an election.  The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.
+
+David Dixon Porter: David Dixon Porter (June 8, 1813 – February 13, 1891) was a United States Navy admiral and a member of one of the most distinguished families in the history of the U.S. Navy.  Promoted as the second U.S. Navy officer ever to attain the rank of admiral, after his adoptive brother David G. Farragut, Porter helped improve the Navy as the Superintendent of the U.S. Naval Academy after significant service in the American Civil War.
+
+Roberta McCain: Roberta McCain (born February 7, 1912) is the centenarian widow of Admiral John S. McCain Jr. and mother of the Republican Arizona Senator and two-time Presidential candidate John S. McCain III.
+
+John S. McCain Sr.: John Sidney McCain Sr. (August 9, 1884 – September 6, 1945), nicknamed "Slew", was a U.S. Navy admiral.  He held several command assignments during the Pacific campaign of World War II.  He is the patriarch of the McCain military family.
+
+Patricio Montojo y Pasarón: Rear Admiral Patricio Montojo y Pasarón (September 7, 1839 – September 30, 1917) was a career Spanish naval officer who commanded the restored Kingdom of Spain's Pacific Squadron based in the Philippines during the Spanish–American War.  Considered to have been a man of high ability and experience, he was given what was regarded as an impossible task of defending the Spanish Philippines with antiquated ships and low supplies against the more formidable U.S. Asiatic Squadron.  Montojo became known for his defeat at the Battle of Manila Bay (1 May 1898) by U.S. Navy Admiral George Dewey, being a decisive naval battle of the war.  After the conflict, the rear admiral was held accountable for the defeat and was court-martialed, but that was later overturned, though Montojo was still discharged from the Spanish Navy.
+
+Robert F. Willard: Robert Frederick "Bob" Willard (born December 5, 1950) is a retired United States Navy admiral who last served as the 22nd Commander, U.S. Pacific Command from October 19, 2009 to March 9, 2012.  He previously served as Commander, U.S. Pacific Fleet from May 8, 2007 to September 25, 2009.  Prior to that, he served as the 34th Vice Chief of Naval Operations from March 18, 2005 to April 2007.  On March 9, 2012, Admiral Willard retired from the Navy after 39 years of service.  On May 9, 2012, he was elected president and chief executive officer of the Institute of Nuclear Power Operations, succeeding retired Navy admiral James O. Ellis, Jr.
+
+Hispanic Admirals in the United States Navy: Hispanic Admirals in the United States Navy can trace their tradition of naval military service to the Hispanic sailors, who have served in the Navy during every war and conflict since the American Revolution.  Prior to the Civil War, the highest rank reached by a Hispanic-American in the U.S. Navy was Commodore.  Such was the case of Commodore Uriah Phillips Levy (1792–1862), a Sephardic Jew of Hispanic descent and great grandson of Dr. Samuel Nunez, who served in the War of 1812.  During the American Civil War, the government of the United States recognized that the rapid expanding Navy was in need of admirals therefore, Congress proceeded to authorize the appointment of nine officers the rank of rear admiral.  On July 16, 1862, Flag Officer David Glasgow Farragut became the first Hispanic-American to be appointed to the rank of rear admiral.  Two years later (1864), Farragut became a vice admiral, and in 1866 the Navy's first full admiral.  During World War I, Robert Lopez, the first Hispanic graduate of the United States Naval Academy, served with the rank of commodore in command of the Mare Island Naval Shipyard, and during World War II five Hispanics served with the ranks of rear admiral or above in either the European or Pacific Theater's of the war.  As of April 2007, twenty-two Hispanic-Americans have reached the rank of admiral, and of this number thirteen were graduates of the USNA.
+
+Early life and military career of John McCain: The early life and military career of John Sidney McCain III spans the first forty-five years of his life (1936–1981).  McCain's father and grandfather were admirals in the United States Navy.  McCain was born on August 29, 1936, in the Panama Canal Zone, and attended many schools growing up as his family moved among naval facilities.  McCain graduated from the United States Naval Academy in 1958.  He married the former Carol Shepp in 1965; he adopted two children from her previous marriage and they had another child together.
+
+Frank Friday Fletcher: Frank Friday Fletcher (November 23, 1855 – November 28, 1928) was a United States Navy admiral who served in the late 19th and early 20th centuries.  He was awarded the U.S. military's highest decoration, the Medal of Honor, for his actions as commander of Navy forces at the Battle of Veracruz, Mexico.  The "Fletcher"-class destroyer , the most produced class of United States Navy destroyers, was named after him.  He was also the uncle of Frank Jack Fletcher, another U.S. Navy Admiral who also received the Medal of Honor for actions at Veracruz.
+
+USS Enterprise (CV-6): USS "Enterprise" (CV-6), was the seventh U.S. Navy vessel to bear the name.  Colloquially called "the Big E", she was the sixth aircraft carrier of the United States Navy.  A "Yorktown"-class carrier, she was launched in 1936 and was one of only three American carriers commissioned before World War II to survive the war (the others being "Saratoga" and "Ranger" ).  She participated in more major actions of the war against Japan than any other United States ship.  These actions included the Attack on Pearl Harbor (18 dive bombers of VS-6 were over the harbor, 6 were shot down with a loss of eleven men, making her the only American Aircraft carrier with men at Pearl Harbor during the Attack and the first to receive casualties during the Pacific War), the Battle of Midway, the Battle of the Eastern Solomons, the Battle of the Santa Cruz Islands, various other air-sea engagements during the Guadalcanal Campaign, the Battle of the Philippine Sea, and the Battle of Leyte Gulf.  "Enterprise" earned 20 battle stars, the most for any U.S. warship in World War II, and was the most decorated U.S. ship of World War II, She is also the first American ship to sink an enemy vessel during the Pacific War, the sole surviving pilot of the six planes shot down over Pearl Harbor sank Japanese submarine I-70 on 10 December 1941.  On three occasions during the Pacific War, the Japanese announced that she had been sunk in battle, resulting in her being named "The Grey Ghost".
+
+Question: "Slew" McCain, U.S. Navy admiral who saw action in the Pacific war, was what relation to the recent Presidential candidate?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_a_name": {
+      "type": "string",
+      "description": "The full name of the first person mentioned, 'Slew' McCain."
+    },
+    "person_a_nickname": {
+      "type": "string",
+      "description": "The nickname of the first person."
+    },
+    "person_a_rank": {
+      "type": "string",
+      "description": "The military rank of the first person."
+    },
+    "person_a_notable_service": {
+      "type": "string",
+      "description": "A notable service or campaign the first person participated in."
+    },
+    "person_b_name": {
+      "type": "string",
+      "description": "The full name of the recent Presidential candidate."
+    },
+    "person_b_notable_role": {
+      "type": "string",
+      "description": "A notable role or achievement of the second person."
+    },
+    "relationship": {
+      "type": "string",
+      "description": "The familial relationship of the first person to the second person."
+    }
+  },
+  "required": [
+    "person_a_name",
+    "person_a_nickname",
+    "person_a_rank",
+    "person_a_notable_service",
+    "person_b_name",
+    "person_b_notable_role",
+    "relationship"
+  ],
+  "additionalProperties": false
+}

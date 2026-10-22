@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "0ef7508c2441e3be828e45320f024df8ca44ce14886ea6d668818f2435b7c07e",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a875e935542996e4f3087a3",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Australian Alps National Parks",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Alpine National Park: The Alpine National Park is a national park located in the Central Highlands and Alpine regions of Victoria, Australia.  The 646000 ha national park is located northeast of Melbourne.  It is the largest National Park in Victoria, and covers much of the higher areas of the Great Dividing Range in Victoria, including Victoria's highest point, Mount Bogong at 1986 m and the associated subalpine woodland and grassland of the Bogong High Plains.  The park's north-eastern boundary is along the border with New South Wales, where it abuts the Kosciuszko National Park.  On 7 November 2008 the Alpine National Park was added to the Australian National Heritage List as one of eleven areas constituting the Australian Alps National Parks and Reserves.\n\nWrangell–St. Elias National Park and Preserve: Wrangell–St. Elias National Park and Preserve is a United States national park and national preserve managed by the National Park Service in south central Alaska.  The park and preserve was established in 1980 by the Alaska National Interest Lands Conservation Act.  This protected area is included in an International Biosphere Reserve and is part of the Kluane/Wrangell–St. Elias/Glacier Bay/Tatshenshini-Alsek UNESCO World Heritage Site.  The park and preserve form the largest area managed by the National Park Service in the United States by area with a total of 13175799 acre , an expanse that could encapsulate a total of six Yellowstone National Parks.  The park includes a large portion of the Saint Elias Mountains, which include most of the highest peaks in the United States and Canada, yet are within 10 mi of tidewater, one of the highest reliefs in the world.  Wrangell–St. Elias borders on Canada's Kluane National Park and Reserve to the east and approaches the U.S. Glacier Bay National Park to the south.  The chief distinction between park and preserve lands is that sport hunting is prohibited in the park and permitted in the preserve.  In addition, 9078675 acre of the park are designated as the largest single wilderness in the United States.\n\nMalkumba-Coongie Lakes National Park: Malkumba-Coongie Lakes National Park is a protected area located in the north-east of South Australia about 110 km north-west of Innamincka.  The national park was proclaimed on 31 March 2005 as the Coongie Lakes National Park under \"National Parks and Wildlife Act 1972\" over a parcel of land previously part of the Innamincka Regional Reserve to \"conserve significant wetlands, provide experiences for visitors and ensure that the core component of the Coongie Lakes system was protected.\"  The national park is located on land that was included on the List of Wetlands of International Importance under the Ramsar Convention under the name, Coongie Lakes in 1987.  In 2014, the national park was renamed as the Malkumba-Coongie Lakes National Park.  The national park is co-managed by the Department of Environment, Water and Natural Resources (DEWNR), the Yandruwandha Yawarrawarrka Parks Advisory Committee and South Australian Arid Lands Natural Resources Management Board.  It is classified as an IUCN Category II protected area.\n\nDzanga-Sangha Special Reserve: The Dzanga-Sangha Special Reserve (also known as Dzanga-Sangha Forest Reserve, or Dzanga-Sangha Forest Special Reserve, Dzanga-Sangha Baï, or Dzanga-Sangha Special Forest Reserve) is a protected reserve of southwestern Central African Republic.  It was established in 1990 and covers 6865.54 km.  It is one of several areas within the Dzanga-Sangha Complex of Protected Areas (DSCPA), each within its own protective status and along with Lobéké National Park in Cameroon and Nouabalé-Ndoki National Park in Republic of Congo, it is part of the Sangha Trinational Landscape.  Other areas within the DSCPA include the Dzanga Ndoki National Park which has two sectors, the 495 km Dzanga park and the 725 km Ndoki park.  A conference of the Ministers of Forests of Central African Forest Commission (COMIFAC) had resolved to establish within the Congo basin, the Sangha River Tri-national Protected area (STN) encompassing these three parks.  The forest special reserve is operated by the Central African Forest Commission (COMIFAC).\n\nGrampians National Park: The Grampians National Park (also Gariwerd), commonly referred to as The Grampians, is a national park located in the Grampians region of Victoria, Australia.  The 167219 ha national park is situated between Stawell and Horsham on the Western Highway and Dunkeld on the Glenelg Highway, 260 km west of Melbourne and 460 km east of Adelaide.  Proclaimed as a national park on 01   1984 (1984--) , the park was listed on the Australian National Heritage List on 15 December 2006 for its outstanding natural beauty and being one of the richest indigenous rock art sites in south-eastern Australia.  The Grampians feature a striking series of sandstone mountain ranges.\n\nSiding Spring Observatory: Siding Spring Observatory near Coonabarabran, New South Wales, Australia, part of the Research School of Astronomy & Astrophysics (RSAA) at the Australian National University (ANU), incorporates the Anglo-Australian Telescope along with a collection of other telescopes owned by the Australian National University, the University of New South Wales, and other institutions.  The observatory is situated 1165 m above sea level in the Warrumbungle National Park on Mount Woorat, also known as Siding Spring Mountain.  Siding Spring Observatory is owned by the Australian National University (ANU) and is part of the Mount Stromlo and Siding Spring Observatories research school.\n\nSki Club of Australia: The Ski Club of Australia is a private club and ski lodge located in Thredbo, New South Wales, Australia.  It was founded in 1920 and as its foundation pre-dated the foundation of the Ski Council of New South Wales in 1929, it played a pivotal role in the history of skiing and ski racing in Australia.  Four members of the Ski Club, Herbert Schlink, Eric Fisher, William Gordon and John Laidley, made the first winter crossing of the Snowy Mountains Main Range from Kiandra to Kosciusko in 1927.  Slalom skiing was introduced into Australia by the club.  The club formerly had an official role in Australian skiing and its 75th Anniversary history was written by Olympian Bob Arnott.\n\nSkoki Ski Lodge: The Skoki Ski Lodge National Historic Site of Canada was built in 1930-31 in the Skoki Valley of Canada's Banff National Park.  Built by local members of the Ski Club of the Canadian Rockies, the lodge was the first commercial building built specifically to serve skiers in Canada, and possibly in North America.  Design and construction work was carried out by local outfitter and builder Earl Spencer with help from Spud White and Victor Kutschera.  The lodge was progressively expanded through 1936 by outfitter, guide and log home builder Jim Boyce who was also managing the Lodge the time.  It has remained unaltered since that time.  The Lodge operates throughout the year.\n\nMount Kosciuszko: Mount Kosciuszko is a mountain located on the Main Range of the Snowy Mountains in Kosciuszko National Park, part of the Australian Alps National Parks and Reserves, in New South Wales, Australia and is located west of Crackenback and close to Jindabyne.\n\nEstablishment of Grand Teton National Park: The establishment of Grand Teton National Park took place over a period spanning more than 50 years.  Located in the northwestern region of the U.S. state of Wyoming, Grand Teton National Park is 10 mi south of Yellowstone National Park which was established in 1872, when Wyoming, Idaho and Montana were still territories and the region was very sparsely settled.  By the late 19th century, conservationists were working to provide further protection to surrounding regions, leading President Grover Cleveland to create the Teton Forest Reserve, which included a portion of northern Jackson Hole.  By 1902, the reserve had been combined into the Yellowstone Forest Reserve, then was divided again in 1908 by President Theodore Roosevelt, establishing the Teton National Forest, which protected most of the Teton Range.  By 1907, the U.S. Bureau of Reclamation had constructed a temporary dam at the Snake River outlet of Jackson Lake.  This dam failed in 1910 and a new concrete Jackson Lake Dam replaced it by 1911.  The dam was further enlarged in 1916, raising lake waters 39 ft as part of the Minidoka Project, designed to provide irrigation for agriculture in the state of Idaho.  Though efforts to protect the Teton Range and Jackson Hole as part of an expanded Yellowstone National Park dated back to the late 19th century, proposals to construct more dams on some of the other lakes in Jackson Hole led Yellowstone National Park superintendent Horace Albright to block such efforts.  Albright was originally an advocate of the expanded Yellowstone plan which was very unpopular with local residents.  By the mid-1920s local sentiment had changed as a result of proposals for a new national park including only the Teton Range and six lakes at the base of the range.  With the general agreement of prominent Jackson Hole residents to this plan, President Calvin Coolidge signed the executive order establishing the 96000 acre Grand Teton National Park on February 26, 1929.",
+    "question": "The Ski Club of Australia is part of which Australian National Park and Reserve?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "club_name": {
+          "type": "string",
+          "description": "The name of the ski club."
+        },
+        "club_location_town": {
+          "type": "string",
+          "description": "The town where the ski club is located."
+        },
+        "club_location_state": {
+          "type": "string",
+          "description": "The state where the ski club is located."
+        },
+        "associated_mountain": {
+          "type": "string",
+          "description": "A mountain explicitly associated with the ski club's activities or location."
+        },
+        "associated_national_park": {
+          "type": "string",
+          "description": "The national park that the associated mountain is located within."
+        },
+        "broader_national_park_and_reserve_system": {
+          "type": "string",
+          "description": "The larger national park and reserve system that encompasses the associated national park."
+        }
+      },
+      "required": [
+        "club_name",
+        "club_location_town",
+        "club_location_state",
+        "associated_mountain",
+        "associated_national_park",
+        "broader_national_park_and_reserve_system"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "club_name": "Ski Club of Australia",
+      "club_location_town": "Thredbo",
+      "club_location_state": "New South Wales",
+      "associated_mountain": "Mount Kosciuszko",
+      "associated_national_park": "Kosciuszko National Park",
+      "broader_national_park_and_reserve_system": "Australian Alps National Parks and Reserves"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

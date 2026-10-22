@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Florida State Road 501: Locally known as Clearlake Road, State Road 501 is a three-mile (5 km) long north–south highway entirely within Cocoa, Florida, in the United States.  It southern terminus is an intersection with King Street (SR 520); its northern terminus is an intersection with SR 524 just south of an interchange with State Road 528 and Grissom Parkway.  Until the mid-1980s, Clearlake Road was State Road 503A.
+
+Goldenrod Road Extension: The Goldenrod Road Extension is a 2.7 mi long toll road in southeastern Orlando, Florida, United States, owned and operated by the Central Florida Expressway Authority (CFX).  It extends from Cargo Road at the north end of the Orlando International Airport north to Hoffner Avenue (State Road 15) near the south end of State Road 551.  It is a four-lane surface road with several at-grade intersections.  A toll (of 50 cents for two-axle vehicles) is required to drive only the section between State Road 528 and Lee Vista Boulevard; the rest can be driven without paying.  It is not assigned a state road number, as it will be given to the City of Orlando once the cost of building the road is paid off.
+
+Florida State Road 526: State Road 526 (SR 526) is a 12 mi east–west route in the Orlando MSA, located entirely in Orange County.  It runs from State Road 50 in Ocoee, to State Road 15, the frontage roads of State Road 408, in Orlando.  After the western terminus of SR 526, State Road 50, it becomes SR 439.  Between US 17 and the western terminus, it is known as County Road 526, and locally known as Old Winter Garden Road.  It crosses State Road 408 twice.  At the overpass of Interstate 4, State Road 526 runs north–south for 1 block.  It then heads into Downtown Orlando via Robinson Street and follows the northern shore of Lake Eola.  SR 526 next intersects State Road 15.  At the Orlando Executive Airport, it heads north–south and then ends at State Road 15, the frontage roads of State Road 408.
+
+Florida State Road 528: State Road 528 (SR 528), the Martin Andersen Beachline Expressway (formerly known as the Martin Andersen Bee Line Expressway or simply The Bee Line), is a 53.5 mi state highway in the U.S. state of Florida.  It is a mostly-tolled expressway connecting Interstate 4 in southwest Orlando with Interstate 95, Titusville, and Cape Canaveral on Florida's Space Coast.  It passes close to the tourist areas of Orlando, including SeaWorld and Universal Orlando, and serves the north entrance to Orlando International Airport.  Near its east end, it passes over the Intracoastal Waterway on the Emory L. Bennett Causeway, and ends at State Road A1A and State Road 401 near Port Canaveral.
+
+New Mexico State Road 528: New Mexico State Road 528 is a 15.3 mi long state highway in Sandoval County and Bernalillo County, New Mexico.  NM 528 is signed as Alameda Blvd.  In Rio Rancho, the road is also known as Pat D'Arco Highway, named after former mayor of Rio Rancho Pat D'Arco.  It is an L-shaped route signed north-south in Sandoval County and east-west in Bernalillo County.
+
+New Mexico State Road 448: New Mexico State Road 448 is a 13.01 mi long state highway in Sandoval County and Bernalillo County, New Mexico.  New Mexico 448 is assigned as Coors Blvd inside of Albuquerque, and is assigned as Corrales Rd in Corrales, New Mexico.  The highway's northern terminus is at an intersection with NM 528 (Pat D'Arco Highway) in Rio Rancho.  The highway then proceeds east then south through Corrales via Corrales Road.  After leaving Corrales, it intersects with New Mexico State Road 528 again.  The highway's southern terminus is at New Mexico State Road 45.
+
+Indianola, Florida: Indianola is a historic unincorporated community on Merritt Island in Brevard County, Florida, United States.  It is centered on Indianola Drive, which is about half a mile south of where State Road 528, the Bennett Causeway across the Indian River, enters Merritt Island.  It extends north of 528 a short distance to include the "Indianola Cemetery near the Barge Canal, and east to State Road 3
+
+Turkey Creek (Econlockhatchee River): Turkey Creek is a creek and tributary of the Econlockhatchee River located in the community of Narcoossee in Southeast Orlando, in the U.S. State of Florida.  The source of the 3 mi river is Turkey Creek Bay, which is the northern beginning of the Econlockhatchee River Swamp that extends to Lake Conlin, the source of the Econlockhatchee River.  From Turkey Creek Bay, the creek flows north and goes under Wewahootee Road and then State Road 528, commonly known as the "Beachline Expressway".  A tributary of the creek itself, the Green Branch, joins Turkey Creek at about 1100 ft before Turkey Creek joins the Econlockhatchee at .
+
+Farm to Market Road 528: Farm to Market Road 528, or FM 528 or Urban Road 528, is a farm to market road in southeast Texas.  The road runs from Interstate 45 in Webster, Texas southwest to State Highway 35C Business (a spur of State Highway 35, which FM 528 also intersects).
+
+Orlando International Airport: Orlando International Airport (IATA: MCO, ICAO: KMCO, FAA LID: MCO) is a major public airport located six miles (10 km) southeast of Orlando, Florida, United States.  It is the second-busiest airport in the state of Florida, as over 40.2 million passengers were handled at the airport as of 2015.  This makes it the 14th-busiest airport in the U.S. by total passenger traffic.
+
+Question: Florida State Road 528 serves as the north entrance for what major public airport 6 mi southeast of Orlando?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "airport_name": {
+      "type": "string",
+      "description": "The name of the major public airport."
+    },
+    "airport_location_description": {
+      "type": "string",
+      "description": "Description of the airport's location relative to Orlando."
+    },
+    "road_serving_entrance": {
+      "type": "string",
+      "description": "The state road that serves as the north entrance to the airport."
+    }
+  },
+  "required": [
+    "airport_name",
+    "airport_location_description",
+    "road_serving_entrance"
+  ],
+  "additionalProperties": false
+}

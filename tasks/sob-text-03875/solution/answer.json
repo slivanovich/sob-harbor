@@ -1,0 +1,17 @@
+{
+  "airport_names": [
+    "Yeager Airport",
+    "Albert J. Ellis Airport"
+  ],
+  "airport_locations": [
+    {
+      "airport_name": "Yeager Airport",
+      "country": "United States"
+    },
+    {
+      "airport_name": "Albert J. Ellis Airport",
+      "country": "United States"
+    }
+  ],
+  "are_in_same_country": true
+}

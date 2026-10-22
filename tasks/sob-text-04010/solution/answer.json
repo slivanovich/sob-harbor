@@ -1,0 +1,29 @@
+{
+  "filmmaker_name": "Kevin Smith",
+  "filmmaker_primary_roles": [
+    "filmmaker",
+    "actor",
+    "comic book writer",
+    "author",
+    "podcaster"
+  ],
+  "associated_film_festival": {
+    "name": "Movies Askew",
+    "organizers": [
+      "Kevin Smith",
+      "View Askew Productions"
+    ]
+  },
+  "film_identified": {
+    "title": "Clerks",
+    "release_year": 1994,
+    "genre": "comedy",
+    "filmmaker_roles_in_film": [
+      "wrote",
+      "directed",
+      "co-produced",
+      "acted in"
+    ],
+    "character_played": "Silent Bob"
+  }
+}

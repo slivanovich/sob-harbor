@@ -1,0 +1,9 @@
+{
+  "company_name": "Themeparks LLC",
+  "park_name": "Kentucky Kingdom",
+  "park_details": {
+    "area_acres": 63,
+    "location": "Louisville, Kentucky",
+    "is_first_park_for_company": true
+  }
+}

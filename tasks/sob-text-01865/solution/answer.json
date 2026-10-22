@@ -1,0 +1,10 @@
+{
+  "mall_name": "Highland Mall",
+  "city": "Austin",
+  "state": "Texas",
+  "is_first_suburban_mall": true,
+  "nearby_highways": [
+    "I-35",
+    "Highway 290"
+  ]
+}

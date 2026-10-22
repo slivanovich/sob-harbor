@@ -1,0 +1,15 @@
+{
+  "composer_name": "Roman Yakub",
+  "competition_details": {
+    "competition_name": "Ithaca College Choral Composition Competition",
+    "prize_won": "First Prize",
+    "year_won": 2006
+  },
+  "college_details": {
+    "college_name": "Ithaca College",
+    "college_type": "liberal arts college",
+    "founder_name": "William Egbert",
+    "founding_year": 1892,
+    "location": "Ithaca, New York, United States"
+  }
+}

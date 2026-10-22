@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Seashell and the Clergyman: The Seashell and the Clergyman (French: "La Coquille et le clergyman" ) is an experimental French film directed by Germaine Dulac, from an original scenario by Antonin Artaud.  It premiered in Paris on 9 February 1928.
+
+La Souriante Madame Beudet: La Souriante Madame Beudet (The Smiling Madame Beudet) is a short French impressionist silent film made in 1922, directed by pioneering avant-garde cinema director Germaine Dulac.  It stars Germaine Dermoz as the protagonist Madame Beudet, who has grown tired of her husband's foolish antics and Alexandre Arquillière as Monsieur Beudet.  It is considered by many to be one of the first truly "feminist" films.  It tells the story of an intelligent woman trapped in a loveless marriage.
+
+Germaine Dulac: Germaine Dulac (] ; born Charlotte Elisabeth Germaine Saisset-Schneider; 17 November 1882 – 20 July 1942) was a French filmmaker, film theorist, journalist and critic.  She was born in Amiens and moved to Paris in early childhood.  A few years after her marriage she embarked on a journalistic career in a feminist magazine, and later became interested in film.  With the help of her husband and friend she founded a film company and directed a few commercial works before slowly moving into Impressionist and Surrealist territory.  She is best known today for her Impressionist film, "La Souriante Madame Beudet" ("The Smiling Madam Beudet", 1922/23), and her Surrealist experiment, "La Coquille et le Clergyman" ("The Seashell and the Clergyman", 1928).  Her career as filmmaker suffered after the introduction of sound film and she spent the last decade of her life working on newsreels for Pathé and Gaumont.
+
+La Fête espagnole: La Fête espagnole is a 1920 French silent film directed by Germaine Dulac and written by Louis Delluc.  It was cited by critic and film historian Georges Sadoul as being first in ushering in French impressionist cinema.
+
+Gina Manès: Gina Manès (7 April 1893 — 6 September 1989) was a French film actress and a major star of French silent cinema.  After an early appearance in a film of Louis Feuillade, she had significant roles in films of Jean Epstein, including "Cœur fidèle", and of Germaine Dulac.  In Abel Gance's "Napoléon", she took the part of Joséphine de Beauharnais, and then played the title role in Jacques Feyder's "Thérèse Raquin" (now lost).  She made the transition to sound films but during the 1930s her roles diminished in importance, and periods of residence in Morocco took her further from the public eye.  She continued to take small roles in films, and also worked in the circus and in the theatre.  In total Manès appeared in over 90 films between 1916 and 1966.
+
+Antoinette Sabrier: Antoinette Sabrier is a 1927 French silent film directed by Germaine Dulac and starring Ève Francis, Gabriel Gabrio and Jean Toulout.
+
+Project Pedro: Project Pedro was a secretly funded program under the United States Information Agency during the 1950s to create newsreels in Mexico.  The program was a clandestine public relations campaign to spread propaganda portraying the United States positively and Communism negatively, in an effort to change the Mexican public's neutral attitude toward Communism as part of the Cold War.  Projects with similar objectives were carried out in other Latin American countries, such as Brazil, Chile, Bolivia and Ecuador.  The project was publicly operated in part by a former film executive named Richard K. Tompkins who had produced anti-communist animated cartoons and films in Mexico, who allowed the USIA to influence newsreel content while having no official trace to production.  Since Mexican citizens owned the rest of the production company creating the newsreels, the USIA was not required to publicly disclose its involvement in the project.
+
+Gaumont Film Company: The Gaumont Film Company (] ) (often shorted to Gaumont) is a French mini-major film studio founded by the engineer-turned-inventor Léon Gaumont (1864–1946), in 1895.  It is the first and oldest film company in the world, founded before other studios such as Pathé (founded in 1896), Titanus (1904), Nordisk Film (1906), Universal and Paramount Pictures (both founded in 1912).  Gaumont predominantly produces, co-produces, and distributes films, and in 2011, 95% of Gaumont's consolidated revenues came from the film division.  The company is increasingly becoming a TV series producer with its new American subsidiary Gaumont International Television as well as its existing French production features.
+
+Charles Dekeukeleire: Charles Dekeukeleire (27 February 1905 – 2 June 1971) was a Belgian film director.  He pioneered modern Belgian film with Henri Storck.  He was inspired by French avant-garde cinema, particularly the works of Germaine Dulac.
+
+Heart of an Actress: Heart of an Actress (French:Âme d'artiste) is a 1924 French silent drama film directed by Germaine Dulac and starring Iván Petrovich, Nicolas Koline and Mabel Poulton.  Poulton had almost been cast in Abel Gance's "Napoleon", but after being turned down she appeared in this film before returning to Britain.
+
+Question: What is the name of the American subsidiary of the French production company that Germaine Dulac spent the last decade of her life working on newsreels for?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "french_production_company": {
+      "type": "string",
+      "description": "The name of the French production company Germaine Dulac worked for."
+    },
+    "american_subsidiary_name": {
+      "type": "string",
+      "description": "The name of the American subsidiary of the French production company."
+    },
+    "subsidiary_focus": {
+      "type": "string",
+      "description": "The primary focus or type of production of the American subsidiary."
+    }
+  },
+  "required": [
+    "french_production_company",
+    "american_subsidiary_name",
+    "subsidiary_focus"
+  ],
+  "additionalProperties": false
+}

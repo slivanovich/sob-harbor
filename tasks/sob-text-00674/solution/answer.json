@@ -1,0 +1,10 @@
+{
+  "player_name": "Calvin Bird",
+  "team_name": "Kentucky Wildcats",
+  "team_competition_details": {
+    "main_competition_organization": "NCAA",
+    "division_level": "Football Bowl Subdivision (FBS)",
+    "conference": "Southeastern Conference",
+    "conference_division": "Eastern Division"
+  }
+}

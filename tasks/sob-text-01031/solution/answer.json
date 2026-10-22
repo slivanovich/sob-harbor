@@ -1,0 +1,19 @@
+{
+  "person_name": "Christopher Eric Hitchens",
+  "roles": [
+    "author",
+    "columnist",
+    "essayist",
+    "orator",
+    "religious critic",
+    "literary critic",
+    "social critic",
+    "journalist"
+  ],
+  "is_religious_critic": true,
+  "is_literary_critic": true,
+  "comparison_candidate_names": [
+    "Henry Roth",
+    "Christopher Hitchens"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "record_id": "02796a89ae63580371e1c40da6cb661476a3ceb8676c2629194174f88bb9a888",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a85a2945542997175ce1fe2",
+    "source_dataset": "hotpotqa",
+    "source_answer": "China",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Luoding: Luoding, formerly romanized as Loting, is a county-level city in western Guangdong, China.  It is administered as part of Yunfu.\n\nQingfengdian: Qingfengdian () is a town under the administration of Dingzhou City in western Hebei province, China, located about 12 km northeast of downtown Dingzhou and just off of China National Highway 107.  It has an area of 53 km2 and a reported population of 49,000 people.\n\nHaotouzhuang Hui Ethnic Township: Haotouzhuang Hui Ethnic Township (; Xiao'erjing: هَوْتِوْتُوْا خُوِذُو سِیْا) is an ethnic township under the administration of Dingzhou City in Hebei province, China, located about 12 km southeast of downtown Dingzhou in the southern part of Baoding City.  , it has 17 villages under its administration.\n\nDingzhou East Railway Station: The Dingzhou East Railway Station is a railway station of Jingshi Passenger Railway that located in Hebei, People's Republic of China.\n\nDingzhou: Dingzhou (), formerly Dingxian ( postal: Tingsien) is a county-level city with sub-prefecture-level city status, located under the administration of the prefecture-level city of Baoding in the southwest of Hebei Province in northern China, about halfway between Baoding and Shijiazhuang.  As of 2009, Dingzhou had a population of 1.2 million.  Dingzhou has 3 subdistricts, 13 towns, 8 townships, and 1 ethnic township.  Dingzhou is 196 km southwest of Beijing, 68 km northeast of Shijiazhuang.",
+    "question": "Where are Luoding and Dingzhou located?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "places_info": {
+          "type": "array",
+          "description": "Information about each place mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "place_name": {
+                "type": "string",
+                "description": "The name of the place."
+              },
+              "country": {
+                "type": "string",
+                "description": "The country where the place is located."
+              },
+              "province": {
+                "type": "string",
+                "description": "The province where the place is located."
+              },
+              "administered_by_city": {
+                "type": "string",
+                "description": "The prefecture-level city or higher entity that administers the place."
+              }
+            },
+            "required": [
+              "place_name",
+              "country",
+              "province",
+              "administered_by_city"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "shared_country": {
+          "type": "string",
+          "description": "The common country where all mentioned places are located."
+        },
+        "number_of_places": {
+          "type": "integer",
+          "description": "The total number of places whose location was requested."
+        }
+      },
+      "required": [
+        "places_info",
+        "shared_country",
+        "number_of_places"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "places_info": [
+        {
+          "place_name": "Luoding",
+          "country": "China",
+          "province": "Guangdong",
+          "administered_by_city": "Yunfu"
+        },
+        {
+          "place_name": "Dingzhou",
+          "country": "China",
+          "province": "Hebei",
+          "administered_by_city": "Baoding"
+        }
+      ],
+      "shared_country": "China",
+      "number_of_places": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "country_name": "China",
+  "country_full_name": "People's Republic of China",
+  "cities_details": [
+    {
+      "city_name": "Mingguang",
+      "administrative_level": "county-level city",
+      "province": "Anhui Province",
+      "parent_administration": "Chuzhou city"
+    },
+    {
+      "city_name": "Xiaogan",
+      "administrative_level": "prefecture-level city",
+      "province": "Hubei province"
+    }
+  ]
+}

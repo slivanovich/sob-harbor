@@ -1,0 +1,14 @@
+{
+  "northernmost_plant_name": "Zamia",
+  "comparison_details": [
+    {
+      "plant_name": "Zamia",
+      "northern_distribution_description": "Mexico, the West Indies, and Central and South America as far south as Bolivia. The range of one species (\"Z. integrifolia\", extends into the contiguous United States, i.e. Georgia and Florida."
+    },
+    {
+      "plant_name": "Vallea",
+      "northern_distribution_description": "Andes mountain range in South America."
+    }
+  ],
+  "is_zamia_further_north": true
+}

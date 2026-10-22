@@ -1,0 +1,13 @@
+{
+  "song_title": "One",
+  "writers": [
+    "James Hetfield",
+    "Lars Ulrich"
+  ],
+  "original_artist": "Metallica",
+  "featured_on_release": {
+    "release_title": "Live",
+    "release_type": "DVD",
+    "feature_details": "part of their cover"
+  }
+}

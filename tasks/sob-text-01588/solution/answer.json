@@ -1,0 +1,12 @@
+{
+  "marine_officer_name": "Smedley Butler",
+  "rank": "Major General",
+  "years_of_service": 34,
+  "medal_of_honor_recipient": true,
+  "number_of_medals_of_honor": 2,
+  "medals_awarded_in_separate_conflicts": true,
+  "comparison_to_daniel_daly": {
+    "daniel_daly_medal_of_honor_count": 2,
+    "daniel_daly_medals_in_separate_conflicts": true
+  }
+}

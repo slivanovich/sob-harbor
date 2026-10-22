@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "a828c80de470240d1f2f9e499c1035ef343788df9cc78d1b87afa09a0f6aabbf",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5aba3bbd554299232ef4a28d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "genus of flowering plants",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hardenbergia: Hardenbergia is a small genus of leguminous vines from Australia.\n\nChrysogonum: Chrysogonum is a genus of flowering plants in the daisy family.  The plants are terrestrial herbs with yellow flower heads containing both disc florets and ray florets.\n\nStyphnolobium: Styphnolobium is a small genus of three or four species of small trees and shrubs in the subfamily Faboideae of the pea family Fabaceae, formerly included within a broader interpretation of the genus \"Sophora\".  It was recently assigned to the unranked, monophyletic \"Cladrastis\" clade.  They differ from the genus \"Calia\" (mescalbeans) in having deciduous leaves and flowers in axillary, not terminal, racemes.  The leaves are pinnate, with 9–21 leaflets, and the flowers in pendulous racemes similar to those of the black locust.  Necklacepod is a common name for plants in this genus.\n\nAcacia cincinnata: Acacia cincinnata, also known as the Daintree wattle, is a species of leguminous trees of the plant family Fabaceae, found naturally in north eastern Queensland.\n\nGeoffroea: Geoffroea is a rather small genus of wild spiny shrubs or small trees of tropical and subtropical South America.  Although it gathers few species, they are highly extended geographically throughout the subcontinent.  Each species is well known in its local area, as seen from the varied (and mostly domestic) usage of these trees as food, timber, or fuel.  It was recently assigned to the informal monophyletic \"Pterocarpus\" clade within the Dalbergieae.\n\nClover: Clover or trefoil are common names for plants of the genus Trifolium (Latin, \"tres\" \"three\" + \"folium\" \"leaf\"), consisting of about 300 species of plants in the leguminous pea family Fabaceae.  The genus has a cosmopolitan distribution; the highest diversity is found in the temperate Northern Hemisphere, but many species also occur in South America and Africa, including at high altitudes on mountains in the tropics.  They are small annual, biennial, or short-lived perennial herbaceous plants.  Clover can be evergreen.  The leaves are trifoliate (rarely quatrefoiled (Four-leaf clover), cinquefoil, or septfoil), with stipules adnate to the leaf-stalk, and heads or dense spikes of small red, purple, white, or yellow flowers; the small, few-seeded pods are enclosed in the calyx.  Other closely related genera often called clovers include \"Melilotus\" (sweet clover) and \"Medicago\" (alfalfa or Calvary clover).\n\nGymnocladus: Gymnocladus (Neo-Latin, from Greek γυμνὀς, \"gymnos\", naked + κλάδος, \"klados\", branch) is a small genus of leguminous trees.  The common name coffeetree is used for this genus.\n\nCopaiba: Copaiba is a stimulant oleoresin obtained from the trunk of several pinnate-leaved South American leguminous trees (genus \"Copaifera\").  The thick, transparent exudate varies in color from light gold to dark brown, depending on the ratio of resin to essential oil.  Copaiba is used in making varnishes and lacquers.\n\nMesquite: Mesquite is the common name for the genus \"Prosopis\", containing over 40 species of small leguminous trees.  They are native to the southwestern United States and Mexico (even the creeping mesquite, which is invasive in southern California).\n\nBauhinia monandra: Bauhinia monandra is a species of leguminous trees, of the Fabaceae family.  Common names include pink bauhinia, orchid tree, and Napoleon’s plume.  Naturally they grow in Madagascar, but have naturalised in Burma, Australia, Christmas Island, the Caribbean, southern USA and the Pacific Islands.",
+    "question": "While  Gymnocladus is a small genus of leguminous trees, what genus is Chrysogonum?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "plant_genus_name": {
+          "type": "string",
+          "description": "The name of the plant genus."
+        },
+        "plant_type_description": {
+          "type": "string",
+          "description": "A general description of the plant type for the genus."
+        },
+        "family": {
+          "type": "string",
+          "description": "The plant family to which the genus belongs."
+        }
+      },
+      "required": [
+        "plant_genus_name",
+        "plant_type_description",
+        "family"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "plant_genus_name": "Chrysogonum",
+      "plant_type_description": "genus of flowering plants",
+      "family": "daisy family"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "question_products": [
+    {
+      "product_name": "Pecom 32",
+      "production_year": 1985
+    },
+    {
+      "product_name": "Apple I",
+      "production_year": 1976
+    }
+  ],
+  "comparison_year": 1990,
+  "all_products_produced_before_comparison_year": true
+}

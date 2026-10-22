@@ -1,0 +1,9 @@
+{
+  "film_title": "JLA Adventures: Trapped in Time",
+  "actor_name": "Travis Willingham",
+  "character_details": {
+    "character_name": "Gorilla Grodd",
+    "character_type": "supervillain",
+    "primary_enemy_of": "The Flash"
+  }
+}

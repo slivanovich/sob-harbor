@@ -1,0 +1,11 @@
+{
+  "statue_original_name": "Statue of Liberty",
+  "statue_alternative_name": "Liberty Enlightening the World",
+  "replica_details": {
+    "is_replica_present": true,
+    "location_description": "The bridge passes behind a replica of the Statue of Liberty.",
+    "landmark_name": "Pont de Grenelle",
+    "landmark_city": "Paris",
+    "landmark_country": "France"
+  }
+}

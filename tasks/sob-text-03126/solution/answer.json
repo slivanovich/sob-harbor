@@ -1,0 +1,13 @@
+{
+  "academy_name": "Nova União",
+  "location": "Rio de Janeiro, Brazil",
+  "disciplines": [
+    "Brazilian Jiu-Jitsu",
+    "Mixed Martial Arts"
+  ],
+  "connection_to_brites_student": {
+    "student_name": "Robson Moura",
+    "brites_role": "first Brazilian Jiu-Jitsu teacher",
+    "black_belt_awarded_by_academy_co_founder": "Andre Pederneiras"
+  }
+}

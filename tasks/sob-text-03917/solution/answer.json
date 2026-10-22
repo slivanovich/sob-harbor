@@ -1,0 +1,18 @@
+{
+  "olympic_games": {
+    "year": 1960,
+    "name": "1960 Summer Olympics"
+  },
+  "primary_athlete_of_question": {
+    "name": "Wilma Rudolph",
+    "status_achieved": "world renowned star"
+  },
+  "associated_nba_player": {
+    "name": "Oscar Robertson",
+    "nba_teams_played_for": [
+      "Cincinnati Royals",
+      "Milwaukee Bucks"
+    ],
+    "became_star_at_event": "1960 Summer Olympics"
+  }
+}

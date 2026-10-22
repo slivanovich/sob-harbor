@@ -1,0 +1,12 @@
+{
+  "entity_name": "Muskrat",
+  "scientific_name": "Ondatra zibethicus",
+  "animal_type": "rodent",
+  "native_location": "North America",
+  "introduced_locations": [
+    "Europe",
+    "Asia",
+    "South America"
+  ],
+  "habitat_description": "wetlands"
+}

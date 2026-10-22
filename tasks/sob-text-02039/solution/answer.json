@@ -1,0 +1,16 @@
+{
+  "tracinda_ceo_name": "Kerkor \"Kirk\" Kerkorian",
+  "tracinda_ceo_roles": [
+    "president",
+    "CEO"
+  ],
+  "chief_aide": {
+    "name": "Jerry York",
+    "previous_roles": [
+      "Chairman, President and CEO of Harwinton Capital",
+      "CFO of IBM",
+      "CFO of Chrysler",
+      "CEO of Micro Warehouse"
+    ]
+  }
+}

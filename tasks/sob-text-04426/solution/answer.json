@@ -1,0 +1,17 @@
+{
+  "question_asked": "Are Joe Manganiello and Adam G. Sevani both American actors?",
+  "answer": true,
+  "actors_details": [
+    {
+      "name": "Joe Manganiello",
+      "is_american": true,
+      "is_actor": true
+    },
+    {
+      "name": "Adam G. Sevani",
+      "is_american": true,
+      "is_actor": true
+    }
+  ],
+  "conclusion_reasoning": "The context explicitly states that Joe Manganiello is an 'American actor' and Adam G. Sevani is an 'American actor and dancer'. Since both are confirmed to be American actors, the answer is true."
+}

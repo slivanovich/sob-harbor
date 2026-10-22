@@ -1,0 +1,19 @@
+{
+  "comparison_result": "King Gimp",
+  "films_compared": [
+    {
+      "film_title": "King Gimp",
+      "awards_won_count": 2,
+      "award_details": [
+        "2000 Academy Award for Best Short Subject Documentary",
+        "2000 Peabody Award"
+      ]
+    },
+    {
+      "film_title": "Streetwise",
+      "awards_won_count": 0,
+      "award_details": []
+    }
+  ],
+  "reasoning": "King Gimp won 2 awards (Academy Award for Best Short Subject Documentary, Peabody Award), while Streetwise did not have any awards mentioned in the context."
+}

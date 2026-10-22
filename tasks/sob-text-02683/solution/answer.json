@@ -1,0 +1,17 @@
+{
+  "suburb_name": "Dulwich",
+  "city": "Adelaide",
+  "state": "South Australia",
+  "country": "Australia",
+  "electoral_district": "Bragg",
+  "bordering_features": [
+    {
+      "name": "Rose Park",
+      "direction": "north"
+    },
+    {
+      "name": "Adelaide Parklands",
+      "direction": "west"
+    }
+  ]
+}

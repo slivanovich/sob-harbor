@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mad Love (1995 film): Mad Love is a 1995 teen romantic drama film directed by Antonia Bird and starring Drew Barrymore and Chris O'Donnell.  The screenplay was written by Paula Milne.  The original music score is composed by Andy Roberts.
+
+Arsi Nami: Arsalan Nami (Persian: ارسلان نامی‎ ‎ ) (born May 21, 1984 in Shiraz) better known as Arsi Nami, is a Persian-Swedish singer, songwriter, music therapist, actor and philanthropist living in Los Angeles, California.  Credits include music on Fox TV shows Bones (TV series) and The Goodwin Games as well Cannes Film Festival winning film Love is Blind and Crown Prince of Heaven.  He was the lead actor and composer in drama shortfilm, Love Is Blind, which won the 2017 Jury Prize at Cannes International Film Festival Entr'2 Marches for sharing disability awareness.  His commercial acting credits include giant brands such as Hewlett Packard, Ford Motor Company, Samsung, Disney, NBA, Guitar Center, Los Defensores.  Arsi Nami nominated for Best lead male actor in comedy film Villa, a 2017 Official Selection at Premio Tortoreto alla Cultura in Italy, AM Film Festival in Egypt and International Festival of Short Films on Culture & Tourism, India.  also one of the lead actors in 2017 European Cinematography Award winning Drama film Camelia as Vincent the painter.
+
+Rosario Dawson: Rosario Isabel Dawson (born May 9, 1979) is an American actress, producer, singer, comic book writer, and political activist.  She made her film debut in the 1995 teen drama "Kids".  Her subsequent film roles include "He Got Game", "Men in Black II", "25th Hour", "Rent", "Sin City", "Death Proof", "Seven Pounds", "", and "Top Five".  Dawson has also provided voice-over work for Disney and DC.
+
+Auritra Ghosh: Auritra Ghosh is an Indian film actress, dancer and theatre artist.  She made her acting debut in 2011 with the film Love Breakups Zindagi and has recently appeared in Indian comedy film Dharam Sankat Mein released in 2015.
+
+Jared Leto filmography: Jared Leto is an American entertainer who has had an extensive career in film, music, and television.  He made his debut with minor roles in the television shows "Camp Wilder" (1992) and "Almost Home" (1993).  He achieved recognition in 1994 for his role as Jordan Catalano in the teen drama television series "My So-Called Life".  The show was praised for its portrayal of adolescence and gained a cult following, despite being canceled after only one season.  The same year, he made his television film debut starring alongside Alicia Silverstone in "Cool and the Crazy".  Leto's first film role was in the 1995 drama "How to Make an American Quilt".  He later co-starred with Christina Ricci in "The Last of the High Kings" (1996) and received a supporting role in "Switchback" (1997).  In 1997, Leto starred in the biopic "Prefontaine" in which he played the role of Olympic hopeful Steve Prefontaine.  His portrayal received positive reviews from critics and is often considered his breakthrough role.  The following year, Leto starred together with Alicia Witt in the horror "Urban Legend".  He then acted alongside Sean Penn and Adrien Brody in the war film "The Thin Red Line" (1998).  After playing supporting roles in "Black and White" and "Girl, Interrupted", Leto portrayed Angel Face in "Fight Club" (1999), which has since became a cult film.
+
+Love in the Time of Money: Love in the Time of Money is a 2002 American romantic comedy-drama film written and directed by Peter Mattei, and starring Steve Buscemi, Vera Farmiga, Rosario Dawson, Malcolm Gets, Jill Hennessy, and Adrian Grenier.  The film had its premiere at the Sundance Film Festival on January 11, 2002, and was given a limited release in the United States on November 1, 2002.
+
+Tom Cruise filmography: Tom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama "Endless Love".  Two years later he made his breakthrough by starring in the romantic comedy "Risky Business" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.  In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama "Top Gun" (the highest-grossing film that year), and also starred opposite Paul Newman in the Martin Scorsese-directed drama "The Color of Money".  Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama "Rain Man" (1988), and also appeared in the Golden Raspberry Award for Worst Picture-winning romantic drama "Cocktail" (1988).  In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.  His next role was as anti-war activist Ron Kovic in the drama adaptation of Kovic's memoir of the same name, "Born on the Fourth of July" (1989).  For his performance Cruise received the Golden Globe Award for Best Actor – Motion Picture Drama and his first nomination for the Academy Award for Best Actor.
+
+Michelle Williams on screen and stage: Michelle Williams is an American actress who has appeared in film, television and stage.  Her first screen appearance was at the age of 13 in a 1993 episode of the television series "Baywatch", and she made her film debut as the love interest of the teenage lead in "Lassie" (1994).  She subsequently had guest roles in the television sitcoms "Step by Step" and "Home Improvement" and played the younger version of Natasha Henstridge's character in the science fiction film "Species" (1995).  Greater success came to Williams when she began starring as the sexually troubled teenager Jen Lindley in the teen drama "Dawson's Creek" (1998–2003).  In 1999, she made her stage debut with the Tracy Letts-written play "Killer Joe", in which she played the naive young daughter of a dysfunctional family.
+
+Taryn Manning: Taryn Manning (born November 6, 1978) is an American actress, singer-songwriter, and fashion designer.  Manning made her film debut in the teen drama "Crazy/Beautiful" (2001), followed by a lead part opposite Britney Spears in "Crossroads" (2002), which garnered her mainstream attention.  She then appeared in "8 Mile" (2002), "White Oleander" (2002), "A Lot Like Love" (2005) and "Hustle & Flow" (2005).  Manning has also had a main role on "Hawaii Five-0" and had recurring roles in television on "Sons of Anarchy", and plays the role of Tiffany "Pennsatucky" Doggett in the Netflix original series "Orange Is the New Black".
+
+Shannon Purser: Shannon Purser (born June 27, 1997) is an American actress.  She made her acting debut in the Netflix drama series "Stranger Things" as Barbara "Barb" Holland, and portrays Ethel Muggs in The CW's teen drama series "Riverdale".  She made her film debut as June Acosta in the 2017 horror film "Wish Upon".
+
+Question: The actress who appeared in the 2002 film Love in the Time of Money and made her film debut in a 1995 teen drama was born in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actress_name": {
+      "type": "string",
+      "description": "The name of the actress who meets the criteria."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the actress."
+    },
+    "film_debut_details": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the actress's debut film."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the debut film."
+        },
+        "genre": {
+          "type": "string",
+          "description": "The genre of the debut film."
+        }
+      },
+      "required": [
+        "film_title",
+        "release_year",
+        "genre"
+      ],
+      "additionalProperties": false
+    },
+    "film_in_question_details": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film the actress appeared in, as specified in the question."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the specified film."
+        }
+      },
+      "required": [
+        "film_title",
+        "release_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actress_name",
+    "birth_year",
+    "film_debut_details",
+    "film_in_question_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "record_id": "95159223a85db561d66c96432047a03a4f5940592d2af617fcf55ced262d42ef",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5adfe29055429925eb1afaf4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Christopher Isherwood",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Madison Avenue Baptist Church: The Madison Avenue Baptist Church was first chartered in 1848 as Rose Hill Baptist Sunday School and Church, on East 30th Street between Third and Lexington Avenues in Manhattan, New York City.  Rose Hill was a house church with twelve members.  In 1849, Rose Hill Baptist became the Lexington Avenue Baptist Church with twenty-eight members at 154 Lexington Avenue and 30th Street in a new Lombardian Romanesque-style edifice, which is now the First Moravian Church.  Prominent Baptist Jeremiah Milbank – developer of condensed milk with inventor Gail Borden – and other congregational leaders, including the Colgate family, decided to move the church east in order to avoid the falling cinders emitted by the nearby Third Avenue elevated railroad.  Five lots at East 31st Street and Madison Avenue became the site of a grand new structure, built in 1858.\n\nDuffy's Hill: Duffy's Hill is a hill located on Lexington Avenue between 102nd and 103rd Streets in the East Harlem neighborhood of Manhattan, New York City.  It was named for Michael James Duffy, a Tammany Hall Alderman who spent $250,000 to build 26 rowhouses on the south side of 101st Street between Lexington and Park Avenues in 1894.  He continued building between Third Avenue and Lexington Avenue up to 104th Street, a section of the city sometimes known at the time as \"Duffyville\".\n\nManhattan Community Board 5: Manhattan Community Board 5 is a New York City community board, part of the local government apparatus of the city, with responsibility for the neighborhoods of Midtown, Times Square, most of the Theater District, the Diamond District, the Garment District, Herald Square, Koreatown, NoMad, Murray Hill and the Flatiron District, all in the borough of Manhattan.  It is bounded by 59th Street on the north, Eighth Avenue, 26th Street, the Avenue of the Americas (\"Sixth Avenue\") on the west, 14th Street on the south, and Lexington Avenue on the east, excluding the area from 34th to 40th Streets between Madison and Lexington Avenues, and the area from 20th to 22nd Streets between Park Avenue South and Lexington Avenue/Irving Place.\n\n6 (New York City Subway service): The 6 Lexington Avenue/Pelham Local and ⟨6⟩ Lexington Avenue Local/Pelham Express are two rapid transit services in the A Division of the New York City Subway.  Their route emblems, or \"bullets\", are colored forest green since they use the IRT Lexington Avenue Line in Manhattan.\n\nGrand Central Palace: The Grand Central Palace was an exhibition hall in New York City.  Built in 1911, the 13-story building was located on Lexington Avenue between 46th and 47th Streets, occupying the air rights over the railroad tracks leading into Grand Central Terminal.  The Palace was designed by Warren and Wetmore and Reed and Stem, who had collaborated on Grand Central Terminal.  It replaced the original Grand Central Palace, built in 1893 on Lexington Avenue between 43rd and 44th Streets and demolished by 1913 to make way for the Grand Central development after it had served as a temporary station during the building of the terminal.  The Palace was New York's main exposition hall until it closed in 1953.  Its location and the proximity of Grand Central Terminal spurred the construction of a hotel district in the area.  The new Grand Central Palace was demolished in 1964 to make way for 245 Park Avenue.\n\nBrevet Lt. General Winfield Scott: Brevet Lt. General Winfield Scott is an equestrian statue in Washington, D.C., that honors career military officer Winfield Scott.  The monument stands in the center of Scott Circle, a traffic circle and small park at the convergence of 16th Street, Massachusetts Avenue and Rhode Island Avenue NW.  The statue was sculpted by Henry Kirke Brown, whose best-known works include statues of George Washington in New York and Nathanael Greene in Washington, D.C.  It was the first of many sculptures honoring Civil War generals that were installed in Washington, D.C.'s traffic circles and squares and was the second statue in the city to honor Scott.\n\nChristopher Isherwood: Christopher William Bradshaw Isherwood (26 August 1904 – 4 January 1986) was an English-American novelist.  His best-known works include \"The Berlin Stories\" (1935-39), two semi-autobiographical novellas inspired by Isherwood's time in Weimar Republic Germany.  These enhanced his postwar reputation when they were adapted first into the play \"I Am a Camera\" (1951), then the 1955 film of the same name, \"I Am a Camera (film)\"; much later (1966) into the bravura stage musical \"Cabaret (musical)\" which was acclaimed on Broadway, its unsparing stance being substantially sweetened for the film \"Cabaret\" (1972).  His novel \"A Single Man\" was published in 1964.\n\nGeorge Washington Hotel (New York City): The George Washington Hotel was a hotel and boarding house located at 23 Lexington Avenue in New York City.  The building was occupied by many famous writers, musicians, and poets including W. H. Auden and Christopher Isherwood who lived there in the 1930s, or Keith Haring who lived in the building as a student at the School of Visual Arts. \n\nLexington Avenue–63rd Street (63rd Street Lines): Lexington Avenue–63rd Street (formerly Lexington Avenue) is a New York City Subway station in Lenox Hill, Manhattan, shared by the IND and BMT 63rd Street Lines.  Located at the intersection of Lexington Avenue and 63rd Street, it is served by the F and Q trains at all times, and by limited N train service during rush hours.  The station has two platform levels; trains headed southbound to downtown and Brooklyn use the upper level, while trains headed northbound to uptown and Queens use the lower level.  This is one of the deepest stations in the subway system requiring several banks of long escalators.\n\nAllerton Hotel for Women: The Allerton Hotel for Women, today known as Renaissance New York Hotel 57, is a hotel located at 130 East 57th Street in the New York City borough of Manhattan.  It is a seventeen story brick, limestone, and terra cotta building designed by Arthur Loomis Harmon in 1920.  It was built on the southwest corner of Lexington Avenue and 57th Street by the Allerton House Company at a cost of $700,000.  It originally had stores on its ground floor.  The hotel intended to accommodate six hundred business and professional women and also shelter young girls.  When completed in 1923, the Allerton Hotel had room for four hundred tenants.  Its occupancy was filled prior to completion and there was a long waiting list.  After opening it was so popular that another establishment of its kind was anticipated.",
+    "question": "The George Washington Hotel was a hotel and boarding house located at 23 Lexington Avenue in New York City, the building was occupied by many famous writers, musicians, and poets including which English-American novelist, whose best-known works include \"The Berlin Stories\" (1935-39)?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "novelist_name": {
+          "type": "string",
+          "description": "The name of the English-American novelist."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the novelist."
+        },
+        "known_works": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of the novelist's best-known works."
+        },
+        "hotel_residence": {
+          "type": "object",
+          "properties": {
+            "hotel_name": {
+              "type": "string",
+              "description": "The name of the hotel where the novelist lived."
+            },
+            "hotel_address": {
+              "type": "string",
+              "description": "The address of the hotel."
+            }
+          },
+          "required": [
+            "hotel_name",
+            "hotel_address"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "novelist_name",
+        "nationality",
+        "known_works",
+        "hotel_residence"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "novelist_name": "Christopher Isherwood",
+      "nationality": "English-American",
+      "known_works": [
+        "The Berlin Stories"
+      ],
+      "hotel_residence": {
+        "hotel_name": "George Washington Hotel",
+        "hotel_address": "23 Lexington Avenue"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

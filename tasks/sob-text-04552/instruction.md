@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Edward S. Godfrey (physician): Edward Settle Godfrey, Jr. (1878–December 13, 1960), son of Edward Settle Godfrey, was a physician and epidemiologist, the founder of the first epidemiological society in the United States.  He studied the epidemiology of diphtheria and tuberculosis.  From April 21, 1936 until he retired on May 1, 1947, he was the New York State Commissioner of Health.
+
+Aguata: Aguata is a Local Government Area in Anambra state in Nigeria with its headquarters in Aguata (location of the headquarters office buildings) major part of which falls into the city of Ekwulobia while the smallest part falls within Aguluezechukwu.  There has been an age-long contention on this issue between the indigenes of Aguluezechukwu and Ekwulobia with both towns claiming the status of the headquarters on account of ownership claim to the 'Aguata land'.  This state of affairs made the Government of Anambra State to officially declare that the headquarters of Aguata Local Government Area should be Aguata (the neuter name of the location in which the headquarters of Aguata Local Government Area Offices are sited) in a bid to settle the conflict.  Slogan: The Orient Colossus.
+
+Florida Ecological Greenways Network: Florida Ecological Greenways Network work to provide a "system of native landscapes and ecosystems that supports native plant and animal species, sustains clean air, water, fisheries, and other natural resources, and maintains the scenic natural beauty that draws people to visit and settle in Florida,” as stated Florida Greenways Commission.  It also functions to devise a plan for a statewide greenways system, based on GIS (Geographic Information System) technology and suggestions from the public.  The GIS data used includes soil, water, and geological information, wildlife movements and habitat data, as well as existing trails and parks, transportation and infrastructure fixtures, educational and historical sites, and political boundaries.  This system would be created in accordance with the December 1994 report from the Florida Greenways Commission to the Governor of the state of Florida, a report which outlined the protocol for creating it.  Such a system would connect all aspects of the state’s “green infrastructure”, making it more comprehensive for use by the state’s citizens and more effective in achieving greater sustainability throughout the state of Florida for generations to come.
+
+Jourian: Jourian Town was established by Sh Mustafa Khan, Jagirdhar of RakhDhok which is approximately 5 to 6 km north of Jourian.  The Jagirdhar had their land limit up to Jourian which is north side of mighty River Chenab is plain and fertile as compare to Rakhdhok which is Kandi Area and less fertile.  In 1903, the north Punjab was engulfed with the havoc of plague and it also effected adjoining areas.  It was in the end of Apr /Beginning of May 1903 when there was a big rain falls with hailstorms (Aan)which destroyed the wheat crops resulting the rats died insides the huts/kacha houses with the results plague spread.  The GrandMother of Sh Mustafa Khan came to Jourian where they have already a temporary (Kula) Shelter in order to avoid havoc of plague.  The temporary shelter came into permanent shelter as the land of Jourian was more fertile and near the River, so there was no scarcity of water.  Sh Mustafa Khan constructed the pucca Well few feet east of Masjid near to his house and decided to live at Jourian.  That was the beginning of a town which is called Jourian.  Later, when it was felt by young Sh Mustafa Khan to create the Jourian a Town.  He called Shri Nand Shah(Father of Bhagwan Shah),Father of Munshi Shah,Roulu Shah (father of Krishan Shah, Ganesh,Rama,Kaindu and Rattan) from Kaleeth to settle at Jourian and start business.  Shri Nand Shah was the friend of Sh Mustafa Khan.  Sh Nandu Bhagat, Lambardar who also belongs from Rakhdhok shifted to Jourian on the request of Sh Mustafa Khan.  It is very interesting that our Patwar is Rakhdhok though Patwari office is in Jourian.  Sh Moti Bhagat Father of Sh Shatu Ram, Sh Sangaru, Sh Guran Ditta and Sh Khikru called from Ajjal Mallal.  Sh Nanku Bhagat Father of Sh Kartar Chand also from Panjigrain was called to settle at Jourian.  Sh Manna Ram Chamar father of Munshi Ram from Potha which is hardly less than 2 km was also called to settle at Jourian.  Sh Ishwar Dass and Badri Nath called from Setrial.  Sh Nanku Mahajan Father of Sh Banarsi and Birta Ram also called from Potha.  Sh Billo and Basanata Lohar were called from Chamb.  Some Banias which are still called Bakoria came from Bakore.  In addition to this Nandu Barawala also called from Gher.  Jourian town and a notified area committee in Jammu district in the Indian state of Jammu and Kashmir.
+
+John Settle: John R. Settle (born June 2, 1965 in Reidsville, North Carolina), is currently the running backs coach for the Wisconsin Badgers.  He is also a former professional American football player.  A 5'9", 207-lb.  undrafted running back from Appalachian State University, Settle attended Rockingham County High School where he still holds both the single game, single season, and career rushing records.  He played for the Atlanta Falcons from 1987 to 1990.  During the 1988 NFL season, he was selected as a first team All-Pro and to the 1988 Pro Bowl after rushing for a career-high 1,024 yards and 7 touchdowns.  He was the first undrafted running back in NFL history to rush for over 1,000 yards in a season.
+
+New England Emigrant Aid Company: The New England Emigrant Aid Company (originally the Massachusetts Emigrant Aid Company) was a transportation company in Boston, Massachusetts, created to transport immigrants to the Kansas Territory to shift the balance of power so that Kansas would enter the United States as a free state, rather than a slave state.  Created by Eli Thayer in the wake of the Kansas-Nebraska Act, which allowed the population of Kansas Territory to choose whether slavery would be legal, the Company is noted less for its direct impact than for the psychological impact it had on proslavery and antislavery elements.  Thayer's prediction that the Company would eventually be able to send 20,000 immigrants a year never came to fruition, but it spurred Border Ruffians from nearby Missouri, where slavery was legal, to move to Kansas to ensure its admission to the Union as a slave state.  That, in turn, further galvanized Free-Staters and enemies of Slave Power.
+
+Topeka Constitution: The Topeka Constitutional Convention met from October 23 to Nov 11, 1855 in Topeka, Kansas Territory at Constitution Hall.  It drafted the Topeka Constitution that would have banned slavery in Kansas.  The convention was organized by Free-Staters to counter the pro slavery Territorial legislature elected March 5, 1855 in polling suffering widely from electoral fraud and the intimidation of free state settlers.
+
+Leavenworth Constitution: The Leavenworth Constitution was one of four Kansas state constitutions proposed during the era of Bleeding Kansas.  The Leavenworth Constitution was drafted by a convention of Free-Staters, and was the most progressive of the four proposed constitutions.  The conspicuous aspects of this Constitution were a Bill of Rights that referred to ""all men"" (making no distinction between the rights of white men and African-American men), the banning of slavery from the state, and a basic framework for the rights of women.
+
+Free-Stater (Kansas): Free-Staters were those settlers in Kansas Territory during the Bleeding Kansas era in the 1850s who opposed the extension of slavery to Kansas.  The name derives from the term "free state", that is, a U.S. state without slavery.
+
+David Settle Reid: David Settle Reid (April 19, 1813 – June 19, 1891) was the 32nd Governor of the U.S. state of North Carolina from 1851 to 1854 and a U.S. Senator from December 1854 to March 1859.  His uncle was Congressman Thomas Settle, and his brother was Hugh Kearns Reid.
+
+Question: In which state did Free-Staters settle?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "group_name": {
+      "type": "string",
+      "description": "The name of the group of settlers."
+    },
+    "settlement_location": {
+      "type": "string",
+      "description": "The state or territory where the group settled."
+    },
+    "location_status": {
+      "type": "string",
+      "description": "The political status of the settlement location at the time (e.g., Territory, State)."
+    },
+    "primary_motivation": {
+      "type": "string",
+      "description": "The main reason or goal for the group's settlement in that location."
+    }
+  },
+  "required": [
+    "group_name",
+    "settlement_location",
+    "location_status",
+    "primary_motivation"
+  ],
+  "additionalProperties": false
+}

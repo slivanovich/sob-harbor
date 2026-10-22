@@ -1,0 +1,9 @@
+{
+  "artist_name": "Lil Wayne",
+  "age_joined_record_label": 9,
+  "record_label_joined": "Cash Money Records",
+  "music_video_director": {
+    "name": "Hannah Lux Davis",
+    "nationality": "American"
+  }
+}

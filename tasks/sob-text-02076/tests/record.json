@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "22331f590c1fa1d2788990e54e674bb15177e5c603c39ec220d1ad020f7acf4c",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae371115542992e3233c404",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Dianetics",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "MEST (Scientology): MEST is an acronym used in Scientology and coined by author L. Ron Hubbard.  Hubbard used the first letters of the words matter, energy, space and time, the component parts of the physical universe.\n\nPlanning Alternative Tomorrows with Hope (PATH): Planning Alternative Tomorrows with Hope (PATH) is a strengths-based person-centred planning process developed by John O'Brien, Marsha Forrest and Jack Pierpoint, who also developed the McGill Action Planning System (MAPS) .  The PATH process is designed to help a focus person establish their own vision for their life and imagine what supports and connections will help them achieve this vision.  Unlike other person-centred planning processes, PATH is also intended to be a community-building opportunity, and is not limited to existing service systems.  The focus person chooses is invited to their PATH meetings, and it is encouraged to include not only service providers but also those who share a common identity or culture with the focus person.  PATH is designed to develop a comprehensive plan and goals to work towards.  In PATH, a service plan is only the response of one of the parties for how they can contribute toward the focus person's vision for their life.  PATH includes and stresses documentation and structures of accountability, since follow through by support persons is essential for client wellbeing.  It is especially suited for situations where all participants are already familiar with the focus person, since it does not include information gathering components.\n\nEducation in Kosovo: Education in Kosovo is carried out in public and private institutions.  Starting from 1999, education in Kosovo was subject to reforms at all levels: from preschool education up to university level.  These reforms aimed at adjusting the education in Kosovo according to European and global contemporary standards.  As a first step of this new system is considered the establishment of the Department of Education and Science (DES), which is followed with the creation of legal and professional infrastructure, which should facilitate the fundamental reformation of the education (system 5 + 4 + 3-4 in the general and professional education as well as Bologna agreement for high education), and the establishment of the Ministry of Education, Science and Technology (MEST) in March 2002.  During this period the private education system began to develop.\n\nStockholm syndrome: Stockholm syndrome (sometimes erroneously referred to as Helsinki syndrome) is a condition that causes hostages to develop a psychological alliance with their captors as a survival strategy during captivity.  These feelings, resulting from a bond formed between captor and captives during intimate time spent together, are generally considered irrational in light of the danger or risk endured by the victims.  Generally speaking, Stockholm syndrome consists of \"strong emotional ties that develop between two persons where one person intermittently harasses, beats, threatens, abuses, or intimidates the other.\"  The FBI's Hostage Barricade Database System shows that roughly eight percent of victims show evidence of Stockholm syndrome.\n\nVismon: Vismon was the Bell Labs system which displayed authors' faces on one of their internal e-mail systems.  The name was a pun on the \"sysmon\" program used at Bell to show the load on computer systems.  It can also be interpreted as \"visual monitor\".  The system inspired Rich Burridge to develop the similar but more widespread \"faces\" system which spread with Unix distributions in the 1980s.  This in turn inspired Steve Kinzler to develop the \"Picons\", or personal icons, which have the goal of offering symbols and other images, as well as faces to represent individuals and institutions in email messages.  Other systems such as the faces available on the LAN email functions of the NeXTSTEP platform also seem to have been influenced by the original Vismon capabilities.  The \"faces\" program in Plan 9 is the direct descendant of this system.\n\nL. Ron Hubbard: Lafayette Ronald Hubbard (March 13, 1911 – January 24, 1986), better known as L. Ron Hubbard ( ) and often referred to by his initials, LRH, was an American author and the founder of the Church of Scientology.  After establishing a career as a writer, becoming best known for his science fiction and fantasy stories, he developed a system called Dianetics which was first expounded in book form in May 1950.  He subsequently developed his ideas into a wide-ranging set of doctrines and practices as part of a new religious movement that he called Scientology.  His writings became the guiding texts for the Church of Scientology and a number of affiliated organizations that address such diverse topics as business administration, literacy and drug rehabilitation.  The Church's dissemination of these materials led to Hubbard being listed by the \"Guinness Book of World Records\" as the most translated and published author in the world.  The Guinness World Record for the most audio books published for one author is also held by Hubbard.  In 2014, Hubbard was cited by \"Smithsonian\" magazine as one of the 100 most significant Americans of all time, as one of the eleven religious figures on that list.\n\nNegging: Negging is an act of emotional manipulation whereby a person makes a deliberate backhanded compliment or otherwise flirtatious remark to another person to undermine their confidence and increase their need of the manipulator's approval.  Although some believe that it builds attraction, it results in poor quality relationships.  Over time the less confident person becomes resentful.  Negging is often misunderstood as straightforward insult rather than as a pick up line.  The term was coined and prescribed by the pickup artist community.  The term has been popularized in social media and mainstream media.  The opposite is \"pozzing\", whereby one pays a person a compliment in order to gain their affection.\n\nBasic symptoms of schizophrenia: Basic symptoms of schizophrenia are subjective symptoms, described as experienced from a person's perspective, which show evidence of underlying psychopathology.  Basic symptoms have generally been applied to the assessment of people who may be at risk to develop psychosis.  Though basic symptoms are often disturbing for the person, problems generally do not become evident to others until the person is no longer able to cope with their basic symptoms.  In the prodrome to psychosis, uncharacteristic basic symptoms develop first, followed by more characteristic basic symptoms and brief and self-limited psychotic-like symptoms, and finally the onset of psychosis.  In 2015, the European Psychiatric Association issued guidance recommending the use of a subscale of basic symptoms, called the Cognitive Disturbances scale (COGDIS), in the assessment of psychosis risk in help-seeking psychiatric patients; in a meta-analysis, COGDIS was shown to be as predictive of transition to psychosis as the Ultra High Risk (UHR) criteria up to 2 years after assessment, and significantly more predictive thereafter.  The basic symptoms measured by COGDIS, as well as those measured by another subscale, the Cognitive-Perceptive basic symptoms scale (COPER), are predictive of transition to schizophrenia.\n\nImagini: Imagini is a London-based software firm founded in 2006.  It uses images instead of questions to do marketing tasks such as psychographic marketing research and social networking.  Using Imagini's \"VisualDNA\" technology, Web visitors respond to queries such as \"My biggest vice is...\" or \"My idea of love is...\" by clicking on images, and software algorithms analyse the choices made to learn more about that particular person's preferences, likes and attitudes; then, a profile is constructed of the person which the firm describes as that person's \"Visual DNA\".  One software application matches up a person's choices with that of others in a database, and suggests possible others with similar dispositions and worldviews.  An additional application takes consumer's responses to images and uses this information to write a person's personal profile which can be used in places such as online dating sites.  Information obtained by Imagini software can be used by web marketers to develop a better understanding of consumer preferences.  In 2007, \"The Guardian\" noted that Imagini had high-powered financial backing.\n\nPosttraumatic stress disorder: Posttraumatic stress disorder (PTSD) is a mental disorder that can develop after a person is exposed to a traumatic event, such as sexual assault, warfare, traffic collisions, or other threats on a person's life.  Symptoms may include disturbing thoughts, feelings, or dreams related to the events, mental or physical distress to trauma-related cues, attempts to avoid trauma-related cues, alterations in how a person thinks and feels, and an increase in the fight-or-flight response.  These symptoms last for more than a month after the event.  Young children are less likely to show distress but instead may express their memories through play.  A person with PTSD is at a higher risk for suicide and intentional self-harm.",
+    "question": "Which system did the person who coined MEST develop?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_who_coined_term": {
+          "type": "string",
+          "description": "The name of the person who coined the specified term."
+        },
+        "term_coined": {
+          "type": "string",
+          "description": "The term that was coined by the person."
+        },
+        "developed_systems": {
+          "type": "array",
+          "description": "A list of systems or doctrines developed by the person.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_developed_system": {
+          "type": "string",
+          "description": "The specific system identified as the answer to the question."
+        }
+      },
+      "required": [
+        "person_who_coined_term",
+        "term_coined",
+        "developed_systems",
+        "primary_developed_system"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_who_coined_term": "L. Ron Hubbard",
+      "term_coined": "MEST",
+      "developed_systems": [
+        "Dianetics",
+        "Scientology"
+      ],
+      "primary_developed_system": "Dianetics"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

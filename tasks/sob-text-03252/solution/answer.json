@@ -1,0 +1,9 @@
+{
+  "film_title": "Ocean's Twelve",
+  "release_year": 2004,
+  "is_blockbuster": true,
+  "excluded_film_details": {
+    "title": "I, Robot",
+    "director": "Alex Proyas"
+  }
+}

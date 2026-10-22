@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "record_id": "bc58ef5b0a673339a520a4c1fffce94684a8fabaec01ea9e1bbfd159545afadc",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a77148855429966f1a36c26",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Kurt Weill",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Gerhard Stäbler: Gerhard Stäbler (born 1949) is a German composer born in Wilhelmsdorf near Ravensburg.  He studied with Klaus Huber and came to prominence with the chamber orchestra \"acronym\" \"Den Müllfahrern von San Francisco\" (The Garbage Truck Drivers of San Francisco) in 1990.  This was followed by lectures at the Darmstädter Ferienkurse in 1992.  He has resided extensively abroad, including Stanford University in the 1980s and Yonsei University in Seoul in 1988 and has visited Israel and Lebanon repeatedly, writing a chamber cantata \"Den Toten von Sabra und Chatila\" to poems by the Palestinian poet Tawfiq Ziad (1982).  In Germany he has concentrated his activities around the Ruhr Area.\n\nBrigitte Klump: Brigitte Klump (born 23 January 1935) is a German author and campaigner.  She was born into a relatively poor farming family, originally of Huguenot provenance.  She grew up, between 1949 and 1957, in the German Democratic Republic (East Germany) where she trained as a journalist, before undertaking an internship at the Theater am Schiffbauerdamm in Berlin.  Here she was mentored by Brecht's widow, the actress-director Helene Weigel.  Klump escaped to West Berlin in 1957.\n\nBerliner Ensemble: The Berliner Ensemble (] ) is a German theatre company established by playwright Bertolt Brecht and his wife, Helene Weigel in January 1949 in East Berlin.  In the time after Brecht's exile, the company first worked at Wolfgang Langhoff's Deutsches Theater and in 1954 moved to the Theater am Schiffbauerdamm, built in 1892, that was open for the 1928 premiere of \"The Threepenny Opera\" (\"Die Dreigroschenoper\").\n\nMack the Knife: \"Mack the Knife\" or \"The Ballad of Mack the Knife\", originally \"Die Moritat von Mackie Messer\", is a song composed by Kurt Weill with lyrics by Bertolt Brecht for their music drama \"Die Dreigroschenoper\", or, as it is known in English, \"The Threepenny Opera\".  It premiered in Berlin in 1928 at the Theater am Schiffbauerdamm.  The song has become a popular standard recorded by many artists, including a US and UK number one hit for Bobby Darin in 1959.\n\nKurt Weill: Kurt Julian Weill (March 2, 1900April 3, 1950) was a German composer, active from the 1920s in his native country, and in his later years in the United States.  He was a leading composer for the stage who was best known for his fruitful collaborations with Bertolt Brecht.  With Brecht, he developed productions such as his best-known work \"The Threepenny Opera\", which included the ballad \"Mack the Knife\".  Weill held the ideal of writing music that served a socially useful purpose.  He also wrote several works for the concert hall.  He became a United States citizen on August 27, 1943.\n\nIsak Roux: Isak Roux is a South African born German composer born in 1959.  He is known for his arrangements of South African music, especially his work with the musical groups Ladysmith Black Mambazo and Kwela Tebza.\n\nCornelius Gurlitt (composer): Cornelius Gurlitt (10 February 1820 – 17 June 1901) was a German composer born in Altona, Schleswig-Holstein.  He was a classmate of Carl Reinecke, whose father was head of the famous Leipzig Conservatory.  Gurlitt studied with Reinecke's father for six years.  His first public appearance at the age of seventeen was well received, and he decided to go to Copenhagen to continue his studies.  There he studied organ, piano, and composition under Curlander and Weyse.  While in Copenhagen he became acquainted with the Danish composer Niels Gade, and they remained friends until Gade's death.\n\nTheater am Schiffbauerdamm: The Theater am Schiffbauerdamm (] ) is a theatre building at the \"Schiffbauerdamm\" riverside in the Mitte district of Berlin, Germany, opened on November 19, 1892.  Since 1954 it has been home to the Berliner Ensemble theatre company, founded in 1949 by Helene Weigel and Bertolt Brecht.\n\nPioneers in Ingolstadt: Pioneers in Ingolstadt (German: \"Pioniere in Ingolstadt\" ) is a play by German playwright Marieluise Fleißer, which premiered on 25 March 1928 in Dresden.  The play is set in 1926 and is described as a comedy in 14 Scenes.  Fleißer based the play on real incidents, and worked on it in collaboration with Bertolt Brecht.  The play was revised and produced at the Theater am Schiffbauerdamm in Berlin in March and April 1929, directed by Brecht and Jacob Geis, with set-design by Caspar Neher.  In 1968 Fleißer began a third revision, which was performed in 1970.  In 1971, Rainer Werner Fassbinder adapted the play as a film for television.\n\nEvald Aav: Evald Aav (7 March [O.S. 22 February] 1900 – 21 March 1939) was an Estonian composer born in Tallinn, Governorate of Estonia, Russian Empire.  He studied music composition there with Artur Kapp and wrote primarily vocal music to words in the Estonian language.  In 1928 he composed the first national Estonian opera, \"Vikerlased\" (The Vikings).  The opera premiered in Tallinn on 8 September 1928.  He modelled his style of composition after Tchaikovsky.",
+    "question": "What German composer born in 1900 had a premier in Berlin in 1928 at the Theater am Schiffbauerdamm?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "composer_name": {
+          "type": "string",
+          "description": "The full name of the composer."
+        },
+        "composer_nationality": {
+          "type": "string",
+          "description": "The nationality of the composer."
+        },
+        "composer_birth_year": {
+          "type": "integer",
+          "description": "The birth year of the composer."
+        },
+        "premiere_event": {
+          "type": "object",
+          "properties": {
+            "work_title": {
+              "type": "string",
+              "description": "The title of the work that premiered."
+            },
+            "premiere_year": {
+              "type": "integer",
+              "description": "The year the work premiered."
+            },
+            "premiere_city": {
+              "type": "string",
+              "description": "The city where the premiere took place."
+            },
+            "venue_name": {
+              "type": "string",
+              "description": "The name of the venue where the premiere took place."
+            }
+          },
+          "required": [
+            "work_title",
+            "premiere_year",
+            "premiere_city",
+            "venue_name"
+          ],
+          "additionalProperties": false
+        },
+        "collaborators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the collaborator."
+              },
+              "role": {
+                "type": "string",
+                "description": "The role of the collaborator (e.g., lyricist, playwright)."
+              }
+            },
+            "required": [
+              "name",
+              "role"
+            ],
+            "additionalProperties": false
+          },
+          "description": "A list of collaborators on the premiered work."
+        }
+      },
+      "required": [
+        "composer_name",
+        "composer_nationality",
+        "composer_birth_year",
+        "premiere_event",
+        "collaborators"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "composer_name": "Kurt Weill",
+      "composer_nationality": "German",
+      "composer_birth_year": 1900,
+      "premiere_event": {
+        "work_title": "The Threepenny Opera",
+        "premiere_year": 1928,
+        "premiere_city": "Berlin",
+        "venue_name": "Theater am Schiffbauerdamm"
+      },
+      "collaborators": [
+        {
+          "name": "Bertolt Brecht",
+          "role": "lyricist"
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

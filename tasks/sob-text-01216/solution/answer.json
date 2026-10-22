@@ -1,0 +1,39 @@
+{
+  "winning_university_name": "Bahauddin Zakariya University",
+  "comparison_summary": "Bahauddin Zakariya University has more explicit accolades in the form of international and national university rankings, whereas Makerere University's descriptions are more about its historical development and size.",
+  "universities_data": [
+    {
+      "university_name": "Bahauddin Zakariya University",
+      "accolades": [
+        "one of the largest universities in Punjab",
+        "offers degree courses in more than 60 majors"
+      ],
+      "rankings": [
+        {
+          "ranking_type": "global",
+          "rank_value": "Top 800",
+          "source": "Times Higher Education (THE) Ranking System",
+          "year": "2016-2017"
+        },
+        {
+          "ranking_type": "national",
+          "rank_value": "8th",
+          "source": "General Universities Category of Higher Education Commission of Pakistan (HEC)",
+          "year": "2014"
+        }
+      ]
+    },
+    {
+      "university_name": "Makerere University",
+      "accolades": [
+        "Uganda's largest and third-oldest institution of higher learning",
+        "first established as a technical school in 1922",
+        "became the University of East Africa in 1963",
+        "became an independent national university in 1970",
+        "composed of nine colleges and one school",
+        "offers programmes for about 36,000 undergraduates and 4,000 postgraduates"
+      ],
+      "rankings": []
+    }
+  ]
+}

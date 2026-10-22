@@ -1,0 +1,35 @@
+{
+  "question_topic": "individuals' professions",
+  "individuals_analysis": [
+    {
+      "name": "Thomas Merton",
+      "is_writer": true,
+      "writing_roles": [
+        "writer",
+        "theologian",
+        "mystic",
+        "poet",
+        "author"
+      ],
+      "works_mentioned": [
+        "Dialogue About A Hidden God",
+        "The Seven Storey Mountain"
+      ]
+    },
+    {
+      "name": "Jane Urquhart",
+      "is_writer": true,
+      "writing_roles": [
+        "novelist",
+        "poet",
+        "author"
+      ],
+      "works_mentioned": [
+        "The Whirlpool",
+        "Away",
+        "The Underpainter"
+      ]
+    }
+  ],
+  "are_all_writers": true
+}

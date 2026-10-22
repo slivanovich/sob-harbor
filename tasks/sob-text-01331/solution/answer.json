@@ -1,0 +1,14 @@
+{
+  "common_media_type": "documentary",
+  "entity_1_details": {
+    "name": "Round Eyes in the Middle Kingdom",
+    "release_year": 1995,
+    "director": "Ronald Levaco"
+  },
+  "entity_2_details": {
+    "name": "In the Shadow of the Moon",
+    "release_year": 2007,
+    "country_of_origin": "British"
+  },
+  "reason_for_commonality": "Both 'Round Eyes in the Middle Kingdom' and 'In the Shadow of the Moon' are described as documentary films."
+}

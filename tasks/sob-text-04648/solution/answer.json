@@ -1,0 +1,14 @@
+{
+  "club_name": "Strindheim Idrettslag",
+  "skier_info": {
+    "name": "Petter Northug Jr.",
+    "nationality": "Norwegian",
+    "achievement_year": 2013,
+    "achievement_event": "Nordic World Ski Championships in 4 x 10 km relay in Val di Fiemme",
+    "gold_medals_won_in_event": 9
+  },
+  "person_whose_achievement_was_leveled": {
+    "name": "Bjørn Dæhlie",
+    "previous_record_description": "most successful World Champion male skier"
+  }
+}

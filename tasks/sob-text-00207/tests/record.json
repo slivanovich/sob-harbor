@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "bb14f693cea471c6c0b305140f78330704c3172e6ad23f3b664520695cfe1f38",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8e54f05542990e94052ad4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "the regional government of Wallonia",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "SAKO: SAKO, Limited (Suojeluskuntain Ase- ja Konepaja Oy, \"Civil Guard Gun- and Machiningworks Ltd\") is a Finnish firearm manufacturer located in Riihimäki.  It is now owned by the Italian firearms holding company Beretta Holding.\n\nAmerican Outdoor Brands Corporation: American Outdoor Brands Corporation is an American manufacturer of firearms and outdoor sports and recreation products, organized as a holding company with direct or indirect participation in 18 brands.  Its principal holding is firearms manufacturer Smith & Wesson.\n\nPhoenix Arms: Phoenix Arms is a firearms manufacturer established in 1992.  A predecessor company owned by George Jennings, Raven Arms, burned down in 1991, after which Jennings retired and sold his designs to Phoenix.  Phoenix was founded and owned by George's ex-wife, his children, four of his grandchildren, and by Raven's former general manager.  Phoenix is described by the U.S. BATF as one of the \"Ring of Fire\" companies.\n\nBeretta 93R: The Beretta 93R is a selective-fire machine pistol, designed and manufactured by Italian firearms manufacturer Beretta in the 1970s for police and military use, that is derived from their semi-automatic Beretta 92.  The \"R\" stands for \"Raffica\", which is Italian for \"volley\", \"flurry\", or \"burst\" (sometimes spoken \"R\" as \"\"Rapid\"\" in English).\n\nFranchi LF-57: The Franchi LF57 is an Italian pressed-metal submachine gun.  A small number were made for the Italian Navy in the 1960s, but few others ordered it.  The LF57 uses a recessed bolt head similar to the Beretta Model 12's as a method of reducing the weapon's length, although on the LF57 the bolt's mass is carried above the barrel rather than around it.  This allows manufacture to be simplified to a degree.  Most parts are made of stampings and pressings, and the two sides of the gun are one piece each, joined by a long seam.  Dismantling the weapon is very simple, such as the barrel, which is held on by one single barrel nut.  The tubular butt folds to the right side of the receiver, and the pistol grip is made entirely of steel.  The sights are simple fixtures on the top of the barrel.  Also it was rapidly known as the \"Dead Squirrel\" due to its low ammunition capacity.\n\nSIG Sauer: There are two SIG Sauer companies.  The original company, SIG Sauer GmbH, is a Swiss-German firearms manufacturer and exporter, formed in 1976 as a partnership between Schweizerische Industrie Gesellschaft (SIG) of Switzerland and J.P. Sauer & Sohn of Germany.  SIG (now known as SIG Holding, AG) no longer has any firearms business.  Their firearms subsidiary, Swiss Arms AG, was sold to (L&O Holding) of Emsdetten, Germany and was renamed Swiss Arms.  L&O Holding is currently the parent company of SIG Sauer GmbH.\n\nBeretta M12: The Beretta Model 12 is a 9×19mm Parabellum caliber submachine gun designed by Beretta.  The production started in 1962, the first users were the Italian Carabinieri and the Italian State Police even though in limited number, only in 1978 it was widely issued replacing the old Beretta MAB.  In 1962 the Italian Army bought a limited number of Franchi LF57 submachine gun, judged better than the M12 but never issued to the troops, and only in 1992 the M12S2 variant was introduced also if in very limited number.  The Italian Air Force, instead, bought a large number of M12S and M12S2 for the airport security units.  However the weapon had a higher initial success in the Arab countries and South America.  Its debut in combat came during the Tet Offensive in 1968 when the Marines guarding the U.S. embassy in Saigon repelled the assault by the Viet Cong using the Beretta M12.  It is also used by various South American, African and Asian countries, and made under license in Brazil by Taurus, in Belgium by FN Herstal and in Indonesia by PT Pindad.\n\nBeretta Holding: Beretta Holding S.p.A also called the Berretta Holding Group, is headquartered in Gardone Val Trompia near Brescia, Italy.  It is an Italian holding company for the famous Italian industrial group and holds direct or indirect participation in 26 companies.  The eponymous company is managed by fifteenth-generation descendants of \"Maestro\" , progenitor of a firearms manufacturing dynasty.\n\nBeretta: Fabbrica d'Armi Pietro Beretta ] (literally, \"Pietro Beretta Arms Factory\") is a privately held Italian firearms manufacturing company operating in several countries.  Its firearms are used worldwide for a variety of civilian, law enforcement, and military purposes.  Sporting arms account for three-quarters of sales; Beretta is also known for marketing shooting clothes and accessories.  Founded in the 16th century, Beretta is the oldest active manufacturer of firearm components in the world.  In 1526 its inaugural product was arquebus barrels; by all accounts Beretta-made barrels equipped the Venetian fleet at the Battle of Lepanto in 1571.  Beretta has supplied weapons for every major European war since 1650.\n\nFN Herstal: Fabrique Nationale d'Herstal (French for: National Factory of Herstal), self identified as FN Herstal and often referred to as Fabrique Nationale or simply FN, is a leading firearms manufacturer located in Herstal, Belgium, and is owned by the holding company Herstal Group which is owned by the regional government of Wallonia.  It is currently the largest exporter of military small arms in Europe.",
+    "question": "The Beretta Model 12 are made under license in Belgium by a leading firearms manufacturer is owned by a holding company owned by whom?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "firearm_model": {
+          "type": "string",
+          "description": "The specific firearm model being discussed."
+        },
+        "licensed_manufacturer": {
+          "type": "string",
+          "description": "The company that manufactures the firearm under license."
+        },
+        "manufacturer_location": {
+          "type": "string",
+          "description": "The location of the licensed manufacturer."
+        },
+        "holding_company": {
+          "type": "string",
+          "description": "The holding company that owns the licensed manufacturer."
+        },
+        "ultimate_owner": {
+          "type": "string",
+          "description": "The ultimate entity that owns the holding company."
+        },
+        "ultimate_owner_type": {
+          "type": "string",
+          "description": "The type of the ultimate owner (e.g., 'government')."
+        }
+      },
+      "required": [
+        "firearm_model",
+        "licensed_manufacturer",
+        "manufacturer_location",
+        "holding_company",
+        "ultimate_owner",
+        "ultimate_owner_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "firearm_model": "Beretta Model 12",
+      "licensed_manufacturer": "FN Herstal",
+      "manufacturer_location": "Herstal, Belgium",
+      "holding_company": "Herstal Group",
+      "ultimate_owner": "regional government of Wallonia",
+      "ultimate_owner_type": "government"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

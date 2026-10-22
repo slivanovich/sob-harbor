@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "20a30a3360e32a26b4c5e74af3000b91582c1e7d7835a05ec1f767a15b7a2d78",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8b69f655429950cd6afce5",
+    "source_dataset": "hotpotqa",
+    "source_answer": "2008 to 2012",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Yunus-bek Yevkurov: Yunus-bek Bamatgireyevich Yevkurov (Russian: Юну́с-бек Баматгире́евич Евку́ров ; born 23 July 1963) is the head of the southern Russian republic of Ingushetia, appointed by President Dmitry Medvedev on 30 October 2008.  The following day, the People's Assembly of the Republic of Ingushetia, the republic's regional parliament, voted in favor of Yevkurov's appointment, making him the third Head of Ingushetia.\n\nAkhmed Malsagov: Akhmed Malsagov is a former interim president of the southern Russian republic of Ingushetia.  The duration of his term was between December 2001 and May 2002.\n\nDmitry Medvedev: Dmitry Anatolyevich Medvedev ( ) (Russian: Дми́трий Анато́льевич Медве́дев , \"Dmitriy Anatolyevich Medvedev\"; ] , born 14 September 1965) is a Russian politician, currently the Prime Minister of Russia.  From 2008 to 2012, Medvedev served as the third President of Russia.\n\nHead of the Republic of Ingushetia: The Head of the Republic of Ingushetia (Russian: Глава Республики Ингушетия ), formerly \"President of the Republic of Ingushetia\", is the highest office within the Government of Ingushetia, Russia.  The Head is elected by Russian citizens living in Ingushetia.  Term of service is five years.\n\nIngush Head election, 2013: Indirect elections for the Head of the Republic of Ingushetia were held on 9 September 2013.  Incumbent Head Yunus-Bek Yevkurov was re-elected for another 5 year term.\n\nRustaman Makhauri: Rustaman Makhauri (born 1978) is a Chechen military commander and a close associate of Doku Umarov, the anti-Russian underground Chechen leader.  Makhauri was appointed by Umarov as Minister of Defense; he is suspected of being responsible for a series of attacks against the forces loyal to the governments in Chechnya and neighboring Ingushetia.  He was captured by police in July 2009 in Ingushetia's district of Sunzhen and charged with involvement in the June 22, 2009 attack on the Ingush president Yunus-Bek Yevkurov.\n\nMurat Zyazikov: Murat Magometovich Zyazikov (Russian: Мура́т Магоме́тович Зя́зиков ) (born September 10, 1957) is an Ingush politician who was the second president of the southern Russian republic of Ingushetia.  He was born in what is now Kyrgyzstan.  Zyazikov was a controversial politician in Ingushetia.\n\nRashid Gaysanov: Rashid Yakhyayevich Gaysanov (Russian: Рашид Яхьяевич Гайсанов ; born 17 September 1972), last name also spelled Gaisanov, is a Russian politician in the southern Republic of Ingushetia.  He has served as the Prime Minister of Ingushetia under Ingush President Yunus-bek Yevkurov.  He was further appointed the acting President of Ingushetia following an assassination attempt against Yevkurov in June 2009.\n\nAbdul Madzhid (Dagestan rebel): Ilgar Mollachiev, better known as Emir Abdul Madzhid (Majid), was the militant leader of the Shariat Jamaat of the Caucasian Front in the Second Chechen War, in the volatile southern Russian republic of Dagestan.  He was the deputy of Rappani Khalilov until Khalilov's death in September 2007.  He was then appointed the new leader of the Shariat Jamaat by the orders of Dokka Umarov.  His nationality was Tsakhur.\n\nRoddy Scott: On 26 September 2002 Scott was killed in the Russian republic of Ingushetia.  Russian soldiers found his body in Ingushetia's Galashki region, near the border with the war-torn republic of Chechnya, following a fierce battle between Russian forces and a group of Chechen rebel fighters in which at least 17 were killed and a Russian helicopter was shot down.  Scott had accompanied the Chechens from Ruslan Gelayev's unit as they crossed from Georgia into Russia and was apparently killed by a bullet in the viewfinder of his camera while filming the firefight, United Press International reported.  According to the Kavkaz Center, however, he was killed alone while trying to surrender.  At first, the Kremlin officials said Scott might still be alive.",
+    "question": "Yunus-bek Yevkurov was appointed the head of the southern Russian republic of Ingushetia by a president that served during what years?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "appointed_person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the person who was appointed."
+            },
+            "position": {
+              "type": "string",
+              "description": "The position to which the person was appointed."
+            }
+          },
+          "required": [
+            "name",
+            "position"
+          ],
+          "additionalProperties": false
+        },
+        "appointing_president": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the president who made the appointment."
+            },
+            "term_start_year": {
+              "type": "integer",
+              "description": "The start year of the president's term."
+            },
+            "term_end_year": {
+              "type": "integer",
+              "description": "The end year of the president's term."
+            }
+          },
+          "required": [
+            "name",
+            "term_start_year",
+            "term_end_year"
+          ],
+          "additionalProperties": false
+        },
+        "republic_of_appointment": {
+          "type": "string",
+          "description": "The name of the republic where the appointment took place."
+        }
+      },
+      "required": [
+        "appointed_person",
+        "appointing_president",
+        "republic_of_appointment"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "appointed_person": {
+        "name": "Yunus-bek Yevkurov",
+        "position": "head of the southern Russian republic of Ingushetia"
+      },
+      "appointing_president": {
+        "name": "Dmitry Medvedev",
+        "term_start_year": 2008,
+        "term_end_year": 2012
+      },
+      "republic_of_appointment": "Ingushetia"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

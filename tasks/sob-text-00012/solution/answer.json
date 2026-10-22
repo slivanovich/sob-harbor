@@ -1,0 +1,15 @@
+{
+  "championship_year": 1965,
+  "championship_edition": 47,
+  "winning_team_details": {
+    "team_name": "Niagara Falls Flyers",
+    "trophy_won": "George Richardson Memorial Trophy",
+    "league": "Ontario Hockey Association",
+    "franchise_description": "The Niagara Falls Flyers were two junior ice hockey franchises that played in the top tier in the Ontario Hockey Association."
+  },
+  "final_series_details": {
+    "opponent_team_name": "Edmonton Oil Kings",
+    "games_won_by_winner": 4,
+    "games_won_by_opponent": 1
+  }
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Saskatoon: Saskatoon ( ) is the largest city in the Canadian province of Saskatchewan.  Straddling a bend in the South Saskatchewan River and along the Trans-Canada Yellowhead Highway, it has served as the region's cultural and economic hub since it was founded in 1882 as a Temperance colony.  At its 2016 census population of 246,376, Saskatoon is the largest city in the province, while at a 2016 census population of 295,095, the Saskatoon census metropolitan area (CMA) is the 17th largest CMA in Canada.  The City of Saskatoon has estimated its population to be 271,000 as of July 2017, while Statistics Canada has estimated the CMA's population to have to be 315,200 as of 2016.
+
+Ocean County, New Jersey: Ocean County is a county located along the Jersey Shore in the U.S. state of New Jersey.  Its county seat is Toms River.  Since 1990, Ocean County has been one of New Jersey's fastest-growing counties.  As of the 2016 Census estimate, the county's population was 592,497, a 2.8% increase from the 576,567 enumerated in the 2010 United States Census, making Ocean the state's sixth-most populous county.  The 2010 population figure represented an increase of 65,651 (+12.8%) from the 2000 Census population of 510,916, as Ocean surpassed Union County to become the sixth-most populous county in the state.  Ocean County was also the fastest growing county in New Jersey between 2000 and 2010 in terms of increase in the number of residents and second-highest in percentage growth.  Ocean County was established on February 15, 1850, from portions of Monmouth County, with the addition of Little Egg Harbor Township which was annexed from Burlington County on March 30, 1891.  The most populous place was Lakewood Township, with 92,843 residents at the time of the 2010 Census (up 32,491 since 2000, the largest population increase of any municipality in the state), while Jackson Township, covered 100.62 sqmi , the largest total area of any municipality in the county.
+
+Vladivostok: Vladivostok (Russian: Владивосто́к ; ] , literally "ruler of the east") is a city and the administrative center of Primorsky Krai, Russia, located around the Golden Horn Bay, not far from Russia's borders with China and North Korea.  The population of the city as of 2016 is 606,653, up from 592,034 recorded in the 2010 Russian census.
+
+Clearwater County, Alberta: Clearwater County is a municipal district in west central Alberta, Canada in Division No. 9.  Its northwest boundary is the Brazeau River.  The municipal office is located in the Town of Rocky Mountain House.  The county has a land area of 18,691.65 km² (7,216.89 sq mi) and comprises close to 99% of Census Division No. 9's land area of 18,921.38 km² (7,305.59 sq mi).  Although the territory excluded is rather small in geographical area, it comprises the major population centre of Rocky Mountain House, which has one-third of Division No. 9's population, in addition to the communities of Caroline, Burnstick Lake and three Indian reserves.  The county's 2016 census population was 11,947.
+
+Burlington, Ontario: Burlington (Canada 2016 Census population 183,314) is a city in the Regional Municipality of Halton at the northwestern end of Lake Ontario.  Along with Milton to the north, Burlington forms the west end of the Greater Toronto Area, while its metropolitan census area is part of the neighbouring city of Hamilton.  Burlington lies between Lake Ontario's north shore and the Niagara Escarpment.  Economically, Burlington is strategically located near the geographic centre of the Golden Horseshoe, a densely populated and industrialized region of over 8 million people.
+
+Strathcona Regional District: The Strathcona Regional District is a regional district in British Columbia, Canada.  It was created on February 15, 2008, encompassing the northern and western portions of the former Regional District of Comox-Strathcona.  The partition left the new Strathcona Regional District with 91.6 percent of the former Comox-Strathcona's land area, but only 42.1 percent of its population.  Its current territory has a land area of 18,329.948 km² (7,077.232 sq mi) and a 2016 census population of 44,671 inhabitants.  There are 21 named Indian reserves within its territory, with a combined 2016 census population of 1,579 and combined land area of 16.444 km² (6.345 sq mi).
+
+Owen Sound: Owen Sound (Canada 2016 Census population 22,032), the county seat of Grey County, is a city in the northern area of Southwestern Ontario, Canada.  (The 2016 population of Grey County was 93,830 in 2016).  Owen Sound is located at the mouths of the Pottawatomi and Sydenham Rivers on an inlet of Georgian Bay.
+
+Armenians in Russia: Armenians in Russia or Russian Armenians are one of the country's largest ethnic minorities and the largest Armenian diaspora community outside of Armenia.  The 2010 Russian census recorded 1,182,388 Armenians in the country.  Various figures estimate that the ethnic Armenian population in Russia is actually more than 2 million.  Armenians populate various regions, including Moscow, Saint Petersburg, Krasnodar Krai in the North Caucasus and as far as Vladivostok in the East.
+
+Salmas: Salmas (Persian: سلماس‎ ‎ , Azerbaijani: Sālmās; Romanized as Salmās and Salamas) is the capital of Salmas County, WA (West Azerbaijan Province), Iran.  It is located near the eastern boarder of Turkey.  According to the 2016 census, the city's population is 101,441.  The majority of the population is composed of Azerbaijanis and Kurds (mostly at the countrysides) with some Assyrian, Armenian, Persian Jewish, and Persians as minorities.
+
+Milton, Ontario: Milton (2016 census population 110,128) is a town in Southern Ontario, Canada, and part of the Halton Region in the Greater Toronto Area.  Between 2001 and 2011 Milton was the fastest growing municipality in Canada, with a 71.4% increase in population in 2006 and another 56.5% increase in 2011.  In 2016, Milton's census population was 110,128 with an estimated growth to 228,000 by 2031.
+
+Question: What is the 2016 census population of the city which creates the eastern boarder where Armenians in Russia are found?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "city_name": {
+      "type": "string",
+      "description": "The name of the city identified from the context."
+    },
+    "census_year": {
+      "type": "integer",
+      "description": "The year of the population census."
+    },
+    "population": {
+      "type": "integer",
+      "description": "The population of the city for the specified census year."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation of how the city was identified based on the question and context."
+    }
+  },
+  "required": [
+    "city_name",
+    "census_year",
+    "population",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

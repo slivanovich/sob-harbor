@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "d2b09ca512209f5078643d22a7657fe3f521a66f245768095b7cfb732682320e",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a714c945542994082a3e79d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Pizza Patrón Inc.",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Freshslice Pizza: Freshslice Pizza is a Canadian franchised pizza chain in restaurants located throughout British Columbia, and one location in Toronto as of 2016.  The first restaurant opened in 1999 in Vancouver, British Columbia.  Today, Freshslice Pizza is the second-largest pizza chain in British Columbia behind Panago in terms of locations open.\n\nPeppes Pizza: Peppes Pizza is a Norwegian pizza chain that serves American style and Italian style pizza.  Peppes is the largest pizza chain in Scandinavia.  The restaurant was founded by two Americans, Louis Jordan and his wife Anne from Hartford, Connecticut.  The restaurant chain is part of Umoe Catering As which consists of restaurants such as Burger King, TGI Fridays, La Baguette and Cafe Opus.  Peppes Pizza is one of the first restaurants that brought foreign food to Norway.  9 million pizzas are served by Peppes each year with deliveries in 11 cities in Norway.  Their menu was first put online in March 1995.  The servings have been described as enough for two people and that the pizza chain is \"a cut above the rest\".\n\nHungry Howie's Pizza: Hungry Howie's Pizza & Subs, Inc., also known as Hungry Howie's Pizza, is a franchise and the 11th largest pizza chain in the United States, with over 550 locations.  Hungry Howie's products include pizza, calzone-style subs, chicken wings and tenders, bread, salads, and brownies. Its headquarters are located in Madison Heights, Michigan in Metro Detroit.\n\nPizza delivery: Pizza delivery is a service in which a pizzeria or pizza chain delivers a pizza to a customer.  An order is typically made either by telephone or over the internet to the pizza chain, in which the customer can request pizza type, size and other products alongside the pizza, commonly including soft drinks.  Pizzas may be delivered in pizza boxes or delivery bags, and deliveries are made with either an automobile, motorized scooter, or bicycle.  Customers can, depending on the pizza chain, choose to pay online, or in person, with cash, credit or a debit card.  A delivery fee is often charged with what the customer has bought.\n\nBlackjack Pizza: Blackjack Pizza is a Colorado-based pizza delivery chain founded in 1983 by a former Domino's Pizza employee, Vince Schmuhl, because Domino's Pizza was the only major pizza delivery company in the Rocky Mountain region and he thought customers would appreciate an alternative.  The pizza chain is the largest in Colorado with 800 employees, some of whom work part-time.  On January 1, 2013, Blackjack Pizza was acquired by Askar Brands.\n\nRabbe Grönblom: Rabbe Anders Grönblom (May 3, 1950 Helsinki, Finland – June 29, 2015) was a Finland-Swedish businessman who started a successful pizza business in Vaasa, Finland.  His first company—a pizzeria—was called \"O sole mio\" and it was founded in 1976 in the center of Vaasa.  From there he expanded to a pizza franchise chain first called \"Pizzeria N:o 1\".  He was known as the \"Pizza-emperor\" (Pizzakeisari in Finnish), because he was the founder of a well known pizza franchise chain called Kotipizza which was the new name of \"Pizzeria N:o 1\" which expanded fast outside of Vaasa.  The chain is said to be the biggest one in the Nordic countries.  He was also the founder of a shipping company called RG Line, a hotel chain called Omenahotelli and another pizza chain called Golden Rax Pizzabuffet.  Most of his companies are subsidiaries of Grönblom International LTD, where Rabbe Grönblom acted as director.  Golden Rax Pizzabuffet however is nowadays a part of Finland's largest hotel & restaurant company Restel Oy Ltd, where Rabbe Grönblom sat on the board.  He was also on the board of the Finnish tyre company Nokian Renkaat (since 2003).\n\nPietro's Pizza: Pietro's Pizza is a small pizza chain in the U.S. state of Oregon.  Founded in 1957, the chain grew to about 80 restaurants and changed owners several times before shrinking to only four stores.  The company is based in Milwaukie, Oregon.\n\nHappy Joe's: Happy Joe's Pizza & Ice Cream Parlor is an American pizza parlor chain based in Bettendorf, Iowa.  The restaurant chain was founded in 1972 by Lawrence Joseph \"Happy Joe\" Whitty, a former Shakey's Pizza manager.  Its 61 restaurants are mostly located in the Midwestern United States (in Iowa, Illinois, Missouri, Minnesota, North Dakota and Wisconsin). , although the company is also present in Arizona.  The idea for Happy Joe's came from a combination of a pizza parlor and ice cream palace.\n\nPizza Schmizza: Pizza Schmizza is an American pizza chain with 23 locations throughout the Portland, Oregon area, and two in southern Oregon.  Pizza Schmizza, primarily selling thin crust pizza by-the-slice.\n\nPizza Patrón: Pizza Patrón Inc. is a United States pizza chain headquartered in San Antonio, Texas.",
+    "question": "Which American pizza chain has their headquarters in a more southerly state, Pietro's Pizza or Pizza Patrón?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "comparison_subject_1": {
+          "type": "object",
+          "properties": {
+            "chain_name": {
+              "type": "string",
+              "description": "Name of the first pizza chain being compared."
+            },
+            "headquarters_state": {
+              "type": "string",
+              "description": "The U.S. state where the first chain's headquarters is located."
+            }
+          },
+          "required": [
+            "chain_name",
+            "headquarters_state"
+          ],
+          "additionalProperties": false
+        },
+        "comparison_subject_2": {
+          "type": "object",
+          "properties": {
+            "chain_name": {
+              "type": "string",
+              "description": "Name of the second pizza chain being compared."
+            },
+            "headquarters_state": {
+              "type": "string",
+              "description": "The U.S. state where the second chain's headquarters is located."
+            }
+          },
+          "required": [
+            "chain_name",
+            "headquarters_state"
+          ],
+          "additionalProperties": false
+        },
+        "more_southerly_state": {
+          "type": "string",
+          "description": "The state identified as being more southerly."
+        },
+        "chain_in_more_southerly_state": {
+          "type": "string",
+          "description": "The name of the pizza chain whose headquarters is in the more southerly state."
+        }
+      },
+      "required": [
+        "comparison_subject_1",
+        "comparison_subject_2",
+        "more_southerly_state",
+        "chain_in_more_southerly_state"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "comparison_subject_1": {
+        "chain_name": "Pietro's Pizza",
+        "headquarters_state": "Oregon"
+      },
+      "comparison_subject_2": {
+        "chain_name": "Pizza Patrón Inc.",
+        "headquarters_state": "Texas"
+      },
+      "more_southerly_state": "Texas",
+      "chain_in_more_southerly_state": "Pizza Patrón Inc."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

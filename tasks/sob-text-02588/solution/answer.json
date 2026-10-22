@@ -1,0 +1,13 @@
+{
+  "mine_name": "Ruggles Mine",
+  "located_in_town": {
+    "town_name": "Grafton",
+    "state": "New Hampshire",
+    "country": "United States",
+    "population_details": {
+      "population_count": 1340,
+      "census_year": 2010
+    }
+  },
+  "mine_current_status": "closed_and_for_sale"
+}

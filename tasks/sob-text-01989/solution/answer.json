@@ -1,0 +1,19 @@
+{
+  "museum_name": "Living Heritage Tree Museum",
+  "museum_type": "open-air museum",
+  "location": {
+    "city": "Storm Lake",
+    "state": "Iowa",
+    "country": "US"
+  },
+  "dedicated_to": "heritage trees",
+  "founders": [
+    "Stan Lemaster",
+    "Theodore Klein"
+  ],
+  "historical_connections": [
+    "Joan of Arc",
+    "Johnny Appleseed",
+    "Henry Wadsworth Longfellow"
+  ]
+}

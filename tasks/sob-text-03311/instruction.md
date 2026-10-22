@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+PHYLIP: PHYLogeny Inference Package (PHYLIP) is a free computational phylogenetics package of programs for inferring evolutionary trees (phylogenies).  It consists of 35 portable programs, i.e., the source code is written in the programming language C.  As of version 3.696, it is licensed as open-source software; versions 3.695 and older were proprietary software freeware.  Releases occur as source code, and as precompiled executables for many operating systems including Windows (95, 98, ME, NT, 2000, XP, Vista), Mac OS 8, Mac OS 9, OS X, Linux (Debian, Red Hat); and FreeBSD from FreeBSD.org.
+
+Pristine Sources: Pristine Sources is a software management concept coined by the developers of the short-lived Bogus Linux distribution and popularized by Marc Ewing, co-founder of Red Hat Inc, after he adopted it and RPM Package Manager as a development philosophy for Red Hat Linux.  It was the concept that enabled Red Hat to build Linux distributions faster and more reliably than had been possible previously.  Briefly, the problem with building an operating systems out of the myriad pieces of open source (or free software) components available from teams across the Internet was that there were many of these components and they all upgraded on different schedules at different times.  Ewing's insight was to recognize that he could not take responsibility for these components.  He and Erik Troan, wanted to build a software package management system, RPM, that allowed the team at Red Hat to avoid changing any of the source code of the software components they needed to use to build their Red Hat Linux operating system.
+
+Bibus: Bibus is reference management software designed for OpenOffice.org packages and Microsoft Word in particular, with goal of creating an open source bibliographic software package that will allow easy formatting of the bibliographic index in OpenOffice.org Writer and Microsoft Word.  It is based on Python and wxWidgets, making it platform-independent in principle.  It functions on all 32-bit versions of Microsoft Windows (95/98/NT/2000/XP), POSIX (Linux/BSD/UNIX-like OSes) and, to a limited extent, Mac OS X.  Bibus is free software released under the GNU GPL v2+.
+
+Open Systems Accounting Software: Open Systems Accounting Software (OSAS) is a business accounting software package for small- to medium-sized businesses using the Microsoft Windows, Linux, and Mac OS X operating systems.  It has been developed and sold since 1976 by Open Systems, Inc. of Shakopee, MN.
+
+Microsoft Small Business Financials: Microsoft Small Business Financials (formerly Microsoft Small Business Manager) is a business accounting software package.  The software is targeting growing small businesses that require more than basic accounting software: with fewer than 25 employees and less than $10 million of revenue.  It is part of Microsoft Dynamics (formerly Microsoft Business Solutions) family.  It is based on Microsoft Dynamics GP and runs on top of free Microsoft MSDE or SQL Server Express database.  Microsoft Small Business Financials and Microsoft Dynamics GP are built on the same platform, so migration to Microsoft Dynamics GP is very simple and straightforward.
+
+MacPorts: MacPorts, formerly called DarwinPorts, is a package management system that simplifies the installation of software on the macOS and Darwin operating systems.  It is an open-source software project to simplify installation of other open source software.  Similar in aim and function to Fink and the BSDs' ports collections, DarwinPorts was started in 2002 as part of the OpenDarwin project, with the involvement of a number of Apple Inc. employees including Landon Fuller, Kevin Van Vechten, and Jordan Hubbard.
+
+HomeBank: HomeBank is a personal accounting software package that runs on OpenBSD, Linux, FreeBSD, Microsoft Windows, Mac OS (via macports or homebrew) and AmigaOS.
+
+Ports collection: Ports collections (or "ports trees", or just "ports") are the sets of makefiles and patches provided by the BSD-based operating systems, FreeBSD, NetBSD, and OpenBSD, as a simple method of installing software or creating binary packages.  They are usually the base of a package management system, with ports handling package creation and additional tools managing package removal, upgrade, and other tasks.  In addition to the BSDs, a few Linux distributions have implemented similar infrastructure, including Gentoo's Portage, Arch's Arch Build System (ABS), CRUX's Ports and Void Linux's Templates.
+
+OpenBSD Cryptographic Framework: The OpenBSD Cryptographic Framework (OCF) is a service virtualization layer for the uniform management of cryptographic hardware by an operating system.  It is part of the OpenBSD Project, having been included in the operating system since OpenBSD 2.8 (December, 2000).  Like other OpenBSD projects such as OpenSSH, it has been ported to other systems based on Berkeley Unix such as FreeBSD and NetBSD, and to Solaris and Linux.  One of the Linux ports is supported by Intel for use with its proprietary cryptographic software and hardware to provide hardware-accelerated SSL encryption for the open source Apache HTTP Server.
+
+Homebrew (package management software): Homebrew is a free and open-source software package management system that simplifies the installation of software on Apple's macOS operating system.  Originally written by Max Howell, the package manager has gained popularity in the Ruby on Rails community and earned praise for its extensibility.  Homebrew has been recommended for its ease of use as well as its integration into the command line.
+
+Question: HomeBank is a personal accounting software package, that runs on OpenBSD, Linux, FreeBSD, Microsoft Windows, Mac OS (via macports or homebrew), Homebrew is a free and open-source software package management system that simplifies the installation of software, on which operating system?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "software_name": {
+      "type": "string",
+      "description": "The name of the software package."
+    },
+    "software_type": {
+      "type": "string",
+      "description": "The type or category of the software."
+    },
+    "primary_function": {
+      "type": "string",
+      "description": "The main purpose or function of the software."
+    },
+    "supported_operating_system": {
+      "type": "string",
+      "description": "The operating system on which the software simplifies installation."
+    }
+  },
+  "required": [
+    "software_name",
+    "software_type",
+    "primary_function",
+    "supported_operating_system"
+  ],
+  "additionalProperties": false
+}

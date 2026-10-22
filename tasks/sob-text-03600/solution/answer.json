@@ -1,0 +1,8 @@
+{
+  "city_1_name": "Yixing",
+  "city_1_administrative_level": "county-level city",
+  "city_2_name": "Dezhou",
+  "city_2_administrative_level": "prefecture-level city",
+  "are_same_level": false,
+  "comparison_summary": "Yixing is a county-level city, while Dezhou is a prefecture-level city, meaning they are not the same administrative level."
+}

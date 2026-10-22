@@ -1,0 +1,16 @@
+{
+  "park_comparison": [
+    {
+      "park_name": "Sierra Nevada National Park",
+      "location_country": "Spain",
+      "land_area_hectares": 85883
+    },
+    {
+      "park_name": "Atlantic Islands of Galicia National Park",
+      "location_country": "Spain",
+      "land_area_hectares": 1200
+    }
+  ],
+  "park_with_larger_land_area": "Sierra Nevada National Park",
+  "land_area_difference_hectares": 84683
+}

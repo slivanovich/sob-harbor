@@ -1,0 +1,11 @@
+{
+  "school_name": "Singwango Secondary School",
+  "sister_school_details": {
+    "place_name": "Carle Place",
+    "place_type": "CDP",
+    "town_name": "North Hempstead",
+    "county_name": "Nassau County",
+    "state_name": "New York"
+  },
+  "answer_county": "Nassau County"
+}

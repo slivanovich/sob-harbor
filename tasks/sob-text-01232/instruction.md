@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+24K Magic (album): 24K Magic is the third studio album by American singer and songwriter Bruno Mars.  It was released worldwide on November 18, 2016, by Atlantic Records.  The follow-up to Mars's successful sophomore album, "Unorthodox Jukebox" (2012), it explores genres similar to those of its predecessor, such as soul and funk, while Mars and his team focused on capturing the R&B sound that was very popular in the 90's, described by the singer as the reason he fell in love with music in the first place.  Recording sessions for the album took place between early 2015 and September 2016 at Glenwood Place Studios in Burbank, California.  The production of the album was handled by newly formed production trio Shampoo Press & Curl, consisting of Mars, Brody Brown and Philip Lawrence.
+
+U2 discography: The discography of Irish rock band U2 consists of thirteen studio albums, one live album, three compilation albums, sixty-seven singles, and eight extended plays (EPs).  The band formed at Mount Temple Comprehensive School in 1976 as teenagers.  In 1979, the group issued their first release, the EP "U2-3", which sold well in Ireland.  The following year, the group signed to Island Records and released their debut album, "Boy".  It reached number 52 in the UK and number 63 in the US.  They followed it up with the release of "October" (1981) and "War" (1983).  "War" was a commercial success, becoming the band's first number-one album in the UK while reaching number 12 in the US.  The album yielded the singles "Sunday Bloody Sunday" and "New Year's Day" and have since become among the band's most popular songs.  On the subsequent War Tour, the group recorded the live album "Under a Blood Red Sky" and concert film "", both of which sold well and helped establish them globally as a live act.
+
+Thor 5: Thor 5, also known as Thor 2R is a Norwegian communications satellite.  It was successfully launched for Telenor atop an International Launch Services Proton-M/Briz-M carrier rocket, at 11:34 GMT on 11 February 2008.  It is based on the STAR-2 satellite bus, and was constructed by Orbital Sciences Corporation.  It carries 24 K band transponders, to provide direct-to-home television broadcasting.  After launch, the Briz-M upper stage placed Thor 5 directly into a geosynchronous orbit, eliminating the need for orbital raising manoeuvres and making the spacecraft able to save weight by carrying less fuel.  It is positioned at a longitude of 1° West.
+
+Apstar 2R: Apstar 2R, also known as Telstar 10 and SinoSat 1C located at 76.5°E ( ), is a communications satellite equipped with 27 C band and 24 K band transponders (36 MHz equivalents).  The C band payload provides coverage of Asia, Australia, parts of Europe and Africa.  The K band payload covers Korea and China, including Hong Kong, Macau and Taiwan.  Telstar 10, which hosts one of the most extensive cable neighborhoods in Asia, distributes cable television programming, direct-to-home services, telecommunications, as well as Internet and VSAT (very small aperture terminal) services.
+
+The Twilight Sad discography: The discography of Scottish rock band The Twilight Sad consists of four studio albums, four compilation albums, eleven singles, and five extended plays (EPs).  The band currently consists of James Graham (vocals), Andy MacFarlane (guitar, producer), and Mark Devine (drums).  The Kilsyth-based band formed in 2003 and were signed to Fat Cat Records when Alex Knight, co-founder of the label, went to Glasgow to watch the band perform their third gig and signed them on the spot.  The band released their debut EP "The Twilight Sad" in November 2006 in the United States only, followed by their debut album "Fourteen Autumns & Fifteen Winters" in April 2007, which garnered widespread critical acclaim.  The album spawned two singles, "That Summer, at Home I Had Become the Invisible Boy" in April, and "And She Would Darken the Memory" in July.  The following year, the band released "Here, It Never Snowed.  Afterwards It Did", a mini-album of reworked versions of songs from "Fourteen Autumns & Fifteen Winters" and two non-album tracks, inspired by stripped-down live performances.  A collection of live versions and previously unreleased tracks entitled "Killed My Parents and Hit the Road" was released in December 2008.  The Twilight Sad's second studio album, "Forget the Night Ahead", was released in September 2009 to further acclaim and marked a shift in the band's direction towards a darker and more streamlined sound.  The album produced three singles: "I Became a Prostitute" in August 2009, "Seven Years of Letters" in October 2009, and "The Room" in April 2010.  Founding bassist Craig Orzel left the band in February 2010, and the band released "The Wrong Car" EP in September of that year.
+
+The Star Parade: The Star Parade are an Irish–Italian rock band based in Milan, Italy.  The band formed in late 2008, when they quickly released five tracks online for public review.  The band, known locally as TSP, was created by Des Anderson and Fab Martini.  TSP speedily accessed many avenues within the industry since this time.  Having quickly made its mark within the online community, they are now being tied to fashion labels and the arts within Milan.  Anderson, being Irish, has brought an international side to the band while Martini has brought years of training in sound design and engineering within Italy.  They have created a unique sound within the Italian music industry.  Albeit different from what Italy expects, TSP have strangely slotted into the music world there and found their place.  It has been rumored by TgCom  that the band are working with Thomas Black ("You're a Star" Ireland and A&R man for Sony/EMI Records) with regards to publishing their music worldwide, but for now they are working within Italy and most recently started work with Solomasagio, based in Milan.
+
+Galaxy 18: Galaxy 18 is a Space Systems/Loral (SS/L) 1300-series hybrid communications satellite owned by Intelsat and located in geosynchronous orbit at 123° W longitude, serving the continental United States, Alaska, Hawaii, Mexico, and Canada with 24 C band, and 24 K band transponders.  Galaxy 18 is intended to replace Galaxy 10R which was nearing the end of its design life.
+
+24K (band): 24K (Korean: 투포케이 ) is a South Korean boy group formed by Choeun Entertainment in 2012.  The group currently consists of seven members.  They debuted on September 6, 2012 with the extended play "Hurry Up".
+
+Kawaihae (band): Kawaihae is an island music band formed in the summer 2000 in Japan formed by Tokyo/Yokohama/Nagoya radio personality Vance K who was born and raised on the Big Island of Hawaii.  Since the band formed, they have released three albums and is currently working on a 4th album slated for release in 2009.  The band houses a large fanbase within Japan and Hawaii and has received the Group of the Year award at the 2004 Hawaii Music Awards.
+
+24K discography: The discography of South Korean boy band 24K, formed by Choeun Entertainment consists of one studio album, three extended plays (EPs), one single album and eight singles.
+
+Question: The 24K discography regards the band formed by Choeun Entertainment in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "formed_by_entity": {
+      "type": "string",
+      "description": "The entity that formed the band."
+    },
+    "formation_year": {
+      "type": "integer",
+      "description": "The year the band was formed."
+    },
+    "band_type": {
+      "type": "string",
+      "description": "The type of band (e.g., boy group)."
+    }
+  },
+  "required": [
+    "band_name",
+    "formed_by_entity",
+    "formation_year",
+    "band_type"
+  ],
+  "additionalProperties": false
+}

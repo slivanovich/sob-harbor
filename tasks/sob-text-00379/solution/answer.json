@@ -1,0 +1,15 @@
+{
+  "person_name": "Michael Carrington",
+  "person_roles": [
+    "comic writer",
+    "voice actor"
+  ],
+  "animated_series_name": "The Simpsons",
+  "episode_details": {
+    "episode_title": "I Love Lisa",
+    "season_number": 4,
+    "episode_number": 15,
+    "character_voiced": "Sideshow Raheem",
+    "character_description": "Krusty's militant black sideshow partner in the 1970s"
+  }
+}

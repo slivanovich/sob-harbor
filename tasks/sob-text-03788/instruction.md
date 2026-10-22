@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Bitter Sweet (1933 film): Bitter Sweet is a British musical romance film directed by Herbert Wilcox and released by United Artists in 1933.  It was the first film adaptation of Noël Coward's 1929 operetta "Bitter Sweet".  It starred Anna Neagle and Fernand Gravey, with Ivy St. Helier reviving her stage role as Manon.  It was made at Elstree Studios and was part of a boom in operetta films during the 1930s.
+
+Every River: "Every River" is a song written by American country music artist Kim Richey along with Angelo Petraglia and Tom Littlefield.  First recorded by Richey on her 1997 album "Bitter Sweet", it was later covered by duo Brooks & Dunn, who released it as the fifth and final single from the 2001 album "Steers & Stripes".  It entered the Billboard Hot Country Songs Chart on the week of September 7, 2002.  It peaked at number 12 on the week of December 14, 2002.  It was more recently covered by "British Invasion" band The Searchers.
+
+The Verve: The Verve were an English rock band formed in Wigan in 1990 by lead vocalist Richard Ashcroft, guitarist Nick McCabe, bass guitarist Simon Jones and drummer Peter Salisbury.  Guitarist and keyboard player Simon Tong later became a member.
+
+Bitter Sweet Symphony: "Bitter Sweet Symphony" is a song by British alternative rock band The Verve, and is the lead track on their third studio album, "Urban Hymns" (1997).  It is based on an Andrew Loog Oldham orchestral version of The Rolling Stones' song "The Last Time", from which it samples a main theme, and involved some legal controversy surrounding a plagiarism charge as a result.  Consequently, Mick Jagger and Keith Richards were added to the songwriting credits.  "Bitter Sweet Symphony" was released on 16 June 1997 by Hut Recordings as the first single from the album, reaching number two on the UK Singles Chart and stayed in the chart for three months.  The song's momentum built slowly in the US throughout the latter months of 1997, ultimately leading to a CD single release on 3 March 1998 by Virgin Records America, helping the song to reach number 12 on the "Billboard" Hot 100.
+
+Home Sweet Home/Bittersweet Symphony: "Home Sweet Home / Bittersweet Symphony", also known as "Bittersweet Home" is a song by American rock group Limp Bizkit.  It was released in December 2005 as the only single from the compilation album "Greatest Hitz".  The song is a medley of "Home Sweet Home" by Mötley Crüe and "Bitter Sweet Symphony" by The Verve.  It is, along with the songs "Why" and "Lean On Me", the only new content on the "Greatest Hitz" compilation, and is the third cover song Limp Bizkit has released on an album (the others being The Who's "Behind Blue Eyes", and George Michael's "Faith").
+
+Bitter Sweet (1940 film): Bitter Sweet is a 1940 American Technicolor musical film directed by W. S. Van Dyke, based on the operetta "Bitter Sweet" by Noël Coward.  It was nominated for two Academy Awards, one for Best Cinematography and the other for Best Art Direction by Cedric Gibbons and John S. Detlie.
+
+Bitter Sweet &amp; Twisted: Bitter Sweet & Twisted is rock band The Quireboys's second studio album, released in 1993.  The album was released on EMI and went into the UK Albums Chart at #31.
+
+Ridin' Solo: "Ridin' Solo" is the third single from Jason Derulo's self-titled debut album, produced by J.R. Rotem.  The demo originally sampled "Bitter Sweet Symphony" by The Verve, but the sample was not cleared and was subsequently replaced with electronic motifs which are featured throughout the entire song.
+
+Bitter &amp; Sweet (album): Bitter & Sweet is the first album released by Beni Arashiro under her new label Universal Music Japan and her new stage name, Beni on September 2, 2009.  The CD+DVD version is a limited edition with all her single PVs and 2 new PVs named "The Boy Is Mine", which features Tynisha Keli, and "Superstar" which are both cover songs.  The vocals for the DJ Hasebe Remix of "Kiss Kiss Kiss" were recorded from one of her live performances.  The song "Dakishimete", featuring Dohzi-T, was released on 19 August as an online download on Recochoku's Chaku Uta.  The song debuted on the #5 place on the Chaku-Uta charts and the #2 place on the Recochoku chart.  The album debuted at the #6 place on the Oricon chart.  The day after it rose to the #5 place.  At the end of the first week, the album ended up on the #5 spot on the weekly chart selling about 30,000 copies making it Beni's highest ranked and best selling album to date.  She went on a release club tour.  The tour was named "Bitter&Sweet RELEASE TOUR".  The tour was so successful that new tour dates were added.  "Bitter & Sweet" has been certified Gold by RIAJ for shipment of 100,000 copies.  On 28 December, it was announced that Bitter & Sweet sold over 100,000 copies.
+
+Ostinato: In music, an ostinato ] (derived from Italian: "stubborn", compare English, from Latin: 'obstinate') is a motif or phrase that persistently repeats in the same musical voice, usually at the same pitch.  Well-known ostinato-based pieces include both classical compositions such as Ravel's "Boléro" and popular songs such as Donna Summer and Giorgio Moroder's "I Feel Love" (1977), Henry Mancini's Theme from Peter Gunn (1959), and The Verve's "Bitter Sweet Symphony" (1997).
+
+Question: Where was the band who released "Bitter Sweet Symphony" formed?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band that released the song."
+    },
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song in question."
+    },
+    "formation_location": {
+      "type": "string",
+      "description": "The city where the band was formed."
+    },
+    "formation_year": {
+      "type": "integer",
+      "description": "The year the band was formed."
+    }
+  },
+  "required": [
+    "band_name",
+    "song_title",
+    "formation_location",
+    "formation_year"
+  ],
+  "additionalProperties": false
+}

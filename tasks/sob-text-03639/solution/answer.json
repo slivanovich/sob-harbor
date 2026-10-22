@@ -1,0 +1,9 @@
+{
+  "university_name": "University of Tampa",
+  "location": {
+    "city": "Tampa",
+    "state": "Florida",
+    "country": "United States"
+  },
+  "institution_type": "private co-educational university"
+}

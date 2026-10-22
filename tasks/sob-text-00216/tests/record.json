@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "1a7e6bb886fc9116c7cc5cdd1d637c58be6e4191fb9f8bea7fcc56a31396f61f",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab9578f554299131ca422fc",
+    "source_dataset": "hotpotqa",
+    "source_answer": "animal siblings",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Chicken sandwich: In North America, a chicken sandwich is a sandwich which typically consists of a boneless, skinless breast of chicken served between slices of bread, on a bun, or on a roll.  Variations of what North Americans consider a \"Chicken Sandwich\" include the chicken burger or chicken on a bun, hot chicken, and chicken salad sandwich.  Countries outside of North America generally consider a chicken sandwich to only consist of flat bread, whereas a \"chicken burger\" is defined by the use of bread buns with chicken as part of its content.\n\nCow dung: Cow dung, also known as cow pats, cow pies or cow manure, is the waste product of bovine animal species.  These species include domestic cattle (\"cows\"), bison (\"buffalo\"), yak, and water buffalo.  Cow dung is the undigested residue of plant matter which has passed through the animal's gut.  The resultant faecal matter is rich in minerals. Color ranges from greenish to blackish, often darkening soon after exposure to air.\n\nWorking cow horse: Working cow horse is a type of competition, known also as reined cow horse, where horses are asked to work a single live cow in an arena, performing specific maneuvers that include circling the cow, turning it in a specified manner, and performing a reining pattern.  Horses that can perform these tasks are called \"reined cow horses,\" \"cow horses,\" \"stock horses,\" or \"working cow horses.\"  Competition consists of three parts where a horse and rider are judged on their performance in a reining pattern, herd work, and \"fence work\".  Horses are judged on accuracy, timing, and responsiveness, as well as how they handle a single cow and their ability to ride into a herd of cattle and quietly \"cut\" a cow from the herd.\n\nHydrodamalis: Hydrodamalis is a genus of extinct herbivorous sirenian marine mammals, and included the Steller's sea cow (\"Hydrodamalis gigas\"), the Cuesta sea cow (\"Hydrodamalis cuestae\"), and the Takikawa sea cow (\"Hydrodamalis spissa\").  The fossil genus \"Dusisiren\" is regarded as the sister taxon of \"Hydrodamalis\": together, the two genera form the dugong subfamily Hydrodamalinae.  They were the largest member of the order Sirenia, whose only extant members are the dugong (\"Dugong dugon\") and the manatees (\"Trichechus\" spp.) .  They reached up to 9 m in length, making the Steller's sea cow among the largest mammals other than whales to have existed in the Holocene epoch.  Steller's sea cow was first described by Georg Wilhelm Steller, Cuesta by Daryl Domning, and Takikawa by Hitoshi Furusawa.  The Steller's sea cow was the only member of the genus to survive into modern times, and, although had formerly been abundant throughout the North Pacific, by the mid 1700s, its range had been limited to a single, isolated population surrounding the uninhabited Commander Islands.  It was hunted for its meat, skin, and fat by fur traders, and was also hunted by aboriginals of the North Pacific coast, leading to its and the genera's extinction 27 years after discovery.  The Cuesta sea cow along with the Takikawa sea cow were probably extinct at the end of the Pliocene due to the onset of the Ice Ages and the subsequent recession of seagrasses—their main food source.\n\nCharlie Adler: Charles Michael \"Charlie\" Adler (born October 2, 1956) is an American voice actor and voice director.  He is known for voicing Buster Bunny in \"Tiny Toon Adventures\", Cow, Chicken, and The Red Guy in \"Cow and Chicken\" and \"I Am Weasel\", Starscream in the \"Transformers\" film series and Ickis in \"Aaahh!!!  Real Monsters\".\n\nCow and Chicken: Cow and Chicken is an American animated comedy television series created by David Feiss for Cartoon Network, and the 3rd of the network's Cartoon Cartoons.  It follows the surreal adventures of two funny animal siblings, Cow and Chicken.  They are often antagonized by the Red Guy, who poses as various characters to scam them.\n\nCow lung: Cow lung is used in various cuisines and as a source for pulmonary surfactants.  In Peru it is known as bofe.  In Southeast Asia, Nasi kuning can be made with cow lung.  Paru goreng is fried cow lung Padang food.  It is a type of offal.  In Indonesia, cow's lung is called \"paru\" and is eaten coated with spices (turmeric and coriander) and fried as a snack or side dish.  In Malaysian cuisine, cow or goat lung, called paru, coated in turmeric and fried is often served as a side dish to rice, especially in the ever popular nasi lemak.\n\nInterrupting Chicken: \"Interrupting Chicken’s\" plot has a repetitive nature, with a humorous story line and a good underlying message.  The story begins with little red chicken’s bedtime.  Little red chicken’s calm, patient father is referred to as “Papa.”  Papa is getting little red chicken settled for bed.  Little red chicken eagerly suggests reading a bedtime story.  Papa often refers to how little red chicken regularly interrupts bedtime stories before they are finished.  Papa informs little red chicken that she should not interrupt the story like past experiences, little red chicken promises to “be good tonight”(4).  \"Interrupting chicken\" includes other classic children’s books such as: \"Hansel and Gretel\",\" Little Red Riding Hood\" and \"Chicken Little\".  Papa begins by kindly reading \"Hansel and Gretel\" to little red chicken.  Before reaching the end of the story little red chicken interrupts the story!  The images show little red chicken in the story of \"Hansel and Gretel\" and she is yelling, “don’t go in she’s a witch!”  which results to a sudden end to the story(18).  Little Red chicken appears to be absolutely delighted with her decision to step in and save the day while her father was not so impressed.  Papa addresses little red chicken's behavior and she promises not to engage in such activity for the next story.  Papa begins by reading \"Little Red Riding Hood\".  Before Papa could get through the story little Red chicken jumps in once again and informs Little Red Riding Hood that she is not to talk to strangers.  Papa begins to become tired and informs little red chicken that she should not be interrupting because the purpose of bedtime stories is to make her sleepy.  Little red chicken defends herself by saying “he was a mean old wolf.” (18).  Little red chicken convinces Papa to read another story, this time, \"Chicken Little\".  Little red chicken once again jumps into to solve the problem.  Papa is becoming exhausted and little red chicken is upset because there are no more stories to read.  Little red chicken believes she cannot go to bed without a story.  Papa suggests that little red chicken tell him a story.  Little red chicken loves the idea and climbs into bed, yawning and tired.  Little red chicken then writes a story about reading stories for bedtime until she realizes papa has fallen asleep!  The story ends with little red chicken saying “good night, Papa” and the last picture shows both of them cuddled up happily in bed(40).\n\nCow Creek (Montana): Cow Creek is a tributary of the Missouri River, approximately 35 mi long, in north central Montana in the United States.  Cow Creek rises in the southern foothills of the Bear Paw Mountains in western Blaine County and flows east and then south, joining the Missouri approximately 25 mi northeast of Winifred, Montana—or 22 mi upstream from the Fred Robinson Bridge.  Cow Creek flows down to the Missouri in a canyon that passes through the Missouri Breaks, which are severely eroded badlands that extend out on either side from the Missouri River.  The floor of Cow Creek canyon provided a pathway of travel from the Montana plains north of the river, down to the Missouri – at the mouth of Cow Creek, Cow Island made fording the Missouri easier – a steep but short trail on the south bank of the Missouri opposite Cow Creek completed this route which led from the northern Montana plains to the central and southern Montana plains.  This pathway was used by migrating buffalo/bison and nomadic American Natives for centuries.  During the steamboat era on the Missouri River, when low water prevented riverboats getting up to Fort Benton, the mouth of Cow Creek became a river landing and freighting depot, and it was the start of the Cow Island Trail by which freight was moved on to Fort Benton by going north up Cow Creek and then west.  In 1877 the Nez Perce Indian Tribe, fleeing to Canada, had several skirmishes along Cow Creek including the \"Battle of Cow Island\", and several days later at a camp on Cow Creek the Nez Perce, thinking themselves now beyond the reach of the U.S. Army, made the fateful decision to slow down, rather than push on for the Canada–US border.  Today, modern highways have by passed Cow Creek, and the buffalo and the nomadic Indian are gone.  Cow Creek is dormant, in one of the most remote spots of the isolated regions of the vast area known as the Montana Missouri Breaks.\n\nTakikawa sea cow: The Takikawa sea cow (\"Hydrodamalis spissa\") is an extinct herbivorous marine mammal of the Late Pliocene, which was closely related to the recently extinct Steller's sea cow (\"H. gigas\").  In 1988, fossils of sea cows were discovered in Hokkaido, but were originally assigned to the Takikawa sea cow, a newly described species, even though this taxon is thought of by some scientists as a synonym of the Cuesta sea cow (\"H. cuestae\").  It is uncertain whether or not the Takikawa sea cow was simply a local variant of the Cuesta sea cow or a completely separate lineage.  However, Steller's sea cow and the Takikawa sea cow share more morphological similarities than between the Takikawa sea cow and the Cuesta sea cow.",
+    "question": "How do Cow and Chicken relate?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "entity_one_name": {
+          "type": "string",
+          "description": "The name of the first entity."
+        },
+        "entity_two_name": {
+          "type": "string",
+          "description": "The name of the second entity."
+        },
+        "relationship_type": {
+          "type": "string",
+          "description": "The nature of the relationship between the two entities."
+        },
+        "entity_category": {
+          "type": "string",
+          "description": "The category of the entities (e.g., animal characters)."
+        },
+        "source_media": {
+          "type": "string",
+          "description": "The name of the media where the entities appear."
+        },
+        "media_type": {
+          "type": "string",
+          "description": "The type of media (e.g., animated comedy television series)."
+        }
+      },
+      "required": [
+        "entity_one_name",
+        "entity_two_name",
+        "relationship_type",
+        "entity_category",
+        "source_media",
+        "media_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "entity_one_name": "Cow",
+      "entity_two_name": "Chicken",
+      "relationship_type": "siblings",
+      "entity_category": "animal characters",
+      "source_media": "Cow and Chicken",
+      "media_type": "animated comedy television series"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

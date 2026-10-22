@@ -1,0 +1,9 @@
+{
+  "river_name": "James River",
+  "drainage_description": "main drainage of the flat lowland area of the Dakotas",
+  "plateau_regions": [
+    "Coteau du Missouri",
+    "Coteau des Prairies"
+  ],
+  "other_plateau_identified": "Coteau des Prairies"
+}

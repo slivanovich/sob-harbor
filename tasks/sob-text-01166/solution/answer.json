@@ -1,0 +1,14 @@
+{
+  "music_genre": "rap",
+  "groups_involved": [
+    {
+      "group_name": "Treacherous Three",
+      "genre_description_in_context": "old school rap group"
+    },
+    {
+      "group_name": "Grandmaster Flash and the Furious Five",
+      "genre_description_in_context": "hip hop group"
+    }
+  ],
+  "genre_commonality_note": "Rap is a subgenre and core component of hip hop music, making 'rap' a suitable common genre for both groups."
+}

@@ -1,0 +1,20 @@
+{
+  "actor_name": "Vincent Price",
+  "movie_details": {
+    "title": "Theatre of Blood",
+    "role": "Edward Lionheart"
+  },
+  "walk_of_fame_honors": [
+    {
+      "location": "Hollywood Walk of Fame",
+      "category": "motion pictures"
+    },
+    {
+      "location": "Hollywood Walk of Fame",
+      "category": "television"
+    },
+    {
+      "location": "Saint Louis Walk of Fame"
+    }
+  ]
+}

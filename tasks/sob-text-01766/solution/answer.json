@@ -1,0 +1,21 @@
+{
+  "comic_book_author": {
+    "name": "Kevin Smith",
+    "roles": [
+      "screenwriter",
+      "director",
+      "comic book author"
+    ]
+  },
+  "essay_collection": {
+    "title": "Silent Bob Speaks: The Collected Writings of Kevin Smith",
+    "sources_from_magazine": [
+      {
+        "magazine_name": "Details",
+        "founder_name": "Annie Flanders",
+        "founding_year": 1982
+      }
+    ]
+  },
+  "final_answer": "Kevin Smith"
+}

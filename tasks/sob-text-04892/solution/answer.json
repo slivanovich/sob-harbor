@@ -1,0 +1,14 @@
+{
+  "individuals": [
+    {
+      "name": "Howard Deutch",
+      "nationality": "American"
+    },
+    {
+      "name": "W. S. Van Dyke",
+      "nationality": "American"
+    }
+  ],
+  "common_nationality": true,
+  "shared_nationality": "American"
+}

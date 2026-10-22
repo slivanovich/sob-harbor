@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "9103f6d5b2317adc371b77845300e958bdfaa3b526fa5e4847dad2ac9b1e7d60",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8bebb25542997f31a41df4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Paul Watson: Paul Franklin Watson (born December 2, 1950) is a Canadian marine wildlife conservation and environmental activist, who founded the Sea Shepherd Conservation Society, an anti-poaching and direct action group focused on marine conservation and marine conservation activism.  He is a citizen of Canada and the United States.\n\nNoah Idechong: Noah Idechong is an environmental activist from Palau, and former chief of Palau's Governmental Division of Marine Resources, where he helped draft the Island's first marine conservation legislation in 1997.  Having linked marine science, fisheries, and political reform in Palau, he was awarded the Goldman Environmental Prize in 1995 for his efforts in marine conservation.  Idechong helped found the Palau Conservation Society, which spearheaded revivals in traditional conservation, now proven as effective management measures in the Micronesia region.  He later served as a member of the House of Delegates of Palau, helping to enact progressive, conservation-oriented public programs, such as the Protected Areas Network, the Micronesia Challenge, and the word's first Shark Sanctuary.\n\nSharkwater: Sharkwater is a 2006 Canadian documentary film written and directed by Rob Stewart.  Helping to protect sharks, changing government policy, and inspiring the creation of shark conservation groups, Sharkwater is considered one of conservation's success stories, resulting in shark finning being banned worldwide.  In the film, Stewart filmed current attitudes about sharks, and how shark-hunting industries are driving them to extinction.\n\nMarine Conservation Institute: Marine Conservation Institute (formerly Marine Conservation Biology Institute) is a tax-exempt nonprofit ocean conservation organization working to identify and protect vulnerable ocean ecosystems worldwide.  The organization is headquartered in Seattle, Washington with offices in Washington D.C. and Glen Ellen, California.\n\nParks Canada: Parks Canada (French: \"Parcs Canada\" ), also known as the Parks Canada Agency (French: \"Agence Parcs Canada\" ), is an agency of the Government of Canada run by a chief executive who answers to the Minister of the Environment.  The national park service is mandated to protect and present nationally significant natural and cultural heritage, and foster public understanding, appreciation, and enjoyment in ways that ensure their ecological and commemorative integrity for present and future generations.  Parks Canada manages 38 National Parks, three National Marine Conservation Areas, 171 National Historic Sites, and one National Landmark.  The agency also administers lands and waters set aside as potential national parklands, including eight National Park Reserves and one National Marine Conservation Area Reserve.  More than 407000 km2 of lands and waters in national parks and national marine conservation areas has been set aside for such purposes.  The Canadian Register of Historic Places is supported and managed by Parks Canada, in collaboration with provincial and territorial governments and other federal bodies.  The agency is also the working arm of the national Historic Sites and Monuments Board, which recommends National Historic Sites, Events, and Persons.\n\nMarine conservation activism: Marine Conservation Activism refers to the efforts of non-governmental organizations and individuals to bring about social and political change in the area of marine conservation.  Marine conservation is properly conceived as a set of management strategies for the protection and preservation of ecosystems in oceans and seas.  Activists raise public awareness and support for conservation, while pushing governments and corporations to practice sound ocean management, create conservation policy, and enforce existing laws and policy through effective regulation.  There are many different kinds of organizations and agencies that work toward these common goals.  They all are a part of the growing movement that is ocean conservation.  These organizations fight for many causes including stopping pollution, overfishing, whaling, by-catching, and Marine Protected Areas.\n\nMarine conservation: Marine conservation is the protection and preservation of ecosystems in oceans and seas. Marine conservation focuses on limiting human-caused damage to marine ecosystems, restoring damaged marine ecosystems, and preserving vulnerable species of the marine life.\n\nChasing Coral: Chasing Coral is a 2017 documentary film about a team of divers, scientists and photographers around the world who document the disappearance of coral reefs. \"Chasing Coral\" was produced by Exposure Labs and directed by Jeff Orlowski.  It premiered at the 2017 Sundance Film Festival and was released globally on Netflix as a Netflix Original Documentary in July 2017.\n\nBolsa Chica Basin State Marine Conservation Area: Bolsa Chica Basin State Marine Conservation Area (SMCA) and Bolsa Bay State Marine Conservation Area (SMCA) are two adjoining marine protected areas located in Orange County on the southern coast of California.  The SMCAs cover 0.66 and 0.07 square miles, respectively.  The SMCAs protect marine life by limiting the removal of marine wildlife from within their borders.\n\nLake Superior National Marine Conservation Area: Lake Superior National Marine Conservation Area is a National Marine Conservation Area (NMCA) on the north shore of Lake Superior in Ontario, and is a unit of the national park system.  Established on September 1, 2015, it is the largest freshwater marine protected area in the world.",
+    "question": "Are the recent films Chasing Coral and Sharkwater both concerned with marine conservation?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "is_concerned_with_marine_conservation": {
+          "type": "boolean",
+          "description": "Indicates whether both films are concerned with marine conservation."
+        },
+        "films_analyzed": {
+          "type": "array",
+          "description": "Details about each film and its connection to marine conservation.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "film_name": {
+                "type": "string",
+                "description": "The name of the film."
+              },
+              "primary_focus": {
+                "type": "string",
+                "description": "The main subject or issue the film addresses related to marine conservation."
+              },
+              "conservation_impact_or_goal": {
+                "type": "string",
+                "description": "The specific way the film contributes to or highlights marine conservation."
+              }
+            },
+            "required": [
+              "film_name",
+              "primary_focus",
+              "conservation_impact_or_goal"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "marine_conservation_definition": {
+          "type": "string",
+          "description": "The definition of marine conservation as provided in the context."
+        }
+      },
+      "required": [
+        "is_concerned_with_marine_conservation",
+        "films_analyzed",
+        "marine_conservation_definition"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "is_concerned_with_marine_conservation": true,
+      "films_analyzed": [
+        {
+          "film_name": "Chasing Coral",
+          "primary_focus": "disappearance of coral reefs",
+          "conservation_impact_or_goal": "documenting the disappearance of coral reefs"
+        },
+        {
+          "film_name": "Sharkwater",
+          "primary_focus": "sharks and shark-hunting industries",
+          "conservation_impact_or_goal": "helping to protect sharks, changing government policy, and inspiring the creation of shark conservation groups, resulting in shark finning being banned worldwide"
+        }
+      ],
+      "marine_conservation_definition": "the protection and preservation of ecosystems in oceans and seas. Marine conservation focuses on limiting human-caused damage to marine ecosystems, restoring damaged marine ecosystems, and preserving vulnerable species of the marine life."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

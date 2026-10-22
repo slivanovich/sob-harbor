@@ -1,0 +1,31 @@
+{
+  "question_text": "Cindy Baer and Karel Reisz, work in the film related industry?",
+  "answer": true,
+  "individuals_involved": [
+    {
+      "name": "Cindy Baer",
+      "is_film_professional": true,
+      "film_roles": [
+        "actress",
+        "director",
+        "producer",
+        "entrepreneur"
+      ],
+      "associated_film_entities": [
+        "Free Dream Pictures"
+      ]
+    },
+    {
+      "name": "Karel Reisz",
+      "is_film_professional": true,
+      "film_roles": [
+        "filmmaker",
+        "director",
+        "co-founder"
+      ],
+      "associated_film_entities": [
+        "Free Cinema"
+      ]
+    }
+  ]
+}

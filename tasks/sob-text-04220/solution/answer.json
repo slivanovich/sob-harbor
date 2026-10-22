@@ -1,0 +1,17 @@
+{
+  "award_name": "Val Barker Trophy",
+  "award_description": "presented to the most \"outstanding boxer\" at the Olympic Games",
+  "award_frequency": "every four years",
+  "known_winners": [
+    {
+      "boxer_name": "Dick McTaggart",
+      "nationality": "Scottish",
+      "year_won": 1956
+    },
+    {
+      "boxer_name": "Valeri Popenchenko",
+      "nationality": "Russian",
+      "year_won": 1964
+    }
+  ]
+}

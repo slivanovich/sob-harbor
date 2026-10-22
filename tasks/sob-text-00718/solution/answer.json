@@ -1,0 +1,9 @@
+{
+  "politician_served_under": "John Major",
+  "party_led": "Conservative Party",
+  "leadership_period": {
+    "start_year": 1990,
+    "end_year": 1997
+  },
+  "is_prime_minister": true
+}

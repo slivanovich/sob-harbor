@@ -1,0 +1,12 @@
+{
+  "monk_name": "Ekkehard I",
+  "monk_details": {
+    "is_of_noble_birth": true,
+    "role_at_abbey": "dean"
+  },
+  "abbey_details": {
+    "abbey_name": "Abbey of Saint Gall",
+    "founder": "Saint Othmar",
+    "founding_spot_origin": "hermitage of Saint Gall"
+  }
+}

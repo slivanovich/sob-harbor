@@ -1,0 +1,13 @@
+{
+  "vre_station_info": {
+    "name": "Leeland Road station",
+    "line_served": "Fredericksburg Line"
+  },
+  "shared_amtrak_service_details": {
+    "name": "Northeast Regional",
+    "service_type": "higher-speed rail service",
+    "operator": "Amtrak",
+    "operating_region": "Northeastern and Mid-Atlantic United States"
+  },
+  "operator_of_northeast_regional": "Amtrak"
+}

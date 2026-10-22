@@ -1,0 +1,9 @@
+{
+  "film_title": "The Mothers of Plaza de Mayo",
+  "film_release_year": 1985,
+  "association_name": "Mothers of the Plaza de Mayo",
+  "dictatorship_period": {
+    "start_year": 1976,
+    "end_year": 1983
+  }
+}

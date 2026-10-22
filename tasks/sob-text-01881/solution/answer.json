@@ -1,0 +1,15 @@
+{
+  "boxers_compared": [
+    {
+      "name": "Lucas Martin Matthysse",
+      "birth_year": 1982
+    },
+    {
+      "name": "Walter Dario Matthysse",
+      "birth_year": 1978
+    }
+  ],
+  "younger_brother_name": "Lucas Martin Matthysse",
+  "younger_brother_birth_year": 1982,
+  "relationship_established": true
+}

@@ -1,0 +1,23 @@
+{
+  "car_name": "BMW M6",
+  "is_high_performance_version": true,
+  "base_series": "6 Series",
+  "body_styles": [
+    "coupe",
+    "convertible"
+  ],
+  "appeared_on_moscow_billboard": true,
+  "production_periods": [
+    {
+      "start_year": 1983,
+      "end_year": 1989
+    },
+    {
+      "start_year": 2005,
+      "end_year": 2010
+    },
+    {
+      "start_year": 2012
+    }
+  ]
+}

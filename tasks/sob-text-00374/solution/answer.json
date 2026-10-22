@@ -1,0 +1,20 @@
+{
+  "musician_name": "Seth Haley",
+  "nationality": "American",
+  "albums_released": [
+    {
+      "title": "In Decay",
+      "release_year": 2012
+    },
+    {
+      "title": "Iteration",
+      "release_year": 2017
+    }
+  ],
+  "pseudonyms_used": [
+    "Com Truise",
+    "Sarin Sunday",
+    "SYSTM",
+    "Airliner"
+  ]
+}

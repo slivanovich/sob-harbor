@@ -1,0 +1,12 @@
+{
+  "composer_1_details": {
+    "name": "Jacopo Peri",
+    "birth_year": 1561
+  },
+  "composer_2_details": {
+    "name": "Ambroise Thomas",
+    "birth_year": 1811
+  },
+  "composer_who_lived_earlier": "Jacopo Peri",
+  "earlier_composer_birth_year": 1561
+}

@@ -1,0 +1,87 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Pythian Games: The Pythian Games (Greek: Πύθια ; also Delphic Games) were one of the four Panhellenic Games of Ancient Greece.  They were held in honour of Apollo every four years at his sanctuary at Delphi.  They were held two years after each Olympic Games, and between each Nemean and Isthmian Games.  The Pythian Games were founded sometime in the 6th century BC, and, unlike the Olympic Games, also featured competitions for art and dance.  The art and dance competitions pre-dated the athletic portion of the games, and were said to have been started by Apollo after he killed Python and set up the oracle at Delphi.  Otherwise, the athletic events were the same as those at the Olympic Games.
+
+Scottish Amateur Cup: The Scottish Amateur Cup is a nationwide knockout tournament supported and organised by the Scottish Amateur Football Association.  The Scottish Amateur Cup is competed for by hundreds of football clubs every year.
+
+Antisemitism in the Olympic Games: The modern Olympic Games or Olympics (French: "Jeux olympiques" ), are leading international sporting events featuring summer and winter sports competitions in which thousands of athletes from around the world participate in a variety of competitions.  The Olympic Games are considered the world's foremost sports competition with more than 200 nations participating.  The Olympic Games are held every four years, with the Summer and Winter Games alternating by occurring every four years but two years apart.  In the Olympic games during the years, although its approach of "peace through sport", there have been many anti-Semitic occasions which brought the politics into the sports field, and at least in 1972 – ended in the death of eleven Israeli athletes.
+
+Dick McTaggart: Richard "Dick" McTaggart, MBE (born 15 October 1935) is a retired Scottish amateur boxer.  He competed in the 1956 and 1960 Olympics in the lightweight division and won a gold and a bronze medal, respectively.  In 1956 he received the Val Barker Trophy for best boxing style at the Olympics.  At the 1964 Olympics McTaggart moved to the light-welterweight category, but lost in the third bout to the eventual winner Jerzy Kulej.  McTaggart won the British ABA title in 1956, 1958, 1960, 1963 and 1965, and retired with a record of 610 wins out of 634 bouts.
+
+Winter Olympic Games: The Olympic Winter Games (official name) (French: "Jeux olympiques d'hiver" ) is a major international sporting event held once every four years, for sports practised on snow and ice.  The first Winter Olympics, the 1924 Winter Olympics, was held in Chamonix, France.  The original five sports (broken into nine disciplines) were bobsleigh, curling, ice hockey, Nordic skiing (consisting of the disciplines military patrol, cross-country skiing, Nordic combined, and ski jumping), and skating (consisting of the disciplines figure skating and speed skating).  The Games were held every four years from 1924 to 1936, interrupted in 1940 and 1944 by World War II, and resumed in 1948.  Until 1992 the Winter and Summer Olympic Games were held in the same years, but in accordance with a 1986 decision by the International Olympic Committee (IOC) to place the Summer and Winter Games on separate four-year cycles in alternating even-numbered years, the next Winter Olympics after 1992 was in 1994.
+
+Valeri Popenchenko: Valeri Vladimirovich Popenchenko (Russian: Валерий Владимирович Попенченко , 26 August 1937 – 15 February 1975) was a Russian amateur boxer who competed in the middleweight division (−75 kg).  During his career he won 200 out of 213 bouts; he won an Olympic gold medal in 1964 and European titles in 1963 and 1965.  He was named the Outstanding Boxer of the 1964 Olympics and given the Val Barker Trophy, becoming the only Soviet boxer to receive the honor.
+
+Val Barker Trophy: The Val Barker Trophy is presented every four years to the most "outstanding boxer" at the Olympic Games.  In theory, the award goes to the top "pound for pound" boxer in the Olympics.  The winner is selected by a committee of International Boxing Association (amateur) (AIBA) officials.  The trophy is named after British boxer Val Barker who won the Amateur Boxing Association of England (ABA) heavyweight title in 1891, before becoming the secretary of the AIBA between 1926 and 1929.
+
+Olympic Games: The modern Olympic Games or Olympics (French: "Jeux olympiques" ) are leading international sporting events featuring summer and winter sports competitions in which thousands of athletes from around the world participate in a variety of competitions.  The Olympic Games are considered the world's foremost sports competition with more than 200 nations participating.  The Olympic Games are held every four years, with the Summer and Winter Games alternating by occurring every four years but two years apart.
+
+Youth Olympic Games: The Youth Olympic Games (YOG) is an international multi-sport event organized by the International Olympic Committee.  The games are held every four years in staggered summer and winter events consistent with the current Olympic Games format.  The first summer version was held in Singapore from 14 to 26 August 2010 while the first winter version was held in Innsbruck, Austria from 13 to 22 January 2012.  The age limitation of the athletes is 14 to 18.  The idea of such an event was introduced by Johann Rosenzopf from Austria in 1998.  On 6 July 2007, International Olympic Committee (IOC) members at the 119th IOC session in Guatemala City approved the creation of a youth version of the Olympic Games, with the intention of sharing the costs of hosting the event between the IOC and the host city, whereas the traveling costs of athletes and coaches were to be paid by the IOC.  These Games will also feature cultural exchange programs and opportunities for participants to meet Olympic athletes.
+
+Peter Buchanan (footballer, born 1938): Peter Gordon Blyth Buchanan (born 14 December 1938) is a retired Scottish amateur football centre forward who made over 200 appearances in the Scottish League for Queen's Park.  He later served on the club's committee and as president.  He is Scotland's joint-top scorer at amateur level and made two 1964 Summer Olympic qualifying appearances for Great Britain.
+
+Question: What is presented every four years to the most "outstanding boxer" at the Olympic Games and won by a retired Scottish amateur boxer in 1995?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "award_name": {
+      "type": "string",
+      "description": "The name of the award."
+    },
+    "award_description": {
+      "type": "string",
+      "description": "A description of the award's purpose or criteria."
+    },
+    "award_frequency": {
+      "type": "string",
+      "description": "How often the award is presented."
+    },
+    "known_winners": {
+      "type": "array",
+      "description": "A list of known recipients of the award mentioned in the context.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "boxer_name": {
+            "type": "string",
+            "description": "The name of the boxer who won the award."
+          },
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the boxer."
+          },
+          "year_won": {
+            "type": "integer",
+            "description": "The year the boxer won the award."
+          }
+        },
+        "required": [
+          "boxer_name",
+          "nationality",
+          "year_won"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "award_name",
+    "award_description",
+    "award_frequency",
+    "known_winners"
+  ],
+  "additionalProperties": false
+}

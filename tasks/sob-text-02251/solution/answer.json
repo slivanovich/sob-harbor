@@ -1,0 +1,14 @@
+{
+  "composer_name": "Leoš Janáček",
+  "operas_examined": [
+    {
+      "title": "The Makropulos Affair",
+      "composed_by_janacek": true
+    },
+    {
+      "title": "From the House of the Dead",
+      "composed_by_janacek": true
+    }
+  ],
+  "all_composed_by_janacek": true
+}

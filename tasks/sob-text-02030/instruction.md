@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Dan Henderson: Daniel Jeffery Henderson (born August 24, 1970) is an American former mixed martial artist and Olympic wrestler, who last competed as a middleweight in the Ultimate Fighting Championship.  He was the last Strikeforce Light Heavyweight Champion and was the last Welterweight (80 kg ) and Middleweight (95 kg ) champion of Pride Fighting Championships.  Additionally, Henderson was the Brazil Open '97 Tournament Champion, the UFC 17 Middleweight Tournament Champion, the Rings: King of Kings 1999 Tournament Champion and the Pride Weltwerweight Grand Prix Tournament Champion.  During his career, Henderson also challenged for the UFC Middleweight Championship (2x), the UFC Light Heavyweight Championship and the Strikeforce Middleweight Championship.  He was the first mixed martial artist to concurrently hold two titles in two different weight classes in a major MMA promotion.  At the time of his retirement after UFC 204, he was the oldest fighter on the UFC roster.  Known to be one of the greatest mixed martial artists of all time having defeated a total of seventeen MMA world champions across four major MMA promotions (UFC, PRIDE FC, Strikeforce, and RINGS).
+
+Lee Hasdell: Lee Hasdell (born 13 December 1966) is a British martial artist, promoter and former professional kickboxer and mixed martial artist.  Hasdell is considered by many as a true pioneer of UK mixed martial arts, as he was the main driving force and innovator in the 1990s.  Hasdell promoted the first professional Mixed martial arts events in the United Kingdom and has helped develop many of the standards within the British MMA scene of today.
+
+Mixed Martial Arts Pakistan: Mixed Martial Arts Pakistan (or PAK MMA) is the premiere mixed martial arts (MMA) and martial arts promotion based in Pakistan that was created in December 2007 by Bashir Ahmad to promote martial arts (and martial sports such as boxing and wrestling) styles in Pakistan with a particular focus on mixed martial arts competition.
+
+Team Lakay Wushu: Team Lakay, is a martial arts group based in Baguio City, Philippines.  Officially named Lakay MMA Top Team, it is also known as Lakay Wushu or Lakay MMA.  The group was founded in 2003 by mixed martial artist Marquez Sangiao.  Sangiao was also head coach of the Cordillera chapter in Baguio for Wushu, and a seasoned martial artist with past experience in kickboxing, taekwondo, and Jiu-Jitsu as well as a martial arts instructor at the Philippine Military Academy (PMA) and a coach for Wushu at the University of the Cordilleras in Baguio City.
+
+Baboo Da Silva: Mauricio "Baboo" Da Silva (born November 28, 1967) is a Brazilian kyokushin kaikan full contact karate practitioner and former professional kickboxer and mixed martial artist.  He is a professional coach and trainer of K-1 and MMA (Mixed Martial Arts), who has trained a number of world class fighters including Francisco Filho (martial artist), Glaube Feitosa, Andrews Nakahara, Ewerton Teixeira, Ray Sefo, Aleksandr Pitchkounov, Takumi Sato, Jan Soukup, Kou Tasei (aka Hong Tae Seong), Jan Nortje, Doug Viney, Mighty Mo (kickboxer) and Akebono Taro.  From 1998 to 2004 he worked as the trainer and sparring partner for Francisco Filho.  He lived in Tokyo, Japan from 2005 to December 2010 and trained fighters from the IKO1 Kyokushin - Team Ichigeki and other fighters from visiting teams at the Ichigeki Plaza.  He fought in the K-1 PREMIUM 2003 Dynamite!!  and also in the Ichigeki events in Japan.
+
+Igor Vovchanchyn: Igor Yaroslavovych Vovchanchyn (Ukrainian: Ігор Ярославович Вовчанчин ; born August 6, 1973) is a retired Ukrainian mixed martial artist and kickboxer.  After making his professional MMA debut in 1995, he won nine mixed martial arts tournaments, 3 superfights, holds the second longest unbeaten streak in MMA (at 37 fights), has the 6th most wins in MMA (61), and reached the final of the PRIDE 2000 Openweight Grand Prix.  He is widely considered an MMA legend, and in Ukraine he even has a tournament named after him, the "Igor Vovchanchyn Cup".
+
+Zaza Tkeshelashvili: Zaza "Grom" Tkeshelashvili (born March 19, 1965) is a Georgian retired Freestyle wrestling Olympic competitor (100 kg) for Georgia in 1996 Olympic Games Atlanta and mixed martial artist.  He formerly competed in the Heavyweight (MMA) division, most of which he fought with Fighting Network RINGS where he was known as Zaza Grom.  He lost his last fight at Rings Lithuania – Bushido Rings 2 against Volk Han on August 5, 2001.  He holds notable wins over Volk Han and Travis Fulton, and has fought Bobby Hoffman and Renato Sobral.  His brother Koba Tkeshelashvili is also mixed martial artist and has competed in RINGS.
+
+Yoel Romero: Yoel Romero Palacio (born April 3, 1977) is a Cuban mixed martial artist (MMA) and former World Champion and Olympic silver medalist in freestyle wrestling.  He competes in the Middleweight division of the Ultimate Fighting Championship, and formerly competed in the now-defunct Strikeforce organization.  As of July 17, 2017, Romero is the #2 contender in the UFC Middleweight division. .
+
+Yoan Pablo Hernández: Yoan Pablo Hernández Suárez (born October 28, 1984) is a Cuban-German former professional boxer who competed from 2005 to 2014.  He held the unified IBF and "Ring" magazine cruiserweight titles, as well as the WBA interim cruiserweight title.  His brother Yoel Romero is a freestyle wrestler and mixed martial artist.
+
+Mohammed &quot;The Hawk&quot; Shahid: Mohammed Shahid (born July 8, 1989) is an entrepreneur and a mixed martial artist from Bahrain.  He is the CEO of KHK MMA and the President of the Bahrain based mixed martial arts organisation, Brave Combat Federation owned and supported by His Highness Sheikh Khalid bin Hamad Al Khalifa.  Mohammed Shahid was the first mixed martial artist from Bahrain to compete in global MMA events.  He was assigned a managerial role to develop mixed martial arts in Bahrain as the CEO of KHK MMA.  Bahrain established a national team alongside bringing global talent to facilitate the growth of MMA in Bahrain.
+
+Question: Who's brother is a Cuban mixed martial artist (MMA)?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person whose brother is a Cuban mixed martial artist."
+    },
+    "brother_name": {
+      "type": "string",
+      "description": "The name of the brother who is a Cuban mixed martial artist."
+    },
+    "brother_nationality": {
+      "type": "string",
+      "description": "The nationality of the brother who is a mixed martial artist."
+    },
+    "brother_profession": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The professions of the brother."
+    }
+  },
+  "required": [
+    "person_name",
+    "brother_name",
+    "brother_nationality",
+    "brother_profession"
+  ],
+  "additionalProperties": false
+}

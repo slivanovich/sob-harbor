@@ -1,0 +1,14 @@
+{
+  "film_title": "Dog Soldiers",
+  "film_year": 2002,
+  "film_genre": [
+    "action",
+    "horror"
+  ],
+  "film_director": "Neil Marshall",
+  "producer": {
+    "name": "Christopher Figg",
+    "birth_year": 1957,
+    "nationality": "English"
+  }
+}

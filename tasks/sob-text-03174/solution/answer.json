@@ -1,0 +1,15 @@
+{
+  "identified_cathedral": {
+    "name": "Southwark Cathedral",
+    "location_description": "lies on the south bank of the River Thames close to London Bridge.",
+    "is_on_south_bank": true,
+    "is_near_london_bridge": true
+  },
+  "comparison_cathedral": {
+    "name": "Brentwood Cathedral",
+    "location_description": "in the English town of Brentwood, Essex.",
+    "is_on_south_bank": false,
+    "is_near_london_bridge": false
+  },
+  "final_answer_cathedral_name": "Southwark Cathedral"
+}

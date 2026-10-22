@@ -1,0 +1,15 @@
+{
+  "author_one": {
+    "full_name": "Kingsley William Amis",
+    "nationality": "English"
+  },
+  "author_two": {
+    "full_name": "John Hoyer Updike",
+    "nationality": "American"
+  },
+  "mutual_occupations": [
+    "novelist",
+    "poet",
+    "critic"
+  ]
+}

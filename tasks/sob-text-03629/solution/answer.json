@@ -1,0 +1,31 @@
+{
+  "question_asked": "George Marshall and Bruce Robinson, have occupations of director, screenwriter, and actor?",
+  "target_occupations": [
+    "director",
+    "screenwriter",
+    "actor"
+  ],
+  "individuals": [
+    {
+      "name": "George Marshall",
+      "occupations_listed_in_context": [
+        "actor",
+        "screenwriter",
+        "producer",
+        "film and television director"
+      ],
+      "has_all_target_occupations": true
+    },
+    {
+      "name": "Bruce Robinson",
+      "occupations_listed_in_context": [
+        "director",
+        "screenwriter",
+        "novelist",
+        "actor"
+      ],
+      "has_all_target_occupations": true
+    }
+  ],
+  "all_individuals_have_target_occupations": true
+}

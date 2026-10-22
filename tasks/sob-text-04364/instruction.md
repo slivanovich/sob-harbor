@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Heinkel: Heinkel Flugzeugwerke (] ) was a German aircraft manufacturing company founded by and named after Ernst Heinkel.  It is noted for producing bomber aircraft for the Luftwaffe in World War II and for important contributions to high-speed flight, with the pioneering examples of a successful liquid-fueled rocket and a turbojet-powered aircraft in aviation history, with both Heinkel designs' first flights occurring shortly before the outbreak of World War II in Europe.
+
+Albatros L 76: The Albatros L 76 Aeolus was a military reconnaissance aircraft built by Albatros Flugzeugwerke in 1927.  The plane had wooden dual-spar wings with plywood skins supported by N-type struts and a fabric-covered fuselage made of welded steel tubing.  The aircraft was used for testing, as well as the training of the Soviet Air Force.  It was difficult to fly, and killed many people, including Emil Thuy, who crashed near Smolensk on June 11, 1930, and Paul Jeschonnek, who crashed near Berlin on June 13, 1929.  As a result, it had to be improved, leading to the production of the Albatros L 77v, designed by Ernst Heinkel Flugzeugwerke.
+
+Albatros L 77v: The Albatros L 77v was a German tandem two-seat reconnaissance fighter biplane, four examples of which were built under license for Albatros Flugzeugwerke by Ernst Heinkel Flugzeugwerke in 1928.  Based upon the L 76 Aeolus reconnaissance trainer, the aircraft was powered by a 450 kW (600 hp) BMW VI 5.5 water-cooled V12 engine.
+
+Heinkel He 111: The Heinkel He 111 was a German aircraft designed by Siegfried and Walter Günter at Heinkel Flugzeugwerke in 1934.  Through development it was described as a "wolf in sheep's clothing" because the project masqueraded the machine as civilian transport, though from conception the Heinkel was intended to provide the nascent Luftwaffe with a fast medium bomber.
+
+Heinkel He 112: The Heinkel He 112 is a German fighter aircraft designed by Walter and Siegfried Günter.  It was one of four aircraft designed to compete for the Luftwaffe's 1933 fighter contract, in which it eventually came second behind the Messerschmitt Bf 109.  Small numbers were used for a short time by the Luftwaffe, and small runs were completed for several other countries, but only around 100 were completed in total.
+
+Heinkel HD 23: The Heinkel HD 23 was a carrier-borne fighter biplane designed in Germany at Heinkel Flugzeugwerke in the 1920s, for export to Japan.  Two examples were delivered to Aichi as pattern aircraft in 1927.  Aichi added rudimentary flotation capability and built two further examples as the Type H Carrier Fighter, but full-scale production was not started.
+
+Lehrgeschwader 1: "Lehrgeschwader" 1 (LG 1) (Demonstration Wing 1) formerly "Lehrgeschwader Greifswald" was a Luftwaffe multi-purpose unit during World War II, operating fighter, bomber and dive-bomber "Gruppen".  The unit was formed in July 1936 and operated the Messerschmitt Bf 109, Messerschmitt Bf 110, Dornier Do 17, Heinkel He 111, Junkers Ju 88 and Junkers Ju 87.
+
+Heinkel Kabine: The Heinkel Kabine was a microcar designed by Heinkel Flugzeugwerke and built by them from 1956 to 1958.  Production was transferred under licence to Dundalk Engineering Company in Ireland in 1958.  However, the licence was withdrawn shortly afterwards due to poor quality control.  Production restarted in 1960, again under licence, under the Trojan 200 name by Trojan Cars Ltd. in the UK, and continued until 1966.
+
+Hansa-Brandenburg: Hansa und Brandenburgische Flugzeugwerke (more usually just Hansa-Brandenburg) was a German aircraft manufacturing company that operated during World War I.  It was created in May 1914 by the purchase of "Brandenburgische Flugzeugwerke" by Camillo Castiglioni, who relocated the factory from Liebau to Brandenburg an der Havel.  Brandenburg's chief designer, Ernst Heinkel was retained by the new enterprise.  By Autumn 1915, it had become the largest aircraft manufacturer in Germany, with a capital of 1,500,000 Marks, 1,000 employees, and two more factories - one in Rummelsburg, Berlin, and one in Wandsbek, Hamburg.
+
+Ernst Heinkel: Dr. Ernst Heinkel (January 24, 1888 – January 30, 1958) was a German aircraft designer, manufacturer, Wehrwirtschaftsführer in the Third Reich, and member of the Nazi party.  His company Heinkel Flugzeugwerke produced the Heinkel He 178, the world's first turbojet aircraft and jet plane, and the Heinkel He 176, the first rocket aircraft.  He was awarded the German National Prize for Art and Science in 1938.
+
+Question: What German aircraft designed by Seiegfried and Walter Günter at Heinkel Flugzeugwerke in 1934 was operated by Lehrgeschwader 1?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "aircraft_name": {
+      "type": "string",
+      "description": "The name of the aircraft."
+    },
+    "designers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The names of the individuals who designed the aircraft."
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "The company that designed and manufactured the aircraft."
+    },
+    "design_year": {
+      "type": "integer",
+      "description": "The year the aircraft was designed."
+    },
+    "operating_unit": {
+      "type": "string",
+      "description": "The military unit that operated the aircraft."
+    }
+  },
+  "required": [
+    "aircraft_name",
+    "designers",
+    "manufacturer",
+    "design_year",
+    "operating_unit"
+  ],
+  "additionalProperties": false
+}

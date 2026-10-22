@@ -1,0 +1,10 @@
+{
+  "artist_name": "Rihanna",
+  "song_title": "Sex with Me",
+  "album_details": {
+    "album_title": "Anti",
+    "album_number": 8,
+    "release_year": 2016,
+    "is_bonus_track": true
+  }
+}

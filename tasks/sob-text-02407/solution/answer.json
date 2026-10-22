@@ -1,0 +1,14 @@
+{
+  "canal_1": {
+    "name": "Shinnecock Canal",
+    "length_feet": 4700
+  },
+  "canal_2": {
+    "name": "Wiconisco Canal",
+    "length_feet": 63360
+  },
+  "comparison_result": {
+    "longer_canal_name": "Wiconisco Canal",
+    "length_difference_feet": 58660
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "earliest_born_person_name": "Roger Donaldson",
+  "earliest_born_person_birth_year": 1945,
+  "comparison_details": [
+    {
+      "person_name": "Roger Donaldson",
+      "birth_year": 1945
+    },
+    {
+      "person_name": "Peter Chung",
+      "birth_year": 1961
+    }
+  ]
+}

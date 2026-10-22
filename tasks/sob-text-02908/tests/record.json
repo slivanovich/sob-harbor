@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "record_id": "97cac615965e3688bd7850ec57c9054aa6ee7ccbb60be5f60807c262c3e52795",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5aba848c5542994dbf01992b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Olearia solandri: Olearia solandri, commonly known as coastal daisy-bush or coastal tree daisy, is a coastal shrub of New Zealand.\n\nOlearia macrodonta: Olearia macrodonta (mountain holly or arorangi in New Zealand, or New Zealand holly elsewhere) is a small sub-alpine evergreen tree endemic to New Zealand, from the plant family Asteraceae.  It is closely related to the narrow-leaved \"Olearia ilicifolia\", with which it shares several characteristics including largely undulating and serrated grey-green leaves.  These common characteristics mean the two species are often confused with one another.  It is found in lowland to sub-alpine forests from the East Cape of the North Island of New Zealand southwards throughout the South Island and Stewart Island, at 450 - in altitude.\n\nOlearia ilicifolia: Olearia ilicifolia is a shrub or small tree endemic to New Zealand.  Common names include Maori-holly, mountain holly, hakeke or hakekeke and New Zealand holly.  It is a spreading shrub or small tree of the family Asteraceae, and has largely serrated and undulating grey-green leaves.  It is closely related to the sub-alpine \"Olearia macrodonta\", with which it shares the names mountain holly and New Zealand holly, however it is much more common than \"Olearia macrodonta\".  It is found in lowland and sub-alpine forests from sea level to 1200 m .\n\nLaw of New Zealand: The law of New Zealand can be found in several sources.  The primary sources of New Zealand law are statutes enacted by the New Zealand Parliament and decisions of the Courts of New Zealand.  At a more fundamental level, the law of New Zealand is based on three related principles: parliamentary sovereignty; the rule of law; and the separation of powers.  As a former British colony, the New Zealand legal system is heavily based on the English law, and remains similar in many respects.  There are also important differences, which reflect the unique legal culture that has developed in New Zealand.\n\nBrachyglottis stewartiae: Brachyglottis stewartiae is a species of flowering plant, often referred to as a tree daisy, in the Asteraceae family.  It is found only in New Zealand, especially on its subantarctic islands.  With another tree daisy, \"Olearia lyallii\", it is common in the forest of the Snares Islands, growing to about 6 m in height.  It bears conspicuous clusters of yellow daisy-like flowers.\n\nOlearia paniculata: Olearia paniculata, commonly called akiraho, is a species of shrub or tree in the Asteraceae family, found only in New Zealand.  The tree can grow to 7.5 metres high, and has yellow-green, oval-shaped leaves, with white undersides and wavy margins.\n\nAtomotricha colligatella: Atomotricha colligatella, the Olearia Skeletoniser, is a moth of the Oecophoridae family.  It was described by Francis Walker in 1864.  It is found in New Zealand.\n\nOlearia lyallii: Olearia lyallii is a New Zealand plant from the genus \"Olearia\".  It is commonly known as the subantarctic tree daisy.  The species is endemic to the Snares Islands and southern New Zealand, and has also established itself as an introduced species on the Auckland Islands, where the type specimen was described from.  \"O. lyallii\" forms trees up to 10 m tall with trunks 50 cm in diameter.\n\nOlearia: Olearia is a genus of flowering plants belonging to the family Asteraceae.  There are about 130 different species within the genus found mostly in Australia, New Guinea and New Zealand.  The genus includes herbaceous plants, shrubs and small trees.  The latter are unusual among the Asteraceae and are called \"tree daisies\" in New Zealand.  All bear the familiar daisy-like composite flowerheads.\n\nBreynia: Breynia is a plant genus in the family Phyllanthaceae, first described as a genus in 1776.  It is native to Southeast Asia, China, the Indian Subcontinent, Papuasia, Australia, and the island of Réunion.",
+    "question": "Are both Olearia and Breynia found in New Zealand?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question posed."
+        },
+        "genus_names": {
+          "type": "array",
+          "description": "List of plant genera mentioned in the question.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "genus_location_details": {
+          "type": "array",
+          "description": "Details about the location of each genus.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "genus_name": {
+                "type": "string",
+                "description": "The name of the plant genus."
+              },
+              "is_found_in_new_zealand": {
+                "type": "boolean",
+                "description": "True if the genus is found in New Zealand, false otherwise."
+              },
+              "known_native_regions": {
+                "type": "array",
+                "description": "A list of regions where the genus is known to be native.",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "genus_name",
+              "is_found_in_new_zealand",
+              "known_native_regions"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "both_found_in_new_zealand": {
+          "type": "boolean",
+          "description": "True if both specified genera are found in New Zealand, false otherwise."
+        }
+      },
+      "required": [
+        "question_asked",
+        "genus_names",
+        "genus_location_details",
+        "both_found_in_new_zealand"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Are both Olearia and Breynia found in New Zealand?",
+      "genus_names": [
+        "Olearia",
+        "Breynia"
+      ],
+      "genus_location_details": [
+        {
+          "genus_name": "Olearia",
+          "is_found_in_new_zealand": true,
+          "known_native_regions": [
+            "Australia",
+            "New Guinea",
+            "New Zealand"
+          ]
+        },
+        {
+          "genus_name": "Breynia",
+          "is_found_in_new_zealand": false,
+          "known_native_regions": [
+            "Southeast Asia",
+            "China",
+            "Indian Subcontinent",
+            "Papuasia",
+            "Australia",
+            "Réunion"
+          ]
+        }
+      ],
+      "both_found_in_new_zealand": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

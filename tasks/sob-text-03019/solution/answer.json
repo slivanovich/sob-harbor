@@ -1,0 +1,23 @@
+{
+  "main_song_context": {
+    "title": "Hot Stuff (Let's Dance)",
+    "artist": "Craig David",
+    "album": "Trust Me",
+    "release_month": "November",
+    "release_year": 2007,
+    "single_order": 2
+  },
+  "preceding_single_details": {
+    "title": "This Is the Girl",
+    "collaborating_artist_type": "rapper"
+  },
+  "collaborating_artist_identity": {
+    "stage_name": "Kano",
+    "real_name": "Kane Robinson",
+    "origin_location": "East Ham, London",
+    "professions": [
+      "rapper",
+      "actor"
+    ]
+  }
+}

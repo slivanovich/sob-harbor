@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "record_id": "f321e4ca8b1b77536d7465c963b0a3bb25a68a406e5e13ab7511f28d3acf7b76",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8afd3d55429971feec45cd",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Rick Bass (born March 7, 1958)",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Silas House: Silas Dwane House (born August 7, 1971) is an American writer best known for his novels.  He is also a music journalist, environmental activist, and columnist.  House's fiction is noted for its attention to the natural world, working class characters, and the plight of the rural place and rural people.\n\nKen Saro-Wiwa: Kenule Beeson \"Ken\" Saro-Wiwa (10 October 1941 – 10 November 1995) was a Nigerian writer, television producer, environmental activist, and winner of the Right Livelihood Award and the Goldman Environmental Prize.  Saro-Wiwa was a member of the Ogoni people, an ethnic minority in Nigeria whose homeland, Ogoniland, in the Niger Delta has been targeted for crude oil extraction since the 1950s and which has suffered extreme environmental damage from decades of indiscriminate petroleum waste dumping.  Initially as spokesperson, and then as president, of the Movement for the Survival of the Ogoni People (MOSOP), Saro-Wiwa led a nonviolent campaign against environmental degradation of the land and waters of Ogoniland by the operations of the multinational petroleum industry, especially the Royal Dutch Shell company.  He was also an outspoken critic of the Nigerian government, which he viewed as reluctant to enforce environmental regulations on the foreign petroleum companies operating in the area.\n\nDennis Delaney: Dennis Delaney (born January 29, 1953) is an American writer and actor, and former environmental activist who (in 1980) became the first National Director of Greenpeace USA.  He is a graduate of the University of North Carolina School of the Arts, and the University of California, Santa Cruz.\n\nAtticus Lish: Atticus Lish (born 1972, age 43) is an American novelist.  His debut, \"Preparation for the Next Life\" (New York: Tyrant, 2014), caught its independent publisher “off guard” by becoming a surprise success, winning a number of awards including the PEN/Faulkner Award for Fiction.  Lish lives in Sunset Park, Brooklyn with his wife.  He is the son of influential literary editor Gordon Lish.\n\nGordon Lish: Gordon Lish (born February 11, 1934 in Hewlett, New York) is an American writer.  As a literary editor, he championed many American authors, particularly Raymond Carver, Barry Hannah, Amy Hempel, Rick Bass, and Richard Ford.  He is the father of the novelist Atticus Lish.\n\nRick Bass: Rick Bass (born March 7, 1958) is an American writer and an environmental activist.\n\nJanisse Ray: Janisse Ray (born 1962) is an American writer, naturalist and environmental activist.\n\nDouglas Glover (writer): Douglas Glover BA, M.Litt., MFA (born 14 November 1948 in Simcoe, Ontario.  Canada) is a Canadian writer.  He was raised on his family's tobacco farm just outside Waterford, Ontario.  He has published five short story collections, four novels (including \"Elle\" which won the 2003 Governor-General's Award for Fiction), two books of essays, \"Notes Home from a Prodigal Son\" and \"Attack of the Copula Spiders\", and \"The Enamoured Knight\", a book-length meditation on \"Don Quixote\" and novel form.  His 1993 novel, \"The Life and Times of Captain N.\", was edited by Gordon Lish and released by Alfred A. Knopf.  His most recent book is a story collection, \"Savage Love\" (Goose Lane Editions, 2013).\n\nSteven Guilbeault: Steven Guilbeault (born 1970 in La Tuque, Quebec) is a Canadian science reporter, environmental reporter, environmental journalist, writer, consultant, venture capitalist, professional speaker, NGO founder and environmental activist.  He is best known as the co-founder of Équiterre, a non-profit and non-governmental organization.\n\nGreg Mulcahy: Greg Mulcahy is an American novelist and short story writer.  He was born in St. Paul, Minnesota in 1958.  His collection,\"Out of Work,\" was published by Alfred A. Knopf in 1993.  His novel, \"Constellation,\" was published by Avisson Press in 1996.  His short fiction appeared frequently in Gordon Lish's \"The Quarterly\".  His work has also appeared in Diane Williams's NOON Coop Renner's \"elimae,\" Kathryn Rantala's publications,\"The New York Tyrant\", \"Caliban\", \"The Gettysburg Review\", \"Juked\", \"Alice Blue Review\", \"Sidebrow\", \"five_trope\", \"Word Riot,\" and other journals.",
+    "question": "Name an American writer and environmental activist championed by Gordon Lish.",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_found": {
+          "type": "object",
+          "description": "The American writer and environmental activist identified.",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of the person."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the person."
+            },
+            "birth_date": {
+              "type": "string",
+              "description": "The birth date of the person."
+            },
+            "professions": {
+              "type": "array",
+              "description": "A list of professions held by the person.",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "birth_date",
+            "professions"
+          ],
+          "additionalProperties": false
+        },
+        "championed_by_editor": {
+          "type": "object",
+          "description": "Details about the literary editor who championed the person.",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the literary editor."
+            },
+            "role": {
+              "type": "string",
+              "description": "The role of the editor."
+            }
+          },
+          "required": [
+            "name",
+            "role"
+          ],
+          "additionalProperties": false
+        },
+        "criteria_matched": {
+          "type": "array",
+          "description": "A list of criteria from the question that were matched by the identified person.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "person_found",
+        "championed_by_editor",
+        "criteria_matched"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_found": {
+        "name": "Rick Bass",
+        "nationality": "American",
+        "birth_date": "March 7, 1958",
+        "professions": [
+          "writer",
+          "environmental activist"
+        ]
+      },
+      "championed_by_editor": {
+        "name": "Gordon Lish",
+        "role": "literary editor"
+      },
+      "criteria_matched": [
+        "American writer",
+        "environmental activist",
+        "championed by Gordon Lish"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

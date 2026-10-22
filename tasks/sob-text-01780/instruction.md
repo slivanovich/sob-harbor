@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Frank W. Benson (politician): Frank Williamson Benson (March 20, 1858 – April 14, 1911) was an American politician, a Republican, and the 12th Governor of Oregon from 1909 to 1910.  A native of California, Benson also served as educator, a land office clerk, and was twice elected as Oregon Secretary of State.  From this position he became governor after sitting governor George Earle Chamberlain resigned to become a United States Senator.
+
+Louisiana gubernatorial election, 1876: The Louisiana gubernatorial election, 1876, was the third and final election to take place under the Louisiana Constitution of 1868.  As a result of this election Francis T. Nicholls became Governor of Louisiana, but not before the election was contested by his opponent.  The results of this election, like those of 1872 were disputed.  The dispute was resolved by the Compromise of 1877 which gave the Governor's Mansion to Democrat Francis T. Nicholls.  The Compromise also gave Republican presidential candidate Rutherford B. Hayes the electoral votes of several disputed states, including Louisiana, which resulted in his election to the White House.  The election of Nicholls marked the end of Reconstruction in Louisiana and the decline of the Republican Party of Louisiana.
+
+Louisiana Purchase (musical): Louisiana Purchase is a musical with music and lyrics by Irving Berlin and book by Morrie Ryskind based on a story by B. G. DeSylva.  Set in New Orleans, the musical lightly satirises Louisiana Governor Huey Long and his control over Louisiana politics An honest U.S. senator travels to Louisiana to investigate corruption in the Louisiana Purchase Company; the company's lawyer attempts to divert him via the attentions of two beautiful women, but the senator maintains his integrity and ends up marrying one of them.  In 1941 it was adapted for the film "Louisiana Purchase" directed by Irving Cummings.
+
+First Ladies and Gentlemen of Oklahoma: The First Lady or First Gentleman of Oklahoma is the title held by the spouse of the sitting Governor of Oklahoma.  The First Lady or First Gentleman serves as the official host of the Oklahoma Governor's Mansion.  As of 2011, there have been 25 First Ladies and one First Gentleman.
+
+Jimmie Davis: James Houston Davis (September 11, 1899 – November 5, 2000) was an American singer and songwriter of both sacred and popular songs who served for two nonconsecutive terms from 1944–48 and from 1960–64 as the governor of his native Louisiana.
+
+Mieko Yoshimura: Mieko Yoshimura (吉村 美栄子 , Yoshimura Mieko , born 18 May 1951) is governor of Yamagata Prefecture, Japan.  She was elected on January 25, 2009.  She defeated the sitting governor of Yamagata Prefecture, Hiroshi Saitō in an upset.  A native of Ōe, Yamagata, she worked at a help-wanted advertising company before becoming a notary public for the city government of Yamagata.  She soon became a member of Yamagata Prefecture's Education Committee before running for governor in 2008.  She is Yamagata's first female governor and the sixth in Japanese history.
+
+Old Louisiana Governor's Mansion: The Old Louisiana Governor's Mansion, home of Preserve Louisiana  is located at 502 North Blvd. between Royal and St. Charles Streets in Baton Rouge and was used between 1930 and 1961; a new residence was completed in 1963.  When the original Louisiana Governor's mansion was termite-infested during the beginning of Huey Long's governorship, Long decided to build a new one on the site.  This governor's mansion is modeled after the White House in Washington D.C. supposedly because Governor Long wanted to become familiar with Washington's White House.  During the construction of this new governor's mansion Huey Long refused to move into the original one.  Instead after his inauguration Long stayed at the Heidelberg Hotel in Baton Rouge while his family stayed back home in Shreveport.
+
+Vesta M. Roy: Vesta M. Roy (née Coward ; March 26, 1925February 9, 2002) was a Republican New Hampshire politician.  She was the first woman to serve as both the President of the New Hampshire Senate and Governor of New Hampshire.  She began her brief time as Acting Governor of New Hampshire when the sitting governor fell ill and died prior to the end of his term.
+
+Louisiana Governor's Mansion: The Louisiana Governor's Mansion is the official residence of the Governor of Louisiana and his or her family.  The Governor’s Mansion was built in 1963 when Jimmie Davis was Governor of Louisiana.  The Mansion overlooks Capital Lake near the Louisiana State Capitol in Baton Rouge.
+
+Pete Maravich Assembly Center: The Pete Maravich Assembly Center is a 13,215-seat multi-purpose arena in Baton Rouge, Louisiana.  The arena opened in 1972.  It is home to the Louisiana State University Tigers and Lady Tigers basketball teams, the LSU Tigers women's gymnastics team and the LSU Tigers women's volleyball team.  It was originally known as the LSU Assembly Center, but was renamed in honor of Pete Maravich, a Tiger basketball legend, shortly after his death in 1988.  Louisiana Governor Buddy Roemer signed an act to rename the building in Maravich's honor (under Louisiana law, no LSU or state owned building may be named after a living person).  Maravich never played in the arena as a collegian but played in it as a member of the Atlanta Hawks in a preseason game.  But his exploits while at LSU led the University to build a larger home for the basketball team, which languished for decades in the shadow of the school's football program.  The Maravich Center is known to locals as "The PMAC" or "Pete's Palace", or by its more nationally known nickname, "The Deaf Dome", coined by Dick Vitale.  The Maravich Center's neighbor, Tiger Stadium is known as "Death Valley".
+
+Question: What was the middle name of the sitting Governor of Louisiana when Louisiana Governor's Mansion was built?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "governor_full_name": {
+      "type": "string",
+      "description": "The full name of the governor of Louisiana at the time the mansion was built."
+    },
+    "governor_middle_name": {
+      "type": "string",
+      "description": "The middle name of the governor."
+    },
+    "mansion_name": {
+      "type": "string",
+      "description": "The name of the official residence."
+    },
+    "year_built": {
+      "type": "integer",
+      "description": "The year the mansion was built."
+    }
+  },
+  "required": [
+    "governor_full_name",
+    "governor_middle_name",
+    "mansion_name",
+    "year_built"
+  ],
+  "additionalProperties": false
+}

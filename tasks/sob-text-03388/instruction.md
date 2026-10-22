@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Danny Brown: Daniel Dewan Sewell (born March 16, 1981), better known by his stage name Danny Brown, is an American rapper from Detroit, Michigan.  He is best known for his individuality, being described by MTV as "one of rap's most unique figures in recent memory".  In 2010, after amassing several mixtapes, Brown released his debut studio album, "The Hybrid".  Brown began to gain major recognition after the release of his second studio album, "XXX", which received critical acclaim and earned him such accolades as "Spin", as well as "Metro Times" "Artist of the Year".  In 2013, he entered a US "Billboard" chart, with the release of his third studio album, "Old", which reached number 18 on the US "Billboard" 200 chart and spawned three singles, "Dip", "25 Bucks" and "Smokin & Drinkin".  His latest studio album, "Atrocity Exhibition", was released on September 27, 2016.
+
+Pop 'til You Drop!: Pop 'til You Drop!  is the third studio album by Swedish pop group A-Teens, released in 2002 exclusively for the U.S. market.  Recorded between 2001 and 2002 in Stockholm, Sweden, "Pop 'til You Drop!"  provide a more American-driven sound rather than just Europop.  For the first time, the A-Teens participated on the writing of the tracks and the design of the album and image.  It was released as an American only release on June 18, 2002, in the hype of the promotion of the first single, the Elvis Presley cover "Can't Help Falling in Love", which was part of the soundtrack of Disney's movie "Lilo & Stitch".  The album also consists of six songs later released on their third full-length studio album "New Arrival", with "Let Your Heart Do All the Talking" having an early altered version with a slightly different ending on this album in contrast to the "New Arrival" version, the song "This Year" from the "Kim Possible" soundtrack, along with four new previously unreleased songs.  Despite the fact that their third studio album "New Arrival" hasn't been released in the U.S., this compilation album is considered as the third studio album there.
+
+Tuks Senganga: Tumelo Kepadisa (born 2 May 1981), simply known as Tuks or Tuks Senganga is a South African Motswako rapper born in Mafikeng, in the former homeland of the Bophuthatswana.  He frequently performs in ethnic languages, though mostly Setswana.  Tuks Senganga started writing in 1993, drawing inspiration from everyday issues in his immediate environment.  His career took off in 2005 with his debut album "Mafoko a me".  This was the album that earned Tuks the Best Hip Hop Album Award at the 12th Annual MTN South African Music Awards (SAMA).
+
+Talk Dirty (Jason Derulo song): "Talk Dirty" is a song by American singer Jason Derulo, released as the second single from his third studio album, "Tattoos" (2013), in Europe and Oceania.  Derulo's third studio album was retitled "Talk Dirty" for its US release, featuring an alternative track listing.  It was released as the third single in the US on January 7, 2014.  Additional vocals are provided by American rapper 2 Chainz, making it Derulo's first single to feature a guest performer, excluding the French version of "Whatcha Say".  The artists co-wrote the song with Jason Evigan, Sean Douglas, Ori Kaplan, Tamir Muskat, Tomer Yosef, and Wallpaper frontman Ricky Reed; the latter is also the song's producer.  The song is built around sampled instrumentals from "Hermetico" by the Israeli band Balkan Beat Box from their 2007 studio album "Nu Med".  The main saxophone lick is based on characteristic Turkish traditional ornamentations, particularly rendering the Turkish wind instrument Zurna.
+
+The Kardashev Scale (album): Type I : The Kardashev Scale is the third studio album by rapper Greydon Square.  It is his third studio album assuming his current title, and is also the third album in the Quintilogy which also encompasses albums The Compton Effect and The C.P.T. Theorem.  It features notable features from rappers such as Gripp and Canibus.  The album's title, like Greydon's previous two albums, is the actual name of a scientific theory.  The Kardashev scale in fact comes from a theory surrounding humanity's ability to harness universal energy; it was forwarded by Russian astronomer Nikolai Kardashev.
+
+The Struggle (Cappadonna album): The Struggle is the third studio album by American rapper and Wu-Tang Clan member Cappadonna.  The album was one of the two solo albums released from the Clan on October 7, 2003 (the other one was RZA's third studio album Birth of a Prince)
+
+Skeme: Lonnie Kimble (born January 3, 1990), better known by his stage name Skeme, is an American rapper born and raised in Inglewood, California.  Skeme has collaborated with various West Coast rappers such as the Black Hippy members, Bizzy Bone, The Game, Dom Kennedy, Nipsey Hussle, E-40, Casey Veggies and Problem among others.  On October 16, 2012, Skeme released his debut studio album "Alive & Living" under RBC Records.  His second studio album "Ingleworld" was released on December 17, 2013 by MADE Headlines.  In July 2014, The Game announced that he had signed Skeme to Blood Money Entertainment.  He also signed with Generation Now and Atlantic Records.
+
+Prince of the South 2: Prince of the South 2 is the third studio album by Atlanta rapper Lil Scrappy, it was released on October 19, 2010.
+
+Lil Scrappy: Darryl Kevin Richardson (born January 19, 1982), better known by his stage name Lil Scrappy, is an American rapper.
+
+20 (Twenty): 20 [Twenty] (stylized as 20 [twenty]) is the third studio album released in Japan by South Korean rock band F.T. Island.  It is their second studio album under Warner Music Japan and third studio album overall in the country.  Recorded in South Korea in the midst of the band's promotions there, the band aimed to make "20 [Twenty]" their most mature album to date.  The album spawned three singles prior to its release—"Let It Go! ", "Distance", and "Neverland"—which all charted within the top ten spots of the weekly Oricon singles chart.
+
+Question: Prince of the South 2 is the third studio album by a rapper born in which year ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album."
+    },
+    "artist_name": {
+      "type": "string",
+      "description": "The name of the artist who released the album."
+    },
+    "artist_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the artist."
+    },
+    "album_release_year": {
+      "type": "integer",
+      "description": "The year the album was released."
+    }
+  },
+  "required": [
+    "album_title",
+    "artist_name",
+    "artist_birth_year",
+    "album_release_year"
+  ],
+  "additionalProperties": false
+}

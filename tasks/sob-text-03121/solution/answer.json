@@ -1,0 +1,13 @@
+{
+  "person_named_after": {
+    "name": "Grace Hopper",
+    "occupation": "computer scientist",
+    "notable_achievement": "pioneer of computer programming who invented one of the first compiler related tools"
+  },
+  "ship_details": {
+    "ship_name": "USS Hopper",
+    "ship_hull_number": "DDG-70"
+  },
+  "destroyer_class_name": "Arleigh Burke",
+  "destroyer_type": "guided missile destroyer"
+}

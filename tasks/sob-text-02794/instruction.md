@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jonathan Neale: Jonathan Neale is a British businessman and director of McLaren Technology Group, currently employed by McLaren Technology Group, by McLaren Group.  Neale's role includes managing the group operation, alongside Zak Brown.
+
+McLaren Automotive: McLaren Automotive (often simply McLaren) is a British automaker founded by Bruce McLaren and is based at the McLaren Technology Campus in Woking, Surrey.  It produces and manufactures sports and luxury cars, usually produced in-house at designated production facilities.  In July 2017, McLaren Automotive became 100% owned by the wider McLaren Technology Group.
+
+McLaren: McLaren Racing Limited, competing as McLaren Honda, is a British Formula One team based at the McLaren Technology Centre, Woking, Surrey, England.  McLaren is best known as a Formula One constructor but has also competed in and won the Indianapolis 500 and the Canadian-American Challenge Cup (Can-Am).  The team is the second oldest active team after Ferrari.  They are one of the most successful teams in Formula One history, having won 182 races, 12 drivers' championships and eight constructors' championships.  The team is a wholly owned subsidiary of McLaren Technology Group.
+
+Zak Brown: Zak Brown (born November 7, 1971) is an American businessman and former professional racing driver, currently residing in London, England.  Brown is currently the Executive Director of McLaren Technology Group.  He is the founder and CEO of Just Marketing International (JMI), the world’s largest motorsport marketing agency.  JMI, which was founded in 1995, was acquired in 2013 by CSM Sport & Entertainment, a division of Chime Communications plc, and Brown became Group Chief Business Development Officer.  Brown’s accomplishments as a sports marketer have been reflected through multiple industry recognitions, including as a Marketer of the Year by PROMO magazine, being named four times in the INC 500 Fastest Growing Private Companies of the Year, and his inclusion in the SportsBusinessJournal’s Forty Under 40 Hall of Fame, having been presented the award three times.
+
+Alain Ferté: Alain Ferté (born 8 October 1955 in Falaise, Calvados) is a professional racing driver.  He is the elder brother of Michel Ferté, who is also a professional racing driver.
+
+McLaren Technology Centre: The McLaren Technology Centre is the headquarters of the McLaren Technology Group Ltd and all of its companies, located on a 500,000 m² site in Woking, Surrey, England.  The complex consists of four buildings, two of which are open.  The main building is the McLaren Technology Centre (Home of McLaren Group).  The others are The McLaren Production Centre (Home of McLaren Automotive), the McLaren-GSK Centre for Applied Performance (Home of McLaren-GSK Partnership) and the McLaren Centre for Applied Technologies (Home of McLaren Applied Technologies).
+
+McLaren Technology Group: The McLaren Group is a British conglomerate based in Woking, Surrey, United Kingdom.  Founded by Ron Dennis shortly after his acquisition of the McLaren Formula One team in 1981, it was originally named the TAG McLaren Group due to a partnership with Mansour Ojjeh's TAG Group.  It was renamed to simply the McLaren Group in 2003, then to McLaren Technology Group in 2015, before reverting back to McLaren Group in 2017.  The group was originally formed from a Formula One team established by New Zealander Bruce McLaren in 1963 and is now focused around the McLaren Honda Formula One Racing Team, the group's second most profitable company.
+
+Mansour Ojjeh: Mansour Akram Ojjeh (born 1952) is a French Saudi Arabia-born entrepreneur who owns part of TAG, a Luxembourg-based holding company with interests worldwide.  Ojjeh is the CEO of TAG which owns 25% of the McLaren Technology Group, the most important asset of which is the McLaren Formula One team.
+
+Oliver Turvey: Oliver Jonathan Turvey (born 1 April 1987) is a British professional racing driver.  He was a notable kart racer, with two national titles, and was the 2006 McLaren Autosport BRDC Award winner.  His career has been supported by the Racing Steps Foundation.  He is currently signed to McLaren Honda as a test driver.
+
+Ron Dennis: Ronald Dennis CBE (born 1 June 1947) is a British businessman and Official British Business Ambassador for The United Kingdom.  Dennis is the Global Consultant for Minsheng Investment Corporation and also owner of Absolute Taste.  He is best known for his former role as owner, CEO, chairman and founder of McLaren Technology Group.  Dennis was removed from his McLaren management roles in 2016 but remained a director of the company and a 25% shareholder until June 2017, when his 37-year association with the company ended.
+
+Question: Which former professional racing driver is now the Executive Director of McLaren Technology Group?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the individual."
+    },
+    "current_role": {
+      "type": "string",
+      "description": "The current role of the individual at the specified organization."
+    },
+    "organization": {
+      "type": "string",
+      "description": "The organization where the individual holds their current role."
+    },
+    "former_profession": {
+      "type": "string",
+      "description": "A significant former profession of the individual."
+    },
+    "is_former_racing_driver": {
+      "type": "boolean",
+      "description": "Indicates if the individual was a former professional racing driver."
+    }
+  },
+  "required": [
+    "person_name",
+    "current_role",
+    "organization",
+    "former_profession",
+    "is_former_racing_driver"
+  ],
+  "additionalProperties": false
+}

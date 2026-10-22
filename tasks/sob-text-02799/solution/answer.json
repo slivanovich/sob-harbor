@@ -1,0 +1,19 @@
+{
+  "mountains": [
+    {
+      "name": "Siguang Ri",
+      "location_countries": [
+        "China"
+      ]
+    },
+    {
+      "name": "Gasherbrum II",
+      "location_countries": [
+        "Pakistan",
+        "China"
+      ]
+    }
+  ],
+  "common_location_country": "China",
+  "is_border_peak_involved": true
+}

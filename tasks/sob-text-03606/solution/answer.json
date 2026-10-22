@@ -1,0 +1,9 @@
+{
+  "person_name": "Johnny Ramone",
+  "band_name": "The Ramones",
+  "primary_role": "guitarist",
+  "other_roles": [
+    "songwriter"
+  ],
+  "is_founding_member": true
+}

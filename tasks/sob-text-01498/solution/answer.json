@@ -1,0 +1,14 @@
+{
+  "person_name": "Simon Coveney",
+  "election_details": {
+    "year": 2017,
+    "election_type": "Fine Gael leadership election",
+    "opponent_in_election_as_stated_in_question": "Enda Kenny",
+    "actual_winner_of_election": "Leo Varadkar",
+    "person_outcome": "Lost"
+  },
+  "positions_taken_after_election": [
+    "Minister for Foreign Affairs and Trade",
+    "Deputy Leader of Fine Gael"
+  ]
+}

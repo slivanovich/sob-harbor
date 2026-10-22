@@ -1,0 +1,12 @@
+{
+  "actor_name": "George Kennedy",
+  "films_starred_in": [
+    "The Flight of the Phoenix",
+    "Cool Hand Luke"
+  ],
+  "award_details": {
+    "award_name": "Academy Award",
+    "film_for_award": "Cool Hand Luke",
+    "award_category": "Best Supporting Actor"
+  }
+}

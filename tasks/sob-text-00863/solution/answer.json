@@ -1,0 +1,14 @@
+{
+  "film_title": "The Killing of a Sacred Deer",
+  "release_year": 2017,
+  "genre": "psychological horror-thriller",
+  "actor_in_question": {
+    "name": "Barry Keoghan"
+  },
+  "co_star_actors": [
+    {
+      "name": "Colin Farrell",
+      "gender": "male"
+    }
+  ]
+}

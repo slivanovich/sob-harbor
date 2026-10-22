@@ -1,0 +1,50 @@
+{
+  "scale_model_name": "Palestine Park",
+  "model_description": "scale model of the Holy Land, including cities, hills, rivers, and seas",
+  "location": {
+    "institution_name": "Chautauqua Institution",
+    "city": "Chautauqua",
+    "state": "New York"
+  },
+  "included_geographical_features": [
+    "cities",
+    "hills",
+    "rivers",
+    "seas",
+    "Mount Hermon",
+    "Jordan River",
+    "Sea of Galilee",
+    "Dead Sea",
+    "Mount Tabor",
+    "Mount of Olives"
+  ],
+  "included_biblical_sites": [
+    {
+      "site_name": "Jacob's Well",
+      "is_scale_model_replica": false
+    },
+    {
+      "site_name": "Jericho",
+      "is_scale_model_replica": false
+    },
+    {
+      "site_name": "Bethsaida",
+      "is_scale_model_replica": false,
+      "attributes": {
+        "meaning": "house of hunting or fishing",
+        "mentioned_in_text": "New Testament"
+      }
+    },
+    {
+      "site_name": "Jerusalem",
+      "is_scale_model_replica": true,
+      "attributes": {
+        "time_period": "time of Jesus"
+      }
+    },
+    {
+      "site_name": "ancient Jewish Temple",
+      "is_scale_model_replica": true
+    }
+  ]
+}

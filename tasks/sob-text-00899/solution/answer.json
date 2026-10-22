@@ -1,0 +1,16 @@
+{
+  "common_media_type": "film",
+  "media_items": [
+    {
+      "title": "The Gnome-Mobile",
+      "release_year": 1967,
+      "director": "Robert Stevenson"
+    },
+    {
+      "title": "Dumbo",
+      "release_year": 2019,
+      "director": "Tim Burton"
+    }
+  ],
+  "number_of_media_items": 2
+}

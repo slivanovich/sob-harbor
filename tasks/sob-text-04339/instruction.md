@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jindyworobak Movement: The Jindyworobak Movement was an Australian literary movement of the 1930s and 1940s whose white members, mostly poets, sought to contribute to a uniquely Australian culture through the integration of Indigenous Australian subjects, language and mythology.  The movement's stated aim was to "free Australian art from whatever alien influences trammel it" and create works based on an engagement with the Australian landscape and an "understanding of Australia's history and traditions, primeval, colonial and modern".
+
+Australian Literary Studies: Australian Literary Studies is a peer-reviewed academic journal of literary studies, specialising in historical, critical, and theoretical studies of Australian literature.  It was established in 1963 by Laurie Hergenhan (University of Queensland), who edited the journal for its first forty years.  It was then edited by Leigh Dale (University of Wollongong) from 2002 to 2015; in 2010 the journal increased its publication frequency to quarterly, with two issues (May and October) focussed on Australian authors and texts, along with two "general" issues (June and November).  Successful special issues have focussed on queer writers and writing, the environment, medievalism, and biopolitics.  Since 2016, the journal has been edited by Julieanne Lamond (Australian National University).  In 2016, the journal ceased producing print volumes and digitised its entire archive.  It also moved to a rolling publication model involving a mix of open access for new essays and low-cost subscription access to the archive.  The journal, described as "the preeminent journal in Australian literary criticism", is abstracted and indexed by the MLA International Bibliography and AustLit.
+
+Roy Hasan: Roy Hasan (Hebrew: רועי חסן) (born 9 April 1983, in Hadera, Israel) is a leading contemporary Hebrew poet.  An Israeli, he is a leading light of the Ars poetica literary movement.
+
+Aswikrit Sahitya Andolan: The Aswikrit Sahitya Andolan (Nepali: अस्वीकृत साहित्य आन्दोलन) (Rejected Literary Movement) is a dissident literary movement, formed in 1970 by a group of writers in Nepal under the name of "Aswikrit Jamat (Nepali: अस्वीकृत जमात)" (Rejected Generation).  At the time, Nepal was under the reign of a rigid monarchical authoritarian regime known as the panchayat system (defined as a party-less system).  No progressive thoughts were allowed in literary works, nor was any printed material or professional group formation allowed without the government sanction during this period.  Progressive writers were suppressed and subjugated by the government and its vigilant sneakers.  Thus they rebelled pronouncing themselves as Aswikrit Jamat i.e. rejectionists; not merely "rejected generation" but "rejecters" of all imposed authoritarian, undemocratic and unrealistic values by the rigid regime and old traditions.
+
+The Great South Land : An Epic Poem: The Great South Land : An Epic Poem (1951) is a poem by Australian author Rex Ingamells.  It consists of a sequence of twelve books, with an "Overture" and an epilogue, "The Timeless Covenant".  It won the ALS Gold Medal, and the Grace Leven Prize for Poetry, both in 1951.
+
+Peter Craven (literary critic): Peter Craven is an Australian literary critic and cultural studies writer.  Craven has written for "The Age", "The Australian" and the "Australian Literary Review".  His work has also appeared in "Oxford Guide to Contemporary Writing", the "Times Literary Supplement" and "London Review of Books".
+
+Khit-San Sarpay: Khit San Sarpay (Burmese: ခေတ်စမ်းစာပေ , ] ; lit.  "Testing the Age Literature") was a literary movement that emerged in 1930s British Burma, and is considered the first modern literary movement in the history of Burmese literature.  The movement was heavily influenced by modern English literature, and started by young Burmese writers, many of whom were educated in Christian missionary schools.  It emerged from the literary contests held by the Burma Education Extension Association.  Many short stories in the modern prose appeared in the association's "Ganda Lawka" Magazine as well as other periodicals.  Three collections—"Khit-San Ponbyin-mya Volume 1" ("Experimental Tales", 1934), "Khit-San Kabya-mya" ("Experimental Poems", 1934), and "Khit-San Ponbyin-mya Volume 2" (1938), which were edited and selected by came to represent the emerging literary style.
+
+Laurie Hergenhan: Laurence Thomas "Laurie" Hergenhan (born 1931 in Bega, New South Wales) is an Australian literary scholar.  He is the founder and former editor of "Australian Literary Studies" (1963) and editor of the 1988 "Penguin New Literary History of Australia" and has published on Xavier Herbert.  He is a professor emeritus of the University of Queensland.
+
+ABC Fiction Award: The ABC Fiction Award was an Australian literary award presented annually to the best, original, unpublished, adult fiction manuscript, written by an Australian resident over the age of 18.  It was launched in 2005.  The aim of the award was "to encourage emerging writers, contribute to Australian literary culture, and fulfil the ABC's charter by reflecting the diversity of the Australian community and adding to a sense of national identity".  The award was supported by ABC Local Radio and ABC TV.
+
+Rex Ingamells: Reginald Charles (Rex) Ingamells (19 January 191330 December 1955) was an Australian poet, generally credited with being the leading light of the Jindyworobak Movement.
+
+Question: Rex Ingamells is credited with being the leading light of this Australian literary  movement in what decades
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "movement_name": {
+      "type": "string",
+      "description": "The name of the literary movement."
+    },
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person associated with the movement."
+    },
+    "person_role": {
+      "type": "string",
+      "description": "The role of the person within the movement."
+    },
+    "movement_decades": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The decades during which the movement was active."
+    }
+  },
+  "required": [
+    "movement_name",
+    "person_name",
+    "person_role",
+    "movement_decades"
+  ],
+  "additionalProperties": false
+}

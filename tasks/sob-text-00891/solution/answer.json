@@ -1,0 +1,11 @@
+{
+  "is_both_genus": true,
+  "entity_1": {
+    "name": "Tithonia",
+    "taxonomic_category": "genus"
+  },
+  "entity_2": {
+    "name": "Pachysandra",
+    "taxonomic_category": "genus"
+  }
+}

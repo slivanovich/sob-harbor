@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Sacramento State Hornets men's basketball: The Sacramento State Hornets men's basketball team is the basketball team that represent California State University, Sacramento in Sacramento, California.  The school's team currently competes in the Big Sky Conference.  The team has never played in the NCAA Division I Men's Basketball Tournament.  The Hornets are currently coached by Brian Katz.
+
+Long Beach State 49ers men's basketball: The Long Beach State 49ers Basketball team represents California State University, Long Beach in Long Beach, California.  The school's team currently competes in the Big West Conference.  The team last played in the NCAA Division I Men's Basketball Tournament in 2012.  The 49ers are currently coached by Dan Monson.
+
+Central Michigan Chippewas men's basketball: The Central Michigan Chippewas team is the basketball team that represent Central Michigan University in Mount Pleasant, Michigan.  The school's team currently competes in the Mid-American Conference.  The team last played in the NCAA Division I Men's Basketball Tournament in 2003.  The Chippewas are currently coached by Keno Davis.
+
+Old Dominion Monarchs basketball: The Old Dominion Monarchs basketball team represents Old Dominion University in Norfolk, Virginia, United States in NCAA Division I men's competition.  (The women's team, which has traditionally had a considerably higher national profile, is known as the Lady Monarchs.)  The school's team currently competes in the Conference USA.  They were the Division II national champions in 1975, champions of the inaugural CollegeInsider.com Postseason Tournament in 2009, and champions of the inaugural Vegas 16 in 2016.  The team last played in the Division I NCAA Tournament in 2011.  The Monarchs are currently coached by Jeff Jones.
+
+Dave Ragone: David Patrick Ragone (born October 3, 1979) is an American football coach and former player who is the quarterbacks coach for the Chicago Bears of the National Football League (NFL).  He played in the NFL and NFL Europe for four seasons.  He played college football for the University of Louisville.
+
+Akron Zips men's basketball: The Akron Zips men's basketball team represents the University of Akron in Akron, Ohio.  The team currently competes in the Mid-American Conference East division.  The team first played in the NCAA Tournament in 1986 when Bob Huggins was their coach.  The Zips are currently coached by John Groce, who is in his first year with the school.  The Zips won their first MAC East division title in 1998.  In 2006, the Zips received an invitation to the NIT and won their first-ever post season game at Temple University before falling in the second round.  In 2007, the team won their second MAC East title and tied the school record for wins in a season in the Division I era with 26.  They also made their first-ever appearance in the MAC Tournament Championship game, which they lost on a last-second shot 53–52 to the Miami RedHawks.  The loss cost them the MAC's automatic berth and they were subsequently not selected for either the 2007 NCAA Tournament or NIT, despite finishing with a 26–7 record.  The Zips posted a 24–11 record (11–5 in the MAC) in 2008 which included a second-straight appearance in the MAC tournament championship game and a berth in the 2008 National Invitation Tournament.  In 2008 the Zips officially announced they had signed a three-year partnership to be outfitted by the LeBron James line by Nike.  They are now the only team with a LJ23/Nike contract.  Nike has released several Zips themed versions of LeBron's shoes.  Some are available to the public, while others are exclusively for the members of the basketball team.
+
+Albany Great Danes men's basketball: The Albany Great Danes Basketball team is the basketball team that represent the University at Albany, State University of New York in Albany, New York.  The school's team currently competes in the America East Conference and plays its home games at SEFCU Arena.  The team played in the NCAA Division I Men's Basketball Tournament in 2006, 2007, 2013, and 2014, 2015 and are currently coached by Will Brown.
+
+Army Black Knights women's basketball: The Army Black Knights women's basketball team is the women's basketball team that represents the United States Military Academy in West Point, New York.  The team currently competes in the Patriot League.  The Black Knights are currently coached by Dave Magarity.
+
+Québec official soccer team: The Québec official soccer team is the official association football team representing the Canadian province of Québec.  The stated mission of the team is "...to allow Québec to be represented at the international level to share our language, our culture and heritage through soccer."  Originally, the team was not sanctioned by the Quebec Soccer Federation as the federation was suspended by the Canadian Soccer Association in June 2013 for not allowing players wearing turbans for religious reasons to participate in matches.  However, the team communicated with the federation and regularly communicated the progress of the project to build a relationship in preparation for being sanctioned in the future.  In May 2014, it was announced that the team had officially become associated with the QSF and were working together to perhaps eventually become a member of CONCACAF and play against other national teams.  Québec is not a member of FIFA or any confederation or subconfederation as they are wholly a part of Canada.  However, Québec is an official member of the Confederation of Independent Football Associations (ConIFA), a global umbrella organization for national football teams outside FIFA.  Usually in Québec, the majority of the population speak French, while English is the largest minority.  Although the purpose of the team is said to be cultural, not political, the team is partially funded by the Saint-Jean-Baptiste Society and Parti Québécois, a Canadian political party that advocates the Québec sovereignty movement.  The team was formed in 2013 and played its first match against a Tibet select team in the 2013 International Peoples, Cultures, and Tribes Tournament, an event hosted by Marseille as the 2013 European Capital of Culture, on 24 June 2013.  Québec won the match 21–0.  The team currently consists mostly of players from the Première Ligue de soccer du Québec and former Montreal Impact players.  They are currently coached by former Canadian international Patrick Leduc.
+
+Louisville Cardinals football: The Louisville Cardinals Football team represents the University of Louisville in the sport of American football.  The Cardinals compete in the Football Bowl Subdivision (FBS) of the National Collegiate Athletic Association (NCAA) and compete in the Atlantic Coast Conference.  The team is currently coached by Bobby Petrino.
+
+Question: Dave Ragone played football for a university team currently coached by whom?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the player."
+    },
+    "university_played_for": {
+      "type": "string",
+      "description": "The name of the university the player played college football for."
+    },
+    "sport": {
+      "type": "string",
+      "description": "The sport the player played at the university level."
+    },
+    "current_coach_of_team": {
+      "type": "string",
+      "description": "The name of the current coach of the university's football team."
+    }
+  },
+  "required": [
+    "player_name",
+    "university_played_for",
+    "sport",
+    "current_coach_of_team"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+{
+  "tv_show_name": "Barney & Friends",
+  "artist_details": {
+    "name": "Selena Gomez",
+    "roles": [
+      "singer",
+      "actress"
+    ]
+  },
+  "songwriter_details": {
+    "name": "Shelly Peiken",
+    "known_for_hits": [
+      "What A Girl Wants",
+      "Come On Over Baby (All I Want Is You)"
+    ]
+  },
+  "collaboration_type": "written for or with"
+}

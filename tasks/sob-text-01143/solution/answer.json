@@ -1,0 +1,14 @@
+{
+  "person_name": "Albert Ogden \"Scoop\" Vorse Jr.",
+  "role": "World War II naval ace",
+  "squadron_commanded": "VF-80",
+  "retirement_year": 1959,
+  "served_with_legendary_aviator": true,
+  "legendary_aviator_details": {
+    "name": "Jimmy Thach",
+    "birth_year": 1905
+  },
+  "wars_participated_in": [
+    "World War II"
+  ]
+}

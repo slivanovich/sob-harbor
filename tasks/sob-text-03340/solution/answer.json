@@ -1,0 +1,16 @@
+{
+  "airport_name": "Charles de Gaulle Airport",
+  "airport_country": "France",
+  "airport_attributes": {
+    "alternative_names": [
+      "Roissy Airport"
+    ],
+    "is_largest_international_airport_in_country": true
+  },
+  "refugee_details": {
+    "name": "Mehran Karimi Nasseri",
+    "nationality": "Iranian",
+    "terminal_of_residence": "Terminal One",
+    "years_lived_at_airport": 18
+  }
+}

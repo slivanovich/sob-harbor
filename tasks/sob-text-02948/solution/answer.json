@@ -1,0 +1,31 @@
+{
+  "band_name": "The Fratellis",
+  "members": [
+    {
+      "name": "Jon Fratelli",
+      "roles": [
+        "lead vocalist",
+        "guitarist"
+      ]
+    },
+    {
+      "name": "Barry Fratelli",
+      "roles": [
+        "bass guitarist"
+      ]
+    },
+    {
+      "name": "Mince Fratelli",
+      "roles": [
+        "drummer",
+        "backing vocalist"
+      ]
+    }
+  ],
+  "single_release_details": {
+    "single_title": "A Heady Tale",
+    "album_title": "Here We Stand",
+    "release_date": "22 December 2008",
+    "single_number_on_album": 3
+  }
+}

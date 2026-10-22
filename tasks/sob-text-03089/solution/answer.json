@@ -1,0 +1,19 @@
+{
+  "plant_genera_info": [
+    {
+      "genus_name": "Dampiera",
+      "native_continents": [
+        "Australia"
+      ]
+    },
+    {
+      "genus_name": "Acacia",
+      "native_continents": [
+        "Africa",
+        "Australia"
+      ]
+    }
+  ],
+  "common_continent": "Australia",
+  "is_common_continent_identified": true
+}

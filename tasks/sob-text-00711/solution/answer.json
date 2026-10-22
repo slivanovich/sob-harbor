@@ -1,0 +1,10 @@
+{
+  "beverage_name": "Genesee Cream Ale",
+  "producing_brewery": "Genesee Brewing Company",
+  "brewery_location": {
+    "city": "Rochester",
+    "state": "New York",
+    "river_name": "Genesee River"
+  },
+  "fermentation_process": "cold fermented"
+}

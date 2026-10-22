@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "record_id": "c3a75d7320d2d05da703ac089354ded01983324e3c005c44c642896f390b80a9",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae472dc5542996836b02ca6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "tenth and current Commissioner",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Major League Baseball Most Valuable Player Award: The Major League Baseball Most Valuable Player Award (MVP) is an annual Major League Baseball (MLB) award, given to one outstanding player in the American League and one in the National League.  Since 1931, it has been awarded by the Baseball Writers' Association of America (BBWAA).  The winners receive the Kenesaw Mountain Landis Memorial Baseball Award, which became the official name of the award in 1944, in honor of the first MLB commissioner, who served from 1920 until his death on November 25, 1944.\n\nTony Petitti: Tony Petitti is the Chief Operating Officer of Major League Baseball.  He succeeded Rob Manfred in the position on January 25, 2015 after Manfred became Commissioner of Baseball.  He previously served as the President and Chief Executive Officer of the MLB Network, where he oversaw all of the network's day-to-day operations.\n\nMinnesota Department of Transportation: The Minnesota Department of Transportation (MnDOT, pronounced \"min-dot\") oversees transportation by land, water, and air in the U.S. state of Minnesota.  The cabinet-level agency is responsible for maintaining the state's trunk highway system (including state highways, U.S. highways, and interstate highways), funding municipal airports and maintaining radio navigation aids, and other activities.  Carol Molnau, who served as Minnesota's lieutenant governor under Tim Pawlenty, led the department as Commissioner of Transportation from the start of the Pawlenty administration in 2003 until her February 2008 removal in the aftermath of the I-35W Mississippi River bridge collapse.  Thomas K. \"Tom\" Sorel succeeded her as commissioner and was reappointed when Mark Dayton became governor.  Sorel has resigned from his position effective December 1, 2012, and his deputy commissioner, Bernard J. \"Bernie\" Arseneau, was appointed to act as interim commissioner.  On December 15, 2012, Governor Mark Dayton announced that Charlie Zelle, CEO of Jefferson Lines, would be MnDOT's next commissioner, effective January 15, 2013.\n\nCommissioner of Baseball: The Commissioner of Baseball is the chief executive of Major League Baseball (MLB) and the associated Minor League Baseball (MiLB) – a constellation of leagues and clubs known as organized baseball.  Under the direction of the Commissioner, the Office of the Commissioner of Baseball hires and maintains the sport's umpiring crews, and negotiates marketing, labor, and television contracts.  The commissioner is chosen by a vote of the owners of the teams.  The current commissioner is Rob Manfred, who assumed office on January 25, 2015.\n\nCommissioner's Historic Achievement Award: The Commissioner's Historic Achievement Award is awarded by the Commissioner of Baseball to a group or person who has made a \"major impact on the sport\" of baseball.  It is not an annual award; rather, the Commissioner presents the trophy at his discretion.  The trophy is a gold baseball sitting atop a cylindrical silver base, created by Tiffany & Co. The award has been presented fourteen times by Commissioner Bud Selig: eleven times to players, once to a team, and twice to a non-player.  Mark McGwire and Sammy Sosa were the first to receive the award for their parts in the 1998 MLB home run record chase.  The most recent recipient is Derek Jeter (2014), who was honored in the final year of his career for being \"one of the most accomplished shortstops of all-time\".  The 2001 Seattle Mariners won the award as a team for posting a 116–46 record one season after losing Alex Rodriguez to the Texas Rangers.  Roberto Clemente, the 2006 awardee, is the only player to receive the award posthumously; his award was accepted by his wife, Vera.\n\nStacey Evans: Stacey Evans is a Democratic member of the Georgia House of Representatives.  Evans was elected to the House of Representatives in 2010.  She represents District 42, a collection of Cobb County Communities that includes Smyrna, Georgia, and Marietta, Georgia. (link).  She succeeded Rob Teilhet in a contested election.  Evans has been reelected overwhelmingly three additional times, and was targeted by Republicans in the 2016 election.  She won reelection in 2016 with 73.25% of the vote, exceeding the percentage that Hillary Clinton received in the district by 12 points.\n\nBud Selig: Allan Huber \"Bud\" Selig ( ; born July 30, 1934) is an American baseball executive who currently serves as the Commissioner Emeritus of Baseball.  Previously, he served as the ninth Commissioner of Baseball.  He initially served as the acting commissioner beginning in 1992 before being named the official commissioner in 1998.  Selig oversaw baseball through the 1994 strike, the introduction of the wild card, interleague play, and the merging of the National and American Leagues under the Office of the Commissioner.  He was instrumental in organizing the World Baseball Classic in 2006.  Selig also introduced revenue sharing.  He is credited for the financial turnaround of baseball during his tenure with a 400 percent increase in the revenue of MLB and annual record breaking attendance.  Selig enjoys a high level of support from baseball owners.  Jerome Holtzman, MLB's official historian from 1999 until his death in 2008, believed Selig to be the best commissioner in baseball history.\n\n2015 Major League Baseball season: The 2015 Major League Baseball season began on April 5 with a Sunday night game between the St. Louis Cardinals and the Chicago Cubs at Wrigley Field, and ended on November 1 with the Kansas City Royals winning the World Series.  This was Rob Manfred's first season serving as Commissioner of Baseball.\n\n2017 Major League Baseball All-Star Game: The 2017 Major League Baseball All-Star Game was the 88th edition of the Major League Baseball All Star Game.  The game was hosted by the Miami Marlins and was played at Marlins Park on July 11, 2017.  It was televised nationally by Fox.  The game was the first since 2002 whose outcome did not determine home-field advantage for the World Series; instead, the team with the better regular-season record will have home-field advantage.  The Marlins were announced as the hosts on February 10, 2015, by Major League Baseball Commissioner Rob Manfred; the game was the Marlins' first time hosting, leaving the Tampa Bay Rays as the only MLB franchise not to have hosted an All-Star game.\n\nRob Manfred: Robert D. Manfred Jr. (born September 28, 1958) is an American lawyer and business executive who is the tenth and current Commissioner of Baseball.  He previously served as the Chief Operating Officer of Major League Baseball (MLB) and succeeded Bud Selig as Commissioner on January 25, 2015.",
+    "question": "Who succeeded Rob Manfred as MLB Commissioner",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person whose succession is being queried."
+        },
+        "role": {
+          "type": "string",
+          "description": "The specific role in question."
+        },
+        "is_current_holder": {
+          "type": "boolean",
+          "description": "Indicates if the person is the current holder of the specified role."
+        },
+        "has_been_succeeded": {
+          "type": "boolean",
+          "description": "Indicates if the person has been succeeded in the specified role."
+        },
+        "successor_name": {
+          "type": "string",
+          "description": "The name of the person who succeeded them in the role, if applicable."
+        },
+        "succession_date": {
+          "type": "string",
+          "description": "The date when the succession occurred, if applicable."
+        }
+      },
+      "required": [
+        "person_name",
+        "role",
+        "is_current_holder",
+        "has_been_succeeded"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Rob Manfred",
+      "role": "Commissioner of Baseball",
+      "is_current_holder": true,
+      "has_been_succeeded": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

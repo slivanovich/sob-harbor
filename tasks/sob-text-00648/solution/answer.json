@@ -1,0 +1,16 @@
+{
+  "question_asked": "Portland State University and Boston University, are they a research institution?",
+  "institutions_status": [
+    {
+      "institution_name": "Portland State University",
+      "is_research_institution": true,
+      "institution_type": "public"
+    },
+    {
+      "institution_name": "Boston University",
+      "is_research_institution": true,
+      "institution_type": "private"
+    }
+  ],
+  "overall_answer": true
+}

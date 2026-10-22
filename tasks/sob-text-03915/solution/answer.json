@@ -1,0 +1,20 @@
+{
+  "influenced_movement_name": "South Korean student movement",
+  "turning_point_event": {
+    "name": "Gwangju massacre",
+    "year": 1980
+  },
+  "influencing_theory": {
+    "name": "Marxism",
+    "description_characteristics": [
+      "explores class relations and societal conflict",
+      "uses a materialist interpretation of historical development",
+      "uses a dialectical view of social transformation"
+    ],
+    "originator": {
+      "name": "Karl Marx",
+      "nationality": "German",
+      "work_period": "mid-to-late 19th century"
+    }
+  }
+}

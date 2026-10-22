@@ -1,0 +1,16 @@
+{
+  "composer_name": "Morten Lauridsen",
+  "nationality": "American",
+  "primary_profession": "composer",
+  "awards_received": [
+    {
+      "award_name": "National Medal of Arts",
+      "award_year": 2007
+    }
+  ],
+  "taught_student_composer": {
+    "student_name": "Gregg Wager",
+    "student_profession": "composer"
+  },
+  "teaching_role": "professor of composition"
+}

@@ -1,0 +1,11 @@
+{
+  "person_name": "William P. Baker",
+  "university_attended": {
+    "name": "San Jose State University",
+    "location": "San Jose, California, United States"
+  },
+  "founding_system": {
+    "name": "California State University (CSU) system",
+    "campus_count": 23
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "is_both_flowering_plants": false,
+  "carphalea_details": {
+    "is_flowering_plant": true,
+    "family": "Rubiaceae"
+  },
+  "tuberaria_details": {
+    "is_flowering_plant": false,
+    "family": "Cistaceae"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "fight_event": {
+    "name": "Buster Douglas vs Evander Holyfield",
+    "date": "October 25, 1990",
+    "venue": {
+      "name": "The Mirage",
+      "location": "Paradise, Nevada, USA"
+    }
+  },
+  "venue_builder": {
+    "name": "Steve Wynn",
+    "role": "developer"
+  },
+  "final_answer": "Steve Wynn"
+}

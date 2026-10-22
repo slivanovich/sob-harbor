@@ -1,0 +1,9 @@
+{
+  "station_name": "WWDP",
+  "affiliation_network": "Evine",
+  "headquarters_location": {
+    "city": "Eden Prairie",
+    "state": "Minnesota",
+    "country": "United States"
+  }
+}

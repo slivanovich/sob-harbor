@@ -1,0 +1,16 @@
+{
+  "common_classification_type": "genus",
+  "entities_compared": [
+    {
+      "name": "Cistus",
+      "family": "Cistaceae",
+      "species_count": 20
+    },
+    {
+      "name": "Abelia",
+      "family": "Caprifoliaceae",
+      "species_count": 30
+    }
+  ],
+  "comparison_summary": "Both Cistus and Abelia are classified as genera of flowering plants."
+}

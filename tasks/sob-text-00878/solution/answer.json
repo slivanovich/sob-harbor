@@ -1,0 +1,16 @@
+{
+  "question_about_drug_testing": true,
+  "case_details": [
+    {
+      "case_name": "Escobedo v. Illinois",
+      "is_about_drug_testing": false,
+      "primary_topic": "right to counsel during police interrogations"
+    },
+    {
+      "case_name": "Vernonia School District 47J v. Acton",
+      "is_about_drug_testing": true,
+      "primary_topic": "constitutionality of random drug testing regimen for student athletes"
+    }
+  ],
+  "both_cases_about_drug_testing": false
+}

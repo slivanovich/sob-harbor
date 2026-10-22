@@ -1,0 +1,18 @@
+{
+  "player_name": "Shannon Sharpe",
+  "birth_month": "June",
+  "nfl_street_cover_players": [
+    {
+      "player": "Barry Sanders",
+      "team": "Detroit Lions"
+    },
+    {
+      "player": "Shannon Sharpe",
+      "team": "Denver Broncos"
+    },
+    {
+      "player": "Ricky Williams",
+      "team": "Miami Dolphins"
+    }
+  ]
+}

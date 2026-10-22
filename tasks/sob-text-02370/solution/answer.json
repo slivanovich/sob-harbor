@@ -1,0 +1,16 @@
+{
+  "company_name": "Northrop Grumman",
+  "ranking_information": {
+    "year": 2015,
+    "position": 5,
+    "category": "defense contractor",
+    "scope": "world"
+  },
+  "working_group_memberships": [
+    {
+      "group_name": "VITA",
+      "group_full_name": "VME International Trade Association",
+      "group_type": "Trade Association"
+    }
+  ]
+}

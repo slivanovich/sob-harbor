@@ -1,0 +1,10 @@
+{
+  "author_name": "Dan Brown",
+  "author_nationality": "American",
+  "author_genre": "thriller fiction",
+  "novel_details": {
+    "title": "The Da Vinci Code",
+    "publication_year": 2003,
+    "inspiration_source": "Rose Line"
+  }
+}

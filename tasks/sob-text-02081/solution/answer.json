@@ -1,0 +1,12 @@
+{
+  "film_title": "The Wrestler",
+  "person_involved": {
+    "name": "David Juskow",
+    "role_in_film": "actor"
+  },
+  "film_producer": {
+    "name": "Darren Aronofsky",
+    "role_in_film": "co-producer",
+    "also_directed": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "name": "Jonathan Melvoin",
+      "type": "person"
+    },
+    {
+      "name": "The Smashing Pumpkins",
+      "type": "band"
+    }
+  ],
+  "shared_nationality": "American",
+  "nationality_source": "context"
+}

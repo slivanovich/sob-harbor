@@ -1,0 +1,13 @@
+{
+  "album_title": "What a Terrible World, What a Beautiful World",
+  "artist": "The Decemberists",
+  "was_influenced_by_politics": true,
+  "political_influences": [
+    {
+      "event_description": "Sandy Hook Elementary School shooting",
+      "involved_political_figure": "Barack Obama",
+      "related_date": "12/17/12",
+      "artist_sentiment": "lead singer Colin Meloy's conflicting feelings about the shooting and his happy personal life"
+    }
+  ]
+}

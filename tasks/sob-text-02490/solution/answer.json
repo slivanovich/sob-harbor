@@ -1,0 +1,13 @@
+{
+  "player_name": "Paul Pierce",
+  "college_career_highlights": {
+    "university": "Kansas",
+    "all_american_honor": "consensus first-team All-America",
+    "all_american_year_level": "junior year"
+  },
+  "nba_team_affiliation": {
+    "team_name": "Boston Celtics",
+    "affiliation_year": 2011,
+    "source_event_mention": "2006 NBA All-Star Game"
+  }
+}

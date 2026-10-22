@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Greatest Hits: Souvenir Edition: Greatest Hits: Souvenir Edition is a greatest hits album by Puerto Rican singer-songwriter Ricky Martin.  It was released exclusively in Australia, New Zealand and Taiwan on April 12, 2013.  The album was issued as a CD/DVD combo and features all of Martin's biggest hits, including: "María", "The Cup of Life", "Livin' la Vida Loca", "She Bangs" and "Nobody Wants to Be Lonely".  Martin promoted the album during his 2013 Australian Tour.
+
+Livin la Vida Loco: Livin La Vida Loco, a play on the song title "Livin' la Vida Loca" by Ricky Martin, was a concert tour in 1999.  It was headlined by Coal Chamber, and organized by the band's record label, Roadrunner Records.  Other bands that were featured included Machine Head, Slipknot, and Amen.  The tour was formed after Coal Chamber were thrown off a tour with the Insane Clown Posse, and picked up Nadja Peulen as an interim bassist during the tour.
+
+Hank Osasuna: Hank Osasuna is an actor and performance artist.  He was grew up in Chadwell Heath in London.  After working in The House of Lords for 14 years, Hank took up acting full-time and has appeared in many prime time advertisements for brands such as Cadburys, Heineken, 118.  Hank is the pioneer of punk rock poetry - a mix of a cappella singing, poetry and comedy.  He has been heavily involved in promoting and performing in both the American and British antifolk circuits.  His performance persona is Spinmaster Plantpot and when performing a set in 2008 was discovered by Leigh Francis - and offered a part in "Keith Lemon's Brilliant World Tour" as Mad Paul.  After this, Hank subsequently appeared as Mad Paul in "" and ITV2 series "Lemon La Vida Loca".  He is known for his height - 4 feet eleven inches.
+
+Livin' la Vida Loca Tour: The Livin' La Vida Loca World Tour was the first major world concert tour by Puerto Rican singer Ricky Martin to support his first English-language album "Ricky Martin".  The tour started in October 1999 and continued until October 2000.
+
+Livin' la Vida Loca: "Livin' la Vida Loca" is a number-one hit song by Puerto Rican singer Ricky Martin.  It was released on March 23, 1999 from Martin's self-titled debut English album (he had previously released several albums in Spanish).  The song was composed by Desmond Child and Draco Rosa and topped the charts during 1999.  "La vida loca" is Spanish for "the crazy life."
+
+Lemon La Vida Loca: Lemon La Vida Loca is a British mock reality show created and written by, and starring, comedian Leigh Francis and actress Laura Aikman.  The show's title is derived from Ricky Martin's 1999 hit single, "Livin' la Vida Loca".
+
+Poetas Puertorriqueños: Poetas Puertorriqueños is a compilation album from Puerto Rican singer Roy Brown.  It features eleven songs from Brown's previous albums, that are based on poems from Puerto Rican writers like Luis Palés Matos and Juan Antonio Corretjer, among others.  It also features a new, unreleased song titled "Ay, ay, ay de la grifa negra", based on a poem by Julia de Burgos.  The album was released under Brown's label Discos Lara-Yarí in 1992.  The album was also sponsored by the Puerto Rican Committee for the Celebration of the 500th Anniversary of the Discovery of Puerto Rico.
+
+Leopoldo Figueroa: Dr. Leopoldo Figueroa (September 21, 1887 – October 15, 1969) a.k.a. "The deacon of the Puerto Rican Legislature", was a Puerto Rican politician, journalist, medical doctor and lawyer.  Figueroa, who began his political career as an advocate of Puerto Rican Independence, was the co-founder of the "Independence Association", one of three political organizations which merged to form the Puerto Rican Nationalist Party.  Figueroa, had changed political ideals and in 1948, was a member of the "Partido Estadista Puertorriqueño" (Puerto Rican Statehood Party).  That year, he was the only member of the Puerto Rico House of Representatives who did not belong to the Popular Democratic Party of Puerto Rico PPD, who opposed the PPD's approval of the infamous Law 53, also known as "Puerto Rico's Gag Law" and "Ley de La Mordaza", which violated the civil rights of those who favored Puerto Rican Independence.  On December 22, 2006, the Puerto Rican Legislature approved a law declaring every September 21, Leopoldo Figueroa Carreras Day.
+
+Mi Vida Loca (album): Mi Vida Loca is the ninth studio album released by American singer Jenni Rivera in 2007 by Fonovisa Records.  "Mi Vida Loca" earned Rivera the award, Regional Mexican Album Of The Year at the 2008 Latin Billboard Music Awards.
+
+Ricky Martin (1999 album): Ricky Martin is the fifth album by the Puerto Rican singer Ricky Martin released on Columbia Records on May 11, 1999.  The album is one of the best selling albums of all time and has sold 15 million copies, worldwide.  This album is Martin's third which marketed in the United States and is his first album in English.  "Ricky Martin" includes the singer’s first US number one hit "Livin' la Vida Loca."
+
+Question: Lemon La Vida Loca took its name from a song by which Puerto Rican singer?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "show_name": {
+      "type": "string",
+      "description": "The name of the show whose title is derived from a song."
+    },
+    "song_title_inspiration": {
+      "type": "object",
+      "properties": {
+        "song_title": {
+          "type": "string",
+          "description": "The title of the song that inspired the show's name."
+        },
+        "artist_name": {
+          "type": "string",
+          "description": "The name of the artist who performed the inspiring song."
+        },
+        "artist_nationality": {
+          "type": "string",
+          "description": "The nationality of the artist."
+        },
+        "song_release_year": {
+          "type": "integer",
+          "description": "The year the inspiring song was released."
+        }
+      },
+      "required": [
+        "song_title",
+        "artist_name",
+        "artist_nationality",
+        "song_release_year"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer_singer_name": {
+      "type": "string",
+      "description": "The name of the Puerto Rican singer."
+    }
+  },
+  "required": [
+    "show_name",
+    "song_title_inspiration",
+    "final_answer_singer_name"
+  ],
+  "additionalProperties": false
+}

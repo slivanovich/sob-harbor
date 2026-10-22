@@ -1,0 +1,16 @@
+{
+  "court_name": "United States Supreme Court",
+  "court_level": "Supreme Court",
+  "cases_heard": [
+    {
+      "case_name": "Texas v. White",
+      "citation": "74 U.S. 700 (1869)",
+      "year": 1869
+    },
+    {
+      "case_name": "United States v. Curtiss-Wright Export Corp.",
+      "citation": "299 U.S. 304 (1936)",
+      "year": 1936
+    }
+  ]
+}

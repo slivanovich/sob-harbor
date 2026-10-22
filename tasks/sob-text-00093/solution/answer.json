@@ -1,0 +1,8 @@
+{
+  "entity_1_name": "Irish Terrier",
+  "entity_1_is_dog": true,
+  "entity_2_name": "Chihuahua",
+  "entity_2_is_dog": true,
+  "both_are_dogs": true,
+  "common_classification": "dog breed"
+}

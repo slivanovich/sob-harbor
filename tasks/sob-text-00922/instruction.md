@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Minimum metal mine: A minimum metal mine is a land mine that is designed to use the smallest amount of metal possible in its construction.  Typically, the only metal components are located inside the fuze mechanism which triggers detonation.  Both minimum metal anti-tank and anti-personnel mines exist.  Some designs contain virtually no metal at all e.g. less than a gram.  This is achieved by encasing the explosive charge in a plastic, wooden, or glass body, with metallic components limited to the few small parts in the fuze which can not easily be made from other materials, such as the spring, striker tip, and shear pin.  Minimum metal mines are extremely difficult to detect using conventional metal mine detectors and usually require modern techniques, such as robotic "Multi Period Sensing" (MPS) equipment, to identify, but it is still too difficult to find non-metallic mines.  These techniques are usually restricted to well-funded international mine clearing organizations and major militaries, making minimum metal mines especially pernicious where they are encountered.
+
+Lost Lemon Mine: The Lost Lemon Mine is a legendary lost mine said to be located in the Canadian Province of Alberta.  The story has been retold in countless books with the authoritative version being "The Lost Lemon Mine" by Tom Primrose.The story first appeared in the 1946 edition of the "Alberta Folklore Quarterly" and later in magazines such as "Canada West".  The Lost Lemon Mine has also been featured in television documentary series "Northern Mysteries", and worked into the plot of "The Final Sacrifice".  Countless people have searched for the mine.  A number of searchers have never returned.
+
+P3 Mk2 mine: The P2 Mk2 and P3 Mk2 are Pakistani plastic cased minimum metal anti-tank blast mines.  The P2 Mk2 has a square case with a central circular ribbed pressure plate, the P3 is circular with a central circular pressure plate.  Both mines use anti-personnel mines as the fuse, typically the either the P4 Mk1 or P2 Mk2 anti-personnel mines.  The anti-personnel mine sits in a cavity below the pressure plate, when enough pressure is place on the pressure plate of the mine, it collapses onto the anti-personnel mine triggering it and the main charge which sits below it.  A yellow canvas carrying strap is normally fitted to the side of the mine.  The mines have a secondary fuse well on the bottom which can be used with anti-handling devices.  A GLM-2 electronic booby trap can be fitted to the cavity under the pressure plate.  The mine is supplied with a steel disc which makes the mine more easily detectable, although this is seldom used.  Since 1997 only a detectable version of the mine has been produced, and to comply with the Convention on Conventional Weapons amended protocol II, Pakistani stocks of the mine are being retrofitted with steel detection discs.  The mines are found in Afghanistan, Angola, Eritrea, Ethiopia, Pakistan, Somalia, and Tajikistan.
+
+Colomac Mine: The Colomac Mine was a privately owned and operated open pit gold mine located 220 km northwest of Yellowknife in the Northwest Territories in Canada .  The Colomac mine operated between 1990–1992, and 1994–1997.  It was operated by Neptune Resources Limited that had little success in making a profit during its operation.  In 1994, the mine had reopened under Royal Oak Mines Inc.  Both Neptune Resources and Royal Oak Mines where both owned and operated by Peggy Witte.  Due to low gold prices and high cost of mining, Royal Oak Mines was forced into bankruptcy.  The Federal Government of Canada became owners of the mine, along with the related environmental issues.  A major cleanup effort is under way to prevent the mine from polluting the environment, but this might be too late at this stage.  This mine is now owned and controlled by the Indigenous and Northern Affairs department of the Federal government, while Public Works and Government services is the current contracting authority.
+
+National Mine Map Repository: The National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM).  The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania.  The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines.  This repository contains maps of mine workings from the 1790s to the present day.  It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States.  It also serves as a location to retrieve mine maps in an emergency.  The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining.  Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare.  In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.
+
+Keeley-Frontier Mine: Keeley-Frontier Mine is a large abandoned mine in the ghost town of Silver Centre, Northeastern Ontario, Canada.  It consists of two underground mines that were sunk 1455 ft below the surface.  Keeley Mine was discovered in 1907 while Frontier Mine was constructed in 1921.  The 8th level of the Keeley Mine connected with the 6th level of the Frontier Mine in 1962, creating the two compartment Keeley-Frontier Mine.  In 1965, Keeley-Frontier Mine closed with a total production of 19000000 oz of silver, 3300000 lb of cobalt, 27000 lb of nickel and 10000 lb of copper.
+
+Accentor-class minesweeper: In World War II, the United States Navy needed a vessel that could consistently locate mines in [foreign or domestic?]  or littoral waters.  Littoral waters are found between the shore line and waters 60 meters deep.  The Accentor-class minesweeper (sometimes called the Accentor/Acme-class minesweeper) was developed for this task.  This class of minesweeper was named after the Accentor bird, Prunella modularis.  This bird is endemic to Europe, Asia, and North Africa which is the area that World War II occurred.  The bird is a drab brown and gray color and is in the same family as warblers and thrushes.  The Accentor-class mine sweeper was designed for the sweeping of mines in harbors, bays, and other littoral waters.  The Accentor-class minesweeper had a wooden hull for three reasons.  The first was that some of the mines that the Accentor-class minesweeper was trying to detect were detonated by a copper wire coming out of the top of the mine that is used to detect the magnetic field that is produced by the metal hulls of most ships; when the wire senses a magnetic field, it detonates the mine.  Minesweepers use wooden hulls because wood is a non-magnetic material, unlike steel, and would not set off this type of mine.  The second is that wooden hulls were lighter than metal hulls.  This caused them to float higher in the water, which made them displace less water and have a smaller pressure wave, so pressure mines would not be set off by the movement of the ship.  Lastly, due to the ship floating higher in the water, contact mines were not effective because they were often around 20 feet below the surface of the water, and the draft of this class of ship was between 8 feet 11 inches and 10 feet 8 inches.  Typically, the Accentor-class minesweepers were armed with a pair of .50 caliber machine guns for protection.  Rather than creating new minesweeping vessels, forty-five wooden-hulled fishing boats were converted into Accentor-class minesweepers.  This saved the Navy both time and money.  Since these converted fishing boats were not all the same, their specifications do vary a bit.  The converted fishing boats had a displacement from 165 to 270 tons of water.  They had speeds from 8.5 up to 14 knots and crews from as small as 15 up to 50.
+
+McIntyre Mines: The McIntyre mine is an abandoned underground gold mine in Schumacher, Ontario, Canada, which has earned a place in Canadian mining history as one of the nation's most important mines.  Its iconic headframe, located near downtown Timmins, has come to represent the entire Porcupine Gold Rush.  The McIntyre also yielded a considerable amount of copper over its life.
+
+MI AC Disp F1 Minotaur mine: The MI AC Disp F1 Minotaur mine is a French scatterable anti-tank mine.  The mines can also be scattered from 155 millimetre artillery shells, which can hold six of the mines.  The mine is cylindrical with two Misznay Schardin effect warheads, one on each side of the mine, with a 600 gram charge.  The warhead is claimed to be able to penetrate 90 mm of armour at a distance of 0.5 m.  It uses a magnetic influence fuze combined with an anti-handling device which arms itself 64 seconds after launch.  At the end of its active life, which is set to between one and 96 hours the mine self-destructs.  The land based scattering system can launch mines to a range of up to 300 m.
+
+McIntyre Community Building: The McIntyre Community Building was constructed in Timmins, Ontario, Canada in 1938 by McIntyre Mines owner J. P. Bickell.  At the time, it was one of the finest recreational centres in Canada outside of a major centre.
+
+Question: Are Lost Lemon Mine and McIntyre Mines both in Ontario?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "mine_1_name": {
+      "type": "string",
+      "description": "The name of the first mine mentioned in the question."
+    },
+    "mine_1_location": {
+      "type": "string",
+      "description": "The Canadian province or territory where the first mine is located."
+    },
+    "mine_2_name": {
+      "type": "string",
+      "description": "The name of the second mine mentioned in the question."
+    },
+    "mine_2_location": {
+      "type": "string",
+      "description": "The Canadian province or territory where the second mine is located."
+    },
+    "are_locations_same_province": {
+      "type": "boolean",
+      "description": "True if both mines are located in the same Canadian province/territory, false otherwise."
+    },
+    "answer": {
+      "type": "boolean",
+      "description": "The final answer to the question: Are Lost Lemon Mine and McIntyre Mines both in Ontario?"
+    }
+  },
+  "required": [
+    "mine_1_name",
+    "mine_1_location",
+    "mine_2_name",
+    "mine_2_location",
+    "are_locations_same_province",
+    "answer"
+  ],
+  "additionalProperties": false
+}

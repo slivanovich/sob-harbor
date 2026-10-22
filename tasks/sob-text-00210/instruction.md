@@ -1,0 +1,93 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2003–04 Miami Heat season: The 2003–04 NBA season season was the 16th season for the Miami Heat in the National Basketball Association.  This season saw the team draft future All-Star and 3-time NBA Champion Dwyane Wade with the fifth overall pick in the 2003 NBA draft, while acquiring forward Lamar Odom from the Los Angeles Clippers.  Before the season began, head coach Pat Riley resigned, but he would later return midway in the 2005–06 season and help guide the Heat to their first ever NBA championship.  Under new head coach Stan Van Gundy, the Heat stumbled out of the gate losing their first seven games.  However, the team would play .500 basketball for the remainder of the season winning 14 of their final 17 games.  Despite posting a mediocre 42–40 record, the Heat entered the playoffs as the #4 seed in the Eastern Conference.  Wade had a stellar rookie season averaging 16.2 points per game, and was selected to the All-Rookie First Team.
+
+2017–18 Cleveland Cavaliers season: The 2017–18 Cleveland Cavaliers season will be the 48th season of the franchise in the National Basketball Association (NBA).  The Cavaliers will enter the season as the 3-time defending Eastern Conference champions and a runner up from the 2017 NBA Finals.  On June 19, 2017, the Cavaliers general manager David Griffin agreed to leave the team.  During July, Cleveland competed in the MGM Resorts Summer League in Las Vegas, winning 4 of 5 games.  On July 24, 2017, the Cavaliers named Koby Altman as their new general manager.  On August 22, 2017, the Cavaliers traded away Kyrie Irving to the rival Boston Celtics in exchange for Isaiah Thomas, Jae Crowder, Ante Žižić, and the rights to the Brooklyn Nets' first round pick in the 2018 NBA draft; the trade would later be expanded with the Cavaliers acquiring a 2020 second round pick from the Miami Heat eight days afterward due to concerns over the health of Thomas's hip.  On September 28, during training camp, Dwyane Wade would sign a one-year deal with Cleveland.  The Cavs will play the first regular season game of the year on October 17, 2017 against the Boston Celtics.
+
+2017 NBA Finals: The 2017 NBA Finals was the championship series of the National Basketball Association (NBA)'s 2016–17 season and conclusion of the season's playoffs.  The Western Conference champion Golden State Warriors defeated the defending NBA champion and Eastern Conference champion Cleveland Cavaliers 4 games to 1.  This Finals was the first time in NBA history the same two teams had met for a third consecutive year.  The Cavaliers sought to repeat as champions after winning the championship in 2016, while the Warriors won the first meeting in 2015.  Golden State earned home court advantage with a 2016–17 regular season record of 67–15 , while Cleveland finished the regular season with a 51–31 record.  The Warriors entered the 2017 Finals after becoming the first team in NBA playoff history to start 12–0 , while the Cavaliers entered the 2017 Finals with a 12–1 record during the first three rounds of the postseason.  The Warriors' 15–0 start in the playoffs is the most consecutive postseason wins in NBA history and their 16–1 record is the best winning percentage () in NBA Playoff history.
+
+2016–17 NBA season: The 2016–17 NBA season was the 71st season of the National Basketball Association.  The regular season began on October 25, 2016, with the 2016 NBA champion Cleveland Cavaliers hosting a game against the New York Knicks.  Christmas Day games were played on Sunday December 25, 2016.  The 2017 NBA All-Star Game was played at the Smoothie King Center in New Orleans, Louisiana, on February 19, 2017, with the West defeating the East 192–182.  Anthony Davis of the New Orleans Pelicans was named the All Star Game MVP after breaking Wilt Chamberlain's record by scoring 52 points in the All Star Game.  The original host of the game, Charlotte's Spectrum Center, was removed as the host on July 21, 2016 due to the league's opposition against North Carolina's Public Facilities Privacy & Security Act.  The regular season ended on April 12, 2017, and the playoffs began on April 15, 2017 and ended on June 12, 2017, with the Golden State Warriors going 16-1 in the playoffs and beating the Cleveland Cavaliers in five games during their third consecutive matchup in the NBA Finals.
+
+Shaun Livingston: Shaun Patrick Livingston (born September 11, 1985) is an American professional basketball player for the Golden State Warriors of the National Basketball Association (NBA).  Livingston entered the league directly out of high school after he was selected in the first round of the 2004 NBA draft by the Los Angeles Clippers with the 4th overall pick.  In 2007, Livingston suffered a debilitating knee injury that damaged almost every part of his left knee, and it took him about a year and a half to return to action.  Livingston later played for the Miami Heat, Oklahoma City Thunder, Washington Wizards, Charlotte Bobcats, Milwaukee Bucks, Cleveland Cavaliers, and Brooklyn Nets.  He has also spent time with the Tulsa 66ers of the NBA Development League.  He is a two-time NBA champion, winning both with Golden State in 2015 and 2017.
+
+2001–02 Toronto Raptors season: The 2001–02 NBA season was the Raptors' 7th season in the National Basketball Association.  During the offseason, the Raptors acquired All-Star center and 2-time NBA Champion Hakeem Olajuwon from the Houston Rockets.  Throughout the season, All-Star guard Vince Carter struggled with a left knee injury, and only managed to play 60 games.  Despite the injury, Carter was still voted to play in the All-Star Game for the third consecutive year, but he did not play due to injury.  The Raptors played solid basketball with a 29–21 start 50 games into the season.  However, the team then suffered a 13-game losing streak, losing 17 of their next 18 games.  They would then post a nine-game winning streak between March and April.
+
+2016–17 Toronto Raptors season: The 2016–17 Toronto Raptors season was the 22nd season of the franchise in the National Basketball Association (NBA).  On March 25, 2017, the team clinched a team-record fourth straight birth to the NBA playoffs.  They finished the regular season with a 51–31 record as the 3rd seed.  In the playoffs, the Raptors defeated the Milwaukee Bucks in the First Round of the playoffs in six games, facing the defending NBA Champion Cleveland Cavaliers in the Semifinals, whom they met in last season's Eastern Conference Finals.  However, the Raptors would be swept by the Cavaliers in four games.
+
+Steve Kerr: Stephen Douglas Kerr (born September 27, 1965) is an American former professional basketball player and the current head coach of the Golden State Warriors.  Kerr is a seven-time NBA champion, winning three with the Chicago Bulls and two with the San Antonio Spurs as a player, and two with the Warriors as a head coach.  Kerr has the highest career three-point percentage (45.4%) for any player with at least 250 three pointers made in NBA history.
+
+Cavaliers–Warriors rivalry: The Cavaliers–Warriors rivalry is a National Basketball Association (NBA) rivalry between the Cleveland Cavaliers and the Golden State Warriors.  While the two teams have played each other since the Cavaliers joined the league in 1970, their rivalry did not develop until the 2014–15 season, when they met in the first of three consecutive NBA Finals series.  The two teams have met in three straight NBA Finals, becoming the only two teams in NBA history to do so.  Of these three series, the Warriors have won two, most recently in 2017the Cavaliers have won one, in 2016.  The two teams feature 11 NBA All-Stars: LeBron James, Kyrie Irving, Kevin Love, Deron Williams and Kyle Korver (Cleveland), and Stephen Curry, Kevin Durant, Draymond Green, Klay Thompson, David West and Andre Iguodala (Golden State).  Two players, Andrew Bogut and Anderson Varejão, played for both teams during this time.
+
+1989–90 Cleveland Cavaliers season: The 1989–90 NBA season was the 21st season of the National Basketball Association in Cleveland, Ohio.  During the offseason, the Cavaliers acquired second-year guard Steve Kerr from the Phoenix Suns.  The Cavaliers got off to a slow start losing their first four games, on their way to a mediocre 10–16 start.  Early into the season, they traded Ron Harper to the Los Angeles Clippers for rookie Danny Ferry and Reggie Williams, although Ferry went to play in Italy.  At midseason, the team traded Chris Dudley to the New Jersey Nets and released Williams.  The Cavaliers struggled playing below .500 for the first half of the season, but finished it on a strong note winning their final six games.  The team finished the season with a 42–40 record, finishing 4th in the Central Division.  Mark Price led the team in assists as the Cavs advanced to the playoffs.  In the first round of the playoffs, the Cavaliers lost in five games to the Philadelphia 76ers.
+
+Question: What seven time NBA champion was acquired by the Cleveland Cavaliers in the 1989 season?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the NBA player."
+    },
+    "team_acquired_by": {
+      "type": "string",
+      "description": "The team that acquired the player."
+    },
+    "season_of_acquisition": {
+      "type": "string",
+      "description": "The NBA season during which the player was acquired."
+    },
+    "nba_championship_count": {
+      "type": "integer",
+      "description": "The total number of NBA championships won by the player (as player or coach)."
+    },
+    "championship_details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "player",
+              "head coach"
+            ]
+          },
+          "team": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "role",
+          "team",
+          "count"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Details of championships won, specifying role and team."
+    }
+  },
+  "required": [
+    "player_name",
+    "team_acquired_by",
+    "season_of_acquisition",
+    "nba_championship_count",
+    "championship_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+  "mines_compared": [
+    {
+      "mine_name": "Murray Brook Mine",
+      "establishment_year": "1955"
+    },
+    {
+      "mine_name": "Temagami-Lorrain Mine",
+      "establishment_year": "early 1900s"
+    }
+  ],
+  "earlier_mine": {
+    "name": "Temagami-Lorrain Mine",
+    "establishment_period": "early 1900s"
+  },
+  "comparison_summary": "Temagami-Lorrain Mine was established earlier (early 1900s) than Murray Brook Mine (1955)."
+}

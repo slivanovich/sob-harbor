@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "a440eee13268900507d443b1a4344372c6da3c76071e9cd066dd715de7d17be1",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5adc97125542994734353750",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Jenna Jameson",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Briana Loves Jenna: Briana Loves Jenna is a 2001 pornographic film starring Briana Banks and Jenna Jameson, written and directed by Jay Grdina under the stage name \"Justin Sterling\".\n\nSheila Kennedy: Sheila Kennedy (born April 12, 1962) is a model and actress who was the December 1981 Penthouse Pet of the Month and the 1983 Pet of the Year.\n\nChanel Preston: Chanel Preston (born December 1, 1985) is an American pornographic actress and the \"Penthouse\" magazine Penthouse Pet for March 2012.  She entered the adult film industry in 2010 at the age of 24.\n\nBriana Banks: Briana Banks (born May 21, 1978) is the stage name of a German American pornographic actress and model.  She is the \"Penthouse\" Pet of the Month for June 2001.\n\nNikki Benz: Alla Montchak (Russian: А́лла Монча́к , born December 11, 1981), better known by her stage name Nikki Benz, is a Ukrainian Canadian pornographic actress.  She was also a 2010 Penthouse Pet who was selected as the 2011 Pet of the Year.\n\nSamantha Saint: Samantha Saint (born June 8, 1987) is the stage name of an American pornographic actress, model and Penthouse Pet of the Month for October 2012.\n\nVictoria Zdrok: Victoria Nika Zdrok (Ukrainian: Вікторія Здрок ; born March 3, 1973) is a pornographic performer, author, and model of Ukrainian origin.  She is \"Playboy's\" Playmate for October 1994.  In June 2002 she became \"Penthouse\" magazine's Pet of the Month, later being chosen as their 2004 Penthouse Pet of the Year.  Zdrok is also a non-practicing attorney, a clinical psychologist and sex therapist.\n\nFrankenhooker: Frankenhooker is a 1990 American black comedy horror directed by Frank Henenlotter.  Very loosely inspired by Mary Shelley's novel \"Frankenstein\", the film stars James Lorinz as medical school drop-out Jeffrey Franken and former Penthouse Pet Patty Mullen as the title character (who wears a fatsuit in the beginning of the film).\n\nGina Lynn: Gina Lynn (born February 15, 1974) is a Puerto Rican former pornographic actress, model, and stripper.  She was inducted into the AVN Hall of Fame in 2010 and is the \"Penthouse\" magazine Penthouse Pet for April 2012.\n\nHesketh 308E: The Hesketh 308E is a Formula One racing car model built by the Hesketh Racing team in .  The car was designed by Frank Dernie and Nigel Stroud and was the last car built by the Hesketh team before it folded at the end of .  The 308E was a relatively conservative design, with an aluminium monocoque chassis built around the common Cosworth DFV engine and Hewland gearbox combination.  However, the 308E gained particular notoriety owing to Hesketh's team sponsors in 1977 – Penthouse and Rizla – and the resultant livery which incorporated a large rendering of a scantily-clad Penthouse Pet embracing a Rizla packet.  During this year, driver Rupert Keegan managed to qualify the car at every race entered although its best finish was only seventh place at the Austrian Grand Prix.  For 1978 the team reverted to rather less controversial sponsorship from the Olympus Corporation, although results were less dependable.  Following Hesketh's withdrawal from the F1 World Championship the remaining 308Es were run for various competitors in the British Aurora AFX championship.",
+    "question": "Who starred in a film with the Penthouse Pet for June 2001?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "penthouse_pet_of_month": {
+          "type": "string",
+          "description": "The name of the Penthouse Pet for the specified month and year."
+        },
+        "pet_month": {
+          "type": "string",
+          "description": "The month of the Penthouse Pet selection."
+        },
+        "pet_year": {
+          "type": "integer",
+          "description": "The year of the Penthouse Pet selection."
+        },
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film in which the Penthouse Pet starred."
+        },
+        "co_star": {
+          "type": "string",
+          "description": "The name of the co-star who appeared in the film with the Penthouse Pet."
+        }
+      },
+      "required": [
+        "penthouse_pet_of_month",
+        "pet_month",
+        "pet_year",
+        "film_title",
+        "co_star"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "penthouse_pet_of_month": "Briana Banks",
+      "pet_month": "June",
+      "pet_year": 2001,
+      "film_title": "Briana Loves Jenna",
+      "co_star": "Jenna Jameson"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

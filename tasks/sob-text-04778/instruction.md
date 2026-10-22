@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Letters (Jimmy Webb album): Letters is the fourth album by American singer-songwriter Jimmy Webb, released in 1972 by Reprise Records. Letters was a more sedate, piano-oriented album than its predecessors, and soaked in the influence of Webb's peer and eventual close friend Joni Mitchell.  "I was tremendously influenced by Joni Mitchell," he admitted to Peter Doggett of Record Collector in 1994.  "She was a good friend, and I was fortunate enough to be around her when she was working on For the Roses and Court and Spark.  We were just part of each other's lives for a while.  I definitely envied that part of her work -- the idea that this is just a conversation you're listening in on.  It can still be poetry, but not self-conscious or forced poetry.  I got extremely under her spell as a writer -- I still am.  I used to go to the studio and listen to her record, sit quietly in the back of the control room.  After the Beatles, Joni was the next big blip on my radar screen, in terms of, 'Hey, pay attention: this girl is doing something a little bit different.'"  Mitchell's longtime engineer Henry Lewy also did some engineering work for Letters as well.
+
+Taming the Tiger: Taming the Tiger is the sixteenth studio album by Canadian singer-songwriter Joni Mitchell.  It was released in 1998 and was widely believed to be the last album of new material Mitchell would ever release (though this was dispelled with the release of her 2007 album "Shine").  The title refers to the unexpected commercial and critical success of her previous album "Turbulent Indigo".  s of 2007 , it has sold 133,000 copies in the US to date.
+
+Lolo (singer): Lauren Pritchard (born December 27, 1987), known professionally as Lolo (stylized as LOLO), is an American singer, songwriter and actress, best known for being featured on the single "Miss Jackson" by Panic!  at the Disco and her singles "Not The Drinking", "Not Gonna Let You Walk Away" and "Shine".  In 2016, she released her second album "In Loving Memory of When I Gave a Shit."  Pritchard mentions Billy Joel, Joni Mitchell, Al Green and Candi Staton as some of the influences behind her music.
+
+Song to a Seagull: Song to a Seagull (also known as Joni Mitchell) is the debut album by Canadian singer-songwriter Joni Mitchell.  Produced by David Crosby, the album was recorded in 1967 at Sunset Sound and released in March 1968 by record label Reprise.
+
+Let There Be Love (1953 Joni James album): Let There Be Love is Joni James debut album, recorded in 1953 and released by MGM Records at the end of the year.  It was released in a four-disc 10-inch 78-rpm record box, in both a two-disc 7-inch 45-rpm extended-play foldout album and a four-disc 45-rpm regular-play box and on a 10-inch 33⅓-rpm album.  The serial number, 222, coincidentally included James's lucky number, "22," which appeared in many of her record serial numbers all over the world.  The album is the first to present its songs as a book in music, opening with "Let There Be Love" and closing with "I'll Be Seeing You", with the songs telling a story start to finish.  The memorable cover was done at M-G-M Pictures Studios in Culver City by artist Russ Gale.  From the album a single of "Let There Be Love" and "You're Nearer" was shipped to radio stations.  Then, by public demand, a single of "You're My Everything" and "You're Nearer" was released.  This album offered Joni's second recording of "Let There Be Love," which had been released in an earlier version in 1952 as her first single on Sharp Records in Chicago, then going to M-G-M Records for further distribution.  Both recordings were arranged and conducted by Lew Douglas.  "Let There Be Love" went to the top of the album charts and was the sixth-best-selling album of 1953.  In 1956 the album was reissued as a 12-inch L.P. and in three single EPs; there was no EP set including the entire album.  For this release, four Joni James singles were added, but one of them had never been released.  That was "I Need You Now," which was to have followed the hit "My Love, My Love" but was canceled when Eddie Fisher came out with a version recorded several weeks after Joni's.  M-G-M had expected Joni's original version to go straight to #1.  For the new album the first four songs and second four songs were switched to get "You're My Everything" in the outside groove of the L.P. to facilitate disc jockey play.  So, for 50 years, the story the album tells has been garbled.  In 1961 the album got new cover art, a new serial number (E3931), and an electronically simulated stereo release.  Released again on compact disk with yet more bonus tracks, the album is in its fifth decade as a best seller.  Joni James hopes for yet another release which will restore the original song order.  Significantly, for her last M-G-M album, "Bossa Nova Style", Joni included new recordings of several songs from "Let There Be Love", including a new single of "You're Nearer."  That album was arranged by Lew Douglas's protégé Chuck Sagle.  This information comes from Wayne Brasler, longtime President of the Joni James International Fan Club and the writer of the album notes for all Joni James' CD releases.
+
+Insomnia &amp; Other Lullabyes: Insomnia & Other Lullabyes is the debut album of independent Filipino singer-songwriter Cynthia Alexander released in 1996.  The album received local critical acclaim, comparing Alexander to Joni Mitchell.  The album earned Alexander the Best Alternative Music Album and Best New Artist awards, at the 1998 Katha Music Awards, in the Philippines.
+
+Shine (Joni Mitchell album): Shine is the nineteenth and final studio album by Canadian singer-songwriter Joni Mitchell and was released on September 25, 2007 by Starbucks' Hear Music.  It is Mitchell's first album of new songs in nine years, since 1998's "Taming the Tiger".
+
+Starbucks: Starbucks Corporation is an American coffee company and coffeehouse chain.  Starbucks was founded in Seattle, Washington in 1971.  As of November 2016, it operates 23,768 locations worldwide.
+
+Drawn to All Things: The Songs of Joni Mitchell: Drawn to All Things: The Songs of Joni Mitchell is a 2006 studio album by Ian Shaw, recorded in tribute to Joni Mitchell.  This was Shaw's first album for Linn Records.
+
+Dreamland (Joni Mitchell album): Dreamland is a compilation album by Canadian singer-songwriter Joni Mitchell, released in 2004 by Rhino.  The songs for the album were selected by the singer herself.  The booklet contains an essay by Cameron Crowe on Mitchell's career and several paintings by Joni Mitchell.  s of 2007 , the album has sold 78,000 copies in the US.
+
+Question: When was the corporation that released the music album "Shine" by Joni Mitchell founded?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the music album."
+    },
+    "artist_name": {
+      "type": "string",
+      "description": "The name of the artist who released the album."
+    },
+    "releasing_corporation": {
+      "type": "string",
+      "description": "The name of the corporation that released the album."
+    },
+    "corporation_founding_year": {
+      "type": "integer",
+      "description": "The year the releasing corporation was founded."
+    }
+  },
+  "required": [
+    "album_title",
+    "artist_name",
+    "releasing_corporation",
+    "corporation_founding_year"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "publication_comparison": [
+    {
+      "name": "Hot Rod",
+      "frequency_description": "monthly",
+      "issues_per_year": 12
+    },
+    {
+      "name": "Democracy",
+      "frequency_description": "quarterly",
+      "issues_per_year": 4
+    }
+  ],
+  "magazine_with_more_issues": "Hot Rod",
+  "more_issues_count": 12
+}

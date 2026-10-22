@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "c29b1f6f46ed9f86b68e2818432c9ce73e5e841d0b05d33bf049d0c510725f4f",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5adcdf5c5542992c1e3a2445",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Alf Kjellin",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Facifica Falayfay: Facifica Falayfay is a 1969 movie starring Dolphy, adapted from Mars Ravelo’s series of superhero comics.  A sequel, \"Mga Anak ni Facifica Falayfay\", was released in 1987.\n\nPasand Apni Apni: Pasand Apni Apni is a 1983 Hindi-language Indian film directed by Basu Chatterjee, starring Ashok Kumar, Mithun Chakraborty, Utpal Dutt, Rati Agnihotri, Subbiraj, Mithilesh Chaturvedi, Javed Khan and A K Hangal.  The concept of this movie is based on the 1951 British film \"Happy Go Lovely\" which was earlier used in the 1969 movie \"Sajan\" and subsequently in \"Ghajini\".\n\nPyar Ka Mausam: Pyar Ka Mausam \"(English: Season of Love)\" is a 1969 movie under Nasir Hussain films banner.  Hussain wrote, produced, and directed the film.  It starred Shashi Kapoor, and the Nasir Husain fixture- Asha Parekh.  It also had Bharat Bhushan, Nirupa Roy, Madan Puri, Tahir Hussain and another Nasir Husain fixture Rajendranath.  Nasir's nephew Faisal Khan who was 3 years old at the time plays Shashi Kapoor's character as a child.  Two more Husain fixtures were responsible for the memorable songs: lyricist Majrooh Sultanpuri and music composer R.D. Burman.  The musical instrument duggi was played by Homi Mullan for the song Ni sultana re.  R.D.Burman also had an acting role in the film.  The film became a Silver Jubilee Hit.\n\nIrina Kupchenko: Irina Petrovna Kupchenko (Russian: Ирина Петровна Купченко ; born 1 March 1948 in Vienna) is a Soviet and Russian actress.  She rose to prominence after acting in Andrei Konchalovsky's 1969 movie adaptation of \"A Nest of Gentlefolk\".  She has performed in more than forty films since 1969.\n\nWinning (disambiguation): Winning is a 1969 movie starring Paul Newman.\n\nWendell Burton: Wendell Ray Burton (July 21, 1947 – May 30, 2017) was an American television executive and former actor.  He is best known for his co-starring role with Liza Minnelli in the 1969 movie \"The Sterile Cuckoo\" (1969).\n\nFreddie Steele: Freddie Steele (December 18, 1912 – August 22, 1984) was a boxer and film actor born Frederick Earle Burgett in Seattle, Washington.  He was recognized as the National Boxing Association (NBA) Middleweight Champion of the World between 1936 and 1938.  Steele was nicknamed \"The Tacoma Assassin\" and was trained by Jack Connor, Johnny Babnick, and Ray Arcel, while in New York.  His managers included George McAllister, Dave Miller, Eddie Miller, and Pete Reilly.  He appeared as an actor in a number of Hollywood films in the 1940s, including Preston Sturges's \"Hail the Conquering Hero\".\n\nMidas Run: Midas Run (UK title A Run on Gold) is a 1969 American comedy film directed by Alf Kjellin and starring Richard Crenna, Anne Heywood and, in one of his final big-screen roles, Fred Astaire.\n\nFred Astaire: Fred Astaire (born Frederick Austerlitz; May 10, 1899 – June 22, 1987) was an American dancer, singer, actor, choreographer and television presenter.\n\nL'Amour fou (1969 film): L'Amour fou is a 1969 movie directed by Jacques Rivette, who also co-wrote the script with Marilù Parolini.",
+    "question": "Who directed the 1969 movie starring the actor born Frederick Austerlitz?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "movie_title": {
+          "type": "string",
+          "description": "The title of the movie."
+        },
+        "movie_year": {
+          "type": "integer",
+          "description": "The release year of the movie."
+        },
+        "director_name": {
+          "type": "string",
+          "description": "The name of the director of the movie."
+        },
+        "starring_actor": {
+          "type": "object",
+          "properties": {
+            "stage_name": {
+              "type": "string",
+              "description": "The stage name of the actor."
+            },
+            "birth_name": {
+              "type": "string",
+              "description": "The birth name of the actor."
+            }
+          },
+          "required": [
+            "stage_name",
+            "birth_name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "movie_title",
+        "movie_year",
+        "director_name",
+        "starring_actor"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "movie_title": "Midas Run",
+      "movie_year": 1969,
+      "director_name": "Alf Kjellin",
+      "starring_actor": {
+        "stage_name": "Fred Astaire",
+        "birth_name": "Frederick Austerlitz"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "station_name": "WCCO-TV",
+  "relationship_type": "owned by",
+  "related_entity": {
+    "name": "CBS Corporation",
+    "entity_type": "corporation"
+  }
+}

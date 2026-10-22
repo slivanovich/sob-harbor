@@ -1,0 +1,21 @@
+{
+  "best_known_writer": {
+    "name": "Jorge Amado",
+    "nationality": "Brazilian",
+    "is_modern_brazilian": true,
+    "reason_for_fame": "He remains the best known of modern Brazilian writers, with his work having been translated into some 49 languages and popularized in film."
+  },
+  "candidate_writers_evaluated": [
+    {
+      "name": "Jorge Amado",
+      "nationality": "Brazilian",
+      "is_modern_brazilian": true
+    },
+    {
+      "name": "Sarah Caudwell",
+      "nationality": "British",
+      "is_modern_brazilian": false
+    }
+  ],
+  "comparison_result_accurate": true
+}

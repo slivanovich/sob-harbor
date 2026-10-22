@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "86d8e37ec5ecd797af13b92bd12e8aa239bda34ce314c97213bca5adbddfd9b7",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab7ec0e554299366779404d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Sons of Anarchy",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Close to Home (2005 TV series): Close to Home is an American crime drama television series co-produced by Warner Bros.  Television and Jerry Bruckheimer Television for CBS.  While in pre-production the series was known as \"American Crime\".  It first aired from October 4, 2005 to May 11, 2007 and starred actress Jennifer Finnigan as Annabeth Chase, a Deputy Prosecutor for Marion County, Indiana.  Created by Jim Leonard, the series was primarily filmed in Southern California.  The score composer was Michael A. Levine.\n\nSons of Anarchy (season 5): The fifth season of the American television drama series \"Sons of Anarchy\" created by Kurt Sutter about the lives of a close-knit outlaw motorcycle club operating in Charming, a fictional town in California's Central Valley.  The show centers on protagonist Jackson \"Jax\" Teller (Charlie Hunnam), first shown as vice president then as president of the club, who begins questioning the club and himself.\n\nHunter Via: Hunter M. Via (born May 2, 1976 in Charleston, West Virginia) is an American film and television editor.  After graduating from the College of Charleston with a degree in communication, and attending Full Sail University where he earned a film degree, Via entered the film industry working as an editor.  He edited several early projects by fellow Full Sail graduate Darren Lynn Bousman before landing a job as an assistant editor on the FX original series \"The Shield\" in 2002.  Beginning in 2004, Via took on the role of editor and ended up cutting seventeen episodes of the series through 2007.  In 2007, Via edited his first studio feature film, Frank Darabont's \"The Mist\".  Via went on to work on several other television shows and film, including \"Sons of Anarchy\", \"Mother's Day\", \"The Craigslist Killer\", and \"Torchwood\".  Via edited twelve episodes of the popular AMC series \"The Walking Dead\" and received the 61st Annual ACE Eddie Award for Best Edited One-Hour Series for Commercial Television for his work on the pilot episode.\n\nSons of Anarchy (season 6): The sixth season of the American television drama series \"Sons of Anarchy\" created by Kurt Sutter about the lives of a close-knit outlaw motorcycle club operating in Charming, a fictional town in California's Central Valley.  The show centers on protagonist Jackson \"Jax\" Teller (Charlie Hunnam), the president of the club, who begins questioning the club and himself.\n\nKatey Sagal: Catherine Louise Sagal (born January 19, 1954) is an American actress and singer-songwriter.  She is best known for her role as Peggy Bundy, Al's sarcastic, lazy, bon bon-eating wife, on \"Married... with Children\" and for her role voicing the character Leela on the animated science-fiction series \"Futurama\" from 1999 to 2003 and 2008 to 2013, as well as for starring on the show \"8 Simple Rules\" in the role of Cate Hennessy.  In the latter role, she worked with John Ritter until his death, leading to Sagal's taking over as the series lead for the remainder of the show's run.  Sagal has been married to \"Sons of Anarchy\" creator Kurt Sutter since 2004.  Currently, Sagal is a series regular on CBS's Superior Donuts.\n\nThe Bastard Executioner: The Bastard Executioner is an American historical fiction drama television series, created by Kurt Sutter and aired on FX from September 15, 2015, to November 17, 2015.  On November 18, 2015, Sutter announced that FX had cancelled the series after one season.\n\nSons of Anarchy: Sons of Anarchy is an American crime drama television series created by Kurt Sutter, which aired from 2008 to 2014.  It follows the lives of a close-knit outlaw motorcycle club operating in Charming, a fictional town in California's Central Valley.  The show stars Charlie Hunnam as Jackson \"Jax\" Teller, initially the vice president, who begins questioning the club and himself.  Brotherhood, loyalty and redemption are constant themes.\n\nList of Sons of Anarchy episodes: \"Sons of Anarchy\", a television drama series created by Kurt Sutter, premiered on September 3, 2008 on the cable network FX in the United States.  The series concluded on December 9, 2014, after 92 episodes broadcast over seven seasons.\n\nThe Inside (TV series): The Inside is an American crime drama television series created by Tim Minear and Howard Gordon and produced by Imagine Television.  \"The Inside\" follows the work of the FBI's Los Angeles Violent Crimes Unit (VCU), a division dedicated to investigating particularly dangerous crimes.  \"The Inside\" initially aired on the Fox Network from June 8 to July 13, 2005.  Although thirteen episodes were produced, Fox aired only seven episodes before canceling the series.  All thirteen episodes were subsequently aired on ITV4 in the UK in 2006.\n\nKatie Findlay: Katie Findlay (born August 28, 1990) is a Canadian actress.  She is best known for her role as Rosie Larsen in the American crime drama television series \"The Killing\".  From 2013 to 2014, Findlay portrayed Maggie Landers in The CW's teen drama \"The Carrie Diaries\".  From 2014 to 2015, Findlay starred as Rebecca Sutter in the first season of the ABC series \"How to Get Away with Murder\".  In 2017 she joined the cast of FXX comedy series \"Man Seeking Woman\" in the show's third season.",
+    "question": "Hunter M. Via worked on which American crime drama television series created by Kurt Sutter, which aired from 2008 to 2014?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "series_title": {
+          "type": "string",
+          "description": "The title of the television series."
+        },
+        "creator_name": {
+          "type": "string",
+          "description": "The name of the person who created the series."
+        },
+        "genre": {
+          "type": "string",
+          "description": "The genre of the television series."
+        },
+        "air_period": {
+          "type": "object",
+          "properties": {
+            "start_year": {
+              "type": "integer",
+              "description": "The year the series first aired."
+            },
+            "end_year": {
+              "type": "integer",
+              "description": "The year the series concluded."
+            }
+          },
+          "required": [
+            "start_year",
+            "end_year"
+          ],
+          "additionalProperties": false
+        },
+        "involved_person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the person involved with the series."
+            },
+            "involvement_type": {
+              "type": "string",
+              "description": "Description of the person's involvement with the series."
+            }
+          },
+          "required": [
+            "name",
+            "involvement_type"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "series_title",
+        "creator_name",
+        "genre",
+        "air_period",
+        "involved_person"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "series_title": "Sons of Anarchy",
+      "creator_name": "Kurt Sutter",
+      "genre": "American crime drama television series",
+      "air_period": {
+        "start_year": 2008,
+        "end_year": 2014
+      },
+      "involved_person": {
+        "name": "Hunter M. Via",
+        "involvement_type": "worked on"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

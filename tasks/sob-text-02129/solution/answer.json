@@ -1,0 +1,16 @@
+{
+  "actor_name": "Wilfrid Brambell",
+  "film_title": "A Hard Day's Night",
+  "role_description": "fictional grandfather",
+  "person_whose_grandfather_was_played": {
+    "name": "Paul McCartney",
+    "occupations": [
+      "singer-songwriter",
+      "multi-instrumentalist",
+      "composer",
+      "bass guitarist",
+      "singer"
+    ],
+    "band_affiliation": "The Beatles"
+  }
+}

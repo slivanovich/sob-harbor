@@ -1,0 +1,13 @@
+{
+  "site_name": "Bead Hill",
+  "is_open_to_public": false,
+  "reason_for_restriction": "sensitive archaeological nature",
+  "country": "Canada",
+  "indigenous_group_associated": "Seneca",
+  "is_national_historic_site": true,
+  "location_details": {
+    "city": "Toronto",
+    "province": "Ontario",
+    "park_name": "Rouge Park"
+  }
+}

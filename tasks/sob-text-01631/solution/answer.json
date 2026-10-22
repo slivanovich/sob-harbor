@@ -1,0 +1,12 @@
+{
+  "player_info": {
+    "name": "Pandit Kishan Maharaj",
+    "instrument": "tabla",
+    "music_genre": "Hindustani classical music"
+  },
+  "gharana_info": {
+    "name": "Benares gharana",
+    "is_one_of_six_common_styles": true
+  },
+  "final_answer": "Benares gharana"
+}

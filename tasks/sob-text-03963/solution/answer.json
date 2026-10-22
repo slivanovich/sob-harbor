@@ -1,0 +1,14 @@
+{
+  "player_name": "Jean-Pierre Papin",
+  "player_details": {
+    "nationality": "French",
+    "birth_year": 1963,
+    "professional_status": "former professional"
+  },
+  "match_contribution": {
+    "competition_name": "Coupe de France Final",
+    "final_year": 1989,
+    "team_played_for": "Olympique de Marseille",
+    "goals_scored": 3
+  }
+}

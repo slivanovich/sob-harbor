@@ -1,0 +1,17 @@
+{
+  "engineer": {
+    "full_name": "Roland Henry Chaplin",
+    "known_as": "Roy",
+    "birth_date": "1899-05-16",
+    "profession": "aeronautical engineer"
+  },
+  "aircraft_designed": [
+    "Hawker Fury biplane",
+    "Hurricane monoplane",
+    "Harrier jump-jet"
+  ],
+  "successful_vstol_aircraft": {
+    "name": "Harrier Jump Jet",
+    "design_status": "first truly successful V/STOL design"
+  }
+}

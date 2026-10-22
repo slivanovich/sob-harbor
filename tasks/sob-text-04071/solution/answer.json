@@ -1,0 +1,15 @@
+{
+  "person_name": "Sharon Christa McAuliffe",
+  "person_role": "American teacher",
+  "disaster_details": {
+    "name": "Space Shuttle Challenger disaster",
+    "mission_identifier": "STS-51-L",
+    "date": "January 28, 1986",
+    "crew_fatalities_count": 7
+  },
+  "project_affected": {
+    "project_name": "Teacher in Space Project",
+    "cancellation_result": true,
+    "reason_for_cancellation_mention": "Christa McAuliffe died in the Space Shuttle \"Challenger\" disaster (STS-51-L)"
+  }
+}

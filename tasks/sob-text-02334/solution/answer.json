@@ -1,0 +1,12 @@
+{
+  "player_name": "Stefan Mihajlović",
+  "player_nationality": "Serbian",
+  "player_birth_date": "24 June 1994",
+  "current_team": "Vojvodina",
+  "parent_details": {
+    "name": "Radmilo Mihajlović",
+    "nationality": "Bosnian Serb",
+    "former_profession": "footballer",
+    "played_for_national_team": "Yugoslavia national football team"
+  }
+}

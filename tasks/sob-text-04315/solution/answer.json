@@ -1,0 +1,9 @@
+{
+  "park_name": "Tusheti National Park",
+  "location_country": "Georgia",
+  "key_faunal_species_count": 10,
+  "leopard_species_details": {
+    "common_name": "Anatolian leopard",
+    "subspecies_scientific_name": "Panthera pardus ambornii"
+  }
+}

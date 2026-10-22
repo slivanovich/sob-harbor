@@ -1,0 +1,24 @@
+{
+  "singer_with_more_bands": "James Elliot Bourne",
+  "singer_comparison": [
+    {
+      "singer_name": "Richard Ashcroft",
+      "number_of_bands": 2,
+      "band_names": [
+        "The Verve",
+        "RPA & The United Nations of Sound"
+      ]
+    },
+    {
+      "singer_name": "James Elliot Bourne",
+      "number_of_bands": 4,
+      "band_names": [
+        "Busted",
+        "Son of Dork",
+        "McBusted",
+        "Call Me When I'm 18"
+      ]
+    }
+  ],
+  "comparison_summary": "James Elliot Bourne has been part of 4 bands, while Richard Ashcroft has been part of 2 bands, making James Elliot Bourne part of more bands."
+}

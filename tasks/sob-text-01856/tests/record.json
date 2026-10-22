@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "4d1e0b85c967af274ae98ac235635c3fb0458019fd3a20758d19b278f7f7c0c5",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab5ef9a554299488d4d9a59",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Newark, New Jersey",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Denny Lambert: Denny Lambert (born January 7, 1970) is a former professional Canadian ice hockey player and member of the Batchewana First Nation.  Lambert was drafted in the Ontario Hockey League where he played for the Sault Ste. Marie Greyhounds for three years.  He then played 2 seasons in the International Hockey League with the San Diego Gulls before being drafted to the National Hockey League (NHL) for the Mighty Ducks of Anaheim.  He was then signed as a free agent with the Ottawa Senators in July 1996 and went on to play for the Nashville Predators (1998-1999) and the Atlanta Thrashers.  He rejoined the Mighty Ducks of Anaheim (2001-2002) for his final NHL season before finishing off his career in the American Hockey League with the Milwaukee Admirals.  He also coached the Sault Ste. Marie Greyhounds of the Ontario Hockey League from 2008–2011.  He went on to be a First Nations Police Officer with the Anishinabek Police Service.  Denny graduated from the Ontario Police College in November 2012.  He is currently hired by the Gatineau Olympiques of the Quebec Major Jr.  Hockey League as an associate coach as of 2016. <http://www.batchewana.ca/election/dlambert.html> <http://www.saultstar.com/2012/01/18/lambert-passing-on-wisdom>\n\nMatt Ruchty: Matt Ruchty (born November 27, 1969) is a retired Canadian professional ice hockey left winger.  He was drafted by the New Jersey Devils 65th overall in 1988, but only played two exhibition games in the National Hockey League (NHL).  Ruchty was a career minor-leaguer, playing in the American Hockey League (AHL), International Hockey League (IHL), Continental Hockey League (CoHL), West Coast Hockey League (WCHL), United Hockey League (UHL) and ECHL.  Although best known for his toughness and accumulation of penalty minutes, Ruchty proved to be an integral part of the Calder Cup-winning Albany River Rats during the 94-95 season, scoring a career-high 49 points in 78 regular season games and notching an additional 15 points in 12 playoff contests.\n\nAll-American Hockey League: The All-American Hockey League was a minor league hockey organization formed in 1972 with teams based in the Upper Midwest and Great lakes regions of the United States as the Continental Hockey League.  In 1986 the league folded, and Danville, Dayton, and Troy went on to form the All-American Hockey League.  In 1987, the All-American Hockey League merged with the Atlantic Coast Hockey League.  After a single season in the AAHL, Carolina, Johnstown, and Virginia left the league to form the East Coast Hockey League.  The AAHL only lasted one more season and folded after the 1988-1989 season.\n\nNiclas Lundgren: Niclas Lundgren (born October 15, 1989) is a Swedish ice hockey defenceman.  He is currently playing with Linköpings HC of the Swedish Hockey League (SHL).\n\nNiclas Bergfors: Niclas Bergfors (born 7 March 1987) is a Swedish professional ice hockey right winger currently playing for Djurgårdens IF Hockey of the Swedish Hockey League (SHL).  He was drafted by the National Hockey League (NHL)'s New Jersey Devils in the first round, 23rd overall, at the 2005 NHL Entry Draft, playing for the organization for four-and-a-half seasons before joining the Atlanta Thrashers 2010, Florida Panthers in 2011 and Nashville Predators via free agency in 2011.  He later joined the KHL's Ak Bars Kazan in late 2011 before signing with Severstal Cherepovets.  In 2013, he joined Admiral Vladivostok, where he played for three seasons before joining Amur Khabarovsk in a mid-season trade.\n\nNew Jersey Devils: The New Jersey Devils are a professional ice hockey team based in Newark, New Jersey.  They are members of the Metropolitan Division of the Eastern Conference of the National Hockey League (NHL).  The club was founded as the Kansas City Scouts in Kansas City, Missouri, in 1974.  The Scouts moved to Denver, Colorado in 1976 and became the Colorado Rockies.  In 1982, they moved to East Rutherford, New Jersey and took their current name.  For their first 25 seasons in New Jersey, the Devils were based at the Meadowlands Sports Complex in East Rutherford and played their home games at Brendan Byrne Arena (later renamed to Continental Airlines Arena).  Beginning with the 2007–08 season, the Devils relocated to Newark and now play their home games at the Prudential Center.\n\nJack Campbell (ice hockey): Jack Campbell (born January 9, 1992) is an American ice hockey goaltender currently playing with the Ontario Reign in the American Hockey League (AHL) while under contract to the Los Angeles Kings of the National Hockey League (NHL).  Campbell was one of the top goaltenders eligible for the 2010 NHL Entry Draft, ranked second among North American goaltenders both in Central Scouting's midterm and final rankings.  He was drafted in the first round, 11th overall, by the National Hockey League (NHL)'s Dallas Stars, the first goaltender selected in the Draft.  He was also drafted in the seventh round, 170th overall, by Dinamo Minsk of the 2010 Kontinental Hockey League Junior Draft.\n\nNiclas Wallin: Niclas Wallin (born 20 February 1975) is a Swedish former professional ice hockey player who played in the National Hockey League (NHL).  He won the Stanley Cup with the Carolina Hurricanes in 2006.\n\nFlyers Cup: The Flyers Cup is an annual high school ice hockey tournament held by the Philadelphia Flyers.  The invitational tournament is the scholastic hockey championship for eastern Pennsylvania high schools and is conducted through three tiers of play, AAA, AA, and A with AAA representing private schools, AA large public schools and A small public schools based on male student enrollment.  There are 53 participating teams consisting of 13 AAA, 20 AA, and 20 A chosen from teams participating in the following leagues: the Eastern High School Hockey League, the Inter-County Scholastic Hockey League, the Lehigh Valley Scholastic Hockey League, the Lower Bucks County Scholastic Hockey League, the South Jersey High School Ice Hockey League, the Suburban High School Hockey League, and the Central Pennsylvania Ice Hockey League.  Teams are invited to participate based on their skill level as demonstrated by the strength of their overall schedule and season performance.  The winner of the Flyers Cup at each tier level plays the respective western champion as determined by the Penguins Cup, held by the Pittsburgh Penguins, for the Pennsylvania State High School Ice Hockey Championship.\n\nNiclas Burström: Niclas Burström (born January 25, 1991) is a Swedish professional ice hockey defenceman who currently plays for HC Vityaz in the Kontinental Hockey League (KHL).",
+    "question": "Where was the Hockey League which drafted Niclas Bergfors based?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The name of the ice hockey player."
+        },
+        "drafting_league": {
+          "type": "string",
+          "description": "The name of the league that drafted the player."
+        },
+        "drafting_team": {
+          "type": "string",
+          "description": "The name of the team that drafted the player."
+        },
+        "team_location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the drafting team is based."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the drafting team is based."
+            }
+          },
+          "required": [
+            "city",
+            "state"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "player_name",
+        "drafting_league",
+        "drafting_team",
+        "team_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Niclas Bergfors",
+      "drafting_league": "National Hockey League",
+      "drafting_team": "New Jersey Devils",
+      "team_location": {
+        "city": "Newark",
+        "state": "New Jersey"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

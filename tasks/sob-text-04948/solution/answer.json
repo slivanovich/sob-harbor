@@ -1,0 +1,13 @@
+{
+  "band_name": "The xx",
+  "album_details": {
+    "title": "xx",
+    "is_debut_album": true
+  },
+  "recording_location": {
+    "city": "London",
+    "studio_type": "label's in-house studio",
+    "recording_start_year": 2008,
+    "recording_end_year": 2009
+  }
+}

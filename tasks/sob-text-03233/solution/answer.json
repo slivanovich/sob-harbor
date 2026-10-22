@@ -1,0 +1,14 @@
+{
+  "comparison_entities": [
+    {
+      "name": "Charlie, the Lonesome Cougar",
+      "release_year": 1967
+    },
+    {
+      "name": "Mulan",
+      "release_year": 1998
+    }
+  ],
+  "second_released_entity_name": "Mulan",
+  "release_year_difference_years": 31
+}

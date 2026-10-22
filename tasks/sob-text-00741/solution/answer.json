@@ -1,0 +1,11 @@
+{
+  "composer_details": {
+    "name": "John Williams",
+    "primary_occupation": "composer"
+  },
+  "director_association": {
+    "director_name": "Steven Spielberg",
+    "association_start_year": 1974
+  },
+  "performed_with_pedro_javier_gonzalez": true
+}

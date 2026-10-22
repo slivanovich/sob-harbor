@@ -1,0 +1,13 @@
+{
+  "person_name": "Claire Danes",
+  "film_details": {
+    "title": "William Shakespeare's Romeo + Juliet",
+    "role": "Juliet",
+    "director": "Baz Luhrmann"
+  },
+  "recognition_details": {
+    "award_name": "100 most influential people in the world",
+    "awarding_body": "Time magazine",
+    "year": 2012
+  }
+}

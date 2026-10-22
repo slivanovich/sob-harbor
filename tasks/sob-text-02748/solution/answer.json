@@ -1,0 +1,16 @@
+{
+  "identified_person": {
+    "name": "James Alfred \"Jimmy\" Moody",
+    "primary_role": "English gangster and hitman",
+    "career_span_description": "more than four decades"
+  },
+  "associated_individuals": [
+    {
+      "name": "Frank Davidson \"Frankie\" Fraser",
+      "role": "English gangster and criminal",
+      "prison_sentence_years": 42,
+      "relationship_type": "had run-ins with"
+    }
+  ],
+  "final_answer_name": "James Alfred \"Jimmy\" Moody"
+}

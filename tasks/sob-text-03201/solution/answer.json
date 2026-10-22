@@ -1,0 +1,23 @@
+{
+  "company_name": "Canonical Ltd.",
+  "candidate_1": {
+    "name": "Mark Richard Shuttleworth",
+    "is_founder_ceo": true,
+    "nationality": "South African",
+    "known_roles": [
+      "entrepreneur",
+      "founder and CEO of Canonical Ltd.",
+      "space tourist"
+    ]
+  },
+  "candidate_2": {
+    "name": "Claudie Haigneré",
+    "is_founder_ceo": false,
+    "known_roles": [
+      "doctor",
+      "politician",
+      "astronaut"
+    ]
+  },
+  "identified_founder_ceo_name": "Mark Richard Shuttleworth"
+}

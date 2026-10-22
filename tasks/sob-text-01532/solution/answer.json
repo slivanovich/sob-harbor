@@ -1,0 +1,13 @@
+{
+  "are_both_professional_tennis_players": true,
+  "player_one": {
+    "name": "Rika Hiraki",
+    "is_professional_tennis_player": true,
+    "nationality": "Japanese"
+  },
+  "player_two": {
+    "name": "Fiorella Bonicelli",
+    "is_professional_tennis_player": true,
+    "nationality": "Uruguay"
+  }
+}

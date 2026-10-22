@@ -1,0 +1,11 @@
+{
+  "event_year": 2009,
+  "event_location_island": "Long Island",
+  "island_counties": [
+    "Kings",
+    "Queens",
+    "Nassau",
+    "Suffolk"
+  ],
+  "number_of_counties": 4
+}

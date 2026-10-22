@@ -1,0 +1,17 @@
+{
+  "former_mayor": {
+    "name": "Hazen S. Pingree",
+    "political_party": "Republican",
+    "terms_served": 4,
+    "city": "Detroit",
+    "state": "Michigan"
+  },
+  "acting_mayor": {
+    "name": "William Richert",
+    "city": "Detroit",
+    "state": "Michigan",
+    "start_date": "1897-03-22",
+    "end_date": "1897-04-05"
+  },
+  "reason_for_acting_mayor": "resignation of Hazen S. Pingree"
+}

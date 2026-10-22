@@ -1,0 +1,33 @@
+{
+  "comedian_details": {
+    "name": "Josh Widdicombe",
+    "birth_year": 1983
+  },
+  "sitcom_details": {
+    "title": "Josh",
+    "starring_comedian_name": "Josh Widdicombe"
+  },
+  "comedian_appearances_in_period": [
+    {
+      "show_title": "The Last Leg",
+      "run_start_year": 2012,
+      "run_end_year": 2016
+    },
+    {
+      "show_title": "Fighting Talk",
+      "run_start_year": 2014,
+      "run_end_year": 2016
+    },
+    {
+      "show_title": "Insert Name Here",
+      "run_start_year": 2016,
+      "run_end_year": 2016
+    },
+    {
+      "show_title": "Have I Got News for You",
+      "run_start_year": 2014,
+      "run_end_year": 2016
+    }
+  ],
+  "answer_show_title": "Fighting Talk"
+}

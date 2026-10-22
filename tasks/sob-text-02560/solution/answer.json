@@ -1,0 +1,20 @@
+{
+  "film_information": {
+    "title": "Unlocking the Mystery of Life",
+    "year": 2003,
+    "writer": {
+      "name": "Stephen C. Meyer",
+      "role": "director of the Center for Science and Culture"
+    }
+  },
+  "associated_organization": {
+    "name": "Discovery Institute",
+    "division": "Center for Science and Culture"
+  },
+  "featured_fellow": {
+    "name": "Jonathan Wells",
+    "profession": "molecular biologist",
+    "advocacy": "intelligent design",
+    "organization_role": "fellow of the institute"
+  }
+}

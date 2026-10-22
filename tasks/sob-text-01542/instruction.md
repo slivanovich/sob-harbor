@@ -1,0 +1,87 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Walkovszky v. Carlton: Walkovszky v. Carlton, 223 N.E.2d 6 (NY 1966), is a United States corporate law decision on the conditions under which Courts may pierce the corporate veil.  A cab company had shielded itself from liability by incorporating each cab as its own corporation.  The New York Court of Appeals refused to pierce the veil on account of undercapitalization alone.
+
+Black Veil Brides: Black Veil Brides is an American rock band based in Hollywood, California.  The group formed in 2006 in Cincinnati, Ohio and is currently composed of Andy Biersack (lead vocals), Ashley Purdy (bass, backing vocals), Jake Pitts (lead guitar), Jinxx (rhythm guitar, violin) and Christian "CC" Coma (drums).  Black Veil Brides are known for their use of black makeup, body paint, tight black studded clothing, and long hair, which were all inspired by the stage personas of KISS and Mötley Crüe, as well as other 1980s glam metal acts.
+
+The Neighbourhood: The Neighbourhood (sometimes rendered as "THE NBHD") is an American rock band formed in Newbury Park, California in 2011.  The band is composed of vocalist Jesse Rutherford, guitarists Jeremy Freedman and Zach Abels, bassist Mikey Margott, and drummer Brandon Alexander Fried.  After releasing three EPs, "I'm Sorry...", "The Love Collection" and "Thank You", The Neighbourhood released their first full-length album, "I Love You. ", on April 23, 2013, via Columbia Records.
+
+Nee Soon Central Single Member Constituency: Nee Soon Central Single Member Constituency (Traditional Chinese: 義順中單選區; Simplified Chinese: 义顺中单选区) is a defunct Single Member Constituency in the northern area in Singapore.  The seat consists of Yishun Town Centre(Neighbourhood 9),Neighbourhood 6 and part of Neighbourhood 7.  Its current Member of Parliament is Ong Ah Heng of the People's Action Party who has held the seat since 1997.  The constituency was formed in 1988 and has been held by the ruling party from 1988 to 1991 when the People's Action Party lost the seat to Singapore Democratic Party's Cheo Chai Chen but Cheo lost to Ong in Singapore general election, 1997.  It had disappeared in 2011 when Nee Soon Central, Nee Soon East, Nee Soon South, Chong Pang and Canberra had merged into a newly formed Nee Soon GRC.
+
+Pierce the Veil discography: Pierce the Veil is an American rock band from San Diego, California, formed in 2006.  They have released four studio albums, seven singles, and ten music videos.
+
+Kosmopoulos v Constitution Insurance Co of Canada: Kosmopoulos v Constitution Insurance Co of Canada is a leading Supreme Court of Canada decision on the court's ability to pierce the corporate veil—to impose an interest or liability, that is, upon the shareholders of a company instead of the company itself.  It was held that the veil can only be lifted where it would be "just and equitable", specifically to third parties.
+
+Mike Fuentes (musician): Michael Christopher "Mike" Fuentes (born December 14, 1984 in San Diego) is a Mexican-American musician from San Diego, California.  He is the drummer for the post-hardcore band Pierce the Veil alongside his older brother Vic Fuentes.  Fuentes was the percussionist for the supergroup Isles & Glaciers.  He has more recently began a hip hop solo project under the stage name MikeyWhiskeyHands in which he raps on instrumentals produced by Pierce the Veil's bassist Jaime Preciado.  Fuentes signed to Velocity Records in March 2012.  Both brothers attended Mission Bay High School and graduated class of 2003.
+
+Pierce the Veil: Pierce the Veil is an American rock band from San Diego, California.  Formed in 2006, the band was founded by brothers Vic and Mike Fuentes after the disbandment of the group Before Today (formerly Early Times), which was formed out of the San Diego punk rock scene.  Other members of the band include Jaime Preciado (bass) and Tony Perry (lead guitar).  Pierce the Veil has released three studio albums and has toured worldwide since the release of their debut album, "A Flair for the Dramatic" in 2007.  The band released their second full-length studio album, titled "Selfish Machines" in 2010.  Their third album, "Collide with the Sky", was released in 2012, and is their first album under the Fearless Records label.  Featuring the hit first single "King for a Day", the album debuted at No. 12 on the "Billboard 200".  Their fourth and latest album, "Misadventures", was released on May 13, 2016.
+
+Vic Fuentes: Victor Vincent "Vic" Fuentes (born February 10, 1983 in San Diego, California) is the lead singer and rhythm guitarist of the rock band Pierce the Veil.  He also plays the keyboard on some Pierce The Veil records.  He plays in the band along with his brother Mike Fuentes.  Both brothers attended Mission Bay High School.
+
+Piercing the corporate veil: Piercing the corporate veil or lifting the corporate veil is a legal decision to treat the rights or duties of a corporation as the rights or liabilities of its shareholders. Usually a corporation is treated as a separate legal person, which is solely responsible for the debts it incurs and the sole beneficiary of the credit it is owed.  Common law countries usually uphold this principle of separate personhood, but in exceptional situations may "pierce" or "lift" the corporate veil.
+
+Question: Were The Neighbourhood and Pierce the Veil formed in the same year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_one": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the first band."
+        },
+        "formation_year": {
+          "type": "integer",
+          "description": "The year the first band was formed."
+        }
+      },
+      "required": [
+        "name",
+        "formation_year"
+      ],
+      "additionalProperties": false
+    },
+    "band_two": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the second band."
+        },
+        "formation_year": {
+          "type": "integer",
+          "description": "The year the second band was formed."
+        }
+      },
+      "required": [
+        "name",
+        "formation_year"
+      ],
+      "additionalProperties": false
+    },
+    "formed_in_same_year": {
+      "type": "boolean",
+      "description": "True if both bands were formed in the same year, false otherwise."
+    }
+  },
+  "required": [
+    "band_one",
+    "band_two",
+    "formed_in_same_year"
+  ],
+  "additionalProperties": false
+}

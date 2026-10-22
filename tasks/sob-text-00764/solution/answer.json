@@ -1,0 +1,18 @@
+{
+  "film_title": "Evita",
+  "film_details": {
+    "release_year": 1996,
+    "genre": "American musical drama film",
+    "director": "Alan Parker",
+    "main_subject": "Eva Perón"
+  },
+  "source_material": {
+    "source_type": "concept album",
+    "album_title": "Evita",
+    "album_release_year": 1976,
+    "album_producers": [
+      "Andrew Lloyd Webber",
+      "Tim Rice"
+    ]
+  }
+}

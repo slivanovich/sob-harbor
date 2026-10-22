@@ -1,0 +1,13 @@
+{
+  "monarch_name": "Charles I",
+  "birth_date": "19 November 1600",
+  "kingdoms_ruled": [
+    "England",
+    "Scotland",
+    "Ireland"
+  ],
+  "imprisonment_details": {
+    "location": "Carisbrooke Castle",
+    "attempted_escape": true
+  }
+}

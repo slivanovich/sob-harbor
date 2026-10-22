@@ -1,0 +1,15 @@
+{
+  "actor": {
+    "name": "Christian Bale",
+    "nationality": "British"
+  },
+  "film": {
+    "title": "A Midsummer Night's Dream",
+    "year": 1999,
+    "director": "Michael Hoffman",
+    "genre": "romantic comedy fantasy"
+  },
+  "role": {
+    "character_name": "Demetrius"
+  }
+}

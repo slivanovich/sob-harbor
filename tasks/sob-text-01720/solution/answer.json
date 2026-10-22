@@ -1,0 +1,15 @@
+{
+  "person_1_name": "Alan J. Pakula",
+  "person_1_occupations": [
+    "film director",
+    "writer",
+    "producer"
+  ],
+  "person_2_name": "Sam Mendes",
+  "person_2_occupations": [
+    "stage director",
+    "film director"
+  ],
+  "common_occupation": "director",
+  "occupation_category": "film"
+}

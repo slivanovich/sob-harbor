@@ -1,0 +1,12 @@
+{
+  "ballerina_name": "Anna Pavlova",
+  "nationality": "Russian",
+  "title": "prima ballerina",
+  "theatre_of_performance": {
+    "name": "Theater des Westens",
+    "location": "Berlin, Germany"
+  },
+  "performing_company": "Ballets Russes",
+  "imperial_ballet_role": "principal artist",
+  "active_period": "late 19th and the early 20th centuries"
+}

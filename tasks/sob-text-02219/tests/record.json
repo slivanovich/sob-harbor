@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "d6583c3e2e03509e156bac159291aaca89a47f1ef3e3fc81cac6ca969b158c00",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8845e45542994846c1ce81",
+    "source_dataset": "hotpotqa",
+    "source_answer": "the Kersal area",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Gary Alexander (sound engineer): Gary Alexander is an American sound engineer.  He won the Academy Award for Best Sound for the film \"Out of Africa\".  He worked on over 300 films from 1976 to 2011.\n\nAlexander Neville (scholar): Alexander Neville (1544–1614) was an English scholar, known as a historian and translator and a Member of the House of Commons.\n\nAlexander Neville: Alexander Neville (c. 1340–1392) was a late medieval prelate who served as Archbishop of York from 1374 to 1388.\n\nSalford City F.C.: Salford City Football Club is a professional football club in the Kersal area of Salford, Greater Manchester, England, which plays in National League North, the sixth tier of English football.\n\nMartin Hinshelwood: Martin Hinshelwood (born 16 June 1953) is an English former professional footballer and football club coach and manager.  He is currently an academy coach at Lewes and was Interim Manager at Crawley Town F.C. alongside Gary Alexander, following the sacking of manager Richie Barker.\n\nGary Alexander (martial art pioneer): Gary Alexander is an American martial artist, karate fighter, author and actor.  He was Black Belt Magazine's Co-Instructor of the Year (1974) and is known as the \"First International Bare Knuckle Contact Karate Champion.\n\nAlexander Neville (disambiguation): Alexander Neville was a bishop.\n\nGary Loizzo: Gary Alexander Loizzo (August 16, 1945 – January 16, 2016) was an American guitarist, singer, recording engineer, and record producer.  He is best known for being the lead singer with The American Breed.\n\nGary Goldstone: Gary Alexander Goldstone (born 27 July 1976 in Durban, KwaZulu-Natal) is a South African football (soccer) defender for Premier Soccer League club Bloemfontein Celtic.\n\nGary Neville: Gary Alexander Neville (born 18 February 1975) is an English football coach and former player who until recently served as assistant manager for the England national football team, and as co-owner of Salford City.  Since retiring from football in 2011, Neville went into punditry and was a commentator for Sky Sports until he took over the head coach position at Valencia.  After being sacked by the club in 2016, he returned to his position as a pundit for Sky Sports later that year.",
+    "question": "In what area of Salford is the club Gary Alexander Neville co-owns located?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "club_name": {
+          "type": "string",
+          "description": "The name of the football club."
+        },
+        "co_owner_name": {
+          "type": "string",
+          "description": "The name of the co-owner of the club."
+        },
+        "club_location": {
+          "type": "object",
+          "properties": {
+            "area": {
+              "type": "string",
+              "description": "The specific area within the city where the club is located."
+            },
+            "city": {
+              "type": "string",
+              "description": "The city where the club is located."
+            },
+            "region": {
+              "type": "string",
+              "description": "The greater region or county where the club is located."
+            },
+            "country": {
+              "type": "string",
+              "description": "The country where the club is located."
+            }
+          },
+          "required": [
+            "area",
+            "city",
+            "region",
+            "country"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "club_name",
+        "co_owner_name",
+        "club_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "club_name": "Salford City F.C.",
+      "co_owner_name": "Gary Alexander Neville",
+      "club_location": {
+        "area": "Kersal",
+        "city": "Salford",
+        "region": "Greater Manchester",
+        "country": "England"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

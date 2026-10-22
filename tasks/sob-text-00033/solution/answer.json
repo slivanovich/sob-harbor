@@ -1,0 +1,23 @@
+{
+  "common_profession": "film director",
+  "description_of_commonality": "Both Ernest Lamont Johnson Jr. and Harmony Korine are identified as film directors in the provided context.",
+  "individuals": [
+    {
+      "name": "Ernest Lamont Johnson Jr.",
+      "primary_occupation": "actor and film director",
+      "is_also_film_director": true
+    },
+    {
+      "name": "Harmony Korine",
+      "primary_occupation": "film director and screenwriter",
+      "is_also_film_director": true,
+      "directed_films": [
+        "Mister Lonely",
+        "Spring Breakers",
+        "Gummo",
+        "Julien Donkey-Boy",
+        "Trash Humpers"
+      ]
+    }
+  ]
+}

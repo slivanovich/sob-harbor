@@ -1,0 +1,21 @@
+{
+  "quartet_name": "Fourth Party",
+  "total_members": 4,
+  "members": [
+    {
+      "name": "Lord Randolph Churchill",
+      "description": "genuine Tory radical, who coined the term Tory Democracy"
+    },
+    {
+      "name": "Henry Drummond Wolff"
+    },
+    {
+      "name": "John Gorst"
+    },
+    {
+      "name": "Arthur Balfour"
+    }
+  ],
+  "identified_member": "Arthur Balfour",
+  "identified_member_role": "Member of the Fourth Party"
+}

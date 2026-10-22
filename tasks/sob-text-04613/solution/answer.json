@@ -1,0 +1,14 @@
+{
+  "person_of_interest": {
+    "name": "Billy Kinsley",
+    "birthplace": "Anfield, Liverpool"
+  },
+  "stadium_in_birthplace": {
+    "name": "Anfield",
+    "seating_capacity": 54074
+  },
+  "stadium_location_details": {
+    "city": "Liverpool",
+    "country": "England"
+  }
+}

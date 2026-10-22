@@ -1,0 +1,17 @@
+{
+  "common_profession": "tennis player",
+  "number_of_players_mentioned": 2,
+  "players": [
+    {
+      "player_name": "Łukasz Kubot",
+      "nationality": "Polish",
+      "birth_date": "May 16, 1982",
+      "is_doubles_specialist": true
+    },
+    {
+      "player_name": "Henri Kontinen",
+      "nationality": "Finnish",
+      "birth_date": "19 June 1990"
+    }
+  ]
+}

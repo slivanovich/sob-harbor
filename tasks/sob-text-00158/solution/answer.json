@@ -1,0 +1,16 @@
+{
+  "is_both_orchid_genera": false,
+  "genera_checked": [
+    {
+      "genus_name": "Coelia",
+      "is_orchid": true,
+      "plant_family": "Orchidaceae"
+    },
+    {
+      "genus_name": "Hakonechloa",
+      "is_orchid": false,
+      "plant_family": "Poaceae"
+    }
+  ],
+  "conclusion_reasoning": "Coelia is a genus of orchids, but Hakonechloa is a genus of grasses (Poaceae family), therefore not both are orchid genera."
+}

@@ -1,0 +1,31 @@
+{
+  "artist_name": "Frances Stark",
+  "art_medium": "carbon paper",
+  "traced_content_types": [
+    "letters",
+    "words",
+    "sentences"
+  ],
+  "traced_languages": [
+    "English",
+    "French"
+  ],
+  "source_authors_mentioned": [
+    {
+      "name": "Emily Dickinson"
+    },
+    {
+      "name": "Goethe"
+    },
+    {
+      "name": "Henry Miller"
+    },
+    {
+      "name": "Samuel Beckett",
+      "languages_written_in": [
+        "English",
+        "French"
+      ]
+    }
+  ]
+}

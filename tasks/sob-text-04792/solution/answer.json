@@ -1,0 +1,8 @@
+{
+  "question_asked": "Are both John Korty and Charley Chase known for comedies?",
+  "person_1_name": "John Korty",
+  "person_1_known_for_comedies": false,
+  "person_2_name": "Charley Chase",
+  "person_2_known_for_comedies": true,
+  "both_known_for_comedies": false
+}

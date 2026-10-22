@@ -1,0 +1,10 @@
+{
+  "lawsuit_name": "Miller v. Campbell",
+  "plaintiff": "Joe Miller",
+  "number_of_lawsuits": 3,
+  "courts_filed_in": [
+    "federal",
+    "state"
+  ],
+  "state_court_jurisdiction": "Alaska"
+}

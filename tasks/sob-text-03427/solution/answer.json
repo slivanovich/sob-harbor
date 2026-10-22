@@ -1,0 +1,12 @@
+{
+  "retail_chain_name": "The Container Store",
+  "operating_company": {
+    "name": "The Container Store Group, Inc.",
+    "is_american": true
+  },
+  "product_offerings": [
+    "storage products",
+    "organization products"
+  ],
+  "anchors_collection_at_riverpark": true
+}

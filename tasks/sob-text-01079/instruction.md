@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Fatal Attraction: Fatal Attraction is a 1987 American psychological thriller film directed by Adrian Lyne and written by James Dearden.  It is based on Dearden's 1980 short film "Diversion".  Featuring a cast of Michael Douglas, Glenn Close, Anne Archer, and Ellen Hamilton Latzen, the film centers on a married man who has a weekend affair with a woman who refuses to allow it to end and becomes obsessed with him.
+
+Foxes (film): Foxes is a 1980 American teen drama film directed by Adrian Lyne (in his feature film directorial debut) and written by Gerald Ayres.  The film stars Jodie Foster, Scott Baio, Sally Kellerman, Randy Quaid and Cherie Currie (in her film debut).  The original music score is composed by Giorgio Moroder, and features the song "On the Radio", sung by Donna Summer.  It revolves around a group of girls coming-of-age in suburban Los Angeles toward the end of the disco era.
+
+Indecent Proposal: Indecent Proposal is a 1993 American drama film based on the novel of the same name by Jack Engelhard.  It was directed by Adrian Lyne and stars Robert Redford, Demi Moore, and Woody Harrelson.
+
+Flashdance: Flashdance is a 1983 American romantic drama film directed by Adrian Lyne.  It was the first collaboration of producers Don Simpson and Jerry Bruckheimer, and the presentation of some sequences in the style of music videos was an influence on other 1980s films including "Top Gun" (1986), Simpson and Bruckheimer's most famous production.  "Flashdance" opened to negative reviews by professional critics, but was a surprise box office success, becoming the third highest-grossing film of 1983 in the United States.  It had a worldwide box-office gross of more than $100 million.  Its soundtrack spawned several hit songs, including "Maniac" (performed by Michael Sembello), and the Academy Award–winning "Flashdance... What a Feeling" (performed by Irene Cara), which was written for the film.
+
+Tom Cruise filmography: Tom Cruise is an American actor and producer who made his film debut with a minor role in the 1981 romantic drama "Endless Love".  Two years later he made his breakthrough by starring in the romantic comedy "Risky Business" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.  In 1986, Cruise played a fighter pilot in the Tony Scott-directed action drama "Top Gun" (the highest-grossing film that year), and also starred opposite Paul Newman in the Martin Scorsese-directed drama "The Color of Money".  Two years later he played opposite Dustin Hoffman in the Academy Award for Best Picture-winning drama "Rain Man" (1988), and also appeared in the Golden Raspberry Award for Worst Picture-winning romantic drama "Cocktail" (1988).  In doing so Cruise became the first and only person as of 2014 to star in a Best Picture Oscar winner and a Worst Picture Razzie winner in the same year.  His next role was as anti-war activist Ron Kovic in the drama adaptation of Kovic's memoir of the same name, "Born on the Fourth of July" (1989).  For his performance Cruise received the Golden Globe Award for Best Actor – Motion Picture Drama and his first nomination for the Academy Award for Best Actor.
+
+Peter Guber: Howard Peter Guber (born March 1, 1942) is an executive, entrepreneur, educator, and author.  He is Chairman and CEO of Mandalay Entertainment.  Guber's most recent films from Mandalay Entertainment include "The Kids Are All Right", "Soul Surfer", and "Bernie".  He has also produced "Batman", "The Witches of Eastwick", and "Flashdance."  Guber's films have earned over $3 billion worldwide and 50 Academy Award nominations.
+
+Lolita (1997 film): Lolita is a 1997 American-French drama film directed by Adrian Lyne and written by Stephen Schiff.  It is the second screen adaptation of Vladimir Nabokov's novel of the same name and stars Jeremy Irons as Humbert Humbert and Dominique Swain as Dolores "Lolita" Haze, with supporting roles by Melanie Griffith as Charlotte Haze, and Frank Langella as Clare Quilty.  The film is about a middle-aged male professor, Humbert (Irons), who rents a room in the house of the widow Charlotte Haze (Griffith), because he is sexually attracted to her adolescent daughter Dolores (Swain), also called "Lo" or "Lolita".
+
+Top Gun: Top Gun is a 1986 American romantic military action drama film directed by Tony Scott, and produced by Don Simpson and Jerry Bruckheimer, in association with Paramount Pictures.  The screenplay was written by Jim Cash and Jack Epps, Jr., and was inspired by an article titled "Top Guns" published in "California" magazine three years earlier.  The film stars Tom Cruise, Kelly McGillis, Val Kilmer, Anthony Edwards, and Tom Skerritt.  Cruise plays Lieutenant Pete "Maverick" Mitchell, a young Naval aviator aboard the aircraft carrier USS "Enterprise" .  He and his Radar Intercept Officer (RIO) Nick "Goose" Bradshaw (Edwards) are given the chance to train at the Navy's Fighter Weapons School at the former Naval Air Station (NAS) Miramar in San Diego.
+
+Unfaithful (2002 film): Unfaithful is a 2002 American erotic thriller drama film directed by Adrian Lyne and starring Richard Gere, Diane Lane, Chad Lowe, Dominic Chianese, and Olivier Martinez.  It was adapted by Alvin Sargent and William Broyles Jr. from the 1969 French film "The Unfaithful Wife" ("La Femme infidèle") by the noted director Claude Chabrol.  It tells about a couple living in suburban New York City whose marriage goes dangerously awry when the wife indulges in an adulterous affair with a stranger she encounters by chance.
+
+9½ Weeks: 9½ Weeks (originally titled Nine ½ Weeks) is a 1986 American erotic romantic drama film directed by Adrian Lyne with a screenplay by Sarah Kernochan, Zalman King, and Patricia Louisanna Knop.  The film is based on the 1978 memoir of the same name by Austrian-American author Ingeborg Day.  It stars Kim Basinger as Elizabeth McGraw and Mickey Rourke as John Gray.  McGraw is a New York City art gallery employee who has a brief yet intense affair with a mysterious Wall Street broker.  The film was completed in 1984, but not released until February 1986.
+
+Question: The producer of the 1983 American romantic drama film directed by Adrian Lyne that had an influence on other 1980s films including "Top Gun" (1986) is Chairman and CEO of which industry?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film described in the question."
+    },
+    "film_year": {
+      "type": "integer",
+      "description": "The release year of the film."
+    },
+    "film_director": {
+      "type": "string",
+      "description": "The director of the film."
+    },
+    "producer_name": {
+      "type": "string",
+      "description": "The name of the producer of the film."
+    },
+    "producer_company_role": {
+      "type": "string",
+      "description": "The role of the producer within the company."
+    },
+    "company_name": {
+      "type": "string",
+      "description": "The name of the company the producer is associated with."
+    },
+    "company_industry": {
+      "type": "string",
+      "description": "The industry of the company."
+    }
+  },
+  "required": [
+    "film_title",
+    "film_year",
+    "film_director",
+    "producer_name",
+    "producer_company_role",
+    "company_name",
+    "company_industry"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "artist_name": "Lionel Richie",
+  "song_details": {
+    "title": "Oh No",
+    "year_released": 1981,
+    "is_last_hit_with_band": true
+  },
+  "band_details": {
+    "name": "Commodores",
+    "artist_joined_year": 1968
+  },
+  "solo_career_details": {
+    "started_year": 1982,
+    "is_successful": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "person_name": "Christy Cabanne",
+  "roles": [
+    "film director",
+    "screenwriter",
+    "silent film actor"
+  ],
+  "is_silent_film_actor": true,
+  "is_director": true
+}

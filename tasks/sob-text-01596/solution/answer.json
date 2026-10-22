@@ -1,0 +1,11 @@
+{
+  "vehicle_name": "Ford Explorer",
+  "manufacturer": "Ford Motor Company",
+  "production_start_year": 1990,
+  "related_vehicles": [
+    {
+      "name": "Mercury Mountaineer",
+      "relationship_description": "Sharing many of its features with the Ford Explorer, the vehicles were virtually identical in terms of hardware."
+    }
+  ]
+}

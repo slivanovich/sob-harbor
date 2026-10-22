@@ -1,0 +1,14 @@
+{
+  "shooter_name": "John Russell Houser",
+  "film_details": {
+    "title": "Trainwreck",
+    "release_year": 2015,
+    "starring_actress": "Amy Schumer"
+  },
+  "shooting_event_details": {
+    "date": "July 23, 2015",
+    "location": "Grand 16 movie theater in Lafayette, Louisiana",
+    "fatalities": 2,
+    "injuries": 9
+  }
+}

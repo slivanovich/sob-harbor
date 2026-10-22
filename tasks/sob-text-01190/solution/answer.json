@@ -1,0 +1,14 @@
+{
+  "shopping_center_name": "Richardson Square Mall",
+  "location": "Richardson, Texas, United States",
+  "center_type": "enclosed shopping center",
+  "demolition_status": "demolished",
+  "replacement_center_name": "Richardson Square",
+  "has_pad_sites": true,
+  "pad_site_details": {
+    "restaurant_name": "Sonic Drive-In",
+    "restaurant_type": "American drive-in fast-food restaurant chain",
+    "qsr_magazine_ranking": 10,
+    "ranking_year": 2011
+  }
+}

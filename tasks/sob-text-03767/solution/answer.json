@@ -1,0 +1,17 @@
+{
+  "film_title": "Immortals",
+  "release_year": 2011,
+  "genre": [
+    "epic fantasy",
+    "action-adventure"
+  ],
+  "country_of_origin": "American",
+  "starred_actress": {
+    "name": "Isabel Lucas",
+    "nationality": "Australian",
+    "professions": [
+      "actress",
+      "model"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "rebellion_name": "Indian Rebellion of 1857",
+  "was_unsuccessful": true,
+  "target_entity": "British East India Company",
+  "participant_soldier": {
+    "name": "John Doyle",
+    "rank": "Private soldier"
+  }
+}

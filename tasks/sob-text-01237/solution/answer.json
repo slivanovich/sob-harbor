@@ -1,0 +1,14 @@
+{
+  "government_name": "Flensburg Government",
+  "head_of_state_successor": {
+    "name": "Karl Dönitz",
+    "role_in_government": "Reichspräsident",
+    "succeeded_adolf_hitler": true
+  },
+  "other_key_members": [
+    {
+      "name": "Lutz Graf Schwerin von Krosigk",
+      "role_in_government": "Leading Minister"
+    }
+  ]
+}

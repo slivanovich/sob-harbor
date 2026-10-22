@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Shah Inayat Shaheed: Shah Ïnayatullah (Sindhi: شاه عنایت اللہ ‎ ) (c. 1655 – 1718), popularly known as Sufi Shah Inayat Shaheed, Shah Shaheed, sometimes referred as the First Social Reformer of Sindh was a 17th-century Revolutionary from Jhok, Sindh who was executed at the hands of Mughal Emperor in early eighteenth century.  Sufi Inayat was accused of leading small army of peasants (Harees) of his area to challenge the domination of Mughal Emperor Farrukhsiyar, local feudal landlords and Mullahs.  His mantra was “Jo Kherray so Khaey” (Sindhi: جو کيڙي سو کائي ‎ ), means the one who ploughs has the foremost right on the yield.  The popularity of Sufi Shah Inayat forced the feudal landlords of the area to contact Mughal King Farrukhsiyar who on wrong information ordered the ruler of northern Sindh Mian Yar Muhammad Kalhoro to uproot the Sufi Inayat and his companions.  A prolonged siege of Jhok resulted in the offer of negotiations from Kalhora commander and Sufi Inayat accepted the offer to avoid further bloodshed.  As he arrived for the negotiations in the enemy camp he was arrested and later executed in Thatto.
+
+Charles Coleman (murderer): Charles Troy Coleman (March 15, 1947 – September 10, 1990) was a convicted murderer executed in 1990 by lethal injection by the State of Oklahoma for the murder of John Seward.  He was convicted in 1979 of the murder of Seward, who, along with his wife, was killed by a shotgun blast in rural Muskogee County, Oklahoma, when they interrupted a robbery at a relative's house.  Coleman was executed in 1990 after almost twelve years on death row at the Oklahoma State Penitentiary.  He was put to death by the State of Oklahoma by lethal injection at the age of 43 after exhausting all appeals.  (At the time, Coleman had become friends with Gregory R. Wilhoit, now a death row exoneree, though they had argued bitterly over the death penalty.)  He became the first person to be executed in Oklahoma since the 1966 electrocution of James Donald French after the United States Supreme Court reinstated the death penalty in 1976 and the first person in Oklahoma to be executed by lethal injection.
+
+Shaheed Bhagat Singh State Technical Campus: Shaheed Bhagat Singh State Technical Campus (formerly known as Shaheed Bhagat Singh College of Engineering and Technology) is an Integrated Technical Campus in the Ferozepur city of Punjab.  It was established by Punjab Government in the year 1995.  Dr.Tejinder Singh Sidhu is the current director.  The institute is fully promoted by the Punjab Government and is registered as a Society under the Societies Registration Act 1860.  Only merit based admission is available.Students with jee main qualification get admission here.It is considered as one of the best engineering college in terms of infrastructure and studies in north India.  Now the college is autonomous and affiliated to Maharaja ranjit Singh state technical university.
+
+Thomas Aikenhead: Thomas Aikenhead (  March 1676  – 8 January 1697) was a Scottish student from Edinburgh, who was prosecuted and executed at the age of 20 on a charge of blasphemy.  He was the last person in Britain to be executed for blasphemy.  This was 85 years after the death of Edward Wightman (1612), the last person to be burned at the stake for heresy in England.
+
+Clyde Arwood: Clyde Arwood (September 7, 1901 – August 14, 1943) was the only person ever executed by the United States federal government in Tennessee.  He was convicted of killing a federal agent during a moonshine raid, which is a federal capital offense.  Arwood was executed in the electric chair at age 41.  in Tennessee State Penitentiary in Nashville.  Arwood was the last federal inmate executed under administration of President Franklin D. Roosevelt.
+
+Shaheed Udham Singh (film): Shaheed Udham Singh is a 2000 revolutionary movie based on the life of the son of Hindustani soil, Shaheed Udham Singh who spent his whole life to punish Michael O'Dwyer, the British Lieutenant Governor of the Punjab who ordered the massacre of a thousand people at Jallianwala Bagh in Amritsar.  The film was screened retrospective on August 13, 2016 at the "Independence Day Film Festival" jointly presented by the Indian Directorate of Film Festivals and Ministry of Defense, commemorating 70th Indian Independence Day.
+
+Bhagat Singh: Bhagat Singh (] 1907  – 23 March 1931) was a charismatic Indian socialist revolutionary whose two acts of dramatic violence against the British in India and execution at age 23 made him a folk hero of the Indian independence movement.
+
+Shaheed (1965 film): Shaheed is a 1965 Hindi movie based on Bhagat Singh's life.  One of the most prominent Indian patriotic movies based on the Indian independence movement, it was produced by Kewal Kashyap and directed by S Ram Sharma and stars Manoj Kumar, Kamini Kaushal, Pran, Iftekhar, Nirupa Roy, Prem Chopra, Madan Puri and Anwar Hussain in lead roles.  The music is by Prem Dhawan with several songs written by freedom fighter Ram Prasad Bismil.  Shaheed was first of Manoj Kumar's series of patriotic films, followed by likes of Upkar, Purab Aur Paschim and Kranti.
+
+Werner Teske: Werner Teske (24 April 1942 – 26 June 1981) was a Hauptmann (Captain) of the Ministry for State Security of East Germany who was executed after having been found guilty of "planned treason".  He was the last person to be executed in the German Democratic Republic, and the last person to be executed in Germany.
+
+List of people executed in New Jersey: This is a list of people executed in New Jersey.  No one has been executed by the state of New Jersey since 1963, although a statute reinstating capital punishment for murder had been in force from 1982 until 2007.  New Jersey executed a total of 361 people from its inception to the abolition of the death penalty on December 17, 2007.  The first person executed was a slave known to history only as Tom for a rape in 1690.  The last execution was of Ralph Hudson for murder on January 22, 1963.  Of those executions, 187 occurred in the 20th century.  The last execution for a crime other than murder (or conspiracy to murder) was of Andrew Clark in 1872 for rape.  The last woman executed was Margaret Meierhoffer in 1881.  Except for a dozen slaves executed by burning in the early 18th century, executions in New Jersey were by hanging until 1906 and electrocution since then, with the exception of an execution by hanging in 1909.
+
+Question: The person "Shaheed" is based on was executed at what age?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the historical figure the film is based on."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film mentioned in the context."
+    },
+    "execution_details": {
+      "type": "object",
+      "properties": {
+        "age_at_execution": {
+          "type": "integer",
+          "description": "The age of the person at the time of their execution."
+        },
+        "reason_for_fame": {
+          "type": "string",
+          "description": "The reason why the person became a folk hero."
+        }
+      },
+      "required": [
+        "age_at_execution",
+        "reason_for_fame"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "film_title",
+    "execution_details"
+  ],
+  "additionalProperties": false
+}

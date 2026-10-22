@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Teori Zavascki: Teori Albino Zavascki (15 August 1948 – 19 January 2017) was a Brazilian judge who served as a Minister of the Superior Court of Justice from 8 May 2003 until 29 November 2012, appointed by President Luiz Inácio Lula da Silva, and as a Minister of the Supreme Federal Court of Brazil from 29 November 2012 until his death in 19 January 2017, having been appointed to the position by President Dilma Rousseff.  At the time of his death he was the justice in charge of the trials resulting from Operation Car Wash.
+
+Pohl trial: The Pohl trial against the Nazi German administration of the "Final Solution" (also known as the WVHA Trial and officially "The United States of America vs. Oswald Pohl, et al") was the fourth of the twelve trials for war crimes that the United States authorities held in their occupation zone in Germany in Nuremberg after the end of World War II.  The twelve trials were all held before U.S. military courts, not before the International Military Tribunal, although both courts presided in the same rooms at the Palace of Justice.  They are known collectively as the "Subsequent Nuremberg Trials" or more formally, as the "Trials of War Criminals before the Nuremberg Military Tribunals" (NMT).
+
+William Scott (Missouri): William Scott (June 7, 1804 – 1862) was an American lawyer and judge who served on the Supreme Court of Missouri from 1841 to 1849 and from 1851 to 1862.  He also served on the Jefferson City Circuit Court.  Justice Scott was the author of the majority opinion in "Scott v. Emerson", 15 Missouri 572 (1852), which was part of the "Dred Scott v. Sandford" case.  Scott's opinion, which overturned well-established precedent in Missouri, set the stage for Dred Scott's case in the Supreme Court.
+
+W. Scott Wilkinson: William Scott Wilkinson, known as W. Scott Wilkinson (February 5, 1895 – June 19, 1985), was an attorney in Shreveport, Louisiana, who served a single term as a Democrat from Caddo Parish in the Louisiana House of Representatives from 1920 to 1924 during the administration of Governor John M. Parker.
+
+William Scott (justice): Sir William Scott (d. 1350s) was an English lawyer, and Chief Justice of the King's Bench from 8 January 1341 to 26 November 1346.  Originally from Yorkshire – probably Birthwaite in Kexbrough – Scott as Chief Justice presided over trials resulting from Edward III's purge of the administration the previous years.  Among those tried was William de la Pole.  After retiring from this position, Scott largely withdrew from public life, probably because of ill health.  He returned to Yorkshire to attend to his estates.  The Oxford Dictionary of National Biography says that he "was still alive on 10 March 1352...but was certainly dead by 11 May 1356, and probably by 1354".
+
+William of Baskerville: William of Baskerville (Italian: "Guglielmo da Baskerville") is a fictional Franciscan friar from the 1980 historical mystery novel "Il nome della rosa" ("The Name of the Rose") by Umberto Eco, which is itself a recounting of events as experienced by Adso of Melk, a Francisian novice with whom William travels.  Years earlier, as an inquisitor, Brother William presided at some trials in England and Italy, where he distinguished himself by his perspicacity along with great humility. <br> Following the events of "The Name of the Rose", Adso and William part ways, with Adso relating the tale before his death.  We are informed near the end of the book that William had earlier died during a Plague in Europe.
+
+Billy Scott (footballer, born 1884): Billy Scott (born 17 May 1882) also known as William Scott, was an Irish footballer who played as a goalkeeper for, among others, Everton, Leeds City, Liverpool and Ireland.  In 1913 Scott was a member of the Ireland team that beat England for the first time with a 2–1 win at Windsor Park.  His younger brother, Elisha Scott, was also a notable goalkeeper and also played for Liverpool and Ireland.  It was Billy Scott who recognised his younger brother's potential and recommended him to Liverpool after an unsuccessful trial at Everton.
+
+1794 Treason Trials: The 1794 Treason Trials, arranged by the administration of William Pitt, were intended to cripple the British radical movement of the 1790s.  Over thirty radicals were initially arrested; three were tried for high treason: Thomas Hardy, John Horne Tooke and John Thelwall.  In a repudiation of the government's policies, they were acquitted by three separate juries in November 1794 to great public rejoicing.  The treason trials were an extension of the sedition trials of 1792 and 1793 against parliamentary reformers in both England and Scotland.
+
+Edward III of England: Edward III (13 November 1312 – 21 June 1377) was King of England from 25 January 1327 until his death; he is noted for his military success and for restoring royal authority after the disastrous and unorthodox reign of his father, Edward II.  Edward III transformed the Kingdom of England into one of the most formidable military powers in Europe.  His long reign of 50 years was the second longest in medieval England and saw vital developments in legislation and government—in particular the evolution of the English parliament—as well as the ravages of the Black Death.
+
+Brian Balfour-Oatts: Brian Balfour-Oatts (born 1966) is a British art dealer, collector and writer, particularly noted for his 2005 publication "William Scott: A Survey of His Original Prints" ISBN  , the standard reference work and de facto catalogue raisonné of William Scott's graphic work.
+
+Question: The King of England, who William Scott presided over trials resulting from this purge of the administration, reigned for how long?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "king_name": {
+      "type": "string",
+      "description": "The name of the King of England."
+    },
+    "reign_length_years": {
+      "type": "integer",
+      "description": "The duration of the King's reign in years."
+    },
+    "william_scott_role": {
+      "type": "string",
+      "description": "The role of William Scott in relation to the King's administration."
+    },
+    "event_description": {
+      "type": "string",
+      "description": "Description of the event William Scott presided over trials for, related to the King."
+    }
+  },
+  "required": [
+    "king_name",
+    "reign_length_years",
+    "william_scott_role",
+    "event_description"
+  ],
+  "additionalProperties": false
+}

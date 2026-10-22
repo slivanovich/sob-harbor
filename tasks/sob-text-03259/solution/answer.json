@@ -1,0 +1,12 @@
+{
+  "lawsuit_name": "Miller v. Campbell",
+  "number_of_lawsuits": 3,
+  "plaintiff": "Joe Miller",
+  "courts_involved": {
+    "federal_courts": true,
+    "state_courts_involved": true,
+    "state_name": "Alaska"
+  },
+  "dispute_details": "vote-counting methods and other procedures conducted by the Alaska Division of Elections",
+  "election_date": "November 2, 2010"
+}

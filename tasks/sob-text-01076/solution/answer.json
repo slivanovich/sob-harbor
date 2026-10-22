@@ -1,0 +1,17 @@
+{
+  "manager_who_took_over": {
+    "full_name": "Dean Thomas John Holden",
+    "former_footballer": true,
+    "current_role": "assistant head coach at Bristol City"
+  },
+  "previous_manager": {
+    "full_name": "Lee David Johnson",
+    "former_footballer": true
+  },
+  "management_takeover_details": [
+    {
+      "club_name": "Oldham Athletic",
+      "year_of_takeover": 2015
+    }
+  ]
+}

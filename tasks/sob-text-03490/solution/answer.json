@@ -1,0 +1,18 @@
+{
+  "station_info": {
+    "name": "Jacksonville station",
+    "location": "Jacksonville, Florida, United States"
+  },
+  "served_trains_details": [
+    {
+      "train_name": "Silver Meteor",
+      "is_relevant_for_question": true,
+      "continuous_operation_start_year": 1939
+    },
+    {
+      "train_name": "Silver Star",
+      "is_relevant_for_question": false
+    }
+  ],
+  "answer_year": 1939
+}

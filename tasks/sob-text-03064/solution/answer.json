@@ -1,0 +1,10 @@
+{
+  "park_name": "St James's Cemetery",
+  "city_info": {
+    "city_name": "Liverpool",
+    "region": "North West England",
+    "metropolitan_area_rank": 5,
+    "metropolitan_area_type": "metropolitan area"
+  },
+  "park_former_use": "cemetery"
+}

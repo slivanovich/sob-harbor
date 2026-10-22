@@ -1,0 +1,10 @@
+{
+  "manager": "The Pyramid Company",
+  "shopping_destinations": [
+    {
+      "name": "Crossgates Mall",
+      "total_square_feet": 1700000
+    }
+  ],
+  "comparison_result": "Crossgates Mall"
+}

@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Conium: Conium ( or ) is a genus of flowering plants in the carrot family Apiaceae which consists of four species accepted by The Plant List.  One species, "C. maculatum", also called hemlock, which is highly poisonous, is native to temperate regions of Europe, North Africa and Western Asia, while the other three are from southern Africa.
+
+Neoparrya: Neoparrya is a plant genus in the carrot family Apiaceae.
+
+Erigenia: Erigenia bulbosa, also known as harbinger of spring or pepper and salt, is a perennial plant in the carrot family (Apiaceae).  "E. bulbosa" is the only species in the genus Erigenia (Nutt. ).  This plant is known as harbinger of spring because it is one of the earliest blooming native wildflowers of rich forests in the mid-latitude United States.  It is found as far north as central New York and southern Wisconsin, west to the western Ozarks, and south to central Alabama.  It is also found in extreme southern Ontario. Throughout most of its range it blooms from late February through early April.  It is a small spring ephemeral reaching only 5–15 cm tall when in flower, and slightly larger afterwards.  Each spherical bulb gives rise to a single purplish stem, which terminates in an umbel.  The flowers have white petals and large dark-reddish anthers.  The teardrop shaped petals are 3-4 millimeters long, widely spaced and do not touch each other.  As is characteristic of the carrot family, the leaves of this plant are sheathed at the base and pinnately divided into many small sections.
+
+Hydrangea: Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.  By far the greatest species diversity is in eastern Asia, notably China, Japan, and Korea.  Most are shrubs 1 to 3 meters tall, but some are small trees, and others lianas reaching up to 30 m by climbing up trees.  They can be either deciduous or evergreen, though the widely cultivated temperate species are all deciduous.
+
+Conium maculatum: Conium maculatum (hemlock or poison hemlock) is a highly poisonous biennial herbaceous flowering plant in the carrot family Apiaceae, native to Europe and North Africa.  A hardy plant capable of living in a variety of environments, hemlock is widely naturalized in locations outside its native range.
+
+Aegopodium: Aegopodium is a plant genus of the carrot family Apiaceae native to Europe and western Asia.  It is represented by about seven species, all are perennial herbs.  Flowers are compounded, umbels appearing in spring-summer and are visited by many types of insect pollinators.  Fruit consists of two-winged or ribbed nuts that separate on ripening.
+
+Aegopodium podagraria: Aegopodium podagraria L. commonly called ground elder, herb gerard, bishop's weed, goutweed, gout wort, and snow-in-the-mountain, and sometimes called English masterwort, and wild masterwort, is a perennial plant in the carrot family (Apiaceae) that grows in shady places.  The name "ground elder" comes from the superficial similarity of its leaves and flowers to those of elder ("Sambucus"), which is unrelated.  It is the type species of the genus "Aegopodium".  This species is native to Eurasia, and has been introduced around the world as an ornamental plant, where it occasionally poses an ecological threat as an invasive exotic plant.
+
+Perideridia gairdneri: Perideridia gairdneri is a species of flowering plant in the carrot family known by the common names common yampah and Gardner's yampah.  It is native to western North America from southwestern Canada to California to New Mexico, where it grows in many types of habitat.  It is a perennial herb which may approach 1.5 meters in maximum height, its slender, erect stem growing from cylindrical tubers measuring up to 8 centimeters long.  Leaves near the base of the plant have blades up to 35 centimeters long which are divided into many narrow, subdivided lobes.  Leaves higher on the plant are smaller and less divided.  The inflorescence is a compound umbel of many spherical clusters of small white flowers.  These yield ribbed, rounded fruits each a few millimeters long.  This was an important food plant, even a staple food, for many Native American groups, including the Blackfoot, Paiute, Cheyenne and Comanche It would seem certain that the term "yampa" would be a version on the Comanche name for the tuber, variously yap, and yampa.  One of the main divisions of the Comanche, the Yapainuu, were named the yap eaters, whose chief was the famous Ten Bears.  More commonly referred to as the Yamparikas, this division roamed in the Northern Oklahoma area in historic times. .  The tuberous roots could be eaten like potatoes, roasted, steamed, eaten fresh or dried, made into mush or pinole, used as flour and flavoring, and were also used medicinally.  The danger of collecting and eating wild members of the carrot family (Apiaceae family, also known as Umbelliferae family) can not be overstressed.  The deadly plants water hemlock and poisonous hemlock are in this family and have a similar appearance to the edible species.
+
+Anthriscus sylvestris: Anthriscus sylvestris, known as cow parsley, wild chervil, wild beaked parsley, or keck is a herbaceous biennial or short-lived perennial plant in the family Apiaceae (Umbelliferae), genus "Anthriscus".  It is also sometimes called mother-die (especially in the UK), a name that is also applied to the common hawthorn.  It is native to Europe, western Asia and northwestern Africa; in the south of its range in the Mediterranean region, it is limited to higher altitudes.  It is related to other diverse members of Apiaceae, such as parsley, carrot, hemlock and hogweed.  It is often confused with "Daucus carota" which is known as Queen Anne's lace or wild carrot, also a member of the Apiaceae.
+
+Silaum silaus: Silaum silaus, commonly known as pepper-saxifrage, is a perennial plant in the family Apiaceae (Umbelliferae) (the carrot family) found across south-eastern, Central and Western Europe, including the British Isles.  It grows in damp grasslands on neutral soils.
+
+Question: What is a plant genus of the carrot family Apiaceae native to Europe and western Asia, Hydrangea or Aegopodium ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "plant_genus_name": {
+      "type": "string",
+      "description": "The name of the plant genus that fits the criteria."
+    },
+    "is_apiaceae_family": {
+      "type": "boolean",
+      "description": "Indicates if the plant genus belongs to the Apiaceae (carrot) family."
+    },
+    "native_regions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of regions where the plant genus is native."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation for the chosen plant genus based on the context."
+    }
+  },
+  "required": [
+    "plant_genus_name",
+    "is_apiaceae_family",
+    "native_regions",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

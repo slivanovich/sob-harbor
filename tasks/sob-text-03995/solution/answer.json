@@ -1,0 +1,11 @@
+{
+  "stadium_name": "Eck Stadium",
+  "university": {
+    "name": "Wichita State University",
+    "location": {
+      "city": "Wichita",
+      "state": "Kansas"
+    }
+  },
+  "governing_body": "Kansas Board of Regents"
+}

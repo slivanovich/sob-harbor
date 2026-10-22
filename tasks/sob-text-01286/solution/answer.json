@@ -1,0 +1,14 @@
+{
+  "film_title": "Battle Royale",
+  "film_year": 2000,
+  "film_genre": "dystopian",
+  "actor_details": {
+    "actor_name": "Tatsuya Fujiwara",
+    "character_played": "Shuya Nanahara"
+  },
+  "source_novel": {
+    "novel_title": "Battle Royale",
+    "novel_author": "Koushun Takami",
+    "novel_publication_year": 1999
+  }
+}

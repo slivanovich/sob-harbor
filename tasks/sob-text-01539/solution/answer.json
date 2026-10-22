@@ -1,0 +1,12 @@
+{
+  "artist_name": "Rose English",
+  "festival_name": "Adelaide Festival",
+  "festival_location": {
+    "city": "Adelaide",
+    "country": "Australia"
+  },
+  "festival_description_keywords": [
+    "major celebrations of the arts",
+    "pre-eminent cultural event"
+  ]
+}

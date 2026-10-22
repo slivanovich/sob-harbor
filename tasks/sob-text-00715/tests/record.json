@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "c09c04172d0bc3d178c7ce23dac3c43afa20996ee70a47760e44cca538cb359f",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5a76a7a55542993735360134",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Timothy Thomas",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Three Days to Never: Three Days to Never is a 2006 fantasy novel by Tim Powers.  As with most of Powers' novels, it proposes a secret history in which real events have supernatural causes and prominent historical figures have been involved in supernatural or occult activities.  The novel was shortlisted for the Locus Fantasy Award in 2007 as well as the Mythopoeic Fantasy Award for Adult Literature in the same year.\n\nWorld Fantasy Special Award—Professional: The World Fantasy Awards are given each year by the World Fantasy Convention for the best fantasy fiction and art published in English during the preceding calendar year.  The awards have been described by sources such as \"The Guardian\" as a \"prestigious fantasy prize\", and one of the three most renowned speculative fiction awards, along with the Hugo and Nebula Awards (which cover both fantasy and science fiction).  The World Fantasy Special Award—Professional is given each year to individuals for their professional work in the preceding calendar year in fields related to fantasy that is not covered by other World Fantasy Award categories.  These have included editors of magazines and novels, publishers, and authors of non-fiction works.  Occasionally, especially in the first few years of the award, some publishing companies were nominated along with individual editors and publishers.  The nomination reasons were not specified in the first year of the award, and have sometimes not been specified beyond \"contributions to the genre\".  Individuals are also eligible for the Special Award—Non-professional category for their non-professional work.  The World Fantasy Special Award—Professional has been awarded annually since 1975.\n\nTim Powers: Timothy Thomas \"Tim\" Powers (born February 29, 1952) is an American science fiction and fantasy author.  Powers has won the World Fantasy Award twice for his critically acclaimed novels \"Last Call\" and \"Declare\".  His 1987 novel \"On Stranger Tides\" served as inspiration for the \"Monkey Island\" franchise of video games and was optioned for adaptation into the .\n\nWorld Fantasy Special Award—Non-professional: The World Fantasy Awards are given each year by the World Fantasy Convention for the best fantasy fiction and art published in English during the preceding calendar year.  The awards have been described by sources such as \"The Guardian\" as a \"prestigious fantasy prize\", and as one of the three most renowned speculative fiction awards, along with the Hugo and Nebula Awards (which cover both fantasy and science fiction).  The World Fantasy Special Award—Non-professional is given each year to individuals for their non-professional work in the preceding calendar year in fields related to fantasy that are not covered by other World Fantasy Award categories.  These have included editors of magazines and novels, publishers, and authors of non-fiction works.  Occasionally some publishing companies have been nominated along with individual editors and publishers.  The nomination reasons have sometimes not been specified beyond \"contributions to the genre\".  Individuals are also eligible for the Special Award—Professional category for their professional work.  The World Fantasy Special Award—Non-professional has been awarded annually since 1975.\n\nWilliam F. Wu: William F. Wu (born 1951 in Kansas City, Missouri) is a Chinese-American science fiction author.  He published his first story in 1977.  Since then, Wu has written thirteen published novels, one scholarly work, and a collection of short stories.  His more than fifty published short stories have been nominated for the Hugo Award twice individually and once as a member of the Wild Cards group of anthology writers; his work has been nominated for the Nebula Award twice and once for the World Fantasy Award.  He has written novels using the Three Laws of Robotics invented by Isaac Asimov, including two entries in the \"Robot City\" series and the entire \"Robots in Time\" series.\n\nJoel Lane: Joel Lane (1963 – 26 November 2013) was a British novelist, short story writer, poet, critic and anthology editor.  He received the World Fantasy Award in 2013 and the British Fantasy Award twice.\n\nLorrie Moore: Lorrie Moore (born Marie Lorena Moore; January 13, 1957) is an American fiction writer known mainly for her humorous and poignant short stories.\n\nLast Call (novel): Last Call is a fantasy novel by American writer Tim Powers.  It was published by William Morrow & Co in 1992.  It is the first book in a loose trilogy called Fault Lines; the second book, \"Expiration Date\" (1995), is vaguely related to \"Last Call\", the third book, \"Earthquake Weather\" (1997), acts as a sequel to the first two books.\n\nOn Stranger Tides: On Stranger Tides is a 1987 historical fantasy novel by American writer Tim Powers.  It was nominated for the World Fantasy Award for Best Novel, and placed second in the annual Locus poll for best fantasy novel.\n\nEarthquake Weather (novel): Earthquake Weather is a contemporary fantasy novel by American writer Tim Powers, published in 1997.  It is the third in his Fault Lines series and the sequel to his earlier novels \"Last Call\" and \"Expiration Date\".  It involves characters from both previous novels, two fugitives from a psychiatric hospital, the magical nature of multiple personality disorder, and the secret history of wine production in California.",
+    "question": "Who has won the World Fantasy Award twice for his critically acclaimed novels \"Last Call\" and \"Declare\" ,Tim Powers, or Lorrie Moore?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "author_name": {
+          "type": "string",
+          "description": "The full name of the author who won the award."
+        },
+        "award_name": {
+          "type": "string",
+          "description": "The name of the award won by the author."
+        },
+        "number_of_wins": {
+          "type": "integer",
+          "description": "The number of times the author won the specified award."
+        },
+        "winning_novels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of novels for which the author won the award."
+        }
+      },
+      "required": [
+        "author_name",
+        "award_name",
+        "number_of_wins",
+        "winning_novels"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "author_name": "Timothy Thomas",
+      "award_name": "World Fantasy Award",
+      "number_of_wins": 2,
+      "winning_novels": [
+        "Last Call",
+        "Declare"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

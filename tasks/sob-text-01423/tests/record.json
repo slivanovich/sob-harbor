@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "record_id": "9972202eee357e9497ea811f61de2dbb6b0c872e271e16a9688a5fb866856d82",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8470ea554299334474612c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Tijeras Peak: Tijeras Peak is a high mountain summit in the Sangre de Cristo Range of the Rocky Mountains of North America.  The 13610 ft thirteener is located 15.8 km southeast by east (bearing 120°) of the Town of Crestone in Saguache County, Colorado, United States, on the boundary between the Great Sand Dunes Wilderness in Great Sand Dunes National Preserve and the Sangre de Cristo Wilderness in Rio Grande National Forest.  Tijeras Peak is the highest summit in Great Sand Dunes National Park and Preserve.  \"Tijeras\" is Spanish for scissors, and refers to the double-pronged rocky tip of the mountain.\n\nAthabasca Sand Dunes Provincial Park: The Athabasca Sand Dunes Provincial Park was created to protect the Athabasca sand dunes, a unique geophysical land feature in the boreal shield ecosystem of the province of Saskatchewan.  The Athabasca Sand Dunes are one of the most northerly active sand dune formations on Earth.\n\nMauricio González-Gordon y Díez: Mauricio González-Gordon y Díez, Marquis of Bonanza (18 October 1923 – 27 September 2013) was a Spanish sherry maker and a conservationist.  Most of his life he worked for the family company, González Byass, where he increased its exports to a worldwide level.  His family estate was located in the wetland region called Doñana in southern Spain and was threatened by drainage efforts in the early 1950s.  González-Gordon with the help of researchers and international support managed to preserve the site, while at the same time donating some of his family land to the conservation effort.  Afterward, González-Gordon became one of the founders of the Spanish Ornithological Society in 1954.  His conservation efforts for Doñana culminated in the creation of the Doñana National Park in 1969.  The area was designated a UNESCO World Heritage Site in 1994.\n\nForillon National Park: Forillon National Park, one of 42 national parks and park reserves across Canada, is located at the outer tip of the Gaspé Peninsula of Quebec and covers 244 km2 .  Created in 1970, Forillon was the first national park in Quebec.  The park includes forests, sea coast, salt marshes, sand dunes, cliffs, and the Eastern End of the Appalachians.  The word \"forillon\" is thought to have referred to a flowerpot island or sea stack which used to be a landmark in the area but has since collapsed into the ocean.\n\nDoñana National Park: Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva (most of its territory) and Seville.  It covers 543 km² , of which 135 km² are a protected area.  The park is an area of marshes, shallow streams, and sand dunes in Las Marismas, the delta where the Guadalquivir River flows into the Atlantic Ocean.  It was established as a nature reserve in 1969 when the World Wildlife Fund joined with the Spanish government and purchased a section of marshes to protect it.  The eco-system has been under constant threat by the draining of the marshes, the use of river water to boost agricultural production by irrigating land along the coast, water pollution by upriver mining, and the expansion of tourist facilities.  It is named after wife of the seventh Duke of Medina-Sidonia.\n\nGuadarrama National Park: Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system.  The Guadarrama mountain range (\"Sistema Central\") contains some ecologically valuable areas, located in the Community of Madrid and Castile and León (provinces of Segovia and Ávila).  The law that regulates the recently approved national park was published in the BOE in  26, 2013 (2013--) .\n\nKouchibouguac National Park: Kouchibouguac National Park ('kʊʃ.ɘ.boʊˌkwæk) is located on the east coast of New Brunswick, in Kouchibouguac.  The park includes barrier islands, sand dunes, lagoons, salt marshes and forests.  It provides habitat for seabirds, including the endangered piping plover, and the second largest tern colony in North America.  Colonies of harbour seals and grey seals also inhabit the park's 25 km of sand dunes.  It is also home to the extremely rare and fragile Gulf of St. Lawrence aster, though in 2006, storms eradicated most of the asters' colonies.  The park's size is 238 km2 .  Recreational activities in the park include swimming, cycling and hiking.  In recent news, the park has reported sightings of the fisher marten in the area, making it one of the few places in New Brunswick that have fisher populations.  The park's various public activities attract thousands of visitors each year.  Kouchibouguac offers a range of activities, from a river adventure in a voyageur-style canoe, to going seal watching, to a talk about Mi'kmaq band governments.  The park is also home to the popular Kelly's Beach.\n\nBruneau Dunes State Park: Bruneau Dunes State Park is a state park of Idaho, USA, featuring several large sand dunes and two small lakes.  The park is located south of Mountain Home, Idaho, outside of Bruneau.  The park is the site of North America's highest single-structured sand dune which is approximately 470 ft high.  (North America's highest multistructured dune is at Great Sand Dune National Park in Colorado and is approximately 660 ft higher than its immediate base.)  The park is also the site of the Bruneau Dunes Observatory, where visitors can use a telescope for stargazing.\n\nCrescent Lake National Wildlife Refuge: Crescent Lake National Wildlife Refuge is located in the U.S. state of Nebraska and includes 45,818 acres (185 km).  The refuge contains the largest protected continuous sand dunes in the U.S.  A dozen small lakes and numerous ponds are fed by underground aquifers in areas where the sand dunes are below the water table.  Some of the dunes are covered in shrubs and grasses, while others are completely bare.  After the end of the Pinedale glaciation, the Holocene glacial retreat exposed the sand dunes that had been deposited in their current location by the vast continental glaciers.  This refuge manages the North Platte National Wildlife Refuge and together they form the Crescent Lake National Wildlife Refuge Complex.\n\nGreat Sand Dunes National Park and Preserve: Great Sand Dunes National Park and Preserve is a United States National Park located in the San Luis Valley, in the easternmost parts of Alamosa County and Saguache County, Colorado, United States.  Originally created as Great Sand Dunes National Monument on March 17, 1932, Great Sand Dunes National Park and Preserve was established by an act of the United States Congress on September 13, 2004.  The park includes 107,342 acre , and the preserve protects an additional 41,686 acre .",
+    "question": "Are both Doñana National Park and Guadarrama National Park areas of marshes, streams, and sand dunes?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "parks_compared": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "park_name": {
+                "type": "string"
+              },
+              "has_marshes": {
+                "type": "boolean"
+              },
+              "has_streams": {
+                "type": "boolean"
+              },
+              "has_sand_dunes": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "park_name",
+              "has_marshes",
+              "has_streams",
+              "has_sand_dunes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "all_parks_have_features": {
+          "type": "boolean",
+          "description": "True if both parks are areas of marshes, streams, and sand dunes, otherwise false."
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Explanation for the answer based on the presence of features in each park."
+        }
+      },
+      "required": [
+        "parks_compared",
+        "all_parks_have_features",
+        "reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "parks_compared": [
+        {
+          "park_name": "Doñana National Park",
+          "has_marshes": true,
+          "has_streams": true,
+          "has_sand_dunes": true
+        },
+        {
+          "park_name": "Guadarrama National Park",
+          "has_marshes": false,
+          "has_streams": false,
+          "has_sand_dunes": false
+        }
+      ],
+      "all_parks_have_features": false,
+      "reasoning": "Doñana National Park is described as an area of marshes, shallow streams, and sand dunes. Guadarrama National Park is described as a mountain range and does not mention marshes, streams, or sand dunes."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

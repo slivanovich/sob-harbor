@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Singapore Airlines Flight 006: Singapore Airlines Flight 006 (SQ006/SIA006) was a scheduled Singapore Airlines passenger flight from Singapore Changi Airport to Los Angeles International Airport via Chiang Kai-shek International Airport (now Taiwan Taoyuan International Airport) in Taipei, Taiwan.  On 31 October 2000, at 23:17 Taipei local time (15:17 UTC), the Boeing 747-412 operating the flight attempted to take off from the wrong runway at Chiang Kai-shek International Airport during a typhoon.  The aircraft crashed into construction equipment on the runway, killing 83 of the 179 occupants aboard.  As of 2014, the accident is the third-deadliest on Taiwanese soil.  It is also the first and only Singapore Airlines crash to result in fatalities.
+
+Scoot: Scoot Tigerair Pte Ltd. (operating as Scoot) is a Singaporean low-cost long-haul airline owned by Singapore Airlines through its subsidiary Budget Aviation Holdings.  It launched flights in June 2012 on medium and long-haul routes from Singapore, predominantly to China and India.  Initially, Scoot's fleet consisted of Boeing 777 aircraft obtained from Singapore Airlines.  The airline began to transition its fleet to Boeing 787 Dreamliner aircraft from 2015.  On 25 July 2017, Tigerair was officially merged into Scoot using Tigerair's air operator's certificate (AOC) but retaining the 'Scoot' brand.  With the change of AOC, the airline's IATA code was changed from TZ to TR, previously used by Tigerair.  Its head office is at Singapore Changi Airport.
+
+Singapore Airlines Cargo: Singapore Airlines Cargo (abbreviated as SIA Cargo) is a cargo airline based in Singapore.  It is a subsidiary of Singapore Airlines and was incorporated in 2001.  SIA Cargo operates seven dedicated freighter aircraft and also manages the bellyhold of all NokScoot, Singapore Airlines, Scoot and SilkAir aircraft.  Its head office is on the fifth floor of the SATS Airfreight Terminal 5 at Singapore Changi Airport.
+
+Singapore Flying College: The Singapore Flying College (Abbreviation: SFC) is a flight school based in Singapore.  Established in 1988 under the Singapore Airlines Group, it is the training school for ab-initio cadet pilots with Singapore Airlines, SilkAir and Singapore Airlines Cargo.
+
+Airbus A300: The Airbus A300 is a wide-body twin-engine jet airliner that was developed and manufactured by Airbus.  Formally announced in 1969 and first flying in October 1972, it holds the distinction of being the world's first twin-engined widebody airliner; it was also the first product of Airbus Industrie, a consortium of European aerospace manufacturers, now a subsidiary of Airbus.  The A300 can typically seat 266 passengers in a two-class layout, with a maximum range of 4070 nmi when fully loaded, depending on model.
+
+Singapore Airlines Cargo destinations: Singapore Airlines Cargo freighters serve 19 destinations in 13 countries as of April 2017.  As SIA Cargo also manages the cargo holds of all Singapore Airlines, SilkAir, Scoot and NokScoot aircraft, the company additionally offers cargo product services to all destinations on the Singapore Airlines Group network.
+
+Singapore Airlines fleet: The Singapore Airlines fleet features exclusively wide-body aircraft from four aircraft families: the Boeing 777, Airbus A380, Airbus A350, and the Airbus A330.  As of 31 August 2017, there were 110 aircraft registered in the Singapore Airlines fleet.
+
+Airbus A320 family: The Airbus A320 family consists of short- to medium-range, narrow-body, commercial passenger twin-engine jet airliners manufactured by Airbus.  The family includes the A318, A319, A320 and A321, as well as the ACJ business jet.  The A320s are also named A320ceo (current engine option) after the introduction of the A320neo.  Final assembly of the family takes place in Toulouse, France, and Hamburg, Germany.  A plant in Tianjin, China, has also been producing aircraft for Chinese airlines since 2009, while a final assembly facility in Mobile, Alabama, United States, delivered its first A321 in April 2016.  The aircraft family can accommodate up to 220 passengers and has a range of 3100 to , depending on model.
+
+Airbus A330: The Airbus A330 is a medium- to long-range wide-body twin-engine jet airliner made by Airbus.  Versions of the A330 have a range of 5000 to and can accommodate up to 335 passengers in a two-class layout or carry 70 t of cargo.
+
+List of Airbus A330 operators: The Airbus A330 is a wide-body twin-engine jet airliner made by Airbus.  Versions of the A330 have a range of 7400 to and can accommodate up to 335 passengers in a two-class layout or carry 70 t of cargo.
+
+Question: The Singapore Airlines fleet features aircraft from this aircraft family that have a range of 5000 to and can accommodate up to how many passengers in a two-class layout 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "aircraft_family": {
+      "type": "string",
+      "description": "The name of the aircraft family."
+    },
+    "range_nmi": {
+      "type": "string",
+      "description": "The range of the aircraft family in nautical miles."
+    },
+    "passenger_capacity_two_class": {
+      "type": "integer",
+      "description": "The maximum number of passengers the aircraft can accommodate in a two-class layout."
+    }
+  },
+  "required": [
+    "aircraft_family",
+    "range_nmi",
+    "passenger_capacity_two_class"
+  ],
+  "additionalProperties": false
+}

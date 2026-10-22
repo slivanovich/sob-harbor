@@ -1,0 +1,26 @@
+{
+  "person_name": "Rosie O'Donnell",
+  "nationality": "American",
+  "occupation_types": [
+    "comedian",
+    "actress",
+    "author",
+    "television personality",
+    "magazine editor",
+    "celebrity blogger",
+    "lesbian rights activist",
+    "television producer"
+  ],
+  "has_been_magazine_editor": true,
+  "video_blog_details": {
+    "blog_name": "JaHeRo",
+    "blog_platform": "website",
+    "blog_url_part": "Rosie.com",
+    "blog_purpose": "answering fans questions, giving behind the scenes information and serving as a video diary",
+    "blog_creators": [
+      "Rosie O'Donnell",
+      "Helene Macaulay",
+      "Janette Barber"
+    ]
+  }
+}

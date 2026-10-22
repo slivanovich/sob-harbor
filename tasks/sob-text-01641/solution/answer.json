@@ -1,0 +1,15 @@
+{
+  "person_name": "Chadwick Lee \"Chad\" Bradford",
+  "person_role": "former Major League Baseball (MLB) relief pitcher",
+  "author_name": "Michael Lewis",
+  "book_details": {
+    "title": "Moneyball: The Art of Winning an Unfair Game",
+    "publication_year": 2003,
+    "subject": "the Oakland Athletics baseball team and its general manager Billy Beane"
+  },
+  "film_adaptation": {
+    "exists": true,
+    "release_year": 2011,
+    "actor_playing_person": "Casey Bond"
+  }
+}

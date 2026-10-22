@@ -1,0 +1,14 @@
+{
+  "genus_comparison": {
+    "first_genus": {
+      "name": "Galanthus",
+      "species_count": 20
+    },
+    "second_genus": {
+      "name": "Rhodanthemum",
+      "species_count_description": "10 or 15"
+    }
+  },
+  "genus_with_more_species": "Galanthus",
+  "comparison_summary": "Galanthus has about 20 species, while Rhodanthemum has 10 or 15 species, making Galanthus the genus with more species."
+}

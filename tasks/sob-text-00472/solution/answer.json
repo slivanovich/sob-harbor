@@ -1,0 +1,12 @@
+{
+  "player_name": "David Pear",
+  "super_bowl_details": {
+    "super_bowl_identifier": "Super Bowl XV",
+    "season_year": 1980,
+    "winning_team": "Oakland Raiders",
+    "losing_team": "Philadelphia Eagles",
+    "winning_score": 27,
+    "losing_score": 10
+  },
+  "player_team_for_super_bowl_win": "Oakland Raiders"
+}

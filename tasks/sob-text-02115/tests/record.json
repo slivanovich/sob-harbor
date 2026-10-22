@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "record_id": "f516fce4f0a889a486def0a4ecdaa2ba1e6b11f6774d5025d7b0704213ab7e52",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac4453d5542991943173958",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Voxtrot",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Nerf Herder: Nerf Herder is an American rock band from Santa Barbara, California, formed in 1994 by Parry Gripp (vocals, guitar), Charlie Dennis (bass) and Steve Sherlock (drums).  They describe themselves as a \"geek rock\" band, and are known for simplistic modern punk-style songs with frequently humorous, juvenile, and pop-culture-referencing lyrics.\n\nCaptain Everything!: Captain Everything!  are a punk band from Watford, United Kingdom.  They met at Parmiter's School.  Formed in 1998, the band play high tempo pop-punk, which was branded \"Bubblegum Thrash\".  Renowned for their heavy touring schedule, they have played all over the UK and Europe, touring with bands such as The Vandals, Capdown, and Nerf Herder.  They have also toured in Russia, Canada and Japan.  They were part of the roster of London punk label Household Name Records.\n\nHow to Meet Girls: How to Meet Girls is the follow-up to Nerf Herder's self-titled release.  The album was released in 2000 on Honest Don's Records.  The track \"Courtney\" was written about Courtney Love, containing humorous references to her life.  Likewise, \"Jonathan\" is based on the life of Jonathan Richman, and contains references to his lyrics.\n\nNerf Herder (album): Nerf Herder is the eponymous debut album by Nerf Herder, originally released in November 1996 and produced by Joey Cape and Ryan Greene.\n\nNerf Herder IV: Nerf Herder IV is the fourth studio album by the rock band Nerf Herder.  It was released in 2008 through Oglio Records.\n\nLinus of Hollywood: Kevin Dotson (born March 4, 1973), better known by his stage name Linus of Hollywood, is an American singer, songwriter, multi-instrumentalist, and record producer.  The stage name comes from his early days in Los Angeles, where he would frequently wear striped shirts similar to the Peanuts character Linus van Pelt.  He is currently a member of Nerf Herder and comedy duo Jarinus.\n\nOglio Records: Oglio Records is an American record company started in 1993 by Carl Caprioglio.  They are well known for issuing compilations of rare 1980's modern rock and new wave songs, many of which were previously unreleased on CD.  In addition to releasing new material by artists such as BigBang, Nerf Herder and Wesley Willis, the label has also re-released albums by artists such as Brian Wilson and Barnes & Barnes.  Oglio Entertainment also releases comedy CDs by comedians such as Jackie Martling and George Lopez.\n\nParry Gripp: Parry Gripp (born September 22, 1967 in Santa Barbara, California) is a singer-songwriter who is the lead vocalist and guitarist for the pop punk band Nerf Herder.\n\nVoxtrot: Voxtrot was an indie pop band from Austin, Texas, USA.  Their first recordings were released in 2003 and their final shows were in June 2010.\n\nJustin Fisher (musician): Justin Fisher is an American born bassist most well known for being the bassist in Nerf Herder, touring bassist for The Rentals and lead singer for Psoma.  Fisher also co-founded Rivers Cuomo's first band Avant Garde,",
+    "question": "Which is a pop band, Nerf Herder or Voxtrot?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_type": {
+          "type": "string",
+          "description": "The type of question being answered, related to band genre identification."
+        },
+        "bands_evaluated": {
+          "type": "array",
+          "description": "A list of bands considered in the question, with their mentioned genres.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "band_name": {
+                "type": "string",
+                "description": "The name of the band."
+              },
+              "genres_mentioned": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Genres associated with the band in the context."
+              }
+            },
+            "required": [
+              "band_name",
+              "genres_mentioned"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "identified_pop_band": {
+          "type": "string",
+          "description": "The name of the band identified as a pop band."
+        },
+        "is_nerf_herder_pop_band": {
+          "type": "boolean",
+          "description": "Indicates if Nerf Herder is classified as a pop band based on the context."
+        },
+        "is_voxtrot_pop_band": {
+          "type": "boolean",
+          "description": "Indicates if Voxtrot is classified as a pop band based on the context."
+        }
+      },
+      "required": [
+        "question_type",
+        "bands_evaluated",
+        "identified_pop_band",
+        "is_nerf_herder_pop_band",
+        "is_voxtrot_pop_band"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_type": "band_genre_identification",
+      "bands_evaluated": [
+        {
+          "band_name": "Nerf Herder",
+          "genres_mentioned": [
+            "rock band",
+            "geek rock",
+            "punk-style",
+            "pop punk band"
+          ]
+        },
+        {
+          "band_name": "Voxtrot",
+          "genres_mentioned": [
+            "indie pop band"
+          ]
+        }
+      ],
+      "identified_pop_band": "Voxtrot",
+      "is_nerf_herder_pop_band": false,
+      "is_voxtrot_pop_band": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

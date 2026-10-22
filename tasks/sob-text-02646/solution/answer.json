@@ -1,0 +1,11 @@
+{
+  "movie_title": "Zanjeer",
+  "production_house": "Flying Turtle Films",
+  "director_producer": "Anil V. Kumar",
+  "co_star_1": "Priyanka Chopra",
+  "co_star_2": {
+    "actor_name": "Ram Charan",
+    "primary_cinema_industry": "Telugu cinema",
+    "is_entrepreneur": true
+  }
+}

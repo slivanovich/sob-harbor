@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "record_id": "894bce9e481785873692ba084f80ceaba40cad08348b0542595968748855a0fa",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8a80d55542996c9b8d5f0e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "tennis player",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2012 Trophée des Alpilles – Doubles: Pierre-Hugues Herbert and Édouard Roger-Vasselin were the defending champions but Roger-Vasselin decided not to participate. <br>\n\n2015 French Open – Men's Doubles: Julien Benneteau and Édouard Roger-Vasselin were the defending champions, but Benneteau withdrew from the tournament because of a sports hernia.  Roger-Vasselin played alongside Guillermo García-López, but lost in the third round to Ivan Dodig and Marcelo Melo.\n\n2013 Moselle Open – Doubles: Nicolas Mahut and Édouard Roger-Vasselin were the defending champions, but chose not to participate together.  Roger-Vasselin teamed up with Rohan Bopanna, but lost in the semifinals to Johan Brunström and Raven Klaasen. <br>\n\n2016 Western &amp; Southern Open – Men's Doubles: Daniel Nestor and Édouard Roger-Vasselin were the defending champions, but chose not to compete together.  Nestor played alongside Vasek Pospisil, but lost in the semifinals to Ivan Dodig and Marcelo Melo.  Roger-Vasselin teamed up with Julien Benneteau, but lost in the first round to Milos Raonic and Nenad Zimonjić.\n\nSergi Bruguera: Sergi Bruguera i Torner (] ; born 16 January 1971) is a former professional tennis player from Catalonia, Spain.  He won consecutive men's singles titles at the French Open in 1993 and 1994.  As of 2016, he has won the most Grand Slam titles for someone not inducted to the International Tennis Hall of Fame.\n\n2016 Moselle Open – Doubles: Łukasz Kubot and Édouard Roger-Vasselin were the defending champions, but Kubot chose not to participate this year.  Roger-Vasselin played alongside Julien Benneteau, but lost in the first round to Marcus Daniell and Marcelo Demoliner.\n\n2014 Hall of Fame Tennis Championships – Doubles: Nicolas Mahut and Édouard Roger-Vasselin were the defending champions, but Roger-Vasselin chose not to participate.  Mahut played alongside Sergiy Stakhovsky, but lost in the semifinals to Jonathan Erlich and Rajeev Ram. <br>\n\nÉdouard Roger-Vasselin: Édouard Roger-Vasselin (] ; born 28 November 1983) is a male tennis player from France.  He won the men's doubles title at Roland Garros in 2014, partnering Julien Benneteau.  He is the son of 1983 French Open semifinalist Christophe Roger-Vasselin.\n\n2010 Challenger DCNS de Cherbourg – Doubles: Arnaud Clément and Édouard Roger-Vasselin were the defending champions, but they elected to defend their title with different partners.Clément partnered up with David Guez, but they withdrew before their quarterfinal match against Harsh Mankad and Adil Shamasdin. Roger-Vasselin partnered up with Nicolas Mahut and they won in the final 6–2, 6–4, over Mankad and Shamasdin.\n\n2011 BNP Paribas Primrose Bordeaux – Doubles: Nicolas Mahut and Édouard Roger-Vasselin were the defending champions; however, Roger-Vasselin chose not to compete this year.",
+    "question": "Édouard Roger-Vasselin and Sergi Bruguera, has which occupation?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "individuals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "occupation": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "occupation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "shared_occupation": {
+          "type": "string",
+          "description": "The common occupation shared by all individuals mentioned."
+        },
+        "occupation_category": {
+          "type": "string",
+          "description": "A broader category for the occupation."
+        }
+      },
+      "required": [
+        "individuals",
+        "shared_occupation",
+        "occupation_category"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "individuals": [
+        {
+          "name": "Édouard Roger-Vasselin",
+          "occupation": "male tennis player"
+        },
+        {
+          "name": "Sergi Bruguera",
+          "occupation": "former professional tennis player"
+        }
+      ],
+      "shared_occupation": "tennis player",
+      "occupation_category": "sports professional"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

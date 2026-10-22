@@ -1,0 +1,14 @@
+{
+  "person_married_to_nominee": {
+    "name": "Madeline Lee Gilford",
+    "role": "actress and social activist"
+  },
+  "academy_award_nominee": {
+    "name": "Jack Gilford",
+    "award_category": "Best Supporting Actor"
+  },
+  "nominated_movie": {
+    "title": "Save the Tiger",
+    "year": 1973
+  }
+}

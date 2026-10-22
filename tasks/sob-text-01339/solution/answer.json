@@ -1,0 +1,15 @@
+{
+  "question_entity": "band debut album year",
+  "bands_compared": [
+    {
+      "band_name": "The Telescopes",
+      "debut_album_year": 1989
+    },
+    {
+      "band_name": "Empire of the Sun",
+      "debut_album_year": 2008
+    }
+  ],
+  "answer_band_name": "The Telescopes",
+  "debut_year_matched": 1989
+}

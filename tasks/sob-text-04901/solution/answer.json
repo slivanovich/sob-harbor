@@ -1,0 +1,9 @@
+{
+  "club_name": "F.C. United of Manchester",
+  "club_location_city": "Manchester",
+  "club_location_town": "Moston",
+  "promotion_details": {
+    "number_of_successive_promotions": 3,
+    "comparison_club_name": "Kings Langley F.C."
+  }
+}

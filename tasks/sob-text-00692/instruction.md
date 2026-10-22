@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Leslie Howard (actor): Leslie Howard (born Leslie Howard Steiner, 3 April 18931 June 1943) was an English stage and film actor, director and producer.  Howard also wrote many stories and articles for "The New York Times", "The New Yorker" and "Vanity Fair".  Howard was one of the biggest box-office draws and movie idols of the 1930s but is probably best remembered for playing Ashley Wilkes in "Gone with the Wind" (1939).  Howard had movie roles in many other notable films, including: "Berkeley Square" (1933), "Of Human Bondage" (1934), "The Scarlet Pimpernel" (1934), "The Petrified Forest" (1936), "Pygmalion" (1938), "Intermezzo" (1939), ""Pimpernel" Smith" (1941) and "The First of the Few" (1942), receiving two nominations for the Academy Award for Best Actor.
+
+George Raft: George Raft (born George Ranft; September 26, 1901 – November 24, 1980) was an American film actor and dancer identified with portrayals of gangsters in crime melodramas of the 1930s and 1940s.  A stylish leading man in dozens of movies, today Raft is mostly known for his gangster roles in the original "Scarface" (1932), "Each Dawn I Die" (1939), and Billy Wilder's 1959 comedy "Some Like it Hot", as a dancer in "Bolero" (1934), and a truck driver in "They Drive by Night" (1940).
+
+Ammy Virk: Ammy Virk (Amninderpal Singh Virk) is a Punjabi singer and film actor.  He started his singing career with a single track which proved to be a very popular track.  Later on he did other songs like ‘Yaar Amli’ and ‘jatt da sahara’ which popularized him in Punjabi music industry all over the world.  His first album ‘Jattizm’ was released in 2013 which got the best album of the year award in PTC music awards.  He also worked in the super hit Punjabi movie ‘Angrej’ with the famous singer and actor Amrinder Gill.
+
+Calvin Lockhart: Calvin Lockhart (born Bert Cooper; October 18, 1934March 29, 2007) was a Bahamian–American stage and film actor.  He was best known for his role as Biggie Smalls, a big-time gangster in the 1975 Warner Bros. film "Let's Do It Again" alongside Sidney Poitier, Bill Cosby and Jimmie Walker.
+
+Amitabh Bachchan filmography: Amitabh Bachchan is an Indian film actor, playback singer, producer and television personality.  He made his acting debut in 1969 with "Saat Hindustani", and narrated Mrinal Sen's "Bhuvan Shome" (1969).  He later appeared as Dr. Bhaskar Banerjee in Hrishikesh Mukherjee's "Anand" (1971), for which he won the Filmfare Award for Best Supporting Actor.  In 1973, Bachchan played the role of Inspector Vijay Khanna in Prakash Mehra's action film "Zanjeer".  He has since appeared in several films with the character name "Vijay".  During the same year, he appeared in "Abhimaan" and "Namak Haraam".  For the latter, he received the Filmfare Award for Best Supporting Actor.  Two years later he appeared along with Shashi Kapoor, in Yash Chopra's "Deewar", which earned him the Filmfare Award for Best Actor nomination.  He was cited as the "angry young man" for his roles in "Deewaar" and "Zanjeer".  Later he starred in Ramesh Sippy's "Sholay" (1975), which is considered to be one of the greatest Indian films of all time.  After appearing in the romantic drama "Kabhie Kabhie" (1976), Bachchan starred in Manmohan Desai's action comedy "Amar Akbar Anthony" (1977).  He won the Filmfare Award for Best Actor for his performance in the latter.  He then played dual roles of Don and Vijay in "Don" (1978).
+
+Bo Derek: Bo Derek (born Mary Cathleen Collins; November 20, 1956) is an American film and television actress, movie producer, and model perhaps best known for her breakthrough role in the 1979 film "10".  The film also launched a bestselling poster for Derek in a swimsuit, and subsequently she became one of the most popular sex symbols of the 1980s.  She was directed by husband John Derek in "Tarzan, the Ape Man" (1981), "Bolero" (1984) and "Ghosts Can't Do It" (1989), none of which were critically well received.  A widow since 1998, she lives with actor John Corbett.  She makes occasional film, television, and documentary appearances.
+
+Walter Murphy: Walter Anthony Murphy, Jr. (born December 19, 1952) is an American composer, arranger, pianist, musician, songwriter, and record producer.  He is best known for the instrumental "A Fifth of Beethoven", a disco adaptation of Beethoven's Fifth Symphony which topped the charts in 1976 and was featured on the "Saturday Night Fever" soundtrack.  Further classical–disco fusions followed, such as "Flight '76", "Rhapsody in Blue", "Toccata and Funk in 'D' Minor", "Bolero", and "Mostly Mozart", but were not as successful.
+
+Robin Padilla: Robinhood Ferdinand "Robin" Cariño Padilla or Abdulaziz Padilla (born November 23, 1969) is a Filipino film director, screenwriter, producer, and actor.  Padilla is both a matinee idol and cultural icon; he is sometimes referred to as "James Dean" and dubbed as the "Bad Boy" of Philippine cinema for portraying 'protagonist gangster roles' in his films "Anak ni Baby Ama", "Grease Gun Gang", "Bad Boy 1", and "Bad Boy 2".  Padilla is active in television programs, having played important roles in "Asian Treasures", "Joaquin Bordado", "Totoy Bato", "Guns and Roses", and "Toda Max".
+
+Loan Shark (film): Loan Shark is a 1952 film noir directed by Seymour Friedman and starring George Raft, Dorothy Hart and Paul Stewart.
+
+Nandhu: Nandalal Krishnamoorthy better known by his stage name Nandu is an Indian film actor primarily working in Malayalam films.  Although he has been in the industry for more than 20 years, he is acclaimed for his performance in Mohanlal' s "Spirit" directed by Ranjith.  He was also seen in many Priyadarsan films.  He received SIIMA award for best supporting actor,for the movie 'Spirit'.
+
+Question: What part was played by the American film actor who starred in Loan Shark from 1952 and is best known for his gangster roles in the 1934 movie 'Bolero'?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the American film actor."
+    },
+    "actor_nationality": {
+      "type": "string",
+      "description": "The nationality of the actor."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film in which the specified part was played."
+    },
+    "film_year": {
+      "type": "integer",
+      "description": "The release year of the film."
+    },
+    "role_played": {
+      "type": "string",
+      "description": "The specific part played by the actor in the film."
+    },
+    "actor_known_for_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of types of roles the actor is best known for."
+    }
+  },
+  "required": [
+    "actor_name",
+    "actor_nationality",
+    "film_title",
+    "film_year",
+    "role_played",
+    "actor_known_for_roles"
+  ],
+  "additionalProperties": false
+}

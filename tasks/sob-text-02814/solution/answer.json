@@ -1,0 +1,21 @@
+{
+  "opera_comparison": [
+    {
+      "opera_title": "Punch and Judy",
+      "writing_period": "1966 to 1967",
+      "start_year": 1966,
+      "end_year": 1967
+    },
+    {
+      "opera_title": "Einstein on the Beach",
+      "writing_period": "spring, summer and fall of 1975",
+      "start_year": 1975,
+      "end_year": 1975
+    }
+  ],
+  "earlier_opera": {
+    "title": "Punch and Judy",
+    "completion_year": 1967
+  },
+  "comparison_question": "Which opera was written earlier, Punch and Judy or Einstein on the Beach?"
+}

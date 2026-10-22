@@ -1,0 +1,14 @@
+{
+  "mountains": [
+    {
+      "name": "Malangutti Sar",
+      "elevation_meters": 7207
+    },
+    {
+      "name": "Dhaulagiri I",
+      "elevation_meters": 8167
+    }
+  ],
+  "has_common_elevation": false,
+  "common_elevation_meters": []
+}

@@ -1,0 +1,14 @@
+{
+  "first_person": {
+    "name": "Cheick Kongo",
+    "birth_date": "May 17, 1975",
+    "birth_year": 1975
+  },
+  "second_person": {
+    "name": "Alexander Volkov",
+    "birth_date": "October 24, 1988",
+    "birth_year": 1988
+  },
+  "person_born_earlier_name": "Cheick Kongo",
+  "year_difference": 13
+}

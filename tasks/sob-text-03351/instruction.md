@@ -1,0 +1,124 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+MyUniverse: MyUniverse (est. 2012) is an online money management platform offered through Aditya Birla MyUniverse Limited (ABMUL), under Aditya Birla Financial Services Group for the Aditya Birla Group.  It is an integrated online money management platform, offering customers an opportunity to manage their finances.  It operates from its head office located in the financial capital of India - Mumbai, Maharashtra and caters primarily to Indian customers.
+
+CK Birla Group: The CK Birla Group is an Indian conglomerate named after Chandra Kant Birla, headquartered in the Birla Tower in Barakhamba road, New Delhi, India.  Earlier the group was led by eminent industrialists - BM Birla and GD Birla (Padma Vibhushan).  The Group includes leading brands such as Orient Electric, NBC Bearings, Charminar, Aerocon, BM Birla Heart Research Centre CMRI Hospital, Birla Institute of Technology, Mesra and Caterpillar Dealership represented by Gmmco.
+
+Kumar Mangalam Birla: "Kumar Mangalam Birla"' (born 14 June 1967) is an Indian industrialist and the chairman of the Aditya Birla Group, one of the largest conglomerate corporations in India.  He is also the chancellor of the Birla Institute of Technology & Science.
+
+Aditya Birla Group: The Aditya Birla Group is an Indian multinational conglomerate, headquartered in Worli, Mumbai, India.  It operates in 40 countries with more than 120,000 employees worldwide.  The group was founded by Seth Shiv Narayan Birla in 1857.  The group interests in sectors such as viscose staple fibre, metals, cement (largest in India), viscose filament yarn, branded apparel, carbonblack, chemicals, fertilisers, insulators, financial services, telecom, BPO and IT services.
+
+Aditya Birla Memorial Hospital: Aditya Birla Memorial Hospital (ABMH) is a multi-speciality medical centre located at Pimpri-Chinchwad in the west Indian state of Maharashtra.  The hospital is named for the late Mr. Aditya Birla.  Mrs. Rajashree Birla, chairperson of the Aditya Birla Foundation which is funding the medical centre, is steering this project.It is Maharashtra's First Joint Commission International (JCI) and National Accreditation Board for Hospital (NABH) accredited hospital, and also India's First HACCP and ISO: 22000:2005 certified hospital.
+
+Aditya Birla Public School, Renukoot: Aditya Birla Public School, Renukoot (ABPS is a school in Renukoot, Uttar Pradesh state of India.  It is a branch of the Aditya Birla Group.
+
+Ganga Prasad Birla: Ganga Prasad Birla (2 August 1922 – 5 March 2010), born in Benares was an Indian industrialist.  He was the grandson of Baldeo Das Birla, the son of Brij Mohan Birla and the father of CK Birla.  In 1940 becomes the first graduate in the Birla family.  He joined the board of Orient Paper & Industries in 1942 and later became its chairman in 1957.  He began his innings in group flagship, Hindustan Motors in 1969 and became its chairman in 1982.  He also founded Hyderabad Industries Limited and many academic institutions such as Birla Institute of Technology, Birla Archaeological and Cultural Research Institute, Modern High School for Girls, Kolkata, and hospitals such as BM Birla Heart Research Institute and Calcutta Medical Research Institute.  He built temples in Hyderabad, Jaipur and Bhopal, and supported the renovation of places of historical, architectural and religious importance.  He gradually pulled out of active business life after his second heart attack in 1981.  He still came to office so long as he could, but responsibilities had long been farmed out to son CK Birla.
+
+Dhirubhai Ambani International School: The Dhirubhai Ambani International School (DAIS) is a private co-educational LKG-12 day school in Mumbai, Maharashtra, India, built by Reliance Industries, named after the late patriarch of the conglomerate, Dhirubhai Ambani.  The school was established in 2003 and has been an IB World School since January 2003.  It offers the International Baccalaureate Program in its Diploma form.  Nita Ambani, wife of Mukesh Ambani is the chairperson of the school.
+
+Aditya Birla World Academy: Aditya Birla World Academy (ABWA) is a private co-educational LKG-12 day school in Mumbai in the Indian state of Maharashtra built by The Aditya Birla Group in 2008~2009.  It was named after the late founder of the conglomerate, Aditya Vikram Birla.  Neerja Birla, wife of Kumar Mangalam Birla, is the school's chairperson.
+
+Indo Gulf Fertilisers: Indo Gulf Fertilisers is an Indian company which unit of Aditya Birla Nuvo Ltd based in Mumbai.  and is part of the Aditya Birla Group of companies.  It is among the largest private sector fertiliser companies in India.  The company is located at Jagdishpur, near Lucknow in Uttar Pradesh. It is one of India's best energy efficient plant.
+
+Question: Aditya Birla World Academy (ABWA) is a private co-educational LKG-12 day school in Mumbai in the Indian state of Maharashtra built by which Indian multinational conglomerate, headquartered in Worli, Mumbai, India, and the group was founded by Seth Shiv Narayan Birla in 1857?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "school_name": {
+      "type": "string",
+      "description": "The name of the school mentioned in the question."
+    },
+    "school_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "city",
+        "state",
+        "country"
+      ],
+      "additionalProperties": false
+    },
+    "builder_entity": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the conglomerate that built the school."
+        },
+        "entity_type": {
+          "type": "string",
+          "description": "The type of entity, e.g., 'multinational conglomerate'."
+        },
+        "headquarters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city",
+            "country"
+          ],
+          "additionalProperties": false
+        },
+        "founder": {
+          "type": "string",
+          "description": "The founder of the conglomerate."
+        },
+        "founding_year": {
+          "type": "integer",
+          "description": "The year the conglomerate was founded."
+        }
+      },
+      "required": [
+        "name",
+        "entity_type",
+        "headquarters",
+        "founder",
+        "founding_year"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer": {
+      "type": "string",
+      "description": "The name of the conglomerate that built the school."
+    }
+  },
+  "required": [
+    "school_name",
+    "school_location",
+    "builder_entity",
+    "final_answer"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,9 @@
+{
+  "coach_name": "Fred Brice",
+  "institution_name": "University of Maine",
+  "coaching_period": {
+    "start_year": 1921,
+    "end_year": 1940
+  },
+  "institution_established_year": 1865
+}

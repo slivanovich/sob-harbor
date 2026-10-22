@@ -1,0 +1,19 @@
+{
+  "person_a": {
+    "name": "Chuck D",
+    "birth_date": "August 1, 1960",
+    "birth_year": 1960
+  },
+  "person_b": {
+    "name": "Koshi Inaba",
+    "birth_date": "September 23, 1964",
+    "birth_year": 1964
+  },
+  "comparison_result": {
+    "earlier_born_person_name": "Chuck D",
+    "earlier_birth_year": 1960,
+    "later_born_person_name": "Koshi Inaba",
+    "later_birth_year": 1964,
+    "person_a_born_first": true
+  }
+}

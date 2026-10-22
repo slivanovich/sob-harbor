@@ -1,0 +1,14 @@
+{
+  "are_both_songwriters": true,
+  "individuals_involved": [
+    {
+      "name": "Brendon Urie",
+      "is_songwriter": true
+    },
+    {
+      "name": "Jack Evans",
+      "is_songwriter": true
+    }
+  ],
+  "reasoning": "Brendon Urie is described as an 'American singer, songwriter, musician and multi-instrumentalist'. Jack Evans is described as an 'American musician and songwriter'. Both are explicitly identified as songwriters in the context."
+}

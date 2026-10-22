@@ -1,0 +1,17 @@
+{
+  "individuals": [
+    {
+      "name": "Ike Quartey",
+      "nationality": "Ghanaian"
+    },
+    {
+      "name": "Andrew \"The Eagle\" Murray",
+      "nationality": "Guyanese"
+    }
+  ],
+  "total_individuals_identified": 2,
+  "all_nationalities": [
+    "Ghanaian",
+    "Guyanese"
+  ]
+}

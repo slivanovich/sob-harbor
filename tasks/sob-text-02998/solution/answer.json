@@ -1,0 +1,15 @@
+{
+  "actor_name": "John Alderton",
+  "character_name": "Thomas Watkins",
+  "character_type": "fictional",
+  "tv_series_details": [
+    {
+      "series_title": "Upstairs, Downstairs",
+      "country_of_origin": "British"
+    },
+    {
+      "series_title": "Thomas & Sarah",
+      "country_of_origin": "British"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "musician_1_name": "Chuck Schuldiner",
+  "musician_2_name": "Gary Cherone",
+  "played_in_same_bands": false,
+  "musician_1_bands": [
+    {
+      "band_name": "Death",
+      "role": "singer, songwriter, and guitarist"
+    },
+    {
+      "band_name": "Control Denied",
+      "role": "founder"
+    }
+  ],
+  "musician_2_bands": [
+    {
+      "band_name": "Extreme",
+      "role": "lead vocalist"
+    },
+    {
+      "band_name": "Van Halen",
+      "role": "lead vocalist"
+    },
+    {
+      "band_name": "Tribe of Judah",
+      "role": "musician"
+    }
+  ],
+  "common_bands": []
+}

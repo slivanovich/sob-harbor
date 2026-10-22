@@ -1,0 +1,15 @@
+{
+  "state_name": "Uttarakhand",
+  "environments_known_for": [
+    "Himalayas",
+    "Bhabhar",
+    "Terai"
+  ],
+  "visible_landscape_features": [
+    "lush green meadow",
+    "tall grasslands",
+    "scrub savannah",
+    "sal forests",
+    "clay rich swamps"
+  ]
+}

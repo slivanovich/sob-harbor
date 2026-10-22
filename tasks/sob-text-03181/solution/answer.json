@@ -1,0 +1,11 @@
+{
+  "person_one": {
+    "name": "Bob Woodward",
+    "profession": "author"
+  },
+  "person_two": {
+    "name": "Stanley Kunitz",
+    "profession": "poet"
+  },
+  "shared_profession": "author"
+}

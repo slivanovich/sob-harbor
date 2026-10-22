@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+New Oakland Child-Adolescent and Family Center: New Oakland Child-Adolescent and Family Center is a private, comprehensive mental health facility founded by board-certified child psychiatrist Dr. Ismail B. Sendi.  Serving the tri-county metro-Detroit area, New Oakland has been attending to the mental health and substance abuse needs of children, adolescents, adults and their families since 1990.  New Oakland focuses on providing quality based mental health care with a pro-active, preventive, and early intervention approach.  The continuum of care at New Oakland includes mental health/substance abuse outpatient treatment, psychiatric evaluation with or without medication review and management, psychological testing/evaluation and "Face to Face" State Licensed Partial Hospitalization Program care.
+
+Eagle Mountain, California: Eagle Mountain, California, is a modern-day ghost town in the California desert in Riverside County founded in 1948 by noted industrialist Henry J. Kaiser.  The town is located at the entrance of the now-defunct Eagle Mountain iron mine, once owned by the Southern Pacific Railroad, then Kaiser Steel, and located on the southeastern corner of Joshua Tree National Park.  The town's fully integrated medical care system, similar to other Kaiser operations in California, was the genesis of the modern-day Kaiser Permanente health maintenance organization.  Eagle Mountain is accessible by Riverside County Route R2, twelve miles (19 km) north of Desert Center, midway between Indio and the California/Arizona state line along Interstate 10.  The town's relative youth and brief time of abandonment make Eagle Mountain among the country's best preserved ghost towns.
+
+Spectrum Health: Spectrum Health System, commonly known as Spectrum Health, is a not-for-profit, integrated, managed care health care organization based in West Michigan.  Spectrum Health's subsidiaries include hospitals, treatment facilities, urgent care facilities, as well as physician practices that serve the western Michigan area.  Priority Health is a subsidiary health plan with nearly 795,000 members.  Spectrum Health is the largest employer in West Michigan with 25,400 staff, 3,200 physicians and advanced practice providers, including 1,400 members of the Spectrum Health Medical Group, and 2,300 volunteers.  Spectrum Health is Aa3 rated by Moody’s Investors Service, placing it among only 40 health care systems in the country to receive this high rating.  Spectrum Health was named one of the nation’s 15 Top Health Systems—and in the top five among the largest health systems—by Truven Health Analytics™ for 2017.  This is the sixth time the organization has received this recognition.  Spectrum Health System is recognized as one of the "Top 50 Integrated Health Care Networks" in the United States.
+
+Kaiser Shipyards: The Kaiser Shipyards were seven major shipbuilding yards located on the United States west coast during World War II.  Kaiser ranked 20th among U.S. corporations in the value of wartime production contracts.  The shipyards were owned by the Kaiser Shipbuilding Company, a creation of American industrialist Henry J. Kaiser, (1882-1967), who established the shipbuilding company around 1939 in order to help meet the construction goals set by the United States Maritime Commission for merchant shipping.
+
+Forensic Network: The Forensic Network (the shortened name of the Forensic Mental Health Services Managed Care Network) is one of Scotland's Managed Clinical Networks and it was established in Scotland in September 2003 by Scottish Government, in conjunction with "The Mental Health (Care and Treatment) (Scotland) Act 2003", and following a review of the State Hospital's Board for Scotland, 'The Right Place - The Right Time'.  The review stated that a Forensic Mental Health Services Network Managed Care Network should be established to address fragmentation across the Forensic Mental Health Estate, to overview the processes for determining the most effective care for mentally disordered offenders, consider wider issues surrounding patient pathways, and align strategic planning across Scotland (;).  Under the auspices of the Scottish National Health Service, the Network is multi-agency, multi-disciplinary and multi-regional, linked with Scottish Prison Service, Social Work Services, and Police, Criminal Justice agencies, the Scottish Government and Carers, amongst others.  The Scottish Ministers invited Andreana Adamson, Chief Executive of the State Hospital, to lead on its development:
+
+Nicholas Cummings: Nicholas Andrew Cummings (born July 25, 1924) is an American psychologist and author.  Former president of the American Psychological Association (1979) and Chief of Mental Health with the Kaiser Permanente Health Maintenance Organization (1959-1979), he co-founded with his wife the Nicholas & Dorothy Cumming Foundations, Inc. in 1994.  The Foundation is dedicated to ensuring routine healthcare includes doctoral psychotherapy.  Cummings has authored or co-authored a number of books.  He was born in Salinas, California.
+
+Primary Care Behavioral health: Primary Care Behavioral Health Consultation model (PCBH) is a psychological approach to population-based clinical health care that is simultaneously co-located, collaborative, and integrated within the primary care clinic.  The goal of PCBH is to improve and promote overall health within the general population.  This approach is important because approximately half of all patients in primary care present with psychiatric comorbidities, and 60% of psychiatric illness is treated in primary care.  Primary Care practice has traditionally adopted a generalist approach whereby physicians are trained in the medical model and solutions to problems typically involve medications, procedures, and advice.  Appointment times are short, with the goal of seeing a large number of patients in a day.  Many patients present with mental health care needs whose symptomology may overlap with medical disorders and which may exacerbate, complicate, or masquerade as physical symptoms.  In addition, many medical problems present with associated psychological sequelae (e.g. stress, emotional reactions, dysfunctional lifestyle behaviors), that are amenable to change, through behavioral intervention, that can improve outcomes for these health problems.  Over 50% of medical visits to primary care clinics today are related to chronic medical conditions (e.g. chronic pain, diabetes, COPD, hypertension, obesity).  As we learn more and more about the contributing factors to the development and maintenance of these medical problems, there is growing evidence that the PCBH model affords us the opportunity for early identification and behavioral/medical intervention that can prevent some acute problems from becoming chronic health care problems.  Behavioral Health Consultants (BHCs) work side-by-side with all members of the clinical care team (including primary care providers (PCPs) and nursing staff) to enhance preventive and clinical care for mental health problems that have traditionally been treated solely by physicians.  The role of the BHC is to facilitate systemic change within primary care that facilitates a multidisciplinary approach both from a treatment and reimbursement standpoint.  BHCs typically collaborate with physicians to develop treatment plans, monitor patient progress, and flexibly provide care to meet patients’ changing needs In this review the terms Primary Care Behavioral Health Consultation and Behavioral Health Consultation will be used interchangeably.
+
+Kaiser Permanente: Kaiser Permanente ( ; KP) is an integrated managed care consortium, based in Oakland, California, United States, founded in 1945 by industrialist Henry J. Kaiser and physician Sidney Garfield.  Kaiser Permanente is made up of three distinct but interdependent groups of entities: the Kaiser Foundation Health Plan, Inc. (KFHP) and its regional operating subsidiaries; Kaiser Foundation Hospitals; and the regional Permanente Medical Groups.  As of 2014, Kaiser Permanente operates in eight states and the District of Columbia, and is the largest managed care organization in the United States.
+
+Bernard Tyson: Bernard Tyson is the current CEO of integrated managed care consortium Kaiser Permanente.  He was previously president and chief operating officer of the company for two years.  His promotion was announced November 5, 2012, and he is the first African American to hold that position.  He was named the third most influential person in health care by Modern Healthcare in 2015.  In 2014, Modern Healthcare named him the second most influential person in health care.
+
+Community mental health service: Community mental health services (CMHS), also known as Community Mental Health Teams (CMHT) in the United Kingdom, support or treat people with mental disorders (mental illness or mental health difficulties) in a domiciliary setting, instead of a psychiatric hospital (asylum).  The array of community mental health services vary depending on the country in which the services are provided.  It refers to a system of care in which the patient's community, not a specific facility such as a hospital, is the primary provider of care for people with a mental illness.  The goal of community mental health services often includes much more than simply providing outpatient psychiatric treatment.
+
+Question: In what city and state was the Chief of Mental Health (1959-1979) of the integrated managed care consortium based in Oakland, California, United Stated founded in 1945 by industrialist Henry J. Kaiser and physician Sidney Garfield, born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the individual."
+    },
+    "person_role": {
+      "type": "string",
+      "description": "The role held by the individual within the organization."
+    },
+    "role_start_year": {
+      "type": "integer",
+      "description": "The start year of the person's role."
+    },
+    "role_end_year": {
+      "type": "integer",
+      "description": "The end year of the person's role."
+    },
+    "organization_name": {
+      "type": "string",
+      "description": "The name of the organization."
+    },
+    "organization_founding_year": {
+      "type": "integer",
+      "description": "The year the organization was founded."
+    },
+    "organization_founders": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Names of the founders of the organization."
+    },
+    "birth_city": {
+      "type": "string",
+      "description": "The city where the individual was born."
+    },
+    "birth_state": {
+      "type": "string",
+      "description": "The state where the individual was born."
+    }
+  },
+  "required": [
+    "person_name",
+    "person_role",
+    "role_start_year",
+    "role_end_year",
+    "organization_name",
+    "organization_founding_year",
+    "organization_founders",
+    "birth_city",
+    "birth_state"
+  ],
+  "additionalProperties": false
+}

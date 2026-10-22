@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "80bc313413689973a44e9e63aeeaef74e428aeefaefa4da680a95c295199f8b6",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7b5f105542992d025e682d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Jon-Erik Hexum",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Self Inflicted (album): Self Inflicted is the fourth studio album by American deathcore band Chelsea Grin.\n\nBox (Guided by Voices album): Box is the first box set by indie rock band Guided by Voices.  The set was released in 1995 on CD and vinyl.  It collects their first four limited-release albums \"Devil Between My Toes\", \"Sandbox\", \"Self Inflicted Aerial Nostalgia\" and \"Same Place the Fly Got Smashed\", as well as an LP of previously unavailable material, \"King Shit and the Golden Boys\".\n\n22 mm grenade: The 22mm rifle grenade is inserted over the firing mechanism on the front of rifles that are equipped with the appropriate spigot-type launcher, either in the form of an integral flash suppressor or a detachable adapter.  As with most rifle grenades, it is propelled by a blank cartridge inserted into the chamber of the rifle.  A 22mm grenade can range from powerful anti-tank rounds to simple finned tubes with a fragmentation hand grenade attached to the end.  The \"22mm\" refers to the diameter of the base tube which fits over the spigot of the launcher, not the diameter of the warhead section, which is much wider.  This differs from conventional launched grenades, such as the US 40mm grenade, which are measured at their widest point, since they are launched out of gun-like barrels.  Thus, a 22mm rifle grenade can easily be as powerful as a 40mm grenade, in spite of the seemingly smaller size.  A 22mm grenade is launched on the spigot principle, like a spigot mortar; a tube slightly under 22mm is attached to the end of a rifle barrel to serve as the spigot, and left open on the muzzle end so bullets can be fired through it.  The grenade consists of a heavy warhead section of 30-50mm in diameter for the nose, and a lightweight hollow tube for the tail section.  The inner diameter of this tube is 22mm, and fits over the tube attachment on the muzzle with only a small amount of play, to create a good gas seal and promote accuracy.  There are typically a series of rings machined around the perimeter of the tube, which serve as baffles to slow any escaping high-pressure gases created on launch until the grenade is clear of the launcher, and sometimes a metal o-ring to create a final seal and to lock the grenade in place until pressure has risen high enough.\n\nJon-Erik Hexum: Jon-Erik Hexum (November 5, 1957 – October 18, 1984) was an American model and actor.  He died as a result of an accidental self-inflicted blank cartridge gunshot to the head on the set of the CBS television series \"Cover Up\", in which he played the male lead.\n\nHypocrisy (album): Hypocrisy is the sixth studio album by the Swedish death metal band Hypocrisy, released in 1999.  The digipak version of the album includes the bonus track, \"Self Inflicted Overload\".  The Japanese release of the album includes three bonus tracks: \"Self Inflicted Overload\", a demo version of \"Elastic Inverted Visions\" and \"Falling Through the Ground\".\n\nENERGA anti-tank rifle grenade: The Energa anti-tank rifle grenade is a rifle-launched anti-tank grenade that is propelled by a ballistite-filled blank cartridge.  The name \"Energa\" comes from the firm in Liechtenstein that designed it, the \"Anstalt für die ENtwicklung von ERfindungen und Gewerblichen Anwendungen\", based in Vaduz.\n\nType 9 wooden anti-tank mine: The Type 9 wooden anti-tank mine was an Italian bar type anti-tank mine used during World War II in North Africa.  The box consisted of a lower section, containing the large warhead and fuzes and an upper, overlapping lid with two pivoting wooden covers that sat over the two fuzes.  The fuzes were designed as a pivoting lever, and downward motion of the lid caused the lever to pull back a striker, compressing a striker spring until the pivoting action moved the lever enough to release the striker.  The striker then impacted a blank cartridge, firing it, triggering a detonator charge, followed by the main charge.\n\nKalashnikov grenade launcher: All AK-47 type rifles can mount a cup-type grenade-launcher that fires standard RGD-5 Soviet hand-grenades.  The soup-can shaped launcher is screwed onto to AK-47’s muzzle.  To fire, first insert a standard RGD-5 hand-grenade into the launcher and then remove the safety pin.  Second, insert a special blank cartridge into the rifle's chamber.  Third, place the butt-stock of the rifle on the ground and fire from this position.  The maximum effective range is approximately 150 meters.  This cup-type launcher can also be used to launch tear-gas and riot control grenades.\n\nType 2 rifle grenade launcher: The Type 2 rifle grenade launcher was an attachment for the Japanese Type 38 and Type 99 rifles that allowed them to fire special hollow charge grenades.  It was a version of the German Schiessbecher grenade launcher.  Two grenades were produced for the launcher: a 30 mm calibre grenade and a larger 40 mm calibre grenade, both designated Type 2.  The launcher sits over the end of the barrel, held in place with a clamping device.  A special crimped blank cartridge or wooden bullet is used to fire the grenades.\n\nThe Bear (1984 film): The Bear is a 1984 biopic starring Gary Busey and Jon-Erik Hexum.  The film was written by Michael Kane, directed by Richard C. Sarafian, and produced by James A. Hearn and Larry G. Spangler.",
+    "question": "What was the star in the film \"The Bear\" died by an accidental self inflicted blank cartridge gunshot to the head?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor."
+        },
+        "film_starred_in": {
+          "type": "string",
+          "description": "The name of the film the actor starred in."
+        },
+        "death_details": {
+          "type": "object",
+          "properties": {
+            "is_accidental": {
+              "type": "boolean",
+              "description": "Indicates if the death was accidental."
+            },
+            "is_self_inflicted": {
+              "type": "boolean",
+              "description": "Indicates if the injury was self-inflicted."
+            },
+            "injury_type": {
+              "type": "string",
+              "description": "The type of injury that led to death, e.g., 'gunshot'."
+            },
+            "weapon_used": {
+              "type": "string",
+              "description": "The specific type of weapon or ammunition involved, e.g., 'blank cartridge'."
+            },
+            "body_part_affected": {
+              "type": "string",
+              "description": "The body part affected by the injury."
+            }
+          },
+          "required": [
+            "is_accidental",
+            "is_self_inflicted",
+            "injury_type",
+            "weapon_used",
+            "body_part_affected"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "actor_name",
+        "film_starred_in",
+        "death_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Jon-Erik Hexum",
+      "film_starred_in": "The Bear",
+      "death_details": {
+        "is_accidental": true,
+        "is_self_inflicted": true,
+        "injury_type": "gunshot",
+        "weapon_used": "blank cartridge",
+        "body_part_affected": "head"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

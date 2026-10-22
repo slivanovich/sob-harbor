@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "a5f15b00484b5dcf17fc77d70728897e6d8b96e2befa3fa1cb19577d692deb07",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ab9c7ea554299131ca42404",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Pellaea: Pellaea is a genus of ferns in the Cheilanthoideae subfamily of the Pteridaceae.  The genus name is derived from the Greek word πελλος (\"pellos\"), meaning \"dark,\" and refers to the bluish-gray stems.  Members of the genus are commonly known as cliffbrakes.  They primarily grow in rocky habitats, including moist rocky canyons, slopes, and bluffs.\n\nSophronanthe: Sophronanthe is a small genus of flowering plants in the Veronica family.  The two included species are native to the Southeastern United States.  These species were recently included in the genus \"Gratiola\", but a study in 2008 showed that there are four distinct groups within \"Gratiola\" and resurrected the genus \"Sophronanthe\".\n\nVeronica (plant): Veronica is the largest genus in the flowering plant family Plantaginaceae, with about 500 species; it was formerly classified in the family Scrophulariaceae.  Common names include speedwell, bird's eye, and gypsyweed.",
+    "question": "Veronica and Pellaea, both are flowering plants?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "are_both_flowering_plants": {
+          "type": "boolean",
+          "description": "Indicates whether both Pellaea and Veronica are flowering plants."
+        },
+        "pellaea_details": {
+          "type": "object",
+          "properties": {
+            "is_flowering_plant": {
+              "type": "boolean",
+              "description": "True if Pellaea is a flowering plant, false otherwise."
+            },
+            "plant_type": {
+              "type": "string",
+              "description": "The general type of plant for Pellaea."
+            }
+          },
+          "required": [
+            "is_flowering_plant",
+            "plant_type"
+          ],
+          "additionalProperties": false
+        },
+        "veronica_details": {
+          "type": "object",
+          "properties": {
+            "is_flowering_plant": {
+              "type": "boolean",
+              "description": "True if Veronica is a flowering plant, false otherwise."
+            },
+            "plant_type": {
+              "type": "string",
+              "description": "The general type of plant for Veronica."
+            },
+            "family": {
+              "type": "string",
+              "description": "The plant family Veronica belongs to."
+            }
+          },
+          "required": [
+            "is_flowering_plant",
+            "plant_type",
+            "family"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "are_both_flowering_plants",
+        "pellaea_details",
+        "veronica_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "are_both_flowering_plants": false,
+      "pellaea_details": {
+        "is_flowering_plant": false,
+        "plant_type": "fern"
+      },
+      "veronica_details": {
+        "is_flowering_plant": true,
+        "plant_type": "flowering plant",
+        "family": "Plantaginaceae"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

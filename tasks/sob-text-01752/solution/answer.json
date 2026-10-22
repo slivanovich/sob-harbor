@@ -1,0 +1,17 @@
+{
+  "family_name": "Snowball family",
+  "individual_recorded": {
+    "name": "Nathaniel Snowball",
+    "document_recorded_in": "Book of Negroes"
+  },
+  "document_details": {
+    "document_name": "Book of Negroes",
+    "content_description": "records names and descriptions",
+    "recorded_group": {
+      "group_name": "Black Loyalists",
+      "number_of_individuals": 3000,
+      "group_origin": "African-American slaves",
+      "group_status_after_escape": "free people of colour"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "film_title": "Untitled Woody Allen Project",
+  "film_type": "drama film",
+  "director": "Woody Allen",
+  "screenwriter": "Woody Allen",
+  "starring_actor": {
+    "actor_name": "Timothée Chalamet",
+    "birth_date": "December 26, 1995",
+    "nationality": "American",
+    "profession": "stage and film actor"
+  }
+}

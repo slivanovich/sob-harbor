@@ -1,0 +1,34 @@
+{
+  "is_cocktail_type": true,
+  "cocktail_names": [
+    "Margarita",
+    "Stinger"
+  ],
+  "non_cocktail_mentions": [
+    {
+      "name": "Stinger",
+      "type": "missile",
+      "description": "US-made FIM-92 Stinger anti-aircraft missile, similar in appearance to the Japanese Type 91 surface-to-air missile."
+    },
+    {
+      "name": "Stinger leg",
+      "type": "electrical service connection",
+      "description": "An alternative name for High-leg delta, a type of electrical service connection for three-phase electric power installations."
+    },
+    {
+      "name": "Stingers",
+      "type": "device",
+      "description": "An alternative name for spike strips, devices used to impede or stop the movement of wheeled vehicles by puncturing their tires."
+    },
+    {
+      "name": "Stinger",
+      "type": "fish",
+      "description": "An informal name for species in the Synanceiidae family (stonefish), known for potent neurotoxins."
+    },
+    {
+      "name": "Margarita Pushkina",
+      "type": "person",
+      "description": "A star in the 1994 Russian film 'Tatsu'."
+    }
+  ]
+}

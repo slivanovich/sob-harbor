@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "c79ce820f5ed32bd2c0bcdc9bd751c1dfd453fbfc726bdf70426bda660c38b28",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5adf02a35542992d7e9f9273",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Xingshan District: The district of Xingshan (兴山区 ; pinyin : Xìngshān Qū) is an administrative subdivision of the province of Heilongjiang, China.  It is under the jurisdiction of the prefecture-level city of Hegang.\n\nJiaonan: Jiaonan () was a former county and county-level city under the administration of Qingdao, Shandong, China, located in the southwestern portion of Qingdao along the Yellow Sea coast.  In 1945, as Zhushan County (珠山縣 ) it was carved from Jiao County and Qingdao City, and in 1946, renamed as Jiaonan County, deriving its name from its southern location relative to Jiaozhou Bay.  In 1990, it was upgraded to a county-level city.  Jiaonan has 7 subdistricts and 11 towns.  In December 2012, it was merged into Huangdao District.",
+    "question": "Is Jiaonan located in the same province as Xingshan District?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "entity_1_name": {
+          "type": "string",
+          "description": "The name of the first administrative entity mentioned in the question."
+        },
+        "entity_1_province": {
+          "type": "string",
+          "description": "The province where the first entity is located."
+        },
+        "entity_2_name": {
+          "type": "string",
+          "description": "The name of the second administrative entity mentioned in the question."
+        },
+        "entity_2_province": {
+          "type": "string",
+          "description": "The province where the second entity is located."
+        },
+        "provinces_are_same": {
+          "type": "boolean",
+          "description": "True if both entities are located in the same province, false otherwise."
+        },
+        "final_answer": {
+          "type": "string",
+          "description": "The direct answer to the question (yes/no)."
+        }
+      },
+      "required": [
+        "entity_1_name",
+        "entity_1_province",
+        "entity_2_name",
+        "entity_2_province",
+        "provinces_are_same",
+        "final_answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "entity_1_name": "Jiaonan",
+      "entity_1_province": "Shandong",
+      "entity_2_name": "Xingshan District",
+      "entity_2_province": "Heilongjiang",
+      "provinces_are_same": false,
+      "final_answer": "no"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "comparison_result": "Gatti's Pizza",
+  "pizza_shops": [
+    {
+      "name": "Gatti's Pizza",
+      "founding_year": 1964
+    },
+    {
+      "name": "DoubleDave's Pizzaworks",
+      "founding_year": 1984
+    }
+  ],
+  "earliest_founding_year": 1964
+}

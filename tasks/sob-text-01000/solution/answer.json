@@ -1,0 +1,15 @@
+{
+  "director": {
+    "name": "Nikita Mikhalkov",
+    "nationality": "Russian"
+  },
+  "film": {
+    "title": "Burnt by the Sun",
+    "release_year": 1994
+  },
+  "co_starring_daughter": {
+    "name": "Nadezhda Mikhalkova",
+    "birth_year": 1986,
+    "role_description": "co-starred"
+  }
+}

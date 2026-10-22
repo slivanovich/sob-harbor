@@ -1,0 +1,12 @@
+{
+  "actor_name": "Daniel Day-Lewis",
+  "birth_year": 1957,
+  "nationality": "English",
+  "is_method_actor": true,
+  "film_details": {
+    "film_title": "Nine",
+    "release_year": 2009,
+    "genre": "musical drama",
+    "is_musical_drama": true
+  }
+}

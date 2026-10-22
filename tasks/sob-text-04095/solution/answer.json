@@ -1,0 +1,9 @@
+{
+  "athlete_name": "Natasha Zvereva",
+  "demand_details": {
+    "description": "to keep her tournament earnings",
+    "context": "Soviet Union",
+    "is_public_demand": true
+  },
+  "is_first_major_athlete": true
+}

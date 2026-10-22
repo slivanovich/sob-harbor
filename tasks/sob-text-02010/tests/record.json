@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "record_id": "c17fca845db4f9b29c9cf605e7bb9bfccbc560525a21cba854c0b16ba50cea31",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae47f3a5542996836b02cbb",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Verbascum",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Verbascum: Verbascum ( ), common name mullein (sg. )  (also known as velvet plant), is a genus of about 250 species of flowering plants in the figwort family Scrophulariaceae.  They are native to Europe and Asia, with the highest species diversity in the Mediterranean.\n\nSelago: Selago is a genus of plant in family Scrophulariaceae, closely related to \"Scrophularia\" and \"Verbascum\".  It contains around 190 species, mostly in southern Africa; two are listed on the IUCN Red List:\n\nJasmine: Jasmine (taxonomic name Jasminum ) is a genus of shrubs and vines in the olive family (Oleaceae).  It contains around 200 species native to tropical and warm temperate regions of Eurasia, Australasia and Oceania.  Jasmines are widely cultivated for the characteristic fragrance of their flowers.  A number of unrelated plants contain the word \"Jasmine\" in their common names (see Other plants called \"Jasmine\").",
+    "question": "Which genus Verbascum or Jasmine contains more species ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "comparison_result": {
+          "type": "string",
+          "description": "The genus that contains more species."
+        },
+        "genera_compared": {
+          "type": "array",
+          "description": "Details for each genus involved in the comparison.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "genus_name": {
+                "type": "string",
+                "description": "The name of the genus."
+              },
+              "species_count": {
+                "type": "integer",
+                "description": "The approximate number of species in the genus."
+              }
+            },
+            "required": [
+              "genus_name",
+              "species_count"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "comparison_details": {
+          "type": "object",
+          "description": "Summary of the comparison.",
+          "properties": {
+            "comparison_type": {
+              "type": "string",
+              "description": "The attribute being compared (e.g., 'species_count')."
+            },
+            "higher_count_genus": {
+              "type": "string",
+              "description": "The genus identified as having the higher count."
+            },
+            "higher_count_value": {
+              "type": "integer",
+              "description": "The count value for the genus with the higher count."
+            }
+          },
+          "required": [
+            "comparison_type",
+            "higher_count_genus",
+            "higher_count_value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "comparison_result",
+        "genera_compared",
+        "comparison_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "comparison_result": "Verbascum",
+      "genera_compared": [
+        {
+          "genus_name": "Verbascum",
+          "species_count": 250
+        },
+        {
+          "genus_name": "Jasmine",
+          "species_count": 200
+        }
+      ],
+      "comparison_details": {
+        "comparison_type": "species_count",
+        "higher_count_genus": "Verbascum",
+        "higher_count_value": 250
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

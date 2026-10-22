@@ -1,0 +1,18 @@
+{
+  "question_asked": "Are both Village of Euclid v. Ambler Realty Co. and Roe v. Wade Supreme Court Cases?",
+  "is_both_supreme_court_cases": true,
+  "cases_evaluated": [
+    {
+      "case_name": "Village of Euclid v. Ambler Realty Co.",
+      "is_supreme_court_case": true,
+      "decision_year": 1926,
+      "context_confirmation": "Village of Euclid, Ohio v. Ambler Realty Co., 272 U.S. 365 (1926) , more commonly Euclid v. Ambler, was a United States Supreme Court landmark case argued in 1926."
+    },
+    {
+      "case_name": "Roe v. Wade",
+      "is_supreme_court_case": true,
+      "decision_year": 1973,
+      "context_confirmation": "Roe v. Wade, 410 U.S. 113 (1973) , is a landmark decision by the United States Supreme Court on the issue of abortion."
+    }
+  ]
+}

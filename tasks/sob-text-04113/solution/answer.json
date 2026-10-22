@@ -1,0 +1,18 @@
+{
+  "person_name": "Stephen Hillenburg",
+  "spongebob_series_roles": {
+    "series_title": "SpongeBob SquarePants",
+    "roles": [
+      "creator",
+      "director",
+      "producer",
+      "writer"
+    ]
+  },
+  "spongebob_movie_roles": {
+    "movie_title": "The SpongeBob SquarePants Movie",
+    "roles": [
+      "co-writer"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "player_one": {
+    "name": "Olivier Rochus",
+    "birth_year": 1981
+  },
+  "player_two": {
+    "name": "Pavel Složil",
+    "birth_year": 1955
+  },
+  "player_born_first_name": "Pavel Složil",
+  "player_born_first_year": 1955
+}

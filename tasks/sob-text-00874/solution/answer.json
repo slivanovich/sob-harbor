@@ -1,0 +1,16 @@
+{
+  "artist_name": "Kygo",
+  "artist_nationality": "Norwegian",
+  "artist_roles": [
+    "DJ",
+    "record producer"
+  ],
+  "associated_album": {
+    "title": "Cloud Nine",
+    "type": "debut studio album"
+  },
+  "associated_single": {
+    "title": "Stay",
+    "type": "single"
+  }
+}

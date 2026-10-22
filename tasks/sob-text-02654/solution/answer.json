@@ -1,0 +1,12 @@
+{
+  "airline_name": "Wings of Lebanon",
+  "owner_group": "Nakhal group",
+  "airport_details": {
+    "airport_name": "Beirut–Rafic Hariri International Airport",
+    "location_description": "located 9 km from the city center in the southern suburbs of Beirut, Lebanon",
+    "distance_from_city_center_km": 9,
+    "city": "Beirut",
+    "country": "Lebanon",
+    "is_commercial_airport": true
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "70bf0421daa3b985c530ac2b4df27049df2e3984caf31f45979fb8e599ee468f",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a806fd35542996402f6a513",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Kansas Board of Regents",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Frank Eck Stadium: Frank Eck Stadium is a baseball stadium in Notre Dame, Indiana.  It hosts the University of Notre Dame Fighting Irish college baseball team.  The stadium holds 2,500 people and was built in 1994.  The stadium was named after Frank Eck, an alumnus, benefactor and advisor to the university.\n\nNotre Dame Fighting Irish baseball: The Notre Dame Fighting Irish baseball team represents the University of Notre Dame in National Collegiate Athletic Association (NCAA) Division I college baseball.  Notre Dame competes as a member of the Atlantic Coast Conference and plays its home games at Frank Eck Stadium.\n\n1989 Wichita State Shockers baseball team: The 1989 Wichita State Shockers baseball team represented Wichita State University in the 1989 NCAA Division I baseball season.  The Shockers played their home games at Eck Stadium.  The team was coached by Gene Stephenson in his 12th season at Wichita State.\n\nRhoads Stadium: The John and Ann Rhoads Softball Stadium (frequently shortened to Rhoads Stadium) is a college softball stadium located on the campus of the University of Alabama in Tuscaloosa, Alabama.  It serves as the home field of the Alabama Crimson Tide softball team and is located on the corner of 5th Avenue and Campus Drive on the northeast corner of campus.  The Crimson Tide's all-time record at Rhoads Stadium is 316–50 ( ), and the official capacity of the stadium is 3,940.  After they played their first season at Sokol Park and at Bowers Park for both the 1998 and 1999 seasons, the Crimson Tide opened Rhoads Stadium on February 23, 2000, with a 7–1 victory over the UAB Blazers.\n\nKarnataka State Cricket Association: Karnataka State Cricket Association (KSCA) is the governing body of Cricket in the Indian state of Karnataka.  The association is affiliated to the Board of Control for Cricket in India and governs the Karnataka cricket team.  The association was founded in 1933 and has been affiliated to the BCCI ever since.  The KSCA operates the M. Chinnaswamy Stadium in Bangalore, which hosts International level Test, ODI and T20 cricket matches.  It also operates a newly built stadium in Hubli and Belgaum.\n\nVasai-Virar City Municipal Corporation: The Vasai-Virar City Municipal Corporation, (VVCMC) is the civic body that governs areas and villages in Vasai-Virar tehsil in Maharashtra state, western India comprising the most populated part of Palghar district.  It is an extended suburb of Mumbai.  According to the 2011 census, it is the fifth largest city in Maharashtra with a population of more than 1.3 million.  The city is located 50 km north of Mumbai, on the north bank of Vasai Creek, part of the estuary of the Ulhas River.  It was formed on 3 July 2009 by combining four municipal councils and 53 \"gram panchayats\".\n\nEck Stadium: Eck Stadium is a baseball stadium in Wichita, Kansas, United States.  It is located on the south side of 21st Street between Hillside and Oliver on the campus of Wichita State University in northeast Wichita.\n\nWichita State University: Wichita State University (WSU) is a public research university in Wichita, Kansas, United States.  It is the third-largest university governed by the Kansas Board of Regents.\n\nKollam Municipal Corporation: Kollam Municipal Corporation (KMC) is the civic body that governs the City of Kollam in the Indian state of Kerala.  It is the fourth largest city corporation in the state by population and fifth largest by area.  Constituted in 1903 and officially recognized as city corporation in 2000, the body governs an area of 73.03 km2 centered on Kollam with about 55 wards and a population of 397,419.\n\n2015 Notre Dame Fighting Irish baseball team: The 2015 Notre Dame Fighting Irish baseball team will represent the University of Notre Dame during the 2015 NCAA Division I baseball season.  The Fighting Irish will play their home games at Frank Eck Stadium as a member of the Atlantic Coast Conference.  They were led by head coach Mik Aoki, in his 5th season at Notre Dame.",
+    "question": "What body governs the campus where Eck Stadium is located?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "stadium_name": {
+          "type": "string",
+          "description": "The name of the stadium."
+        },
+        "university": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the university."
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "description": "The city where the university is located."
+                },
+                "state": {
+                  "type": "string",
+                  "description": "The state where the university is located."
+                }
+              },
+              "required": [
+                "city",
+                "state"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "governing_body": {
+          "type": "string",
+          "description": "The body that governs the university."
+        }
+      },
+      "required": [
+        "stadium_name",
+        "university",
+        "governing_body"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "stadium_name": "Eck Stadium",
+      "university": {
+        "name": "Wichita State University",
+        "location": {
+          "city": "Wichita",
+          "state": "Kansas"
+        }
+      },
+      "governing_body": "Kansas Board of Regents"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

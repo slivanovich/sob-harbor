@@ -1,0 +1,19 @@
+{
+  "player_name": "Clint Malarchuk",
+  "player_details": {
+    "birth_city": "Grande Prairie",
+    "birth_province": "Alberta",
+    "birth_country": "Canadian",
+    "position": "goaltender"
+  },
+  "trade_details": {
+    "trade_year": 1987,
+    "traded_from_team": "Quebec Nordiques",
+    "traded_to_team": "Washington Capitals",
+    "other_players_involved_in_trade": [
+      "Dale Hunter",
+      "Gaetan Duchesne",
+      "Alan Haworth"
+    ]
+  }
+}

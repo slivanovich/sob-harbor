@@ -1,0 +1,24 @@
+{
+  "common_allied_nation": "Britain",
+  "battles_information": [
+    {
+      "battle_name": "Battle of Waterloo",
+      "french_commanders": [
+        "Napoleon Bonaparte"
+      ],
+      "allied_commanders_from_nation": [
+        "Duke of Wellington"
+      ]
+    },
+    {
+      "battle_name": "Battle of Redinha",
+      "french_commanders": [
+        "Marshal Ney"
+      ],
+      "allied_commanders_from_nation": [
+        "Wellington"
+      ]
+    }
+  ],
+  "number_of_matched_battles": 2
+}

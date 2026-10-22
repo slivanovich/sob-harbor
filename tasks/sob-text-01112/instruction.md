@@ -1,0 +1,102 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Andy Duncan (executive): Andy Duncan (born 31 July 1962) is CEO of Camelot UK Lotteries Limited (Camelot Group), the operator of the UK National Lottery.  Duncan started his career at Unilever – where he spent 17 years in a variety of senior managerial roles – before he was appointed director of Marketing, Communications and Audiences at the BBC.  Duncan then became chief executive of Britain's Channel 4 television channel from July 2004 to November 2009 – the first not to have a background in programme making – and was the founding chairman of Freeview.  After a year as CEO of H.R. Owen plc, the UK's leading luxury car business, he became UK managing director of Camelot in October 2011 and was subsequently appointed UK CEO in October 2014.  Duncan was appointed President of the Advertising Association in January 2014.
+
+Andy Duncan (footballer, born 1977): Andy Duncan (born 20 October 1977) is an English footballer who plays as a centre-back.
+
+Andy Duncan (footballer, born 1911): Andy Duncan (born 25 January 1911 in Renton–died 1983) was a professional footballer who played for Renton Thistle, Dumbarton, Hull City, Tottenham Hotspur and Chelmsford City.
+
+Oh No (album): Oh No is the second studio album by American rock band OK Go.  It was released 30 August 2005.  The album was recorded in late 2004 with producer Tore Johansson in Malmö, Sweden and mixed by Dave Sardy in Los Angeles.  It is the final album to feature guitarist Andy Duncan, who left shortly after recording finished.
+
+Linx (band): Linx was a British soul/funk band consisting of David Grant (lead vocals), Bob Carter (keyboards), Andy Duncan (drums), Canute Edwards (guitar), Peter Martin (bass) (aka Sketch) and Junior Giscombe (backing vocals).  After its first hit in 1980, the band slimmed down to a duo of Grant and Martin.  They had six entries on the UK Singles Chart from mid 1980 until mid 1982.  The band's biggest success was "Intuition," which reached number 7 in early 1981.  Other hits included "You're Lying" and "So This is Romance."  Linx also contributed to the influential C81 compilation cassette released by "New Musical Express" magazine in 1981.
+
+Andy Duncan (writer): Andy Duncan (born 21 September 1964) is an award-winning American science fiction and fantasy writer whose work frequently deals with Southern U.S. themes.
+
+Camelot Group: Camelot Group are the operators of the UK National Lottery.  Camelot Group was awarded the National Lottery franchise in May 1994 (though the lottery did not start until November 1994) and was re-awarded the franchise in 2001 and again in 2007.  The current franchise period started in 2009 and runs until 2019, with a possible extension of up to five years.  The governmental body the National Lottery Commission is responsible for deciding who is awarded the franchise.  The way the franchise was awarded to Camelot in 2001 caused some controversy because state owned Royal Mail held a 20% stake in the Camelot Group.
+
+Keys of the Kingdom: Keys of the Kingdom is the fourteenth album by the rock band The Moody Blues, released in 1991.  Although some of the tracks recall the songwriting on "Sur la Mer", the failure of "Keys of the Kingdom" to produce any major hit singles would mark the beginning of the Moodies' decline in popularity with mainstream audiences after their success in the MTV video generation.  The album saw the band beginning to return to a more airy rock orientated sound (similar to "The Present"), rather than the previous two albums' forays into synthesiser pop.  Flautist Ray Thomas plays more of a substantial role on this record, with his first ambient flute piece in eight years.  The album was recorded and mixed at four London studios: Olympic Studios, RG Jones Studios, Mayfair Studios and The Hit Factory (not to be confused with the NYC-based studio of the same name).  Drum machines are still used heavily; Graeme Edge only performs on three songs, with session drummer Andy Duncan providing live drums on two more, and the rest being programmed.  Keyboardist Patrick Moraz was fired from the band after completing only a few tracks for this album, and he is listed as an 'additional' keyboard player.  After a lawsuit on Court TV filed by Moraz, their future album and re-release booklets would distance themselves from Moraz - e.g. removing him from photographs that originally featured him - and they never had any future keyboardists become official members of the band.
+
+The Chief Designer (novella): "The Chief Designer" is a science fiction novella published in 2001 by Andy Duncan.  It won the 2002 Sturgeon Award and was nominated for the 2002 Hugo Award for Best Novella.  It also appeared in Gardner Dozois' "".
+
+OK Go: OK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California.  The band is composed of Damian Kulash (lead vocals, guitar), Tim Nordwind (bass guitar and vocals), Dan Konopka (drums and percussion) and Andy Ross (guitar, keyboards and vocals), who joined them in 2005, replacing Andy Duncan.  The band is known for its often quirky and elaborate one-take music videos.
+
+Question: Andy Duncan was the CEO of the group that operates what scheme?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the person."
+        },
+        "title": {
+          "type": "string",
+          "description": "A descriptor for the person's profession or type, to distinguish from others with the same name."
+        },
+        "date_of_birth": {
+          "type": "string",
+          "description": "The birth date of the person."
+        }
+      },
+      "required": [
+        "name",
+        "title",
+        "date_of_birth"
+      ],
+      "additionalProperties": false
+    },
+    "organization_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The official name of the organization."
+        },
+        "alias": {
+          "type": "string",
+          "description": "A common or abbreviated name for the organization."
+        },
+        "person_role_in_organization": {
+          "type": "string",
+          "description": "The role the person holds within this organization."
+        },
+        "role_start_date": {
+          "type": "string",
+          "description": "The date when the person started in this specific role."
+        }
+      },
+      "required": [
+        "name",
+        "alias",
+        "person_role_in_organization",
+        "role_start_date"
+      ],
+      "additionalProperties": false
+    },
+    "scheme_operated": {
+      "type": "string",
+      "description": "The name of the scheme or lottery operated by the organization."
+    }
+  },
+  "required": [
+    "person",
+    "organization_details",
+    "scheme_operated"
+  ],
+  "additionalProperties": false
+}

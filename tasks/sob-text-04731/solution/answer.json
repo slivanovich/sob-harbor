@@ -1,0 +1,13 @@
+{
+  "query_character_name": "Kyle Broflovski",
+  "target_character_details": {
+    "name": "Stan Marsh",
+    "is_central_character": true,
+    "voiced_by_creator": "Trey Parker",
+    "loosely_based_on_creator": "Trey Parker"
+  },
+  "creator_info": {
+    "name": "Trey Parker",
+    "role": "series co-creator"
+  }
+}

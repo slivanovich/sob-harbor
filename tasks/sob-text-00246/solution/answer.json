@@ -1,0 +1,14 @@
+{
+  "actress_name": "Ludivine Sagnier",
+  "award_details": {
+    "award_name": "César Award",
+    "category": "Best Supporting Actress",
+    "nomination_year": 2003
+  },
+  "film_details": {
+    "film_title": "Swimming Pool",
+    "director_name": "François Ozon",
+    "release_year": 2003
+  },
+  "final_answer_director": "François Ozon"
+}

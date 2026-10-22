@@ -1,0 +1,17 @@
+{
+  "conflict_details": {
+    "name": "Sierra Leone Civil War",
+    "start_year": 1991,
+    "end_year": 2002
+  },
+  "national_patriotic_front_of_liberia_involvement": {
+    "role": "intervener and supporter",
+    "allies": [
+      "Revolutionary United Front"
+    ],
+    "opponents": [
+      "Joseph Momoh government"
+    ]
+  },
+  "primary_question_answer": "Joseph Momoh government"
+}

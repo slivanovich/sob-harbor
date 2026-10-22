@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "record_id": "643a80951e3746534e5f7f81c84072c9f04480926f5a0e86a80e0e97e2084407",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a77c5145542995d831812b9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Marko Marin",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Pierre Womé: Pierre Nlend Womé (born 26 March 1979) is a Cameroonian retired footballer who played as a defender.  A journeyman, Womé was a versatile and skillful left wingback who played for 14 clubs in six countries, being only one of eleven players to have played in the top divisions in Italy, Spain, England and Germany respectively (the others are Jon Dahl Tomasson, Abel Xavier, Gheorghe Popescu, Florin Răducioiu, Pepe Reina, Christian Poulsen, Maniche, Marko Marin, Eduardo Vargas and Obafemi Martins).\n\nSaša Zdjelar: Saša Zdjelar (Serbian Cyrillic: Саша Здјелар; born 20 March 1995) is a Serbian professional footballer who plays for Greek club Olympiacos as a midfielder.\n\nOlympiacos B.C.: Olympiacos B.C. (Greek: ΚΑΕ Ολυμπιακός Σ.Φ.Π. ) , also known simply as Olympiacos or Olympiacos Piraeus, is a Greek professional basketball club, part of the major multi-sport club Olympiacos CFP, based in Piraeus.  The basketball club, founded in 1931, is one of the most successful clubs in European basketball, having won three EuroLeague Championships, one Triple Crown, one Intercontinental Cup, twelve Greek Championships and nine Greek Cups.  They play their home matches at the Peace and Friendship Stadium.\n\nMarko Marin: Marko Marin (Cyrillic: Марко Марин); born 13 March 1989) is a German professional footballer who plays for Greek club Olympiacos as an attacking midfielder and left winger.  He is known for his acceleration, dribbling, agility, creativity, versatility, technical skill and playmaking ability.\n\nDiogo Figueiras: Diogo José Rosário Gomes Figueiras (born 1 July 1991) is a Portuguese professional footballer who plays for Greek club Olympiacos F.C. as a right back.\n\nQazim Laçi: Qazim Laçi (born 19 January 1996) is an Albanian professional footballer who plays as a midfielder for French club Ajaccio on loan from Greek club Olympiacos and the Albania national under-21 football team.\n\nAndré Martins: André Renato Soares Martins (born 21 January 1990 in Santa Maria da Feira, Aveiro District) is a Portuguese professional footballer who plays for Greek club Olympiacos F.C. as a central midfielder.\n\nUroš Đurđević: Uroš Đurđević (Serbian Cyrillic: Урош Ђурђевић; born 2 March 1994) is a Serbian professional footballer who plays as a striker for Greek club Olympiacos.\n\nAlberto Botía: Alberto Tomás Botía Rabasco (] ; born 27 January 1989) is a Spanish professional footballer who plays for Greek club Olympiacos F.C. as a central defender.\n\nOmar Elabdellaoui: Omar Elabdellaoui (born 5 December 1991) is a Norwegian professional footballer who plays for Greek club Olympiacos.  He plays primarily as a right back but can also play as a right midfielder.",
+    "question": "Pierre Nlend Womé is a Cameroonian retired footballer, who played as a defender, is only one of eleven players to have played in the top divisions in Italy, Spain, England and Germany respectively, who is this German professional footballer, who plays for Greek club Olympiacos?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The name of the professional footballer."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the footballer."
+        },
+        "current_club": {
+          "type": "string",
+          "description": "The current club the footballer plays for."
+        },
+        "club_country": {
+          "type": "string",
+          "description": "The country of the current club."
+        },
+        "is_one_of_eleven_players": {
+          "type": "boolean",
+          "description": "Indicates if the player is one of the eleven players who played in the top divisions of Italy, Spain, England, and Germany."
+        },
+        "top_division_countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of countries whose top divisions the player has played in."
+        }
+      },
+      "required": [
+        "player_name",
+        "nationality",
+        "current_club",
+        "club_country",
+        "is_one_of_eleven_players",
+        "top_division_countries"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Marko Marin",
+      "nationality": "German",
+      "current_club": "Olympiacos",
+      "club_country": "Greek",
+      "is_one_of_eleven_players": true,
+      "top_division_countries": [
+        "Italy",
+        "Spain",
+        "England",
+        "Germany"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

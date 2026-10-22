@@ -1,0 +1,14 @@
+{
+  "media_type": "magazine",
+  "entities": [
+    {
+      "name": "Rolling Stone",
+      "is_currently_published": true
+    },
+    {
+      "name": "Cinefantastique",
+      "is_currently_published": false
+    }
+  ],
+  "number_of_entities": 2
+}

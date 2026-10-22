@@ -1,0 +1,22 @@
+{
+  "election_details": {
+    "year": 2012,
+    "state": "Florida",
+    "election_type": "United States Senate election"
+  },
+  "winner": {
+    "name": "Bill Nelson",
+    "party": "Democratic",
+    "incumbent_status": "incumbent",
+    "office_held": "U.S. Senator",
+    "vote_percentage": 55
+  },
+  "defeated_candidate": {
+    "name": "Connie Mack IV",
+    "party": "Republican",
+    "former_office": "U.S. Representative",
+    "former_district": 14,
+    "vote_percentage": 42
+  },
+  "margin_of_victory_percentage": 13
+}

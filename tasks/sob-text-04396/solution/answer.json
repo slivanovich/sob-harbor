@@ -1,0 +1,14 @@
+{
+  "film_genres": [
+    {
+      "film_title": "Fear of a Black Republican",
+      "genre": "documentary"
+    },
+    {
+      "film_title": "Castro Street",
+      "genre": "documentary"
+    }
+  ],
+  "common_genre_identified": true,
+  "common_genre": "documentary"
+}

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "record_id": "65fda1389b20f36126b289c29410d997545c0ab546c435662feb3fd5f87138d2",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab6a0c25542995eadef004c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Daytona Beach, Florida, United States",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2016 Bethune–Cookman Wildcats football team: The 2016 Bethune–Cookman Wildcats football team represented Bethune–Cookman University in the 2016 NCAA Division I FCS football season.  They were led by second-year head coach Terry Sims and played their home games at Municipal Stadium.  They were a member of the Mid-Eastern Athletic Conference (MEAC).  They finished the season 4–6, 4–4 in MEAC play to finish in a two-way tie for fifth place.\n\nBethune–Cookman Wildcats women's basketball: The Bethune–Cookman Wildcats women's basketball team represents Bethune-Cookman University in the sport of basketball.  The Wildcats competes in the NCAA Division I and the Mid-Eastern Athletic Conference (MEAC).  They play their home games in Moore Gymnasium on Bethune-Cookman University campus in Daytona Beach, Florida.\n\nBethune–Cookman Wildcats football: The Bethune–Cookman Wildcats football team represents Bethune-Cookman University in the sport of American football.  The Wildcats compete in the Football Championship Subdivision (FCS) of the National Collegiate Athletics Association (NCAA) and the south division of the Mid-Eastern Athletic Conference (MEAC).  They play their home games at Municipal Stadium (Daytona Beach).  The Wildcats have won two black college football national championships and seven MEAC titles in the history of their football program.\n\nBethune–Cookman University: Bethune–Cookman University (B–CU), formerly Bethune–Cookman College (B–CC), is a private, co-ed, historically black university located in Daytona Beach, Florida, United States.  The primary administration building, White Hall, and the Mary McLeod Bethune Home have been added to the US National Register of Historic Places.\n\n2010 Bethune–Cookman Wildcats football team: The 2010 Bethune–Cookman Wildcats football team represented Bethune-Cookman University in the 2010 NCAA Division I FCS football season.  The Wildcats were led by first year head coach Brian Jenkins and played their home games at Municipal Stadium.  They are a member of the Mid-Eastern Athletic Conference.  They finished the season 10–2, 7–1 in MEAC play to finish in first place.\n\n2011 Bethune–Cookman Wildcats football team: The 2011 Bethune–Cookman Wildcats football team represented Bethune-Cookman University in the 2011 NCAA Division I FCS football season.  The Wildcats were led by fifth year head coach Brian Jenkins and played their home games at Municipal Stadium.  They are a member of the Mid-Eastern Athletic Conference.  They finished the season 8–3, 6–2 in MEAC play to finish in second place.\n\nBethune–Cookman Wildcats: The Bethune–Cookman Wildcats are the athletic teams that represent Bethune–Cookman University in Daytona Beach, Florida.  They compete as a member of the National Collegiate Athletic Association Division I level (Football Championship Subdivision) primarily competing in the Mid-Eastern Athletic Conference (MEAC) for all sports.\n\n2017 Bethune–Cookman Wildcats football team: The 2017 Bethune–Cookman Wildcats football team represents Bethune–Cookman University in the 2017 NCAA Division I FCS football season.  They are led by third-year head coach Terry Sims and play their home games at Municipal Stadium.  They are a member of the Mid-Eastern Athletic Conference (MEAC).\n\n2012 Bethune–Cookman Wildcats baseball team: The 2012 Bethune–Cookman Wildcats baseball team represents Bethune-Cookman University in the sport of baseball during the 2012 college baseball season.  The Wildcats competed in Division I of the National Collegiate Athletic Association (NCAA) and the Southern Division of the Mid-Eastern Athletic Conference (MEAC).  The team is coached by Jason Beverlin, who entered his first season at Bethune-Cookman.  The Wildcats won the MEAC Tournament and moved on to the NCAA Tournament and participated in the Gainesville Regional, where they were beat 0-2.\n\n2015 Bethune–Cookman Wildcats baseball team: The 2015 Bethune–Cookman Wildcats baseball team represents Bethune-Cookman University in the sport of baseball during the 2015 college baseball season.  The Wildcats competed in Division I of the National Collegiate Athletic Association (NCAA) and the Southern Division of the Mid-Eastern Athletic Conference (MEAC).  The team is coached by Jason Beverlin, who is entering his fifth season at Bethune-Cookman.",
+    "question": "The Bethune–Cookman Wildcats are athletic teams that represent a private, co-ed, historically black university located where?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "university_name": {
+          "type": "string",
+          "description": "The full name of the university."
+        },
+        "university_attributes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Key characteristics of the university."
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the university is located."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the university is located."
+            },
+            "country": {
+              "type": "string",
+              "description": "The country where the university is located."
+            }
+          },
+          "required": [
+            "city",
+            "state",
+            "country"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "university_name",
+        "university_attributes",
+        "location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "university_name": "Bethune–Cookman University",
+      "university_attributes": [
+        "private",
+        "co-ed",
+        "historically black"
+      ],
+      "location": {
+        "city": "Daytona Beach",
+        "state": "Florida",
+        "country": "United States"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

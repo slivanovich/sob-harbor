@@ -1,0 +1,13 @@
+{
+  "band_details": {
+    "name": "Modest Mouse",
+    "formation_year": 1992,
+    "current_base_city": "Portland",
+    "current_base_state": "Oregon"
+  },
+  "person_details": {
+    "name": "Chris Grieder",
+    "profession": "music video director"
+  },
+  "action_performed": "directed music videos"
+}

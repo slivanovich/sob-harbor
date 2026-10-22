@@ -1,0 +1,14 @@
+{
+  "film_details": {
+    "title": "The Evil",
+    "release_year": 1978,
+    "genre": "horror"
+  },
+  "director_details": {
+    "name": "Gus Trikonis"
+  },
+  "featured_actor": {
+    "name": "Victor Buono",
+    "description": "American actor and comic and briefly a recording artist"
+  }
+}

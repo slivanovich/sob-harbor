@@ -1,0 +1,14 @@
+{
+  "are_both_american": true,
+  "individuals": [
+    {
+      "name": "Carl Sagan",
+      "nationality": "American"
+    },
+    {
+      "name": "Mary Doria Russell",
+      "nationality": "American"
+    }
+  ],
+  "reasoning": "The context states that Carl Sagan was an 'American astronomer' and Mary Doria Russell is an 'American novelist'. Therefore, both were American."
+}

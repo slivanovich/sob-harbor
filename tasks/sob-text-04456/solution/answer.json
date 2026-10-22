@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "name": "Acer Inc.",
+      "origin_country": "Taiwan"
+    },
+    {
+      "name": "Coleco Adam",
+      "origin_country": "USA"
+    }
+  ],
+  "same_country_of_origin": false,
+  "final_answer": false
+}

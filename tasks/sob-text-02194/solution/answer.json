@@ -1,0 +1,19 @@
+{
+  "band": {
+    "name": "Eagles",
+    "formation_year": 1971,
+    "formation_location": "Los Angeles"
+  },
+  "member_details": {
+    "name": "Timothy B. Schmit",
+    "roles": [
+      "bass guitarist",
+      "co-lead vocalist"
+    ]
+  },
+  "album_context": {
+    "title": "Timothy B",
+    "artist": "Timothy B. Schmit",
+    "type": "second studio solo album"
+  }
+}

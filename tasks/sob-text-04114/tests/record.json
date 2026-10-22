@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "record_id": "e783548ed51336099b458c910e4e138eb063d6b2b52ca23a4936a1c377b989fd",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abbc64e5542992ccd8e7f98",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Hawaii",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Contract curve: In microeconomics, the contract curve is the set of points representing final allocations of two goods between two people that could occur as a result of mutually beneficial trading between those people given their initial allocations of the goods.  All the points on this locus are Pareto efficient allocations, meaning that from any one of these points there is no reallocation that could make one of the people more satisfied with his or her allocation without making the other person less satisfied.  The contract curve is the subset of the Pareto efficient points that could be reached by trading from the people's initial holdings of the two goods.  It is drawn in the Edgeworth box diagram shown here, in which each person's allocation is measured vertically for one good and horizontally for the other good from that person's origin (point of zero allocation of both goods); one person's origin is the lower left corner of the Edgeworth box, and the other person's origin is the upper right corner of the box.  The people's initial endowments (starting allocations of the two goods) are represented by a point in the diagram; the two people will trade goods with each other until no further mutually beneficial trades are possible.  (Contrary to this claim neither the point of initial endowments, nor the contract curve is displayed in the actual diagram shown here.)  The set of points that it is conceptually possible for them to stop at are the points on the contract curve.\n\nWedding (TV series): Wedding () is an 18-episode South Korean television drama that aired on KBS2 in 2005.  The series explores the relationship of a newly wed couple, showing how two people, who met and married through an arranged matchmaking, slowly develop a relationship and learn what it means to be married.  Some of the issues explored include what is the most important thing in a marriage, trust and honesty between a couple, how past relationships affect present, and the role of family in a relationship.  Unlike other dramas written by Oh Soo-yeon, which focused on people falling in love by fate or destiny, this one is about two people with very different personalities, values, and backgrounds, and seeing how they learn to love one another despite all of their differences.\n\nKamehameha II: Kamehameha II (c. 1797 – July 14, 1824) was the second king of the Kingdom of Hawaii.  His birth name was Liholiho and full name was Kalaninui kua Liholiho i ke kapu ʻIolani.  It was lengthened to Kalani Kaleiʻaimoku o Kaiwikapu o Laʻamea i Kauikawekiu Ahilapalapa Kealiʻi Kauinamoku o Kahekili Kalaninui i Mamao ʻIolani i Ka Liholiho when he took the throne.\n\nTwo shot: A two shot is a type of shot in which the frame encompasses a view of two people (the subjects).  The subjects do not have to be next to each other, and there are many common two-shots which have one subject in the foreground and the other subject in the background.  It is very useful if the film is about two people.\n\nKalanimoku: William Pitt Kalanimoku (c. 1768 – February 7, 1827) was a High Chief who functioned similarly to a prime minister of the Hawaiian Kingdom during the reigns of Kamehameha I, Kamehameha II and the beginning of the reign of Kamehameha III.  He was called The Iron Cable of Hawaiʻ i because of his abilities.\n\nWorld Universities Debating Championship: The World Universities Debating Championship (WUDC) is the world's largest debating tournament, and one of the largest annual international student events in the world.  It is a parliamentary debating event, held using either the British Parliamentary Debate format (involving four teams of two people in each debate) or the American Parliamentary Debate format (two teams of two people).  Each year, the event is hosted by a university selected by the World Universities Debating Council.  The tournament is colloquially referred to as \"Worlds\" and the winners of the open competition acknowledged as the \"world champions\".\n\nDating: Dating is a stage of romantic relationships in humans whereby two people meet socially, possibly as friends or with the aim of each assessing the other's suitability as a prospective partner in a more committed intimate relationship or marriage.  It can be a form of courtship that consists of social activities done by the couple.  The protocols and practices of dating, and the terms used to describe it, vary considerably from country to country and over time.  While the term has several meanings, the most frequent usage refers to two people exploring whether they are romantically or sexually compatible by participating in dates with the other.  With the use of modern technology, people can date via telephone or computer or meet in person.\n\nHorseshoes: Horseshoes is an outdoor game played between two people (or two teams of two people) using four horseshoes and two throwing targets (stakes) set in a lawn or sandbox area.  The game is played by the players alternating turns tossing horseshoes at stakes in the ground, which are traditionally placed 40 ft apart.  Modern games use a more stylized U-shaped bar, about twice the size of an actual horseshoe.\n\nSelf-evaluation maintenance theory: Self-evaluation maintenance (SEM) theory refers to discrepancies between two people in a relationship.  Two people in a relationship each aim to keep themselves feeling good psychologically throughout a comparison process to the other person.  Self-evaluation is defined as the way a person views him/herself.  It is the continuous process of determining personal growth and progress, which can be raised or lowered by the behavior of a close other (a person that is psychologically close).  People are more threatened by friends than strangers.  Abraham Tesser created the self-evaluation maintenance theory in 1988.  The self-evaluation maintenance model assumes two things: that a person will try to maintain or increase their own self-evaluation, and self-evaluation is influenced by relationships with others.\n\nTwo People (song): \"Two People\" is a song by recording artist Tina Turner.  It was written by Terry Britten and Graham Lyle, with production helmed by the former, and released as the third single from her sixth solo album \"Break Every Rule\" (1986).  The song became a top ten hit in Germany and Switzerland, and reached the top 20 in Austria, the Netherlands on \"Billboard\"' s Hot R&B/Hip-Hop Songs chart.  There were two music videos to \"Two People\", including one with Turner dressed as different characters, such as Cinderella.",
+    "question": "Where we these two people from?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "role"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "origin_country": {
+          "type": "string"
+        },
+        "reasoning": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "people",
+        "origin_country",
+        "reasoning"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "people": [
+        {
+          "name": "Kamehameha II",
+          "role": "second king"
+        },
+        {
+          "name": "William Pitt Kalanimoku",
+          "role": "High Chief"
+        }
+      ],
+      "origin_country": "Hawaii",
+      "reasoning": "Kamehameha II was the second king of the Kingdom of Hawaii, and William Pitt Kalanimoku was a High Chief of the Hawaiian Kingdom. These are the only two distinct individuals explicitly linked to Hawaii in the provided text."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

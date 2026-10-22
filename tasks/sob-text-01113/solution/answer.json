@@ -1,0 +1,15 @@
+{
+  "creator_details": {
+    "name": "Mark Gravas",
+    "created_series": [
+      "Yakkity Yak"
+    ]
+  },
+  "co_owned_entity": {
+    "name": "Kapow Pictures",
+    "type": "media production company",
+    "location": "Sydney",
+    "co_owner_name": "Sandra Walters"
+  },
+  "final_answer": "Sydney based media production company Kapow Pictures"
+}

@@ -1,0 +1,15 @@
+{
+  "band_name": "4 Non Blondes",
+  "song_title": "What's Up?",
+  "chart_year": 1993,
+  "band_origin": {
+    "city": "San Francisco",
+    "state": "California",
+    "country": "United States"
+  },
+  "album_details": {
+    "title": "Bigger, Better, Faster, More!",
+    "release_year": 1992
+  },
+  "is_major_hit": true
+}

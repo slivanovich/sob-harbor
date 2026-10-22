@@ -1,0 +1,13 @@
+{
+  "bridge_name": "Millau Viaduct",
+  "deck_height_information": {
+    "rank_as_of_year": 22,
+    "year_of_ranking": 2017,
+    "deck_height_meters": 270
+  },
+  "pillar_height_record_details": {
+    "record_achieved": "tallest pillars in the world",
+    "previous_record_holder": "Kocher Viaduct",
+    "year_record_achieved": 2004
+  }
+}

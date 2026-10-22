@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "c8e81f1ed55fd9cb89f43ed2ac450525b87b8fe5a4cfbddebfe5c99113009606",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae7813a554299540e5a55d1",
+    "source_dataset": "hotpotqa",
+    "source_answer": "a path of personal and professional development",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Music therapy: Music therapy is a non verbal approach to the person using instruments and music in general, the use of interventions to accomplish individual goals within a therapeutic relationship by a professional who has completed an approved music therapy program.  Music therapy is one of the expressive therapies, consisting of a process in which a music therapist uses music and all of its facets—physical, emotional, mental, social, aesthetic, and spiritual—to help clients improve their physical and mental health.  Music therapists primarily help clients improve their health in several domains, such as cognitive functioning, motor skills, emotional development, social skills, and quality of life by using both active and passive music experiences such as free improvisation, song, dance, listening, and discussion of music to achieve treatment goals.  There is a wide qualitative and quantitative research literature base which incorporates clinical therapy, psychotherapy, biomusicology, musical acoustics, music theory, psychoacoustics, embodied music cognition, aesthetics of music, sensory integration, and comparative musicology.  Referrals to music therapy services may be made by other health care professionals.  Clients can also choose to pursue music therapy services without a referral (i.e., self-referral).\n\nKeith Semple: Keith Semple (born 20 September 1981 in Larne, Northern Ireland) is a Northern Irish singer and musician.  He originally had his own band Keith Semple Band.  In 2002, he took part and was a winner in \"Popstars: The Rivals\", consequently becoming a member of the boyband One True Voice (OTV).  After the split-up of the band, he had a solo career before joining the American Chicago-based rock band 7th Heaven in 2006 as their lead singer.  In 2010, he took a shot at the ninth season of \"American Idol\", but lost his \"golden ticket\" place due to his legal status and residency considerations.  In October 2012, Keith announced he would be leaving 7th Heaven to pursue his original music and announced the formation of his new band, SEMPLE.  In September 2015, Keith auditioned for Season 9 of \"The Voice\" as part of Team Adam.  He was eliminated from competition after the Top 24 round.\n\nSexual identity therapy: Sexual identity therapy (SIT) is a framework to \"aid mental health practitioners in helping people arrive at a healthy and personally acceptable resolution of sexual identity and value conflicts.\"  It was invented by Warren Throckmorton and Mark Yarhouse, professors at small conservative evangelical colleges.  It has been endorsed by former American Psychological Association president Nick Cummings, psychiatrist Robert Spitzer, and the provost of Wheaton College, Stanton Jones.  Sexual identity therapy puts the emphasis on how the client wants to live, identifies the core beliefs and helps the client live according to those beliefs.  The creators state that their recommendations \"are not sexual reorientation therapy protocols in disguise,\" but that they \"help clients pursue lives they value.\"  They say clients \"have high levels of satisfaction with this approach\".  It is presented as an alternative to both sexual orientation change efforts and gay affirmative psychotherapy.\n\nNXIVM: NXIVM ( ) is a multi-level marketing company/cult centred on the provision of classes and seminars that encourage clients to pursue a path of personal and professional development.\n\nHoward Rogers: Howard Rogers (born 1932) is an illustrator who specialised in drawing nude figures and cowboy scenes.  Rogers grew up in San Diego, California, where his parents encouraged him to pursue his artistic talents at a young age.  After Rogers finished high school, he took a job as a sign painter for three years.  Rogers then served some time in the U.S. military and later returned home to work as the supervisor of a chain of supermarkets.\n\nJerome Schneider: Jerome Schneider is an American financial adviser and author who encouraged his clients to hide their money from taxes using offshore banks. From the mid-1970s to the late 1990s, he advertised widely and, in his books and seminars, encouraged clients to buy offshore banks for their own purposes.  In 2004 Schneider was convicted of conspiring to help clients evade tax laws, leading the \"New York Times\" to name him \"the nation's best-known seller of fraudulent offshore banks\".\n\nTobashi scheme: A tobashi scheme is a financial fraud where a client's losses are hidden by an investment firm by shifting them between the portfolios of other (genuine or fake) clients.  Any real client with portfolio losses can therefore have their accounts flattered by this process.  This cycling cannot continue indefinitely and so the investment firm itself ends up picking up the cost.  As it is ultimately expensive there must be a strong incentive for the investment firm to pursue this activity on behalf of their clients.\n\nJanie Rhyne: Janie Rhyne (1913-1995) was a pioneer in art therapy who used art as expression and communication.  She was also a pioneer of Gestalt art therapy, which integrated Gestalt therapy and art therapy.  She encouraged clients themselves to interpret and express their feelings and emotions from art works.\n\nKeith Raniere: Keith Raniere is an American businessman and founder of NXIVM, a multi-level marketing company in upstate New York that has been referred to by some detractors as being \"cult-like\".\n\nDavid Simpson (Canadian politician): Alfred David Simpson (born March 19, 1910 - September 11, 1965) was a politician in Ontario, Canada.  He served as Mayor of Stratford, Ontario when the Stratford Shakespeare Festival was founded in 1952-53 and encouraged Tom Patterson to pursue the idea further.",
+    "question": "Keith Raniere founded a cult that encouraged clients to pursue what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "founder_name": {
+          "type": "string",
+          "description": "The name of the founder of the organization."
+        },
+        "organization_name": {
+          "type": "string",
+          "description": "The name of the organization founded."
+        },
+        "organization_type": {
+          "type": "string",
+          "description": "The type of organization (e.g., cult, company)."
+        },
+        "client_encouragement": {
+          "type": "string",
+          "description": "The path or goal clients were encouraged to pursue."
+        }
+      },
+      "required": [
+        "founder_name",
+        "organization_name",
+        "organization_type",
+        "client_encouragement"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "founder_name": "Keith Raniere",
+      "organization_name": "NXIVM",
+      "organization_type": "cult",
+      "client_encouragement": "a path of personal and professional development"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

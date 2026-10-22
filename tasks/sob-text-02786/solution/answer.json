@@ -1,0 +1,18 @@
+{
+  "county_details": {
+    "name": "Putnam County",
+    "state": "New York",
+    "named_after_person": {
+      "person_name": "Israel Putnam",
+      "roles": [
+        "hero in the French and Indian War",
+        "general in the American Revolutionary War"
+      ]
+    }
+  },
+  "assembly_representation": {
+    "assembly_member_name": "Kevin Byrne",
+    "assembly_district": "94th District"
+  },
+  "final_answer_county_full_name": "Putnam County, New York"
+}

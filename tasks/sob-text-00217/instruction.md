@@ -1,0 +1,60 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Iko Iko: "Iko Iko" ( ) is a much-covered New Orleans song that tells of a parade collision between two tribes of Mardi Gras Indians and the traditional confrontation.  The song, under the original title "Jock-A-Mo", was written and released as a single in 1953 by Sugar Boy and his Cane Cutters that failed to make the charts.  The song first became popular in 1965 by the girl group, The Dixie Cups, who scored an international hit with "Iko Iko".  In 1967 as part of a lawsuit settlement between "Sugar Boy" James Crawford and the Dixie Cups, the trio were given part songwriting credit to the song.  In 1972, Dr. John had a minor hit with his version of "Iko Iko".  The most successful charting version in the UK was recorded by Scottish singer Natasha England who took her 1982 version into the top 10.  "Iko Iko" became an international hit again twice more, the first being the Belle Stars in June 1982 and again with Captain Jack in 2001.
+
+Duplex canceller: A duplex canceller was a hand stamp used to cancel postage stamps and imprint a dated postmark applied simultaneously with the one device.  The device had a steel die, generally circular, which printed the location of the cancel, together with the time and date of cancel.  This die was held in place by a handle with an obliteration marker, often oval shaped, off to the right side that was applied over the postage stamp to prevent its reuse.  The ink came from an ink pad.
+
+Shower (juggling): In toss juggling, the shower is a juggling pattern for 3 or more objects, most commonly balls or bean bags, where objects are thrown in a circular motion.  Balls are thrown high from one hand to the other while the other hand passes the ball back horizontally.  "In the shower pattern, every ball is thrown in a high arc from the right hand to the left (or vice versa) and then quickly passed off with a low throw from the left to the right hand (or vice versa)."  The animation depicts a 3-ball version.  Siteswap notation for shower patterns is (2n-1)1, where n is the number of objects juggled.  (i.e. 31 for 2 balls, 51 for 3 balls, 71 for 4 balls, etc.. .)
+
+Right in the Palm of Your Hand: "Right in the Palm of Your Hand" is the title of a country song written by Bob McDill.  The song was first recorded by Crystal Gayle on her 1976 album Crystal.  The only charting version of the song was recorded by American country music artist Mel McDaniel.  It was released in July 1981 as the fourth and final single from McDaniel's 1980 album, "I'm Countryfied".  It peaked at number 10 on the U.S. "Billboard" Hot Country Singles & Tracks chart and at number 17 on the Canadian "RPM" Country Tracks chart.
+
+The Right Hand of the Grand Master: The Right Hand of the Grand Master (Georgian: დიდოსტატის კონსტანტინეს მარჯვენა , "The Right Hand of the Grand Master Constantine"), also published as The Hand of the Great Master is a historical novel by 20th century Georgian writer Konstantine Gamsakhurdia, who first published it in 1939 in a literary magazine "Mnatobi".  Subtitled "knightly novel" by the author, the book received much critical acclaim in Georgia and in Soviet Union as a whole, selling 700,000 copies of 12 publications of its Russian-translated version in the author's lifetime alone.  A two-episode feature film "The Right Hand of the Grand Master" based on the novel and directed by Vakhtang Tabliashvili and Devi Abashidze was premiered in 1969.
+
+Kevin Johnson (singer): Kevin Stephen Johnson (born 3 July 1942) is an Australian singer-songwriter.  Popular in the 1970s, his biggest hit is "Rock and Roll I Gave You the Best Years of My Life", which peaked at No. 4 on the Australian Kent Music Report Singles Chart in 1973 (as well as reaching the UK Top 40).  He also had a top 20 hit with "Bonnie Please Don't Go" (aka "She's Leavin'") in 1971.  "Rock and Roll" is one of the most covered songs written by an Australian with 27 different artists recording it in 1975 alone.  Covers include fellow Australians, Col Joye and Digby Richards, and international artists, Mac Davis, Terry Jacks, Gary Glitter, Joe Dassin (in French), The Cats and Tom Jones.  Davis' rendition became the highest charting version on the "Billboard" Hot 100, reaching No. 15 in 1975.
+
+Whispering Your Name: "Whispering Your Name" is a song written by American singer-songwriter Jules Shear.  It was originally performed by Ignatius Jones in 1983, however Shear also recorded the song, which was issued as a single within months of Jones' recording and included on his 1983 album "Watch Dog".  It has been covered numerous times, including a charting version by Alison Moyet in 1994.
+
+Mel McDaniel: Melvin Huston "Mel" McDaniel (September 6, 1942 – March 31, 2011) was an American country music artist.  His chart-making years were mainly the 1980s with his hits from that era including "Louisiana Saturday Night", "Big Ole Brew", "Stand Up", the Number One "Baby's Got Her Blue Jeans On", "I Call It Love", "Stand on It", and a remake of Chuck Berry's "Let It Roll (Let It Rock)".
+
+Die glückliche Hand: Die glückliche Hand ("The Hand of Fate"), Op.  18, is a "Drama mit Musik" ("drama with music") by Arnold Schoenberg in four scenes.  It was composed between 1910 and 1913.  Like "Erwartung", composed a year earlier, it was heavily influenced by Otto Weininger's book "Sex and Character".  Unlike "Erwartung", Schoenberg wrote the libretto for "Die glückliche Hand" himself.  The first performance took place in Vienna on 24 October 1924.  The underlying message of the piece is the idea that man continues to repeatedly make the same mistakes, and the plot is developed from events in Schoenberg’s personal life.
+
+Right Hand Man: "Right Hand Man" is a song written by Gary Scruggs, and recorded by American country music artist Eddy Raven.  It was released in November 1986 as the second single and title track from the album "Right Hand Man".  The song reached #3 on the "Billboard" Hot Country Singles & Tracks chart.
+
+Question: On what date did the man who recorded the only charting version of "Right in the Palom of Your Hand" die?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song in question."
+    },
+    "charting_artist_name": {
+      "type": "string",
+      "description": "The name of the artist who recorded the only charting version of the song."
+    },
+    "artist_death_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date of death for the specified artist."
+    }
+  },
+  "required": [
+    "song_title",
+    "charting_artist_name",
+    "artist_death_date"
+  ],
+  "additionalProperties": false
+}

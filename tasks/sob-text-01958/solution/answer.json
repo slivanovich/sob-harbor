@@ -1,0 +1,10 @@
+{
+  "question_entity": "Westwood Mall",
+  "comparison_entity": "Woodbine Centre",
+  "location_details": {
+    "city": "Toronto",
+    "province_state": "Ontario",
+    "country": "Canada"
+  },
+  "answer": "Canada"
+}

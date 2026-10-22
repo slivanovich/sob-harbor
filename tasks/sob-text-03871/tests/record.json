@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "record_id": "4b53aca4d318dd6abaf0beef8b63626e6fae3689b55a40e119aa32ddf4e28ac1",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a713fbf5542994082a3e6f2",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Mississauga, Ontario",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "TH Motorsport: TH Motorsport is a British motorsports team based in Watford.  It was founded in 1997 by Trevor Humphrey.  Initially entering in various one make national series and Rally events, the team is best known for competing in the British Touring Car Championship and Britcar Championship.\n\nLondon Lions (basketball): London Lions is a professional basketball team based in London, who compete in the British Basketball League, the top level men's basketball league in the United Kingdom.  The club has previously been based in Hemel Hempstead, Watford and Milton Keynes prior to its relocation to London for the 2012–13 season.\n\nRaptors 905: Raptors 905 are a Canadian professional basketball team in the NBA G League.  The team is based in Mississauga, Ontario, and began play in the 2015–16 season.  The club, which is the G League affiliate of the Toronto Raptors of the National Basketball Association, plays their home games at the Hershey Centre, replacing the Centre's former basketball tenant, the Mississauga Power of the National Basketball League of Canada.  The team also plays occasional home games at the Air Canada Centre, the home of their parent club.  Raptors 905 were the eighth D-League team to be owned by an NBA team and the first to be based outside the United States.\n\nChristian Watford: Christian Ramon Watford (born April 28, 1991) is an American professional basketball player for the Raptors 905 of the NBA G League.  He played college basketball for Indiana University.\n\nHertfordshire Rangers F.C.: Hertfordshire Rangers F.C. were a 19th-century English amateur football team based in Watford, Hertfordshire.  They competed in the FA Cup and had two players represent England in international matches.\n\n1977–78 Watford F.C. season: Watford Football Club is an English football team, based in Watford, Hertfordshire.  1977–78 was the club's first season under the management of Graham Taylor, and its last in the fourth tier of English football.  Watford ended the season as champions of the Football League Fourth Division with 71 points, the club's highest Football League total under the system of two points for a win, and three points short of the all-time Football League record set by Graham Taylor's Lincoln City side in 1975–76.  The season also marked new club records for the most league wins in a season (30), most home wins (18), most away wins (12), and most away goals scored (42).\n\nSaracens F.C.: Saracens Football Club are an English professional rugby union team based in London, England.  Established in 1876, they currently play in the English Premiership, the top level of domestic rugby union in England, and are the reigning champions of the European Rugby Champions Cup, which they have won twice consecutively, in 2016 and 2017.  Since 2012, Saracens have played their home games at Allianz Park in Hendon; previous grounds have included Vicarage Road in Watford, and Bramley Road.  The club's home playing colours are black and red.\n\nPortland Trail Blazers: The Portland Trail Blazers, commonly known as the Blazers, are an American professional basketball team based in Portland, Oregon.  The Trail Blazers compete in the National Basketball Association (NBA) as a member club of the league's Western Conference Northwest Division.  The team played its home games in the Memorial Coliseum before moving to Moda Center in 1995 (called the Rose Garden until 2013).  The franchise entered the league as an expansion team in 1970, and has enjoyed a strong following: from 1977 through 1995, the team sold out 814 consecutive home games, the longest such streak in American major professional sports at the time, and only since surpassed by the Boston Red Sox.  The Trail Blazers have been the only NBA team based in the bi-national Pacific Northwest, after the Vancouver Grizzlies relocated to Memphis and became the Memphis Grizzlies in 2001, and the Seattle SuperSonics relocated to Oklahoma City and became the Oklahoma City Thunder in 2008.\n\nPortland Trail Blazers all-time roster: The Portland Trail Blazers, commonly known as the Blazers, are an American professional basketball team based in Portland, Oregon.  They play in the Northwest Division of the Western Conference in the National Basketball Association (NBA).  The Trail Blazers originally played their home games in the Memorial Coliseum, before moving to the Rose Garden in 1995.  The franchise entered the league in 1970, and Portland has been its only home city.  The franchise has enjoyed a strong following; from 1977 through 1995, the team sold out 814 consecutive home games, the longest such streak in American major professional sports.  The Trail Blazers are the only team in the major professional North American sports leagues located in the state of Oregon.  The Trail Blazers are also currently the only NBA team based in the binational Pacific Northwest, after the Vancouver Grizzlies relocated to Memphis and became the Memphis Grizzlies in 2001, and the Seattle SuperSonics relocated to Oklahoma City and became the Oklahoma City Thunder in 2008.\n\nHertfordshire Cheetahs: The Hertfordshire Cheetahs (formerly the Watford Cheetahs and Chiltern Cheetahs) are an American football team based in St Albans, competing in SFC 2 East of the BAFA National Leagues (BAFANL), with their home games played at St Albans Rugby Club.  The senior team was first formed in 1986 and entered senior competition the following year, making them the third longest continuously competing team in the United Kingdom behind only the Birmingham Bulls and Glasgow Tigers.  During their history, the Cheetahs have reached the Divisional Playoff final on three occasions: in 1997, 2004 and 2005.",
+    "question": "What city is Christian Watford's team based in?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the player."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "team_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the team."
+            },
+            "league": {
+              "type": "string",
+              "description": "The league the team competes in."
+            }
+          },
+          "required": [
+            "name",
+            "league"
+          ],
+          "additionalProperties": false
+        },
+        "team_location": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the team is based."
+            },
+            "province_state": {
+              "type": "string",
+              "description": "The province or state where the team is based."
+            },
+            "country": {
+              "type": "string",
+              "description": "The country where the team is based."
+            }
+          },
+          "required": [
+            "city",
+            "province_state",
+            "country"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "player_details",
+        "team_details",
+        "team_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_details": {
+        "name": "Christian Watford"
+      },
+      "team_details": {
+        "name": "Raptors 905",
+        "league": "NBA G League"
+      },
+      "team_location": {
+        "city": "Mississauga",
+        "province_state": "Ontario",
+        "country": "Canada"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

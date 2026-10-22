@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "5e627f4701e7bf85cbbb6a81a54345bdaf60ce5a9bc31220df1652fe579ff15f",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5aba5f485542994dbf0198f9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "rock band",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Translating the Name: Translating the Name is the debut EP by American rock band Saosin, released on June 17, 2003 through Death Do Us Part.  The album was released before Anthony Green departed from the band to form the rock band Circa Survive.  It is also the band's only release to feature bass guitarist Zack Kennedy, as well as the only release to not feature drummer Alex Rodriguez.  Guitarist Beau Burchell stated that Rodriguez intended to track the drums for Translating the Name but had a prior commitment with his former band Open Hand before he could join.  Pat Magrath was hired as a session musician and performed with Saosin briefly before Rodriguez joined.\n\nAvalon (Anthony Green album): Avalon is the debut solo album by current Saosin and current Circa Survive, vocalist Anthony Green.  It was released August 5, 2008 on Photo Finish Records, with a US tour to coincide with its release.  Keith Goodwin, Tim Arnold, and Dan Schwartz (also known as the band Good Old War) have guest appearances on this record.  The album leaked in its entirety on August 1, 2008.  Anthony Green's Avalon is being made available on vinyl LP.  The package includes the limited Vinyl LP and Digital Remix CD of Avalon, remixes created by Colin Frangicetto of Circa Survive.\n\nThe Amulet (album): The Amulet is the sixth studio album by American rock band Circa Survive, released on September 22, 2017.  The Amulet is Circa Survive's first album released through Hopeless Records, after departing their previous label, Sumerian Records.  As with previous Circa Survive albums, Esao Andrews created the album artwork.\n\nDescensus (album): Descensus is the fifth studio album by the American rock band Circa Survive, released on November 24, 2014.  Descensus is Circa Survive's first album released through Sumerian Records, aside from the Deluxe CD/DVD version of the band's previous album, \"Violent Waves\" which was released on August 28, 2012.  As with Circa Survive's previous albums, Esao Andrews created the album artwork.\n\nAppendage (EP): Appendage is Circa Survive's second EP.  It was released on November 30, 2010 through Atlantic Records.  It contains b-sides from the Blue Sky Noise sessions, as well as a demo of \"Sleep Underground\".  As with Circa Survive's previous three albums and EP, Esao Andrews created the artwork.\n\nBrian Moncarz: Brian Moncarz is a music producer, and mixer.  He has worked with various artists including Moneen, The Junction, Kyle Riabko, Silverstein, Pilot Speed, Rise Electric, Circa Survive, Acres of Lions, Jeffery Straker and Neverending White Lights.\n\nCirca Survive: Circa Survive is an American rock band from the Philadelphia suburb of Doylestown, formed in 2004.  The band, led by Anthony Green, consists of former members from Saosin, This Day Forward, and Taken.\n\nViolent Waves: Violent Waves is the fourth studio album by the American rock band Circa Survive.  It was released on August 28, 2012.  As Circa Survive wanted a record that would capture the band's live sound, where they felt the magic of the band lay, they recorded the album in one week and produced it themselves.  Violent Waves is also Circa Survive's first and only album released without a record label.\n\nWill Yip: Will Yip is a multi-genre music producer, engineer, songwriter, and musician from Philadelphia, Pennsylvania.  Yip works out of Studio 4 in Conshohocken, Pennsylvania alongside Grammy Award-winning producer Phil Nicolo.  Yip is also the owner of Memory Music, an independent record label he launched in June, 2015 featuring projects worked on at Studio 4.  Yip's partial discography includes producing, engineering, mixing, and mastering recordings for artists such as Lauryn Hill, Circa Survive, None More Black, Anthony Green, Cold World, Blacklisted, Title Fight, The Wonder Years, Major League, The Disco Biscuits, King Sunny Adé, The Fray, Keane, Mother of Mercy, Balance and Composure, Superheaven, mewithoutYou, among many others.  Will Yip is also a studio and live drummer.  Will was drummer and music director for rapper Schoolly D and his band International Supersport.\n\nThe Auteurs: The Auteurs were a British alternative rock band of the 1990s, and a vehicle for songwriter Luke Haines (guitar, piano and vocals).",
+    "question": "Both Circa Survive and The Auteurs share what in common?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "entity_1_name": {
+          "type": "string",
+          "description": "The name of the first entity."
+        },
+        "entity_2_name": {
+          "type": "string",
+          "description": "The name of the second entity."
+        },
+        "shared_attribute": {
+          "type": "string",
+          "description": "The common attribute shared by both entities."
+        },
+        "attribute_category": {
+          "type": "string",
+          "description": "The category of the shared attribute (e.g., 'genre', 'origin', 'role')."
+        }
+      },
+      "required": [
+        "entity_1_name",
+        "entity_2_name",
+        "shared_attribute",
+        "attribute_category"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "entity_1_name": "Circa Survive",
+      "entity_2_name": "The Auteurs",
+      "shared_attribute": "rock band",
+      "attribute_category": "genre"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

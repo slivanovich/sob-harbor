@@ -1,0 +1,15 @@
+{
+  "miniseries_details": {
+    "name": "The Corner",
+    "release_year": 2000,
+    "network": "HBO",
+    "genre": "drama"
+  },
+  "award_information": {
+    "award_name": "Primetime Emmy Award for Outstanding Miniseries",
+    "award_year": 2000
+  },
+  "executive_producer": {
+    "name": "Robert F. Colesberry"
+  }
+}

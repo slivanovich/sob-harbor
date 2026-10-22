@@ -1,0 +1,12 @@
+{
+  "actress_name": "Marcia Strassman",
+  "nurse_role": "Nurse Margie Cutler",
+  "sequel_film": {
+    "title": "Honey, I Blew Up the Kid",
+    "release_year": 1992
+  },
+  "original_film": {
+    "title": "Honey, I Shrunk the Kids",
+    "release_year": 1989
+  }
+}

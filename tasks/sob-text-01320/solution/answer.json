@@ -1,0 +1,10 @@
+{
+  "brewery_name": "Paulaner Brewery",
+  "establishment_year": 1634,
+  "festival_details": {
+    "festival_name": "Salvator-Ausschank auf dem Nockherberg",
+    "festival_location": "Nockherberg"
+  },
+  "alcoholic_beverage_served": "beer",
+  "beverage_origin": "German"
+}

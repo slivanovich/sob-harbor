@@ -1,0 +1,12 @@
+{
+  "band_one": {
+    "name": "The Accidentals",
+    "formation_year": 2012
+  },
+  "band_two": {
+    "name": "Porcupine Tree",
+    "formation_year": 1987
+  },
+  "earliest_formed_band_name": "Porcupine Tree",
+  "earliest_formation_year": 1987
+}

@@ -1,0 +1,11 @@
+{
+  "common_type": "film",
+  "shared_attributes": [
+    "American",
+    "released by Walt Disney Pictures"
+  ],
+  "entities_compared": [
+    "College Road Trip",
+    "The Castaway Cowboy"
+  ]
+}

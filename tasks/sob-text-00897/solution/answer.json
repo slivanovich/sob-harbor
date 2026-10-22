@@ -1,0 +1,11 @@
+{
+  "person_name": "Konstantin Somov",
+  "birth_year": 1869,
+  "birth_century": "19th century",
+  "family_member_details": {
+    "relationship": "father",
+    "name": "Andrey Ivanovich Somov",
+    "profession": "curator",
+    "institution": "Hermitage Museum"
+  }
+}

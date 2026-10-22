@@ -1,0 +1,15 @@
+{
+  "people_involved": [
+    {
+      "name": "Meyer Schapiro",
+      "birth_year": 1904
+    },
+    {
+      "name": "Thomas Wolfe",
+      "birth_year": 1900
+    }
+  ],
+  "earliest_birth_year": 1900,
+  "person_born_first": "Thomas Wolfe",
+  "comparison_result": "Thomas Wolfe was born before Meyer Schapiro."
+}

@@ -1,0 +1,9 @@
+{
+  "religious_belief_system_name": "Scientology",
+  "founder_name": "L. Ron Hubbard",
+  "development_year": 1954,
+  "content_control_software": {
+    "software_name": "Scieno Sitter",
+    "blocking_target": "websites critical of Scientology"
+  }
+}

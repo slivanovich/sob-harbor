@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Tell Fray: Tell Fray is a tell, or settlement mound, on the east bank of the Euphrates in Raqqa Governorate, northern Syria.  The archaeological site takes its name from an ancient irrigation canal, hence 'Fray' or 'Little Euphrates'.  It was excavated in 1972 and 1973 as a joint Syrian–Italian operation under the direction of Adnan Bounni of the Syrian Service of Archaeological Excavations and Paolo Matthiae, the excavator of Ebla.  The operation was part of the UNESCO-coordinated international effort to excavate as many sites as possible in the area that would be flooded by the reservoir of the Tabqa Dam, which was being constructed at that time.  Tell Fray disappeared under the rising waters of Lake Assad in 1974.  The excavations revealed occupation layers dating to the 14th century BCE, or Late Bronze Age.  There were at least two temples in this city, one of them probably devoted to the god Teshub.  A number of houses were also excavated.  Two of these houses belonged to important officials.  One of these was possibly a local representative or governor of the Hittite king, whereas the other was responsible for the maintenance of the canals in the area.  The clay tablets found at Tell Fray indicate that the site belonged to the influence sphere of Ashtata, centred on Emar, which in turn fell under Carchemish, upstream from both Emar and Tell Fray.  The site was destroyed by fire in the 13th century BCE, probably by the Middle Assyrian kings Shalmaneser I or Tukulti-Ninurta I, when the Assyrians conquered this area.  Based on the cuneiform texts found in Tell Fray and elsewhere, it has been proposed that the name of the ancient site was either Yakharisha or Shaparu.  Finds from the excavation are now on display in the National Museum of Aleppo.
+
+Thebes, Greece: Thebes ( ; Ancient Greek: Θῆβαι , "Thēbai", ] ; Modern Greek: Θήβα , "Thíva" ] ) is a city in Boeotia, central Greece.  It played an important role in Greek myths, as the site of the stories of Cadmus, Oedipus, Dionysus and others.  Archaeological excavations in and around Thebes have revealed a Mycenaean settlement and clay tablets written in the Linear B script, indicating the importance of the site in the Bronze Age.
+
+Vecate Parish: Vecate parish (Latvian: "Vecates pagasts" ) is an administrative unit of the Burtnieki Municipality, Latvia - located in northern Latvia, south of the town of Mazsalaca, near the river Salaca and Lake Burtnieks which is fourth largest lake in Latvia.  The area covers 8974 ha and population is approx 564.  One of the most outstanding European Stone Age settlements such as Fishermen Archaeological Complex "Zvejnieki" (contains settlement and the cemetery), ancient settlement "Kaulenkalns" (archaeological excavations by E.Sturm in 1943.  - 1944.)  and "Rinnukalns" (archaeological excavations by Carl Georg von Sievers in 1875.  - 1877.; A.Zommers in 1881.  and E. Sturm in 1943.)  are located in this area.  Vecate parish developed around the former Alt-Ottenhof manor and it was first mentioned in historical sources in 1640.  The area benefits from the local boathouse, library with free public WiFi access, doctorate, open-air stage with sports facilities, newly build community centre and a local shop.  "Vecate" boathouse has been very popular to anglers and hunters for many years and provides a hire of rowing / fishing boats, also anglers can purchase local fishing licences for legal fishing in the river and lake.
+
+List of archaeological excavations in Jerusalem: List of archaeological excavations in Jerusalem is an incomplete list of archaeological excavations in Jerusalem.
+
+Klin-Yar: Klin-Yar (or Klin-Jar) is a prehistoric and early medieval site in the North Caucasus, outside of Kislovodsk.  It was first discovered in the 1980s.  Archaeological excavations had uncovered settlement traces and extensive cemetery areas starting in the 8th century BC, belonging to the Koban culture.  The site was used up to the 7th century AD.  Its long use over all this period, its size and rich finds, as well as the data quality of recent excavations make Klin-Yar one of the most important archaeological sites of the region.
+
+Greek Archaeological Service: The Greek Archaeological Service (Greek: Αρχαιολογική Υπηρεσία ) is a state service, under the auspices of the Greek Ministry of Culture, responsible for the oversight of all archaeological excavations, museums and the country's archaeological heritage in general.
+
+Polybus of Corinth: Polybus (Greek: Πόλυβος ) is a figure in Greek mythology.  He was the king of Corinth and husband of either Merope or Periboea.  He raised Oedipus as his adopted son, who had been abandoned by his parents Laius and Jocasta of Thebes in Greece.  Polybus was the true father of Alcinoe.  In virtually all accounts of the mythology, when Oedipus reached adolescence, he consulted with the Delphic Oracle, who told him "You shall kill your father and marry your mother".  Obviously horrified and disgusted with such a prophecy, Oedipus imposed self-exile upon himself and kept away from Corinth, as he resolved never to murder King Polybus, who had been a kind father to him.  Oedipus was also understandably disgusted the act of murdering Polybus and claiming his wife for himself, as he had no unnatural attraction to Queen Merope.  Many years later, after Oedipus won the kingship of Thebes by defeating the Sphinx, did another plague befall Thebes.  King Oedipus, in his effort to find the cause of plague due to a patricide, revealed that he was told in his teen years that he was destined to murder his father, and sent a spy to Corinth to see who is currently on the throne.  The news of Polybus' death by natural causes was announced by the messenger to Jocasta in Sophocles' "Oedipus Rex", in which it is mistakenly taken to mean that Oedipus did not kill his father.  This would mean that the prophecy that Oedipus would murder his father and marry his mother would be false, and Oedipus expresses relief that he did not commit such a heinous act.  Since Polybus was in fact his adoptive father, Oedipus could and did kill his true father, King Laius, and fulfill the prophecy.  Oedipus never knew his true destiny until the final parts of the play.
+
+Oedipus: Oedipus ( or or ; Ancient Greek: Οἰδίπους "Oidípous" meaning "swollen foot") was a mythical Greek king of Thebes.  A tragic hero in Greek mythology, Oedipus accidentally fulfilled a prophecy that he would end up killing his father and marrying his mother, thereby bringing disaster to his city and family.
+
+Harilaq Fortress: The Harilaq fortress (Albanian: "Kalaja e Harilaqit or Kështjella e Harilaqit" , Serbian: Градина, "Gradina" or Ариљача, "Ariljača"; 4th–6th century AD), is situated on top of the hill known by the local toponomy as the Gradina – Harilaq, set in an elevated and dominant position, west from the Ariljača village.  The fortress is located in an altitude of maximum 766 metres above sea level, and is approximately sited 9 km southeast from the town of Kosovo Polje and only 2 kilometres west from Pristina International Airport "Adem Jashari".  The total surface of the fortress, also counting the circular walls/ ramparts, measures around 1.3 hectares of the inner space of the stronghold.  The archaeological excavations at this site were conducted in several seasons, commencing in 2005 and were carried out systematically until 2010 by the staff of the Museum of Kosovo, particularly the Archaeological Institute of Kosovo.  Nonetheless, several conservations and consolidations of the circuit walls were done in order to preserve the remains.  During the five archaeological seasons' works, numerous remains and foundations of sacral, profane and utilitarian buildings were discovered.  In regard, the entire outer sides of the rampart with towers at the axes were unearthed, as well as a church with three naves and a Saskrity are discovered, but also two almost identical structures in a rounded shape of an unknown sacral complex has been uncovered, as well.  On the other hand, vast movable archaeological material composed of: metal made working tools, jewelry, coins, bricks, glass fragments and architectural structures, all clear indications that pinpoint to the Late Antique date and especially typical for the Justinian Period.  Also, at this fortress traces of prehistoric periods have been evidenced, especially emphasizing the metal periods, but it continued to exist all through antiquity and up to the Medieval Period.  Discovered and recorded findings from this site of excavations from 2005–2008 were presented at the International Conference on Illyria: "Illyri Meridionale et l'Epire dans l'antiquite, Act du V colloque internacional de Grenoble, 8–11 octobre 2008", held in Grenoble, France.
+
+Archaeological Society of Athens: The Archaeological Society of Athens (Greek: Εν Αθήναις Αρχαιολογική Εταιρεία) is an independent learned society.  Also termed the Greek Archaeological Society, it was founded in 1837, just a few years after the establishment of the modern Greek State, with the aim of encouraging archaeological excavations, maintenance, care and exhibition of antiquities in Greece.
+
+Question: The Greek city, in which Oedipus was king, has been home to which settlement as revealed through archaeological excavations?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "city_name": {
+      "type": "string",
+      "description": "The name of the Greek city where Oedipus was king."
+    },
+    "king_name": {
+      "type": "string",
+      "description": "The name of the king associated with the city."
+    },
+    "settlement_details": {
+      "type": "object",
+      "properties": {
+        "settlement_type": {
+          "type": "string",
+          "description": "The type of settlement revealed by archaeological excavations."
+        },
+        "evidence_type": {
+          "type": "string",
+          "description": "The type of archaeological evidence found."
+        },
+        "historical_period": {
+          "type": "string",
+          "description": "The historical period to which the settlement belongs."
+        }
+      },
+      "required": [
+        "settlement_type",
+        "evidence_type",
+        "historical_period"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "city_name",
+    "king_name",
+    "settlement_details"
+  ],
+  "additionalProperties": false
+}

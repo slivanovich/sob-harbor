@@ -1,0 +1,17 @@
+{
+  "comparison_successful": true,
+  "airport_farther": {
+    "name": "Merle K. (Mudhole) Smith Airport",
+    "iata_code": "CDV",
+    "closest_city": "Cordova",
+    "distance_to_city_miles": 13,
+    "distance_to_city_km": 20
+  },
+  "airport_closer": {
+    "name": "Eugene Airport",
+    "iata_code": "EUG",
+    "closest_city": "Eugene",
+    "distance_to_city_miles": 7,
+    "distance_to_city_km": 11
+  }
+}

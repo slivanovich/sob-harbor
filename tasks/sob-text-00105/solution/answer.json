@@ -1,0 +1,14 @@
+{
+  "episode_title": "You're Getting Old",
+  "season_details": {
+    "season_number": 15,
+    "episode_number_in_season": 7
+  },
+  "overall_episode_number": 216,
+  "air_date": "June 8, 2011",
+  "relationship_to_target_episode": {
+    "target_episode_title": "Ass Burgers",
+    "is_immediately_preceding": true,
+    "is_seventh_episode_of_its_season": true
+  }
+}

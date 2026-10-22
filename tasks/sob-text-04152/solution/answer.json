@@ -1,0 +1,16 @@
+{
+  "film_title": "Tenacious D in The Pick of Destiny",
+  "film_year": 2006,
+  "film_genre": [
+    "musical",
+    "fantasy",
+    "comedy"
+  ],
+  "film_country_of_origin": "American",
+  "related_tour": {
+    "tour_name": "The Pick of Destiny Tour",
+    "tour_start_date": "November 11, 2006",
+    "tour_end_date": "February 21, 2007",
+    "number_of_shows": 32
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "coach_name": "Henry Frazier III",
+  "university_name": "Bowie State University",
+  "coaching_tenure": {
+    "start_year": 1999,
+    "end_year": 2003
+  },
+  "university_location_state": "Maryland"
+}

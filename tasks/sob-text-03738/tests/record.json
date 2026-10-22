@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "15570e44a7c1c7cf1209185543fcab6fdabc4685ffbb802af66fab626210582b",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5abc5389554299700f9d7868",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Air Doll",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Look Back in Anger (TV series): Look Back in Anger () is a 2000 South Korean television series about two brothers' love for two women that aired on KBS2.  Starring Joo Jin-mo, Lee Min-woo, Park Jin-hee and Bae Doona, the cast also includes the following actors pre-stardom: Kim Myung-min, Uhm Tae-woong, Kim Min-hee and Lee Eun-ju.\n\nSex doll: A sex doll (also love doll or blowup doll) is a type of sex toy in the size and shape of a sexual partner for aid in masturbation.  The sex doll may consist of an entire body with face, or just a head, pelvis or other partial body, with the accessories (vagina, anus, mouth, penis) for sexual stimulation.  The parts are sometimes vibrating and may be removable or interchangeable.\n\nDon't Look Back in Anger: \"Don't Look Back in Anger\" is a song by the English rock band Oasis.  It was released on 19 February 1996 as the fifth single from their second studio album, \"(What's the Story) Morning Glory? \" (1995).  The song was written by the band's guitarist and main songwriter, Noel Gallagher.  It became the band's second single to reach number one on the UK Singles Chart, where it also went platinum.  \"Don't Look Back in Anger\" was also the first Oasis single with lead vocals by Noel (who had previously only sung lead on B-sides) instead of his brother, Liam.\n\nEpitaph for George Dillon: Epitaph for George Dillon is an early John Osborne play, one of two he wrote in collaboration with Anthony Creighton (the other is \"Personal Enemy\").  It was written before \"Look Back in Anger\", the play which made Osborne’s career, but opened a year after in Oxford in 1957 and moved to London’s Royal Court theatre, where \"Look Back in Anger\" had debuted on 8 May 1956.  It moved to New York City shortly afterwards and garnered three Tony Award nominations.\n\nLook Back in Anger (1980 film): Look Back in Anger is a 1980 British film starring Malcolm McDowell, Lisa Banes and Fran Brill, and directed by Lindsay Anderson and David Hugh Jones.  The film is based on John Osborne's play \"Look Back in Anger\".\n\nNoriko Tatsumi: Noriko Tatsumi (辰巳典子 , Tatsumi Noriko , born October 12, 1947 in Osaka, Japan) is a Japanese actress known primarily for her appearances in \"pink films\" of the 1960s.  During the \"First Wave\" of \"pink film\", Tatsumi became known as the first \"Queen\" of Japanese softcore sex movies, a title which she held from 1967 through 1970.  She most often appeared in the films of the World Eiga and Nihon Cinema studios, and is best known for her work with director Kōji Seki, especially \"Whore\" (1967) and \"Erotic Culture Shock\" (1969).  She also appeared in director and Seijun Suzuki script-writer, Atsushi Yamatoya's influential 1967 cult film, \"Inflatable Sex Doll of the Wastelands\".\n\nInflatable Sex Doll of the Wastelands: Inflatable Sex Doll of the Wastelands (荒野のダッチワイフ , Kōya no Datchi Waifu ) \"aka\" Dutch Wife of the Wasteland \"and\" The Dutch Wives of the Wild, originally released as Horror Doll (恐怖人形 , Kyōfu Ningyō ) , is a 1967 Japanese \"pink film\" written and directed by cult filmmaker Atsushi Yamatoya, starring the first \"Queen\" of \"pink film\", Noriko Tatsumi, and with music by the noted jazz pianist, Yōsuke Yamashita.\n\nJune Korea: June Korea (Korean: 조준태 ; born July 22, 1982) is a New York–based visual artist and photographer.  Sometimes, his works feature his sex doll Eva.  He lives with Eva, his silicon sex doll for his photographic project.  His work has been featured in numerous solo and group exhibitions.  He and his sex doll have attracted attraction from the media and has been featured in different media publications worldwide.\n\nBae Doona: Bae Doo-na (; ] ; born October 11, 1979) is a South Korean actress and photographer.  She first became known outside Korea for her roles as a political activist in Park Chan-wook's \"Sympathy for Mr. Vengeance\" (2002), archer Park Nam-joo in Bong Joon-ho's \"The Host\" (2006), and as an inflatable sex doll-come-to-life in Hirokazu Koreeda's \"Air Doll\" (2009).  She has had English-speaking roles in the Wachowski films \"Cloud Atlas\" (2012) and \"Jupiter Ascending\" (2015), and the TV series \"Sense8\" (2015-present).\n\nKathryn Hamilton: Kathryn Hamilton is a British director who is now based in New York City.  In addition to independent work, she is the Artistic Director of Sister Sylvester.  For Sister Sylvester, she has directed \"The Ventriloquist Circle\" at Dixon Place; \"Look Back In\", an adaptation of John Osborne's classic Look Back in Anger; a New York City tour of \"The Box Man\"; a site specific production of \"Play America\" at Saint Cecilia's Convent.  She and the company are currently developing \"Hideouts for Time, or The Whale\".  Washington DC's Shakespeare Theatre Company recently invited her to present at their AsidesLive Symposium on Site Specific and Immersive Theatre.",
+    "question": "Look Back in Anger starred the actress who was the part of an inflatable sex doll in what movie?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actress_name": {
+          "type": "string",
+          "description": "The name of the actress who starred in 'Look Back in Anger' and played an inflatable sex doll."
+        },
+        "look_back_in_anger_version_type": {
+          "type": "string",
+          "description": "The type of 'Look Back in Anger' production the actress was in (e.g., TV series, film)."
+        },
+        "look_back_in_anger_version_year": {
+          "type": "integer",
+          "description": "The release year of the 'Look Back in Anger' production."
+        },
+        "movie_with_sex_doll_role": {
+          "type": "string",
+          "description": "The title of the movie where the actress played an inflatable sex doll."
+        },
+        "movie_with_sex_doll_role_year": {
+          "type": "integer",
+          "description": "The release year of the movie where the actress played an inflatable sex doll."
+        },
+        "director_of_sex_doll_movie": {
+          "type": "string",
+          "description": "The director of the movie where the actress played an inflatable sex doll."
+        }
+      },
+      "required": [
+        "actress_name",
+        "look_back_in_anger_version_type",
+        "look_back_in_anger_version_year",
+        "movie_with_sex_doll_role",
+        "movie_with_sex_doll_role_year",
+        "director_of_sex_doll_movie"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actress_name": "Bae Doona",
+      "look_back_in_anger_version_type": "TV series",
+      "look_back_in_anger_version_year": 2000,
+      "movie_with_sex_doll_role": "Air Doll",
+      "movie_with_sex_doll_role_year": 2009,
+      "director_of_sex_doll_movie": "Hirokazu Koreeda"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "rescued_person": {
+    "name": "Gilbert du Motier, Marquis de Lafayette",
+    "description": "French aristocrat and military officer who fought in the American Revolutionary War.",
+    "close_friends": [
+      "George Washington",
+      "Alexander Hamilton",
+      "Thomas Jefferson"
+    ]
+  },
+  "rescuer": {
+    "name": "Francis Kinloch Huger",
+    "family_name": "Huger",
+    "rescue_attempt_details": {
+      "year": 1794,
+      "outcome": "failed"
+    }
+  },
+  "question_focus": "Gilbert du Motier, Marquis de Lafayette"
+}

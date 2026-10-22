@@ -1,0 +1,10 @@
+{
+  "place_name": "Leavenworth, Kansas",
+  "county_seat_of": "Leavenworth County",
+  "location_details": {
+    "distance_from_kansas_city_miles": 25,
+    "direction_from_kansas_city": "northwest",
+    "river_bank": "west bank of the Missouri River"
+  },
+  "notable_person_born_there": "Jack Killilay"
+}

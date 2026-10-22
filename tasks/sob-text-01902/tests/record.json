@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "80513cc3f687fc9d0f28d566c306775290d892834ec12a7b1eefcbf1e5c69a4f",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a865dbc55429960ec39b678",
+    "source_dataset": "hotpotqa",
+    "source_answer": "\"The Coach\"",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The V Show with Bob Valvano: The V Show with Bob Valvano is a sports talk radio show hosted by Bob Valvano and broadcast on ESPN Radio.  Normally, the show is heard Saturdays and Sundays from 1am ET to 5am ET; however, in 2009, his Friday night shows were pre-empted, and his Saturday shows shortened by one hour, during football season, mainly by Mike Tirico's \"Weekend Blitz\" and Chris Mortensen's \"The Mort Report\".  Valvano has been on the same post since he joined ESPN Radio in December 1998.  During the college basketball season he broadcasts from a different location almost every week, because he does a game for ESPN2 every Saturday night during the regular season.  Two personalities that often replaced him were Jeff Rickard and Amy Lawrence, both were regulars on \"GameNight\" and ESPN Radio.\n\nMike &amp; Mike: Mike & Mike (formerly \"Mike and Mike in the Morning\") is an American sports-talk radio show hosted by Mike Golic and Mike Greenberg on ESPN Radio and simulcast on television, normally on ESPN2, and acts as the morning show for both the radio and television sides of the production.  If ESPN is broadcasting a live sporting event during the show's timeslot, SportsCenter would air on ESPN2, and the show's simulcast would therefore then air on ESPNews.  If both ESPN and ESPN2 are showing live sporting events, Sportscenter would air on ESPNews and the show would air on either ESPNU or ESPN Classic.  Outside of a few radio stations which are able to move or decline carriage of the show for their own local morning productions (or for daytime-only operations, may not be able to carry), \"Mike & Mike\" is effectively a compulsory element of the ESPN Radio schedule which all affiliates of the network are required to carry.\n\nDanny Kanell: Daniel Kanell (born November 21, 1973) is a former professional American football quarterback in the National Football League (NFL) and Arena Football League, and former ESPN personality.  He was employed by ESPN as an analyst and host on the \"Russillo and Kanell\" show on ESPN Radio.  He was the host of ESPNU's late-night sports and humor show UNITE before the show was canceled in June 2013.  He would also appear on ESPN's new College Football Playoff Selection Show alongside Rece Davis, Joey Galloway, and Kirk Herbstreit.  His career with ESPN ended on April 26th, 2017.\n\nFootball Tonight: Football Tonight is a sports radio program that began airing on ESPN Radio July 21, 2008, and is run each weeknight from 7- 8 pm and 10pm to 1am on Saturday evenings during football season.  The one-hour show is hosted by Freddie Coleman and Jon Siebel on a rotating basis and discusses what happened in football that day.  The format is similar to what is done on ESPN's NFL Live weekdays.  Marc Kestacher provides the ESPN Radio SportsCenter updates every 20 minutes during the early show with Neil Jackson providing the updates on the late run.\n\nAllNight with Jason Smith: AllNight with Jason Smith was a syndicated sports talk radio show on ESPN Radio, hosted by Jason Smith.  The show was heard Sunday through Thursday from 10pm PT to 1am PT live from the studios of KSPN in Los Angeles, California, rather than the ESPN Headquarters in Bristol, Connecticut.  Smith was named host of the show on September 19, 2005, after former host Todd Wright was fired after almost eight years on the show.  It reached more than 500 ESPN affiliate markets across the United States and Canada.\n\nESPN Radio: ESPN Radio is an American sports radio network.  It was launched on January 1, 1992 under the original banner of \"SportsRadio ESPN.\"  ESPN Radio is located at ESPN headquarters in Bristol, Connecticut.  The network airs a regular schedule of daily and weekly programming as well as live coverage of sports events including Major League Baseball, Major League Soccer, National Basketball Association, Army Black Knights football, College Football Playoff, Championship Week and UEFA Champions League games.  ESPN Radio is broadcast to hundreds of affiliate stations as well as to subscribers of Sirius XM Radio in the United States and Canada.  The network's content is also streamed online and via mobile applications and other media devices via TuneIn, and several affiliates and owned stations are also available through the service.  In 2014, ESPN partnered with TuneIn to create 24/7 streams of its most popular programming including Mike & Mike and SVP & Russillo.  Select iHeartMedia-owned ESPN Radio affiliates are available through iHeartRadio.\n\nErik Kuselias: Erik Kuselias is a television and radio host.  He is currently on Sports Talk 1040 Orlando.  He used to co-host Pro Football Talk on the NBC Sports Network with Mike Florio and a host on NBC Sports Radio.  He is the former host of Morning Drive on Golf Channel, \"NASCAR Now\" on ESPN2, \"The SportsBash\" on ESPN Radio, and \"NFL on ESPN Radio\" on Sundays during NFL season.\n\nJonathan Coachman: Jonathan William Coachman (born August 12, 1972), also known as \"The Coach\", is an American sports interviewer who works for ESPN.  He is a former professional wrestling color commentator and authority figure.  He is also a former college basketball player, and football play-by-play announcer.  He is best known for his work with WWE, where he spent nine years as a commentator, interviewer, and occasional wrestler.\n\nFootball Sunday on ESPN Radio: Football Sunday on ESPN Radio is a weekly radio program dedicated to the National Football League (NFL) every Sunday from 1 pm ET to 8 pm ET on ESPN and ESPN Radio.  The current host of the show is Jonathan Coachman.  Analysts include former defensive back Eric Allen, former quarterback Tim Hasselbeck, and former wide receiver Tom Waddle.  The program originates from ESPN headquarters in Bristol, Connecticut and is sponsored by Progressive.\n\nStephen A. Smith: Stephen Anthony Smith (born October 14, 1967) is an American sports television personality, sports radio host, sports journalist, and actor.  Smith is a commentator on \"ESPN First Take\", where he appears with Max Kellerman and Molly Qerim.  He also makes frequent appearances as an NBA analyst on SportsCenter.  He also is an NBA analyst for ESPN on \"NBA Countdown\" and NBA broadcasts on ESPN.  Smith formerly hosted \"The Stephen A. Smith and Ryan Ruocco Show\" on ESPN Radio New York 98.7 FM He now hosts \"The Stephen A. Smith Show\" on the Chris Russo sports radio station: Mad Dog Sports Radio SiriusXM Radio, channel 82, and is a featured columnist for ESPNNY.com, ESPN.com, and The Philadelphia Inquirer.",
+    "question": "What is the nickname of the current host of Football Sunday on ESPN Radio?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "show_name": {
+          "type": "string",
+          "description": "The name of the radio show."
+        },
+        "host_full_name": {
+          "type": "string",
+          "description": "The full name of the show's current host."
+        },
+        "host_nickname": {
+          "type": "string",
+          "description": "The nickname of the show's current host."
+        },
+        "broadcast_network": {
+          "type": "string",
+          "description": "The radio network broadcasting the show."
+        }
+      },
+      "required": [
+        "show_name",
+        "host_full_name",
+        "host_nickname",
+        "broadcast_network"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "show_name": "Football Sunday on ESPN Radio",
+      "host_full_name": "Jonathan Coachman",
+      "host_nickname": "The Coach",
+      "broadcast_network": "ESPN Radio"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

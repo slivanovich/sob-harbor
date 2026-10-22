@@ -1,0 +1,20 @@
+{
+  "island_name": "Maui",
+  "location_details": {
+    "area_name": "Kahakuloa",
+    "island_part": "north side of West Maui"
+  },
+  "found_items": [
+    {
+      "item_type": "plant",
+      "name": "Taro",
+      "scientific_name": "Colocasia esculenta",
+      "plant_family": "Araceae",
+      "description": "most widely cultivated species of plants in the Araceae family"
+    },
+    {
+      "item_type": "gallery",
+      "name": "Kaukini Gallery"
+    }
+  ]
+}

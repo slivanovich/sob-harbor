@@ -1,0 +1,10 @@
+{
+  "event_name": "MTV Video Music Awards",
+  "event_year": 2015,
+  "event_date": "August 30, 2015",
+  "premiere_details": {
+    "video_title": "Wildest Dreams",
+    "artist": "Taylor Swift",
+    "premiere_context": "pre-show"
+  }
+}

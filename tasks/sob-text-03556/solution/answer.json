@@ -1,0 +1,17 @@
+{
+  "person_name": "Cal McCrystal",
+  "person_professions": [
+    "director",
+    "actor"
+  ],
+  "film_details": {
+    "film_title": "The World's End",
+    "film_genre": "comic science fiction",
+    "film_plot_elements": [
+      "alien invasion",
+      "pub crawl",
+      "group of friends"
+    ],
+    "person_role_in_film": "Physical Comedy Director"
+  }
+}

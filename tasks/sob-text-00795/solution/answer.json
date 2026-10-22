@@ -1,0 +1,9 @@
+{
+  "tour_name": "The End Tour",
+  "band_name": "Black Sabbath",
+  "ep_details": {
+    "ep_name": "The End",
+    "release_date": "2016-01-20",
+    "availability_restriction": "only available at dates on their final tour The End"
+  }
+}

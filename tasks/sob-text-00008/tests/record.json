@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "98f4dc27d92863f2f034c818dce522633e601a46ceb64373538cb4836f685ace",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ade00405542997dc7907117",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Australian school teacher",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Jon Byrne: Jon Stephen Byrne (born June 23, 1983) is a former Major League Baseball (MLB) umpire.  He made his debut on May 16, 2014, becoming the first MLB professional umpire to have been born in Australia.  Australian second baseman Joe Quinn had acted as a substitute umpire for two National League games; one each in 1894 and 1896.\n\nAleem Dar: Aleem Sarwar Dar (born 6 June 1968) is a Pakistani cricket umpire and a member of the ICC Elite umpire panel.  He won three consecutive ICC Umpire of the Year awards 2009, 2010 and 2011, after being nominated twice in 2005 and 2006.  Aleem Dar, Marais Erasmus, Richard Kettleborough, Kumar Dharmasena and Simon Taufel were the only umpires to have received the award from its inception until 2016.  Before becoming an umpire, he played first-class cricket for Allied Bank, Gujranwala Cricket Association, Lahore and Pakistan Railways as a right-handed batsman and a leg-break bowler.  Since his retirement as a player, he has gained prominence as one of the leading umpires in international cricket.  He was educated at Islamia College, Civil Lines, Lahore.\n\nAlan Thomson (sportsman, born 1899): Alan Thomson (1 September 1899 – 15 September 1938) was an Australian sportsman.  He played one first-class cricket match for Victoria in 1926.  He also played Australian rules football with St Kilda in the Victorian Football League (VFL).\n\nLindsay Johnston (Australian rules footballer): Lindsay Johnston (born 12 April 1937) is a former Australian rules football player and umpire.  He played in the Western Australian National Football League (WANFL) for Swan Districts before becoming a WANFL umpire.  He appeared in two WANFL Grand Finals, one as a premiership-winning player and one as an umpire.\n\nAlan Thomson (musician): Alan Thomson (born 3 May 1960, Glasgow) is a Scottish bassist and vocalist with many acts including the late John Martyn.\n\nAlan Thomson (cricketer): Alan Lloyd \"Froggy\" Thomson (born 2 December 1945) is an Australian school teacher and former cricketer and Australian rules football umpire.\n\nRamon De Jesus: Ramon Silvestre De Jesus Ferrer (born August 31, 1983) is a Major League Baseball (MLB) umpire.  He made his MLB debut on April 22, 2016, becoming the first MLB umpire from the Dominican Republic.  He wears number 18, which was most recently worn by former umpire Marcus Pattillo.\n\nUmpire (Australian rules football): An umpire is an official in the sport of Australian rules football who adjudicates the game according to the \"Laws Of The Game\", the official handbook of Australian Rules Football.\n\nAlan Thomson (canoeist): Alan Thomson (born June 19, 1961 in Montreal) is a Canadian sprint canoer who competed during the mid-1980s.  He was eliminated in the semifinals of the K-1 1000 m event at the 1984 Summer Olympics in Los Angeles.  He coached the Canadian Canoe Kayak team at the 1987 Pan American Games in Indianapolis USA.\n\nRoberto Ortiz (umpire): Roberto Carlos Ortiz Maymi (born December 16, 1984) is a Major League Baseball (MLB) umpire.  He made his debut on May 14, 2016, becoming the first MLB umpire since Delfin Colon to have been born in Puerto Rico.  He wears number 40, which was most recently worn by former umpire Jeff Gosney.",
+    "question": "What was Alan Thomson before becoming an umpire?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "umpire_name": {
+          "type": "string",
+          "description": "The full name of the umpire."
+        },
+        "umpire_sport": {
+          "type": "string",
+          "description": "The sport in which the person became an umpire."
+        },
+        "previous_professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professions held by the person before becoming an umpire."
+        },
+        "country_of_origin": {
+          "type": "string",
+          "description": "The country of origin of the umpire."
+        }
+      },
+      "required": [
+        "umpire_name",
+        "umpire_sport",
+        "previous_professions",
+        "country_of_origin"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "umpire_name": "Alan Lloyd Thomson",
+      "umpire_sport": "Australian rules football",
+      "previous_professions": [
+        "school teacher",
+        "cricketer"
+      ],
+      "country_of_origin": "Australia"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

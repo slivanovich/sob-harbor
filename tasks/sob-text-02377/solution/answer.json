@@ -1,0 +1,11 @@
+{
+  "discovered_artist_name": "Marcos Hernandez",
+  "discoverer_role": "manager",
+  "discoverer_of_artist_name": "Vanilla Ice",
+  "work_location": {
+    "name": "Lewisville YMCA",
+    "city": "Flower Mound",
+    "state": "Texas",
+    "type": "YMCA"
+  }
+}

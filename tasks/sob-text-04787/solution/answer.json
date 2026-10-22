@@ -1,0 +1,15 @@
+{
+  "film_title": "Diamonds Are Forever",
+  "bond_actor": "Sean Connery",
+  "film_series_number": 7,
+  "villains": [
+    {
+      "name": "Mr. Wint",
+      "notable_trait": "Trades quips after killing targets"
+    },
+    {
+      "name": "Mr. Kidd",
+      "notable_trait": "Trades quips after killing targets"
+    }
+  ]
+}

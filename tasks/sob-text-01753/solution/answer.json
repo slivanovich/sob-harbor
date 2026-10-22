@@ -1,0 +1,9 @@
+{
+  "country_name": "South Africa",
+  "country_population": 56000000,
+  "massacre_event": {
+    "name": "Leliefontein massacre",
+    "date": "31 January 1902",
+    "location_province": "Northern Cape"
+  }
+}

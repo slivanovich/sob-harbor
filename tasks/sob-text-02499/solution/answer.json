@@ -1,0 +1,12 @@
+{
+  "agency_name": "Infinity Patrol",
+  "detailing_book": {
+    "title": "GURPS Infinite Worlds",
+    "publisher": "Steve Jackson Games",
+    "publication_year": 2005,
+    "gurps_edition": "Fourth Edition"
+  },
+  "related_settings": [
+    "GURPS Banestorm"
+  ]
+}

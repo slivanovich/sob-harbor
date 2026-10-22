@@ -1,0 +1,16 @@
+{
+  "ship_details": {
+    "name": "USS Kearsarge",
+    "type": "Mohican-class sloop-of-war",
+    "naming_reason": "Mount Kearsarge in New Hampshire"
+  },
+  "mountain_details": {
+    "name": "Mount Kearsarge",
+    "location": "New Hampshire",
+    "summit_condition": "bare"
+  },
+  "event_details": {
+    "event_type": "forest fire",
+    "event_year": 1796
+  }
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Black Cat Bar: The Black Cat Bar or Black Cat Café was a bar in San Francisco, California.  It originally opened in 1906 and closed in 1921.  The Black Cat re-opened in 1933 and operated for another 30 years.  During its second run of operation, it was a hangout for Beats and bohemians but over time began attracting more and more of a gay clientele.
+
+Black Cat Music: Black Cat Music is a punk rock band from San Francisco Bay Area, California.  They were formed in the summer of 1998 by former members of bands such as The Criminals and the Receivers.  The music combined elements of punk & rock and roll with dark, poetic lyrics.  After its formation, Black Cat Music released an EP & first full-length record on Cheetah's records.  Soon thereafter, Black Cat Music signed to Lookout!  Records.  The band played live shows up and down the west coast, and on several national tours.  In 2004, the band released a video for the song "the Jet Trash", directed by Vincent Haycock.
+
+The Black Cat (1981 film): Strange things are happening in a small English village starting when a man driving a car suddenly encounters a strange black cat in the back seat and through the mesmerizing stare, the cat causes the man to crash his car into a lamp post, killing him.  The black cat travels back to its home, a rambling old house occupied by Robert Miles (Patrick Magee), a morbid and hostile former college professor of the supernatural who is reputed to be a medium.  Professor Miles lives alone except for his equally hostile black cat, and spends his time making audio tape recordings at the tombs of the recently deceased.  Meanwhile, an American tourist named Jill Travers (Mimsy Farmer), ventures into an open crypt to take photographs for her scrapbook when she discovers a small microphone on the floor of the place.  Venturing out, she meets the local police constable Sergeant Wilson (Al Cliver) who tells her not to venture down the crypt again, saying that the dead like to be left alone.  "They're not very hospitable," says Wilson.
+
+White Cat Black Cat: White Cat Black Cat series has founded by Ma Sing-yuen and Fong She Mei in 2004.  Nowadays, White Cat Black Cat series are well-received by children and parents in Hong Kong.  This series is remarkable and has gained many book awards in Hong Kong.  Ma Sing-yuen and Fong She Mei gain The Best Ten Books Election Award from Hong Kong Reading City several times, including 3rd Prize in 2011, 5th Prize in 2014, 1st Prize in 2015.
+
+Walter Hardy: The Cat (Walter Hardy) is a fictional character appearing in American comic books published by Marvel Comics.  Created by writer Marv Wolfman and artist Keith Pollard, he first appeared in "The Amazing Spider-Man" #194 (July 1979).  He is a world-renowned cat burglar and the father of Felicia Hardy, aka Black Cat.
+
+Marvel Comics: Marvel Comics is the common name and primary imprint of Marvel Worldwide Inc., formerly Marvel Publishing, Inc. and Marvel Comics Group, a publisher of comic books and related media.  In 2009, The Walt Disney Company acquired Marvel Entertainment, Marvel Worldwide's parent company.
+
+Black Cat (Harvey Comics): The Black Cat is a comic book adventure heroine published by Harvey Comics from 1941 to 1951.  Harvey also published reprints of the character in both the mid-1950s and the early 1960s.  The character's creation is claimed by the Harvey family to have originated with publisher Alfred Harvey, but there is no corroborating evidence for this.  The Black Cat debuted in "Pocket Comics" #1 (Aug. 1941), an experimental digest-sized comic book published by Harvey., and was illustrated by artist Al Gabrielle.  The character was ranked 41st in "Comics Buyer's Guide's" "100 Sexiest Women in Comics" list.
+
+List of Black Cat chapters: The chapters of the manga "Black Cat" were written and illustrated by Kentaro Yabuki and published by Shueisha in "Weekly Shōnen Jump" from 2000 to 2004.  "Black Cat"' s plot follows Train Heartnet, a former assassin known as the Black Cat, who now lives as a bounty hunter, dubbed "Sweeper".
+
+Black Cat (comics): The Black Cat (Felicia Hardy) is a fictional character appearing in American comic books published by Marvel Comics.  Throughout her history, Black Cat has been an enemy, love interest, and ally of the superhero Spider-Man.  Created by writer Marv Wolfman and artist Dave Cockrum, she first appeared in "The Amazing Spider-Man" #194 (July 1979).
+
+Spider-Man/Black Cat: The Evil that Men Do: Spider-Man/Black Cat: The Evil That Men Do is a six-issue comic book limited series published by Marvel Comics starring the superhero Spider-Man and his ally, the cat burglar known as the Black Cat.
+
+Question: Spider-Man/Black Cat: The Evil That Men Do was published by which company that was bought by Disney?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "comic_series_title": {
+      "type": "string",
+      "description": "The title of the comic book series."
+    },
+    "publisher": {
+      "type": "string",
+      "description": "The company that published the comic series."
+    },
+    "acquiring_company": {
+      "type": "string",
+      "description": "The company that acquired the publisher."
+    },
+    "acquisition_year": {
+      "type": "integer",
+      "description": "The year the publisher was acquired."
+    }
+  },
+  "required": [
+    "comic_series_title",
+    "publisher",
+    "acquiring_company",
+    "acquisition_year"
+  ],
+  "additionalProperties": false
+}

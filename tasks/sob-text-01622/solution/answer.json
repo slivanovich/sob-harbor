@@ -1,0 +1,17 @@
+{
+  "artist": {
+    "name": "Vulca",
+    "origin_city": "Veii",
+    "notable_works": [
+      "terracotta statue of Jupiter",
+      "Apollo of Veii"
+    ]
+  },
+  "roman_king": {
+    "name": "Lucius Tarquinius Superbus",
+    "title": "last of the Roman kings",
+    "reign_start_year_bc": 535,
+    "reign_end_year_bc": 509
+  },
+  "relationship": "worked for"
+}

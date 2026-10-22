@@ -1,0 +1,13 @@
+{
+  "country_name": "Lithuania",
+  "television_introduction_year": 1957,
+  "channel_details": {
+    "channel_name": "TV6",
+    "launch_date": "March 31, 2002",
+    "broadcast_methods": [
+      "terrestrial",
+      "satellite",
+      "cable"
+    ]
+  }
+}

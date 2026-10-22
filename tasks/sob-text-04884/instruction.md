@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+USS Tarawa (CV-40): USS "Tarawa" (CV/CVA/CVS-40, AVT-12) was one of 24 "Essex"-class aircraft carrier s built during and shortly after World War II for the United States Navy.  The ship was the first US Navy ship to bear the name, and was named for the bloody 1943 Battle of Tarawa.  "Tarawa" was commissioned in December 1945, too late to serve in World War II.  After serving a short time in the Far East, she was decommissioned in 1949.  She was soon recommissioned after the Korean War began, serving in the Atlantic as a replacement for carriers sent to Korea.  In the early 1950s, she was redesignated an attack carrier (CVA) and then an antisubmarine warfare carrier (CVS).  Except for one tour in the Far East, she spent her entire second career operating in the Atlantic and Caribbean.  Consequently, "Tarawa" was the only ship of her class to never see combat action.
+
+Third Battle of Panipat: The specific site of the battle itself is disputed by historians, but most consider it to have occurred somewhere near modern-day Kaalaa Aamb and Sanauli Road.  The battle lasted for several days and involved over 125,000 troops.  Protracted skirmishes occurred, with losses and gains on both sides.  The forces led by Ahmad Shah Durrani came out victorious after destroying several Maratha flanks.  The extent of the losses on both sides is heavily disputed by historians, but it is believed that between 60,000–70,000 were killed in fighting, while the numbers of injured and prisoners taken vary considerably.  According to the single best eyewitness chronicle—the bakhar by Shuja-ud-Daulah's Diwan Kashi Raj—about 40,000 Maratha prisoners were slaughtered in cold blood the day after the battle.  Grant Duff includes an interview of a survivor of these massacres in his "History of the Marathas" and generally corroborates this number.  Shejwalkar, whose monograph "Panipat 1761" is often regarded as the single best secondary source on the battle, says that "not less than 100,000 Marathas (soldiers and non-combatants) perished during and after the battle."
+
+Battle of Fort Dearborn: The Battle of Fort Dearborn was an engagement between United States troops and Potawatomi Native Americans that occurred on August 15, 1812, near Fort Dearborn in what is now Chicago, Illinois, but was then part of the Illinois Territory.  The battle, which occurred during the War of 1812, followed the evacuation of the fort as ordered by William Hull, commander of the United States Army of the Northwest.  The battle lasted about 15 minutes and resulted in a complete victory for the Native Americans.  Fort Dearborn was burned down and those soldiers and settlers who survived were taken captive.  Some were later ransomed.  After the battle, however, settlers continued to seek to enter the area, the fort was rebuilt in 1816, and settlers and the government were now convinced that all Indians had to be removed from the territory, far away from the settlement.
+
+Tarawa: Tarawa is an atoll and the capital of the Republic of Kiribati, in the central Pacific Ocean.  It comprises North Tarawa, which has much in common with other, more remote islands of the Gilberts group; and South Tarawa, which is home to 50,182 as of 2010 – half of the country's total population.  The atoll is best known by outsiders as the site of the Battle of Tarawa during World War II.
+
+Zhou dynasty: The Zhou dynasty ( ) was a Chinese dynasty that followed the Shang dynasty and preceded the Qin dynasty.  The Zhou dynasty lasted longer than any other dynasty in Chinese history.  The military control of China by the royal house, surnamed Ji (), lasted initially from 1046 until 771 BC for a period known as the Western Zhou and the political sphere of influence it created continued well into Eastern Zhou for another 500 years.
+
+Battle of Määritsa: Battle of Määritsa (Estonian: "Määritsa lahing" ,also known as Battle of Osula, "Osula lahing" ) was a battle held in Osula village, at that time in Võru County, Estonian SSR, Soviet Union.  It began on the night of 31 March 1946, involving members of the Forest Brothers and Soviet occupation forces.  Seven Estonian fighters based at the Hindrik farmhouse were besieged by up to 300 Soviet soldiers.  The battle lasted about seven hours before the farmhouse caught fire and the Soviets demanded that the rebels surrender.  Only two fighters managed to escape alive from the farmhouse, but were subsequently killed in battle with the besiegers.
+
+Battle of Leyte: The Battle of Leyte in the Pacific campaign of World War II was the amphibious invasion of the Gulf of Leyte in the Philippines by American forces and Filipino guerrillas under the command of General Douglas MacArthur, who fought against the Imperial Japanese Army in the Philippines led by General Tomoyuki Yamashita from 17 October - 26 December 1944.  The operation code named "King Two" launched the Philippines campaign of 1944–45 for the recapture and liberation of the entire Philippine Archipelago and to end almost three years of Japanese occupation.
+
+Battle of Puruarán: The Battle of Puruarán was a battle of the War of Mexican Independence that occurred on 5 January 1814 in the area around , Michoacán.  The battle was fought between the royalist forces loyal to the Spanish crown and the Mexican rebels fighting for independence from the Spanish Empire.  The Mexican insurgents were commanded by Mariano Matamoros y Guridi and the Spanish by Agustín Cosme Damián de Iturbide y Arámburu who would later go on to become the Mexican emperor, and by Ciriaco del Llano.  The battle lasted approximately one hour and resulted in a victory for the Spanish Royalists.
+
+Battle of St Matthew's: The Battle of St Matthew's or Battle of Short Strand was a gun battle that took place on the night of 27–28 June 1970 in Belfast, Northern Ireland.  It was fought between the Provisional Irish Republican Army (IRA) and Ulster loyalists in the area around St Matthew's Roman Catholic church.  This lies at the edge of the Short Strand, a Catholic enclave in a mainly-Protestant part of the city.  Violence had erupted there, and in other parts of Belfast, following marches by the Orange Order.  The battle lasted about five hours and ended at dawn when loyalists withdrew.  The British Army and police were deployed nearby but did not intervene.  Three people were killed and at least 26 wounded in the fighting, while another three were killed in north Belfast.
+
+Battle of Tarawa: The Battle of Tarawa was a battle in the Pacific Theater of World War II that was fought on 20–23 November 1943.  It took place at the Tarawa Atoll in the Gilbert Islands, and was part of Operation Galvanic, the U.S. invasion of the Gilberts.  Nearly 6,400 Japanese, Koreans, and Americans died in the fighting, mostly on and around the small island of Betio, in the extreme southwest of Tarawa Atoll.
+
+Question: Which battle lasted longer, the Battle of Tarawa or the Battle of Leyte?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "comparison_result": {
+      "type": "string",
+      "description": "The name of the battle that lasted longer."
+    },
+    "battle_durations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "battle_name": {
+            "type": "string",
+            "description": "The name of the battle."
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date",
+            "description": "The start date of the battle in YYYY-MM-DD format."
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date",
+            "description": "The end date of the battle in YYYY-MM-DD format."
+          },
+          "duration_days": {
+            "type": "integer",
+            "description": "The duration of the battle in days."
+          }
+        },
+        "required": [
+          "battle_name",
+          "start_date",
+          "end_date",
+          "duration_days"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "longer_battle_duration_days": {
+      "type": "integer",
+      "description": "The duration in days of the battle that lasted longer."
+    }
+  },
+  "required": [
+    "comparison_result",
+    "battle_durations",
+    "longer_battle_duration_days"
+  ],
+  "additionalProperties": false
+}

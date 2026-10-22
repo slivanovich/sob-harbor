@@ -1,0 +1,16 @@
+{
+  "university_name": "Hampton University",
+  "university_details": {
+    "type": "private",
+    "is_historically_black_university": true,
+    "location": {
+      "city": "Hampton",
+      "state": "Virginia",
+      "country": "United States"
+    }
+  },
+  "dean_information": {
+    "person_name": "Mamie Evelyn Locke",
+    "role": "Dean of the School of Liberal Arts"
+  }
+}

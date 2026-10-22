@@ -1,0 +1,8 @@
+{
+  "jailbreak_tool_name": "JailbreakMe",
+  "package_manager_details": {
+    "name": "Cydia",
+    "description": "a package manager mobile app for iOS that enables a user to find and install software packages on jailbroken iPhones, iPads and iPods"
+  },
+  "jailbreak_mechanism": "flaws in the Safari browser on the device"
+}

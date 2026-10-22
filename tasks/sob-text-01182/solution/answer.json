@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "Jack Hill",
+    "birth_year": 1933
+  },
+  "person_2": {
+    "name": "Boaz Yakin",
+    "birth_year": 1966
+  },
+  "older_person_name": "Jack Hill",
+  "age_difference_years": 33
+}

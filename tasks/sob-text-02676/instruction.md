@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Toledo Bullfrogs: The Toledo Bullfrogs was to be a professional arena football team based at the Lucas County Arena in Toledo, Ohio.  They were scheduled to begin play in the af2, the developmental league of the Arena Football League, in 2010, until that league folded in 2009.  The team has never played a game and the Toledo Bullfrogs website now leads directly to the Toledo Walleye website, which seems to indicate that the franchise is defunct.
+
+Orlando Predators: The Orlando Predators were a professional arena football team based in Orlando, Florida and member of the Arena Football League (AFL).  The team was most recently owned by Orlando Predators LLC, a company owned by David A. Siegel, and played its home games at Amway Center.
+
+Washington Valor: The Washington Valor are a professional arena football team based in Washington, D.C. that began play in the Arena Football League (AFL) in 2017.  The team's home arena is the Capital One Arena.  The Valor is owned by Monument Sports and Entertainment (Ted Leonsis, chairman), which also owns the Washington Wizards of the National Basketball Association (NBA), Washington Mystics of the Women's National Basketball Association (WNBA), Washington Capitals of the National Hockey League (NHL) and the new Baltimore Brigade franchise.
+
+San Jose SaberCats: The San Jose SaberCats were a professional arena football team based in San Jose, California.  The SaberCats had been members of the Arena Football League (AFL) since 1995 (the year in which the team was founded); and until 2015, they belonged to the AFL's National Conference.  Over nineteen seasons of play, the SaberCats emerged as one of the Arena Football League's most successful franchises; at the conclusion of the 2015 season, the SaberCats boasted a lifetime regular season record of 198–98.  Moreover, the SaberCats had won a total of four AFL Championships (2002, 2004, 2007, and 2015).  Their lifetime postseason record stood at 19–12.
+
+List of Orlando Predators seasons: This is a list of seasons completed by the Orlando Predators.  The Predators were a professional arena football franchise of the Arena Football League (AFL), based in Orlando, Florida, and plays its home games at CFE Arena.  The team was established in 1991.  The Predators made the playoffs for 19 consecutive seasons from to .  The franchise has played in seven ArenaBowls, the most of any arena football team, but only winning ArenaBowl XII and ArenaBowl XIV.  Prior to the 2009 season, the AFL announced that it had suspended operations indefinitely and canceled the 2009 season.  In September 2009, it was announced that the Predators would return for the 2010 season when the league relaunched.  They folded after the 2016 season.
+
+Garrett Rivas: Garrett Rivas (born June 1, 1985) is a former American football kicker who played in af2 and the Arena Football League (AFL).  He played college football at Michigan; he set the current school records for career scoring, field goals and point after touchdowns and was a three-time All-Big Ten Conference selection during his time there.  As a professional, he played for the Florida Firecats of af2 and the Tampa Bay Storm of the AFL.
+
+Albany Firebirds (af2): The Albany Firebirds were a professional arena football team of the af2 based in Albany, New York.  Albany was granted an expansion team in 2002 and began play as the Albany Conquest.  The Firebirds play their home games at the Times Union Center.  They are the second arena football team for Albany, as the city was granted an expansion team, the Albany Firebirds, in the Arena Football League in 1990.  The team moved to Indianapolis, Indiana in 2000 and played as the Indiana Firebirds through 2004 before disbanding.
+
+Los Angeles Kiss: The Los Angeles Kiss (stylized as LA KISS) were a professional arena football team based in Anaheim, California, and members of the Arena Football League (AFL).  The Kiss joined the AFL as an expansion team after Los Angeles' previous franchise (Los Angeles Avengers) did not return as a part of Arena Football 1.  The team's ownership was a group of Gene Simmons and Paul Stanley, members of rock band Kiss, as well as their manager Doc McGhee.  The team played its home games at the Honda Center in nearby Anaheim, which they shared with the Anaheim Ducks of the National Hockey League.  The team was featured in the AMC series "4th and Loud".
+
+Florida Firecats: The Florida Firecats were a professional arena football team based in Estero, Florida.  They played in the af2, the Arena Football League's developmental league, from 2001 to 2009.  They did not join the AFL following the leagues' reorganization in 2010.  During their run they won the 2004 ArenaCup championship, two conference titles, and made a total of seven playoff appearances.  They played their home games at Germain Arena.
+
+Estero, Florida: Estero is a village in Lee County, Florida, United States.  As of the 2010 census, the CDP (Census Designated Population) was 18,176.  It is the home of Germain Arena, which hosts the home games for the Florida Everblades ECHL ice hockey team.  Florida Gulf Coast University is also located just outside the Estero Planning District.
+
+Question: The Florida Firecats were a professional arena football team based in what county?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "team_name": {
+      "type": "string",
+      "description": "The name of the professional arena football team."
+    },
+    "team_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the team was based."
+        },
+        "state": {
+          "type": "string",
+          "description": "The state where the team was based."
+        },
+        "county": {
+          "type": "string",
+          "description": "The county where the team was based."
+        }
+      },
+      "required": [
+        "city",
+        "state",
+        "county"
+      ],
+      "additionalProperties": false
+    },
+    "league": {
+      "type": "string",
+      "description": "The league the team played in."
+    }
+  },
+  "required": [
+    "team_name",
+    "team_location",
+    "league"
+  ],
+  "additionalProperties": false
+}

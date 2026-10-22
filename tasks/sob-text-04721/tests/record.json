@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "record_id": "4e9607f138feca51579e7da96e51a8cb8156210c71366c8f2d720d8405ff35a4",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7bd6c0554299294a54ab2d",
+    "source_dataset": "hotpotqa",
+    "source_answer": "May 23, 2000",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Roman's Revenge: \"Roman's Revenge\" is a song by Trinidadian rapper Nicki Minaj, featuring American rapper Eminem, from Minaj's debut studio album \"Pink Friday\".  It was written by Minaj, Eminem, Kaseem Dean and Trevor Smith, and was produced by Swizz Beatz.  It was released exclusively on October 30, 2010 through the US iTunes Store, as a promotional release preceding the album's release.  The song initiated a feud between Lil' Kim and Minaj, where several critics felt the song was directed at Lil' Kim and regarded around her feelings towards Minaj's rise to fame.  The song references Minaj's alter-ego, Roman Zolanski, and Eminem's alter-ego, Slim Shady.\n\nDevamı Var: Devamı Var is the sixth studio album by the Turkish pop singer Mustafa Sandal.  The original release date for this album was December 2006 but was later pushed to April 23, May 19, and June 8, 2007.  Two weeks before the release, an instrumental version of the song \"Çoban\" (\"Shepard\") was available on Mustafa Sandal's official website.  The official release date for the album was June 13, 2007.  The album also features two brilliant musicians, Turkish pop singer İzel, in the song \"Dayan\" (\"Survive\"), and guitarist Ayberay, on (\"Zaten\").  \"Melek Yüzlüm\" (\"My angel face\") has been confirmed to be the song in which Emina Jahovic was in tears.  The song \"Kim Bilir Kim Var Yanında?\"  (\"Who is going to know beside?\")  was originally released in an early album of Turkish pop singer Ayten Alpman.  The song \"Farketmez\" (\"It doesn't matter\") is a remake of the 2005 World Music Award winning hit \"Bastanak\" by Lebanese pop singer Elissa.  \"Herkes Mecbur\" (\"Necessary to everyone\") is a remake of the song \"Fatet Sineen\" by Elissa.  Devamı Var was released onto the iTunes Store on July 11, 2007.  By the end of 2007 more than 2.000.000 copies was sold just in Turkey.\n\nHello Sadness: Hello Sadness is the fourth studio album by British indie pop band Los Campesinos! .  It was recorded during summer 2011 in a small studio near Figueres, Spain, and was produced by John Goodmanson.  It is the band's first release to feature new drummer Jason (formerly of The Ghost Frequency) and the first full-length release to feature new members Rob and Kim, who had previously first appeared on the \"All's Well That Ends\" EP in 2010.  The album is also the group's final release to feature violinist Harriet, who left before the album's release, and bassist Ellen who left the band in December 2012.\n\nReverie (Cherie Currie album): Reverie is the third full-length studio album by Cherie Currie.  Released on iTunes March 16, 2015.  Cherie released the CD version of this album June 5, 2015 on her eBay page cheriecurriedirect.  There is a 35-year gap between Cherie's last full-length studio album, 1980's Messin' with the Boys (with Marie Currie), and 2015's Reverie.  This is last studio album Kim Fowley produced before his death.  Kim helped Cherie release this album to make amends with her after all the money he swindled her out of when she was in the Runaways and for releasing her and Marie's music on Young and Wild without their approval.  After Kim's death Cherie's son, Jake Hays, took over producing.\n\nKim Ki-bum: Kim Ki-bum (born August 21, 1987) is a South Korean actor and singer.  He was a member of the South Korean boy band Super Junior.  After the release of Super Junior's third studio album \"Sorry, Sorry\" in 2009, Kim announced his leave from the group to pursue his acting career.  In 2015, Kim announced he ended his contract with S.M. Entertainment and departure from the group.  Kim made his television debut in the Korean television drama, \"April Kiss\", in 2004.\n\nThe Phoenix (Fall Out Boy song): \"The Phoenix\" is a song by American rock band Fall Out Boy for their fifth studio album \"Save Rock and Roll\" (2013).  The song was written by the band in collaboration with Butch Walker, who handled production.  After being released to digital outlets on March 24, 2013 in advance of the album's release, \"The Phoenix\" impacted radio on July 16, 2013 as an official single.  The song charted for 1 week then fell off.  An accompanying music video was also released as part of the ongoing series \"The Young Blood Chronicles\", serving as a prequel to the video of the album's lead single \"My Songs Know What You Did in the Dark (Light Em Up)\".\n\n'97 Bonnie &amp; Clyde: \"'97 Bonnie & Clyde\" is a song by American rapper Eminem.  The song appears on the \"Slim Shady EP\" (as \"Just the Two of Us\") & \"The Slim Shady LP\".  Eminem recorded a prequel for The Marshall Mathers LP, \"Kim\".  The song is covered by Tori Amos on her 2001 album of gender-swapped covers, \"Strange Little Girls\".\n\nThe Marshall Mathers LP: The Marshall Mathers LP is the third studio album by American rapper Eminem.  It was released on May 23, 2000, by Aftermath Entertainment, Interscope Records, and Eminem's newly founded label, Shady Records in the United States, and on September 11, 2000, by Polydor Records in the United Kingdom.  The album was produced mostly by Dr. Dre and Eminem, along with The 45 King, the Bass Brothers, and Mel-Man.  Released a year after Eminem's breakout album \"The Slim Shady LP\", the record features more introspective lyricism including the rapper's response to his sudden rise to fame and controversy surrounding his lyrics.\n\nThe Texas Chainsaw Massacre: The Beginning: The Texas Chainsaw Massacre: The Beginning is a 2006 American slasher film and a prequel to the 2003 film \"The Texas Chainsaw Massacre\".  The sixth installment in \"The Texas Chainsaw Massacre\" franchise was directed by Jonathan Liebesman and co-produced by Kim Henkel and Tobe Hooper (co-creators of the original 1974 film).  The film went into release in North America on October 6, 2006.  The film's story takes place four years before the timeline of the 2003 film.  It stars Jordana Brewster, Diora Baird, Taylor Handley, Matt Bomer and R. Lee Ermey.\n\nI (Nightingale album): I is the third full-length studio album by Swedish progressive/AOR metal/rock band Nightingale.  The album is a prequel to \"The Breathing Shadow\" story from the first two albums.  With this album release, Nightingale solidifies its dark, 1970s progressive hard rock style.",
+    "question": "When did the album that \"Kim\" is a prequel of release?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "album_title": {
+          "type": "string",
+          "description": "The title of the album."
+        },
+        "song_title": {
+          "type": "string",
+          "description": "The title of the song that is a prequel to the album."
+        },
+        "album_artist": {
+          "type": "string",
+          "description": "The artist who released the album."
+        },
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The release date of the album."
+        }
+      },
+      "required": [
+        "album_title",
+        "song_title",
+        "album_artist",
+        "release_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "album_title": "The Marshall Mathers LP",
+      "song_title": "Kim",
+      "album_artist": "Eminem",
+      "release_date": "2000-05-23"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

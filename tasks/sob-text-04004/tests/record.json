@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "d20b555bc78ef414e11723728d79b142ac7bdacba0e1c2fb1e7b9ea77dd1d1e3",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7fb8415542994857a767d6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "NaHCO",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Sodium sesquicarbonate: Sodium sesquicarbonate (Systematic name trisodium hydrogendicarbonate) NaH(CO) is a double salt of sodium bicarbonate and sodium carbonate, and has a needle-like crystal structure.  However, the term is also applied to an equimolar mixture of those two salts, with whatever water of hydration the sodium carbonate includes, supplied as a powder.\n\nChemical traffic light experiment: The chemical traffic light is the reaction of the changing in color of the solution which is also related to the blue bottle experiment.  One of the early formulas consists of glucose, sodium hydroxide, indigo carmine, and water.  Another formula consists of indigo carmine, dye, ascorbic acid (Vitamin C), sodium bicarbonate, sodium chloride, copper(II) sulfate, sodium hydroxide and water.  By doing so, chemical waste and the level of corrosive chemicals is reduced.  The amount of solid chemicals dissolved in the experiment could be reduced from 60 grams to 6 grams.  And the pH could be lowered from 13 to 3 which is easier to neutralize the pH to 7 by adding baking soda before disposal.  Also, it is safer and the reactions also occur faster and are easier to perform.\n\nSodium bicarbonate rocket: A sodium bicarbonate rocket (sometimes called an Alka-Seltzer rocket) is a model rocket fashioned from a 35mm film canister and propelled by the pressure of a gas, often carbon dioxide, generated from the reaction of an acid with sodium bicarbonate.  Sodium bicarbonate rockets are often used in science classes to demonstrate principles of chemistry and physics.\n\nZotZ (candy): ZotZ is a candy with a fizzy, sour center manufactured by G.B. Ambrosoli in Italy and distributed in the United States by Andre Prost, Inc.  It is a hard candy that contains a sour powder comprising malic and tartaric acids mixed with sodium bicarbonate.  When the powder dissolves, the acids dissolve in liquid (saliva or water) and react with the sodium bicarbonate to produce carbon dioxide bubbles and a fizzing sensation.  Zotz has a mild sour flavor to it, owing to the acids involved in its ingredients.  ZotZ flavors include apple, cherry, strawberry, watermelon, blue raspberry, grape, and orange.  As of the year 2017 they are still currently in production and sold in stores.\n\nSodium bicarbonate: Sodium bicarbonate (IUPAC name: sodium hydrogen carbonate) is a chemical compound with the formula NaHCO.  It is a salt composed of sodium ions and bicarbonate ions.  Sodium bicarbonate is a white solid that is crystalline but often appears as a fine powder.  It has a slightly salty, alkaline taste resembling that of washing soda (sodium carbonate).  The natural mineral form is nahcolite.  It is a component of the mineral natron and is found dissolved in many mineral springs.\n\nClabber Girl: Clabber Girl is a brand of baking powder, baking soda, and corn starch popular in the United States.  It is manufactured by Hulman & Company, which also owns and operates the Indianapolis Motor Speedway and INDYCAR, the sanctioning body for American open-wheel racing.  The brand also owns the Rumford baking powder label.  The Clabber Girl name brand comes from the word \"clabber\", a synonym of sour milk.  In the early 1800s, people mixed clabber with pearl ash, soda, cream of tartar, and a few other ingredients to make what we know today as baking powder.  The first baking powder brand by Hulman and company was the \"Milk Brand\".  In 1899, it was changed to the \"Clabber Brand\".  In 1923, the company changed the name to \"Clabber Girl\".\n\nFruit salt: Fruit salt or fruit salts is a term for effervescent compounds made up of organic acids such as citric acid or tartaric acid and salts such as sodium bicarbonate, sodium carbonate, or sodium bitartrate in combination with added flavoring and sugar.  Historically, fruit salts were sold for a wide range of ailments, and today they are used primarily as antacids.\n\nNatron: Natron is a naturally occurring mixture of sodium carbonate decahydrate (NaCO·10HO, a kind of soda ash) and around 17% sodium bicarbonate (also called baking soda, NaHCO) along with small quantities of sodium chloride and sodium sulfate.  Natron is white to colourless when pure, varying to gray or yellow with impurities.  Natron deposits are sometimes found in saline lake beds which arose in arid environments.  Throughout history natron has had many practical applications that continue today in the wide range of modern uses of its constituent mineral components.\n\nAcid salt: Acid salt is a class of salts formed by the partial neutralization of diprotic or polyprotic acids. Because the parent acid is only partially neutralized, one or more replaceable hydrogen atoms remain.  Typical acid salts have one or more alkali (alkaline) metal ions as well as one or more hydrogen atoms.  Well known examples are sodium bicarbonate (NaHCO), sodium hydrosulfide (NaHS), sodium bisulfate (NaHSO), monosodium phosphate (NaHPO), and disodium phosphate (NaHPO).  Often acid salts are used as buffers.\n\nTullio Simoncini: Tullio Simoncini (born 1951) is an Italian former physician and alternative medicine advocate.  He holds a Ph.D. in philosophy from La Sapienza University.  He is known for claiming that cancer is caused by the fungus \"Candida albicans\", and has gone so far as to say that cancer is actually a form of candida overgrowth.  He also says that cancer can be cured with injections of sodium bicarbonate.  He says that he was formerly an oncologist, but that he was struck off because he prescribed sodium bicarbonate instead of conventional chemotherapy.",
+    "question": "What is the formula for Sodium bicarbonate which is found in Clabber Girl?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "chemical_name": {
+          "type": "string",
+          "description": "The common name of the chemical compound."
+        },
+        "chemical_formula": {
+          "type": "string",
+          "description": "The chemical formula of the compound."
+        },
+        "product_containing_chemical": {
+          "type": "string",
+          "description": "The name of the product mentioned in the context that contains the chemical."
+        }
+      },
+      "required": [
+        "chemical_name",
+        "chemical_formula",
+        "product_containing_chemical"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "chemical_name": "Sodium bicarbonate",
+      "chemical_formula": "NaHCO",
+      "product_containing_chemical": "Clabber Girl"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

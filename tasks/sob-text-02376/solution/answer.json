@@ -1,0 +1,13 @@
+{
+  "main_athlete": {
+    "name": "Magomedrasul Mukhtarovich Gazimagomedov",
+    "primary_sport": "freestyle wrestler"
+  },
+  "training_partner": {
+    "name": "Rustam Mikailovich Khabilov",
+    "nationality": "Russian",
+    "championship_title": "Combat Sambo World Champion",
+    "championship_sport": "Combat Sambo"
+  },
+  "training_period": "preseason"
+}

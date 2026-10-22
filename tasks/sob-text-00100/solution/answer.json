@@ -1,0 +1,14 @@
+{
+  "entity_1": {
+    "name": "Stephan Pastis",
+    "primary_work": "Pearls Before Swine comic strip",
+    "is_comedy_related": true
+  },
+  "entity_2": {
+    "name": "Endurance",
+    "primary_work": "1999 docudrama film about a distance runner",
+    "is_comedy_related": false
+  },
+  "both_in_comedy_fields": false,
+  "reasoning": "Stephan Pastis is the creator of the comic strip 'Pearls Before Swine', which is a comedy. 'Endurance' is a 1999 docudrama film about a distance runner, which is not a comedy."
+}

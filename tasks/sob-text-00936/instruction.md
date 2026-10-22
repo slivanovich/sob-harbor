@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Zeresenay Alemseged: Zeresenay (Zeray) Alemseged (born 4 June 1969) is an Ethiopian paleoanthropologist and was Chair of the Anthropology Department at the California Academy of Sciences in San Francisco, United States.  He recently joined the faculty of the University of Chicago.  He is best known for his discovery, on December 10, 2000, of Selam, also referred to as “Lucy’s child”, the almost-complete fossilized remains of a 3.3 million year old child of the species "Australopithecus afarensis".  The “world’s oldest child”, she is the most complete skeleton of a human ancestor discovered to date.  Selam represents a milestone in our understanding of human and pre-human evolution and contributes significantly to our understanding of the biology and childhood of early species in the human lineage; a subject about which we have very little information.  Alemseged discovered Selam while working with the Dikika Research Project (DRP), a multi-national research project, which he both initiated in 1999 and leads.  The DRP has thus far made many important paleoanthropological discoveries and returns to the field each year to conduct further important research.  Alemseged’s specific research centers on the discovery and interpretation of hominin fossil remains and their environments, with emphasis on fieldwork designed to acquire new data on early hominin skeletal biology, environmental context, and behavior.
+
+Research: Research comprises "creative work undertaken on a systematic basis to increase the stock of knowledge, including knowledge of humans, culture and society, and the use of this stock of knowledge to devise new applications."  It is used to establish or confirm facts, reaffirm the results of previous work, solve new or existing problems, support theorems, or develop new theories.  A research project may also be an expansion on past work in the field.  Research projects can be used to develop further knowledge on a topic, or in the example of a school research project, they can be used to further a student's research prowess to prepare them for future jobs or reports.  To test the validity of instruments, procedures, or experiments, research may replicate elements of prior projects or the project as a whole.  The primary purposes of basic research (as opposed to applied research) are documentation, discovery, interpretation, or the research and development (R&D) of methods and systems for the advancement of human knowledge.  Approaches to research depend on epistemologies, which vary considerably both within and between humanities and sciences.  There are several forms of research: scientific, humanities, artistic, economic, social, business, marketing, practitioner research, life, technological, etc.
+
+University of Exeter: The University of Exeter is a public research university in Exeter, Devon, South West England, United Kingdom.  The university was founded and received its Royal Charter in 1955, although its predecessor institutions, the Royal Albert Memorial College and the University College of the South West of England, were established in 1900 and 1922 respectively.  In post-nominals, the University of Exeter is abbreviated as "Exon."  (from the Latin "Exoniensis"), and is the suffix given to honorary and academic degrees from the university.
+
+Banded mongoose: The banded mongoose ("Mungos mungo") is a mongoose commonly found in the central and eastern parts of Africa.  It lives in savannas, open forests and grasslands and feeds primarily on beetles and millipedes. Mongooses use various types of dens for shelter including termite mounds.  While most mongoose species live solitary lives, the banded mongoose live in colonies with a complex social structure.
+
+Liberian mongoose: The Liberian mongoose ("Liberiictis kuhni") is a small carnivoran belonging to the mongoose family (Herpestidae).  It is the only member of the genus Liberiictis.  Phylogenetic analysis has shown that the Liberian mongoose is closely related other small, social mongooses and that the banded mongoose is its closest relative.
+
+De La Salle Brothers: The Brothers of the Christian Schools (also known as the Christian Brothers, the Lasallian Brothers, the French Christian Brothers, or the De La Salle Brothers; French: Frères des écoles chrétiennes ; Latin: Fratres Scholarum Christianarum) is a Roman Catholic religious teaching congregation, founded in France by Jean-Baptiste de La Salle (1651–1719), and now based in Rome.  The Brothers use the post-nominal abbreviation F.S.C. to denote their membership of the order, and the honorific title Brother, abbreviated Br. .  The Lasallian Christian Brothers are not the same order as the Irish Christian Brothers.
+
+HIVE (virtual environment): The H.I.V.E. (Huge Immersive Virtual Environment) is a joint research project between the departments of Psychology, Computer Science, and Systems Analysis at Miami University.  The project is funded by a grant from the U.S. Army Research Office and is currently the world's largest virtual environment in terms of navigable floor area (currently over 1200m).  The goal of the research project is to conduct experiments in human spatial cognition.
+
+Governor's School of Engineering and Technology: The Governor's School of Engineering and Technology, or GSET, is one of the six original schools that comprise the New Jersey Governor's School program.  Since its inception, the program has been held at Rutgers University in Piscataway, in Middlesex County, New Jersey and aims to educate scholars in the fields of engineering and technology.  This program is tuition-free and receives funding from sponsors, alumni, the state of New Jersey, Rutgers University, and others.  This 4-week residential summer program is academically intense and demanding with very little free time.  It typically runs from the end of June to the middle/end of July.  A typical student participates in two elective courses, along with the core courses of Physics, and Robotics.  Their schedule also includes keynote speakers, tours, enrichment activities, and a research project.  The research project is one of the main focuses of the program, in which students conduct research, design experiments, and write a professional research paper.  On the final day, a symposium is held to showcase the research, projects, and creations.  The symposium is open to both invited guests and the public.
+
+Amboseli Elephant Research Project: The Amboseli Elephant Research Project is a long-term research project on the ethology of the African elephant, operated by the nonprofit Amboseli Trust for Elephants.  The project studies the elephant's social behavior, age structure and population dynamics.  It is the longest running study of elephant behavior in the wild, and has gathered data on life histories and association patterns for more than 1700 individual elephants.
+
+Banded Brothers: Banded Brothers (also known as "Banded Brothers: The Mongoose Mob") is a British television program airing on BBC2 on Sundays during February and March 2010.  Filmed and presented in the style of "Meerkat Manor", it follows the regular lives and activities of a family of banded mongooses being monitored by the Banded Mongoose Research Project of the University of Exeter, in Uganda's Queen Elizabeth National Park.
+
+Question: What is the post-nominal abbreviation for the university where the Banded Mongoose Research Project is based?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "university_name": {
+      "type": "string",
+      "description": "The name of the university where the research project is based."
+    },
+    "research_project_name": {
+      "type": "string",
+      "description": "The name of the research project."
+    },
+    "post_nominal_abbreviation": {
+      "type": "string",
+      "description": "The post-nominal abbreviation for the university."
+    }
+  },
+  "required": [
+    "university_name",
+    "research_project_name",
+    "post_nominal_abbreviation"
+  ],
+  "additionalProperties": false
+}

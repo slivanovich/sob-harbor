@@ -1,0 +1,23 @@
+{
+  "first_band": {
+    "name": "Cocteau Twins",
+    "member_count": 4,
+    "members": [
+      "Elizabeth Fraser",
+      "Robin Guthrie",
+      "Will Heggie",
+      "Simon Raymonde"
+    ]
+  },
+  "second_band": {
+    "name": "Headstones",
+    "member_count": 3,
+    "members": [
+      "Hugh Dillon",
+      "Trent Carr",
+      "Tim White"
+    ]
+  },
+  "band_with_more_members": "Cocteau Twins",
+  "more_members_count": 4
+}

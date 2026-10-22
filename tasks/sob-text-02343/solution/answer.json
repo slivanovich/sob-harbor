@@ -1,0 +1,15 @@
+{
+  "comparison_result": "American Bellydancer was released first.",
+  "films": [
+    {
+      "title": "American Bellydancer",
+      "release_year": 2005
+    },
+    {
+      "title": "Dalai Lama Renaissance",
+      "release_year": 2007
+    }
+  ],
+  "first_released_film_title": "American Bellydancer",
+  "first_released_year": 2005
+}

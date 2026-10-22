@@ -1,0 +1,14 @@
+{
+  "common_musician_role": "composer",
+  "musicians_involved": [
+    {
+      "name": "Arnold Schoenberg",
+      "nationality": "Austrian"
+    },
+    {
+      "name": "Léo Delibes",
+      "nationality": "French"
+    }
+  ],
+  "role_description_source": "Both are explicitly identified as 'composer' in their respective descriptions."
+}

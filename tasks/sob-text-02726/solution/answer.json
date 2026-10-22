@@ -1,0 +1,12 @@
+{
+  "opera_1": {
+    "name": "Un ballo in maschera",
+    "number_of_acts": 3
+  },
+  "opera_2": {
+    "name": "Der Zwerg",
+    "number_of_acts": 1
+  },
+  "comparison_result": "Un ballo in maschera has more acts than Der Zwerg.",
+  "opera_with_more_acts": "Un ballo in maschera"
+}

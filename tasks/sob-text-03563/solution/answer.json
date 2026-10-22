@@ -1,0 +1,13 @@
+{
+  "identified_chef_name": "Wolfgang Puck",
+  "chef_origin_country": "Austria",
+  "chef_professions": [
+    "celebrity chef",
+    "restaurateur",
+    "occasional actor"
+  ],
+  "pizza_style_associated": "California-style pizza",
+  "contributing_chef_name": "Ed LaDou",
+  "contributing_chef_role_at_restaurant": "first pizza chef",
+  "restaurant_name_where_developed": "Spago"
+}

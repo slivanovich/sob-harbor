@@ -1,0 +1,94 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Saving Private Brian: "Saving Private Brian" is the fourth episode of season five of "Family Guy", an episode produced for Season 4.  The episode originally broadcast on November 5, 2006.  The episode follows Stewie and Brian after they unintentionally join the United States Army, and end up leaving to serve in Iraq, only to return home when the war ends.  Meanwhile, Chris joins a heavy metal band, and develops an anti-social attitude, which requires Marilyn Manson to intervene.
+
+Tearjerker (American Dad!): "Tearjerker" is the tenth episode of the fourth season of the animated comedy series "American Dad! ".  It originally aired on Fox in the United States on January 13, 2008.  As the episode follows a story based entirely from a "James Bond" film, each "American Dad!"  character plays a role of another: Stan as Agent Stan Smith, Francine Smith as Sexpun T'Come, Hayley as Miss Peacenickel, Steve as S, Avery Bullock as B, Roger as Tearjerker, Klaus as Tchochkie Schmear, Greg Corbin as Peddie, Terry Bates as Mannie, Chuck White as Professor, and Captain Monty as Gums.  This episode follows Agent Stan Smith during his infiltration of a movie set, where he finds Matthew McConaughey to be a robot, as well as Johnny Depp during his visit on Tearjerker's island.  Tearjerker, the main antagonist of the episode, is a business tycoon who has been abducting celebrities from his spa and replacing them with robots that will star in his horrible movies.  While in the meantime he is pressured to accept a marriage by Sexpun T'Come, Stan goes to stop Tearjerker from premiering his tragedy film in cinemas worldwide, making those who watch it cry to death literally.
+
+The Wacky Molestation Adventure: "The Wacky Molestation Adventure" is the sixteenth episode of the fourth season of the animated television series "South Park", and the 64th episode of the series overall.  "The Wacky Molestation Adventure" originally aired in the United States on December 13, 2000 on Comedy Central.  The episode follows the children of South Park, who remove all adults from the town by claiming that they molested them.  With the whole town to themselves, they create a new society, but it quickly deteriorates and two separate groups are formed.  Much of the episode's plot is inspired by the 1984 film "Children of the Corn", based on the Stephen King short story.
+
+Christmas Who?: "Christmas Who?"  (also known as "The SpongeBob Christmas Special") is a "SpongeBob SquarePants" special episode from season two.  The episode aired on Nickelodeon in the United States on December 6, 2000.  It is the series' first double-length episode.  The episode marks the first appearance of both Patchy the Pirate, and his pet parrot, Potty.  The episode follows SpongeBob as he learns what Christmas is about, and as he creates excitement for everyone in Bikini Bottom.
+
+A Song of Ass and Fire: "A Song of Ass and Fire" is the eighth episode in the seventeenth season of the American animated television series "South Park".  The 245th episode of the series overall, it first aired on Comedy Central in the United States on November 20, 2013.  The episode serves as a continuation of the previous episode, "Black Friday", in which the children of South Park, role-playing as characters from "Game of Thrones", are split into two factions over whether to collectively purchase bargain-priced Xbox One or PlayStation 4 video game consoles at an upcoming Black Friday sale at the local mall, where Randy Marsh has been made the Captain of mall security.  The story arc concludes with the following episode, "Titties and Dragons".
+
+Black Friday (South Park): "Black Friday" is the seventh episode in the seventeenth season of the American animated television series "South Park".  The 244th episode of the series overall, it premiered on Comedy Central in the United States on November 13, 2013.  The episode is the first of a three-episode story arc, which continues with "A Song of Ass and Fire", and concludes with "Titties and Dragons".  The plot, which employs themes and motifs from the TV series "Game of Thrones", concerns the characters' anticipation of a Black Friday sale, with Randy Marsh taking a temporary job as a mall security guard to gain an advantage over the holiday shopping crowds, and the children of South Park split into two factions over whether to collectively purchase bargain-priced Xbox One or PlayStation 4 video game consoles to facilitate their online group gaming.
+
+End of Days (Torchwood): "End of Days" is the thirteenth episode and the first series finale of the British science fiction television series "Torchwood".  It originally aired on BBC Three on 1 January 2007, alongside the previous episode, "Captain Jack Harkness".  The episode was written by Chris Chibnall and directed by Ashley Way.  The episode follows "Captain Jack Harkness", where the team open the rift to rescue Jack (John Barrowman) and Tosh (Naoko Mori) from 1941, only to find the rift has opened, causing the past and future of time to bleed through.  The episode received three 2008 BAFTA Cymru award nominations, though none of them was won.
+
+Eternal Moonshine of the Simpson Mind: "Eternal Moonshine of the Simpson Mind" is the ninth episode of "The Simpsons"<nowiki>'</nowiki> nineteenth season.  It first aired on the Fox network in the United States on December 16, 2007.  The episode averaged 10.15 million viewers, winning in its time slot and receiving a 12 percent audience share.  The episode follows Homer's attempts to recall a deliberately forgotten memory from the previous night.  At the 2008 Primetime Emmy Awards, the episode won the award for Outstanding Animated Program (for Programming Less Than One Hour).  The episode received positive reviews from critics, who often cited it as the best of the season.  In 2014, showrunner Al Jean selected it as one of five essential episodes in the show's history.
+
+Brian's Got a Brand New Bag: "Brian's Got a Brand New Bag" is the fourth episode of the eighth season of the animated comedy series "Family Guy".  It premiered on Fox in the United States on November 8, 2009.  The episode follows anthropomorphic dog Brian as he dates a middle-aged woman named Rita, after he is stood up by her daughter.  He eventually becomes reluctant to continue their relationship, however, after he discovers several health concerns that she endures and is continually harassed by his family.  The episode premiered during an "all-Seth MacFarlane" schedule, preceding the live-action episode "Seth and Alex's Almost Live Comedy Show".
+
+The Gathering (Star Wars: The Clone Wars): "The Gathering" is the sixth episode of the fifth season of the American animated television series "".  It aired in the United States on November 3, 2012.  The episode marks the first in the series' Young Jedi arc, the entirety of which was screened at the "Star Wars" Celebration VI convention on August 25, 2012.  The episode follows six Jedi Younglings, guided by Ahsoka and Yoda, as they fulfill their rite of passage in constructing their own lightsabers, the main weapon used by the mystical Jedi.  The episode also discusses the lightsaber's power source, Kyber crystals, which amplify the power of the force.
+
+Question: Which episode follows Southpark's November 13, 2013 episode?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "series_name": {
+      "type": "string",
+      "description": "The name of the television series."
+    },
+    "preceding_episode": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the preceding episode."
+        },
+        "air_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The original air date of the preceding episode."
+        }
+      },
+      "required": [
+        "title",
+        "air_date"
+      ],
+      "additionalProperties": false
+    },
+    "following_episode": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the episode that follows."
+        },
+        "air_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The original air date of the following episode."
+        }
+      },
+      "required": [
+        "title",
+        "air_date"
+      ],
+      "additionalProperties": false
+    },
+    "is_part_of_story_arc": {
+      "type": "boolean",
+      "description": "Indicates if the episodes are part of a multi-episode story arc."
+    }
+  },
+  "required": [
+    "series_name",
+    "preceding_episode",
+    "following_episode",
+    "is_part_of_story_arc"
+  ],
+  "additionalProperties": false
+}

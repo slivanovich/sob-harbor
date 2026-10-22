@@ -1,0 +1,8 @@
+{
+  "port_town_name": "Magadan",
+  "ust_omchug_location_description": "northwest of Magadan",
+  "highway_details": {
+    "distance_from_ust_omchug_km": 271,
+    "direction_from_port_town": "northwest"
+  }
+}

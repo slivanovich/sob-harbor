@@ -1,0 +1,17 @@
+{
+  "composer_name": "Kurt Weill",
+  "composer_nationality": "German",
+  "composer_birth_year": 1900,
+  "premiere_event": {
+    "work_title": "The Threepenny Opera",
+    "premiere_year": 1928,
+    "premiere_city": "Berlin",
+    "venue_name": "Theater am Schiffbauerdamm"
+  },
+  "collaborators": [
+    {
+      "name": "Bertolt Brecht",
+      "role": "lyricist"
+    }
+  ]
+}

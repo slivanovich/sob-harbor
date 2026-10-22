@@ -1,0 +1,100 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lucas Cleeve: Lucas Cleeve was the pseudonym of Adeline Georgiana Isabel Kingscote, "née" Wolff (1868–1908) was a novelist born in England, the author of over sixty works including "The Woman Who Wouldn't" in 1895.  After her marriage to Colonel Howard Kingscote, most of her novels were published under the name Mrs Howard Kingscote.
+
+Jan Cox Speas: Jan Cox Speas (1925–1971) is a short story writer and novelist born in Raleigh, North Carolina in 1925.  She studied creative writing with Hiram Haydn at Woman's College (now the University of North Carolina at Greensboro, or UNCG), from which she graduated in 1945.  From 1954 to 1960 she published Bride of the MacHugh, My Lord Monleigh, and My Love, My Enemy.  She also published many short stories in magazines, from pulp to slick.  She returned to UNC-G and secured her master's degree in Fine Arts in 1964, submitting her fourth novel The Growing Season as her thesis.  Her mentor and advisor was noted poet Randall Jarrell.  After graduation, she began teaching English and Creative Writing at Guilford College, also in Greensboro.  Speas was well known for her historical romances during the 1950s and 1960s.  Following her death from a heart attack in 1971, Avon Publications brought out paperback editions of her romances.  By 1978 there were more than a million copies of her books in print.  The author was married to John Speas; they lived in Greensboro and had two children, Cynthia and Gregory.
+
+Propinquity (novel): Propinquity is a 1986 novel by Australian author/journalist John Macgregor.  The manuscript won the Adelaide Festival Biennial Award for Literature; the novel was short-listed for "The Age" Book of the Year.  Its author was compared by critics with PG Wodehouse, Don DeLillo, Julian Barnes, Umberto Eco, and Australian Nobellist Patrick White.  Despite its critical success, the collapse of the original publisher meant that "Propinquity" did not reach a wide audience, although in 2013 it was released on Amazon as a Kindle e-book and a CreateSpace print-on-demand paperback.
+
+Rosa María Britton: Rosa María Britton is a Panamanian novelist born on July 28, 1936 in Panama City.
+
+Peter Rock (novelist): Peter Rock (born 1967) is an American novelist born and raised in Salt Lake City, Utah.  He is a professor of creative writing at Reed College and lives in Portland, Oregon, with his wife and daughters.
+
+Ron Ely: Ronald Pierce "Ron" Ely (born June 21, 1938) is an American actor and novelist born in Hereford, Texas.  Ely is best known for having portrayed Tarzan on the 1966 NBC series "Tarzan" and for playing the lead role in the film "" (1975).
+
+William Heffernan: William Heffernan (born August 22, 1940) is an American novelist born in New Haven, Connecticut.  Before becoming a novelist, Heffernan was an investigative reporter for the "New York Daily News".  For that work he was thrice nominated for a Pulitzer Prize.  Heffernan left journalism in 1978 after receiving his first book contract for the novel "Broderick".  He won the Heywood Broun Award twice, received the Robert F. Kennedy Journalism Award and has received a number of other local, state and regional honors.  William Heffernan has received the Edgar Award, is a member of the Authors Guild, The Mystery Writers of America, and was once President of the International Association of Crime Writers.  The film rights for the "The Dinosaur Club" were sold to Warner Bros in 1997 for $1 million.
+
+Larry Heinemann: Larry Heinemann (born 1944) is an American novelist born and raised in Chicago.  His published work—three novels and a memoir—is primarily concerned with the Vietnam War.
+
+Don DeLillo: Donald Richard "Don" DeLillo (born November 20, 1936) is an American novelist, playwright and essayist.  His works have covered subjects as diverse as television, nuclear war, sports, the complexities of language, performance art, the Cold War, mathematics, the advent of the digital age, politics, economics, and global terrorism.
+
+William Black (novelist): William Black (13 November 1841 – 10 December 1898) was a novelist born in Glasgow, Scotland.  During his own lifetime Black's novels were immensely popular, and were compared favourably with those of Anthony Trollope.  However, his fame and popularity did not survive long into the twentieth century.
+
+Question: Which American novelist born in 1936 was compared to the author or Propinquity?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "target_novelist": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the American novelist."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the novelist."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The birth year of the novelist."
+        }
+      },
+      "required": [
+        "name",
+        "nationality",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    },
+    "comparison_details": {
+      "type": "object",
+      "properties": {
+        "compared_to_author_of_novel": {
+          "type": "string",
+          "description": "The title of the novel whose author was used for comparison."
+        },
+        "compared_to_author_name": {
+          "type": "string",
+          "description": "The name of the author of the novel used for comparison."
+        },
+        "comparison_source": {
+          "type": "string",
+          "description": "The source that made the comparison."
+        }
+      },
+      "required": [
+        "compared_to_author_of_novel",
+        "compared_to_author_name",
+        "comparison_source"
+      ],
+      "additionalProperties": false
+    },
+    "other_authors_in_comparison": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Other authors to whom the author of 'Propinquity' was compared."
+    }
+  },
+  "required": [
+    "target_novelist",
+    "comparison_details",
+    "other_authors_in_comparison"
+  ],
+  "additionalProperties": false
+}

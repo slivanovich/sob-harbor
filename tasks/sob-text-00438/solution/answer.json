@@ -1,0 +1,14 @@
+{
+  "comparison_entities": [
+    {
+      "name": "Saint Louis University",
+      "student_enrollment": 13505
+    },
+    {
+      "name": "University of Missouri System",
+      "student_enrollment": 70000
+    }
+  ],
+  "entity_with_more_students": "University of Missouri System",
+  "enrollment_difference": 56495
+}

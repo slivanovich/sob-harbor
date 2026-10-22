@@ -1,0 +1,9 @@
+{
+  "city_with_specified_area": "Dujiangyan City",
+  "area_km2": 1208,
+  "compared_cities": [
+    "Fuqing",
+    "Dujiangyan City"
+  ],
+  "area_information_available_for_all_compared_cities": false
+}

@@ -1,0 +1,16 @@
+{
+  "institution_with_more_campuses": "Indiana University",
+  "institutions_details": [
+    {
+      "name": "Indiana University",
+      "is_multi_campus_system": true,
+      "campus_description": "Indiana University (IU) is a multi-campus public university system in the state of Indiana, United States. It includes campuses like Indiana University Bloomington and Indiana University – Purdue University Indianapolis (IUPUI), and cooperatively manages IPFW."
+    },
+    {
+      "name": "University of Washington",
+      "is_multi_campus_system": false,
+      "campus_description": "The University of Washington is a large, public flagship research university in Seattle, Washington."
+    }
+  ],
+  "comparison_summary": "Indiana University is explicitly described as a 'multi-campus public university system' with multiple named campuses (Bloomington, IUPUI, IPFW), while the University of Washington is only mentioned with a single location in Seattle, Washington."
+}

@@ -1,0 +1,17 @@
+{
+  "person_of_interest": {
+    "name": "Isabella Rossellini",
+    "parents": [
+      "Ingrid Bergman",
+      "Roberto Rossellini"
+    ]
+  },
+  "movie_details": {
+    "title": "The Gift",
+    "duration_minutes": 30,
+    "type": "made-for-television movie"
+  },
+  "co_star": {
+    "name": "Jason Adelman"
+  }
+}

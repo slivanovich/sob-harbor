@@ -1,0 +1,10 @@
+{
+  "person_name": "Stan Lee",
+  "role": "co-creator of Spider-Man",
+  "birth_details": {
+    "month": "December",
+    "day": 28,
+    "year": 1922
+  },
+  "final_answer_person_name": "Stan Lee"
+}

@@ -1,0 +1,17 @@
+{
+  "play_details": {
+    "title": "Henry V",
+    "author": "William Shakespeare",
+    "writing_year_approx": 1599
+  },
+  "film_adaptation_details": {
+    "film_year": 1944,
+    "director": "Laurence Olivier",
+    "star_actor": "Laurence Olivier"
+  },
+  "actor_details": {
+    "name": "Laurence Olivier",
+    "birth_year": 1907
+  },
+  "final_answer": "William Shakespeare"
+}

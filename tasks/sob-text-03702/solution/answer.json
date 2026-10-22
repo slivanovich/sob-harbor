@@ -1,0 +1,15 @@
+{
+  "player_details": {
+    "name": "Klaas-Jan Huntelaar",
+    "nationality": "Dutch",
+    "birth_date": "12 August 1983"
+  },
+  "team_details": {
+    "name": "FC Schalke 04",
+    "season": "2011–12"
+  },
+  "top_scorer_statistics": {
+    "total_goals": 48,
+    "bundesliga_goals": 29
+  }
+}

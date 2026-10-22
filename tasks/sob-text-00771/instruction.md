@@ -1,0 +1,116 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Greyson Chance: Greyson Michael Chance (born August 16, 1997) is an American singer, songwriter, and pianist.  His April 2010 performance of Lady Gaga's "Paparazzi" at a sixth-grade music festival went viral on YouTube, gaining widespread attention and over 59 million views as of May 2017, as well as an appearance on "The Ellen DeGeneres Show" shortly afterward.  Two of his original compositions, "Stars" and "Broken Hearts", gained over six and eight million views respectively on his YouTube channel.  His debut single, "Waiting Outside the Lines", was released in October 2010.  Chance's debut album, "Hold On 'Til the Night," was released on August 2, 2011.
+
+Kyle Andrews: Kyle Andrews is an American songwriter and performer born in Chicago, IL and based in Nashville, TN.  He has released albums on Portland's Badman Recording Co. as well as his own Elephant Lady Records imprint.  His 2010 song "You Always Make Me Smile" (co-written with friend Neil Mason) was featured in a worldwide Holiday Inn ad.  The music video for the song was filmed in Utah during an attempt to break the Guinness World Record for the largest water balloon fight and went viral.  His interactive video for "Sushi" (directed by Dennis Liu) was made from 1.4 million tiles, and thousands of unique YouTube video stills.  In 2010 it was shortlisted for the Guggenheim's YouTube Play Exhibit.
+
+Billboard Year-End Hot 100 singles of 2009: "Billboard" magazine each year releases a Top Hot 100 songs of the year, counted from the first week of November to the final week in October.  The 2009 list was dominated by The Black Eyed Peas and Lady Gaga, who shared the top four spots.  On 27 December, DJ Earworm released a mashup video to YouTube entitled "Blame It On The Pop", featuring the top twenty-five songs from the list, as he had also done the previous two years.  The video quickly went viral, and received four million views in little over a week.
+
+Perfect Illusion: "Perfect Illusion" is a song recorded by American singer Lady Gaga.  It was made available for digital consumption on September 9, 2016 through Interscope Records as the lead single from her fifth studio album, "Joanne" (2016).  The track was written and produced by Gaga, Kevin Parker, Mark Ronson and BloodPop.  A disco-rock song, "Perfect Illusion" lyrically delves on the singer's "highest of highs and lowest of lows" in a relationship, and is ultimately a commentary on social media.  Gaga wrote the lyrics using her Underwood typewriter; after numerous permutations the composers derived the final track.  Speculation that the song referred to Gaga's ex-boyfriend Taylor Kinney was refuted by the singer.
+
+Maria Aragon: Maria Lourdes Aragon (born July 17, 2000) is a Canadian singer of Filipino descent.  Aragon gained fame after a YouTube video of her performing Lady Gaga's "Born This Way" went viral.
+
+Lady Gaga: Queen of Pop: Lady Gaga: Queen of Pop is a biography of American singer Lady Gaga.  It was written by Emily Herbert (pen name for Virginia Blackburn) and published in the United Kingdom by John Blake Publishing Ltd. The book was published by Overlook Press in the United States with the title Lady Gaga: Behind the Fame.  Additional versions under the title "Lady Gaga: Queen of Pop" were published in 2010 by Wilkinson Publishing of Melbourne in Australia and by Gardners Books in the United Kingdom.  The book discusses Gaga's early life when she was known as Stefani Joanne Angelina Germanotta from her birth in 1986, and chronicles her education at Convent of the Sacred Heart in New York, her early visits to nightclubs with her mother to perform at open-mic events, and her brief foray into the Tisch School of the Arts, leading up to her first experience of fame.  Germanotta took the name "Lady Gaga" from the song "Radio Ga Ga" by the rock group Queen; she released her first album "The Fame" in 2008.  "Lady Gaga: Queen of Pop" describes the musician's success in the industry, noting her business collaborations and appearance on the cover of "Rolling Stone" in 2009.
+
+Marry the Night: "Marry the Night" is a song by American singer and songwriter Lady Gaga.  It was released as the fifth and final single from her second studio album, "Born This Way" (2011).  The song was written and produced by Lady Gaga and Fernando Garibay, and was recorded on the tour bus during The Monster Ball Tour with Garibay.  Revealed in February 2011, the song was inspired by the energy of Gaga's previous song "Dance in the Dark" and the love for her hometown, New York City.  The song was released for promotion on Farmville, six days before the release of "Born This Way".
+
+Judas (Lady Gaga song): "Judas" is a song by American singer Lady Gaga, from her second studio album, "Born This Way" (2011).  It was released four days ahead of schedule by Interscope Records on April 15, 2011.  Written and produced by Lady Gaga and RedOne, "Judas" is a dance and electro house song about a woman in love with a man who betrayed her.  It embodies the incidents that have haunted Gaga in the past, and its core meaning refers to the negative parts of her life that she cannot escape.  Gaga has further explained that the song was also about honoring one's inner darkness in order to bring oneself into the light.  The artwork for the single was designed by Gaga in Microsoft Word.  In spite of a polarizing impact on several religious groups, the song was generally well received by critics, who likened the song to "Bad Romance" with some noting it should have been the album's lead single.
+
+Born This Way (song): "Born This Way" is a song by American singer Lady Gaga, and the lead single from her second studio album of the same name.  Written by Gaga and Jeppe Laursen, who produced it along with Fernando Garibay and DJ White Shadow, the track was developed while Gaga was on the road with The Monster Ball Tour.  Inspired by 1990s music which empowered women and the gay community, Gaga explained that "Born This Way" was her freedom song.  She sang part of the chorus at the 2010 MTV Video Music Awards in 2010 and announced the song as the lead single from the album, released on February 11, 2011.
+
+Just Dance (song): "Just Dance" is the debut single by American singer Lady Gaga.  The song was produced by RedOne and co-written by RedOne, Gaga and Akon, while also featuring labelmate Colby O'Donis.  It was released in 2008 as the lead single from Gaga's debut studio album, "The Fame".  The song was written by Gaga in 10 minutes as "a happy record".  "Just Dance" also has influences of R&B and lyrically speaks about being intoxicated at a club.
+
+Question: Maria Lourdes Aragon, is a Canadian singer of Filipino descent, she gained fame after a YouTube video of her performing which Lady Gaga song, and the lead single from her second studio album of the same name, went viral?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "singer_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the singer."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the singer."
+        },
+        "descent": {
+          "type": "string",
+          "description": "The ethnic descent of the singer."
+        }
+      },
+      "required": [
+        "name",
+        "nationality",
+        "descent"
+      ],
+      "additionalProperties": false
+    },
+    "song_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the Lady Gaga song performed."
+        },
+        "is_lead_single_of_album": {
+          "type": "boolean",
+          "description": "Indicates if the song was the lead single from its album."
+        },
+        "album_title": {
+          "type": "string",
+          "description": "The title of the album the song is from."
+        },
+        "album_number": {
+          "type": "integer",
+          "description": "The sequential number of the studio album."
+        }
+      },
+      "required": [
+        "title",
+        "is_lead_single_of_album",
+        "album_title",
+        "album_number"
+      ],
+      "additionalProperties": false
+    },
+    "viral_event": {
+      "type": "object",
+      "properties": {
+        "platform": {
+          "type": "string",
+          "description": "The platform where the video went viral."
+        },
+        "gained_fame": {
+          "type": "boolean",
+          "description": "Indicates if the singer gained fame due to the viral video."
+        }
+      },
+      "required": [
+        "platform",
+        "gained_fame"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "singer_details",
+    "song_details",
+    "viral_event"
+  ],
+  "additionalProperties": false
+}

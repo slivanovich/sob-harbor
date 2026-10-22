@@ -1,0 +1,15 @@
+{
+  "researcher": {
+    "name": "Georgina Bruni",
+    "role": "UFO researcher"
+  },
+  "researched_incident": {
+    "name": "Rendlesham Forest incident",
+    "location": "Rendlesham Forest, Suffolk, England",
+    "description_summary": "series of reported sightings of unexplained lights, linked with claims of UFO landings",
+    "year": 1980
+  },
+  "publication_about_incident": {
+    "title": "You Can't Tell the People"
+  }
+}

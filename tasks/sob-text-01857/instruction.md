@@ -1,0 +1,91 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Patrick McGuigan: Patrick McGuigan (March 17, 1868 – September 13, 1938), commonly known as "Paddy" McGuigan, was an American boxer, promoter, entertainer, business man, and sports figure in the late nineteenth and early twentieth centuries.  A member of the NJ Boxing Hall of Fame, he is considered one of the best fighters of the era and was a beloved figure among sports fans in the region, considered by many to be "The Pride of New Jersey."  He became the New Jersey Lightweight Champion in 1890 and the Interstate New York & New Jersey Lightweight Champion in 1892.  Fighting in both the bare-knuckle and gloved eras, he met virtually all of the world's top boxers in his class.  At the peak of his career he traveled the country with William Muldoon's athletic carnival, "meeting all comers" in each city they visited.  Once he retired from boxing professionally, he became a promoter and opened a fight club and a saloon in Harrison, NJ.  He has been credited as one of the men responsible for boxing's rise to affluence in New Jersey after it was legalized in 1918 under the Hurley Law, being the first individual in the state to secure a license to legally host boxing matches.  Paddy "must be chronicled as one of the greatest ringmen who ever lived," according to sportswriter Anthony Marenghi, and has been described by Hall of Fame manager Tom O'Rourke as the greatest fighter he had ever seen.
+
+W. C. Fields: William Claude Dukenfield (January 29, 1880 – December 25, 1946), better known as W. C. Fields, was an American comedian, actor, juggler and writer.  Fields' comic persona was a misanthropic and hard-drinking egotist, who remained a sympathetic character despite his snarling contempt for dogs and children.
+
+Bush Temple of Music: The Bush Temple of Music, at 100 West Chicago Avenue in Chicago, was built in 1901 as the headquarters and showroom of the Bush and Gerts Piano Company, one of Chicago’s leading piano companies.  Designed by architect J.E.O. Pridmore, the building is an example of the importance of piano manufacturing and sales during the late 19th and early 20th centuries when Chicago was the leading piano manufacturing center in the world.  The building is a rare large-scale example of French Renaissance Revival-style architecture, an unusual style in Chicago and the United States.  The building’s design and decorative details are unique examples of the historic revival style favored by Chicagoans in the late nineteenth and early twentieth centuries.  The building was designated a Chicago Landmark on June 27, 2001.  It is being considered for listing on the National Register of Historic Places.
+
+Sherman H. Dudley: Sherman Houston Dudley (1872 – March 1, 1940) was an African-American vaudeville performer and theatre entrepreneur.  He gained notability in the late nineteenth and early twentieth century as an individual performer, a composer of ragtime songs, and as a member and later owner of various minstrel shows including the Smart Set.  Dudley is also notable as one of the first African Americans to combine business with theater, by starting a black theater circuit, in which theaters were owned or operated by African Americans and provided entertainment by and for African Americans.
+
+E. O. Excell: Edwin Othello Excell (December 13, 1851 – June 10, 1921), commonly known as E. O. Excell, was a prominent American publisher, composer, song leader, and singer of music for church, Sunday school, and evangelistic meetings during the late nineteenth and early twentieth centuries.  Some of the significant collaborators in his vocal and publishing work included Sam P. Jones, William E. Biederwolf, Gipsy Smith, Charles Reign Scoville, J. Wilbur Chapman, W. E. M. Hackleman, Charles H. Gabriel and D. B. Towner.
+
+Rex Pope: Rex Pope is a British historian who was formerly head of the school of historical and critical studies at Lancashire Polytechnic.  Pope is a specialist in the social and economic history of Britain in the later nineteenth and twentieth centuries.  He has had two volumes published in the Seminar Studies in History series.  Pope's other interests relate to the British hotel industry since 1850 and leisure hotels and tourism in the late nineteenth and early twentieth centuries.
+
+O. K. Sato: O. K. Sato (March 13, 1871 - March 23, 1921) was an American vaudeville performer who flourished in the late nineteenth and early twentieth centuries.  His act was notable for its juggling of the comedic style and may be described as helping define the so-called "tramp" juggling style epitomized by W. C. Fields.  In fact, Sato and Fields are known from Fields' surviving correspondence to have maintained a bantering relationship in which the two traded gossip and ideas for their acts.
+
+Trams in Australia: In Australia, tram networks were developed to provide public transport in many of the country's cities and towns in the late nineteenth and early twentieth centuries.  As the twentieth century wore on, trams fell out of favour and most networks closed or were severely cut back.  A revival in the late twentieth and early twenty-first centuries has seen trams return to some of the larger cities and existing networks extended.
+
+Edward M. Favor: Edward Addison Favor (August 29, 1856 – January 10, 1936), who was billed as Edward M. Favor or Ed.  M. Favor, was an American vaudeville comedian, singer, musical theatre performer and pioneer recording artist, who was one of the most popular stars of the late nineteenth and early twentieth centuries.
+
+Paul Dresser: Paul Dresser (born Johann Paul Dreiser, Jr.; April 22, 1857 – January 30, 1906) was an American singer, songwriter, and comedic actor of the late nineteenth and early twentieth centuries.  In addition to songwriting Dresser performed in traveling minstrel and medicine-wagon shows and as a vaudeville entertainer.  Dresser sold his songs through sheet music publishers, especially the firms in New York City's Tin Pan Alley, and became a partner in the music publishing business.
+
+Question: O. K. Sato (March 13, 1871 - March 23, 1921) was an American vaudeville performer who flourished in the late nineteenth and early twentieth centuries, his act was notable for its juggling of the comedic style and may be described as helping define the so-called "tramp" juggling style epitomized by which American comedian, actor, juggler and writer, his comic persona was a misanthropic and hard-drinking egotist, who remained a sympathetic character, born as William Claude Dukenfield ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "performer_name": {
+      "type": "string",
+      "description": "The common name of the American comedian, actor, juggler, and writer."
+    },
+    "birth_name": {
+      "type": "string",
+      "description": "The birth name of the performer."
+    },
+    "professions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of professions held by the performer."
+    },
+    "comic_persona_description": {
+      "type": "string",
+      "description": "A description of the performer's comic persona."
+    },
+    "juggling_style_connection": {
+      "type": "object",
+      "properties": {
+        "style_name": {
+          "type": "string",
+          "description": "The name of the specific juggling style."
+        },
+        "sato_contribution": {
+          "type": "string",
+          "description": "How O. K. Sato contributed to this style."
+        },
+        "performer_role": {
+          "type": "string",
+          "description": "How the identified performer is associated with this style."
+        }
+      },
+      "required": [
+        "style_name",
+        "sato_contribution",
+        "performer_role"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "performer_name",
+    "birth_name",
+    "professions",
+    "comic_persona_description",
+    "juggling_style_connection"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "film_production_company": "Seed Productions",
+  "founder_actor": {
+    "name": "Hugh Jackman",
+    "nationality": "Australian"
+  },
+  "lead_role_film": {
+    "title": "Kate & Leopold",
+    "year": 2001,
+    "genre": "romantic-comedy fantasy"
+  }
+}

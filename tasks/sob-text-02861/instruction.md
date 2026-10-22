@@ -1,0 +1,95 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Activision Blizzard: Activision Blizzard, Inc. is an American video game developer.  Headquartered in Santa Monica, California and founded in 2008 through the merger of Vivendi Games and Activision, the company is traded on the NASDAQ stock exchange under the ticker symbol NASDAQ: ATVI , and since 2015 has been one of the stocks that make up the S&P 500.  Activision Blizzard currently includes five business units: Activision, Blizzard Entertainment, Major League Gaming, Activision Blizzard Studios, and King Digital Entertainment.
+
+Blizzard Entertainment: Blizzard Entertainment, Inc. is an American video game developer and publisher based in Irvine, California, and is a subsidiary of the American company Activision Blizzard.  The company was founded on February 8, 1991, under the name Silicon & Synapse by three graduates of the University of California, Los Angeles: Michael Morhaime, Frank Pearce, and Allen Adham.  The company originally concentrated on the creation of game ports for other studios before beginning development of their own software in 1993 with games like "Rock n' Roll Racing" and "The Lost Vikings".  In 1994 the company became Chaos Studios, then Blizzard Entertainment, Inc. after being acquired by distributor Davidson & Associates.
+
+Time Warner: Time Warner, Inc. is an American multinational mass media and entertainment conglomerate headquartered in New York City.  It is currently the world's third largest entertainment company in terms of revenue, after Comcast and The Walt Disney Company.  It was also once the world's largest media conglomerate.  Time Warner was first founded in 1990, with the merger of Time Inc. and Warner Communications.  The current company consists largely of the assets of the former Warner Communications (as well as HBO, a Time Inc. subsidiary prior to the merger), and the assets of Turner Broadcasting (which was acquired by the company in 1996).
+
+High Moon Studios: High Moon Studios (formerly Sammy Studios) is an American video game developer that used to be a part of Sierra Entertainment.  After a period as an independent studio, the developer was acquired by Vivendi Games in January 2006 and retained the current name.  It is now owned by Activision Blizzard, a parent company of Activision.  It has developed multiple "Transformers" video games as well as assisting in the development of both "" and "Destiny".
+
+Take-Two Interactive: Take-Two Interactive Software, Inc. is an American multinational publisher and distributor of video games and video game peripherals. Take-Two wholly owns publishers Rockstar Games and 2K Games.  The company's headquarters are in New York City, with international headquarters in Windsor, United Kingdom.  Development studio locations include San Diego, Vancouver, Toronto and Novato, California.  Notable game series published by Take-Two include "Grand Theft Auto", "Civilization", "NBA 2K", "BioShock" and "Borderlands".  As owner of 2K Games, Take-Two publishes its 2K Sports titles, and creates free-to-play mobile titles through Social Point.  It also acted as the publisher of Bethesda Softworks's 2006 game, "".  As of September 2017, it is the third largest publicly-traded game company (after Activision Blizzard and Electronic Arts) in the Americas and Europe.
+
+Activision Blizzard Studios: Activision Blizzard Studios is a film, television production and distribution company owned by American multinational game developer, publisher and distributor Activision Blizzard.  It was created to exploit its parent company's popular game franchises through films and television shows.  It is co-headed by Stacey Sher and Nick van Dyk, the latter being a former executive of The Walt Disney Company.
+
+List of Bungie video games: Bungie Inc. (stylized in its corporate logo as "BUNGiE") is an American video game developer located in Bellevue, Washington.  The company was established in May 1991 as Bungie Software Products Corporation by University of Chicago undergraduate student Alex Seropian, who later brought in programmer Jason Jones after publishing Jones's game "".  Originally based in Chicago, Illinois, the company concentrated primarily on Macintosh games during its early years, creating the successful games "Pathways Into Darkness" and the "Marathon" and "Myth" series.  A West Coast satellite studio named Bungie West produced the PC and console title "Oni" in 2001.  Microsoft acquired Bungie in 2000; its then-current project was repurposed into a launch title for Microsoft's new Xbox console, called "".  "Halo" went on to become the Xbox's "killer application", selling millions of copies and spawning a billion dollar franchise.  On October 5, 2007, Bungie announced that it had split from Microsoft and became a privately held independent company, Bungie LLC.  The company later incorporated and signed a ten-year publishing deal with Activision Blizzard.  The company is known for its informal and dedicated workplace culture, and has recently released new titles with Activision, including IP "Destiny".
+
+The Walt Disney Company: The Walt Disney Company, commonly known as Disney, is an American diversified multinational mass media and entertainment conglomerate, headquartered at the Walt Disney Studios in Burbank, California.  It is the world's second largest media conglomerate in terms of revenue, after Comcast.  Disney was founded on October 16, 1923 – by brothers Walt Disney and Roy O. Disney – as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks.  The company also operated under the names The Walt Disney Studio and then Walt Disney Productions.  Taking on its current name in 1986, it expanded its existing operations and also started divisions focused upon theater, radio, music, publishing, and online media.
+
+Walt Disney Studios Motion Pictures: Walt Disney Studios Motion Pictures (formerly Buena Vista Pictures Distribution and Buena Vista Film Distribution Company) is an American film distributor owned by The Walt Disney Company.  Established in 1953 as Buena Vista Film Distribution Company, the company handles theatrical distribution, marketing and promotion for films produced and released by the Walt Disney Studios, including Walt Disney Pictures, Walt Disney Animation Studios, Pixar Animation Studios, DisneyToon Studios, Marvel Studios, Lucasfilm, Disneynature, and Touchstone Pictures.  The division took on its current name in late 2007, which before that had been Buena Vista Pictures Distribution since 1987.
+
+Michael Morhaime: ‘’’Michael​ ​ "Mike"​ ​ Morhaime’’’​​ ​(born​ ​ November​ ​ 3,​ ​1967)​ is​ ​president​ ​ and​ ​ a co-founder​ ​of​​ ​Blizzard​ ​Entertainment​​ (founded​ ​in​ ​1991​ as​ Silicon​ ​ & Synapse​ ),​ ​a ​video​ ​game​ ​developer​​ ​located​ in​​ Irvine,​ ​California​, owned​ by​​ Activision​ ​Blizzard​.  ​Mr.​ ​Morhaime​ ​served​ ​as​ ​Vice​ ​President​ ​of​ ​Blizzard Entertainment,​ ​ Inc.,​ ​a ​​subsidiary​ ​of​ ​Activision​ Blizzard,​ ​Inc.​ He​ served​ ​on​ the​ Vivendi​ Games executive​ committee​ since​ January​ 1999,​ ​ when Blizzard​ ​ Entertainment,​ ​ Inc.​ ​ became​ ​ a ​subsidiary​ ​of​ ​Vivendi​ ​ Games. ​ ​ He​ ​ graduated​ ​ from​​ ​ Granada​ ​ Hills​ ​ High​ ​ School​​ ​ in​ ​ 1985. ​ ​ He​ ​ is​ also​ an​ ​alumnus of​​ Triangle​ ​ Fraternity​​ and​ ​ received​ ​ his​​ ​ bachelor's​ ​degree​​ ​in​ Electrical​​ Engineering​ in​ 1990​ from​​ UCLA​.  Morhaime​ is​ ​Jewish.  His​ ​estimated​ ​net​ worth​ ​is​ ​1.8​ ​billion​ dollars.
+
+Question: Activision Blizzard Studios is a film, television production and distribution company owned by which nationality, multinational game developer, publisher and distributor Activision Blizzard, co-headed by Stacey Sher and Nick van Dyk, the latter being a former executive of The Walt Disney Company, it is an American diversified multinational mass media, and entertainment conglomerate?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "studio_name": {
+      "type": "string",
+      "description": "The name of the studio in question."
+    },
+    "owner_company": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the parent company that owns the studio."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the owner company."
+        }
+      },
+      "required": [
+        "name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "co_heads": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of individuals who co-head the studio."
+    },
+    "former_executive_details": {
+      "type": "object",
+      "properties": {
+        "executive_name": {
+          "type": "string",
+          "description": "The name of the co-head who was a former executive."
+        },
+        "former_company": {
+          "type": "string",
+          "description": "The company where the co-head was formerly an executive."
+        }
+      },
+      "required": [
+        "executive_name",
+        "former_company"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "studio_name",
+    "owner_company",
+    "co_heads",
+    "former_executive_details"
+  ],
+  "additionalProperties": false
+}

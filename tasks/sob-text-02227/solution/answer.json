@@ -1,0 +1,12 @@
+{
+  "matching_movie": {
+    "title": "Miracle",
+    "release_year": 2004,
+    "subject_description": "Miracle is a 2004 American sports docudrama about the United States men's hockey team that won the gold medal in the 1980 Winter Olympics."
+  },
+  "other_movie_info": {
+    "title": "Nikki, Wild Dog of the North",
+    "subject_description": "Nikki, Wild Dog of the North is a 1961 Walt Disney film about a title character who is a wild dog."
+  },
+  "answer_summary": "The movie 'Miracle' was about the United States men's hockey team."
+}

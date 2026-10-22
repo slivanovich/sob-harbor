@@ -1,0 +1,20 @@
+{
+  "film_title": "Man Facing Southeast",
+  "release_year": 1986,
+  "country_of_origin": "Argentine",
+  "genres": [
+    "drama",
+    "science fiction"
+  ],
+  "director": "Eliseo Subiela",
+  "writer": "Eliseo Subiela",
+  "uncredited_adaptations": [
+    {
+      "adaptation_title": "K-PAX",
+      "adaptation_type": "film",
+      "adaptation_year": 2001,
+      "source_material_author": "Gene Brewer",
+      "source_material_year": 1995
+    }
+  ]
+}

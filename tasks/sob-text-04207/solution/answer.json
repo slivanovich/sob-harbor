@@ -1,0 +1,9 @@
+{
+  "county_name": "Palm Beach County",
+  "population_details": {
+    "count": 1320134,
+    "census_year": 2010,
+    "population_rank_description": "third-most populous"
+  },
+  "location_relative_to_deerfield_beach": "north"
+}

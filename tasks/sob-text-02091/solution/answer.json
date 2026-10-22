@@ -1,0 +1,16 @@
+{
+  "person_1_name": "Strawberry Saroyan",
+  "person_2_name": "Hrayr Shahinian",
+  "mutual_location_name": "California",
+  "location_type": "state",
+  "relationship_details": [
+    {
+      "person_name": "Strawberry Saroyan",
+      "relationship_description": "spent her childhood in Bolinas, California"
+    },
+    {
+      "person_name": "Hrayr Shahinian",
+      "relationship_description": "was licensed to practice in California since 1996"
+    }
+  ]
+}

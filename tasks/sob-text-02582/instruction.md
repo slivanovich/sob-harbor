@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Boomerang (Tenjo Chiki song): "Boomerang" is The Grace's 1st Japanese under the Rhythm Zone label and was released in both CD and CD+DVD (Limited Edition) versions.  The title track was also sung in Korean, released in Korea's 1st single ""Too Good"".  The single ranked #110 on the Oricon charts and charted for 1 week, selling 967 copies.
+
+Trophies (song): "Trophies" is a song by Canadian rapper Drake.  The song was produced by Hit-Boy, 40 and Hagler.  The song was originally meant for Drake's third studio album "Nothing Was the Same", however, it would be cut off the final track listing.  After Drake released the song for free in December 2013, it was then announced to be included on the Young Money Entertainment compilation "".  On February 27, 2014, it was released as the album's second official single and credited as Young Money featuring Drake.  It has peaked at number 50 on the US "Billboard" Hot 100 chart.
+
+Work (Rihanna song): "Work" is a song recorded by Barbadian singer Rihanna for her eighth studio album, "Anti" (2016), featuring Canadian rapper Drake, the song was released as the lead single from "Anti" on January 27, 2016 through Westbury Road and Roc Nation.  The song was written by PartyNextDoor, Drake, Monte Moir, Rupert "Sevn" Thomas, Allen Ritter and Matthew Samuels, and was produced by Boi-1da, Sevn Thomas, Ritter, Kuk Harrell and Noah "40" Shebib.  The dancehall, reggae-pop and R&B song, contains an interpolation of "If You Were Here Tonight" (1985) performed by Alexander O'Neal.  Lyrically, the song incorporates themes of working for money, as well as discussing fragile relationships.  The song uses West Indian Patois and Creole.
+
+Headlines (Drake song): "Headlines" is a song by Canadian rapper Drake.  It is the second single from Drake's second studio album "Take Care".  The song, produced by Matthew "Boi-1da" Samuels, and Noah "40" Shebib, first premiered on Drake's blog October's Very Own on July 31, 2011, and was sent to all radio formats in the US on August 9, 2011.  It was released on iTunes and Amazon on August 9, 2011 in the U.S.  The song debuted and peaked on the "Billboard" charts at number 13, his second highest debut.  It was re-released to U.S. Top 40/Mainstream radio on October 18, 2011.  On February 7, 2012 the track was certified Platinum by the RIAA for sales of 1,000,000 copies in the US.  On November 17, 2011 the track was certified Platinum by Music Canada for sales of 40,000 copies in Canada.
+
+40 (record producer): Noah James Shebib (born March 31, 1983), better known as 40, is a Canadian record producer and former child actor from Toronto, Ontario.  He is best known for his musical collaborations with Canadian rapper Drake.  Shebib's style of production, which is often down-tempo and ambient, has become heavily associated with Drake's music.  Shebib and Drake are also two of the three co-founders of the OVO Sound label.  Shebib has also produced for artists including Lil Wayne, Alicia Keys, Action Bronson, and Jamie Foxx.
+
+Too Good: "Too Good" is a song by Canadian rapper Drake, recorded for his fourth studio album "Views" (2016).  It features guest vocals from Barbadian singer Rihanna.  It samples the dancehall song "Love Yuh Bad" performed by Popcaan.  The song was released as the fourth single from the album in the UK on May 15, 2016; and serviced to US contemporary hit radio on July 26, 2016, as the fifth single in that market.  The artists co-wrote the track with its producers Nineteen85, Maneesh Bidaye, and Dwayne Chin-Quee, with additional writing from Andrew Hershey, Andre Sutherland and A. Martin.
+
+Back to Back (Drake song): "Back to Back" is a song by Canadian rapper Drake.  It is the second diss track created by Drake aimed at American rapper Meek Mill, following "Charged Up".  At OVO Fest 2015, Drake performed "Charged Up" and "Back to Back" live.  The album's cover art is a still from Game 6 of the 1993 World Series, when former professional baseball player Joe Carter of the Toronto Blue Jays famously hit a walk-off home run to win the series against the Philadelphia Phillies.
+
+Say Something (Timbaland song): "Say Something" is a song recorded by American producer, songwriter and rapper Timbaland, for his third studio album "Shock Value II" (2009).  The song features vocals from Canadian rapper Drake.  It was written by Mosley, Jerome Harmon, Graham, Timothy Clayton and John Maultsby.  The production was helmed by Mosley under his stage-name Timbaland while Harmon served as the assistant producer, under the stage-name Jroc.  The song was tailored to Drake's sound and when the rapper wrote to it, he contacted the producer about the lyrics.  Despite the verses feeling more like Graham's record, Mosley gave his blessing and went the product.  The song was solicited to digital retailers on November 3, 2009 in the United States as the album's second single.
+
+What's My Name? (Rihanna song): "What's My Name?"  is a song recorded by Barbadian singer Rihanna, for her fifth studio album "Loud" (2010).  Featuring guest vocals from Canadian rapper Drake, the song was released as the second single from "Loud" on October 26, 2010 through Def Jam Recordings.  The electro-R&B song was produced by the Norwegian production duo StarGate, and was written by the duo along with Ester Dean, Traci Hale, and Drake.  Lyrically, it incorporates themes of sexual intercourse and romance.
+
+Truffle Butter: "Truffle Butter" is a song by Trinidadian rapper Nicki Minaj featuring Canadian rapper Drake and American rapper Lil Wayne.  It is included as an exclusive bonus track on the iTunes Store edition of Minaj's third studio album "The Pinkprint" (2014).  Produced by Young Money Entertainment, Cash Money Records and Republic Records, the song was released as the fifth single from the album on January 23, 2015.  "Truffle Butter" is a mix between hip hop and house music genres and contains a sample of Maya Jane Coles' song "What They Say" (2010).  In March 2015, it was sent to urban contemporary and contemporary hit radio.
+
+Question: "Boomerang," featuring a song by Canadian rapper Drake, was released under what label?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song being inquired about."
+    },
+    "release_label": {
+      "type": "string",
+      "description": "The record label under which the song was released."
+    },
+    "primary_artist": {
+      "type": "string",
+      "description": "The main artist of the song."
+    },
+    "drake_feature_present": {
+      "type": "boolean",
+      "description": "Indicates whether Canadian rapper Drake is featured on this specific song, according to the context."
+    }
+  },
+  "required": [
+    "song_title",
+    "release_label",
+    "primary_artist",
+    "drake_feature_present"
+  ],
+  "additionalProperties": false
+}

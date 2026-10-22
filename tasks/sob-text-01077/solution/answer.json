@@ -1,0 +1,15 @@
+{
+  "journalist_name": "Jon Lee Anderson",
+  "profiled_politician": {
+    "name": "Fidel Castro",
+    "nationality": "Cuban",
+    "birth_year": 1926,
+    "roles": [
+      "revolutionary",
+      "Prime Minister",
+      "President",
+      "First Secretary of the Communist Party of Cuba"
+    ]
+  },
+  "answer_year": 1926
+}

@@ -1,0 +1,18 @@
+{
+  "duchess_full_name": "Princess Antonia, Duchess of Wellington, Duchess of Ciudad Rodrigo, Princess of Waterloo, Duchess of Victoria",
+  "husband_full_name": "Arthur Charles Valerian Wellesley, 9th Duke of Wellington",
+  "husband_political_roles": [
+    {
+      "role_title": "Member of the European Parliament",
+      "start_year": 1984,
+      "end_year": 1989,
+      "is_current": false
+    },
+    {
+      "role_title": "hereditary peer in the House of Lords",
+      "start_year": 2015,
+      "is_current": true
+    }
+  ],
+  "primary_occupation_summary": "Member of the European Parliament (1984–1989)"
+}

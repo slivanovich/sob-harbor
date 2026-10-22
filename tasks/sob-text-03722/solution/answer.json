@@ -1,0 +1,11 @@
+{
+  "person_born_first": {
+    "name": "Cecil John Rhodes PC",
+    "birth_year": 1853
+  },
+  "person_born_second": {
+    "name": "Alfred Aloysius \"Trader\" Horn",
+    "birth_year": 1861
+  },
+  "comparison_result": "Cecil John Rhodes PC was born first."
+}

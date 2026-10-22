@@ -1,0 +1,10 @@
+{
+  "show_name": "The Simpsons",
+  "network": "Fox network",
+  "first_air_date": "1995-03-05",
+  "setting": {
+    "town_name": "Springfield",
+    "is_fictional": true,
+    "country": "United States"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "person_of_interest": {
+    "name": "Frank Andrew Munsey",
+    "occupation": [
+      "newspaper publisher",
+      "magazine publisher",
+      "author"
+    ]
+  },
+  "named_entities": [
+    {
+      "entity_type": "village",
+      "entity_name": "Munsey Park",
+      "location": "Nassau County, New York"
+    },
+    {
+      "entity_type": "building",
+      "entity_name": "Munsey Building",
+      "location": "downtown Baltimore, Maryland"
+    }
+  ],
+  "question_answer": "Munsey Park"
+}

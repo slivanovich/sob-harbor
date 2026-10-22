@@ -1,0 +1,30 @@
+{
+  "album_title": "Wachovia Spectrum, Philadelphia, PA 10/20/09",
+  "album_type": "live album",
+  "release_date": "2017-07-13",
+  "archive_release_number": 14,
+  "performance_details": {
+    "venue_name": "Wachovia Spectrum",
+    "venue_location": "Philadelphia, PA",
+    "performance_significance": "Springsteen's final show at the soon to be demolished venue"
+  },
+  "notable_performances": {
+    "full_album_performed": "Born in the U.S.A.",
+    "rare_song_performances": [
+      {
+        "song_title": "The Price You Pay",
+        "first_performance_since_year": 1981
+      }
+    ]
+  },
+  "guest_appearances": [
+    {
+      "name": "Vini Lopez",
+      "role": "former band member"
+    },
+    {
+      "name": "Adele Springsteen",
+      "role": "Bruce Springsteen's mother"
+    }
+  ]
+}

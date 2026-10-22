@@ -1,0 +1,8 @@
+{
+  "common_retail_type": "chain",
+  "entities_involved": [
+    "Bullwinkle's Restaurant",
+    "Pizza Fusion"
+  ],
+  "reasoning": "Both Bullwinkle's Restaurant and Pizza Fusion are explicitly described as 'chain' in their respective context descriptions."
+}

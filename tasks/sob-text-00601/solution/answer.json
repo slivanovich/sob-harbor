@@ -1,0 +1,10 @@
+{
+  "company_name": "Emerson Electric Company",
+  "is_american_multinational": true,
+  "headquarters_location": {
+    "city": "Ferguson",
+    "state": "Missouri",
+    "country": "United States"
+  },
+  "relationship_to_apm_automation_solutions": "APM Automation Solutions recently became part of the Emerson Process Management business, which is a part of Emerson Electric Company."
+}

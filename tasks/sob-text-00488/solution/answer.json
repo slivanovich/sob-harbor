@@ -1,0 +1,12 @@
+{
+  "roller_coaster_name": "Oblivion",
+  "manufacturer_name": "Bolliger & Mabillard",
+  "speed_rank_uk": 3,
+  "roller_coaster_details": {
+    "location": "Alton Towers in England",
+    "maximum_speed_mph": 68,
+    "coaster_type": "dive coaster",
+    "was_world_first_of_type": true
+  },
+  "manufacturer_origin_country": "Switzerland"
+}

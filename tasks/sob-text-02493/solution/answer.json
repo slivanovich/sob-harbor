@@ -1,0 +1,19 @@
+{
+  "olympic_event": {
+    "year": 2000,
+    "city": "Sydney",
+    "ceremony_type": "Opening Ceremony"
+  },
+  "performer": {
+    "name": "Julie Moncrief Anthony",
+    "role": "singer"
+  },
+  "anthem": {
+    "title": "Advance Australia Fair",
+    "type": "national anthem",
+    "composer": {
+      "name": "Peter Dodds McCormick",
+      "origin": "Scottish-born"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "record_id": "e47624f727388609bb0d86d1047452466bcd260a3d6ba7ca5e59dc7eb479ae84",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae1f9155542997f29b3c1d9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1958",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2012 Cleveland Browns season: The Cleveland Browns season was the team's 64th season as a professional sports franchise and its 60th season as a member of the National Football League (NFL).  Although the team improved on its record to 5–11 this 2012 season from its 4–12 finish in 2011, the team still placed fourth in the AFC North.  The team also failed to break its 9-year playoff drought, the longest in franchise history.  The 2012 season was the third season under the leadership of team president Mike Holmgren and general manager Tom Heckert and the second season under head coach Pat Shurmur.  The Browns also had Jimmy Haslam as their new owner, after buying the team from Randy Lerner.  The Browns played all of their home games at Cleveland Browns Stadium in Cleveland, Ohio.\n\n2008 New York Dragons season: The 2008 New York Dragons season is the 14th season for the franchise, their eighth season in New York.  The Dragons finished the regular season with an 8–8 record, and were able to take the 6th and final playoff seed in the National Conference by virtue of winning a tiebreaker scenario over the New Orleans VooDoo.  The Dragons won their Wild Card round game, upsetting the Dallas Desperados 77–63.  The Desperados had defeated the Dragons in both regular season meetings.  In the Divisional round of the playoffs, the Dragons lost to top seeded Philadelphia Soul, 48–49, who the Dragons had also lost both regular season meetings to.\n\n2012 Cincinnati Bengals season: The Cincinnati Bengals season was the team's 45th season as a professional sports franchise and its 43rd season as a member of the National Football League (NFL).  This also marked the 22nd season under the leadership of owner and team president Mike Brown and the 10th season under head coach Marvin Lewis.  The team improved on its 2011 season, finishing tied with the Baltimore Ravens for the AFC North division title, but lost the tiebreaker to the Ravens.  The Bengals, however, made the playoffs as a Wild Card, finishing as the 6th seed in the AFC playoffs, but lost to the Houston Texans for a second consecutive season.\n\n2012 FC Bunyodkor season: The 2012 season was Bunyodkors 6th season in the Uzbek League in Uzbekistan, and they also competed in the Uzbekistan Cup and the AFC Champions League.  Bunyodkor reached the Semi-Final's of the AFC Champions League before beaing beaten 5-1 on aggregate by Ulsan Hyundai of South Korea.\n\nMarvin Lewis: Marvin Ronald Lewis (born September 23, 1958) is an American football coach who is the head coach of the Cincinnati Bengals of the National Football League (NFL).  Lewis has held the position since January 14, 2003 and is currently the second-longest tenured head coach in the NFL behind Bill Belichick of the New England Patriots.  He is also the longest tenured coach in Bengals history.  Previously, he was the defensive coordinator of the Baltimore Ravens from 1996 to 2001, whose record-setting defense in 2000 helped them win Super Bowl XXXV 34-7 over the New York Giants.\n\n2011 K League Championship: 2011 K League Championship is postseason championship playoff of 2011 K League.  The championship are a series of playoff matches contested by the teams 1st to 6th in the 2011 K League table.  All matches are played one leg, except final is played two legs.  With 6th playing 3rd and 5th playing 4th, winner of each matches play one match in higher team's homeground.  This match's winner gain the next 2012 AFC Champions League spot by the secured 3rd position.  The winner of second round playing regular season's 2nd position team in the 2nd team's homeground.  The final is played home and away format.\n\n2010 Green Bay Packers season: The 2010 Green Bay Packers season was the 91st season in the National Football League for the Packers and the 92nd season for the team overall.  Although they finished with only a respectable 10–6 record, good for a second-place finish in the NFC North, the Packers never lost a game by more than four points, and never trailed by more than seven the entire season, becoming the only team since the AFL-NFL merger in 1970 to accomplish this.  All six of their regular season losses were by a combined 20 points.  They entered the playoffs as the NFC's sixth seed.  After defeating the Philadelphia Eagles 21–16 in the Wild Card round, the Atlanta Falcons 48–21 in the Divisional round and the Chicago Bears 21–14 in the NFC Championship, the team advanced to Super Bowl XLV in which they faced the AFC's 2nd seed Pittsburgh Steelers.  The Packers defeated the Steelers 31–25 to win their fourth Super Bowl and 13th NFL championship.  The Packers became the second overall team after the 2005 Pittsburgh Steelers, and the first NFC team, to win the Super Bowl as a sixth seed, as well as becoming the second NFC team to win three straight road playoff games (the 2007 New York Giants won three straight road games as a five seed).\n\n2009 Indianapolis Colts season: The 2009 Indianapolis Colts season was the franchise's 57th season in the National Football League and the 26th in Indianapolis.  It was the first season since 2002 that the Colts did not have Tony Dungy on their coaching staff, due to his retirement from coaching.  The 2009 Indianapolis Colts improved upon their 12–4 record from 2008 as well as winning their sixth AFC South division championship in seven years.  The Colts also clinched the #1 playoff seed in the AFC.  The Colts became the sole undefeated team after week 15.  The following week, the Colts lost to the New York Jets after benching their starters.  During the playoffs, the Colts defeated the Baltimore Ravens in the divisional round and the New York Jets in the AFC Championship game, but lost to the New Orleans Saints in Super Bowl XLIV, 31–17.\n\n2009–10 Toronto Raptors season: The 2009–10 Toronto Raptors season was the 15th season of the Canadian franchise in the National Basketball Association (NBA).  The Raptors were the busiest team in preseason transactions, replacing the previous season's entire roster with the exception of Chris Bosh, Andrea Bargnani, José Calderón, Patrick O'Bryant and Marcus Banks.  Although the Raptors were chasing the fourth playoff seed at one point, they capitulated after the All-Star break, and eventually lost the eighth and final playoff spot to Chicago.  After the season, Bosh left for the Miami Heat.\n\n2009 Baltimore Ravens season: The 2009 Baltimore Ravens season was the franchise's 14th season as a team in the National Football League (NFL).  The franchise entered the season off an 11–5 record in their previous season, a playoff berth, but a loss in the American Football Conference (AFC) Championship game against the eventual Super Bowl XLIII champions, the Pittsburgh Steelers.  The Ravens recorded nine victories to seven losses, although they were unable to win the AFC North division title.  However, due to various playoff clinching scenarios in the AFC, the Ravens were able to clinch a wild card playoff berth against the New England Patriots, which they won.  They, however, lost in the AFC playoffs divisional round against the eventual AFC Champion Indianapolis Colts; with this loss, the 2009 season came to an end for the Ravens.  For head coach John Harbaugh, this was his second year with the franchise, compiling an overall record of 20–12 in the regular season.",
+    "question": "The coach AFC's 6th playoff seed in the 2012 season was born in what year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "season_year": {
+          "type": "integer",
+          "description": "The year of the NFL season."
+        },
+        "playoff_seed": {
+          "type": "integer",
+          "description": "The playoff seed of the team."
+        },
+        "conference": {
+          "type": "string",
+          "description": "The conference the team belongs to (e.g., AFC, NFC)."
+        },
+        "team": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the team."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "coach": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the coach."
+            },
+            "birth_year": {
+              "type": "integer",
+              "description": "The birth year of the coach."
+            }
+          },
+          "required": [
+            "name",
+            "birth_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "season_year",
+        "playoff_seed",
+        "conference",
+        "team",
+        "coach"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "season_year": 2012,
+      "playoff_seed": 6,
+      "conference": "AFC",
+      "team": {
+        "name": "Cincinnati Bengals"
+      },
+      "coach": {
+        "name": "Marvin Lewis",
+        "birth_year": 1958
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

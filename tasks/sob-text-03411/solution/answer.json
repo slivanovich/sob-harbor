@@ -1,0 +1,11 @@
+{
+  "company_name": "eBay",
+  "founder_details": {
+    "name": "Pierre Omidyar",
+    "role": "founder"
+  },
+  "founding_information": {
+    "year": 1995,
+    "headquarters_location": "San Jose, California"
+  }
+}

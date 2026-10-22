@@ -1,0 +1,17 @@
+{
+  "person_one": {
+    "name": "Charles Maigne",
+    "professions": [
+      "screenwriter",
+      "film director"
+    ]
+  },
+  "person_two": {
+    "name": "Stanley Kwan",
+    "professions": [
+      "film director",
+      "producer"
+    ]
+  },
+  "common_profession": "film director"
+}

@@ -1,0 +1,16 @@
+{
+  "question_context_institution": "Berklee College of Music",
+  "candidates": [
+    {
+      "name": "Matthew Sweet",
+      "attended_institution": false
+    },
+    {
+      "name": "St. Vincent",
+      "attended_institution": true,
+      "duration_of_attendance_years": 3
+    }
+  ],
+  "person_matching_criteria": "St. Vincent",
+  "matched_attendance_duration_years": 3
+}

@@ -1,0 +1,9 @@
+{
+  "player_name": "Larry Bird",
+  "award_details": {
+    "award_year": 1986,
+    "award_name": "NBA Finals MVP",
+    "award_occurrence": "second time"
+  },
+  "retirement_team": "Boston Celtics"
+}

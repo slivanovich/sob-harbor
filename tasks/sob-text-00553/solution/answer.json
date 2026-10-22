@@ -1,0 +1,11 @@
+{
+  "winner_name": "Jack Zwerner",
+  "tournament_name": "World Series of Poker",
+  "event_details": {
+    "year": 2006,
+    "event_number": "Event 8",
+    "game_type": "Omaha Hi-Lo (8 or better)"
+  },
+  "tournament_location": "Las Vegas",
+  "is_las_vegas_based": true
+}

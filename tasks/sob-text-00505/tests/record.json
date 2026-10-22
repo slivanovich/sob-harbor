@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "6a9820e951f1afa980009c0c46aea1c706c89600fcf8a4bf05a6a92a3162692c",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7bb857554299042af8f7b8",
+    "source_dataset": "hotpotqa",
+    "source_answer": "41,000",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2002 El Ayyat railway accident: The El Ayyat train disaster happened at 02:00 on the morning of 20 February 2002 in an eleven-carriage passenger train travelling from Cairo to Luxor.  A cooking gas cylinder exploded in the fifth carriage, creating a fire which engulfed seven third-class carriages, reducing them almost to cinders.  The initial number of dead given by officials at the time was 383, all Egyptians.  However, considering that seven carriages were burnt to the ground, and each carriage was packed with at least double the maximum carrying capacity of 150, this number is considered by many people to be a great underestimate.  The dubious nature of the given death toll lies with the absence of a full passenger list; accounting for those missing was almost impossible at the time.  In addition, the fire was so intense and the carriages so badly burned that many corpses had been reduced to ash.  As there was no means of communication between the driver and the rear carriages, the driver did not know of the fire until about two hours after it had begun, resulting in many people, attempting to flee from the overcrowded carriages, jumping to their death.  Some important Egyptians have commentated that the official number of 383 dead is grossly inaccurate and was an attempt to lessen the damage done to the reputation of the government.  Many people consider a number of about 1000 deaths to be more accurate.\n\nSexuality after spinal cord injury: Although spinal cord injury (SCI) often causes sexual dysfunction, many people with SCI are able to have satisfying sex lives.  Physical limitations acquired from SCI affect sexual function and sexuality in broader areas, which in turn has important effects on quality of life.  Damage to the spinal cord impairs its ability to transmit messages between the brain and parts of the body below the level of the lesion.  This results in lost or reduced sensation and muscle motion, and affects orgasm, erection, ejaculation, and vaginal lubrication.  More indirect causes of sexual dysfunction include pain, weakness, and side effects of medications.  Psycho-social causes include depression and altered self-image.  Many people with SCI have satisfying sex lives, and many experience sexual arousal and orgasm.  People with SCI employ a variety of adaptations to help carry on their sex lives healthily, by focusing on different areas of the body and types of sexual acts.  Neural plasticity may account for increases in sensitivity in parts of the body that have not lost sensation, so people often find newly sensitive erotic areas of the skin in erogenous zones or near borders between areas of preserved and lost sensation.\n\nDanish cuisine: Danish cuisine (Danish: \"det danske køkken\" ), originating from the peasant population's own local produce, was enhanced by cooking techniques developed in the late 19th century and the wider availability of goods after the Industrial Revolution.  The open sandwiches, known as \"smørrebrød\", which in their basic form are the usual fare for lunch, can be considered a national speciality when prepared and decorated with a variety of fine ingredients.  Hot meals are traditionally prepared from ground meats, such as \"frikadeller\" (meat balls) and \"medisterpølse\", or from more substantial meat and fish dishes such as \"flæskesteg\" (roast pork with crackling) or \"kogt torsk\" (poached cod) with mustard sauce and trimmings.  Denmark is known for its Carlsberg and Tuborg beers and for its akvavit and bitters, but amongst the Danes themselves imported wine has gained in popularity since the 1960s.\n\nEpic Brewing Company: Epic Brewing Company is a brewing company located in Otahuhu, Auckland, New Zealand.  Epic beers are contract brewed at Steam Brewing Company.  Their beers have won several awards in New Zealand and Australia.\n\nPipeworks Brewing: Pipeworks Brewing Company is a brewery in Chicago, Illinois.  The brewery opened in January 2012 by founders Beejay Oslon and Gerrit Lewis.  Pipeworks began their brewing different from other microbreweries in that they initially brewed their beers entirely as a series of 'one off' beers that were aimed specifically to the niche market of beer connoisseurs.  The brewery's stated goal is to release a new beer every week.  This approach gave the brewery and its beers somewhat of a cult status among beer enthusiasts, with its offerings selling out relatively quickly.  After seeing significant growth, both in output brand and identity, Pipeworks has since augmented their one-off beers with several of its 'core' beers in 16 ounce can 4-Packs now regularly available widley throughout the Chicago area.\n\nHawaii Nui Brewing Company: Hawaiʻ i Nui Brewing Company is a brewery in Hilo on the Island of Hawaii, Hawaii, United States.  It was established in 2007 By Keith Kinsey, Andrew Baker and Nina Lytton.  Hawai'i Nui Brewing acquired Keoki Brewing Company in May 2007.  In January 2009, Hawaii Nui Brewing acquired Mehana Brewing Company and consolidated operations to Hilo, Hawai'i, It sells Hawaiʻ i Nui, Keoki and Mehana labels of beers.\n\nCarlsberg Group: The Carlsberg Group ( ; ] ) is a global brewer employing around 41,000 people, primarily located in Western Europe, Eastern Europe and Asia.  Founded in 1847 by J. C. Jacobsen, the company's headquarters is located in Copenhagen, Denmark.  Since Jacobsen's death in 1887, the majority owner of the company has been the Carlsberg Foundation.  The company's flagship brand is Carlsberg Beer (named after Jacobsen's son Carl) but it also brews Tuborg, Kronenbourg, Somersby cider, Russia's best-selling beer Baltika, Belgian Grimbergen abbey beers, and more than 500 local beers.\n\nMarshall Brewing Company: Marshall Brewing Company is a brewery in Tulsa, Oklahoma, USA.  It opened in 2008 in a 7300 sqft facility outside downtown Tulsa, Oklahoma.  It is the first commercial brewing facility in Tulsa since World War II.  The brewery produced about 1200 USbeerbbl in 2009 and 2000 USbeerbbl in 2010.  Currently, Marshall Brewing offers four year-round core beers: a North German-style pilsner, an English bitter, an India Pale Ale, and an American-style wheat ale.  Outside of their core brands, Marshall Brewing offers over 20 different beers throughout the year, styles including an India-style Black Ale (El Cucuy), a German Hefeweizen (Klaus), and a Munich Dunkel, among others.\n\nAvery Brewing Company: Avery Brewing Company is a regional brewery that has produced craft beers since 1993.  The brewery is located in Boulder, Colorado.  The brewery produces year round beers as well as seasonal beers, some of which have received praise from brewing competitions and festivals such as White Rascal Belgian-Style White Ale at the 2015 Great American Beer Festival.\n\nLost Abbey: The Lost Abbey Brewing Company is a brewery in San Marcos, run by Director of Brewery Operations Tomme Arthur.  The Lost Abbey specializes in producing Belgian-inspired beers, barrel-aged beers, and sours.  The Lost Abbey is co-located with Port Brewing Company in a facility that previously housed Stone Brewing Co.",
+    "question": "How many people does the company brewing Denmark's most well-known beers employ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "The name of the brewing company."
+        },
+        "beers_brewed": {
+          "type": "array",
+          "description": "A list of well-known beers brewed by the company.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "employee_count": {
+          "type": "integer",
+          "description": "The number of people employed by the company."
+        }
+      },
+      "required": [
+        "company_name",
+        "beers_brewed",
+        "employee_count"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "company_name": "Carlsberg Group",
+      "beers_brewed": [
+        "Carlsberg Beer",
+        "Tuborg"
+      ],
+      "employee_count": 41000
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "airports_checked": [
+    {
+      "airport_name": "Modesto City–County Airport",
+      "is_located_in_usa": true,
+      "state_or_county": "California"
+    },
+    {
+      "airport_name": "St. Mary's Airport",
+      "is_located_in_usa": true,
+      "state_or_county": "Alaska"
+    }
+  ],
+  "all_airports_in_usa": true,
+  "reasoning": "Modesto City–County Airport is located in California, USA, and St. Mary's Airport is located in Alaska, USA. Therefore, both are located in the United States."
+}

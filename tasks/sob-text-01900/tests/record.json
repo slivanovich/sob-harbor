@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "6902fe018ac0f0f90eb2a98ff3b8150f764dab1553a31faf1397e9f5a87145a6",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a732e415542992359bc3267",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Round the Horne",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Kenneth Williams: Fantabulosa!: Kenneth Williams: Fantabulosa!  is a 2006 BBC Four television play starring Michael Sheen as the English comic actor Kenneth Williams, based on Williams' own diaries.  Cheryl Campbell plays Williams's beloved mother, Lou.\n\nRound the Horne: Round the Horne is a BBC Radio comedy programme that was transmitted in four series of weekly episodes from 1965 until 1968.  The series was created by Barry Took and Marty Feldman, with others contributing to later series after Feldman returned to performing, and starred Kenneth Horne, with Kenneth Williams, Hugh Paddick, Betty Marsden and Bill Pertwee.  The show's announcer was Douglas Smith and from time to time he took part in the sketches.  It had musical interludes by close harmony singing group the Fraser Hayes Four, and accompaniment by the big band of Edwin Braden (\"the great, 'airy fool\" according to Kenneth Williams), known as Edwin Braden and the Hornblowers.  The band was actually the BBC Radio Orchestra but was never billed as such.  In the fourth series, all the musical duties were performed by the smaller Max Harris Group.  Took and the cast had worked on the predecessor series \"Beyond Our Ken\".  The name is a pun on the nautical phrase for sailing around Cape Horn.\n\nMichael McCorkell: Colonel Sir Michael McCorkell (3 May 1925 – 13 November 2006) was an Ulster soldier and British public servant, emulating the high level of British public service of successive generations of the McCorkell family, being Lord Lieutenant of County Londonderry for 25 years.  His uncle, Sir Dudley McCorkell, had also been Lord Lieutenant of County Londonderry.\n\nTamotsu Yatō: Tamotsu Yato (矢頭 保 , Yatō Tamotsu , 1928(?)  – May 1973) was a Japanese photographer and occasional actor responsible for pioneering Japanese homoerotic photography and creating iconic black-and-white images of the Japanese male.  He was a friend and collaborator of the writer Yukio Mishima and the film critic Donald Richie, as well as a long-term romantic partner of Meredith Weatherby, an expatriate American publisher and translator of Mishima's works into English.  Yato completed three volumes of photography.\n\nHugh Paddick: Hugh William Paddick (22 August 1915 – 9 November 2000) was an English actor, whose most notable role was in the 1960s BBC radio show \"Round the Horne\", in sketches such as \"Charles and Fiona\" (as Charles) and \"Julian and Sandy\" (as Julian).  Both he and Kenneth Williams are largely responsible for introducing the underground language polari to the British public.\n\nWilliam Sharp (homeopath): William Sharp (1805–1896) was an English surgeon and physician.  Sharp is credited with first advocating the establishment of local museums in Britain and for putting science on the curricula of British public schools.  He was the first science teacher in a British public school and an early advocate of homoeopathy.\n\nJulian and Sandy: Julian and Sandy were characters on the BBC radio comedy programme \"Round the Horne\" from 1965 to 1968 and were played by Hugh Paddick and Kenneth Williams respectively, with scripts written by Barry Took and Marty Feldman.  According to a BBC Radio 4 programme on the characters, they were named after the writers Sandy Wilson and Julian Slade.\n\nCarry On Sergeant: Carry On Sergeant is a 1958 comedy film about National Service starring William Hartnell, Bob Monkhouse and Eric Barker; it is the first in the series of \"Carry On\" films, with 31 entries.  The film was based on a play \"The Bull Boys\" by R. F. Delderfield and was adapted into a script by Norman Hudis with John Antrobus contributing additional material and replacing the conscripted ballet dancers of the novel into a married couple.  It was directed by Gerald Thomas and produced by Peter Rogers, a partnership which would last until 1978.  Actors in this film, who went on to be part of the regular team in the series, were Kenneth Williams, Charles Hawtrey, Hattie Jacques, Kenneth Connor and Terry Scott.  The first public screening was on 1 August 1958 at Screen One, in London and it went on general cinema release across British cinemas on 15 August 1958.  The soundtrack music was played by the Band of the Coldstream Guards, conducted by the composer.\n\nBeyond Our Ken: Beyond Our Ken (1958–1964) is a radio comedy programme, the predecessor to \"Round the Horne\" (1965–1968).  Both programmes starred Kenneth Horne, Kenneth Williams, Hugh Paddick, Betty Marsden and Bill Pertwee, with announcer Douglas Smith.  Musical accompaniment was provided by the BBC Revue Orchestra.  The name is a pun on Kenneth Horne's name and the (now mainly Northern English and Scots) word \"\", meaning \"knowledge or perception\".\n\nCastaway 2007: Castaway 2007 was a follow-up to the BBC series \"Castaway 2000\" in which a group of people from the British public are \"castaway\" on a remote island.  While in the 2000 series 36 men, women and children moved to a remote Scottish island for a year, this series featured 15 men and women from the British public who were moved to a New Zealand island for three months.  The basic premise of a group of volunteers living as a community in a remote location remains, however this time the BBC promised an \"exotic location, on the other side of the world\".  Another change since Castaway 2000, was that the castaways were voted off the island one-by-one, in a manner similar to other reality series like \"Big Brother\".",
+    "question": "The actor responsible for introducing the underground language polari to the British public, starred with Kenneth Williams in what show from 1965 to 1968?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor who helped introduce the language."
+        },
+        "co_star_name": {
+          "type": "string",
+          "description": "The name of the co-star mentioned in the question."
+        },
+        "language_introduced": {
+          "type": "string",
+          "description": "The name of the underground language introduced to the public."
+        },
+        "show_details": {
+          "type": "object",
+          "properties": {
+            "show_name": {
+              "type": "string",
+              "description": "The name of the radio show."
+            },
+            "transmission_start_year": {
+              "type": "integer",
+              "description": "The start year of the show's transmission."
+            },
+            "transmission_end_year": {
+              "type": "integer",
+              "description": "The end year of the show's transmission."
+            }
+          },
+          "required": [
+            "show_name",
+            "transmission_start_year",
+            "transmission_end_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "actor_name",
+        "co_star_name",
+        "language_introduced",
+        "show_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Hugh Paddick",
+      "co_star_name": "Kenneth Williams",
+      "language_introduced": "polari",
+      "show_details": {
+        "show_name": "Round the Horne",
+        "transmission_start_year": 1965,
+        "transmission_end_year": 1968
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

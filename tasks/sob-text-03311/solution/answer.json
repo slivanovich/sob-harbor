@@ -1,0 +1,6 @@
+{
+  "software_name": "Homebrew",
+  "software_type": "package management system",
+  "primary_function": "simplifies the installation of software",
+  "supported_operating_system": "Apple's macOS"
+}

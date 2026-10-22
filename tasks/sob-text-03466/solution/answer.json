@@ -1,0 +1,15 @@
+{
+  "film_title": "The Trials of Cate McCall",
+  "release_year": 2013,
+  "film_genre": "drama",
+  "main_actors": [
+    {
+      "actor_name": "Kate Beckinsale",
+      "is_english_actress_born_july_26_1973": true
+    },
+    {
+      "actor_name": "Nick Nolte",
+      "is_english_actress_born_july_26_1973": false
+    }
+  ]
+}

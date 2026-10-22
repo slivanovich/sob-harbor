@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+St. Leonards Nunnery, Perth: St. Leonards Nunnery was a former Augustinian convent at Perth, Scotland.  After King Edward I of England's foray in Scotland in 1296, the Prioress swore fealty to him.  The convent was annexed to the Carthusian Monastery at Perth by 1434 and was suppressed in 1438.
+
+Battle of Dunbar (1296): The Battle of Dunbar was the only significant field action in the campaign of 1296.  King Edward I of England had invaded Scotland in 1296 to punish King John Balliol for his refusal to support English military action in France. The battlefield is currently under research to be inventoried and protected by Historic Scotland under the Scottish Historical Environment Policy of 2009.
+
+Principality of Wales: The Principality of Wales (Welsh: "Tywysogaeth Cymru") existed between 1216 and 1536, encompassing two-thirds of modern Wales during its height between 1267 and 1277.  For most of its history it was "annexed and united" to the English Crown except for its earliest few decades.  However, for a few generations, specifically the period from its foundation in 1216 to Edward I's completion of the conquest of Wales in 1284, it was "de facto" independent under a Welsh Prince of Wales, albeit one who swore fealty to the King of England.
+
+Battle of Connor: Edward Bruce landed in Larne, in modern-day County Antrim, on 26 May 1315.  In early June, Donall Ó Néill of Tyrone and some twelve fellow northern Kings and lords met Edward Bruce at Carrickfergus and swore fealty to him as King of Ireland.  Edward held the town of Carrickfergus, but was unable to take the Castle.  His army continued to spread south, through the Moyry Pass to take Dundalk.
+
+Edward I of England: Edward I (17/18 June 1239 – 7 July 1307), also known as Edward Longshanks and the Hammer of the Scots (Latin: "Malleus Scotorum" ), was King of England from 1272 to 1307.  He spent much of his reign reforming royal administration and common law.  Through an extensive legal inquiry, Edward investigated the tenure of various feudal liberties, while the law was reformed through a series of statutes regulating criminal and property law.  Increasingly, however, Edward's attention was drawn towards military affairs.
+
+Ragman Rolls: Ragman Rolls refers to the collection of instruments by which the nobility and gentry of Scotland subscribed allegiance to King Edward I of England, during the time between the Conference of Norham in May 1291 and the final award in favour of Balliol in November 1292; and again in 1296.  Of the former of these records two copies were preserved in the Chapter House at Westminster Abbey (now in The National Archives (United Kingdom) at Kew), and it has been printed by Rymer (Foedera, ~i. 542).  Another copy, preserved originally in the Tower of London, is now also in The National Archives.  The latter record, containing the various acts of homage and fealty extorted by Edward from Balliol and others in the course of his progress through Scotland in the summer of 1296 and in August at the parliament of Berwick, was published by Prynne from the copy in the Tower and now in The National Archives (United Kingdom) at Kew (Piece reference C 47/23/3).  Both records were printed by the Bannatyne Club in 1834.
+
+John Balliol: John Balliol (  1249 – late 1314), known derisively as "Toom Tabard" (meaning "empty coat") was King of Scots from 1292 to 1296.  Little is known of his early life.  After the death of Margaret, Maid of Norway, Scotland entered an interregnum during which several competitors for the Crown of Scotland put forward claims.  Balliol was chosen from among them as the new King of Scotland by a group of selected noblemen headed by King Edward I of England.  Edward used his influence over the process to subjugate Scotland and undermined Balliol's personal reign by treating Scotland as a vassal of England.  Edward's influence in Scottish affairs tainted Balliol's reign and the Scottish nobility deposed him and appointed a council of twelve to rule instead.  This council signed a treaty with France known as the Auld Alliance.
+
+William Sinclair (bishop): William de Sancto Claro, or simply William Sinclair († 1337), was a 14th-century bishop of Dunkeld.  He was the son of Amicia de Roskelyn and Sir William Sinclair, Baron of Roslin.  He was the brother of Sir Henry Sinclair, baron of Roslin.  After the death of Bishop Matthew de Crambeth in 1309, William was elected to the bishopric.  The following year, on 24 February 1310, William was one of twelve Scottish bishops to swear fealty to King Robert the Brus.  However, king Edward II of England had his own candidate in mind, John de Leck.  William went to the Holy See, where his election was contested by the said John.  The diocese of Dunkeld lay vacant for three years.  Pope Clement V appointed Cardinal James, cardinal deacon of St George in Velabro, to judge the issue.  However, the issue was more or less resolved when, on 22 May 1311, John de Leck was promoted to the Archbishopric of Dublin.  When John de Leck took over the see of Dublin on 20 July, he retired from the dispute.  The pope then declared William's election canonical, and sent him to Cardinal Berenger Fredoli, bishop of Tusculum, in order to be consecrated.  On 3 February 1313 king Edward II issued a safe-conduct to William, clearly indicating that the bishop was planning to arrive in England on his way back to Scotland, however Edward demanded cooperation in political matters as a condition.  William became a frequent witness to King Robert's charters, but that did not prevent Bishop William, on 24 September 1332, being present at the coronation of Edward Balliol.  Bishop William attended the latter's parliaments.  William died on 27 June 1337, and was buried in the choir of Dunkeld Cathedral.
+
+Ruadhri of Bute: Ruadhri is an obscure 13th-century noble, who claimed the Isle of Bute through hereditary descent.  Outlawed by King Alexander III of Scotland, because of attacks against Scottish lands, which he had undertaken as a result of him being denied his declared patrimony to the Isle of Bute through his hereditary right.  When King Hakon IV of Norway began his 1263 expedition against Scotland, Ruadhri presented himself to Hakon and swore fealty to the King of Norway.  He was allowed to participate in the attack on Bute, as part of the campaign, with Rothesay Castle surrendering.  He took revenge on the garrison killing nine upon their retreat.  He was granted the Isle of Bute by King Hakon, however he disappears from contemporary records shortly afterwards.
+
+David de Bernham: David de Bernham (died 1253) was Chamberlain of King Alexander II of Scotland and subsequently, Bishop of St. Andrews.  He was elected to the see in June 1239, and finally consecrated, after some difficulties, in January, 1240.  He died in 1253, and was buried at Nenthorn, near Kelso.
+
+Question: What is the name of this King of England, born in June 1239, in which the Prioress swore fealty to him, after his foray in Scotland in 1296?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "king_name": {
+      "type": "string",
+      "description": "The full name of the King of England."
+    },
+    "king_birth_year": {
+      "type": "integer",
+      "description": "The year the King was born."
+    },
+    "event_details": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "description": "The action taken by the Prioress."
+        },
+        "entity_involved": {
+          "type": "string",
+          "description": "The entity that performed the action."
+        },
+        "entity_location": {
+          "type": "string",
+          "description": "The location associated with the entity."
+        },
+        "year_of_event": {
+          "type": "integer",
+          "description": "The year the event occurred."
+        },
+        "king_action_preceding_event": {
+          "type": "string",
+          "description": "The King's action that preceded the event."
+        }
+      },
+      "required": [
+        "action",
+        "entity_involved",
+        "entity_location",
+        "year_of_event",
+        "king_action_preceding_event"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "king_name",
+    "king_birth_year",
+    "event_details"
+  ],
+  "additionalProperties": false
+}

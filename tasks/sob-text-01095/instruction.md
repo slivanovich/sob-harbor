@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Suzanna Hupp: Suzanna Gratia Hupp, DC (born September 28, 1959), is a former Republican member of the Texas House of Representatives, who represented traditionally Democratic District 54 (Bell, Burnet, and Lampasas counties) for ten years from 1997–2007.  After surviving the Luby's shooting in 1991, Hupp became a leading advocate of an individual's right to carry a concealed weapon.  Hupp was elected to her first of five consecutive terms in 1996.  She did not seek a sixth two-year term in 2006.  She has also written a book called "From Luby’s to the Legislature: One Woman’s Fight Against Gun Control", published by Privateer Publications, San Antonio, Texas.
+
+Luby's shooting: The Luby's shooting, also known as the Luby's massacre, was a mass shooting that took place on October 16, 1991, at a Luby's restaurant in Killeen, Texas, United States.  The perpetrator, George Hennard, drove his pickup truck through the front window of the restaurant, and immediately shot and killed 23 people, and wounded 27 others before fatally shooting himself.  It is the fourth deadliest massacre by a single shooter in U.S. history.
+
+Gun politics in the United States: Gun politics is an area of American politics that is defined primarily by the actions of two groups: gun control and gun rights activists.  These groups often disagree on the interpretation of laws and court cases related to firearms as well as about the effects of gun control on crime and public safety.  It has been estimated that U.S. civilians own 270 million to 310 million firearms, and that 35% to 42% of the households in the country have at least one gun.
+
+Gun Control in the Third Reich (book): Gun Control in the Third Reich is a non-fiction book from the Independent Institute that describes the gun control policies used in Germany from the 1918 Weimar Republic, through the Third Reich in 1938.  The book aims to substantiate the Nazi gun control theory of gun politics in the United States by referencing German archives, diaries, and newspapers that attest to restrictions on firearm ownership for Jews and enemies of the state.
+
+Tom Diaz: Tom Diaz is an American writer, lawyer, and public speaker on the gun industry and gun control issues.  He was formerly senior policy analyst at the Violence Policy Center and is one of the more prominent advocates for a strict system of federal gun control in the United States.
+
+Stephen Halbrook: Stephen P. Halbrook is a Senior Fellow at the Independent Institute and an author and lawyer known for his litigation on behalf of the National Rifle Association.  He has written extensively about the original meanings of the Second Amendment and the Fourteenth Amendment (the latter as applied to Second Amendment rights).  He has argued and won three cases before the US Supreme Court: "Printz v. United States", "United States v. Thompson-Center Arms Company", and "Castillo v. United States".  He has also written briefs in many other cases, including the Supreme Court cases "Small v. United States" (pertaining to the Gun Control Act of 1968) and "McDonald v. Chicago".  In "District of Columbia v. Heller", he wrote a brief on behalf of the majority of both houses of Congress.  More broadly, his decades of research on the Second Amendment contributed to the intellectual foundation of the "Heller" decision.  He has written many books and articles on the topic of gun control, some of which have been cited in Supreme Court opinions ("Heller", "McDonald", "Printz v. United States").  He has testified before congress on multiple occasions.  Halbrook’s most important scholarly contribution, however, was the book "That Every Man Be Armed", originally published in 1986.  The book was the most thorough analysis of the legal history and original intent of the Second Amendment.
+
+Law Center to Prevent Gun Violence: The Law Center to Prevent Gun Violence (LCPGV), previously known as the Legal Community Against Violence, is a national public interest law center which provides legal assistance to elected officials, government attorneys, and activists in the United States to promote gun control and to oppose gun violence.  LCPGV also publishes information about gun laws and gun control.  The organization has been active in promoting gun control ordinances in California and elsewhere, as well as conducting litigation to defend gun control laws against challenges.
+
+Gun Control Australia: Gun Control Australia (GCA) is a gun-control lobbying group in Australia.  The group was formed in 1981 to press for stricter gun laws.  In 2012 the spokespersons of the National Coalition for Gun Control (NCGC) merged with GCA.  Its President is John Crook.
+
+Dickey Amendment (1996): In United States politics, the Dickey Amendment is a provision first inserted as a rider into the 1996 federal government omnibus spending bill which mandated that "none of the funds made available for injury prevention and control at the Centers for Disease Control and Prevention (CDC) may be used to advocate or promote gun control."  In the same spending bill, Congress earmarked $2.6 million from the CDC's budget, the exact amount that had previously been allocated to the agency for firearms research the previous year, for traumatic brain injury-related research.  The amendment is named after its author Jay Dickey, a Republican member of the United States House of Representatives from Arkansas.  The amendment was introduced after lobbying by the National Rifle Association in response to their perceived bias in a 1993 study by Arthur Kellermann that found that guns in the home were associated with an increased risk of homicide in the home, as well as other CDC funded studies and efforts.  Mark L. Rosenberg, the former director of the National Center for Injury Prevention and Control, has described this amendment as "a shot fired across the bow" at CDC researchers who wanted to research gun violence.  Many commentators have described this amendment as a "ban" on gun violence research by the CDC.  In a 2012 op-ed, Dickey and Rosenberg argued that the CDC should be able to research gun violence, and Dickey has since said that he regrets his role in stopping the CDC from researching gun violence, saying he simply didn't want to "let any of those dollars go to gun control advocacy."
+
+National Gun Victims Action Council: The National Gun Victims Action Council (NGVAC) is an American organization which advocates against gun violence and for gun control.  The NGVAC uses targeted boycotts of various businesses and organizations in an attempt to persuade those organizations into changing their gun policies, or advocate for increased gun control.  NGAC is based in Chicago, Illinois, and headed by Elliot Fineman, who "became active in gun control causes after his son was shot and killed in a San Diego restaurant in 2006 by a mentally ill man wielding a legally purchased handgun."
+
+Question: Who was responsible for the massacre that led to suzanna hupp's book "From Luby’s to the Legislature: One Woman’s Fight Against Gun Control"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "event_name": {
+      "type": "string",
+      "description": "The name of the massacre or shooting event."
+    },
+    "perpetrator_name": {
+      "type": "string",
+      "description": "The name of the individual responsible for the massacre."
+    },
+    "event_date": {
+      "type": "string",
+      "description": "The date the event took place."
+    },
+    "fatalities_count": {
+      "type": "integer",
+      "description": "The number of people killed in the event."
+    },
+    "wounded_count": {
+      "type": "integer",
+      "description": "The number of people wounded in the event."
+    }
+  },
+  "required": [
+    "event_name",
+    "perpetrator_name",
+    "event_date",
+    "fatalities_count",
+    "wounded_count"
+  ],
+  "additionalProperties": false
+}

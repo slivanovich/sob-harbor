@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "c93f57d56ef18ec70c486b1ac31bb3ac229ccd29e61057d33cc8624fd2e87984",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae77ec555429952e35ea948",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Del McCoury",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Pennsylvania Route 194: Pennsylvania Route 194 (PA 194) is a 31 mi north–south state highway located in south-central Pennsylvania.  The southern end is at the Maryland state line, where it continues south as Maryland Route 194 (MD 194), and the northern terminus is at the intersection with PA 74 in the town of Dillsburg.  PA 194 heads northeast from the state line through rural areas in southeastern Adams County, intersecting PA 97 in Littlestown.  The route continues into the southwestern section of York County and passes through Hanover, where it forms a concurrency with PA 116 and crosses PA 94 in the downtown area.  Past here, PA 194 heads north and crosses back into the eastern portion of Adams County, passing through rural land and intersecting U.S. Route 30 (US 30) in Abbottstown and PA 234 in East Berlin.  The route heads into the northwestern portion of York County and passes through Franklintown before coming to its northern terminus.\n\nPennsylvania Route 382: Pennsylvania Route 382 (PA 382) is an 11.8 mi state highway located in York County, Pennsylvania.  The southern terminus is at PA 181 in York Haven.  The western terminus is at PA 114 near Bunches in Fairview Township.  PA 382 is a two-lane undivided road that runs through rural areas in the northern part of York County.  The route heads west from York Haven, intersecting PA 262 and PA 295.  Farther west, the road has an interchange with Interstate 83 (I-83) in Newberrytown and an intersection with PA 177 in Lewisberry.  From here, PA 382 turns north and continues to its terminus at PA 114.  What is now PA 382 was designated as a portion of PA 24 in 1928.  PA 382 was designated to its current alignment in the 1960s after the northern terminus of PA 24 was truncated to the York area.\n\nYork County School of Technology: York County School of Technology, or \"YCST\", formerly known as York County Area Vocational-Technical School \"Vo-Tech\", is located at 2179 S. Queen St. in York, Pennsylvania.  The school accepts students from 14 sending school districts within York County.  York County School of Technology, the oldest on-going career and technical school in the United States, is a comprehensive career and technical school for students who want help to provide experience in a career field for their future.  The career areas or programs, commonly called \"shops\", are divided into three academies: \"Arts and Human Services\", \"Engineering and Construction.\" , and \"Manufacturing and Transportation.\"  Each academy has 2 career pathways.  The schools colors are green and white, and the mascot is the Spartan.\n\nHeidelberg Township, York County, Pennsylvania: Heidelberg Township is a township in York County, Pennsylvania, United States.  The township was erected in 1750 and encompassed the land grant known as \"Digges' Choice\" (a warrant granted to John Digges in 1727 by the province of Maryland, prior to the time the Mason-Dixon line fixed the final boundary between Maryland and Pennsylvania).  The township consisted of 9,030 acres and extended as far west as the borough (town) of McSherrystown.  The township included the borough (town) of Hanover until Hanover was made a borough in 1815.  When Adams County was formed from western York County in 1800, the portion of Heidelberg Township that was included in York County was subsequently renamed Conewago Township.  In 1860, the western half of Heidelberg Township (including the area around Hanover) was split off to form Penn Township.\n\nMichael and Magdealena Bixler Farmstead: The Michael and Magdealena Bixler Farmstead, also known as John Rudy County Park, is a historic property located at East Manchester Township, Pennsylvania, York County, Pennsylvania.  It includes seven stone and frame buildings dating from about 1799 to about 1910.  They are a Georgian-style house, Sweitzer barn (1811), a summer kitchen, corn barn, hog barn, tobacco barn, and milk house.  The house was built about 1799, and is a 2 1/2-story, stone dwelling on a limestone foundation.  It has a slate covered gable roof.  Also on the property is a hand-dug well dating to about 1799 or earlier, the foundations of a house dated to about 1737, and a smokehouse.  The property was donated to York County in 1973, and is operated as a county park.\n\nRabbit Transit (York): The Central Pennsylvania Transportation Authority (formerly York Adams Transportation Authority), doing business as rabbittransit, is the mass transit service of York County, Pennsylvania.  The agency currently operates 15 fixed routes within York County (12 in York and 3 in Hanover) and express bus routes from Gettysburg to Harrisburg and from York to Harrisburg and Towson, Maryland (connecting to the central light rail line of the Baltimore area's Maryland Transit Administration).\n\nNorthern York County School District: The Northern York County School District is midsized, suburban public school district in York County, Pennsylvania.  It econompasses an area of approximately 92 sqmi which includes: the boroughs of Dillsburg, Wellsville, and Franklintown, plus Monaghan Township, Warrington Township, Carroll Township, and Franklin Township.  The school district has a population of 20,023, according to a 2005 local census.  By 2010, the district's population had increased to 21,108 people.  The educational attainment levels for the Northern York County School District population (25 years old and over) were 91.9% high school graduates and 29.8% college graduates.\n\nDel McCoury: Delano Floyd McCoury was born in Bakersville, North Carolina in 1939, but the family relocated to York County, Pennsylvania while he was still a child, is an American bluegrass musician.  As leader of the Del McCoury Band, he plays guitar and sings lead vocals along with his two sons, Ronnie McCoury and Rob McCoury, who play mandolin and banjo respectively.  In June 2010, he received a National Heritage Fellowship lifetime achievement award from the National Endowment for the Arts and in 2011 he was elected into the International Bluegrass Music Hall of Fame.\n\nBuddy Greene: Buddy Greene is an American singer, songwriter, guitar player and harmonica player.  Most of his recordings consist of gospel music with a distinctly Southern flavor.  Much of his music is influenced by country music and bluegrass music.  Greene grew up in Macon, Georgia.  He has written the music for many songs and also co-wrote the Christmas song \"Mary, Did You Know? \" with Mark Lowry; Greene also wrote \"Recovering Pharisee\" recorded by Del McCoury, and \"He Is\" recorded by Ashley Cleveland.  He is considered a harmonica legend by many, and once played a classical harmonica medley at Carnegie Hall.\n\nSouthern York County School District: The Southern York County School District is a suburban, public school district in York County in the South Central region of Pennsylvania.  It serves: Codorus Township, Glen Rock, Railroad, New Freedom, Shrewsbury Township, Shrewsbury, and a portion of Hopewell Township.  Southern York County School District encompasses approximately 68 sqmi .  According to 2000 federal census data, it served a resident population of 18,592 people.  By 2010, the district's population increased to 20,858 people.  The educational attainment levels for the Southern York County School District population (25 years old and over) were 89.3% high school graduates and 26.5% college graduates.",
+    "question": "The record \"Recovering pharisee\", was recorded by this man from York County, Pennsylvania?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "artist_name": {
+          "type": "string",
+          "description": "The name of the artist who recorded the song."
+        },
+        "recorded_song_title": {
+          "type": "string",
+          "description": "The title of the song recorded."
+        },
+        "artist_origin_location": {
+          "type": "string",
+          "description": "The specific location in Pennsylvania the artist is associated with."
+        },
+        "artist_genre": {
+          "type": "string",
+          "description": "The primary music genre of the artist."
+        }
+      },
+      "required": [
+        "artist_name",
+        "recorded_song_title",
+        "artist_origin_location",
+        "artist_genre"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "artist_name": "Del McCoury",
+      "recorded_song_title": "Recovering Pharisee",
+      "artist_origin_location": "York County, Pennsylvania",
+      "artist_genre": "bluegrass"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

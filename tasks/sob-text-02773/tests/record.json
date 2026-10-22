@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "beb93f52d5f6d50de9e700ba91f3164a0947aff1b2fbb78db7bb8dc370a27e63",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5abaaf68554299232ef4a372",
+    "source_dataset": "hotpotqa",
+    "source_answer": "El Paso, Texas",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "1935–36 Stoke City F.C. season: The 1935–36 season was Stoke City's 36th season in the Football League and the 22nd in the First Division.\n\n2011 Independence Bowl: The 2011 AdvoCare V100 Independence Bowl, the 36th edition of the game, was a post-season American college football bowl game, held on December 26, 2011 at Independence Stadium in Shreveport, Louisiana as part of the 2011–12 NCAA bowl season.\n\nBowl game: In North America, a bowl game is one of a number of post-season college football games that are primarily played by teams belonging to the NCAA's Division I Football Bowl Subdivision (FBS).  Prior to 2002, bowl game statistics were not included in players' career totals and the games were mostly considered to be exhibition games involving a payout to participating teams.  While teams once had to meet strict bowl eligibility requirements to receive an invitation to a bowl game, the number of bowl games has grown in recent years, climbing to 40 team-competitive games (not including the College Football Playoff National Championship) starting in the 2015–16 bowl season, although this number will drop to 39 in the 2017–18 bowl season.  The increase in bowl games has necessitated the steady easing of the NCAA bowl eligibility rules since 2006, as teams with a losing record are often required to fill some of the 78 available bowl slots.\n\nList of Hull City A.F.C. seasons: Hull City A.F.C., an English association football club based in Kingston upon Hull, East Riding of Yorkshire, was founded in 1904.  The team's first competitive matches came in the FA Cup, being beaten 4–1 by Stockton in a replay following a 3–3 draw, before they were elected to the Football League Second Division ahead of the 1905–06 season.  Hull missed out on promotion in the 1909–10 season, having an inferior goal average to Oldham Athletic and finishing in third.  The 1929–30 season saw Hull relegated to the Third Division North after 21 seasons in the Second Division while reaching the semi-final of the FA Cup, where they were beaten by Arsenal after a replay.  Promotion back to the Second Division was achieved three years later, with the Third Division North championship becoming the club's first major honour.  However, they were relegated in the 1935–36 season and it was 13 years before another return to the Second Division was made, when, under the player-management of former England international Raich Carter, the Third Division North title was won.  Relegation back to this division came in the 1955–56 season and following League reorganisation implemented for the 1958–59 season Hull won promotion in the Third Division's inaugural season, although they were relegated after one year.\n\nPittsburgh Shamrocks: The Pittsburgh Shamrocks were a professional ice hockey team, based in Pittsburgh, Pennsylvania that played in the International Hockey League in 1935–36.  The team played all of its home games at the Duquesne Gardens.  During their lone season in existence, the Shamrocks finished in fourth place in the West Division behind the Detroit Olympics, Cleveland Falcons, and Windsor Bulldogs.  The Shamrocks scored 137 goals and allowed 170.  The team folded after one season.  It is estimated that the team lost $36,000 during 1935–36 season.\n\n1935–36 NCAA football bowl games: The 1935–36 NCAA football bowl games were the first to feature the Sun Bowl, which complemented the Orange, Rose, and Sugar Bowl as the fourth post-season game.  What may be striking about the 1935–36 post-season from a historical perspective is the participation of three of the eight teams.  As of 2015, two teams, the Catholic Cardinals and the Hardin–Simmons Cowboys compete in the NCAA's lowest level of competition, Division III.  Another team, the New Mexico State Aggies, still competes in Division I, however, they possess the longest bowl drought (their last bowl appearance was in the 1960 Sun Bowl) and one of the worst winning percentages in Division I. Two teams from the Southeastern Conference would play in bowl games, the LSU Tigers and the Ole Miss Rebels, however, they would lose both by a combined score of two points.\n\n2012 Maaco Bowl Las Vegas: The 2012 Maaco Bowl Las Vegas was an American college football bowl game held on December 22, 2012 at Sam Boyd Stadium in Whitney, Nevada in the Las Vegas Valley in the United States as part of the 2012–13 NCAA Bowl season.  The 21st edition of the Maaco Bowl Las Vegas began at 12:30 p.m. PST and aired on ESPN.  It featured the Mountain West Conference co-champion Boise State Broncos against the Washington Huskies from the Pac-12 Conference (Pac-12) and was the final game of the 2012 NCAA Division I FBS football season for both teams.  The Broncos accepted their invitation after earning a 10-2 record in the regular season, while the Huskies advanced to the game after earning a 7-5 record.  Boise State kicked a 27-yard field goal with 1:16 left in the game to defeat Washington 28–26 to win their third consecutive Maaco Bowl Las Vegas game.\n\n1935–36 Michigan Wolverines men's basketball team: The 1935–36 Michigan Wolverines men's basketball team represented the University of Michigan in intercollegiate basketball during the 1935–36 season.  The team compiled a 15–5 record, and 7–5 against Big Ten Conference opponents.  The team scored 700 points in 20 games for an average of 35.0 points per game – the highest point total and scoring per game in school history up to that time.  Michigan finished tied for third place in the Big Ten.\n\n1935–36 British Home Championship: The 1935-36 British Home Championship was a football tournament played between the British Home Nations during the 1935–36 season.  It was won by Scotland after a close contest between Scotland, Wales and England.  England began the tournament the stronger team, with a 3–1 win over Ireland in Belfast while Scotland struggled to a 1–1 draw with Wales.  Scotland recovered to beat Ireland in their second match whilst England dropped position after defeat by Wales.  Wales and Ireland played a tough, high-scoring game which might have given Wales the title, but was ultimately won by the Irish, whilst Scotland came to London knowing that only a win would be enough to give them the trophy.  In a furious attacking game the end result; 1–1, was enough to give Scotland an undisputed tournament success.\n\nSun Bowl: The Sun Bowl is an annual American college football bowl game that is usually played at the end of December in El Paso, Texas.  The Sun Bowl, along with the Sugar Bowl and the Orange Bowl, are the second-oldest bowl games in the country, behind the Rose Bowl.  Games are currently played at Sun Bowl Stadium on the campus of the University of Texas at El Paso, and since 2014 have featured teams from the Atlantic Coast Conference (ACC) and the Pac-12 Conference (Pac-12).",
+    "question": "Where is the NCAA bowl, which made its debut in the 1935-36 season, held?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "bowl_game_name": {
+          "type": "string",
+          "description": "The name of the college football bowl game."
+        },
+        "debut_season": {
+          "type": "string",
+          "description": "The season in which the bowl game made its debut."
+        },
+        "location": {
+          "type": "string",
+          "description": "The city and state where the bowl game is held."
+        },
+        "host_city": {
+          "type": "string",
+          "description": "The city where the bowl game is held."
+        },
+        "host_state": {
+          "type": "string",
+          "description": "The state where the bowl game is held."
+        }
+      },
+      "required": [
+        "bowl_game_name",
+        "debut_season",
+        "location",
+        "host_city",
+        "host_state"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "bowl_game_name": "Sun Bowl",
+      "debut_season": "1935–36",
+      "location": "El Paso, Texas",
+      "host_city": "El Paso",
+      "host_state": "Texas"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

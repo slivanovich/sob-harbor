@@ -1,0 +1,121 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Best Buy: Best Buy Co., Inc. is an American multinational consumer electronics corporation headquartered in Richfield, Minnesota, a Minneapolis suburb.  Internationally, it also operates in Canada and Mexico.  It was formerly operational in China until February 2011 (when the faction was merged with Five Star) and in Europe until 2012.  The company was founded by Richard M. Schulze and Gary Smoliak in 1966 as an audio specialty store.  In 1983, it was renamed and rebranded with more emphasis placed on consumer electronics.
+
+AppForge: AppForge, Inc. was a software company headquartered in Atlanta, Georgia, providing mobile application development services as well as CrossFire, a software tool simplifying mobile applications for Symbian, Windows Mobile, RIM BlackBerry, and Palm OS.  Crossfire was a software plugin for Visual Basic 6 and for Microsoft Visual Studio . NET.
+
+Reporty Homeland Security: Reporty Homeland Security is a multi-national public safety technology company headquartered in Israel.  Its focus is enhancing communications with emergency and city services through technology and mobile applications, acting as a gateway between smart devices and Public Safety Answering Points.  Reporty connects individuals in emergencies to emergency services via live video and audio.  Using an application, smart devices, and IoT, Reporty helps emergency services establish what is happening in real-time and provide citizens with faster emergency support.
+
+Collabrify: Collabrification came from the foundation of making mobile education more collaborative.  From the start, it was designed to make something that was inherently non-collaborative and make it collaborative.  The infrastructure has been used in the IMLC, University of Michigan, University of Texas, and the department of Mathematics and Information Technology at The Hong Kong Institute of Education.  By building real-time, synchronous collaboration into mobile infrastructure, people build on the Four C's: critical thinking, communications, collaboration, and creativity.  Collabrification of mobile and web applications allows people to build relationships, increase shared understanding, increase productivity, organize thoughts, and make mobile technology, specifically related to mobile applications, more fun and engaging.
+
+Mindtree: Mindtree Limited is an Indian multinational information technology and outsourcing company headquartered in Bengaluru, India and New Jersey, USA.  Founded in 1999, the company employs approximately 16,500+ employees with annual revenue of $780+ million.  The company deals in e-commerce, mobile applications, cloud computing, digital transformation, data analytics, EAI and ERP, with more than 328 clients and 43 offices in over 17 countries, as of 31st March, 2017.  Its largest operations are in India and major markets are United States and Europe.  The company was formed on 18 August 1999 by ten IT professionals, who formerly worked for Cambridge Technology Partners, Lucent Technologies, and Wipro.
+
+AT Internet: AT Internet is a privately held company that provides web analytics services and consulting for websites, intranet, mobile sites and mobile applications.  It has provided these services since 1995.  The company is commonly known (especially in France) by the former name of its flagship product XiTi .  AT Internet’s solution, the Analytics Suite, is used on approximately 20,000 websites and mobile applications worldwide.
+
+DragonRAD: DragonRAD is a cross-platform mobile development tool for building, deploying, and managing enterprise mobile applications across a variety of smartphones and tablets.  DragonRAD is developed by Seregon Solutions Inc. and was released in September 2010.  DragonRAD is an evolution of SeregonMAP, a mobile enterprise application platform, that adds many new features to the drag and drop enterprise application development platform.  Cross platform support for developing Android and Windows Mobile applications was added in October 2010.  On January 12, 2011, the company made a commitment to developers and the BlackBerry platform with their announcement to support the BlackBerry PlayBook, expanding its cross platform support to the tablet market.
+
+Slyce: Slyce Inc. is a visual search and recognition company headquartered in Philadelphia, PA, with operations in New Waterford, Nova Scotia.  The company developed image recognition technology that can identify products based on a picture and allow the user to purchase the item on their smartphone.  The company has partnered with a number of retailers in the United States and Europe to operate its technology inside their mobile applications, including Neiman Marcus, Best Buy, and Home Depot.  The company also operates two other mobile apps, Craves, and SnipSnap.
+
+Sky-mobi: Sky-mobi Limited is a mobile applications company based in Hangzhou, China.  It is China's largest mobile application store by sales.  The company was set up on April 20, 2007; prior to 2010, it was named Profit Star Limited.  Sky-mobi was funded by the US-based Sequoia Capital, and provides mobile applications and services through its mobile application platform (“Maopao”).
+
+SmartCell Technology: SmartCell Technology, LLC was a mobile applications developer with its headquarters in Irvine, California, United States, and a development center in Shanghai, China.  Commonly referred to as "SmartCell" for short, the company was founded in 2001 by its President and CEO, Bruce Wang, whose previous involvements have been with mobile technology.  SmartCell has developed a number of mobile applications using its proprietary technology, called HCM Technology, which is shorthand for High-performance, Cross-platform Mobile Technology.
+
+Question: What company headquartered in Richfield, Minnesota uses Slyce Inc technology in their mobile applications? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "The name of the company."
+    },
+    "company_headquarters": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the company is headquartered."
+        },
+        "state": {
+          "type": "string",
+          "description": "The state where the company is headquartered."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the company is headquartered."
+        }
+      },
+      "required": [
+        "city",
+        "state",
+        "country"
+      ],
+      "additionalProperties": false
+    },
+    "technology_partner": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the technology provider company."
+        },
+        "headquarters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "The city where the technology partner is headquartered."
+            },
+            "state": {
+              "type": "string",
+              "description": "The state where the technology partner is headquartered."
+            },
+            "country": {
+              "type": "string",
+              "description": "The country where the technology partner is headquartered."
+            }
+          },
+          "required": [
+            "city",
+            "state",
+            "country"
+          ],
+          "additionalProperties": false
+        },
+        "technology_type": {
+          "type": "string",
+          "description": "Description of the technology provided by the partner."
+        },
+        "used_in_mobile_applications": {
+          "type": "boolean",
+          "description": "Indicates if the technology is used in mobile applications."
+        }
+      },
+      "required": [
+        "name",
+        "headquarters",
+        "technology_type",
+        "used_in_mobile_applications"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "company_name",
+    "company_headquarters",
+    "technology_partner"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "people_compared": [
+    {
+      "name": "Julia Alvarez",
+      "birth_year": 1950
+    },
+    {
+      "name": "Meyer Schapiro",
+      "birth_year": 1904
+    }
+  ],
+  "person_born_first_name": "Meyer Schapiro",
+  "person_born_first_birth_year": 1904,
+  "comparison_statement": "Meyer Schapiro was born in 1904, which is before Julia Alvarez who was born in 1950."
+}

@@ -1,0 +1,15 @@
+{
+  "film_title": "My 5 Wives",
+  "film_year": 2000,
+  "director": "Sidney J. Furie",
+  "main_actor": {
+    "name": "Rodney Dangerfield",
+    "occupation": [
+      "stand-up comedian",
+      "actor",
+      "producer",
+      "screenwriter"
+    ],
+    "catchphrase": "I don't get no respect!"
+  }
+}

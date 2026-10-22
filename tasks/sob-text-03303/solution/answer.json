@@ -1,0 +1,9 @@
+{
+  "question_entities": [
+    "Manuel Puig",
+    "Joyce Kilmer"
+  ],
+  "manuel_puig_nationality": "Argentine",
+  "joyce_kilmer_nationality": "American",
+  "are_both_american": false
+}

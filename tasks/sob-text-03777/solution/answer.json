@@ -1,0 +1,13 @@
+{
+  "film_title": "Face/Off",
+  "film_year": 1997,
+  "film_genre": [
+    "science fiction",
+    "action"
+  ],
+  "director": "John Woo",
+  "stunt_double_details": {
+    "stunt_double_name": "Nick Loren",
+    "actor_stunt_doubled_for": "John Travolta"
+  }
+}

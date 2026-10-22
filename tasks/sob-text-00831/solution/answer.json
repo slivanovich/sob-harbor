@@ -1,0 +1,13 @@
+{
+  "artist_name": "RuPaul",
+  "song_title": "Looking Good Feeling Gorgeous",
+  "album_name": "Red Hot",
+  "artist_details": {
+    "primary_profession": "drag queen",
+    "other_professions": [
+      "actor",
+      "television personality",
+      "singer/songwriter"
+    ]
+  }
+}

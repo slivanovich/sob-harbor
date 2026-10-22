@@ -1,0 +1,16 @@
+{
+  "person_of_interest": {
+    "name": "Steven M. Hilton",
+    "relationship_to_owner": "son"
+  },
+  "owner_details": {
+    "name": "Barron Hilton",
+    "ownership_role": "original owner"
+  },
+  "team_information": {
+    "team_name": "Los Angeles Chargers",
+    "city": "Los Angeles",
+    "sport": "American Football"
+  },
+  "final_answer": "Los Angeles Chargers"
+}

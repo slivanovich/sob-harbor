@@ -1,0 +1,12 @@
+{
+  "series_name": "Delta",
+  "network": "ABC",
+  "starring_actress": {
+    "name": "Delta Ramona Leah Burke",
+    "birth_date": "1956-07-30"
+  },
+  "air_dates": {
+    "start_date": "1992-09-15",
+    "end_date": "1993-08-25"
+  }
+}

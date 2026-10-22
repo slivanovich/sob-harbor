@@ -1,0 +1,19 @@
+{
+  "collection_title": "M Is for Magic",
+  "author_name": "Neil Gaiman",
+  "awards_received_by_author": [
+    "Hugo",
+    "Nebula",
+    "Bram Stoker",
+    "Newbery",
+    "Carnegie"
+  ],
+  "book_awarded_both_medals": {
+    "title": "The Graveyard Book",
+    "medals_won": [
+      "Newbery",
+      "Carnegie"
+    ],
+    "award_year": 2008
+  }
+}

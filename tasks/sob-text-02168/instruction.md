@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Gran Akuma: Gran Akuma (born December 20, 1974) is a professional wrestler, best known for his work in Chikara.  He has also worked for Combat Zone Wrestling (CZW), Dragon Gate USA and Full Impact Pro (FIP).  In Chikara, he was a member of The Kings of Wrestling stable, while also being a part of Team F.I.S.T. with Icarus and Chuck Taylor.  On November 17, 2006, Akuma and Icarus defeated Chris Hero and Claudio Castagnoli to capture the Campeonatos de Parejas.
+
+Chuck Taylor (salesman): Charles Hollis "Chuck" Taylor (June 24, 1901 – June 23, 1969) was an American basketball player and shoe salesman/evangelist.  He is best known for his association with the Chuck Taylor All-Stars sneaker, the most successfully selling basketball shoe in history.
+
+Chuck Taylor (journalist): Chuck Taylor (born Charles L. Taylor on June 18, 1957, Hanover, New Hampshire) is an American journalist based in Seattle, Washington.  Since late 2010, he has worked as an editor at The Daily Herald and HeraldNet.com in Everett, Washington.  He was the founding editor of Crosscut.com in Seattle, worked as managing editor of "Seattle Weekly", and was an editor and reporter at "The Seattle Times" and the "Tri-City Herald" in Kennewick, Washington.  He attended Whitman College in Walla Walla, Washington, graduating in 1979.  Taylor was raised in Ohio and, primarily, Albion, Michigan.
+
+Ricochet (wrestler): Trevor Mann (born October 11, 1988) is an American professional wrestler best known by the ring name Ricochet.
+
+DoYaThing: "DoYaThing" is a song by alternative rock virtual band Gorillaz, featuring LCD Soundsystem frontman James Murphy and André 3000 of Outkast.  The song was released on 23 February 2012.  It was commissioned by Converse as a part of their "Three Artists.  One Song" project where three artists collaborate on a track.  The song is also the starting point for a limited edition Chuck Taylor All-Stars collection designed by Gorillaz artist Jamie Hewlett.  The shoe designs feature artwork from other projects related to Gorillaz.  It was released in two different versions: the approximately 4-and-a-half-minute radio edit, and the explicit 13-minute version.  The former was released as a free download on Converse's website, while the latter was released for streaming on Gorillaz's website.  The cover features a baboon representing Murphy and a masked figure representing André 3000, referencing the single cover for "I'm a Goner" by Matt and Kim.
+
+Chuck Taylor, All Star: Chuck Taylor, All Star: The True Story of the Man Behind the Most Famous Athletic Shoe in History (also known as Chuck Taylor, All Star) is a book by Abraham Aamidor, chronicling the artistic achievements and history of basketball player and salesman Chuck Taylor and Chuck Taylor All-Stars.  The book was published by Indiana University Press, and released around March 2006.
+
+Joe Ruetz: Joseph Hubert Ruetz (October 21, 1916 – January 2, 2003) was a professional football player in the All-America Football Conference (AAFC) for the Chicago Rockets in 1946 and 1948.  Prior to that he played college football while attending the University of Notre Dame.  He played guard for the Irish with the exception of playing one season at quarterback.  In 1938, he graduated from Notre Dame with cum laude honors.  Ruetz played in the 1938 College All-Star Game and his team upset Sammy Baugh and the Washington Redskins.  During World War II, he was a Navy physical education instructor and pilot.  During that time he played for the famed Saint Mary's Pre-Flight football team.  He was named an All-Navy All-American by sportswriter Grantland Rice in 1942.  After the war, Ruetz studied at the University of Chicago and played two seasons with the Chicago Rockets of the All-America Football Conference.  In 1950, he then was an assistant and head coach at St. Mary's before joining Chuck Taylor's football staff at Stanford University and helping guide the team to the 1952 Rose Bowl.  Ruetz later worked as a fund-raiser for Cardinal athletics, before succeeding Taylor as athletic director in 1972.  He then "saved" the East-West Shrine Game by convincing Stanford to allow it to be played at the school, where it remained until its move to Pacific Bell Park in 2001.  Joe also launched the head coaching career of Bill Walsh in 1977, when he hired him as Stanford's football coach.  He also instituted a long football series with Notre Dame, before retiring in 1979.  He later served as a fund-raising consultant to the Psoriasis Research Institute in Palo Alto, California.
+
+Chuck Taylor (wrestler): Dustin Howard (born April 22, 1986) is an American professional wrestler, better known by his ring name Chuck Taylor.  Howard began his wrestling training at age 15 under the tutelage of Brandon Walker at the Old School Wrestling Training Academy in Hardin, Kentucky.  Due to age requirements for wrestling licenses in Kentucky, he was unable to wrestle during shows in-state until age 18, during which time he wrestled for promotions in Tennessee and Illinois.  The most prominent of these was the then-newly restarted Chaos Pro Wrestling (CPW) in Brookport, Illinois, where he began his friendship with Ricochet.  Currently, he most notably wrestles for Chikara, Evolve, Ring of Honor (ROH), and Pro Wrestling Guerrilla (PWG), where he is the current PWG World Champion in his first reign.  He also serves as an assistant trainer at The Wrestle Factory, operated by Chikara founder Mike Quackenbush.
+
+Chuck Taylor All-Stars: Chuck Taylor All-Stars or Converse All Stars (also referred to as "Converse", "Chuck Taylors", "Chucks", "Cons", and "All Stars") is the brand name for a pair of casual shoes developed and produced by Converse, which has been a subsidiary of Nike, Inc. since 2003.
+
+1957 Stanford Indians football team: The 1957 Stanford Indians football team represented Stanford University in the 1957 college football season.  The team was coached by Chuck Taylor in his seventh year as head coach.  Taylor was a popular coach who had led the Indians to the 1952 Rose Bowl and who had been an All-American player for the Indians who starred on the undefeated 1940 "Wow Boys" team that won the 1941 Rose Bowl and the national championship in several polls.  Just before the team's final game against archrival California, Taylor announced he was retiring as head coach to become assistant athletic director of the university.
+
+Question: Which wrestler is older, Chuck Taylor or Ricohet?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "older_wrestler_name": {
+      "type": "string",
+      "description": "The name of the wrestler who is older."
+    },
+    "older_wrestler_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the older wrestler."
+    },
+    "younger_wrestler_name": {
+      "type": "string",
+      "description": "The name of the wrestler who is younger."
+    },
+    "younger_wrestler_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the younger wrestler."
+    },
+    "age_difference_years": {
+      "type": "integer",
+      "description": "The difference in birth years between the two wrestlers."
+    }
+  },
+  "required": [
+    "older_wrestler_name",
+    "older_wrestler_birth_year",
+    "younger_wrestler_name",
+    "younger_wrestler_birth_year",
+    "age_difference_years"
+  ],
+  "additionalProperties": false
+}

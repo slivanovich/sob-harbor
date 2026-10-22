@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "e109d47f17f252aba18dfadfc0fd25c057d36c6b1b8d49d182da3b30cfed01f6",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5add1b015542992ae4cec467",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hunting Dog (Felids): Hunting Dogs (Felids) refers to those few hunting dogs which are used primarily to aid in the hunt for large members of the cat family (felids) such as lion in the Old World and cougar in the New World.  A pack may be used either, to track the animal and keep it at baywhich combines both giving voice to the sound known as baying, and surrounding and confining the animalor, they may be expected to engage the animal in combat and seize it, in the manner of the catch dogs used in boar hunting, until the huntsmen have the opportunity to dispatch it.  This dual function means that the dogs are of essentially molosser type and are among the largest of all hunting dogs.\n\nBlack and Tan Virginia Foxhound: The Black and Tan Virginia Foxhound is an American foxhound breed.  It resulted of a cross breed with Bloodhounds in the 1700s.  The breed was developed by the landed gentry in order to get a dog suitable for fox hunting.  Besides the Black and Tan there are the Walker, Calhoun, Penn-Marydel, Goodman, July and Trigg, which all developed from similar crosses.  The Black and Tan is believed to descend form hunting dogs imported to America by Robert Brooke in 1650.  These hunting dogs were the ancestors of several varieties of American hounds and stayed with the Brooke family for more than 300 years.  Afterwards French Foxhounds were bred in after George Washington received them as gifts from the Marquis de Lafayette.  Much later, the breed's speed and stamina were improved introducing Irish Foxhounds.\n\nStephens Cur: The Stephens Cur (a.k.a. Stephens' Stock Cur), is a scent hound that belongs to the Cur dog breed.  They were originally bred by the Stephens family in southeastern Kentucky.  The dogs known as \"Little black dog\" were bred by generations of that family for over a century.  In 1970, they were recognized as separate and distinct breed of Cur.  The dog is mostly black with white markings, but more than a third white is not permissible.  It is good for hunting raccoon and squirrel, but can also be used to bay wild boar.  They are registered with the United Kennel Club\n\nCoon hunting: Coon hunting or raccoon hunting is the practice of hunting raccoons, most often for their meat and fur.  It is almost always done with specially bred dogs called coonhounds, of which there are six breeds, and is most commonly associated with rural life in the Southern United States.  Coon hunting is also popular in the rural Midwest.  Most coon hunts take place at night, with the dogs being turned loose, trailing and putting the raccoon up a tree without human assistance.  Once the raccoon is in the tree, with the dog at the base, it is referred to as \"treed\", with \"treeing\" being the active verb form.\n\nBraque Francais: The Braques français are hunting dogs, from a very old type of gun dog used for pointing the location of game birds for a hunter.  There are two breeds of Braque français, both from the south of France, the Braque français, type Gascogne (French Pointing Dog - Gascogne type, larger size) and the Braque français, type Pyrénées (French Pointing Dog - Pyrenean type, smaller size) They are popular hunting dogs in France, but are seldom seen elsewhere.\n\nMountain Cur: The Mountain Cur is a type of working dog that is bred specifically for treeing and trailing small game, like squirrel and raccoons.  They are also used for hunting and baying big game like bear and wild boar as well as being an all-purpose farm dog.  Curs are a member of the Hound group, and the Mountain Cur is one of several varieties of cur.  It can also be used as a water dog.  Mainly bred in Ohio, Kentucky, Virginia, and Tennessee, it has been registered with the United Kennel Club since 1998.  The Mountain Cur Breeder's Association was formed in 1957.\n\nHunting dog: A hunting dog refers to a canine that hunts with or for humans.  There are several types of hunting dogs developed for various tasks.  The major categories of hunting dogs include hounds, terriers, dachshunds, cur type dogs, and gun dogs. Among these categories further divisions can be made based upon the dogs' skill sets.\n\nTreeing: Treeing is a method of hunting where dogs are used to force animals that naturally climb up into trees, where they can be shot by hunters.  Particularly used with coonhunting, treeing dogs are selected for the instinct to not cease barking at an animal after it has escaped into a tree.  The idiomatic phrase \"\"Barking up the wrong tree\"\" comes from this practice.\n\nPandikona: The Pandikona is a primitive-type hunting dog from Pattikonda taluk-Kurnool district of Andhra Pradesh and Madhya Pradesh state, India.  \"Pandikona\" is a medium size sight hound which is adapted to harsh climatic conditions of Kurnool district.  This breed is associated with shepherd families of that region.  PandiKona dogs need very little care.\n\nTreeing Cur: The Treeing Cur is a breed of dog that originated in the mid-west and was first recognized by United Kennel Club on November 1, 1998, due to the efforts of Alex and Ray Kovac.  \"Most Cur breeders were not well off and so they required a dog that could serve multiple purposes: hunter, guardian, and stock dog.  The result was the Treeing Cur, \"which is the most varied in size and colors of the Cur breeds\", according to United Kennel Club.They are primarily used to tree squirrels, raccoons, opossums, wild boars, bears, mountain lions and bobcats as well as to hunt big game.",
+    "question": "Are both Pandikona and Treeing Cur hunting dogs?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "dog_breeds_in_question": {
+          "type": "array",
+          "description": "Details about the dog breeds mentioned in the question and their hunting dog status.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "breed_name": {
+                "type": "string",
+                "description": "The name of the dog breed."
+              },
+              "is_hunting_dog": {
+                "type": "boolean",
+                "description": "True if the breed is identified as a hunting dog in the context, false otherwise."
+              },
+              "reasoning_snippet": {
+                "type": "string",
+                "description": "A direct quote from the context supporting the 'is_hunting_dog' status."
+              }
+            },
+            "required": [
+              "breed_name",
+              "is_hunting_dog",
+              "reasoning_snippet"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "all_breeds_are_hunting_dogs": {
+          "type": "boolean",
+          "description": "The final answer to whether all specified breeds are hunting dogs."
+        },
+        "number_of_breeds_checked": {
+          "type": "integer",
+          "description": "The total number of dog breeds evaluated in the question."
+        }
+      },
+      "required": [
+        "dog_breeds_in_question",
+        "all_breeds_are_hunting_dogs",
+        "number_of_breeds_checked"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "dog_breeds_in_question": [
+        {
+          "breed_name": "Pandikona",
+          "is_hunting_dog": true,
+          "reasoning_snippet": "The Pandikona is a primitive-type hunting dog from Pattikonda taluk-Kurnool district of Andhra Pradesh and Madhya Pradesh state, India."
+        },
+        {
+          "breed_name": "Treeing Cur",
+          "is_hunting_dog": true,
+          "reasoning_snippet": "They are primarily used to tree squirrels, raccoons, opossums, wild boars, bears, mountain lions and bobcats as well as to hunt big game."
+        }
+      ],
+      "all_breeds_are_hunting_dogs": true,
+      "number_of_breeds_checked": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

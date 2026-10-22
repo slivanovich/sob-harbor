@@ -1,0 +1,16 @@
+{
+  "is_both_in_istanbul": true,
+  "entities_locations": [
+    {
+      "entity_name": "Beyazıt Tower",
+      "city": "Istanbul",
+      "country": "Turkey"
+    },
+    {
+      "entity_name": "Rüstem Pasha Mosque",
+      "city": "Istanbul",
+      "country": "Turkey"
+    }
+  ],
+  "common_location_city": "Istanbul"
+}

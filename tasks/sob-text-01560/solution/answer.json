@@ -1,0 +1,12 @@
+{
+  "magazine_name": "Pleine Vie",
+  "language": "French",
+  "frequency": "monthly",
+  "categories": [
+    "general interest",
+    "women's magazine"
+  ],
+  "publication_city": "Paris",
+  "publication_country": "France",
+  "is_correct_answer": true
+}

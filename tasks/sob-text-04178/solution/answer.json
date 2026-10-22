@@ -1,0 +1,12 @@
+{
+  "child": {
+    "name": "Rory Kennedy",
+    "birth_year": 1968
+  },
+  "parent": {
+    "name": "Ethel Skakel Kennedy",
+    "role": "human-rights campaigner",
+    "birth_year": 1928
+  },
+  "relationship_type": "child_of"
+}

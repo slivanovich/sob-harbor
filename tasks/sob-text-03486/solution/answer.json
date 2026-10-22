@@ -1,0 +1,12 @@
+{
+  "battle_name": "Meuse-Argonne Offensive",
+  "location_continent": "Europe",
+  "conflict": "World War I",
+  "involved_forces": [
+    "American Expeditionary Forces",
+    "French Army",
+    "British Army",
+    "Canadian Army",
+    "German Empire"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "player_name": "Wayne Gretzky",
+  "first_nhl_goal_event": {
+    "opponent_goalie": "Glen Hanlon",
+    "event_year": 1979
+  },
+  "player_birth_details": {
+    "birth_date": "January 26, 1961",
+    "birth_year": 1961
+  }
+}

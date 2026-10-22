@@ -1,0 +1,8 @@
+{
+  "band_1_name": "The Cribs",
+  "band_1_country_of_origin": "England",
+  "band_2_name": "Mad Season",
+  "band_2_country_of_origin": "United States",
+  "are_from_same_country": false,
+  "reasoning": "The Cribs are an English band, while Mad Season was an American supergroup formed in Seattle, Washington. Therefore, they are not from the same country."
+}

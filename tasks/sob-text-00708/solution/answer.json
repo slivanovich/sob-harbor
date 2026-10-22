@@ -1,0 +1,16 @@
+{
+  "is_both_airports": true,
+  "airports_checked": [
+    {
+      "airport_name": "Valley International Airport",
+      "is_identified_as_airport": true,
+      "location_description": "owned by the City of Harlingen, in Cameron County, Texas"
+    },
+    {
+      "airport_name": "Westerly State Airport",
+      "is_identified_as_airport": true,
+      "location_description": "a public use airport in Washington County, Rhode Island, United States"
+    }
+  ],
+  "conclusion_reason": "Both Valley International Airport and Westerly State Airport are explicitly referred to as airports in their respective descriptions within the provided context."
+}

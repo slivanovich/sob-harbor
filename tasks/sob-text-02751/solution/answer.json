@@ -1,0 +1,9 @@
+{
+  "highway_name": "Nevada State Route 161",
+  "connected_community": {
+    "name": "Goodsprings",
+    "type": "unincorporated community",
+    "county": "Clark County"
+  },
+  "major_interstate_connection": "Interstate 15"
+}

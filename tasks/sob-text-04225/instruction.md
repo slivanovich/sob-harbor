@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Triangle (2014 TV series): Triangle () is a 2014 South Korean television series, headlined by Kim Jae-joong who plays Jang Dong-chul, the second of three brothers.  The other two brothers are played by Lee Beom-soo and Im Si-wan.  It aired on MBC from May 5 to July 29, 2014 on Mondays and Tuesdays at 22:00 for 26 episodes.  "Triangle" was directed by Yoo Cheol-yong and written by Choi Wan-kyu, who previously collaborated on the gambling dramas "All In" (2003) and "Swallow the Sun" (2009).
+
+Boy Band (TV series): Boy Band is an American television music competition series that premiered on June 22, 2017 on ABC.  The 10-episode first season features young male vocalists competing to become a member of a new five-piece boy band.  The final five boys who form the boy band receive a recording contract with Hollywood Records and perform the band's debut single during the finale.  On August 24, 2017, it was announced on the live show that Brady Tutton, Chance Perez, Drew Ramos, Sergio Calderon, and Michael Conor were the new members of the boy band, In Real Life.  They performed for the very first time their first single, "Eyes Closed".
+
+Highlight (band): Highlight (Korean: 하이라이트 ) is a South Korean boy band formerly known as Beast (Korean: 비스트).  The band consists of five members: Yoon Doo-joon, Yong Jun-hyung, Yang Yo-seob, Lee Gi-kwang, and Son Dong-woon.  Original member Jang Hyun-seung officially left the group in April 2016.  Later that year, the five remaining members moved labels from Cube Entertainment to Around Us Entertainment and subsequently changed their name to Highlight in 2017.
+
+B3 (band): B3 was an American pop boy band from New York City.  They were formed in 2001 and were first produced by O-Jay of German dance band Real McCoy.  Original members were Timothy Andrew Cruz (2001–2004), John Steven Sutherland (2001–2004) and Rod Michael (2001–2002).  When Michael left in 2002, Blair Madison Late (2002–2004) joined in.  Tim Cruz was previously, in the late 1990s, a member of the boy band React.
+
+Columns (band): Columns is an American death metal/grindcore band from Charlotte, North Carolina, United States.  The band formed in 2004.  Vocalist Adam Cody is also the vocalist for Glass Casket and Victory Records' Wretched.  Jason Skipper and Jake Wade are also currently members in the punk band One Another.  Guitarist Michael Lehmann was an original member of the goregrind band Hemdale.  Jake Troth, also of Glass Casket, was an original member of Columns who left the band in 2007.
+
+A Skylit Drive: A Skylit Drive is an American post-hardcore band from Lodi, California.  The band has released one DVD, one EP and five studio albums: "Wires...and the Concept of Breathing" (2008), "Adelphia" (2009), "Identity on Fire" (2011), "Rise" (2013) and recently, "ASD" (2015).  The band consisted of Michael Jagmin (lead vocals), Nick Miller (lead guitar), Michael Labelle (rhythm guitar, unclean vocals), and Kyle Simmons (bass, keyboards).  Original member Joey Wilson left the band in 2012, reducing the band to a five-piece.  In 2014, Brian White and Cory La Quay departed from the band, and were replaced by Michael Labelle and Brandon Richter in March 2015.  The band has toured internationally both as headliner and support-act.
+
+Imajin: Imajin is an American R&B boy band that is known for their hit "Shorty (You Keep Playing With My Mind)" featuring Keith Murray.  The group also made a version of this song with (rapper) Mr. Cheeks of the rap group The Lost Boyz.  This single peaked at number 25 on the "Billboard" Hot 100, number 20 on Billboard's Hot R&B/Hip-Hop Songs chart and number 22 in the UK Singles Chart in 1998.  The band was originally put together by record producer Bert Price and inspired by past boy bands such as Jackson 5, New Edition, Hi-Five, Immature, and Mint Condition.  Original credited band members included Jamal Hampton (who was later replaced by Tony Royster, Jr.), Talib Kareem, Olamide Faison, and John Fitch.  Faison is the younger brother of Donald Faison of the television series "Scrubs".  Imajin credited themselves to being a true boy band and are different because each member played an instrument.  Jamal Hampton and Tony Royster played the drums, Talib Kareem the keyboard, and Olamide Faison played the guitar while John Fitch played the bass guitar.  After the first album, the group split and John and Olamide made a duo called JizLams.  During the hiatus, Talib continued to produce songs for various artists such as Solange Knowles.  Jamal Hampton changed his name to J Star while pursuing a solo career.  The group continues to produce and sing music together as "Imajin".
+
+Kim Jae-joong: Kim Jae-joong (Hangul: 김재중 ; Hanja: 金在中 ; born January 26, 1986), also known mononymously as Jaejoong, is a South Korean singer, songwriter, actor, director and designer.  He is best known as a member of the Korean pop group JYJ, and was one of the original members of boy band TVXQ.  Kim was also known by the stage names Hero Jaejoong (in South Korea), Jejung (ジェジュン) (in Japan), and 英雄在中 (영웅재중) (in China).  Kim is now using Kim Jae-joong (JYJ) for his activities.
+
+Anaïs Lameche: Anaïs Helena Lameche Bonnier (née Kretz Lameche) (born 19 August 1987 in French Alps, France) is a former Swedish pop singer and original member of the Swedish pop group Play.  She is the only member of Play out of its seven different members to appear in all four different line-ups of the group.  Before the band's split, she was also the last remaining original member of the group since Faye's second departure in January 2011.  She quit the music industry in 2011.
+
+Masahiro Nakai: Masahiro Nakai (中居 正広 , Nakai Masahiro , born August 18, 1972) is a Japanese television host, actor, newscaster, radio personality.  He was the leader of the now defunct boy band SMAP, which had been the best-selling boy band in Asia.  While working as a member of a boy band, he worked extensively as a television presenter, hosting many of his own talk shows, variety shows, music shows, news programs, and several Olympic games as a sportscaster.  His conversational method and technique has been critically praised, establishing himself as one of the most well-respected, iconic hosts in the Japanese entertainment industry.  He is the host of six weekly television programs and one radio program.
+
+Question: Of which boy band was the headliner for Triangle an original member?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person who was the headliner for the TV series."
+    },
+    "series_name": {
+      "type": "string",
+      "description": "The name of the TV series mentioned in the question."
+    },
+    "role_in_series": {
+      "type": "string",
+      "description": "The role of the person in the TV series."
+    },
+    "original_boy_band": {
+      "type": "string",
+      "description": "The name of the boy band the person was an original member of."
+    }
+  },
+  "required": [
+    "person_name",
+    "series_name",
+    "role_in_series",
+    "original_boy_band"
+  ],
+  "additionalProperties": false
+}

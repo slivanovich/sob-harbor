@@ -1,0 +1,16 @@
+{
+  "father_name": "Stuart James McCullum",
+  "sons_details": [
+    {
+      "name": "Brendon McCullum",
+      "is_international_cricketer": true,
+      "represented_country": "New Zealand"
+    },
+    {
+      "name": "Nathan McCullum",
+      "is_international_cricketer": true,
+      "represented_country": "New Zealand"
+    }
+  ],
+  "final_answer_country": "New Zealand"
+}

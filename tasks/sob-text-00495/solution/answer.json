@@ -1,0 +1,24 @@
+{
+  "question_asked": "Have tennis players Amélie Mauresmo and Vitas Gerulaitis both won titles at Wimbledon?",
+  "player_1_info": {
+    "name": "Amélie Mauresmo",
+    "wimbledon_titles_won": true,
+    "wimbledon_title_details": [
+      {
+        "year": 2006,
+        "title_type": "women_s_singles"
+      }
+    ]
+  },
+  "player_2_info": {
+    "name": "Vitas Gerulaitis",
+    "wimbledon_titles_won": true,
+    "wimbledon_title_details": [
+      {
+        "year": 1975,
+        "title_type": "men_s_doubles"
+      }
+    ]
+  },
+  "final_answer": true
+}

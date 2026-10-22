@@ -1,0 +1,26 @@
+{
+  "village_details": {
+    "name": "Effingham",
+    "classification": [
+      "large semi-rural",
+      "rural"
+    ],
+    "location": {
+      "borough": "Guildford",
+      "county": "Surrey"
+    }
+  },
+  "notable_residents": [
+    {
+      "name": "Sir Barnes Wallis",
+      "connection_to_village": "home and buried"
+    },
+    {
+      "name": "Toni Mascolo",
+      "connection_to_village": "home"
+    }
+  ],
+  "answer": {
+    "figure_name": "Toni Mascolo"
+  }
+}

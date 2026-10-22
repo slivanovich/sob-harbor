@@ -1,0 +1,21 @@
+{
+  "person_with_broader_scope": {
+    "name": "Aldous Leonard Huxley",
+    "professions": [
+      "writer",
+      "novelist",
+      "philosopher",
+      "lecturer"
+    ],
+    "profession_count": 4
+  },
+  "person_with_narrower_scope": {
+    "name": "Raymond Clevie Carver Jr.",
+    "professions": [
+      "short-story writer",
+      "poet"
+    ],
+    "profession_count": 2
+  },
+  "comparison_result": "Aldous Leonard Huxley has a broader scope of profession."
+}

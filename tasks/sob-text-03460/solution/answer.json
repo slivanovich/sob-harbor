@@ -1,0 +1,13 @@
+{
+  "manufacturer": {
+    "name": "Sylva Autokits",
+    "founding_year": 1981,
+    "location": {
+      "region": "Lincolnshire",
+      "country": "England"
+    },
+    "founder_name": "Jeremy Phillips"
+  },
+  "product_derived_from": "Sylva Star",
+  "answer_founding_year": 1981
+}

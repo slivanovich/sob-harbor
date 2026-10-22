@@ -1,0 +1,12 @@
+{
+  "championship_defended": "WCW World Heavyweight Championship",
+  "defending_champion": "Ron Simmons",
+  "challenger_wrestler": {
+    "name": "Dr. Death\" Steve Williams",
+    "college_attended": "University of Oklahoma"
+  },
+  "event_details": {
+    "name": "Starrcade",
+    "year": 1992
+  }
+}

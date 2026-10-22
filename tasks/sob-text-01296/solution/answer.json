@@ -1,0 +1,11 @@
+{
+  "film_title": "The Zookeeper's Wife",
+  "actor_name": "Johan Heldenbergh",
+  "film_release_year": 2017,
+  "film_director": "Niki Caro",
+  "source_book": {
+    "book_title": "The Zookeeper's Wife",
+    "author_name": "Diane Ackerman",
+    "is_same_name_as_film": true
+  }
+}

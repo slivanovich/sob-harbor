@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "889685824021680c89d33bd1e7ca2d819012acdf56fce36ee50a5c700eb45dee",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8378745542993344746018",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Point of Entry",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Point of Entry: Point of Entry is the seventh album from the British heavy metal band Judas Priest.  It was released on 26 February 1981.\n\nHell Bent Forever: A Tribute to Judas Priest: Hell Bent Forever: A Tribute to Judas Priest is a tribute album, released in 2008.  It includes several rock and metal bands such as Motörhead, Icarus Witch, L.A. Guns and Sepultura, covering songs by British heavy metal band Judas Priest.  The album's font is a mistake because the red lettering is in the style of Iron Maiden's logo instead of Judas Priest's logo\n\nHero, Hero: Hero, Hero is a compilation album of early Judas Priest recordings, released in between \"British Steel\" (1980) and \"Point of Entry\" (1981) by Gull Records.\n\nJudas Rising: \"Judas Rising\" is a song by heavy metal band Judas Priest.  It is the opening track on the band's 2005 album Angel of Retribution.  The song is about the Judas Priest \"Messiah\" on the cover of the albums \"Sad Wings of Destiny\", \"Painkiller\" and \"Angel of Retribution\".  .  It was also included on the album's The Essential Judas Priest and\n\nRocka Rolla: Rocka Rolla is the debut studio album by British heavy metal band Judas Priest, released on 6 September 1974 by Gull Records.  It was produced by Rodger Bain, who had made a name for himself as the producer of Black Sabbath's first three albums.  It is the only album to feature drummer John Hinch.\n\nThe Best of Judas Priest: The Best of Judas Priest is a collection of a few select songs from Judas Priest's first two albums, and was released under Gull, the band's former record label.  It was the first of many reissues of the band's earlier material produced in an effort to \"capitalize on Judas Priest's popularity\" and was released without any consent from the band.\n\nStained Class: Stained Class is the fourth album by British heavy metal group Judas Priest, released in February 1978.  It is the first of three albums to feature drummer Les Binks.  It gained notoriety for its dark lyrics and themes, as well as 1990 civil action trial where the band were accused of backmasking that led to the suicide attempts of two teenagers.  Stained Class was ranked as the greatest Judas Priest album on Stereogum.com, and was described by Steve Huey on Allmusic.com as “Judas Priest’s greatest achievement.”\n\nGenocide (album): Genocide is a 2000 Judas Priest compilation consisting of their first two albums, \"Rocka Rolla\" and \"Sad Wings of Destiny\", plus a bonus track from the \"Sad Wings of Destiny\" sessions as well.  Like several others in the past, Genocide was released under the label Gull, in an effort to \"capitalize on Judas Priest's popularity.\"  Judas Priest's management firmly states that people should not buy these compilations, because even though it would seem like a new album on the surface, it's just a re-issue of material already recorded.\n\nA Tribute to Judas Priest: Legends of Metal: A Tribute to Judas Priest: Legends of Metal Vol.  I and A Tribute to Judas Priest: Legends of Metal Vol.  II are tribute albums, both released in 1997 by Century Media Records.  It includes several rock and metal bands such as Helloween, Overkill, Saxon, Heavens Gate, Blind Guardian, Mercyful Fate, and Iced Earth, covering songs by British heavy metal band Judas Priest.  Some of the songs included in this album have been previously released by the artists.\n\nVictim of Changes (album): Victim of Changes is ex-Judas Priest singer Al Atkins's fourth release, named after a Judas Priest song of the same name originally featured on the \"Sad Wings of Destiny\" album.  The album's sleeve contains three pages of historic photos and a biography outlining his days in Judas Priest.  Former Judas Priest drummer Dave Holland plays on this release.",
+    "question": "What was Judas Priest's seventh album and produced by Gull Records?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "album_name": {
+          "type": "string",
+          "description": "The name of the album."
+        },
+        "album_release_order": {
+          "type": "integer",
+          "description": "The sequential release number of the album for the band."
+        },
+        "release_date": {
+          "type": "string",
+          "description": "The release date of the album."
+        }
+      },
+      "required": [
+        "album_name",
+        "album_release_order",
+        "release_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "album_name": "Point of Entry",
+      "album_release_order": 7,
+      "release_date": "26 February 1981"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

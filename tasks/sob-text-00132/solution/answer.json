@@ -1,0 +1,15 @@
+{
+  "composers": [
+    {
+      "name": "Béla Bartók",
+      "birth_year": 1881
+    },
+    {
+      "name": "Igor Stravinsky",
+      "birth_year": 1882
+    }
+  ],
+  "earlier_born_composer_name": "Béla Bartók",
+  "birth_year_difference_years": 1,
+  "comparison_statement": "Béla Bartók was born before Igor Stravinsky."
+}

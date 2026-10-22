@@ -1,0 +1,19 @@
+{
+  "person_identified": "Christian X",
+  "relationships": [
+    {
+      "relationship_type": "father",
+      "related_person_name": "Knud",
+      "related_person_title": "Hereditary Prince of Denmark"
+    },
+    {
+      "relationship_type": "grandfather",
+      "related_person_name": "Elisabeth",
+      "related_person_title": "Princess of Denmark"
+    }
+  ],
+  "source_documents": [
+    "Knud, Hereditary Prince of Denmark",
+    "Princess Elisabeth of Denmark"
+  ]
+}

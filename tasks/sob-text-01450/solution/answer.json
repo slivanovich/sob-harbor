@@ -1,0 +1,12 @@
+{
+  "medal_name": "Achievement Medal",
+  "eligible_personnel_types": [
+    "junior officers",
+    "enlisted personnel"
+  ],
+  "purpose": "to recognize the contributions of junior officers and enlisted personnel",
+  "higher_medals_not_eligible_for": [
+    "Commendation Medal",
+    "Meritorious Service Medal"
+  ]
+}

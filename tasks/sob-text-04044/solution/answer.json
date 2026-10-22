@@ -1,0 +1,22 @@
+{
+  "book_details": {
+    "title": "Science, Order, and Creativity",
+    "co_authors": [
+      {
+        "name": "David Bohm",
+        "role": "co-author",
+        "nationality": "American"
+      },
+      {
+        "name": "F. David Peat",
+        "role": "co-author",
+        "nationality": "Scottish"
+      }
+    ]
+  },
+  "person_questioned": {
+    "name": "David Bohm",
+    "relationship_to_book": "co-author"
+  },
+  "answer_nationality": "American"
+}

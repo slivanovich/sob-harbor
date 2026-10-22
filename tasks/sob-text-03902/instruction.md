@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Say Goodbye (Chris Brown song): "Say Goodbye" is a song recorded by American singer Chris Brown.  Released August 8, 2006, from his self-titled debut album, the song is also featured in the movie "Step Up".  It became Brown's third top-ten single on the "Billboard" Hot 100, peaking at number ten on October 31, 2006, and the second single of his career to top the R&B charts.  The track was released as a single in the UK and US.  It was his first single to not chart at all in the UK.
+
+Step Up (film): Step Up is a 2006 American romantic dance film directed by Anne Fletcher starring Channing Tatum and Jenna Dewan.  Set in Baltimore, Maryland, the film follows the tale of the disadvantaged Tyler Gage (Channing Tatum) and the privileged modern dancer Nora Clark (Jenna Dewan), who find themselves paired up in a showcase that determines both of their futures.  Realizing that they only have one chance, they finally work together.  The film is the first installment in the "Step Up" series, it was followed by four sequels, "" (2008), "Step Up 3D" (2010), "Step Up Revolution" (2012) and "" (2014) and a web series "Step Up: High Water" (2017).
+
+Timeless (Sarah Brightman album): Timeless, known as Time to Say Goodbye in the USA and Canada, is the fifth album by classical crossover soprano Sarah Brightman & the London Symphony Orchestra.  The album went gold or platinum in 21 countries, selling over 1.4 million copies in the US alone, and topped the Billboard Classical Crossover chart in the US for 35 weeks.  EMI's SACD 5.1 release of the album is also entitled "Time to Say Goodbye" and follows the American track listing.
+
+The Proposal (film): The Proposal is a 2009 American romantic comedy film directed by Anne Fletcher and written by Peter Chiarelli.  The film stars Sandra Bullock and Ryan Reynolds with Betty White, Mary Steenburgen and Craig T. Nelson.  The plot centers on a Canadian executive who learns that she may face deportation from the U.S. because of her expired visa.  Determined to retain her position as editor in chief of a publishing house, she convinces her assistant to temporarily act as her fiancé.
+
+Cabaret (2017 film): Cabaret is an upcoming Indian romantic dance film directed by Kaustav Narayan Niyogi and produced by Pooja Bhatt and Bhushan Kumar under the banner of Fisheye Network private limited.  Principal photography of the film began around 9 June 2015.
+
+She Even Woke Me Up to Say Goodbye: "She Even Woke Me Up to Say Goodbye" is a song written by Doug Gilmore and Mickey Newbury, and recorded by American country music artist Jerry Lee Lewis.  Released in September 1969, it was the first single from his album "She Even Woke Me Up to Say Goodbye".  The song peaked at number 2 on the "Billboard" Hot Country Singles chart.  It also reached number 1 on the "RPM" Country Tracks chart in Canada.
+
+Never Say Goodbye (Bon Jovi song): "Never Say Goodbye" is a song by American rock band Bon Jovi, written by Jon Bon Jovi and Richie Sambora.  It was a track off the band's third album, "Slippery When Wet", in June 1987, and reached number 11 on the mainstream rock charts and number 21 in the UK Singles Chart.  Because it was not released domestically as a commercially available single, "Never Say Goodbye" was ineligible to chart on the "Billboard" Hot 100; nevertheless, it reached number 28 on the Hot 100 Airplay survey.
+
+Live &amp; More Encore: Live & More Encore is a live album released by Donna Summer in 1999, an edited version of a televised concert of the same name.  Released on Sony Music's sublabel Epic, it featured a live concert which had been filmed especially for the VH-1 channel, and also two new dance tracks, including a re-working of "Time To Say Goodbye", a semi-classical song previously made popular by Andrea Bocelli and Sarah Brightman.  Summer's dance version of the song was entitled "I Will Go with You (Con te partirò)".  Both of the album's two studio recordings, the other being "Love Is the Healer", reached #1 on the US dance charts, with "I Will Go With You" nominated for a Grammy as Best Dance Recording.
+
+Learning to Love You More: Learning to Love You More (LTLYM) was a 7 year long crowdsourced art project, where over 8,000 people posted work they had created in response to a series of prompts.  The project was created in 2002 by Miranda July and Harrell Fletcher, with a website created by Yuri Ono.  In May 2009, the authors discontinued the project, ending with a final assignment asking people to "Say Goodbye."  In 2010 SFMOMA acquired the work.  The work has been exhibited at The Whitney Museum of American Art in New York, Rhodes College in Memphis, the Aurora Picture Show in Houston, The Seattle Art Museum in Seattle, and the Wattis Institute for Contemporary Arts in San Francisco, and the San Francisco Museum of Modern Art.
+
+It's So Hard to Say Goodbye to Yesterday: "It's So Hard to Say Goodbye to Yesterday" is an R&B song written by Motown husband-and-wife songwriting team Freddie Perren and Christine Yarian for the 1975 film "Cooley High".  In the film, the song is performed by Motown artist G.C. Cameron, whose rendition peaked at number 38 on the "Billboard" R&B singles chart that same year.  Perren also composed the instrumental score for "Cooley High", and the B-side to "It's So Hard to Say Goodbye to Yesterday" features two of his score compositions from the film.
+
+Question: Say Goodbye is featured in what 2006 American romantic dance film that was directed by Anne Fletcher?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The release year of the film."
+    },
+    "director": {
+      "type": "string",
+      "description": "The director of the film."
+    },
+    "genre": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The genres of the film."
+    },
+    "song_featured": {
+      "type": "string",
+      "description": "The title of the song featured in the film."
+    }
+  },
+  "required": [
+    "film_title",
+    "release_year",
+    "director",
+    "genre",
+    "song_featured"
+  ],
+  "additionalProperties": false
+}

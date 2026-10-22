@@ -1,0 +1,13 @@
+{
+  "officer_name": "Idi Amin",
+  "hometown": "Koboko",
+  "roles": [
+    "political leader",
+    "military officer",
+    "President of Uganda"
+  ],
+  "presidency_period": {
+    "start_year": 1971,
+    "end_year": 1979
+  }
+}

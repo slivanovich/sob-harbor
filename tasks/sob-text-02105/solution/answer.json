@@ -1,0 +1,10 @@
+{
+  "journalist_name": "Munif Mohammed Abou Rish",
+  "target_politician": {
+    "name": "Bob Hawke",
+    "birth_year": 1929,
+    "role_at_time_of_plan": "federal president of the Australian Labor Party",
+    "later_role": "prime minister of Australia"
+  },
+  "plan_year": 1974
+}

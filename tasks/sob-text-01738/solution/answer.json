@@ -1,0 +1,13 @@
+{
+  "estate_name": "Melgund Castle",
+  "location_details": {
+    "distance_from_aberlemno_km": 2,
+    "direction_from_aberlemno": "due east",
+    "county": "Angus",
+    "country": "Scotland"
+  },
+  "family_connection": {
+    "family_member_name": "Alexander Murray of Melgund",
+    "relationship_to_robert_murray": "elder brother"
+  }
+}

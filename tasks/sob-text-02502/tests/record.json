@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "record_id": "59585d16b1442a814846e545e1fcdd5b43b6fd99939d150300fbbdbcc29578aa",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a760fbc5542992db9473722",
+    "source_dataset": "hotpotqa",
+    "source_answer": "game",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Fanorona: Fanorona (] ) is a strategy board game for two players.  The game is indigenous to Madagascar.\n\nLimaye: Limaye is a family name, common among the Chitpavan Kokanastha Brahmin community in Western Maharashtra, India.  The names Karandikar, Dixit and Khasgiwale are supposedly derived from the same clan.  The origin of the Limaye/Karandikar/Dixit and Khasgiwale family is believed to be from the Western Coast of India, Maharashtra - Ratnagiri, a Southern District of Konkan - Maharashtra region.\n\nDixit (card game): Dixit is a card game created by Jean-Louis Roubira, and published by Libellud.  Using a deck of cards illustrated with dreamlike images, players select cards that match a title suggested by the \"storyteller\", and attempt to guess which card the \"storyteller\" selected.  The game was introduced in 2008.  \"Dixit\" won the 2010 Spiel des Jahres award.",
+    "question": "Dixit and Fanorona are the names of what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "entity_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Names of the entities being categorized."
+        },
+        "common_category": {
+          "type": "string",
+          "description": "The common category that both entities belong to."
+        },
+        "games": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the game."
+              },
+              "type": {
+                "type": "string",
+                "description": "The specific type of game (e.g., board game, card game)."
+              },
+              "origin_or_creator": {
+                "type": "string",
+                "description": "The origin country or the creator of the game."
+              },
+              "number_of_players": {
+                "type": "integer",
+                "description": "The number of players for the game."
+              },
+              "publisher": {
+                "type": "string",
+                "description": "The publisher of the game."
+              },
+              "introduction_year": {
+                "type": "integer",
+                "description": "The year the game was introduced."
+              },
+              "award_won": {
+                "type": "string",
+                "description": "The name of the award won by the game."
+              },
+              "award_year": {
+                "type": "integer",
+                "description": "The year the award was won."
+              }
+            },
+            "required": [
+              "name",
+              "type",
+              "origin_or_creator"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Detailed information about each game."
+        }
+      },
+      "required": [
+        "entity_names",
+        "common_category",
+        "games"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "entity_names": [
+        "Dixit",
+        "Fanorona"
+      ],
+      "common_category": "game",
+      "games": [
+        {
+          "name": "Fanorona",
+          "type": "strategy board game",
+          "origin_or_creator": "Madagascar",
+          "number_of_players": 2
+        },
+        {
+          "name": "Dixit",
+          "type": "card game",
+          "origin_or_creator": "Jean-Louis Roubira",
+          "publisher": "Libellud",
+          "introduction_year": 2008,
+          "award_won": "Spiel des Jahres",
+          "award_year": 2010
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "upstream": {
+    "repository": "https://github.com/InterfazeAI/sob.git",
+    "revision": "da785a8521c8954283b2989d01e54d80c4e023c6"
+  },
+  "dataset": {
+    "repository": "https://huggingface.co/datasets/interfaze-ai/sob",
+    "revision": "c118e38abdef6a8e1beba183405c70b28ff7d5a8",
+    "path": "data/test-00000-of-00001.parquet",
+    "sha256": "b86a475557aa65028a0d2c71aac780c8258a2a8cf15cd76e1300d9cc241c81a5",
+    "split": "test",
+    "modality": "text",
+    "task_count": 5000
+  },
+  "protocol": "agent writes /tmp/answer.json; upstream SOB text evaluator",
+  "primary_metric": "leaf_value_em",
+  "aggregation": "unweighted per-metric arithmetic mean"
+}

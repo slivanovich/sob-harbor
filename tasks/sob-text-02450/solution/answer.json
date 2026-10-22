@@ -1,0 +1,9 @@
+{
+  "film_title": "In the Blink of an Eye",
+  "starring_actor": "David A. R. White",
+  "actor_role_in_company": "co-founder",
+  "production_company": {
+    "name": "Pure Flix Entertainment",
+    "type": "distribution and production company"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "question_entity": "Underoath",
+  "role_in_band": "former vocalist and founder",
+  "candidate_options": [
+    "Paul Carrack",
+    "Dallas Taylor"
+  ],
+  "identified_person": "Dallas Taylor",
+  "person_details": {
+    "full_name": "Dallas Taliaferro Taylor",
+    "birth_date": "May 17, 1980",
+    "birth_place": "Ocala, Florida",
+    "founding_date": "November 30, 1997",
+    "albums_performed_on": [
+      "Act of Depression",
+      "Cries of the Past",
+      "The Changing of Times"
+    ],
+    "departure_year": 2003,
+    "replacement_vocalist": "Spencer Chamberlain"
+  }
+}

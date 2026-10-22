@@ -1,0 +1,24 @@
+{
+  "identified_person": {
+    "name": "Bill T. Jones",
+    "is_co_founder_of_company": true,
+    "has_received_numerous_awards": true
+  },
+  "dance_company_details": {
+    "company_name": "Bill T. Jones/Arnie Zane Dance Company",
+    "co_founders": [
+      "Bill T. Jones",
+      "Arnie Zane"
+    ]
+  },
+  "related_dancer_details": {
+    "dancer_name": "Janet Lilly",
+    "role_in_company": "principal dancer",
+    "company_danced_for": "Bill T. Jones and Arnie Zane's company",
+    "presidency_details": {
+      "organization": "Iyengar Yoga National United States Association",
+      "start_year": 2012,
+      "end_year": 2014
+    }
+  }
+}

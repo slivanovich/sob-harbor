@@ -1,0 +1,14 @@
+{
+  "player_comparison": [
+    {
+      "player_name": "Conchita Martínez",
+      "doubles_titles_won": 13
+    },
+    {
+      "player_name": "Lucie Šafářová",
+      "doubles_titles_won": 15
+    }
+  ],
+  "player_with_most_doubles_titles": "Lucie Šafářová",
+  "most_doubles_titles_count": 15
+}

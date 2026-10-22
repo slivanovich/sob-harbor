@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "record_id": "cd772e0bdbe6628d86dd83122fe4b57625b8ddcc7e525d571bb1386820ca4158",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5add200c5542994ed6169c97",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The President's Mystery: The President's Mystery is a 1936 American film directed by Phil Rosen.\n\nI Killed That Man: I Killed That Man is a 1941 American film directed by Phil Rosen that was a remake of his 1933 film \"The Devil's Mate\".  It starred Ricardo Cortez and was produced by the King Brothers.\n\nBeggars in Ermine: Beggars in Ermine is a 1934 American film directed by Phil Rosen.\n\nPaul Bogart: Paul Bogart (November 21, 1919 – April 15, 2012) was an American television and film director and producer.\n\nBorn to Gamble: Born to Gamble (1935) is an American film directed by Phil Rosen and released by Republic Pictures.\n\nPhil Rosen: Phil Rosen (May 8, 1888 – October 22, 1951) was an American film director and cinematographer.  He directed 142 films between 1915 and 1949.\n\nThe Scarlet Clue: The Scarlet Clue is a 1945 American film directed by Phil Rosen.\n\nRoad to Happiness: Road to Happiness is a 1942 American film directed by Phil Rosen.\n\nRoar of the Press: Roar of the Press is a 1941 American film directed by Phil Rosen.\n\nPaper Bullets: Paper Bullets is a 1941 American film directed by Phil Rosen and starring Joan Woodbury.  It was the first film produced by the King Brothers, launching their career.",
+    "question": "Are Phil Rosen and Paul Bogart American film directors?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "overall_answer": {
+          "type": "boolean",
+          "description": "True if both individuals are American film directors, false otherwise."
+        },
+        "individuals_checked": {
+          "type": "array",
+          "description": "Details for each individual mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the individual."
+              },
+              "is_american": {
+                "type": "boolean",
+                "description": "True if the individual is American."
+              },
+              "is_film_director": {
+                "type": "boolean",
+                "description": "True if the individual is a film director."
+              },
+              "nationality": {
+                "type": "string",
+                "description": "The stated nationality of the individual."
+              },
+              "professions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "A list of professions attributed to the individual."
+              }
+            },
+            "required": [
+              "name",
+              "is_american",
+              "is_film_director",
+              "nationality",
+              "professions"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "number_of_individuals_found": {
+          "type": "integer",
+          "description": "The total number of individuals found in the context that were asked about."
+        }
+      },
+      "required": [
+        "overall_answer",
+        "individuals_checked",
+        "number_of_individuals_found"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "overall_answer": true,
+      "individuals_checked": [
+        {
+          "name": "Phil Rosen",
+          "is_american": true,
+          "is_film_director": true,
+          "nationality": "American",
+          "professions": [
+            "film director",
+            "cinematographer"
+          ]
+        },
+        {
+          "name": "Paul Bogart",
+          "is_american": true,
+          "is_film_director": true,
+          "nationality": "American",
+          "professions": [
+            "television director",
+            "film director",
+            "producer"
+          ]
+        }
+      ],
+      "number_of_individuals_found": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

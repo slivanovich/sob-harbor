@@ -1,0 +1,14 @@
+{
+  "show_name": "Room 104",
+  "network": "HBO",
+  "show_type": "anthology series",
+  "setting_details": {
+    "location_type": "American hotel",
+    "specific_setting": "single room"
+  },
+  "actress_information": {
+    "name": "Poorna Jagannathan",
+    "role_in_show": "part of the ensemble cast",
+    "known_for_film": "Delhi Belly"
+  }
+}

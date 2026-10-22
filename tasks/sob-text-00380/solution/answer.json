@@ -1,0 +1,14 @@
+{
+  "magazine_comparison": [
+    {
+      "magazine_name": "Viltis",
+      "first_publication_period": "1940s"
+    },
+    {
+      "magazine_name": "McClure's",
+      "first_publication_period": "1893"
+    }
+  ],
+  "earliest_published_magazine_name": "McClure's",
+  "earliest_publication_year": 1893
+}

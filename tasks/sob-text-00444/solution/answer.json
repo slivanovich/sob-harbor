@@ -1,0 +1,17 @@
+{
+  "plant_genera": [
+    "Adenophora",
+    "Pterostyrax"
+  ],
+  "common_native_region": "eastern Asia",
+  "region_details": {
+    "adenophora_specific_regions": [
+      "China",
+      "Siberia"
+    ],
+    "pterostyrax_specific_regions": [
+      "China",
+      "Japan"
+    ]
+  }
+}

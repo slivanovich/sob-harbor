@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Amazing Spider-Man 2: The Amazing Spider-Man 2 (also released as The Amazing Spider-Man 2: Rise of Electro in some markets) is a 2014 American superhero film featuring the Marvel Comics character Spider-Man.  The film was directed by Marc Webb and was produced by Avi Arad and Matt Tolmach.  It is the fifth theatrical "Spider-Man" film produced by Columbia Pictures and Marvel Entertainment, and is the sequel to 2012's "The Amazing Spider-Man", it is also the final film in "The Amazing Spider-Man" franchise.  The studio hired James Vanderbilt to write the screenplay and Alex Kurtzman and Roberto Orci to rewrite it.  The film stars Andrew Garfield as Peter Parker / Spider-Man, Emma Stone as Gwen Stacy, Dane DeHaan as Green Goblin / Harry Osborn, Campbell Scott and Embeth Davidtz as Peter's parents, and Sally Field as Aunt May, with the addition of a new cast including Paul Giamatti as Rhino / Aleksei Sytsevich and Jamie Foxx as Electro / Max Dillon.
+
+Spider-Man (2002 film): Spider-Man is a 2002 American superhero film directed by Sam Raimi and based on the Marvel Comics comic book series titled "The Amazing Spider-Man".  The film stars Tobey Maguire as Peter Parker, a high school student living in New York City, who turns to crimefighting after developing spider-like super powers.  "Spider-Man" also stars Kirsten Dunst as Peter's love interest Mary Jane Watson, Willem Dafoe as Norman Osborn/Green Goblin, Rosemary Harris and Cliff Robertson as Aunt May and Uncle Ben, and James Franco as his best friend Harry Osborn.
+
+Spider-Man 3: Spider-Man 3 is a 2007 American superhero film based on the fictional Marvel Comics comic book series "The Amazing Spider-Man".  It was directed by Sam Raimi from a screenplay by Raimi, Ivan Raimi and Alvin Sargent.  It is the final film in Raimi's original "Spider-Man" film trilogy, following "Spider-Man" (2002) and "Spider-Man 2" (2004).  The film stars Tobey Maguire, Kirsten Dunst, James Franco, Thomas Haden Church, Topher Grace, Bryce Dallas Howard, Rosemary Harris, J. K. Simmons, James Cromwell, and Cliff Robertson in his final acting appearance before his death in 2011.  Following the events of "Spider-Man 2", Peter Parker has become a cultural phenomenon as Spider-Man, while Mary Jane "M.J." Watson continues her Broadway career.  Harry Osborn still seeks vengeance for his father's death, and an escaped Flint Marko falls into a particle accelerator and is transformed into a shape-shifting sand manipulator.  An extraterrestrial symbiote crashes to Earth and bonds with Peter, influencing his behavior for the worse.
+
+Lucy Gordon (actress): Lucy Gordon (22 May 1980 – 20 May 2009) was an English actress and model.  She became a face of CoverGirl in 1997 before starting an acting career.  Her first film was "Perfume" in 2001 before going on to have small roles in "Spider-Man 3", "Serendipity" and "The Four Feathers".  Gordon had played the actress and singer Jane Birkin in the film "", a biopic of singer-songwriter Serge Gainsbourg.  Before the film was released, she was found hanged in her flat in Paris on 20 May 2009 after committing suicide.
+
+Dying Wish: "Dying Wish" is a three-issue comic book storyline in "The Amazing Spider-Man", first published by Marvel Comics between November and December 2012 and featuring the fictional superhero Spider-Man.  Starting with a prologue in "The Amazing Spider-Man" #698 and ending in "The Amazing Spider-Man" #700, "Dying Wish" brought over fifty years of Marvel's publication of "The Amazing Spider-Man" comic series to an end, and ushered in the new series "The Superior Spider-Man" in January 2013.  The story concluded a storyline started in "The Amazing Spider-Man" #600 where it is revealed that the Spider-Man villain Doctor Octopus is terminally ill from his years of crime and fighting superheroes.  Aware of his impending death, Doctor Octopus sets in motion a series of plans to create his legacy, that ran through the March 2012 story "Ends of the Earth" and finished in "Dying Wish", where the villain successfully swapped consciousnesses with Spider-Man's alter ego Peter Parker, thrusting the hero into his decaying body.
+
+The Superior Spider-Man: The Superior Spider-Man was a superhero comic book series that was published by Marvel Comics that ran between January 2013 and June 2014.  The series was written by Dan Slott with artwork by Ryan Stegman, Humberto Ramos, and Giuseppe Camuncoli.  It features a reformed Otto Octavius who has taken over Peter Parker's body, and, having allowed Peter to die in Octavius' body but being affected by Peter's memories, is determined to be a better Spider-Man than Peter ever was, and a better man than Otto Octavius.  The title replaced the long running series "The Amazing Spider-Man", after the conclusion of the "Dying Wish" storyline, as the core Spider-Man book.  The Superior Spider-Man also crosses over into other Spider-man titles such as Avenging Spider-Man and its superseding title Superior Spider-Man Team-Up, as well as many other Marvel titles.  The series ended with issue 31, which determined the fate of Otto Octavius' mind, and was followed by the next volume of "The Amazing Spider-Man", in which Peter Parker has regained his body and the Spider-Man mantle.
+
+The Amazing Spider-Man (2012 film): The Amazing Spider-Man is a 2012 American superhero film based on the Marvel Comics character Spider-Man, and sharing the title of the character's longest-running comic book.  It is the fourth theatrical "Spider-Man" film produced by Columbia Pictures and Marvel Entertainment, and a reboot of Sam Raimi's "Spider-Man" 2002-2007 trilogy preceding it.  The film was directed by Marc Webb.  It was written by James Vanderbilt, Alvin Sargent and Steve Kloves and it stars Andrew Garfield as Peter Parker / Spider-Man, Emma Stone as Gwen Stacy, Rhys Ifans as Dr. Curtis Connors, Denis Leary as NYPD Captain George Stacy, along with Martin Sheen and Sally Field as the uncle and aunt of Peter Parker, Ben Parker and May Parker.  The film tells the story of Peter Parker, a teenager from New York who becomes Spider-Man after being bitten by a genetically altered spider.  Parker must stop Dr. Curt Connors as a mutated lizard, from spreading a mutation serum to the city's human population.
+
+Avenging Spider-Man: Avenging Spider-Man is the title of an American comic book series published monthly by Marvel Comics, featuring the adventures of the fictional superhero Spider-Man.  The events in the story take place in the primary continuity of the mainstream Marvel Universe along with the events of "The Amazing Spider-Man" and later "The Superior Spider-Man".  This was the first ongoing series to feature Spider-Man as the main character besides "The Amazing Spider-Man" since the cancellation of "Friendly Neighborhood Spider-Man" and the second volume of "Sensational Spider-Man" in December 2008 following the conclusion of the "" storyline.  "Avenging Spider-Man" has also been instrumental in Marvel's shift towards including codes to receive free digital copies of the comic with purchased print comic books.
+
+Spider-Man 2: Spider-Man 2 is a 2004 American superhero film directed by Sam Raimi and written by Alvin Sargent from a story by Alfred Gough, Miles Millar, and Michael Chabon.  The sequel to the 2002 film "Spider-Man", it is the second film in Raimi's Spider-Man film trilogy based on the fictional Marvel Comics comic book series "The Amazing Spider-Man".  Tobey Maguire, Kirsten Dunst, and James Franco reprise their respective roles as Peter Parker "/" Spider-Man, Mary Jane "M.J." Watson and Harry Osborn.
+
+List of Spider-Man enemies: Spider-Man is a fictional superhero in the Marvel Universe debuting in the anthology comic book series issue "Amazing Fantasy" #15 (August 1962) in the Silver Age of Comics published by Marvel Comics.  After his debut he would get his own comic book entitled "The Amazing Spider-Man".  The comic book series would introduce many of what would become his major supervillain adversaries.  Spider-Man would then be popular enough for more Spider-Man comic spinoffs ("The Spectacular Spider-Man", "Marvel Team-Up", "Web of Spider-Man", "" etc.) which introduced more recurring enemies of the web-slinger.
+
+Question: Lucy Gordon's first film was "Perfume" in 2001 before going on to have a small role in "Spider-Man 3", an American superhero film based on the fictional Marvel Comics comic book series "The Amazing Spider-Man" from what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the film was released."
+    },
+    "film_type": {
+      "type": "string",
+      "description": "The genre or type of the film."
+    },
+    "based_on_comic_series": {
+      "type": "string",
+      "description": "The comic book series the film is based on."
+    }
+  },
+  "required": [
+    "film_title",
+    "release_year",
+    "film_type",
+    "based_on_comic_series"
+  ],
+  "additionalProperties": false
+}

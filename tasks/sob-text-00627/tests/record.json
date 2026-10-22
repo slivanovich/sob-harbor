@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "f49f1e34e8fc91d3adc62aee898f8508dc332bdce198ef3547b58452320a3dc2",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8c5c275542996e8ac88a7a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Bubbles",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "John Dunsworth: John Dunsworth (born April 12, 1946) is a Canadian actor.  He is best known for playing the frequently drunk trailer park supervisor Jim Lahey on the comedy series \"Trailer Park Boys\" and the mysterious reporter Dave Teagues on the supernatural drama series \"Haven\".  He has also appeared in \"\", a CBC film about the 1917 Halifax Explosion.  He also has extensive experience in regional theatre.\n\nThorburn, Nova Scotia: This small rural Nova Scotia town has a hair salon, sports arena, a school (Thorburn Consolidated School), a few churches and a fire hall.  It is home to several farms and is also the hometown of actor Mike Smith, who plays the character Bubbles on the Canadian television show Trailer Park Boys as well as Aaron Cameron of the City TV series Seed (TV series).  The community is about 10 minutes from the town of New Glasgow, Nova Scotia.\n\nList of Trailer Park Boys episodes: \"Trailer Park Boys\" is a Canadian mockumentary television series created and directed by Mike Clattenburg and a continuation of Clattenburg's 1999 film of the same name.  The series focuses on the misadventures of a group of trailer park residents, some of whom are ex-convicts, living in the fictional Sunnyvale Trailer Park in Dartmouth, Nova Scotia.\n\nTrailer Park Boys: Trailer Park Boys is a Canadian mockumentary television series created and directed by Mike Clattenburg.  The show focuses on the misadventures of a group of trailer park residents, some of whom are ex-convicts, living in the fictional Sunnyvale Trailer Park in Dartmouth, Nova Scotia.  The television series, a continuation of Clattenburg's 1999 film of the same name, premiered on Showcase in 2001.  There have been 3 films released in the series: \"\", released on October 6, 2006; \"\", released on September 25, 2009; and \"\", released on April 18, 2014 after issues during production.\n\nTrailer Park Boys: The Movie: Trailer Park Boys: The Movie, also known as Trailer Park Boys: The Big Dirty and simply Trailer Park Boys, is a 2006 Canadian crime dark comedy film based on the television series \"Trailer Park Boys\".  The film follows characters Ricky, Julian and Bubbles creating a plan for The Big Dirty, one last crime that will enable them to retire from their criminal lives.  The film, like the series, was directed and produced by Mike Clattenburg, with Ivan Reitman as an executive producer.  It was released in Canada on October 6, 2006, and a limited release in the United States began on January 25, 2008.  It has developed into a cult film since then.\n\nSwearnet: The Movie: Swearnet: The Movie (titled as Swearnet) is a 2014 Canadian comedy film directed by Warren P. Sonoda, written, produced by and starring Mike Smith, John Paul Tremblay, and Robb Wells, stars of the Canadian television series \"Trailer Park Boys\".  In the film, Smith, Tremblay and Wells appear as fictionalized versions of themselves, who embark on creating a fully uncensored Internet network.\n\nTrailer Park Boys: Don't Legalize It: Trailer Park Boys: Don't Legalize It is a 2014 Canadian mockumentary comedy/crime film directed by Mike Clattenburg, and based on the Canadian television series \"Trailer Park Boys\".  It is the third and final film in the \"Trailer Park Boys\" franchise, and a sequel to \"\" (2009).  In the film, Ricky (Robb Wells), Julian (John Paul Tremblay) and Bubbles (Mike Smith) attempt a series of get-rich-quick schemes, but are again pursued by Sunnyvale Trailer Park supervisor Jim Lahey (John Dunsworth).  The story culminates in Ricky heading to Parliament Hill in Ottawa, where he tries to prevent the legalization of marijuana.\n\nTrailer Park Boys: Countdown to Liquor Day: Trailer Park Boys: Countdown to Liquor Day is a 2009 Canadian mockumentary crime/dark comedy film directed by Mike Clattenburg, and based on the Canadian television series \"Trailer Park Boys\".  It is the second film in the \"Trailer Park Boys\" franchise, following \"\" (2006).  \"Trailer Park Boys: Countdown to Liquor Day\" is a conclusion to \"Say Goodnight to the Bad Guys\", the television special that ended the series after its seventh season.  The film follows the characters of Ricky (Robb Wells), Julian (John Paul Tremblay) and Bubbles (Mike Smith) as they return to a life of crime after being released from prison.\n\nJohn Paul Tremblay: John Paul Tremblay (born 1968) is a Canadian actor who stars in the hit Canadian TV show \"Trailer Park Boys\" playing Julian, a newly released ex-con returning to his home in a trailer park in Nova Scotia.  Tremblay grew up in the Dartmouth suburb of Cole Harbour where he lived on the same street and went to the same high school as Robb Wells, his future co-star of \"Trailer Park Boys\".  Before Trailer Park Boys he and Wells owned a chain of pizza restaurants called J.R. Capone's.  The show is written by Tremblay along with co-stars Robb Wells and Mike Smith.  The Trailer Park Boys released a in 2006, most of it being filmed in the municipality of Halifax.  Tremblay and Wells also appeared in the 2002 family film \"Virginia's Run\", though not as Ricky and Julian.  John is married to Andrea Tremblay (Hurley); they have three children.\n\nMike Smith (actor): Mike Smith (born August 27, 1972) is a Canadian actor and musician born in New Glasgow, Nova Scotia, and raised in Thorburn.  He is best known for his portrayal of \"Bubbles\" and co-writer of the ongoing cult classic television program, films and stage production \"Trailer Park Boys\".  He played hockey for the Pictou County Weeks of the Nova Scotia Midget AAA Hockey League when he was in high school.  Smith earned a degree in English from St. Francis Xavier University in Antigonish, Nova Scotia.  For a short time in 2006, he was engaged to actress Nichole Hiltz.",
+    "question": "Swearnet: The Movie actor Mike Smith is best known for his role in the tv series \"Trailer Park Boys\" as a character named what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor."
+        },
+        "tv_series_name": {
+          "type": "string",
+          "description": "The name of the TV series."
+        },
+        "character_name": {
+          "type": "string",
+          "description": "The name of the character played by the actor in the TV series."
+        },
+        "is_best_known_role": {
+          "type": "boolean",
+          "description": "Indicates if this role is the actor's best known portrayal."
+        }
+      },
+      "required": [
+        "actor_name",
+        "tv_series_name",
+        "character_name",
+        "is_best_known_role"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Mike Smith",
+      "tv_series_name": "Trailer Park Boys",
+      "character_name": "Bubbles",
+      "is_best_known_role": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

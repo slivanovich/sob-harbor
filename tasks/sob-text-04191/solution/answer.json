@@ -1,0 +1,8 @@
+{
+  "movie_title": "Clifford's Really Big Movie",
+  "book_series_title": "Clifford the Big Red Dog",
+  "publishing_company": {
+    "name": "Scholastic",
+    "role": "publisher of the book series"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "shared_profession": "actor",
+  "number_of_individuals": 2,
+  "individuals": [
+    {
+      "name": "Rostislav Čtvrtlík",
+      "primary_profession": "actor",
+      "nationality": "Czech",
+      "notable_work_or_role": "Czech voice of Matthew Perry in \"Friends\""
+    },
+    {
+      "name": "Matthew Perry",
+      "primary_profession": "actor",
+      "nationality": "Canadian-American",
+      "notable_work_or_role": "Chandler Bing on \"Friends\""
+    }
+  ]
+}

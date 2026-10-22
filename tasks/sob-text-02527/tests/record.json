@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "0d18d19aaf91f0f4b26509c7d06273c3dc979be846925746c9f55676bd86cb94",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5ae18f945542997283cd222f",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Rummoli",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "1000 Blank White Cards: 1000 Blank White Cards is a party game played with cards in which the deck is created as part of the game.  Though it has been played by adults in organized groups worldwide, 1000 Blank White Cards is also described as well-suited for children in \"Hoyle's Rules of Games\".  Since any game rules are contained on the cards (rather than existing as all-encompassing rules or in a rule book), 1000 Blank White Cards can be considered a sort of nomic.  It can be played by any number of players and provides the opportunity for card creation and gameplay outside the scope of a single sitting.  Creating new cards during the game, dealing with previous cards' effects, is allowed, and rule modification is encouraged as an integral part of gameplay.\n\nGlasnost The Game: Each Glasnost The Game game comes with a Board, one die, 36 cards and a number of differently colored tokens denoting armies and industries: Armies are dark, industries are light colored.  Both types of token come in the following numbers and denominations: 25x1, 20x2, 5x2, 5x10, 5x20\n\nTexas hold 'em: Texas hold 'em (also known as Texas holdem, hold 'em, and holdem) is a variation of the card game of poker.  Two cards, known as the hole cards, are dealt face down to each player, and then five community cards are dealt face up in three stages.  The stages consist of a series of three cards (\"the flop\"), later an additional single card (\"the turn\" or \"fourth street\"), and a final card (\"the river\" or \"fifth street\").  Each player seeks the best five card poker hand from any combination of the seven cards of the five community cards and their own two hole cards.  (If a player's best five-card poker hand consists only of the five community cards and none of the player's hole cards, it is called \"playing the board\".  If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents, using either or both hole cards.)  Players have betting options to check, call, raise, or fold.  Rounds of betting take place before the flop is dealt and after each subsequent deal.\n\nRummoli: Rummoli is a family card game for 2 to 8 people.  This Canadian board game, first marketed in 1940 by the Copp Clark Publishing Company of Toronto requires a Rummoli board, a deck of playing cards (52 cards, no jokers), and chips or coins to play.  The game is usually played for fun, or for small stakes (e.g. Canadian Dimes).\n\nBaseball Boss: Baseball Boss (also known as BaseballBoss and abbreviated to BBB) was a web based, free online MMOG (massively multiplayer online game) baseball game published by Challenge Games.  Baseball Boss is also an official licensee of Major League Baseball Advanced Media.  The game combines virtual baseball card collecting and fantasy baseball simulation through head to head completion against historical teams and other online players.  The game was released on July 10, 2008.  Players are given cards of real baseball players from all of baseball's ages (card sets range from 1907 to the 2009 MLB All Star Game) to create teams of players using their cards.  Players then attempt to move up \"classes,\" from Rookie to Hall of Fame by defeating other players' teams through simulated challenges.  Players can spend their tickets, earned for sending challenges to other teams, to purchase new packs of cards from the Market, new cards from other users in the Auction House, or can trade with them.  Baseball Boss features two brands of cards, the \"National\" base brand and the \"Spire\" premium brand.  In addition to playing against other online users, Baseball Boss allows users to collect entire sets or a group of their favorite cards in a way that resembles virtual baseball card collecting, using \"Shoeboxes\".\n\nAquarius (game): Aquarius is a card game created by Andrew Looney and published by Looney Labs.  The game play has some similarity to the game of dominoes.  The card design and feel of the game is influenced by the Hippie movement and the art of Peter Max.  The game has been released in two editions.  The First Edition deck contained 5 Goal cards, 15 Action cards and 40 Element cards.  The current Second Edition deck has 5 Goal cards, 18 Action cards, 55 Element cards and 1 \"Wild\" card.\n\nCommunity card poker: Community card poker refers to any game of poker that uses community cards (also called \"shared cards\" or \"window cards\"), which are cards dealt face up in the center of the table and shared by all players.  In these games, each player is dealt privately an incomplete hand (\"hole cards\"), which are then combined with the community cards to make a complete hand.  The set of community cards is called the \"board\", and may be dealt in a simple line or arranged in a special pattern.  Rules of each game determine how they may be combined with each player's private hand.  The most popular community card game today is Texas hold 'em, originating sometime in the 1920s.\n\nBattleCards: BattleCards was marketed as a trading card game and published in 1993 by Merlin Publishing.  The game features a unique \"Scratch and Slay\" system created by Steve Jackson.  The cards come in 10 card booster packs which include warrior cards, spell cards, advanced combat cards, quest cards, and treasure cards.  The game was published in both the UK and the United States with a number of differences between the two releases.  Since the game is not played with a deck, and there is no collectibility involved (once the cards are scratched off they're worthless), this game does not strictly qualify as a collectible card game.  Darwin Bromley of Mayfair Games noted that when shuffled the scratch-offs would crack, and once scratched off \"you had to either play the game or collect it.\"  \"You couldn't have your cake and eat it too.\"\n\nBridgette (game): Bridgette is a two-player bridge game that has been popular since 1970.  It features a 55-card deck: the regular pack of 52 cards plus three extra cards called \"Colons\".  These special cards separate the pack into three groups: aces (A), picture cards (JQK), and spot cards (2—10).  On an opponent's lead, the colon from the corresponding group may be played instead of following suit.  The colon so played loses, but forces the opponent to lead one of the other three suits to the next trick.  The colons' skill is quite subtle and the addition of these cards makes up for the fact that there are only two cards to a trick, instead of four cards as in the game of standard bridge.\n\nGlasnost Bowl: The Glasnost Bowl was an attempt to stage an American college football game in Moscow, USSR at the beginning of the 1989 season.  The game was named after the policy of glasnost (\"openness\") introduced by Soviet leader Mikhail Gorbachev in 1985.  Scheduled for the Dynamo Stadium, the game was similar to the Mirage Bowl, a college football game played annually in Tokyo, Japan, with plans to have it be an annual contest with different participants each year.",
+    "question": "Which game has more cards, Rummoli or Glasnost The Game ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "game_1_name": {
+          "type": "string",
+          "description": "The name of the first game being compared."
+        },
+        "game_1_card_count": {
+          "type": "integer",
+          "description": "The number of cards in the first game."
+        },
+        "game_2_name": {
+          "type": "string",
+          "description": "The name of the second game being compared."
+        },
+        "game_2_card_count": {
+          "type": "integer",
+          "description": "The number of cards in the second game."
+        },
+        "game_with_more_cards": {
+          "type": "string",
+          "description": "The name of the game that has more cards."
+        },
+        "card_difference": {
+          "type": "integer",
+          "description": "The absolute difference in the number of cards between the two games."
+        }
+      },
+      "required": [
+        "game_1_name",
+        "game_1_card_count",
+        "game_2_name",
+        "game_2_card_count",
+        "game_with_more_cards",
+        "card_difference"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "game_1_name": "Rummoli",
+      "game_1_card_count": 52,
+      "game_2_name": "Glasnost The Game",
+      "game_2_card_count": 36,
+      "game_with_more_cards": "Rummoli",
+      "card_difference": 16
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

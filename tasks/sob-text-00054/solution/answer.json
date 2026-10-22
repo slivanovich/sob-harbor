@@ -1,0 +1,12 @@
+{
+  "product_name": "Nutrisoda",
+  "company_name": "Ardea Beverage Company",
+  "sweetener_details": {
+    "sweetener_name": "Sucralose",
+    "sweetener_types": [
+      "artificial sweetener",
+      "sugar substitute"
+    ],
+    "manufacturing_process": "chlorinating sucrose"
+  }
+}

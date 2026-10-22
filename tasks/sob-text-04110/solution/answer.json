@@ -1,0 +1,16 @@
+{
+  "question_players": [
+    {
+      "player_name": "Richey Reneberg",
+      "nationality": "American",
+      "is_australian": false
+    },
+    {
+      "player_name": "Kim Warwick",
+      "nationality": "Australian",
+      "is_australian": true
+    }
+  ],
+  "australian_player_name": "Kim Warwick",
+  "final_answer": "Kim Warwick"
+}

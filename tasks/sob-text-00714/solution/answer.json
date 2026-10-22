@@ -1,0 +1,19 @@
+{
+  "artist_name": "Alicia Keys",
+  "artist_birth_date": "January 25, 1981",
+  "artist_professions": [
+    "singer",
+    "songwriter",
+    "record producer",
+    "pianist",
+    "actress"
+  ],
+  "recording_studio": {
+    "name": "Unique Recording Studios",
+    "location": "New York City",
+    "operating_years": {
+      "start_year": 1978,
+      "end_year": 2004
+    }
+  }
+}

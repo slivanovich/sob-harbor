@@ -1,0 +1,14 @@
+{
+  "university_comparison": [
+    {
+      "university_name": "Saint Louis University",
+      "founding_year": 1818
+    },
+    {
+      "university_name": "Ohio State University",
+      "founding_year": 1870
+    }
+  ],
+  "first_founded_university_name": "Saint Louis University",
+  "founding_order_statement": "Saint Louis University was founded in 1818, which is before Ohio State University was founded in 1870."
+}

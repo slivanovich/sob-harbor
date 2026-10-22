@@ -1,0 +1,9 @@
+{
+  "air_arm_name": "Indian Air Force",
+  "pilot_details": {
+    "pilot_name": "MP Anil Kumar",
+    "aircraft_type": "MiG 21",
+    "pilot_rank": "Flying Officer"
+  },
+  "air_arm_mission": "to secure Indian airspace and to conduct aerial warfare during armed conflict"
+}

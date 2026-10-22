@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "record_id": "e313c1ec32e2390eee40ab01a3ecd930f2cbe9a414e4da72a7f36185d1c08154",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7a2e2b5542990198eaf0b9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Hans \"Dolph\" Lundgren",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Needle (2010 film): Needle (also known as Black Magic) is a 2010 Australian independent supernatural horror film starring Michael Dorman, Jessica Marais, Travis Fimmel, Trilby Glover, and Ben Mendelsohn, and directed by John V. Soto.  \"Needle\" is structured as a murder mystery, with six distinct clues pointing to one of ten suspects; the trailer is intentionally misleading.  The film premiered at Cinefest OZ in August 2010, and has since screened at the British Horror Film Festival and Screamfest Horror Film Festival; as well as the Melbourne Underground Film Festival.  \"Needle\" had a limited eight-screen release in Australian cinemas on 28 July 2011.  The film also had a successful release in Turkey on 29 July 2011 where it opened at No.4 at the box office on 62 screens.  \"Needle\" played for 13 weeks eventually grossing US$259,185.  At 1 September 2012, \"Needle\" has been sold in 82 countries worldwide with rights for major territories going to Lionsgate (USA), High Fliers (UK), Telepool (Germany), Playarte (Brazil), SND (France), Shochiku (Japan) and Sony (Australia) \"Needle\" was filmed over six weeks in Perth, Western Australia.  Needle had its Australian TV Premiere on Saturday the 12th of December, 2015 on Channel ONE (Network TEN).\n\nThe Mother of Tears: The Mother of Tears (Italian: \"La Terza madre\" , literally \"The Third Mother\") is a 2007 supernatural horror film written and directed by Dario Argento.  The film stars Asia Argento, Daria Nicolodi, Moran Atias, Udo Kier, and Coralina Cataldi-Tassoni.  The film has also been billed in English-speaking media as \"Mater Lachrymarum\", \"The Third Mother\" (English translation of the film's original Italian title), and \"Mother of Tears: The Third Mother\".  Written by Argento, Jace Anderson, Walter Fasano, Adam Gierasch and Simona Simonetti, the film is the concluding installment of Argento's supernatural horror trilogy \"The Three Mothers\", which began with \"Suspiria\" in 1977.  The film depicts the confrontation with the final \"Mother\" witch, known as Mater Lachrymarum.\n\nThe Apparition: The Apparition is a 2012 American supernatural horror film, written and directed by Todd Lincoln, making his directorial debut, and starring Ashley Greene, Sebastian Stan, Tom Felton, Julianna Guill and Rick Gomez.  The plot follows three college students who, after the death of their friend, must battle a supernatural force they summoned themselves.  The film was loosely inspired by the Philip experiment conducted in 1972.  The film was a box office bomb and was cited by critics as one of the worst horror movies of 2012.  It was also the last Warner Bros.  Pictures horror film to be released under its own label before resorting to New Line Cinema to release all future horror movies made by Warner Bros.\n\nFredrik Dolk: Gustav Fredrik Dolk (born 14 December 1961) is a Swedish actor.  He is a noted voice actor and has delivered the Swedish voice of Buzz Lightyear in Toy Story, Splinter in Teenage Mutant Ninja Turtles (1987), Superman in and Tuxedo Mask in Sailor Moon.  He has appeared on stage, in television and films since 1991.  He cameoed in the 2010 Swedish science fiction horror film Sector 236 – Thor's Wrath.  In 2011 he appeared in David Fincher's The Girl with the Dragon Tattoo.  He will appear in the upcoming Swedish horror film Wither, a film based on Swedish folklore.\n\nM. Night Shyamalan: Manoj Nelliyattu \"M. Night\" Shyamalan ( ; ; \"Maṉōj Nelliyāṭṭu Śyāmaḷaṉ\"; Tamil: மனோஜ் நெல்லியட்டு ஷியாமளன் ; Malayalam: മനോജ് നെല്ലിയാട്ട് ശ്യാമളന്‍ born 6 August 1970) is an Indian American film director, screenwriter, author, producer, and actor known for making movies with contemporary supernatural plots and surprise endings.  His most well-received films include the supernatural horror thriller \"The Sixth Sense\" (1999), the superhero drama thriller \"Unbreakable\" (2000), and the science fiction thriller \"Signs\" (2002).  Afterwards, Shyamalan released a series of poorly received but sometimes financially successful movies, including the historical drama-horror film \"The Village\" (2004), the fantasy film \"Lady in the Water\" (2006), the disaster film \"The Happening\" (2008), the film adaptation of \"The Last Airbender\" (2010), and the science-fiction film \"After Earth\" (2013).  Following the financial failure of \"After Earth,\" Shyalaman's career was revived with the release of the found footage horror \"The Visit\" (2015) and the psychological horror \"Split\" (2016), the latter of which is set in the same universe as his previous film \"Unbreakable\".  He is also known for producing \"Devil\" (2010), as well as being instrumental in the creation of the Fox science fiction series \"Wayward Pines.\n\nDolph Lundgren: Hans \"Dolph\" Lundgren (born 3 November 1957) is a Swedish actor, director, screenwriter, producer, and martial artist.\n\nWolves (2014 film): Wolves is a 2014 Canadian action horror film directed by David Hayter.\n\nThe Minion: The Minion (also known as Fallen Knight in Canada), is a 1998 American and Canadian action supernatural horror film directed by Jean-Marc Piché and starring Dolph Lundgren and Françoise Robertson.\n\nThe Amityville Horror (1979 film): The Amityville Horror is a 1979 American supernatural horror film directed by Stuart Rosenberg, based on Jay Anson's 1977 book of the same name.  It stars James Brolin and Margot Kidder as a young couple who purchase a home they come to find haunted by combative supernatural forces.  The story is based on the alleged experiences of the Lutz family who bought a new home on 112 Ocean Avenue in Amityville, New York, a house where a mass murder had been committed the year before.  It is the first film based on the Amityville horror.\n\nJenma Natchathiram: Jenma Natchathiram (தமிழ்: ஜென்ம நட்சத்திரம், English: Birth Star) is a 1991 Tamil supernatural horror film directed and Screenplays by Thakkali Srinivasan for Thirai Gangai Films.  The film dialogue were written by Ma.  Pandarinathan, and story were written by Krishnan respectively.  Music by Premi - Srini assets to the soundtrack.  It Stars Baby Vichithra played titular role with Pramoth, Sindhuja and Vivek played pivotal role.  The film was unofficial remake of \"The Omen\", 1976 British/American supernatural horror drama film directed by Richard Donner.",
+    "question": "What Swedish actor, director, screenwriter, producer, and martial artist who starred in a 1998 American and Canadian action supernatural horror film directed by Jean-Marc Piché?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The full name of the actor."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the actor."
+        },
+        "professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of the actor's professions."
+        },
+        "film_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the film the actor starred in."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The release year of the film."
+            },
+            "director": {
+              "type": "string",
+              "description": "The director of the film."
+            },
+            "genres": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "A list of genres for the film."
+            }
+          },
+          "required": [
+            "title",
+            "release_year",
+            "director",
+            "genres"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "actor_name",
+        "nationality",
+        "professions",
+        "film_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Hans \"Dolph\" Lundgren",
+      "nationality": "Swedish",
+      "professions": [
+        "actor",
+        "director",
+        "screenwriter",
+        "producer",
+        "martial artist"
+      ],
+      "film_details": {
+        "title": "The Minion",
+        "release_year": 1998,
+        "director": "Jean-Marc Piché",
+        "genres": [
+          "action",
+          "supernatural horror"
+        ]
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

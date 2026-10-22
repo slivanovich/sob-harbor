@@ -1,0 +1,16 @@
+{
+  "were_in_production_simultaneously": true,
+  "first_entity": {
+    "name": "Bass Player",
+    "type": "magazine",
+    "start_year": 1988
+  },
+  "second_entity": {
+    "name": "Moving Pictures",
+    "type": "magazine",
+    "start_year": 1989,
+    "end_year": 2012
+  },
+  "simultaneous_period_start_year": 1989,
+  "simultaneous_period_end_year": 2012
+}

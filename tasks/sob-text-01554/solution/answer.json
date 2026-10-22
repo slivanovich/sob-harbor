@@ -1,0 +1,13 @@
+{
+  "film_title": "The Last Tycoon",
+  "film_year": 1976,
+  "film_director": "Elia Kazan",
+  "actor_details": {
+    "name": "Jack Nicholson",
+    "birth_date": "April 22, 1937",
+    "professions": [
+      "American actor",
+      "filmmaker"
+    ]
+  }
+}

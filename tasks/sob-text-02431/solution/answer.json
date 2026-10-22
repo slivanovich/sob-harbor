@@ -1,0 +1,15 @@
+{
+  "band_name": "Sabaton",
+  "band_origin_city": "Falun",
+  "band_origin_country": "Sweden",
+  "band_genre": "heavy metal",
+  "drummer_details": {
+    "name": "Kevin Foley",
+    "nationality": "French",
+    "descent": [
+      "Irish",
+      "Italian"
+    ]
+  },
+  "relationship": "drummer played with band"
+}

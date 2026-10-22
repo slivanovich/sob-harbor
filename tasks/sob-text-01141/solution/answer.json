@@ -1,0 +1,13 @@
+{
+  "initiative_name": "The FREE Initiative",
+  "first_project_endorsed_by_governments": true,
+  "related_attack": {
+    "attack_name": "2011 Norway attacks",
+    "perpetrator_name": "Anders Behring Breivik",
+    "summer_camp_victims": {
+      "count": 69,
+      "location": "Utøya",
+      "victim_description": "participants of a Workers' Youth League (AUF) summer camp"
+    }
+  }
+}

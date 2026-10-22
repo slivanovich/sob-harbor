@@ -1,0 +1,12 @@
+{
+  "boxer_name": "Juan Díaz",
+  "fight_details": {
+    "event_name": "Juan Manuel Márquez vs. Juan Diaz II",
+    "year": 2009,
+    "opponent_name": "Juan Manuel Márquez"
+  },
+  "retirement_details": {
+    "year": 2011,
+    "reason": "to attend the University of Massachusetts Dartmouth Law School"
+  }
+}

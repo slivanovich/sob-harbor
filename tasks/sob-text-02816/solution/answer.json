@@ -1,0 +1,30 @@
+{
+  "person_one": {
+    "name": "Hayley Williams",
+    "occupations": [
+      "singer",
+      "songwriter",
+      "musician",
+      "lead vocalist",
+      "primary songwriter",
+      "keyboardist"
+    ]
+  },
+  "person_two": {
+    "name": "Ian MacKaye",
+    "occupations": [
+      "singer",
+      "songwriter",
+      "guitarist",
+      "musician",
+      "record label owner",
+      "producer",
+      "frontman"
+    ]
+  },
+  "common_occupations": [
+    "singer",
+    "songwriter",
+    "musician"
+  ]
+}

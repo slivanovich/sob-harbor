@@ -1,0 +1,62 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Be Quiet and Drive (Far Away): "Be Quiet and Drive (Far Away)" is the second single released from the American alternative metal band Deftones' second album, "Around the Fur".  It was their first single to chart on the US charts, peaking at number 29 on the Mainstream Rock Tracks chart, and within the top 50 in the UK Singles Chart.  Although it was a more modest hit than the follow-up, "Change (In the House of Flies)", it was included in the game "Dave Mirra Freestyle BMX", released in 2000.  An acoustic version appeared on the soundtrack to the film "Little Nicky".  This version, which featured Adam Sandler, the star of the movie, as well as Jonah Matranga of Far, was also included on the Deftones' "B-Sides & Rarities" album.
+
+Chi Cheng (musician): Chi Ling Dai Cheng (July 15, 1970 – April 13, 2013) was an American musician and poet, best known as the bassist for the American alternative metal band Deftones.  His career ended in 2008, when he was involved in a serious automobile crash in Santa Clara, California.  After the crash, he remained in a semi-comatose state before dying of cardiac arrest in April 2013.  After Cheng's hospitalization, Deftones friend Sergio Vega became the band's full-time bassist, having previously filled in for Cheng.
+
+Saturday Night Wrist: Saturday Night Wrist is the fifth studio album by the American alternative metal band Deftones.  It was released by Maverick Records on October 31, 2006.  Despite early contributions that were later scrapped, "Saturday Night Wrist" marked the departure of mainstay Deftones producer Terry Date.  It was their last released album to feature bass player Chi Cheng before his car accident in 2008 (although an additional album with Cheng, "Eros", was in production at the time of the accident and subsequent death in 2013).
+
+Eros (Deftones album): of an unreleased album by American alternative metal band Deftones with tentative release dates in 2008 and 2009.  The November 2008 car accident of bassist Chi Cheng forced the band to initially hold off on releasing the album, and later shelve the album indefinitely in a creative decision to move forward.  With Cheng in a coma, Deftones recruited former Quicksand bassist Sergio Vega and released "Diamond Eyes" instead in 2010.  In the years that followed, the band has had mixed feelings about finishing and officially releasing "Eros" at some point down the road.
+
+My Own Summer (Shove It): "My Own Summer (Shove It)" is a single by American alternative metal band Deftones, their first to be taken from the album "Around the Fur".  It was released in 1997 by Maverick Records.  It was Deftones' first charting single, reaching number 29 in the UK Singles Chart.  The song has been described as alternative metal and nu metal.
+
+Deftones: Deftones is an American alternative metal band from Sacramento, California, U.S. Formed in 1988, the band was founded by Chino Moreno (lead vocals, rhythm guitar), Stephen Carpenter (lead guitar), Abe Cunningham (drums) and Dominic Garcia (bass).  During the group's first five years, the band's lineup changed several times, but stabilized in 1993 when Cunningham rejoined the group after his departure in 1990; by this time, Chi Cheng was the band's bassist.  The lineup remained stable for fifteen years, with the exception of keyboardist and turntablist Frank Delgado being added in 1999.  The band is known as one of the most experimental groups to have come from the alternative metal music scene.  They are sometimes dubbed "the Radiohead of metal" by critics.
+
+Deftones (album): Deftones is the fourth studio album by American alternative metal band Deftones.  It was released on May 20, 2003 by Maverick Records.  The album featured a broader spectrum of musical styles than previous Deftones records, ranging from some of their heaviest compositions (such as "Bloody Cape" and "When Girls Telephone Boys") to moody trip hop influences (such as "Lucky You"), and recorded mostly with seven-string guitars.  It was the band's final album produced by Terry Date, whose collaboration with Deftones dated back to their 1995 debut, "Adrenaline".
+
+White Pony: White Pony is the third studio album by American alternative metal band Deftones, released on June 20, 2000 by Maverick Records.  It marked a significant growth in the band's sound and is considered a turning point for the band in terms of experimentation, employing an increasingly experimental rock sound and incorporating more new wave, dream pop, trip hop, shoegaze and post-rock influences into the alternative metal sound for which the group had become known.  Upon release and retrospectively, the album was met with overall critical acclaim and is generally regarded by fans and critics alike as one of their most mature outings.  "White Pony" is also their highest-selling album to date.  The album was certified platinum by the RIAA on July 17, 2002.  The album includes three successful singles ("Change (In the House of Flies)", "Back to School (Mini Maggit)" and "Digital Bath") as well as the 2001 Grammy Award-winning track for Best Metal Performance, "Elite".
+
+Rocket Skates: "Rocket Skates" is a song by the American alternative metal band Deftones.  It was the first single released from Deftones' sixth studio album, "Diamond Eyes", and their 12th single overall.  It was also the first single released without bassist Chi Cheng, who was in a coma during its recording, following a car accident in October 2008.  The single was recorded with former Quicksand bassist Sergio Vega, who played bass on the entirety of "Diamond Eyes".
+
+New Empire (band): New Empire was a rock band from Sydney, Australia.  The band members were Jeremy Fowler, Kale Kneale, Kyle Lane and Nate Cairns.  Up until late 2011 they also had a touring guitarist and keyboardist, Thom William.  The band played at Black Stump Music and Arts Festival between 2005 and 2009, also appearing at Big Exo Day for a number of years.  Their debut album, titled "Come with Me Tonight", was released in August 2008.  In 2009 they found themselves opening for headline act Relient K.  In 2010 they opened for Stan Walker and Hillsong United as part of the Youth Alive tour.  On 27 December 2010, it was announced on the band's Myspace and Facebook pages that Sam Walker had parted ways with the band.  Throughout April 2011, they toured Australia as a supporting act for Good Charlotte.
+
+Question: Among New Empire and Deftones who was doing metal band?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "metal_band_name": {
+      "type": "string",
+      "description": "The name of the band identified as a metal band."
+    },
+    "genre": {
+      "type": "string",
+      "description": "The specific genre of the identified metal band."
+    },
+    "comparison_bands": {
+      "type": "array",
+      "description": "A list of bands that were part of the comparison.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "metal_band_name",
+    "genre",
+    "comparison_bands"
+  ],
+  "additionalProperties": false
+}

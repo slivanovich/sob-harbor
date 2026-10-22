@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "record_id": "08a07e52662b17cb70c8f786e6366fbb80a03816cee0866026ecd95e210fa397",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab8562b5542992aa3b8c8ba",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Urdu",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hindustani language: Hindustani (Hindustani: , '\"of Hindustan\"' ), historically also known as Hindavi, Dehlavi and Rekhta, is the \"lingua franca\" of North India and Pakistan.  It is an Indo-Aryan language, deriving its base primarily from the Khariboli dialect of Delhi.  The language incorporates a large amount of vocabulary from Sanskrit, Persian and Arabic.  It is a pluricentric language, with two official forms, Modern Standard Hindi and Modern Standard Urdu, which are its standardised registers, and which may be called Hindustani or Hindi-Urdu when taken together.  The colloquial registers are mostly indistinguishable, and even though the official standards are nearly identical in grammar, they differ in literary conventions and in academic and technical vocabulary, with Urdu adopting stronger Persian and Arabic influences, and Hindi relying more heavily on Sanskrit.  Before the Partition of the British Indian Empire, the terms \"Hindustani, Urdu,\" and \"Hindi\" were synonymous; all covered what would be mostly called Urdu and Hindi today.  The term \"Hindustani\" is still used for the colloquial language and the \"lingua franca\" of North India and Pakistan, for example for the language of Bollywood films, as well as for several quite different varieties of Hindi spoken outside the Indian Subcontinent, such as Fiji Hindi of Fiji and the Caribbean Hindustani of Trinidad and Tobago, Guyana, Suriname, and the rest of the Caribbean.  Hindustani is also spoken by a small number of people in Mauritius and South Africa.\n\nGulistan, Punjab: Gulistan (Urdu, Punjabi: ) is a town of Sahiwal District in the Punjab province of Pakistan.  It is located at 30°29'0N 72°43'0E with an altitude of 159 metres (524 feet).  Neighbouring settlements include Agra and Chandol.\n\nMalaysian language: The Malaysian language (Malay: \"Bahasa Malaysia\"), or Standard Malay (Malay: Bahasa Melayu Baku) is the name regularly applied to the Malay language used in Malaysia.  Constitutionally, however, the official language of Malaysia is Malay, but the government from time to time refers to it as Malaysian.  Malaysian is a standardised register of the Johore-Riau dialect of Malay.  It is spoken by much of the Malaysian population as a first language.  It is a compulsory subject in primary and secondary schools.\n\nJohn Gilchrist (linguist): He is principally known for his study of the Hindustani language, which led to it being adopted as the lingua franca of northern India (including present-day Pakistan) by British colonists and indigenous people.  He compiled and authored \"An English-Hindustani Dictionary\", \"A Grammar of the Hindoostanee Language\", \"The Oriental Linguist\", and many more.  His lexicon of Hindustani was published in Arabic script, Nāgarī script, and in Roman transliteration.  He is also known for his role in the foundation of University College London and for endowing the Gilchrist Educational Trust.\n\nList of Urdu-language films: A list of Urdu language films in year order.  The films listed here are mostly from Pakistan.  For a full list of Pakistani films which includes Punjabi language, and Bengali language films in addition to Urdu see List of Pakistani films.  Most films from Bollywood (India) are in mixed Hindi and Urdu with a spectrum ranging from entirely Urdu to mostly Hindi.  See article on Hindustani language and list of Bollywood films\n\nUrdu literature: Urdu literature (Urdu: ‎ , \"“Adbiyāt-i Urdū”\" ) has a history that is inextricably tied to the development of Urdu, the register of the Hindustani language written in the Perso-Arabic script.  While it tends to be dominated by poetry, especially the verse forms of the ghazal and nazm, it has expanded into other styles of writing, including that of the short story, or afsana.  Urdu literature is mostly popular in Pakistan, where Urdu is the national language.  It is also a recognized official language in India.  It is also widely understood in Afghanistan.\n\nHindi-Urdu vocabulary: Hindustani vocabulary, also known as Hindi-Urdu vocabulary, like all Indo-Aryan languages, has a core base of Sanskrit, which it gained through Prakrit.  As such the standardized registers of the Hindustani language (Hindi-Urdu) share a common vocabulary, especially on the colloquial level.  However, in formal speech, Hindi tends to draw on Sanskrit, while Urdu turns to Persian and sometimes Arabic.  This difference lies in the history of Hindustani, in which the Khariboli dialect started to gain more Persian words in urban areas (such as Lucknow and Hyderabad), under the Delhi Sultanate; this dialect came to be termed Urdu.  The original Hindi dialects continued to develop alongside Urdu and according to Professor Afroz Taj, \"the distinction between Hindi and Urdu was chiefly a question of style.  A poet could draw upon Urdu's lexical richness to create an aura of elegant sophistication, or could use the simple rustic vocabulary of dialect Hindi to evoke the folk life of the village.  Somewhere in the middle lay the day to day language spoken by the great majority of people.  This day to day language was often referred to by the all-encompassing term \"Hindustani\".\"  In Colonial India, Hindi-Urdu acquired vocabulary introduced by Christian missionaries from the Germanic and Romanic languages, e.g. \"pādrī\" (Devanagari: पादरी, Nastaleeq: پادری) from \"padre\", meaning pastor.  When describing the state of Hindi-Urdu under the British Raj, Professor Śekhara Bandyopādhyāẏa stated that \"Truly speaking, Hindi and Urdu, spoken by a great majority of people in north India, were the same language written in two scripts; Hindi was written in Devanagari script and therefore had a greater sprinkling of Sanskrit words, while Urdu was written in Persian script and thus had more Persian and Arabic words in it.  At the more colloquial level, however, the two languages were mutually intelligible.\"  After the partition of India, political forces within India tried to further Sanskritize Hindi, while political forces in Pakistan campaigned to remove Prakit/Sanksrit derived words from Urdu and supplant them with Persian and Arabic words.  Despite these government efforts, the film industry, Bollywood continues to release its films in the original Hindustani (Hindi-Urdu) language, easily understood and enjoyed by speakers of both registers; in addition many of the same television channels are viewed across the border.\n\nUrdu: Urdu ( ; Urdu: ‎ \"Urdū\" ] , or Modern Standard Urdu) is a Persianised and standardised register language of the Hindustani language.  It is the official and \"lingua franca\" of Pakistan.\n\nRekhta: Rekhta (Hindi: रेख़्ता ,Urdu: ریختہ‎ \"rextā\") was the Hindustani language as its dialectal basis shifted to the Khariboli dialect of Delhi.  It is considered one of the Urdu dialects.  \"Rekhta\" means \"scattered\" but also \"mixed\" and implies that it contained Persian and Hindvi/Hindi.  The term Rekhta was in greatest use from the late 17th century until the late 18th century, when it was largely supplanted by \"Hindi/Hindwi (Hindavi)\" and later by \"Hindustani\" and \"Urdu\", though it continued to be used sporadically until the late 19th century.  Rekhta-style poetry is still produced today by Urdu speakers, and is the most common linguistic form of writing poetry in the Urdu language.  Rekhta is a very versatile language, and can grammatically change to adapt to Persian grammar, without sounding odd to the reader.\n\nHindi: Hindi (Devanagari: हिन्दी, \"Hindī\"), or Modern Standard Hindi (Devanagari: मानक हिन्दी, \"Mānak Hindī\") is a standardised and Sanskritised register of the Hindustani language.",
+    "question": "Gulistan is Punjabi in which Persianised and standardised register language of the Hindustani language?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "language_name": {
+          "type": "string",
+          "description": "The name of the language that fits the description."
+        },
+        "language_characteristics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Key characteristics of the language as described in the context."
+        },
+        "associated_locations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Locations mentioned in the context where this language is relevant."
+        },
+        "other_associated_languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other languages mentioned alongside the primary language in the context of the location."
+        },
+        "is_official_language_of_pakistan": {
+          "type": "boolean",
+          "description": "Indicates if the language is an official language of Pakistan."
+        }
+      },
+      "required": [
+        "language_name",
+        "language_characteristics",
+        "associated_locations",
+        "other_associated_languages",
+        "is_official_language_of_pakistan"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "language_name": "Urdu",
+      "language_characteristics": [
+        "Persianised",
+        "standardised register",
+        "Hindustani language register"
+      ],
+      "associated_locations": [
+        "Gulistan",
+        "Punjab"
+      ],
+      "other_associated_languages": [
+        "Punjabi"
+      ],
+      "is_official_language_of_pakistan": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

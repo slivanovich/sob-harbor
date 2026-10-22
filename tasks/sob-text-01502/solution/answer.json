@@ -1,0 +1,17 @@
+{
+  "musician_details": {
+    "name": "Steve Wickham",
+    "instrument": "violin",
+    "origin_country": "Irish"
+  },
+  "song_details": {
+    "title": "Sunday Bloody Sunday",
+    "album": "War",
+    "album_release_year": 1983
+  },
+  "performing_band": {
+    "name": "U2",
+    "country_of_origin": "Irish",
+    "genre": "rock band"
+  }
+}

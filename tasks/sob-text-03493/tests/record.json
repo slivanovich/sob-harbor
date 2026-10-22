@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "974af53e54f01278dcfe4692e3667e73c0a3c91beed76e8afc51c18ff57b3d47",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab45b705542990594ba9c04",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Mary Tyler Moore",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Mary (1985 TV series): Mary is an American sitcom that aired on CBS from December 11, 1985, to April 8, 1986.  The series stars Mary Tyler Moore in her return to series television after an absence of over six years, during which time she appeared on Broadway in \"Whose Life Is It Anyway? \" and in the dramatic film \"Ordinary People\".  After \"The Mary Tyler Moore Show\", her subsequent ventures into series television on the variety shows \"Mary\" (1978) and \"The Mary Tyler Moore Hour\" (1979) had been short-running ratings disasters, and Moore decided to return to the sitcom format which had brought her the greatest television success; the sitcom nonetheless met the same fate as the variety shows.\n\nFlirting with Disaster (film): Flirting with Disaster is a 1996 American black comedy film written and directed by David O. Russell about a young father's search for his biological parents.  The film stars Ben Stiller, Patricia Arquette, Téa Leoni, Mary Tyler Moore, George Segal, Glenn Fitzgerald, Alan Alda and Lily Tomlin.  It was screened out of competition in the Special Screenings section at the 1996 Cannes Film Festival.\n\nMary and Rhoda: Mary and Rhoda is a 2000 American made-for-television comedy-drama film starring Mary Tyler Moore and Valerie Harper reprising their roles as Mary Richards and Rhoda Morgenstern from the 1970–77 sitcom \"The Mary Tyler Moore Show\".\n\nMary Richards: Mary Richards, portrayed by Mary Tyler Moore, is the main character of the television sitcom \"The Mary Tyler Moore Show\".\n\nMary Tyler Moore: Mary Tyler Moore (December 29, 1936 – January 25, 2017) was an American actress, known for her roles in the television sitcoms \"The Mary Tyler Moore Show\" (1970–1977), in which she starred as Mary Richards, a single woman working as a local news producer in Minneapolis, and \"The Dick Van Dyke Show\" (1961–1966), in which she played Laura Petrie, a former dancer turned Westchester homemaker, wife and mother.  Her film work includes 1967's \"Thoroughly Modern Millie\" and 1980's \"Ordinary People\", in which she played a role that was very different from the television characters she had portrayed, and for which she was nominated for an Academy Award for Best Actress.\n\nNancy Walker: Nancy Walker (May 10, 1922 – March 25, 1992) was an American actress and comedian of stage, screen, and television.  She was also a film and television director (most notably of \"The Mary Tyler Moore Show\", on which she also made several guest appearances).  During her five-decade long career, she may be best remembered for her long-running roles as Mildred on \"McMillan & Wife\" and Ida Morgenstern, who first appeared on several episodes of \"The Mary Tyler Moore Show\" and later became a prominent recurring character on the spinoff series \"Rhoda\".\n\nPhyllis (TV series): Phyllis is an American sitcom that aired on CBS from September 8, 1975, to March 13, 1977.  Created by Ed Weinberger and Stan Daniels, it was the second spin-off of \"The Mary Tyler Moore Show\" (the first being \"Rhoda\").  The show starred Cloris Leachman as Phyllis Lindstrom, who was previously Mary Richards' landlady on \"The Mary Tyler Moore Show\".\n\nLou Grant (TV series): Lou Grant is an American drama series starring Ed Asner in the title role as a newspaper editor that aired on CBS from September 20, 1977 to September 13, 1982.  The series was the third spin-off of the sitcom \"The Mary Tyler Moore Show\".  \"Lou Grant\" was created by \"The Mary Tyler Moore Show\" co-creators James L. Brooks and Allan Burns, along with Gene Reynolds.\n\nMary Tyler Moore filmography and awards: Mary Tyler Moore (December 29, 1936 – January 25, 2017) was an American actress, known for her roles in the television sitcoms \"The Mary Tyler Moore Show\" (1970–1977), in which she starred as Mary Richards, a thirtyish single woman who worked as a local news producer in Minneapolis, and \"The Dick Van Dyke Show\" (1961–1966), in which she played Laura Petrie, a former dancer turned Westchester homemaker, wife and mother.  Her notable film work includes 1967's \"Thoroughly Modern Millie\" and 1980's \"Ordinary People\", in which she played a role that was very different from the television characters she had portrayed, and for which she was nominated for an Academy Award for Best Actress.\n\nThe Mary Tyler Moore Show opening sequence: \"The Mary Tyler Moore Show\" opening sequence is an element of the American television series \"The Mary Tyler Moore Show\".  In 1999, \"Entertainment Weekly\" picked Mary Richards' hat toss at the end of the sequence as the 1970s' second-greatest television moment.  The theme song, \"Love Is All Around\", was written and performed by Sonny Curtis.",
+    "question": "Who is the actress known for her television sitcom \"The Mary Tyler Moore Show\" that appeared in Flirting with Disaster?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actress_name": {
+          "type": "string",
+          "description": "The name of the actress."
+        },
+        "known_for_tv_show": {
+          "type": "string",
+          "description": "The television show the actress is known for."
+        },
+        "appeared_in_film": {
+          "type": "string",
+          "description": "The film the actress appeared in."
+        },
+        "is_main_star_of_tv_show": {
+          "type": "boolean",
+          "description": "Indicates if the actress was the main star of the TV show."
+        }
+      },
+      "required": [
+        "actress_name",
+        "known_for_tv_show",
+        "appeared_in_film",
+        "is_main_star_of_tv_show"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actress_name": "Mary Tyler Moore",
+      "known_for_tv_show": "The Mary Tyler Moore Show",
+      "appeared_in_film": "Flirting with Disaster",
+      "is_main_star_of_tv_show": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

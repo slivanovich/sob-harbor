@@ -1,0 +1,13 @@
+{
+  "nuclear_complex": {
+    "name": "Hanford Site",
+    "establishment_year": 1943
+  },
+  "establishing_project": {
+    "name": "Manhattan Project"
+  },
+  "associated_highway_segment": {
+    "highway_name": "Washington State Route 24",
+    "action_at_complex": "turns north to cross the Columbia River"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "chemist_name": "S. P. L. Sørensen",
+  "chemist_nationality": "Danish",
+  "famous_for_concept": "introduction of the concept of pH",
+  "titration_method": {
+    "name": "Sørensen formol titration",
+    "invention_year": 1907,
+    "purpose": "determination of protein content in samples"
+  }
+}

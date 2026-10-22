@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Their Eyes Were Watching God: Their Eyes Were Watching God is a 1937 novel and the best known work by African-American writer Zora Neale Hurston.  The novel narrates main character Janie Crawford's "ripening from a vibrant, but voiceless, teenage girl into a woman with her finger on the trigger of her own destiny."  As a young woman, who is fair-skinned with long hair, she expects more out of life, but comes to realize she has to find out about life 'fuh theyselves' (for herself), just as people can only go-to-God for themselves.  Set in central and southern Florida in the early 20th century, the novel was initially poorly received for its rejection of racial uplift literary prescriptions.  Today, it has come to be regarded as a seminal work in both African-American literature and women's literature. " TIME" included the novel in its 2005 list of the 100 best English-language novels published since 1923.
+
+Studs Lonigan: Studs Lonigan is a novel trilogy by American author James T. Farrell: "Young Lonigan" (1932), "The Young Manhood of Studs Lonigan" (1934), and "Judgment Day" (1935).  In 1998, the Modern Library ranked the Studs Lonigan trilogy at 29th on its list of the 100 best English-language novels of the 20th century.
+
+The Prime of Miss Jean Brodie (novel): The Prime of Miss Jean Brodie is a novel by Muriel Spark, the best known of her works.  It first saw publication in "The New Yorker" magazine and was published as a book by Macmillan in 1961.  The character of Miss Jean Brodie brought Spark international fame and brought her into the first rank of contemporary Scottish literature.  In 2005, the novel was chosen by "Time" magazine as one of the one hundred best English-language novels from 1923 to present.  In 1998, the Modern Library ranked "The Prime of Miss Jean Brodie" No. 76 on its list of the 100 best English-language novels of the 20th century.
+
+Go Tell It on the Mountain (novel): Go Tell It on the Mountain is a 1953 semi-autobiographical novel by James Baldwin.  It tells the story of John Grimes, an intelligent teenager in 1930s Harlem, and his relationship to his family and his church.  The novel also reveals the back stories of John's mother, his biological father, and his violent, religious fanatic step-father, Gabriel Grimes.  The novel focuses on the role of the Pentecostal Church in the lives of African-Americans, as a negative source of repression and moral hypocrisy and also as a positive source of inspiration and community.  In 1998, the Modern Library ranked "Go Tell It on the Mountain" 39th on its list of the 100 best English-language novels of the 20th century. " Time Magazine" included the novel in its "TIME 100 Best English-language Novels from 1923 to 2005".
+
+Brave New World: In 1999, the Modern Library ranked "Brave New World" fifth on its list of the 100 best English-language novels of the 20th century.  In 2003, Robert McCrum writing for "The Observer" included "Brave New World" chronologically at number 53 in "the top 100 greatest novels of all time", and the novel was listed at number 87 on the BBC's survey The Big Read.
+
+Iris Murdoch: Dame Jean Iris Murdoch ( ; 15 July 1919 – 8 February 1999) was an Anglo-Irish novelist and philosopher, best known for her novels about good and evil, sexual relationships, morality, and the power of the unconscious.  Her first published novel, "Under the Net", was selected in 1998 as one of Modern Library's 100 best English-language novels of the 20th century.  In 1987, she was made a Dame Commander of the Order of the British Empire.  Her books include "The Bell" (1958), "A Severed Head" (1961), "The Red and the Green" (1965), "The Nice and the Good" (1968), "The Black Prince" (1973), "Henry and Cato" (1976), "The Sea, the Sea" (1978, Booker Prize), "The Philosopher's Pupil" (1983), "The Good Apprentice" (1985), "The Book and the Brotherhood" (1987), "The Message to the Planet" (1989), and "The Green Knight" (1993).  In 2008, "The Times" ranked Murdoch twelfth on a list of "The 50 greatest British writers since 1945".
+
+Deliverance (novel): Deliverance is a 1970 novel by James Dickey, his first.  It was adapted into a 1972 film by director John Boorman.  In 1998, the editors of the Modern Library selected "Deliverance" as #42 on their list of the 100 best 20th-Century novels.  The novel was included on "Time" magazine's list of the 100 best English-language novels written since 1923.
+
+A Death in the Family: A Death in the Family is an autobiographical novel by author James Agee, set in Knoxville, Tennessee.  He began writing it in 1948, but it was not quite complete when he died in 1955 (with reputedly many portions having been written in the home of his friend Frances Wickes).  It was edited and released posthumously in 1957 by editor David McDowell.  Agee's widow and children were left with little money after Agee's death and McDowell wanted to help them by publishing the work.  Agee won the Pulitzer Prize for Fiction in 1958 for the novel.  The novel was included on "Time"'s 2005 list of the 100 best English-language novels written since 1923.
+
+The Moviegoer: The Moviegoer is the debut novel by Walker Percy, first published in the United States by Vintage in 1961.  It won the U.S. National Book Award "Time" magazine included the novel in its "Time 100 Best English-language Novels from 1923 to 2005".  In 1998, the Modern Library ranked "The Moviegoer" sixtieth on its list of the hundred best English-language novels of the twentieth century.
+
+Modern Library 100 Best Novels: Modern Library's 100 Best Novels is a list of the best English-language novels of the 20th century as selected by the Modern Library, an American publishing company owned by Random House.
+
+Question: Which publishing company, owned by Random House, ranked Brave New World fifth on its list of the 100 best English-language novels of the 20th century?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "publishing_company_name": {
+      "type": "string",
+      "description": "The name of the publishing company."
+    },
+    "owner_company": {
+      "type": "string",
+      "description": "The company that owns the publishing company."
+    },
+    "novel_ranked": {
+      "type": "string",
+      "description": "The title of the novel that was ranked."
+    },
+    "ranking": {
+      "type": "integer",
+      "description": "The rank of the novel on the list."
+    },
+    "list_century": {
+      "type": "string",
+      "description": "The century for which the novels on the list were selected."
+    }
+  },
+  "required": [
+    "publishing_company_name",
+    "owner_company",
+    "novel_ranked",
+    "ranking",
+    "list_century"
+  ],
+  "additionalProperties": false
+}

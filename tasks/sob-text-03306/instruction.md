@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Johnny Sims: Johnny Sims (born October 14, 1967) is a former American football lineman who played one season with the New Orleans Night of the Arena Football League.  He played college football at Mississippi Valley State University.
+
+Brian Partlow: Brian Partlow is a former arena football coach.  He last served as the offensive coordinator of the Cleveland Gladiators in the Arena Football League.  He is the former head coach for the Austin Wranglers where he had a career record of 4-12, including a 0-0 mark in the postseason.  He spent the 2006, 2005, and 2004 seasons as the offensive coordinator of the Colorado Crush.  The Crush won the ArenaBowl championship in 2005.  Partlow led one of the top ranked offenses in the league helping WR Damien Harrell win offensive player of the year in 2005 and 2006 while breaking the single season record for receiving touchdowns.  In 2003, 2002, 2001, and 2000 Partlow coached for the Indiana/Albany Firebirds in the Arena Football League spending two seasons as the offensive coordinator.  Partlow also has experience coaching college football including stops at The College of William and Mary, Shenandoah College, and Randolph Macon College.
+
+Tony Bowick: Vantonio Bernard Bowick (born 1966-10-03 in Dothan, Alabama) is a former National Football League player for the Atlanta Falcons and a former Arena Football League player with a 13-season career.
+
+Barry Wagner: Barry Wagner (born November 24, 1967) is a retired American football player in the Arena Football League for the Orlando Predators, with whom he won his first ArenaBowl Championship, and the San Jose SaberCats, with whom he won two championships.  He also played in the World Indoor Football League as a wide receiver/defensive back with the Daytona Beach Thunder.  Wagner is the all-time AFL all-purpose yardage leader.  He is considered the best Arena Football player of all time.  During the 2012 Arena Football League season, Wagner was named the league's greatest player of all time.
+
+Brian Mitchell (kicker): Brian Mitchell (born October 15, 1969) played college football for Marshall University in 1987 and the University of Northern Iowa from 1989-1991.  He holds many UNI football records and NCAA records as well including the most accurate single season kicker in NCAA college football history (26 for 27 in field goals).  His longest field goal was 57 yards in 1990.  Mitchell played two years of professional football in the Arena Football League, in 1994 for the Cleveland Thunderbolts and in 1995 for the St. Louis Stampede.  Mitchell kicked 6 drop kick field goals and 18 drop kick extra points in 1994.  Mitchell holds every drop kick record in the Arena Football League.  As of 2008, Mitchell is the only player to make a 4-point field goal (drop kick) in Arena Football League history.
+
+Ron Carpenter (defensive back): Ronald Allen Carpenter, Jr. (born January 20, 1970) is a former professional American football player who played defensive back for five seasons for the Cincinnati Bengals, Minnesota Vikings.  New York Jets, and St. Louis Rams.  He played college football at Miami University in Oxford, Ohio, where he was a three-time first-team All-Mid-American Conference player and served as captain his senior season.  He was voted to the Miami University All-Millennium team by "The Cincinnati Enquirer" in 2000.  He was also inducted into the Miami University Athletic Hall of Fame on October 14, 2016.  Carpenter was also an All-World League player for the Amsterdam Admirals and spent seasons with the New York CityHawks of the Arena Football League (AFL), the Los Angeles Xtreme of the XFL, and the Nashville Kats, Georgia Force, and Detroit Fury of the AFL.  He owns a Super Bowl ring from the 1999 Rams and an XFL Championship ring from the 2001 Xtreme.  Following his professional career, Carpenter took up coaching and scouting, having scouted for Pro Football Scouts Inc., the Tennessee Titans as a scouting intern, and coached for Princeton High School in Ohio, the Georgia Force, Central State University, Indiana University, Miami University and the University of Central Arkansas.
+
+Raymond Philyaw: Raymond 'Ray' Philyaw (born July 30, 1974) is a former arena football quarterback who was most recently the offensive coordinator of the Jacksonville Sharks of the Arena Football League (AFL).  He also played for the Cleveland Gladiators Chicago Rush, Kansas City Brigade, Bossier-Shreveport Battle Wings and the Albany/Indiana Firebirds, leading the former to the American Conference championship game in 2004 and 2005.  Prior to his Arena Football career, he played for the Winnipeg Blue Bombers of the Canadian Football League and the Madison Mad Dogs of the Indoor Football League.  After leaving to coach with the New Orleans VooDoo in 2011, he attempted a return as a player in 2012 with the San Jose SaberCats, but later became OC for the San Antonio Talons.  He holds the record for the highest career TD-to-INT ratio in AFL history and threw a school record 52 TDs while attending Northeast Louisiana.
+
+Shadrick McAfee: Shadrick "Mac" McAfee (born September 22, 1974) is the former coach of the Arena Football League Louisiana Swashbucklers and was a professional football player in the National Football League, Canadian Football League, Regional Football League, Arena Football League 2, National Indoor Football League, Intense Football League, and Indoor Football League.  He played running back, wide receiver, defensive back, linebacker, and kick returner in his career.  McAfee attended Philadelphia High School in Mississippi.  McAfee played at NCAA Division II Mississippi College after high school and after two years transferred to the University of Central Arkansas.  In 1998 he was named all Gulf South Conference at running back.
+
+Mississippi Valley State University: Mississippi Valley State University (commonly referred to as MVSU or Valley) is a historically black university located in Mississippi Valley State, Leflore County, Mississippi, in the Mississippi Delta, near Itta Bena.  MVSU is a member-school of the Thurgood Marshall College Fund.
+
+List of Arena Football League arenas: The following is a list of Arena Football League (AFL) arenas.  American and Canadian football is traditionally played outdoors on grass or artificial turf fields 120–150 yards (109.73–137.16 m) in length.  However, arena football is played in covered climate-controlled multi-purpose venues.  The field is comparable to the size of a National Hockey League rink, allowing 50 yard for a scrimmage area.  The AFL was established in 1987 and features arena football teams across the United States.  In 2014, the average AFL attendance was 8,473 per game.  That year the Tampa Bay Storm averaged the most attendees per game with 11,402.  The Orlando Predators were the least attended team in 2014 drawing an average of 5,421 per game.  Talking Stick Resort Arena was the home of the Arizona Rattlers from 1992 until the team's departure in 2016, making it the longest operating AFL venue.  The smallest venue to house an AFL team was the 5,000 seat West Palm Beach Auditorium, the home of the Florida Bobcats from 1996 to 1998.  ArenaBowl IX at the Thunderdome (now Tropicana Field) in St. Petersburg, Florida on September 1, 1995, was the highest attended game in AFL history (25,087).  Joe Louis Arena in Detroit has been host to four ArenaBowls (1989, 1990, 1991, 1993).
+
+Question: What type of university was the college that Arena Football League player Johnny Sims attended?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the Arena Football League player."
+    },
+    "university_name": {
+      "type": "string",
+      "description": "The name of the university the player attended."
+    },
+    "university_type": {
+      "type": "string",
+      "description": "The classification or type of the university."
+    }
+  },
+  "required": [
+    "player_name",
+    "university_name",
+    "university_type"
+  ],
+  "additionalProperties": false
+}

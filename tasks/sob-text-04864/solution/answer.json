@@ -1,0 +1,23 @@
+{
+  "person_a": {
+    "name": "Bobby Fuller",
+    "is_author": false,
+    "professions": [
+      "singer",
+      "songwriter",
+      "guitarist"
+    ]
+  },
+  "person_b": {
+    "name": "Storm Large",
+    "is_author": true,
+    "professions": [
+      "singer",
+      "songwriter",
+      "actress",
+      "author"
+    ]
+  },
+  "at_least_one_is_author": true,
+  "author_identified": "Storm Large"
+}

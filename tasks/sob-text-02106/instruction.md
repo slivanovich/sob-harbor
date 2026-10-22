@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jane Altschwager: Jane Altschwager (born 25 August 1980 in Millicent, South Australia) is a former Australian netball player.  Altschwager started her netball career in 1994 playing for New South Wales, in the Australian State Netball League, somehow, despite being a 14-year-old in South Australia.  She was an Australian Institute of Sport scholarship holder.  In 1997 she signed with the Sydney Swifts in the inaugural Commonwealth Bank Trophy, becoming co-captain in 1999.  Altschwager earned a spot in the Australian national team in 2000, remaining with the side until 2005 and playing in seven test matches.  Also in 2000, Altschwager left the Sydney Swifts to play with the Hunter Jaegers.  She returned to the Sydney Swifts the following year, remaining with them until 2005 when she moved back to the Jaegers.  She then played as captain of the Jaegers until her retirement in 2007.  Altschwager came out of retirement in 2009 to play for the Adelaide Thunderbirds in the ANZ Championship.
+
+Maryka Holtzhausen: Maryka Holtzhausen (born 2 June 1987) is a South African netball player.  She plays in the positions of GA and WA.  She is a member of the South Africa national netball team and has competed in the 2010 Commonwealth Games in Delhi and the 2011 World Netball Championships in Singapore.  She has also participated in the 2010 World Netball Series and the 2011 World Netball Series, both held in Liverpool, UK.  She played in the 2012 Quad Series, and in the same year, she won a bronze medal in 2012 Fast5 Netball World Series with the Fast5 Proteas.
+
+Mandy Edwards: Mandy Edwards (born 28 July 1982) is an Australian netball player.  In 2008, Edwards was signed to play in the ANZ Championship for the Adelaide Thunderbirds.  Edwards was educated at Westminster School in Adelaide.
+
+Amorette Wild: Amorette Wild (also known as Amy Wild) (born 10 August 1989) is an Australian netball player in the ANZ Championship, playing for the Queensland Firebirds.  Wild previously played with the NSW Swifts From 2009 - 2010.  She has also played in the Australian Fastnet team in Liverpool 2011.  She graduated from Westfields Sports High School in 2007.  A Fairfield City Netball Association junior, Amorette (pronounced Am-oar-ray) has come through the ranks to represent New South Wales at the 17/U, 19/U and 21/U age groups.  Quiet by nature, Amorette rose to prominence during the Australian Netball League and DOOLEYS State League, where she played an integral role in her teams’ success, including the Netball NSW Waratahs maiden ANL victory in 2011. Since making her ANZ Championship debut in 2009, Amorette has gone on to become an integral part of the NSW Swifts 'moving' shooting circle, earning a nomination for ANZ Championship Best Young Player in 2012.  Amorette’s journey to the NSW Swifts is a unique one – she had her first taste of elite netball when she was a ball girl for the Swifts as a teenager before going on to be a member of the Swifts squad in the former national league at the age of 17.  At 23 years of age, Amorette will be suiting up for the NSW Swifts for her fifth season in 2013.  Amorette played her 25th ANZ Championship game when she took the court at wing attack against the Northern Mystics in Round 10 of the 2013 ANZ Championship at Sydney Olympic Park Sports Centre.  After the Swifts season in 2013 Amorette made up her mind and moved north to the Queensland and play for the Firebirds alongside 2013 premiership winning rookie Stephanie Puopolo.  Amorette Spent 1 year with the Sydney Swifts in the Commonwealth Bank Trophy, That year being the last year of the competition 2007.
+
+Joanne Harten: Joanne "Jo" Harten (born 21 March 1989) is an English netball player.  She can play GS and GA.  She competed at the 2007 and 2011 Netball World Championships and the 2010 and 2014 Commonwealth Games, and has so far earned 81 caps for England.  She captained the Loughborough Lightning netball team in the English Netball Superleague, before picking up a contract with the Canterbury Tactix in the ANZ Championship in 2012.  She returned to play for the Tactix in 2013.  In 2014, she joined the Waikato Magic on a 2-year contract.  In 2017, Harten began playing for new franchise Giants Netball in the newly created Australian Super Netball league.
+
+Jade Clarke: Jade Clarke (born 17 October 1983 in Manchester, England) is an English netball player.  Primarily a midcourt defender, Clarke was selected for the England national netball team in 2002, making her senior debut the following year against New Zealand.  During her international career, she has competed at four Netball World Championships (2003 and 2007 2011 and 2015), three Commonwealth Games (2006, 2010 and 2014), and the 2009 and 2011 World Netball Series.  Clarke plays domestic netball in the Netball Superleague, having played four seasons with Loughborough Lightning before switching to the Northern Thunder for 2009–10.  In 2010, Clarke was signed to play in the Australasian ANZ Championship with New Zealand–based team the Waikato Bay of Plenty Magic, as a Temporary Replacement Player for injured midcourter Peta Scholz.
+
+Westminster School, Adelaide: Westminster School is an independent, Uniting Church, Early Learning to Year 12, coeducational, day and boarding school located at Marion, South Australia, 12 km south of Adelaide.  Founded as a Methodist day and boarding school for boys, the school was opened by the Prime Minister Robert Menzies in 1961 and is named after Westminster School in London.  The school became co-educational in 1978, and has a current enrolment of around 1150 students.
+
+Elaine Davis: Elaine Lamour Davis (born 21 September 1976) is a Jamaican international netball player.  Fresh out of high school, she got her baptism in international sports when she was selected as a member of the national senior team, the Sunshine Girls, for the ninth World Netball Championships held in Birmingham, England in 1995.  Davis officially debuted for the Jamaican national team during the 1995 Netball World Championships against Barbados, and has played goal shooter for most of her career.  Playing for Jamaica at the Birmingham Tournament marked the beginning of a glorious, unbroken 12-year run of local, regional and international representation of her country on the netball court.  In 1998, she played at the Commonwealth Games held in Malaysia; and friendlies against New Zealand and South Africa in 1999 were followed by a tri-test series against England.  She was selected as a member of the team for the World Netball Championships in Christ Church, New Zealand in 1999.  Here, she emerged as the third highest goal scorer of the entire tournament.  Saving the best for the historic World Netball Championships held at the newly built National Indoor Sports Centre in 2003, Elaine was pivotal in positioning Jamaica at third place behind the formidable Australia and New Zealand teams.  She subsequently led the national team to the 2006 Commonwealth Games in Melbourne, Australia; and guided the Sunshine Girls to success over Caribbean neighbor, Trinidad and Tobago in a test series that same year.  Not even the intense pain of five knee surgeries between 1996 and December 2006 deterred her from becoming one of Jamaica's best netball players in history and arguably their best Goal Shooter of all-time.
+
+Amanda Mynhardt: Amanda Mynhardt (born 9 January 1986) is a South African netball player.  She plays in the positions of GK and GD.  She is currently captain of the South Africa national netball team and has competed in the 2010 Commonwealth Games in Delhi and the 2011 World Netball Championships in Singapore.  She has also participated in the 2010 World Netball Series and the 2011 World Netball Series, both held in Liverpool, UK.  In October 2012, she travelled with the Proteas to Australia & New Zealand to participate in the Quad-Series tournament, and in November 2012 she was a member of the Proteas Fast5 team in the 2012 Fast5 Netball World Series where she won a bronze medal.
+
+Karla Mostert: Karla Mostert (born 12 March 1990) is a South African netball player.  She plays in the positions of GD and WD.  She has participated in the 2011 World Netball Series, held in Liverpool, UK and the INF Netball World Cup 2015 held in Sydney, Australia.  Karla has been playing for the netball team of the University of the Free State (Kovsies) since 2009.  She has also captained the Free State Criniums Netball team who won the 2015 Brutal Fruit Première League.  Karla was awarded the 2014 Varsity Cup Netball Player of the Tournament award.Karla is currently working as community Dietician in Mangaung (Bloemfontein), Free State.
+
+Question: What team did a netball player who was educated at a school in Marion, South Australia play on?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the netball player."
+    },
+    "school_attended": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the school."
+        },
+        "location": {
+          "type": "string",
+          "description": "The location of the school."
+        }
+      },
+      "required": [
+        "name",
+        "location"
+      ],
+      "additionalProperties": false
+    },
+    "team_played_for": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the netball team."
+        },
+        "championship": {
+          "type": "string",
+          "description": "The championship the team played in."
+        },
+        "year_signed": {
+          "type": "integer",
+          "description": "The year the player was signed to the team."
+        }
+      },
+      "required": [
+        "name",
+        "championship",
+        "year_signed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "player_name",
+    "school_attended",
+    "team_played_for"
+  ],
+  "additionalProperties": false
+}

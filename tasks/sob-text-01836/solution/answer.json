@@ -1,0 +1,14 @@
+{
+  "entity_name": "Spirit Mountain",
+  "entity_type": "mountain",
+  "located_in_country": "United States",
+  "alternative_names": [
+    "Newberry Peak"
+  ],
+  "associated_town": {
+    "name": "Laughlin",
+    "type": "unincorporated town and census-designated place",
+    "county": "Clark County",
+    "state": "Nevada"
+  }
+}

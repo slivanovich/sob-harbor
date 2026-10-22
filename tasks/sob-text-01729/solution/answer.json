@@ -1,0 +1,15 @@
+{
+  "person_identified": {
+    "name": "Thomas Jefferson",
+    "roles": [
+      "Principal author of the Declaration of Independence",
+      "Third President of the United States"
+    ]
+  },
+  "correspondence_details": {
+    "correspondent_name": "Ann Willing Bingham",
+    "impact_on_us_history": "Led to the construct of the United States Bill of Rights"
+  },
+  "is_principal_author_of_declaration_of_independence": true,
+  "served_as_third_president_of_united_states": true
+}

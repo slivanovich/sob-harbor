@@ -1,0 +1,14 @@
+{
+  "medication_name": "Carvedilol",
+  "medication_class": "beta blocker",
+  "selectivity_type": "non-selective",
+  "conditions_treated": [
+    "congestive heart failure",
+    "mild to severe congestive heart failure",
+    "left ventricular dysfunction following heart attack",
+    "high blood pressure"
+  ],
+  "brand_names": [
+    "Coreg"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "song_title": "Team",
+  "original_artist_details": {
+    "artist_name": "Lorde",
+    "country_of_origin": "New Zealand",
+    "original_album": "Pure Heroine",
+    "album_release_year": 2013
+  },
+  "local_h_release_details": {
+    "ep_title": "The Team EP",
+    "ep_initial_sales_channel": "Local H concerts",
+    "later_compilation_album": "Local H's Awesome Mix Tape #2",
+    "compilation_album_release_year": 2014
+  }
+}

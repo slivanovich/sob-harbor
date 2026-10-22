@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "record_id": "e28a16999d7de015a7ad7c60ce6a4c26f8798e398e72fb307c4e33cc18b1ee2b",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a82092655429926c1cdadf7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "seven",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Nobel Prize in Physics: The Nobel Prize in Physics (Swedish: \"Nobelpriset i fysik\" ) is a yearly award given by the Royal Swedish Academy of Sciences for those who conferred the most outstanding contributions for mankind in the field of physics.  It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895 and awarded since 1901; the others being the Nobel Prize in Chemistry, Nobel Prize in Literature, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine.\n\nList of Nobel laureates in Physiology or Medicine: The Nobel Prize in Physiology or Medicine (Swedish: \"Nobelpriset i fysiologi eller medicin\" ) is awarded annually by the Swedish Karolinska Institute to scientists and doctors in the various fields of physiology or medicine.  It is one of the five Nobel Prizes established by the 1895 will of Alfred Nobel (who died in 1896), awarded for outstanding contributions in chemistry, physics, literature, peace, and physiology or medicine.  As dictated by Nobel's will, the award is administered by the Nobel Foundation and awarded by a committee that consists of five members and an executive secretary elected by the Karolinska Institute.  While commonly referred to as the Nobel Prize in Medicine, Nobel specifically stated that the prize be awarded for \"physiology or medicine\" in his will.  Because of this, the prize can be awarded in a broader range of fields.  The first Nobel Prize in Physiology or Medicine was awarded in 1901 to Emil Adolf von Behring, of Germany.  Each recipient receives a medal, a diploma and a monetary award that has varied throughout the years.  In 1901, von Behring received 150,782 SEK, which is equal to 7,731,004 SEK in December 2008.  In 2013, the prize was awarded to James E. Rothman, Randy W. Schekman and Thomas C. Südhof; they were recognised \"after discovering how cells precisely transport material\".  The award is presented in Stockholm at an annual ceremony on December 10, the anniversary of Nobel's death.\n\nAda Yonath: Ada E. Yonath (Hebrew: עדה יונת‎ ‎ , ] ) (born 22 June 1939) is an Israeli crystallographer best known for her pioneering work on the structure of the ribosome.  She is the current director of the Helen and Milton A. Kimmelman Center for Biomolecular Structure and Assembly of the Weizmann Institute of Science.  In 2009, she received the Nobel Prize in Chemistry along with Venkatraman Ramakrishnan and Thomas A. Steitz for her studies on the structure and function of the ribosome, becoming the first Israeli woman to win the Nobel Prize out of ten Israeli Nobel laureates, the first woman from the Middle East to win a Nobel prize in the sciences, and the first woman in 45 years to win the Nobel Prize for Chemistry.  However, she said herself that there was nothing special about a woman winning the Prize.\n\nList of female Nobel laureates: The Nobel Prizes are awarded annually by the Royal Swedish Academy of Sciences, the Swedish Academy, the Karolinska Institute, and the Norwegian Nobel Committee to individuals who make outstanding contributions in the fields of Chemistry, Physics, Literature, Peace, Physiology or Medicine and Economics.  All but the economics prize were established by the 1895 will of Alfred Nobel, which dictates that the awards should be administered by the Nobel Foundation.  The Nobel prize in Economics, or The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, was established in 1968 by the Sveriges Riksbank, the central bank of Sweden, for outstanding contributions in the field of Economics.  Each prize is awarded by a separate committee; the Royal Swedish Academy of Sciences awards the Prizes in Physics, Chemistry, and Economics, the Swedish Academy awards the Prize in Literature, the Karolinska Institute awards the Prize in Physiology or Medicine, and the Norwegian Nobel Committee awards the Prize in Peace.  Each recipient receives a medal, a diploma and a cash prize that has varied throughout the years.\n\nList of Danish Nobel laureates: This is a list of Danish Nobel laureates.  Since the Nobel Prize was established per the will of Swedish inventor Alfred Nobel in 1895, 12 of the prize winners have been from Denmark.  The first Danish Nobel laureate was Niels Ryberg Finsen, who won a Nobel Prize for medicine in 1903 for his work in using light therapy to treat diseases.  The most recent Danish Nobel Prize winner was Jens Skou who won the prize in chemistry for his discovery over the enzyme, Na+/K+-ATPase in 1997.  To date, of the 13 Nobel Prizes won by Danish people, 5 have been for medicine, 3 have been for physics, 3 have been for literature, 1 has been for chemistry and one has been for peace.\n\nKristian Birkeland: Kristian Olaf Bernhard Birkeland (13 December 1867 – 15 June 1917) was a Norwegian scientist.  He is best remembered as the person whose theories of atmospheric electric currents elucidated the nature of the aurora borealis.  In order to fund his research on the aurorae, he invented the electromagnetic cannon and the Birkeland-Eyde process of fixing nitrogen from the air.  Birkeland was nominated for the Nobel Prize seven times.\n\nAkselsundet: Akselsundet is a sound between Van Mijenfjorden and Bellsund at Spitsbergen, Svalbard.  It has a width of about 1.2 kilometers, located north of Akseløya, and is the main entrance to Van Mijenfjorden.  There are strong tidal currents in the strait, up to five to six knots.  The entrance is marked by a light at Birkelandodden, the northern point of Akseløya.\n\nBirkelandodden: Birkelandodden is the northern point of the island Akseløya between Van Mijenfjorden and Bellsund at Spitsbergen, Svalbard.  The point is named after Kristian Birkeland.  A light has been set up to help navigation through Akselsundet, the main entrance to Van Mijenfjorden.\n\nNobel Prize in Literature: Since 1901, the Nobel Prize in Literature (Swedish: \"Nobelpriset i litteratur\" ) has been awarded annually to an author from any country who has, in the words of the will of Alfred Nobel, produced \"in the field of literature the most outstanding work in an ideal direction\" (original Swedish: \"den som inom litteraturen har producerat det mest framstående verket i en idealisk riktning\").  Though individual works are sometimes cited as being particularly noteworthy, here \"work\" refers to an author's work as a whole.  The Swedish Academy decides who, if anyone, will receive the prize in any given year.  The academy announces the name of the chosen laureate in early October.  It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895; the others are the Nobel Prize in Chemistry, Nobel Prize in Physics, Nobel Peace Prize, and Nobel Prize in Physiology or Medicine.\n\nSusumu Tonegawa: Susumu Tonegawa (利根川 進 \"Tonegawa Susumu\", born September 6, 1939) is a Japanese scientist who was the sole recipient of the Nobel Prize for Physiology or Medicine in 1987, for his discovery of the genetic mechanism that produces antibody diversity.  Although he won the Nobel Prize for his work in immunology, Tonegawa is a molecular biologist by training and he again changed fields following his Nobel Prize win; he now studies neuroscience, examining the molecular, cellular and neuronal basis of memory formation and retrieval.",
+    "question": "Birkelandodden is the northern point of Akseloya, that was named for a Norwegian scientist who was nominated for the Nobel prize how many times?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "named_entity": {
+          "type": "string",
+          "description": "The entity for which Birkelandodden was named."
+        },
+        "entity_nationality": {
+          "type": "string",
+          "description": "The nationality of the named entity."
+        },
+        "nobel_prize_nominations": {
+          "type": "integer",
+          "description": "The number of times the named entity was nominated for the Nobel Prize."
+        }
+      },
+      "required": [
+        "named_entity",
+        "entity_nationality",
+        "nobel_prize_nominations"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "named_entity": "Kristian Birkeland",
+      "entity_nationality": "Norwegian",
+      "nobel_prize_nominations": 7
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

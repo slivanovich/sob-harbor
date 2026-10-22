@@ -1,0 +1,15 @@
+{
+  "company_name": "Synopsys",
+  "is_integrated_circuit_product_provider": true,
+  "company_industry": "Electronic Design Automation",
+  "integrated_circuit_related_products": [
+    "Design Compiler",
+    "logic synthesis",
+    "behavioral synthesis",
+    "place and route",
+    "static timing analysis",
+    "formal verification",
+    "hardware description language simulators",
+    "transistor-level circuit simulation"
+  ]
+}

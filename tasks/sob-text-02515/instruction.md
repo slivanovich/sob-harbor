@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Shrouded Planet: The Shrouded Planet is a 1957 science fiction novel published under the name "Robert Randall", actually the collaborative work of American writers Robert Silverberg and Randall Garrett.  It consists of three linked stories, each originally published separately in the magazine "Astounding Science Fiction".  Linking chapters were added for book release.  The first book printing, by Gnome Press in New York, was small and did not sell well.  This and the sequel novel, "The Dawning Light", were reprinted 25 years later, and well received.
+
+Blindsight (Watts novel): Blindsight is a hard science fiction novel by Canadian writer Peter Watts, published by Tor Books in 2006.  It garnered nominations for a Hugo Award for Best Novel, a John W. Campbell Memorial Award for Best Science Fiction Novel, and a Locus Award for Best Science Fiction Novel.  The novel follows a crew of astronauts sent out as the third wave, following two series of probes, to investigate a trans-Neptunian Kuiper belt comet dubbed 'Burns-Caulfield' that has been found to be transmitting an unidentified radio signal to an as-yet unknown destination elsewhere in the solar system, followed by their subsequent first contact.  The novel explores questions of identity, consciousness, free will, artificial intelligence, neurology, game theory as well as evolution and biology.  "Blindsight" is available online under a Creative Commons license.  Its sequel "Echopraxia" came out in 2014.
+
+Embassytown: Embassytown is a science fiction novel by British author China Miéville.  It was published in the UK by Pan Macmillan on 6 May 2011, and in the US by Del Rey Books on 17 May 2011.  A limited edition was released by Subterranean Press.  The plot of the novel surrounds the town of Embassytown, the native alien residents known as Ariekei, their Language, and the human interaction with them.  The novel was well reviewed and won the 2012 Locus Award for Best Science Fiction Novel.
+
+Timescape: Timescape is a 1980 science fiction novel by American writer Gregory Benford (with unbilled co-author Hilary Foister, Benford's sister-in-law, who is credited as having "contributed significantly to the manuscript").  It won the 1981 Nebula and 1980 British Science Fiction Award, and the 1981 John W. Campbell Memorial Award for Best Science Fiction Novel.  The novel was widely hailed by both critics of science fiction and mainstream literature for its fusion of detailed character development and interpersonal drama with more standard science fiction fare such as time travel and ecological issues.
+
+Rama II (novel): Rama II is a science fiction novel by Gentry Lee and Arthur C. Clarke, first published in 1989.  It recounts humankind's further interaction with the Ramans, first introduced in "Rendezvous with Rama".  Written primarily by Lee, "Rama II" has a distinctly different writing style than the original, with a more character driven narrative and a closer-to-contemporary mindset, ambience and human relations than the first novel's more futuristic tones.
+
+Rendezvous with Rama: Rendezvous with Rama is a science fiction novel by British writer Arthur C. Clarke first published in 1973.  Set in the 2130s, the story involves a 50 km cylindrical alien starship that enters Earth's solar system.  The story is told from the point of view of a group of human explorers who intercept the ship in an attempt to unlock its mysteries.  This novel won both the Hugo and Nebula awards upon its release, and it is regarded as one of the cornerstones in Clarke's bibliography.
+
+Perfect Imperfection: Perfect Imperfection: First third of progress (Polish: Perfekcyjna niedoskonałość.  Pierwsza tercja progresu ; also sometimes translated as "Ideal Imperfection") is a science fiction novel published in 2004 by the Polish science fiction writer Jacek Dukaj as the first part of a planned trilogy.  It was published in Poland by Wydawnictwo Literackie.  The novel received the prime Polish award for science-fiction literature, Janusz A. Zajdel Award, in 2004.
+
+David Walton (science fiction writer): David Walton (born October 26, 1975) is an American science fiction and fantasy writer living in Philadelphia.  His novel "Terminal Mind" won the 2008 Philip K. Dick Award for the best paperback science fiction novel published in the United States, in a tie with Adam-Troy Castro's novel "Emissaries from the Dead".
+
+Pieprzony los Kataryniarza: Pieprzony los Kataryniarza is a science fiction novel published in 1995 by the Polish science fiction writer Rafał Ziemkiewicz.  It was published in Poland by superNOWA.  The novel received the prime Polish award for science-fiction literature, Janusz A. Zajdel Award, in 1995.
+
+Walc stulecia: Walc Stulecia (Polish for "Ball of the Century") is a science fiction novel published in 1998 by the Polish science fiction writer Rafał Ziemkiewicz.  It was published in Poland by superNOWA.  The novel received the prime Polish award for science-fiction literature, Janusz A. Zajdel Award, in 1998.
+
+Question: Rama II recounts humankind's further interaction with the Ramans, first introduced in a science fiction novel published in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "novel_title": {
+      "type": "string",
+      "description": "The title of the novel where the Ramans were first introduced."
+    },
+    "author": {
+      "type": "string",
+      "description": "The author of the novel."
+    },
+    "publication_year": {
+      "type": "integer",
+      "description": "The year the novel was first published."
+    }
+  },
+  "required": [
+    "novel_title",
+    "author",
+    "publication_year"
+  ],
+  "additionalProperties": false
+}

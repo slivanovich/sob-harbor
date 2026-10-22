@@ -1,0 +1,17 @@
+{
+  "village_name": "Bayt 'Itab",
+  "location": {
+    "subdistrict": "Jerusalem Subdistrict"
+  },
+  "historical_figures_associated": [
+    {
+      "figure_name": "Samson",
+      "association_details": "An ancient tunnel which led to the village spring is associated with story of Samson.",
+      "figure_description": "the last of the judges of the ancient Israelites mentioned in the Book of Judges in the Hebrew Bible and one of the last of the leaders who \"judged\" Israel before the institution of the monarchy",
+      "source_of_information": {
+        "book": "Book of Judges",
+        "chapters": "chapters 13 to 16"
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+William T. Anderson: William T. Anderson (1840 – October 26, 1864)—known as "Bloody Bill" Anderson—was one of the deadliest and most brutal pro-Confederate guerrilla leaders in the American Civil War.  Anderson led a band that targeted Union loyalists and Federal soldiers in Missouri and Kansas.
+
+Herman Hollis: Herman Edward "Ed" Hollis (January 1903 – November 27, 1934) was an American law enforcement official and Federal Bureau of Investigation (FBI) special agent.  As an FBI special agent in the 1930s, Hollis worked with agents Melvin Purvis, Samuel P. Cowley and others fighting bank robbers, gangsters and organized crime in the Chicago area during the Great Depression.  Hollis is best known for having been killed in the line of duty during an intense shootout with Chicago-area bank robber Lester Gillis, a.k.a. Baby Face Nelson, at the Battle of Barrington in 1934.  Hollis was also one of the three FBI special agents who shot John Dillinger near the Biograph Theater earlier that year, resulting in Dillinger's death.  One controversial account also implicates Hollis in the death of Pretty Boy Floyd.  Hollis served as a special agent for the FBI's field offices in Kansas City, Cincinnati, and Chicago for over seven years; at the time of his death, he was 31 years old.
+
+Samuel P. Jackson: Samuel P. Jackson (February 5, 1818 in Manchester, England – July 27, 1885 in Brooklyn, New York, United States) was an American organist and composer.  His father, James Jackson, was an organ builder; his family immigrated to the United States in 1825, where Samuel learned his father's trade.  Jackson's music teachers were Moran (piano) and Thornton (harmonium).  From 1830—42 he played the organ at St. Clement's Church ; at St. Bartholomew from 1842–61; later at Christ Church, Church of the Ascension, and the Anthon Memorial Church.  He was a well-known teacher of piano, organ, and harmonium.  For many years he was music-proof reader to G. Schirmer, New York.  Besides a variety of vocal sacred music, he published "Gems for the Organ" and four books of very popular "Organ-Voluntaries".
+
+Essex County Natural History Society: The Essex County Natural History Society (1833–1848) in Salem, Massachusetts, was formed "for the purpose of promoting the science of natural history."  It endeavored "to form a complete collection of natural productions, curiosities.  &c, particularly of this county; and, to form a library of standard books on the natural sciences."  The society incorporated in 1836; Andrew Nichols, William Oakes, and William Prescott served as signatories.  Other members included Samuel B. Buttrick, Samuel P. Fowler, John M. Ives, John C. Lee, George Osgood, Charles G. Page, Gardner B. Perry, George Dean Phippen, William P. Richardson, John Lewis Russell, Henry Wheatland.  By 1836 some 100 members belonged to the society.  In Salem its "cabinets and library were first deposited in Essex Place, then in Franklin Building, then in Chase's Building, Washington Street, and finally removed to Pickman Place, in 1842."  In 1848 the society merged with the Essex Historical Society to form the Essex Institute.
+
+Samuel P. Cox: Samuel P. Cox (December 16, 1828 – August 21, 1913) was a businessman and farmer who is best remembered as the commander of the Union troops that killed "Bloody Bill" Anderson in the Battle of Albany in the American Civil War.
+
+Battle of La Ebonal: The Battle of La Ebonal was fought in December 1859 near Brownsville, Texas during the First Cortina War.  Following the Brownsville Raid, on September 28, and a few skirmishes with the Texas Rangers, rebel leader Juan Cortina led his small army into the hills outside of town and dug in near a series of cattle ranches.  The United States Army responded by sending an expedition into the area, under the command of Major Samuel P. Heintzelman, with orders to pacify all resistance.  A minor battle began on December 13, at a ranch called La Ebonal, and continued for a few hours as the Americans routed and then pursued the retreating Cortinistas.
+
+Samuel P. Kenyon: Samuel P. Kenyon (1846 – June 14, 1884) was an American soldier who fought in the American Civil War.  Kenyon received his country's highest award for bravery during combat, the Medal of Honor.  Kenyon's medal was won for his capturing a flag at the Battle of Sailor's Creek, Virginia on April 6, 1865 He was honored with the award on May 3, 1865.
+
+The Soldier and the State: The Soldier and the State: The Theory and Politics of Civil-Military Relations is a 1957 book written by political scientist Samuel P. Huntington.  In the book, Huntington advances the theory of objective civilian control, according to which the optimal means of asserting control over the armed forces is to professionalize them.  This is in contrast to subjective control, which involves placing legal and institutional restrictions on the military's autonomy.  Edward M. Coffman has written that "[a]nyone seriously interested in American military history has to come to terms with Samuel P. Huntington's "The Soldier and the State."
+
+The Battle of Barrington: The Battle of Barrington was an intense and deadly gunfight between federal agents and notorious Great Depression Era gangster, Baby Face Nelson, that took place on November 27, 1934 in the town of Barrington, outside Chicago, Illinois.  It resulted in the deaths of Nelson, Federal Agent Herman "Ed" Hollis and Agent/Inspector Samuel P. Cowley.
+
+Langley Gold Medal: The Langley Gold Medal, or Samuel P. Langley Medal for Aerodromics, is an award given by the Smithsonian Institution for outstanding contributions to the sciences of aeronautics and astronautics.  Named in honor of Samuel P. Langley, the Smithsonian's third Secretary, it was authorized by the Board of Regents in 1909.
+
+Question: Samuel P. Cox killed somebody on what day in the Battle of Albany?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "killer_name": {
+      "type": "string",
+      "description": "The name of the person who commanded the troops that killed the victim."
+    },
+    "victim_name": {
+      "type": "string",
+      "description": "The name of the person who was killed."
+    },
+    "event_name": {
+      "type": "string",
+      "description": "The name of the battle or event where the killing occurred."
+    },
+    "date_of_death": {
+      "type": "string",
+      "format": "date",
+      "description": "The specific date the victim was killed."
+    }
+  },
+  "required": [
+    "killer_name",
+    "victim_name",
+    "event_name",
+    "date_of_death"
+  ],
+  "additionalProperties": false
+}

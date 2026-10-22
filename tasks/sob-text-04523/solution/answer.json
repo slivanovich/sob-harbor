@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are both Zhuanghe and Chencun, Guangdong under the administration of Dalian?",
+  "answer": false,
+  "entities_checked": [
+    {
+      "name": "Zhuanghe",
+      "is_under_dalian_administration": true,
+      "administrative_location": "Dalian"
+    },
+    {
+      "name": "Chencun, Guangdong",
+      "is_under_dalian_administration": false,
+      "administrative_location": "Shunde district of Foshan, Guangdong Province"
+    }
+  ]
+}

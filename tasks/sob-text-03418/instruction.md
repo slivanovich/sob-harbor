@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Gigantic (2008 film): Gigantic is a 2008 independent comedy film directed by Matt Aselton and starring Paul Dano, Zooey Deschanel, John Goodman, Edward Asner and Jane Alexander.  The script, written by Aselton and his college friend Adam Nagata, tells of Brian (Dano), a mattress salesman who wishes to adopt a baby from China, but finds himself sharing his passion, with the quirky, wealthy Harriet (Deschanel) when they meet in his store.  The story was based on Aselton's childhood wish for his parents to adopt a Chinese baby.  The film was shot in New York and Connecticut.  It had its world premiere at 2008's Toronto International Film Festival and was released in the United States on April 3, 2009.
+
+The Giant Gila Monster: The Giant Gila Monster is a 1959 hot rod/monster/science fiction film, directed by Ray Kellogg and produced by Ken Curtis.  This low-budget B-movie starred Don Sullivan, a veteran of several low budget monster and zombie films, and Lisa Simone, the French contestant for Miss Universe of 1957, as well as comedy relief Shug Fisher and KLIF disc jockey Ken Knox.  The effects included a live Mexican beaded lizard (not an actual Gila monster) filmed on a scaled-down model landscape.  The movie is considered a cult classic.
+
+Frankenstein: Through the Eyes of the Monster: Frankenstein: Through the Eyes of the Monster is a point-and-click adventure video game that stars Tim Curry as Dr. Frankenstein, and has the player controlling a newly created Frankenstein monster.  Other cast members include Robert Rothrock as the voice of the monster, Rebecca Wink as villager Sara, and Amanda Fuller as Gabrielle, the monster's daughter.  It used full motion video clips and 3D CGI graphics similar to Myst.  The game was developed by Amazing Media and published by Interplay Entertainment Corp for the PC in 1995 and for the Sega Saturn in 1997.  The game was given a "Teen" rating by the Entertainment Software Rating Board, but was originally rated as K-A.
+
+St. Augustine Monster: The St. Augustine Monster is the name given to a large carcass, originally postulated to be the remains of a gigantic octopus, that washed ashore on the United States coast near St. Augustine, Florida, in 1896.  It is sometimes referred to as the Florida Monster or the St. Augustine Giant Octopus and is one of the earliest recorded examples of a globster.  The species that the carcass supposedly represented has been assigned the binomial names Octopus giganteus (Latin for "giant octopus") and Otoctopus giganteus (Greek prefix: "oton" = "ear"; "giant-eared octopus"), although these are not valid under the rules of the ICZN.
+
+The Monster of Phantom Lake: The Monster of Phantom Lake is an independent comedy released on March 9, 2006.  It is a modern 1950s style, Cold War era, B-grade "drive-in" movie in the style of The Phantom from 10,000 Leagues, Monster from the Ocean Floor, or The Horror of Party Beach.  Written, directed and edited by Christopher R. Mihm, the film was shot on digital video in and around the Minneapolis/St.  Paul area.  The entire film was made for less than $10,000.  The film stars Minnesota & Wisconsin based actors with the director taking a small part.  "Monster of Phantom Lake" has spawned a series of subsequent films including "It Came from Another World" (10 May 2007), "Cave Women on Mars" (12 April 2008), "Terror from Beneath the Earth" (2009), "Destination Outer Space" (2010), "Attack of the Moon Zombies" (2011), "House of Ghosts" (2012), "The Giant Spider" (2013), and "The Late Night Double Feature" (2014).  The films are all connected to each other, sharing common fictional locations or characters (and actors) or both, forming what the creators call "The Mihmiverse".
+
+Pacific Rim (film): Pacific Rim is a 2013 American science fiction monster film directed by Guillermo del Toro and starring Charlie Hunnam, Idris Elba, Rinko Kikuchi, Charlie Day, Burn Gorman, Robert Kazinsky, Max Martini and Ron Perlman.  The screenplay was written by Travis Beacham and del Toro from a story by Beacham.  The film is set in the future, when Earth is at war with the Kaiju, colossal monsters which have emerged from an interdimensional portal on the bottom of the Pacific Ocean.  To combat the monsters, humanity unites to create the Jaegers, gigantic humanoid mechas each controlled by at least two pilots, whose minds are joined by a mental link.  Focusing on the war's later days, the story follows Raleigh Becket, a washed-up Jaeger pilot called out of retirement and teamed with rookie pilot Mako Mori as part of a last-ditch effort to defeat the Kaiju.
+
+John Goodman: John Stephen Goodman (born June 20, 1952) is an American actor.  Early in his career, he was best known for playing Dan Conner on the ABC TV series "Roseanne" (1988–1997), for which he won a Golden Globe Award for Best Actor in 1993.  He is also a regular collaborator with the Coen brothers on such films as "Raising Arizona" (1987), "Barton Fink" (1991), "The Big Lebowski" (1998), "O Brother, Where Art Thou? " (2000), and "Inside Llewyn Davis" (2013).  Goodman's voice roles in animated films include Pacha in Disney's "The Emperor's New Groove" (2000), and Sulley in Pixar's "Monsters, Inc." (2001), and "Monsters University" (2013).
+
+Armie Hammer: Armand Douglas "Armie" Hammer (born August 28, 1986) is an American actor.  He is known for his portrayal of the Winklevoss twins in the film "The Social Network" (2010), Prince Andrew Alcott in "Mirror Mirror" (2012), the title character in the adventure film "The Lone Ranger" (2013), Mike in "Mine" (2016), and the voice role of Jackson Storm in 2017's Disney-Pixar Film "Cars 3".  He played the role of Illya Kuryakin in "The Man from U.N.C.L.E." (2015), and stars as Oliver in the 2017 romance drama "Call Me by Your Name".  For his portrayal of Clyde Tolson in "J. Edgar" (2011), he was nominated for a Screen Actors Guild Award.
+
+Rodan (film): Rodan, released in Japan as Sora no Daikaijū Radon (空の大怪獣 ラドン , lit.  "Radon, Giant Monster of the Sky") , is a 1956 science fiction kaiju film produced by Toho Studios.  It was the studio's first Kaiju movie filmed in color (though Toho's first color tokusatsu film, "Madame White Snake", was released earlier that year).  It is one of a series of "giant monster" movies that found an audience outside Japan, especially in the United States, where it was originally released in 1957 as Rodan!  The Flying Monster! .  (It was re-released later in some drive-ins in the U.S. in 1959 on a double bill with "Gigantis the Fire Monster".)
+
+Monster movie: A monster movie, creature feature, or giant monster film is a disaster film that focuses on a group of characters struggling to survive attacks by at least one antagonistic monster or other animal, often abnormally large ones.  The film may also fall under the horror, comedy, fantasy, or science fiction genres.  Monster movies originated with adaptations of horror folklore and literature.  Typically, movie monsters differ from more traditional antagonists in that many exist due to circumstances beyond their control; their actions are not entirely based on choice, potentially making them objects of sympathy to film viewers.
+
+Question: What character did one of the stars of the movie Gigantic voice in TWO Disney-Pixar "Monster" films? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor who starred in Gigantic."
+    },
+    "movie_gigantic_role": {
+      "type": "string",
+      "description": "The actor's role or status in the film Gigantic."
+    },
+    "voiced_character_name": {
+      "type": "string",
+      "description": "The name of the character voiced by the actor."
+    },
+    "disney_pixar_monster_films": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of Disney-Pixar 'Monster' films the character appeared in."
+    },
+    "number_of_monster_films": {
+      "type": "integer",
+      "description": "The count of Disney-Pixar 'Monster' films the character appeared in."
+    }
+  },
+  "required": [
+    "actor_name",
+    "movie_gigantic_role",
+    "voiced_character_name",
+    "disney_pixar_monster_films",
+    "number_of_monster_films"
+  ],
+  "additionalProperties": false
+}

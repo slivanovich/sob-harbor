@@ -1,0 +1,34 @@
+{
+  "question_asked": "Were both Wong Ka Kui and Kyosuke Himuro a songwriter?",
+  "overall_answer": true,
+  "individuals_analyzed": [
+    {
+      "name": "Wong Ka Kui",
+      "was_songwriter": true,
+      "primary_roles": [
+        "musician",
+        "singer",
+        "songwriter",
+        "leader",
+        "co-founder",
+        "lead vocalist",
+        "rhythm guitarist"
+      ],
+      "associated_bands": [
+        "Beyond"
+      ]
+    },
+    {
+      "name": "Kyosuke Himuro",
+      "was_songwriter": true,
+      "primary_roles": [
+        "singer-songwriter",
+        "musician",
+        "lead vocalist"
+      ],
+      "associated_bands": [
+        "Boøwy"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "deity_info": {
+    "name": "Fontus",
+    "domain": "wells and springs"
+  },
+  "fontinalia_festival_info": {
+    "name": "Fontinalia",
+    "date": "October 13",
+    "honored_deity": "Fontus"
+  },
+  "roman_festivals_general_info": {
+    "importance_eras": [
+      "Republican",
+      "Imperial"
+    ]
+  }
+}

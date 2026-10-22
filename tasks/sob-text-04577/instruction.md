@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Uncommon Valor: Uncommon Valor is a 1983 American action war film directed by Ted Kotcheff and starring Gene Hackman, Fred Ward, Reb Brown, Robert Stack and Patrick Swayze in an early screen appearance.  It follows an ex–U.S. Marine (Hackman) officer who puts together a rag-tag team to rescue his son, who he believes is among those still held in Laos after the Vietnam War.
+
+The Royal Tenenbaums: The Royal Tenenbaums is a 2001 American comedy-drama film directed by Wes Anderson and co-written with Owen Wilson.  The film stars Danny Glover, Gene Hackman, Anjelica Huston, Bill Murray, Gwyneth Paltrow, Ben Stiller, Luke Wilson, and Owen Wilson.  Ostensibly based on a non-existent novel and told with a literary narrative, the story follows the lives of three gifted siblings who experience great success in youth, and even greater disappointment and failure in adulthood.  The children's eccentric father Royal Tenenbaum (Hackman) leaves them in their adolescent years, returning to them after they have grown, and falsely claiming to have a terminal illness.  Long after he was shunned by his family, Royal gradually reconciles with his children and ex-wife (Huston).
+
+French Connection II: French Connection II is a 1975 crime drama film starring Gene Hackman and directed by John Frankenheimer.  It is a fictional sequel to the initially true story of the 1971 Academy Award winning picture "The French Connection".  The film expands on the central character of Det. Jimmy "Popeye" Doyle who travels to Marseille, France where he is attempting to track down French drug-dealer Alain Charnier, who escaped at the end of the first film.  Hackman won an Academy Award for Best Actor for the original "The French Connection" and he and Fernando Rey are the only returning cast members.
+
+Roy K. Moore: Roy K. Moore (June 11, 1914 Hood River Oregon - October 12, 2008 Madison Wisconsin) was an American FBI agent and former Marine who was best known as the chief agent who investigated the disappearance of civil rights workers James Chaney, Michael Schwerner and Andrew Goodman.  The 1988 film "Mississippi Burning", starring Gene Hackman and Willem Dafoe was based on that case.  Because of the efforts of Moore and his agents, nineteen men were indicted and seven were convicted.  All served less than 6 years in prison.
+
+The French Connection (book): The French Connection: A True Account of Cops, Narcotics, and International Conspiracy is a non-fiction book by Robin Moore first published in 1969 about the notorious "French Connection" drug trafficking scheme.  It is followed by the book "The Setup".  The book was adapted to film in 1971 as "The French Connection", written by Ernest Tidyman and Directed by William Friedkin.
+
+The Quick and the Dead (1995 film): The Quick and the Dead is a 1995 American western film directed by Sam Raimi, and starring Sharon Stone, Gene Hackman, Russell Crowe and Leonardo DiCaprio.  The screenplay was written by Simon Moore but includes contributions from Joss Whedon.  The story focuses on "The Lady" (Stone), a gunfighter who rides into the frontier town of Redemption, controlled by John Herod (Hackman).  The Lady joins a deadly dueling competition in an attempt to exact revenge for her father's death.
+
+Jimmy &quot;Popeye&quot; Doyle: Detective Jimmy "Popeye" Doyle is a fictional character portrayed by actor Gene Hackman in the films "The French Connection" (1971) and its sequel, "French Connection II" (1975), and by Ed O'Neill in the 1986 television film "Popeye Doyle".  Hackman won the Academy Award for Best Actor for his performance in "The French Connection".  The character is based on a real-life New York City police detective, Eddie Egan, who also appeared in the film as Walt Simonson, Popeye's supervisor.  Popeye, as played by Hackman in "The French Connection", is ranked number 44 as a hero on the AFI's 100 Years...100 Heroes and Villains list.
+
+The French Connection (film): The French Connection is a 1971 American crime thriller film directed by William Friedkin and produced by Philip D'Antoni.  It stars Gene Hackman, Fernando Rey, and Roy Scheider.  The film was adapted and fictionalized by Ernest Tidyman from the 1969 non-fiction book by Robin Moore.  It tells the story of New York Police Department detectives Jimmy "Popeye" Doyle and Buddy "Cloudy" Russo, whose real-life counterparts were Narcotics Detectives Eddie Egan and Sonny Grosso.  Don Ellis scored the film.
+
+The Crippled Eagles: The Crippled Eagles was the informal name of a group of American expatriates that served in the Rhodesian Security Forces during the Rhodesian Bush War.  The name and emblem came from author Robin Moore, who offered a house in Salisbury as a meeting place for the Americans who served in all units of the security forces, but never had their own unit.  The name "Crippled Eagle" and their badge was meant to symbolise what they considered their abandonment by the US government.  Robin Moore and Barbara Fuca tried to publish a book with the same title, but because of the political controversy the book was refused by publishers and appeared only in 1991, when it was published as "The White Tribe".
+
+The Poseidon Adventure (1972 film): The Poseidon Adventure is a 1972 American disaster film directed by Ronald Neame, produced by Irwin Allen, and based on Paul Gallico's eponymous 1969 novel.  It features an ensemble cast, including five Academy Award winners: Gene Hackman, Ernest Borgnine, Jack Albertson, Shelley Winters, and Red Buttons.  Parts of the movie were filmed aboard the  .  The plot centers on the fictional SS "Poseidon", an aged luxury liner on her final voyage from New York City to Athens before being sent to the scrapyard.  On New Year's Eve, she is overturned by a Tsunami.  Passengers and crew are trapped inside, and a rebellious preacher attempts to lead a small group of survivors to safety.
+
+Question: What award did Gene Hackman win for his performance in a movie that was adapted and fictionalized from a 1969 book by Robin Moore?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor who won the award."
+    },
+    "award_won": {
+      "type": "string",
+      "description": "The specific award won by the actor."
+    },
+    "movie_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the movie for which the award was won."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the movie."
+        },
+        "adaptation_details": {
+          "type": "object",
+          "properties": {
+            "source_book_title": {
+              "type": "string",
+              "description": "The title of the book from which the movie was adapted."
+            },
+            "source_author": {
+              "type": "string",
+              "description": "The author of the source book."
+            },
+            "source_publication_year": {
+              "type": "integer",
+              "description": "The publication year of the source book."
+            }
+          },
+          "required": [
+            "source_book_title",
+            "source_author",
+            "source_publication_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "title",
+        "release_year",
+        "adaptation_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actor_name",
+    "award_won",
+    "movie_details"
+  ],
+  "additionalProperties": false
+}

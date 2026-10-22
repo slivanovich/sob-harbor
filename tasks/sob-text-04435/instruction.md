@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+There's Something About Paulie: "There's Something About Paulie" is the 16th episode from the second season of the Fox animated series "Family Guy".  It is the 23rd episode of "Family Guy".  It was also the last episode of the first production season of "Family Guy" to air, but unlike the others, Mila Kunis had replaced Lacey Chabert for the voice of Meg Griffin.  Michael Chiklis guest stars as Big Fat Paulie.
+
+Criticism of Family Guy: The American animated sitcom "Family Guy" has been the target of numerous taste and indecency complaints.  The show is known to include offensive jokes and violent images.  The show's dark humor and sexual themes has led to backlash from the community.  Since the premiere of Family Guy the Parents Television Council has been an outspoken critic of the series.  The Parents Television Council is a conservative non-profit watchdog group that has not only expressed moral opposition to the series, but also has filed complaints with the Federal Communications Commission.  Since 2005, the PTC has deemed Family Guy the "Worst TV Show of the Week" on at least 40 occasions, with at least 42 episodes so designated; many of the awards came following original broadcasts, while the others were based on repeat airings.
+
+Las chicas del cable: Las chicas del cable (Cable Girls) is a Spanish period drama web television series.  It stars Ana Fernández, Nadia de Santiago, Blanca Suárez and Maggie Civantos.  The first season of sixteen episodes will be released in two batches of eight episodes each; the first eight episodes premiered on Netflix worldwide on April 28, 2017.  The second season will air in December of 2017 and a third is ordered for a 2018 release.
+
+James Woods: James Howard Woods (born April 18, 1947) is an American actor and producer.  He is known primarily for playing villainous roles, and has appeared in a variety of films, including "The Way We Were" (1973), "The Onion Field" (1979), "Videodrome" (1983), "Once Upon a Time in America" (1984), "Best Seller" (1987), "Chaplin" (1992), "Casino" (1995), "Nixon" (1995), "Vampires" (1998), "Straw Dogs" (2011) and "White House Down" (2013).  On television, he is known for portraying the titular protagonist of "Shark" (2006–2008), and for playing himself on eight episodes of the animated series "Family Guy", as well as on one episode of "The Simpsons".
+
+Spencer Lofranco: Spencer Rocco Lofranco (born October 18, 1992) is a Canadian actor.  He made his film debut in the 2013 romantic comedy "At Middleton" as Conrad Hartman, and portrayed the lead role of James Burns in the 2014 crime drama "Jamesy Boy".  He then co-starred as Harry Brooks in the biographical war drama "Unbroken" (2014) and Billy in the crime drama "Dixieland" (2015).
+
+Family Guy: Back to the Multiverse: Family Guy: Back to the Multiverse is an action-adventure game that was released for Microsoft Windows, PlayStation 3 and Xbox 360 on November 20, 2012, in North America, November 21, 2012, in Australia and November 23, 2012, in Europe.  The game is based on the American animated television series "Family Guy", most notably the episode "Road to the Multiverse", and is also a continuation of the episode "The Big Bang Theory".  This game also features the return of Stewie's evil half-brother Bertram, who was killed in the show.  "Back to the Multiverse" is the first "Family Guy" console game since "Family Guy Video Game! " in 2006.  When the game was available for pre-order, people who pre-ordered the game received a special level, based on "", another video game based on the "Aliens" trademark also owned by 20th Century Fox, which was released the next February to similar negative reception.
+
+Albert and Me: Albert and Me is a British radio series that had a pilot and eight episodes in 1977 and another eight episodes in 1983.  The 17 half-hour-long episodes were broadcast on BBC Radio 2.  It starred Richard Beckinsale and Pat Coombs.  Richard Beckinsale played Bryan Archer who was a single parent struggling to find a job and to bring up his child with the help of his mother played by Pat Coombs (who also played baby Albert).
+
+Jamesy Boy: Jamesy Boy is a 2014 American biographical crime drama film directed by Trevor White and written by White and Lane Shadgett.  The film stars Spencer Lofranco, Mary-Louise Parker, Taissa Farmiga, Ving Rhames, and James Woods.  It tells the true story of ex-convict James Burns.  The film was released in North America on January 3, 2014 through video on demand, and in a limited release on January 17, 2014 by Phase 4 Films.
+
+Peter Shin: Peter Shin is an American animator who served as supervising director of "", the director of "Big Bug Man", the director of "Family Guy" episodes "Death Has a Shadow", "Emission Impossible", "North by North Quahog", "It's a Trap! " and "The Simpsons Guy" and was a character layout artist "The Simpsons" for several episodes between 1990 and 1995.  He directed the first ever episode of Family Guy.
+
+Family Guy (season 2): The second season of the animated comedy series "Family Guy" aired on Fox from September 23, 1999 to August 1, 2000, and consisted of 21 episodes.  The series follows the dysfunctional Griffin family—father Peter, mother Lois, daughter Meg, son Chris, baby Stewie and their anthropomorphic dog Brian, all of whom reside in their hometown of Quahog.  The show features the voices of series creator Seth MacFarlane, Alex Borstein, Seth Green, Lacey Chabert and later Mila Kunis in the roles of the Griffin family.  The executive producers for the second production season were David Zuckerman and MacFarlane; the aired season also contained eight episodes which were holdovers from season one.
+
+Question: Jamesy Boy stars what actor who played himself on eight episodes of "Family Guy"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor who starred in Jamesy Boy and played himself on Family Guy."
+    },
+    "movie_starred_in": {
+      "type": "string",
+      "description": "The title of the movie the actor starred in."
+    },
+    "family_guy_appearance": {
+      "type": "object",
+      "properties": {
+        "role_type": {
+          "type": "string",
+          "description": "The type of role the actor played on Family Guy (e.g., 'himself')."
+        },
+        "episode_count": {
+          "type": "integer",
+          "description": "The number of episodes the actor appeared in on Family Guy playing that role."
+        }
+      },
+      "required": [
+        "role_type",
+        "episode_count"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actor_name",
+    "movie_starred_in",
+    "family_guy_appearance"
+  ],
+  "additionalProperties": false
+}

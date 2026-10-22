@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lay-Away: "Lay Away" is a 1972 funk-rock single released by The Isley Brothers on their T-Neck imprint.  Released as the first record off their "Brother, Brother, Brother" album, the song depicted the narrator's description of how his lover's love was so special that he wanted to have for keeps just in case (hence the lyrics "going back to get (your love) on a rainy day/your love is safe in my lay-away").  The song took the riff of Honey Cone's "Want Ads" especially in the bridges.  The song was significant for showcasing brother Ernie on lead guitar for the first time on an Isley Brothers record.  Written and produced by elder brothers O'Kelly, Rudolph and Ronald, the song charted at number fifty-four pop and number six R&B in the spring of 1972.
+
+Everblack Industries: Everblack Industries is the record imprint created by American heavy metal band Shadows Fall in conjunction with Warner Music Group's ILG, Ferret Music and ChannelZERO Entertainment.  The label's first release was Shadows Fall's album "Retribution" on September 15, 2009.
+
+Light Poles and Pine Trees: Light Poles and Pine Trees is the third album from the southern hip hop duo Field Mob, and their first, and only, under the Disturbing tha Peace imprint.  It was released in stores on June 20, 2006.  Originally, the premiere single from the album was to be the track "Friday Night" but did not make the final album cut, although it was still released in early 2006 as a radio promo and appeared on international editions as an extra bonus track.  Instead the first official single from the album was the Jazze Pha produced song "So What" featuring R&B singer Ciara.  This has become the duo's most successful hit to date, climbing to #10 on the US "Billboard" Hot 100, and #3 and #4 on the US Hot Rap Tracks and US Hot R&B/Hip Hop Songs charts, respectively.
+
+Make Me... (Britney Spears song): "Make Me..." is a song recorded by American singer Britney Spears for her ninth studio album, "Glory" (2016).  It features the vocal collaboration of American rapper G-Eazy.  The track was written by Spears, Matthew Burns, Joe Janiak and Gerald Gillum, while produced by Burns, with Mischke serving as a vocal producer.  "Make Me..." was released as the album's lead-single on July 15, 2016, after being previously delayed due to reported production difficulties.  Described as a "slinky" midtempo R&B-influenced ballad, the recording incorporates "raw" guitar riffs, "snare slaps", "whooshing synths" and a "dub step-esque boom-bap" in its instrumentation.  Lyrically, the song talks about demanding sexual satisfaction.
+
+All Roads Lead to Ausfahrt: All Roads Lead to Ausfahrt is the tenth and final studio album by Vancouver punk rock band Nomeansno.  It was released by the band's own Wrong Records imprint, in conjunction with AntAcidAudio in North America and Southern Records in Europe, making it their first record not to be released by the Alternative Tentacles imprint since "Mama" in 1982.  The album marked a return to shorter and less experimental songs than their previous efforts, "Dance of the Headless Bourgeoisie" (1998) and "One" (2000).
+
+Say No More (House of Heroes album): Say No More is an album from Christian rock band House of Heroes, released on May 2, 2006.  While the CD is technically a full-length album, it is mainly a re-release of the band's second album.  Unlike "House of Heroes", this album was not released on Gotee Records.  Instead, it was released on Gotee's imprint label, Mono Vs Stereo.  Other than the instrumental "The Bois D'arc Circus" being added onto the end of "Pulling Back The Skin" to make one track, adding two new songs, and the cover art and title being changed, it is the same record.  The other songs, with the exception of tracks 4 and 9 (which are the new songs featured on the re-issue) are the same recording of the previous album.  The band calls this an album, but admits is not really an entirely new album.  The band does play the song "The Invisible Hook" at shows, and the song is played on Christian radio stations, so the album has become as popular as their previous releases.  In fact, the band often names this album rather than the previous album when referring to songs of this era.
+
+Physical Graffiti: Physical Graffiti is the sixth studio album by the English rock band Led Zeppelin, released as a double album on 24 February 1975 by their newly founded imprint label Swan Song Records.  The band wrote and recorded eight new songs for the album at Headley Grange, which stretched the total time of the record beyond the typical length of a single LP, so the band decided to make "Physical Graffiti" a double album by including unreleased tracks from earlier recording sessions: one outtake from "Led Zeppelin III," three from "Led Zeppelin IV," and three from "Houses of the Holy", including the unused title track from the latter album.
+
+Glory (Britney Spears album): Glory is the ninth studio album by American singer Britney Spears.  It was released on August 26, 2016, through RCA Records.  After renewing her contract with RCA, Spears began work on the album in 2014.  Lacking a deadline for completion, she continued work into 2015 and 2016, which—according to Spears—provided her the opportunity to create one of her favorite albums in her catalogue.
+
+High Life (Brian Tarquin album): High Life is the fourth studio album by guitarist Brian Tarquin, released in October 2001 and the final one he would record for Instinct records.  The album was recorded in Los Angeles at Tarquin's studio Jungle Room and in New York at his composing partner, Chris Ingram's studio, the Farm.  Tarquin veered back to his rock fusion roots with the songs "Razor's Edge" and "Spartacus".  However giving into the record company's pressure for radio friendly songs the album produced the singles Riders on the Storm, originally recorded by The Doors, "Celtic Tales" and "Charlemagne".  Although the album reached the Top 40 charts at Smooth Jazz radio, Tarquin became disenchanted with the inconsistencies and water downed music of the format.  Soon after the album came out he asked to be released from the record contract to pursue his pet roctronica project Asphalt Jungle while establishing his full-time composing career in television and film.  Tarquin also went onto to form the record imprint BHP Music to release the Guitar Master Series.
+
+T.I. discography: American rapper T.I. has released nine studio albums, one remix album, five extended plays (EPs), 13 mixtapes, 110 singles (including 61 as a featured artist) and 11 promotional singles.  He has also released one music video album and over 60 music videos, the details of which are included in his videography.  Throughout his career, T.I.'s music has been released on several record labels, including Artista and Atlantic, as well as his own label imprint, Grand Hustle Records.  T.I. has also served as an executive producer for several projects other than his own, including Big Kuntry King's debut "My Turn to Eat" (2008), B.G.'s "Too Hood 2 Be Hollywood" (2009), B.o.B's debut "The Adventures of Bobby Ray" (2010) and Iggy Azalea's debut EP "Glory" (2012), as well as her debut album "The New Classic" (2014).  In 2005, T.I. had executive produced the soundtrack to the film "Hustle & Flow" and released the collection through his record label.  T.I. is also a noted record producer, having produced several song recordings, a few under the pseudonym T.I.P..  He has also served as a ghostwriter and assisting songwriter, for several artists, such as Bow Wow, Sean "Diddy" Combs, Dr. Dre, Bun B and Keyshia Cole.
+
+Question: Make Me... is a song for the album that was released on what record imprint?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song."
+    },
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album the song is from."
+    },
+    "record_imprint": {
+      "type": "string",
+      "description": "The record imprint on which the album was released."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The artist who recorded the song and album."
+    }
+  },
+  "required": [
+    "song_title",
+    "album_title",
+    "record_imprint",
+    "artist"
+  ],
+  "additionalProperties": false
+}

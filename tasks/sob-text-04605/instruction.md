@@ -1,0 +1,82 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Indiana Harbor and Ship Canal: The Indiana Harbor and Ship Canal is an artificial waterway on the southwest shore of Lake Michigan, in East Chicago, Indiana which connects the Grand Calumet River to Lake Michigan.  It consists of two branch canals, the 1.25 mile (2 km) Lake George Branch and the 2 mile (3 km) long Grand Calumet River Branch which join to form the main Indiana Harbor Canal.  The Indiana Harbor Canal also functions as a harbor and runs 1.4 miles (2 km) before reaching the Indiana Harbor which connects to Lake Michigan.  In 2002, Indiana Harbor was the 45th busiest harbor in the United States, handling almost 13,300,000 short tons (12,000,000 metric tons) of cargo.  Foreign trade accounted for only 500,000 short tons (450,000 metric tons) of that.  Indiana Harbor is not a state-managed harbor, and it is maintained by the Chicago District of the U.S. Army Corps of Engineers, as authorized by the Rivers and Harbors Act of 1913.
+
+Indiana Harbor East Breakwater Light: The Indiana Harbor East Breakwater Light is an active aid to navigation that marks the end of a breakwater on the east side of the Indiana Harbor and Ship Canal where it enters Lake Michigan.
+
+Grand Calumet River: The Grand Calumet River is a 13.0 mi river that flows primarily into Lake Michigan.  Originating in Miller Beach in Gary, it flows through the cities of Gary, East Chicago and Hammond, as well as Calumet City and Burnham on the Illinois side.  The majority of the river's flow drains into Lake Michigan via the Indiana Harbor and Ship Canal, sending about 1500 cuft per second of water into the lake.  A smaller part of the flow, at the river's western end, enters the Calumet River and ultimately drains into the Illinois and ultimately the Mississippi River.
+
+Whiting Refinery: The Whiting Refinery is an oil refinery located on the southwestern shore of Lake Michigan and the Indiana Harbor Ship Canal and operated by BP.  The facility is primarily located in Whiting, Indiana, USA, though portions of the 1400 acre complex span into the neighboring cities of Hammond and East Chicago.
+
+Chicago, Indiana and Southern Railroad: The Chicago, Indiana and Southern Railroad (reporting mark CI&S) is a defunct railroad which operated in the states of Illinois and Indiana during the early 20th century.  The CI&S formed in 1906 from the consolidation of the two other railroads: the Indiana, Illinois and Iowa Railroad and the Indiana Harbor Railroad.  The new railroad also owned the capital stock of the Danville and Indiana Harbor Railroad.  The stock of the new company itself was wholly owned by the Lake Shore and Michigan Southern Railway and the Michigan Central Railroad, both of which were part of the New York Central system.  A 1907 report called the CI&S a "tributary to the Lake Shore."  The railroad operated two lines: a north-south line between Indiana Harbor (East Chicago, Indiana) and Danville, Illinois, and a line from the Spring Valley coalfields at Seatonville, Illinois, to South Bend, Indiana.  Together the two lines controlled 301 mi of track.  In 1914 the CI&S was one of several railroads consolidated to form the modern New York Central Railroad.
+
+Pennsylvania Canal (Delaware Division): The Delaware Division of the Pennsylvania Canal, more commonly called the Delaware Canal, runs for 60 mi parallel to the right bank of the Delaware River from the entry locks near the mouth of the Lehigh River and terminal end of the Lehigh Canal at Easton south to Bristol.  At Easton, which today is the home of The National Canal Museum, the Delaware Canal also connected with the Morris Canal built to carry anthracite coal to energy starved New Jersey industries.  Later, with a crossing-lock constructed at New Hope, the New Hope 'outlet lock' (1847) connected by Cable Ferry to a feeder navigation/canal at Bull's Island along the opposite shore from Lumberville, which ran over 22 mi south along the left bank through Trenton to Bordentown, the west end of the Delaware and Raritan Canal (1834) to New York City via New Brunswick.  as part of the solution to the United States' first energy crisis.  The Commonwealth of Pennsylvania built the Delaware canal to feed anthracite stone coal to energy-hungry Philadelphia as part of its transportation infrastructure building plan known as the Main Line of Public Works—a legislative initiative creating a collection of self-reinforcing internal improvements to commercial transportation capabilities.
+
+Philadelphia and Columbia Railroad: Philadelphia and Columbia Railroad (P&CR) (1834) was one of the earliest commercial railroads in the United States, running 82 mi from Philadelphia to Columbia, Pennsylvania, it was built by the Pennsylvania Canal Commission in lieu of a canal from Columbia to Philadelphia; in 1857 it became part of the Pennsylvania Railroad, and its trackage lives on today operated by Norfolk-Southern.  The Philadelphia and Columbia Railroad's western terminus was located near the former ferry site known as Wright's Ferry, in the town once of that name, but now Columbia in Lancaster County.  There the P&CR met with the Pennsylvania Canal—navigations and improvements on the Susquehanna River east bank approximately 30 mi south of Harrisburg, Pennsylvania.  Most of its right-of-way was obtained by the actions of the Pennsylvania Canal Commission which operated the railroad under the various enabling acts of the Pennsylvania legislature known as the Main Line of Public Works in support of a far sighted plan to link the whole state by canals.  With an engineering study reporting back a finding that obtaining sufficient waters to flood the intended 80+ mile canal from Philadelphia to Columbia, the Canal Commission and legislature authorized the railway on the right of way intended for the canal.
+
+I-Pass: I-Pass (stylized as I-PASS) is the electronic toll collection system utilized by the Illinois State Toll Highway Authority (ISTHA) on its toll highways that launched on November 18, 1993, with the opening of Interstate 355 (Veterans Memorial Tollway).  It uses the same transponder as the E-ZPass system used in the Northeastern US and the Indiana Toll Road, along with the future Indiana State Road 912 (Cline Avenue) Indiana Harbor and Ship Canal bridge.
+
+Pennsylvania Canal (Susquehanna Division): The Susquehanna Canal of the Pennsylvania Canal System was funded and authorized as part of the 1826 Main Line of Public Works enabling act, and would later become the Susquehanna Division of the Pennsylvania Canal under the Pennsylvania Canal Commission.  Constructed early on in America's brief canal age, it formed an integral segment of the water focused transportation system which cut Philadelphia-Pittsburgh (pre-railroad) travel time from nearly a month to just four days.  One of the system's navigations, the Susquehanna Canal/division created a mule-towed navigable channel 41 mi along the west bank of the main stem of the Susquehanna River between a lock terminus near the mouth of the Juniata Tributary River and the canal basin at Northumberland.  Meeting the West Branch Canal and the North Branch Canal at Northumberland, it formed a link between the public and private canals upriver and the main east–west Pennsylvania Canal route known as the Main Line of Public Works which was devised to connect Philadelphia to Pittsburgh, southern New York, northern Pennsylvania and Lake Erie using most of the far reaches of the Susquehanna's tributaries.
+
+Pennsylvania Canal: Pennsylvania Canal "(or sometimes Pennsylvania Canal system)" refers generally to a complex system of transportation infrastructure improvements including canals, dams, locks, tow paths, aqueducts, and viaducts.  The Canal and Works were constructed and assembled over several decades beginning in 1824, the year of the first enabling act and budget items.  It should be understood the "first use of any railway" in North America was the year 1826, so the newspapers and the Pennsylvania Assembly of 1824 applied the term then to the proposed Right of ways mainly for the canals of the Main Line of Public Works to be built across the southern part of Pennsylvania.  Enacted before Railroads gestated during their infancy, the focus of the act was to create through building a canal system, the capability to ship heavy or bulk goods and connect Philadelphia to Pittsburgh—and "more importantly"—and "beyond" to the "new growth markets" in the developing territories reached by the Ohio River now called the midwest.  Later, when updated in 1837 to reflect the experience of twelve years of toddler-railways, the term was also applied to railroads and new canals to be added to the state transportation system.  As a crowning achievement, the Main Line of Public Works and the Pennsylvania Canal system topped 2100 ft in elevation by erecting the Allegheny Portage Railroad, which used a system of five inclines and five planes on each side of the Eastern Continental Divide at Cresson Pass in Cambria County to actually haul wheeled flat cars, which had halved canal boats placed on them, up and over the Allegheny Front and connect Pittsburgh to the Susquehanna.  When finished in 1834 the trip from Philadelphia to Pittsburgh could be made in 3–5 days, weather conditions depending.
+
+Question: Are the Pennsylvania Canal and Indiana Harbor and Ship Canal both located in the US?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "answer": {
+      "type": "boolean",
+      "description": "True if both canals are located in the US, false otherwise."
+    },
+    "canals_information": {
+      "type": "array",
+      "description": "Details about each canal mentioned in the question.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "canal_name": {
+            "type": "string",
+            "description": "The name of the canal."
+          },
+          "is_located_in_us": {
+            "type": "boolean",
+            "description": "True if the canal is located in the US, false otherwise."
+          },
+          "us_state_mentioned": {
+            "type": "string",
+            "description": "The US state explicitly mentioned in the context for the canal's location."
+          }
+        },
+        "required": [
+          "canal_name",
+          "is_located_in_us",
+          "us_state_mentioned"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "overall_reasoning": {
+      "type": "string",
+      "description": "A brief explanation of why the final answer is true or false based on the individual canal locations."
+    }
+  },
+  "required": [
+    "answer",
+    "canals_information",
+    "overall_reasoning"
+  ],
+  "additionalProperties": false
+}

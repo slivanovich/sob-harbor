@@ -1,0 +1,12 @@
+{
+  "movie_details": {
+    "title": "Midas Run",
+    "year": 1969,
+    "director": "Alf Kjellin"
+  },
+  "starring_actor_info": {
+    "actor_name": "Fred Astaire",
+    "birth_name": "Frederick Austerlitz"
+  },
+  "final_answer": "Alf Kjellin"
+}

@@ -1,0 +1,18 @@
+{
+  "journal_name": "Thesis Eleven: Critical Theory and Historical Sociology",
+  "affiliated_university_details": {
+    "name": "La Trobe University",
+    "founding_year": 1964
+  },
+  "editors_from_affiliated_university": [
+    {
+      "editor_name": "Peter Beilharz",
+      "role": "editor"
+    },
+    {
+      "editor_name": "Trevor Hogan",
+      "role": "editor"
+    }
+  ],
+  "answer_founding_year": 1964
+}

@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are both Up and Victory Through Air Power comedy films?",
+  "is_both_comedy": false,
+  "film_details": [
+    {
+      "film_title": "Victory Through Air Power",
+      "is_comedy": false,
+      "genre_from_context": "animated documentary feature film"
+    },
+    {
+      "film_title": "Up",
+      "is_comedy": true,
+      "genre_from_context": "3D computer-animated comedy-adventure film"
+    }
+  ]
+}

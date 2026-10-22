@@ -1,0 +1,92 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Rich Saul: Richard Robert "Rich" Saul (February 5, 1948 – April 15, 2012) was an American football offensive lineman who played in the National Football League (NFL) from 1970 through 1981, all with the Los Angeles Rams.  He played college football at Michigan State University.  He had two brothers that played in the NFL.  His older brother Bill Saul and his twin brother Ron Saul, who also played with the Spartans.
+
+Russ Reader: Russell "Big Daddy" Reader Jr. (June 26, 1923 – August 12, 1995) was an American football player.  Reader was born in Ypsilanti, Michigan and graduated from Dearborn High School in Dearborn, Michigan.  After graduating from Dearborn High School, Reader enrolled at the University of Michigan where he was a member of Fritz Crisler's 1941 Michigan Wolverines football team.  After World War II, Reader enrolled at Michigan State University and played at the halfback position for the Spartans football team in 1946 and 1947.  Reader was considered a triple-threat player, as he handled rushing, passing and kicking duties for the Spartans.  In November 1945, he led the Spartans to a 33–0 win over the Penn State Nittany Lions, as he threw two touchdown passes and also caught a touchdown pass.  He was drafted by the Chicago Bears in the 21st round (195th overall pick) in the 1947 NFL Draft.  Simkus played in two games for the Bears in the 1947 NFL season, and began the 1948 season with the Bears as an understudy for Sid Luckman at the quarterback position.  He was also a renowned swimmer and diver.  He started the 1949 season with the Toronto Argonauts in the Canadian Football League and finished the season playing for the Windsor Bulldogs in the Canadian American Football League.  Reader died in 1995 at age 72 while living in Milford, Michigan.
+
+1888 Miami Redskins football team: The 1888 Miami Redskins football team was an American football team that represented Miami University during the 1888 college football season.  The 1888 team was Miami's first football team to compete in intercollegiate football.  The team played only one game, a scoreless tie with the University of Cincinnati football team at Oxford, Ohio, on December 8, 1888.  The team did not have a paid coach from 1888 to 1894.  The 1888 game between Cincinnati and Miami was the first in what later became the Victory Bell series that has been included more than 110 games and is one of the oldest rivalries in college football.  It was also the first college football game played in the State of Ohio.
+
+Doc Rodes: William "Doc" Rodes (October 7, 1894 – January 28, 1946) was an American football, basketball, and baseball player for the Kentucky Wildcats of the University of Kentucky.  Rodes served in the First World War as a Second Lieutenant.  Rodes was a cousin of earlier Kentucky football player William "Red Doc" Rodes, often called William while Black Doc is called Doc.  "Doc" also had two brothers play football at Kentucky: J. W. "Boots" Rodes was on the 1904 team that went 9–1.  Pete Rodes was a halfback on the 1907 team, and upon entering the Naval Academy was captain of Navy's 1912 football team.
+
+Cecil Gooding: Cecil Gooding (May 1883 – January 5, 1904) was an American football player.  Gooding attended Ann Arbor High School where he played football.  He enrolled as an engineering student at the University of Michigan in the fall of 1901.  He played on Michigan's All-Freshman football team in 1901 and became a backup at the guard position for the 1902 Michigan Wolverines football team.  As a junior, he was the starting right guard in all 12 games for the 1903 Michigan Wolverines football team that compiled a record of 11-0-1 and outscored its opponents 565-6.  The 1903 Michigan team has been recognized as national champions by the National Championship Foundation.  He contracted typhoid fever following a Thanksgiving Day game against the University of Minnesota in late November 1903.  It was believed that he contracted the illness from drinking the water while in Chicago for the game.  He died five weeks later.  He was the first Michigan Wolverines football player to die while attending the school.  Following his death, "The Michigan Alumnus" wrote: "He had striven conscientiously to perfect himself in the game and earned the respect of coaches, players and spectators.  He was a reliable, hard-working guard who never under any circumstances played anything but a sportsmanlike game.  He was a "man" off the field and on."  He was buried at York Charter Township, Washtenaw County, Michigan.
+
+Yuan Hongdao: Yuan Hongdao (, 1568–1610) was a Chinese poet of the Ming Dynasty, and one of the Three Yuan Brothers, along with his brothers Yuan Zongdao and Yuan Zhongdao.  His life spanned nearly the whole of the Wanli period (1573-1620) in Chinese history.  Yuan was from Gong'an in Hukuang. 　His family had been military officials for generations.  Yuan showed an interest in literature from youth and formed his own literary club at age fifteen.  At the age of twenty-four in 1592 he took the chin-shih examination and subsequently received an official position in 1595.  However he quit out of boredom after a year.  Yuan traveled and consulted with the radical philosopher Li Zhi.  On another trip his brothers joined him.  Hu's elder brother was a Buddhist-Confucianist synchronist.  His travels resulted in his publishing a poetry compilation "Jietuo ji" [Collection of One Released].  His and his two brothers' poetry, which focused on clarity and sincerity, produced a following eventually known as the Gong'an school, the central belief of which was that good writing was a result of genuine emotions and personal experience.  When one of his brothers died in 1600, Yuan retired to a small island in a lake to meditate and write poetry.  The resulting work is "Xiaobi tangji" [Jade-Green Bamboo Hall Collection].
+
+Tommy Løvenkrands: Thomas "Tommy" Løvenkrands (born 30 May 1974) is a Danish former professional football player.  He most recently played as a winger for Danish club SønderjyskE.  He is the older brother of Danish international winger Peter Løvenkrands.
+
+John Toohey (American football): John Peter Toohey (April 28, 1892 – February 1984) was an American football player.  A native of Kingston, New York, Toohey was "known as one of the best athletes Newburgh H. S. ever turned out."  He enrolled at Rutgers University in 1910 and was a star athlete in both basketball and football.  He played at the tackle position for the Rutgers football team from 1910 to 1914.  In September 1912, "The New York Times" called Toohey "Rutgers' greatest tackle," and noted that Toohey's brother also planned to play at tackle for Rutgers.  Toohey worked during the summer of 1913 building the Croton Aqueduct, and there was uncertainty as to whether he would return for another season of football.  When he announced his intent to return to the gridiron, the "New Brunswick Times" reported: "Toohey Is Back Ready To Jump In The Game."  In November 1913, Toohey was elected by his teammates as captain of Rutgers' 1914 football team.  In December 1913, the Board of Managers at Rutgers ruled that Toohey was ineligible to play in 1914, having already played four seasons with the football team.  The decision of the Board of Managers sparked a controversy, as alumni sought to restore his eligibility, and others criticized any leniency in enforcing the four-year eligibility rule.  Toohey's eligibility was ultimately restored, and he was the captain of the 1914 Rutgers team.  Following a 33-0 win over NYU in November 1914, "The New York Times" praised Toohey for his blocking: "Toohey weights 210 pounds and made a whole in the line ten yards wide."  He was also selected as a first-team All-American in 1914 by James P. Sinnot of the "New York Evening Mail", the "New York Globe", sports writer Daniel of the "New York Press" the "Newark Sunday Call", and "Newark Evening Star".  In announcing the selection of Toohey, Daniel wrote:"Among the tackles we place Toohey of Rutgers on an even plane with Ballin of Princeton.  Despite his 210 pounds Toohey is a speedy and is a stone wall on defense.  He played Ballin in the Princeton game, and had distinctly the better of the Tiger captain."
+
+Peter Løvenkrands: Peter Rosenkrands Løvenkrands (born 29 January 1980) is a Danish former footballer who played mainly as a striker or as a left winger, and was known for his pace.
+
+Charles H. Smith (American football): Charles H. "Fatty" Smith was an American football center who played for the University of Michigan Wolverines football team in 1893 and 1894.  Smith stood 5 feet, 10 inches, and weighed a hefty 230 pounds in 1893.  In 1894, Smith anchored the line for one of the first great Michigan football teams.  The 1894 Michigan team outscored opponents 244-84 and compiled a record of 9-1-1, including wins over Cornell University and the University of Chicago.  Michigan's 1894 victory over Cornell marked the first victory by a Western football school against one of the Eastern football powers.  Up to that point, no Western player had been selected for the annual College Football All-America Teams selected by Eastern football authorities, Caspar Whitney and Walter Camp.  Smith was the standout star of Western football in 1894, and Western football enthusiasts lobbied for Smith to be selected as an All-American.  Whitney and Camp declined the suggestion, and no Western football players would be selected as All-Americans until 1898, when Clarence Herschberger and William Cunningham received the honors.  The resistance to selecting Smith (or any other Western player) as an All-American is reflected in the following newspaper account from December 1894:"Some of the western colleges have developed great players on their teams and this year may claim for them a position on the All American team.  Notably the University of Michigan claims for their center 'Fatty' Smith the supremacy in his position.  But the western institutions have not yet mastered the eastern knowledge of all the details and fine points of the game.  Smith has made a great record against the west and even against Cornell, but the Ithacan center was not a master of his position.  When brought to face a man like the Stillman of today or the Bulliet of last year, Smith would simply be lost and entirely out generaled.  So it would be with all of the claimants for line positions from western teams.  And no one claims for a moment that western back field men could play in the same class with eastern men."
+
+Question: Which position was played on a football team by one of the two brothers?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_who_played_position": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the player whose position is being identified."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the player."
+        },
+        "position": {
+          "type": "string",
+          "description": "The primary football position played by this player."
+        }
+      },
+      "required": [
+        "name",
+        "nationality",
+        "position"
+      ],
+      "additionalProperties": false
+    },
+    "related_brother": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the other brother mentioned in the context."
+        },
+        "relationship_to_player": {
+          "type": "string",
+          "description": "Describes the relationship of this brother to the player whose position is identified (e.g., 'older brother')."
+        }
+      },
+      "required": [
+        "name",
+        "relationship_to_player"
+      ],
+      "additionalProperties": false
+    },
+    "answer_context": {
+      "type": "string",
+      "description": "A brief statement confirming the player is one of the two brothers and their position."
+    }
+  },
+  "required": [
+    "player_who_played_position",
+    "related_brother",
+    "answer_context"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "ice_cream_brand": "Häagen-Dazs",
+  "founders": [
+    "Reuben Mattus",
+    "Rose Mattus"
+  ],
+  "marketing_company": {
+    "name": "General Mills",
+    "headquarters_city": "Golden Valley",
+    "headquarters_state": "Minnesota"
+  }
+}

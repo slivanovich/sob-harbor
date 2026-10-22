@@ -1,0 +1,101 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Roy Chaplin: Roland Henry Chaplin, OBE, FRAeS, (16 May 1899 – 13 December 1988), known as "Roy", was an aeronautical engineer who worked with Sydney Camm at Hawker Aircraft Limited from 1927 to 1962.  He helped design the Hawker Fury biplane, the Hurricane monoplane, and the Harrier jump-jet.  He graduated with a degree in engineering from London University and retired in the 1960s.
+
+Harrier Jump Jet: The Harrier, informally referred to as the Harrier Jump Jet, is a family of jet-powered attack aircraft capable of vertical/short takeoff and landing operations (V/STOL).  Originally developed by UK manufacturer Hawker Siddeley in the 1960s, the Harrier emerged as the only truly successful V/STOL design of the many attempted during that era, despite being a subsonic aircraft, unlike most of its competitors.  It was conceived to operate from improvised bases, such as car parks or forest clearings, without requiring large and vulnerable air bases. Later, the design was adapted for use from aircraft carriers.
+
+Avro 500: The Avro Type E, Type 500, and Type 502 made up a family of early British military aircraft, regarded by Alliott Verdon Roe as his firm's first truly successful design.  It was a forerunner of the Avro 504, one of the outstanding aircraft of the First World War.
+
+Alphonse Pénaud: Alphonse Pénaud (31 May 1850 – 22 October 1880), was a 19th-century French pioneer of aviation design and engineering.  He was the originator of the use of twisted rubber to power model aircraft, and his 1871 model airplane, which he called the "Planophore", was the first truly successful automatically stable flying model.  He went on to design a full sized aircraft with many advanced features, but was unable to get any support for the project, and eventually committed suicide in 1880, aged 30.
+
+Seymour I. Rubinstein: Seymour Ivan Rubinstein (born 1934) is a pioneer of the PC software industry.  He grew up in Brooklyn, New York, and after a six-year stint in New Hampshire, later moved to California.  Programs developed partially or entirely under his direction include WordStar, HelpDesk, Quattro Pro, and WebSleuth, among others.  WordStar was the first truly successful program for the personal computer (in a commercial sense) and gave reasonably priced access to word processing for the general population for the first time.
+
+Edith Marion Patch: Edith Marion Patch (1876–1954) was an American entomologist and writer.  Born in Worcester, Massachusetts, she received a degree from the University of Minnesota in 1901 and originally embarked on a career as an English teacher before receiving the opportunity to organize the entomology department at the University of Maine.  She became the head of the entomology department in 1904, despite misgivings from several male colleagues about having a female department head, and she remained in this post until her 1937 retirement.Edith Patch is recognized as the first truly successful professional woman entomologist in the United States.
+
+Santos-Dumont number 6: The Santos-Dumont No. 6 was an airship designed and built by the Brazilian pioneer aviator Alberto Santos-Dumont.  In 1901 it was used by him to win the Deutsch de la Meurthe prize for a return from Parc Saint Cloud to the Eiffel Tower and back.  It is considered by many to be the first truly successful airship.
+
+Latécoère 17: The Latécoère 17 was a French airliner built in 1923 for use on Latécoère's own airline on routes between France and Morocco.  The prototype was designated the Latécoère 14, reusing the number of an unrelated earlier design that had been rejected.  This new aircraft was a parasol-wing monoplane of conventional configuration with an enclosed cabin for five passengers and an open cockpit for the pilot.  This was to be Latécoère's first truly successful design, and as production continued, a range of different engines were fitted.
+
+Zeppelin LZ 1: The Zeppelin LZ 1 was the first truly successful experimental rigid airship.  It was first flown from a floating hangar on Lake Constance, near Friedrichshafen in southern Germany on 2 July 1900.  "LZ" stood for "Luftschiff Zeppelin", or "Airship Zeppelin"
+
+Hawker Siddeley Harrier: The Hawker Siddeley Harrier, developed in the 1960s, was the first of the Harrier Jump Jet series of aircraft.  It was the first operational close-support and reconnaissance fighter aircraft with vertical/short takeoff and landing (V/STOL) capabilities and the only truly successful V/STOL design of the many that arose in that era.  The Harrier was developed directly from the Hawker Siddeley Kestrel prototype aircraft, following the cancellation of a more advanced supersonic aircraft, the Hawker Siddeley P.1154.  The British Royal Air Force (RAF) ordered the Harrier GR.1 and GR.3 variants in the late 1960s.  It was exported to the United States as the AV-8A, for use by the US Marine Corps (USMC), in the 1970s.
+
+Question: Which engineer born on May 16, 1899 helped develop the first truly successful V/STOL design of aircraft?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "engineer": {
+      "type": "object",
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "description": "The full name of the engineer."
+        },
+        "known_as": {
+          "type": "string",
+          "description": "The informal name the engineer was known by."
+        },
+        "birth_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The birth date of the engineer in YYYY-MM-DD format."
+        },
+        "profession": {
+          "type": "string",
+          "description": "The profession of the engineer."
+        }
+      },
+      "required": [
+        "full_name",
+        "known_as",
+        "birth_date",
+        "profession"
+      ],
+      "additionalProperties": false
+    },
+    "aircraft_designed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of aircraft the engineer helped design."
+    },
+    "successful_vstol_aircraft": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the first truly successful V/STOL aircraft."
+        },
+        "design_status": {
+          "type": "string",
+          "description": "Description of its success as a V/STOL design."
+        }
+      },
+      "required": [
+        "name",
+        "design_status"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "engineer",
+    "aircraft_designed",
+    "successful_vstol_aircraft"
+  ],
+  "additionalProperties": false
+}

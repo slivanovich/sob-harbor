@@ -1,0 +1,87 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Souled Out (1998): Souled Out (1998) was the second Souled Out professional wrestling pay-per-view (PPV) event produced by World Championship Wrestling (WCW) and sponsored by Snickers.  Unlike the previous year's event, this year's event was billed as a joint production by WCW and the nWo (in storyline) and the pay-per-view events until the following year's Uncensored were jointly produced by WCW and the nWo.  The event took place on January 24, 1998 from the Hara Arena in and featured a double main event.  The first main event featured Bret Hart making his WCW in-ring debut against Ric Flair.  Hart made Flair submit to the Sharpshooter.  The second main event featured WCW's Lex Luger against nWo's Randy Savage.  Luger made Savage submit to the "Torture Rack".
+
+EMLL Carnaval de Campeones: The EMLL Carnaval de Campeones (Spanish for the "EMLL Carnival of Champions") was a major professional wrestling event produced by Empresa Mexicana de Lucha Libre (EMLL) that took place on January 13, 1965, in EMLL's home arena Arena México in Mexico City, Mexico.  As the name indicated most of the matches on the show, five out of six, featured a champion defending their championship against a chosen challenger.  This was one of the few special, major shows promoted by EMLL outside of their annual EMLL Anniversary, Arena México Anniversary and Arena Coliseo Anniversary shows.  The event featured a total of six professional wrestling matches, in which some wrestlers were involved in pre-existing scripted feuds or storylines.  The wrestlers themselves portrayed either villains (referred to as ""Rudos"" in Mexico) or fan favorites (""Tecnicos"" in Mexico) as they competed in matches with pre-determined outcomes.  On the undercard two championships from the Acapulco, Guerrero local promotion were defended in Mexico City despite it being outside the region where the championship was usually contested in.  The fifth match of the night for the Mexican National Women's Championship was defended in Mexico City, which would be one of the last high profile women's wrestling matches in Mexico City as the Mexico City boxing and wrestling commission would ban women's wrestling from Mexico City a short while later, a band that was not lifted until 1986.  In the fourth match of the night Rodolfo Ruiz defeated reigning Mexican National Lightweight Champion Chanoc to win his first of a record setting three Mexican National Lightweight Championships.  In the main event Raúl Reyes defeated Ray Mendoza to win the Mexican National Light Heavyweight Championship, Reyes' only reign with the championship.
+
+Samba school: A samba school (Portuguese: "Escola de samba" ) is a dancing club or school.  They practise and often perform in huge square-compounds ("quadras de samba") devoted to practising and exhibiting samba, an African-Brazilian dance.  The schools (which are structured more like a guild than a school in the usual sense) have a strong community basis and are traditionally associated with a particular neighborhood.  They are often seen to affirm the cultural validity of the Afro-Brazilian heritage in contrast to the mainstream education system.  and have evolved often in contrast to authoritarian development.  The phrase "escola de samba" is popularly held to derive from the schoolyard location of the first group's early rehearsals.  In Rio de Janeiro especially, they are mostly associated with particular shanty towns ("favela") .  Samba and the samba school can be deeply interwoven with the daily lives of the shanty-town dwellers.  Throughout the year the samba schools have various happenings and events, most important of which are rehearsals for the main event which is the yearly carnival parade.  Each of the main schools spend many months each year designing the theme, holding a competition for their song, building the floats and rehearsing.  It is overseen by a "carnavalesco" or carnival director.  From 2005, some fourteen of the top samba schools in Rio have used a specially designed warehouse complex, the size of ten football pitches, called Samba City (Cidade do Samba) to build and house the elaborate floats.  Each school's parade may consist of about 3,000 performers or more, and the preparations, especially producing the many different costumes, provide work for thousands of the poorest in Brazilian society.  The resulting competition is a major economic and media event, with tens of thousands in the live audience and screened live to millions across South America.
+
+Gower Champion: Gower Carlyle Champion (June 22, 1919 – August 25, 1980) was an American actor, theatre director, choreographer, and dancer.
+
+Carnival!: Carnival!  is a musical, originally produced by David Merrick on Broadway in 1961, with the book by Michael Stewart and music and lyrics by Bob Merrill.  The musical is based on the 1953 film "Lili".  The show's title originally used an exclamation point; it was eventually dropped during the show's run, as director Gower Champion felt it gave the wrong impression, saying, "It's not a blockbuster.  It's a gentle show."
+
+Billy Boyle: Billy Boyle is an Irish actor on British film, television and stage.  He is a veteran of the West End stage having played leading roles in over 15 hit shows.  In his first West End musical "Maggie May" he was nominated as best newcomer.  Gower Champion then chose him to play Barnaby in "Hello Dolly" at The Theatre Royal Drury Lane.  He appeared in "Canterbury Tales" at the Phoenix Theatre as The Clerk of Oxford.  Harold Hobson, The Times critic said, "He was a breath of fresh air in the West-End".  He then went on to play leading roles in "No Sex Please, We're British", "Billy", "What's a Nice Country", "The Rivals", "Love, Lust, & Marriage", "Some Like it Hot", Disney's "Beauty and the Beast", and in the original cast of "Dirty Dancing.  Lately he has appeared as Grandpa George" and Grandpa Joe in Charlie and The Chocolate Factory at Drury Lane.  In 2016 he was Major Bouvier and Norman Vincent Peale in the smash hit Grey Gardens.  He followed this playing Arvide in Guys and Dolls at the Phoenix Theatre in the West End.He has had his own very successful television series in Ireland "It's Billy Boyle" as well as leading roles in "Trail of Guilt", the award-winning "The Grass Arena", "The Bretts", as well as many guest appearances in EastEnders, The Professionals, Coronation Street, Father Ted etc.  In the late 1970s, Boyle was cast as 'Ronald McDonald' in the European TV commercials and in all print media for the fast food chain McDonald's.  He was the last 'straight man' to Basil Brush on BBC1's "The Basil Brush Show" and later presented a programme, Dance Crazy for ITV, on the history of dance with Lesley Judd.  Lately he has been seen in Dirk Gently, for BBC Four and Lead Balloon.  His many films include Stanley Kubrick's "Barry Lyndon", "Groupie Girl", "Side by Side", "Shergar", "Wild Geese II", "The Scarlet and the Black", "Round Ireland with a Fridge" and A United Kingdom.
+
+Cheddleton Carnival: Cheddleton Carnival is an event held annually on the second Saturday of August at Ashcombe Park Cricket Club and all the proceeds from fundraising go to Cancer Research UK.  It was founded by Ruth Wood, licensee of The Boat Inn, Basford Bridge Lane and some of her customers who thought it would be a good idea to raise funds for local charities.  The very first Carnival took place in Cheddleton in 1944 and a local young lady called Gloria Harris had the honour of being crowned the first Basford Bridge carnival Queen.  As the village began to expand it became known as the Basford Bridge and Cheddleton Carnival and more latterly simply as Cheddleton Carnival.  It starts at 11am-1;30pm depending on the year and how it has been set.
+
+Champion Carnival: The Champion Carnival (チャンピオン・カーニバル , Chanpion Kānibaru ) is a professional wrestling tournament held by All Japan Pro Wrestling (AJPW).  The tournament is also known by the nickname Haru no Saiten (春の祭典 , "Spring Festival") and is sometimes abbreviated to CC.  Created by AJPW founder Giant Baba, the tournament has been held annually since 1973 and is the longest-running singles tournament in professional wrestling, while also ranking as the most prestigious event in the AJPW calendar.  It is considered a successor to the World League, held by Japan Pro Wrestling Alliance (JWA) between 1959 and 1972, predating the New Japan Pro Wrestling (NJPW) G1 Climax tournament by a year.
+
+42nd Street (musical): 42nd Street is an American musical with a book by Michael Stewart and Mark Bramble, lyrics by Al Dubin and Johnny Mercer, and music by Harry Warren.  The 1980 Broadway production, produced by David Merrick, directed by an ailing Gower Champion and orchestrated by Philip J. Lang, won the Tony Award for Best Musical and became a long-running hit.  The show was produced in London in 1984 (winning the Olivier Award for Best Musical) and its 2001 Broadway revival won the Tony for Best Revival.
+
+Justine Dufour-Lapointe: Justine Dufour-Lapointe (born March 25, 1994) is a Canadian freestyle skier from Montreal, Quebec.  She is the reigning Olympic champion in the moguls event as well as the reigning world champion from 2015 event.  This was also the first time that Canadian sisters stood together on the podium, and the fourth time ever, when her sister Chloe Dufour-Lapointe won silver in the same event.  In winning the Olympics, she became the youngest freestyle skiing Olympic champion ever at nineteen years of age.  Dufour-Lapointe was the FIS World Cup rookie of the year for the 2010–11 season.  Dufour-Lapointe has also won a bronze medal in the moguls event at the 2013 FIS World Championships.
+
+Question: What is the year of the event which occured first, Carnival! was produced, or Gower Champion was born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "event_comparison": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event_name": {
+            "type": "string",
+            "description": "The name of the event or person involved."
+          },
+          "event_type": {
+            "type": "string",
+            "description": "The type of event, e.g., 'musical production', 'birth'."
+          },
+          "year": {
+            "type": "integer",
+            "description": "The year the event occurred."
+          }
+        },
+        "required": [
+          "event_name",
+          "event_type",
+          "year"
+        ],
+        "additionalProperties": false
+      },
+      "description": "A list of events being compared, each with its name, type, and year."
+    },
+    "earliest_event_year": {
+      "type": "integer",
+      "description": "The year of the event that occurred first."
+    },
+    "earliest_event_description": {
+      "type": "string",
+      "description": "A brief description of the event that occurred first."
+    },
+    "person_of_interest_name": {
+      "type": "string",
+      "description": "The name of the person whose birth year was one of the comparison points."
+    }
+  },
+  "required": [
+    "event_comparison",
+    "earliest_event_year",
+    "earliest_event_description",
+    "person_of_interest_name"
+  ],
+  "additionalProperties": false
+}

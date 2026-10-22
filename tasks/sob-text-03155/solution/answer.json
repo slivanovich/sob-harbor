@@ -1,0 +1,12 @@
+{
+  "witness_details": {
+    "name": "Charles Bowden",
+    "role": "state's witness"
+  },
+  "victim_details": {
+    "name": "Veronica Guerin",
+    "profession": "crime reporter",
+    "birth_location": "Dublin"
+  },
+  "crime_type": "murder"
+}

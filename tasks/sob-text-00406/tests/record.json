@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "record_id": "aad6338b274a94661285220b915353bac801dc0b6f288a8d2771ce50857f626d",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab7e3615542995dae37e9da",
+    "source_dataset": "hotpotqa",
+    "source_answer": "the 1951 Dean Martin",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "That's My Boy (U.S. TV series): That's My Boy is a largely forgotten 1954-1955 CBS situation comedy television series based on the 1951 Dean Martin and Jerry Lewis film of the same name.\n\nThe Jerry Lewis Show: The Jerry Lewis Show was the name of several separate but similar American variety, talk and comedy programs starring comedian Jerry Lewis that aired non-consecutively between September 21, 1963 – 1984.  The original version of the series aired on ABC from September 21, 1963–December 21, 1963.  A second series also called The Jerry Lewis Show aired on NBC from September 12, 1967–May 27, 1969.  A final version also called The Jerry Lewis Show aired in first-run syndication for one week in June 1984.\n\nBoeing Boeing (1965 film): Boeing (707) Boeing (707) (alternately titled Boeing Boeing) is a 1965 American bedroom farce comedy film, based on the 1960 French play \"Boeing-Boeing\", and starring Jerry Lewis and Tony Curtis.  It was released on December 22, 1965, and was the last film Paramount Pictures made with Lewis, who had made films exclusively with the studio since \"My Friend Irma\" (1949).\n\nJerry Lewis: Jerry Lewis (born either Jerome Levitch or Joseph Levitch, depending on the source; March 16, 1926 – August 20, 2017) was an American comedian, actor, singer, producer, director, screenwriter, and humanitarian.\n\nHow to Smuggle a Hernia Across the Border: How to Smuggle the Hernia Across the Border is a short 1949 comedy film directed by Jerry Lewis and starring Jerry Lewis, Janet Leigh, and Tony Curtis.  The film was not released commercially.  The film is based on a funny story by Dean Martin's wartime personal problems with hernia.\n\nThe Geisha Boy: The Geisha Boy is a 1958 American comedy film starring Jerry Lewis, distributed by Paramount Pictures.  Filmed from June 16 to August 7, 1958, it had its first screening in New York City on December 19, 1958.  This film marked the film debut of Suzanne Pleshette.\n\nMax Rose: Max Rose is a 2016 American drama film starring Jerry Lewis and written and directed by Daniel Noah.  The film also stars Kevin Pollak, Kerry Bishe, Dean Stockwell and Claire Bloom.  It is Lewis' first starring film role since 1995's \"Funny Bones\", as well as his final starring role.  Oscar winners Michel Legrand with Alan and Marilyn Bergman created an original song for the feature.  The film was produced by Lightstream Entertainment's Garrett Kelleher and Blackbird’s Lawrence Inglee, along with Rush River’s Bill Walton.\n\nThe Errand Boy: The Errand Boy is a 1961 American comedy film directed, co-written and starring Jerry Lewis.\n\nWill the Real Jerry Lewis Please Sit Down: Will the Real Jerry Lewis Please Sit Down is a 1970 animated showcase for various caricatured Jerry Lewis characters, all based on characters from the Lewis film, \"The Family Jewels\" and styled in a fashion similar to \"Archie's TV Funnies\" and the \"Groovie Goolies\".  The title is a variant of the deciding question on the game show \"To Tell the Truth\": \"Will the real __________ please stand up?\" .  Like most 1970s-era Saturday morning cartoon series, \"Will the Real Jerry Lewis Please Sit Down\" contained an adult laugh track.\n\nThe Day the Clown Cried: The Day the Clown Cried is an unreleased 1972 American drama film directed by and starring Jerry Lewis.  It is based on a script of the same name by Joan O'Brien, who had co-written the original script with Charles Denton ten years previously.  The film was met with controversy regarding its premise and content, which features a circus clown who is imprisoned in a Nazi concentration camp.  Lewis repeatedly insisted that \"The Day the Clown Cried\" would never be released because it is an embarrassingly \"bad work\" of which he was ashamed.  Despite claims the film will never be screened, Lewis reportedly donated a copy of the film to the Library of Congress in 2015, under the stipulation that it wouldn't be screened before June 2024.",
+    "question": "What was the television series That's my boy based on starring Jerry Lewis? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "tv_series_name": {
+          "type": "string",
+          "description": "The name of the television series."
+        },
+        "based_on_type": {
+          "type": "string",
+          "description": "The type of media the series was based on (e.g., film, play)."
+        },
+        "based_on_title": {
+          "type": "string",
+          "description": "The title of the work the series was based on."
+        },
+        "based_on_year": {
+          "type": "integer",
+          "description": "The release year of the work the series was based on."
+        },
+        "starring_actors_in_original": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of actors who starred in the original work."
+        },
+        "jerry_lewis_starred_in_original": {
+          "type": "boolean",
+          "description": "Indicates if Jerry Lewis starred in the original work."
+        }
+      },
+      "required": [
+        "tv_series_name",
+        "based_on_type",
+        "based_on_title",
+        "based_on_year",
+        "starring_actors_in_original",
+        "jerry_lewis_starred_in_original"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "tv_series_name": "That's My Boy",
+      "based_on_type": "film",
+      "based_on_title": "That's My Boy",
+      "based_on_year": 1951,
+      "starring_actors_in_original": [
+        "Dean Martin",
+        "Jerry Lewis"
+      ],
+      "jerry_lewis_starred_in_original": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

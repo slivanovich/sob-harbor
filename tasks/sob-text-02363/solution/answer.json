@@ -1,0 +1,21 @@
+{
+  "grand_prix_year": 2016,
+  "race_date": "3 April 2016",
+  "circuit_details": {
+    "circuit_name": "Bahrain International Circuit",
+    "city": "Sakhir",
+    "country": "Bahrain"
+  },
+  "driver_information": [
+    {
+      "driver_name": "Lewis Hamilton",
+      "role_in_race": "defending race winner"
+    },
+    {
+      "driver_name": "Nico Rosberg",
+      "role_in_race": "Drivers' Championship leader",
+      "team_mate_of": "Lewis Hamilton",
+      "nationality": "German-Finnish"
+    }
+  ]
+}

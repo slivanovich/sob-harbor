@@ -1,0 +1,68 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Liar's Poker: Liar's Poker is a non-fiction, semi-autobiographical book by Michael Lewis describing the author's experiences as a bond salesman on Wall Street during the late 1980s.  First published in 1989, it is considered one of the books that defined Wall Street during the 1980s, along with Bryan Burrough and John Helyar's "", and the fictional "The Bonfire of the Vanities" by Tom Wolfe.  The book captures an important period in the history of Wall Street.  Two important figures in that history feature prominently in the text, the head of Salomon Brothers' mortgage department Lewis Ranieri and the firm's CEO John Gutfreund.
+
+Lawrence A. Gordon: Lawrence A. Gordon is the EY Alumni Professor of Managerial Accounting and Information Assurance at the University of Maryland’s Robert H. Smith School of Business.  He is also an Affiliate Professor in the University of Maryland Institute for Advanced Computer Studies.  Dr. Gordon earned his Ph.D. in Managerial Economics from Rensselaer Polytechnic Institute.  An internationally known scholar in the areas of managerial accounting (often called management accounting) and cybersecurity economics, Dr. Gordon's research focuses on such issues as economic aspects of information security (including cybersecurity or computer security), corporate performance measures, cost management systems, and capital investments.  He is the author of approximately 100 articles, published in such journals as The Accounting Review, ACM Transactions on Information and System Security, Communications of the ACM, Journal of Financial and Quantitative Analysis, Journal of Computer Security, MIS Quarterly, Accounting, Organizations and Society, and the Journal of Accounting and Public Policy.  Dr. Gordon's current research emphasizes the importance of applying concepts from economics and managerial accounting to an information-based economy.  Dr. Gordon is the co-creator (with Martin P. Loeb) of the Gordon-Loeb Model, which provides a mathematical economic model for deriving an organization's optimal investment level in cyber/information security.  The Gordon-Loeb Model has been featured in The Wall Street Journal and The Financial Times.  For a 3-minute video that provides a non-mathematical overview of the Model, go to: https://www.youtube.com/watch?v=cd8dT0FuqQ4.  Dr. Gordon also is the author of several books, including Managerial Accounting: Concepts and Empirical Evidence, Managing Cybersecurity Resources: A Cost-Benefit Analysis and Improving Capital Budgeting: A Decision Support System Approach.  In addition, he is the Editor-in-Chief of the Journal of Accounting and Public Policy and serves on the editorial boards of several other journals.  Dr. Gordon's research has over 6,400 citations in Google Scholar.
+
+Gordon Deal: Gordon Deal is an American talk radio host for the nationally syndicated wake-up show "This Morning, America's First News with Gordon Deal", previously called "The Wall Street Journal This Morning".  Prior to working at "The Wall Street Journal", Deal worked at both WINS and WCBS in New York City as a writer and reporter.  He also served as New York City bureau chief for Metro Networks (now Total Traffic) where his reports aired on WOR and WABC.  Deal began his career in radio as a play-by-play sports announcer for Rutgers University.  He has also been a public address announcer for the New York Knicks of the NBA and the New York Liberty of the WNBA.  In 2012, he became the New York Giants PA Announcer at MetLife Stadium
+
+Wall Street (1987 film): Wall Street is a 1987 American drama film, directed and co-written by Oliver Stone, which stars Michael Douglas, Charlie Sheen, and Daryl Hannah.  The film tells the story of Bud Fox (Sheen), a young stockbroker who becomes involved with Gordon Gekko (Douglas), a wealthy, unscrupulous corporate raider.
+
+L. Gordon Crovitz: Louis Gordon Crovitz is an American media executive and advisor to media and technology companies.  He is a former publisher of "The Wall Street Journal" who also served as executive vice-president of Dow Jones and launched the company's Consumer Media Group, which under his leadership integrated the global print, online, digital, TV and other editions of "The Wall Street Journal", MarketWatch.com and Barron's across news, advertising, marketing and other functions.  He stepped down from those positions in December 2007, when News Corp. completed its acquisition of Dow Jones.  He writes a weekly column in The Wall Street Journal, titled "Information Age."
+
+Greed Is Good (disambiguation): "Greed is good" is a catchphrase by Gordon Gekko from the 1987 film "Wall Street".
+
+Jessie (Toy Story): Jessie The Yodeling Cowgirl is a fictional character from the films "Toy Story 2" and "Toy Story 3".  At Christmas in 1999, the "Wall Street Journal" called Jessie toys among the hottest of the season.  In the movie, she is a very rare toy modeled after a character on the fictional television show "Woody's Roundup", where the characters included Sheriff Woody, Jessie, Stinky Pete the Prospector and Bullseye, Woody's horse.  Her hair is formed in a ponytail braid tied with a bow.
+
+Gordon Gekko: Gordon Gekko is a fictional character in the 1987 film "Wall Street" and its 2010 sequel "", both directed by Oliver Stone.  Gekko was portrayed by actor Michael Douglas, whose performance in the first film won him an Oscar for Best Actor.
+
+New York University in popular culture: New York University (NYU), one of the most renowned and influential universities in the world, and one of the world's premier residential research and teaching institutions, has been the subject of numerous aspects of popular culture.  NYU is often portrayed in a variety of television shows, motion pictures, literature, and other media.  This is a partially sorted list of NYU's representation in various films and television programs.  Fictional NYU students and faculty include Kramer's intern Darren in "Seinfeld", who helps him run "Kramerica Industries"; a student reporter in a different episode of Seinfeld who interviews Jerry; Theo Huxtable (Malcolm-Jamal Warner) from "The Cosby Show", who graduates from NYU in the series finale; Ross Geller (David Schwimmer) from "Friends", who becomes an NYU professor in Season 6; Character Tom Collins from "Rent", who taught there; Bud Fox (Charlie Sheen) in the movie "Wall Street" (1987); Finch (Eddie Kaye Thomas) from the "American Pie" films; Paul Tannek (Jason Biggs) in "Loser" (2000); Alex Foreman (Scarlett Johansson) in "In Good Company" (2005); Jack Campbell (Nicolas Cage) in "The Family Man" (2000); Clark Kellogg (Matthew Broderick) in "The Freshman" (1990); Justin Cobb (Lou Taylor Pucci) in the film version of "Thumbsucker" (2005), who secretly applies and is accepted to NYU; the songwriter Albert Peterson in the musical "Bye Bye Birdie" who promises his sweetheart Rosie to start studying at NYU and become an English teacher; and the characters Blair Waldorf, Dan Humphrey, Vanessa Abrams and Georgina Sparks in "Gossip Girl".  In the 1998 film "Stepmom (film)", the character Isabel (Julia Roberts), in a scene says that she attended NYU.  In the 1999 film "The Bone Collector", an NYU student gets abducted.  In the Hindi film "Jaane Tu... Ya Jaane Na", the lead character decides to go to the USA to study film-making at New York University.
+
+Forgotten Sins: Forgotten Sins was a 1996 television movie based on Lawrence Wright's "New Yorker" articles and his book "Remembering Satan", which was in turn based on the actual case of Paul Ingram.  It originally aired on the ABC Network on March 7, 1996.  It starred William Devane as Dr. Richard Ofshe, "a role to which William Devane brings his customary bristling panache" wrote Dorothy Rabinowitz in the Wall Street Journal.  John Shea also starred as Matthew Bradshaw, a fictional character based on Paul Ingram.  Bess Armstrong also appeared in this film, portraying Roberta 'Bobbie' Bradshaw, a character based on Sandy Ingram. " Doogie Howser"'s Lisa Dean Ryan co-starred.
+
+Question: Gordon Gekko is a fictional character in the movie Wall Street, played by who?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "character_name": {
+      "type": "string",
+      "description": "The name of the fictional character."
+    },
+    "movie_title": {
+      "type": "string",
+      "description": "The title of the movie in which the character appears."
+    },
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor who portrayed the character."
+    },
+    "is_fictional": {
+      "type": "boolean",
+      "description": "Indicates if the character is fictional."
+    },
+    "award_for_performance": {
+      "type": "string",
+      "description": "Any award won by the actor for this specific performance."
+    }
+  },
+  "required": [
+    "character_name",
+    "movie_title",
+    "actor_name",
+    "is_fictional"
+  ],
+  "additionalProperties": false
+}

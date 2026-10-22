@@ -1,0 +1,18 @@
+{
+  "film": {
+    "title": "Willow",
+    "director": "Ron Howard",
+    "genre": "high fantasy",
+    "release_year": 1988
+  },
+  "actress": {
+    "name": "Jean Marsh",
+    "nationality": "English",
+    "is_writer": true
+  },
+  "itv_series": {
+    "title": "Upstairs, Downstairs",
+    "co_created_by_actress": true,
+    "actress_role": "Rose Buck"
+  }
+}

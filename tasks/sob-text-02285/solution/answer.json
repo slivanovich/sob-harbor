@@ -1,0 +1,16 @@
+{
+  "common_country_of_origin": "American",
+  "entities_involved": [
+    {
+      "name": "Nate Parker",
+      "type": "person",
+      "country_of_origin": "American"
+    },
+    {
+      "name": "Red Tails",
+      "type": "film",
+      "country_of_origin": "American"
+    }
+  ],
+  "reasoning": "Nate Parker is described as an 'American actor' and 'Red Tails' is described as an 'American war film' in the provided context, indicating 'American' as their common country of origin."
+}

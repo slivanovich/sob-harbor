@@ -1,0 +1,18 @@
+{
+  "song_title": "Something's Gotta Give",
+  "first_performer": {
+    "name": "Fred Astaire",
+    "heritage": "American",
+    "roles": [
+      "dancer",
+      "singer",
+      "actor",
+      "choreographer",
+      "television presenter"
+    ]
+  },
+  "performance_context": {
+    "media_type": "film",
+    "year": 1955
+  }
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Blue, Dressed in Black: Blue, Dressed In Black is the third CD (second full-length album) from the Eric Stuart Band, in which Eric Stuart is the songwriter and lead singer.  This album is a compilation of Stuart’s four-song demo EP (1999) produced by Peter Frampton in Nashville sessions ("Lost Innocence", "One Good Reason", "Hole in the Head", "God’s Roof"), two more songs produced by Peter Frampton in Nashville ("Home" and "Corner Booth Chronicles"), and six songs ("Staring You In The Face", "The Best Ones Get Away", "Blue Dressed In Black", "Heaven In A Cadillac", "Can’t Get Enough Of It", and "Raise a Little Hell") recorded in NYC and produced by John Regan (Frampton's bass player), and Harvey Jay Goldberg (a producer for Dave Matthews Band and Sting).  Stuart credits Peter Frampton as his mentor, and Frampton even did background vocals, lead guitar, and/or other roles in four of the songs.  For example, Frampton has an extensive guitar solo at the end of “"God’s Roof"” and also plays the mountain dulcimer in “"Home".”  Stuart’s song ""Corner Booth Chronicles"" won the John Lennon Songwriting Contest in 1998.  In 1999, ”"One Good Reason"” was released on AudioDiner as a single and received 2,500 downloads in two days.
+
+William Burns (cricketer): William Beaumont Burns (29 August 1883 – 7 July 1916) was an English cricketer who played more than 200 first-class matches in the early 20th century, the great bulk of them for Worcestershire, for whom he filled in as captain on a number of occasions when the usual incumbents were not available.  Burns' obituary in "Wisden" described him as a "dashing, hard-hitting batsman" but added that his bowling — which he scarcely pursued until the middle of his career — had to be considered suspect: "the fairness of his delivery was often questioned — and not without good reason".
+
+Official Information Act 1982: The Official Information Act 1982 is a New Zealand law which replaced the Official Secrets Act of 1951 which made the release of information held by Government agencies an offence.  The Official Information Act takes the opposite approach and is designed to promote access to information held by various Government agencies.  Its guiding principle is that information should be made available unless a good reason exists under the Act for withholding it.
+
+Peremptory challenge: In English and American law, the right of peremptory challenge is a right in jury selection for the attorneys to reject a certain number of potential jurors without stating a reason.  Other potential jurors may be challenged for cause, i.e. by giving a good reason why they might be unable to reach a fair verdict, but the challenge will be considered by the presiding judge and may be denied.
+
+Kunnon syy: "Kunnon syy" (in English, "A Good Reason") is a song by Finnish singer Irina released on her debut album "Vahva" on March 22, 2004.  It was written by Irina and Toni Wirtanen.
+
+Ralph Steadman: Ralph Steadman (born 15 May 1936) is a Welsh artist best known for his work with American author Hunter S. Thompson.
+
+For No Good Reason: For No Good Reason is a 2012 American-British documentary film about Ralph Steadman, directed by Charlie Paul.  The film was in competition for the Grierson Award for Best Documentary at the 2012 BFI London Film Festival.
+
+Fixed-term contract: A fixed-term contract is a contractual relationship between an employee and an employer that lasts for a specified period.  These contracts are usually regulated by different countries' labour laws, to ensure that employers still fulfill basic labour rights regardless of a contract's form, particularly unjust dismissal.  Generally, fixed-term contracts will automatically be deemed to have created a permanent contract, subject to the employer's right to terminate employment on reasonable notice for a good reason.  In the European Union the incidence of fixed-term contracts ranges from 6% in the UK to 23% in Spain, with Germany, Italy and France between 13% and 16%.
+
+Multiple citizenship: Multiple citizenship, also called dual citizenship or multiple nationality or dual nationality, is a person's citizenship status, in which a person is concurrently regarded as a citizen of more than one state under the laws of those states.  There is no international convention which determines the nationality or citizen status of a person, which is defined exclusively by national laws, which vary and can be inconsistent with each other.  Multiple citizenship arises because different countries use different, and not necessarily mutually exclusive, criteria for citizenship.  Colloquial speech refers to people "holding" multiple citizenship but technically each nation makes a claim that this person be considered its national.
+
+Locust Fudge: In 1991 Locust Fudge was founded by Schneider (a.k.a. Dirk Dresselhaus of Schneider TM, Angel, ex-Hip Young Things etc.) and Krite (a.k.a. Christopher Uhe, ex-Speed Niggs, ex-Sharon Stoned, ex-Floor etc.).  The two of them had met on different occasions when both of their rather noisy indie rock outfits Hip Young Things and Speed Niggs appeared on the same bill.  Pretty soon they decided to play acoustic versions of their bands’ semi-hits to ignorant audiences of passers-by on the streets of Schneider’s home town Bielefeld.  What started as a good reason to hang out and have a couple of drinks together soon draw the attention of Reinhard Holstein, CEO of Glitterhouse Records, a fine German company that was operating the European business for Seattle's Sub Pop label, home to the likes of Nirvana, Mudhoney and others who were just about to define a new hype soon to be called grunge.  Holstein encouraged Locust Fudge to record an album for his label.  Their debut album "Flush" was released in 1993, receiving widespread media coverage all over Europe.  After touring as a duo for quite a while, Schneider and Krite recorded their ground-breaking follow-up "Royal Flush" in 1995, a milestone of lofi-glam-folk to this very day.  The album's delicate arrangements demanded a somewhat bigger live sound, and thus the 5-piece Locust Fudge Band was formed to go on the road with the new material.  After extensive touring throughout Europe Locust Fudge released the EP "Business Express" in 1996.  A year later Schneider and Krite decided to kick back a little; Locust Fudge have been pretty lazy ever since.  Although they never split up, it seems there has been very little activity over the last decades, the last vital sign being a song entitled "Cannibal Man", their contribution to "Perverted by Mark E. – A Tribute to The Fall" by ZickZack.  Random appearances on stages in Berlin and elsewhere over the last years have fueled the rumors of Locust Fudge coming back to the surface at some point in the 21st century, being neither confirmed nor denied, until a limited vinyl edition of the albums "Flush" and "Royal Flush" was released at the end of 2014 and Locust Fudge embarked on a short tour fort he first time in nearly 20 years to present the classic material alongside a bunch of new songs.
+
+Question: What is the nationality of the person "For No Good Reason" is about?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person the documentary is about."
+    },
+    "person_nationality": {
+      "type": "string",
+      "description": "The nationality of the person."
+    },
+    "documentary_title": {
+      "type": "string",
+      "description": "The title of the documentary film."
+    },
+    "documentary_director": {
+      "type": "string",
+      "description": "The director of the documentary film."
+    }
+  },
+  "required": [
+    "person_name",
+    "person_nationality",
+    "documentary_title",
+    "documentary_director"
+  ],
+  "additionalProperties": false
+}

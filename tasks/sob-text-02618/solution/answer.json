@@ -1,0 +1,14 @@
+{
+  "items_classified": [
+    {
+      "name": "Zingo!",
+      "contextual_description": "a game inspired by Bingo"
+    },
+    {
+      "name": "Mikado",
+      "contextual_description": "a pick-up sticks game originating in Europe"
+    }
+  ],
+  "common_category": "game",
+  "is_a_game": true
+}

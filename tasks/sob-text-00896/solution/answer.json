@@ -1,0 +1,15 @@
+{
+  "question_asked": "Are Anita Shreve And Diana Athill from the same country?",
+  "authors_compared": [
+    {
+      "author_name": "Anita Shreve",
+      "nationality": "American"
+    },
+    {
+      "author_name": "Diana Athill",
+      "nationality": "British"
+    }
+  ],
+  "are_from_same_country": false,
+  "reasoning": "Anita Shreve is an American writer, and Diana Athill is a British literary editor, novelist and memoirist. Therefore, they are not from the same country."
+}

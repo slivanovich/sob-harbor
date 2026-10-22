@@ -1,0 +1,14 @@
+{
+  "comparison_result": true,
+  "genus_with_more_species": "Dryopteris",
+  "genera_comparison": [
+    {
+      "genus_name": "Dryopteris",
+      "species_count": 250
+    },
+    {
+      "genus_name": "Adenanthos",
+      "species_count": 33
+    }
+  ]
+}

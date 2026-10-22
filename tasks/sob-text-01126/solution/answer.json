@@ -1,0 +1,17 @@
+{
+  "debut_movie_name": "Love Story",
+  "artist_details": {
+    "name": "Vijayta Pandit",
+    "relationship_to_other_artist": "younger sister"
+  },
+  "related_artist_details": {
+    "name": "Sulakshana Pandit",
+    "profession": "playback singer and actor",
+    "awards": [
+      "Filmfare Award"
+    ],
+    "movies_with_shashi_kapoor": [
+      "Phaansi"
+    ]
+  }
+}

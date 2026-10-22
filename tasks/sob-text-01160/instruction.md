@@ -1,0 +1,98 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+A Very Potter Musical: A Very Potter Musical (originally titled Harry Potter: The Musical and often shortened to AVPM) is a musical with music and lyrics by Darren Criss and A. J. Holmes and a book by Matt Lang, Nick Lang and Brian Holden.  The story is a parody, based on several of the "Harry Potter" novels (particularly "Harry Potter and the Philosopher's Stone", "Harry Potter and the Goblet of Fire" and "Harry Potter and the Deathly Hallows") by J. K. Rowling, as well as their film counterparts.
+
+A Very StarKid Album: A Very StarKid Album contains several songs from the musical "A Very Potter Sequel", sequel to the Harry Potter parody musical "A Very Potter Musical", produced by StarKid Productions with music and lyrics by Darren Criss (who also starred in both musicals as Harry Potter), and book by Matt Lang, Nick Lang, and Brian Holden.  The album features seven of the twelve songs from "A Very Potter Sequel" as well as tracks from others members of the group.  Songs from the musical that were absent from the album were later released as the "A Very Potter Sequel" soundtrack.  The album was released digitally through iTunes and Amazon.com on July 22, 2010, and was made available on the StarKid Productions Bandcamp page on August 3, 2010.  The album reached No. 14 on the iTunes Pop Charts and No. 27 out of all Top Albums officially topping Lady Gaga (#29) and "Glee" (#31) on the charts.  The album also reached No. 19 on Top Compilations.
+
+A Very Potter Sequel: A Very Potter Sequel (often shortened to AVPS) is a musical with music and lyrics by Darren Criss and a book by Matt Lang, Nick Lang, and Brian Holden.  The story is a parody, based on several of the "Harry Potter" novels (particularly "Harry Potter and the Philosopher's Stone", "Harry Potter and the Prisoner of Azkaban" and "Harry Potter and the Order of the Phoenix") by J. K. Rowling, as well as their film counterparts.
+
+A Very Potter Musical (album): The A Very Potter Musical album contains the songs from the Harry Potter parody musical "A Very Potter Musical", produced by StarKid Productions with music and lyrics by Darren Criss (who also starred in the musical as Harry Potter) and A.J. Holmes (who played piano in the band), and book by Matt Lang, Nick Lang, and Brian Holden.  It was recorded by the musical's cast and was released digitally through the group's official site in 2009 and later on their Bandcamp site on July 29, 2010.
+
+A Very Potter Sequel (album): The A Very Potter Sequel album contains songs from the musical "A Very Potter Sequel", sequel to the Harry Potter parody musical "A Very Potter Musical", produced by StarKid Productions with music and lyrics by Darren Criss (who also starred in both musicals as Harry Potter) and book by Matt Lang, Nick Lang, and Brian Holden, that were not released on "A Very StarKid Album".  The EP was released digitally on July 31, 2010, through the group's Bandcamp site.
+
+Joey Richter: Joseph Michael "Joey" Richter (born July 31, 1989) is an American actor, singer, and internet personality.  Richter co-starred as Ron Weasley in the fan-parody musicals, "A Very Potter Musical" (2009), "A Very Potter Sequel" (2010) and "A Very Potter Senior Year" (2012) with Bonnie Gruesen and Glee star Darren Criss, created by University of Michigan theatre group, StarKid Productions.  He starred in leading roles in two other StarKid productions: as a fictionalized version of himself in the musical "Me and My Dick" (2009) and as Bug in "Starship" (2011).  Richter graduated from the University of Michigan in 2011.  Richter also performed on The SPACE Tour along with several fellow Starkids.  In 2012, Richter performed in Starkid's Apocalyptour.
+
+Darren Criss: Darren Everett Criss (born February 5, 1987) is an American actor, singer and songwriter.  One of the founding members and co-owners of StarKid Productions, a musical theater company based in Chicago, Criss first garnered attention playing the lead role of Harry Potter in StarKid's musical production of "A Very Potter Musical".  The theater troupe made "Billboard" history when their original album, "Me and My Dick", became the first charting student-produced musical recording , debuting at number eleven on the Top Cast Albums chart in 2010.
+
+StarKid Productions: StarKid Productions, also known as Team StarKid, is a Chicago-based musical theatre company founded in 2009 at the University of Michigan by Darren Criss, Brian Holden, Matt Lang, and Nick Lang.  Best known for the musical "A Very Potter Musical", a parody of the Harry Potter series, the troupe produces musical-comedies inspired by pop culture, with original scripts, songs, and music.  StarKid uses social media for theatrical distribution, to make their productions accessible to a worldwide audience.
+
+Me and My Dick (soundtrack): Me and My Dick (A New Musical) contains the songs from the musical "Me and My Dick", produced by StarKid Productions with music and lyrics by A.J. Holmes, Carlos Valdes, and Darren Criss, and book by Eric Kahn Gale, Brian Holden, Matt Lang, and Nick Lang.  It was recorded by the musical's cast and was released digitally on January 6, 2010, through iTunes.  The soundtrack became the first-ever student-produced college musical to reach "Billboard", debuting at No. 11 on the Top Cast Albums chart.
+
+A Very Potter Senior Year: A Very Potter Senior Year (often shortened to AVPSY) is a musical written by Matt Lang, Nick Lang, and Brian Holden with songs by Clark Baxtresser, Pierce Siebers, A. J. Holmes, and additional songs by Darren Criss.  It is the conclusion of the "Very Potter" trilogy of "Harry Potter"-inspired musicals produced over four years by StarKid Productions.  Rather than a full musical, as with its previous installments, the production took the form of a live staged reading of the script with performances of the songs at LeakyCon in Chicago, Illinois, on August 11, 2012.  It featured nearly all of the StarKid actors and actresses, including actor Darren Criss, who returned to the company to reprise his role as Harry Potter, and Evanna Lynch as Luna Lovegood, who played the character in the original film series.
+
+Question: Other than Darren Criss, who wrote the music and lyrics for the musical A Very Potter Musical?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "musical_title": {
+      "type": "string",
+      "description": "The title of the musical in question."
+    },
+    "creative_roles_summary": {
+      "type": "object",
+      "properties": {
+        "music_and_lyrics_writers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of all individuals credited for music and lyrics for the musical."
+        },
+        "book_writers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of all individuals credited for the book (script) of the musical."
+        }
+      },
+      "required": [
+        "music_and_lyrics_writers",
+        "book_writers"
+      ],
+      "additionalProperties": false
+    },
+    "question_specific_answer": {
+      "type": "object",
+      "properties": {
+        "role_in_question": {
+          "type": "string",
+          "description": "The specific creative role asked about in the question."
+        },
+        "excluded_person": {
+          "type": "string",
+          "description": "The person explicitly excluded from the answer by the question."
+        },
+        "answer_person": {
+          "type": "string",
+          "description": "The name of the person who fits the criteria after exclusion."
+        }
+      },
+      "required": [
+        "role_in_question",
+        "excluded_person",
+        "answer_person"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "musical_title",
+    "creative_roles_summary",
+    "question_specific_answer"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+  "entertainment_type": "game",
+  "entertainment_items": [
+    {
+      "name": "Careers",
+      "description_snippet": "Careers is a board game first manufactured by Parker Brothers in 1955"
+    },
+    {
+      "name": "Capitol",
+      "description_snippet": "Capitol is a German-style building game set in the ancient Roman Empire"
+    }
+  ],
+  "number_of_items": 2
+}

@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2011–12 Derby County F.C. season: The 2011–12 season was Derby County's 106th season in the Football League and their 113th overall in league football.  It was their fourth consecutive season in the second tier following the previous campaign and their 44th overall.  Derby started the season well, winning their first 4 league games in August, which was also club's best league start since the 1905–06 season.  However, the club were knocked out of the first round of League Cup against League Two opposition for the third season in a row against Shrewsbury Town.  Derby maintained their top 2 position in September, with the main highlight being a 2–1 win at local rivals Nottingham Forest, despite the fact that goalkeeper Frank Fielding gave away a penalty and was sent off after 67 seconds, Jeff Hendrick's winner in the game was his first goal in senior football.  October and November were disappointing with Derby picking up only 1 win and 5 points out of a possible 30 as Derby fell to 15th place in the league, with a 4–0 defeat at rivals Leicester City at the start of the month, starting the slump in form.  In mid-October, Nigel Clough and his backroom staff signed new 3 1/2-year contracts.  Derby picked up form in December and January, losing only twice in 9 games, picking up 17 points as Derby ended the month 12th peaking at 8th in mid-January.  February was another disappointing month, where they picked up on 1 point, scoring no goals with them club suffering their 2nd 4–0 defeat of the season to the hands of Southampton by the end of the month, Derby were 15th in the table.  From the start of April to mid march, Derby picked up 14 points out a possible 21 which lifted Derby to 11th in the table, 5 points off the play-offs with 4 games remaining, Derby manager Nigel Clough however ruled out a play-off place, wishing there was more the 4 games left as the club were showing great form.  However defeats to Middlesbrough and Cardiff City in 4 days ended the Derby's play-off chances.  Derby finished the season 12th in the league, 11 points off the play-off players, with Nigel Clough being satisfied with the performances of the team, stating a lack of firepower as the reason why they fell short and a target to improve in 2012–13.  Derby ended the season with a win and a draw as they finished in 12th place on 64 points, 7 places and 15 points better off than the previous season, the club's first top half finish since promotion in 2007 and best league standing since relegation in 2008.
+
+Skullduggery (board game): Skullduggery, created and illustrated by Allegra Vernon, Outset Media's Creative Director, is a children's board game, teaching basic logic and strategy.  The pirate-themed game is played on a tiled board, with tokens representing the players.  The game uses pirates and gemstones as enemies to create obstacles, which lends to its name.  Each player works to uncover four landmarks in order to complete a treasure map and race to the treasure.  The tile game was manufactured by Outset Media, the same company that distributes Qwirkle, another tile-based game, that also won a Mensa Select Mind Game Award in 2007.  Only five awards are given each year by American Mensa.
+
+Qwirkle: Qwirkle is a tile-based game for 2 to 4 players, designed by Susan McKinley Ross and published by MindWare.  Qwirkle shares some characteristics with the games "Rummikub" and "Scrabble".  It is distributed in Canada by game and puzzle company, Outset Media.  Qwirkle is considered by MindWare to be its most awarded game of all time.  In 2011, Qwirkle won the Spiel des Jahres, widely considered the most prestigious award in the board and card game industry.  A sequel, Qwirkle Cubes, was released by Mindware in 2009.
+
+Oceania (board game): Oceania is a board game by Klaus Teuber, published by Mayfair Games.  It is a simpler version of Entdecker, and is played with one or two players.  The solitaire version's objective is completely different from the two player version's.
+
+Entdecker: Entdecker (German: "Discoverer") is a German-style board game designed by Klaus Teuber and published in 1996 by Goldsieber in German.  Although the game won 2nd prize in the Deutscher Spiele Preis, many gamers were disappointed with the game after the success of Teuber's previous game, "The Settlers of Catan".  An updated version, "Die Neuen Entdecker", was published in 2001 by Kosmos; this version was published in English by Mayfair Games under the title "Entdecker - Exploring New Horizons".  This version of the game won the Essen Feather for that year.
+
+Project Highrise: Project Highrise is a 2D tower-building simulation game, developed and published by Kasedo Games, considered by many to be the spiritual successor to SimTower.  In the game, players take on the role of a high-rise manager, who is responsible for building and maintaining a tower block, filling it with offices, apartments, shops and restaurant, which they support with utilities, while providing specialized services and fulfilling certain conditions in order to keep the resident and tenants of the building satisfied.
+
+Bonus stage: A bonus stage (also known as a bonus level or bonus round) is a special level within a video game designed to reward the player or players, and typically allows the player to collect extra points or power-ups. Bonus stage either have no enemies or hazards, or replace the normal penalties for being struck by enemies or hazards with simply being thrown out of the bonus stage.  Many bonus stages need to be activated or discovered in some manner, or certain conditions must be satisfied to access them.  Otherwise, they appear after the player has completed a certain number of regular stages.  They are often much shorter than regular stages.
+
+Question: Which game has satisfied most players, Entdecker or Qwirkle ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "game_comparison": {
+      "type": "object",
+      "properties": {
+        "game_1_name": {
+          "type": "string",
+          "description": "Name of the first game being compared."
+        },
+        "game_1_reception_summary": {
+          "type": "string",
+          "description": "Summary of player reception for the first game."
+        },
+        "game_2_name": {
+          "type": "string",
+          "description": "Name of the second game being compared."
+        },
+        "game_2_reception_summary": {
+          "type": "string",
+          "description": "Summary of player reception for the second game."
+        }
+      },
+      "required": [
+        "game_1_name",
+        "game_1_reception_summary",
+        "game_2_name",
+        "game_2_reception_summary"
+      ],
+      "additionalProperties": false
+    },
+    "most_satisfied_game": {
+      "type": "string",
+      "description": "The game that satisfied most players based on the context."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation for why one game satisfied more players than the other."
+    }
+  },
+  "required": [
+    "game_comparison",
+    "most_satisfied_game",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

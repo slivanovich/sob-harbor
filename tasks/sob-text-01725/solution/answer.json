@@ -1,0 +1,16 @@
+{
+  "question_asked": "Do Abigail Child and Nabil Ayouch both write media?",
+  "answer": true,
+  "individuals": [
+    {
+      "name": "Abigail Child",
+      "is_writer": true,
+      "writing_context": "Abigail Child is a filmmaker, poet, and writer who has been active in experimental writing and media since the 1970s."
+    },
+    {
+      "name": "Nabil Ayouch",
+      "is_writer": true,
+      "writing_context": "Nabil Ayouch (born 1 April 1969) is a French-Moroccan television and film director, producer and writer of Moroccan origin."
+    }
+  ]
+}

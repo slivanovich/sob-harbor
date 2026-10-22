@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "name": "Leon Uris",
+      "book_count": 6,
+      "books": [
+        "QB VII",
+        "Exodus",
+        "Mila 18",
+        "Trinity",
+        "Topaz",
+        "Battle Cry"
+      ]
+    },
+    {
+      "name": "Wilhelm Reich",
+      "book_count": 3,
+      "books": [
+        "Character Analysis",
+        "The Mass Psychology of Fascism",
+        "The Sexual Revolution"
+      ]
+    }
+  ],
+  "author_with_more_books": "Leon Uris",
+  "comparison_summary": "Based on the provided context, Leon Uris has written 6 books, while Wilhelm Reich has written 3 books, making Leon Uris the author with more books."
+}

@@ -1,0 +1,15 @@
+{
+  "actor_name": "Philip Seymour Hoffman",
+  "professions": [
+    "actor",
+    "director",
+    "producer"
+  ],
+  "death_age": 46,
+  "film_details": {
+    "film_title": "Doubt",
+    "character_played": "Father Flynn",
+    "accuser": "Sister James",
+    "accused_of_attention_with_student": "Donald Miller"
+  }
+}

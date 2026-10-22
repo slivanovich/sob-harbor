@@ -1,0 +1,86 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Nubkhesbed: Nubkhesbed (“Gold and Lapis lazuli”) was an ancient Egyptian queen of the 20th dynasty.  She was the Great Royal Wife of Pharaoh Ramesses VI and mother of Pharaoh Ramesses VII, Princess Iset (God's Wife of Amun) and Princes Amenherkhepshef and Panebenkemyt.
+
+Kayarohanaswami Temple, Nagapattinam: Kayarohanaswami Temple, Nagapattinam (காயாரோகணசுவாமி கோயில், நாகபட்டினம்) is a Hindu temple dedicated to Lord Siva situated in the town of Nagapattinam in Tamil Nadu, India.  The presiding deity is known as Kayarohana and his consort is Nilayathakshi.  The temple has been in existence from the 6th century AD and has been praised by the Nayanmars Appar, Sambandar and Sundarar.  The temple has been constructed by the Lakolisa cult which originated in Gujarat and their only other temple in Tamil Nadu is at Kanchipuram.  The idol of Thyagaraja in the temple is made of "lapis lazuli".
+
+List of solar eclipses in the 7th century BC: This is a list of solar eclipses in the 7th century BC.  During the period 700 to 601 BC there were 253 solar eclipses of which 96 were partial, 87 were annular (one non-central), 63 were total, and 7 were hybrids.  The greatest number of eclipses in one year was four, occurring in 18 different years: 699 BC, 692 BC, 689 BC, 685 BC, 674 BC, 667 BC, 656 BC, 449 BC, 442 BC, 638 BC, 634 BC, 631 BC, 627 BC, 620 BC, 616 BC, 609 BC, 605 BC, and 602 BC.  Three months, December 689 BC, November 678 BC, and October 602 BC, had two eclipses.
+
+Imports to Ur: Imports to Ur reflect the cultural and trade connections of the Sumerian city of Ur.  During the period of the Early Dynastic III royal cemetery (ca. 2600 BC), Ur was importing elite goods from geographically distant places.  These objects include precious metals such as gold and silver, and semi-precious stones, namely lapis lazuli and carnelian.  These objects are all the more impressive considering the distance from which they traveled to reach Mesopotamia and Ur specifically.
+
+Lapis lazuli: Lapis lazuli ( , ), or lapis for short, is a deep blue metamorphic rock used as a semi-precious stone that has been prized since antiquity for its intense color.  As early as the 7th millennium BC, lapis lazuli was mined in the Sar-i Sang mines, in Shortugai, and in other mines in Badakhshan province in northeast Afghanistan.  Lapis was highly valued by the Indus Valley Civilisation (3300–1900 BC).  Lapis beads have been found at Neolithic burials in Mehrgarh, the Caucasus, and even as far from Afghanistan as Mauritania.  It was used in the funeral mask of Tutankhamun (1341–1323 BC).
+
+Sar-i Sang: Sar-i Sang (or Sar-e Sang) is a settlement in the Kuran Wa Munjan District of Badakhshan Province, Afghanistan, famous for its ancient lapis lazuli mines producing the world's finest lapis.
+
+Statue of Ebih-Il: The Statue of Ebih-II is a 25th-century BC statue of the praying figure of Ebih-II, superintendent of the ancient city-state of Mari in eastern Syria.  The statue was discovered at the Temple of Ishtar in Mari during excavations directed by French archaeologist André Parrot.  It is made of gypsum, with inlays of schist, shells and lapis lazuli.  Iselin Claire of the Musée du Louvre, where the statue is displayed, describes it as "a masterpiece by virtue of its craftsmanship, state of preservation, and expressive style."
+
+Burebista: Burebista (Ancient Greek: Βυρεβίστας, Βοιρεβίστας ) was a Thracian king of the Getae and Dacian tribes from 82/61 BC to 45/44 BC.  He was the first king who successfully unified the tribes of the Dacian kingdom.  The Dacian kingdom comprised the area roughly located between the Danube, Tisza and Dniester rivers and covering modern day Romania.  In the 7th and 6th Centuries BC it became home to the Thracian peoples, including Getae and Dacians.  From the 4th century to the middle of the 2nd century BC the Dacian peoples were influenced by La Tène Celts who brought new technologies with them into Dacia.  Sometime in the 2nd century BC, however, the Dacians expelled the Celts from their lands.  Dacians often warred with the Getae, however, the relative isolation of the Dacian peoples located around the Carpathian mountains allowed them to survive and even to thrive.  By the 1st century BC, the Dacians had become the dominant tribe.
+
+Lapis Niger: The Lapis Niger (Latin, "Black Stone") is an ancient shrine in the Roman Forum.  Together with the associated Vulcanal (a sanctuary to Vulcan) it constitutes the only surviving remnants of the old Comitium, an early assembly area that preceded the Forum and is thought to derive from an archaic cult site of the 7th or 8th century BC.
+
+Ultramarine: Ultramarine is a deep blue color and a pigment which was originally made by grinding lapis lazuli into a powder.  The name comes from the Latin "ultramarinus", literally "beyond the sea", because the pigment was imported into Europe from mines in Afghanistan by Italian traders during the 14th and 15th centuries.
+
+Question: Lapis lazuli was mined where during the 7th milennium BC?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "stone_name": {
+      "type": "string",
+      "description": "The name of the semi-precious stone."
+    },
+    "time_period": {
+      "type": "string",
+      "description": "The historical period when the mining occurred."
+    },
+    "mining_details": {
+      "type": "object",
+      "properties": {
+        "specific_mines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specific named mining locations."
+        },
+        "province": {
+          "type": "string",
+          "description": "The province where the mining took place."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the mining took place."
+        },
+        "region": {
+          "type": "string",
+          "description": "The broader geographical region within the country."
+        }
+      },
+      "required": [
+        "specific_mines",
+        "province",
+        "country",
+        "region"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "stone_name",
+    "time_period",
+    "mining_details"
+  ],
+  "additionalProperties": false
+}

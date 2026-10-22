@@ -1,0 +1,13 @@
+{
+  "player_name": "Marko Marin",
+  "nationality": "German",
+  "current_club": "Olympiacos",
+  "club_country": "Greek",
+  "is_one_of_eleven_players": true,
+  "top_division_countries": [
+    "Italy",
+    "Spain",
+    "England",
+    "Germany"
+  ]
+}

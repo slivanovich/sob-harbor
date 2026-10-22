@@ -1,0 +1,16 @@
+{
+  "film_with_similarities_context": {
+    "title": "Jung"
+  },
+  "schroeder_directed_film_with_similarities": {
+    "title": "Desperate Measures",
+    "director": "Barbet Schroeder",
+    "release_year": 1998,
+    "genres": [
+      "action",
+      "thriller"
+    ],
+    "country": "American"
+  },
+  "similarity_statement": "The film has some similarities to the Hollywood film \"Desperate Measures\"."
+}

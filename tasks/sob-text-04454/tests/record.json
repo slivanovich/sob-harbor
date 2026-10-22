@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "record_id": "f9e7da7bba537fa6a1b4017e8e69ba3a2c909db5658a6dbf292663456a5a025b",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac0cd595542997d64295a52",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Night Watch",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Demobbed (2000 film): Demobbed (Russian: ДМБ , \"DMB \" ) is a cult Russian comedy film by Roman Kachanov, offering an absurdistic view on the Russian army by the eyes of a conscript.  The brutal rituals of Dedovshchina, a major problem within Russian society, is shown not as a tragedy, but as an idylically insane process of resocialization.\n\nYolki: Yolki (Russian: Ёлки, \"Spurce trees\" ), also known as Six Degrees of Celebration, is a 2010 Russian comedy film directed by Timur Bekmambetov.  Two sequels have been released, including Yolki 2 in 2011 and Yolki 3 in 2013.  The films in the series represent a Russian tradition of the New Year's Movie where films that take place during the holiday season tap into the vein of hope, optimism, and possibility associated with New Year's in the Russian culture.  Other examples include \"The Irony of Fate\" and \"The Irony of Fate 2\" (also directed by Bekmambetov).  Typically such films are released in December, just before the start of the holidays in Russia.\n\nInadequate People: Inadequate People (Russian: Неадекватные люди , \"Neadekvatnye lyudi \" ) is a 2011 Russian comedy film directed by .\n\nThe Best Movie 2: The Best Movie 2 (Russian: Самый лучший фильм 2 , \"Samiy luchshiy film 2 \" ) is a 2009 Russian comedy from Monumental Pictures (Sony Pictures Entertainment) and Comedy Club Production, continuation of 2008 \"The Best Movie\" film, spoofing such famous Russian films as \"Zhara\", \"The Irony of Fate 2\" and TV-programs: \"Malakhov+\", \"King of Ring\" and \"Taxi\".\n\nThe Best Movie 3: The Best Movie 3 (Russian: Самый лучший фильм 3 , \"Samiy luchshiy film 3 \" ) is a 2011 Russian comedy from Monumental Pictures (Sony Pictures Entertainment) and Comedy Club Production, continuation of 2009 The Best Movie 2 film, spoofing such famous Russian films as \"Admiral\", \"Burnt by the Sun 2\", \"Stilyagi\", \"Black Lightning\", and others.\n\nCloud-Paradise: Cloud-Paradise (Russian: Облако-рай , \"Oblako-ray \" ) is a 1990 Russian comedy film directed by Nikolai Dostal.  It was voted best film of 1992 by 90 Russian critics.\n\nTimur Bekmambetov: Timur Nuruakhitovich Bekmambetov (Russian: Тиму́р Нуруахи́тович Бекмамбе́тов , ] ; Kazakh: Темір Нұрбақытұлы Бекмамбетoв , Temir Nurbaqıtulı Bekmambetov; born June 25, 1961) is a Russian-Kazakh director, producer and screenwriter who has worked on films, music videos and commercials.  He is best known for the film \"Night Watch\" (2004) and its sequel \"Day Watch\" (2006), and the American films \"Wanted\" (2008) and \"\" (2012).\n\nDrumroll (film): Drumroll (Russian: Barabaniada , \"Барабаниада \" ) is a 1993 Russian comedy film directed by Sergei Ovcharov.  It was entered into the 18th Moscow International Film Festival where it won the Special Silver St. George and the Prix of Ecumenical Jury.  The picture also won the Special Jury Prize at Kinotavr.\n\nAssia and the Hen with the Golden Eggs: Assia and the Hen with the Golden Eggs (Russian: Курочка Ряба , translit.  Kurochka Ryaba) is a 1994 Russian comedy film directed by Andrei Konchalovsky.  It was entered into the 1994 Cannes Film Festival.\n\nThe Best Movie: The Best Movie (Russian: Самый лучший фильм , \"Samy luchshiy film\") is a 2008 Russian comedy film from TNT and Comedy Club Russia, spoofing such famous Russian films as \"Night Watch\" and \"Day Watch\", \"The 9th Company\", \"Heat\" and TV series: \"My Fair Nanny\", \"Dalnoboyshchiki\" and \"Brigada\".  The movie includes numerous cameos by Russian celebrities, some of them involving a humorous touch on their public image.  For instance, socialite Kseniya Sobchak appears as a luxury prostitute, and gay icon Boris Moiseev plays a rough-and-tumble policeman, his only line being: \"You gonna sign it all, you faggot!\"",
+    "question": "What 2004 film is the director of Yolki (a Russian comedy film), most famous for?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "original_film_title": {
+          "type": "string",
+          "description": "The title of the film mentioned in the question that led to identifying the director."
+        },
+        "director": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of the director."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "most_famous_film": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the film the director is most famous for, matching the specified year."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The release year of the most famous film."
+            }
+          },
+          "required": [
+            "title",
+            "release_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "original_film_title",
+        "director",
+        "most_famous_film"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "original_film_title": "Yolki",
+      "director": {
+        "name": "Timur Bekmambetov"
+      },
+      "most_famous_film": {
+        "title": "Night Watch",
+        "release_year": 2004
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

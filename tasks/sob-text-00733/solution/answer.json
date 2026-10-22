@@ -1,0 +1,13 @@
+{
+  "former_facility": {
+    "name": "Joliet Army Ammunition Plant",
+    "type": "Army arsenal",
+    "opening_year": 1940,
+    "associated_conflict": "World War II"
+  },
+  "current_site": {
+    "name": "Midewin National Tallgrass Prairie",
+    "type": "tallgrass prairie reserve"
+  },
+  "question_answer": 1940
+}

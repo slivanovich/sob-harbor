@@ -1,0 +1,17 @@
+{
+  "band_names": [
+    "A Silent Film",
+    "Needtobreathe"
+  ],
+  "genres": [
+    {
+      "band_name": "A Silent Film",
+      "specific_genre": "alternative rock"
+    },
+    {
+      "band_name": "Needtobreathe",
+      "specific_genre": "Christian rock"
+    }
+  ],
+  "common_genre": "rock"
+}

@@ -1,0 +1,16 @@
+{
+  "person_1_name": "Billy Bob Thornton",
+  "person_2_name": "Gene Saks",
+  "nationality": "American",
+  "shared_occupation": "actor",
+  "person_1_other_occupations": [
+    "filmmaker",
+    "singer",
+    "songwriter",
+    "musician"
+  ],
+  "person_2_other_occupations": [
+    "stage director",
+    "film director"
+  ]
+}

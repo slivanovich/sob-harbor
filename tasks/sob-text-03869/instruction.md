@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ernie Koy, Jr.: Ernest Melvin Koy (born October 22, 1942) is a former American football running back for the New York Giants of the National Football League (NFL).  He played college football at the University of Texas from 1962 to 1964 and was drafted by the Giants in the 11th round of the 1965 NFL Draft.  He was a member of the 1963 Texas Longhorns football team, which won a national championship, although he missed most of the season to injury and illness.  His brother Ted Koy also played with the Longhorns and in the NFL.  His father, Ernie Koy, played Major League Baseball from 1938 through 1942 for five teams, and also played football at Texas.
+
+Chris Simms: Christopher David Simms (born August 29, 1980) is a former American football quarterback who played in the National Football League (NFL).  He was drafted by the Tampa Bay Buccaneers in the third round of the 2003 NFL Draft.  He played college football at Texas.
+
+Marty Akins: Martin Ray Akins (born January 6, 1954) is a former college All-American football player and politician.  He started as quarterback for the Texas Longhorns in the early 1970s and was the only Longhorn quarterback to start three seasons for Legendary Head Football Coach Darrell Royal.  Darrell Royal said: "Akins directed and ran the option and the wishbone offense better than any other player in football history."  Akins was the only wishbone quarterback to ever be selected a first team All-American.  Coach Royal also stated: "Marty was the best all around athlete I ever coached and he was the best college football player in the nation in 1975."  Royal added: "Marty making All-American as a wishbone quarterback was like winning the Heisman Trophy."  Akins briefly ran for Governor of Texas and was later the Democratic nominee for Texas State Comptroller in 2002.
+
+2002 Texas Longhorns baseball team: The 2002 Texas Longhorns baseball team represented the University of Texas at Austin in the 2002 NCAA Division I baseball season.  The Longhorns played their home games at UFCU Disch-Falk Field.  The team was coached by Augie Garrido in his 6th season at Texas.
+
+2010 Texas Longhorns football team: The 2010 Texas Longhorns football team (variously "Texas", "UT", the "Longhorns", or the "'Horns") represented the University of Texas at Austin in the 2010 NCAA Division I FBS football season.  The team was coached by Mack Brown, in his 13th year at Texas.  Longhorns played their home games in Darrell K Royal–Texas Memorial Stadium and are members of the south division of the Big 12 Conference.  Texas finished the season 5–7, 2–6 in Big 12 play.  It was the Longhorns' first losing season since 1997.
+
+Miniature Texas Longhorn: Miniature Texas Longhorns are purebred, registered Texas Longhorns that have been "downsized" by selectively breeding the smallest Texas Longhorns together over time.
+
+1999 Philadelphia Eagles season: The 1999 Philadelphia Eagles season was the franchise's 67th in the National Football League (NFL).  The team finished 5–11 and last place in the NFC East.  The Eagles hired Andy Reid away from the Green Bay Packers to be their new head coach prior to the start of the season.  In the 1999 NFL Draft, the team drafted quarterback Donovan McNabb with the second overall pick.
+
+List of Texas Longhorns head football coaches: The Texas Longhorns football program is a college football team that represents the University of Texas at Austin of the Big 12 Conference in the National Collegiate Athletic Association.  The team has had 28 head coaches since it started playing organized football in 1893 with the nickname "Longhorns", although they played without a head coach in their first season.  Texas was an original member of the Southwest Conference, joining in 1915.  The Longhorns became a charter member of the Big 12 in 1996 when the Southwest Conference disbanded.  The Longhorns have played in 1,200 games during their 117 seasons.  In those seasons, eight coaches have led Texas to postseason bowl games: Dana X. Bible, Blair Cherry, Ed Price, Darrell Royal, Fred Akers, David McWilliams, John Mackovic, and Mack Brown.  Ten coaches have won conference championships with the Longhorns: Berry Whitaker, Clyde Littlefield, Bible, Cherry, Price, Royal, Akers, McWilliams, Mackovic, and Brown.  Royal and Brown have also won national championships with Texas.
+
+2004 Texas Longhorns football team: The 2004 Texas Longhorns football team represented the University of Texas at Austin in the 2004 NCAA Division I-A football season.  The team was coached by head football coach Mack Brown and led on the field by quarterback Vince Young.  Ranked third in wins in Division I-A college football history, the University of Texas has traditionally been considered a college football powerhouse, but Brown had not managed to lead the Longhorns into a Bowl Championship Series (BCS) game.  The 2004 season included some controversy related to the selection of Texas as an at-large team to attend the 2005 Rose Bowl.  Brown coached the team to win that game with a thrilling last-second victory.  The victory brought the Longhorns to 11 wins and 1 loss for the season (11–1) and it earned the Longhorns a top 5 finish in the polls.
+
+2002 Texas Longhorns football team: The 2002 Texas Longhorns football team represented the University of Texas at Austin in the 2002 NCAA Division I-A football season.  The team was coached by head football coach Mack Brown and led on the field by senior quarterback Chris Simms.
+
+Question: Which NFL team drafted the senior quarterback of the 2002 Texas Longhorns?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The name of the quarterback."
+    },
+    "college_team": {
+      "type": "string",
+      "description": "The college team the player played for."
+    },
+    "nfl_draft_details": {
+      "type": "object",
+      "properties": {
+        "nfl_team_drafted_by": {
+          "type": "string",
+          "description": "The NFL team that drafted the player."
+        },
+        "draft_year": {
+          "type": "integer",
+          "description": "The year the player was drafted into the NFL."
+        },
+        "draft_round": {
+          "type": "integer",
+          "description": "The round in which the player was drafted."
+        }
+      },
+      "required": [
+        "nfl_team_drafted_by",
+        "draft_year",
+        "draft_round"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "player_name",
+    "college_team",
+    "nfl_draft_details"
+  ],
+  "additionalProperties": false
+}

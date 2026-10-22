@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Great Mosque of Asmara: The Great Mosque of Asmara (Italian: "Grande Moschea di Asmara" ; alternately known as Al Kulafah Al Rashidan, Al Kulafah Al Rashidin, Al Kuaka Al Rashidin or Al Khulafa Al Rashiudin; Arabic: جامع الخلفاء الراشدين‎ ‎ , "jama al khulafa'a al rashidin", Mosque of the Rightly-Guided Caliphs) is a mosque located on Harnet Avenue (earlier known as Viale Mussolini) in Asmara, the capital city of Eritrea.  The mosque is considered to be one of the three prominent edifices of the city, along with Church of Our Lady of the Rosary and Enda Mariam Coptic Cathedral.  Designed by Guido Ferrazza, it was built in 1938 on the initiative of Benito Mussolini, to impress the Muslim population, who make up about 50% of the locality.  The name means "followers of the right path".
+
+Jemmal: Jemmal is a city in the Monastir Governorate of Tunisia, located about 20 km south of Monastir.  As of 2014 it had a population of 50275 people.  The city is well known for its historic Grand Mosque and is at the centre of a region of olive groves.  A festival takes place during the olive harvest season in November or December of each year.  It is also an important industrial center for textiles and manufacturing; the manufacturing industry employs about half of Jemmal's active population.  An industrial zone there was established in 2005 on 7.5 hectares (.03 sq. miles), along the road which connects Jemmal to the town of Moknine.
+
+Afro-Palestinians: Africans in Palestine self-identify deeply with both their original African ancestry and the Palestinian nationality.  A minority of African Palestinians reside in the Muslim quarter located in the city of Jerusalem.  Approximately 450 African-Palestinians live in two compounds, one of which is neighboring the main entrance of Al-Aqsa mosque.  A larger Afro population is located in the city of Gaza, as of today, there is about 10,000 African Palestinians currently living there.
+
+Khaglan Wala: Khaglan Wala (ڪھگلانواله) is a village and union council of Isakhel Tehsil of Mianwali District in the Punjab province of Pakistan.  It is part of Isa Khel Tehsil and is located at 32°37'60N 71°16'0E. It is located on the northern bank of Kurram River.  It is one of the villages situated on the western borders of Punjab province adjacent to KPK province.  Its population is about 3000 people .  It is a comparatively developed village as basic facilities like electricity, telephone, metallic road, internet, schools, water supply system and sewerage system are provided to the inhabitants of this village.  It is also a well-planned village situated on a 40 feet wide (18' metallic) road.  A 30' main street runs east to west through the village by equally dividing the entire village into two parts.  Three other streets run north to south crossing the main street at 90°.  There are four mosques including a grand mosque (Jamae Masjid or Waddi Maseet) situated in this settlement.  The scene of river Kurram alongside bela jungle give beautiful look to this historical village.  Khaglanwala is a hub of different routs coming from various villages situated on other side of the River Kurram to reach Isa Khel city.
+
+Butt Road Jumma Masjid: The Butt Road Jama Masjid is a mosque located in St Thomas Mount on the outskirts of Chennai, India.  Situated at a distance of 13 kilometres from Chennai city and 2 kilometres from Guindy on the Mount-Poonamallee Road, the mosque caters to the Muslim population of the suburb and the nearby cantonment.
+
+Mosque Scorpio: Scorpio Mosque is a mosque located near the city of Almtihh in Basra.  It has been in reconstruction since 2013.
+
+Basra: Basra (Arabic: البصرة‎ ‎ "al-Baṣrah"), is an Iraqi city located on the Shatt al-Arab between Kuwait and Iran.  It had an estimated population of 1.5 million in 2012.  Basra is also Iraq's main port, although it does not have deep water access, which is handled at the port of Umm Qasr.
+
+Makhachkala: Makhachkala (Russian: Махачкала ; ] ; Kumyk: Анжи-кала ; Lak: Гьанжи; Avar: МахӀачхъала; Lezgian: Магьачкъала; Rutul: МахаӀчкала) is the capital city of the Republic of Dagestan, Russia.  It is located on the western shore of the Caspian Sea and is home to the Makhachkala Grand Mosque, one of Russia’s largest.  As of the 2010 Census, the city had a population of 572,076, making it the largest in the North Caucasus Federal District.  The city has an ethnic plurality, with the Avars and Laks being the largest groups.
+
+Bura Jungle: Bura Jungle is a medium size village located in northeast Punjab, Pakistan.  It is located three miles west from a rapidly growing town of Dina City in district Jhelum and six miles from famous Rohtas Fort.  Its population is around 1000 people.  Majority of people living in Bura Jungle belong to Gujjar family.  Famous GT Road of Pakistan goes right across this village.  There is a very famous Bura Jungle mosque situated in this village right on GT Road.
+
+Bhour: Bhour is a village in the Punjab state of India, located near the city of Sultanpur Lodhi, in the Kapurthala district.  The population consists of members of different castes, with a majority of Jatt Sikh members, and a minority population of Muslims. {(} The village has a Gurudwara and a Mosque (Lakha Wala Datta).  There is a stadium on the north side, and a unisex school on the south side of the village which holds classes for 1st-5th standard years of education.  The population consists of many expats living in Dubai, Canada, United States and Europe.  The village has undergone a huge Infrastructural development with almost all houses been built modern when compared to neighboring villages.  The village hosts a Tournament "Shaeed Bhagat Singh Tournament" in memorial of Bhagat Singh, every year with help of all the village members and NRI people.  People having roots from this village are very hardworking and have success in their field such as Trucking businesses and wood works/ designs e.g.: Vishkarma Transport Dubai, Sody Nahal Canada, and various others in Italy.
+
+Question: What is the population of the city where Mosque Scorpio is located?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "city_name": {
+      "type": "string",
+      "description": "The name of the city where the mosque is located."
+    },
+    "mosque_name": {
+      "type": "string",
+      "description": "The name of the mosque in question."
+    },
+    "population": {
+      "type": "number",
+      "description": "The estimated population of the city."
+    },
+    "population_year": {
+      "type": "integer",
+      "description": "The year the population was estimated."
+    }
+  },
+  "required": [
+    "city_name",
+    "mosque_name",
+    "population",
+    "population_year"
+  ],
+  "additionalProperties": false
+}

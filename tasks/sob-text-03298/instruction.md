@@ -1,0 +1,103 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2012 French Open – Women's Singles: Li Na was the defending champion, but lost in the fourth round to qualifier Yaroslava Shvedova, the first time a defending champion was defeated by a qualifier in the tournament's history.
+
+2006 FIFA World Cup qualification: The 2006 FIFA World Cup qualification competition was a series of tournaments organised by the six FIFA confederations.  Each confederation — the AFC (Asia), CAF (Africa), CONCACAF (North, Central America and Caribbean), CONMEBOL (South America), OFC (Oceania), and UEFA (Europe) — was allocated a certain number of the 32 places at the tournament.  A total of 197 teams entered the qualification process for the 2006 FIFA World Cup, for the first time ever, the defending champion (Brazil) did not qualify automatically.  The hosts (Germany) retained their automatic spot.  In 1934, the defending champions (Uruguay) declined to participate and the hosts (Italy) had to qualify, but in the tournaments between 1938 and 2002 (inclusive), the hosts and the defending champions had automatic berths.
+
+2016 US Open – Men's Singles: Novak Djokovic was the defending champion, but lost in the final to Stan Wawrinka, 7–6, 4–6, 5–7, 3–6.  This was the first time the men's singles champion at the US Open won the match after losing the first set since Juan Martín del Potro in 2009.  This was also the first time the men's singles champion at the US Open won the title after being a match point down since Djokovic in 2011, with Wawrinka having saved a match point against Dan Evans in the 3rd round.  As he had done in his 2 previous grand slam titles, Wawrinka again defeated the world No. 1 in the final.
+
+2002 WTA German Open – Singles: Amélie Mauresmo was the defending champion, but lost in Quarterfinals to Serena Williams.
+
+2011 Mini 7 Racing Club season: The 2011 Mini 7 Racing Club season consisted of thirteen rounds over seven events including a return to Spa-Francorchamps for the first time since 2006.  Paul Thompson was the Mini Miglia defending champion and Paul Spark the Mini Se7en defending champion.
+
+2009 BDO World Darts Championship: The 2009 Lakeside World Professional Darts Championship was the 32nd World Championship organised by the British Darts Organisation.  Mark Webster was the defending men's champion having won the title for the first time in last year's final against Simon Whitlock, but he was eliminated convincingly 4–0 by John Walton in the second round.  The title was eventually won by 2000 champion Ted Hankey, who won 7–6 against Tony O'Shea, in a match which lasted just under two and a half hours.  The defending women's champion, Anastasia Dobromyslova, was due to defend her championship, having beaten seven-time champion Trina Gulliver in the 2008 final, but on 7 December 2008 she resigned from the BDO/WDF setup after her defeat in the Winmau World Masters to Francis Hoenselaar.  It later emerged that she had accepted the 70th and last place into the rival PDC World Championship, replacing an Indian qualifier.  This meant that for the first time, the defending women's champion would not be returning to defend her title.  Hoenselaar, a five-time runner-up, finally won her first world title by beating Gulliver – the player that had beaten her each time – by two sets to one.  The event took place from 3–11 January 2009 and for the 24th time, the tournament took place at the Lakeside Country Club in Frimley Green.
+
+Serena Williams: Serena Jameka Williams (born September 26, 1981) is an American professional tennis player.  The Women's Tennis Association (WTA) has ranked her world No. 1 in singles on eight occasions, from 2002 to 2017.  She became the world No. 1 for the first time on July 8, 2002.  On the sixth occasion, she held the ranking for 186 consecutive weeks, tying the record set by Steffi Graf for the most consecutive weeks as world No. 1 by a female tennis player.  In total, she has been world No. 1 for 319 weeks, which ranks her third in the Open Era among female tennis players.  Some commentators, players and sports writers regard her as the greatest female tennis player of all time.
+
+1994 Wimbledon Championships – Women's Singles: Steffi Graf was the defending champion, but she lost in the first round to Lori McNeil ending her streak of thirty-one consecutive quarterfinal appearances dated back to 1985 US Open.  This also would be the first time that a Grand Slam defending champion lost in the first round.
+
+Giovanni Cucelli: Giovanni Cucelli (1916–1977) was an Italian tennis player.  He played Davis Cup for Italy and formed a great doubles partnership with Marcello Del Bello.  Because of World War 2, Cucelli was 30 by the time he made his Grand Slam debut at Wimbledon in 1947, where he lost in the third round to Jack Kramer.  At Roland Garros (held just after Wimbledon) Cucelli beat veteran Jack Crawford and Robert Abdesselam before losing to defending champion Marcel Bernard in five sets in the quarter finals.  At Roland Garros in 1948, Cucelli beat a young Frank Sedgman before losing to Frank Parker in the quarter finals.  At Wimbledon Cucelli beat Jaroslav Drobny before losing to Tony Mottram in round three.  At Roland Garros in 1949, Cucelli reached his third consecutive quarter final, where he lost to Budge Patty.  At Wimbledon he beat Mottram before losing to Eric Sturgess in the last 16.  At 1949 U. S. championships, Cucelli lost in round two to Sam Match.  Cucelli lost in the last 16 of Roland Garros in 1950 to Patty.  After early exits at the French and Wimbledon in 1951, Cucelli reached the last 16 at Roland Garros in 1952, where he lost to Ken McGregor.  He lost early at Wimbledon to Mottram.  Cucelli lost his first match at Roland Garros in 1953 to Rex Hartwig.  In 1955 Cucelli turned professional.  Cucelli won a lot of tournaments during his career: Italian Riviera championships and Alassio in 1939, Napoli and Barcelona Christmas tournament in 1941, St. Moritz, French-Switzerland championships and Milan international in 1946, Swiss championships, Villars, Montana-Vermala, Viareggio and Rapallo in 1947, Milan international, Napoli, Rapallo, Montecatini and Barcelona Christmas tournament in 1948, San Remo in 1949, Lugano, Istanbul, Venice and Lugano Lido tournament in 1950, San Pellegrino and Viareggio in 1951 and Cava De Tirreni in 1952.  He was runner up at Monte Carlo in 1948 to Jozsef Asboth and 1949 to Parker and runner up at Rome in 1951 (where he beat Patty before losing to Drobny).
+
+2005 Tim Hortons Brier: The 2005 Tim Hortons Brier, the Canadian men's curling championship, was held at Rexall Place in Edmonton, Alberta from March 5 to 13.  The tournament consisted of 12 teams, one from each province, plus a team representing the Yukon and Northwest Territories, plus a team representing Northern Ontario.  The defending champion, Mark Dacey did not participate, as he was knocked out in the Nova Scotia final by Shawn Adams' team.  The tournament featured 3-time Brier champion (2001, 2002, 2003) Randy Ferbey of Alberta, 1998 Champion Wayne Middaugh of Ontario, 2003 and 2004 Newfoundland and Labrador champion Brad Gushue, 2000 and 2002 Nova Scotia champion Shawn Adams, 1992 and 2001 Yukon/Northwest Territories champion skip Steve Moss, 1986 New Brunswick champion Wade Blanchard, 2002 and 2003 British Columbia champion (third and second respectively for Pat Ryan), Deane Horning, 1981 and 1996 Prince Edward Island champion lead for Peter MacDonald, Rod MacDonald; 2003 Quebec champion second for Guy Hemmings, Jean-Michel Ménard as well as three new teams: Randy Dutiaume of Manitoba, Mike Jakubo of Northern Ontario and Pat Simmons of Saskatchewan.
+
+Question: Who beat the defending champion in 2002 and She became the world No. 1 for the first time on July 8, 2002?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person who meets the criteria."
+    },
+    "event_of_victory": {
+      "type": "object",
+      "properties": {
+        "event_name": {
+          "type": "string",
+          "description": "The name of the event where the person beat the defending champion."
+        },
+        "year": {
+          "type": "integer",
+          "description": "The year the event took place."
+        },
+        "defending_champion_defeated": {
+          "type": "string",
+          "description": "The name of the defending champion who was defeated."
+        },
+        "round_of_defeat": {
+          "type": "string",
+          "description": "The round in which the defending champion was defeated."
+        }
+      },
+      "required": [
+        "event_name",
+        "year",
+        "defending_champion_defeated",
+        "round_of_defeat"
+      ],
+      "additionalProperties": false
+    },
+    "ranking_milestone": {
+      "type": "object",
+      "properties": {
+        "first_time_world_no_1_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date when the person first became world No. 1."
+        },
+        "total_weeks_as_world_no_1": {
+          "type": "integer",
+          "description": "The total number of weeks the person has been world No. 1."
+        },
+        "consecutive_weeks_as_world_no_1": {
+          "type": "integer",
+          "description": "The record for consecutive weeks the person held the world No. 1 ranking."
+        }
+      },
+      "required": [
+        "first_time_world_no_1_date",
+        "total_weeks_as_world_no_1",
+        "consecutive_weeks_as_world_no_1"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "event_of_victory",
+    "ranking_milestone"
+  ],
+  "additionalProperties": false
+}

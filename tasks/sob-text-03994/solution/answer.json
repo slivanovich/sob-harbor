@@ -1,0 +1,11 @@
+{
+  "person_1": {
+    "name": "Ang Lee",
+    "nationality": "Taiwanese"
+  },
+  "person_2": {
+    "name": "Cameron Crowe",
+    "nationality": "American"
+  },
+  "are_nationalities_same": false
+}

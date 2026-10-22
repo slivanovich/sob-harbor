@@ -1,0 +1,12 @@
+{
+  "question_asked": "Are The Four Seasons and Julian Cope the same nationality?",
+  "entity_1": {
+    "name": "Julian Cope",
+    "nationality": "English"
+  },
+  "entity_2": {
+    "name": "The Four Seasons",
+    "nationality": "American"
+  },
+  "are_same_nationality": false
+}

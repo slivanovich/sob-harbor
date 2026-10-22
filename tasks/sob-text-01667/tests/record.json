@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "record_id": "597438b876292b3a03da65c68de8886ce0f472ea275b50f1b4dd39fe997845a5",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8adec25542992d82986fbe",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Brownea",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Brownea coccinea: Brownea coccinea is a species in the subfamily Caesalpinioideae of the family Fabaceae.  Common names include Scarlet Flame Bean, Mountain Rose, Rose of Venezuela and Cooper Hoop.\n\nBrownea santanderensis: Brownea santanderensis is a species of legume in the Fabaceae family.\n\nBrownea grandiceps: Brownea grandiceps is a species of tree in the family Fabaceae.  Its common names include the rose of Venezuela and the scarlet flame bean.  It originated in South America but is now widely grown as a decorative tree in tropical gardens.\n\nEcballium: Ecballium is a genus of flowering plants in the family Cucurbitaceae containing a single species, Ecballium elaterium, also called the squirting cucumber or exploding cucumber (but not to be confused with \"Cyclanthera explodens\").  It gets its unusual name from the fact that, when ripe, it squirts a stream of mucilaginous liquid containing its seeds, which can be seen with the naked eye.  It is thus considered to have rapid plant movement.\n\nBrownea: Brownea is a genus of about 30 species in the family Fabaceae, subfamily Detarioideae.  The genus is native to tropical regions of the Americas.  The species are shrubs and trees growing to 20 m tall.",
+    "question": "Which has more species, Ecballium or Brownea?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "genus_comparison_summary": {
+          "type": "string",
+          "description": "A summary statement indicating which genus has more species."
+        },
+        "genera_details": {
+          "type": "array",
+          "description": "Details for each genus involved in the comparison.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "genus_name": {
+                "type": "string",
+                "description": "The name of the genus."
+              },
+              "species_count": {
+                "type": "integer",
+                "description": "The number of species in the genus."
+              }
+            },
+            "required": [
+              "genus_name",
+              "species_count"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "genus_with_more_species": {
+          "type": "string",
+          "description": "The name of the genus that has more species."
+        },
+        "species_count_difference": {
+          "type": "integer",
+          "description": "The numerical difference in species count between the two genera."
+        }
+      },
+      "required": [
+        "genus_comparison_summary",
+        "genera_details",
+        "genus_with_more_species",
+        "species_count_difference"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "genus_comparison_summary": "Brownea has more species than Ecballium.",
+      "genera_details": [
+        {
+          "genus_name": "Ecballium",
+          "species_count": 1
+        },
+        {
+          "genus_name": "Brownea",
+          "species_count": 30
+        }
+      ],
+      "genus_with_more_species": "Brownea",
+      "species_count_difference": 29
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

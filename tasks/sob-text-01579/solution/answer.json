@@ -1,0 +1,13 @@
+{
+  "criticized_person": "Donald Trump",
+  "criticizing_couple": {
+    "first_person_name": "Khizr Muazzam Khan",
+    "second_person_name": "Ghazala Khan"
+  },
+  "event_details": {
+    "convention_name": "2016 Democratic National Convention",
+    "location": "Philadelphia, Pennsylvania",
+    "venue": "Wells Fargo Center",
+    "year": 2016
+  }
+}

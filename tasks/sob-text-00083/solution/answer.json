@@ -1,0 +1,16 @@
+{
+  "act_name": "Global Food Security Act of 2016",
+  "congress_number": 114,
+  "introduction_details": {
+    "introduction_date": "2015-05-07",
+    "introducer_type": "Senator"
+  },
+  "senator_information": {
+    "full_name": "Robert Patrick Casey Jr.",
+    "nickname": "Bob",
+    "state": "Pennsylvania",
+    "political_party": "D",
+    "current_role": "senior United States Senator from Pennsylvania",
+    "profession": "American attorney and politician"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "disaster_name": "Space Shuttle Columbia disaster",
+  "disaster_year": 2003,
+  "crew_fatalities_count": 7,
+  "astronaut_honored_by_asteroid": {
+    "name": "Laurel Clark",
+    "asteroid_designation": "51827 Laurelclark"
+  }
+}

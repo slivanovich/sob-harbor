@@ -1,0 +1,13 @@
+{
+  "river_name": "River Avon",
+  "county": "Warwickshire",
+  "ferry_details": {
+    "ferry_name": "Malvolio",
+    "ferry_type": "chain ferry"
+  },
+  "character_details": {
+    "character_name": "Malvolio",
+    "play_title": "Twelfth Night",
+    "character_role": "main antagonist"
+  }
+}

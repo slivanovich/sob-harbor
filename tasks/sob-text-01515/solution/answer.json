@@ -1,0 +1,14 @@
+{
+  "controlled_region_name": "Revolutionary Catalonia",
+  "controlling_factions": [
+    "anarchist",
+    "communist",
+    "socialist trade unions",
+    "parties",
+    "militias"
+  ],
+  "control_period": "July 21, 1936 – 1939",
+  "event_name": "May Days",
+  "event_date_range": "3 and 8 May 1937",
+  "event_location": "various parts of Catalonia, in particular in the city of Barcelona"
+}

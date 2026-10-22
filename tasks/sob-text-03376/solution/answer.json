@@ -1,0 +1,14 @@
+{
+  "film_details": {
+    "title": "Don't Cry, Nanking",
+    "alternative_title": "Nanjing 1937",
+    "release_year": 1995
+  },
+  "historical_event_depicted": {
+    "name": "Nanking Massacre",
+    "year": 1937
+  },
+  "war_context": {
+    "name": "Second Sino-Japanese War"
+  }
+}

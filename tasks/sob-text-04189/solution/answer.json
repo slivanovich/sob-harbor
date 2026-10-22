@@ -1,0 +1,12 @@
+{
+  "stadium_details": {
+    "name": "Holman Stadium",
+    "location": "Nashua, New Hampshire",
+    "seating_capacity": 4000
+  },
+  "home_team_details": {
+    "name": "Nashua Silver Knights",
+    "owner": "Drew Weber"
+  },
+  "final_answer": 4000
+}

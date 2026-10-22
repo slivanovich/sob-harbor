@@ -1,0 +1,13 @@
+{
+  "venue_name": "Trees Dallas",
+  "resurrection_date": "August 14, 2009",
+  "performer_details": {
+    "singer_name": "Charlie Puth",
+    "nationality": "American",
+    "known_for_song": {
+      "song_title": "See You Again",
+      "release_year": 2015,
+      "song_description": "A tribute to Paul Walker for the 'Furious 7' soundtrack, co-produced and performed with Wiz Khalifa."
+    }
+  }
+}

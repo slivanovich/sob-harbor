@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "record_id": "e0124a06e12bbafcacb12a7501464ada6e1dba8b5824b491dde9eb66e973b409",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5ab6d5765542995eadef00b4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Shamrock Bowl XXI: Shamrock Bowl XXI was played on July 29, 2007 at UL Sports Ground, Limerick to decide the Irish American Football League (IAFL) champion following the 2007 regular season.  This Shamrock Bowl hosted two teams from the IAFL South division, the University of Limerick Vikings and the Cork Admirals.  The Vikings won the first Shamrock Bowl title in their team history, previously losing their last two in 2002 and 2006.  This was the Cork Admirals' first Shamrock Bowl appearance.\n\nStyphelia: Styphelia is a genus of shrubs in the heather family, Ericaceae.  The genus is endemic to Australia and the Pacific Islands.\n\nFrank Shamrock: Frank Shamrock (born Frank Alisio Juarez, III; December 8, 1972) is an American former mixed martial artist.  Shamrock was the first to hold the UFC Middleweight Championship (later renamed the UFC Light Heavyweight Championship) and retired as the four-time defending undefeated champion.  Shamrock was the No. 1 ranked pound for pound UFC fighter in the world during his reign as the UFC Middleweight Champion.  Shamrock has won numerous titles in other martial arts organizations, including the interim King of Pancrase title, the WEC Light Heavyweight Championship and the Strikeforce Middleweight Championship.\n\nShamrock High School: Shamrock High School is a public high school located in Shamrock, Texas (USA) and classified as a 2A school by the UIL.  It is part of the Shamrock Independent School District located in south central Wheeler County.  In 2015, the school was rated \"Met Standard\" by the Texas Education Agency.\n\nCyathopsis: Cyathopsis is a genus of shrubs in the family Ericaceae.  The genus is endemic to New Caledonia in the Pacific and contains three species that have previously been included in \"Styphelia\".  It is related to genera such as \"Leucopogon\", \"Lissanthe\" and \"Styphelia\".\n\nShane Shamrock: Brian Stephen Howser (February 8, 1975 – August 18, 1998) was an American professional wrestler best known for wrestling in Maryland Championship Wrestling.  In the promotion, he was the first and only wrestler to win the Light Heavyweight Championship and was nicknamed \"The Lifetime MCW Light Heavyweight Champion\" in tribute to his death.  Each year, the Shane Shamrock Memorial Cup is held as a tribute to him.  Despite sharing an in-ring last name, he is not related to Ken Shamrock (who was born Kenneth Wayne Kilpatrick, although he adopted the surname \"Shamrock\" after his adopted father, Bob Shamrock).\n\nDiamond Alkali: Diamond Alkali Company was an American chemical company incorporated in 1910 in West Virginia by a group of glass industry businessmen from Pittsburgh.  The company soon established as a large chemical plant at Fairport Harbor, Ohio, along with Jadeja Chemicals Inc. which would operate for over sixty years.  In 1947, the headquarters of the company was moved from Pittsburgh to Cleveland.  In 1967, Diamond Alkali and Shamrock Oil and Gas merged to form the Diamond Shamrock Corporation.  Diamond Shamrock would go on to merge with Ultramar Corporation, and the combined company, Ultramar Diamond Shamrock Corporation, would in turn be acquired by Valero Energy Corporation in 2001.\n\nShamrock Bowl XXV: Shamrock Bowl XXV was an American football game pitting the 6 time Shamrock Bowl champions, Dublin Rebels against university side, UL Vikings.  The game was played on July 31, 2011, at the Morton Stadium in Santry, Dublin.  The Rebels defeated the Vikings by a score of 14 - 13, earning their seventh Shamrock Bowl win.  Rebels safety Marcus Naylor was named the Shamrock Bowl MVP.  He was the second Rebels safety ever to win the award following, Brian Carter.\n\nShamrock: A shamrock is a young sprig of clover, used as a symbol of Ireland.  Saint Patrick, Ireland's patron saint, is said to have used it as a metaphor for the Christian Holy Trinity.  The name \"shamrock\" comes from Irish \"seamróg \" ] , which is the diminutive of the Irish word for clover (\"seamair \") and means simply \"little clover\" or \"young clover\".\n\nShamrock Bowl: The Shamrock Bowl is the championship game of the Irish American Football League (IAFL), the highest level of American football on the island of Ireland, culminating a season that begins in March of the current calendar season.  The Shamrock Bowl uses Roman numerals to identify each game, rather than the year in which it was held.  For example, Shamrock Bowl XIII was played on August 30, 1998, following the regular season played in 1998, while Shamrock Bowl XXV was played on July 31, 2011, to determine the champion of the 2011 regular season.",
+    "question": "Are the Shamrock and Styphelia both shrubs?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question posed."
+        },
+        "entity_1_name": {
+          "type": "string",
+          "description": "The name of the first entity mentioned in the question."
+        },
+        "entity_1_description": {
+          "type": "string",
+          "description": "A description of the first entity from the context."
+        },
+        "entity_1_is_shrub": {
+          "type": "boolean",
+          "description": "Indicates whether the first entity is identified as a shrub in the context."
+        },
+        "entity_2_name": {
+          "type": "string",
+          "description": "The name of the second entity mentioned in the question."
+        },
+        "entity_2_description": {
+          "type": "string",
+          "description": "A description of the second entity from the context."
+        },
+        "entity_2_is_shrub": {
+          "type": "boolean",
+          "description": "Indicates whether the second entity is identified as a shrub in the context."
+        },
+        "both_are_shrubs": {
+          "type": "boolean",
+          "description": "The final answer to whether both entities are shrubs."
+        }
+      },
+      "required": [
+        "question_asked",
+        "entity_1_name",
+        "entity_1_is_shrub",
+        "entity_2_name",
+        "entity_2_is_shrub",
+        "both_are_shrubs"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Are the Shamrock and Styphelia both shrubs?",
+      "entity_1_name": "Shamrock",
+      "entity_1_description": "A young sprig of clover, used as a symbol of Ireland.",
+      "entity_1_is_shrub": false,
+      "entity_2_name": "Styphelia",
+      "entity_2_description": "A genus of shrubs in the heather family, Ericaceae.",
+      "entity_2_is_shrub": true,
+      "both_are_shrubs": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

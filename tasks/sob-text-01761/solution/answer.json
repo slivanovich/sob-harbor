@@ -1,0 +1,9 @@
+{
+  "entity_one_name": "Echidnopsis",
+  "entity_one_is_genus": true,
+  "entity_one_family": "Apocynaceae",
+  "entity_two_name": "Lechenaultia",
+  "entity_two_is_genus": true,
+  "entity_two_family": "Goodeniaceae",
+  "are_both_genera": true
+}

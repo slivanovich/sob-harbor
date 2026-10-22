@@ -1,0 +1,16 @@
+{
+  "organization_name": "Proud Boys",
+  "founding_year": 2016,
+  "founder": {
+    "name": "Gavin McInnes",
+    "roles": [
+      "Vice Media co-founder",
+      "former commentator"
+    ]
+  },
+  "rally_attendance": {
+    "rally_name": "Mother of All Rallies",
+    "rally_date": "September 16, 2017",
+    "was_present": true
+  }
+}

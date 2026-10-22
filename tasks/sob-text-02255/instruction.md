@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Coney Island USA: Coney Island USA is a 501(c)(3) not-for-profit arts organization founded in 1980 that is dedicated to the cultural and economic revitalization of the Coney Island neighborhood of the Borough of Brooklyn in New York City.  Its landmark building in the heart Coney Island's amusement district houses a theater in which the organization presents "Sideshows by the Seashore", a showcase for performers with unusual talents that runs continuously during the warmer months, as well as the Coney Island Museum.  It is also notable as the organizer of the annual Coney Island Mermaid Parade, the first of which took place in 1983.
+
+Stillwell Avenue: Stillwell Avenue is a major two-way north/south thoroughfare in southern Brooklyn and the central section of Coney Island.  It is 2.4 miles (3.86 kilometres) long and begins at a dead end on Coney Island.  The road goes north, leaving Coney Island, ending at Bay Parkway, where the road continues as the Bay Ridge Parkway (former Route 439).  On December 11, 2008 it acquired the subsidiary name Polar Bear Club Walk, named for the Coney Island Polar Bear Club.  The Stillwell Avenue/Surf Avenue intersection on Coney Island is the location of what is said to be the largest subway station in the world.
+
+Steeplechase Park: Steeplechase Park was an amusement park in the Coney Island area of Brooklyn, New York created by George C. Tilyou (1862–1914) which operated from 1897 to 1964.  It was the first of the three original iconic large parks built on Coney Island, the other two being Luna Park (1903) and Dreamland (1904).  Steeplechase was Coney Island's longest lasting park.  Unlike Dreamland, which burned in a fire in 1911, and Luna Park which, despite early success, saw its profitability disappear during the Great Depression, Steeplechase had kept itself financially profitable.  The Tilyou family had been able to adapt the park to the changing times, bringing in new rides and new amusements to Steeplechase such as the Parachute Jump.
+
+ZGF Architects LLP: ZGF Architects LLP (ZGF), formerly Zimmer Gunsul Frasca Partnership, is an American architectural firm with offices in Portland, Oregon; Seattle, Washington; Los Angeles, California; Washington D.C.; New York, New York; and Vancouver, Canada.  Founded in 1942, the firm was listed in 2011 as the #4 architectural firm in the United States by "Building Design+Construction", and ranked the #9 architectural firm by "Architect".  In 2016 "Architect" named ZGF the #1 architecture firm in the country, citing the organization's dedication to sustainability as a major deciding factor.  Between the company's five offices in the United States and their office in Canada they employ more than 600 employees.
+
+Gone to Coney Island and Booming Business: Gone to Coney Island and Booming Business are two 1910 American silent short comedy productions by the Thanhouser Company.  Both were released together on a single film reel on July 5, 1910.  "Gone to Coney Island" is a comedy that features Coney Island, which the mere subject would make for a successful film.  "Booming Business" may have been the very type of slapstick comedy that Edwin Thanhouser specifically said the Thanhouser Company would not produce.  The productions of both films have no credits for the cast or crew, but possible candidates for these roles exist.  Reviews of the films favored "Gone to Coney Island", but some reviewers specifically refused to explain the plot because Coney Island subjects were deemed self-explanatory.  "Booming Business" received one detailed review in "The New York Dramatic Mirror" which was negative.  The films are presumed lost.
+
+KBJ Architects: KBJ Architects, Inc. (KBJ) is an American architectural firm based in Jacksonville, Florida.  The firm designed 17 of the city's 30 tallest buildings and "created Jacksonville's modern skyline", according to "The Florida Times-Union" newspaper.  The firm designed the first high-rise in downtown Jacksonville, the 22-story Aetna Building, which opened in 1955.  It took pride in "having the second-largest number of architects of any Florida firm", according to a 1997 article in "The Florida Times-Union".
+
+Half Moon Hotel: The Half Moon Hotel in Coney Island, Brooklyn, N.Y. was a 225-foot-tall, 14-story hotel that opened in May 5, 1927 on the Riegelmann Boardwalk at West 29th Street.  The Half Moon was built to help Coney Island compete with the beach resort Atlantic City, N.J.  The hotel was designed by the architectural firm of George B. Post and Sons and built by the Cauldwell-Wingate Co.
+
+Dreamland (amusement park): Dreamland was an ambitious amusement park at Coney Island, Brooklyn, New York City from 1904 to 1911.  It was the last, and considered the grandest, of the three original iconic large parks built on Coney Island, the other two being Steeplechase Park and Luna Park.
+
+Olson Kundig Architects: Olson Kundig, an American architectural firm based in Seattle, was founded by architect Jim Olson in 1967.  Current principal/owners include Jim Olson, FAIA, Tom Kundig, FAIA, FAIA, Kirsten R. Murray, AIA, Alan Maskin and Kevin M. Kudo-King.  Olson Kundig’s work encompasses museums, commercial and mixed-use design, exhibit design, interior design, places of worship, and residences, often for art collectors.  The firm was awarded the 2009 AIA Architecture Firm Award (as Olson Sundberg Kundig Allen Architects) from the American Institute of Architects.  The firm launched an interiors studio in 2000.  Their first line of accessories, The Tom Kundig Collection, debuted in 2012.
+
+Kirby, Petit &amp; Green: Kirby, Petit & Green was an American architectural firm practicing in New York City, noted as the architects of Coney Island's Dreamland, among other major commissions.  The three principals were architects Henry P. Kirby, John J. Petit, and James C. Green.
+
+Question: Kirby, Petit & Green was an American architectural firm practicing in which city, noted as the architects of Coney Island's Dreamland?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "firm_name": {
+      "type": "string",
+      "description": "The name of the architectural firm."
+    },
+    "practice_city": {
+      "type": "string",
+      "description": "The city where the architectural firm practiced."
+    },
+    "notable_achievement": {
+      "type": "string",
+      "description": "A significant project or achievement the firm is noted for."
+    }
+  },
+  "required": [
+    "firm_name",
+    "practice_city",
+    "notable_achievement"
+  ],
+  "additionalProperties": false
+}

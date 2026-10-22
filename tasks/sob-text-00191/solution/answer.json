@@ -1,0 +1,15 @@
+{
+  "person_name": "Paul McEuen",
+  "degree_details": {
+    "degree_type": "B.S.",
+    "field_of_study": "engineering physics",
+    "university_name": "University of Oklahoma"
+  },
+  "university_programs_offered": {
+    "university_name": "University of Oklahoma",
+    "number_of_master_programs": 160,
+    "number_of_baccalaureate_programs": 152,
+    "number_of_doctorate_programs": 75
+  },
+  "final_answer": 160
+}

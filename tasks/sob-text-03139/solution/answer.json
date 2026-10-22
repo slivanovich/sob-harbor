@@ -1,0 +1,8 @@
+{
+  "town_name": "Calais",
+  "administrative_division_details": {
+    "type": "Subprefecture",
+    "is_below_prefecture_or_province": true
+  },
+  "division_type_definition": "Subprefecture is an administrative division of a country that is below prefecture or province."
+}

@@ -1,0 +1,14 @@
+{
+  "brewing_group": {
+    "name": "Kompania Piwowarska",
+    "established_year": 1999,
+    "total_breweries": 3
+  },
+  "target_brewery_details": {
+    "name": "Tyskie Browary Książęce",
+    "location_city": "Tychy",
+    "location_region": "Upper Silesia",
+    "associated_beer_brand": "Tyskie"
+  },
+  "answer": "Tyskie"
+}

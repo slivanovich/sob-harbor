@@ -1,0 +1,16 @@
+{
+  "naturalist_name": "Karl Kraepelin",
+  "specialized_predatory_arachnids": [
+    {
+      "group_name": "scorpions",
+      "order_name": "Scorpiones",
+      "notable_contribution": "monograph \"Scorpiones und Pedipalpi\""
+    }
+  ],
+  "other_specialized_groups": [
+    "centipedes",
+    "spiders",
+    "solfugids",
+    "myriapods"
+  ]
+}

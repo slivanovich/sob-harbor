@@ -1,0 +1,14 @@
+{
+  "landslide_name": "1997 Thredbo landslide",
+  "event_details": {
+    "location": "Thredbo",
+    "state": "New South Wales",
+    "country": "Australia",
+    "date": "1997-07-30",
+    "fatalities": 18
+  },
+  "survivor_details": {
+    "survivor_name": "Stuart Diver",
+    "role": "sole survivor"
+  }
+}

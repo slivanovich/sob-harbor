@@ -1,0 +1,12 @@
+{
+  "director_name": "Mike Leigh",
+  "film_details": {
+    "title": "Happy-Go-Lucky",
+    "release_year": 2008
+  },
+  "award_details": {
+    "actor_name": "Eddie Marsan",
+    "award_category": "Best Supporting Actor",
+    "award_year": 2008
+  }
+}

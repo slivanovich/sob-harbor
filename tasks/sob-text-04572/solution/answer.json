@@ -1,0 +1,14 @@
+{
+  "opera_comparison": [
+    {
+      "opera_title": "Iolanta",
+      "number_of_acts": 1
+    },
+    {
+      "opera_title": "The Midsummer Marriage",
+      "number_of_acts": 3
+    }
+  ],
+  "opera_with_more_acts": "The Midsummer Marriage",
+  "act_difference": 2
+}

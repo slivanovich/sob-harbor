@@ -1,0 +1,17 @@
+{
+  "comparison_result": "Datong has a higher population than Zhuozhou.",
+  "city_populations": [
+    {
+      "city_name": "Zhuozhou",
+      "population": 628000
+    },
+    {
+      "city_name": "Datong",
+      "population": 3318057
+    }
+  ],
+  "higher_population_city": {
+    "city_name": "Datong",
+    "population": 3318057
+  }
+}

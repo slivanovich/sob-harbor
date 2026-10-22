@@ -1,0 +1,12 @@
+{
+  "film_title": "1408",
+  "film_year": 2007,
+  "film_genre": "psychological horror",
+  "starring_actor": {
+    "name": "John Cusack",
+    "golden_globe_nomination_for_high_fidelity": {
+      "year": 2000,
+      "category": "Best Actor – Motion Picture Musical or Comedy"
+    }
+  }
+}

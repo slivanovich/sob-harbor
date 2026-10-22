@@ -1,0 +1,19 @@
+{
+  "first_historian": {
+    "name": "George W. Bernard",
+    "specialization": [
+      "reign of King Henry VIII",
+      "English Reformation of the 1530s",
+      "reign of Anne Boleyn"
+    ]
+  },
+  "second_historian": {
+    "name": "David Starkey",
+    "profession": "English constitutional historian"
+  },
+  "debated_historical_event": "reign of King Henry VIII",
+  "specific_debated_topics": [
+    "strength of Henry VIII as a ruler not controlled by faction",
+    "Anne Boleyn was guilty of adultery in 1536"
+  ]
+}

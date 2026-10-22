@@ -1,0 +1,23 @@
+{
+  "common_classification": "genus",
+  "common_plant_type": "plants",
+  "genera_information": [
+    {
+      "genus_name": "Bessera",
+      "family": "asparagus family",
+      "origin_regions": [
+        "Mexico"
+      ],
+      "number_of_known_species": 3
+    },
+    {
+      "genus_name": "Sesleria",
+      "family": "grass family",
+      "origin_regions": [
+        "Eurasia",
+        "North Africa"
+      ],
+      "is_perennial": true
+    }
+  ]
+}

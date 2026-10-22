@@ -1,0 +1,20 @@
+{
+  "author_with_most_recent_publication": "Paul Benjamin Auster",
+  "most_recent_publication_details": {
+    "title": "4 3 2 1",
+    "year": 2017,
+    "author": "Paul Auster"
+  },
+  "authors_publication_summary": [
+    {
+      "author_name": "Paul Auster",
+      "latest_publication_title": "4 3 2 1",
+      "latest_publication_year": 2017
+    },
+    {
+      "author_name": "Allen Ginsberg",
+      "latest_publication_title": "Watermelons",
+      "latest_publication_year": 1959
+    }
+  ]
+}

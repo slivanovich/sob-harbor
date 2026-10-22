@@ -1,0 +1,10 @@
+{
+  "fort_name": "Fort Cass",
+  "river_name": "Hiwassee River",
+  "river_length_miles": 147,
+  "river_location_states": [
+    "Georgia",
+    "North Carolina",
+    "Tennessee"
+  ]
+}

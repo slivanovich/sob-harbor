@@ -1,0 +1,9 @@
+{
+  "water_coaster_name": "Crush 'N' Gusher",
+  "location": {
+    "park_name": "Disney's Typhoon Lagoon",
+    "city": "Orlando",
+    "state": "Florida"
+  },
+  "entity_type": "water coaster"
+}

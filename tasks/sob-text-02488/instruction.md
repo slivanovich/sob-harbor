@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Hannah Broederlow: Hannah Broederlow (born 8 March 1988 in Palmerston North, New Zealand) is a New Zealand netball player.  Broederlow attended Palmerston North Girls' High School before continuing her studies at the University of Otago.  During her high school years she played in the New Zealand Secondary Schools team (2004–05).  She has played with the New Zealand U21 netball team since 2006, and was elevated to the New Zealand A squad in 2008.  Broederlow was signed in 2007 to play with the Otago Rebels in the National Bank Cup.  She was overlooked the next year for a spot in the inaugural ANZ Championship, but later received a callup from Yvette McCausland-Durie to play with the Central Pulse in 2009.  Broederlow was also named in the New Zealand U21 team to compete at the 2009 World Youth Netball Championships in the Cook Islands.
+
+Sumner, New Zealand: Sumner is a coastal seaside suburb of Christchurch, New Zealand and was surveyed and named in 1849 in honour of John Bird Sumner, the then newly appointed Archbishop of Canterbury and president of the Canterbury Association.  Originally a separate borough, it was amalgamated with the city of Christchurch as communications improved and the economies of scale made small town boroughs uneconomic to operate.
+
+Jean Baptiste Pompallier: Jean-Baptiste François Pompallier (11 December 1802 – 21 December 1871) was the first Roman Catholic bishop in New Zealand and, with priests and brothers of the Marist order, he organised the Roman Catholic Church throughout the country.  He was born in Lyon, France.  He arrived in New Zealand in 1838 as Vicar Apostolic of Western Oceania, but made New Zealand the centre of his operations.  In 1848 he became the first Roman Catholic Bishop of Auckland.  He returned to France in 1868 and died in Puteaux, near Paris, on 21 December 1871, aged 69.  His exhumed remains were returned to New Zealand in 2001 and they were re-interred under the altar at St Mary's, Motuti, in 2002.  Educational institutions named in his honour include Pompallier Catholic College, Whangarei (1969).  There are Pompallier houses at Sacred Heart College, Auckland (1903), St. Bernard's College, Lower Hutt (1947), Carmel College, Auckland (1957), St John's College, Hamilton (1961), St Peter's College, Gore (1969), Liston College, Auckland (1974), St Mary's Rotorua, Garin College, Nelson (2002) and other New Zealand secondary and primary schools.  Sancta Maria College, Auckland (2004) commemorates Pompallier and his work through the name of his schooner, the "Sancta Maria".
+
+David Moxon: Sir David John Moxon {'1': ", '2': ", '3': ", '4': "} (born 6 September 1951) is a New Zealand Anglican bishop.  He was until June 2017, the Archbishop of Canterbury's Representative to the Holy See and Director of the Anglican Centre in Rome.  He was previously the Bishop of Waikato in the Diocese of Waikato and Taranaki, the archbishop of the New Zealand dioceses and one of the three primates of the Anglican Church in Aotearoa, New Zealand and Polynesia.  In the 2014 New Year Honours, he was appointed a Knight Companion of the New Zealand Order of Merit for services to the Anglican Church.
+
+Jean Betts: Jean Betts is a London born New Zealand playwright , actor and director.  She emigrated with her parents, both founders of Unity Theatre, London, to Christchurch, New Zealand.  She obtained a degree at University of Canterbury in English Literature and New Zealand and Pacific History.  and graduated from the New Zealand Drama School (now Toi Whakaari) in 1970, the inaugural year when its founder, Nola Millar, was principal.  During her time as actor and director at Gateway, BATS, Downstage and Circa Theatres, she became a foundation member of Playmarket (New Zealand, 1975), Circa Theatre (Wellington, 1976) and Taki Rua/The Depot Theatre (Wellington, 1983).  In 1979 Jean worked at ESTA (English Speaking Theatre Amsterdam) as actor/director, and was a founding member of the expatriate (New Zealand) group 'The Heartache and Sorrow Company' (directing) which presented work in Amsterdam, Germany, London, and at the Edinburgh Festival, where the group received a 'Fringe First' and a Scotsman's Award.  In 1993 she co-founded the Women's Professional Playwrights Association (WOPPA) which premiered her play "Ophelia Thinks Harder", and established The Women's Play Press with Lorae Parry, Cathy Downes, Viv Plumb and Fiona Samuel.  ("Ophelia Thinks Harder" has subsequently been translated in German and Italian and produced over 160 times.)  In 2005 she set up a small NZ play publishing project, The Play Press (www.playpress.co.nz).  She has been a finalist for the Susan Smith Blackburn Prize twice; and in 2015 received the Playmarket Award of $20,000 for her contribution to New Zealand Theatre.
+
+Jonathan Hunt (New Zealand politician): Jonathan Lucas Hunt, ONZ (born 2 December 1938) is a New Zealand politician, and was New Zealand's High Commissioner to the United Kingdom from 2005 to March 2008.  He formerly served as Speaker of the New Zealand House of Representatives.  He is a member of the Labour Party, and was until recently the longest-serving MP in Parliament.  Hunt is a member of the Order of New Zealand, New Zealand's highest civilian honour.  Hunt was given the nickname the "Minister for Wine and Cheese" after his well-known liking of the combo.
+
+John Bird Sumner: John Bird Sumner (25 February 1780 – 6 September 1862) was a bishop in the Church of England and Archbishop of Canterbury.
+
+Bert Sutcliffe: Bert Sutcliffe, {'1': ", '2': ", '3': 'MBE', '4': "} (17 November 1923 in Ponsonby, New Zealand – 20 April 2001 in Auckland, New Zealand), was a New Zealand Test cricketer.  Sutcliffe was a successful left-hand batsman.  His batting achievements on tour in England in 1949, which included four fifties and a century in the Tests, earned him the accolade of being one of Wisden's Five Cricketers of the Year.  He captained New Zealand in four Tests in the early 1950s, losing three of them and drawing the other.  None of Sutcliffe's 42 Tests resulted in a New Zealand victory.  In 1949 Sutcliffe was named the inaugural New Zealand Sportsman of the Year, and in 2000 was named as New Zealand champion sportsperson of the decade for the 1940s.
+
+David Penman: Born in Wellington, New Zealand, on 8 August 1936, Penman received his secondary education at Hutt Valley High School, and studied Physical Education as part of teacher training at Wellington Teachers' College (now a part of the Victoria University of Wellington Faculty of Education).  He was accepted as a candidate for ordination by Archbishop Reginald Herbert Owen, and entered theological training at College House (University of Canterbury), the University of New Zealand and the University of Karachi.  He was ordained deacon in 1961 and priest in 1962.  His first post was as a curate at Wanganui from 1961 to 1964, followed by a decade of missionary work in Pakistan and the Middle East.  In 1975 he was appointed Principal of St Andrew's Hall a Church Mission Society missionary training college in Melbourne.  He returned to New Zealand in 1979, where he was Vicar of All Saints' Church in Palmerston North.  In 1982 he became a bishop coadjutor in the Diocese of Melbourne before becoming the archbishop two years later.  Though remaining strongly Evangelical, he was passionately committed to dialogue between religious traditions.  He was a member of the first Australian Palliative Care Council, President of the Australian Council of Churches, Patron of the National AIDS Trust and a member of the Australian National Council on AIDS.  On his way to Britain for the 1988 Lambeth Conference he undertook a highly secretive detour to Iran in an ultimately unsuccessful attempt to secure the release of Terry Waite, the personal envoy of the Archbishop of Canterbury, and several other western hostages.  On 24 July 1989, after returning home from the Tokyo World Conference on Religion and Peace and the Lausanne Evangelical Congress in Manila, where he delivered a series of Bible studies, he suffered a severe heart attack.  He was kept on life-support in Melbourne's St Vincent's hospital, but although he regained consciousness, he died on 1 October 1989.  He was 53.  His state funeral service was held at St Paul's Cathedral, Melbourne on 6 October 1989.
+
+Robert Francis Ross McNabb: Robert Francis Ross McNabb (11 December 1934 – 14 December 1972) was a New Zealand mycologist.  He was born in Kawakawa, and attended local schools in his youth, including Whangarei Boys' High School and Southland Boys' High School.  He received a BSc degree from the University of Otago in 1956, and two years later an MSc for his work on mycorrhizae morphology in native New Zealand plants.  In 1961, having been awarded a National Research Fellowship the year before, McNabb left New Zealand for the UK to study with Cecil Terence Ingold at Birkbeck College.  McNabb earned a PhD in 1963; his thesis was titled "Taxonomic studies in the Dacrymycetaceae".  He was jointly awarded the Hamilton Memorial Prize in 1966 from The Royal Society of New Zealand, the same year he was appointed to the editorial board of the "New Zealand Journal of Botany".  Most of McNabb's later publications, largely published in this journal, were about fungal taxonomy.  Fungus species named in honor of McNabb include "Paxillus mcnabbii" (now "Austropaxillus mcnabbii"), and "Entoloma mcnabbianum".
+
+Question: Sumner, New Zealand was named in 1849 in honour of an Archbishop born in which year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "place_named": {
+      "type": "string",
+      "description": "The name of the place that was named."
+    },
+    "naming_year": {
+      "type": "integer",
+      "description": "The year the place was named."
+    },
+    "honored_person": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the person honored."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title or role of the honored person."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The birth year of the honored person."
+        }
+      },
+      "required": [
+        "name",
+        "title",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "place_named",
+    "naming_year",
+    "honored_person"
+  ],
+  "additionalProperties": false
+}

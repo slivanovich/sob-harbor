@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "record_id": "a438e6f260c91b7f75f0f34a65da1c3ebdd8f2409c2414bd6868bdc45cb8f1e3",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a74a9c755429979e28829e9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Franco Egidio Malerba",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Wale Adebanwi: Professor Wale Adebanwi, (born 1969), is a Nigerian - born first Black African Rhodes Professor at Oxford University\n\nDespoina: In Greek mythology, Despoina, Despoena or Despoine, was the daughter of Demeter and Poseidon and sister of Arion.  She was the goddess of mysteries of Arcadian cults worshipped under the title \"Despoina\", \"the mistress\" alongside her mother Demeter, one of the goddesses of the Eleusinian mysteries.  Her real name could not be revealed to anyone except those initiated to her mysteries.  Pausanias spoke of Demeter as having two daughters; Kore being born first, then later Despoina.  With Zeus being the father of Kore, and Poseidon as the father of Despoina.  Pausanias made it clear that Kore is Persephone, though he wouldn't reveal Despoina's proper name.\n\nMichael S. Hopkins: Michael Scott Hopkins (born December 28, 1968) is a Colonel in the U.S. Air Force, and a current NASA astronaut.  Hopkins was selected in June 2009 as a member of the NASA Astronaut Group 20.  He made his first spaceflight as a Flight Engineer on Soyuz TMA-10M/Expedition 37/Expedition 38, from September 2013 until March 2014.  He was the first member of his astronaut class to fly in space.\n\nList of Lab Rats characters: \"Lab Rats\", also known as \"Lab Rats: Bionic Island\" for its fourth season, is an American television sitcom that premiered on February 27, 2012, on Disney XD.  It focuses on the life of teenager Leo Dooley, whose mother, Tasha, marries billionaire genius Donald Davenport.  He meets Adam, Bree, and Chase, three bionic superhumans, with whom he develops an immediate friendship.  It should be noted that the names of the Lab Rats imply that they were originally known as subjects A, B, C and D. Adam was born first, then Bree, then Chase, and finally Daniel.\n\nClaude Nicollier: Claude Nicollier (born 2 September 1944 in Vevey, Switzerland) is the first astronaut from Switzerland.  He has flown on four Space Shuttle missions.  His first spaceflight (STS-46) was in 1992, and his final spaceflight (STS-103) was in 1999.  He took part in two servicing missions to the Hubble Space Telescope (called STS-61 and STS-103).  During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).  In 2000 he was assigned to the Astronaut Office Extravehicular Activity Branch, while maintaining a position as Lead ESA Astronaut in Houston.  Nicollier retired from ESA in April 2007.\n\nFrank De Winne: Frank, Viscount De Winne (born 25 April 1961, in Ledeberg, Belgium) is a Belgian Air Component officer and an ESA astronaut.  He is Belgium's second person in space (after Dirk Frimout).  He was the first ESA astronaut to command a space mission when he served as commander of ISS Expedition 21.  ESA astronaut de Winne serves currently as Head of the European Astronaut Centre of the European Space Agency in Cologne/Germany (Köln).\n\nAugustine of Canterbury: Augustine of Canterbury (born first third of the 6th century – died probably 26 May 604) was a Catholic Benedictine monk who became the first Archbishop of Canterbury in the year 597.  He is considered the \"Apostle to the English\" and a founder of the Catholic Church in England.\n\nMichael Foale: Colin Michael Foale, CBE (born 6 January 1957) is a British-American astrophysicist and former NASA astronaut.  He is a veteran of six Space Shuttle missions and extended missions on both Mir and the International Space Station.  He was the first Briton to perform a space walk, and until 17 April 2008, he held the record for most time spent in space by a US citizen: 374 days, 11 hours, 19 minutes.  He still holds the cumulative-time-in-space record for a UK citizen.\n\nSTS-63: STS-63 was the first mission of the US/Russian Shuttle-Mir Program, which carried out the first rendezvous of the American Space Shuttle with Russia's space station \"Mir\".  Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida.  A night launch and the 20th mission for \"Discovery\", it marked the first time a Space Shuttle mission had a female pilot, Eileen Collins, the first EVAs for both a UK born astronaut Michael Foale and a US astronaut of African heritage Bernard A. Harris, Jr. and it also carried out the successful deployment and retrieval of the Spartan-204 platform, along with the scheduled rendezvous and flyaround of \"Mir\", in preparation for STS-71, the first mission to dock with \"Mir\".\n\nFranco Malerba: Franco Egidio Malerba (born October 10, 1946, in Busalla, Metropolitan City of Genoa, Italy) is an astronaut.  He was the first citizen of Italy to travel to space.",
+    "question": "Which astronaut was born first Franco Malerba or Michael Foale?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "astronauts_compared": {
+          "type": "array",
+          "description": "Details of the astronauts being compared.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The full name of the astronaut."
+              },
+              "birth_year": {
+                "type": "integer",
+                "description": "The birth year of the astronaut."
+              }
+            },
+            "required": [
+              "name",
+              "birth_year"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "first_born_astronaut_name": {
+          "type": "string",
+          "description": "The name of the astronaut who was born first."
+        },
+        "first_born_astronaut_birth_year": {
+          "type": "integer",
+          "description": "The birth year of the astronaut who was born first."
+        }
+      },
+      "required": [
+        "astronauts_compared",
+        "first_born_astronaut_name",
+        "first_born_astronaut_birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "astronauts_compared": [
+        {
+          "name": "Franco Egidio Malerba",
+          "birth_year": 1946
+        },
+        {
+          "name": "Colin Michael Foale",
+          "birth_year": 1957
+        }
+      ],
+      "first_born_astronaut_name": "Franco Egidio Malerba",
+      "first_born_astronaut_birth_year": 1946
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

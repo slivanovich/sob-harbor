@@ -1,0 +1,10 @@
+{
+  "player_name": "Andre Kirk Agassi",
+  "player_nationality": "American",
+  "player_birth_year": 1970,
+  "tournament_won": {
+    "name": "ATP Tour World Championships",
+    "year": 1990,
+    "event_type": "Singles"
+  }
+}

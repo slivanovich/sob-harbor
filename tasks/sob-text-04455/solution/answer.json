@@ -1,0 +1,16 @@
+{
+  "question_asked": "Are Raffaella Reggi and Marion Bartoli both former tennis players?",
+  "player_comparison": {
+    "player_one": {
+      "name": "Raffaella Reggi",
+      "is_former_professional": true,
+      "nationality": "Italy"
+    },
+    "player_two": {
+      "name": "Marion Bartoli",
+      "is_former_professional": true,
+      "nationality": "French"
+    }
+  },
+  "both_are_former_players": true
+}

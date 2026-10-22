@@ -1,0 +1,16 @@
+{
+  "film_info": {
+    "title": "The Conjuring",
+    "release_year": 2013,
+    "genres": [
+      "supernatural horror"
+    ],
+    "country_of_origin": "American",
+    "director": "James Wan"
+  },
+  "composer_info": {
+    "name": "Joseph Bishara"
+  },
+  "composition_role": "composer",
+  "meets_query_criteria": true
+}

@@ -1,0 +1,11 @@
+{
+  "fighter": {
+    "name": "Fabrício Werdum",
+    "nationality": "Brazilian"
+  },
+  "championship": {
+    "title": "Heavyweight Champion",
+    "organization": "UFC"
+  },
+  "is_former_champion": true
+}

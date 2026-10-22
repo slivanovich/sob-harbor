@@ -1,0 +1,10 @@
+{
+  "company_name": "Ann Inc.",
+  "division_name": "Ann Taylor",
+  "outlet_details": {
+    "name": "Palm Beach Outlets",
+    "city": "West Palm Beach",
+    "state": "Florida"
+  },
+  "is_division_present_in_outlet": true
+}

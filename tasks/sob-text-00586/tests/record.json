@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "record_id": "aa455fa4e3c4ec16b181187e6a4c239ee102426bb2d4a22eff2c26fbc06f5780",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a8644c75542991e771815e9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "tennis player",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2009 Fergana Challenger – Doubles: Konstantin Kravchuk and Łukasz Kubot didn't defend their 2009 title.  Kubot chose to not play and Kravchuk (who partnered up with Lukáš Lacko) lost to more late champions - Pavel Chekhov and Alexey Kedryuk in the quarterfinals.\n\nHenri Kontinen: Henri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.\n\n2016 Open 13 – Doubles: Marin Draganja and Henri Kontinen were the defending champions, but Kontinen chose not to participate.  Draganja played alongside Julian Knowle, but lost in the quarterfinals to Teymuraz Gabashvili and Nick Kyrgios. <br>\n\n2016 Ricoh Open – Men's Doubles: Ivo Karlović and Łukasz Kubot were the defending champions, but Karlović chose not to participate this year and Kubot chose to compete in Stuttgart instead. <br>\n\n2014 Abierto Mexicano Telcel – Men's Doubles: Łukasz Kubot and David Marrero were the defending champions, but chose not to compete together.  Kubot played alongside Robert Lindstedt, but lost to Feliciano López and Max Mirnyi in the quarterfinals.  Marrero teamed up with Ivo Karlović, but lost to López and Mirnyi in the first round.  <br>\n\nŁukasz Kubot: Łukasz Kubot (; born May 16, 1982) is a Polish professional tennis player.  Kubot is a doubles specialist and won the 2014 Australian Open men's doubles title with Robert Lindstedt as well as the 2017 Wimbledon men's doubles title with Marcelo Melo.  He has also had success in singles, achieving a career-high singles ranking of World No. 41 in April 2010 and reaching the quarterfinals of the 2013 Wimbledon Championships.  In 2013 he was awarded the Gold Cross of Merit by Polish President Bronisław Komorowski.\n\n2015 Australian Open – Men's Doubles: Łukasz Kubot and Robert Lindstedt were the defending champions, but chose not to participate together.  Kubot teamed up with Jérémy Chardy, but lost in the second round to Alex Bolt and Andrew Whittington.  Lindstedt played alongside Marcin Matkowski, but lost in the second round to Jonathan Erlich and Treat Huey.\n\n2017 Western &amp; Southern Open – Men's Doubles: Ivan Dodig and Marcelo Melo were the defending champions, but chose not to participate together.  Dodig teamed up with Rohan Bopanna, but lost in the quarterfinals to Melo who partnered Łukasz Kubot.  Kubot and Melo lost in the semifinals to Jamie Murray and Bruno Soares.\n\n2010 Serbia Open – Doubles: Łukasz Kubot and Oliver Marach were the defenders of title, but Kubot chose not to compete this year and Marach chose to play in Munich instead.\n\n2016 Moselle Open – Doubles: Łukasz Kubot and Édouard Roger-Vasselin were the defending champions, but Kubot chose not to participate this year.  Roger-Vasselin played alongside Julien Benneteau, but lost in the first round to Marcus Daniell and Marcelo Demoliner.",
+    "question": "What are both Łukasz Kubot and Henri Kontinen?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "common_profession": {
+          "type": "string",
+          "description": "The shared profession of both individuals."
+        },
+        "number_of_players_mentioned": {
+          "type": "integer",
+          "description": "The total number of players mentioned in the question."
+        },
+        "players": {
+          "type": "array",
+          "description": "Details about each player mentioned.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "player_name": {
+                "type": "string",
+                "description": "The full name of the player."
+              },
+              "nationality": {
+                "type": "string",
+                "description": "The nationality of the player."
+              },
+              "birth_date": {
+                "type": "string",
+                "description": "The birth date of the player."
+              },
+              "is_doubles_specialist": {
+                "type": "boolean",
+                "description": "Indicates if the player is a doubles specialist."
+              }
+            },
+            "required": [
+              "player_name",
+              "nationality",
+              "birth_date"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "common_profession",
+        "number_of_players_mentioned",
+        "players"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "common_profession": "tennis player",
+      "number_of_players_mentioned": 2,
+      "players": [
+        {
+          "player_name": "Łukasz Kubot",
+          "nationality": "Polish",
+          "birth_date": "May 16, 1982",
+          "is_doubles_specialist": true
+        },
+        {
+          "player_name": "Henri Kontinen",
+          "nationality": "Finnish",
+          "birth_date": "19 June 1990"
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

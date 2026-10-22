@@ -1,0 +1,13 @@
+{
+  "king_name": "Centwine",
+  "kingdom": "Wessex",
+  "reign_period": "c. 676 to 685 or 686",
+  "shared_kingship_possibility": true,
+  "viceroy_details": {
+    "name": "Cissa",
+    "attributed_actions": [
+      "constructed Chisbury Camp",
+      "founded Abingdon Abbey"
+    ]
+  }
+}

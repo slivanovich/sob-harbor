@@ -1,0 +1,13 @@
+{
+  "coach_name": "Don Maestri",
+  "award_received": "Coach of the Year",
+  "award_year": 1997,
+  "conference_details": {
+    "conference_name": "Summit League",
+    "former_conference_name": "Mid-Continent Conference",
+    "headquarters_location": {
+      "city": "Elmhurst",
+      "state": "Illinois"
+    }
+  }
+}

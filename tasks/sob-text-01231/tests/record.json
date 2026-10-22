@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "3aea6a1116e9508304aa163a59ff470a234e9ddc6ee8e5fc2f66b22899e6eee3",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae0d801554299603e418471",
+    "source_dataset": "hotpotqa",
+    "source_answer": "genus",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Cistus ladanifer: Cistus ladanifer is a species of flowering plant in the family Cistaceae.  It is native to the western Mediterranean region.  Common names include gum rockrose, laudanum, labdanum, common gum cistus, and brown-eyed rockrose.\n\nAbelia: Abelia is a genus of about 30 species and many hybrids in the honeysuckle family Caprifoliaceae.  Some authors, including the Angiosperm Phylogeny Group, consider \"Abelia\" and related genera to belong instead in the segregate family Linnaeaceae, also including such genera as \"Linnaea\", \"Abelia\", \"Dipelta\", \"Kolkwitzia\", and \"Zabelia\", but not such others as \"Lonicera\" or \"Symphoricarpos,\" included by them instead in a more narrowly viewed Caprifoliaceae.\n\nCistus: Cistus (from the Greek \"kistos\") is a genus of flowering plants in the rockrose family Cistaceae, containing about 20 species (Ellul \"et al.\" 2002).  They are perennial shrubs found on dry or rocky soils throughout the Mediterranean region, from Morocco and Portugal through to the Middle East, and also on the Canary Islands.\n\nCistus monspeliensis: Cistus monspeliensis is a species of rockrose known by the common name Montpellier cistus.  It is native to southern Europe and northern Africa, in the Mediterranean forests, woodlands, and scrub ecosystems of matorral—maquis shrublands.\n\nCistus salviifolius: Cistus salviifolius, common names sage-leaved rock-rose, salvia cistus or Gallipoli rose, is a perennial ligneous plant of the family Cistaceae.",
+    "question": "What does Cistus and Abelia have in common?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "common_classification_type": {
+          "type": "string",
+          "description": "The common biological classification level shared by the entities."
+        },
+        "entities_compared": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the entity."
+              },
+              "family": {
+                "type": "string",
+                "description": "The family to which the entity belongs."
+              },
+              "species_count": {
+                "type": "integer",
+                "description": "The approximate number of species within this genus, if specified."
+              }
+            },
+            "required": [
+              "name",
+              "family",
+              "species_count"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Details of the entities being compared."
+        },
+        "comparison_summary": {
+          "type": "string",
+          "description": "A brief summary of what the entities have in common."
+        }
+      },
+      "required": [
+        "common_classification_type",
+        "entities_compared",
+        "comparison_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "common_classification_type": "genus",
+      "entities_compared": [
+        {
+          "name": "Cistus",
+          "family": "Cistaceae",
+          "species_count": 20
+        },
+        {
+          "name": "Abelia",
+          "family": "Caprifoliaceae",
+          "species_count": 30
+        }
+      ],
+      "comparison_summary": "Both Cistus and Abelia are classified as genera of flowering plants."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

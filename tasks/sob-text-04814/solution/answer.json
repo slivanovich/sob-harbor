@@ -1,0 +1,16 @@
+{
+  "school_name": "University Preparatory Charter Academy",
+  "aliases": [
+    "U-prep",
+    "UPREP"
+  ],
+  "founding_details": {
+    "year": 2001,
+    "founder": "Isaac Haqq",
+    "location": {
+      "name": "Eastmont Town Center",
+      "type": "shopping mall and social services hub",
+      "area_acres": 33
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "actress_name": "Mariska Hargitay",
+  "character_played": "Olivia Benson",
+  "precinct_number": 16,
+  "awards_information": {
+    "has_won_multiple_awards": true,
+    "specific_awards": [
+      "Emmy",
+      "Golden Globe"
+    ]
+  }
+}

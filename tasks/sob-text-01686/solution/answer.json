@@ -1,0 +1,21 @@
+{
+  "player_name": "Danny Mills",
+  "stadium_name": "Select Security Stadium",
+  "teams_player_played_for": [
+    "Huddersfield",
+    "Doncaster",
+    "Widnes",
+    "Sheffield Eagles"
+  ],
+  "stadium_home_teams": [
+    {
+      "team_name": "Widnes Vikings",
+      "sport": "rugby league"
+    },
+    {
+      "team_name": "Everton Ladies Football Club",
+      "sport": "women's association football"
+    }
+  ],
+  "matching_team": "Widnes Vikings"
+}

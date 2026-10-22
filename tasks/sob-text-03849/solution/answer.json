@@ -1,0 +1,17 @@
+{
+  "city_info": {
+    "name": "Cache",
+    "county": "Comanche County",
+    "state": "Oklahoma"
+  },
+  "landmark_info": {
+    "name": "Star House",
+    "owner_chief": "Quanah Parker"
+  },
+  "chief_details": {
+    "name": "Quanah Parker",
+    "role": "Comanche war leader",
+    "band": "Quahadi (\"Antelope\")",
+    "people": "Comanche"
+  }
+}

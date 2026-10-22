@@ -1,0 +1,19 @@
+{
+  "entity_1_name": "Doc Hammer",
+  "entity_2_name": "6 Interpretations",
+  "common_genre": "rock",
+  "entity_1_associated_genres": [
+    "gothic rock",
+    "rock",
+    "ethereal wave",
+    "shoegaze",
+    "post-punk",
+    "synthpop"
+  ],
+  "entity_2_associated_genres": [
+    "rock",
+    "gothic rock",
+    "shoegaze",
+    "dance"
+  ]
+}

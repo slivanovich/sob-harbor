@@ -1,0 +1,16 @@
+{
+  "answer": true,
+  "canals_information": [
+    {
+      "canal_name": "Pennsylvania Canal",
+      "is_located_in_us": true,
+      "us_state_mentioned": "Pennsylvania"
+    },
+    {
+      "canal_name": "Indiana Harbor and Ship Canal",
+      "is_located_in_us": true,
+      "us_state_mentioned": "Indiana"
+    }
+  ],
+  "overall_reasoning": "Both the Pennsylvania Canal and the Indiana Harbor and Ship Canal are explicitly stated to be located within US states (Pennsylvania and Indiana, respectively)."
+}

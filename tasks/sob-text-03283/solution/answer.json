@@ -1,0 +1,22 @@
+{
+  "band_name": "Babymetal",
+  "members": [
+    {
+      "name": "Suzuka Nakamoto",
+      "stage_name": "Su-metal"
+    },
+    {
+      "name": "Yui Mizuno",
+      "stage_name": "Yuimetal"
+    },
+    {
+      "name": "Moa Kikuchi",
+      "stage_name": "Moametal"
+    }
+  ],
+  "live_video_release": {
+    "title": "Live: Legend 1999 & 1997 Apocalypse",
+    "release_order": 2,
+    "number_of_concerts": 2
+  }
+}

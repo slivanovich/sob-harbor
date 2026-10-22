@@ -1,0 +1,10 @@
+{
+  "parkway_name": "Ocean Parkway",
+  "terminus_location_description": "ending just past the southern terminus of the Robert Moses Causeway",
+  "related_causeway": {
+    "name": "Robert Moses Causeway",
+    "route_designation": "NY 908J",
+    "is_unsigned_reference_route": true
+  },
+  "final_answer_route_designation": "NY 908J"
+}

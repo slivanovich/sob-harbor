@@ -1,0 +1,14 @@
+{
+  "fashion_house_name": "The Row",
+  "founding_year": 2006,
+  "founders": [
+    {
+      "name": "Ashley Olsen"
+    },
+    {
+      "name": "Mary-Kate Olsen"
+    }
+  ],
+  "country_of_origin": "United States",
+  "is_luxury_brand": true
+}

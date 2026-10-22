@@ -1,0 +1,12 @@
+{
+  "television_network_name": "Fox",
+  "connecting_show": {
+    "show_title": "So You Think You Can Dance",
+    "show_network": "Fox"
+  },
+  "connecting_personality": {
+    "personality_name": "Mia Michaels",
+    "role_in_show": "judge and choreographer"
+  },
+  "reasoning": "Mia Michaels is best known as a judge and for her contemporary choreography on 'So You Think You Can Dance', and 'So You Think You Can Dance' airs on the Fox network."
+}

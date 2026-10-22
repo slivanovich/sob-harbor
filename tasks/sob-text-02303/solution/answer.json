@@ -1,0 +1,12 @@
+{
+  "band_1": {
+    "name": "Malfunkshun",
+    "genre": "alternative rock"
+  },
+  "band_2": {
+    "name": "Manic Street Preachers",
+    "genre": "alternative rock"
+  },
+  "share_genre": true,
+  "shared_genre_name": "alternative rock"
+}

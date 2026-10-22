@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "record_id": "1efdc5f8be6b25917557305727f09bf04525cfcd5d9361bf54752804759485bc",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7790a85542995d831811d6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Samuel E. Jones",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Alfie Clarke: Alfred William Clarke (1914–1953) was a Welsh amateur football inside left who played in the Football League for Newport County.  He was capped by Wales at amateur level.\n\nGeorge Wheeler (footballer): George Harold Wheeler (19 February 1910 – 1995) was a Welsh amateur football left back who played in the Football League for Newport County.  He was capped by Wales at amateur level.\n\nAlan McIntosh: Alan McIntosh (born 19 July 1939) was a Welsh amateur football outside forward who played in the Football League for Cardiff City.  He was capped by Wales at amateur level.\n\nRoy McDonald (footballer): Robert William McDonald (11 July 1896 – 1970) was a Welsh amateur football inside left who played in the Football League for Newport County.  He was capped by Wales at amateur level.\n\nReg Callender: Reginald Henry Callender (1892 – 5 October 1915) was an English amateur football outside left who played in the Football League for Derby County and Glossop.  He represented the England amateur national team.\n\nGlyn Davies (footballer, born 1909): Glyn Ivor Davies (24 November 1909 – 1985) was a Welsh amateur football outside left who played in the Football League for Swansea Town and Norwich City.  He was capped by Wales at amateur level.\n\nDoug Orr: Douglas McDonald Orr (born 8 November 1937) was a Scottish amateur football outside left who played in the Scottish League for Queen's Park.  He was capped by Scotland at amateur level and also played in the Football League for Queens Park Rangers.\n\nSam Jones (Welsh footballer): Samuel E. Jones was a Welsh amateur football outside left who played in the Football League for Newport County.  He was capped by Wales at amateur level.\n\nKeith Huntley: Keith Stanley Murray Huntley (12 February 1931 – December 1995) was a Welsh amateur football outside left who played in the Football League for Swansea Town.  He was capped by Wales at amateur level.\n\nNewport County A.F.C.: Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales.  The team play in League Two, the fourth tier of the English football league system.  Most recently reformed in 1989, the club is a continuation of the Newport County club which was founded in 1912 and was a founder member of the Football League's new Third Division in 1920.",
+    "question": "What Welsh amateur football outside left played for a football club in Newport, South Wales?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of the football player."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the player."
+            },
+            "position": {
+              "type": "string",
+              "description": "The primary playing position of the player."
+            },
+            "is_amateur": {
+              "type": "boolean",
+              "description": "Indicates if the player was an amateur footballer."
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "position",
+            "is_amateur"
+          ],
+          "additionalProperties": false
+        },
+        "club_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the football club the player played for."
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "description": "The city where the club is based."
+                },
+                "region": {
+                  "type": "string",
+                  "description": "The region or country subdivision where the club is located."
+                }
+              },
+              "required": [
+                "city",
+                "region"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "question_match": {
+          "type": "boolean",
+          "description": "True if the player and club details match all criteria in the question."
+        }
+      },
+      "required": [
+        "player_details",
+        "club_details",
+        "question_match"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_details": {
+        "name": "Samuel E. Jones",
+        "nationality": "Welsh",
+        "position": "outside left",
+        "is_amateur": true
+      },
+      "club_details": {
+        "name": "Newport County",
+        "location": {
+          "city": "Newport",
+          "region": "South Wales"
+        }
+      },
+      "question_match": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

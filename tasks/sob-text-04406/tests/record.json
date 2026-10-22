@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "record_id": "082c15779752c5acb68c2b033a8462129dd5f834050110d48b3627aad4b98d3e",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8b6b255542997f31a41d1c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Capoeira",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "João Grande: João Oliveira dos Santos (born 15 January 1933) better known as Mestre João Grande, is a Grão-Mestre (Grand Master) of the Afro-Brazilian martial art of capoeira angola who has contributed to the spread of this art throughout the world.  He was a student of the \"father of Angola\", Mestre Pastinha, and has an academy in New York City.\n\nCapoeira: Capoeira (] ) is an Afro-Brazilian martial art that combines elements of dance, acrobatics and music.  It was developed in Brazil mainly by Angolans, at the beginning of the 16th century.  It is known for its quick and complex maneuvers, predominantly using power, speed, and leverage across a wide variety of kicks, spins and other techniques.\n\nAntonio Neves Braga: Mestre Braga (born Antonio Neves Braga; June, 13 1957; Rio de Janeiro, Brazil) is a \"Mestre\" (a master practitioner) of the Afro-Brazilian martial art Capoeira Angola.  He is the founder of the capoeira Angola group, Africa Bantu, and one of the founders of the Grupo de Capoeira Angola Pelourinho (GCAP).\n\nPé de Chumbo: Pé de Chumbo is a master of Capoeira Angola, an Afro-Brazilian martial art, and a student of João Pequeno's.  This mestre is one of the few capoeira angola mestres who carry on the Centro Esportivo de Capoeira Angola (CECA) school created by Mestre Pastinha.  He has academies in Brazil and in Europe - including several academies in Sweden, Portugal, Mexico City, Germany and the United States.  Mestre Pé de Chumbo (literally Master Foot of Lead) was one of the first capoeira angola masters to take the Bahian art form to São Paulo and is known in capoeira circles for his low ground movements, dedication to his master and focus on the traditional aspects of the capoeira game.\n\nBerimbau: The berimbau (] ) is a single-string percussion instrument, a musical bow, from Brazil.  Originally from Africa where it receives different names, the berimbau was eventually incorporated into the practice of the Afro-Brazilian martial art \"capoeira\", the berimbau (the soul of capoeira) leads the capoeiristas movement in the \"roda\"—the faster the berimbau is playing the faster the capoeirista moves in the game.  The instrument is known for being the subject matter of a popular song by Brazilian guitarist Baden Powell, with lyrics by Vinicius de Moraes.  The instrument is also a part of Candomblé-de-caboclo tradition.\n\nGrupo Capoeira Brasil: Grupo Capoeira Brasil is an organization that practices, teaches, and demonstrates the Afro-Brazilian martial art of Capoeira.  Grupo Capoeira Brasil practices a style of Capoeira known as \"Capoeira Regional Contemporânea\".  This style is derived from movements and sequences developed and systematized by Mestre Bimba's \"Luta Regional Baiana\", the adapted techniques of Grupo Senzala, as well as influences from the founding Mestres of Grupo Capoeira Brasil, each of whom brought personal contributions specific to their ideology, stylistic methodology and personality.\n\nHeadspin: A headspin is an athletic move in which a person balances on their head while rotating along the vertical axis of their body, usually without any other form of support.  The move is commonly employed in the Afro-Brazilian martial art Capoeira and in breakdancing.  Though b-boy Kid Freeze is sometimes credited with having invented the headspin, the first known footage of the move is seen in the 1933 film, \"Wild Boys of the Road\".  One of the film's protagonists Edward 'Eddie' Smith, played by Frankie Darro, performs a Headspin at the 67 minute mark.  There is also an older video featuring a headspin \"A Street Arab\" Thomas A. Edison, INC April 21, 1898 in which a preadolescent boy, dressed like a street urchin, performs acrobatic stunts for the camera.  The dancer, Olav Thorshaug, performed Norwegian hallingdans shows in the United States of America around 1910-1920, incorporating the headspin in his dance.\n\nOnly the Strong (film): Only the Strong is a 1993 martial arts film directed by Sheldon Lettich, starring Mark Dacascos.  It is considered to be the only Hollywood film that showcases capoeira, an Afro-Brazilian martial art, from beginning to end.\n\nChoreomusicology: Choreomusicology is a portmanteau word joining the words choreology and musicology.  As a discipline, choreomusicology emerged at the end of the twentieth century as a field of study concerned with the relationship between music and dance.  More precisely, choreomusicology grew out of Euro-American performance traditions that considered musical composition and dance choreography as separate specialties.  Not all performance genres separate music and dance into separate theoretical categories.  The directionality of the relationship between sound and movement is not always fixed.  Choreomusicologists hold that studying the variable relationships between sound and movement in diverse performance arts can provide insight into perceptual sensibilities, cultural processes, and interpersonal dynamics.  Famous artists whose works exhibit rich choreomusical relationships include: John Cage and Merce Cunningham, Igor Stravinsky and George Balanchine, and Louis Horst and Martha Graham.  Interesting choreomusical relationships also exist in West Sumatran Tari Piring, West Javanese Pencak Silat, and Afro-Brazilian Capoeira to name but a few examples.\n\nManuel dos Reis Machado: Manuel dos Reis Machado, commonly called Mestre Bimba (] ; November 23, 1899 – February 5, 1974), was a \"mestre\" (a master practitioner) of the Afro-Brazilian martial art of capoeira.",
+    "question": "Choreomusicology is a portmanteau word joining the words choreology and musicology, interesting choreomusical relationships also exist in which Afro-Brazilian martial art that combines elements of dance, acrobatics and music?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "discipline_name": {
+          "type": "string",
+          "description": "The name of the discipline being discussed."
+        },
+        "discipline_type": {
+          "type": "string",
+          "description": "The type of word the discipline name is (e.g., portmanteau)."
+        },
+        "combined_words": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The words that form the portmanteau."
+        },
+        "martial_art_name": {
+          "type": "string",
+          "description": "The name of the Afro-Brazilian martial art."
+        },
+        "martial_art_origin": {
+          "type": "string",
+          "description": "The origin of the martial art."
+        },
+        "martial_art_elements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Key elements combined in the martial art."
+        },
+        "has_interesting_choreomusical_relationships": {
+          "type": "boolean",
+          "description": "Indicates if the martial art exhibits interesting choreomusical relationships."
+        }
+      },
+      "required": [
+        "discipline_name",
+        "discipline_type",
+        "combined_words",
+        "martial_art_name",
+        "martial_art_origin",
+        "martial_art_elements",
+        "has_interesting_choreomusical_relationships"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "discipline_name": "Choreomusicology",
+      "discipline_type": "portmanteau word",
+      "combined_words": [
+        "choreology",
+        "musicology"
+      ],
+      "martial_art_name": "Capoeira",
+      "martial_art_origin": "Afro-Brazilian",
+      "martial_art_elements": [
+        "dance",
+        "acrobatics",
+        "music"
+      ],
+      "has_interesting_choreomusical_relationships": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

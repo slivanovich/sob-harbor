@@ -1,0 +1,9 @@
+{
+  "player_name": "William Bradley",
+  "player_birth_year": 1941,
+  "attended_school": {
+    "school_current_name": "Central High School",
+    "school_formal_name": "Louisville Central High School Magnet Career Academy",
+    "school_location": "Louisville, Kentucky"
+  }
+}

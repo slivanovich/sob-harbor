@@ -1,0 +1,12 @@
+{
+  "band_name": "Eluveitie",
+  "founding_year": 2002,
+  "founder_details": {
+    "founder_name": "Chrigel Glanzmann",
+    "founder_role": "male lead vocalist",
+    "birth_location": {
+      "city": "Basel",
+      "country": "Switzerland"
+    }
+  }
+}

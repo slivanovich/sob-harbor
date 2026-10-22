@@ -1,0 +1,11 @@
+{
+  "supervillain_name": "Apocalypse",
+  "alias": "En Sabah Nur",
+  "publisher": "Marvel Comics",
+  "is_one_of_first_mutants": true,
+  "storyline_context": {
+    "name": "Age of Apocalypse",
+    "affected_region": "North America",
+    "impact_description": "caused North America to need to recover from his iron fist"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "bands_analyzed": [
+    {
+      "band_name": "Fake Problems",
+      "genres_from_context": [
+        "indie rock",
+        "indie-punk",
+        "rock"
+      ]
+    },
+    {
+      "band_name": "Monoral",
+      "genres_from_context": [
+        "alternative rock"
+      ]
+    }
+  ],
+  "common_genre": "rock",
+  "genre_derivation_method": "combination"
+}

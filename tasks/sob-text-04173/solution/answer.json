@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "Samuel R. Delany",
+    "birth_date": "1942-04-01"
+  },
+  "person_2": {
+    "name": "Alan Moore",
+    "birth_date": "1953-11-18"
+  },
+  "earlier_born_person_name": "Samuel R. Delany",
+  "birth_year_difference": 11
+}

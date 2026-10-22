@@ -1,0 +1,14 @@
+{
+  "clock_name": "Aqua Horological Tintinnabulator",
+  "alternative_names": [
+    "Victoria Centre Clock",
+    "Emett Clock",
+    "The Time Fountain"
+  ],
+  "location": {
+    "city": "Nottingham",
+    "country": "England"
+  },
+  "power_source": "water-powered",
+  "located_within_building": "Victoria Centre"
+}

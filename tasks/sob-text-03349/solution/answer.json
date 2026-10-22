@@ -1,0 +1,15 @@
+{
+  "common_entity_name": "Walt Disney",
+  "entity_type": "Company",
+  "shared_items": [
+    {
+      "title": "It's a Small World",
+      "item_type": "ride"
+    },
+    {
+      "title": "Son of Flubber",
+      "item_type": "film"
+    }
+  ],
+  "commonality_description": "Both are associated with Walt Disney."
+}

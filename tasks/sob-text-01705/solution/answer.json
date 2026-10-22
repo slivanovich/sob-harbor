@@ -1,0 +1,10 @@
+{
+  "university": {
+    "name": "Utah State University",
+    "location": "Logan, Utah"
+  },
+  "laboratory": {
+    "name": "Space Dynamics Laboratory"
+  },
+  "ownership_confirmed": true
+}

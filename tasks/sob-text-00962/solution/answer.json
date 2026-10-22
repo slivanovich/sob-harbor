@@ -1,0 +1,13 @@
+{
+  "person_name": "Cherrie Ireland",
+  "event_type": "paralysis",
+  "cause_of_event": "polio",
+  "event_location": {
+    "city": "Melbourne"
+  },
+  "person_birth_location": {
+    "city": "Darwin",
+    "territory": "Northern Territory",
+    "country": "Australia"
+  }
+}

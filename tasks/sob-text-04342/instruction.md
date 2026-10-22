@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Can Man Dan: Dan Johnstone (born July 31, 1987 in Edmonton, Alberta), also known as "Can Man Dan", is a Canadian anti-poverty activist, philanthropist, community organizer and social activist.  His fundraising group, also called "Can Man Dan", works to alleviate poverty and strengthen communities in Alberta, Canada by working with several non profit groups and charities.  Johnstone also hosts many of his own created events, but is perhaps best known for his annual "Moving Hunger Out" campaign, where he camps out multiple times every December in freezing cold temperatures in the back of a tractor-trailer, aiming to fill it with donations for various Food Banks around Alberta.  Due to the severity of the winters commonly found in Alberta and the freezing cold temperatures that go along with them, These campouts have become highly publicized and staple events for various food banks around Alberta.  Can Man Dan's campouts have proven to be very successful, as Dan has raised several thousands of dollars and thousands of pounds of food for local food banks every year from these events alone.  Johnstone also has created and hosted many other events around Alberta aimed to help those less fortunate including his annual "We're Here For Ya Day" event.  Can Man Dan offers free hair services, a barbacue lunch, personal hygiene products, backpacks filled with school supplies, fresh bread, and food hampers to thousands of men, women and children every year.
+
+Jacobi form: In mathematics, a Jacobi form is an automorphic form on the Jacobi group, which is the semidirect product of the symplectic group Sp(n;R) and the Heisenberg group formula_1.  The theory was first systematically studied by .
+
+Isabelle Gallagher: Isabelle Gallagher (born 27 October 1973) is a French mathematician.  Her research concerns partial differential equations such as the Navier–Stokes equations, wave equation, and Schrödinger equation, as well as harmonic analysis of the Heisenberg group.
+
+Rupert Glasgow: Rupert D.V. Glasgow (born 1964 in Sheffield, England) is an institutionally independent translator, philosopher and writer.  Glasgow studied French and German at St. John's College, Oxford, UK.  His translations from German into English include letters of Martin Heidegger to his wife.  Translations from the Spanish include a collection of stories by Augusto Monterroso.  Glasgow's writings concern the history of ideas, including comedy, laughter, the mind, as well as the concepts of water and of self.  Glasgow taught philosophy courses on 'The Phylogeny of the Self' to biologists at the Leibniz Institute for Neurobiology, Magdeburg, and the University of Würzburg, Germany, and received a PhD for a thesis on this topic from the Graduate School of Humanities at the Julius-Maximilians University of Würzburg, Germany, under the supervision of Roland Borgards, Karl Mertens, and Martin Heisenberg.  Upon invitation, Glasgow presented his work to the German Science Foundation Research Training Group Emotions at the Julius-Maximilians Universität Würzburg, Germany (2008), at the Centre for Genomic Regulation, Barcelona, Spain (2012), as well as at the Minibrains conference of the European Science Foundation/ European Molecular Biology Organization (2014).
+
+Werner Heisenberg: Werner Karl Heisenberg ( ; ] ; 5 December 1901 – 1 February 1976) was a German theoretical physicist and one of the key pioneers of quantum mechanics.  He published his work in 1925 in a breakthrough paper.  In the subsequent series of papers with Max Born and Pascual Jordan, during the same year, this matrix formulation of quantum mechanics was substantially elaborated.  He is known for the Heisenberg uncertainty principle, which he published in 1927.  Heisenberg was awarded the Nobel Prize in Physics for 1932 "for the creation of quantum mechanics".
+
+Iwasawa manifold: In mathematics, in the field of differential geometry, an Iwasawa manifold is a compact quotient of a 3-dimensional complex Heisenberg group by a cocompact, discrete subgroup.  An
+
+Weil–Brezin Map: In mathematics, the Weil–Brezin map, named after André Weil and Jonathan Brezin, is a unitary transformation that maps a Schwartz function on the real line to a smooth function on the Heisenberg manifold.  The Weil–Brezin map gives a geometric interpretation of the Fourier transform, the Plancherel theorem and the Poisson summation formula.  The image of Gaussian functions under the Weil–Brezin map are nil-theta functions, which are related to theta functions.  The Weil–Brezin map is sometimes referred to as the Zak transform, which is widely applied in the field of physics and signal processing; however, the Weil–Brezin Map is defined via Heisenberg group geometrically, whereas there is no direct geometric or group theoretic interpretation from the Zak transform.
+
+Heisenberg group: In mathematics, the Heisenberg group, named after Werner Heisenberg, is the group of 3×3 upper triangular matrices of the form
+
+Extra special group: In group theory, a branch of abstract algebra, extra special groups are analogues of the Heisenberg group over finite fields whose size is a prime.  For each prime "p" and positive integer "n" there are exactly two (up to isomorphism) extra special groups of order "p".  Extra special groups often occur in centralizers of involutions.  The ordinary character theory of extra special groups is well understood.
+
+Theta representation: In mathematics, the theta representation is a particular representation of the Heisenberg group of quantum mechanics.  It gains its name from the fact that the Jacobi theta function is invariant under the action of a discrete subgroup of the Heisenberg group.  The representation was popularized by David Mumford.
+
+Question: The man "the Heisenberg group" was named after was born in what year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person the Heisenberg group was named after."
+    },
+    "group_name": {
+      "type": "string",
+      "description": "The name of the mathematical group."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the person."
+    }
+  },
+  "required": [
+    "person_name",
+    "group_name",
+    "birth_year"
+  ],
+  "additionalProperties": false
+}

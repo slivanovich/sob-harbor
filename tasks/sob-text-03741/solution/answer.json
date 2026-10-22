@@ -1,0 +1,8 @@
+{
+  "wind_farm_name": "Sherbino Mesa Wind Farm",
+  "project_phase": "Phase I",
+  "turbine_manufacturer": {
+    "name": "Vestas",
+    "founding_year": 1945
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "drama_series_name": "The Secret",
+  "crime_type": "double murder",
+  "number_of_victims": 2,
+  "victims": [
+    {
+      "full_name": "Lesley Howell"
+    },
+    {
+      "full_name": "Constable Trevor Buchanan"
+    }
+  ]
+}

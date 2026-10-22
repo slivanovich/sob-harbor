@@ -1,0 +1,24 @@
+{
+  "question_asked": "Were Simone de Beauvoir and Bob Monkhouse both comedians?",
+  "person_one": {
+    "name": "Simone de Beauvoir",
+    "professions": [
+      "writer",
+      "intellectual",
+      "existentialist philosopher",
+      "political activist",
+      "feminist",
+      "social theorist"
+    ],
+    "is_comedian": false
+  },
+  "person_two": {
+    "name": "Bob Monkhouse",
+    "professions": [
+      "entertainer",
+      "comedian"
+    ],
+    "is_comedian": true
+  },
+  "both_comedians": false
+}

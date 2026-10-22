@@ -1,0 +1,10 @@
+{
+  "person_name": "James Louis McCartney",
+  "birth_date": "12 September 1977",
+  "birth_year": 1977,
+  "current_residence": "London",
+  "parental_relationship": {
+    "father_name": "Paul McCartney",
+    "mother_name": "Linda McCartney"
+  }
+}

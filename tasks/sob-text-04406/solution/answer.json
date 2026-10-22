@@ -1,0 +1,16 @@
+{
+  "discipline_name": "Choreomusicology",
+  "discipline_type": "portmanteau word",
+  "combined_words": [
+    "choreology",
+    "musicology"
+  ],
+  "martial_art_name": "Capoeira",
+  "martial_art_origin": "Afro-Brazilian",
+  "martial_art_elements": [
+    "dance",
+    "acrobatics",
+    "music"
+  ],
+  "has_interesting_choreomusical_relationships": true
+}

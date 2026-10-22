@@ -1,0 +1,15 @@
+{
+  "company_name": "Shelter Insurance Company",
+  "company_type": "mutual insurance company",
+  "headquarters_location": {
+    "city": "Columbia",
+    "state": "Missouri"
+  },
+  "insurance_products_offered": [
+    "Auto",
+    "Property",
+    "Business",
+    "Life Insurance"
+  ],
+  "operational_states_count": 14
+}

@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "6eec46377ea34c20a7ef7555cef917cea018038c809647104573fd43b89895af",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a73304a5542991f29ee2d4b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "New Slains Castle",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Dundarg Castle: Dundarg Castle is a ruined castle about 2 km north-northeast of New Aberdour, Aberdeenshire, Scotland, built within the ramparts of an earlier iron age promontory fort.  It was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of north-east Aberdeenshire.\n\nBužim Fort: Bužim Castle (Bosnian: \"Tvrđava Bužim\", \"Stari grad Bužim\" , \"Old City of Bužim\") is a castle in the Bužim municipality in northwestern Bosnia and Herzegovina.  The castle was built during the 12th century, and is located at 325 m above sea level.  It was the second-biggest medieval castle in Cazinska krajina, after Bihać.  The castle is an example of renaissance architecture, and served as both a military hill fort and a residence for the nobility.  Bužim Castle and a nearby old mosque are protected as national monuments in Bosnia and Herzegovina.\n\nFedderate Castle: Fedderate Castle is a ruined castle near New Deer in Aberdeenshire, Scotland.  A drawbridge and causeway provided access to the castle.  Lord William Oliphant with Jacobite forces, took control of Fedderate Castle and held out against the forces of Hugh Mackay for more than 3 weeks, surrendering in October 1690.\n\nKildrummy Castle: Kildrummy Castle is a ruined castle near Kildrummy, in Aberdeenshire, Scotland.  Though ruined, it is one of the most extensive castles dating from the 13th century to survive in eastern Scotland, and was the seat of the Earls of Mar.  It is owned today by Historic Scotland and is open to the public as a scheduled ancient monument.\n\nOld Slains Castle: Old Slains Castle (otherwise known as Old Castle Slains) is a ruined castle near Collieston in Aberdeenshire, Scotland.\n\nNew Slains Castle: Slains Castle, also known as New Slains Castle to distinguish it from nearby Old Slains Castle, is a ruined castle in Aberdeenshire, Scotland.  It overlooks the North Sea from its cliff-top site 1 km east of Cruden Bay.  The core of the castle is a 16th-century tower house, built by the 9th Earl of Erroll.  Significant reconstruction of the castle has been carried out a number of times, lastly in 1837 when it was rebuilt as a Scots Baronial mansion.  At one time it had three extensive gardens, but is now a roofless ruin.  Plans to restore the castle have been on hold since 2009.\n\nBognie Castle: Bognie Castle (also called Conzie Castle) is a ruined castle near Huntly, in the Aberdeenshire region of Scotland.  It was built in the 17th century and is now ruined.  It once rose 4 storeys high.\n\nSlains Castle: Slains Castle may refer to one of two ruined castles in Aberdeenshire, Scotland:\n\nPitsligo Castle: Pitsligo Castle is a ruined castle half a mile east of Rosehearty, Aberdeenshire, Scotland.  It was described by W. Douglas Simpson as one of the nine castles of the Knuckle, referring to the rocky headland of north-east Aberdeenshire.\n\nNational Museum of Wildlife Art: The National Museum of Wildlife Art (NMWA) is a museum located in Jackson Hole, Wyoming, United States that preserves and exhibits wildlife art.  The 51,000 square foot building with its Idaho quartzite façade was inspired by the ruins of Slains Castle in Aberdeenshire, Scotland and echoes the hillside behind the facility.  Located on a bluff called East Gros Ventre Butte in the midst of a real wildlife habitat, the institution overlooks the National Elk Refuge and is situated 2.5 miles north of the town of Jackson.  The core of the collections reflects traditional and contemporary realism.  The Museum's centerpiece is a collection of works by Carl Rungius (1869-1959) and Bob Kuhn (1920-2007).  In addition to 14 galleries, the museum has a Sculpture Trail, Museum Shop, Restaurant, Children’s Discovery Gallery, and Library.  More than 80,000 people visit every year, and over 10,000 children visit the Museum each year, often as part of their school curricula.",
+    "question": "Which ruined castle, located in Aberdeenshire, Scotland, is located nearby Old Slains Castle?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "castle_name": {
+          "type": "string",
+          "description": "The name of the castle."
+        },
+        "is_ruined": {
+          "type": "boolean",
+          "description": "Indicates if the castle is in a ruined state."
+        },
+        "location_region": {
+          "type": "string",
+          "description": "The region where the castle is located."
+        },
+        "location_country": {
+          "type": "string",
+          "description": "The country where the castle is located."
+        },
+        "nearby_landmark": {
+          "type": "string",
+          "description": "The name of the landmark it is located nearby."
+        },
+        "distinction_reason": {
+          "type": "string",
+          "description": "The reason for its alternative name, distinguishing it from another landmark."
+        }
+      },
+      "required": [
+        "castle_name",
+        "is_ruined",
+        "location_region",
+        "location_country",
+        "nearby_landmark",
+        "distinction_reason"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "castle_name": "New Slains Castle",
+      "is_ruined": true,
+      "location_region": "Aberdeenshire",
+      "location_country": "Scotland",
+      "nearby_landmark": "Old Slains Castle",
+      "distinction_reason": "to distinguish it from nearby Old Slains Castle"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

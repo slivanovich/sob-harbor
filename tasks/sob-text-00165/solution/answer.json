@@ -1,0 +1,15 @@
+{
+  "entities_examined": [
+    {
+      "name": "Vancouveria",
+      "type_from_context": "small group of plants",
+      "specific_common_name": "inside-out flowers"
+    },
+    {
+      "name": "Basselinia",
+      "type_from_context": "genus of flowering plant"
+    }
+  ],
+  "number_of_entities_examined": 2,
+  "general_common_classification": "plants"
+}

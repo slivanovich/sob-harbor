@@ -1,0 +1,13 @@
+{
+  "event_name": "The New York Stakes",
+  "venue_name": "Belmont Park",
+  "community_details": {
+    "community_name": "Elmont",
+    "is_unincorporated": true,
+    "is_cdp": true,
+    "county": "Nassau County",
+    "state": "New York",
+    "located_within": "northwestern Hempstead"
+  },
+  "answer": "northwestern Hempstead"
+}

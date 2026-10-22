@@ -1,0 +1,12 @@
+{
+  "comparison_subject_1": {
+    "chain_name": "Pietro's Pizza",
+    "headquarters_state": "Oregon"
+  },
+  "comparison_subject_2": {
+    "chain_name": "Pizza Patrón Inc.",
+    "headquarters_state": "Texas"
+  },
+  "more_southerly_state": "Texas",
+  "chain_in_more_southerly_state": "Pizza Patrón Inc."
+}

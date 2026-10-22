@@ -1,0 +1,18 @@
+{
+  "question_universities": [
+    {
+      "university_name": "University of Massachusetts Amherst",
+      "located_in_united_states": true,
+      "country": "United States",
+      "city": "Amherst"
+    },
+    {
+      "university_name": "Bilkent University",
+      "located_in_united_states": false,
+      "country": "Turkey",
+      "city": "Ankara"
+    }
+  ],
+  "all_in_united_states": false,
+  "reasoning": "The University of Massachusetts Amherst is located in the United States, but Bilkent University is located in Turkey."
+}

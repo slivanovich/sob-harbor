@@ -1,0 +1,12 @@
+{
+  "airport_name": "Rockhampton Airport",
+  "destination_cities": [
+    "Brisbane",
+    "Townsville",
+    "Gold Coast",
+    "Mackay"
+  ],
+  "target_city_name": "Brisbane",
+  "target_city_population": 2.4,
+  "population_unit": "million"
+}

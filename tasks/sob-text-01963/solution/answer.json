@@ -1,0 +1,13 @@
+{
+  "architect_name": "William W. Bosworth",
+  "designed_mansion": {
+    "name": "Theodore N. Vail mansion",
+    "location": "Morristown, New Jersey",
+    "year_built": 1916,
+    "current_status": "Morristown Town Hall"
+  },
+  "related_project": {
+    "name": "Kykuit",
+    "architect_role": "responsible to a large degree for the architectural expression"
+  }
+}

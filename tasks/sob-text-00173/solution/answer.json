@@ -1,0 +1,10 @@
+{
+  "person_name": "Jon Lovitz",
+  "group_name": "Saturday Night Live",
+  "membership_period": {
+    "start_year": 1985,
+    "end_year": 1990
+  },
+  "group_member_designation": "Not Ready For Prime Time Players",
+  "missing_designation_part": "Prime Time Players"
+}

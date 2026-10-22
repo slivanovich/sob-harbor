@@ -1,0 +1,13 @@
+{
+  "film_title": "Wolf Creek",
+  "release_year": 2005,
+  "genre": "horror",
+  "country_of_origin": "Australian",
+  "person_involved": {
+    "name": "David Lightfoot",
+    "role": "worked on"
+  },
+  "starring_actors": [
+    "John Jarratt"
+  ]
+}

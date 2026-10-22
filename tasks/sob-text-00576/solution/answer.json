@@ -1,0 +1,18 @@
+{
+  "film_title": "Pirates of the 20th Century",
+  "film_release_year": 1980,
+  "film_writers": [
+    {
+      "name": "Boris Durov"
+    },
+    {
+      "name": "Stanislav Govorukhin",
+      "birth_year": 1936
+    }
+  ],
+  "target_birth_year": 1936,
+  "matching_writer": {
+    "name": "Stanislav Govorukhin",
+    "birth_year": 1936
+  }
+}

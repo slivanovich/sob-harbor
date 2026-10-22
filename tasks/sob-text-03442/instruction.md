@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jason Bell (photographer): Jason Bell (born 19 April 1969 in Camden Town, London) is an English portrait and fashion photographer.  He studied politics, philosophy and economics at Oxford University before returning to London to work for the Sunday Times.  He lives in both New York and London.  He describes photography as 'always part of who I was' and he sees himself as a portrait photographer rather than a fashion photographer, saying: 'for me the most important thing is the person'.
+
+Mark Wagner (artist): Mark Wagner (born 1976) is an American artist best known for meticulous collages made of United States banknotes, such as the portrait of Federal Reserve Bank Chairman Ben Bernanke, composed exclusively of one-dollar bills, in the collection of the Smithsonian Institution’s National Portrait Gallery.  Wagner’s work is represented by Pavel Zoubok Gallery in New York City.  He is co-founder of The Booklyn Artist Alliance and has published over twenty artists’ books with Bird Brain Press and X-ing Books.
+
+Daphne Todd: Daphne Todd OBE (born 27 March 1947) is an English artist who was the first female President of the Royal Society of Portrait Painters from 1994–2000, and who won the BP Portrait Award 2010 with a painting of her 100-year-old mother's corpse.
+
+Mimi Vang Olsen: Mimi Vang Olsen is a New York born painter specializing in pet portraits in The Village since the early 1970's.  Her work has brought her international recognition and celebrity clientele.  It is estimated she has made close to 400 pet and family portraits over her decades-long career.  “I approach it as if it were a formal portrait of a person or a piece of fruit,” Vang Olsen said.  “It could be a still life.  And by analyzing the pet’s personality, dog or cat, you can figure out how to do a beautiful portrait.”
+
+John Adams (composer): John Coolidge Adams (born February 15, 1947) is an American composer of classical music and opera, with strong roots in minimalism.
+
+Laura a la ciutat dels sants: Laura a la ciutat dels sants is a 1931 novel written by the Catalan writer Miquel Llor.  The work is rooted in realism and modernisme, but it also has features of the 1930s, more influenced by Freud and other modern authors.  Set in Vic, it follows the initial journey of Laura and her development as a person.  The negative image of rural and catholic caused a controversy that made Llor write the second part, "El somriure dels sants" (1947), which clarified this pessimistic portrait.
+
+Zair Azgur: Zair Isaakovich Azgur (1908-1995) was a Belarusian sculptor active during the Soviet period.  Born in Mogilev Governorate (now in Vitebsk Region, Belarus), he studied in that city from 1922 to 1925; from 1925 until 1928 he studied at the Vkhutein in Leningrad.  He first exhibited in 1923.  He was mainly active in Minsk, where among his projects was the creation of reliefs for the opera house.  He created a series of portrait busts of war heroes and military figures during the 1940s.  At the 1958 World's Fair in Brussels he won a silver medal for his work.  Monuments to his design were erected at Lugansk in 1947; Minsk in 1947; Borodino in 1949; Suzdal in 1950; and Leninogorsk - a monument to Vladimir Lenin - in 1957.  Later in his career he exhibited in Bucharest and Paris.
+
+Columbian half dollar: The Columbian half dollar is a coin issued by the Bureau of the Mint in 1892 and 1893.  The first United States commemorative coin, it was issued both to raise funds for the 1893 World's Columbian Exposition and to mark the quadricentennial of the first voyage to the Americas of Christopher Columbus, whose portrait it bears.  The Columbian half dollar was the first American coin to depict a historical person.
+
+Paul Emsley: Paul Emsley (born 25 August 1947) is a British artist who worked in South Africa until 1996 and is now resident in Bradford-on-Avon, Wiltshire, England.  He is a former lecturer at the Stellenbosch University and the 2007 winner of the BP Portrait Award for portrait painting.  His work can be found in most public collections in South Africa, The National Portrait Gallery London and The British Museum.  He is known for his large detailed images of people, animals and flowers.  There was a major retrospective of his work in 2012 at the Sasol Art Gallery in Stellenbosch.  He is represented in the UK by the Redfern Gallery and in South Africa by Brundyn & Gonsalves.  Emsley’s portrait of The Duchess of Cambridge is on permanent display at the National Portrait Gallery in London.  Other notable portraits include Nelson Mandela, Sir V. S. Naipaul, Michael Simpson and William Kentridge.
+
+Mark Kidel: Mark Kidel (born 6 July 1947) is a documentary filmmaker and writer who lives in Bristol, England.  <br>His award-winning films include portraits of John Adams (composer), Elvis Costello, Boy George, Ravi Shankar, Rod Stewart, Bill Viola, Iannis Xenakis, pianists Alfred Brendel and Leon Fleisher, Derek Jarman, Balthus, Tricky, Robert Wyatt and American theatre and opera director Peter Sellars.
+
+Question: Which person that Mark Kidel did a portrait of was born in 1947?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person who was the subject of the portrait."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the person."
+    },
+    "portrait_artist": {
+      "type": "string",
+      "description": "The name of the artist who created the portrait."
+    },
+    "artist_profession": {
+      "type": "string",
+      "description": "The profession of the artist who created the portrait."
+    }
+  },
+  "required": [
+    "person_name",
+    "birth_year",
+    "portrait_artist",
+    "artist_profession"
+  ],
+  "additionalProperties": false
+}

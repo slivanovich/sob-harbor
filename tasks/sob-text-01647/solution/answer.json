@@ -1,0 +1,11 @@
+{
+  "entity_1_name": "Take That",
+  "entity_1_event_type": "formation",
+  "entity_1_year": 1990,
+  "entity_2_name": "Let Me Entertain You Tour",
+  "entity_2_event_type": "tour_start",
+  "entity_2_year": 2015,
+  "first_event_name": "Take That",
+  "first_event_year": 1990,
+  "comparison_result": "Take That came first."
+}

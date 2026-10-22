@@ -1,0 +1,16 @@
+{
+  "tournament_name": "2014 Macau Open Grand Prix Gold",
+  "tournament_year": 2014,
+  "tournament_category": "Grand Prix Gold",
+  "match_details": {
+    "winner": {
+      "player_name": "P. V. Sindhu",
+      "player_nationality": "Indian"
+    },
+    "runner_up": {
+      "player_name": "Kim Hyo-min",
+      "player_nationality": "South Korean"
+    },
+    "round": "final round"
+  }
+}

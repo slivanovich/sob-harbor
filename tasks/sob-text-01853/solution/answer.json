@@ -1,0 +1,12 @@
+{
+  "player_most_votes": {
+    "name": "Dan Fouts",
+    "team_anniversary": "San Diego Chargers 50th Anniversary Team"
+  },
+  "passing_record": {
+    "yards_thrown": 4000,
+    "consecutive_seasons": 3,
+    "record_description": "first player in history to throw for 4,000 yards in three consecutive seasons"
+  },
+  "online_votes_cast": 400000
+}

@@ -1,0 +1,14 @@
+{
+  "question_comparison": "Were both Battle of Chickamauga and Battle of Aachen fought in the same continent?",
+  "battle_1": {
+    "name": "Battle of Chickamauga",
+    "location": "southeastern Tennessee and northwestern Georgia",
+    "continent": "North America"
+  },
+  "battle_2": {
+    "name": "Battle of Aachen",
+    "location": "Aachen, Germany",
+    "continent": "Europe"
+  },
+  "same_continent": false
+}

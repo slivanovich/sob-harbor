@@ -1,0 +1,11 @@
+{
+  "band_one": {
+    "name": "The Neighbourhood",
+    "formation_year": 2011
+  },
+  "band_two": {
+    "name": "Pierce the Veil",
+    "formation_year": 2006
+  },
+  "formed_in_same_year": false
+}

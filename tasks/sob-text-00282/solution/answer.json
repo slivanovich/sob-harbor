@@ -1,0 +1,14 @@
+{
+  "match_details": {
+    "competition": "League Cup",
+    "winning_club": "Birmingham City Football Club",
+    "losing_club": "Arsenal",
+    "winning_score": 2,
+    "losing_score": 1
+  },
+  "goal_scorer_details": {
+    "scorer_name": "Nikola Žigić",
+    "playing_position": "centre forward"
+  },
+  "season_of_match": "2010–11"
+}

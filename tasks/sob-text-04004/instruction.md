@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Sodium sesquicarbonate: Sodium sesquicarbonate (Systematic name trisodium hydrogendicarbonate) NaH(CO) is a double salt of sodium bicarbonate and sodium carbonate, and has a needle-like crystal structure.  However, the term is also applied to an equimolar mixture of those two salts, with whatever water of hydration the sodium carbonate includes, supplied as a powder.
+
+Chemical traffic light experiment: The chemical traffic light is the reaction of the changing in color of the solution which is also related to the blue bottle experiment.  One of the early formulas consists of glucose, sodium hydroxide, indigo carmine, and water.  Another formula consists of indigo carmine, dye, ascorbic acid (Vitamin C), sodium bicarbonate, sodium chloride, copper(II) sulfate, sodium hydroxide and water.  By doing so, chemical waste and the level of corrosive chemicals is reduced.  The amount of solid chemicals dissolved in the experiment could be reduced from 60 grams to 6 grams.  And the pH could be lowered from 13 to 3 which is easier to neutralize the pH to 7 by adding baking soda before disposal.  Also, it is safer and the reactions also occur faster and are easier to perform.
+
+Sodium bicarbonate rocket: A sodium bicarbonate rocket (sometimes called an Alka-Seltzer rocket) is a model rocket fashioned from a 35mm film canister and propelled by the pressure of a gas, often carbon dioxide, generated from the reaction of an acid with sodium bicarbonate.  Sodium bicarbonate rockets are often used in science classes to demonstrate principles of chemistry and physics.
+
+ZotZ (candy): ZotZ is a candy with a fizzy, sour center manufactured by G.B. Ambrosoli in Italy and distributed in the United States by Andre Prost, Inc.  It is a hard candy that contains a sour powder comprising malic and tartaric acids mixed with sodium bicarbonate.  When the powder dissolves, the acids dissolve in liquid (saliva or water) and react with the sodium bicarbonate to produce carbon dioxide bubbles and a fizzing sensation.  Zotz has a mild sour flavor to it, owing to the acids involved in its ingredients.  ZotZ flavors include apple, cherry, strawberry, watermelon, blue raspberry, grape, and orange.  As of the year 2017 they are still currently in production and sold in stores.
+
+Sodium bicarbonate: Sodium bicarbonate (IUPAC name: sodium hydrogen carbonate) is a chemical compound with the formula NaHCO.  It is a salt composed of sodium ions and bicarbonate ions.  Sodium bicarbonate is a white solid that is crystalline but often appears as a fine powder.  It has a slightly salty, alkaline taste resembling that of washing soda (sodium carbonate).  The natural mineral form is nahcolite.  It is a component of the mineral natron and is found dissolved in many mineral springs.
+
+Clabber Girl: Clabber Girl is a brand of baking powder, baking soda, and corn starch popular in the United States.  It is manufactured by Hulman & Company, which also owns and operates the Indianapolis Motor Speedway and INDYCAR, the sanctioning body for American open-wheel racing.  The brand also owns the Rumford baking powder label.  The Clabber Girl name brand comes from the word "clabber", a synonym of sour milk.  In the early 1800s, people mixed clabber with pearl ash, soda, cream of tartar, and a few other ingredients to make what we know today as baking powder.  The first baking powder brand by Hulman and company was the "Milk Brand".  In 1899, it was changed to the "Clabber Brand".  In 1923, the company changed the name to "Clabber Girl".
+
+Fruit salt: Fruit salt or fruit salts is a term for effervescent compounds made up of organic acids such as citric acid or tartaric acid and salts such as sodium bicarbonate, sodium carbonate, or sodium bitartrate in combination with added flavoring and sugar.  Historically, fruit salts were sold for a wide range of ailments, and today they are used primarily as antacids.
+
+Natron: Natron is a naturally occurring mixture of sodium carbonate decahydrate (NaCO·10HO, a kind of soda ash) and around 17% sodium bicarbonate (also called baking soda, NaHCO) along with small quantities of sodium chloride and sodium sulfate.  Natron is white to colourless when pure, varying to gray or yellow with impurities.  Natron deposits are sometimes found in saline lake beds which arose in arid environments.  Throughout history natron has had many practical applications that continue today in the wide range of modern uses of its constituent mineral components.
+
+Acid salt: Acid salt is a class of salts formed by the partial neutralization of diprotic or polyprotic acids. Because the parent acid is only partially neutralized, one or more replaceable hydrogen atoms remain.  Typical acid salts have one or more alkali (alkaline) metal ions as well as one or more hydrogen atoms.  Well known examples are sodium bicarbonate (NaHCO), sodium hydrosulfide (NaHS), sodium bisulfate (NaHSO), monosodium phosphate (NaHPO), and disodium phosphate (NaHPO).  Often acid salts are used as buffers.
+
+Tullio Simoncini: Tullio Simoncini (born 1951) is an Italian former physician and alternative medicine advocate.  He holds a Ph.D. in philosophy from La Sapienza University.  He is known for claiming that cancer is caused by the fungus "Candida albicans", and has gone so far as to say that cancer is actually a form of candida overgrowth.  He also says that cancer can be cured with injections of sodium bicarbonate.  He says that he was formerly an oncologist, but that he was struck off because he prescribed sodium bicarbonate instead of conventional chemotherapy.
+
+Question: What is the formula for Sodium bicarbonate which is found in Clabber Girl?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "chemical_name": {
+      "type": "string",
+      "description": "The common name of the chemical compound."
+    },
+    "chemical_formula": {
+      "type": "string",
+      "description": "The chemical formula of the compound."
+    },
+    "product_containing_chemical": {
+      "type": "string",
+      "description": "The name of the product mentioned in the context that contains the chemical."
+    }
+  },
+  "required": [
+    "chemical_name",
+    "chemical_formula",
+    "product_containing_chemical"
+  ],
+  "additionalProperties": false
+}

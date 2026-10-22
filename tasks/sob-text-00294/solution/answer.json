@@ -1,0 +1,16 @@
+{
+  "question_answered": true,
+  "all_magazines_cater_to_female_readers": true,
+  "magazines_details": [
+    {
+      "magazine_name": "Me Naiset",
+      "target_audience_confirmed_female": true,
+      "evidence": "Me Naiset (meaning \"We the Women\" in English) is a Finnish language women's magazine published in Helsinki, Finland."
+    },
+    {
+      "magazine_name": "Today's Housewife",
+      "target_audience_confirmed_female": true,
+      "evidence": "Today's Housewife was an American women's magazine in the early 20th century."
+    }
+  ]
+}

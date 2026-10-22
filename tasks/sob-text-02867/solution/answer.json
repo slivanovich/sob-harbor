@@ -1,0 +1,23 @@
+{
+  "are_both_authors": false,
+  "individuals": [
+    {
+      "name": "Richard Ashcroft",
+      "is_author": false,
+      "known_professions": [
+        "singer",
+        "songwriter"
+      ]
+    },
+    {
+      "name": "Cerys Matthews",
+      "is_author": true,
+      "known_professions": [
+        "singer",
+        "songwriter",
+        "broadcaster"
+      ]
+    }
+  ],
+  "reasoning": "Cerys Matthews is described as an 'author', while Richard Ashcroft is described as a 'singer and songwriter' but not an author. Therefore, they are not both authors."
+}

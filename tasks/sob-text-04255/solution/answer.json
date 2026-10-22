@@ -1,0 +1,9 @@
+{
+  "event_name": "Halil",
+  "premiere_type": "American",
+  "premiere_date": "1981-07-04",
+  "location": {
+    "venue_name": "Tanglewood",
+    "state": "Massachusetts"
+  }
+}

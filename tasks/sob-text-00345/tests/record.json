@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "f953839f82efe3bb60c9dd3450e6edab7984e0c6150024eb695b6edde4aae533",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5a7a1bb25542996a35c170d2",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Robert Manoogian Jr. (January 4, 1918 – April 3, 2002) was an American professional wrestler",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Rainy Day Records: Rainy Day Records is a music production company and independent record label that is a subsidiary of Sound City Entertainment Group, the parent company of Sound City recording studios located in Los Angeles.  Sound City is celebrating its 40th Anniversary in the recording business in 2009.  More than 100 Gold and Platinum albums have been recorded at Sound City over the past 40 years, including albums produced by such record producers as David Foster, Keith Olsen, Richard Dashut, Bill Drescher, Jimmy Iovine, Butch Vig, GGGarth (Richardson), T-Bone Burnett, Andy Johns, Joe Barresi, Tony Berg, Tom Scott, Chris Goss, George Drakoulias, Brendan O'Brien, Matt Wallace, Rick Rubin, Sylvia Massy Shivy, Nick Raskulinecz and Ross Robinson.  Rainy Day usually only signs two or three new artists or acts in any given year, and then makes a concerted effort to fully develop and promote those artists that they do sign.  Also, Rainy Day Records only uses experienced record producers who have produced or engineered at least one Gold or Platinum album in the production of their albums.\n\nGeorge Avakian: George Avakian (Armenian: Գևորգ Ավագյան ; Russian: Геворк Авакян ; born March 15, 1919) is an American record producer and executive known particularly for his work with Columbia Records, and his production of albums by Louis Armstrong, Miles Davis and other notable jazz musicians.\n\nJazz on a Summer's Day: Jazz on a Summer's Day (1960) is a concert film set at the 1958 Newport Jazz Festival in Rhode Island, directed by commercial and fashion photographer Bert Stern.  The Columbia Records jazz producer, George Avakian, was the musical director of the film.\n\nTrombone for Two: Trombone For Two is a 1956 album by jazz trombonists J. J. Johnson and Kai Winding (\"Jay and Kai\").  It was the first of five albums that Winding and Johnson recorded for Columbia Records (CL 742).  George Avakian produced the recording sessions, which took place on June 23 and 24, 1955.\n\nEli's Chosen Six: Eli's Chosen Six was the ensemble that appeared in the influential 1958 concert film \"Jazz On A Summer's Day\" playing Dixieland as they drove around Newport in a convertible jalopy.  It was a famous Yale University Dixieland band of the 1950s that played the boisterous trad-jazz style of the day.  The ensemble of white college-student jazz revivalists rose into popular prominence in the mid-1950s, when \"college jazz\" was a catchphrase.  The sextet was founded and managed by Dick Voigt, and counted as members the later-legendary trombonist Roswell Rudd, bassists Buell Neidlinger (succeeded by Bob Morgan), cornetist and cartoonist Lee Lorenz, clarinetist Pete Williams (who was succeeded by Leroy Sam Parkins) and drummer Lyman \"House\" Drake (who was succeeded by Steve Little).  With the help of the producer and Yale alumnus George Avakian, the band recorded an album for Columbia Records in 1955.\n\nBill Haley and His Comets (1960 album): Bill Haley and His Comets is the title of the tenth album of rock and roll recordings by Bill Haley & His Comets.  Released in April 1960, it was the band's first album release for Warner Bros.  Records, following their departure from Decca Records at the end of 1959.  The recordings were produced by George Avakian, who succeeded Haley's Decca producer, Milt Gabler.\n\nHaley's Juke Box: Haley's Juke Box: Songs of the Bill Haley Generation (often listed in reference books as \"Bill Haley's Jukebox\"), is the eleventh studio album by Bill Haley & His Comets.  Released by Warner Bros.  Records in the summer of 1960, the album was produced by George Avakian.\n\nLouis Armstrong Plays W.C. Handy: Louis Armstrong Plays W. C. Handy is a 1954 studio release by Louis Armstrong and His All Stars, described by Allmusic as \"Louis Armstrong's finest record of the 1950s\" and \"essential music for all serious jazz collections\".  Columbia CD released the album on CD in 1986 in a much altered form, with alternative versions in place of many of the original songs, but restored the original with its 1997 re-issue, which also included additional tracks: a brief interview by the producer, George Avakian, with W. C. Handy; a joke told by Louis Armstrong; and several rehearsal versions of the songs.\n\nExpectations (Keith Jarrett album): Expectations is a 1972 album by the pianist, saxophonist and composer Keith Jarrett, released on Columbia Records.  In addition to Jarrett, musicians on the recording include Dewey Redman (tenor saxophone), Charlie Haden (bass), Paul Motian (drums), Sam Brown (guitar), Airto Moreira (percussion), as well as brass and string sections whose members are not credited in the album information.  \"Expectations\" was produced by George Avakian.\n\nBobby Managoff: Robert Manoogian Jr. (January 4, 1918 – April 3, 2002) was an American professional wrestler of Armenian descent who was best known for his work with National Wrestling Alliance in the 1940s as Bobby Managoff.",
+    "question": "Are George Avakian and Bobby Managoff both record producers?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question asked."
+        },
+        "answer": {
+          "type": "boolean",
+          "description": "True if both individuals are record producers, false otherwise."
+        },
+        "individuals": {
+          "type": "array",
+          "description": "Details about each individual mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the individual."
+              },
+              "is_record_producer": {
+                "type": "boolean",
+                "description": "True if the individual is identified as a record producer in the context."
+              },
+              "profession": {
+                "type": "string",
+                "description": "The profession of the individual as stated in the context."
+              }
+            },
+            "required": [
+              "name",
+              "is_record_producer",
+              "profession"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "question_asked",
+        "answer",
+        "individuals"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Are George Avakian and Bobby Managoff both record producers?",
+      "answer": false,
+      "individuals": [
+        {
+          "name": "George Avakian",
+          "is_record_producer": true,
+          "profession": "record producer and executive"
+        },
+        {
+          "name": "Bobby Managoff",
+          "is_record_producer": false,
+          "profession": "professional wrestler"
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

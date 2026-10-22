@@ -1,0 +1,15 @@
+{
+  "question_focus": "band origin",
+  "bands_evaluated": [
+    {
+      "band_name": "The Dangerous Summer",
+      "origin_country": "America"
+    },
+    {
+      "band_name": "Hello Sleepwalkers",
+      "origin_country": "Japan"
+    }
+  ],
+  "american_band_name": "The Dangerous Summer",
+  "is_american_band_found": true
+}

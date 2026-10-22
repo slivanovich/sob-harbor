@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Brett Ratner: Brett Ratner (born March 28, 1969) is an American film producer, entertainment businessman, and director of motion pictures, music videos, and television.  He is known for directing the "Rush Hour" film series, "The Family Man", "Red Dragon", "", and "Tower Heist".  He was also a producer on the Fox drama series "Prison Break", the comedy "Horrible Bosses" and its 2014 sequel.  He is the co-founder of RatPac-Dune Entertainment, a prolific film production and financing company.
+
+Robert Shaye: Robert Kenneth Shaye (born March 4, 1939), often referred to as Bob Shaye, is an American entertainment businessman, film producer, director and actor.  He is the founder and former CEO of New Line Cinema.
+
+Stuart O'Brien: Stuart O'Brien (27 May 1906 – 10 January 2004) was an American film editor.  He worked on B-movies and low budget horror and exploitation films, including Roger Corman's "The Terror" (1963) and Francis Ford Coppola's "Dementia 13" (1963).
+
+Dementia 13: Dementia 13 (UK title: The Haunted and the Hunted) is a 1963 horror-thriller film released by American International Pictures, starring William Campbell, Patrick Magee, and Luana Anders.  The film was written and directed by Francis Ford Coppola and produced by Roger Corman.  Although Coppola had been involved in at least two nudie films previously, "Dementia 13" served as his first mainstream "legitimate" directorial effort.
+
+Dementia 13 (2017 film): Dementia 13 (alternately titled Haloran Manor) is an upcoming American horror film directed by Richard LeMay, and starring Julia Campanelli, Ana Isabelle, Marianne Noscheze, Channing Pickett, and Christian Ryan.  It is a remake of 1963's "Dementia 13".
+
+Independent Spirit John Cassavetes Award: The Independent Spirit John Cassavetes Award is presented to the creative team of a film budgeted at less than $500,000 by the Film Independent, a non-profit organization dedicated to independent film and independent filmmakers.  It is named after actor/screenwriter/director John Cassavetes, a pioneer of American independent film.
+
+X: The Man with the X-ray Eyes: X: The Man with the X-ray Eyes is a 1963 science-fiction horror film written by Ray Russell and Robert Dillon and directed by Roger Corman.  The film stars Ray Milland as Dr. James Xavier, a world-renowned scientist, whose experiments with X-ray vision go awry.  While most of the cast are relatively unknown, Don Rickles is notable in an uncharacteristically dramatic role.  Veteran character actor Morris Ankrum makes an uncredited appearance, his last in the movie industry.  American International Pictures released the film as a double feature with "Dementia 13".
+
+Charles Hannawalt: Charles Hannawalt (January 15, 1910 in Los Angeles, California - June 7, 1973 in Los Angeles, California) was an American key grip, film producer, and cinematographer.  He worked in the film industry from 1956 to 1971, most frequently as a key grip for low-budget films directed and/or produced by Roger Corman and released by American International Pictures.  He is probably best known as the cinematographer for Francis Ford Coppola's "Dementia 13", the only film in which he worked in that capacity.  He also produced a handful of exploitation films.
+
+Roger Corman: Roger William Corman (born April 5, 1926) is an American independent film producer, director, screenwriter, entertainment businessman, and actor.  He has been called "The Pope of Pop Cinema" and is known as a trailblazer in the world of independent film.  Much of Corman's work has an established critical reputation, such as his cycle of low budget cult films adapted from the tales of Edgar Allan Poe.  Admired by members of the French New Wave and "Cahiers du cinéma", in 1964 Corman was the youngest filmmaker to have a retrospective at the Cinémathèque Française, as well as the British Film Institute and the Museum of Modern Art.  He was the co-founder of New World Pictures, a prolific multimedia company that helped to cement Fox as a major American television network, and is a long-time member of the Academy of Motion Picture Arts and Sciences.  In 2009, he was awarded an Honorary Academy Award.
+
+Derrick Tseng: Derrick Tseng (born 1954) is an American independent film producer based in New York City.  After establishing himself as a first assistant director in the mid 1990s, he moved up the ranks of the New York independent film world, eventually establishing himself as a producer.  Tseng is a frequent collaborator of filmmaker Todd Solondz, credited as Co-Producer on his 2011 film "Dark Horse", and Producer on "Life During Wartime" (2009) and “Palindromes” (2004).
+
+Question: What is the birthdate of this American independent film producer, director, screenwriter, entertainment businessman, and actor, who produced Dementia 13?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person identified in the question."
+    },
+    "birth_date": {
+      "type": "string",
+      "description": "The birth date of the person."
+    },
+    "person_roles": {
+      "type": "array",
+      "description": "A list of professional roles held by the person.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "produced_film_title": {
+      "type": "string",
+      "description": "The title of the film produced by the person, as mentioned in the question."
+    }
+  },
+  "required": [
+    "person_name",
+    "birth_date",
+    "person_roles",
+    "produced_film_title"
+  ],
+  "additionalProperties": false
+}

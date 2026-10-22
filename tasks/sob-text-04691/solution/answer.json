@@ -1,0 +1,12 @@
+{
+  "overall_answer": true,
+  "acinos_classification": {
+    "is_genus": true,
+    "has_evergreen_species": true
+  },
+  "cryptocarya_classification": {
+    "is_genus": true,
+    "is_evergreen_genus": true
+  },
+  "genii_term_interpretation": "The term 'genii' in the question is interpreted as 'genera', the plural form of 'genus', given the context describes both Acinos and Cryptocarya as genera."
+}

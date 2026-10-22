@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "a0bfea301852ed5038071ebf73d7f0cc6c97109fe10f3a3a2328885f7a8e2096",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7e8bb15542991319bc94d2",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Castile and León",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Ports (comarca): Ports (] ) is a comarca in the province of Castellón, Valencian Community, Spain.  It mostly overlaps the historical comarca known as Ports de Morella (Spanish: \"Los Puertos de Morella\" ), except for the municipal areas surrounding Catí and Vilafranca that were excluded from the present-day Ports comarca.\n\nA Pobra do Brollón: A Pobra do Brollón is a municipality in the Spanish province of Lugo in Galicia.  It belongs to the comarca named Terra de Lemos.  It has a population of 2,066 (Spanish 2010 Census) and an area of 175 km.\n\nMaestrazgo, Aragon: Maestrazgo (Aragonese: \"Mayestrato\" ) is a comarca in southeastern Aragon, Spain.  Its names derives from the Maestrat/Maestrazgo mountain massif that extends to the east to the Comarques of the Valencian Community Alt Maestrat and Baix Maestrat.  The most important town is Cantavieja.  It is bordered by the Aragonese comarcas of Andorra-Sierra de Arcos, Cuencas Mineras, Comunidad de Teruel and Bajo Aragón, in the north and in the west and Gúdar-Javalambre in the south, as well as with the Castellón Province (Ports (comarca), Alt Maestrat Alcalatén) in the east.  Some municipal terms of this comarca are part of the historical region of Lower Aragon.\n\nBread: Bread is a staple food prepared from a dough of flour and water, usually by baking.  Throughout recorded history it has been popular around the world and is one of the oldest artificial foods, having been of importance since the dawn of agriculture.\n\nTierra del Pan: Tierra del Pan (Land of Bread) is a \"comarca\" located in the center of the province of Zamora, western Spain.  It belongs to the Autonomous Community of Castile and León.  The city of Zamora, capital of the province, is included in this comarca.\n\nLa Siberia: La Siberia is a comarca in the northeastern portion of the  province of Badajoz in the autonomous community of Extremadura, Spain.  Its capital is the municipality of Herrera del Duque.  The comarca is bordered on the north by the provinces of Cáceres and Toledo, on the west by Las Vegas Altas comarca, on the south by La Serena comarca, and on the east by the province of Ciudad Real.  The district contains 18 municipalities with a combined area of 2943 km2 and a population of 29,214 people.\n\nOdra-Pisuerga: Odra-Pisuerga is a \"comarca\" (county, but without administrative roles) located in the west of the province of Burgos, in the autonomous community of Castile and León, Spain.  It is bounded by the west and south-west by the province of Palencia, south-east by the Arlanza comarca, west by the Alfoz de Burgos and north by the Páramos comarca.\n\nComarca del Ebro: The Comarca del Ebro is a comarca of the Province of Burgos in the autonomous community of Castile and León, Spain.  It is located in the northeast of the province, and is divided from northwest to southeast by the River Ebro.  The Obarenes Mountains separate the comarca from the Meseta Central to the west.  Its capital is Miranda de Ebro, and its population is roughly 58,000 in the 2000s.\n\nSierra de la Demanda (comarca): Sierra de la Demanda is a \"comarca\" located south-east of the province of Burgos in the autonomous community of Castile and León, Spain.  It is bounded on the north-east by the Montes de Oca comarca, north-west by the Alfoz de Burgos, south-east by the province of Soria, south-west by the Ribera del Duero comarca, on the east by the province of La Rioja and west by the Arlanza \"comarca\".  It is named after the mountain sub-range of Sierra de la Demanda, the northwesternmost end of the Sistema Ibérico.\n\nList of bread dishes: This is a list of bread dishes and foods, which use bread as a primary ingredient.  Bread is a staple food prepared from a dough of flour and water, usually by baking.  Throughout recorded history it has been popular around the world and is one of the oldest artificial foods, having been of importance since the dawn of agriculture.",
+    "question": "What community in Spain owns a comarca named for one of the oldest artificial foods?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "autonomous_community": {
+          "type": "string",
+          "description": "The autonomous community in Spain that owns the comarca."
+        },
+        "comarca_name": {
+          "type": "string",
+          "description": "The name of the comarca."
+        },
+        "food_name": {
+          "type": "string",
+          "description": "The name of the food after which the comarca is named."
+        },
+        "food_description_keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Keywords describing the historical significance of the food."
+        }
+      },
+      "required": [
+        "autonomous_community",
+        "comarca_name",
+        "food_name",
+        "food_description_keywords"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "autonomous_community": "Castile and León",
+      "comarca_name": "Tierra del Pan",
+      "food_name": "Bread",
+      "food_description_keywords": [
+        "oldest artificial foods",
+        "importance since the dawn of agriculture"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

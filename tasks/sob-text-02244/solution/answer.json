@@ -1,0 +1,9 @@
+{
+  "prisoner_name": "Aldrich Hazen Ames",
+  "prison_institution": "Federal Correctional Institution in Terre Haute",
+  "prison_complex": "Terre Haute Federal Correctional Complex",
+  "sentence_details": {
+    "type": "life sentence",
+    "parole_possibility": false
+  }
+}

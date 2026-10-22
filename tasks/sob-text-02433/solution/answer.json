@@ -1,0 +1,15 @@
+{
+  "film_title": "The Dirty Dozen: Next Mission",
+  "film_type": "made-for-TV film and sequel",
+  "director": "Andrew V. McLaglen",
+  "reunited_actor": {
+    "name": "Lee Marvin",
+    "nationality": "American",
+    "profession": "film and television actor"
+  },
+  "other_reunited_cast_members": [
+    "Ernest Borgnine",
+    "Richard Jaeckel"
+  ],
+  "years_since_original_film": 18
+}

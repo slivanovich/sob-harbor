@@ -1,0 +1,23 @@
+{
+  "book_series_by_huygen_poortvliet": {
+    "main_series_title": "The Secret Book of Gnomes",
+    "authors": [
+      "Wil Huygen"
+    ],
+    "illustrator": "Rien Poortvliet",
+    "other_series_title": "The Gnomes"
+  },
+  "animated_series_adaptation": {
+    "series_title": "The World of David the Gnome",
+    "origin_country": "Spain",
+    "based_on_book_title": "The Secret Book of Gnomes",
+    "source_book_author": "Wil Huygen",
+    "producer": "BRB Internacional",
+    "number_of_episodes": 26,
+    "spin_off_title": "Wisdom of the Gnomes"
+  },
+  "question_answer": {
+    "answer_type": "animated_tv_series_title",
+    "value": "The World of David the Gnome"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "record_id": "ce4a18132eaaecfc1bce727901cf1af47a341d3e7925184a73482db0110f8c9f",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a8efac55542997ba9cb315e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Cable Guy",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Cable Guy: The Cable Guy is a 1996 American comedy film directed by Ben Stiller, starring Jim Carrey and Matthew Broderick.  It was released in the United States on June 14, 1996.  The film co-stars Leslie Mann, Jack Black, George Segal, Diane Baker, Eric Roberts, Owen Wilson, Janeane Garofalo, David Cross, Andy Dick, Amy Stiller, and Bob Odenkirk.\n\nGod Tussi Great Ho: God Tussi Great Ho (English: \"God you are Great\" ) is a 2008 Indian fantasy comedy film, written and directed by Rumi Jaffery and starring Salman Khan, Priyanka Chopra, Sohail Khan and Amitabh Bachchan in a friendly appearance.  It was released on 15 August 2008.  According to director Rohit Dhawan, the film is inspired from a village folk tale about a Brahmin, though most reviewers noted that the film's story-line has similarities with the 2003 Hollywood comedy \"Bruce Almighty\", starring Jim Carrey and Jennifer Aniston.  However the film bombed at the box office.\n\nAce Ventura (film series): Ace Ventura is an American comedy film series consisting of three entries, starring Jim Carrey as the titular character, Ace Ventura, a private investigator and self-proclaimed \"pet detective.\"  The first film, \"\", was released in 1994 after six years of development, with a sequel, \"\", released in 1995.  In 2009, a direct-to-video sequel, \"\", was released.  An was also produced and ran for three seasons.\n\nTonino Accolla: Tonino Accolla (6 April 1949 – 14 July 2013) was an Italian voice actor and actor.  He is notable for dubbing over all of Eddie Murphy's roles, as well as dubbing over the voice of Homer Simpson in the animated sitcom \"The Simpsons\".  Other actors he dubbed over are Kenneth Branagh, Tom Hanks, Mickey Rourke, Ralph Fiennes, Jim Carrey, Ben Stiller, and Gary Oldman (\"Léon\" and \"The Fifth Element\"), as well as the voice of Timon in the animated film \"The Lion King\".  He is the uncle of voice actor Natalia Accolla.\n\nLeslie Mann: Leslie Mann (born March 26, 1972) is an American actress and comedian known for her roles in comedic films such as \"The Cable Guy\" (1996), \"George of the Jungle\" (1997), \"Big Daddy\" (1999), \"Timecode\" (2000), \"Perfume\" (2001), \"Stealing Harvard\" (2002), \"The 40-Year-Old Virgin\" (2005), \"Knocked Up\" (2007), \"17 Again\" (2009), \"Funny People\" (2009), \"Rio\" (2011), \" The Change-Up\" (2011), \"This Is 40\" (2012), \"The Bling Ring\" (2013), \"The Other Woman\" (2014), \"Vacation\" (2015), and \"How to Be Single\" (2016).\n\nMe, Myself &amp; Irene: Me, Myself & Irene is a 2000 American black comedy film directed by the Farrelly brothers, and starring Jim Carrey and Renée Zellweger.  Chris Cooper, Robert Forster, Richard Jenkins, Daniel Greene, Anthony Anderson, Jerod Mixon and Mongo Brownlee co-star.  The film is about a Rhode Island state trooper named Charlie who, after years of continuously suppressing his rage and feelings, suffers a psychotic breakdown which results in a second personality, Hank.  This was also Carrey's first role in a 20th Century Fox film.\n\nOnce Bitten (1985 film): Once Bitten is a 1985 American comedy horror fantasy film starring Lauren Hutton, Jim Carrey, and Karen Kopins.  Carrey stars as Mark Kendall, an innocent and naive high school student who is seduced in a Hollywood, California, nightclub by a sultry blonde countess (Hutton), who unknown to him, is really a centuries-old vampire.  The film was Carrey's seventh film and his first main role.\n\nWhile We're Young (film): While We're Young is a 2014 American comedy film written, produced, and directed by Noah Baumbach.  The film stars Ben Stiller, Naomi Watts, Adam Driver, and Amanda Seyfried.  It was screened in the Special Presentations section of the 2014 Toronto International Film Festival.  The film centers on a New York-based documentary filmmaker and his wife (Ben Stiller and Naomi Watts, respectively), who begin hanging out with a couple in their 20s (Adam Driver and Amanda Seyfried).  A24 Films released the film on March 27, 2015 and the film went on to gross more than all of Baumbach's previous films in the United States box office.\n\nAce Ventura: Pet Detective: Ace Ventura: Pet Detective (or simply Ace Ventura, or also simply Pet Detective) is a 1994 American comedy film directed by Tom Shadyac, and co-written by and starring Jim Carrey.  It was developed by the film's original writer, Jack Bernstein, and co-producer, Bob Israel, for almost six years.  The film co-stars Courteney Cox, Tone Lōc, Sean Young and former Miami Dolphins quarterback Dan Marino.  In the film, Carrey plays Ace Ventura, an animal detective who is tasked with finding the Miami Dolphins' mascot that was abducted.  The film features a cameo appearance from death metal band Cannibal Corpse.\n\nLiar Liar: Liar Liar is a 1997 American comedy film directed by Tom Shadyac, written by Paul Guay and Stephen Mazur and starring Jim Carrey, who was nominated for a Golden Globe Award for Best Actor in Comedy.",
+    "question": "Leslie Mann is an American actress known for her role in what American comedy film starring Jim Carrey and directed by Ben Stiller?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the American comedy film."
+        },
+        "film_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "director": {
+          "type": "string",
+          "description": "The director of the film."
+        },
+        "main_stars": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of the main actors starring in the film."
+        },
+        "co_star_actress": {
+          "type": "string",
+          "description": "The name of the co-starring actress mentioned in the question."
+        },
+        "genre": {
+          "type": "string",
+          "description": "The genre of the film."
+        },
+        "country_of_origin": {
+          "type": "string",
+          "description": "The country of origin of the film."
+        }
+      },
+      "required": [
+        "film_title",
+        "film_year",
+        "director",
+        "main_stars",
+        "co_star_actress",
+        "genre",
+        "country_of_origin"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "The Cable Guy",
+      "film_year": 1996,
+      "director": "Ben Stiller",
+      "main_stars": [
+        "Jim Carrey",
+        "Matthew Broderick"
+      ],
+      "co_star_actress": "Leslie Mann",
+      "genre": "comedy",
+      "country_of_origin": "American"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

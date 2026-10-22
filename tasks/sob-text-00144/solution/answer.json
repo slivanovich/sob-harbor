@@ -1,0 +1,14 @@
+{
+  "film_title": "I",
+  "film_details": {
+    "director": "Shankar",
+    "language": "Tamil",
+    "genre": "romantic thriller"
+  },
+  "music_contribution": {
+    "contributor_name": "Nakash Aziz",
+    "role": "assisted composer",
+    "main_composer": "A. R. Rahman",
+    "notes": "Assistance mentioned for the Hindi version of the film"
+  }
+}

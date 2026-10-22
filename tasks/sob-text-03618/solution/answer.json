@@ -1,0 +1,25 @@
+{
+  "common_media_type": "video game",
+  "entities_involved": [
+    {
+      "name": "Contrast",
+      "type": "video game",
+      "developer": "Compulsion Games",
+      "platforms_mentioned": [
+        "Microsoft Windows",
+        "PlayStation 3",
+        "PlayStation 4",
+        "Xbox 360",
+        "Xbox One",
+        "NVIDIA Shield"
+      ]
+    },
+    {
+      "name": "Xbox One",
+      "type": "home video game console",
+      "developer": "Microsoft",
+      "generation": "eighth generation"
+    }
+  ],
+  "relationship_description": "Contrast is a video game that is developed for and available on the Xbox One console."
+}

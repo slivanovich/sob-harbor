@@ -1,0 +1,65 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Russian Roulette (song): "Russian Roulette" is a song recorded by Barbadian singer Rihanna for her fourth studio album, "Rated R" (2009).  It premiered on radio stations worldwide on October 20, 2009 and was released as the album's lead single on October 27 through Def Jam Recordings.  Written and produced by Ne-Yo and Chuck Harmony, "Russian Roulette" is a pop and R&B ballad that contains dark, morbid, and tense atmospheric elements in its composition.  Lyrically, the single is about an abusive romantic relationship that ended abruptly.  Music critics noted the lyrical theme as a response to the domestic violence case between Rihanna and her then-boyfriend, singer Chris Brown.
+
+Cold Case Love: "Cold Case Love" is a song recorded by Barbadian singer Rihanna for her fourth studio album, "Rated R" (2009).  It was written and produced by The Y's (Justin Timberlake, Robin Tadross and James Fauntleroy II).  Following Chris Brown's assault on Rihanna, she started working on the sound of her new album.  Timberlake who co-wrote "Cold Case Love" labeled the sound of Rihanna's new project as a step forward for the singer.  In February 2010, Rihanna admitted that the song's lyrics are about her complicated relationship with Brown.
+
+Wait Your Turn: "Wait Your Turn" is a song recorded by Barbadian singer Rihanna for her fourth studio album, "Rated R" (2009).  It was written by Mikkel S. Eriksen, Tor Erik Hermansen, Saul Milton, Will Kennard, James Fauntleroy II, Takura Tendayi, and Rihanna herself.  Stargate (Eriksen and Hermansen) and Chase & Status (Milton and Kennard) produced the song.  "Wait Your Turn" was released on November 13, 2009 as the second international and third overall single from "Rated R".
+
+Hard (Rihanna song): "Hard" is a song by Barbadian recording artist Rihanna from her fourth studio album, "Rated R" (2009).  The song features a guest verse from American rapper Young Jeezy, credited only as "Jeezy" on the album.  The artists co-wrote the song with its producers, The-Dream and Tricky Stewart.  "Hard" was sent to radio by Def Jam Recordings on November 10, 2009, as the second United States single from "Rated R".  It is a hip hop song and features military horns, hissing synthesizers, sharp beats and piano chords.
+
+Rated R: Remixed: Rated R: Remixed (stylized as Rated R /// Remixed) is the second remix album by Barbadian singer Rihanna.  It was released on May 8, 2010, in Brazil and Europe and on May 24, 2010, in the United States by Def Jam Recordings.  It contains remixes from her fourth studio album, "Rated R" (2009).  The songs were solely remixed by Chew Fu.  The majority of the remixes were remastered to incorporate influences from the genre of house music, and incorporate heavy usage of synthesizers as part of their instrumentation.
+
+Rude Boy (Rihanna song): "Rude Boy" is a song by Barbadian singer Rihanna, taken from her fourth studio album, "Rated R" (2009).  It was released as the album's third single on February 19, 2010, through Def Jam.  Rihanna co-wrote the song with StarGate, Ester Dean, Makeba Riddick, and Rob Swire, with Swire also co-producing it with StarGate.  "Rude Boy" is an up-tempo dancehall and R&B song which incorporates elements of raggamuffin.  The song received mixed to positive reviews from critics; some called it is the highlight of the album, but others criticized Rihanna's "monotone" and "icy" vocal performance.
+
+Te Amo (Rihanna song): "Te Amo" (English: "I Love You") is a song by Barbadian recording artist Rihanna from her fourth studio album, "Rated R" (2009).  The electro-Latin song was written by Mikkel S. Eriksen, Tor Erik Hermansen, James Fauntleroy II and Rihanna, with production helmed by Eriksen and Hermansen under their production name, Stargate.  "Te Amo" impacted radio in Canada on June 7, 2010, and was released via digital download on June 8, 2010, in Australia, Italy and New Zealand, as the album's third international and fifth overall single.  "Te Amo" incorporates elements of Latin American music and conveys Rihanna's struggles as the object of another woman's desires.
+
+Unapologetic: Unapologetic is the seventh studio album by Barbadian singer Rihanna.  It was released on November 19, 2012, by Def Jam Recordings and SRP Records.  It was recorded between June and November 2012, during promotion of her sixth album, "Talk That Talk" (2011).  As executive producer, Rihanna enlisted previous collaborators The-Dream, David Guetta, Chase & Status, and StarGate to work alongside new collaborators such as Parker Ighile, Mike Will Made-It, and Labrinth.  "Unapologetic" is mainly a pop, dubstep and R&B album that incorporates elements of hip hop, EDM and reggae in its production, similar to the sound of her previous albums "Talk That Talk" and "Rated R" (2009).
+
+Rated R (Rihanna album): Rated R is the fourth studio album by Barbadian singer Rihanna.  It was released on November 20, 2009 by Def Jam Recordings and SRP Records.  Recording sessions for the album began in April 2009 and took place at several recording studios throughout United States and Europe.  Rihanna, together with Antonio "L.A." Reid and The Carter Administration, was the executive producer of the album and worked with various record producers, including Chase & Status, StarGate, The-Dream, Ne-Yo, and Brian Kennedy.  The record featured several vocalists and instrumentalists, including Young Jeezy, will.i.am, Justin Timberlake and Slash, who played the guitars in "Rockstar 101".
+
+Stupid in Love: "Stupid in Love" is a song recorded by Barbadian singer Rihanna for her fourth studio album, "Rated R" (2009).  The song was written by Shaffer Smith, Mikkel S. Eriksen and Tor Erik Hermansen, with production helmed by StarGate.  Ne-Yo served as the assistant producer.  It was written two days before Rihanna and then boyfriend Chris Brown's altercation on the night of the 2009 Grammy Awards, which occurred on February 8, 2009.  The lyrical content, which describes an abusive relationship, led Ne-Yo to describe the song as a "premonition".
+
+Question: "Wait Your Turn" is a song recorded by Barbadian singer Rihanna for her fourth studio album, "Rated R", released on which date?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song mentioned in the question."
+    },
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album the song is from."
+    },
+    "album_release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The release date of the album."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The artist who recorded the song and album."
+    }
+  },
+  "required": [
+    "song_title",
+    "album_title",
+    "album_release_date",
+    "artist"
+  ],
+  "additionalProperties": false
+}

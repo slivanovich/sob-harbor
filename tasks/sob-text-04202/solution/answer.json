@@ -1,0 +1,17 @@
+{
+  "olympic_athlete": {
+    "name": "Denise Lewis",
+    "olympic_games": {
+      "year": 2000,
+      "city": "Sydney",
+      "event": "heptathlon",
+      "medal": "gold"
+    }
+  },
+  "childrens_tv_show": {
+    "title": "Camp Orange (UK & Ireland)",
+    "role": "host",
+    "premiere_year": 2011
+  },
+  "answer_year": 2011
+}

@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lonely Lisa: "Lonely Lisa" is a 2010 song recorded by French singer-songwriter Mylène Farmer.  It is the third single from her 2010 eighth album "Bleu Noir" and was released digitally on 16 May 2011, then it was released physically on 5 July.  As "Oui mais... non", the lead single from the album, The lyrics were written by Farmer with the music composed by RedOne.  The song title comes from a female character created by Farmer which was already used in her 2002 music video for "C'est une belle journée" and served as trademark for one of her commercial companies.  Musically, the song has electro and dance sonorities.  It was generally praised in the media and reached number-one on the French Singles Chart.
+
+Pose (Rihanna song): "Pose" is a song recorded by Barbadian singer Rihanna for her eighth studio album, "Anti" (2016); it is one of three bonus tracks included on the deluxe edition.  She wrote the song in collaboration with Bibi Bourelly, Hit-Boy and Travis Scott, and it was produced by the latter two.  Kuk Harrell was also enlisted as Rihanna's vocal producer.  On April 14, 2017, Rihanna released a four-track EP which included remixes of "Pose" by the Far East Movement, Salva, Deadly Zoo and Eva Shaw.
+
+Loveeeeeee Song: "Loveeeeeee Song" is a song by Barbadian recording artist Rihanna recorded for her seventh studio album "Unapologetic" (2012).  The song features vocals by American singer-rapper Future who also co-wrote, and music produced by Luney Tunez, Emmanuel Zaragoza (previously known as Mex Manny) and Future.  Additional writing was done by Denisia "Blu June" Andrews and Rihanna herself.  The song was released as the fourth single in the UK only and fourth overall from the album, impacting on urban radio stations in that region on April 3, 2013.
+
+A Date with Elvis (The Cramps album): A Date with Elvis is the third full-length studio album by the American garage punk band the Cramps, released in the UK on Big Beat Records in 1986.  The title was appropriated from "A Date with Elvis" (1959), the eighth album by Elvis Presley.  The album was recorded in fall 1985 and engineered by Steve McMillan and Mark Ettel at Ocean Way Studios in Hollywood, California.  The album was first released in the US in 1990 by Enigma Records, with the bonus tracks "Blue Moon Baby", "Georgia Lee Brown", "Give Me a Woman" and "Get Off the Road".  The Cramps reissued the album (with bonus tracks) on their own Vengeance Records in 2001.  The original album was reissued in the UK by Big Beat in 2013 on orange vinyl, and subsequently reissued again by Vengeance Records in the US, UK and Canada in 2014.
+
+Needed Me: "Needed Me" is a song recorded by Barbadian singer and songwriter Rihanna from her eighth studio album, "Anti" (2016).  It was written by Rihanna, Brittany Hazard, Charles Hinshaw and Derrus Rachel together with its producer DJ Mustard and its co-producers Twice as Nice and Frank Dukes.  The song was serviced to the urban radio stations on March 30, 2016, as a follow up single from "Anti" together with "Kiss It Better".  Afterwards, Def Jam released "Needed Me" to mainstream radio.  "Needed Me" is a "mellow" dubstep-flavored electro-R&B song, that contains a downtempo and loose production with synthetic sounds.  The song's lyrics discuss romantic rejection.
+
+Anti (album): Anti is the eighth studio album by Barbadian singer Rihanna.  It was released on January 28, 2016, through Westbury Road and Roc Nation.  The singer began planning the record in 2014, at which time she left her previous label Def Jam and joined Roc Nation.  Work continued into 2015, during which she released three singles including "FourFiveSeconds", which reached the top 10 in several markets; they were ultimately removed from the final track listing.  "Anti" was made available for free digital download on January 28 through Tidal and was released to online music stores for paid purchase on January 29.
+
+Sex with Me: "Sex with Me" is a song recorded by Barbadian singer Rihanna for her eighth studio album, "Anti" (2016); it is one of three bonus tracks included on the deluxe edition.  She wrote the song in collaboration with PartyNextDoor, Chester Hansen, Boi-1da, Frank Dukes and Vinylz, and it was produced by the latter three.  Kuk Harrell was also enlisted as Rihanna's vocal producer.  On February 3, 2017, Rihanna released a five-track EP which included remixes of "Sex with Me" by MK, Salva, John Blake, Addal and DEVAULT.
+
+I Wanna Love You (Akon song): "I Wanna Fuck You", also known by its clean version "I Wanna Love You", is a song written and recorded by Akon featuring Snoop Dogg, also known as, the title of the explicit version.  It was released in September 2006 as the second single from his second album, "Konvicted".  It is also featured on Snoop Dogg's eighth album, "Tha Blue Carpet Treatment".  This song was Akon's first #1 single on the "Billboard" Hot 100 and was also Snoop's second #1 on the same chart.  The song also reached a peak of #3 on the UK Singles Chart.  The song originally featured Plies, an up-and-coming rapper from Fort Myers, Florida, but his verse was replaced by Snoop's for reasons explained below and his name has been left out from the writers' credits.  This song was #88 on "MTV Asia"' s list of Top 100 Hits of 2007.  The song was nominated for the Grammy Award given to the Best Rap/Sung Collaboration in the 50th Grammy Awards of 2008.
+
+Bill Haley's Chicks: Bill Haley's Chicks was the eighth album of rock and roll recordings by Bill Haley & His Comets for Decca Records, Decca 8821.  Released in January 1959 and produced by Milt Gabler, the album was the third "theme" album Haley recorded for Decca, following "Rockin' the Oldies" (rock and roll versions of standards) and "Rockin' Around the World" (rock and roll versions of folk songs).  This album is built on the theme of women's names, with each song being about a different girl.  Included on the album is "Skinny Minnie", which was a major hit for the band in 1958, reaching no.22 on Billboard and no.25 on Cashbox, along with a mixture of originals and cover versions of standards and jazz songs.  "Lean Jean", a song musically and thematically almost identical to "Skinny Minnie", also charted in 1958, reaching no. 52 on Cashbox.  The song "B.B. Betty", co-written by Bill Haley and released as a Decca 45 single, featured a solo vocal by Haley's steel guitar player, Billy Williamson.
+
+You da One: "You da One" is a song by Barbadian recording artist Rihanna recorded for her sixth studio album, "Talk That Talk" (2011).  It was co-written by Rihanna with Ester Dean, Henry Walter, John Hill and Lukasz Gottwald.  Production of the song was completed by Gottwald, under his production name Dr. Luke, and Cirkut.  Kuk Harrell and Marcas Tovar recorded the track at the Sofital Paris Le Laubourg, Room 538, and Westlake Recording Studios in Los Angeles, California.  It premiered on US radio on November 11, 2011, and was made available to download digitally throughout Europe and Australasia on November 14, 2011.  It was added to US Mainstream, rhythmic and urban radio station playlists on November 29, 2011.  Throughout December 2011 and January 2012, a remix extended play (EP) was released worldwide.
+
+Question: Rihanna recorded the song "Sex with Me" on her eighth album by which title that was released in 2016?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "artist_name": {
+      "type": "string",
+      "description": "The name of the artist who recorded the song."
+    },
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song in question."
+    },
+    "album_details": {
+      "type": "object",
+      "properties": {
+        "album_title": {
+          "type": "string",
+          "description": "The title of the album."
+        },
+        "album_number": {
+          "type": "integer",
+          "description": "The sequential number of the album in the artist's discography."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The year the album was released."
+        },
+        "is_bonus_track": {
+          "type": "boolean",
+          "description": "Indicates if the song is a bonus track on the album."
+        }
+      },
+      "required": [
+        "album_title",
+        "album_number",
+        "release_year",
+        "is_bonus_track"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "artist_name",
+    "song_title",
+    "album_details"
+  ],
+  "additionalProperties": false
+}

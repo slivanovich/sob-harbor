@@ -1,0 +1,11 @@
+{
+  "sheriffdom_name": "Lorn",
+  "castle_name": "Dunollie Castle",
+  "castle_state": "ruined",
+  "location": {
+    "town_name": "Oban",
+    "direction_from_town": "north",
+    "country": "Scotland",
+    "region": "Argyll"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "play_title": "Zaïre",
+  "author": "Voltaire",
+  "genre": "tragedy",
+  "number_of_acts": 5,
+  "composition_time_weeks": 3,
+  "revival_details": {
+    "year": 1874,
+    "actress": {
+      "name": "Sarah Bernhardt",
+      "nationality": "French",
+      "notable_plays_starred_in": [
+        "La Dame Aux Camelias",
+        "Ruy Blas",
+        "Fédora",
+        "La Tosca",
+        "L'Aiglon",
+        "Hamlet"
+      ]
+    }
+  }
+}

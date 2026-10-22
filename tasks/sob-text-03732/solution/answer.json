@@ -1,0 +1,17 @@
+{
+  "event_comparison": [
+    {
+      "event_name": "Carnival!",
+      "event_type": "musical production",
+      "year": 1961
+    },
+    {
+      "event_name": "Gower Champion",
+      "event_type": "birth",
+      "year": 1919
+    }
+  ],
+  "earliest_event_year": 1919,
+  "earliest_event_description": "Gower Champion was born",
+  "person_of_interest_name": "Gower Champion"
+}

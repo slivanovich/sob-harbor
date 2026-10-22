@@ -1,0 +1,85 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mitte: Mitte is the first and most central borough of Berlin.  It was created in Berlin's 2001 administrative reform by the merger of the former districts of Mitte proper, Tiergarten and Wedding; the resulting borough retained the name Mitte.  It is one of the two boroughs (beside Friedrichshain-Kreuzberg) which comprises former West and East Berlin districts.  Mitte encompasses Berlin's historic core and includes some of the most important tourist sites of Berlin like Museum Island, Brandenburg Gate, Unter den Linden, Potsdamer Platz, the Reichstag and Berlin Hauptbahnhof, most of which were in former East Berlin.
+
+Paul Wallot: Paul Wallot (26 June 1841 Oppenheim am Rhein – 10 August 1912 Bad Schwalbach) was a German architect of Huguenot descent, best known for designing the Reichstag building in Berlin, erected between 1884 and 1894.  He also built the adjacent Palace of the President of the Reichstag, finished in 1904, and the former Saxon "Ständehaus" state diet building of 1906 at Brühl's Terrace in Dresden.
+
+Memorial to the Murdered Members of the Reichstag: The Memorial to the Murdered Members of the Reichstag is a memorial in Berlin, Germany.  The memorial is located in front of the Reichstag building, and commemorates the 96 members of the parliament who died unnaturally between 1933 and 1945 (1948).  The idea of creating the monument started in the 1980s, and the memorial was erected in September 1992.  It was designed by Dieter Appelt, Klaus W. Eisenlohr, Justus Müller and Christian Zwirner.  The memorial is made of 96 cast iron plates, with the names, birth and death dates and places engraved on the edges.  It has been designed so that it can be extended if new names are discovered in the future.
+
+Kroll Opera House: The Kroll Opera House (German: "Krolloper, Kroll-Oper" ) was an opera building in Berlin, Germany, located in the central Tiergarten district on the western edge of the "Königsplatz" square (today "Platz der Republik"), facing the Reichstag building.  It was built in 1844 as an entertainment venue for the restaurant owner Joseph Kroll.  During its eventful history it was redeveloped as an opera house in 1851 and was used by various owners and directors for opera, operetta and drama.  It was later operated by the Prussian state opera and drama companies and served as the assembly hall of the German Reichstag parliament from 1933 until 1942.  On 19 July 1940, the opera house was used to host the 1940 Field Marshal Ceremony.  Severely damaged by bombing and the Battle of Berlin in World War II, it was finally demolished in 1951.
+
+Marinus van der Lubbe: Marinus (Rinus) van der Lubbe (13 January 1909 – 10 January 1934) was a Dutch council communist tried, convicted and executed for setting fire to the German Reichstag building on 27 February 1933, an event known as the Reichstag fire.
+
+Mikhail Minin: Mikhail Petrovich Minin (Russian: Михаил Петрович Минин ) (July 29, 1922 – January 10, 2008) was a Russian Soviet soldier who was the first to enter the Reichstag building on April 30, 1945 during the Battle of Berlin, and the first soldier to mount the flag on the Reichstag building at 10:40 pm.
+
+Platz der Republik (Berlin): Platz der Republik (] , "Square of the Republic") is a square in Berlin, Germany.  It is located in the Tiergarten (borough Mitte), directly in front (west) of the Reichstag building.  The square has an area of about 36,900 square meters and is almost completely covered by grass but is decorated with some hedges and a few trees.
+
+White Crosses: White Crosses (in German: "Weiße Kreuze") is a memorial for those who died during the Cold War at the Berlin Wall.  It is located at the shore of the river Spree in Berlin next to the Reichstag building, which houses the German parliament.  Established by the private group "Berliner Bürger-Verein" on the 10th anniversary of the Berlin Wall in 1971 it was first located east of the Reichstag on a fence directly in front of the wall.  After the German reunification in 1990 it kept its location until construction of the new government buildings next to the Reichstag was started at the end of that century – Berlin was chosen to be the new capital of Germany.
+
+Reichstag fire: The Reichstag fire (German: "Reichstagsbrand" , ) was an arson attack on the Reichstag building (home of the German parliament) in Berlin on 27 February 1933, just one month after Adolf Hitler had been sworn in as Chancellor of Germany.  The Nazis stated that Marinus van der Lubbe, a Dutch council communist, was found near the building.  The Nazis publicly blamed the fire on communist agitators in general, although in a German court in 1933, it was decided that Van Der Lubbe had acted alone, as he claimed to have done.  After the fire, the Reichstag Fire Decree was passed.  The fire was used as evidence by the Nazi Party that communists were plotting against the German government.  The event is seen as pivotal in the establishment of Nazi Germany.
+
+Reichstag building: The Reichstag (German: "Reichstagsgebäude" ] ; officially: "Deutscher Bundestag - Plenarbereich Reichstagsgebäude" ] ) is a historic edifice in Berlin, Germany, constructed to house the Imperial Diet (German: "Reichstag"), of the German Empire.  It was opened in 1894 and housed the Diet until 1933, when it was severely damaged after being set on fire.  After World War II, the building fell into disuse; the parliament of the German Democratic Republic (the "Volkskammer") met in the "Palast der Republik" in East Berlin, while the parliament of the Federal Republic of Germany (the "Bundestag") met in the "Bundeshaus" in Bonn.
+
+Question: What city of origin does Mitte and Reichstag building have in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "common_city_of_origin": {
+      "type": "string",
+      "description": "The city that both entities originate from or are located in."
+    },
+    "entities_analyzed": {
+      "type": "array",
+      "description": "A list of entities for which the common city of origin was sought.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "entity_locations": {
+      "type": "array",
+      "description": "Details about each entity and its confirmed location.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the entity."
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of the entity (e.g., borough, building)."
+          },
+          "located_in_city": {
+            "type": "string",
+            "description": "The city where the entity is located."
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "located_in_city"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "common_city_of_origin",
+    "entities_analyzed",
+    "entity_locations"
+  ],
+  "additionalProperties": false
+}

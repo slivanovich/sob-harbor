@@ -1,0 +1,18 @@
+{
+  "district_name": "Dangme East District",
+  "district_capital": "Ada Foah",
+  "ada_locations_in_district": [
+    {
+      "location_name": "Ada Kasseh",
+      "location_type": "town"
+    },
+    {
+      "location_name": "Ada",
+      "location_type": "parliament constituency"
+    },
+    {
+      "location_name": "Big Ada",
+      "location_type": "town"
+    }
+  ]
+}

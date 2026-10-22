@@ -1,0 +1,16 @@
+{
+  "publication_type": "women's magazine",
+  "number_of_publications_identified": 2,
+  "publications": [
+    {
+      "name": "New Zealand Woman's Weekly",
+      "country_of_origin": "New Zealand",
+      "frequency": "weekly"
+    },
+    {
+      "name": "Olivia",
+      "country_of_origin": "Finland",
+      "frequency": "monthly"
+    }
+  ]
+}

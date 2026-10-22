@@ -1,0 +1,11 @@
+{
+  "mall_name": "Westfield Southcenter",
+  "proximity_to_station_minutes": 5,
+  "station_name": "Tukwila station",
+  "owner_name": "Westfield Group",
+  "location": {
+    "city": "Tukwila",
+    "state": "Washington",
+    "country": "US"
+  }
+}

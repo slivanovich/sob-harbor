@@ -1,0 +1,12 @@
+{
+  "person_1_name": "Natalia Ginzburg",
+  "person_2_name": "Lytton Strachey",
+  "common_occupation": "writer",
+  "person_1_occupations": [
+    "author"
+  ],
+  "person_2_occupations": [
+    "writer",
+    "critic"
+  ]
+}

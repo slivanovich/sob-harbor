@@ -1,0 +1,16 @@
+{
+  "actor_name": "Hank Azaria",
+  "film_name": "Godzilla",
+  "television_sitcom": "The Simpsons",
+  "sitcom_details": {
+    "start_year": 1989,
+    "is_ongoing": true
+  },
+  "actor_notable_roles": [
+    "Moe Szyslak",
+    "Apu Nahasapeemapetilon",
+    "Chief Wiggum",
+    "Comic Book Guy",
+    "Carl Carlson"
+  ]
+}

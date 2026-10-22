@@ -1,0 +1,19 @@
+{
+  "comparison_details": {
+    "target_release_year": 2015,
+    "films_evaluated": [
+      {
+        "film_title": "Maleficent",
+        "release_year": 2014,
+        "is_american": true
+      },
+      {
+        "film_title": "Monkey Kingdom",
+        "release_year": 2015,
+        "is_american": true
+      }
+    ]
+  },
+  "answer_film_title": "Monkey Kingdom",
+  "answer_release_year": 2015
+}

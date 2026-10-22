@@ -1,0 +1,20 @@
+{
+  "pioneer_details": {
+    "name": "Igor Ivanovich Sikorsky",
+    "nationality": "Russian-American",
+    "pioneering_fields": [
+      "helicopters",
+      "fixed-wing aircraft"
+    ]
+  },
+  "first_aircraft_design": {
+    "model_name": "S-1",
+    "design_order": 1,
+    "aircraft_type": "fixed-wing"
+  },
+  "first_successful_aircraft": {
+    "model_name": "S-2",
+    "design_order": 2,
+    "aircraft_type": "fixed-wing"
+  }
+}

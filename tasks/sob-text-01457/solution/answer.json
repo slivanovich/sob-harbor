@@ -1,0 +1,11 @@
+{
+  "politician": {
+    "name": "Bruce Poliquin",
+    "political_party": "Republican"
+  },
+  "congressional_district": {
+    "name": "Maine's 2nd congressional district",
+    "state_land_area_percentage": 80
+  },
+  "answer": "Republican"
+}

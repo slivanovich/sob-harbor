@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+New (album): New is the sixteenth solo studio album by Paul McCartney, (discounting his Wings-era discography, his orchestral works and his output as the Fireman) released on 14 October 2013 in the United Kingdom and the following day in the United States.  The album was his first since 2007's "Memory Almost Full" to consist entirely of new compositions.
+
+Memory Almost Full: Memory Almost Full is the fourteenth solo studio album by Paul McCartney, discounting his Wings-and-Beatles-era discography, his orchestral works and his output as the Fireman.  It was released in the United Kingdom on 4 June 2007 and in the United States a day later.  The album was the first release on Starbucks' Hear Music label.  It was produced by David Kahne and recorded at Abbey Road Studios, Henson Recording Studios, AIR Studios, Hog Hill Mill Studios and RAK Studios between October 2003, and from 2006 to February 2007.  In between the 2003 and 2006 sessions, McCartney was working on another studio album, "Chaos and Creation in the Backyard" (2005), with producer Nigel Godrich.
+
+Hear Music Volume 7: Waking: Hear Music Volume 7: Waking is a compilation album published in 2002 by Universal Music Enterprises and sold exclusively at Starbucks locations through their Hear Music label.
+
+Raees Coffee: Raees Coffee is an Iranian coffeehouse chain based in Tehran.  The company was founded in 2000, and currently has seven branches in Tehran.  The coffee chain is designed in a manner that emulates Starbucks coffee houses, and included a company logo that was similar to that of Starbucks.  In 2016 they changed the logo.
+
+Baristas: Baristas Corporation is an American costume coffee company and coffeehouse chain based in Seattle, Washington.  It's known for primarily hiring young attractive women to run the stores and serve coffee, and for the sexy costumes they wear.  The company was recently voted the "Best Coffee Company in the USA" by the coffee stand mapping service, Ibikinicoffee.
+
+Philz Coffee: Philz Coffee is an American coffee company and coffeehouse chain based in San Francisco, California, considered a major player in third wave coffee.  Philz Coffee focuses on making drip coffee.
+
+Good Evening New York City: Good Evening New York City is a CD/DVD double live album by Paul McCartney consisting of material performed over three nights as the inaugural concert at New York City's Citi Field, 17, 18 and 21 July 2009, part of his Summer Live '09 concert tour.  Over 180,000 tickets were sold within hours of the shows being announced.  The album is McCartney's third release for Hear Music, following 2007 album "Memory Almost Full" and the live EP "Amoeba's Secret".  Previous McCartney live albums such as "Back in the US" proved to be huge sellers based on his record-breaking live shows from the 2000s.
+
+Seattle's Best Coffee: Seattle's Best Coffee LLC, an American coffee retailer and wholesaler, based in Seattle, Washington.  Since 2003, they have been a subsidiary of American coffeehouse chain Starbucks.
+
+Kisses on the Bottom: Kisses on the Bottom is the fifteenth post-Beatles studio album by Paul McCartney (discounting his Wings-era discography, his orchestral works and his output as the Fireman), consisting primarily of covers of traditional pop music and jazz.  Released in February 2012 on Starbucks' Hear Music label, it was McCartney's first studio album since "Memory Almost Full" in 2007.  The album was produced by Tommy LiPuma and includes just two original compositions by McCartney: "My Valentine" and "Only Our Hearts".  The former features Eric Clapton on guitar, while the latter features Stevie Wonder on harmonica.  "Kisses on the Bottom" peaked at number 3 on the UK Albums Chart and number 5 on the US "Billboard" 200, while also topping "Billboard" magazine's Jazz Albums chart.
+
+Starbucks: Starbucks Corporation is an American coffee company and coffeehouse chain.  Starbucks was founded in Seattle, Washington in 1971.  As of November 2016, it operates 23,768 locations worldwide.
+
+Question: Memory Almost Full, is the fourteenth solo studio album by Paul McCartney, discounting his Wings-and-Beatles-era discography, his orchestral works and his output as the Fireman, the album was the first release on Starbucks' Hear Music label,Starbucks Corporation is an American coffee company and coffeehouse chain, it was founded in Seattle, Washington in which year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entity_name": {
+      "type": "string",
+      "description": "The name of the entity being described."
+    },
+    "entity_type": {
+      "type": "string",
+      "description": "The type of business or organization."
+    },
+    "founding_location": {
+      "type": "string",
+      "description": "The city and state where the entity was founded."
+    },
+    "founding_year": {
+      "type": "integer",
+      "description": "The year the entity was founded."
+    }
+  },
+  "required": [
+    "entity_name",
+    "entity_type",
+    "founding_location",
+    "founding_year"
+  ],
+  "additionalProperties": false
+}

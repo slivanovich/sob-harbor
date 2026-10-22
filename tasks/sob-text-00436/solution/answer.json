@@ -1,0 +1,23 @@
+{
+  "film_title": "Cat People",
+  "director": "Paul Schrader",
+  "director_attributes": {
+    "occupations": [
+      "screenwriter",
+      "film director",
+      "film critic"
+    ],
+    "notable_screenplay_credits": [
+      {
+        "title": "Taxi Driver",
+        "year": 1976
+      }
+    ]
+  },
+  "starring_actors": [
+    "Nastassja Kinski",
+    "Malcolm McDowell"
+  ],
+  "film_genre": "erotic horror",
+  "release_year": 1982
+}

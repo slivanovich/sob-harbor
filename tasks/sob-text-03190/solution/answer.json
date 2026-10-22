@@ -1,0 +1,10 @@
+{
+  "nfl_team_name": "Buffalo Bills",
+  "draft_year": 2003,
+  "player_info": {
+    "player_name": "Willis McGahee",
+    "college_team": "Miami",
+    "draft_round": "first round",
+    "appeared_on_famously_single": true
+  }
+}

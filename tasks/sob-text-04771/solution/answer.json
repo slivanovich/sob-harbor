@@ -1,0 +1,10 @@
+{
+  "person_name": "Heinrich Himmler",
+  "role_in_party": "Reichsführer of the Schutzstaffel (SS)",
+  "birth_date": "1900-10-07",
+  "event_details": {
+    "archive_name": "Jewish Archive",
+    "handed_over_by_regime": "Francisco Franco",
+    "year_handed_over": 1941
+  }
+}

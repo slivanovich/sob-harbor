@@ -1,0 +1,18 @@
+{
+  "ride_details": {
+    "name": "SkyScreamer",
+    "type": "Swing ride",
+    "height_ft": 242,
+    "location": {
+      "themed_section": "Adventure Alley",
+      "park_name": "Six Flags Great Adventure",
+      "park_city": "Jackson",
+      "park_state": "New Jersey"
+    }
+  },
+  "designer_info": {
+    "name": "Funtime",
+    "country_of_origin": "Australia"
+  },
+  "final_answer": "Funtime"
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of Once Upon a Time episodes: "Once Upon a Time" is an American fairy tale drama television series created by Edward Kitsis and Adam Horowitz, who also serve as executive producers alongside Steve Pearlman.  It debuted on ABC on October 23, 2011.  The first season introduces a bail bond agent, Emma Swan (Jennifer Morrison) and her birth-son, Henry Mills (Jared S. Gilmore), who discover that a New England town named Storybrooke, Maine is actually a remnant of a parallel world that was cursed by Henry's adoptive mother the Evil Queen/Mayor Regina Mills (Lana Parrilla) and that all the characters from the fairy tales have no memories of who they were, including the parents of Emma: Snow White/Mary Margaret Blanchard (Ginnifer Goodwin) and Prince Charming/David Nolan (Josh Dallas), who sent her to the real world to save their world and break the curse.
+
+True North (Once Upon a Time): "True North" is the ninth episode of the first season of the American fairy tale/drama television series "Once Upon a Time".  The series takes place in the fictional seaside town of Storybrooke, Maine, in which the residents are actually characters from various fairy tales that were transported to the "real world" town by a powerful curse.  In the episode, Sheriff Emma Swan (Jennifer Morrison) helps two children (Karley Scott Collins and Quinn Lord) track down their father before they are placed in a foster care system, in a parallel with the story of Hansel and Gretel.  Along the way, they encounter the Evil Queen (Lana Parrilla), and the Blind Witch (Emma Caulfield).
+
+Mary Margaret Blanchard: Snow White, formerly known as Mary Margaret Blanchard in Storybrooke, is a fictional character in ABC's television series "Once Upon a Time".  She is portrayed by Ginnifer Goodwin and by Bailee Madison as a child.  She is the true love of Prince Charming/David Nolan, mother of Emma Swan and son Neal, and grandmother of Emma's son Henry.  The character has been one of Goodwin's best roles, one she loves playing on the show.
+
+Emma Swan: The daughter of Snow White and Prince Charming, an ex-bail bonds collector, and Henry Mills' biological mother.  Morrison described her character at the beginning of the first season as "broken, damaged and worldly".  During the fourth season finale, "Operation Mongoose", Emma absorbs the power of the Dark One into herself to save Storybrooke.  In order to successfully create a dark version of Emma, Morrison explained that "In order to build Dark Emma, I've been doing a bunch of research there with some of their mythology books and old fairy tale books and just looking back through the history of swans and the etymology of 'Swan'" and explained that Emma's rate of evolution "challenged [her] on a daily basis".  Emma became the primary antagonist of the fifth season's first half, until the end of the season's eighth episode when her real plans are revealed.
+
+Jennifer Morrison: Jennifer Marie Morrison (born April 12, 1979) is an American actress, producer, director, and former child model.  She is known for her roles as Dr. Allison Cameron in the medical-drama series "House" (2004–2012) and Emma Swan in the ABC adventure-fantasy series "Once Upon a Time" (2011–2017).  She also has portrayed Zoey Pierson, one of Ted Mosby's love interests on the comedy series "How I Met Your Mother"; Winona Kirk, mother of James T. Kirk in the 2009 science-fiction film "Star Trek"; and Tess Conlon in the 2011 sports drama film "Warrior".
+
+Snow Falls: "Snow Falls" is the third episode of the American fairy tale/drama television series "Once Upon a Time".  The series takes place in the fictional seaside town of Storybrooke, Maine, in which the residents are actually characters from various fairy tales that were transported to the "real world" town by a powerful curse.  This episode centers on the first meeting of Snow White (Ginnifer Goodwin) and Prince Charming (Joshua Dallas), when the former steals his mother's ring; Charming hunts her down, but they later part amicably.  Meanwhile, Snow's Storybrooke counterpart, Mary Margaret (Goodwin), develops a personal bond with a comatose John Doe (Dallas) while reading him fairy tales.  During the night, he awakens and escapes the hospital; Mary Margaret locates the amnesiac man, but is dismayed to learn that he is married.
+
+The Charmings: The Charmings is an American fantasy sitcom that follows Snow White and Prince Charming, awakened from a thousand-year spell, as they adjust from their familiar life in the enchanted forest to the modern ways of 20th century Los Angeles suburbs.  The series originally aired from March 1987 to February 1988 on ABC.
+
+7:15 A.M.: "7:15 A.M." is the tenth episode of the American fairy tale/drama television series "Once Upon a Time".  The series takes place in the fictional seaside town of Storybrooke, Maine, in which the residents are actually characters from various fairy tales that were transported to the "real world" town by a powerful curse.  In this episode, Emma Swan (Jennifer Morrison) and Regina Mills (Lana Parrilla) become suspicious of the Stranger (Eion Bailey) and his visit to Storybrooke, while David (Josh Dallas) and Mary Margaret's (Ginnifer Goodwin) feelings for each other grow, which parallels with Prince James' (Dallas) search for Snow (Goodwin) after he falls for her.
+
+David Nolan (Once Upon a Time): David Nolan, also known as Prince Charming is a fictional character in ABC's television series "Once Upon a Time".  He is portrayed by Josh Dallas, who also happens to be married to series co-star Ginnifer Goodwin, who plays David's wife Snow White/Mary Margaret Blanchard.
+
+List of Fables characters: Having reformed from his violent ways, Bigby (a.k.a. the Big Bad Wolf) became the cigarette-smoking, trench coat-clad sheriff of Fabletown.  He is extremely cunning and resourceful, in addition to being an excellent detective.  Due to Snow White's possession of a lycanthropy-stained knife, he is now a werewolf and can change between wolf form, human form and an intermediate "wolfman" stage at will (in "The Great Fables Crossover", it is revealed that Bigby's nature as one of the North Wind's sons allows him to change forms at will).  He is the son of the North Wind, and, as such, has control over the lower-tier winds, plus the "huff and puff" of legend.  Despite his reformation, he can still be vicious if he believes the situation calls for it.  He develops feelings for Snow White and the two have a litter of seven children together.  He quits his position as the Sheriff due to the election of Prince Charming as Mayor, whom he despises, and leaves Fabletown.  He has since returned and married Snow, and now lives with her and their cubs on a specially set-aside area of land up at the Farm.  In "The Destiny Game", Bigby forces The Lady Of The Lake to change his fate: he will never grow old, but he will continue to grow in strength and power; fall in love with Snow White; father seven children who will become gods and monsters who will lay waste to worlds; and he will die seven times, outliving all of his cubs.  So far, it is unknown how often Bigby has already died (if at all) - nor is it known if being shot by Goldilocks and gravely wounded, along with Little Boy Blue, during the war count as deaths.  However, since one of his cubs is in a relationship with the enchantress who altered his previous fate, even this current fate may or may not be changed later (though this is, at this time, pure speculation).
+
+Question: Jennifer Marie Morrison (born April 12, 1979) is an American actress, producer, director, and former child model, known for her roles as Emma Swan in the ABC adventure-fantasy series "Once Upon a Time" (2011–2017), The daughter of Snow White and Prince Charming, an ex-bail bonds collector, and who's biological mother?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person whose biological mother is being identified."
+    },
+    "biological_mother": {
+      "type": "string",
+      "description": "The name of the biological mother."
+    },
+    "mother_actress": {
+      "type": "string",
+      "description": "The name of the actress who portrays the biological mother."
+    },
+    "series_name": {
+      "type": "string",
+      "description": "The name of the television series where these characters appear."
+    }
+  },
+  "required": [
+    "person_name",
+    "biological_mother",
+    "mother_actress",
+    "series_name"
+  ],
+  "additionalProperties": false
+}

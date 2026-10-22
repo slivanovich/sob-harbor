@@ -1,0 +1,16 @@
+{
+  "person_with_more_awards": "Alexander Payne",
+  "award_details_by_person": [
+    {
+      "person_name": "Hal Hartley",
+      "other_awards_mentioned": false
+    },
+    {
+      "person_name": "Alexander Payne",
+      "academy_award_wins": 2,
+      "academy_award_nominations": 3,
+      "other_awards_mentioned": false
+    }
+  ],
+  "comparison_notes": "Alexander Payne is mentioned as a two-time winner of the Academy Award for Best Adapted Screenplay and a three-time nominee for Best Director, while no awards are mentioned for Hal Hartley in the provided context."
+}

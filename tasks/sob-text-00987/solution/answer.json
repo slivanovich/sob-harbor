@@ -1,0 +1,13 @@
+{
+  "poem_title": "De rerum natura",
+  "poem_genre": "didactic philosophical poem",
+  "philosophical_school": "Epicureanism",
+  "rediscoverer": {
+    "name": "Poggio Bracciolini",
+    "description": "Italian scholar and an early humanist"
+  },
+  "original_author": {
+    "name": "Lucretius",
+    "nationality": "Roman"
+  }
+}

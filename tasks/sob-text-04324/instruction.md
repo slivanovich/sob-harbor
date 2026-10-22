@@ -1,0 +1,96 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of North Carolina Tar Heels in the NBA draft: The North Carolina Tar Heels men's basketball team, representing the University of North Carolina at Chapel Hill, has had 110 players drafted into the National Basketball Association (NBA) since the league began holding the yearly event in 1947.  Each NBA franchise seeks to add new players through an annual draft.  The NBA uses a draft lottery to determine the first three picks of the NBA draft; the 14 teams that did not make the playoffs the previous year are eligible to participate.  After the first three picks are decided, the rest of the teams pick in reverse order of their win–loss record.  To be eligible for the NBA Draft, a player in the United States must be at least 19 years old during the calendar year of the draft and must be at least one year removed from the graduation of his high school class.
+
+1992 NBA draft: The 1992 NBA draft took place on June 24, 1992, in Portland, Oregon.  At the time, the draft was considered to be one of the deepest drafts in NBA history.  The top three picks (Shaquille O'Neal, Alonzo Mourning, Christian Laettner) were considered can't-miss prospects.  O'Neal and Mourning are Hall of Famers.  Laettner made one All-Star game in his career and was an Olympic Gold Medalist on the 1992 Dream Team, but did not live up to the lofty expectations set for him.  All three would end up playing together on the 2005 Miami Heat.  Two other players went on to become All-Stars (Tom Gugliotta once, Latrell Sprewell four times) and several others had solid careers (Jimmy Jackson, Robert Horry, Doug Christie, P.J. Brown, LaPhonso Ellis, Jon Barry, Walt Williams, Anthony Peeler, and Clarence Weatherspoon).  Harold Miner, who was given the nickname "Baby Jordan" because of his similarities to Michael Jordan, slipped to number 12 and, other than winning two slam dunk contests, only had a brief, uneventful four-year career.
+
+1992–93 Charlotte Hornets season: The 1992–93 NBA season was the fifth season for the Charlotte Hornets in the National Basketball Association.  In the 1992 NBA draft, the Hornets selected center Alonzo Mourning out of Georgetown with the second overall pick.  With the addition of Mourning, along with second-year star Larry Johnson and Muggsy Bogues, the Hornets struggled around .500 for most of the season, but won 9 of their final 12 games finishing their season third in the Central Division with a 44–38 record, and qualified for their first ever playoff appearance.  The team became the first of the four expansion franchises of the late 1980s to win a playoff series, when Mourning sunk a 20 ft jumper at the buzzer in Game 4 of the first round playoff series against the 4th-seeded Boston Celtics.  However, in the semifinals, the Hornets were eliminated by the New York Knicks in five games.
+
+2004–05 Miami Heat season: The 2004–05 NBA season season was the 17th season for the Miami Heat in the National Basketball Association.  The Heat entered the season with high expectations following the acquisition of All-Star center Shaquille O'Neal from the Los Angeles Lakers, plus signing free agents Christian Laettner, three-point specialist Damon Jones, and Shandon Anderson.  The team played solid basketball posting a 14-game winning streak between December and January winning 25 of their first 32 games, then winning twelve straight between February and March.  At midseason, the team re-signed free agent All-Star center Alonzo Mourning, and re-acquired former Heat guard Steve Smith from the expansion Charlotte Bobcats.  The Heat finished in first place in both their division and conference with a 59–23 record, which was the franchise's best since 1996–97.
+
+1967 NBA draft: The 1967 NBA draft was the 21st annual draft of the National Basketball Association (NBA).  The draft was held on May 3 and 4, 1967 before the 1967–68 season.  In this draft, 12 NBA teams took turns selecting amateur U.S. college basketball players.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  The first two picks in the draft belonged to the teams that finished last in each division, with the order determined by a coin flip.  The Detroit Pistons won the coin flip and were awarded the first overall pick, while the Baltimore Bullets were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Five teams that had the best records in previous season were not awarded second round draft picks.  Two expansion franchises, the Seattle SuperSonics and the San Diego Rockets, took part in the NBA Draft for the first time and were assigned the sixth and seventh pick in the first round, along with the last two picks of each subsequent round.  The draft consisted of 20 rounds comprising 162 players selected.
+
+Christian Laettner: Christian Donald Laettner ( , ; born August 17, 1969) is a retired American basketball player whose Hall of Fame career for the Duke Blue Devils is widely regarded as one of the best in National Collegiate Athletic Association (NCAA) history.  He was the star player on the back-to-back National Championship teams of 1991 and 1992.  He is particularly famous for his game-winning shot against Kentucky in the 1992 regional final and for the hatred he received from opposing fans.
+
+1977 NBA draft: The 1977 NBA draft was the 31st annual draft of the National Basketball Association (NBA).  The draft was held on June 10, 1977, before the 1977–78 season.  In this draft, 22 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Milwaukee Bucks won the coin flip and were awarded the first overall pick, while the Kansas City Kings, who obtained the New York Nets first-round pick in a trade, were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, six college underclassmen were declared eligible for selection under the "hardship" rule.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  Four former American Basketball Association (ABA) franchises who joined the NBA when both leagues merged, the Denver Nuggets, the Indiana Pacers, the New York Nets and the San Antonio Spurs, took part in the NBA Draft for the first time.  Prior to the start of the season, the Nets relocated to New Jersey and became the New Jersey Nets.  The draft consisted of 8 rounds comprising the selection of 170 players.
+
+1976 NBA draft: The 1976 NBA draft was the 30th annual draft of the National Basketball Association (NBA).  The draft was held on June 8, 1976, before the 1976–77 season.  In this draft, 18 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Atlanta Hawks won the coin flip and were awarded the first overall pick, while the Chicago Bulls were awarded the second pick.  The Hawks then traded the first pick to the Houston Rockets before the draft.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  The New York Knicks forfeited their first-round draft pick due to their illegal signing of George McGinnis whose rights were held by the Philadelphia 76ers.  The 76ers, the Golden State Warriors and the Buffalo Braves also forfeited their second, third and fourth-round pick respectively due to their participation in 1975 supplementary draft American Basketball Association (ABA) players who had never been drafted in the NBA.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 26 college underclassmen were declared eligible for selection under the "hardship" rule.  13 of them withdrew before the draft, leaving only 13 early entry candidates eligible for selection.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 10 rounds comprising the selection of 173 players.  On August 8, 1976, the league also hosted a Dispersal draft for ABA players from the Kentucky Colonels and Spirits of St. Louis, who were not included in the ABA–NBA merger.
+
+1997 NBA All-Star Game: The 1997 NBA All-Star Game was the 47th edition of the All-Star Game and commemorated the 50th anniversary of NBA.  The game was played on February 9, 1997, at Gund Arena (now known as Quicken Loans Arena) in Cleveland, Ohio, United States.  The winner of the MVP award was Glen Rice of the Charlotte Hornets who played 25 minutes and scored 26 points while breaking two records in the process, 20 points in the third quarter and 24 points in the second half.  Rice's 20 points in the period broke Hal Greer's record (19), set in 1968.  Rice's 24 points in a half surpassed the previous mark of 23, owned by Wilt Chamberlain and Tom Chambers.  Michael Jordan's 14 points, 11 rebounds, and 11 assists were the first and, until the 2011 NBA All-Star Game, the only triple-double in NBA All-Star Game history (LeBron James (2011), Dwyane Wade (2012), and Kevin Durant (2017) have also achieved this).  Five players (Charles Barkley, Alonzo Mourning, Patrick Ewing, Clyde Drexler, Shaquille O’Neal) who were voted or selected for the team opted out due to injury, opening the doors for the annually neglected and the new stars—Joe Dumars, Detlef Schrempf, Chris Webber, Chris Gatling and 20-year-old second-year man Kevin Garnett took their spots.
+
+List of Illinois Fighting Illini in the NBA draft: The Illinois Fighting Illini men's basketball team, representing the University of Illinois at Urbana–Champaign, has had 68 players drafted into the National Basketball Association (NBA) since the league began holding the yearly event in 1947.  Each NBA franchise seeks to add new players through an annual draft.  The NBA uses a draft lottery to determine the first three picks of the NBA draft; the 14 teams that did not make the playoffs the previous year are eligible to participate.  After the first three picks are decided, the rest of the teams pick in reverse order of their win–loss record.  To be eligible for the NBA Draft, a player in the United States must be at least 19 years old during the calendar year of the draft and must be at least one year removed from the graduation of his high school class.
+
+Question: When was the American basketball player born who was among the top three picks of The 1992 NBA draft with Shaquille O'Neal and  Alonzo Mourning?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The full name of the American basketball player."
+    },
+    "player_birth_date": {
+      "type": "string",
+      "description": "The birth date of the player in 'Month Day, Year' format."
+    },
+    "draft_information": {
+      "type": "object",
+      "properties": {
+        "draft_year": {
+          "type": "integer",
+          "description": "The year of the NBA draft the player was selected in."
+        },
+        "overall_pick_number": {
+          "type": "integer",
+          "description": "The overall pick number of the player in the draft."
+        },
+        "top_three_picks_details": {
+          "type": "array",
+          "description": "Details of the top three picks in the specified NBA draft.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "player_name": {
+                "type": "string",
+                "description": "The name of one of the top three picks."
+              },
+              "overall_pick_number": {
+                "type": "integer",
+                "description": "The overall pick number for this player."
+              }
+            },
+            "required": [
+              "player_name",
+              "overall_pick_number"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "draft_year",
+        "overall_pick_number",
+        "top_three_picks_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "player_name",
+    "player_birth_date",
+    "draft_information"
+  ],
+  "additionalProperties": false
+}

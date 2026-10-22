@@ -1,0 +1,9 @@
+{
+  "season_year": 2015,
+  "team_name": "Baltimore Ravens",
+  "injured_player": {
+    "player_name": "Terrell Raymonn Suggs",
+    "position": "outside linebacker",
+    "injury_status": "season-ending"
+  }
+}

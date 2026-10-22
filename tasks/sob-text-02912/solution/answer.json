@@ -1,0 +1,12 @@
+{
+  "egyptian_boxer": {
+    "name": "Saleh Khoulef"
+  },
+  "ukrainian_boxer": {
+    "name": "Vyacheslav Senchenko",
+    "title_held": "WBA welterweight title",
+    "title_reign_start_year": 2009,
+    "title_reign_end_year": 2012
+  },
+  "relationship": "defeated"
+}

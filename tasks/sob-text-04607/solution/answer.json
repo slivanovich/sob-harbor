@@ -1,0 +1,19 @@
+{
+  "musician_details": {
+    "name": "Count Basie",
+    "primary_roles": [
+      "pianist",
+      "organist",
+      "bandleader",
+      "composer"
+    ],
+    "birth_date": "August 21, 1904",
+    "death_date": "April 26, 1984"
+  },
+  "album_details": {
+    "album_title": "Back with Basie",
+    "release_year_context": 1962,
+    "original_label": "Roulette"
+  },
+  "question_answer": "April 26, 1984"
+}

@@ -1,0 +1,13 @@
+{
+  "writer_born_earlier": {
+    "name": "Ferenc Molnár",
+    "birth_year": 1878
+  },
+  "writer_born_later": {
+    "name": "Karen Joy Fowler",
+    "birth_year": 1950
+  },
+  "earlier_birth_year": 1878,
+  "later_birth_year": 1950,
+  "comparison_statement": "Ferenc Molnár was born earlier than Karen Joy Fowler."
+}

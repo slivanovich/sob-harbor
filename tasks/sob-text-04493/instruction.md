@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Centre Daily Times: The Centre Daily Times is a daily newspaper located in State College, Pennsylvania in the United States.  It is the hometown newspaper for State College and the Pennsylvania State University, one of the best-known and largest universities in the country, with more than 45,000 students attending the main campus.
+
+Pulitzer Prize for Explanatory Reporting: The Pulitzer Prize for Explanatory Reporting has been presented since 1998, for a distinguished example of explanatory reporting that illuminates a significant and complex subject, demonstrating mastery of the subject, lucid writing and clear presentation.  From 1985 to 1997, it was known as the Pulitzer Prize for Explanatory Journalism.
+
+The Topeka Capital-Journal: The Topeka Capital-Journal is a daily newspaper in Topeka, Kansas owned by Morris Communications.
+
+Disappointment with God: Disappointment with God: Three Questions No One Asks Aloud is a book written by Philip Yancey and published by Zondervan in 1988.  It is one of Yancey's early bestsellers. "Library Journal" reviewer Elise Chase called the book "extraordinarily empathetic and persuasive; highly recommended".  Mark DeVries of "The Christian Century" reviewed the book and wrote that, through the book, Yancey "cuts through the pollyannaish denials that so often characterize evangelical treatment of unbelief, disappointment and unanswered prayer".  The "Christian Bookstore Journal" listed "Disappointment with God" as the fifth-bestselling Christian book in 1989.  In a 1991 "Ministry" review, Daniel Guild calls the book "Yancey at his superlative best".  In 2000, Jim Remsen of "The Philadelphia Inquirer" called the title of the book evocative.  A 2001 article in "U.S. Catholic" states that "Disappointment with God" demonstrates Yancey's willingness to address difficult questions.  In 2002, Mike Collins of the "Charleston Gazette-Mail" recommended the book for rape victims.  In 2005, Christian apologist William Lane Craig wrote that he "enjoyed reading "Disappointment with God" and found much of it to be meaningful and poignant", but that he disagreed with the thesis of the book.  Hong Kong film director Clement Cheng read the book and called it thought-provoking.
+
+Tagera Ningwaphumang: Tagera Ningwaphumang is the main traditional cultural god of Limbu community.  They worship this god in various festivities such as Chasok Tangnam.  It is in Limbu language which translates as invisible god of spirit.
+
+Kamlang Wildlife Sanctuary: The Kamlang Wildlife Sanctuary, established in 1989, is rich in flora and fauna.  It is situated in the Lohit District of the northeastern Indian state of Arunachal Pradesh.  The park is named after the Kamlang River which flows through it.  The Mishmi, Digaru, and Mizo tribal people who reside around the periphery of the sanctuary claim their descent from the King Rukmo of the epic Mahabharata.  They believe in a myth of an invisible god known as "Suto Phenkhenynon jamalu".  An important body of water in the sanctuary is the Glow Lake.  Located in tropical and sub-tropical climatic zones, the sanctuary is the habitat of the four big cat species of India: tiger, leopard, clouded leopard and snow leopard.
+
+Yancey Collegiate Institute Historic District: Yancey Collegiate Institute Historic District is a historic school complex and national historic district located at Burnsville, Yancey County, North Carolina.  The district encompasses seven contributing buildings, one contributing structure, and one contributing object built between 1914 and 1955.  Contributing resources include the Brown Dormitory for Boys (1914), (Former) Burnsville High School Gymnasium (Parkway Playhouse, 1933, 1947, 1955), an outdoor amphitheater (1950-1952), the Classical Revival style (Second) Administration Building for Yancey Collegiate Institute (1919, 1922), Gymnasium (c. 1946), former Burnsville High School built by the Works Progress Administration (1939) and a stone retaining wall (c. 1950).  The Yancey Collegiate Institute (YCI) was established in 1901 and sponsored by the Baptist church.  The YCI educated students until 1926, when the facilities were sold to the Yancey County Board of Education.
+
+Reaching for the Invisible God: Reaching for the Invisible God: What Can We Expect to Find?  is a book written by Evangelical Christian writer Philip Yancey and published by Zondervan in September 2000.  The popularity of Yancey's 1997 book "What's So Amazing About Grace? " helped boost the sales of "Reaching for the Invisible God" to the point that it appeared on religion bestseller lists immediately upon publication.  Within a month, Zondervan reported sales of 94,000 copies.  While preparing to write the book, Yancey asked several people how they knew that their trust in Jesus had changed their lives, and one Christian radio host responded, "I have no trouble believing God is good.  My question is more, what good is he?  ... I cry out to God for help, and it's hard to know just how he answers".  "Reaching for the Invisible God" includes discussion of Yancey's bad experiences of growing up in a very judgmental church, a theme that he had previously discussed in "The Jesus I Never Knew" and "What's So Amazing About Grace?"  and later returned to in "Soul Survivor".  In November 2000, "Reaching for the Invisible God" became the first print book to be released as an e-book by Zondervan, appearing on Microsoft Reader.  The book received the 2001 "Christianity Today" Book Award in the spirituality category.  A "Topeka Capital-Journal" review called "Reaching for the Invisible God" "another accessible book from Yancey on a theologically complex subject for those who believe in God, and those who aren't sure if they can".  David Crumm of the "Lincoln Journal Star" wrote a review of the book and said that Yancey's honesty about his own personal pursuit of God is remarkable.  In a 2001 review in "The Christian Century", Peter Marty writes that Yancey "succeeds brilliantly [in] tell[ing] the truth about the Christian life 'without overselling it'".
+
+The Great House of God: The Great House Of God: A Home for Your Heart is a Christian religious book written by Max Lucado and published by Word Publishing in 1997.  Terry Burns of the "Pembroke Daily Observer" called "The Great House of God" "an excellent book on the Lord's Prayer". " The Christian Science Monitor" listed "The Great House of God" fifth on its quarterly list of hardcover religion bestsellers in December 1997.  In a "Publishers Weekly" review, Henry Carrigan writes that, although the thoughts in the book "might be powerful in their spoken form, the brevity and the shallowness of their written form abandons readers in the foyer".  In a "Booklist" article, Ray Olson compares the book to Philip Yancey's "What's So Amazing About Grace? ", which was also published in 1997, and argues that, although Lucado and Yancey have each written several bestselling Christian books, Yancey's book is better edited.
+
+Use of force continuum: A use of force continuum is a standard that provides law enforcement officers and civilians with guidelines as to how much force may be used against a resisting subject in a given situation.  In some ways, it is similar to the U.S. military's escalation of force (EOF).  The purpose of these models is to clarify, both for law enforcement officers and civilians, the complex subject of use of force.  They are often central parts of law enforcement agencies' use of force policies.  Various criminal justice agencies have developed different models of the continuum, and there is no universal or standard model.  Generally, each different agency will have their own use of force policy.  Some agencies may separate some of the hand-to-hand based use of force.  For example, take-downs and pressure point techniques may be one step before actual strikes and kicks.  Also, for some agencies the use of aerosol pepper spray and electronic control devices (TASER) may fall into the same category as take-downs, or the actual strikes.
+
+Question: What state is the newspaper located that commented on Reaching for the Invisible God by stating, "another accessible book from Yancey on a theologically complex subject..."?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "book_title": {
+      "type": "string",
+      "description": "The title of the book being reviewed."
+    },
+    "author_name": {
+      "type": "string",
+      "description": "The author of the book."
+    },
+    "reviewing_newspaper": {
+      "type": "string",
+      "description": "The name of the newspaper that published the review."
+    },
+    "newspaper_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the newspaper is located."
+        },
+        "state": {
+          "type": "string",
+          "description": "The state where the newspaper is located."
+        }
+      },
+      "required": [
+        "city",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "review_quote": {
+      "type": "string",
+      "description": "The specific quote from the newspaper's review."
+    }
+  },
+  "required": [
+    "book_title",
+    "author_name",
+    "reviewing_newspaper",
+    "newspaper_location",
+    "review_quote"
+  ],
+  "additionalProperties": false
+}

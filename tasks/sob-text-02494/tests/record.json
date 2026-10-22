@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "record_id": "0499894abeab49d4b6bb03895749f31c86809b592a95fa471724a503d589ba48",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8eb2e75542995a26add4eb",
+    "source_dataset": "hotpotqa",
+    "source_answer": "being suspected of foul play against three individuals in different states",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Penny Mickelbury: Penny Mickelbury (born 1948) is an African-American playwright and mystery novelist who worked as a print and television journalist for ten years before concentrating on fiction writing.  After leaving journalism, she taught fiction and script writing in Los Angeles and saw two of her plays (‘’Waiting for Gabriel’’ and ‘’Hush Now’’) produced there.  She began writing detective novels with \"Keeping Secrets\", published by Naiad Press in 1994, the first of a series featuring 'Gianna Maglione’, a lesbian chief of a hate-crimes unit based in Washington D.C. and her lover 'Mimi Patterson', a journalist.  Her second series features ‘Carol Ann Gibson’, a Washington D.C attorney who is widowed in the first book and subsequently runs an investigation agency with 'Jake Graham', the detective who investigated her husband’s death.  Her third features 'Phil Rodriguez', a Puerto Rican private investigator on the Lower Easter Side of New York City.\n\nJustin Hopson: Justin Hopson is a retired New Jersey State Trooper, licensed private investigator, whistle-blower, and author of \"\"Breaking the Blue Wall: One Man's War Against Police Corruption.\"\"  As a rookie state trooper, Justin Hopson witnessed an unlawful arrest and false charges of a woman made by his training officer, so Hopson refused to testify in court supporting the arrest.  As a result, Trooper Hopson was targeted by a rogue group of troopers known as the Lords of Discipline or \"LOD.\"  The LOD bullied and hazed fellow troopers for decades until Justin Hopson blew the whistle.  Hopson brought tangible evidence and a written chronology of events that occurred to internal affairs and the attorney general's office...which sparked the largest internal investigation in state police history and high profile federal case (Hopson v State of New Jersey #1:03-CV-5817).  \"I was an ordinary cop with an extraordinary cause.  My cause is constant - to unearth corruption by shining a light on integrity,\" says Hopson.\n\nOperation Underworld (novel): Operation Underworld, published in 2009, is a novel written by author Paddy Kelly.  The title is taken from the real life operation instituted by the U.S. Navy in February 1942 following the false alert that German saboteurs had invaded the New York City waterfront in preparation for a possible invasion.  The story is set five weeks after the bombing of Pearl Harbour when America is poorly equipped to enter a world conflict.  The story revolves around Mike 'Doc' McKeowen, a New York private investigator, Commander Charles Haffenden, a naval intelligence operative and Charles 'Lucky' Luciano, the then head of the New York Mafia.  The World War II episode was a common story known to New York area Italian-Americans for many years but one that had never been novelized or much written about.  The characters are involved with murder, a large sum of counterfeit currency and the misconception that a large scale invasion of Nazi saboteurs is underway.\n\nTuxedo Club: The Tuxedo Club is a private member-owned country club located on West Lake Road in the village of Tuxedo Park, New York, in the Ramapo Mountains.  Founded in 1886 by Pierre Lorillard IV, its facilities now include an 18-hole golf course, lawn tennis, court tennis, racquets, squash, platform tennis, olympic-sized pool, and boating.  The tuxedo was introduced by New York millionaire James Potter at the club's first Autumn ball in 1886, after a trip to England.\n\nDoctor Occult: Doctor Richard Occult is a fictional superhero appearing in American comic books published by DC Comics.  Created by Superman's creators Jerry Siegel and Joe Shuster, Doctor Occult, also known as the Ghost Detective, is a private investigator and user of magic who specializes in cases involving the supernatural.  Doctor Occult is the earliest character created by DC Comics still currently used in the DC Universe.\n\nSantosky v. Kramer: Santosky v. Kramer, 455 U.S. 745 (1982) , is a Supreme Court case involving the burden of proof for the revocation of parental rights.  The case arose when the Ulster County, New York Department of Social Services sought to revoke John Santosky II and Annie Santosky's parental rights to their three children.  Under Section 622 of the New York State Family Court Act, the state was permitted to revoke parental rights to a natural child if, after a fair preponderance of the evidence, a court found \"permanent neglect.\"  The New York State Family Court found such neglect by using the \"fair perponderance\" standard.  The Appellate Division of the New York Supreme Court upheld the constitutionality of the burden of proof used.\n\nBobbi Bacha: Bobbi Bacha is a Texas Private Investigator portrayed in 2004 TV Sony Pictures Movie \"Suburban Madness\" played by actress Sela Ward.  Bobbi Bacha also was involved and worked on the case of New York millionaire Robert Durst who was charged with murder in Galveston, Texas for killing his neighbor Morris Black but was found not guilty by a Galveston County Jury.\n\nRobert Durst: Robert Alan Durst (born April 12, 1943) is an American real estate heir, the son of New York City mogul Seymour Durst, and the elder brother of Douglas Durst, head of the Durst Organization.  He is primarily known for being suspected of foul play against three individuals in different states: Kathleen McCormack Durst, his first wife, who disappeared in New York in 1982; Susan Berman, his longtime friend, who was murdered in California in 2000; and his neighbor, Morris Black, who was murdered in Texas in 2001.  Durst was the subject of a multi-state manhunt and was ultimately convicted of dismembering Black, but acquitted of his murder.\n\nDavid Goodwillie (author): David Goodwillie (born March 25, 1972) is an American novelist and memoirist.  He has written two acclaimed books: the novel \"American Subversive\" (Scribner, 2010) and the memoir \"Seemed Like a Good Idea at the Time\" (Algonquin, 2006).  Hailed as \"genuinely thrilling\" by \"The New Yorker\", and \"a triumphant work of fiction\" by the Associated Press, \"American Subversive\" was a \"New York Times\" Notable Book of 2010, and a \"Vanity Fair\" and \"Publishers Weekly\" top ten spring debut.  Upon publication of his previous book, \"Seemed Like a Good Idea at the Time\", he was named one of the Best New Writers of 2006 by members of the PEN American Center.  Goodwillie writes about books for \"The Daily Beast\", and his fiction and nonfiction have appeared in numerous magazines, newspapers, and websites, including \"New York Magazine\", \"Men's Health\", \"Black Book\", \"The New York Times\", \"The New York Observer\", \"The New York Post\", The Rumpus, and Deadspin.  He has also played professional baseball, worked as a private investigator, and been an expert at Sotheby’s auction house.  A graduate of Kenyon College, he lives in New York City.\n\nBroken City: Broken City is a 2013 American neo-noir crime drama film directed by Allen Hughes and written by Brian Tucker.  Mark Wahlberg stars as a police officer turned private investigator and Russell Crowe as the mayor of New York City who hires the private detective to investigate his wife.",
+    "question": "Texas Private Investigator worked on a case involving a New York millionaire primarily known for what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "investigator": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "profession": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "profession",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "millionaire": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "primary_known_for": {
+              "type": "string"
+            },
+            "origin_city": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "primary_known_for",
+            "origin_city"
+          ],
+          "additionalProperties": false
+        },
+        "case_details": {
+          "type": "object",
+          "properties": {
+            "involved_in_case": {
+              "type": "boolean"
+            },
+            "case_subject_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "involved_in_case",
+            "case_subject_name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "investigator",
+        "millionaire",
+        "case_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "investigator": {
+        "name": "Bobbi Bacha",
+        "profession": "Private Investigator",
+        "location": "Texas"
+      },
+      "millionaire": {
+        "name": "Robert Durst",
+        "primary_known_for": "being suspected of foul play against three individuals in different states",
+        "origin_city": "New York City"
+      },
+      "case_details": {
+        "involved_in_case": true,
+        "case_subject_name": "Robert Durst"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

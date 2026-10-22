@@ -1,0 +1,17 @@
+{
+  "entity_names": [
+    "La straniera",
+    "Platée"
+  ],
+  "common_classification": "opera",
+  "entity_details": [
+    {
+      "name": "La straniera",
+      "specific_type_description": "opera in two acts"
+    },
+    {
+      "name": "Platée",
+      "specific_type_description": "comic opera"
+    }
+  ]
+}

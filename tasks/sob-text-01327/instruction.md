@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Oregon Department of State Lands: The Department of State Lands (DSL), one of the oldest agencies of government of the U.S. state of Oregon, is principally responsible for the management of lands under state ownership, as its name implies.  Unlike most other department-level state agencies, it is not headed by a sole elected official, but is the administrative arm of the Oregon State Land Board.  Although established by the Constitution, subsequent statutes have added to its duties and authority, and include some provisions relating to its conduct.  In addition to managing state-owned lands, the Board through the Department is responsible for the Common School Fund, off-shore lands and coastal estuarine tidelands, submerged and submersible lands of the navigable waterways, unclaimed property, estates with no heirs, and additional functions assigned by the Oregon Legislative Assembly from time to time.  The Board decides cases, adopts rules, issues policy statements, and approves DSL recommendations.
+
+Martin Baum (agent): Martin "Marty" Baum (March 2, 1924 – November 5, 2010) was an American talent agent known for his work at the Creative Artists Agency (CAA), including the first head of the agency's motion picture department.  During his career, which spanned from the 1940s until 2010, his client list at CAA and other agencies included Bette Davis, Bo Derek, Richard Attenborough, Red Buttons, Maggie Smith and Rock Hudson.  Baum was also the President of ABC Pictures, the film division of the American Broadcasting Company (ABC), from 1968 until 1971.
+
+Jeanette Winterson: Jeanette Winterson, OBE (born 27 August 1959) is an award-winning English writer, who became famous with her first book, "Oranges Are Not the Only Fruit", a semi-autobiographical novel about a sensitive teenage girl rebelling against conventional values.  Some of her other novels have explored gender polarities and sexual identity.  Winterson is also a broadcaster and a professor of creative writing.  She is a two-time winner of the Lambda Literary Award, which focuses on LGBT issues.
+
+Stuart Piper: Stuart Piper is a London-based Agent and Producer represents actors, comedians and creatives, as Managing Director of Cole Kitchenn Personal Management Ltd and Director of CKP Comedy and ROAR Comedy.  His client list includes actors Janie Dee, Dame Joan Collins, Pixie Lott, Katherine Jenkins OBE, Hannah Spearritt, Marc Pickering, Chizzy Akudolu, Glynis Barber, Rita Simons, Mica Paris, Phoebe Thomas, Louise Jameson, Mark Moraghan, Sid Owen, comedians Jan Ravens, Josie Lawrence, Lewis Macleod and Hal Cruttenden, West-End and Broadway theatre stars 2016 Evening Standard Award Winner Tyrone Huntley, 2017 Olivier Award winner David Bedella, 2017 Whatsonstage Award Winner Emma Williams, Amy Lennox, Cassie Compton, Julie Atherton, Christine Allado, Caroline O'Connor, Rosemary Ashe, Stephen Carlile, Lauren Samuels, Melanie La Barrie, Siobhan McCarthy, Alexandra Silber, Judy Kuhn, Mazz Murray, and creatives Arlene Phillips, Russell Labey and Nick Winston.  In 2010, the agency became part of ROAR Group led by Chairman Jonathan Shalit, expanding to become part of a group of entertainment companies.  His team of agents include Oliver Thomson, Alex Segal, Ashley Vallance, Adam Maskell, Brooke Kinsella MBE, Martha Atack, Sam Day, Charlie Royce, Alex MacMillan.  In July 2015, The Stage called him a "Star Maker" in a front page interview, and Broadcast Magazine have announced him as a Director of new ROAR Comedy company with Corrie McGuire from Objective and Professor Jonathan Shalit OBE.  In Jan 2017 he was announced to have masterminded the acquisition of CKP (Christian Knowles Productions) the agency that represents Micky Flanagan, Zoe Lyons, Hal Cruttenden and Mark Watson and was appointed Director as reported in The Stage and on Chortle.
+
+Joia Jefferson Nuri: Joia Jefferson Nuri is a communications strategist and human rights activist from the United States.  She is an expert in human rights advocacy.  She is the Director and founder of In The Public Eye Communications.  She is a consultant and senior adviser for human rights organizations and political activists.  In the past, she has worked as a Technical Director and Senior Producer for news agencies such as NBC, CBS, NPR, and C-SPAN.  Her topics of interest include racism, perceptions of minorities, sports and emerging democracies in West Africa.  Today she is a contributor to political television and radio talk shows and is the author of a video blog on how cultural and historical images shape current politics and policy.  Her client list includes Harry Belafonte, TransAfrica, the Calvert Foundation, Truly Living Well Center for Natural Urban Agriculture and SNV USA.  Her company, In The Public Eye Communications, has served as event strategists for two Presidential Inaugural galas (2009 and 2013), Smithsonian Institution fundraisers, embassy celebrations, annual conferences, seminars and press events.
+
+Rick Rollens: Rick Rollens (born 1950) is an American lobbyist with a client list including ARCA (Association of Regional Center Agencies/California Department of Developmental Services), Autism Business Association, and Applied Behavior Consultants.  He is also a political consultant and identifies as an internationally known advocate for autism research.  His specific focus in terms of research and advocacy is for those "full syndrome" autistic individuals.  Prior to his son Russell's autism diagnosis, Rollens was the secretary of the California State Senate.  Rollens resides in Granite Bay, California where he runs a lobbying/consulting business.
+
+Dick Klotzman: Klotzman dominated the world of live personal appearances for several decades, promoting and producing concerts for the greatest Artists in Entertainment History.  His client list includes T.I., Elvis Presley, Paul Anka, The Beatles, The Rolling Stones, Frank Sinatra, The Eagles, Neil Diamond, Tom Jones, Liza Minnelli, The Jacksons, Madonna, Luther Vandross, Teddy Pendergrass, Alice Cooper, Earth, Wind & Fire, Diana Ross, Seals and Crofts, Stevie Wonder, Cream, Prince, The Who, Led Zeppelin, Dr. Dre, Snoop Dogg, Queen Latifah, Public Enemy and so many more.  His client list is far too long to include in this summary.  No one person has had a greater impact on the development of contemporary music concert promotion and exclusive entertainment event planning for facilities throughout North America as Klotzman.  It was in the late fifties, at the age of 13 ½ that Klotzman began his journey into the business of Entertainment.  Beginning as a DJ for Radio, record hops and even Bar Mitzvahs, Klotzman knew early on that this was going to be his chosen career.  His determination, tenacity, and creativity soon catapulted him to the top of his field.
+
+Talent agent: A talent agent, or booking agent, is a person who finds jobs for actors, authors, film directors, musicians, models, film producers, professional athletes, writers, screenwriters, broadcast journalists, and other people in various entertainment or broadcast businesses.  In addition, an agent defends, supports and promotes the interest of their clients.  Talent agencies specialize, either by creating departments within the agency or developing entire agencies that primarily or wholly represent one specialty.  For example, there are modeling agencies, commercial talent agencies, literary agencies, voice-over agencies, broadcast journalist agencies, sports agencies, music agencies and many more.
+
+Peters, Fraser &amp; Dunlop: Peters Fraser and Dunlop (PFD) is a talent and literary agency based in London, England.  One of the oldest agencies in Britain, and a co-founder of the Association of Authors' Agents, it is home to a distinguished and varied client list, including Jeanette Winterson, Ruby Wax, Steve Peters, Helen Rappaport, Simon Schama, William Hague, Sarah Raven, Twiggy, Sir Max Hastings, Chris Patten, Bear Grylls, Valentine Warner, Philip Norman and such estates as V.S. Pritchett, E.M. Forster, Georges Simenon, Margery Allingham C.S. Forester, Robert Bolt, Edmund Crispin and Storm Jameson.
+
+John Mattera: John Joseph Mattera (born 1962) is a writer and American shipwreck explorer and the subject of the book "Pirate Hunters" by Robert Kurson.  Pirate Hunters is the story of two US divers, John Chatterton and John Mattera, finding the lost pirate ship "Golden Fleece" of Captain Joseph Bannister in the waters off the Dominican Republic in 2008.  Mattera first became a certified diver in 1976, exploring the North Atlantic, he was an early pioneer of the shipwrecks in the waters around New York and New Jersey, performing penetration and decompression dives long before technical diving had a name.  From the late 1970s on exploring some of the most famous shipwrecks of the northeast, with over sixty dives on the SS "Andrea Doria".  Mattera is a former police officer/administrator and has spent over a two decades as a security consultant to a client list of the who's who of the rich and famous, becoming one of the highest paid executive protection specialist in the industry and working in over forty countries.  Mattera performed primary security duty on three US and foreign Presidential campaigns.
+
+Question: One of the oldest agencies in Britain, and a co-founder of the Association of Authors' Agents, it is home to a distinguished and varied client list, including what person that become famous with a book?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "agency_name": {
+      "type": "string",
+      "description": "The name of the talent or literary agency."
+    },
+    "agency_location": {
+      "type": "string",
+      "description": "The primary location of the agency."
+    },
+    "client_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the client."
+        },
+        "reason_for_fame": {
+          "type": "string",
+          "description": "The primary reason the client became famous, specifically related to a book."
+        },
+        "famous_book_title": {
+          "type": "string",
+          "description": "The title of the book that made the client famous."
+        }
+      },
+      "required": [
+        "name",
+        "reason_for_fame",
+        "famous_book_title"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "agency_name",
+    "agency_location",
+    "client_details"
+  ],
+  "additionalProperties": false
+}

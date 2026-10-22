@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Alaunt: The Alaunt is an extinct breed of dog, with the original breed having existed in central Asia and Europe from ancient times through the 17th century.  The Alaunt breed had three distinct phenotypes: Alaunt Veantre, Alaunt Boucherie and the Alaunt Gentile.  They all were large, short coated dogs of varying head-types.  The former two resembled the molosser type dogs much like the present-day Dogo Argentino or like the Caucasian Shepherd Dog except with short hair and a mesocephalic head which made them excellent large-game hunters.  The Alaunt was originally bred by the Alani tribes, the nomads of Indo-European Sarmatian ancestry who spoke an Iranian language.  The Alans were known as superb warriors, herdsmen, and breeders of horses and dogs.  The Alans bred their dogs for work and developed different strains within the breed for specific duties.  The breed was further developed in Spain, France, Germany, England, and in Italy.
+
+Dogo Argentino: The Dogo Argentino, also known as the Argentine Mastiff, is a large, white, muscular dog that was developed in Argentina primarily for the purpose of big-game hunting, including wild boar; the breeder, Antonio Nores Martínez, also wanted a dog that would exhibit steadfast bravery and willingly protect its human companion.  It was first bred in 1928, from the Cordoba Fighting Dog along with a wide array of other breeds including the Great Dane.
+
+Scottish Deerhound: The Scottish Deerhound, or simply the Deerhound, is a large breed of hound (a sighthound), once bred to hunt the Red Deer by coursing.
+
+Agriculture in Mexico: Agriculture in Mexico has been an important sector of the country’s economy historically and politically even though now it accounts for a very small percentage of Mexico’s GDP.  Mexico is one of the cradles of human agriculture with the Mesoamericans developing domesticated plants such as maize, beans, tomatoes, squash, avocados, cacao, various kinds of spices, and more.  Turkeys were the only domesticated fowl in the prehispanic period and small dogs were raised for food.  There were no large domesticated animals.
+
+White dog shaker syndrome: White dog shaker syndrome (also known as idiopathic steroid responsive shaker syndrome, shaker dog syndrome and "little white shakers" syndrome; Latin name Idiopathic Cerebellitis) causes full body tremors in small dog breeds.  It is most common in West Highland White Terriers, Maltese, Bichons, and Poodles, and other small dogs.  There is a sudden onset of the disease at one to two years of age.  It is more likely to occur, and the symptom is worse during times of stress.  Nystagmus, difficulty walking, and seizures may occur in some dogs.
+
+Bark (sound): A bark is a sound most commonly produced by dogs.  Other animals that make this noise include wolves, coyotes, pinnipeds, foxes and quolls. "Woof" is the most common representation in the English language for this sound, especially for large dogs.  Other transliterations include the onomatopoeic "ruff", "arf", "au au", "borf", "bow-wow", and, for small dogs, "yip".  “Bark” is also a "verb" that describes the sharp explosive cry of certain animals.
+
+Foxcliffe Hickory Wind: GCH Foxcliffe Hickory Wind (December 20, 2005 – June 13, 2017), also known as Hickory, is a female Scottish Deerhound who was named Best in Show at the Westminster Kennel Club Dog Show in 2011.  She is the first of her breed to have won the title.
+
+Celtic Hounds: The Celtic hounds were a breed of dogs in Gaelic Ireland described in Irish legend.  They may have corresponded to Greyhound, Scottish Deerhound, Irish Wolfhound, or ancestors of all of these breeds.
+
+Hemorrhagic gastroenteritis: Hemorrhagic gastroenteritis (HGE) is a disease of dogs characterized by sudden vomiting and bloody diarrhea.  The symptoms are usually severe, and HGE can be fatal if not treated.  HGE is most common in young adult dogs of any breed, but especially small dogs such as the Toy Poodle and Miniature Schnauzer.  It is not contagious.
+
+Bullenbeisser: The Bullenbeisser (also known as the German Bulldog) was a breed of dog known for its strength and agility.  The breed was closely related to the Bärenbeisser (some believe that the two breeds were the same; the names mean "bull-biter" and "bear-biter," respectively), and the Boxer.  It was, in all its aspects, similar to the present Alano Español (Spanish Bulldog) and very alike to the Dogo Argentino, not only in aspect, but also in usage.  There were two regional varieties, the Brabanter Bullenbeisser and the Danziger Bullenbeisser.  The breed is now extinct.
+
+Question: Are the Dogo Argentino and the Scottish Deerhound large or small dogs?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "dog_breeds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "breed_name": {
+            "type": "string"
+          },
+          "is_large": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "breed_name",
+          "is_large"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "all_breeds_are_large": {
+      "type": "boolean"
+    },
+    "total_breeds_evaluated": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "dog_breeds",
+    "all_breeds_are_large",
+    "total_breeds_evaluated"
+  ],
+  "additionalProperties": false
+}

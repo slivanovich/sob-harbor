@@ -1,0 +1,11 @@
+{
+  "temple_name": "Third Temple",
+  "temple_description": "the third central religious space for Jews",
+  "preceding_temples": [
+    "Solomon's Temple",
+    "Second Temple"
+  ],
+  "biblical_book_of_mention": "Ezekiel",
+  "mention_context": "Ezekiel's prophetic vision of a city centered on the rebuilt Holy Temple, the Third Temple, to be established in Jerusalem",
+  "associated_vision_name": "New Jerusalem"
+}

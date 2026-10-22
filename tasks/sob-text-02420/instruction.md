@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Hyannis, Massachusetts: Hyannis is the largest of the seven villages in the town of Barnstable, Massachusetts, in the United States.  It is the commercial and transportation hub of Cape Cod and was designated an urban area as of the 1990 census.  Because of this, many refer to Hyannis as the "Capital of the Cape".  It contains a majority of the Barnstable Town offices and two important shopping districts: the historic downtown Main Street and the Route 132 Commercial District, including Cape Cod Mall and Independence Park, headquarters of Cape Cod Potato Chips.  Cape Cod Hospital in Hyannis is the largest on Cape Cod.
+
+Joint Base Cape Cod: The Joint Base Cape Cod is a joint base created by the Commonwealth of Massachusetts and the United States War Department in 1935.  Governor James Curley signed the state bill to allocate and purchase land for a military facility, and establishing a formal commission to manage this new state military property and personnel.  After 22000 acre of land was secured in Cape Cod, the Massachusetts National Guard began erecting tents and a basic training program in the following year.  Formerly the Massachusetts Military Reservation, it was renamed in 2013 to Joint Base Cape Cod.
+
+Cape Cod Rail Trail: The Cape Cod Rail Trail (CCRT) is a 22 mi paved rail trail located on Cape Cod in Massachusetts.  The trail route passes through the towns of Dennis, Harwich, Brewster, Orleans, Eastham, and Wellfleet.  It connects to the 6-plus mile (10 km) Old Colony Rail Trail leading to Chatham, and 8 miles (13 km) of trails within Nickerson State Park.  It also passes near the end of the Nauset Bike Trail leading to Coast Guard Beach in Cape Cod National Seashore.  Short side trips on roads lead to several other national seashore beaches.
+
+Cape Cod Central Railroad: The Cape Cod Central Railroad is a heritage railroad located on Cape Cod, Massachusetts.  It operates on a rail line known as the Cape Main Line which is owned by Massachusetts Department of Transportation.  The line was previously owned and operated by the Cape Cod Railroad, the Old Colony Railroad, and later the New Haven Railroad, each of which operated passenger trains on the line from 1854 to 1959.  Although it is the namesake of the Cape Cod Central Railroad (1861–68), the two companies are unrelated.  This company, however, is the first of this brand name to not be a railroad company just on paper.
+
+Cape Cod Bay: Cape Cod Bay is a large bay of the Atlantic Ocean adjacent to the U.S. state of Massachusetts.  Measuring 604 sqmi below a line drawn from Brant Rock in Marshfield to Race Point in Provincetown, Massachusetts, it is enclosed by Cape Cod to the south and east, and Plymouth County, Massachusetts, to the west.  To the north of Cape Cod Bay lie Massachusetts Bay and the Atlantic Ocean.  Cape Cod Bay is the southernmost extremity of the Gulf of Maine.  Cape Cod Bay is one of the bays adjacent to Massachusetts that give it the name Bay State.  The others are Narragansett Bay, Buzzards Bay, and Massachusetts Bay.
+
+Rockland Trust: Rockland Trust is a commercial bank based in Rockland, Massachusetts that serves Southeastern Massachusetts, Coastal Massachusetts, Cape Cod, and Boston's MetroWest.  Established in 1907 as Rockland Trust Company, it is one of few local banks that retain their original name and independent ownership after more than 100 years.  (Rockland Trust Company is the wholly owned subsidiary of Independent Bank Corp., which is publicly traded on NASDAQ (INDB).)  Rockland Trust is the largest publicly traded commercial bank headquartered in Massachusetts, with more than 8 billion in assets and over 1000 employees.  Rockland Trust offers a wide range of commercial, retail, commercial banking products and services, business and consumer loans, insurance products and services, and investment management services from: 77 retail branches, 10 commercial lending centers, and 4 mortgage banking centers located throughout Eastern Massachusetts and on Cape Cod; and 4 investment management offices located in Southeastern Massachusetts, on Cape Cod, and in Rhode Island.  Corporate headquarters are in Hanover, Massachusetts.
+
+James H. Cromartie: James H. Cromartie is an internationally renowned American artist credited with the birth of Hard-Edge Realism, a style by turns both redolent of and a departure from the Magic Realism pioneered by Andrew Wyeth.  The list of celebrities and wealthy patrons reported to be among his collectors is extensive and examples of Cromartie’s work may be found in 125 countries across the globe.  Domestically, Cromartie has been called, “one of America’s leading historical artists,” for his commissioned portraits of the White House, Smithsonian Institution, U.S Capitol and Supreme Court, among others.  In 2005, James H. Cromartie’s historical portrait of the White House was featured in the widely distributed art history textbook, ArtTalk, a distinction granted to a mere 25 living artists globally.  Cromartie has resided year-round on Nantucket, Massachusetts for over 35 years, proudly quipping, “there are Nantucket artists, but then again there are…artists who have chosen to live on Nantucket.  There’s a b-i-g difference.”
+
+Nantucket, Massachusetts: Nantucket is an island about 30 mi by ferry south from Cape Cod, in the American state of Massachusetts.  Together with the small islands of Tuckernuck and Muskeget, it constitutes the Town of Nantucket, and the conterminous Nantucket County, which are consolidated.  As of the 2010 census, the population was 10,172.  Part of the town is designated the Nantucket CDP, or census-designated place.  The region of Surfside on Nantucket is the southernmost settlement in Massachusetts.
+
+Nantucket Sound: Nantucket Sound is a roughly triangular area of the Atlantic Ocean offshore from the U.S. state of Massachusetts.  It is 30 mi long and 25 mi wide, and is enclosed by Cape Cod on the north, Nantucket on the south, and Martha's Vineyard on the west.  Between Cape Cod and Martha's Vineyard it is connected to the Vineyard Sound.  Ports on Nantucket Sound include Nantucket and Hyannis, Massachusetts.
+
+Billingsgate Island: Billingsgate Island, also sometimes known as Bellingsgate Island, was an island off Cape Cod in Massachusetts in the United States.  Originally settled as a fishing and whaling community as part of the town of Eastham, Massachusetts, Billingsgate Island was for a long time the site of a lighthouse used as a navigational aid in Cape Cod Bay.  It is sometimes known by local historians as the Atlantis of Cape Cod.
+
+Question: James H. Cromartie is an internationally renowned American artist credited with the birth of Hard-Edge Realism, a style by turns both redolent of and a departure from the Magic Realism, he has resided year-round on which island about 30 mi by ferry south from Cape Cod, in the American state of Massachusetts?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "artist_name": {
+      "type": "string",
+      "description": "The name of the artist."
+    },
+    "residence_island": {
+      "type": "string",
+      "description": "The name of the island where the artist resides."
+    },
+    "island_location_description": {
+      "type": "string",
+      "description": "A description of the island's location relative to Cape Cod, including distance and direction."
+    },
+    "residence_duration_years": {
+      "type": "integer",
+      "description": "The number of years the artist has resided on the island."
+    }
+  },
+  "required": [
+    "artist_name",
+    "residence_island",
+    "island_location_description",
+    "residence_duration_years"
+  ],
+  "additionalProperties": false
+}

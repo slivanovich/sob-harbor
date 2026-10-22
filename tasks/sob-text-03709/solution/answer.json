@@ -1,0 +1,11 @@
+{
+  "station_name": "KTMS",
+  "station_frequency": "990 AM",
+  "station_location": "Santa Barbara, California",
+  "station_owner": "Rincon Broadcasting LS LLC",
+  "talk_show_host": {
+    "host_name": "Sean Patrick Hannity",
+    "host_description": "American talk show host, author, and conservative political commentator",
+    "host_birth_year": 1961
+  }
+}

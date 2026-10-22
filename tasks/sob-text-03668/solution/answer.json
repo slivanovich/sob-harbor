@@ -1,0 +1,18 @@
+{
+  "song_title": "I Want to Know What Love Is",
+  "album_name": "Agent Provocateur",
+  "song_release_year": 1984,
+  "album_release_year": 1984,
+  "chart_performance": [
+    {
+      "chart_name": "United Kingdom",
+      "peak_position": 1
+    },
+    {
+      "chart_name": "United States",
+      "peak_position": 1
+    }
+  ],
+  "is_biggest_hit": true,
+  "is_lead_single": true
+}

@@ -1,0 +1,19 @@
+{
+  "play_details": {
+    "title": "Hamlet",
+    "author": "William Shakespeare"
+  },
+  "referred_character": {
+    "name": "Polonius",
+    "description_by_hamlet": "tedious old fool",
+    "role": "chief counsellor of the king"
+  },
+  "daughter_character": {
+    "name": "Ophelia",
+    "relationship_to_referred_character": "daughter",
+    "other_relationships": [
+      "sister of Laertes",
+      "potential wife of Prince Hamlet"
+    ]
+  }
+}

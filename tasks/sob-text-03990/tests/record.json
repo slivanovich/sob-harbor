@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "record_id": "527c24b6f99224030f009b26761491d2633ceff3a7f99e545e13fa2d1fc19acc",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a74a05655429979e28829ce",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Mehrdad Raissi Ardali",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "A Christmas Carol (1997 film): A Christmas Carol is a 1997 American animated musical film version of the book of the same name by Charles Dickens.  It features eight new songs and a voice line-up including Tim Curry, Whoopi Goldberg, Ed Asner, and Michael York.\n\nUp (2009 film): Up is a 2009 American 3D computer-animated comedy-adventure film produced by Pixar Animation Studios and released by Walt Disney Pictures.  Directed by Pete Docter, the film centers on an elderly widower named Carl Fredricksen (Ed Asner) and an earnest young \"Wilderness Explorer\" (a fictional youth group similar to the Boy Scouts) named Russell (Jordan Nagai).  By tying thousands of balloons to his home, Carl sets out to fulfill his dream to see the wilds of South America and complete a promise made to his late wife, Ellie.  The film was co-directed by Bob Peterson, with music composed by Michael Giacchino.\n\nGood Men: Good Men is a 12-minute short film starring Ed Asner and Mark Rydell, written & directed by Brian Connors and produced by Sean Tracey.  Associate Producers were Dean Jamali, Neal Wilde, Tom Downey, Phil Gillin, and Mehrdad Sahafi.  This micro-budget, two-character film was shot in one day.  The drama takes place on an afternoon before an Oscar party.  Asner & Rydell get into an argument over the Holocaust, the proposed mosque at ground zero and the conspiracy allegations surrounding the 9/11 attacks on the World Trade Center.  \"Good Men\" won Best Short at The Los Angeles Arthouse Film Festival in 2012 and screened in numerous cities around the U.S. as well as around the world.\n\nLuxo Jr. (character): Luxo Jr. is a desk lamp character and the corporate mascot of Pixar Animation Studios.  Luxo Jr. is the protagonist of the short film of the same name and appears on the production logo of every Pixar film, hopping on screen and bouncing on the letter I. John Lasseter created Luxo Junior, modeling the character after his own Luxo brand lamp.  The manufacturer of Luxo lamps sued Disney, the parent company of Pixar, for selling Luxo Jr. branded merchandise in 2009.\n\nPAJ animation studio: PAJ animation studio is a persian animation film studio based in IRAN.  The studio produced several short films, television commercials, and one feature film.  It was founded on 30 October 2007.  PAJ animation studio produced a mini series called the hidden lives in 2017 .\n\nFarkhondeh Torabi: Farkhondeh Torabi (born March, 1965 in Tehran, Iran) is an internationally acclaimed Persian animation director.\n\nAxel: The Biggest Little Hero: Axel: The Biggest Little Hero (original title: Bonta) is a 2013 animated 3-D film written and directed by Leo Lee.  The English language version stars the voices of Yuri Lowenthal, Sarah Natochenny, Colleen O'Shaughnessey, Kate Higgins and Ed Asner.  Under its original title of \"Bonto\", the film released nationwide across China on August 2, 2013, as China’s very first 3-D film to combine stereoscopic effects with CG technology, representing their highest level of animation.\n\nEd Asner filmography: Ed Asner has a career in Hollywood that spans over five decades, in film as well as television and voice acting.\n\nMehrdad Raissi Ardali: Mehrdad Raissi Ardali (Persian: مهرداد رئیسی اردلی‎ ‎ ), born (1978--)20 1978 in Iran, is a prolific Iranian voice actor, dubbing director, founder, director, CEO and Quality Control Manager of Glory Entertainment (The Association of Tehran Young Voice Actors).  He has also provided Persian voices for several animation characters, including famous characters such as Donkey in \"Shrek\", Marty in \"Madagascar\", \"\" and \"\", Buck in \"\", Bolt in \"Bolt\", Carl Fredricksen in \"Up\", Flynn Rider in \"Tangled\", The Once-ler in \"The Lorax\", RJ in \"Over the Hedge\", Francesco Bernoulli in \"Cars 2\", Mr. Ping in \"Kung fu Panda\", Ramon in \"Happy Feet 2\", The Man in the Yellow Hat in \"Curious George\", Raoul in \"A Monster in Paris\", Kevin in \"\", Barry in \"Bee Movie\", Bunnymund in \"Rise of the Guardians\", Guy in \"The Croods\" and Kristoff in \"Frozen (2013 film)\".\n\nI Know That Voice: I Know That Voice is a documentary about American voice acting.  It premiered on November 6, 2013, at Grauman's Egyptian Theatre.  It is narrated by John DiMaggio, the voice of Bender on \"Futurama\" and Jake on \"Adventure Time\", and stars DiMaggio and many other voice actors, including Billy West, Tara Strong, Tom Kenny, Grey DeLisle, June Foray, Rachael MacFarlane, Mark Hamill, Ed Asner, Robin Atkin Downes, and Pamela Adlon.",
+    "question": "Who provided the voice in the Persian animation of the 2009 Pixar film of the character orginally voiced by Ed Asner",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the animated film."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The release year of the film."
+            },
+            "animation_studio": {
+              "type": "string",
+              "description": "The animation studio that produced the film."
+            }
+          },
+          "required": [
+            "title",
+            "release_year",
+            "animation_studio"
+          ],
+          "additionalProperties": false
+        },
+        "character_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the character."
+            },
+            "original_voice_actor": {
+              "type": "string",
+              "description": "The original English voice actor for the character."
+            }
+          },
+          "required": [
+            "name",
+            "original_voice_actor"
+          ],
+          "additionalProperties": false
+        },
+        "persian_dubbing_details": {
+          "type": "object",
+          "properties": {
+            "voice_actor": {
+              "type": "string",
+              "description": "The voice actor who provided the Persian voice for the character."
+            }
+          },
+          "required": [
+            "voice_actor"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "film_details",
+        "character_details",
+        "persian_dubbing_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_details": {
+        "title": "Up",
+        "release_year": 2009,
+        "animation_studio": "Pixar Animation Studios"
+      },
+      "character_details": {
+        "name": "Carl Fredricksen",
+        "original_voice_actor": "Ed Asner"
+      },
+      "persian_dubbing_details": {
+        "voice_actor": "Mehrdad Raissi Ardali"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

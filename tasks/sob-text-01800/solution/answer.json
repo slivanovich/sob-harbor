@@ -1,0 +1,19 @@
+{
+  "creator_name": "Byron Balasco",
+  "series_identified": "Kingdom",
+  "linking_actor": {
+    "actor_name": "Frank Grillo",
+    "roles": [
+      {
+        "title": "Kingdom",
+        "type": "series",
+        "year": 2014
+      },
+      {
+        "title": "Zero Dark Thirty",
+        "type": "film",
+        "year": 2012
+      }
+    ]
+  }
+}

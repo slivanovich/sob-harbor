@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "db0f3fa0104127df2b74e2616ed5fd4d74ab89f8de59d46412632f629ac3ef7d",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a90968f55429933b8a20574",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1984",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "In the Hour of Chaos: In the Hour of Chaos is a 2016 American documentary film directed by Bayer Mack.  It details the life and various trials of the Reverend Martin Luther King Sr. (\"Daddy King\"), including his violent, poverty-stricken upbringing in rural Georgia, the assassination of his oldest son (civil rights leader Martin Luther King Jr.), the drowning of his younger son Alfred Daniel Williams King and the shooting death of his wife, Alberta Williams King.\n\nLASCAD: On 26 October 1992 the London Ambulance Service started to use a new computer-assisted dispatch (CAD) system, known as LASCAD.  Poorly designed and implemented, its introduction led to significant delays in the assigning of ambulances, with anecdotal reports of 11-hour waits.  Media reports at the time claimed that up to 30 people may have died as a result of the chaos, despite a lack of evidence.  The then-chief executive, John Wilby, resigned shortly afterwards.  This failure is often cited in case studies of poor engineering management.\n\nGeorge Griffin (butler): George Griffin was an African American born into slavery in Virginia sometime in the mid-19th century.  In 1874, as a free man, Griffin came to work for Samuel L. Clemens (a.k.a. Mark Twain).  Details of Griffin's early life remain largely unknown.  They have said that he was about age 65 when he died, but the date remains, also, unknown.  But there is much information about Griffin's later life, primarily from Clemens's letters and unpublished memoirs.  For example, according to Clemens's unpublished manuscript \"A Family Sketch\", Griffin \"was a Maryland slave by birth; the Proclamation set him free, & as a young fellow he saw his fair share of the Civil War as body servant to General Devens\".\n\nNight of the Grizzlies: Night of the Grizzlies (1969) is a book by Jack Olsen which details events surrounding the night of August 13, 1967, when two young women were separately attacked in Glacier National Park, Montana, by grizzly bears. Both women, Julie Helgeson, 19, of Albert Lea, Minnesota, and Michele Koons, 19, of San Diego, California, died of their injuries.  Olsen's book examines the most plausible explanation of the unlikely dual attacks since no fatal grizzly attack had ever been recorded in the park's 57-year history prior to that night.  One specialist at the time calculated the odds were greater than 1 in a million for a single attack but the odds of two separate attacks in a 4 hour time span were beyond measure.  However future events would show grizzly attacks to become more common, as Olson explains, because of increased human presence in wilderness areas and decreased habitat for bears to live in, reaching a critical tipping point in the summer of 1967.\n\nAmen (American band): Amen is an American rock act that was formed in 1994 in Los Angeles, California.  The band was founded by front man and singer Casey Chaos and combines elements of punk rock, hardcore, and heavy metal.  Amen has released four studio albums, one live album, and the songs \"Coma America\", \"The Price of Reality\", and \"California's Bleeding\".  The band saw continuous changes in membership, with Casey Chaos remaining the sole original member.  In 2007, Amen went on hiatus and returned in 2014 with an appearance at that year's Knotfest.\n\nRadulf II, Abbot of Kinloss: Radulf (died 1220) was a 13th-century Scoto-Norman Cistercian monk and abbot.  Most details about Radulf's career and all details about his early life are not known.  His earliest certain occurrence in history is his appearance as Abbot of Kinloss in a Melrose charter datable to between 1202 and 1207.  It is not known for certain when he became abbot of Kinloss Abbey, but the last known abbot of Kinloss, also called Radulf, left Kinloss in 1194 to become abbot of Melrose, putting Radulf II's succession somewhere between 1194 and 1207.  Written in the margins next to Radulf's obituary is the assertion that he was the 4th Abbot of Kinloss, and if these are accurate, Radulf II would have succeeded not long after Radulf I's departure to Melrose Abbey in 1194.\n\nBrenno de Winter: Brenno de Winter (born 6 December 1971 in Ede) is a Dutch ICT and investigative journalist.  He writes for Linux Magazine, Computer!Totaal, NU.nl and Webwereld and is a commenter for the \"PowNews\" programme on PowNed TV.  Brenno is also a podcaster and hosts \"Laura Speaks Dutch\".  He caused controversy by submitting requests for information on the basis of the Open Government Act (WOB) to include Jeltje van Nieuwenhoven (regarding her role as OV ambassador) and hundreds WOB requests to all Dutch municipalities and provinces.  Because not all agencies fulfilled the WOB requests, de Winter filed lawsuits against them.  The Dutch Association of Journalists (NEY) supported de Winter.  In the decision of the Hague court on 4 May 2010, de Winter's favor, which is not confirmed that municipalities may levy fees for the appeal to the WOB.  In April 2010, de Winter was involved in the disclosure of the expenditure of the FENS funds (1.3 billion euros) by the NS.  After the publications and media appearances] of de Winter related to the ease and simplicity of the \"OV-chipkaart\", the public transport smart card in the Netherlands, the Minister of Infrastructure and Environment was able to get the NVB in Haaglanden about a one-month postponement.  Due to the disclosure the District Attorney decided to open a criminal investigation against de Winter; however, after a legal defense fund met its goals within an hour.  The Journalist magazine Villamedia has named Brenno de Winter as the journalist of the year 2011.  In July 2012 de Winter broke a new story about Dutch employer censorship after an employee of Unisys Netherlands was threatened with termination for giving a presentation about online censorship for the conference Last H.O.P.E., New York, USA In September 2012 de Winter released a video and accompanying news story of how he was able to use an obvious fake identification to gain access to numerous Netherlands and European government offices: The European Parliament, four Dutch Ministries among which the Ministry of Justice and the Ministry of the Interior, The Dutch Secret Service, The Dutch Telecom Regulator OPTA, The Dutch National Cyber Security Center, The Royal Palace, The Dutch National Police, The Police Department of The Hague and Brabant Zuid-Oost.  De Winter purchased the obvious fake ID at the 28C3 Chaos Computer Club Congress in 2011 where he was the conference closing speaker.\n\nMartin Luther King Sr.: Martin Luther King Sr. (born Michael King; December 19, 1899November 11, 1984), was an American Baptist pastor, missionary, and an early figure in the Civil Rights Movement.  He was the father of civil rights leader Martin Luther King Jr.\n\nRobert Drury (sailor): Robert Drury (born 1687; died between 1743 and 1750) was an English sailor on the \"Degrave\" who was shipwrecked at the age of 17 on the island of Madagascar.  He would be trapped there for fifteen years.  Upon returning to England, a book allegedly recounting his memoirs would be published in his name in 1729.  Though it was an instant success, the credibility of the details in the book would be put into question by later historians.  Modern scholars have proven though that many details in the book are authentic and that the story itself is one of the oldest written historical accounts of life in southern Madagascar during the 18th century.\n\nRutebeuf: Rutebeuf (or Rustebuef) (fl.  1245 – 1285), a trouvère, was born in the first half of the 13th century, possibly in Champagne (he describes conflicts in Troyes in 1249); he was evidently of humble birth, and he was a Parisian by education and residence.  His name is nowhere mentioned by his contemporaries.  He frequently plays in his verse on the word \"Rutebeuf\", which was a \"nom de plume\", and is variously explained by him as derived from \"rude boeuf\" and \"rude oeuvre\" (\"coarse ox\" or \"rustic piece of work\").  Paulin Paris thought that he began life in the lowest rank of the minstrel profession as a \"jongleur\" (juggler and musician).  Some of his poems have autobiographical value.  In \"Le Mariage de Rutebeuf\" (\"The Marriage of Rutebeuf\") he says that on the 2 January 1261 he married a woman old and ugly, with neither dowry nor amiability.  In the \"Complainte de Rutebeuf\" he details a series of misfortunes which have reduced him to abject destitution.  In these circumstances he addresses himself to Alphonse, comte de Poitiers, brother of Louis IX, for relief.  Other poems in the same vein reveal that his own miserable circumstances were chiefly due to a love of play, particularly a game played with dice; which was known as griesche.  It would seem that his distress could not be due to lack of patrons; for his metrical \"Life of Saint Elizabeth of Hungary\" was written by request of Erard de Valery, who wished to present it to Isabel, queen of Navarre; and he wrote elegies on the deaths of Anceau de l'Isle Adam, the third of the name, who died about 1251, Eudes, comte de Nevers (died 1267), Theobald II of Navarre (died 1270), and Alphonse, comte de Poitiers (d. 1271), which were probably paid for by the families of the personages celebrated.  In the \"Pauvreté de Rutebeuf\" (\"The Poverty of Rutebeuf\"), he addresses Louis IX himself.",
+    "question": "The film \"In the Hour of Chaos\" details the life of a man that died in what year? ",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the documentary film."
+        },
+        "person_detailed": {
+          "type": "string",
+          "description": "The name of the person whose life is detailed in the film."
+        },
+        "person_role": {
+          "type": "string",
+          "description": "The primary role or title of the person detailed in the film."
+        },
+        "death_year": {
+          "type": "integer",
+          "description": "The year the person detailed in the film died."
+        }
+      },
+      "required": [
+        "film_title",
+        "person_detailed",
+        "person_role",
+        "death_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "In the Hour of Chaos",
+      "person_detailed": "Martin Luther King Sr.",
+      "person_role": "Reverend",
+      "death_year": 1984
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

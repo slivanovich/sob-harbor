@@ -1,0 +1,9 @@
+{
+  "band_names": [
+    "Atlas Genius",
+    "Bleeker"
+  ],
+  "atlas_genius_is_rock_band": true,
+  "bleeker_is_rock_band": true,
+  "both_are_rock_bands": true
+}

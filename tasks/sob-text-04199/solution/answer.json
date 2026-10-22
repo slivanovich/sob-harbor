@@ -1,0 +1,13 @@
+{
+  "film": {
+    "title": "Gandahar",
+    "genre": "French science fiction epic"
+  },
+  "director": {
+    "name": "René Laloux"
+  },
+  "production_studio": {
+    "name": "SEK Studio",
+    "country_of_origin": "North Korea"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "parks_compared": [
+    {
+      "park_name": "Doñana National Park",
+      "has_marshes": true,
+      "has_streams": true,
+      "has_sand_dunes": true
+    },
+    {
+      "park_name": "Guadarrama National Park",
+      "has_marshes": false,
+      "has_streams": false,
+      "has_sand_dunes": false
+    }
+  ],
+  "all_parks_have_features": false,
+  "reasoning": "Doñana National Park is described as an area of marshes, shallow streams, and sand dunes. Guadarrama National Park is described as a mountain range and does not mention marshes, streams, or sand dunes."
+}

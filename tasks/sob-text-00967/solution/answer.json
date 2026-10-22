@@ -1,0 +1,9 @@
+{
+  "square_name": "Connaught Square",
+  "nearby_park": "Hyde Park",
+  "park_location_relative_to_square": "south",
+  "park_dividing_features": [
+    "Serpentine",
+    "Long Water"
+  ]
+}

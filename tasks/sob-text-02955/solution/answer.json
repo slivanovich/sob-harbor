@@ -1,0 +1,12 @@
+{
+  "award_name": "MTV Movie Award",
+  "award_category": "Best Breakthrough Performance",
+  "recipient_actress": {
+    "name": "Julia Stiles"
+  },
+  "film": {
+    "title": "10 Things I Hate About You",
+    "director": "Gil Junger",
+    "release_year": 1999
+  }
+}

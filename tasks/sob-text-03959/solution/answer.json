@@ -1,0 +1,15 @@
+{
+  "award_name": "Professional Footballers' Association Young Player of the Year",
+  "current_holder_details": {
+    "player_common_name": "Dele Alli",
+    "player_full_name": "Bamidele Jermaine Alli",
+    "club": "Tottenham Hotspur",
+    "position": "midfielder",
+    "national_team": "England",
+    "season_awarded_for": "2016–17"
+  },
+  "award_criteria": {
+    "age_limit_at_start_of_season": 23,
+    "football_region": "English football"
+  }
+}

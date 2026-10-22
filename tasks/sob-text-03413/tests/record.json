@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "dcf0a189ff376022297f13f41593cce9f914e83e93f30367f1aff5f8f92498c0",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5adebd84554299728e26c7a9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Anglo-Saxon",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Portuguese Podengo: The Portuguese Podengo is an ancient multi-sensory hound (sight and scent) breed of dog from Portugal.  As a breed, the Podengo is divided into three size categories that are not interbred: small (Pequeno), medium (Medio) and large (Grande).  Their coats are either short and 'smooth', or longer and 'wired'.  The smooth coated variety is traditional, dating back to the 5th century, whereas the wire coated variety is an outcome of the assimilation of various other breeds during the 20th century.  In general, the breed is healthy; the Pequeno (small) variety has an average lifespan of approximately 15–17 years.\n\nAnglo-Saxons: The Anglo-Saxons were a people who inhabited Great Britain from the 5th century.  They comprise people from Germanic tribes who migrated to the island from continental Europe, their descendants, and indigenous British groups who adopted some aspects of Anglo-Saxon culture and language.  Historically, the Anglo-Saxon period denotes the period in Britain between about 450 and 1066, after their initial settlement and up until the Norman conquest.\n\nBlackwater Castle: Blackwater Castle (Castle Widenham) is a privately owned estate located in the village of Castletownroche between the towns of Mallow and Fermoy in North Cork, Ireland, and since 2005 is available to rent as a private hire venue for castle weddings and private parties along with castle rentals for vacations.  The castle comprises one of the oldest occupied castles in Ireland as parts of the residential section date back to the early 15th century while the castle structure itself dates back to the 12th century.  A round tower on the eastern end of the Castle dating from the late 12th century is still standing although no longer accessible.  The castle was constructed on the ancient fortress of Dun Cruadha, an inland promontory fort dating back to the late Bronze Age/early Iron Age, while the site itself was first occupied back in the Mesolithic age (circa 9,000 years ago) as evidenced by the flint scatter found at Kilcummer and the caves on the south bank of the River Awbeg making this site one of the earliest known settlements in Ireland.\n\nCorps Berlin: The Corps Berlin is a fraternity (\"Studentenverbindung\") in Berlin, Germany, founded on February 9, 2009 with roots dating back to December 2, 1859.  It is one of 162 \"German Student Corps\" in Germany, Austria, Switzerland, Belgium, Latvia and Hungary today.  The Corps is a member of the Weinheimer Senioren-Convent (WSC), the second oldest federation of classical European fraternal corporations, with roots dating back to the 15th century and fraternities founded in several European countries.\n\nChurch frescos in Denmark: Church frescos or church wall paintings (Danish: \"kalkmalerier\") are to be found in some 600 churches across Denmark, no doubt representing the highest concentration of surviving church murals anywhere in the world.  Most of them date back to the Middle Ages and were uncovered by Jacob Kornerup (1825-1913) who carried out restoration work in 80 churches across the country towards the end of the 19th century.  They lay hidden for centuries as after the reformation, they were covered with limewash (Danish: \"kalk\") only to be revealed and restored during the course of the 19th and 20th centuries.  In most of Europe medieval frescos, extremely common in the Middle Ages, were more likely to be removed completely during the Reformation or in subsequent rebuildings, or merely as they aged.  The oldest frescos, dating back to the 12th century, were painted in the Romanesque style by artists from elsewhere in Europe but those from the 14th century and thereafter are in the Gothic style which was used by native Danish painters.  It is these that are considered to be the most important for Danish art and culture.  A distinction is to be made between these church wall paintings or \"kalkmalerier\" and the generic term \"fresco\" (Danish: \"fresko\") which refers to all types of painting on plastered walls or ceilings.\n\nWyrd: Wyrd is a concept in Anglo-Saxon culture roughly corresponding to fate or personal destiny.  The word is ancestral to Modern English \"weird\", which retains its original meaning only dialectally.\n\nSaint Barbara Church in Coptic Cairo: The Coptic Orthodox Church of St. Barbara (or \"Sitt Barbara\") is one of the many famous Coptic Orthodox parishes that can be found in the district of Coptic Cairo.  The building is located on the eastern part of the Babylon Fortress and is one of the oldest buildings in Cairo, dating back to the 5th or 6th century AD.  However, like many other buildings of Coptic architecture, it was rebuilt several times, most notably by the end of the 11th century.\n\nSirpur (Chhattisgarh): Sirpur is a historical town in Mahasamund district in the state of Chhattisgarh 78 km away from Raipur and 35 km from Mahasamund city on the banks of the river Mahanadi.  The town of Sirpur (aka Shirpur) has been mentioned in ancient epigraphic records, dating back to the 5th to the 8th centuries A.D.  The city was once the capital of the Sarbhapuriya and Somvanshi Kings of Dakshin (south) Kosala state.  It was an important centre of Buddhist from the 6th the 10th century A.D. and was visited by Hieun Tsang, the 7th Century Chinese Pilgrimist and Scholar.  The beauty of this magical place has beckoned the presence of the Dalai Lama too in March 2013.\n\nMapuche history: The Mapuche people of southern Chile has a long history dating back as an archaeological culture to 600–500 BC.  The Mapuche society had great transformations after Spanish contact in the mid–16th century.  These changes included the adoption of Old World crops and animals and the onset of a rich Spanish–Mapuche trade in La Frontera and Valdivia.  Despite these contacts Mapuche were never completely subjugated by the Spanish Empire.  Between the 18th and 19th century Mapuche culture and people spread eastwards into the Pampas and the Patagonian plains.  This vast new territory allowed Mapuche groups to control a substantial part of the salt and cattle trade in the Southern Cone.\n\nHistory of the Irish language: The history of the Irish language begins with the period from the arrival of speakers of Celtic languages in Ireland to Ireland's earliest known form of Irish, Archaic Irish, which is found in Ogham inscriptions dating from the 3rd or 4th century.  After the conversion to Christianity in the 5th century, Old Irish begins to appear as glosses and other marginalia in Latin manuscripts, beginning in the 6th century.  It evolved in the 10th century to Middle Irish.  Early Modern Irish, otherwise known as Classical Irish, was a literary language that represented a transition between Middle and Modern Irish.  It was used by writers in both Ireland and Scotland until the 17th century, in the course of which slowly but surely writers began writing in the vernacular dialects, Ulster Irish, Connacht Irish, Munster Irish and Scottish Gaelic.  As the number of hereditary poets and scribes dwindled under British rule in the early 19th century, Irish became a mostly spoken tongue with little written literature appearing in the language until the Gaelic Revival of the late 19th century.  The number of speakers was also declining in this period with monoglot and bilingual speakers of Irish increasing adopting only English: while Irish never died out, by the time of the Revival it was largely confined to the less Anglicised regions of the island, which were often also the more rural and remote areas.  In the 20th and 21st centuries, Irish has continued to survive in Gaeltacht regions and among a minority in other regions.  It has once again come to be considered an important part of the island's culture and heritage, with efforts being made to preserve and promote it.",
+    "question": "Wyrd is a concept in what culture, dating back to the 5th century?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "concept_name": {
+          "type": "string",
+          "description": "The name of the concept."
+        },
+        "associated_culture": {
+          "type": "string",
+          "description": "The culture to which the concept belongs."
+        },
+        "culture_origin_century": {
+          "type": "string",
+          "description": "The century from which the culture inhabited Great Britain."
+        },
+        "concept_description": {
+          "type": "string",
+          "description": "A brief description of the concept."
+        }
+      },
+      "required": [
+        "concept_name",
+        "associated_culture",
+        "culture_origin_century",
+        "concept_description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "concept_name": "Wyrd",
+      "associated_culture": "Anglo-Saxon",
+      "culture_origin_century": "5th century",
+      "concept_description": "A concept roughly corresponding to fate or personal destiny."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

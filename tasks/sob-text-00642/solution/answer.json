@@ -1,0 +1,23 @@
+{
+  "universities_analyzed": [
+    {
+      "university_name": "University of Queensland",
+      "us_establishments": [
+        "UQ-Ochsner Clinical School in Louisiana"
+      ],
+      "us_partnerships_or_protocols": []
+    },
+    {
+      "university_name": "Bahçeşehir University",
+      "us_establishments": [],
+      "us_partnerships_or_protocols": [
+        "academic and strategic protocol with San Diego State University"
+      ]
+    }
+  ],
+  "comparison_summary": {
+    "university_with_greater_physical_presence": "The University of Queensland",
+    "reason_for_greater_presence": "The University of Queensland has a physical establishment, the UQ-Ochsner Clinical School, in Louisiana, United States. Bahçeşehir University only has an academic and strategic protocol with San Diego State University, which is a partnership and not a physical presence of Bahçeşehir University itself."
+  },
+  "answer": "The University of Queensland"
+}

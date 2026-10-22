@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Eternal Devastation: Eternal Devastation is the second full-length album by German thrash metal band Destruction.  It was released in 1986.  It showed the band had moved away from their previous black metal-influenced style of material evident on the "Sentence of Death" EP and "Infernal Overkill" albums, and were headed in the direction of a more contemporary thrash metal style.
+
+Destruction (band): Destruction is a German thrash metal band.  They have been referred to as one of the "Big 4" of the German thrash metal scene, the others being Kreator, Sodom and Tankard.  Along with Venom (UK), Bathory (Sweden) and Celtic Frost (Switzerland), three of those four German bands (Tankard being the exception) are often credited with helping pioneer black metal, by containing several elements of what was to become the genre.  Destruction was originally named Knight of Demon, but changed their name in 1984.  For most of the 1990s, Destruction was not signed to a record label and was forced to self-produce their albums until they signed a contract with Nuclear Blast in the early 2000s.
+
+Infernal Overkill: Infernal Overkill is the first full-length album by German thrash metal band Destruction.  It was released in 1985.
+
+The Stryder: The Stryder was a band hailing from Long Island, NY.  The Band was formed by Peter Toh and Scottie Redix in 1999 after their previous project, Yearly, disbanded following the departure of bassist Eben D'amico who left to join Saves the Day.  They added a vocalist and bassist, John Johansen and Nick Wendel (Respectively).  They released a 7" on Elkion Records titled "The Hits Just Keep on Comin" and shortly after signed a deal to Equal Vision Records and released their debut album "Masquerade in the Key of Crime" in the summer 2000.  The band toured extensively and began writing new material in 2001.  They added former Glassjaw drummer Durijah Lang, and moved Scottie Redix up to Guitar and backing vocals.  In the summer of 2001 the band parted ways with vocalist John Johansen.  2002 saw the release of "Jungle City Twitch".  Debuting a new sound, The Stryder continued to tour the country in support of the new release.  In 2003/2004, Elkion Records released "Savor The Danger" which contained a collection of old demos and the 2 songs from the 7" previously released on the label.  Peter released his first solo EP "Cleopatra" in 2004 on Elkion Records.  Durijah moved on to become the drummer of Classic Case and in 2007, became Pete Parada's replacement in Saves The Day.  In 2006, Peter then went on to start an Internet TV/New Media Company, Hidden Track TV with Adam Schleichkorn, and released a solo EP titled "Shoes of a Beast".  Peter is currently working on his first full-length album, titled "Wildlife".  Scottie Redix now plays under the moniker 'Cassonova Brown' and is currently working on his first full-length.  The Working title for the album is"On the Wall" and there are 2demos available on Soundcloud.com.  Scottie is also a member of the musical collective Teachers, who also have a full-length album titled "Anesthesia" slated for an early 2013 release.  Teachers contributed to Kanye West's "Monster".
+
+Wrecking Your Neck: Wrecking Your Neck is a 2-disc live album released by the thrash metal band Overkill in 1995.  A March 1995 show, once again in Cleveland, Ohio, was recorded for Overkill's first full-length live album, and was released in April 1995; with the first pressing featuring a bonus CD containing the "Overkill EP" that had been out of print for ten years.  A music video for the song "Bastard Nation" was also released.  "Wrecking Your Neck" is also the last Overkill album to feature guitarists Rob Cannavino and Merritt Gant.
+
+Earl Greyhound: Earl Greyhound is an American rock trio from Brooklyn consisting of Matt Whyte (vocals, guitar), Kamara Thomas (bass, keyboards, vocals) and Ricc Sheridan (drums).  Sheridan replaced original drummer Christopher Bear just after the band recorded its first full-length album.  They were previously signed to Some Records but have since started their own label, Hawk Race Records.  Their music is heavily influenced by blues rock and hard rock bands of both the 1990s and the 1970s, and the intertwined vocals of Whyte and Thomas are a key component of the band's sound.  After an EP in 2004, the band's first full-length album, "Soft Targets", was released in 2006, followed by "Suspicious Package" in 2010.
+
+Separated Vegetables: Separated Vegetables is the first full-length album by Washington, D.C.'s Slickee Boys.  Self-released on guitarist Kim Kane's Dacoit label (catalog number 1001), it was pressed in an edition of 100 copies.  As well as songs written by the band, it includes cover versions of songs originally by Overkill (an early D.C. punk band, not the heavy metal band of the same name), Flamin' Groovies, the Road Runners, Johnny Smith, Country Joe and the Fish, the Small Faces, Chuck Berry, and the Hangmen (whose song, "What a Girl Can't Do", the Slickee's had already released on their debut record, 1976's "Hot and Cool" EP.  A mix of studio and live recordings, the album includes a number of tracks taped in front of an appreciative audience at D.C. punk dive the Keg.
+
+Protest the Hero: Protest the Hero is a Canadian progressive metal band from Whitby, Ontario.  Originally named Happy Go Lucky, the band changed their name to Protest the Hero shortly before releasing their debut EP, "Search for the Truth", in 2002.  In 2005, the band released their first full-length album "Kezia" on Canadian indie label Underground Operations.
+
+ReliXIV: ReliXIV is the thirteenth full-length studio album by American thrash metal band Overkill, released in spring 2005.  The reason the Roman numeral 14 is included in the title is because the band includes the "Overkill EP" in their lineup of studio albums, which would make this album the 14th by their chronology.  It can also be because Overkill released the covers album "Coverkill", which would have been their eleventh studio album.  While this diction left it unclear how the title was to be pronounced, Blitz just mentioned it as "Relics" when announcing songs from the album on stage.  The album produced the popular "Old School", which has been played at every Overkill show since it was first released.  As of late 2007, ReliXIV sold over 16,000 copies in the U.S.
+
+The Maine (band): The Maine is an American rock band from Tempe, Arizona, formed in 2007.  Their first release, the EP "Stay Up, Get Down" was released in late 2007, followed by a five-song EP titled "The Way We Talk" on December 11, 2007.  The band's first full-length album, "Can't Stop Won't Stop" was released July 8, 2008. " ...And a Happy New Year" was released in December 2008.  Their second full-length album, "Black & White", (July 13, 2010) sold 22,634 copies in its first week.  On December 6, 2011, the group's third album, "Pioneer", was released and it peaked at No. 90 on the Billboard 200.  Their fourth full-length record "Forever Halloween"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014.  Their fifth studio album, "American Candy", was released on March 31, 2015. " Lovely Little Lonely", their sixth full-length record, was released on April 7, 2017.
+
+Question: Infernal Overkill is the first full-length album by a band that was originally named what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album in question."
+    },
+    "band_name": {
+      "type": "string",
+      "description": "The current or well-known name of the band."
+    },
+    "original_band_name": {
+      "type": "string",
+      "description": "The original name of the band before any changes."
+    }
+  },
+  "required": [
+    "album_title",
+    "band_name",
+    "original_band_name"
+  ],
+  "additionalProperties": false
+}

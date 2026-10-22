@@ -1,0 +1,18 @@
+{
+  "question_canals": [
+    "Suwannee Canal",
+    "Ohio and Erie Canal"
+  ],
+  "canal_connection_status": [
+    {
+      "canal_name": "Suwannee Canal",
+      "connects_to_pennsylvania_systems": false
+    },
+    {
+      "canal_name": "Ohio and Erie Canal",
+      "connects_to_pennsylvania_systems": true,
+      "connection_description": "connections to other canal systems in Pennsylvania"
+    }
+  ],
+  "canal_with_pennsylvania_connection": "Ohio and Erie Canal"
+}

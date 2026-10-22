@@ -1,0 +1,18 @@
+{
+  "rock_group_name": "Nelson",
+  "founders": [
+    "Matthew Nelson",
+    "Gunnar Nelson"
+  ],
+  "record_label": "Geffen Records",
+  "albums_released_on_label": [
+    {
+      "album_title": "After the Rain",
+      "release_year": 1990
+    },
+    {
+      "album_title": "Because They Can",
+      "release_year": 1995
+    }
+  ]
+}

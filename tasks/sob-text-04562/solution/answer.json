@@ -1,0 +1,19 @@
+{
+  "band_details": {
+    "name": "LoMsk",
+    "origin_location": "Lom in Gudbrandsdalen",
+    "establishment_year": 1982
+  },
+  "album_details": {
+    "title": "Bukkerittet",
+    "type": "concept album"
+  },
+  "source_play_details": {
+    "title": "Peer Gynt",
+    "author": "Henrik Ibsen",
+    "publication_year": 1867,
+    "number_of_acts": 5,
+    "play_type": "play in verse"
+  },
+  "relationship_description": "The concept album 'Bukkerittet' is based on the play 'Peer Gynt'."
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Porter (beer): Porter is a dark style of beer developed in London from well-hopped beers made from brown malt.  The name was first recorded in the 18th century, and is thought to come from its popularity with street and river porters.
+
+Fruit beer: Fruit beer is beer made with fruit added as an adjunct or flavouring.
+
+Dogo Beer: Dogo Beer (道後ビール ) is a prizewinning brand of beer made at Minakuchi-shuzō’s microbrewery in Dōgo, Matsuyama, Ehime, Japan.  One of Dogo beer’s features is stronger bubbles, for it is intended to be drunk after taking a bath at Dōgo Onsen.
+
+1612er Zwickelbier: 1612er Zwickelbier, is a Zwickel (Or Zwickl) beer made in the same tradition as Kellerbiers: unfiltered, served straight from the cask or conditioning tank, and naturally cloudy in the glass.  1612er Zwickelbier has an alcohol content of 5.3% abv and was first brewed by Hofbräuhaus Traunstein in 1612, when the Bavarian Duke Maximilian I founded a brewery solely for producing Weissbier.  Today however, the brewery range also includes a Pilsner and a Dunkel.  Hops for 1612er Zwickelbier come from the brewery's own farm in the Hallertau area, whereas the malt is sourced locally.  1612er is currently only available in the brewery's restaurants and beer halls.
+
+Umqombothi: Umqombothi (] ), from the Xhosa and Zulu language, is a beer made from maize (corn), maize malt, sorghum malt, yeast and water.  It is commonly found in South Africa.  It is very rich in Vitamin B.  The beer has a rather low alcohol content (usually less than 3%) and is known to have a heavy and distinctly sour aroma.  In appearance, the beer is opaque and light tan in colour.  It has a thick, creamy and gritty consistency (from the maize).
+
+Tesgüino: Tesgüino is a corn beer made by the Tarahumara Indians of Sierra Madre in Mexico.  The Tarahumaras regard the beer as sacred, and it forms a significant part of their society.  Anthropologist John Kennedy reports that "the average Tarahumaras spends at least 100 days per year directly concerned with tesgüino and much of this time under its influence or aftereffects."
+
+Obadiah Poundage: Obadiah Poundage was the pen-name of a London brewer of the 18th century who published a letter in the "London Chronicle" on November 4, 1760 arguing for a rise in the price of beer.  The letter was reprinted in various journals, including the "Gentleman's Magazine" and "The Gazetteer", and has since been used by beer historians for the basis of information about porter.
+
+Corn beer: Corn beer, beer made from corn (maize), is a traditional beverage in various cuisines.  Chicha, the best-known corn beer, is widespread in the Andes and local varieties of corn beer exist elsewhere.
+
+Mug Root Beer: MUG Root Beer, A PepsiCo Subsidiary/Root Beer Corporation is a brand name of root beer made by the New Century Beverage Company of San Francisco, California, a subsidiary of PepsiCo.
+
+Gluten-free beer: Gluten-free beer is beer made from ingredients that do not contain gluten such as millet, rice, sorghum, buckwheat or corn (maize).  People who have gluten intolerance (including celiac disease and dermatitis herpetiformis sufferers) have a reaction to certain proteins in the grains commonly used to make beer, barley and wheat.  The hordein found in barley and the gliadin found in wheat are types of gluten that can trigger symptoms in sufferers of these diseases.  Gluten-free beer is part of a gluten-free diet.
+
+Question: Obadiah Poundage has been used for information on the types of beer made from what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entity_name": {
+      "type": "string",
+      "description": "The name of the person or entity providing information."
+    },
+    "information_source_type": {
+      "type": "string",
+      "description": "The type of document or source provided by the entity."
+    },
+    "beer_style_informed": {
+      "type": "string",
+      "description": "The specific style of beer for which information was provided."
+    },
+    "main_ingredient": {
+      "type": "string",
+      "description": "The primary ingredient used to make the beer style in question."
+    }
+  },
+  "required": [
+    "entity_name",
+    "information_source_type",
+    "beer_style_informed",
+    "main_ingredient"
+  ],
+  "additionalProperties": false
+}

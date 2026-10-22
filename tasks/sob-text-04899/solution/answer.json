@@ -1,0 +1,15 @@
+{
+  "organization_name": "Missouri National Guard",
+  "headquarters_location": {
+    "city": "Jefferson City",
+    "state": "Missouri"
+  },
+  "commander_in_chief": {
+    "name": "Eric Greitens",
+    "roles": [
+      "politician",
+      "author",
+      "former Navy SEAL"
+    ]
+  }
+}

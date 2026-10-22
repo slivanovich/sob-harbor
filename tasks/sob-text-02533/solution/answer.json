@@ -1,0 +1,16 @@
+{
+  "directors": [
+    {
+      "name": "Horace Ové",
+      "nationality": "British",
+      "is_american": false
+    },
+    {
+      "name": "Richard Thorpe",
+      "nationality": "American",
+      "is_american": true
+    }
+  ],
+  "all_directors_are_american": false,
+  "final_answer": false
+}

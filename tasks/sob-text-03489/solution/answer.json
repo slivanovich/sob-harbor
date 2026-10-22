@@ -1,0 +1,13 @@
+{
+  "event_name": "European theatre of World War II",
+  "alternative_name": "Second European War",
+  "description_summary": "a huge area of heavy fighting across Europe, from Germany's and the Soviet Union's joint invasion of Poland in September 1939 until the end of the war with the Soviet Union conquering much of Europe along with the German unconditional surrender on May 8, 1945",
+  "start_event": "Germany's and the Soviet Union's joint invasion of Poland",
+  "end_event": "German unconditional surrender",
+  "key_participants": [
+    "Germany",
+    "Soviet Union",
+    "Allied forces",
+    "Axis powers"
+  ]
+}

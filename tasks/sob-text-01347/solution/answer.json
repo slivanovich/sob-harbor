@@ -1,0 +1,11 @@
+{
+  "person_one": {
+    "name": "Ben Folds",
+    "nationality": "American"
+  },
+  "person_two": {
+    "name": "Nick Carter",
+    "nationality": "American"
+  },
+  "are_from_same_country": true
+}

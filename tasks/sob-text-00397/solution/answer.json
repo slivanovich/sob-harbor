@@ -1,0 +1,22 @@
+{
+  "film_type": "documentary",
+  "identified_films": [
+    {
+      "title": "The Devil Came on Horseback",
+      "confirmation_snippet": "The Devil Came on Horseback is a documentary film by Ricki Stern and Anne Sundberg",
+      "associated_people": [
+        "Ricki Stern",
+        "Anne Sundberg",
+        "Brian Steidle"
+      ]
+    },
+    {
+      "title": "The Life of Mammals",
+      "confirmation_snippet": "The Life of Mammals is a nature documentary series written and presented by David Attenborough",
+      "associated_people": [
+        "David Attenborough"
+      ]
+    }
+  ],
+  "total_films_identified": 2
+}

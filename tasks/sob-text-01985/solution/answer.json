@@ -1,0 +1,12 @@
+{
+  "artist_name": "Taylor Swift",
+  "highest_grossing_tour_2015": {
+    "tour_name": "The 1989 World Tour",
+    "gross_revenue_usd": 250733097,
+    "year_of_achievement": 2015
+  },
+  "charity_performance": {
+    "event_name": "Stand Up to Cancer",
+    "performance_year": 2012
+  }
+}

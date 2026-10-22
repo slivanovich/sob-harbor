@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "record_id": "bf47459ec76ff93afe3a702890083f390b336004cc9408d7910452bce3add623",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abedfd45542993fe9a41d6c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "2013",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Beautiful Country: The Beautiful Country is a 2004 Norwish-American Vietnam-related drama film set in 1990.  It is directed by Hans Petter Moland and starring Damien Nguyen, Nick Nolte, Bai Ling, Chau Thi Kim Xuan, Tim Roth, Anh Thu, Temuera Morrison and John Hussey.  The screenplay was written by Sabina Murray, a writer who teaches at the University of Massachusetts Amherst's MFA Program for Poets & Writers.\n\nWarrior (2011 film): Warrior is a 2011 American sports drama film directed by Gavin O'Connor and starring Tom Hardy and Joel Edgerton as two estranged brothers whose entrance into a mixed martial arts tournament makes them come to terms with their lives and each other.  Nick Nolte was nominated for an Academy Award for Best Supporting Actor for his role as the father of the two brothers.  Jennifer Morrison and Frank Grillo also star.\n\nClean (film): Clean is a 2004 drama film directed by French director Olivier Assayas, starring Nick Nolte and Maggie Cheung.  It was jointly funded by Canada, France, and United Kingdom sources.  It was released in the United States in 2006.\n\nOff the Black: Off the Black is a 2006 American drama film starring Nick Nolte and Trevor Morgan.  It was written and directed by James Ponsoldt, who also has a small role in the film, and is his feature directorial debut.\n\nKate Beckinsale: Kathrin Romary Beckinsale (born 26 July 1973) is an English actress.  After some minor television roles, she made her film debut in \"Much Ado About Nothing\" (1993) while still a student at the University of Oxford.  She appeared in British costume dramas such as \"Prince of Jutland\" (1994), \"Cold Comfort Farm\" (1995), \"Emma\" (1996), and \"The Golden Bowl\" (2000), in addition to various stage and radio productions.  She began to seek film work in the United States in the late 1990s and, after appearing in small-scale dramas \"The Last Days of Disco\" (1998) and \"Brokedown Palace\" (1999), she had starring roles in the war drama \"Pearl Harbor\" and the romantic comedy \"Serendipity\".  She followed those with appearances in \"The Aviator\" (2004) and \"Click\" (2006).\n\nThe Trials of Cate McCall: The Trials of Cate McCall is a 2013 American drama film directed and written by Karen Moncrieff.  The film stars Kate Beckinsale, Nick Nolte and Clancy Brown.\n\nThe Prince of Tides: The Prince of Tides is a 1991 American romantic drama film based on the 1986 novel of the same name by Pat Conroy; the film stars Barbra Streisand and Nick Nolte.  It tells the story of the narrator's struggle to overcome the psychological damage inflicted by his dysfunctional childhood in South Carolina.  Streisand directed and produced the film in addition to starring in it.  Conroy and Becky Johnston adapted the screenplay.\n\nWho'll Stop the Rain: Who'll Stop the Rain is a 1978 psychological drama film released by United Artists starring Nick Nolte.  It was directed by Karel Reisz and produced by Herb Jaffe and Gabriel Katzka with Sheldon Schrager and Roger Spottiswoode as executive producers.  The screenplay was by Judith Rascoe and Robert Stone from Stone's novel \"Dog Soldiers\".  The music score was by Laurence Rosenthal and the cinematography by Richard H. Kline.\n\nA puerta fría: A puerta fría is a 2012 Spanish drama film starring Antonio Dechent, María Valverde, Nick Nolte, José Luis García Pérez and Héctor Colomé.\n\nBlue Chips: Blue Chips is a 1994 basketball drama film, directed by William Friedkin, written by Ron Shelton and starring Nick Nolte as a college coach and real-life basketball stars Shaquille O'Neal and Anfernee \"Penny\" Hardaway as talented finds.  It features cameos from noted basketball figures Bob Knight, Rick Pitino, Nolan Richardson, Bob Cousy, Larry Bird, Jerry Tarkanian, Matt Painter, Allan Houston, Dick Vitale, Jim Boeheim, Dan Dakich and Bobby Hurley, as well as actor Louis Gossett, Jr.",
+    "question": "In what year was the drama film starring an English actress born July 26, 1973 and Nick Nolte released?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the drama film."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "film_genre": {
+          "type": "string",
+          "description": "The genre of the film."
+        },
+        "main_actors": {
+          "type": "array",
+          "description": "A list of the main actors in the film.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "actor_name": {
+                "type": "string",
+                "description": "The name of the actor."
+              },
+              "is_english_actress_born_july_26_1973": {
+                "type": "boolean",
+                "description": "True if the actor is the English actress born July 26, 1973, otherwise false."
+              }
+            },
+            "required": [
+              "actor_name",
+              "is_english_actress_born_july_26_1973"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "film_title",
+        "release_year",
+        "film_genre",
+        "main_actors"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "The Trials of Cate McCall",
+      "release_year": 2013,
+      "film_genre": "drama",
+      "main_actors": [
+        {
+          "actor_name": "Kate Beckinsale",
+          "is_english_actress_born_july_26_1973": true
+        },
+        {
+          "actor_name": "Nick Nolte",
+          "is_english_actress_born_july_26_1973": false
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

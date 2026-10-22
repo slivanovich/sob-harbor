@@ -1,0 +1,16 @@
+{
+  "dog_breeds_in_question": [
+    {
+      "breed_name": "Pandikona",
+      "is_hunting_dog": true,
+      "reasoning_snippet": "The Pandikona is a primitive-type hunting dog from Pattikonda taluk-Kurnool district of Andhra Pradesh and Madhya Pradesh state, India."
+    },
+    {
+      "breed_name": "Treeing Cur",
+      "is_hunting_dog": true,
+      "reasoning_snippet": "They are primarily used to tree squirrels, raccoons, opossums, wild boars, bears, mountain lions and bobcats as well as to hunt big game."
+    }
+  ],
+  "all_breeds_are_hunting_dogs": true,
+  "number_of_breeds_checked": 2
+}

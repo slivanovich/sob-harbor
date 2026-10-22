@@ -1,0 +1,17 @@
+{
+  "film_title": "Enemy at the Gates",
+  "film_release_year": 2001,
+  "director": "Jean-Jacques Annaud",
+  "book_details": {
+    "author": "William Craig",
+    "publication_year": 1973
+  },
+  "main_character_details": {
+    "fictionalized_name": "Vasily Zaytsev",
+    "real_person_details": {
+      "name": "Vasily Grigoryevich Zaytsev",
+      "role": "Soviet sniper",
+      "award": "Hero of the Soviet Union"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "album_name": "Hail to the Thief",
+  "artist_name": "Radiohead",
+  "album_type": "studio album",
+  "album_number": 6,
+  "release_year": 2003,
+  "musical_elements": [
+    "alternative rock instrumentation",
+    "drum machines",
+    "synthesisers",
+    "digital manipulation"
+  ],
+  "featured_singles": [
+    {
+      "title": "Go to Sleep",
+      "release_date": "18 August 2003"
+    }
+  ]
+}

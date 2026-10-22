@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "bf45b29515513dbb70162a91b46bea2585b2186890221c83c4aee5054ec30218",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae1baab554299234fd042da",
+    "source_dataset": "hotpotqa",
+    "source_answer": "He Stopped Loving Her Today",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Spencer Seim: Spencer Seim (born January 28, 1981) is an American musician, best known as the guitarist in the band Hella.  He is also the drummer in the Nintendo music cover band called The Advantage and has a solo project named sBACH.  The sticker on the cover of the self-titled release says \"a thousand times better than Hella or The Advantage\".\n\nTom Warburton: Thomas Warburton (born August 31, 1968), often credited as Mr. Warburton, is an American animator, producer, writer and designer.  He is best known for creating the animated television series \"\".  He also created the animated short \"Kenny and the Chimp\".  Prior to that he served as production designer on the first season of \"Beavis and Butt-Head\" and was the lead character designer for the animated series \"Pepper Ann\".  He is also the author of the book \"A Thousand Times No\".  Since moving to Los Angeles in 2009 he has worked at Disney Television Animation serving as creative director on \"Fish Hooks\" and co-executive producer on \"The 7D\".\n\nA Thousand Times a Day: \"A Thousand Times a Day\" is a song written by Gary Burr and Gary Nicholson.  It was originally recorded by American country singer George Jones on his 1993 album \"High-Tech Redneck\".\n\nNotis Sfakianakis: Panagiotis \"Notis\" Sfakianakis (Greek: Νότης Σφακιανάκης; born 2 November 1959) is a Greek singer of Folk music, and is one of the most commercially successful artists of all time in Greece and Cyprus.  Sfakianakis began his career in 1985, opening at nightclubs for other artists.  He was discovered by Sony Greece and released his debut album \"Proti Fora\" (1991).  For his second album \"Eisai Ena Pistoli\" (1992), he moved to Minos EMI.  While his first three releases were commercially successful, beginning in the mid-1990s, Sfakianakis released a series of multi-platinum albums that are among the best selling albums of all time in Greece — including \"Notioanatolitika Tou Kosmou\" (1994) with 120–150 thousand copies sold, \"5o Vima\" (1996) which has been recognized as the best selling album of all time in Greece with 200 thousand copies sold, \"I Notes Einai 7psyhes\" with 132.5 thousand copies (265 thousand units) sold, the EPs \"Pro-Dia-Fimin\" (1997) with 100 thousand copies sold, and \"Around the World\" with 15 thousand copies shipped, \"XXX Enthimion\" (1999), which is the best selling live album of all time in Greece in terms of unit sales with 180 thousand copies (360 thousand units) sold, \"Polihroma Kai Entona\" (2000) that shipped 100 thousand copies and \"As Milisoun Ta Tragoudia\" (2002) which fared similarly.  His signature song \"O Aetos\" is one of the most popular songs in Greek music history.  Sfakianakis was the best selling artist of the 1990s and stands as the best selling Greek artist of his generation.  However, in the 2000s he faced a significant commercial decline.  \"Me Agapi O,ti Kaneis\" (2004) and \"Ana...Genisis\" (2005) shipped 40 thousand copies each.  \"Nihtes... Magikes\" (2007) and \"Mnimes\" (2008) sold 30 thousand copies each, while the EP \"Kinonia Ora 07:00\" sold 15 thousand copies.  He then embarked on the \"Matomeno Dakry\" album trilogy (2009–2011).  He has sold over 5 million records in Greece alone and in addition to these he has sold over 900 thousand copies of his albums as newspaper covermounts. Sfakianakis is also known for his controversial image and outspoken manner and opinions.\n\nWilliam Hawkins (songwriter and poet): William Alfred Hawkins (May 20, 1940 – July 4, 2016) was a Canadian songwriter, poet, musician and journalist, most notable for his contributions in the 1960s to Canadian folk rock music and to Canadian poetry.  His best known song is \"Gnostic Serenade\", originally recorded by 3's a Crowd.\n\nIn a Different Light (Doug Stone album): In a Different Light is the tenth studio album released by American country music artist Doug Stone.  It was his first album for Lofton Creek Records.  Two re-recordings of his older songs are included here: \"In a Different Light\" (originally on his 1990 album \"Doug Stone\") and \"Why Didn't I Think of That\" (originally on his 1992 album \"From the Heart\").  Also included are four covers: \"Georgia on My Mind\" (the official state song for the state of Georgia), and \"Only You (And You Alone)\" (originally recorded by The Platters).  and Crazy Love (originally recorded by Van Morrison) and tell it like it is (originally recorded by Aaron Neville)\n\nThe Trouble with the Truth (album): The Trouble with the Truth is the eighth album by country music artist Patty Loveless.  It peaked at number 10 on the Billboard Top Country albums charts, and number 86 on the Pop charts.  It was certified Platinum for shipments of over 1,000,000 copies in the U.S.  The singles \"Lonely Too Long\" and \"You Can Feel Bad\" both made number 1 on the Hot Country Songs charts; \"She Drew a Broken Heart\" hit number 4.  \"A Thousand Times a Day\" and the Title Track both made Top 20 hitting number 13 and 15 respectively.\n\nGeorge Jones: George Glenn Jones (September 12, 1931 – April 26, 2013) was an American musician, singer and songwriter.  He achieved international fame for his long list of hit records, including his best known song \"He Stopped Loving Her Today\", as well as his distinctive voice and phrasing.  For the last twenty years of his life, Jones was frequently referred to as the greatest living country singer.  Country music scholar Bill C. Malone writes, \"For the two or three minutes consumed by a song, Jones immerses himself so completely in its lyrics, and in the mood it conveys, that the listener can scarcely avoid becoming similarly involved.\"  Waylon Jennings expressed a similar opinion in his song \"It's Alright\": \"If we all could sound like we wanted to, we'd all sound like George Jones.\"  The shape of his nose and facial features earned Jones the nickname \"The Possum.\"\n\nRadoslav Pavlović: Radoslav (Lale) Pavlović (Serbian: Радослав Павловић , born in Aleksandrovac, Serbia, 8 September 1954) is a Serbian writer.  Pavlovic authored numerous theatre plays and film/TV scripts popular with the audience and acclaimed by the critics.  He is best known for his theatre plays Šovinistička farsa, performed more than a thousand times across ex-Yugoslavia, \"Mala\", and \"Moja Draga\" performed for hundreds of times in Belgrade theaters, as well as movies Balkan Rules (1997), Living like the rest of us (1983), Hajde da se volimo 3 (1990) featuring ex-Yugoslavia mega-star Lepa Brena, and TV series Moj Rodjak sa Sela (2008) scoring record viewership of over 3 million viewers per episode.\n\nKo Eun-mi: Ko Eun-mi (born Ahn Eun-mi on July 7, 1976) is a South Korean actress.  She made her entertainment debut in 1995 as a singer in the band T.Ra.V (stands for \"TV+Radio+Video\"), which released one album \"Hey!  Henter\" before disbanding.  Ko was then cast in the 1996 sitcom \"Three Guys and Three Girls\", and has been acting full-time since 2001.  She is best known for her roles in the television dramas \"Even So Love\", \"Loving You a Thousand Times\" and \"Dangerous Women\".",
+    "question": "What is the best known song of the artist who originally recorded the song \"A Thousand Times a Day\"?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "song_title": {
+          "type": "string",
+          "description": "The title of the song in question."
+        },
+        "original_recording_artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the artist who originally recorded the song."
+            },
+            "best_known_song": {
+              "type": "string",
+              "description": "The best known song of the original recording artist."
+            }
+          },
+          "required": [
+            "name",
+            "best_known_song"
+          ],
+          "additionalProperties": false
+        },
+        "original_album": {
+          "type": "string",
+          "description": "The album on which the song was originally recorded."
+        }
+      },
+      "required": [
+        "song_title",
+        "original_recording_artist",
+        "original_album"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "song_title": "A Thousand Times a Day",
+      "original_recording_artist": {
+        "name": "George Jones",
+        "best_known_song": "He Stopped Loving Her Today"
+      },
+      "original_album": "High-Tech Redneck"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "record_id": "2b87af24ddbddb05c34bffdfd1987cdc0b6bceeea6f1b9563431e6725788174a",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac144c55542994ab5c67cd1",
+    "source_dataset": "hotpotqa",
+    "source_answer": "film director",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Paris Honeymoon: Paris Honeymoon is a 1939 American musical film directed by Frank Tuttle and written by Frank Butler and Don Hartman.  The film stars Bing Crosby, Franciska Gaal, Akim Tamiroff, Shirley Ross, Edward Everett Horton and Ben Blue.  Filming took place in Hollywood from May 23 to July 1938 and the film was released on January 27, 1939 by Paramount Pictures.\n\nHostages (1943 film): Hostages is a war film produced by Paramount Pictures and released in 1943.  It was directed by Frank Tuttle from a script by Frank Butler and Lester Cole based on the 1942 novel of the same name by Stefan Heym.  The film stars Luise Rainer, Arturo de Cordova, William Bendix and Paul Lukas and features Katina Paxinou and Oskar Homolka.\n\nSomething Always Happens (1928 film): Something Always Happens is a 1928 American comedy silent film directed by Frank Tuttle and written by Raymond Cannon, Herman J. Mankiewicz, Florence Ryerson and Frank Tuttle.  The film stars Esther Ralston, Neil Hamilton, Sôjin Kamiyama, Charles Sellon, Roscoe Karns, Lawrence Grant and Mischa Auer.  The film was released on March 24, 1928, by Paramount Pictures.\n\nVarsity (film): Varsity is a lost 1928 American comedy silent film directed by Frank Tuttle and written by Howard Estabrook, George Marion Jr. and Wells Root.  The film stars Charles 'Buddy' Rogers, Mary Brian, Chester Conklin, Phillips Holmes, Robert Ellis and John Westwood.  The film was released on October 27, 1928, by Paramount Pictures.\n\nFrank Tuttle: Frank Wright Tuttle (August 6, 1892 – January 6, 1963) was a Hollywood film director and writer who directed films from 1922 (\"The Cradle Buster\") to 1959 (\"Island of Lost Women\").\n\nEasy Come, Easy Go (1928 film): Easy Come, Easy Go is a 1928 American comedy silent film directed by Frank Tuttle and written by Owen Davis, George Marion Jr. and Florence Ryerson.  The film stars Richard Dix, Nancy Carroll, Charles Sellon, Frank Currier, Arnold Kent and Christian J. Frank.  The film was released on April 21, 1928, by Paramount Pictures.\n\nThe Kentuckians: The Kentuckians is a lost 1921 American silent drama film directed by Charles Maigne and written by Frank Tuttle based upon the novel of the same name by John Fox, Jr..  The film stars Monte Blue, Wilfred Lytell, Diana Allen, Francis Joyner, J.H. Gilmour, John Miltern, and Thomas S. Brown.  The film was released on February 20, 1921, by Paramount Pictures.\n\nThe Studio Murder Mystery: The Studio Murder Mystery is a 1929 American mystery film directed by Frank Tuttle and written by Ethel Doherty, A. Channing Edington, Carmen Ballen Edington, Joseph L. Mankiewicz and Frank Tuttle.  The film stars Neil Hamilton, Doris Hill, Warner Oland, Fredric March, Chester Conklin, Florence Eldridge and Guy Oliver.  The film was released on June 1, 1929, by Paramount Pictures.\n\nJohn English (director): John Wilkinson English (25 June 1903 – 11 October 1969) was a British film editor and film director.  He is most famous for the film serials he co-directed with William Witney for Republic Pictures such as \"Zorro's Fighting Legion\" and \"Drums of Fu Manchu\".\n\nDon Juan Quilligan: Don Juan Quilligan is a 1945 American comedy film directed by Frank Tuttle and written by Frank Gabrielson and Arthur Kober.  The film stars William Bendix, Joan Blondell, Phil Silvers, Anne Revere, B.S. Pully and Mary Treen.  The film was released on June 1, 1945, by 20th Century Fox.",
+    "question": "Frank Tuttle and John English, have which mutual occupation?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_a": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "occupations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "name",
+            "occupations"
+          ],
+          "additionalProperties": false
+        },
+        "person_b": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "occupations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "name",
+            "occupations"
+          ],
+          "additionalProperties": false
+        },
+        "mutual_occupations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "number_of_mutual_occupations": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "person_a",
+        "person_b",
+        "mutual_occupations",
+        "number_of_mutual_occupations"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_a": {
+        "name": "Frank Tuttle",
+        "occupations": [
+          "film director",
+          "writer"
+        ]
+      },
+      "person_b": {
+        "name": "John English",
+        "occupations": [
+          "film editor",
+          "film director"
+        ]
+      },
+      "mutual_occupations": [
+        "film director"
+      ],
+      "number_of_mutual_occupations": 1
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

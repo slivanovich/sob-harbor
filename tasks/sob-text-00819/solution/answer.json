@@ -1,0 +1,14 @@
+{
+  "game_comparison": {
+    "game_a": {
+      "name": "Space Hulk",
+      "release_year": 1989
+    },
+    "game_b": {
+      "name": "Torres",
+      "release_year": 1999
+    }
+  },
+  "first_released_game_name": "Space Hulk",
+  "comparison_result": "Space Hulk was released in 1989, while Torres was released in 1999, making Space Hulk the earlier release."
+}

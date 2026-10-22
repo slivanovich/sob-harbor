@@ -1,0 +1,18 @@
+{
+  "artist_name": "Morrisson Kaye",
+  "music_genre": "house music",
+  "subgenre_details": {
+    "name": "Deep house",
+    "origin_decade": "1980s",
+    "fused_elements": [
+      "Chicago house",
+      "1980s jazz-funk",
+      "soul music"
+    ]
+  },
+  "release_context": {
+    "release_type": "earliest official releases",
+    "producer_dj": "Julius Papp",
+    "label": "NeoDisco"
+  }
+}

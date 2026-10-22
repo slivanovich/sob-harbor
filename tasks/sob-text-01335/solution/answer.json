@@ -1,0 +1,16 @@
+{
+  "common_destination": "space",
+  "traveler_details": [
+    {
+      "name": "Franco Malerba",
+      "nationality": "Italian",
+      "first_from_country_to_space": true
+    },
+    {
+      "name": "Bertalan Farkas",
+      "nationality": "Hungarian",
+      "first_from_country_to_space": true
+    }
+  ],
+  "number_of_travelers": 2
+}

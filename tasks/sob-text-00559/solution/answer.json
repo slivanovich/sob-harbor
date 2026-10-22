@@ -1,0 +1,13 @@
+{
+  "company_name": "Advitha Creative Studios",
+  "owner_name": "Nandamuri Kalyan Ram",
+  "service_provided": "special effects",
+  "film_details": {
+    "title": "Legend",
+    "release_year": 2015,
+    "genre": "crime thriller",
+    "origin": "French-British",
+    "writer": "Brian Helgeland",
+    "director": "Brian Helgeland"
+  }
+}

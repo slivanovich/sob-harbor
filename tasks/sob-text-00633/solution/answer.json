@@ -1,0 +1,19 @@
+{
+  "presenter_name": "Nick Owen",
+  "birth_year": 1947,
+  "midlands_today_involvement": {
+    "is_host": true,
+    "start_year": 1997
+  },
+  "tv_am_involvement": {
+    "is_host": true
+  },
+  "other_significant_roles": [
+    {
+      "role": "Chairman",
+      "organization": "Luton Town Football Club",
+      "start_year": 2008,
+      "end_year": 2017
+    }
+  ]
+}

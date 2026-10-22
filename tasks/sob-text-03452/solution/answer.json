@@ -1,0 +1,20 @@
+{
+  "trial_details": {
+    "trial_name": "The Scopes Trial",
+    "trial_date": "July 1925",
+    "location": "Dayton, Tennessee",
+    "act_violated": "Tennessee's Butler Act",
+    "violation_description": "made it unlawful to teach human evolution in any state-funded school"
+  },
+  "accused_teacher": {
+    "name": "John T. Scopes",
+    "role": "substitute high school teacher"
+  },
+  "key_figure_rappleyea": {
+    "name": "George Washington Rappleyea",
+    "role_in_trial": "chief architect of the Scopes Trial",
+    "profession": "American metallurgical engineer",
+    "company_managed": "Cumberland Coal and Iron Company",
+    "location": "Dayton, Tennessee"
+  }
+}

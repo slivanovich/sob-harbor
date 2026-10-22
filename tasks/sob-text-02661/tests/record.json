@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "0f7fcab3554a075b7ae561e8a76ab66dcc55cd5a2b86de8cc147f37ee3617c2b",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7e17945542991319bc942b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Olaf",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Disney's Beauty and the Beast (SNES video game): Disney's Beauty and the Beast is an action platformer for the SNES.  It was developed by Probe Entertainment and published by Hudson Soft in North America on July 1, 1994 and Europe on February 23, 1995, respectively.  The game was published by Virgin Interactive in Japan on July 8, 1994.  The entire game is played through the perspective of the Beast.  As the Beast, the player must get Belle to fall in love so that the curse cast upon him and his castle will be broken, she will marry him and become a princess.  The final boss of the game is Gaston, a hunter who will try to steal Belle from the \"Beast\".  There is even a snowball fight scene in the middle of the game and cutscenes between stages that tells the story of \"Beauty and the Beast\".\n\nJesse Corti: Jesse Corti (born July 3, 1955) is a Venezuelan American actor and voice actor.  He is best known for voicing Le Fou in \"Beauty and the Beast\" and playing Courfeyrac in the original Broadway show \"Les Misérables\".  He also voiced the Spanish Dignitary in \"Frozen\" and Mr. Manchas in \"Zootopia\".  He has appeared in numerous feature films, and in several popular TV series such as \"24\", \"Heroes\", \"Desperate Housewives\", \"The West Wing\", \"Judging Amy\", \"Law & Order\" and many more.  In 1990, he received a Clio Award for his Drug Free America commercial.\n\nBelle (Disney song): \"Belle\" is a song written by composer Alan Menken and lyricist Howard Ashman for Walt Disney Pictures' 30th animated feature film \"Beauty and the Beast\" (1991).  Originally recorded by American actress and singer Paige O'Hara and American actor Richard White, \"Belle\", a mid-tempo French and classical music-inspired song, incorporates both Broadway and musical theatre elements.  The film's first song and opening number, \"Belle\" appears during \"Beauty and the Beast \"as a large scale operetta-style production number that introduces the film's heroine Belle, considered a book-loving nonconformist by the townspeople of the village, who has grown weary of the provincial life in which she is supposed to live, and Gaston, the film's narcissistic villain who wishes to desire her hand in marriage despite Belle's rejections.\n\nBeastly: Beastly is a 2007 novel by Alex Flinn.  It is a retelling of the fairytale \"Beauty and the Beast\" set in modern-day New York City from the view of the beast.  Flinn researched many versions of the \"Beauty and the Beast\" story to write her book.  Many of these are playfully alluded to in portions of the book, particularly the chat room transcripts in which the character of Kyle talks to other teens who have been transformed into creatures.\n\nGaston (Disney): Gaston is a fictional character who appears in Walt Disney Pictures' 30th animated feature film \"Beauty and the Beast\" (1991).  Voiced by American actor and singer Richard White, Gaston is an arrogant hunter whose unrequited feelings for the intellectual Belle drive him to murder his adversary, the Beast, once he realizes she cares for him instead.  Gaston serves as a foil personality to the Beast, who was once as vain as Gaston prior to his transformation.\n\nBeauty and the Beast (2017 film): Beauty and the Beast is a 2017 American musical romantic fantasy film directed by Bill Condon from a screenplay written by Stephen Chbosky and Evan Spiliotopoulos, and co-produced by Walt Disney Pictures and Mandeville Films.  The film is based on Disney's 1991 animated film of the same name, itself an adaptation of Jeanne-Marie Leprince de Beaumont's eighteenth-century fairy tale.  The film features an ensemble cast that includes Emma Watson and Dan Stevens as the titular characters with Luke Evans, Kevin Kline, Josh Gad, Ewan McGregor, Stanley Tucci, Audra McDonald, Gugu Mbatha-Raw, Ian McKellen, and Emma Thompson in supporting roles.\n\nBeauty and the Beast (Disney song): \"Beauty and the Beast\" is a song written by lyricist Howard Ashman and composer Alan Menken for the Disney animated feature film \"Beauty and the Beast\" (1991).  The film's theme song, the Broadway-inspired ballad was first recorded by British-American actress Angela Lansbury in her role as the voice of the character Mrs. Potts, and essentially describes the relationship between its two main characters Belle and the Beast, specifically how the couple has learned to accept their differences and in turn change each other for the better.  Additionally, the song's lyrics imply that the feeling of love is as timeless and ageless as a \"tale as old as time\".  Lansbury's rendition is heard during the famous ballroom sequence between Belle and the Beast, while a shorted chorale version plays in the closing scenes of the film, and the song's motif features frequently in other pieces of Menken's film score.  \"Beauty and the Beast\" was subsequently recorded as a pop duet by Canadian singer Celine Dion and American singer Peabo Bryson, and released as the only single from the film's soundtrack on November 25, 1991.\n\nJosh Gad: Joshua Ilan Gad (born February 23, 1981) is an American actor, voice actor, comedian and singer.  He is known for voicing Olaf in \"Frozen\" and playing Elder Arnold Cunningham in the Broadway musical \"The Book of Mormon\".\n\nBeast (Disney): The Beast is a fictional character who appears in Walt Disney Animation Studios' 30th animated feature film \"Beauty and the Beast\" (1991).  He also appears in the film's two direct-to-video followups \"\" and \"Belle's Magical World\".  Based on the hero of the French fairy tale by Jeanne-Marie Leprince de Beaumont, the Beast was created by screenwriter Linda Woolverton and animated by Glen Keane.\n\nBelle (Disney): Belle is a fictional character who appears in Walt Disney Pictures' 30th animated feature film \"Beauty and the Beast\" (1991).  Originally voiced by American actress and singer Paige O'Hara, Belle is the non-conforming daughter of an inventor.  Belle yearns to abandon her predictable village life in return for adventure.  When her father Maurice is imprisoned by a cold-hearted beast, Belle offers him her own freedom in exchange for her father's, and eventually learns to love the Beast despite his unsightly outward appearance.",
+    "question": "Beauty and the Beast featured an actor who played what character in \"Frozen?\"",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor who was in a Beauty and the Beast production and also played a character in Frozen."
+        },
+        "beauty_and_the_beast_involvement": {
+          "type": "object",
+          "properties": {
+            "production_title": {
+              "type": "string",
+              "description": "The title of the Beauty and the Beast production the actor was involved in."
+            },
+            "role_description": {
+              "type": "string",
+              "description": "A description of the actor's role in the Beauty and the Beast production."
+            }
+          },
+          "required": [
+            "production_title",
+            "role_description"
+          ],
+          "additionalProperties": false
+        },
+        "frozen_character_played": {
+          "type": "string",
+          "description": "The name of the character the actor played in the film Frozen."
+        }
+      },
+      "required": [
+        "actor_name",
+        "beauty_and_the_beast_involvement",
+        "frozen_character_played"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Josh Gad",
+      "beauty_and_the_beast_involvement": {
+        "production_title": "Beauty and the Beast (2017 film)",
+        "role_description": "supporting role"
+      },
+      "frozen_character_played": "Olaf"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

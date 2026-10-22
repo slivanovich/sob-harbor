@@ -1,0 +1,13 @@
+{
+  "song_details": {
+    "title": "Cool Kids",
+    "peak_position": 13
+  },
+  "chart_details": {
+    "name": "Billboard Hot 100",
+    "country": "United States",
+    "is_industry_standard": true,
+    "chart_scope": "singles"
+  },
+  "final_answer_chart_name": "Billboard Hot 100"
+}

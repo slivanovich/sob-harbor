@@ -1,0 +1,27 @@
+{
+  "movie_details": {
+    "title": "Winchester '73",
+    "release_year": 1950
+  },
+  "identified_actor": {
+    "name": "James Best",
+    "career_span_decades": 7,
+    "professions": [
+      "television actor",
+      "film actor",
+      "character actor",
+      "voice actor",
+      "stage actor",
+      "writer",
+      "director",
+      "acting coach",
+      "artist",
+      "college professor",
+      "musician"
+    ]
+  },
+  "other_early_performance_actors": [
+    "Rock Hudson",
+    "Tony Curtis"
+  ]
+}

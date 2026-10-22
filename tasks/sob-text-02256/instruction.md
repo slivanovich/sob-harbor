@@ -1,0 +1,131 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Te Amo (Rihanna song): "Te Amo" (English: "I Love You") is a song by Barbadian recording artist Rihanna from her fourth studio album, "Rated R" (2009).  The electro-Latin song was written by Mikkel S. Eriksen, Tor Erik Hermansen, James Fauntleroy II and Rihanna, with production helmed by Eriksen and Hermansen under their production name, Stargate.  "Te Amo" impacted radio in Canada on June 7, 2010, and was released via digital download on June 8, 2010, in Australia, Italy and New Zealand, as the album's third international and fifth overall single.  "Te Amo" incorporates elements of Latin American music and conveys Rihanna's struggles as the object of another woman's desires.
+
+Take You There (Sean Kingston song): "Take You There" is the third single by Sean Kingston from his self-titled debut album.  It was produced by JR Rotem.  The song was co-written by Jonathan "J.R." Rotem, Kingston, Evan "Kidd" Bogart, Rock City, and Eric Bluebaum.  The song is about Kingston taking his girlfriend on a date to the West Indies, particularly his native Jamaica.  As he told noted UK urban writer Pete Lewis of Blues & Soul in June 2007: "In 'Take You There' I'm basically telling a girl 'Let me take you to where I'm from - to Jamaica, to the paradise and to the slums!' .  Because, while many people just think of the tropical beaches, there is definitely another, rugged side to the island too!"
+
+Me Love: "Me Love" is the second single by Sean Kingston from his debut album "Sean Kingston".  It is produced by J.R. Rotem and samples Led Zeppelin's song "D'yer Mak'er" from their 1973 album "Houses of the Holy".
+
+There's Nothin: "There's Nothin" is the fourth single from Sean Kingston's self-titled debut album.  The single features Élan of The D.E.Y. and Juelz Santana.  The album version features Paula DeAnda.  The song was produced by J.R. Rotem and co-written by Sean Kingston and Evan "Kidd" Bogart.
+
+Dumb Love: "Dumb Love" is a song by American recording artist Sean Kingston.  The song was originally released as the third single from Kingston's third studio album, "Back 2 Life", but was taken off for unknown reasons.  It was released on September 7, 2010 as a digital download in the United States.  It has peaked at number 84 on the "Billboard" Hot 100 and 92 on the Canadian Hot 100.  The song rose to popularity due to Sean's appearance and performance of the song on The Suite Life on Deck. The song was written by Ari Levine, Philip Lawrence, Bruno Mars, Steven Battey and Carlos Battey, and the song's chorus interpolates elements from "Come Go With Me" (1957) by The Del-Vikings, as written by Clarence Quick.
+
+Eenie Meenie: "Eenie Meenie" is a song by American singer Sean Kingston and Canadian singer Justin Bieber.  The song was written by Kingston, Bieber, Carlos Battey, Steven Battey, Benny Blanco, Marcos Palacios and Ernest Clark, and was produced by Blanco.  It was originally released as the first single from Kingston's third studio album "Back 2 Life" on March 23, 2010, but was taken off for unknown reasons.  However, it is included on Bieber's "My World 2.0".  The song, a dance-pop number with Kingston's reggae influences and Bieber's R&B vocals, is lyrically about an indecisive lover.
+
+Sean Kingston (album): Sean Kingston is the eponymous debut album by Sean Kingston, released on July 31, 2007.  The album was produced by J. R. Rotem.  Sean Kingston wrote the lyrics with help from Evan Bogart.  Kingston has claimed his lyrics are totally representative of his personal life.  Ranging from the self-deprecating-schoolboy tale of lost love in the album's global chart-topping single "Beautiful Girls" to the much deeper "Dry Your Eyes", where he visits the hardship of watching his mother and sister being sent to prison when he was just 15 years old.
+
+Letting Go (Dutty Love): "Letting Go (Dutty Love)" is a song by American recording artist Sean Kingston.  It was produced by Stargate, and features Trinidadian recording artist Nicki Minaj.  The song was originally released as the second single from Kingston's third studio album, "Back 2 Life", but was taken off for unknown reasons.  The song samples Rihanna's "Te Amo" which was also produced by the same production team, Stargate.  As of December 2014, the song has sold 1.1 million copies in the United States.
+
+Meital Dohan: Meital Dohan (Hebrew: מיטל דוהן‎ ‎ ; born 24 August 1979) is an Israeli award-winning actress in theater, film, and television; including two Israeli Oscar nominations and an Israeli Tony Award.  In Israel she was part of major productions such as, "Dancing with the Stars", "Ugly Betty", "Romeo and Juliet", and many more.  US audiences were first introduced to Meital as Yael Hoffman on Showtime series "Weeds", and as Aurora in the Sony Pictures web-comedy "Woke Up Dead". , co-starring Jon Heder and Wayne Knight.  Meital also stars in "Foreclosure" with Michael Imperioli and Wendell Pierce and thriller "Monogamy", (Oscilloscope), co-starring Chris Messina and Rashida Jones, won the Best Narrative Feature at the Tribeca Film Festival.  In early 2012 she caught the attention of hip-hop producer Che Pope (Lauryn Hill, Eminem, Dr. Dre) and they began to record her debut album "I'm In Hate With Love".  The international attention she received for her first single "Yummy" (Rami Afuni LMFAO) and the viral video led media outlets like MTV Buzzworthy, AOL, Artist Direct, Maxim, Yahoo and others to declare Meital as "the next triple threat".  MTV Buzzworthy said, "She's also a comedian and a singer.  And she's pretty.  Why do some people get all the gifts?"  The song played on radio stations and in clubs around the world, trending No. 1 at Reverb Nation globally.  Her next single,"On Ya" featuring Sean Kingston, charted No. 5 on the UK Club Pop Charts and No. 31 on the Billboard Club Chart.  Following the immediately successful collaboration with Sean Kingston on the hit single "On Ya," "Extra TV", and "Fox News", Chart Show in UK, MTV UK, and German Pro Seiben TV have all been raving.  Both songs have been remixed by top DJs all over the world such as R3hab, Sidney Samson, Dave Aude, Danny Verde, DJ Reflex, DJ Skee, and others...
+
+That's Gangsta: "That's Gangsta" is the first single from the Bun B album "II Trill".  It features Sean Kingston and is produced by J.R. Rotem.  The single peaked at #45 on the U.S. "Billboard" Hot R&B/Hip-Hop Songs chart.  The video is released on MTV2's Unleashed on April 21, 2008.  The video features cameos from Young Buck, Middle Fingaz, P$C, J Prince, LeBron James, Chamillionaire and Slim Thug.  There were also UGK Records artists Young T.O.E., XVII, B-Do and Big Bubb.  Sean Kingston didn't appear in the music video.
+
+Question: Which song, released in June of 2010, was sampled by a single that Sean Kingston recorded?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "sampled_song": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the song that was sampled."
+        },
+        "artist": {
+          "type": "string",
+          "description": "The artist of the sampled song."
+        },
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The release date of the sampled song in YYYY-MM-DD format."
+        },
+        "album": {
+          "type": "string",
+          "description": "The album from which the sampled song originates."
+        },
+        "producers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The producers of the sampled song."
+        }
+      },
+      "required": [
+        "title",
+        "artist",
+        "release_date",
+        "album",
+        "producers"
+      ],
+      "additionalProperties": false
+    },
+    "sampling_song_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the song that sampled another song."
+        },
+        "artist": {
+          "type": "string",
+          "description": "The main artist of the sampling song."
+        },
+        "featured_artist": {
+          "type": "string",
+          "description": "Any featured artist on the sampling song."
+        },
+        "producer": {
+          "type": "string",
+          "description": "The producer of the sampling song."
+        },
+        "original_album": {
+          "type": "string",
+          "description": "The original album the sampling song was intended for."
+        },
+        "album_status": {
+          "type": "string",
+          "description": "The status of the sampling song regarding its album inclusion (e.g., 'taken off for unknown reasons')."
+        },
+        "us_sales_copies": {
+          "type": "integer",
+          "description": "The number of copies sold in the United States for the sampling song."
+        }
+      },
+      "required": [
+        "title",
+        "artist",
+        "featured_artist",
+        "producer",
+        "original_album",
+        "album_status",
+        "us_sales_copies"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer_song_title": {
+      "type": "string",
+      "description": "The title of the song that directly answers the question."
+    }
+  },
+  "required": [
+    "sampled_song",
+    "sampling_song_details",
+    "final_answer_song_title"
+  ],
+  "additionalProperties": false
+}

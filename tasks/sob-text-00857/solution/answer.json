@@ -1,0 +1,15 @@
+{
+  "event_type": "dual meet",
+  "participating_teams": [
+    {
+      "team_name": "Ohio Bobcats",
+      "university_name": "Ohio University"
+    },
+    {
+      "team_name": "Youngstown State University Penguins",
+      "university_name": "Youngstown State University"
+    }
+  ],
+  "location": "Ohio University's Aquatic Center",
+  "opening_date_of_location": "January 27, 1984"
+}

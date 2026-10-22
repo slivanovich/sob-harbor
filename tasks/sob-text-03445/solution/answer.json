@@ -1,0 +1,15 @@
+{
+  "tv_special_title": "Victoria and Shane Grow Their Own",
+  "original_air_date": "Tuesday 8 December 2009",
+  "main_participant": {
+    "name": "Victoria Mary Clarke",
+    "is_author_of_angel_in_disguise": true,
+    "authored_works": [
+      "Angel in Disguise?"
+    ]
+  },
+  "other_participant": {
+    "name": "Shane MacGowan",
+    "role_in_special": "star"
+  }
+}

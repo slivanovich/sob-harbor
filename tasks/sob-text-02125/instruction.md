@@ -1,0 +1,96 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Defensive coordinator: A defensive coordinator is a member of the coaching staff of a gridiron football team who is in charge of the defense.  Generally, along with the offensive coordinator, he represents the second level of command structure after the head coach.  The defensive coordinator is generally in charge of managing all defensive players and assistant coaches, of developing a general defensive game plan, and of calling the plays for the defense during the game.  At higher levels of football (college and professional), the defensive coordinator typically has a number of assistant coaches working under him who are responsible for the various defensive positions on the team (such as defensive line, linebackers, or defensive backs).  You can look to the links under references for some of the best defensive coordinators in history according to Bleacher report.  John Chavis (American football) and Jeremy Pruitt are among two of the great college defensive coordinators in recent history.  There are Also many NFL greats that can be found in the references.  People like Wade Phillips and Vic Fangio are among the NFL greats at defensive coordinator.  Determining how good a defensive coordinator is has to do with a number of things such as defensive statistics, the type of attitude their players took to the field and also what other coaches and players had to say about them.
+
+Arkansas State Red Wolves baseball: The Arkansas State Red Wolves baseball team (formerly the Arkansas State Indians) is a varsity intercollegiate athletic team of Arkansas State University in Jonesboro, Arkansas, United States.  The team is a member of the Sun Belt Conference, which is part of the National Collegiate Athletic Association's Division I.  Arkansas State's first baseball team was fielded in 1925.  The team plays its home games at Tomlinson Stadium–Kell Field in Jonesboro, Arkansas.  The Red Wolves are coached by Tommy Raffo.
+
+Iona Gaels baseball: The Iona Gaels baseball team is a varsity intercollegiate athletic team of Iona College in New Rochelle, New York, United States.  The team is a member of the Metro Atlantic Athletic Conference, which is part of the National Collegiate Athletic Association's Division I.  The team plays its home games at City Park in New Rochelle, New York.  The Gaels are coached by Pat Carey.  Assisted by Matt Perper (Hitting Coach) and Sean McGrath (Pitching Coach/ Recruiting Coordinator).  The Volunteer Assistant Coach is George Schaefer.
+
+Ruffin McNeill: Ruffin Horne McNeill Jr. (born October 8, 1958) is an American football coach and former player.  He is currently the assistant head coach and defensive tackles coach at the University of Oklahoma.  He was previously the assistant head coach and defensive line coach at the University of Virginia.  McNeill also served as the head coach of the East Carolina Pirates from 2010 to 2015.  Before being named head coach of the Pirates, McNeill served the Texas Tech Red Raiders as an interim head coach, assistant head coach, special teams coordinator, and linebackers coach.  On December 28, 2009, he was named interim head coach of the Red Raiders following the suspension and later firing of head coach Mike Leach.  He served in the position until the hiring of Tommy Tuberville, who subsequently released him as defensive coordinator.
+
+Kent State Golden Flashes baseball: The Kent State Golden Flashes baseball team is a varsity intercollegiate athletic team of Kent State University in Kent, Ohio, United States.  The team competes at the Division I level of the National Collegiate Athletic Association (NCAA) as a member of the Mid-American Conference East division.  The head coach is retired Major League Baseball player Jeff Duncan, who was hired in June 2013.
+
+Kent State Golden Flashes football: The Kent State Golden Flashes football team is a varsity intercollegiate athletic team of Kent State University in Kent, Ohio.  The team is a member of the Mid-American Conference East division, which is part of the National Collegiate Athletic Association's Football Bowl Subdivision (formerly Division I-A).  The Golden Flashes played their first game in 1920 and since 1969 have played their home games at Dix Stadium.  The head coach since December 2012 is Paul Haynes, a Kent State alumnus who played for the Flashes from 1987 to 1991.
+
+Sacred Heart Pioneers baseball: The Sacred Heart Pioneers baseball team is a varsity intercollegiate athletic team of Sacred Heart University in Fairfield, Connecticut, United States.  The team is a member of the Northeast Conference, which is part of the National Collegiate Athletic Association's Division I.  Sacred Heart's first baseball team was fielded in 1966.  The team plays its home games at the Ballpark at Harbor Yard in Fairfield, which opened in 1998 and seats 5,300.  The Pioneers are coached by Nick Restaino, who will lead his first season as head coach in 2018.  Former head coach Nick Giaquinto retired following the 2017 season.
+
+Paul Haynes (American football): Paul Jeffrey Haynes III (born July 11, 1969) is an American college football coach and former player.  He is currently the head football coach at Kent State University, a position he has held since December 2012.  Haynes previously served as an assistant coach at the high school, collegiate and professional levels for 20 years, including stints as defensive coordinator at Ohio State University and the University of Arkansas.  Prior to his coaching career, he was a four-year letterman as a defensive back at Kent State between 1987 and 1991.
+
+Keith Burns (American football coach): Melvin Keith Burns (born September 26, 1960) is an American football coach.  He served as head football coach at the University of Tulsa from 2000 to 2002, compiling an overall college football record of seven wins and 28 losses.  Burns has also been the defensive coordinator at Pacific, USC, University of Arkansas and San Jose State.  While at Arkansas in 1998, Burns was a finalist for the Broyles Award, given annually to the nation's top college football assistant coach.  He was also an assistant special teams coach for the Oakland Raiders of the National Football League (NFL).  After serving as assistant head coach and defensive coordinator for Archbishop Mitty High School in San Jose, Burns was promoted to head coach effective for 2015.
+
+Don Brown (American football coach): Don Brown (born July 31, 1955) is an American college football coach and former player.  He is currently the defensive coordinator at University of Michigan, a position he has held since December 2015.  Previously, he served as defensive coordinator Boston College and at the University of Connecticut and as the head football coach at Plymouth State University (1993–1995), Northeastern University (2000–2003), and the University of Massachusetts Amherst (2004–2008), compiling a career college football record of 95–45.  Brown was also the interim head baseball coach at Yale University in 1992, tallying a mark of 26–10.  on December 20th, 2015, he was hired as defensive coordinator at the University of Michigan.
+
+Question: At which University will you find a varsity intercollegiate athletic team known as the Flashes who played their first game in 1920 and whose head coach Paul Haynes since December 2012 has been assistant coach and a former player with stints as defensive coordinator at the University of Arkansas? 
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "university_name": {
+      "type": "string",
+      "description": "The name of the university."
+    },
+    "team_name": {
+      "type": "string",
+      "description": "The full name of the athletic team."
+    },
+    "sport": {
+      "type": "string",
+      "description": "The sport played by the team."
+    },
+    "first_game_year": {
+      "type": "integer",
+      "description": "The year the team played its first game."
+    },
+    "head_coach": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the head coach."
+        },
+        "hired_date": {
+          "type": "string",
+          "description": "The date the head coach was hired."
+        },
+        "former_player_at_university": {
+          "type": "boolean",
+          "description": "Indicates if the head coach was a former player at the same university."
+        },
+        "defensive_coordinator_stints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of universities where the coach served as defensive coordinator."
+        }
+      },
+      "required": [
+        "name",
+        "hired_date",
+        "former_player_at_university",
+        "defensive_coordinator_stints"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "university_name",
+    "team_name",
+    "sport",
+    "first_game_year",
+    "head_coach"
+  ],
+  "additionalProperties": false
+}

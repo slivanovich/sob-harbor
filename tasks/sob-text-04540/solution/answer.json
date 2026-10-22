@@ -1,0 +1,42 @@
+{
+  "transistor_name": "Point-contact transistor",
+  "development_details": {
+    "year": 1947,
+    "organization": "Bell Laboratories"
+  },
+  "developers": [
+    {
+      "name": "John Bardeen",
+      "nationality": "American",
+      "professions": [
+        "physicist",
+        "electrical engineer",
+        "research scientist"
+      ]
+    },
+    {
+      "name": "William Shockley",
+      "professions": [
+        "physicist",
+        "research scientist"
+      ]
+    },
+    {
+      "name": "Walter Brattain",
+      "nationality": "American",
+      "professions": [
+        "physicist",
+        "research scientist"
+      ]
+    }
+  ],
+  "primary_developer_matching_criteria": {
+    "name": "John Bardeen",
+    "matched_criteria": [
+      "American",
+      "physicist",
+      "electrical engineer",
+      "research scientist"
+    ]
+  }
+}

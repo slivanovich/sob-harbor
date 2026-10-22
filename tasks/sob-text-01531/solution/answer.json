@@ -1,0 +1,14 @@
+{
+  "composer_1": {
+    "name": "Pietro Mascagni",
+    "birth_date": "1863-12-07"
+  },
+  "composer_2": {
+    "name": "Giovanni Battista Pergolesi",
+    "birth_date": "1710-01-04"
+  },
+  "first_born_composer": {
+    "name": "Giovanni Battista Pergolesi",
+    "birth_date": "1710-01-04"
+  }
+}

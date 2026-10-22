@@ -1,0 +1,18 @@
+{
+  "event_name": "Battle of the Alamo",
+  "event_type": "battle",
+  "start_date": "1836-02-23",
+  "end_date": "1836-03-06",
+  "key_figures_involved": [
+    {
+      "name": "Damacio Jiménez",
+      "role": "soldier",
+      "served_under": "Juan Seguín"
+    },
+    {
+      "name": "Juan Seguín",
+      "role": "military figure"
+    }
+  ],
+  "historical_significance": "pivotal event in the Texas Revolution"
+}

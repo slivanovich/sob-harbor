@@ -1,0 +1,13 @@
+{
+  "election_details": {
+    "year": 1990,
+    "president_during_term": "George H. W. Bush",
+    "president_term_number": 41
+  },
+  "related_president": {
+    "name": "George W. Bush",
+    "presidency_number": 43,
+    "relationship_to_president_during_election": "son"
+  },
+  "final_answer_president_name": "George W. Bush"
+}

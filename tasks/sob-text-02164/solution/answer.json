@@ -1,0 +1,15 @@
+{
+  "question_asked": "Which is a condominium building, Central Park Place or World Trade Center?",
+  "condominium_building": {
+    "name": "Central Park Place",
+    "type": "condominium building",
+    "location": "New York City",
+    "stories": 56,
+    "completion_year": 1988,
+    "height_feet": 628
+  },
+  "other_building_mentioned": {
+    "name": "World Trade Center",
+    "description_from_context": "large complex of seven buildings"
+  }
+}

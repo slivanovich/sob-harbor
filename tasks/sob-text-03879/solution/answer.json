@@ -1,0 +1,19 @@
+{
+  "shared_street_name": "Steeles Avenue",
+  "malls_on_street": [
+    {
+      "mall_name": "Splendid China Mall",
+      "location_description": "southeast corner of Redlea Avenue and Steeles Avenue in the Scarborough district of Toronto, Ontario, Canada",
+      "city": "Toronto"
+    },
+    {
+      "mall_name": "Pacific Mall",
+      "location_description": "northeast side of Steeles Avenue and Kennedy Road, right across the municipal border from the city of Toronto, on the site formerly occupied by Cullen Country Barns",
+      "city": "Markham"
+    }
+  ],
+  "common_geographic_area": {
+    "province_state": "Ontario",
+    "country": "Canada"
+  }
+}

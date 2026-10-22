@@ -1,0 +1,16 @@
+{
+  "film_series_name": "The Twilight Saga",
+  "actress_info": {
+    "name": "Rachelle Lefevre",
+    "nationality": "Canadian",
+    "character_played": "Victoria Sutherland",
+    "number_of_films_appeared_in": 2
+  },
+  "series_details": {
+    "number_of_films": 5,
+    "genre": "romance fantasy",
+    "production_company": "Summit Entertainment",
+    "based_on_novels_by": "Stephenie Meyer",
+    "number_of_novels_adapted": 4
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "film_details": {
+    "title": "Ice Station Zebra",
+    "release_year": 1968,
+    "genres": [
+      "suspense",
+      "espionage",
+      "Cold War era"
+    ],
+    "screenplay_writers": [
+      "Alistair MacLean",
+      "Douglas Heyes",
+      "Harry Julian Fink",
+      "W. R. Burnett"
+    ]
+  },
+  "author_who_wrote_screenplay_and_used_pseudonym": {
+    "name": "Alistair MacLean",
+    "pseudonym_used": "Ian Stuart"
+  },
+  "director_of_film": {
+    "name": "John Sturges"
+  },
+  "final_answer": "John Sturges"
+}

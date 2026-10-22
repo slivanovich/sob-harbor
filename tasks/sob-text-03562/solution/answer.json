@@ -1,0 +1,14 @@
+{
+  "boxer": {
+    "name": "Curtis Woodhouse",
+    "nationality": "English",
+    "former_profession": "footballer"
+  },
+  "opponent": {
+    "name": "Dave Ryan"
+  },
+  "title_fought_for": {
+    "name": "BBBofC English light welterweight title",
+    "weight_class": "light welterweight"
+  }
+}

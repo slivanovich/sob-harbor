@@ -1,0 +1,93 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The SpongeBob Movie: Sponge Out of Water: The SpongeBob Movie: Sponge Out of Water is a 2015 American 3D live-action/animated comedy film based on the animated television series "SpongeBob SquarePants".  A stand-alone sequel to "The SpongeBob SquarePants Movie" (2004), it was directed by former series showrunner Paul Tibbitt in his directorial debut, with live-action sequences directed by Mike Mitchell.  It was the first film to be produced by Paramount Animation and second film in the "SpongeBob SquarePants" film series.  The film stars Antonio Banderas and features the show's regular voice cast, who returned to reprise their respective roles from the series and the previous film.  The plot follows a pirate called Burger-Beard, who steals the Krabby Patty secret formula using a magical book that makes any text written upon it come true.  SpongeBob and his friends must travel to the surface to confront Burger-Beard and get the formula back.
+
+SpongeBob SquarePants 4-D: SpongeBob SquarePants 4-D (also known as SpongeBob SquarePants 4-D Ride, SpongeBob SquarePants: The Ride or SpongeBob SquarePants 3-D) is a cel-shaded 4-D film based upon the popular television series "SpongeBob SquarePants".  It can be found at many aquariums and theme parks across the world.  The ride consists of a pre-show which then leads into a stadium seated auditorium.  The ride is in 4-D, meaning it is a motion simulator with a 3D movie.  The effects on the ride vary at different parks.  Water spray, bubbles, wind, leg ticklers, smoke, and smells are usually found.
+
+SpongeBob SquarePants (season 3): The third season of the American animated television series "SpongeBob SquarePants", created by Stephen Hillenburg, aired on Nickelodeon from October 5, 2001 to October 11, 2004, and consists of 20 episodes.  The series chronicles the exploits and adventures of the title character and his various friends in the fictional underwater city of Bikini Bottom.  The season was executive produced by series creator Hillenburg, who also acted as the showrunner.  Hillenburg halted production on the show to work on the 2004 film adaptation of the series, "The SpongeBob SquarePants Movie".  After production on the film, Hillenburg resigned from the show as its showrunner, and appointed staff writer Paul Tibbitt to overtake the position.  Season 3 was originally set to end the series after the release of the film, but the success prevented the series from ending, leading to a fourth season.
+
+Stephen Hillenburg: Stephen McDannell Hillenburg (born August21, 1961) is an American cartoonist, animator, and former marine biologist.  He is the creator of the television series "SpongeBob SquarePants" (1999), which he has also directed, produced, and written.  It has gone on the become one of the longest-running American television series as well as the highest-rated show ever to air on Nickelodeon.
+
+APM Music: APM Music (formerly Associated Production Music) is an American production music company headquartered in Hollywood, California.  APM Music's catalog contains over 500,000 tracks and includes more than 50 diverse libraries from around the world, including KPM Musichouse, Bruton, Sonoton, Cezame and Kosinus.  Music tracks from APM Music are used in hundreds of TV shows, films and commercials such as "Modern Family", "Game of Thrones", "House of Cards", "Transparent", "SpongeBob SquarePants", "The SpongeBob Squarepants Movie", "", "The Ren & Stimpy Show", "Ren & Stimpy "Adult Party Cartoon"", "Camp Lazlo", "The Mighty B", and "The Loud House".  Music tracks by APM Music have been used in video games such as "", "", "Tom Clancy's Ghost Recon Wildlands", and the entire series of "Saints Row" and .  NFL Films has a joint venture between the NFL and APM Music where music is composed for NFL-related media.  The APM catalog includes recordings dating back to 1900, music representing 192 countries, and well-known tracks like "Heavy Action" (aka The Theme to Monday Night Football) and "The Big One" (aka The Theme to The People's Court.)
+
+SpongeBob SquarePants (film series): SpongeBob SquarePants is an American animated/live-action comedy film series based on the Nickelodeon animated television program of the same name, created by Stephen Hillenburg.  It began in 2004 with the release of "The SpongeBob SquarePants Movie".  The series is distributed and owned by Paramount Pictures, a subsidiary of Nickelodeon's parent company Viacom.  All films feature the regular television voice cast: Tom Kenny, Clancy Brown, Rodger Bumpass, Bill Fagerbakke, Mr. Lawrence, Jill Talley, Carolyn Lawrence, Mary Jo Catlett and Lori Alan.  The first installment was directed by Hillenburg, and all subsequent films were directed by former showrunner Paul Tibbitt.
+
+List of SpongeBob SquarePants guest stars: In addition to the show's regular cast of voice actors, guest stars have been featured on "SpongeBob SquarePants", an American animated television series created by marine biologist and animator Stephen Hillenburg for Nickelodeon.  "SpongeBob SquarePants" chronicles the adventures and endeavors of the title character and his various friends in the fictional underwater city of Bikini Bottom.  Many of the ideas for the show originated in an unpublished, educational comic book titled "The Intertidal Zone", which Hillenburg created in the mid-1980s.  He began developing "SpongeBob SquarePants" into a television series in 1996 upon the cancellation of "Rocko's Modern Life", which Hillenburg directed.  The pilot episode first aired on Nickelodeon in the United States on May 1, 1999.  The show's ninth season premiered in 2012, and episodes of "SpongeBob SquarePants" have aired.  A feature-length film adaptation of the show, "The SpongeBob SquarePants Movie", was released in 2004; in 2015, a sequel, "", was released.
+
+SpongeBob SquarePants: Lights, Camera, Pants!: SpongeBob SquarePants: Lights, Camera, Pants!  is a 2005 party video game based on the TV series "SpongeBob SquarePants".  It was released in October 2005 for the Xbox, PlayStation 2, GameCube, Game Boy Advance, and the PC.  It was released for the Nintendo DS in Korea in 2007, but its North American release was cancelled.  It is the first "SpongeBob SquarePants" title to feature multiplayer mini-games, similar to the "Mario Party" video game series.  It is also the last SpongeBob game for the Xbox.  It is also the last time Charles Nelson Reilly would voice the Dirty Bubble before his death in 2007.  For reasons unknown, Mermaid Man was not voiced by his original voice actor Ernest Borgnine but instead Joe Alaskey, who would voice him again in .
+
+SpongeBob SquarePants (season 4): The fourth season of the American animated television series "SpongeBob SquarePants", created by former marine biologist and animator Stephen Hillenburg, aired on Nickelodeon from May 6, 2005 to July 24, 2007, and contained 20 episodes, beginning with the episodes "Fear of a Krabby Patty" and "Shell of a Man".  The series chronicles the exploits and adventures of the title character and his various friends in the fictional underwater city of Bikini Bottom.  The season was executive produced by series creator Hillenburg, while writer Paul Tibbitt acted as the supervising/co-executive producer and showrunner.  The show underwent a hiatus on television as Hillenburg halted the production in 2002 to work on the film adaptation of the series, "The SpongeBob SquarePants Movie".  Once the film was finalized and the previous season had completed broadcast on television, Hillenburg wanted to end the show, but the success of the series led to more episodes, so Tibbitt took over Hillenburg's position as showrunner and began working on a fourth season for broadcast in 2005.  Hillenburg remained with the show, but in a smaller advisory role in which he reviewed each episode and offered suggestions to the show's production crew.
+
+The SpongeBob SquarePants Movie: The SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series "SpongeBob SquarePants".  The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff.  It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the "SpongeBob SquarePants" film series.  In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.
+
+Question: Who is the creator, director, producer, and writer of SpongeBob SquarePants series as well as a co-writter of The SpongeBob SquarePants Movie?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the individual."
+    },
+    "spongebob_series_roles": {
+      "type": "object",
+      "properties": {
+        "series_title": {
+          "type": "string",
+          "description": "The title of the television series."
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of roles held for the television series."
+        }
+      },
+      "required": [
+        "series_title",
+        "roles"
+      ],
+      "additionalProperties": false
+    },
+    "spongebob_movie_roles": {
+      "type": "object",
+      "properties": {
+        "movie_title": {
+          "type": "string",
+          "description": "The title of the film."
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of roles held for the film."
+        }
+      },
+      "required": [
+        "movie_title",
+        "roles"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "spongebob_series_roles",
+    "spongebob_movie_roles"
+  ],
+  "additionalProperties": false
+}

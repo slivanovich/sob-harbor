@@ -1,0 +1,96 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Washington State Route 109: State Route 109 (SR 109) is a Washington state highway in Grays Harbor County.  Beginning at its terminus at U.S. Route 101 (US 101) in Hoquiam, the highway travels west to intersect SR 115 north of Ocean Shores and then turns north to temporarily end at Quinault Street in Taholah, located in the Quinault Indian Reservation.  The Washington State Legislature extended the roadway north to end at US 101 south of Queets through tribal lands, although this segment has yet to be built.  SR 109 was first established as Secondary State Highway 9C (SSH 9C) in 1937, which was on a more northern alignment until 1947, when it was switched to a Hoquiam to Quinault Indian Reservation route.  In 1964, SSH 9C was renumbered to SR 109 and in 1983, a spur route of SR 109 that bypasses Hoquiam was added; the route was extended to US 101 near Queets in 1985.
+
+Vernita Bridge: The Vernita Bridge is a bridge on Washington State Route 24 over the Columbia River between Grant County and Benton County, located approximately 10 mi south of Desert Aire and Mattawa, Washington.  The bridge is in the Hanford Reach National Monument near the Hanford Site.
+
+Washington State Route 24: State Route 24 (SR 24) is a 79.23 mi long state highway in the U.S. state of Washington.  Beginning at an interchange with Interstate 82 (I-82) in Yakima, the highway travels east into the Yakima highlands before turning north at the Hanford Site to cross the Columbia River on the Vernita Bridge.  From the crossing, the highway travels east through the Hanford Reach National Monument and turns north to end at SR 26 in Othello.  The highway was known as Secondary State Highway 11A (SSH 11A) from 1937 to 1964 and was originally routed through the Hanford Site until the 1940s.  The Vernita Bridge was completed in 1965 along with the route to Othello north of the Hanford Reach and paved in the 1970s.
+
+U.S. Route 24 in Indiana: U.S. Route 24 (US 24) In Indiana, US 24 runs east from the Illinois state line to Huntington.  At Huntington, US 24 turns northeast and runs to Fort Wayne; it then overlaps Interstate 69 (I-69) and Interstate 469 (I-469) to bypass the city before entering Ohio at the state line east of Fort Wayne.  The segment of US 24 between Logansport and Toledo, Ohio is part of the Hoosier Heartland Industrial Corridor project of the Intermodal Surface Transportation Efficiency Act.
+
+Ohio State Route 225: State Route 225 (SR 225) is a north–south state highway in northeastern Ohio.  It stretches for just over 20 mi from its southern terminus in northern Alliance where it meets State Route 183 to its northern terminus at State Route 5 opposite the Ravenna Training and Logistics Site in Paris Township.  It passes through the mostly rural areas of northern Stark County and southeastern Portage County.  The road is two lanes almost the entire length, except for the portion at the partial interchange with the future U.S. Route 62 just north of the Alliance city limits.  State Route 225 is co-signed with U.S. Route 224 from the western border of Deerfield Township east to the Deerfield Circle and with State Route 14 for a short distance as it turns north from the circle.  It crosses Interstate 76 at exit 48 in Palmyra Township just north of its intersection with Tallmadge Road (County Road 18), formerly designated as State Route 18.
+
+Columbia River Bridge (Bridgeport, Washington): The Columbia River Bridge, also known as the Bridgeport Bridge, at Bridgeport, Washington was built to span the Columbia River in 1950.  Composed of three spans, the bridge is a steel continuous riveted deck truss carrying Washington State Route 17 on a 26 ft wide roadway and two 3 ft sidewalks.  The center portion of the bridge spans 300 ft , flanked by 250 ft end spans.  The 70 ft north approach span and the 100 ft south approach span are supported by steel plate girders.  The bridge played a significant role in the construction of the Chief Joseph Dam just upstream, as no bridge crossing had previously existed in the area.  Construction on the dam started in 1945 and was completed, apart from the powerplant, in 1955.  The bridge was designed and built by the U.S. Army Corps of Engineers as part of the Chief Joseph dam project, and is significant for its association with the project and as a major crossing of the Columbia.
+
+Columbia Valley AVA: The Columbia Valley AVA is an American Viticultural Area which lies in the Columbia River Plateau, through much of central and southern Washington State, with a small section crossing into the neighboring state of Oregon.  The AVA includes the drainage basin of the Columbia River and its tributaries through much of Washington.  Allen Shoup, president of Washington State's largest winery Chateau Ste. Michelle, understood the importance of obtaining appellation status for Washington State to grow the reputation of the vineyards.  He hired Drs. Wade Wolfe and Walter Clore to petition the federal government for appellation status, a request that was granted in 1984.  The Columbia Valley AVA is the largest wine region in the state of Washington, including over 11000000 acre , of which over 40,000 acre are planted in vineyards.  The Columbia Valley AVA includes 99% of the total vineyard area planted in the state of Washington.  Grapes grown here include Cabernet Sauvignon, Merlot, Chardonnay, Riesling, Syrah, Pinot gris, and Sauvignon blanc.  Concord grapes and other "Vitis labrusca" grapes are grown in the region as well.  The unique climates of the area allow the Columbia Valley to produce wines that are very fruit-forward, like California wine, but which also retain some of the balance and structure of European wine.
+
+California State Route 242: State Route 242 (SR 242) is a short three-mile (5 km) connector route that links Interstate 680 north of Pleasant Hill to State Route 4 in Concord.  In 2000, State Route 242 was widened to six through-traffic lanes for the entire route.  Ramp metering is present at all onramps, and is used southbound in the morning and northbound in the evening.  It was signed as part of State Route 24 until ca. 1987.  Currently, along with Interstate 580, State Route 24, Interstate 680, and State Route 4, it serves as the most direct route between the San Francisco Bay Area and the Sacramento River Delta region of Northern California.
+
+Columbia Plateau (ecoregion): The Columbia Plateau ecoregion is a Level III ecoregion designated by the United States Environmental Protection Agency (EPA) in the U.S. states of Oregon and Washington, with small areas over the Washington state border in Idaho.  The ecoregion extends across a wide swath of the Columbia River Basin from The Dalles, Oregon to Lewiston, Idaho to Okanogan, Washington near the Canada–US border.  It includes nearly 500 mi of the Columbia River, as well as the lower reaches of major tributaries such as the Snake and Yakima rivers and the associated drainage basins.  It is named for the Columbia River Plateau, a flood basalt plateau formed by the Columbia River Basalt Group during the late Miocene and early Pliocene.  The arid sagebrush steppe and grasslands of the region are flanked by moister, predominantly forested, mountainous ecoregions on all sides.  The underlying basalt is up to 2 mi thick and partially covered by thick loess desposits.  Where precipitation amounts are sufficient, the deep loess soils have been extensively cultivated for wheat.  Water from the Columbia River is subject to resource allocation debates involving fisheries, navigation, hydropower, recreation, and irrigation, and the Columbia Basin Project has dramatically converted much of the region to agricultural use.
+
+Hanford Site: The Hanford Site is a mostly decommissioned nuclear production complex operated by the United States federal government on the Columbia River in the U.S. state of Washington.  The site has been known by many names, including: Hanford Project, Hanford Works, Hanford Engineer Works and Hanford Nuclear Reservation.  Established in 1943 as part of the Manhattan Project in Hanford, south-central Washington, the site was home to the B Reactor, the first full-scale plutonium production reactor in the world.  Plutonium manufactured at the site was used in the first nuclear bomb, tested at the Trinity site, and in Fat Man, the bomb detonated over Nagasaki, Japan.
+
+Question: What project established the nuclear complex where Washington State Route 24 turns north to cross the Columbia River?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "nuclear_complex": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the nuclear production complex."
+        },
+        "establishment_year": {
+          "type": "integer",
+          "description": "The year the nuclear complex was established."
+        }
+      },
+      "required": [
+        "name",
+        "establishment_year"
+      ],
+      "additionalProperties": false
+    },
+    "establishing_project": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the project that established the nuclear complex."
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "associated_highway_segment": {
+      "type": "object",
+      "properties": {
+        "highway_name": {
+          "type": "string",
+          "description": "The name of the state highway associated with the complex's location."
+        },
+        "action_at_complex": {
+          "type": "string",
+          "description": "The action the highway takes at the nuclear complex's location."
+        }
+      },
+      "required": [
+        "highway_name",
+        "action_at_complex"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "nuclear_complex",
+    "establishing_project",
+    "associated_highway_segment"
+  ],
+  "additionalProperties": false
+}

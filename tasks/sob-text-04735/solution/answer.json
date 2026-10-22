@@ -1,0 +1,9 @@
+{
+  "city_in_yangtze_river_delta": "Shanghai",
+  "is_located_in_yangtze_river_delta": true,
+  "reasoning": "Shanghai is explicitly stated to be located in the Yangtze River Delta. The context mentions: 'Shanghai: ... Located in the Yangtze River Delta, it sits on the south edge of the estuary of the Yangtze in the middle portion of the East China coast.'",
+  "other_city_information": {
+    "name": "Xinji",
+    "location_description": "Xinji is located under the administration of Shijiazhuang of Hebei Province in northern China, with no mention of it being in the Yangtze River Delta."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "player_name": "Steve Kerr",
+  "team_acquired_by": "Cleveland Cavaliers",
+  "season_of_acquisition": "1989–90 NBA season",
+  "nba_championship_count": 7,
+  "championship_details": [
+    {
+      "role": "player",
+      "team": "Chicago Bulls",
+      "count": 3
+    },
+    {
+      "role": "player",
+      "team": "San Antonio Spurs",
+      "count": 2
+    },
+    {
+      "role": "head coach",
+      "team": "Golden State Warriors",
+      "count": 2
+    }
+  ]
+}

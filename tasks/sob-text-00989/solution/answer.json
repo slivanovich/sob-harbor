@@ -1,0 +1,17 @@
+{
+  "person_commended": {
+    "name": "Yiannos Papantoniou",
+    "role_at_commendation": "Finance Minister of the Year"
+  },
+  "commending_publication": {
+    "name": "Euromoney",
+    "type": "monthly magazine",
+    "language": "English-language",
+    "first_published_year": 1969
+  },
+  "commendation_details": {
+    "award_category": "Finance Minister of the Year",
+    "year_received": 1998
+  },
+  "answer": 1969
+}

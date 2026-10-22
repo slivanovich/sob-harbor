@@ -1,0 +1,14 @@
+{
+  "song_title": "It's Raining Men",
+  "performing_artist": {
+    "name": "The Weather Girls",
+    "type": "American musical duo",
+    "nationality": "American"
+  },
+  "song_writers": [
+    "Paul Jabara",
+    "Paul Shaffer"
+  ],
+  "worldwide_sales_millions": 6,
+  "note_on_authorship": "The song 'It's Raining Men' was written by Paul Jabara and Paul Shaffer, and originally recorded by The Weather Girls."
+}

@@ -1,0 +1,16 @@
+{
+  "actor_name": "Haruo Nakajima",
+  "character_portrayed": "Godzilla",
+  "portrayal_details": {
+    "number_of_films": 12,
+    "consecutive_films": true,
+    "first_film": {
+      "title": "Godzilla",
+      "year": 1954
+    },
+    "last_film": {
+      "title": "Godzilla vs. Gigan",
+      "year": 1972
+    }
+  }
+}

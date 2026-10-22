@@ -1,0 +1,30 @@
+{
+  "actor_name": "Tiger Shroff",
+  "films_starred_in": [
+    {
+      "film_title": "Heropanti",
+      "director_name": "Sabbir Khan"
+    },
+    {
+      "film_title": "Baaghi",
+      "director_name": "Sabbir Khan"
+    },
+    {
+      "film_title": "A Flying Jatt",
+      "director_name": "Remo D'Souza"
+    },
+    {
+      "film_title": "Munna Michael",
+      "director_name": "Sabbir Khan"
+    },
+    {
+      "film_title": "Baaghi 2",
+      "director_name": "Ahmed Khan"
+    }
+  ],
+  "directors_of_tiger_shroff_films": [
+    "Sabbir Khan",
+    "Remo D'Souza",
+    "Ahmed Khan"
+  ]
+}

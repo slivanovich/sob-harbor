@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "0a33dc26d7179d5f3af85655c6fe2ddf9207a8c6a14740e1e38adc53fbeb7747",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab73e4555429928e1fe383c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "BMW",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Johnny Mowlem: Johnny Mowlem (born 12 February 1969) is a professional British racing driver.  Mowlem is considered to be among the world's elite sports car drivers, having competed in every class of world championship sports car racing.  He is the 2013 European Le Mans Series GT champion, having previously won the British Porsche Cup championship in 1996 and 1997.  He has class victories in both the 24 Hours of Daytona and the 12 Hours of Sebring, and has earned podiums at virtually all of the world's major sports car races, including the Le Mans 24 hours and the 1000 km Nürburgring.  He has also achieved overall podium finishes at the Daytona 24 hours as well as at the famous 10-hour Petit Le Mans race in the USA.  Mowlem began his career in single seaters racing up to Formula 3 level and got his big break when he was chosen personally by triple Formula One World Champion Jackie Stewart to join his \"staircase of \"talent\" team in the junior single seater formula, alongside drivers of the calibre of Dario Franchitti, Allan McNish and Gil de Ferran.  He switched to sportscars in 1996, winning the Class 1 championship of the British Porsche Cup and then gained international recognition the following year when he won all 17 races of the British Porsche Cup to become British champion.  This launched his professional career in World Sportscars.  Later in his career he gained further international attention for his work as a driver of the hybrid-powered Ginetta Zytek prototype racer in the ALMS in 2008 and 2009.  In 2010, Mowlem was a Lotus Racing factory driver, driving the American Le Mans Series (ALMS) and in the International GT Open Series for sports cars in Europe.  His latest driving championship came in the European Le Mans Series in 2013.  Mowlem raced in the ALMS series every year that sanctioning body held races.  Mowlem also operates his own driving academy, working with both corporate clients and drivers wishing for a career in racing.\n\nAlex Zanardi: Alessandro \"Alex\" Zanardi (] ; born 23 October 1966) is an Italian professional racing driver and paracyclist.\n\nSébastien Bourdais: Sébastien Olivier Bourdais (born 28 February 1979) is a French professional racing driver, who resides in St. Petersburg, Florida.  He is one of the most successful drivers in the history of American Championship car racing, having won 36 races.  He won four successive championships under Champ Car World Series sanction from 2004 to 2007.  s of March 2017 he had won 75 races.\n\nAlain Ferté: Alain Ferté (born 8 October 1955 in Falaise, Calvados) is a professional racing driver.  He is the elder brother of Michel Ferté, who is also a professional racing driver.\n\nMax Papis: Massimiliano \"Max\" Papis (born October 3, 1969) is an Italian professional stock car racing driver who has competed in several top-level motorsports events such as Le Mans 24 Hours, Formula One and Champ Car.  He has three Champ Car victories.  He is the son-in-law of Emerson Fittipaldi.  His sons' godfather is fellow Italian Alex Zanardi.  Papis also currently drives in the NASCAR Whelen Euroseries.\n\n2005 FIA WTCC Race of Germany: The 2005 FIA WTCC Race Of Germany was the seventh round of the 2005 World Touring Car Championship season.  It was held at the Motorsport Arena Oschersleben.  Andy Priaulx took his first win of the season in the first race for BMW, and the second race was won by Alex Zanardi, also for BMW, at a track close to the one where he lost his legs in a crash in 2001.\n\nMichel Ferté: Michel Ferté (born 8 December 1958 in Falaise, Calvados) is a professional racing driver.  He is the younger brother of Alain Ferté, who is also a professional racing driver.\n\nPatrick Pilet: Patrick Pilet (born October 8, 1981) is a French professional racing driver currently racing for Porsche Motorsport as a factory driver in the FIA World Endurance Championship and other racing series.  He has competed in major sports car endurance races like the 24 Hours of Le Mans, 24 Hours of Daytona, 24 Hours of Spa, 12 Hours of Sebring and Petit Le Mans.\n\nDave Steele: David (Dave) Steele (May 7, 1974 – March 25, 2017) was an American professional racing driver who won numerous sprint car racing championships and also competed in IndyCar and NASCAR races.  Steele last drove a winged sprint car in the Southern Sprintcar Shootout Series, where he won the first 5 races in series history.  Steele was killed in a crash at Desoto Speedway on March 25, 2017.\n\nJim Richards (racing driver): Jim Richards (born 2 September 1947) is a New Zealand racing driver who has spent most of his racing life in Australia.  While retired from professional racing, Richards continues to compete in the Touring Car Masters series.  After seven Bathurst 1000 victories and four Australian Touring Car Championships, Richards was inducted into the V8 Supercars Hall of Fame in 2006 and the Australian Motorsports Hall of Fame in 2015.  He is the father of racing driver Steven Richards, and between them they have achieved 11 Bathurst 1000 wins, most recently in 2015.",
+    "question": "The Italian professional racing driver and paracyclist born October 23, 1966 races for which car company?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "driver_name": {
+          "type": "string",
+          "description": "The full name of the racing driver."
+        },
+        "driver_nationality": {
+          "type": "string",
+          "description": "The nationality of the racing driver."
+        },
+        "birth_date": {
+          "type": "string",
+          "description": "The birth date of the driver."
+        },
+        "driver_roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professional roles held by the driver."
+        },
+        "car_company": {
+          "type": "string",
+          "description": "The car company the driver races for."
+        }
+      },
+      "required": [
+        "driver_name",
+        "driver_nationality",
+        "birth_date",
+        "driver_roles",
+        "car_company"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "driver_name": "Alex Zanardi",
+      "driver_nationality": "Italian",
+      "birth_date": "October 23, 1966",
+      "driver_roles": [
+        "professional racing driver",
+        "paracyclist"
+      ],
+      "car_company": "BMW"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "location": {
+    "country": "England",
+    "town": "Gainsborough"
+  },
+  "located_entities": [
+    "Gainsborough station group",
+    "Gainsborough Central railway station"
+  ],
+  "number_of_entities": 2
+}

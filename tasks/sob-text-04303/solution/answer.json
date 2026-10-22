@@ -1,0 +1,17 @@
+{
+  "mountain_with_greatest_relative_height": "Noijin Kangsang",
+  "mountains_details": [
+    {
+      "name": "Noijin Kangsang",
+      "range_name": "Lhagoi Kangri",
+      "is_highest_in_its_range": true
+    },
+    {
+      "name": "Masherbrum",
+      "range_name": "Karakoram",
+      "absolute_height_meters": 7821,
+      "is_highest_in_its_range": false
+    }
+  ],
+  "comparison_basis": "Identification of which mountain is explicitly stated as the highest peak within its respective mountain range."
+}

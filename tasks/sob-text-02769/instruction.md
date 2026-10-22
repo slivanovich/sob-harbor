@@ -1,0 +1,74 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Marina Eglevsky: Marina Eglevsky is an American ballet dancer born in New York City.  She is the daughter of ballet star Andre Eglevsky and ballerina Leda Anchutina Eglevsky.  Marina studied at the School of American Ballet and the American Ballet Theatre School.  Marina performed professionally in New York City Ballet's production of "The Nutcracker," with the Eglevsky Ballet Company, and as a guest in various companies and engagements.
+
+First Position: First Position is a 2011 American documentary film.  It follows six young dancers preparing for the Youth America Grand Prix in New York City, an annual competition for dancers ages 9–19 to earn a place at an elite ballet company or school.  Directed by Bess Kargman, it features Michaela DePrince, Aran Bell, Gaya Bommer-Yemini, Miko Fogarty, Jules Fogarty, Joan Sebastian Zamora and Rebecca Houseknecht as they intensively train and prepare for what could be the turning point of their lives.
+
+New York City Ballet: New York City Ballet (NYCB) is a ballet company founded in 1948 by choreographer George Balanchine and Lincoln Kirstein.  Léon Barzin was the company's first music director.  Balanchine and Jerome Robbins are considered the founding choreographers of the company.  City Ballet grew out of earlier troupes: the Producing Company of the School of American Ballet, 1934; the American Ballet, 1935, and Ballet Caravan, 1936, which merged into American Ballet Caravan, 1941; and directly from the Ballet Society, 1946.
+
+Marina Kamen: Marina Kamen (aka MARINA), is a Director/Producer/Casting Director/Vocalist/Choreographer & Musician best known for her music in the advertising industry & fitness/health/dance music communities and has a large online catalogue of workout music, treadmill workouts and audio workouts including 50 albums, 450 Original Songs and 1,200 Online Musical Audio Programs.  Marina's EBook entitled "I'mSteppin' Out!" …confessions of a Food-a-Holic has sold around the globe for the past 15 years and is available on Iamplifi, Audible and on Amazon.  Kamen won the 2005 People's Choice Award in Podcasting .  MARINA's High-nrg Fitness Brand includes Radio and Television Broadcasts, Music, albums, and a Live Show currently playing in NYC called MARINA's High-nrg Fitness LIVE! …an Interactive Musical Theatre WORKOUT Experience.  MARINA's lifelong work merging the worlds of vocalisation and dance has brought her to work with Celebrity artists including Patti Labelle, Carnie Wilson, James Earl Jones, Mandy Patinkin, Gloria Gaynor, Britney Spears, Liza Minnelli and countless others.  In 1987, Kamen and her husband, Roy Kamen, opened Kamen Entertainment Group, Inc.  Kamen's credits in Radio and television advertising have included thousands of campaigns working for Starburst, PopTarts, Mercedes, Exxon Mobile, CocaCola, Dairy Queen, and Febreeze in the 1990s, in 2004, Marina Diretcted, Produced, Cast & Choreographed Britney Spears' Twister Dance Rave Global Television Campaign for Hasbro.  Kamen also Cast, Directed,Choreographed & Produced Television spots for Jenga Tetris & Bop It.  Kamen performs a series of live performance concerts around the country.  In the late 90s, it seemed impossible because she had three young children and was over 215 pounds.  Nonetheless, Kamen started to write and produce music aimed at the dance market.  High energy shows won awards, such as her "Silent Night" performance at Webster Hall in New York City.  Kamen taught aerobics classes in the 70's and 80's, and through her performances she began using dance music to drive her workout routines.  By singing, dancing, and eating well-portioned meals, she lost over 100 pounds.  Kamen released her debut album, "Um-Lotty-Da" in 1997.  Kamen quickly earned a reputation in the New York City club scene.  Her albums and performances garnered the attention of the Dance Organization of America.  This committee steered Kamen towards positions as a director and choreographer for Atlantic Records, Columbia Records, The Naras Foundation which Hosts The Grammy Awards.By the year 2000, Kamen had combined her previous experiences and started to sell her fitness music within the fitness community.  With her innovative approach and inspirational message, Kamen became a well-known persona in the world of Musical Fitness.  Kamen has produced material and live presentations for clients including QVC/Direct, Dynamix, Equinox Gyms, Jazzercise, Strive Enterprise with Bill Kazmier (ESPN), and Jackie Chan's CableFlex.  She has appeared on British TV on "Reborn in the USA," produced and televised from New York City by the producers of "American Idol."  Kamen has been covered in the NY Times, Daily News and Family Circle Magazine.  She can be seen on programing from The Discovery Health Network, PBS and Nickelodeon (The N), ShopNBC, The Tyra Banks Show & ABC NEWS.  Marina is also Hosting a Web Broadcast show entitled "MARINA's High-nrg Fitness Musical Health Talk" at http://www.musicalhealthtalk.com.  Ms. Kamen attended The Manhattan School of Music & Interlochen Arts Academy majoring in voice, violin, and composition.  Marina trained in dance with The American Ballet Theatre, Luigi & Frank Hatchett.  Marina also thanks her longtime friend in dance Francis Roach for his openness and dance talent over the years in addition to carrying out the teachings of dance Icon Luigi.  His work has helped to train thousands of dancers around the world.
+
+New York International Ballet Competition: The New York International Ballet Competition (NYIBC), was a program providing dance education and employment opportunities for young dancers ages 17 to 24.  In 1983 Ilona Copen founded NYIBC, with Igor Youskevitch as first artistic director, in order to fill a void and satisfy a need in the global dance ecosystem.  Other international ballet competitions existed, but New York City, considered a dance capital of the world, did not have its own.
+
+School of American Ballet: The School of American Ballet (SAB) is an American classical ballet school and is the associate school of the New York City Ballet, a ballet company based at the Lincoln Center for the Performing Arts in New York City.  The school trains students from the age of six, with professional vocational ballet training for students aged 11–18.  Graduates of the school achieve employment with leading ballet companies worldwide, most notably in the United States with New York City Ballet, American Ballet Theatre, Boston Ballet, and San Francisco Ballet.
+
+Dennis Wayne's Dancers: Dennis Wayne's Dancers was a New York based contemporary ballet company founded around dancer Dennis Wayne by Paul Newman and Joanne Woodward.  Formed in the summer of 1975 after Wayne left the American Ballet Theatre, the contemporary ballet company drew on the talents of many famous dancers and received critical acclaim.  The dancers came from a variety of different companies, including Joffrey Ballet and American Ballet Theatre.  Known for their virtuosic skill, the company performed both ballet and modern dance works.  Dennis Wayne’s Dancers presented diverse programs with pieces by a variety of choreographers; though he also presented work he choreographed himself.  Dennis Wayne also danced with the Company, but did not begin appearing with them until 1986.
+
+Center Stage (2000 film): Center Stage is a 2000 American teen drama film directed by Nicholas Hytner about a group of young dancers from various backgrounds who enroll at the fictitious American Ballet Academy in New York City.  The film explores the issues and difficulties in the world of professional dance, and how each individual copes with the stresses.
+
+Ekaterina Shchelkanova: Ekaterina Nikolaievna Shchelkanova (Russian: Екатерина Николаевна Щелканова , born May 2, 1970) is a Russian singer, actress, and dancer from Leningrad, RSFSR, USSR (now St. Petersburg, Russia).  To the American audience, she is most notably cast as Hunyak, the Hungarian prisoner from the musical "Chicago" (2002).  Chtchelkanova was also cast as Darya in the Canadian film "The End of Silence" and held parts in the films "Odin's Shield Maiden", and "Center Stage".
+
+Heather Watts: Heather Watts (born September 27, 1953), was a principal ballerina with New York City Ballet.  A native of California, Ms. Watts was born as Linda Heather Watts in Long Beach on September 27, 1953.  As a little girl, she was a troublemaking child.  She had always wanted to be an actress.  An acting coach advised her taking ballet classes, seeing as she was incredibly dramatic (and clumsy).  She started dancing at the age of 10, came to New York at the age of 13 on a Ford Foundation summer scholarship to attend the School of American Ballet, the official school of the New York City Ballet.  She moved permanently to New York at age 15, again on a Ford Foundation scholarship to the School of American Ballet.  Watts joined the New York City Ballet in 1970 and was promoted to principal dancer by company founder George Balanchine in 1979.  George Balanchine took Watts into his companies "because he would not let such a talent disappear."  During Ms. Watts's tenure with the company, she had numerous principal roles created for her by George Balanchine, Jerome Robbins, and Peter Martins among others.  Mr. Balanchine gave Ms. Watts the principal roles in many of his existing masterpieces, including "Agon", Concerto Barocco, "Apollo", Symphony in C, "Theme and Variations" and "Serenade".  Ms. Watts performed around the world and starred in numerous "Dance in America" television programs, and she performed opposite frequent partner Mikhail Baryshnikov at the White House in a national televised performance of Balanchine's "Rubies" for President and Mrs. Carter.  Ms. Watts retired from the stage in a gala performance at Lincoln Center in 1995.
+
+Question: Which movie was Ekaterina Nikolaievna Shchelkanova in that was directed by Nicholas Hytner, about a group of young dancers from various backgrounds who enroll at the fictitious American Ballet Academy in New York City?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "movie_title": {
+      "type": "string",
+      "description": "The title of the movie."
+    },
+    "director": {
+      "type": "string",
+      "description": "The director of the movie."
+    },
+    "actress_name": {
+      "type": "string",
+      "description": "The name of the actress who appeared in the movie."
+    },
+    "plot_summary": {
+      "type": "string",
+      "description": "A brief summary of the movie's plot, focusing on the dancers and academy."
+    },
+    "academy_name": {
+      "type": "string",
+      "description": "The name of the ballet academy featured in the movie."
+    },
+    "setting_city": {
+      "type": "string",
+      "description": "The city where the movie is set."
+    }
+  },
+  "required": [
+    "movie_title",
+    "director",
+    "actress_name",
+    "plot_summary",
+    "academy_name",
+    "setting_city"
+  ],
+  "additionalProperties": false
+}

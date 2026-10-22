@@ -1,0 +1,12 @@
+{
+  "school_details": {
+    "name": "Rossall School",
+    "founding_year": 1844,
+    "school_type": "British, fee paying co-educational, independent school"
+  },
+  "person_attended": {
+    "name": "Andrew Ballard",
+    "attended_school_name": "Rossall School"
+  },
+  "identified_school_name": "Rossall School"
+}

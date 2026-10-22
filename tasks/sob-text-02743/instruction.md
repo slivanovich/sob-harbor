@@ -1,0 +1,62 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Crystal City Correctional Center: Crystal City Correctional Center is a closed private prison near Crystal City, Texas.  It is about 40 mi from the Mexico-United States border.
+
+Las Americas Premium Outlets: Las Americas Premium Outlets is a 560000 sqft outlet mall in San Ysidro, San Diego, California located directly on the Mexico-United States border just west of the San Ysidro Port of Entry at the new PedWest crossing from Tijuana to Virginia Avenue on the U.S. side.
+
+XEPE-AM: XEPE-AM at 1700 kHz is an English-language sports radio station calling itself ESPN 1700.  XEPE is licensed to Tecate, Baja California, Mexico.  Like other Baja California stations broadcasting in English near the Mexico-United States border, it focuses on listeners in the San Diego, California area.  The station carries programming from ESPN Radio most of the day.  On weekdays, between 9 am and 4 pm, it carries business and money related programming, including syndicated shows from Dave Ramsey, San Diego-based Ray Lucia and local hosts.
+
+Border enforcement: Border enforcement is a type of immigration enforcement whereby a country enforces its immigration laws by trying to prevent people from crossing its border or borders illegally.  There are multiple methods a country can use to do this, including patrolling its border and building walls along part or all of it.  The term is most commonly used in regards to the efforts by the United States government to prevent people from migrating illegally to the U.S. by crossing the Mexico-United States border.  Since 2002, the number of United States Border Patrol agents has more than doubled, to a total of 20,273 (as of September 2016), and federal spending on the Patrol has increased from $1.4 to $3.8 billion over the same time.  In addition to the Patrol, agencies responsible for border enforcement in the U.S. include Immigration and Customs Enforcement.
+
+Day Without Immigrants 2017: Day Without Immigrants (or A Day Without Immigrants) was a protest and boycott that took place on February 16, 2017, to demonstrate the importance of immigration, and to protest President Donald Trump's plans to build a border wall and to potentially deport millions of illegal immigrants.  The strike called for immigrants not to go to work, to avoid spending money, and keep children home from school.  People took part to show the importance of immigrants to the economy and also to protest possible racial profiling of U.S. citizens by immigration enforcement.  The strike was planned on social media.  People first started talking about the strike after the Women's March, and as the idea gained momentum, important people in the restaurant industry helped boost exposure.
+
+Immigration sign: The immigration sign is an American highway safety sign warning motorists to avoid immigrants darting across the road.  It depicts a man, woman, and child with pigtails running.  The signs were erected in response to over one hundred immigrant deaths due to traffic strikes from 1987 to 1990 in two corridors along Interstate 5 along the San Ysidro Port of Entry at the Mexico-United States border and approximately 50 mi north at the San Clemente United States Border Patrol checkpoint in Camp Pendleton.
+
+Cedar Mountain Range: The Cedar Mountain Range is a short 20 mi (32 km) long, mountain range in southwest Luna County, New Mexico, USA, just north of the Mexico-United States border with Chihuahua.
+
+Panama Canal fence: The Panama Canal fence was not a name used by the citizens of the Canal Zone.  It was a low fence, for the majority of its length, part of it chain link.  It sat atop a retaining wall alongside a short stretch of a busy highway, the Fourth of July Avenue.  The fence was located across the street from the border of the Republic of Panama, within the Canal Zone.  It was similar to the fences one might see along major highways in the United State and elsewhere in the world, It was constructed concurrent with the widening of the adjacent roadway which started in 1960 with the construction of the Thatcher Ferry Bridge.  The fence was designed to prevent pedestrians from falling off the high retaining wall into the busy street.  Parts of the fence still exist today or have been replaced with newer fence.  The Canal Zone extended beyond the fence, across Fourth of July Avenue and across the sidewalk on the Panama side, all the way up to the edge of the buildings there.  This invisible line between the sidewalk and the buildings was the actual border between the Canal Zone and Panama.  The United States maintained the avenue and the sidewalks on both sides as they were inside the Zone.
+
+Mexico–United States barrier: The Mexico–United States barrier is a series of walls and fences along the Mexico–United States border aimed at preventing illegal crossings from Mexico into the United States.  The barrier is not one continuous structure, but a grouping of relatively short physical walls, secured in between with a "virtual fence" which includes a system of sensors and cameras monitored by the United States Border Patrol.  As of January 2009, U.S. Customs and Border Protection reported that it had more than 580 mi of barriers in place.  The total length of the continental border is 1,989 mi .
+
+Border War (1910–19): The Border War, or the Border Campaign, refers to the military engagements which took place in the Mexico-United States border region of North America during the Mexican Revolution.  The Bandit War in Texas was part of the Border War.  From the beginning of the Mexican Revolution in 1910, the United States Army was stationed in force along the border and on several occasions fought with Mexican rebels or federals.  The height of the conflict came in 1916 when revolutionary Pancho Villa attacked the American border town of Columbus, New Mexico.  In response, the United States Army, under the direction of General John J. Pershing, launched an expedition into northern Mexico, to find and capture Villa.  Though the operation was successful in finding and engaging the Villista rebels, and in killing Villa's two top lieutenants, the revolutionary himself escaped and the American army returned to the United States in January 1917.  Conflict at the border continued however and the United States launched several more smaller operations into Mexican territory until after the American victory in the Battle of Ambos Nogales, leading to the establishment of a permanent border wall.  Conflict was not only subject to Villistas and Americans; "Maderistas", "Carrancistas", "Constitutionalistas" and Germans also engaged in battle with American forces during this period.
+
+Question: Which structure currently operates as a "virtual fence:"  Boarder Wall or Mexico-United States Barrier?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "structure_name": {
+      "type": "string",
+      "description": "The name of the structure that operates as a virtual fence."
+    },
+    "virtual_fence_components": {
+      "type": "array",
+      "description": "A list of components that constitute the virtual fence.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "purpose_of_barrier": {
+      "type": "string",
+      "description": "The primary aim or goal of the barrier."
+    }
+  },
+  "required": [
+    "structure_name",
+    "virtual_fence_components",
+    "purpose_of_barrier"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "biological_weapons_program": {
+    "name": "United States biological weapons program",
+    "start_year": 1943,
+    "end_year": 1969
+  },
+  "program_center_location": {
+    "installation_name": "Fort Detrick",
+    "city": "Frederick",
+    "state": "Maryland"
+  },
+  "involved_agency": {
+    "agency_name": "United States Army Medical Materiel Agency",
+    "agency_location_installation": "Fort Detrick"
+  }
+}

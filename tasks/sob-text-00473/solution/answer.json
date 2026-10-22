@@ -1,0 +1,10 @@
+{
+  "flight_number": "Korean Air Cargo Flight 8509",
+  "airport_of_origin": {
+    "name": "London Stansted Airport",
+    "local_government_district": "Uttlesford",
+    "county": "Essex",
+    "distance_from_central_london_miles": 30
+  },
+  "destination_airport": "Milano-Malpensa Airport"
+}

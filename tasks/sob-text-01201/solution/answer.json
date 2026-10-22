@@ -1,0 +1,12 @@
+{
+  "film_title": "Grandma",
+  "starring_actress": {
+    "name": "Lily Tomlin",
+    "breakout_role_details": {
+      "role_description": "performing as a cast member",
+      "show_title": "Rowan & Martin's Laugh-In",
+      "show_type": "variety show"
+    }
+  },
+  "answer_variety_show_title": "Rowan & Martin's Laugh-In"
+}

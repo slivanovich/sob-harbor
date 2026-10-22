@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Guero: Guero is the sixth official studio album and ninth overall by American musician Beck, released on March 29, 2005 through Interscope.  It is seen by many as a return to the style of "Odelay", mainly because this album, like "Odelay", is produced with the Dust Brothers and Tony Hoffer.  It also recalls "Mutations" in places with its Brazilian influences.
+
+Mascot Label Group: Mascot Label Group is an independently owned record label.  Founded in 1989 in The Netherlands under the name Mascot Records, the company was renamed Mascot-Provogue in 1999 and since 2010 has been known as the Mascot Label Group.  The company is based in the Netherlands and has offices in New York, Cologne, Stockholm, Milan, Paris and London.  Mascot Label Group is the parent company of four record labels: Mascot Records, Provogue, Music Theories Recordings and Cool Green Recordings.
+
+Interscope Records: Interscope Records is an American major record label.  An imprint of Interscope Geffen A&M Records, its parent company is Universal Music Group, a subsidiary of Vivendi S.A.
+
+Bell Records (1920): The United States based Bell Records record label started issuing records in about 1920.  The label's parent company was the Standard Music Roll Company of Orange, New Jersey, which was also the parent of Arto Records.  After Standard Music Roll got out of the disc record business in 1923, the label was continued by the Bell Record Corporation of Newark, New Jersey, using masters recorded by Emerson Records.  In 1927 the source of Bell masters shifted to Gennett Records.  The label went out of business in 1928.
+
+RCA Records: RCA Records is an American record label owned by Sony Music, a subsidiary of Sony Corporation of America.  It is one of SME's three flagship record labels, alongside Columbia Records and Epic Records.  The label has released multiple genres of music, including pop, rock, hip hop, electronic, R&B, blues, jazz, and country.  The company's name is derived from the initials of the label's former parent company, the Radio Corporation of America (RCA).  It is the second oldest recording company in US history, after sister label Columbia Records.  RCA's Canadian unit (formerly Berliner Gramophone Canada) is Sony's oldest label in Canada.  It was one of only two Canadian record companies to survive the Great Depression.
+
+Uprok Records: Uprok Records was a record label created in 1999 under the parent company Tooth & Nail Records, with a focus on distributing Christian hip-hop artists.  The name Uprok Records refers to the breakdancing term (also spelled Uprock).  The first three artists on the label were Ill Harmonics, Sup the Chemist and MG!  The Visionary.  Shortly after its inception Josh Niemyjski, who created and maintains SphereOfHipHop.com, took over as President and Artist & Repertoire manager.  According to Niemyjski, "It was started because I feel like BEC and Tooth and Nail saw a niche that wasn't being filled."  Through its parent companies BEC/Tooth & Nail and EMI Christian, it was able to sell in Christian and secular stores.  However, a grassroots marketing was used to sell many of the albums online directly through the label, at SphereOfHipHop.com, at other hip-hop websites and local records stores, as well as at the artists live shows. <br>
+
+Vanity label: A vanity label (see related topic on vanity press) is an informal name given sometimes to a record label founded as a wholly or partially owned subsidiary of another, larger and better established (at least at the time of the vanity label's founding) record label, where the subsidiary label is (at least nominally) controlled by a successful recording artist, designed to allow this artist to release music by other artists they admire.  The parent label handles the production and distribution and funding of the vanity label, but the album is usually released with the vanity label brand name prominent.  Usually, the artist/head of the vanity label is signed to the parent label, and this artist's own recordings will be released under the vanity label's brand name.  Creating a vanity label can be an attractive idea for the parent label primarily as a "perk" to keep a successful artist on the label's roster happy and a venue to bring fellow artists to the public's attention.
+
+Embassy Records: Embassy Records was a UK budget record label that produced cover versions of current hit songs that were sold exclusively in Woolworths shops at a lower price than the original recordings.  Embassy can therefore be seen as the UK equivalent of U.S. labels such as Hit and (in its early days) Bell Records.  The label was the result of a contractual arrangement between Oriole Records and Woolworths, with Embassy's product being sold exclusively through the latter's stores from 1954 to 1965.  The label disappeared after the parent company, Oriole, was taken over by CBS Records.  Later, from 1970 through to 1980, CBS Records revived the Embassy imprint to release budget versions of albums in the UK and Europe by artists that were signed to its parent company, Columbia Records.
+
+Nothing Records: Nothing Records was an American record label specializing in industrial rock and electronic music, founded by John Malm Jr. and Trent Reznor in 1992.  It is considered an example of a vanity label, where an artist is able to run a label with some degree of independence from within a larger parent company—in this case, Interscope Records was the parent company.
+
+Capitol Studios: Established in 1956, Capitol Studios are located in the landmark Capitol Records Tower in the heart of Hollywood, California.  The legendary recording studios, which consist of Studios A, B, C and D, started as the primary recording studios for American record label Capitol Records.  While they are still regularly used by Capitol recording artists, during the late 1960s to early-1970s the studios began making the facility available to artists outside the label.  Capitol Studios are renowned for their impressive selection of vintage gear, microphones and state-of-the-art recording equipment, as well as their eight subterranean echo chambers.  The studios are owned by Vivendi, the parent company of Universal Music Group (UMG), which in turn is the parent company of Capitol Music Group.
+
+Question: What is the parent company of the record label on which Beck's album Guero was released?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album."
+    },
+    "artist_name": {
+      "type": "string",
+      "description": "The artist who released the album."
+    },
+    "record_label": {
+      "type": "string",
+      "description": "The record label through which the album was released."
+    },
+    "parent_company_of_record_label": {
+      "type": "string",
+      "description": "The parent company of the record label that released the album."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The year the album was released."
+    }
+  },
+  "required": [
+    "album_name",
+    "artist_name",
+    "record_label",
+    "parent_company_of_record_label",
+    "release_year"
+  ],
+  "additionalProperties": false
+}

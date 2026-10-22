@@ -1,0 +1,18 @@
+{
+  "places_info": [
+    {
+      "place_name": "Luoding",
+      "country": "China",
+      "province": "Guangdong",
+      "administered_by_city": "Yunfu"
+    },
+    {
+      "place_name": "Dingzhou",
+      "country": "China",
+      "province": "Hebei",
+      "administered_by_city": "Baoding"
+    }
+  ],
+  "shared_country": "China",
+  "number_of_places": 2
+}

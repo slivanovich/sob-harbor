@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Alois Hába: Alois Hába (21 June 1893 – 18 November 1973) was a Czech composer, music theorist and teacher.  He belongs to the important discoverers in modern classical music, and major composers of microtonal music, especially using the quarter-tone scale, though he used others such as sixth-tones (e.g., in the 5th, 10th and 11th String Quartets), fifth-tones (Sixteenth String Quartet), and twelfth-tones.  From the other mictrotonal conceptions, he discussed a "three-quarter tone" system (see three-quarter tone flat and the neutral second) in his theoretical works but he used scales in this tuning in sections of some of his compositions.  In his prolific career, Hába composed three operas, an enormous collection of chamber music including 16 string quartets, piano, organ and choral pieces, some orchestral works and songs.  He also had special keyboard and woodwind instruments constructed that were capable of playing quarter-tone scales.
+
+Czech Christmas Mass: Czech Christmas Mass (Czech: Česká mše vánoční; Latin: "Missa solemnis Festis Nativitatis D. J. Ch.  accommodata in linguam bohemicam musikamque redacta – que redacta per Jac.  Joa.  Ryba") is a classic pastoral mass written by the Czech composer Jakub Jan Ryba in 1796.  Because of its opening words, it is also known as Hail, Master!  or Hey, Master!  (in Czech: Hej, mistře!) .  "Czech Christmas Mass" was composed in a frame of traditional Latin mass (with parts Kyrie, Gloria etc.), the story is based on Christian theme of the birth of Jesus of Nazareth.  Despite this, the work has a rather pastoral character with emphasis on a Czech description of the nativity in a Czech setting.  During the centuries, the composition became the most popular Christmas mass in Czech countries and one of the musical symbols of Czech Christmas.
+
+Leoš Janáček: Leoš Janáček (] , baptised Leo Eugen Janáček; 3 July 1854 – 12 August 1928) was a Czech composer, musical theorist, folklorist, publicist and teacher.  He was inspired by Moravian and other Slavic folk music to create an original, modern musical style.
+
+Theodor Schaefer: Theodor Schaefer (23 January 1904 in Telč – 19 March 1969 in Brno) was a Czech composer of modern classical music and musical theorist.
+
+Čestmír Gregor: Čestmír Gregor (14 May 1926 – 2 March 2011) was a Czech composer, theorist and publicist.  His career as a composer lasted from 1942 to 2005, and encompassed a variety of styles and formats.
+
+René Leibowitz: René Leibowitz (] ; 17 February 1913 – 29 August 1972) was a Polish, later naturalized French, composer, conductor, music theorist and teacher born in Warsaw, Poland.  He was historically significant in promoting serialism and the New Music in Paris, France after World War II.
+
+Nikolai Zaremba: Nikolai or Nicolaus Ivanovich von Zaremba (12 June [O.S. 31 May] 1821 8 April [O.S. 27 March] 1879 ) was a Russian musical theorist, teacher and composer.  His most famous student was Pyotr Ilyich Tchaikovsky, who became his pupil 1861.  Others included Dostojevsky's nephews, the children of his brother Mikhail and Vasily Safonov.  Until 2010 almost nobody knew what he had composed.
+
+Concertino (Janáček): The Concertino for piano, two violins, viola, clarinet, French horn and bassoon is a composition by the Czech composer Leoš Janáček.
+
+Ebenezer Prout: Ebenezer Prout ( ; 1 March 18355 December 1909) was an English musical theorist, writer, teacher and composer, whose instruction, afterwards embodied in a series of standard works still used today, underpinned the work of many British classical musicians of succeeding generations.
+
+Émile Durand: Émile Durand (] ; 16 February 18307 May 1903) was a French musical theorist, teacher and composer.  He was better known for his theoretical writings than for his compositions.
+
+Question: In which year was this Czech composer, musical theorist, folklorist, publicist and teacher born who composed "Concertino?"
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "composer_name": {
+      "type": "string",
+      "description": "The name of the composer."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the composer."
+    },
+    "professions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of professions held by the composer."
+    },
+    "composition_name": {
+      "type": "string",
+      "description": "The name of the composition mentioned in the question."
+    }
+  },
+  "required": [
+    "composer_name",
+    "birth_year",
+    "professions",
+    "composition_name"
+  ],
+  "additionalProperties": false
+}

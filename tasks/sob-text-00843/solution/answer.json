@@ -1,0 +1,22 @@
+{
+  "crowned_person": {
+    "name": "Ksenia Sukhinova",
+    "professions": [
+      "actress",
+      "TV Host",
+      "model",
+      "beauty queen"
+    ],
+    "titles_won": [
+      "Miss Russia 2007",
+      "Miss World 2008"
+    ]
+  },
+  "crowning_event": {
+    "pageant_name": "Miss Russia",
+    "year": 2007
+  },
+  "crowned_by_person": {
+    "name": "Tatiana Kotova"
+  }
+}

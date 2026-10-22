@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mercy Hospital and Medical Center: Mercy Hospital and Medical Center is a 292 bed general medical and surgical Catholic teaching hospital in Chicago, Illinois.  Established in 1852, The hospital was the first chartered hospital in Chicago.  In 1859, Mercy Hospital became the first Catholic hospital to affiliate with a medical school—Lind Medical School—and the first to require a graded curriculum.  Today, Mercy Hospital and Medical Center is part of a nationwide network of Mercy Healthcare facilities.  Mercy also is the hospital used by the Daley family: all of their children were born there.  Mercy sold a plot of land to the north of their hospital for 60 million dollars in 2008.  It is also the main women's cancer center in Illinois.  It accepted patients from Michael Reese Hospital and Medical Center and absorbed the ambulance routes when the hospital closed in 2008.  Mercy follows Catholic teaching but does give birth control to rape patients.
+
+68 High Street: 68 High Street, formerly the Children's Hospital, is a historic colonial revival building in Portland, Maine.  Located on the eastern edge of Portland's West End, the building was built in 1909 and was designed by architect Frederick A. Tompson.  According to news archives, Drs. Edville Gerhardt Abbott and Harold A. Pingree and Frank W. Lamb founded this worldwide famous children's hospital for crippled children with scoliosis together in 1908.  It closed in 1948, with most of the 56 patients at the time being transferred to Maine General Hospital, which was later renamed the Maine Medical Center.  It also served as an annex to the Mussey Mansion until the left part of that building was demolished in 1961.  It had also been owned and used by the University of Southern Maine as administrative offices.  In 2010, Community Housing of Maine sought to develop the property and the adjacent empty lot into 35 units of affordable housing.  It was listed on the National Register of Historic Places .
+
+Sutter Medical Center: Sutter Medical Center, Sacramento is a medical center in Sacramento, California that has been named one of the Top 100 Hospitals in the nation for five years, including 2013-2015.  It is owned and operated by Sutter Health, a Northern California not-for-profit health system.  Sutter Medical Center, Sacramento offers both community-based and tertiary medical services.  In 2015, Sutter Medical Center, Sacramento (SMCS) consolidated its Sutter Memorial Hospital campus in East Sacramento with its midtown Sutter General Hospital location, with the opening of the Anderson Lucchetti Women's and Children's Center and the complete remodeling of Sutter General Hospital into the Ose Adams Medical Pavilion.  The midtown location is where Sutter Health's first hospital, Sutter Hospital, opened in 1923.  Sutter Medical
+
+Central Valley General Hospital: Central Valley General Hospital is a rural 49-bed hospital in Hanford, California, specializing in obstetrical care.  It features a women's services unit and an intensive care neonatal nursery.  It also offers extensive Community Care clinic services serving communities in Kings, Tulare and southern Fresno counties.  Central Valley General Hospital is a part of the Seventh-day Adventist hospital system.  Central Valley General Hospital is a part of a division of Adventist Health known as the "Adventist Health/Central Valley Network," consisting of Central Valley General Hospital, Adventist Medical Center - Hanford, Adventist Medical Center - Selma, Adventist Medical Center - Reedley, and over 30 Adventist Health/Community Care clinics throughout a 2500 sqmi region in the Central Valley.
+
+Banner University Medical Center Tucson: Banner - University Medical Center Tucson (BUMCT), formerly University Medical Center and the University of Arizona Medical Center, is a private, non-profit, 487-bed acute-care hospital located on the campus of the University of Arizona in Tucson, Arizona.  BUMCT is part of the University of Arizona Health Sciences (UAHS) center campus which includes the university's Colleges of Medicine, Nursing, Pharmacy and Public Health.  It is Southern Arizona's only Level I trauma center for both adult and pediatric patients.  BUMCT is one of two University of Arizona affiliated academic medical centers in Tucson with Banner - University Medical Center South (formerly Kino Community Hospital, University Physicians Healthcare Hospital, and University of Arizona Medical Center - South Campus) being the other such institution.  The area's only dedicated Children's hospital, Banner Children's at Diamond Children's Medical Center, is located within and adjacent to BUMCT.
+
+Legacy Holladay Park Medical Center: Legacy Holladay Park Medical Center is a hospital located in Portland, Oregon, United States.  It was founded in 1893 as Hahnemann Hospital.  By 1947 the hospital had 100 beds, and that year it changed its name to Holladay Park Hospital with plans to expand to 200 beds.  With a 1985 merger with Physicians & Surgeons Hospital (which had been known as Coffey Memorial Hospital until 1945), the name was changed to Holladay Park Medical Center.  At that time both hospitals were part of Metropolitan Hospitals, Inc. that had been formed by Physicians & Surgeons Hospital and Emanuel Hospital.  After becoming part of Legacy Health when it was formed in 1989, Legacy closed the then 171-bed hospital in 1994.  As of 2014, the former hospital was used by Legacy as the Legacy Research Institute.  Legacy proposed converting the building into an emergency room for psychiatric patients in 2014 after the Legacy Research Institute moved to a new building.  Legacy, Oregon Health & Science University, Adventist Health, and Kaiser Permanente agreed to operate the ER, with a planned opening in 2016.
+
+Maine Medical Center: Maine Medical Center (commonly abbreviated to "MMC" or contracted to "Maine Med") is a 637 licensed-bed teaching hospital located at 22 Bramhall Street in Portland, Maine, United States with a staff of over 6,000 people.  The facility has obtained the rating of Level I Trauma Center, one of only three in Northern New England.  Founded in 1874, it is the largest hospital in northern New England with 28,000 inpatient visits, about 500,000 outpatient visits, 88,000 emergency visits, and over 27,000 surgeries performed annually.  MMC is structured as a non-profit, private corporation governed by volunteer trustees.
+
+Tufts University School of Medicine: The Tufts University School of Medicine is one of the eight schools that constitute Tufts University.  The "Times Higher Education (THE)" and the "Academic Ranking of World Universities (ARWU)" consistently rank Tufts among the world's best medical research institutions for clinical medicine.  Located on the university's health sciences campus in downtown Boston, Massachusetts, the medical school has clinical affiliations with thousands of doctors and researchers in the United States and around the world, as well as at its affiliated hospitals in both Massachusetts (including Tufts Medical Center, St. Elizabeth's Medical Center, Lahey Hospital and Medical Center and Baystate Medical Center), and Maine (Maine Medical Center).  According to Thomson Reuters' "Science Watch", Tufts University School of Medicine's research impact rates sixth among U.S medical schools for its overall medical research and within the top 5 for specialized research areas such as chronic obstructive pulmonary disorder, urology, cholera, public health & health care science, and pediatrics.  In addition, Tufts University School of Medicine is ranked 44th in research and 38th in primary care according to "U.S. News & World Report".
+
+Maine Eye and Ear Infirmary: The Maine Eye and Ear Infirmary is a historic medical facility that was located at 794-800 Congress Street in Portland, Maine.  Also known as Holt Hall, the structure, designed by John Calvin Stevens, was redeveloped into a residential building in 1997, after standing dormant for nearly 10 years.  The Maine Eye and Ear Infirmary was built in 1891.  In 1951 the hospital merged with the Children's Hospital and Maine General Hospital to become Maine Medical Center.  The facility was added to the National Register of Historic Places in 1986.
+
+Providence Court: Providence Court, previously St. Luke's Hospital, is a historic former hospital building at 379 East Street in Pittsfield, Massachusetts.  The Colonial Revival building was constructed in 1926, and was the first Roman Catholic hospital in Berkshire County.  St. Luke's merged with Pittsfield General Hospital in 1967 to form Berkshire Medical Center, in the nation's first mergers between religious and non-sectarian hospitals.  The building was converted into elderly housing in 1978-81.  It was listed on the National Register of Historic Places in 1987.
+
+Question: 68 High Street, formerly the Children's Hospital, is a historic colonial revival building in Portland, Maine, it closed in which year, with most of the 56 patients at the time being transferred to Maine General Hospital, which was later renamed the Maine Medical Center?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "hospital_name": {
+      "type": "string",
+      "description": "The name of the hospital that closed."
+    },
+    "closure_year": {
+      "type": "integer",
+      "description": "The year the hospital closed."
+    },
+    "patient_transfer_details": {
+      "type": "object",
+      "properties": {
+        "number_of_patients": {
+          "type": "integer",
+          "description": "The number of patients transferred upon closure."
+        },
+        "receiving_hospital_initial_name": {
+          "type": "string",
+          "description": "The name of the hospital that received the patients at the time of transfer."
+        },
+        "receiving_hospital_current_name": {
+          "type": "string",
+          "description": "The current name of the hospital that received the patients."
+        }
+      },
+      "required": [
+        "number_of_patients",
+        "receiving_hospital_initial_name",
+        "receiving_hospital_current_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "hospital_name",
+    "closure_year",
+    "patient_transfer_details"
+  ],
+  "additionalProperties": false
+}

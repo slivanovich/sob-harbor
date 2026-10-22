@@ -1,0 +1,16 @@
+{
+  "musical_title": "The Music Man",
+  "primary_creator": {
+    "name": "Meredith Willson",
+    "roles": [
+      "book",
+      "music",
+      "lyrics"
+    ]
+  },
+  "story_contributors": [
+    "Meredith Willson",
+    "Franklin Lacey"
+  ],
+  "is_based_on_story": true
+}

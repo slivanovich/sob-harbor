@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "record_id": "fe4bbbc7150f8f551b35e9c4ca52609e0038aad067529776d524bef9b84f97fd",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5abb14055542992ccd8e7f02",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "A Christmas Memory: \"A Christmas Memory\" is a short story by Truman Capote.  Originally published in \"Mademoiselle\" magazine in December 1956, it was reprinted in \"The Selected Writings of Truman Capote\" in 1963.  It was issued in a stand-alone hardcover edition by Random House in 1966, and it has been published in many editions and anthologies since.\n\nCapote (film): Capote is a 2005 biographical film about Truman Capote, following the events during the writing of Capote's non-fiction book \"In Cold Blood\".  Philip Seymour Hoffman won several awards, including the Academy Award for Best Actor, for his critically acclaimed portrayal of the title character.  The film was based on Gerald Clarke's biography \"Capote\" and was directed by Bennett Miller.  It was filmed mostly in Manitoba in the autumn of 2004.  It was released September 30, 2005, to coincide with Truman Capote's birthday.\n\nDear Mr. Capote: Dear Mr. Capote is a 1983 novel by Gordon Lish.  His first novel, it takes the form of a letter to Truman Capote from a serial killer, \"Yours Truly\", who wishes Capote to write his biography and share the proceeds.\n\nTruman Capote: Truman Garcia Capote ( ; born Truman Streckfus Persons, September 30, 1924 – August 25, 1984) was an American novelist, screenwriter, playwright, and actor.  Many of Capote's short stories, novels, plays, and nonfiction are recognized as literary classics, including the novella \"Breakfast at Tiffany's\" (1958) and the true crime novel \"In Cold Blood\" (1966), which he labeled a \"nonfiction novel\".  At least 20 films and television dramas have been produced of Capote novels, stories, and plays.\n\nTruman Capote Award for Literary Criticism: The Truman Capote Award for Literary Criticism is awarded for literary criticism by the University of Iowa on behalf of the Truman Capote Literary Trust.  The value of the award is $30,000 (USD), and is said to be the largest annual cash prize for literary criticism in the English language.  The formal name of the prize is the Truman Capote Award for Literary Criticism in Memory of Newton Arvin, commemorating both Capote and his friend Newton Arvin, who was a distinguished critic and Smith College professor until he lost his job in 1960 after his homosexuality was publicly exposed.\n\nTrilogy (film): Trilogy (also released as Truman Capote's Trilogy) is a 1969 American anthology drama film directed by Frank Perry and written by Truman Capote.  It was listed to compete at the 1968 Cannes Film Festival, but the festival was cancelled due to the events of May 1968 in France.\n\nInfamous (film): Infamous is a 2006 American drama film based on the 1997 book by George Plimpton \"Truman Capote: In Which Various Friends, Enemies, Acquaintances, and Detractors Recall His Turbulent Career\".  It covers the period from the late 1950s through the mid-1960s, during which Truman Capote researched and wrote his bestseller \"In Cold Blood\".\n\nTruman Capote Literary Trust: The Truman Capote Literary Trust is an American charitable trust established in 1994 by Truman Capote's literary executor, Alan U. Schwartz, pursuant to Capote's will.\n\nDallas John Baker: Dallas John Baker (born Dallas John Angguish Baker on 19 February 1968) is an Australian writer and academic noted for poetry, short stories and travel writing whose work deals with themes of alienation, otherness and sexuality.  He is also known as Dallas Angguish, the name he used as a performance poet beginning in the 1980s.  He has been repeatedly compared to Truman Capote and to David Sedaris.  Angguish, who is openly gay, has also written plays and screenplays some of which have been produced.  He is known for a lyrical style that foregrounds feeling and the use of powerful descriptive passages.  Due to his evocative short stories, he has been variously described as Truman Capote's literary heir and as reminiscent of Carson McCullers, the much lauded Southern Gothic writer.  His prose poetry has appeared in the journals Text, Lodestar Quarterly, Retort Magazine and Polari journal.  His short stories have appeared in the book anthologies \"\"Dumped\"\", \"\"Bend, Don't Shatter\"\",\"\"Sensual Travels\"\" and others.  His collection of memoir and travel writing \"\"Anywhere But Here\"\", released in February 2006, received very strong reviews.  In particular Graeme Aitken of Australian gay magazine DNA wrote:\n\nLewis Mumford: Lewis Mumford, KBE (October 19, 1895 – January 26, 1990) was an American historian, sociologist, philosopher of technology, and literary critic.  Particularly noted for his study of cities and urban architecture, he had a broad career as a writer.  Mumford was influenced by the work of Scottish theorist Sir Patrick Geddes and worked closely with his associate the British sociologist Victor Branford.",
+    "question": "Did Lewis Mumford and Truman Capote share the same nationality?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_asked": {
+          "type": "string",
+          "description": "The original question posed."
+        },
+        "shared_nationality": {
+          "type": "boolean",
+          "description": "True if the individuals share the same nationality, false otherwise."
+        },
+        "person_details": {
+          "type": "array",
+          "description": "Details for each person mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the person."
+              },
+              "nationality": {
+                "type": "string",
+                "description": "The nationality of the person as stated in the context."
+              }
+            },
+            "required": [
+              "name",
+              "nationality"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "common_nationality": {
+          "type": "string",
+          "description": "The specific nationality shared by both individuals, if applicable."
+        }
+      },
+      "required": [
+        "question_asked",
+        "shared_nationality",
+        "person_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_asked": "Did Lewis Mumford and Truman Capote share the same nationality?",
+      "shared_nationality": true,
+      "person_details": [
+        {
+          "name": "Lewis Mumford",
+          "nationality": "American"
+        },
+        {
+          "name": "Truman Capote",
+          "nationality": "American"
+        }
+      ],
+      "common_nationality": "American"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

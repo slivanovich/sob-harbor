@@ -1,0 +1,17 @@
+{
+  "band_names": [
+    "God Lives Underwater",
+    "Pavement"
+  ],
+  "common_music_type": "rock",
+  "individual_band_details": [
+    {
+      "band_name": "God Lives Underwater",
+      "genre": "industrial rock"
+    },
+    {
+      "band_name": "Pavement",
+      "genre": "indie rock"
+    }
+  ]
+}

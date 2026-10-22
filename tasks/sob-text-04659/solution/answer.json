@@ -1,0 +1,10 @@
+{
+  "destination_country": "Denmark",
+  "bridge_name": "Øresund Bridge",
+  "bridge_origin_country": "Sweden",
+  "operating_company": "Transdev",
+  "connection_types": [
+    "railway",
+    "motorway"
+  ]
+}

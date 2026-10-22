@@ -1,0 +1,23 @@
+{
+  "persons": [
+    {
+      "name": "Marguerite Radclyffe Hall",
+      "occupations": [
+        "poet",
+        "author"
+      ]
+    },
+    {
+      "name": "Charles Bukowski",
+      "occupations": [
+        "poet",
+        "novelist",
+        "short story writer",
+        "author",
+        "writer"
+      ]
+    }
+  ],
+  "common_occupation": "poet",
+  "number_of_common_occupations": 1
+}

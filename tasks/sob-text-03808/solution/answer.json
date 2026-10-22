@@ -1,0 +1,14 @@
+{
+  "target_iata_code": "CMH",
+  "airports_evaluated": [
+    {
+      "airport_name": "John Glenn Columbus International Airport",
+      "iata_code": "CMH"
+    },
+    {
+      "airport_name": "University Park Airport",
+      "iata_code": "SCE"
+    }
+  ],
+  "identified_airport_name": "John Glenn Columbus International Airport"
+}

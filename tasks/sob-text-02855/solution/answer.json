@@ -1,0 +1,18 @@
+{
+  "film_title": "The Hole",
+  "director": {
+    "name": "Joe Dante"
+  },
+  "main_actors": [
+    {
+      "name": "Teri Polo"
+    },
+    {
+      "name": "Chris Massoglia"
+    },
+    {
+      "name": "Haley Bennett"
+    }
+  ],
+  "release_year": 2009
+}

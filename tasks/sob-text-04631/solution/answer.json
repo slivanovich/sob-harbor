@@ -1,0 +1,11 @@
+{
+  "person_1": {
+    "name": "Matty Mullins",
+    "country_of_origin": "American"
+  },
+  "person_2": {
+    "name": "Andy Kuntz",
+    "country_of_origin": "German"
+  },
+  "are_from_same_country": false
+}

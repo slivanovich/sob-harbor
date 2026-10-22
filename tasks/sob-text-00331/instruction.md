@@ -1,0 +1,80 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Day at the Circus (1901 film): Day at the Circus is a 1901 American silent film produced and distributed by Edison Manufacturing Company and directed by Edwin S. Porter.  It depicts a parade of the Great Forepaugh and Sells Bros.  Combined Circus followed by a horse race in the tent.  It was one of many early silent film documentaries depicting circuses, which historian Katherine H. Adams said, "The circus' emphasis on movement and quick transition, as well as its lack of dialogue, made it a perfect subject matter for silent film."
+
+Niles Essanay Silent Film Museum: The Niles Essanay Silent Film Museum is located in what is now the historic district of Niles in the city of Fremont, CA.  The museum is housed in the Edison Theater, a century old Nickelodeon movie theater, just half a block from the former site of the Niles Essanay Studios where Broncho Billy and Charlie Chaplin made films in the 1910s.  It is dedicated to preserving and showing silent films and their history.  The silent film historical work of one of the members of its staff, David Kiehn, was featured on 60 Minutes for demonstrating that a film shot in San Francisco entitled A Trip Down Market Steet was actually made a few days before the 1906 San Francisco earthquake.  Additionally, when Google made a Google Doodle for April 15, 2011, in celebration of Charlie Chaplin's 122nd birthday, they collaborated with the Niles Silent Film Museum to produce the short.
+
+A Silent Film: A Silent Film are an English alternative rock band from Oxford.  The band consists of Robert Stevenson (vocals/piano/guitar) and Spencer Walker (drums).  Their first album, "The City That Sleeps", was released on 6 October 2008, with one reviewer describing it as "a surefire winner".  One critic has said that A Silent Film's style "distinctly echoes" Coldplay, Snow Patrol and The Killers.  Their latest album, A Silent Film, was released in October 2015.
+
+San Francisco Silent Film Festival: The San Francisco Silent Film Festival is a film festival first held in 1996 and presented annually at the Castro Theatre in San Francisco, California, USA.  It is the largest silent film festival in the United States, although the largest silent film festival in the world remains the Giornate del cinema muto in Pordenone, northern Italy.
+
+Pordenone Silent Film Festival: Le Giornate del cinema muto (referred to in English as Pordenone Silent Film Festival) is an annual festival of silent film held in October in Pordenone, northern Italy.  It is the first, largest and most important international festival dedicated to silent film and also is present in the list of the top 50 unmissable film festivals in the world according to Variety.  The Pordenone Silent Film Festival is a non-profit association, whose president is Livio Jacob.  The director from 1997 until 2015 was David Robinson.  Other members of the festival board are Paolo Cherchi Usai, Lorenzo Codelli, Piero Colussi, Luciano De Giusti, Carlo Montanaro, Piera Patat.
+
+Needtobreathe: Needtobreathe (stylized as NEEDTOBREATHE) is an American Christian rock band from Seneca, South Carolina, United States.  The band is composed of Bear Rinehart (lead vocals, guitar, piano), Bo Rinehart (backing vocals, guitar), Seth Bolt (backing vocals, bass) and Josh Lovelace (backing vocals, keys).  To date they have released six studio albums: "Daylight" (2006), "The Heat" (2007), "The Outsiders" (2009), "The Reckoning" (2011), "Rivers in the Wasteland" (2014), and "Hard Love" (2016).
+
+Silent film: A silent film is a film with no synchronized recorded sound, especially with no spoken dialogue.  The silent film era lasted from 1895 to 1936.  In silent films for entertainment, the dialogue is transmitted through muted gestures, mime and title cards with a written indication of the plot or key dialogue.  The idea of combining motion pictures with recorded sound is nearly as old as film itself, but because of the technical challenges involved, synchronized dialogue was made practical only in the late 1920s with the perfection of the Audion amplifier tube and the introduction of the Vitaphone system.  During silent films, a pianist, theater organist, or, in large cities, even a small orchestra would often play music to accompany the films.  Pianists and organists would either play from sheet music or improvise; an orchestra would play from sheet music.
+
+Michael G. Ankerich: Michael G. Ankerich is a biographer whose work focuses on American silent film and early twentieth century actors and actresses.  Ankerich's interviews with the last remaining silent film stars were featured in "Broken Silence: Conversations With 23 Silent Film Stars" (1993) and "The Sound of Silence: Conversations with 16 Film and Stage Personalities Who Made the Transition from Silents to Talkies" (1998).  His biography of silent film actress Mae Murray, "Mae Murray: The Girl with the Bee-Stung Lips," was named one of the top 10 must-read film books of 2012.
+
+Where East Is East: Where East Is East is a 1929 silent film starring Lon Chaney as an animal trapper in Laos.  The motion picture is Chaney's penultimate silent film and the last of his collaborations with director Tod Browning.  While this film is essentially a silent film in form, with intertitles and no spoken dialogue, Metro-Goldwyn-Mayer released it with a Movietone soundtrack of effects and music.
+
+What Every Woman Knows (1921 film): What Every Woman Knows is a 1921 American silent comedy drama film adapted form the play "What Every Woman Knows" by James Barrie.  The play had premiered on Broadway in 1908 and was a hit starring Maude Adams.  A British silent film version had been made in 1917 and a later American talkie would be produced in 1934 with Helen Hayes.  This silent film version was directed by William C. deMille continuing his forte at adapting literary and/or stage plays to the silent screen.  The film stars Lois Wilson and Conrad Nagel.  This version is now lost.
+
+Question: A Silent Film and Needtobreathe, have which genre in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Names of the bands mentioned in the question."
+    },
+    "genres": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "band_name": {
+            "type": "string",
+            "description": "The name of the band."
+          },
+          "specific_genre": {
+            "type": "string",
+            "description": "The specific genre of the band."
+          }
+        },
+        "required": [
+          "band_name",
+          "specific_genre"
+        ],
+        "additionalProperties": false
+      },
+      "description": "List of bands and their specific genres."
+    },
+    "common_genre": {
+      "type": "string",
+      "description": "The genre that both bands have in common."
+    }
+  },
+  "required": [
+    "band_names",
+    "genres",
+    "common_genre"
+  ],
+  "additionalProperties": false
+}

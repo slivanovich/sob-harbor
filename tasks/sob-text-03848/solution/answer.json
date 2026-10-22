@@ -1,0 +1,14 @@
+{
+  "actress_name": "Anne Meara",
+  "roles": [
+    "actress",
+    "comedian"
+  ],
+  "film_appearances": [
+    "Lovers and Other Strangers"
+  ],
+  "comedy_team": {
+    "name": "Stiller and Meara",
+    "partner": "Jerry Stiller"
+  }
+}

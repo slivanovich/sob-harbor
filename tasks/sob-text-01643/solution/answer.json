@@ -1,0 +1,12 @@
+{
+  "film_title": "Popstar",
+  "film_release_year": 2005,
+  "featured_singer": {
+    "name": "Aaron Charles Carter",
+    "music_genres": [
+      "pop",
+      "hip hop"
+    ],
+    "role_in_film": "lead role"
+  }
+}

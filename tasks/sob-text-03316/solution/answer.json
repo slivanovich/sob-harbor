@@ -1,0 +1,12 @@
+{
+  "director_name": "Tod Browning",
+  "film_in_question": {
+    "title": "The Deciding Kiss",
+    "year": 1918,
+    "genre": "comedy"
+  },
+  "best_known_film_by_director": {
+    "title": "Dracula",
+    "year": 1931
+  }
+}

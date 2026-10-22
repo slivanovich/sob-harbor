@@ -1,0 +1,13 @@
+{
+  "remake_film": {
+    "title": "Cat Girl",
+    "year": 1957,
+    "remake_type": "unofficial"
+  },
+  "original_film": {
+    "title": "Cat People",
+    "year": 1942,
+    "director": "Jacques Tourneur"
+  },
+  "answer": "Jacques Tourneur"
+}

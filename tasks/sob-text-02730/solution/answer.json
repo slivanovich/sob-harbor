@@ -1,0 +1,11 @@
+{
+  "person_born_first": {
+    "name": "Gregg Araki",
+    "birth_date": "1959-12-17"
+  },
+  "person_born_second": {
+    "name": "Abiola Abrams",
+    "birth_date": "1976-07-29"
+  },
+  "comparison_result": "Gregg Araki was born first."
+}

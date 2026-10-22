@@ -1,0 +1,9 @@
+{
+  "actress_name": "Elizabeth Olsen",
+  "film_starred_in": "Silent House",
+  "award_nomination": {
+    "award_name": "Broadcast Film Critics Association Award",
+    "award_category": "Best Actress",
+    "nominated_for_film": "Martha Marcy May Marlene"
+  }
+}

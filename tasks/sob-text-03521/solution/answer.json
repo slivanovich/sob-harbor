@@ -1,0 +1,18 @@
+{
+  "person_one_name": "Modest Mussorgsky",
+  "person_one_occupations": [
+    "composer"
+  ],
+  "person_two_name": "Carl Maria von Weber",
+  "person_two_occupations": [
+    "composer",
+    "conductor",
+    "pianist",
+    "guitarist",
+    "critic"
+  ],
+  "shared_occupations": [
+    "composer"
+  ],
+  "count_shared_occupations": 1
+}

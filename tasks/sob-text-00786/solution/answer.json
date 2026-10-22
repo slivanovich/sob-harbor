@@ -1,0 +1,13 @@
+{
+  "king_details": {
+    "name": "Olav V",
+    "birth_year": 1903,
+    "title": "King of Norway"
+  },
+  "gas_field_event": {
+    "field_name": "Frigg gas field",
+    "event_description": "officially opened production",
+    "event_date": "8 May 1978"
+  },
+  "final_answer": "Olav V of Norway"
+}

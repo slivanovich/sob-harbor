@@ -1,0 +1,125 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2nd AACTA Awards: The 2nd Australian Academy of Cinema and Television Arts Awards (generally known as AACTA Awards) are a series of awards which includes the 2nd AACTA Awards Luncheon, the 2nd AACTA Awards ceremony and the 2nd AACTA International Awards.  The former two events were held at the Star Event Centre, in Sydney, New South Wales on 28 January and 30 January 2013, respectively.  Presented by the Australian Academy of Cinema and Television Arts (AACTA), the awards celebrated the best in Australian feature film, television, documentary and short film productions of 2012.  The AACTA Awards ceremony was televised on Network Ten.  Actor Russell Crowe hosted the show.  These awards are a continuum of the Australian Film Institute Awards (known as the AFI Awards), established in 1958 and presented until 2010, which was rebranded the AACTA Awards when the Australian Film Institute (AFI) established AACTA in 2011.
+
+1969 Australian Film Institute Awards: The 1968 Australian Film Awards (known retroactively as the Australian Film Institute Awards) ceremony, presented by the Australian Film Institute (AFI), honoured the best feature and non-feature films of 1969, and took place on 2 December 1969 at National Library Theatre, in Canberra, Australian Capital Territory.  Australian Prime Minister John Gorton hosted the ceremony.  During the ceremony the Australian Film Institute presented two gold, nine silver and bronze prizes, four special awards and certificates for twelve honourable mentions.
+
+5th AACTA Awards: The 5th Australian Academy of Cinema and Television Arts Awards (generally known as AACTA Awards) are a series of awards which includes the 5th AACTA Awards Luncheon, the 5th AACTA Awards ceremony and the 5th AACTA International Awards.  The former two events were held at The Star Event Centre, in Sydney, New South Wales in late 2015.  Presented by the Australian Academy of Cinema and Television Arts (AACTA), the awards celebrate the best in Australian feature film, television, documentary and short film productions of 2015.  The AACTA Awards ceremony televised on Seven Network for the fourth year running.  The 5th AACTA Awards are a continuum of the Australian Film Institute Awards (known as the AFI Awards), established in 1958 and presented until 2010 after which it was rebranded the AACTA Awards when the Australian Film Institute (AFI) established AACTA in 2011.
+
+Kerry Armstrong: Kerry Michelle Armstrong (born 1958) is an Australian film, television and stage actress.  She is one of only two actresses to win two Australian Film Institute Awards in the same year, winning Best Actress in a Leading Role for "Lantana" and Best Actress in a Leading Role in a Television Drama for "SeaChange" in 2001.
+
+AFI Members' Choice Award: The AFI Members' Choice Award, is a film award presented by the Australian Academy of Cinema and Television Arts (AACTA) to an Australian feature-length film that is voted for by members of the Australian Film Institute (AFI).  Prior to the establishment of the Academy in 2011, the award was presented by the Australian Film Institute (AFI) at the annual Australian Film Institute Awards (more commonly known as the AFI Awards) from 2009–2010.  The award is presented at the AACTA Awards Luncheon, a black tie event which celebrates achievements in film production, television, documentaries and short films.
+
+4th AACTA Awards: The 4th Australian Academy of Cinema and Television Arts Awards (generally known as AACTA Awards) are a series of awards which includes the 4th AACTA Awards Luncheon, the 4th AACTA Awards ceremony and the 4th AACTA International Awards.  The former two events will be held at The Star Event Centre, in Sydney, New South Wales in late January 2015.  Presented by the Australian Academy of Cinema and Television Arts (AACTA), the awards will celebrate the best in Australian feature film, television, documentary and short film productions of 2014.  The AACTA Awards ceremony will be televised on Network Ten for the third year running.  The 4th AACTA Awards are a continuum of the Australian Film Institute Awards (known as the AFI Awards), established in 1958 and presented until 2010 after which it was rebranded the AACTA Awards when the Australian Film Institute (AFI) established AACTA in 2011.
+
+2006 Australian Film Institute Awards: The 48th Annual Australian Film Institute Awards ceremony, honouring the best in film and television acting achievements for the year 2006 in the cinema of Australia, took place on 6–7 December 2006.  During the ceremony, the Australian Film Institute presented Australian Film Institute Awards (commonly referred to as AFI Awards) in 40 categories including feature films, television, animation, and documentaries.  It was hosted by Geoffrey Rush.
+
+2009 Australian Film Institute Awards: The 51st Annual Australian Film Institute Awards ceremony, honoring the best in film and television acting achievements for 2009 in the cinema of Australia, took place over two nights on 5 December 2009 and on 11 December 2009.  During the ceremonies, the Australian Film Institute presented Australian Film Institute Awards (AFI awards) in 40 categories, including feature films, television, animation, and documentary.  The ceremony was hosted by Julia Zemiro of SBS's "RocKwiz".  Winners are listed first and highlighted in boldface; with nominees thereafter.
+
+2008 Australian Film Institute Awards: The 50th Annual Australian Film Institute Awards for film and television acting achievement in the cinema of Australia in 2008 were presented in a ceremony on 5–6 December 2008.  During the ceremony, the Australian Film Institute presented Australian Film Institute Awards (commonly referred to as AFI Awards) in 40 categories including feature films, television, animation and documentaries.  It was hosted by Stephen Curry of TV1's "The King".
+
+SeaChange: SeaChange was a popular Australian television show that ran for 39 episodes from 1998 to 2000 on the ABC.  It was created by Andrew Knight and Deborah Cox and starred Sigrid Thornton, David Wenham, William McInnes, John Howard, Tom Long, and Kerry Armstrong.  The director was Michael Carson.
+
+Question: What television show ran for 39 episodes from 1998 to 2000 on the ABC starred an actress who is one of only two actresses to win two Australian Film Institute Awards in the same year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "television_show_name": {
+      "type": "string",
+      "description": "The name of the television show."
+    },
+    "run_details": {
+      "type": "object",
+      "properties": {
+        "number_of_episodes": {
+          "type": "integer",
+          "description": "The total number of episodes the show ran for."
+        },
+        "start_year": {
+          "type": "integer",
+          "description": "The year the show started airing."
+        },
+        "end_year": {
+          "type": "integer",
+          "description": "The year the show stopped airing."
+        },
+        "network": {
+          "type": "string",
+          "description": "The television network the show aired on."
+        }
+      },
+      "required": [
+        "number_of_episodes",
+        "start_year",
+        "end_year",
+        "network"
+      ],
+      "additionalProperties": false
+    },
+    "award_winning_actress": {
+      "type": "object",
+      "properties": {
+        "actress_name": {
+          "type": "string",
+          "description": "The name of the actress who won multiple awards in the same year."
+        },
+        "number_of_awards_won_in_same_year": {
+          "type": "integer",
+          "description": "The number of Australian Film Institute Awards won by the actress in the same year."
+        },
+        "award_year": {
+          "type": "integer",
+          "description": "The year the actress won the multiple awards."
+        },
+        "awards_details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "award_category": {
+                "type": "string",
+                "description": "The category of the award won."
+              },
+              "production_title": {
+                "type": "string",
+                "description": "The title of the production for which the award was won."
+              }
+            },
+            "required": [
+              "award_category",
+              "production_title"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Details of each award won by the actress in that year."
+        }
+      },
+      "required": [
+        "actress_name",
+        "number_of_awards_won_in_same_year",
+        "award_year",
+        "awards_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "television_show_name",
+    "run_details",
+    "award_winning_actress"
+  ],
+  "additionalProperties": false
+}

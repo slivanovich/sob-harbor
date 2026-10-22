@@ -1,0 +1,14 @@
+{
+  "owner_company": "Walt Disney",
+  "owned_entities": [
+    {
+      "entity_name": "Davy Crockett and the River Pirates",
+      "entity_type": "film"
+    },
+    {
+      "entity_name": "Matterhorn Bobsleds",
+      "entity_type": "attraction"
+    }
+  ],
+  "number_of_owned_entities": 2
+}

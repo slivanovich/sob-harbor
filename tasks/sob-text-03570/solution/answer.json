@@ -1,0 +1,9 @@
+{
+  "magazine_name": "Playboy",
+  "funding_details": {
+    "source_type": "loan",
+    "funder_relationship": "mother",
+    "amount_usd": 1000
+  },
+  "founder_name": "Hugh Hefner"
+}

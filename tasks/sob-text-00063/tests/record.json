@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "1bd04239c196711657f754e88eec71558bda5993b3518d37dd8e24681cb4b8a7",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab299a6554299194fa93431",
+    "source_dataset": "hotpotqa",
+    "source_answer": "40%",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Chewing gum industry: Two multi-national companies, Wrigley and Cadbury, together account for some 60% market share of the worldwide chewing gum market.  The global market shares for the top 5 chewing gum companies are estimated to be:\n\nShin-Etsu Chemical: Shin-Etsu Chemical Co., Ltd. (信越化学工業株式会社 , Shin'etsu Kagaku Kōgyō Kabushiki-gaisha ) is the largest chemical company in Japan, ranked No. 9 in Forbes Global 2000 for chemical sector.  Shin-Etsu has the largest global market share for polyvinyl chloride, semiconductor silicon, and photomask substrates.\n\nMarket share: Market share is the percentage of a market (defined in terms of either units or revenue) accounted for by a specific entity.  In a survey of nearly 200 senior marketing managers, 67% responded that they found the revenue- \"dollar market share\" metric very useful, while 61% found \"unit market share\" very useful.\n\nBig Three (credit rating agencies): The Big Three credit rating agencies are Standard & Poor's (S&P), Moody's, and Fitch Group.  S&P and Moody's are based in the US, while Fitch is dual-headquartered in New York City and London, and is controlled by Hearst.  As of 2013 they hold a collective global market share of \"roughly 95 percent\" with Moody's and Standard & Poor's having approximately 40% each, and Fitch around 15%.  The financial services firm Morningstar, Inc. and its ratings subsidiary Morningstar Credit Ratings has grown its market share, with some publications speculating the firm could transform the 'Big Three' into the 'Big Four' rating agencies.\n\nAjinomoto: Ajinomoto Co., Inc. (味の素株式会社 , Ajinomoto Kabushiki-gaisha ) is a Japanese food and chemical corporation which produces seasonings, cooking oils, TV dinners, sweeteners, amino acids, and pharmaceuticals.  In particular it is the world's largest producer of aspartame, with a 40% global market share.\n\nAnheuser-Busch InBev: Anheuser-Busch InBev SA/NV (] ; abbreviated as AB InBev) is a Belgian–Brazilian beverage and brewing company with global headquarters in Leuven, Belgium.  Additional main offices are located in New York City, São Paulo, St. Louis, London, Mexico City, Johannesburg, Toronto, Buenos Aires and others.  The company was enlarged in October 2016 when AB InBev purchased SABMiller and concluded a merger of the two entities.  It was the world's largest brewer even before the acquisition of SABMiller and is considered one of the largest fast-moving consumer goods (FMCG) companies in the world.  The estimated annual sales for the company in 2017 will be US$55 billion; prior to the merger, ABInBev had realized US$45.5 billion in revenue in 2016.  The company is expected to have an estimated global market share of 28 percent, according to Euromonitor International.  The company has recently announced a commitment to secure 100% of its purchased electricity from renewable sources by 2025.\n\nBanco de Crédito del Perú: Banco de Crédito del Perú is the largest bank and the leading supplier of integrated financial services in Perú with approximately US$ 39 billion in total assets and a market share of 30.4% in total loans and 33.5% in total deposits.  BCP has more than 127 years of presence in the country and represents Peru’s most valuable brand.  Its network of more than 8,340 points of contact serves its more than 6 million clients.  BCP is the main subsidiary of Credicorp (NYSE: BAP), the largest financial holding in Peru.  BCP’s Wholesale Banking competes with local and foreign banks and provides its customers with short and medium-term loans in local and foreign currencies, foreign trade-related financing, lease financing, underwriting and financial advisory.  Its currently the market leader with a market share of more than 40% in corporate loans.  BCP’s Retail Banking serves individuals and small-sized companies with a wide range of high value-proposition products with a market share of over 20%.  In addition, BCP is the largest capital market and brokerage distribution system in Peru; its main activities include asset management, foreign exchange transactions, treasury, custody and trust, investment advisory services, and research activities.\n\nSeismic Micro-Technology: Seismic Micro – Technology (SMT), is the maker of KINGDOM software.  It is the global market share leader for Windows based interpretation.  SMT developed the first seismic interpretation tools for the Windows environment.  KINGDOM software is used by 2,700 companies in over 95 countries.  KINGDOM software is used to find sources of oil & gas in the subsurface and is used by 85 percent of the 150 largest petroleum exploration and production companies.  SMT's customer base includes international and national companies as well as independent companies and consultants.  More than 50 percent of sales come from international sales.  In August 11, 2011, Seismic Micro Technology was acquired by IHS Inc.\n\nPlug-in electric vehicles in the United States: The adoption of plug-in electric vehicles in the United States is actively supported by the American federal government, and several state and local governments. s of 2016 , cumulative sales in the U.S. totaled 570,187 highway legal plug-in electric vehicles since the market launch of the Tesla Roadster in 2008, representing 28.1% of the global light-duty plug-in stock.  s of 2016 , the U.S. has the world's third largest stock of plug-in passenger cars after China and Europe.  The U.S. market share of plug-in electric passenger cars increased from 0.14% in 2011 to 0.62% in 2013.  The plug-in segment reached a market share of 0.75% in 2014 and fell to 0.66% in 2015.  The plug-in segment achieved a record market share of 0.90% in 2016.  California is the largest plug-in car regional market in the country, with almost 270,000 plug-in electric vehicles registered through December 2016, and accounts for approximately 48% of cumulative plug-in sales in the American market from 2011 to June 2016.  The other nine states that follow California's Zero Emission Vehicle (ZEV) regulations account for another 10% of cumulative plug-in car sales in the U.S. during the same period.\n\nNateglinide: Nateglinide (INN, trade name Starlix) is a drug for the treatment of type 2 diabetes.  Nateglinide was developed by Ajinomoto, a Japanese company and sold by the Swiss pharmaceutical company Novartis.",
+    "question": "The drug Nateglinide was developed by a company that has what percentage of the global market share?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "developer_company_name": {
+          "type": "string",
+          "description": "The name of the company that developed the drug."
+        },
+        "developed_product": {
+          "type": "string",
+          "description": "The name of the drug that was developed."
+        },
+        "market_share_percentage": {
+          "type": "number",
+          "description": "The global market share percentage of the developer company."
+        },
+        "market_share_product": {
+          "type": "string",
+          "description": "The specific product for which the market share is held by the developer company."
+        }
+      },
+      "required": [
+        "developer_company_name",
+        "developed_product",
+        "market_share_percentage",
+        "market_share_product"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "developer_company_name": "Ajinomoto",
+      "developed_product": "Nateglinide",
+      "market_share_percentage": 40,
+      "market_share_product": "aspartame"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

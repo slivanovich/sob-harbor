@@ -1,0 +1,18 @@
+{
+  "historian": {
+    "name": "Ibn Khaldun",
+    "origin": "North African Arab",
+    "birth_year": 1332
+  },
+  "shelter_location": {
+    "name": "Qalʿat ibn Salama",
+    "type": "fortress",
+    "near_city": "Tihert",
+    "current_country": "Algeria"
+  },
+  "shelter_period": {
+    "start_year": 1375,
+    "end_year": 1379,
+    "duration_years": 4
+  }
+}

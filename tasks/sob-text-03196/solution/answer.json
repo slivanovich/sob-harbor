@@ -1,0 +1,15 @@
+{
+  "musician_details": {
+    "name": "Paul Dean",
+    "role": "lead guitarist"
+  },
+  "band_details": {
+    "name": "Loverboy",
+    "formation_location": {
+      "city": "Calgary",
+      "province_state": "Alberta"
+    },
+    "formation_year": 1979
+  },
+  "final_answer": "Calgary, Alberta"
+}

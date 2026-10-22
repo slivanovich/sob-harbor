@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of Native American actors: This is a list of Native American actors in the United States, including Alaskan Natives and American Indians. Native American identity is a complex and contested issue rooted in political sovereignty that pre-dates the creation of colonial nation states like the U.S. and Canada and persists into the 21st century recognized under international law by treaty.  The Bureau of Indian Affairs defines Native American as having American Indian or Alaska Native ancestry.  Legally, being Native American is defined as being enrolled in a federally recognized tribe or Alaskan village.  Ethnologically, factors such as culture, history, language, religion, and familial kinships can influence Native American identity.  All individuals on this list should have Native American ancestry.  Historical figures might predate tribal enrollment practices and would be included based on ethnological tribal membership, while any contemporary individuals should either be enrolled members of federally recognized tribes or have cited Native American ancestry and be recognized as being Native American by their respective tribes(s).  Contemporary unenrolled individuals are listed as being of descent from a tribe.
+
+Little Traverse Bay Bands of Odawa Indians: The Little Traverse Bay Bands of Odawa Indians (LTBBOI) is a federally recognized Native American tribe of Odawa.  A large percentage of the more than 4000 tribal members continue to reside within the tribe's traditional homelands on the northwestern shores of the state of Michigan's Lower Peninsula.  The historically delineated reservation area, located at , encompasses approximately 336 sqmi of land in Charlevoix and Emmet counties.  The largest communities within the reservation boundaries are Harbor Springs (formerly known as "L'arbre Croche" in the French colonial era), where the tribal offices are located; Petoskey, where the Tribe operates the Odawa Casino Resort; and Charlevoix.
+
+Yavapai-Apache Nation: The Yavapai-Apache Nation is a federally recognized Native American tribe in Verde Valley, Arizona.  Tribal members share two culturally distinct backgrounds and speak two indigenous languages, the Yavapai language and the Western Apache language.  The Yavapai-Apache Nation Indian Reservation, at , consists of five non-contiguous parcels of land located in three separate communities in eastern Yavapai County.  The two largest sections, 576 acre together – almost 90 percent of the reservation's territory, are in the town of Camp Verde.  Smaller sections are located in the town of Clarkdale 60.17 acre , and the unincorporated community of Lake Montezuma (5.8 acre ).  The reservation's total land area is 642 acre .  The total resident population of the reservation was 743 persons as of the 2000 census.  The 2010 Census reported 1,615 people on the reservation.  Of these, 512 lived in Camp Verde, 218 in Clarkdale, and only 13 in Lake Montezuma.
+
+Shawnee Tribe: The Shawnee Tribe is a federally recognized Native American tribe in Oklahoma.  Also known as the Loyal Shawnee, they are one of three federally recognized Shawnee tribes.  The others are the Absentee-Shawnee Tribe of Indians of Oklahoma and Eastern Shawnee Tribe of Oklahoma.
+
+Upper Skagit Indian Tribe: The Upper Skagit Indian Tribe are a federally recognized tribe|federally recognized Native American tribe living in the state of Washington.  Before European colonization, the tribe occupied lands along the Skagit River, from as far downstream as present-day Mount Vernon, Washington, and villages going north as far as Newhalem along the Skagit River, as well as lands on the Baker, and the Sauk rivers.
+
+Norman Leard: Joseph Norman Leard (March 23, 1875 – July 1961) was an American football coach and secretary to Green McCurtain, principal chief of the Choctaw Nation of Oklahoma.  He was one-thirty-second Choctaw origin and attended in the Indian schools in Oklahoma.  He was the head football coach for the Kendall Orange and Black football team from 1895 to 1897.  In addition to being the coach, he was also the captain and quarterback of Kendall's first football team.
+
+Kaw people: The Kaw Nation (or Kanza, or "Kansa") are a federally recognized Native American tribe in Oklahoma.  They come from the central Midwestern United States.  The tribe known as Kaw have also been known as the "People of the South wind", "People of water", "Kansa", "Kaza", "Kosa", and "Kasa".  Their tribal language is Kansa, classified as a Siouan language.
+
+Mississippi Band of Choctaw Indians: The Mississippi Band of Choctaw Indians is one of three federally recognized tribes of Choctaw Native Americans.  On April 20, 1945, this band organized under the Indian Reorganization Act of 1934.  Also in 1945 the Choctaw Indian Reservation was created in Neshoba, Leake, Newton, Scott, Jones, Attala, Kemper, and Winston counties in Mississippi.  The Mississippi Band of Choctaw Indians is the only federally recognized Native American tribe in the state.
+
+Choctaw Nation of Oklahoma: The Choctaw Nation of Oklahoma (commonly referred to as the Choctaw Nation) is a federally recognized Native American tribe with a tribal jurisdictional area comprising twelve tribal districts.  The Choctaw Nation maintains a special relationship with both the United States and Oklahoma governments.
+
+Seminole Nation of Oklahoma: The Seminole Nation of Oklahoma is a federally recognized Native American tribe based in the U.S. state of Oklahoma.  It is the largest of the three federally recognized Seminole governments, which include the Seminole Tribe of Florida and the Miccosukee Tribe of Indians of Florida.  Its members are descendants of the 3,000 Seminoles who were forcibly removed from Florida to Indian Territory, along with 800 Black Seminoles, after the Second Seminole War.  The Seminole Nation of Oklahoma is headquartered in Wewoka within Seminole County, Oklahoma.  Of 18,800 enrolled tribal members, 13,533 live within the state of Oklahoma.  The tribe began to revive its government in 1936 under the Indian Reorganization Act.  While its reservation was originally larger, today the tribal jurisdictional area covers Seminole County, Oklahoma, within which it has a variety of properties.
+
+Question: Norman Leard was the secretary to the principal chief of this nation, a federally recognized Native American tribe with a tribal area comprising how many districts?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "nation_name": {
+      "type": "string",
+      "description": "The name of the Native American nation."
+    },
+    "is_federally_recognized": {
+      "type": "boolean",
+      "description": "Indicates if the nation is federally recognized."
+    },
+    "tribal_districts_count": {
+      "type": "integer",
+      "description": "The number of tribal districts comprising the nation's jurisdictional area."
+    }
+  },
+  "required": [
+    "nation_name",
+    "is_federally_recognized",
+    "tribal_districts_count"
+  ],
+  "additionalProperties": false
+}

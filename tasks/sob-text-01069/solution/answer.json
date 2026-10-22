@@ -1,0 +1,14 @@
+{
+  "writer_comparison": {
+    "first_writer": {
+      "name": "Jacques Prévert",
+      "birth_year": 1900
+    },
+    "second_writer": {
+      "name": "Eugène Ionesco",
+      "birth_year": 1909
+    }
+  },
+  "earliest_birth_year": 1900,
+  "writer_born_first_name": "Jacques Prévert"
+}

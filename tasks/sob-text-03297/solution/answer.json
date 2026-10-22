@@ -1,0 +1,12 @@
+{
+  "player_name": "Andy Murray",
+  "nationality": "British",
+  "origin_region": "Scotland",
+  "tournament_details": {
+    "tournament_name": "Rogers Cup",
+    "year": 2010,
+    "event_type": "Men's Singles"
+  },
+  "achievement_description": "successfully defended the title",
+  "comparison_player": "Andre Agassi"
+}

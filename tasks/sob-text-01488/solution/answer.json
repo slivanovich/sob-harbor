@@ -1,0 +1,16 @@
+{
+  "question_context": "Checking if two specific plant genuses are native to Africa.",
+  "genus_distribution_details": [
+    {
+      "genus_name": "Syzygium",
+      "native_range_description": "from Africa and Madagascar through southern Asia east through the Pacific",
+      "is_native_to_africa": true
+    },
+    {
+      "genus_name": "Cyanotis",
+      "native_range_description": "Africa, southern Asia, and northern Australia",
+      "is_native_to_africa": true
+    }
+  ],
+  "are_both_native_to_africa": true
+}

@@ -1,0 +1,11 @@
+{
+  "hotel_chain": {
+    "name": "Wingate By Wyndham",
+    "target_market": "business travelers"
+  },
+  "operating_company": {
+    "name": "Wyndham Worldwide",
+    "type": "hospitality company"
+  },
+  "relationship_description": "is a part of"
+}

@@ -1,0 +1,10 @@
+{
+  "cctld": ".tw",
+  "represented_entity": "Taiwan (Republic of China)",
+  "iso_code_details": {
+    "code_type": "ISO 3166-1 alpha-2",
+    "code_format_description": "two-letter country codes",
+    "standard_part": "ISO 3166-1",
+    "publishing_organization": "International Organization for Standardization (ISO)"
+  }
+}

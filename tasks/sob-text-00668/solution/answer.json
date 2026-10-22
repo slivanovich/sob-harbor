@@ -1,0 +1,13 @@
+{
+  "grand_prix": {
+    "year": 2016,
+    "race_type": "Formula Three"
+  },
+  "driver": {
+    "name": "George Russell",
+    "nationality": "British"
+  },
+  "result": {
+    "position": 3
+  }
+}

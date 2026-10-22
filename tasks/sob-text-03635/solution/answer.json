@@ -1,0 +1,12 @@
+{
+  "lake_name": "General Carrera Lake",
+  "shared_countries": [
+    "Argentina",
+    "Chile"
+  ],
+  "location_details": {
+    "region": "Aysén Region",
+    "country": "Chile"
+  },
+  "is_in_patagonia": true
+}

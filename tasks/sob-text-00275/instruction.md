@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Yugoslav Action: Yugoslav Action (, acronymed JA) was a radical Yugoslav nationalist organization that supported an authoritarian corporatist system and a planned economy, active between 1930 and 1935.  During its existence it was the most radical Yugoslavist group.  The movement was founded on 7 January 1930 in Belgrade, but was based in both Belgrade (in Serbia) and Zagreb (in Croatia), although mainly developed in Croatia.  The movement supported King Alexander's royal dictatorship (declared in 1929).  The organization was claimed by others to be fascist, though the party itself denied this.  It has been described as one of three notable fascist movements, the other being the Association of Fighters of Yugoslavia and the Yugoslav National Movement, that emerged in Yugoslavia in the 1930s, all of whom supported the monarchy, and would reach their zenith during the Axis occupation of Yugoslavia (1941–45).  The organization adopted symbols imitating the Nazi Party, such as a blue swastika and a raised right hand.  It was merged along with other organizations, such as "Boj" ("Battle") in Slovenia, and groups surrounding the magazines of "Zbor" ("Council") and "Otadžbina" ("Homeland") based in Belgrade, and "Budjenje" ("Awakening") in Zrenjanin, to form the Yugoslav National Movement led by Dimitrije Ljotić in early 1935.  The core of the Yugoslav National Movement, also known as "Zbor", was recruited from Yugoslav Action.  Zbor played no significant role prior to the German occupation; afterwards, however, it was among the main supporters of the Nazi military administration.
+
+Bulgarian Red Cross: The Bulgarian Red Cross (BRC) was established in 1878 after the liberation of the Principality of Bulgaria and the region of Eastern Rumelia from the Ottoman Empire.  The first BRC organization was established in May 1878 in Sofia.  The regional governor, V.P. Alabin, recruited many prominent citizens of the city, and led their work in the first BRC.  The two Bulgarian provinces, Principality of Bulgaria and Eastern Rumelia, became unified on September 20, 1885.  The National Organization of the BRC was then founded, with the approval of the statues of the organization by the first Bulgarian Prince, Prince Alexander of Battenberg.  On October 20, 1885, the BRC was recognized by, and became a member of the International Committee of the Red Cross (ICRC).  Significant contributions made by Tsar Boris III during the period of 1918-1943, which provided the organization with the ability to establish itself, and to take the first steps towards creating a Bulgarian social health system.
+
+Henry C. Groseclose: Henry C. Groseclose was born on May 17, 1892.  He lived in Ceres, Virginia for most of his life.  Mr. Groseclose completed his junior college degree from Washington and Lee University in 1917.  In his later years, he also received his bachelor’s degree, as well as his master’s degree, in agricultural education from Virginia Tech.  While Mr. Groseclose was an agriculture teacher at the Virginia Polytechnic Institute, he, along with three other agriculture teachers, Walter Newman, Edmund Magill and Harry Sanders, decided to establish a club for the farm boys in the school.  The organization was fired up in 1925.  Groseclose named the organization the Future Farmers of Virginia, or FFV for short.  The original meaning for the abbreviation FFV stood for the First Families of Virginia.  The “first families” referred to the families of both George Washington and Thomas Jefferson.  Referring to Washington and Jefferson, Groseclose once stated that, “The Future Farmers of America should follow the example of these great sons of early Virginia by using scientific knowledge, intelligence, and enthusiasm to the end that agriculture may again be known as the profession of the real aristocrat.”  Groseclose wrote the by-laws, as well as the constitution that the FFV would be based on.  In 1926, he also wrote, and brought into play, the formal ceremony that would take place as an organizational pattern to structure each meeting.  Two years later, in 1928, the FFV became a nationwide organization.  This developed the organization that is known today as the Future Farmers of America, or The National FFA Organization, or just FFA for short.  The by-laws drawn up by Henry Groseclose became the foundation of the newly national organization.  Also, the formal ceremony that Groseclose developed was taken on by the FFA as a national ritual that is still used today.  Groseclose was a seventh degree Grange member, and he was also involved with the Masons, so it was no surprise when he developed levels of memberships for the FFV, which transferred through to the FFA, that were similar to the three leveled membership structure that the Masons uses.  These three levels included the Greenhand, the Virginia Farmer and the Virginia Planter.  While the official emblem of the National FFA Organization was being drawn, Groseclose’s original emblem, which he hand drew himself, was highly considered and ended up playing a part in the emblem that is still the emblem of the National FFA Organization today.  The part of the emblem that was from Mr. Groseclose’s original drawing included a background setting of a half plowed wheat field with an owl perched upon a spade of wheat in front of the field.  Henry Groseclose served as the Executive Secretary of the National FFA Organization for two years between 1928 and 1930.  During his office of Executive Secretary, he announced at the national convention of 1930 that he had written, and would be releasing, an official FFA manual, which outlined the organization, procedures and structures of the National FFA Organization.  Mr. Groseclose also served as the Treasurer of the National FFA Organization for 11 years, between 1930 and 1941.  In September 1925, Henry Groseclose set his expectations for the members of the FFV, and the purpose of the establishment of the Future Farmers of Virginia was by saying, "In my opinion the farm boys of Virginia who are enrolled in vocational agriculture are equal to any other group of boys in the state.  But somehow the boys themselves seem to have a feeling of inferiority.  Especially is this true when the farm boy goes to the city and has to compete with his city cousin.  This condition should not exist.  I believe that a strong organization of our boys in agriculture would help them to overcome this handicap.  Let's form an organization that will give them a greater opportunity for self-expression and for the development of leadership.  In this way they will develop confidence in their own ability and pride in the fact that they are farm boys."  Mr. Henry C. Groseclose died on June 4 of 1950.  In 2002, the Department of Historic Resources established a marker in Mr. Groseclose’s honor.  It is Marker number KC-5 and it is displayed in Bland County of Ceres, Virginia.
+
+Heidelberg United FC: Heidelberg United Football Club (commonly referred to as Alexander, Warriors, or Bergers) is an association football club based in the northern Melbourne suburb of Heidelberg, Victoria, Australia.  The team currently competes in the National Premier League Victoria.  Heidelberg are one of five state league teams to have eliminated an A-League team in the FFA Cup, along with Blacktown City FC, Redlands United FC, Green Gully SC and Adelaide City FC.
+
+Elm City Express: Elm City Express is a men's soccer club based in New Haven, Connecticut that currently competes in the NPSL Northeast Region's Atlantic Blue Conference.  The club's colors are blue and white, and plays its home matches at Reese Stadium at Yale University.  The ownership group of Elm City Express also owns and operates Clube Atlético Tubarão, a Brazilian soccer club based in Santa Catarina, which competes in the lower levels of Brazil's pyramid.
+
+Alexander Volkanovski: Alexander Volkanovski (born 29 September 1988) is an Australian mixed martial artist and kickboxer.  He won two times Featherweight Australian Fighting Championship (AFC).  He is currently competing in the Ultimate Fighting Championship.
+
+Gold Star Wives of America: The Gold Star Wives of America is a private nonprofit organization formed before the end of World War II to provide support for the spouses and children of those who lost their lives while serving in the Armed Forces of the United States.  The first meeting was on April 5, 1945, when four young widows met in Marie Jordan's apartment on West 20th Street in New York City.  One week later, President Franklin D. Roosevelt died.  Shortly thereafter, Eleanor Roosevelt, the widow of the Commander-in-Chief, joined the organization.  Mrs. Roosevelt was most helpful in the early days of the organization.  She attended meetings, wrote about the organization in her "My Day" column, entertained children of Gold Star Wives at a picnic at her home in Hyde Park, New York, served on the first board of directors, and was one of the original 15 signers when the organization was chartered as a non-profit organization in the State of New York in December 1945.  The group holds a congressional charter under Title 36 of the United States Code under Public Law 96-497.
+
+Council on State Taxation: The Council on State Taxation (COST) is a state tax organization representing business taxpayers, noted by one prominent tax policy expert as the “most influential nongovernmental organization in the state tax policy arena.”  COST is a non-profit trade association based in Washington, D.C. consisting of nearly 600 multistate corporations engaged in interstate and international business.  COST was formed in 1969 as the "Committee on State Taxation" by a handful of companies under the sponsorship of the Council of State Chambers of Commerce, an organization with which COST remains associated.  In 2000, the organization changed its name to "Council on State Taxation".  COST’s objective is to preserve and promote equitable and nondiscriminatory state and local taxation of multijurisdictional business entities.
+
+Fort Wayne United Soccer Club: The Fort Wayne United Futbol Club is a 3-tier (Academy, Elite, and Premier) developmental soccer club based in Fort Wayne, Indiana, and was created in 2013 by the merger of Fort Wayne Fever and Citadel Futbol Club.  The club is a nonprofit (c)3 organization.  Its men's team competes in the USL Premier Development League, and the women's team competes in United Women's Soccer.
+
+Ultimate Fighting Championship: The Ultimate Fighting Championship (UFC) is an American mixed martial arts organization based in Las Vegas, Nevada, that is owned and operated by parent company WME–IMG.  It is the largest MMA promotion in the world and features the top-ranked fighters of the sport.  Based in the United States, the UFC produces events worldwide that showcase eleven weight divisions and abide by the Unified Rules of Mixed Martial Arts.  As of 2017, the UFC has held over 400 events.  Dana White serves as the president of the UFC.  He has held that position since 2001; while under the leadership of Dana White the UFC has grown into a globally popular multibillion-dollar enterprise.
+
+Question: What city and state is the organization that Alexander Volkanovski competes in based in?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "competitor_name": {
+      "type": "string",
+      "description": "The name of the competitor."
+    },
+    "organization_name": {
+      "type": "string",
+      "description": "The name of the organization the competitor is part of."
+    },
+    "organization_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the organization is based."
+        },
+        "state": {
+          "type": "string",
+          "description": "The state where the organization is based."
+        }
+      },
+      "required": [
+        "city",
+        "state"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "competitor_name",
+    "organization_name",
+    "organization_location"
+  ],
+  "additionalProperties": false
+}

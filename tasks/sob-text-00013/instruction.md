@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+On Top (Flume song): "On Top" was released as the first single from Flume's debut studio album, "Flume".  It features the vocals from American rapper T.Shirt.  The track reached its peak of number 57 in Australia on 4 March 2013 and was certified Gold.
+
+Holdin On: "Holdin On" was released as a single from Flume's debut studio album, "Flume".  It was released on 9 November 2012 and reached its peak of number 17 in Australia in March 2013 and was certified 2× Platinum.
+
+With Every Heartbeat: "With Every Heartbeat" is a song by Swedish record producer Kleerup and Swedish singer-songwriter Robyn.  It was first released on 10 January 2007 in Sweden and later on 30 July 2007 in the United Kingdom.  It was released as the second single from the international edition of Robyn's self-titled fourth studio album and the lead single from Kleerup's self-titled debut studio album.
+
+Flume (album): Flume is the debut studio album by electronic musician Flume.  It was released on 9 November 2012, by Future Classic.  The deluxe edition of the album was released on 12 November 2013.
+
+Calvin Harris: Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris, is a Scottish record producer, DJ, singer, and songwriter.  His debut studio album "I Created Disco" was released in June 2007, from which came his UK top 10 singles "Acceptable in the 80s" and "The Girls".  In 2009, Harris released his second studio album "Ready for the Weekend", which debuted at number one on the UK Albums Chart and was later certified gold by the British Phonographic Industry within two months of its release.  Its lead single "I'm Not Alone" became his first song to top the UK Singles Chart.
+
+Skin (Flume album): Skin is the second studio album by Australian electronic musician Flume.  It was released on 27 May 2016 by Future Classic.  The album marks the second full-length release since his self-titled debut in 2012, making it four years between releases.
+
+Flume (musician): Harley Edward Streten, known professionally as Flume, is an Australian record producer, musician and DJ.  His self-titled debut studio album, "Flume", was released on 9 November 2012 to positive reviews, topping the ARIA Albums Chart and reaching double-platinum accreditation in Australia.  Flume is regarded as the pioneer of future bass who helped popularize the genre.
+
+Sneaky Sound System: Sneaky Sound System is an Australian dance music group formed in late 2001 by Black Angus (Angus McDonald) on guitar, MC Double D (Daimon Downey) on vocoder and vocals, Damien Hesse (DJ) and Nick Broadhurst on saxophone.  They were joined in 2004 by Connie Mitchell (ex-Primary) on vocals; Downey left the band in September 2009, Hesse in 2005 and Broadhurst in 2006.  On 12 August 2006, they released their self-titled debut studio album, which peaked at No. 5 on the ARIA Albums Chart in mid-November 2007 and was certified 3× platinum by December 2011, denoting shipments of 210,000 copies.  The group's breakthrough single, "I Love It", which was issued on 8 July 2006, peaked at No. 24 on the ARIA Singles Chart and spent 73 weeks in the Top 100 – this broke the record as the longest charting single previously held by The Living End's 1997 hit, "Second Solution / Prisoner of Society", at 69 weeks.  Their second studio effort, "2", which appeared on 16 August 2008, became their first number-one album.  On 7 October 2011, "From Here to Anywhere" was released and reached at No. 11.  At ARIA Music Awards ceremonies they have been nominated fourteen times winning twice in 2007 for Best Dance Release and Breakthrough Artist – Album for their eponymous album.
+
+&quot;Weird Al&quot; Yankovic discography: The discography of American singer, songwriter, rapper, musician and parodist "Weird Al" Yankovic consists of fourteen studio albums, ten compilation albums, eleven video albums, two extended plays, forty-six singles and fifty-four music videos.  Since the debut of his first comedy song in 1976, he has sold more than 12 million albums—more than any other comedy act in history—recorded more than 150 parody and original songs, and performed more than 1,000 live shows.  His works have earned him four Grammy Awards among eleven nominations, along with several gold and platinum record certifications in the United States.  Yankovic's first single, "My Bologna", was released in 1979, and he made his chart debut two years later with his second single, "Another One Rides the Bus", which peaked at number four on the "Billboard" Bubbling Under Hot 100 Singles chart.  His self-titled debut studio album was released on Scotti Brothers Records in April 1983, peaking at number 16 on the US "Billboard" 200 and being certified gold by the Recording Industry Association of America (RIAA). " Ricky", the album's third single, became his first single to chart on the US "Billboard" Hot 100, peaking at number 64.
+
+Never Be like You: "Never Be like You" is a song by Australian musician Flume, featuring vocals from Canadian singer Kai.  It was released on 16 January 2016, by Future Classic, as the lead single of his second studio album, "Skin".  The song debuted at number10 on the ARIA Singles Chart, later reaching numberone and becoming Flume's first song to top the chart.  The song also charted in Belgium, France, the United States and New Zealand, where it reached numbertwo on the RMNZ Singles Chart.
+
+Question: "On Top" was released as the first single from Harley Edward Streten, known professionally as Flume, an Australian record producer, musician and DJ, his self-titled debut studio album, "Flume", was released on which date?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album."
+    },
+    "artist_professional_name": {
+      "type": "string",
+      "description": "The professional name of the artist."
+    },
+    "artist_full_name": {
+      "type": "string",
+      "description": "The full name of the artist."
+    },
+    "album_type": {
+      "type": "string",
+      "description": "The type of album (e.g., debut studio album)."
+    },
+    "release_date": {
+      "type": "string",
+      "description": "The release date of the album."
+    }
+  },
+  "required": [
+    "album_title",
+    "artist_professional_name",
+    "artist_full_name",
+    "album_type",
+    "release_date"
+  ],
+  "additionalProperties": false
+}

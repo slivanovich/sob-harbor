@@ -1,0 +1,26 @@
+{
+  "authors_involved": [
+    {
+      "name": "Karen Joy Fowler",
+      "writes_sf_fantasy": true,
+      "genres_mentioned": [
+        "science fiction",
+        "fantasy",
+        "literary fiction"
+      ]
+    },
+    {
+      "name": "Diana Gabaldon",
+      "writes_sf_fantasy": true,
+      "genres_mentioned": [
+        "historical fiction",
+        "romance",
+        "mystery",
+        "adventure",
+        "science fiction/fantasy"
+      ]
+    }
+  ],
+  "all_authors_write_sf_fantasy": true,
+  "reasoning": "Karen Joy Fowler is explicitly described as an 'author of science fiction, fantasy, and literary fiction'. Diana Gabaldon's books are described as merging multiple genres, 'featuring elements of historical fiction, romance, mystery, adventure and science fiction/fantasy'. Therefore, both authors write science fiction and fantasy."
+}

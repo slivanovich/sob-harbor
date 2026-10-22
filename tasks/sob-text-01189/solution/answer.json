@@ -1,0 +1,15 @@
+{
+  "film_title": "Subway",
+  "release_year": 1985,
+  "director_name": "Luc Besson",
+  "genre": [
+    "comedy",
+    "drama"
+  ],
+  "starring_actors": [
+    "Isabelle Adjani",
+    "Christopher Lambert",
+    "Jean Bouise"
+  ],
+  "co_star_identified": "Christopher Lambert"
+}

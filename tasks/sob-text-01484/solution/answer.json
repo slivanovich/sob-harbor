@@ -1,0 +1,13 @@
+{
+  "engineer": {
+    "full_name": "Roland Henry Chaplin",
+    "known_as": "Roy",
+    "birth_date": "1899-05-16"
+  },
+  "aircraft_developed": {
+    "name": "Harrier jump-jet",
+    "design_type": "V/STOL",
+    "success_status": "first truly successful V/STOL design"
+  },
+  "role_in_development": "helped design"
+}

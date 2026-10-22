@@ -1,0 +1,15 @@
+{
+  "shared_profession": "actor",
+  "relationship_type": "family",
+  "individual_a": {
+    "name": "Ann Casson",
+    "role_in_relationship": "daughter",
+    "occupation": "actress"
+  },
+  "individual_b": {
+    "name": "Lewis Casson",
+    "role_in_relationship": "father",
+    "occupation": "actor"
+  },
+  "common_ground_description": "Both Ann Casson and Lewis Casson were actors, and Lewis Casson was Ann Casson's father."
+}

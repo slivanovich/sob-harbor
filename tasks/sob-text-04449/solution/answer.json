@@ -1,0 +1,16 @@
+{
+  "are_both_novelists": true,
+  "sholem_asch_professions": [
+    "novelist",
+    "dramatist",
+    "essayist"
+  ],
+  "angela_carter_professions": [
+    "novelist",
+    "short story writer",
+    "journalist"
+  ],
+  "common_professions": [
+    "novelist"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "common_occupation": "engineer",
+  "individuals": [
+    {
+      "name": "Franz Viehböck",
+      "occupations": [
+        "electrical engineer",
+        "cosmonaut"
+      ]
+    },
+    {
+      "name": "Ulrich Walter",
+      "occupations": [
+        "physicist/engineer",
+        "astronaut"
+      ]
+    }
+  ],
+  "reasoning": "Both Franz Viehböck and Ulrich Walter are explicitly described as engineers in their respective biographies."
+}

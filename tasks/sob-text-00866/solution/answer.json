@@ -1,0 +1,9 @@
+{
+  "athlete_name": "Sharon Stewart",
+  "event_details": {
+    "event_name": "Commonwealth Games",
+    "year": 1990,
+    "medal_type": "bronze"
+  },
+  "athlete_nationality": "Australian"
+}

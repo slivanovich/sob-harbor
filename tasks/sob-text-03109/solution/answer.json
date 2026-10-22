@@ -1,0 +1,12 @@
+{
+  "representative": {
+    "name": "Jerrold Nadler",
+    "profession": "attorney",
+    "political_party": "Democratic Party"
+  },
+  "congressional_district": {
+    "state": "New York",
+    "district_number": 10
+  },
+  "is_current_representative": true
+}

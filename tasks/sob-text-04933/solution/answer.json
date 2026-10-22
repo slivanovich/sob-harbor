@@ -1,0 +1,14 @@
+{
+  "compared_groups": [
+    {
+      "group_name": "Willow",
+      "species_count": 400
+    },
+    {
+      "group_name": "Stipa",
+      "species_count": 300
+    }
+  ],
+  "group_with_more_species": "Willow",
+  "species_difference": 100
+}

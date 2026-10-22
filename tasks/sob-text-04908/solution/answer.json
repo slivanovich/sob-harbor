@@ -1,0 +1,14 @@
+{
+  "sampling_song": {
+    "title": "Windows Down",
+    "artist": "Big Time Rush",
+    "release_date": "June 25, 2012"
+  },
+  "sampled_song": {
+    "title": "Song 2",
+    "artist": "Blur",
+    "artist_origin": "English",
+    "release_date": "April 1997"
+  },
+  "sampling_detail": "hook"
+}

@@ -1,0 +1,12 @@
+{
+  "author_name": "Voltaire",
+  "work_title": "Essai sur les mœurs et l'esprit des nations",
+  "monarch_referenced": {
+    "name": "Louis XIV",
+    "title": "King of France",
+    "reign_duration_years": 72,
+    "reign_duration_days": 110,
+    "is_longest_reign_in_european_history": true
+  },
+  "work_historical_scope": "history of Europe before Charlemagne until the dawn of the age of Louis XIV, also addressing the colonies and the East"
+}

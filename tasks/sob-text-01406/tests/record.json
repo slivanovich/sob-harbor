@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "81879d075425bd0d84b628ee805d47820929c4e51b2ab3e87844c23ee41b079a",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5a75e8aa55429976ec32bc9b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Battle of Gettysburg",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "When Trumpets Fade: When Trumpets Fade, an HBO war film first presented on June 27, 1998, was directed by John Irvin, produced by John Kemeny and written by W.W. Vought.  It is set during the World War II Battle of Hürtgen Forest in Autumn of 1944.\n\nLeonard Lomell: Leonard G. “Bud” Lomell (January 22, 1920 – March 1, 2011) was a highly decorated former United States Army Ranger who served in World War II.  He is best known for his actions in the first hours of D-Day at Pointe du Hoc on the coast of Normandy, France.  Pointe du Hoc was the site of the German Army’s largest coastal weapons, five 155-millimeter German guns with a 25-kilometer range that endangered the tens of thousands of troops landing on Omaha Beach and Utah Beach, and thousands of watercraft in the English Channel supporting the Normandy invasion.  Unbeknownst to the Allied intelligence, the Germans had concealed the guns in an orchard, but left them operational and ready to fire.  Through skill, courage and “pure luck,” Lomell found and quickly disabled all five guns.  Lomell was recognized by historian Stephen Ambrose as the single individual — other than Gen. Dwight D. Eisenhower — most responsible for the success of D-Day.  Six months later, in the Battle of Hürtgen Forest, he would again distinguish himself, earning a Silver Star for his heroism and leadership as the 2nd Ranger Battalion captured and held Hill 400.  After the war he returned to Ocean County, New Jersey, becoming an attorney in Toms River.\n\nBattle of the Burbia River: The Battle of Río Burbia or the Battle of the Burbia River was a battle fought in the year 791 between the troops of the Kingdom of Asturias, commanded by King Bermudo I of Asturias, and the troops of the Emirate of Córdoba, led by Yusuf ibn Bujt.  The battle occurred in the context of the Ghazws of Hisham I against the Christian rebels of the northern Iberian Peninsula.  The battle took place near the Río Burbia, in the area which is today known as Villafranca del Bierzo.  The battle resulted in Andalusian victory.\n\nBattle of Gettysburg: The Battle of Gettysburg ( , with an sound) was fought July 1–3, 1863, in and around the town of Gettysburg, Pennsylvania, by Union and Confederate forces during the American Civil War.  The battle involved the largest number of casualties of the entire war and is often described as the war's turning point.  Union Maj. Gen. George Meade's Army of the Potomac defeated attacks by Confederate Gen. Robert E. Lee's Army of Northern Virginia, halting Lee's invasion of the North.\n\nBattle of Alhandic: The Battle of Alhandic (Spanish: \"Batalla de Alhandic\" ), also known as Zamora's trench Battle (\"Batalla del Foso de Zamora\"), was a battle that occurred on August 5, 939 in the city of Zamora, Spain.  The battle occurred when the troops of Abd-ar-Rahman III assaulted the walls of Zamora.  The defending troops were those loyal to Ramiro II of León, King of the Kingdom of Leon.  The fighting was so bloody that the tide of the battle did not turn until the ditch surrounding the city walls was entirely filled with corpses.  The troops of Aberraman III won the day and were able to seize the city of Zamora.  This battle should not be confused with the Day of Zamora (\"Día de Zamora\" or \"Jornada del Foso de Zamora\") which took place a few decades before in the year 901.\n\nBattle of Heartbreak Crossroads: The Battle of Heartbreak Crossroads was fought at a vital crossroads near a forester's cabin named Wahlerscheid, astride the Siegfried Line (\"Westwall\") that ran along the Höfen-Alzen and Dreiborn ridges, about 5.6 mi north of Krinkelt-Rocherath, Belgium.  In early December 1944, the U.S. V Corps trucked the experienced 2nd Infantry Division from positions it had held in the south to Krinkelt-Rocherath, twin villages adjacent to Elsenborn Ridge and near the southern tip of the Hürtgen Forest.\n\nBattle of Hürtgen Forest: The Battle of Hürtgen Forest (German: \"Schlacht im Hürtgenwald\" ) was a series of fierce battles fought from 19 September to 16 December 1944 between American and German forces on the Western Front during World War II in the Hürtgen Forest about 50 mi2 east of the Belgian–German border.  It was the longest battle on German ground during World War II, and is the longest single battle the U.S. Army has ever fought.\n\nJohn W. Minick: John Wilson Minick (June 14, 1908 – November 21, 1944), born in Wall, Pennsylvania, near East McKeesport in Allegheny County, to Anthony Fuhrman and Alma J. (Churchfield) Minick, whose patriarchal Pennsylvania Dutch ancestry can be traced back to the 1700s in Perry County, Pennsylvania.  He was a United States Army soldier and a recipient of the United States military's highest decoration—the Medal of Honor—for his actions during the Battle of Hürtgen Forest in World War II.\n\nDarkest Hour: Europe '44-'45: Darkest Hour: Europe '44-'45 is a free modification developed by Darklight Games / The Darkest Hour Team for Tripwire Interactive's multiplayer first-person shooter video game \"\", It is based on the Western Front during World War II between 1944 and 1945, depicting the conflict between Allied and German forces.  Several large-scale operations are covered, including the invasion of Normandy, Battle of the Bulge, Operation Market Garden, and Battle of the Hürtgen Forest.\n\nHürtgen Forest: The Hürtgen forest (also: Huertgen Forest; German: \"Hürtgenwald\" ) is located along the border between Belgium and Germany in the southwest corner of the German federal state of North Rhine-Westphalia.  Scarcely 50 sqmi in area, the forest lies within a triangle outlined by the German towns of Aachen, Monschau, and Düren.  The Rur River runs along the eastern edge of the forest.",
+    "question": "Which battle occurred first in history, The Battle of Hürtgen Forest or The Battle of Gettysburg?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "first_battle_name": {
+          "type": "string",
+          "description": "The name of the battle that occurred first in history."
+        },
+        "first_battle_year": {
+          "type": "integer",
+          "description": "The year the first battle occurred."
+        },
+        "second_battle_name": {
+          "type": "string",
+          "description": "The name of the battle that occurred second in history."
+        },
+        "second_battle_year": {
+          "type": "integer",
+          "description": "The year the second battle occurred."
+        },
+        "earliest_battle_identified": {
+          "type": "boolean",
+          "description": "True if the earliest battle was successfully identified from the context."
+        }
+      },
+      "required": [
+        "first_battle_name",
+        "first_battle_year",
+        "second_battle_name",
+        "second_battle_year",
+        "earliest_battle_identified"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "first_battle_name": "The Battle of Gettysburg",
+      "first_battle_year": 1863,
+      "second_battle_name": "The Battle of Hürtgen Forest",
+      "second_battle_year": 1944,
+      "earliest_battle_identified": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

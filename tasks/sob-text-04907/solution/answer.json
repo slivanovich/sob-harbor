@@ -1,0 +1,14 @@
+{
+  "actor_name": "Michael Andrew Fox",
+  "role_in_trilogy": "Marty McFly",
+  "trilogy_name": "Back to the Future",
+  "awards_show_details": {
+    "awards_show_name": "48th Primetime Emmy Awards",
+    "year": 1996,
+    "hosted_by_actor": true,
+    "first_time_nominated_networks": [
+      "A&E",
+      "AMC"
+    ]
+  }
+}

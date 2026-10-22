@@ -1,0 +1,21 @@
+{
+  "super_bowl_identifier": "Super Bowl XXXIII",
+  "nfl_season": "1998 season",
+  "player_who_started": "Calvin Collins",
+  "teams_involved": [
+    {
+      "team_name": "Denver Broncos",
+      "conference": "AFC",
+      "is_winner": true,
+      "score": 34,
+      "is_question_answer": false
+    },
+    {
+      "team_name": "Atlanta Falcons",
+      "conference": "NFC",
+      "is_winner": false,
+      "score": 19,
+      "is_question_answer": true
+    }
+  ]
+}

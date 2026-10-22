@@ -1,0 +1,18 @@
+{
+  "person_name": "William Taylor Nagel",
+  "role": "an infielder",
+  "teams_played_for": [
+    {
+      "team_name": "Philadelphia Athletics",
+      "team_city": "Philadelphia",
+      "team_state": "Pennsylvania",
+      "league_affiliation": "Major League Baseball"
+    },
+    {
+      "team_name": "Philadelphia Phillies",
+      "team_city": "Philadelphia",
+      "team_state": "Pennsylvania",
+      "league_affiliation": "Major League Baseball"
+    }
+  ]
+}

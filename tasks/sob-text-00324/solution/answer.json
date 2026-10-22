@@ -1,0 +1,23 @@
+{
+  "person_names": [
+    "Charles Hutchison",
+    "Reginald Barker"
+  ],
+  "mutual_occupation": "film director",
+  "individuals_occupations": [
+    {
+      "name": "Charles Hutchison",
+      "occupations": [
+        "film actor",
+        "director",
+        "screenwriter"
+      ]
+    },
+    {
+      "name": "Reginald Barker",
+      "occupations": [
+        "film director"
+      ]
+    }
+  ]
+}

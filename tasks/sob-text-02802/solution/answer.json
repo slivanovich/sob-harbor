@@ -1,0 +1,16 @@
+{
+  "comparison_summary": "Both Godfather and Agua de Sevilla are types of drinks.",
+  "common_category": "drink",
+  "compared_items": [
+    {
+      "item_name": "Godfather",
+      "item_type": "duo mixed drink",
+      "item_origin_or_components": "Scotch whisky and amaretto"
+    },
+    {
+      "item_name": "Agua de Sevilla",
+      "item_type": "typical drink",
+      "item_origin_or_components": "region of Seville, Spain"
+    }
+  ]
+}

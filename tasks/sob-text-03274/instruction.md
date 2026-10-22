@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+CIO magazine: CIO magazine (also known as CIO.com) was founded in 1987 in Framingham, Massachusetts, to serve executives and technology decision makers in the information technology field and the burgeoning role of Chief Information Officer.  The publication, created as part of Boston-based International Data Group's enterprise publications business, was built to deliver CIO-focused news, features and commentary on emerging technologies and products, industry trends and research, innovation in the tech industry, and legal and regulatory implications of technology.
+
+Talkback Classroom: Talkback Classroom is best known as a forum for young people to interview politicians and other leading decision makers in forums recorded for broadcast and is also known as a Voice for the Voteless on the basis of its mission to provide an opportunity for young people to take part in civic dialogue.  The forum started as a classroom based project instigated by Alexandra Secondary School teacher Stephen Cutting in 1995 and provided an opportunity for secondary school students to conduct interviews (initially by telephone) with people in the news.  The activity proved very popular with students and in 1996 was first heard as a segment on ABC Regional Radio Albury Wodonga via a three way 'hook up' between students in the classroom, the segment guest or interviewee and the radio program host.  In 1997 the project became a monthly national forum for senior secondary school students, broadcast on ABCyouth network Triple J produced by Stephen Cutting who had taken up a secondment to ABC Radio.  Talkback Classroom ran as a regular segment featuring interviews recorded by student interviewers with leading political figures in Australian politics and other decision makers until 2001 when the segment became a live forum based at the National Museum of Australia and shifted to Radio National as part of the "Life Matters" program and ABC's digital network Fly TV.  From 2001 to 2008 the forum was held at the National Museum of Australia, and involved secondary school students from around Australia interviewing various prominent politicians, business and community leaders on current affairs issues.  Guests included two heads of government: John Howard (Australia) and Helen Clark (New Zealand), ministers and shadow ministers and many other decision makers and opinion shapers
+
+Sandra Carpenter: Sandra Mitchell Carpenter (1934–2003) was an American corporate executive, engineer, and information technology professional.  During the 1980s, Carpenter served as corporate vice president for information management systems at Hilton Hotels.  She was one of the first women to serve as a chief information officer (CIO) at a company with more than $1 billion in revenue.  During her tenure at Hilton, CIO magazine named the company to their list of the top ten travel service IT Innovators.  Carpenter also received placement on CIO Magazine's list of the top 100 CIOs.
+
+Computer Magazine: Computer Magazine (and their website www.ComputerMagazine.com) is a popular magazine and online news site on computing and technology, offering current news and reviews of popular and new business and consumer technologies, software, hardware, mobile computing, tablets, PCs, Macs, Windows, Linux, telecom, cellular, wireless, data, cloud and science news on digital technologies and everything in the "tech-sphere and digi-verse", especially focused on information technology, devices, software and services and related subjects, such as networking, servers, data centers and corporate data infrastructure technologies, and the Internet.  Their online site, since 1997, is located at ComputerMagazine.com.  "Computer Magazine" produces industry instructional and a popular ongoing webcast/podcast talk show and performs evaluations and reviews of IT industry technology products, hardware, software and services with objective reporting widely respected as independent and objective, and trusted in the industry.  "Computer Magazine" is a free publication (in addition to their webcasts and other resources) sponsored by the nonprofit UTCP (United Technology and Computing Professionals) organization, and as such charges no fees for the publication nor is influenced by advertising, so their reviews are relied on in the industry and considered unbiased and thorough.  "Computer Magazine" is one of the early large technology publications and resources available on the web still existent and thriving today and that has remained independent.  ComputerMagazine.com is a tech news and resources consolidator that publishes part of the site in a semi-time line/blogging format that is popular among their wide following of subscriber and non-subscriber readers, allowing readers to respond and comment on various articles.  Site contributors include many of the well known technology authors, experts and publication sources, content and articles are provided by major technology syndicators and by external expert technology sources (such as "Computer World", "Information Week", "Network World", "Wired," "Time", etc.) as well as "Computer Magazine" staff writers, and is currently managed and edited by the industry veteran Christopher Swearingin an MCSE and former CIO and regarded author as well as contributor/reporter for "Computer Magazine" and other publications.
+
+Max Hopper: Max D. Hopper (November 4, 1934 – January 25, 2010) was an American IT manager, who served as the CIO of Bank of America, the SVP (IS) of American Airlines (AA) and the chairman of the Sabre group.  The CIO Magazine has hailed him as the "pre-eminent modern-era CIO and a founding father of IT-inspired competitive advantage", and the Computerworld has named him among the top 25 greatest contributors to the field of Information Systems.
+
+Linda Y. Cureton: Linda Y. Cureton (born in 1959, in Bethesda, Maryland) is the Chief Executive Officer (CEO) and Founder of Muse Technologies, Inc.  The Former NASA CIO, Ms. Cureton launched her new company in April 2013.  Muse Technologies, Inc. will provide IT-Enabled Leadership, strategic planning, program management and information technology consulting to both private and government sector organizations.  Ms. Cureton attended Washington, DC public schools and was in the very first graduating class of Duke Ellington School of the Arts in 1977.  In 1980, she graduated from Howard University with a BS in Mathematics.  She later received a Master of Science degree and post-Masters advanced certificate in Applied Mathematics at Johns Hopkins University.  Linda is well known as a strong leader and innovator.  While CIO, she created the popular NASA CIO blog and continues to be a prolific blogger.
+
+Bachelor of Science in Information Technology: A Bachelor of Science in Information Technology, (abbreviated BSIT or B.Sc IT), is a Bachelor's degree awarded for an undergraduate course or program in the Information technology field.  The degree is normally required in order to work in the Information technology industry.
+
+Rana Gujral: Rana Gujral is an Indian American Entrepreneur, Executive, a Columnist and an Investor.  Gujral founded a SaaS startup TiZE and is a member of Forbes Councils.  He is a columnist at "TechCrunch" and "Forbes" and advises several startups.  In 2017, he was awarded the "Entrepreneur of the Month" by "CIO Magazine" and was listed among Top 10 Entrepreneurs to follow in 2017 by "Huffington Post".  He was awarded the ‘US-China Pioneer’ Award in 2017 by IEIE.
+
+Chief information officer: Chief information officer (CIO), chief digital information officer (CDIO) or information technology (IT) director, is a job title commonly given to the most senior executive in an enterprise responsible for the information technology and computer systems that support enterprise goals.  Typically, the CIO reports directly to the chief executive officer but may also report to the chief operating officer or chief financial officer.  In military organizations, they report to the commanding officer.  The Chief Information Officer role was first defined in 1981 by William R. Synnott, former Senior Vice President of the Bank of Boston, and William H. Gruber, former professor at the MIT Sloan School of Management.
+
+Ben Neumann: Ben Neumann is an American entrepreneur, investor, film producer and mixed martial artist, best known for founding early Internet hosting service Internet Communication Icom.com, and his subsequent investments into companies such as iBoost.com, Globat.com, FatCow.com and his work in the motion picture industry.  Some of Ben's more recent ventures are the content delivery networks NetDNA, MaxCDN and HDDN, which he co-founded together with business partner and protégé Chris Ueland in October 2009.  In 2011, through his consulting firm Innovative Currency, Ben ventured outside the technology field and created his unique coaching programs InspireMoreHeroes and MillionairesMentor.
+
+Question: Rana Gujral is an Indian American Entrepreneur, Executive, a Columnist and an Investor, in 2017, he was awarded the "Entrepreneur of the Month" by "CIO Magazine", also known as CIO.com, was founded in 1987 in Framingham, Massachusetts, to serve executives and technology decision makers in the information technology field and the burgeoning role of which occupation?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "magazine_name": {
+      "type": "string",
+      "description": "The name of the magazine."
+    },
+    "magazine_founding_year": {
+      "type": "integer",
+      "description": "The year the magazine was founded."
+    },
+    "magazine_founding_location": {
+      "type": "string",
+      "description": "The location where the magazine was founded."
+    },
+    "magazine_purpose_role": {
+      "type": "string",
+      "description": "The specific burgeoning role the magazine was founded to serve."
+    },
+    "award_details": {
+      "type": "object",
+      "properties": {
+        "recipient_name": {
+          "type": "string",
+          "description": "The name of the person who received the award."
+        },
+        "award_name": {
+          "type": "string",
+          "description": "The name of the award given by the magazine."
+        },
+        "award_year": {
+          "type": "integer",
+          "description": "The year the award was given."
+        }
+      },
+      "required": [
+        "recipient_name",
+        "award_name",
+        "award_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "magazine_name",
+    "magazine_founding_year",
+    "magazine_founding_location",
+    "magazine_purpose_role",
+    "award_details"
+  ],
+  "additionalProperties": false
+}

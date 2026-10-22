@@ -1,0 +1,9 @@
+{
+  "event_name": "UFC 37",
+  "loser_fighter_name": "Paul Creighton",
+  "winner_fighter": {
+    "name": "B.J. Penn",
+    "other_fighting_style": "Brazilian Jiu-Jitsu"
+  },
+  "answer": "Brazilian Jiu-Jitsu"
+}

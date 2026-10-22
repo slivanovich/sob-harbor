@@ -1,0 +1,111 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Lovely (Twenty One Pilots song): "Lovely" is a song by American musical duo Twenty One Pilots, for their third studio album "Vessel".  It was originally featured on their self-released second studio album "Regional at Best", but was re-recorded for "Vessel" and included as a Japanese bonus track for the album.  "Lovely" was released as a promotional single for the band's trip to Japan, being released on Warner Japan on April 17.  The song reached number 67 on the Japan Hot 100, respectively.
+
+Stressed Out: "Stressed Out" is a song by American musical duo Twenty One Pilots, for their fourth studio album, "Blurryface".  Written by Tyler Joseph and produced by Mike Elizondo, the lyrics discuss the harsh end of adolescence and the transition to adulthood.  The song was released as a promotional single on April 28, 2015, on the Google Play Store and Amazon, and was issued to top 40 radio stations as the album's fourth official single on November 10.
+
+Blurryface: Blurryface is the fourth studio album by American musical duo Twenty One Pilots.  It is the band's second album released through Fueled by Ramen.  Originally set to be released on May 19, 2015, it was released two days earlier on May 17, via iTunes.  The album was preceded by its lead single, "Fairly Local", released on March 17, 2015.  It also contains the "Billboard" Hot 100 top-five singles, "Stressed Out" and "Ride", which reached numbers two and five on the chart, respectively.  The album has sold over 1.5 million copies in the United States as of April 2017.  It was the eighth best-selling album of 2016 with over 1.5 million copies sold worldwide that year, according to the International Federation of the Phonographic Industry.
+
+Heathens (song): "Heathens" is a song by American musical duo Twenty One Pilots, released as the lead single for the motion picture soundtrack for the film "Suicide Squad" (2016) on June 16, 2016, through Atlantic Records and Warner Bros.  Records.  The song was written by Tyler Joseph and produced by him along with Mike Elizondo.  "Heathens" peaked at number two on the US "Billboard" Hot 100, tying with "Stressed Out" for the duo's highest charting single to date.  "Heathens" was nominated for three Grammy Awards at the 59th annual awards ceremony.
+
+Tear in My Heart: "Tear in My Heart" is a song written and recorded by American musical duo Twenty One Pilots, for their fourth studio album "Blurryface".  "Tear in My Heart" was uploaded to YouTube on April 6, 2015, being released as a single on the same day.  "Tear in My Heart" was released to radio on April 14, 2015.  The video was directed by Marc Klasfeld.  In addition to both band members, lead singer Tyler Joseph's wife Jenna also appears in the music video.  It is one of the band's highest-charting songs, spending eight weeks at the number two spot on the "Billboard" Alternative Songs chart, with X Ambassadors' "Renegades" keeping it from topping the chart.
+
+Holding On to You (Twenty One Pilots song): "Holding On to You" is a song written and recorded by American musical duo Twenty One Pilots, for their second studio album "Regional at Best".  A partially re-recorded version of the song appeared on their third studio album, "Vessel".  "Holding On to You" was released as the first single from "Vessel" in the iTunes Store worldwide on September 11, 2012.  A video for the song was released on November 15.  The video was directed by Jordan Bahat.  The song impacted alternative radio on December 4, 2012, and released to mainstream radio on June 11, 2013.  It is the band's debut single.
+
+Twenty One Pilots discography: American musical duo Twenty One Pilots have released four studio albums, one live album, seven extended plays, fifteen singles and eighteen music videos.  The band was formed in 2009 and currently consists of Tyler Joseph and Josh Dun.  They put out two self-released albums, "Twenty One Pilots" in 2009 and "Regional at Best" in 2011, before being signed by Fueled by Ramen in 2012.  They released their third studio album, "Vessel", with Fueled by Ramen in 2013.  Their fourth studio album, "Blurryface", was released on May 15, 2015 through the same label.  On November 25, 2016, they released "Blurryface Live", a three-LP, Tri-Gatefold Picture Disc Vinyl featuring the live audio recorded during a concert at The Fox Theater in Oakland, CA.
+
+Guns for Hands: "Guns for Hands" is a song written and recorded by American musical duo Twenty One Pilots, released as a single only in Japan.  The song appears on their second self-released album, "Regional at Best", their third album "Vessel", their 2012 "Three Songs" EP, and their 2013 EP, "Migraine".  The video was directed by Mark C. Eshleman.  The song reached number 21 on the Japan Hot 100.
+
+Car Radio (song): "Car Radio" is a song written and recorded by American musical duo Twenty One Pilots, originally released in 2011 on their second studio album, "Regional at Best".  It was re-released in March 2014 as the fifth and final single from their third studio album, "Vessel".  The song is seen as the duo's most experimental, as it has no sung words or hooks in it.
+
+Ride (Twenty One Pilots song): "Ride" is a song written and recorded by American musical duo Twenty One Pilots, from their fourth studio album, "Blurryface".  "Ride" was originally released as a promotional single on YouTube on May 11, 2015.  The music video for the song was released on YouTube the following day.  It was serviced to US contemporary hit radio on April 12, 2016 as the album's fifth official single.  The song peaked at number five on the US "Billboard" Hot 100.
+
+Question: "Heathens" is a song by American musical duo Twenty One Pilots, released on which date, "Heathens" peaked at number two on the US "Billboard" Hot 100, tying with "Stressed Out"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The musical duo or artist who performed the song."
+    },
+    "release_details": {
+      "type": "object",
+      "properties": {
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date the song was released."
+        },
+        "release_type": {
+          "type": "string",
+          "description": "The type of release, e.g., 'lead single'."
+        },
+        "associated_project": {
+          "type": "string",
+          "description": "The film or album the song is associated with."
+        },
+        "record_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The record labels through which the song was released."
+        }
+      },
+      "required": [
+        "release_date",
+        "release_type",
+        "associated_project",
+        "record_labels"
+      ],
+      "additionalProperties": false
+    },
+    "chart_performance": {
+      "type": "object",
+      "properties": {
+        "chart_name": {
+          "type": "string",
+          "description": "The name of the music chart."
+        },
+        "peak_position": {
+          "type": "integer",
+          "description": "The highest position the song reached on the chart."
+        },
+        "tied_with_song": {
+          "type": "string",
+          "description": "Another song that achieved the same peak position on the chart."
+        }
+      },
+      "required": [
+        "chart_name",
+        "peak_position",
+        "tied_with_song"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "song_title",
+    "artist",
+    "release_details",
+    "chart_performance"
+  ],
+  "additionalProperties": false
+}

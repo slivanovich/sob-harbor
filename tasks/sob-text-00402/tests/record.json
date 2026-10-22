@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "record_id": "2b55c651c9db5f652e4a9278f0b3e175ca682ffd96271d4a40a60c51f84c64a5",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ac1682c5542994ab5c67d13",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Catasetum: Catasetum, abbreviated as Ctsm in horticultural trade, is a genus of showy epiphytic Orchids, family Orchidaceae, subfamily Epidendroideae, tribe Cymbidieae, subtribe Catasetinae, with 166 species, many of which are highly prized in horticulture.\n\nAnisodontea: Anisodontea is a genus in the tribe Malveae in the family Malvaceae.  It comprises twenty-one species native to South Africa.  Members of the genus typically bear toothed leaves with three or five palmate, uneven lobes.  Members of the genus also typically bear flowers with a pubescent calyx, a five-petaled corolla streaked from the center and pink to magenta in color, and stamens with anthers of a dark color.",
+    "question": "Are Anisodontea and Catasetum both genus of plants ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_context": {
+          "type": "string",
+          "description": "The original question asked."
+        },
+        "genera_information": {
+          "type": "array",
+          "description": "Details about each genus mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "genus_name": {
+                "type": "string",
+                "description": "The name of the genus."
+              },
+              "is_identified_as_genus": {
+                "type": "boolean",
+                "description": "Whether the entity is explicitly identified as a genus in the context."
+              },
+              "is_part_of_plant_kingdom": {
+                "type": "boolean",
+                "description": "Whether the genus belongs to the plant kingdom, based on its family."
+              },
+              "family_name": {
+                "type": "string",
+                "description": "The family to which the genus belongs."
+              }
+            },
+            "required": [
+              "genus_name",
+              "is_identified_as_genus",
+              "is_part_of_plant_kingdom",
+              "family_name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "overall_conclusion": {
+          "type": "object",
+          "properties": {
+            "all_mentioned_are_plant_genera": {
+              "type": "boolean",
+              "description": "The final answer to whether all mentioned entities are genera of plants."
+            }
+          },
+          "required": [
+            "all_mentioned_are_plant_genera"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "question_context",
+        "genera_information",
+        "overall_conclusion"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_context": "Are Anisodontea and Catasetum both genus of plants ?",
+      "genera_information": [
+        {
+          "genus_name": "Catasetum",
+          "is_identified_as_genus": true,
+          "is_part_of_plant_kingdom": true,
+          "family_name": "Orchidaceae"
+        },
+        {
+          "genus_name": "Anisodontea",
+          "is_identified_as_genus": true,
+          "is_part_of_plant_kingdom": true,
+          "family_name": "Malvaceae"
+        }
+      ],
+      "overall_conclusion": {
+        "all_mentioned_are_plant_genera": true
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

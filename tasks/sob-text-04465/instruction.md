@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+E-2 visa: The E-2 Investor Visa allows an individual to enter and work inside of the United States based on an investment he or she will be controlling, while inside the United States.  This visa must generally be renewed every two years, but there is no limit to how many times one can renew.  The investment must be "substantial."  Investor visas are available only to citizens of certain countries.  E-2 visas are also available to non-investor employees of the business, as long as the persons are of the same nationality as the investor and are destined for a role in the US business that is either executive/supervisory or requires specialized skills that are essential to the efficient operation of the US enterprise.
+
+Boston College Eagles men's ice hockey: The Boston College Eagles are a Division I college hockey program that represent Boston College in Chestnut Hill, Massachusetts.  The team has competed in Hockey East since 1984, having previously played in the ECAC.  The Eagles have won five national championships, the most recent coming in 2012.  Home games have been played at Kelley Rink, named after coach John "Snooks" Kelley, since 1988, having previously played at McHugh Forum.  The Eagles are coached by former Eagles forward Jerry York, who has won the most games of any head coach in NCAA hockey history, having surpassed Ron Mason's 924th win on December 29, 2012.  York is an alum of Boston College, a member of the class of 1967.
+
+2012 NCAA Division I Men's Ice Hockey Tournament: The 2012 NCAA Division I Men's Ice Hockey Tournament involved sixteen schools in single-elimination play to determine the national champion of men's National Collegiate Athletic Association (NCAA) Division I college ice hockey for the 2011–12 season.  The tournament began on March 23, 2012 with regional semifinals and ended on April 7 with the national championship game.  The Boston College Eagles won their third national championship in five years, beating the Ferris State Bulldogs, 4-1, in the championship game.  BC won nineteen consecutive games to end the season.  It is the fifth title for both the program and head coach Jerry York - York previously coached Bowling Green to a championship in 1984.
+
+Jerry York (businessman): Jerome Bailey York (June 22, 1938 – March 18, 2010), commonly known as Jerry York, was an American businessman, and the Chairman, President and CEO of Harwinton Capital.  He was the former CFO of IBM and Chrysler, and was CEO of Micro Warehouse.  He was a chief aide to Kirk Kerkorian and his Tracinda investment company.  In February 2006, Kerkorian helped elect York to the board of directors of General Motors, from which he had previously resigned.
+
+Parker Milner: Parker Milner (born September 6, 1990) is an American professional ice hockey goaltender for the South Carolina Stingrays of the ECHL while under contract to the Hershey Bears of the American Hockey League (AHL).  He is from Pittsburgh, Pennsylvania.  His team won the NCAA Frozen Four 2012 NCAA Division I Men's Ice Hockey Tournament finals in Tampa, Florida.  Boston College coach Jerry York includes him among elite Boston College goaltenders Scott Clemmensen, Cory Schneider and John Muse.  Milner helped lead his team to a 19-game winning streak including championships at the Beanpot (ice hockey) tournament and the 2011–12 NCAA Division I men's ice hockey season final.
+
+Jerry York: Jerry York (born July 25, 1945) is the men's ice hockey coach at Boston College.  He graduated from Boston College High School in 1963 and BC in 1967.  York is the winningest active coach in NCAA hockey, and leads the all-time list as the only Division I head coach with over 1,000 wins .  He has won the NCAA Division I Men's Ice Hockey title five times as a coach, at Bowling Green State University in 1984 and BC in 2001, 2008, 2010 and 2012 tying him with Murray Armstrong for second-most all-time behind only Vic Heyliger (6).  York received the Spencer Penrose Trophy for being named Division I Coach of the Year in 1977.
+
+Kirk Kerkorian: Kerkor "Kirk" Kerkorian (June 6, 1917 – June 15, 2015) was an Armenian-American businessman, investor, and philanthropist.  He was the president and CEO of Tracinda Corporation, his private holding company based in Beverly Hills, California.  Kerkorian is known for having been one of the important figures in the shaping of Las Vegas and, with architect Martin Stern, Jr. described as the "father of the mega-resort".  He built the world's largest hotel in Las Vegas three times: the International Hotel (opened in 1969), the MGM Grand Hotel (1973) and the MGM Grand (1993).  He purchased the Metro-Goldwyn-Mayer movie studio in 1969.
+
+Greg Brown (ice hockey): Gregory Curtis Brown (born March 7, 1968 in Southborough, Massachusetts) is an American retired professional ice hockey player, most notably for the Buffalo Sabres and the Pittsburgh Penguins.  He currently coaches hockey at his alma mater Boston College as an Associate Head Coach alongside legendary Jerry York.
+
+Ron Mason: Ronald Herbert Mason (January 14, 1940 – June 13, 2016) was a Canadian ice hockey player, head coach, and university executive.  A head coach of various American universities, most notably Michigan State University (MSU), he was the most successful coach in NCAA ice hockey history between 1993-2012 with 924 wins, until Jerry York (Boston College) become the new winningest coach with his 925th career win on December 29, 2012.  Mason was athletic director at MSU from 2002-08.  He then served as senior advisor for the USHL Muskegon Lumberjacks.  On December 2, 2013, Mason was inducted into the U.S Hockey Hall of Fame.
+
+Fioravante Perrotta: Fioravante "Fred" G. Perrotta (July 26, 1931 – July 20, 2012) was an American lawyer, political aide, and political candidate.  He worked as an aide to New York governor Nelson Rockefeller in the late 1950s and early 1960s, and then for New York City mayor John Lindsay a decade later.  He held a diverse range of positions throughout New York government, including finance administrator, and insurance regulator.
+
+Question: Jerry York was an aide to the investor of what nationality?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "aide_name": {
+      "type": "string",
+      "description": "The name of the individual who served as an aide."
+    },
+    "investor_name": {
+      "type": "string",
+      "description": "The name of the investor to whom the individual was an aide."
+    },
+    "investor_nationality": {
+      "type": "string",
+      "description": "The nationality of the investor."
+    },
+    "investor_company": {
+      "type": "string",
+      "description": "The name of the investment company associated with the investor."
+    }
+  },
+  "required": [
+    "aide_name",
+    "investor_name",
+    "investor_nationality",
+    "investor_company"
+  ],
+  "additionalProperties": false
+}

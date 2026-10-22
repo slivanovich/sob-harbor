@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "cba6aa11a78ca9e109b729f61bd9c953e6941c037796f23e4d78bb6cebde0367",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a80725a5542996402f6a522",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Shin Min-a",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Devil (TV series): The Devil () is a 2007 South Korean television series starring Uhm Tae-woong, Ju Ji-hoon, and Shin Min-a.  It aired on KBS2 from March 21 to May 24, 2007 on Wednesdays and Thursdays at 21:55 for 20 episodes.\n\nShin Min-a: Shin Min-a (born Yang Min-a on April 5, 1984) is a South Korean model and actress.  She is best known for starring in television dramas \"A Love to Kill\" (2005), \"My Girlfriend Is a Nine-Tailed Fox\" (2010), \"Arang and the Magistrate\" (2012), \"Oh My Venus\" (2015), and \"Tomorrow With You\" (2017).\n\nBad Love (TV series): Bad Love () is a 2007 South Korean television drama series starring Kwon Sang-woo, Lee Yo-won, and Kim Sung-soo.  It aired on KBS2 from December 3, 2007 to February 5, 2008 on Mondays and Tuesdays at 21:55 for 20 episodes.\n\nHello! Miss: Hello!  Miss (; also known as Hello!  My Lady) is a 2007 South Korean television series starring Lee Da-hae, Lee Ji-hoon, Ha Seok-jin and Yeon Mi-joo.  Based on Lee Ji-wan's novel \"Five Kimchi Mandu\", the series aired on KBS2 from March 19 to May 8, 2007 on Mondays and Tuesdays at 21:55 for 16 episodes.\n\nThe King 2 Hearts: The King 2 Hearts () is a 2012 South Korean television series, starring Ha Ji-won and Lee Seung-gi in the leading roles.  It is about a South Korean crown prince who falls in love with a North Korean special agent.  The series aired on MBC from March 21 to May 24, 2012 on Wednesdays and Thursdays at 21:55 for 20 episodes.\n\nA Happy Woman: A Happy Woman (; also known as Blissful Woman) is a 2007 South Korean television series starring Yoon Jung-hee, Kim Suk-hoon and Jung Gyu-woon.  It aired on KBS2 from January 6 to July 21, 2007 on Saturdays and Sundays at 19:55 for 58 episodes.\n\nMan from the Equator: Man from the Equator (; also known as The Equator Man) is a 2012 South Korean television series, starring Uhm Tae-woong, Lee Joon-hyuk, Lee Bo-young and Im Jung-eun.  A tense, emotionally charged tale of brotherhood and betrayal, it follows two best friends with a tragic, twisted history that follows them from youth to adulthood.  It aired on KBS2 from March 21 to May 24, 2012 on Wednesdays and Thursdays at 21:55 for 20 episodes.\n\nH.I.T (TV series): H.I.T (), also known as Homicide Investigation Team, is a 2007 South Korean television series starring Go Hyun-jung, Ha Jung-woo, Kim Jung-min, and Yoon Ji-min.  It aired on MBC from March 19 to May 22, 2007 on Mondays and Tuesdays at 21:55 for 20 episodes.  A police procedural crime drama that integrated crime scene analysis with action, suspense, and romance, \"H.I.T\" represented a departure from the usual Korean drama subjects of love and relationships.\n\nThank You (TV series): Thank You () is a 2007 South Korean television series starring Jang Hyuk, Gong Hyo-jin, Seo Shin-ae, Shin Sung-rok and Shin Goo.  It aired on MBC from March 21 to May 10, 2007 on Wednesdays and Thursdays at 21:55 for 16 episodes.\n\nI Am Sam (TV series): I am Sam () is a 2007 South Korean television series starring Yang Dong-geun, Park Min-young, Park Jun-gyu, Son Tae-young, and T.O.P in his acting debut.  It aired on KBS2 from August 6 to October 2, 2007, on Mondays and Tuesdays at 21:55 for 16 episodes.  Based on the Japanese comic series \"Kyōkasho ni Nai!\"  (in English, \"Not in a Textbook!\"  or \"Very Private Lesson\"), Yang plays a geeky, straight-arrowed, under-qualified high school teacher who becomes a live-in tutor for the troublemaking daughter of a notorious gangster, in exchange for one million won.",
+    "question": "What actor best known for starring in the television drama \"A Love to Kill\", starred in  a 2007 South Korean television series that aired on KBS2 from March 21 to May 24, 2007 ?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actor_name": {
+          "type": "string",
+          "description": "The name of the actor identified by the question."
+        },
+        "known_for_drama": {
+          "type": "string",
+          "description": "The television drama the actor is best known for."
+        },
+        "matching_series": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the television series that matches the criteria."
+            },
+            "air_channel": {
+              "type": "string",
+              "description": "The channel on which the series aired."
+            },
+            "air_start_date": {
+              "type": "string",
+              "description": "The start date of the series' airing."
+            },
+            "air_end_date": {
+              "type": "string",
+              "description": "The end date of the series' airing."
+            },
+            "air_year": {
+              "type": "integer",
+              "description": "The year the series aired."
+            }
+          },
+          "required": [
+            "title",
+            "air_channel",
+            "air_start_date",
+            "air_end_date",
+            "air_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "actor_name",
+        "known_for_drama",
+        "matching_series"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actor_name": "Shin Min-a",
+      "known_for_drama": "A Love to Kill",
+      "matching_series": {
+        "title": "The Devil",
+        "air_channel": "KBS2",
+        "air_start_date": "March 21",
+        "air_end_date": "May 24",
+        "air_year": 2007
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

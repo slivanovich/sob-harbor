@@ -1,0 +1,21 @@
+{
+  "common_profession": "film director",
+  "individuals": [
+    {
+      "name": "Jean-Marc Vallée",
+      "professions": [
+        "film director",
+        "screenwriter",
+        "film editor"
+      ]
+    },
+    {
+      "name": "Joseph Kosinski",
+      "professions": [
+        "television commercial director",
+        "feature film director"
+      ]
+    }
+  ],
+  "reasoning": "Both Jean-Marc Vallée and Joseph Kosinski are explicitly mentioned as 'film director' in the provided context."
+}

@@ -1,0 +1,12 @@
+{
+  "person_1": {
+    "name": "René Crevel",
+    "birth_date": "1900-08-10"
+  },
+  "person_2": {
+    "name": "Mario Vargas Llosa",
+    "birth_date": "1936-03-28"
+  },
+  "earlier_born_person_name": "René Crevel",
+  "birth_year_difference_years": 36
+}

@@ -1,0 +1,19 @@
+{
+  "entity_names": [
+    "Radio Iodine",
+    "Rocket from the Crypt"
+  ],
+  "common_category": "rock band",
+  "entity_details": [
+    {
+      "name": "Radio Iodine",
+      "genre": "alternative rock",
+      "origin_city": "St. Louis, Missouri"
+    },
+    {
+      "name": "Rocket from the Crypt",
+      "genre": "punk rock",
+      "origin_city": "San Diego"
+    }
+  ]
+}

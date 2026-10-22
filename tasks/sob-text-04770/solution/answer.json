@@ -1,0 +1,14 @@
+{
+  "song_title": "Shot by Both Sides",
+  "writers": [
+    {
+      "name": "Howard Devoto",
+      "is_leader_of_buzzcocks": false
+    },
+    {
+      "name": "Pete Shelley",
+      "is_leader_of_buzzcocks": true
+    }
+  ],
+  "answer": "Pete Shelley"
+}

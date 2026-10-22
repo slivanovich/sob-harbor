@@ -1,0 +1,13 @@
+{
+  "movie_title": "Big Fat Liar",
+  "actor_details": {
+    "actor_name": "Frankie Muniz",
+    "actor_known_for_sitcom": true
+  },
+  "sitcom_details": {
+    "sitcom_title": "Malcolm in the Middle",
+    "network": "Fox",
+    "genre": "family sitcom",
+    "actor_role_in_sitcom": "title character"
+  }
+}

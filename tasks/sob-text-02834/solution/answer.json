@@ -1,0 +1,11 @@
+{
+  "market_name": "Covered Market",
+  "location": "Oxford, England",
+  "is_historic": true,
+  "has_permanent_stalls_and_shops": true,
+  "is_covered_structure": true,
+  "connection_to_arcade": {
+    "arcade_name": "Golden Cross",
+    "connection_type": "underpass"
+  }
+}

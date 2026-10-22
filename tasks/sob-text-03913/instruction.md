@@ -1,0 +1,81 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Cucurbita digitata: Cucurbita digitata is a species of flowering plant in the squash family known by the common names fingerleaf gourd and bitter squash.  It is similar to "Cucurbita californica", "Cucurbita cordata", "Cucurbita cylindrata", and "Cucurbita palmata" and all these species hybridize readily.  These species form the only restricted xerophyte species group in the genus "Cucurbita".  Each member of this species group is native to the Southwestern United States and Northwestern Mexico where they are relatively uncommon.  Each group member is found in hot, arid regions with low rainfall.  They prefer soil that is loose, gravelly, and well-drained.  "C. digitata" is native to northern Baja California at higher elevations, northern Sonora, Mexico, southern Arizona, and southwestern New Mexico.  The juvenile leaves of "C. cylindrata", "C. cordata", "C. digitata", and "C. palmata" show a high degree of similarity, but their mature leaves are visibly different, as are their root structures.  "C. palmata" and "C. digitata" are sympatric, with "C. palmata" separating the ranges of "C. digitata" at the juncture of Baja California, California, and Arizona.  "C. digitata" fruits are clear green mottle that turns yellow at maturity, striped, and round.
+
+Spinney Hills, East Quogue: Spinney Hills is in East Quogue, New York on the eastern end of the Long Island Central Pine Barrens region.  It is often used as a hiking, hunting, and off-roading area for dirt bikers, quadders, paintballers, and four-wheelers that includes miles of trails with near beach sand consistency.  Spinney hills gets its name because of Spinney Road, which used to connect the East Quogue side of the hills to Sears Bellows County Park and Flanders (home of the Big Duck) to the north prior to the construction of the Sunrise Highway New York State Route 27.  This region was created by glacial deposits of rock and sand during the last ice age.  The sandy soil also absorbs most rainfall so there are few ponds or rivers in the area.  There is a shallow glacial well in Spinney Hills known as an aquifer, which is where most of the rainfall in the region is stored.  These hills are the continuation of a long east west ridge of hills known as the Ronkonkoma Moraine, which form the 'backbone' of Long Island.  Much of this region is undeveloped other than a sand mine to the west and Southampton Pines to the east.  There have been large scale legal battles between private real estate companies and the Town of Southampton over the future of the area, being it is one of the last expanses of wilderness left on Long Island.  There is a very large native population of white-tailed deer in the region due to lack of natural predators.  In the higher elevations small sections of the hills have an almost alpine-desert look, with sandy open plateaus and extremely dwarfed vegetation .  The Dwarf Pitch Pine which dominate the region grow not much taller than twenty feet in height due to dry, nutrient-poor soil.  There is a desert effect in the Pine Barrens, with relatively higher daytime temperatures and cooler nighttime temperatures than the coast, only a few miles away.  There are spectacular views of the Atlantic Ocean and Peconic Bay from certain peaks in this region if one knows where to hike.  The consistent ocean breeze at the higher elevations passing through the long brushy needles of the Dwarf Pitch Pines creates a gentle whisping sound, or white noise, adding a peaceful ambience to the big skies and expansiveness one feels in this region.
+
+Halocarpus biformis: Halocarpus biformis, known commonly as yellow pine or pink pine, is a coniferous tree endemic to New Zealand.  The tree can attain heights of 10m, but in open areas is usually a low spreading bush.  It is found at higher elevations in the volcanic plateau of the North Island and at lower elevations on the South Island and Stewart Island.  It yields a tight grained sweet smelling and extremely durable wood The species was formerly known as "Dacrydium biforme".
+
+Wolf Creek (Nevada County, California): Wolf Creek is a waterway in Nevada County, California, US.  The creek is 25 miles long.  The watershed, approximately 78 sqmi , is heavily mined.  Most of the creek is situated in the lower montane zone.  Its altitude ranges between 3000 ft (headwaters at Banner Mountain, also known as Banner Hill) to 1200 ft (confluence with the Bear River).  Vegetation in the valley varies from alpine pines at higher elevations, to blue pines at mid elevations, and ponderosa pine mixed with evergreen forests at lower elevations.  From 1850 to 1950 gold was mined in the rich formations of the Mother Lode in the heart of Banner Mountain.
+
+Culiseta: Culiseta is a genus of mosquitoes.  Most "Culiseta" species are cold-adapted, and only occur in warmer climates during the colder parts of the year or at higher elevations where temperatures are lower.  Species found in Southern California are larger than most mosquitoes species, specifically "Cs.  inornata", "Cs.  particeps" and "Cs.  incidens".  These species are found throughout the year in Southern California and feed on several vertebrate species encompassing birds, livestock, rodents, reptiles and humans.  The larvae of most species are found in ground waters such as bogs, marshes, ponds, streams, ditches, and rock pools, but an African species occurs in tree holes ("phytotelmata"), a common eastern Palaearctic species occurs in water wells and rock pools, and several Australian species occur underground.  Little is known about the blood-feeding habits of females.  Most species feed on birds and mammals, but a few feed on reptiles. Several species attack domestic animals and occasionally humans.
+
+Guzmania: Guzmania (tufted airplant) is a genus of over 120 species of flowering plants in the botanical family Bromeliaceae, subfamily Tillandsioideae.  They are mainly stemless, evergreen, epiphytic perennials native to Florida, the West Indies, southern Mexico, Central America, and northern and western South America.  They are found at altitudes of up to 3500 m in the Andean rainforests.
+
+Eurybia merita: Eurybia merita, commonly known as the subalpine aster or arctic aster (not to be confused with "Eurybia sibirica", which shares the latter common name), is an herbaceous perennial native to northwestern North America, primarily from the Interior Mountains and Plateau system and Rocky Mountains in Canada, stretching south to Utah and extreme northern California.  It is found largely in drier, open areas, generally at subalpine levels in mountains, though in more northern areas it is more common at lower elevations.  It is similar in appearance to "Eurybia sibirica", but their ranges only overlap near the border between the US and Canada, where "E. sibirica" is generally found at higher elevations than its relative.  The flowers emerge in the late summer and display purple to violet ray florets and pale or creamy yellow disc florets.
+
+Indian jungle crow: The Indian jungle crow ("Corvus culminatus") is a species of crow found across the Indian Subcontinent south of the Himalayas.  It is very common and readily distinguished from the house crow which has a grey neck.  In the past the species was treated as a subspecies of an other crow species but vocalizations and evidence from ectoparasite co-evolution and phylogenetic evidence have led to it being considered as a distinct species in modern taxonomic treatments.  It differs in its voice from the large-billed crow found in the higher elevations of the Himalayas and the eastern jungle crow ("Corvus levaillantii") overlaps in the eastern part of its range.  In appearance it can be difficult to distinguish from either of these species although the plumage tends to be more uniformly glossed in purple and has a longer bill with a fine tip and an arched culmen.  The Himalayan species has a slightly wedge-shaped tailunlike the rounded tail of the Indian jungle crow and tends to glide a lot .
+
+Madrean Sky Islands: The Madrean Sky Islands are enclaves of Madrean pine-oak woodlands, found at higher elevations in a complex of small mountain ranges in southern and southeastern Arizona, southwestern New Mexico, and northwestern Mexico.  The sky islands are surrounded at lower elevations by the Sonoran and Chihuahuan deserts.  The northern west-east perimeter of the sky island region merges into the higher elevation eastern Mogollon Rim and the White Mountains of eastern Arizona (southern Anasazi region).
+
+Arundina: The bamboo orchid, Arundina graminifolia, is a species of orchid and the sole accepted species of the genus Arundina.  This tropical Asiatic genus extends from India, Sri Lanka, Nepal, Thailand, Vietnam, the Ryukyu Islands, Malaysia, Singapore, China to Indonesia, the Philippines and New Guinea.  It has become naturalized in Réunion, Fiji, French Polynesia, Micronesia, the West Indies, Costa Rica, Panama and Hawaii.
+
+Question: Which species is found at higher elevations, Arundina or Guzmania?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "species_compared": {
+      "type": "array",
+      "description": "Details of the species being compared for elevation.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "species_name": {
+            "type": "string",
+            "description": "The scientific or common name of the species."
+          },
+          "max_elevation_meters": {
+            "type": "integer",
+            "description": "The maximum altitude at which the species is found, in meters."
+          }
+        },
+        "required": [
+          "species_name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "species_with_highest_elevation": {
+      "type": "string",
+      "description": "The name of the species found at the highest elevation based on the context."
+    },
+    "highest_elevation_value_meters": {
+      "type": "integer",
+      "description": "The specific highest elevation value found for the identified species, in meters."
+    },
+    "comparison_conclusion": {
+      "type": "string",
+      "description": "A summary of the comparison and why the chosen species is at higher elevations."
+    }
+  },
+  "required": [
+    "species_compared",
+    "species_with_highest_elevation",
+    "highest_elevation_value_meters",
+    "comparison_conclusion"
+  ],
+  "additionalProperties": false
+}

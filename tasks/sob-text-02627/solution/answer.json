@@ -1,0 +1,11 @@
+{
+  "person_name": "Peter Sellers",
+  "person_roles": [
+    "film actor",
+    "comedian",
+    "singer"
+  ],
+  "replaced_in_film": "Further Up the Creek",
+  "replacement_actor": "Frankie Howerd",
+  "birth_date": "8 September 1925"
+}

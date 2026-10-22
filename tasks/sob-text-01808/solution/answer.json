@@ -1,0 +1,10 @@
+{
+  "tournament_name": "ICC KnockOut Trophy",
+  "tournament_year": 2000,
+  "host_country": "Kenya",
+  "debuting_player": {
+    "player_name": "Marlon Samuels",
+    "nationality": "Jamaican",
+    "debut_format": "ODI"
+  }
+}

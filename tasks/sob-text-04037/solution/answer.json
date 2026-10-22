@@ -1,0 +1,17 @@
+{
+  "tv_drama": {
+    "title": "Trial & Retribution",
+    "first_aired_year": 1997,
+    "broadcast_network": "ITV1"
+  },
+  "protagonist_actor": {
+    "name": "David Hayman",
+    "character_name": "DCS Michael \"Mike\" Walker"
+  },
+  "linking_actress": {
+    "name": "Victoria Smurfit",
+    "nationality": "Irish",
+    "role_in_tv_drama": "DCI Róisín Connor",
+    "role_in_once_upon_a_time": "Cruella De Vil"
+  }
+}

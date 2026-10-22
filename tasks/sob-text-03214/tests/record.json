@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "fed1773956576e1dbaa93c6efb86f6a7a8fa5fc3db0db5e069b03da5963df85a",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5ab458295542991779162c7c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "genus",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Cladorhiza segonzaci: Cladorhiza segonzaci is a species of sponge in the taxonomic category of Demospongiae.  The body of the sponge consists of a spicule and fibers and is water absorbent.\n\nAptera: Aptera is an obsolete taxonomic category, which included the Apterygota along with various other wingless arthropods.\n\nHeterostropha: Heterostropha was a previously used taxonomic category, an order of sea snails, within the superorder Heterobranchia.  In the most current gastropod taxonomy, that of Bouchet & Rocroi, this taxon is no longer in use.\n\nSigmurethra: Sigmurethra is a taxonomic category of air-breathing land snails and slugs, terrestrial pulmonate gastropod molluscs.  This is an informal group which includes the majority of land snails and slugs.\n\nHelleborine: Helleborine is the common name for a number of species of orchid.  It does not correspond to any currently used taxonomic category.  Some of the plants called helleborines are classified in the genus \"Epipactis\", some in genus \"Cephalanthera\".  A genus \"Helleborine\" was formerly recognised but has now been absorbed into the Grass pink genus \"Calapogon\".\n\nGammaridae: Gammaridae is a family of amphipods.  In North America they are included among the folk taxonomic category of \"scuds\", and otherwise gammarids is usually used as a common name.\n\nAustrocylindropuntia: Austrocylindropuntia is a genus of cacti (family Cactaceae) with 11 recognized species, which were once included in the genus \"Opuntia\".  Some are native to South America.\n\nCladorhiza inversa: Cladorhiza inversa is a species of sponge in the taxonomic category of Demospongiae.  The body of the sponge consists of a spicule and fibers and is water absorbent.\n\nCeratopteris: Ceratopteris is the only genus among homosporous ferns that is exclusively aquatic.  It is pan-tropical and classified in the Ceratopteridoideae subfamily of the Pteridaceae.\n\nEogastropoda: Eogastropoda was a previously used taxonomic category of snails or gastropods, a subclass which was erected by Ponder and Lindberg in 1997.  It was one of two great divisions (subclasses) of the class Gastropoda, the snails.  The other subclass of gastropods was the Orthogastropoda.",
+    "question": "Austrocylindropuntia and Ceratopteris are both examples of what taxonomic category?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "entity_names": {
+          "type": "array",
+          "description": "The names of the entities for which a common taxonomic category is sought.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "shared_taxonomic_level": {
+          "type": "string",
+          "description": "The common taxonomic category that both entities belong to."
+        },
+        "is_current_category": {
+          "type": "boolean",
+          "description": "Indicates whether the identified taxonomic category is currently recognized."
+        }
+      },
+      "required": [
+        "entity_names",
+        "shared_taxonomic_level",
+        "is_current_category"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "entity_names": [
+        "Austrocylindropuntia",
+        "Ceratopteris"
+      ],
+      "shared_taxonomic_level": "genus",
+      "is_current_category": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

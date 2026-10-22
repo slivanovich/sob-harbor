@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1st Legislative Council of Hong Kong: The First Legislative Council of Hong Kong was the first meeting of the legislative branch of the Hong Kong Special Administrative Region Government after the transfer of the sovereignty, replacing the Provisional Legislative Council existing between 1997 and 1998.  The membership of the LegCo is based on the 1998 election.  The term of the session was from 1 July 1998 to 30 June 2000, only two years unlike the latter legislative session of four years.  The legislature was held during the first term of the Tung Chee-hwa's administration.  The pro-democracy camp who did not participate in the Provisional Legislative Council held 20 seats with Democratic Party being the largest party.  Notable newcomers to the Legislative Council included Cyd Ho, Bernard Chan, Lui Ming-wah, and Wong Yung-kan.
+
+President of the Legislative Council of Hong Kong: The President of the Legislative Council () is the speaker of the Legislative Council of Hong Kong.  According to the Article 71 of the Hong Kong Basic Law, the President of the Legislative Council is elected by and from among Legislative Council members, plays the presiding role, administrative role and ceremonial role, and ensures the smooth conduct of the Legislative Council meetings.
+
+Jasper Tsang: Jasper Tsang Yok-sing, GBM, JP (; born 17 May 1947) was the 2nd President of the Legislative Council of Hong Kong.  He is the founding Chairman of the largest Beijing-loyalist party the Democratic Alliance for the Betterment of Hong Kong (DAB) from 1992 to 2003.  He was first elected to the Provisional Legislative Council in 1996 and had represented the Kowloon West constituency in the Legislative Council of Hong Kong from 1998 to 2008 until he ran for the Hong Kong Island constituency and subsequently elected as the President of the Legislative Council since.  Being the leading figure of the pro-Beijing camp, he is considered relatively liberal-minded in the camp.  After his announcing his retirement from the Legislative Council, he expressed that he may run for the 2017 CE election.
+
+List of colonial governors of Florida: The colonial governors of Florida governed Florida during its colonial period (before 1821).  The first European known to arrive there was Juan Ponce de León in 1513, but the governorship did not begin until 1565, when Pedro Menéndez de Avilés founded St. Augustine and was declared Governor and "Adelantado" of Florida.  This district was subordinated to the Viceroyalty of New Spain.  In 1763, following the transfer of Florida to Britain, the territory was divided into West Florida and East Florida, with separate governors.  This division was maintained when Spain resumed control of Florida in 1783, and continued as provincial divisions with the Spanish Constitution of 1812.  The Spanish transferred control of Florida to the United States in 1821, and the organized, incorporated Florida Territory was established on March 30, 1822.  This became the modern State of Florida on March 3, 1845.
+
+Law Cheung-kwok: Law Cheung-kwok (born 26 September 1949, Hong Kong) was a member of the Sai Kung District Council (1994–2007) representing Hong King.  He was also a member of the Legislative Council (1995–97) representing for the Election Committee.  He joined the Provisional Legislative Council which existed from 1996 to 1998 with other members of the Association for Democracy and People's Livelihood (ADPL), while other pro-democrats boycotted it.  He quit the ADPL around 1998 and joined the New Century Forum and Civil Force afterward.  He contested in the 1998 and 2000 Legislative Council but failed to go back to the Legislative Council.
+
+Tamil Nadu Legislative Council: Tamil Nadu Legislative Council was the upper house of the bicameral legislature of the Indian state of Tamil Nadu.  It began its existence as Madras Legislative Council, the first provincial legislature for Madras Presidency.  It was initially created as an advisory body in 1861, by the British colonial government.  It was established by the first Indian Council Act of 1861, enacted in the British parliament in the aftermath of the Indian Rebellion of 1857.  Its role and strength were later expanded by the second Council Act of 1892.  Limited election was introduced in 1909.  The Council became a unicameral legislative body in 1921 and eventually the upper chamber of a bicameral legislature in 1937.  After India became independent in 1947, it continued to be the upper chamber of the legislature of Madras State, one of the successor states to the Madras Presidency.  It was renamed as the Tamil Nadu Legislative Council when the state was renamed as Tamil Nadu in 1969.  The Council was abolished by the M. G. Ramachandran administration on 1 November 1986.  In 2010 the DMK regime headed by M. Karunanidhi tried to revive the Council.  The current AIADMK regime has expressed its intention not to revive the council and has passed a resolution in the Tamil Nadu Legislative Assembly in this regard.
+
+Adams–Onís Treaty: The Adams–Onís Treaty of 1819, also known as the Transcontinental Treaty, the Florida Purchase Treaty, or the Florida Treaty, was a treaty between the United States and Spain in 1819 that ceded Florida to the U.S. and defined the boundary between the U.S. and New Spain.  It settled a standing border dispute between the two countries and was considered a triumph of American diplomacy.  It came in the midst of increasing tensions related to Spain's territorial boundaries in North America against the United States and Great Britain in the aftermath of the American Revolution; and also during the Latin American Wars of Independence.  Florida had become a burden to Spain, which could not afford to send settlers or garrisons.  Madrid decided to cede the territory to the United States through the Adams–Onís Treaty in exchange for settling the boundary dispute along the Sabine River in Spanish Texas.  The treaty established the boundary of U.S. territory and claims through the Rocky Mountains and west to the Pacific Ocean, in exchange for the U.S. paying residents' claims against the Spanish government up to a total of $5,000,000 and relinquishing the US claims on parts of Spanish Texas west of the Sabine River and other Spanish areas, under the terms of the Louisiana Purchase.
+
+Legislative Council of the Territory of Florida: The Legislative Council of the Territory of Florida, often referred to as the Florida Territorial Council or Florida Territorial Legislative Council, was the legislative body governing the American territory of Florida (Florida Territory) before statehood.  The territory of Florida was acquired by the U.S. in 1821 under the Adams–Onís Treaty.  Replacing the form of martial law that had existed in the territory since Florida was acquired, the U.S. Congress in 1822 established a territorial government consisting of a governor, secretary, thirteen-member Legislative Council, and judiciary, all of whom were appointed by the U.S. president.
+
+Legislative Council (Amendment) Bill 2012: The Legislative Council (Amendment) Bill 2012 is a Bill of the Legislative Council of Hong Kong.  It is an amendment to the Legislative Council Ordinance Cap.  542 § 39 to disqualify a resigned member of the Legislative Council from participating in a subsequent by-election.  The original proposal was to avoid by-elections but it sparked vast controversies in the community.  The revised Bill restricts a resigned member of the Legislative Council from standing in any by-elections within six months.
+
+4th Legislative Council of Hong Kong: The Fourth Legislative Council of Hong Kong was the last meeting of the legislative branch of the Hong Kong Special Administrative Region Government.  The membership of the LegCo is based on the 2008 election.  The term of the session is from 1 October 2008 to 30 September 2012, during the second half of the Donald Tsang's administration and first two months of the Leung Chun-ying's term in office.  The meeting place was moved from the Legislative Council Building to the new built Legislative Council Complex in 2011.  The Democratic Alliance for the Betterment and Progress of Hong Kong remained the largest party with 10 seats.  Notable newcomers to the Legislative Council included Regina Ip, Priscilla Leung, Wong Yuk-man, Tanya Chan, and Paul Tse.
+
+Question: The Legislative Council of the Territory of Florida governed Florida after a treaty was made between Spain and what other country?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "governing_body": {
+      "type": "string",
+      "description": "The name of the legislative body that governed the territory."
+    },
+    "governed_territory": {
+      "type": "string",
+      "description": "The name of the territory governed by the legislative body."
+    },
+    "acquisition_details": {
+      "type": "object",
+      "properties": {
+        "treaty_name": {
+          "type": "string",
+          "description": "The name of the treaty through which the territory was acquired."
+        },
+        "year_of_treaty": {
+          "type": "integer",
+          "description": "The year the treaty was made."
+        },
+        "ceding_country": {
+          "type": "string",
+          "description": "The country that ceded the territory."
+        },
+        "acquiring_country": {
+          "type": "string",
+          "description": "The country that acquired the territory."
+        }
+      },
+      "required": [
+        "treaty_name",
+        "year_of_treaty",
+        "ceding_country",
+        "acquiring_country"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "governing_body",
+    "governed_territory",
+    "acquisition_details"
+  ],
+  "additionalProperties": false
+}

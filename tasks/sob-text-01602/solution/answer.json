@@ -1,0 +1,13 @@
+{
+  "are_both_american_directors": false,
+  "director_1": {
+    "name": "Brad Anderson",
+    "nationality": "American",
+    "is_film_director": true
+  },
+  "director_2": {
+    "name": "Carl Boese",
+    "nationality": "German",
+    "is_film_director": true
+  }
+}

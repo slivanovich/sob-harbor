@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mary Murphy (choreographer): Mary Ann Murphy (born c. 1958) is a ballroom dance champion, accredited dance judge, and a judge and choreographer on the Fox dance competition-reality show "So You Think You Can Dance".
+
+Sharon Savoy: Sharon Savoy is an American dancer, choreographer and author.  Born and raised in Chicago, Illinois, she began studying dance at the North Carolina School of the Arts at age 15, and later moved to New York City to attend the School of American Ballet until the age of 19.  Savoy danced in several ballet companies and later became a Star Search Dance Champion, Blackpool Champion, World Champion and U.S. Open Champion for her mastery in ballroom dance.  She continues choreography and dance work in various T.V. shows, competitions and movies.  She won the 2013 "World's Best Female Dancer" at the Huading Awards, held in Macau, China.
+
+Slam Dance (film): Slam Dance is a 1987 thriller directed by Wayne Wang and starring Tom Hulce, Mary Elizabeth Mastrantonio, Virginia Madsen and Harry Dean Stanton.  It was screened out of competition at the 1987 Cannes Film Festival.
+
+Darshana Jhaveri: Darshana Jhaveri (Gujarati: દર્શના ઝવેરી ) (born 1940), the youngest of the four "Jhaveri sisters", is a leading Indian exponent of Manipuri dance, an Indian classical dance form.  She is a disciple of Guru Bipin Singh, and started performing on stage in 1958 along with her sisters.  She is one of the founders of the "Manipuri Nartanalaya" in 1972, which popularized Manipuri dance in India, and is currently headed by her, with centres at Mumbai, Kolkata and Imphal.
+
+Mary Elizabeth Mastrantonio: Mary Elizabeth Mastrantonio (born November 17, 1958) is an American actress and singer.  She made her Broadway debut in the 1980 revival of "West Side Story", and went on to appear in the 1983 film "Scarface" as Al Pacino's character's sister, Gina Montana.  For her role as Carmen in the 1986 film "The Color of Money", she was nominated for the Academy Award for Best Supporting Actress.  Her other film roles include "The Abyss" (1989), "" (1991), and "The Perfect Storm" (2000).  In 2003, she was nominated for the Tony Award for Best Actress in a Musical for the Broadway revival of "Man of La Mancha".
+
+Chubby Checker: Chubby Checker (born Ernest Evans; October 3, 1941) is an American singer and dancer.  He is widely known for popularizing the twist dance style, with his 1960 hit cover of Hank Ballard's R&B hit "The Twist".  In September 2008 "The Twist" topped "Billboard's" list of the most popular singles to have appeared in the Hot 100 since its debut in 1958, an honor it maintained for an August 2013 update of the list.  He also popularized the Limbo Rock and its trademark limbo dance, as well as various dance styles such as the fly.
+
+Kevin Curren: Kevin Melvyn Curren (born 2 March 1958) is a South African-American former professional tennis player.  He played in two Grand Slam singles finals and won four Grand Slam doubles titles, reaching a career-high singles ranking of World No. 5.
+
+Yang Liping: Yang Liping (born November 10, 1958) is the director, choreographer and star of a performance art show called "Dynamic Yunnan" that has drawn sellout crowds all over China.  She toured Europe and the United States in 2005.  Between 2004 and 2008, Yang Liping directed and choreographed a trilogy: "Dynamic Yunnan", "Echoes of Shangri-la" and "Tibetan Myth".  In 2004, "Dynamic Yunnan" won five major awards at the National Lotus Awards, including Gold Award for Dance Spectacular, Best Choreography and Best Female Performer.  To create the exotic song and dance spectacular "Dynamic Yunnan", Yang spent years travelling to remote villages of the 26 ethnic minority tribes in Yunnan and selected over 60 peasants who had the natural gift of song and dance, from whom she built an archive re-creating this rich feast of sight and sound.
+
+Cuckoo's Nest (nightclub): The Cuckoo's Nest (1976–1981) was a punk rock nightclub that was located at 1714 Placentia Avenue in Costa Mesa, California.  There were often confrontations with the punks from the Cuckoo's Nest and the cowboys from Zubie's, which shared a parking lot.  The police were constantly harassing the punks.  Club owner Jerry Roach fought a number of court cases in an effort to keep the club alive, and in his 1981 film on the subject Urban Struggle he suggested that perhaps this was the first time that the authorities would stamp out a fad.  The club was a hub of the punk rock in California.  The club is notable as being home to the first slam pit.  Jim trash from the crowd invented the slam dance at the Cuckoo's Nest according to American hardcore.  the Bands such as 999 (band), The Ramones, XTC, The Damned, Redd Kross, Black Flag, T.S.O.L., Circle Jerks, the Vandals, Social Distortion, Agent Orange (band), Blondie Chaplin, JFA, David Johansen, uk Squeeze (band), the Adolescents, X (American band), the Go-Go's, The Lords of the New Church, Bad Brains, the Cramps, Iggy Pop, Dead Kennedys, the Dickies, Violent Femmes, Ultravox (with John Foxx), the Motels, the Bangles, the Fabulous Thunderbirds, John Cale, Suicidal Tendencies, Los Lobos, Fear (band), Wall of Voodoo, the Misfits (band), the Knack, the Crowd, The Blasters, 45 Grave, The Weirdos, China White (band), The Minutemen (band), Civil Defense (band), 20/20 (band), Pere Ubu, Suburban Lawns, sub humans, Magazine (band), The Plimsouls, Rubber City Rebels, Berlin (band), Middle Class (band), all played gigs there.  The club was memorialized in the Vandals song "Pat Brown", a song about a club goer who actually tried to run the cops into the ground and urban struggle or I want to be a cowboy...couldn't make it as a punker.
+
+Gilbert Shea: Gilbert Shea (born 5 October 1928) is a former American tennis player.  Although born in Oregon, Shea and his family moved to California when he was three years old.  He started playing tennis when he was around eight years old.  Big serving Shea was ranked as high as number 4 in the U. S. in 1957.  Making his Grand Slam debut at the U. S. championships in 1948, Shea lost in round three to Jaroslav Drobny.  In 1949 he lost in round two to Edward Moylan and in 1950 lost in round one to Hugh Stewart.  At the 1952 U. S. Championships, Shea lost in round three to Mervyn Rose.  In 1953 he lost in round three to Arthur Larsen.  At Roland Garros in 1954 Shea lost in round three to Jaroslav Drobny.  At Wimbledon, he lost in the last 16 to Rex Hartwig.  At the U. S. Championships, he beat Luis Ayala before losing in round three to Moylan.  At Wimbledon 1955, Shea beat Vic Seixas and Adrian Quist before losing in the last 16 to Nicola Pietrangeli.  He lost in round one of the U. S. championships.  At the 1956 Australian championships, Shea beat a young Roy Emerson (who won 6 titles in the 1960s) before losing in the quarter finals to Neale Fraser.  Shea lost in round two of Wimbledon.  He reached the last 16 at U. S. championships, losing to Fraser.  In 1957 Shea lost in round two of Roland Garros, round one of Wimbledon and round three at U. S. championships.  Shea then lost in round one of Wimbledon 1958 and round two at U. S. championships in 1959 and then retired.  In later life he played a lot of golf recreationally.
+
+Question: Which star of Slam Dance was born in 1958?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film in question."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year specified in the question."
+    },
+    "star_details": {
+      "type": "object",
+      "properties": {
+        "star_name": {
+          "type": "string",
+          "description": "The name of the star who meets the criteria."
+        },
+        "star_type": {
+          "type": "string",
+          "description": "The type of star (e.g., actress, actor)."
+        }
+      },
+      "required": [
+        "star_name",
+        "star_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "film_title",
+    "birth_year",
+    "star_details"
+  ],
+  "additionalProperties": false
+}

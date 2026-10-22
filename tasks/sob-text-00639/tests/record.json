@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "84ba1e9e34147abcee018e91ccaeb90dfd85305466cc125215a1cab0afb1c2b1",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8e0d4a55429917b4a5bcf9",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ken Loach",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Hristo Smirnenski: Hristo Smirnenski (Bulgarian: Христо Смирненски ), born Hristo Izmirliev, (September 17, 1898, OS - June 18, 1923) was a Bulgarian poet and prose writer who joined the Communist Party and whose works championed socialist ideals in a light-hearted and humane style.  He died at the age of 25, leaving a well regarded body of work produced over a mature career of only three years.\n\nKen Loach: Kenneth Charles Loach (born 17 June 1936) is an English director of television and independent film.  He is known for his socially critical directing style and for his socialist ideals, which are evident in his film treatment of social issues such as poverty (\"Poor Cow\", 1967), homelessness (\"Cathy Come Home\", 1966) and labour rights (\"Riff-Raff\", 1991, and \"The Navigators\", 2001).\n\nMy Name Is Joe: My Name Is Joe is a 1998 British film directed by Ken Loach.  The film stars Peter Mullan as Joe Kavanagh, an unemployed recovering alcoholic in Glasgow who meets and falls in love with a health visitor.  David McKay plays his troubled friend Liam.  The film's title is a reference to the ritualised greeting performed in Alcoholics Anonymous meetings, as portrayed in the film's opening scene.\n\nWilliam Carr Smith: William Carr Smith (1857–1930) was a Church of England clergyman, best known as the rector of St James' Church, Sydney from 1896 to 1910, whose Anglo-Catholic and Christian Socialist ideals transformed Sydney's oldest church.  Carr Smith's teaching was said to be \"continuous, methodical, very direct, very plain, and quite fearless\".\n\nTang Shu Shuen: Tang Shu Shuen (; born 1941), also known as Cecile Tang Shu Shuen, is a former Hong Kong film director.  Though her film career was brief, she was a trailblazer for socially critical art cinema in Hong Kong's populist film industry, as well as its first noted woman director.\n\nAlbert Chavannes: Albert Chavannes (February 23, 1836 – May 3, 1903) was a Swiss-born American author, philosopher, and sociologist, active primarily in the late 19th century.  He is best known for his two utopian novels, \"The Future Commonwealth\" and \"In Brighter Climes\", which discuss a fictional futuristic society, \"Socioland,\" where the economy is governed by socialist ideals rather than capitalism, and where morality is based on social scientific experimentation, rather than traditional religion.  Chavannes was also one of the earliest social theorists to extensively discuss exchange theory, and his ideas on \"magnetism\" (magnetation) influenced writers such as J. William Lloyd and Ida C. Craddock.\n\nI'm Just a Country Boy: \"I'm Just a Country Boy\" is a song written by Fred Hellerman and Marshall Baker.  In 1954, the song was recorded by Harry Belafonte accompanied by Hugo Winterhalter And His Orchestra (RCA Victor) and released on 78 rpm and 45 rpm record.  It was the B-side of the record, \"Hold 'Em Joe\" (Calypso) being the A-side.  The print on the record informs us that the song was written by Fred Brooks and Marshall Barer, noting that Fred Brooks was a pseudonym for Fred Hellerman (of The Weavers fame) who was blacklisted in the McCarthy era for his socialist ideals.\n\nAustralian Fabian Society: The Australian Fabians (also known as the Australian Fabian Society) was established in 1947.  Inspired by the Fabian Society in the United Kingdom, it is dedicated to Fabianism, the focus on the advancement of socialist ideas through gradual influence and patiently promoting socialist ideals to intellectual circles and groups with power.\n\nDuke St. Rollins: Duke St. Rollins is a U.S-based politically progressive Internet troll on Facebook who received mainstream press notoriety for his socially critical and witty commentary in reply to posts made by major U.S. political and conservative media figures.  His outputs have been dubbed by mainstream media journalists as \"extraordinary\" and coming from \"a performance artist.\"  Among his favored targets are Governor Jan Brewer of Arizona, Sheriff Joe Arpaio of Maricopa County, Arizona, and Fox News Channel program host Sean Hannity.\n\nEnvy (novel): Envy (Russian: \"Зависть\") is a novel published in 1927 by the Russian novelist Yuri Olesha.  It is remarkable for its poetic style, undulating modes of transition between the scenes, innovative structure, biting satire, and ruthless examination of Socialist ideals.",
+    "question": "What English director known for his socially critical directing style and socialist ideals directed the film My Name is Joe?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "director_name": {
+          "type": "string",
+          "description": "The name of the director."
+        },
+        "director_nationality": {
+          "type": "string",
+          "description": "The nationality of the director."
+        },
+        "known_for_style": {
+          "type": "string",
+          "description": "The directing style the director is known for."
+        },
+        "ideals": {
+          "type": "string",
+          "description": "The ideals championed by the director."
+        },
+        "film_directed": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the film directed."
+            },
+            "year": {
+              "type": "integer",
+              "description": "The release year of the film."
+            }
+          },
+          "required": [
+            "title",
+            "year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "director_name",
+        "director_nationality",
+        "known_for_style",
+        "ideals",
+        "film_directed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "director_name": "Ken Loach",
+      "director_nationality": "English",
+      "known_for_style": "socially critical directing style",
+      "ideals": "socialist ideals",
+      "film_directed": {
+        "title": "My Name Is Joe",
+        "year": 1998
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

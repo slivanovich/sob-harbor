@@ -1,0 +1,97 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+United States Poet Laureate: The Poet Laureate Consultant in Poetry to the Library of Congress—commonly referred to as the United States Poet Laureate—serves as the official poet of the United States.  During their term, the Poet Laureate seeks to raise the national consciousness to a greater appreciation of the reading and writing of poetry.  The position was modeled on the Poet Laureate of the United Kingdom.  Begun in 1937, and formerly known as the Consultant in Poetry to the Library of Congress, the present title was devised and authorized by an Act of Congress in 1985.  The Poet Laureate's office is administered by the Center for the Book.
+
+Josephine Jacobsen: Josephine Jacobsen (19 August 1908 – 9 July 2003) was an American poet, short story writer, essayist, and critic.  She was appointed the twenty-first Poet Laureate Consultant in Poetry to the Library of Congress in 1971.  In 1997, she received the Poetry Society of America’s highest award, the Robert Frost Medal for Lifetime Achievement in Poetry.
+
+Louise Glück: Louise Elisabeth Glück (born April 22, 1943) is an American poet.  She was appointed Poet Laureate Consultant in Poetry to the Library of Congress in 2003, after serving as a Special Bicentennial Consultant three years prior in 2000.  She won the National Book Award for Poetry in 2014 for "Faithful and Virtuous Night".
+
+Rita Dove: Rita Frances Dove (born August 28, 1952) is an American poet and essayist.  From 1993 to 1995, she served as Poet Laureate Consultant in Poetry to the Library of Congress.  She is the first African-American to have been appointed since the position was created by an act of Congress in 1986 from the previous "consultant in poetry" position (1937–86).  Dove also received an appointment as "special consultant in poetry" for the Library of Congress's bicentennial year from 1999 to 2000.  Dove is the second African American to receive the Pulitzer Prize for Poetry, in 1987, and she served as the Poet Laureate of Virginia from 2004 to 2006.
+
+Gwendolyn Brooks: Throughout her prolific writing career, Brooks received many more honors.  She was appointed Poet Laureate of Illinois in 1968, a position held until her death, and what is now the Poet Laureate Consultant in Poetry to the Library of Congress for the 1985–86 term.  In 1976, she became the first African-American woman inducted into the American Academy of Arts and Letters.
+
+List of U.S. states' Poets Laureate: Many of the states in the United States have established the post of poet laureate to which a prominent poet residing in the respective state is appointed.  The responsibilities of the state poets laureate are similar to those of the Poet Laureate of the United Kingdom and the equivalent Poet Laureate Consultant in Poetry to the Library of Congress in the United States, to make public appearances at poetry readings or literary events, and to promote awareness of poetry within their geographical region.
+
+Karl Shapiro: Karl Jay Shapiro (November 10, 1913 – May 14, 2000) was an American poet.  He was appointed the fifth Poet Laureate Consultant in Poetry to the Library of Congress in 1946.
+
+Woody Allen: Heywood "Woody" Allen (born Allan Stewart Konigsberg; December 1, 1935) is an American filmmaker, writer, actor, comedian, and musician whose career spans more than six decades.
+
+Poet laureate: A poet laureate (plural: poets laureate) is a poet officially appointed by a government or conferring institution, who is often expected to compose poems for special events and occasions.  The Italians Albertino Mussato and Francesco Petrarca were the first to be crowned poets laureate after the classical age, respectively in 1315 and 1342.  In Britain, the term dates from the appointment of Bernard André by Henry VII of England.  In modern times, the title may also be conferred by an organization such as the Poetry Foundation, which has a designated Children's Poet Laureate.  Other examples are the Pikes Peak Poet Laureate, which is designated by a "Presenting Partners" group from within the community; the Minnesota Poet Laureate chosen by the League of Minnesota Poets (est. 1934); the Northampton Poet Laureate chosen by the Northampton Arts Council, and the Martha's Vineyard Poet Laureate chosen by ten judges representing the Martha's Vineyard Poetry Society.
+
+Charles Simic: Charles Simic (Serbian: Душан "Чарлс" Симић ; born Dušan Simić; May 9, 1938) is a Serbian-American poet and was co-poetry editor of the "Paris Review".  He received the Pulitzer Prize for Poetry in 1990 for "The World Doesn't End", and was a finalist of the Pulitzer Prize in 1986 for "Selected Poems, 1963-1983" and in 1987 for "Unending Blues".  He was appointed the fifteenth Poet Laureate Consultant in Poetry to the Library of Congress in 2007.
+
+Question: Who was appointed the fifth Poet Laureate Consultant in Poetry to the Library of Congress in 1946, Woody Allen or Karl Shapiro ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "appointed_poet_laureate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the person appointed as Poet Laureate."
+        },
+        "appointment_year": {
+          "type": "integer",
+          "description": "The year of the appointment."
+        },
+        "appointment_order": {
+          "type": "string",
+          "description": "The ordinal number of the appointment (e.g., 'fifth')."
+        },
+        "position_title": {
+          "type": "string",
+          "description": "The official title of the Poet Laureate position."
+        }
+      },
+      "required": [
+        "name",
+        "appointment_year",
+        "appointment_order",
+        "position_title"
+      ],
+      "additionalProperties": false
+    },
+    "other_candidate_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the other person mentioned in the question."
+        },
+        "known_professions": {
+          "type": "string",
+          "description": "A description of the other person's known professions from the context."
+        }
+      },
+      "required": [
+        "name",
+        "known_professions"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer": {
+      "type": "string",
+      "description": "The name of the person who was appointed as the Poet Laureate."
+    }
+  },
+  "required": [
+    "appointed_poet_laureate",
+    "other_candidate_details",
+    "final_answer"
+  ],
+  "additionalProperties": false
+}

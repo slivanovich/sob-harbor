@@ -1,0 +1,24 @@
+{
+  "targeting_government": {
+    "name": "government of Nazi Germany"
+  },
+  "targeted_group": {
+    "name": "Jewish individuals"
+  },
+  "targeting_details": {
+    "reason_for_targeting": "ethnicity, religion, political beliefs, or sexual orientation",
+    "discriminatory_practices": [
+      "legalized social discrimination",
+      "involuntary hospitalization",
+      "euthanasia",
+      "forced sterilization",
+      "non-judicial incarceration",
+      "confiscation of property",
+      "forced labor",
+      "sexual slavery",
+      "medical experimentation",
+      "death through overwork, undernourishment, and execution",
+      "genocide"
+    ]
+  }
+}

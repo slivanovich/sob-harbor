@@ -1,0 +1,14 @@
+{
+  "camp_name": "Camp Winnarainbow",
+  "adjoining_organization": "Hog Farm",
+  "organization_details": {
+    "type": "hippie commune",
+    "description": "America's longest running",
+    "location_context": "near Laytonville, California",
+    "founded_by": [
+      "Wavy Gravy",
+      "Jahanara Romney"
+    ],
+    "founding_period": "mid-1960s"
+  }
+}

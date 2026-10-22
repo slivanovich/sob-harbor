@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "93789ba8d24f58049b0e003ca7dc98742f9562280f6c00b263d8e4810201f89d",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab7db4855429928e1fe392b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Seven Days",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Plan (film): Plan is an Indian Hindi mystery thriller film released in January 2004, starring Sanjay Dutt, Priyanka Chopra, Dino Morea and Sameera Reddy.  It was produced by Sanjay Gupta and directed by Hriday Shetty, the film was a rage and did exceptionally well at the single screens of India whilst not performing too well at the multiplex cinemas overall the film was given the hit verdict and stands as the seventh highest grossing hindi film of 2004.  This film is loosely based on the 1997 Hollywood comedy \"Suicide Kings\".\n\nManoj Gupta: Manoj Gupta (born December 23, 1967) is an Indian publisher, editor, and the President and Co-founder of Raja Pocket Books and its subsidiary Raj comics.  He established the most popular and longest running comic book company Raj Comics together with his brothers Sanjay Gupta and Manish Gupta.\n\nSeven Days (film): Seven Days () is a 2007 South Korean crime thriller film directed by Won Shin-yun, starring Yunjin Kim and Park Hee-soon.\n\nMusafir (2004 film): Musafir (translation: \"Traveller\") is a 2004 Indian Hindi thriller film, directed and produced by Sanjay Gupta starring Anil Kapoor, Aditya Pancholi, Sameera Reddy and Sanjay Dutt in the lead roles and introducing Koena Mitra.  The film was controversial because of some sensual scenes, including kissing, between Kapoor and Reddy.  The film has been described as \"a take-off on\" Oliver Stone's 1997 thriller, \"U Turn\".  At the box office the film opened to almost near housefull collections of 80%-100percent all over India but witnessed a steep fall by the end of its first week of release and was eventually given an average verdict at the box office due to its high production costs settling as the eighth highest grossing Hindi film of the year.\n\nJazbaa: Jazbaa (translation: \"Passion\" or \"Emotion\") is a 2015 Indian crime thriller film directed by Sanjay Gupta.  The film's narrative revolves around an attorney forced to defend an unsavory criminal after her daughter is kidnapped.  It stars Aishwarya Rai and Irrfan Khan in the lead roles, with Shabana Azmi, Atul Kulkarni, Jackie Shroff and Chandan Roy Sanyal in supporting roles.  It is a remake of the 2007 South Korean film \"Seven Days\".  The film was released on 9 October 2015 and turned out to be financially profitable.  The film marked Aishwarya's return on screen after a five-year break.\n\nHameshaa: Hamesha (Hindi: हमेशा ) English: \"Forever\") is an Indian Hindi romance movie written and directed by Sanjay Gupta.  The film stars Aditya Pancholi, Saif Ali Khan and Kajol in the lead roles.  Aruna Irani and Kader Khan have supporting roles in the film.  The film explores reincarnation and marks Sanjay Gupta's third collaboration with Aditya Pancholi.\n\nZinda (film): Zinda (English: \"Alive\") is a 2006 Indian Hindi mystery-thriller film, starring Sanjay Dutt, John Abraham, and Lara Dutta.  The film was directed by Sanjay Gupta and written by Gupta and Suresh Nair.  Vishal-Shekhar composed the film's thematic music, with background music composed by Sanjoy Chowdhury.  It was released in India on 12 January 2006.\n\nSanjay Gupta (director): Sanjay Gupta (born 23 October 1969) is an Indian filmmaker, producer and screenwriter working primarily in Bollywood industry.  Gupta is mostly known for his films such as \"Jung\", \"Khauff\", \"Kaante\", and \"Zinda\".  He has frequently cast Aditya Pancholi and Sanjay Dutt in his movies.\n\nKaram (film): Karam (English: \"Deeds\") is a Bollywood crime thriller film, released in 2005.  The film is directed by the cinematographer Sanjay F. Gupta (often confused with another director Sanjay Gupta).  This movie is Sanjay F Gupta's directorial debut movie.  He had directed the advertisements and music videos.  This movie stars John Abraham and Priyanka Chopra in the lead roles.\n\nSanjay Gupta MD: Sanjay Gupta MD (previously House Call With Dr. Sanjay Gupta) is a medical-centric news program hosted by CNN's in-house physician, Sanjay Gupta.  The 30 minute program aired Saturdays at 4:30 pm ET in 2013 and 2014.",
+    "question": "Which Won Shin-yun film inspired the Sanjay Gupta directed film Jazbaa?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "sanjay_gupta_film_title": {
+          "type": "string",
+          "description": "The title of the film directed by Sanjay Gupta."
+        },
+        "inspired_film_title": {
+          "type": "string",
+          "description": "The title of the film that inspired Sanjay Gupta's film."
+        },
+        "inspired_film_director": {
+          "type": "string",
+          "description": "The director of the film that inspired Sanjay Gupta's film."
+        },
+        "inspired_film_release_year": {
+          "type": "integer",
+          "description": "The release year of the inspired film."
+        },
+        "inspiration_type": {
+          "type": "string",
+          "description": "The nature of the inspiration (e.g., 'remake')."
+        }
+      },
+      "required": [
+        "sanjay_gupta_film_title",
+        "inspired_film_title",
+        "inspired_film_director",
+        "inspired_film_release_year",
+        "inspiration_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "sanjay_gupta_film_title": "Jazbaa",
+      "inspired_film_title": "Seven Days",
+      "inspired_film_director": "Won Shin-yun",
+      "inspired_film_release_year": 2007,
+      "inspiration_type": "remake"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

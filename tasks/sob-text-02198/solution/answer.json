@@ -1,0 +1,11 @@
+{
+  "film_title": "The Patriot",
+  "film_year": 1986,
+  "film_genre": "action",
+  "actor_details": {
+    "actor_name": "Leslie Nielsen",
+    "actor_nationality": "Canadian",
+    "portrayed_count_minimum": 220,
+    "portrayed_item_type": "characters"
+  }
+}

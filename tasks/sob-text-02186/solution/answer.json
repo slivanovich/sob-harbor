@@ -1,0 +1,14 @@
+{
+  "food_name": "Dead-cakes",
+  "event_details": {
+    "event_type": "wake",
+    "synonyms_in_us_canada": [
+      "viewing",
+      "calling hours",
+      "reviewal",
+      "funeral visitation"
+    ],
+    "event_timing": "before a funeral"
+  },
+  "food_purpose": "to honour the deceased individual"
+}

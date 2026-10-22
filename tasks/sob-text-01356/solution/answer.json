@@ -1,0 +1,11 @@
+{
+  "venue_details": {
+    "name": "The Big Top",
+    "located_within_park": "Luna Park Sydney"
+  },
+  "park_location": {
+    "shore_direction": "northern",
+    "harbour_name": "Sydney Harbour"
+  },
+  "final_answer": "Sydney Harbour"
+}

@@ -1,0 +1,12 @@
+{
+  "car_model": "Porsche 928",
+  "manufacturer": {
+    "name": "Porsche AG",
+    "country_of_origin": "Germany"
+  },
+  "vehicle_type": "luxurious grand tourer",
+  "production_period": {
+    "start_year": 1978,
+    "end_year": 1995
+  }
+}

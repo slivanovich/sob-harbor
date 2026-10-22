@@ -1,0 +1,14 @@
+{
+  "are_both_former_players": true,
+  "player_details": [
+    {
+      "player_name": "Manuel Orantes",
+      "status_in_context": "former tennis player"
+    },
+    {
+      "player_name": "Hank Pfister",
+      "status_in_context": "former tennis player"
+    }
+  ],
+  "reasoning": "The context explicitly states that Manuel Orantes is a 'former tennis player' and Hank Pfister is a 'former tennis player'."
+}

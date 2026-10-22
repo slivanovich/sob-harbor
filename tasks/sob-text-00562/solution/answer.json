@@ -1,0 +1,12 @@
+{
+  "film_title": "Dark Side of the Moon",
+  "film_director": "William Karel",
+  "guest_appearance_details": {
+    "guest_name": "Donald Rumsfeld",
+    "guest_profession": "American retired politician and businessman",
+    "secretary_of_defense_term": {
+      "term_number": "21st",
+      "president_served_under": "President George W. Bush"
+    }
+  }
+}

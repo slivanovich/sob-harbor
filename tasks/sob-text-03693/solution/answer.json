@@ -1,0 +1,15 @@
+{
+  "hospital_comparison": [
+    {
+      "hospital_name": "Howard University Hospital",
+      "establishment_year": 1862
+    },
+    {
+      "hospital_name": "Psychiatric Institute of Washington",
+      "establishment_year": 1967
+    }
+  ],
+  "earlier_hospital_name": "Howard University Hospital",
+  "year_difference": 105,
+  "is_almost_a_century_difference": true
+}

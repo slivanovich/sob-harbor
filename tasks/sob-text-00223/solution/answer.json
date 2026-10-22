@@ -1,0 +1,18 @@
+{
+  "identified_team_name": "Detroit Lions",
+  "identified_season_year": 2008,
+  "identified_team_record": "0–16",
+  "is_identified_team_winless": true,
+  "comparison_teams": [
+    {
+      "team_name": "Tampa Bay Buccaneers",
+      "season_year": 1976,
+      "win_loss_record": "0 wins, no ties"
+    },
+    {
+      "team_name": "Baltimore Colts",
+      "season_year": 1982,
+      "win_loss_record": "0-8-1"
+    }
+  ]
+}

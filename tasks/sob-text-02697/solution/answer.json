@@ -1,0 +1,64 @@
+{
+  "person_known_for_falsetto": "Jimmy Somerville",
+  "person_not_known_for_falsetto": "Peter Dolving",
+  "falsetto_singers_mentioned_in_context": [
+    {
+      "name": "Justin Hawkins",
+      "bands": [
+        "The Darkness",
+        "Hot Leg",
+        "British Whale"
+      ],
+      "other_notable_characteristics": [
+        "English musician and singer-songwriter",
+        "lead singer and lead guitarist",
+        "heavily influenced by classic hard rock and heavy metal bands",
+        "on-stage persona"
+      ]
+    },
+    {
+      "name": "Prince Lincoln Thompson",
+      "bands": [
+        "Royal Rasses"
+      ],
+      "other_notable_characteristics": [
+        "Jamaican singer, musician and songwriter",
+        "member of the Rastafari movement",
+        "very different from his spoken voice"
+      ]
+    },
+    {
+      "name": "Sylvester James, Jr.",
+      "bands": [],
+      "other_notable_characteristics": [
+        "American singer-songwriter",
+        "primarily active in the genres of disco, rhythm and blues, and soul",
+        "flamboyant and androgynous appearance",
+        "hit disco singles"
+      ]
+    },
+    {
+      "name": "Jimmy Somerville",
+      "bands": [
+        "Bronski Beat",
+        "The Communards"
+      ],
+      "other_notable_characteristics": [
+        "Scottish pop singer and songwriter"
+      ]
+    },
+    {
+      "name": "Raine Maida",
+      "bands": [
+        "Our Lady Peace"
+      ],
+      "other_notable_characteristics": [
+        "Canadian musician",
+        "lead vocalist and primary songwriter",
+        "unique countertenor nasal falsetto singing voice",
+        "cryptic and poetry-influenced song lyrics",
+        "occasionally plays certain instruments, such as the acoustic guitar"
+      ]
+    }
+  ]
+}

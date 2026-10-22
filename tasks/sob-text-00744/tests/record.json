@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "654033aa479efe2ab040b8f60ac838a68c1b0a09a9b2336cb39594d168ad9584",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7d2a665542995ed0d16617",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Han",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Guangdong music (genre): Guangdong music, also known as \"Cantonese music\" (廣東音樂 \"Kwongdong yam ngok\",\"Guǎngdōng yīnyuè\") is a style of traditional Chinese instrumental music from Guangzhou and surrounding areas in Pearl River Delta  of Guangdong Province on the southern coast of China.  The name of the music is not an accurate description because \"Guangdong music\" is not the only music of the whole Guangdong area.  Cantonese classical music especially were usually much livelier in pace and happier then those of other China provinces which is typical and the very essence of the Cantonese's character.  In Guangdong, there are numerous traditional genres of music such as Teochew music and Hakka music (Hakka \"Hanyue\" and \"sixian\").  The name of the music originated in the 1920 and 1930s when the music was popular in Shanghai ballrooms in the form of \"Spiritual Music\" (精神音樂, Jīngshěn Yīnyuè; more properly translated as \"spirited music\").  As the performers were almost entirely from Guangdong, Shanghai people generalized the form of music as Guangdong music.  Musically, compositions are based on tunes derived from Cantonese opera, together with new compositions from the 1920s onwards.  Some pieces have influences from jazz and Western music, using syncopation and triple time, and incorporating instruments such as the saxophone, violin, guitar, piano, drum set, or xylophone.\n\nHong Kong Cantonese: Hong Kong Cantonese () is a dialect of the Cantonese language commonly spoken in Hong Kong, as well as Macau.  Although the Hong Kong people largely identify this variant of Chinese with the term \"\"Cantonese\"\" (廣東話 ), a variety of publications in Mainland China describe the variant as \"Hong Kong speech\" (香港話 ).\n\nHong Kong–Mainland China conflict: Tensions between people from Hong Kong and mainland China have developed since the handover of Hong Kong's sovereignty to China in 1997, and in particular since the late 2000s and early 2010s.  Various factors have contributed to the development of such tensions: these include a difference between the popular interpretation in Hong Kong of the \"One country, two systems\" constitutional principle as against the Chinese government's official interpretation; policies of the Hong Kong and central governments to encourage mainland visitors to Hong Kong; and changing economic environments in Hong Kong and mainland China.  Increasingly, these tensions have resulted in a rising sentiment in Hong Kong of hostility to \"mainlanders\" and resentment at a perceived trend towards assimilation and interference from the mainland and the central government, and at the same time a rising sentiment in mainland China of bewilderment and resentment at assertions that Hong Kong is, and should remain, different from the mainland in terms of political system, culture and language.\n\nCantonese people: The Cantonese people () are Han Chinese people originating from or residing in the provinces of Guangdong and eastern Guangxi (together known as Liangguang), in mainland China.  The term \"Cantonese people\" is often synonymous with the Punti people ().  They are also referred to as \"Hoa\" in Vietnam, \"Kongfu\" in Malaysia and \"Konghu\" in Indonesia.\" .\n\nLingnan architecture: Lingnan architecture (Cantonese Jyutping: Ling naam gin zuk; Traditional Chinese: 嶺南建築), or Cantonese architecture, refers to the characteristic architectural style(s) of the Lingnan region - the Southern Chinese provinces of Gwongdung and Gwongsai.  Usually, it is referring to the architecture associated with the Cantonese people - with other peoples in the area (such as the Hakka and the Teochew) having their own styles.  This style began with the architecture of the ancient non-Han Nanyue people and absorbed certain architectural elements from the Tang Empire and Song Empire as the region sinicized in the later half of the first millennium AD.\n\nCantonese merchants: Cantonese merchants (Cantonese Jyutping: Jyut6 soeng1; Traditional Chinese: 粵商) refers to merchants of Cantonese origins, thought sometimes it is used to include Hakka and Teochew merchants who originated from the Southern Chinese province of Gwongdung - where Cantonese people have been the dominant demographic.  Historically, the Cantonese people have spent most of the second millennium AD being one of the main ports of successive Chinese dynasties, resulting in the formation of a distinct business culture which many cultural studies and business scholars have sought to examine.\n\nLiangguang: Liangguang (, postal: Liangkwang) is a Chinese term for the province of Guangdong and former province and present autonomous region of Guangxi, collectively.  It particularly refers to the viceroyalty of Liangguang under the Qing dynasty, when the territory was considered to include Hainan and the leased territories of British Hong Kong, the French Kouang-Tchéou-Wan and Portuguese Macau.  The Viceroy of Liangguang existed from 1735-1911.\n\nTaishanese people in Hong Kong: Sze Yap Cantonese (Chinese: 四邑廣東人; Taishanese: Sli Yip Gong Ong Ngin; Cantonese: Sei Yap Gwong Dong Yan; Mandarin: Si Yi Guang Dong Ren) represents the second largest Han group in Hong Kong after the group of people originating from the Guangzhou-Sam Yap region.  The Sze Yap Cantonese comes from a region in Guangdong in China called Sze Yap (四邑), now called Ng Yap, which consists of the cities of Taishan, Kaiping, Xinhui, Enping, Heshan and Jiangmen.  The Sze Yap Cantonese group have contributed much to what makes Hong Kong a success.  In the 1960s, Hong Kong people of Sze Yap origin represented about 30% of Hong Kong's total population and today this population still increases as more immigrants from the Taishanese speaking areas of Guangdong in mainland China continue to immigrate to Hong Kong.\n\nPunti: Punti (, literally \"local(s)\") is a Cantonese endonym that refers to the Cantonese people of Guangdong, Hong Kong, and Macau.  \"Punti\" designates the Cantonese-speaking locals in contrast to the Hakka immigrants who arrived in Guangdong during the Qing dynasty, the Hoklo people who spoke a different language, and the boat-dwelling Tanka people.\n\nLingnan culture: Lingnan culture (Cantonese Jyutping: Ling naam man faa; Traditional Chinese characters: 嶺南文化) refers to the culture of the core Lingnan region - the provinces of Guangdong (\"Gwongdung\" in Cantonese) and Guangxi (\"Gwongsai\" in Cantonese) in southern China.  In a purely geographical sense, this term can include Hakka culture and Teochew culture in the area.  The term is, however, more typically used to refer to Cantonese culture, which has historically been the dominant cultural force in Gwongdung and the eastern half of Gwongsai.  Here, this term also includes culture of Hong Kong and culture of Macau, since the people of Hong Kong and Macau are largely Cantonese.  Lingnan culture is the subject of research at several institutions such as the Centre of Lingnan Culture studies.  It is often contrasted against the culture of China's northern plains (i.e., Zhongyuan culture).",
+    "question": "Punti (, literally \"local(s)\") is a Cantonese endonym that refers to the Cantonese people of Guangdong, Hong Kong, and Macau, the Cantonese people are which type of Chinese people, originating from or residing in the provinces of Guangdong and eastern Guangxi (together known as Liangguang), in mainland China?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "cantonese_people_type": {
+          "type": "string",
+          "description": "The type of Chinese people the Cantonese are identified as."
+        },
+        "origin_regions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The provinces or regions where Cantonese people originate from or reside."
+        },
+        "collective_region_name": {
+          "type": "string",
+          "description": "The collective name for the origin regions."
+        },
+        "endonym_for_cantonese": {
+          "type": "string",
+          "description": "The Cantonese endonym referring to the Cantonese people."
+        }
+      },
+      "required": [
+        "cantonese_people_type",
+        "origin_regions",
+        "collective_region_name",
+        "endonym_for_cantonese"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "cantonese_people_type": "Han Chinese",
+      "origin_regions": [
+        "Guangdong",
+        "eastern Guangxi"
+      ],
+      "collective_region_name": "Liangguang",
+      "endonym_for_cantonese": "Punti"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

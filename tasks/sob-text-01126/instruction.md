@@ -1,0 +1,103 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Vakil Babu: Vakil Babu is a Hindi movie, which was released in April 1982.  The movie was produced by Jawahar Kapoor and P. K. Luthra and directed by Asit Sen.  The film stars Raj Kapoor alongside his younger brother Shashi Kapoor and also featuring Zeenat Aman, Rakesh Roshan, Kader Khan, Aruna Irani and Kishore Sahu.  This was Raj Kapoor's last leading film role and was also the first and only time he appeared onscreen with his brother Shashi, not counting Awara, wherein Shashi Kapoor appeared as a child actor.
+
+Phaansi: Phaansi is a 1978 Hindi movie directed by Harmesh Malhotra.  The film stars Shashi Kapoor, Sulakshana Pandit, Pran and Ranjeet.  The film's music is by Laxmikant Pyarelal.  Actor Asrani has also played a role as a Muslim guy in the movie who was a closed friend to Shashi Kapoor and actor Iftikar played role as father to Shahsi Kapoor.  Unfortunately, both of them was hanged to death by the villain (Ranjeet).  Thumbs up for Ranjeet of acting the role of Chief of Daku in the movie.The movie was declared hits due to its story line, drama, songs and good action.  A worth to watch movie of the 1970s.
+
+Jab Jab Phool Khile: Jab Jab Phool Khile (Hindi: जब जब फूल खिले ; Urdu: ‎ ; Translated: 'Whenever the flowers bloomed') is a 1965 Indian Hindi movie.  It stars Shashi Kapoor and Nanda.  The story is of a poor boy who is a boatman in Kashmir and falls in love with a rich tourist.  The film became a "blockbuster" at the box office, was No. 2 in top ten grossing films at the Indian Box Office in 1965.  The songs by music composing duo Kalyanji Anandji assisted by then little-known Laxmikant Pyarelal are highlights of the film (lyrics by Anand Bakshi).  The film was screened in Algeria's cinema halls every two days for a couple of years; there was, in fact, public demand for it.  Shashi Kapoor was one of the most successful Indian actors in North African countries like Algeria, Morocco and Libya.  In the souks of Marrakesh, even today some of the older shopkeepers will give you a discount if you are from the land of Shashi Kapoor.
+
+Roti Kapda Aur Makaan: Roti Kapda Aur Makaan (English: Food, Clothing and Shelter ) is a 1974 Indian Bollywood Hindi-language film.  It was written, produced, directed by and stars Manoj Kumar, alongside Shashi Kapoor, Zeenat Aman and Moushumi Chatterjee in the main lead roles and had Amitabh Bachchan, Prem Nath and Madan Puri in supporting roles.  Laxmikant Pyarelal were the music directors.  It was released on 18 October 1974 with films like "Roti" and "Benaam".
+
+23rd Filmfare Awards: The 23rd Filmfare Awards were held on March 30, 1976.  Ramesh Sippy's Sholay, Bollywood's most famous film, went home with just one win out of several nominations.  Yash Chopra's Deewaar was the big winner on the night, winning Best Picture and Best Director, among several other awards.  Shashi Kapoor won his sole acting Filmfare award, as Best Supporting Actor in Deewaar.
+
+Sulakshana Pandit: Sulakshana Pratap Narain Pandit is a Filmfare Award winning playback singer and actor.  Her brothers are the composing duo Jatin–Lalit and her younger sister is Vijayta Pandit who achieved fame with her debut movie "Love Story".  Her uncle is the accomplished classical vocalist Pandit Jasraj.
+
+Prithvi Theatre: Prithvi Theatre is one of Mumbai's best known theatres.  It was built by Shashi Kapoor and his wife Jennifer Kapoor in memory of Prithviraj Kapoor, Shashi's father, who had dreamt of having a "home" for his repertory theatre company, Prithvi Theatres, belongs to the Kapoor family, one of the most influential actor and director families in Bollywood.  Prithviraj Kapoor founded 'Prithvi Theatres', a travelling theatre company in 1944.  The company ran for sixteen years.  Ved Segan was the architect who designed and built the Theatre with the supervision of Jennifer Kapoor.  Jennifer, (Trustee) supervised the building and running of the theatre until her death in 1984.  In 1978 Prithvi Theatre opened in Juhu, Mumbai.  Shashi Kapoor is the Managing Trustee, the daily affairs are looked after by Kunal Kapoor (Trustee) with a small but efficient team.  Prithvi Theatre has shows every day of the year (closed Mondays), hosts an annual Summertime programme of workshops and plays for children, the Memorial Concert on 28 February, an annual Theatre Festival in November, and many partnership programmes promoting language, poetry, international cinema & documentaries, performing arts – which are free to the public.
+
+Kabhie Kabhie (1976 film): Kabhi Kabhie (Hindi: कभी कभी, English: "Sometimes") is a 1976 Indian Hindi romantic drama film, produced and directed by Yash Chopra, and starring an ensemble cast of Amitabh Bachchan, Raakhee, Shashi Kapoor, Waheeda Rehman, Rishi Kapoor and Neetu Singh.  This was Yash Chopra's second directorial film with Amitabh Bachchan and Shashi Kapoor in the lead roles after "Deewaar" and was particularly noted for its soundtrack compositions by Khayyam, who won Filmfare Award for Best Music, while film lyricist Sahir Ludhianvi won the Best Lyricist Award for "Kabhi Kabhie Mere Dil Mein," the song which also got singer Mukesh, the Best Male Playback Singer award.
+
+Amitabh Bachchan filmography: Amitabh Bachchan is an Indian film actor, playback singer, producer and television personality.  He made his acting debut in 1969 with "Saat Hindustani", and narrated Mrinal Sen's "Bhuvan Shome" (1969).  He later appeared as Dr. Bhaskar Banerjee in Hrishikesh Mukherjee's "Anand" (1971), for which he won the Filmfare Award for Best Supporting Actor.  In 1973, Bachchan played the role of Inspector Vijay Khanna in Prakash Mehra's action film "Zanjeer".  He has since appeared in several films with the character name "Vijay".  During the same year, he appeared in "Abhimaan" and "Namak Haraam".  For the latter, he received the Filmfare Award for Best Supporting Actor.  Two years later he appeared along with Shashi Kapoor, in Yash Chopra's "Deewar", which earned him the Filmfare Award for Best Actor nomination.  He was cited as the "angry young man" for his roles in "Deewaar" and "Zanjeer".  Later he starred in Ramesh Sippy's "Sholay" (1975), which is considered to be one of the greatest Indian films of all time.  After appearing in the romantic drama "Kabhie Kabhie" (1976), Bachchan starred in Manmohan Desai's action comedy "Amar Akbar Anthony" (1977).  He won the Filmfare Award for Best Actor for his performance in the latter.  He then played dual roles of Don and Vijay in "Don" (1978).
+
+Chor Machaye Shor: Chor Machaye Shor is a 1974 Hindi movie produced by N. N. Sippy and directed by Ashok Roy.  The film stars Shashi Kapoor, Mumtaz, Danny Denzongpa, Madan Puri and Asit Sen. Asrani earned a Filmfare nomination for best performance in a comic role, the only nomination for the film.  The music is by Ravindra Jain.  The film became a "superhit" and earned the second spot at the box office in 1974.  Because of the film's success, the film's producer (N.N. Sippy), cast (Shashi Kapoor, Danny Denzongpa, Asrani, Madan Puri), and music composer (Ravindra Jain) teamed again for Fakira (1976), which also became a box office hit.
+
+Question: What is the name of the debut movie of Vijayta Pandit, the younger sister of a Filmfare Award winning singer and actor who starred in Phaansi alongside Shashi Kapoor?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "debut_movie_name": {
+      "type": "string",
+      "description": "The name of Vijayta Pandit's debut movie."
+    },
+    "artist_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the artist whose debut movie is being queried."
+        },
+        "relationship_to_other_artist": {
+          "type": "string",
+          "description": "The relationship of the artist to the related artist mentioned in the context."
+        }
+      },
+      "required": [
+        "name",
+        "relationship_to_other_artist"
+      ],
+      "additionalProperties": false
+    },
+    "related_artist_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the related artist (sister of Vijayta Pandit)."
+        },
+        "profession": {
+          "type": "string",
+          "description": "The profession of the related artist."
+        },
+        "awards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of awards won by the related artist."
+        },
+        "movies_with_shashi_kapoor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of movies where the related artist starred alongside Shashi Kapoor."
+        }
+      },
+      "required": [
+        "name",
+        "profession",
+        "awards",
+        "movies_with_shashi_kapoor"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "debut_movie_name",
+    "artist_details",
+    "related_artist_details"
+  ],
+  "additionalProperties": false
+}

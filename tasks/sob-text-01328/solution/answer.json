@@ -1,0 +1,14 @@
+{
+  "magazine_comparison": [
+    {
+      "magazine_name": "Us Weekly",
+      "founding_year": 1977
+    },
+    {
+      "magazine_name": "Strictly Slots",
+      "founding_year": 1998
+    }
+  ],
+  "first_founded_magazine": "Us Weekly",
+  "year_difference": 21
+}

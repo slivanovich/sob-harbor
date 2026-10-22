@@ -1,0 +1,13 @@
+{
+  "main_event_description": "Departure of Russians from Afghanistan",
+  "conflict_details": {
+    "name": "Soviet war in Afghanistan",
+    "type": "War"
+  },
+  "population_movement": {
+    "group": "Russians",
+    "action": "left",
+    "location_from": "Afghanistan",
+    "timing_relative_to_conflict": "during or after the war"
+  }
+}

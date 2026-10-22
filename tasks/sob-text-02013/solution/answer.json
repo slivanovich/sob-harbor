@@ -1,0 +1,16 @@
+{
+  "film_information": {
+    "title": "Above and Beyond",
+    "release_year": 1952
+  },
+  "pilot_information": {
+    "name": "Paul W. Tibbets, Jr.",
+    "rank_at_time_of_film_subject": "Lt. Col."
+  },
+  "bombing_event": {
+    "aircraft_name": "Enola Gay",
+    "bomb_codename": "Little Boy",
+    "bomb_type": "atomic bomb",
+    "target_city": "Hiroshima"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "person_names": [
+    "Menahem Golan",
+    "John Rawlins"
+  ],
+  "mutual_occupation": "director",
+  "occupation_details": [
+    {
+      "person_name": "Menahem Golan",
+      "roles": [
+        "director",
+        "producer",
+        "writer"
+      ]
+    },
+    {
+      "person_name": "John Rawlins",
+      "roles": [
+        "film editor",
+        "film director",
+        "writer"
+      ]
+    }
+  ]
+}

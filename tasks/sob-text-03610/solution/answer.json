@@ -1,0 +1,21 @@
+{
+  "question_topic": "composer_musical_periods",
+  "composers_analyzed": [
+    {
+      "name": "Paul Hindemith",
+      "birth_year": 1895,
+      "death_year": 1963,
+      "primary_musical_period_description": "20th-century classical music",
+      "is_romantic_composer": false
+    },
+    {
+      "name": "Louis-Hector Berlioz",
+      "birth_year": 1803,
+      "death_year": 1869,
+      "primary_musical_period_description": "Romantic",
+      "is_romantic_composer": true
+    }
+  ],
+  "romantic_composer_identified": "Louis-Hector Berlioz",
+  "reasoning": "The context explicitly states Louis-Hector Berlioz was a 'French Romantic composer' with dates (1803-1869) falling squarely within the Romantic period. Paul Hindemith (1895-1963) is a 20th-century composer, not primarily known for the Romantic period."
+}

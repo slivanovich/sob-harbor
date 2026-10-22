@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "record_id": "036d85eedad9acaccb67ffa85f185212eb528dc0e7698ffdb9b9a58833418b2d",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac2f2be554299218029dba7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Jose Verges",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Orel VH2 Streamline: The Orel VH2 Streamline is a French ultralight aircraft that was designed by Jean-Francois Boudet and is under development by Orel Aircraft of Selles-Saint-Denis, introduced at the AERO Friedrichshafen show in 2015.  The aircraft will be supplied complete and ready-to-fly.\n\nAeroJames 01 Isatis: The AeroJames 01 Isatis (named for the flowering plant) is a French ultralight aircraft, designed and produced by AeroJames of Ajaccio, Corsica.  It was introduced at the Aero show held in Friedrichshafen in 2009.  The aircraft is supplied as a complete ready-to-fly-aircraft.\n\nHoude Bimax: The Houde Bimax is a French ultralight aircraft, designed and produced by Patrice Houde, introduced at the Blois homebuilt aircraft fly-in in September 2010.  The aircraft is supplied as a complete ready-to-fly-aircraft.\n\nHumbert La Moto Du Ciel: The Humbert La Moto Du Ciel (English: \"Motorbike of the Sky\" ) is a French ultralight aircraft, designed and produced by Humbert Aviation of Ramonchamp, introduced in the mid-1980s.  The aircraft is supplied as a complete ready-to-fly-aircraft.\n\nAirbus: Airbus SE ( , ] , ] , ] ) is a European multinational corporation that designs, manufactures, and sells civil and military aeronautical products worldwide.  In addition to its primary civil aeroplane business, the company has two divisions for other products and services: \"Defence and Space\" and \"Helicopters\", the latter being the largest in its industry in terms of revenues and turbine helicopter deliveries.\n\nAero Synergie Jodel D20: The Aero Synergie Jodel D20 is a French ultralight aircraft that was designed by Jean Délémontez and produced by Aero Synergie of Villefranche-de-Rouergue.  The aircraft was supplied as a kit for amateur construction or as a completed aircraft.\n\nSanstroem Friendship 3: The Friendship 3 is a French ultralight aircraft with tandem seats, engineered in France and Switzerland, and assembled in Czech Republic by Ivanov Aircraft for the manufacturer, R,S & Associes SAS Erik Sanstroem of Versailles, Yvelines.  Inspired by 1950s and 1960s light aircraft and motorgliders, the Friendship 3 is a two-place tandem-seat ultralight aircraft with dual controls, so that the rear seated passenger can also fly.\n\nAeroflying Sensation: The Aeroflying Sensation is a French ultralight aircraft, designed by former Airbus engineer Jose Verges and produced by Aeroflying of Saint-André-des-Eaux, Loire-Atlantique.  It was introduced at the French Hombuilders Rally in Blois in 2007.  The aircraft is supplied as a kit for amateur construction or as a complete ready-to-fly-aircraft.\n\nAero Synergie J300 Joker: The Aero Synergie J300 Joker is a French ultralight aircraft that was designed and produced by Sauper/ALMS and later by Aero Synergie.  The aircraft was supplied as a kit for amateur construction and also as a complete ready-to-fly aircraft.\n\nApollo Ultralight Aircraft: Apollo Ultralight Aircraft is a Hungarian aircraft manufacturer based in Eger.  The company specializes in the design and manufacture of ultralight aircraft, gyroplanes and ultralight trikes, in the form of kits for amateur construction and ready-to-fly aircraft for the European Fédération Aéronautique Internationale microlight and the American light-sport aircraft categories.",
+    "question": "A European multinational corporation that designs, manufactures, and sells civil and military aeronautical products worldwide introduced a French ultralight aircraft that was designed by former employee?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "designer_name": {
+          "type": "string",
+          "description": "The name of the aircraft designer."
+        },
+        "aircraft_details": {
+          "type": "object",
+          "properties": {
+            "aircraft_name": {
+              "type": "string",
+              "description": "The name of the ultralight aircraft."
+            },
+            "aircraft_type": {
+              "type": "string",
+              "description": "The type of aircraft."
+            },
+            "manufacturer": {
+              "type": "string",
+              "description": "The company that produces the aircraft."
+            },
+            "country_of_origin": {
+              "type": "string",
+              "description": "The country of origin of the aircraft."
+            }
+          },
+          "required": [
+            "aircraft_name",
+            "aircraft_type",
+            "manufacturer",
+            "country_of_origin"
+          ],
+          "additionalProperties": false
+        },
+        "former_employer_details": {
+          "type": "object",
+          "properties": {
+            "company_name": {
+              "type": "string",
+              "description": "The name of the former employer."
+            },
+            "company_description": {
+              "type": "string",
+              "description": "A description of the former employer's business."
+            }
+          },
+          "required": [
+            "company_name",
+            "company_description"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "designer_name",
+        "aircraft_details",
+        "former_employer_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "designer_name": "Jose Verges",
+      "aircraft_details": {
+        "aircraft_name": "Aeroflying Sensation",
+        "aircraft_type": "ultralight aircraft",
+        "manufacturer": "Aeroflying",
+        "country_of_origin": "French"
+      },
+      "former_employer_details": {
+        "company_name": "Airbus",
+        "company_description": "European multinational corporation that designs, manufactures, and sells civil and military aeronautical products worldwide"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

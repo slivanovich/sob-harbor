@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Church of Saint John the Baptist (Pijnacker): The church of Saint John the Baptist (or as written by the parish H. Joannes de Dooper or as a variant in Dutch Sint Johannes de Doper) is a Roman Catholic church in Pijnacker.  The church is cruciform and built in the neo-Roman style.  It was built in 1892 and at that time was within the Roman Catholic Diocese of Haarlem which was later renamed the Roman Catholic Diocese of Haarlem-Amsterdam.  When diocesan boundaries were redrawn it became part of the Roman Catholic Diocese of Rotterdam.  It is the work of architect, Adrianus Bleijs.  The name of the church has several variations.  The parish website officially shows it as "H. Joannes de Dooper," (with no "h" and with two "o"s) but others list it as Heilige (or Sint) Johannes de Doper (with an "h" and with only one "o.")
+
+Polish National Catholic Church: The Polish National Catholic Church (PNCC) is a Christian church based in the United States and founded by Polish-Americans who were Roman Catholic.  The PNCC is not in full communion with the Roman Catholic Church; it seeks full communion with the Holy See, although it differs theologically in several important respects.  A sister church in Poland, the Polish Catholic Church, is a member of the Old Catholic Union of Utrecht and is also not in communion with the Holy See; at the same time, the PNCC is neither in communion with the Union of Utrecht, but rather the Union of Scranton.  The Polish National Catholic Church welcomes people of all ethnic, racial, and social backgrounds.
+
+Augustana Catholic Church: The Augustana Catholic Church (ACC), formerly the Anglo-Lutheran Catholic Church (ALCC) and the Evangelical Community Church-Lutheran (ECCL), is an American church in the Lutheran Evangelical Catholic tradition.  The ACC says it is unique among Lutheran churches in that it is of both Lutheran and Anglo-Catholic heritage and has also been significantly influenced by the Roman Catholic Church.  The church was founded in 1997 by former members of the Lutheran Church–Missouri Synod.  Its headquarters are in Pittsburgh, Pennsylvania.  The ACC has long had a policy of seeking union with the Catholic Church and announced in 2011 that it would accept the conditions of "Anglicanorum coetibus" and join the personal ordinariates as they are established.  Later developments on limitations of joining the ordinariate caused the ACC to hold their offer while they established intercommunion with groups such as the Old Roman Catholic Church of North America.  The Church claims a membership in excess of 60,000 in 12 countries.
+
+Ivan Illich: Ivan Illich ( ; 4 September 1926 – 2 December 2002) was a Croatian-Austrian philosopher, Roman Catholic priest, and critic of the institutions of modern Western culture, who addressed contemporary practices in education, medicine, work, energy use, transportation, and economic development.
+
+Russian Greek Catholic Church: The Russian Greek Catholic Church (Russian: Российская греко-католическая церковь , "Rossiyskaya greko-katolicheskaya tserkov") or also called Russian Catholic Church is a Byzantine Rite catholic church "sui juris" in full union with the Roman Catholic Church.  Historically it represents the first reunion of members of the Russian Orthodox Church with the Roman Catholic Church.  It is now in full communion with and subject to the authority of the Pope as defined by Eastern canon law.  Russian Catholics historically had their own episcopal hierarchy (the Russian Catholic Apostolic Exarchate of Russia and the Russian Catholic Apostolic Exarchate of Harbin, China), however these offices are currently vacant; their few parishes are served by priests ordained in other Byzantine Catholic churches, former Orthodox priests, and Roman Catholic priests with bi-ritual faculties.
+
+St. James the Less Roman Catholic Church: St. James the Less Roman Catholic Church, also known as St. James and St. John's Roman Catholic Church, is a historic Roman Catholic church located at Baltimore, Maryland, United States and was one of the earliest neighborhood parishes established in the central city (1833).  It is a High Victorian Gothic influenced brick structure with Romanesque Revival overtones built 1865-67.  It has a tall central tower and featured an ornate interior with marble sculpture and murals.  The church is 184 feet long, 65 feet wide, and the ceiling is 51 feet from the floor.  The steeple, at 256 feet, is the second tallest church tower in the city (next to First and Franklin Street Presbyterian Church at West Madison Street and Park Avenue, in Mount Vernon-Belveere neighborhood, constructed 1875), which dominates Old East Baltimore.  The cross surmounting the spire, is 10 feet tall.  There is a peal of four bells in the tower, the largest weighing 5000 pounds, cast by McShane of Baltimore, in 1885.  The tower clock was installed during the same year.  The magnificent and priceless 25 foot-high Mayer windows were installed in 1891.  The church is an early work of George A. Frederick (1842-1924), a prolific and prominent architect in Baltimore who designed various buildings in the city including the Baltimore City Hall in 1875.  The interior features three large interior murals painted about 1886 by the German-born artist William Lamprecht and marble sculpture work by the Baltimore sculptor Joseph Martin Sudsburg.  In 1966, the neighbouring parish of St. John the Evangelist was closed, and the new parish of St. James and St. John, was formed, the congregation worshipping at St. James.  The parish was dissolved around 1986, and the former St. James Church was sold to an evangelical church.  Most regrettably, the church has been stripped of its windows, altars, marble communion rail, pipe organ, and other artifacts, and the church has been whitewashed, destroying its beautiful and historic murals.
+
+Of True Religion: Of True Religion, Heresy, Schism, Toleration; and what best means may be used against the Growth of Popery is the title of a polemical tract against the popery of the Roman Catholic Church written by John Milton which was published in London in 1673.  The tract addresses Milton's own problems with the doctrines, practices, and ceremonies associated with the pope or the papal system of the Roman Catholic Church and, with what Milton called, the implicit faith of its members.  The anti-Catholic ideas in Milton's writing are in direct response to the tolerant stance of King Charles II of England toward the Roman Catholic Church.  Pro-Catholic sentiments had not been popular in England since the very bloody reign of the devout Roman Catholic queen Mary I of England.  The obvious anti-Catholic ideas present in Milton's writing, coupled with Milton's own influence, may have inspired such social movements as the Glorious Revolution of 1688 and the eventual passing of the Popery Act of 1698.
+
+Archbishop of Cashel: The Archbishop of Cashel (Irish: "Ard-Easpag Chaiseal Mumhan" ) was an archiepiscopal title which took its name after the town of Cashel, County Tipperary in Ireland.  Following the Reformation, there had been parallel apostolic successions to the title: one in the Church of Ireland and the other in the Roman Catholic Church.  The archbishop of each denomination also held the title of Bishop of Emly.  The Church of Ireland title was downgraded to a bishopric in 1838, and in the Roman Catholic Church it was superseded by the role of Archbishop of Cashel and Emly when the two diocese united in 2015.
+
+Centro Intercultural de Documentación: The Centro Intercultural de Documentación (CIDOC) was founded by Ivan Illich in 1965 as a higher education campus for development workers and missionaries.  It was located in Cuernavaca (Mexico), at the Rancho Tetela.
+
+Mexican Catholic Apostolic Church: Mexican Catholic Apostolic Church Spanish: "Iglesia Católica Apostólica Mexicana" (ICAM) was a church founded in 1925 to bolster revolution and machinate a schism from the Catholic Church in Mexico with the support of the Regional Confederation of Mexican Workers (CROM) and Mexican President Plutarco Elías Calles' approval.  President Álvaro Obregón and his successor Calles, as well as other politicians, wanted the revolutionary government to restrict and terminate the Catholic Church in Mexico.  In February 1925, armed intruders calling themselves "Knights of the Order of Guadeloupe" occupied the church of María de la Soledad in Mexico City where , a Freemason and former Catholic priest, proclaimed himself the future patriarch of a new national church; parishioners attacked the interlopers and rioted the next day; similar riots were incited when other churches in Mexico were occupied by armed intruders that month.  These armed intruders occupying churches induced fear of anti-Catholic persecution that led to the formation of the National League for the Defense of Religious Liberty (LNDLR) a militant Catholic defense organization.  Official favoritism of a national church enraged revolutionaries who saw this as a "violation of state "laicidad "" with potential to faction the revolution, so Calles stopped his support of after about 3 months.  Nevertheless, the government failed in 1925 to orchestrate Pérez's consecration by a visiting Eastern Orthodox bishop, but in 1926, North American Old Roman Catholic Church Bishop Carmel Henry Carfora consecrated Pérez, Antonio Benicio López Sierra, and Macario López Valdez as bishops.  In 1927, López Sierra established an church in San Antonio, Texas, where Archbishop Arthur Jerome Drossaerts, of the Roman Catholic Archdiocese of San Antonio, called the "cismáticos " (Spanish for schismatics) "designing proselytizers of the sects supported by Calles and the Mexican government, that archenemy of all Christianity;" and in 1929, López Valdes established an church in Los Angeles, California.  Pérez moved his cathedra to San Antonio in March 1930 but in April 1931, Pérez returned to Mexico City.
+
+Question: The Centro Intercultural de Documentacion was fonded by a Croatian-Austrian philosopher who also held what title in the Roman Catholic church?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "founder_name": {
+      "type": "string",
+      "description": "The name of the person who founded the organization."
+    },
+    "founder_nationality": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The nationalities of the founder."
+    },
+    "roman_catholic_title": {
+      "type": "string",
+      "description": "The title held by the founder within the Roman Catholic Church."
+    },
+    "organization_founded": {
+      "type": "string",
+      "description": "The name of the organization founded by the person."
+    },
+    "founding_year": {
+      "type": "integer",
+      "description": "The year the organization was founded."
+    }
+  },
+  "required": [
+    "founder_name",
+    "founder_nationality",
+    "roman_catholic_title",
+    "organization_founded",
+    "founding_year"
+  ],
+  "additionalProperties": false
+}

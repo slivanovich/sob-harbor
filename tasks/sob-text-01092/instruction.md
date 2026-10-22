@@ -1,0 +1,102 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mettoy: Mettoy Playcraft Ltd was the name of a range of toys manufactured in Northampton and Fforestfach Swansea, between the 1930s and 1980s.  The Mettoy (Metal Toy) company was founded in 1933 by German émigré Philip Ullmann and was later joined by South African-born German Arthur Katz who had previously worked for Ulmann at his toy company Tipp and Co of Nuremberg.  The firm made a variety of lithographed metal wind-up toys. Both Jewish, they moved to Britain following Hitler’s rise to power in 1933.  The firm is most famous for its line of die-cast toy motor vehicles of their Corgi Toys branch created in 1956.  In the same year Mettoy merged with the Playcraft model railway and slot car company.
+
+Johnny Lightning: Johnny Lightning is a brand of model cars originally produced by Topper Toys, similar to the hugely successful Mattel Hot Wheels die cast racing cars.  Their claim to fame at that time was that they were extremely fast compared to other brands of die-cast cars.  Their most important technology was to mold in a small hook under the front axle so that they could be propelled by a lever-driven catapult, far faster than could be obtained by either gravity, or battery powered "supercharger" devices.  Topper closed in 1971 and production of Johnny Lightning cars ceased for 23 years.  In 2003 Thomas Lowe secured the trademark rights to the Johnny Lightning name for his Playing Mantis company.  Playing Mantis produced toy cars under the Johnny Lightning brand name from 1994 to June 2004.  At that time Playing Mantis (including the Johnny Lightning brand) was bought by RC2 Corp. which in turn was bought by the Japanese toy company TOMY in 2011.  TOMY discontinued the Johnny Lightning line of diecast cars in 2013.  The brand continued to maintain a following by a loyal group of collectors.  In early 2016 Round 2 LLC, a toy company owned by Thomas Lowe (who also owned Playing Mantis), revived and reintroduced Johnny Lightning vehicles to the toy market for a second time.
+
+Corgi Toys: Corgi Toys (trademark) is the name of a range of die-cast toy vehicles produced by Mettoy Playcraft Ltd. in the United Kingdom.  The Mettoy (Metal Toy) company was founded in 1933 by German émigré Philip Ullmann in Northampton, England, where he was later joined by South African-born German Arthur Katz, who had previously worked for Ulmann at his toy company Tipp and Co of Nuremberg.  They decided to market a range of toy vehicles as competition to Meccano's Dinky Toys model vehicles, which had dominated the British market for many years.  Corgi Toys were introduced in the UK in July 1956 and were manufactured in Swansea, Wales, for twenty seven years before the company went into liquidation.  A management buy-out re-formed the company as Corgi Toys Limited in March 1984.  In 1989, the management sold the Corgi brand to Mattel and the factory was retained under the name of Microlink Industries Ltd.  In 1995, Corgi regained its independence as a new company, Corgi Classics Limited, and moved to new premises in Leicester.
+
+Welly (toy company): Welly Die Casting Factory Limited is a manufacturer of die-cast toy cars and has been in the scale model business since 1979.
+
+Jack Ryan (designer): John W. "Jack" Ryan (November 12, 1926 – August 13, 1991) was an American designer noted for creating the popular image of the Barbie doll, Hot Wheels, Chatty Cathy and being the sixth husband of Zsa Zsa Gabor.  He had a brother, Jim Ryan, who also was an inventor, and a nephew, Jon Gelsey, who is CEO of cloud security company Auth0.
+
+Hot Wheels (disambiguation): Hot Wheels is a brand of scale model die-cast toy cars sold by American toy maker Mattel.
+
+Mattel Hot Birds: Hot Birds are a set of 6 futuristic die-cast toy airplanes produced by American toy maker Mattel in 1971.  All 6 of the models were manufactured in the US.  4 of the models were also produced in Hong Kong.  Hot Birds were painted with the same Spectraflame paint as Mattel's Hot Wheels cars were painted.  However, the planes came in only five colors, Red, Blue, Green, Gold/Yellow, and Magenta.  Not all models came in all colors.  These colors also came varying shades believed due to the way the paint was mixed at the factory.
+
+Dyna-Flytes: Dyna-Flites – note correct spelling and use of the hyphen – was a brand of die-cast toy model airplanes sold in the 1970s, '80s and '90s by Zee Toys of California.  The line was part of a series of "Dyna" die-cast products that included toy cars, construction vehicles, bikes and tanks.  The Dyna-Flites range included 79 aircraft with over 206 color and marking variations released until production ceased in 1996.
+
+Hot Wheels: Hot Wheels is a brand of 1:64, 1:43, 1:18 and 1:50 scale die-cast toy cars introduced by American toy maker Mattel in 1968.  It was the primary competitor of Matchbox until 1997, when Mattel bought Tyco Toys, then-owner of Matchbox.
+
+Schabak Modell: Schabak is a die-cast toy producer based in Nurnberg, Germany.  The company is well known for its line of German cars and commercial airline models.  The company's on and off relation with German Schuco Modell is particularly notable.
+
+Question: Jack Ryan was a designed behind a brand of die-cast toy cars produced by what company?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "designer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "notable_for": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "notable_for"
+      ],
+      "additionalProperties": false
+    },
+    "product_brand": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "introduction_year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "introduction_year"
+      ],
+      "additionalProperties": false
+    },
+    "producing_company": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "origin_country": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "origin_country"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "designer",
+    "product_brand",
+    "producing_company"
+  ],
+  "additionalProperties": false
+}

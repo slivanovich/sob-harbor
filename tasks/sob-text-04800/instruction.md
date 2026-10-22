@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1993 Atlantic hurricane season: The 1993 Atlantic hurricane season was a below average Atlantic hurricane season that produced ten tropical cyclones and tropical storms, four hurricanes, and one major hurricane.  It officially started on June 1 and ended on November 30, dates which conventionally delimit the period during which most tropical cyclones form in the Atlantic Ocean.  The first tropical cyclone, Tropical Depression One, developed on May 31, while the final storm, Tropical Depression Ten, dissipated on September 30, well before the average dissipation date of a season's last tropical cyclone; this represented the earliest end to the hurricane season in ten years.  The most intense hurricane, Emily, was a Category 3 on the Saffir–Simpson Hurricane Scale that paralleled close to the North Carolina coastline causing minor damage and a few deaths before moving out to sea.
+
+Timeline of the 2005 Atlantic hurricane season: The Timeline of the 2005 Atlantic hurricane season documents the formations, strengthenings, weakenings, landfalls, extratropical transitions, and dissipations of the season's tropical and subtropical storms.  The 2005 Atlantic hurricane season was the most active Atlantic hurricane season in recorded history.  The season saw a record twenty-eight tropical or subtropical storms of which a record four storms achieved Category 5 status.  Officially beginning on June 1, 2005, and lasting until November 30, the 2005 season persisted into January 2006 due to continued storm activity.
+
+2007 Atlantic hurricane season: The 2007 Atlantic hurricane season was an active Atlantic hurricane season, although most of the storms were weak and short-lived.  However, the 2007 season was the first season to feature more than one Category 5 landfalling hurricane, a feat that would not be matched until 2017.  It produced 17 tropical cyclones, 15 tropical storms, six hurricanes, and two major hurricanes.  It officially started on June 1 and ended on November 30, dates which conventionally delimit the period during which most tropical cyclones form in the Atlantic Ocean.  The first tropical cyclone, Subtropical Storm Andrea, developed on May 9, while the last storm, Tropical Storm Olga, dissipated on December 13.  The most intense hurricane, Dean, is tied for the eighth most intense Atlantic hurricane ever recorded as well as the third most intense Atlantic hurricane at landfall.  The season was one of only six on record for the Atlantic with more than one Category 5 hurricane.  It was the second on record in which an Atlantic hurricane, Felix, and an eastern Pacific hurricane, Henriette, made landfall on the same day.  September had a record-tying eight storms, although the strengths and durations of most of the storms were low.  Aside from hurricanes Dean and Felix, none of the storms in the season exceeded Category 1 intensity.
+
+1968 Atlantic hurricane season: The 1968 Atlantic hurricane season was one of five Atlantic hurricane seasons during the satellite era not to feature a major hurricane, the others being 1972, 1986, 1994, and 2013.  The season officially began on June 1 and lasted until November 30, dates which conventionally delimit the period of each year when most tropical cyclones form in the Atlantic basin.  It was a below average season in terms of tropical storms, with a total of eight nameable storms.  The first system, Hurricane Abby, developed in the northwestern Caribbean Sea on June 1.  Abby moved northward and struck Cuba, bringing heavy rainfall and flooding to western portions of the island.  Making landfall in Florida on June 4, Abby caused flooding and spawned four tornadoes, but left behind little damage.  Overall, the hurricane resulted in six deaths and about $450,000 (1968 USD) in damage.  In late June, Tropical Storm Candy brought minor flooding and spawned several tornadoes across portions of the Southern United States.  Overall damage from the cyclone reached approximately $2.7 million.
+
+2002 Atlantic hurricane season: The 2002 Atlantic hurricane season was a near average Atlantic hurricane season, officially starting on June 1, 2002 and ending on November 30, dates which conventionally limit the period of each year when most tropical cyclones develop in the Atlantic Ocean.  The season produced 14 tropical cyclones, of which 12 developed into named storms; four became hurricanes, and two attained major hurricane status.  The season officially began on June 1, although the season's first cyclone did not develop until July 14.  Despite the late start, the 2002 season tied with 2004, 2007, and 2010 in which a record number of tropical storms, eight, developed in the month of September.  It ended early however, with no tropical storms forming after October 6—a rare occurrence caused partly by El Niño conditions.  The most intense hurricane of the season was Hurricane Isidore with a minimum central pressure of 934 mbar, although Hurricane Lili attained higher winds and peaked at Category 4 whereas Isidore only reached Category 3.  The season's low activity is reflected in the low cumulative accumulated cyclone energy (ACE) rating of 67.  ACE is, broadly speaking, a measure of the power of the hurricane multiplied by the length of time it existed, so low number reflects the small number of strong storms and preponderance of tropical storms.
+
+1950 Atlantic hurricane season: The 1950 Atlantic hurricane season was the first year in the Atlantic hurricane database (HURDAT) that storms were given names in the Atlantic basin.  Names were taken from the Joint Army/Navy Phonetic Alphabet, with the first named storm being designated "Able", the second "Baker", and so on.  It was an active season with sixteen tropical storms, with eleven of them developing into hurricanes.  Six of these hurricanes were intense enough to be classified as major hurricanes—a denomination reserved for storms that attained sustained winds equivalent to a Category 3 or greater on the present-day Saffir–Simpson scale.  One storm, the twelfth of the season, was unnamed and was originally excluded from the yearly summary, and three additional storms were discovered in re-analysis.  The large quantity of strong storms during the year yielded, prior to modern reanalysis, what was the highest seasonal accumulated cyclone energy (ACE) of the 20th century in the Atlantic basin; 1950 held the seasonal ACE record until broken by the 2005 Atlantic hurricane season.  However, later examination by researchers determined that several storms in the 1950 season were weaker than thought, leading to a lower ACE than assessed originally.
+
+1947 Atlantic hurricane season: The 1947 Atlantic hurricane season was the first Atlantic hurricane season to have tropical storms named by the United States Air Force.  The season officially began on June 16, 1947, and ended on November 1, 1947.  These dates conventionally delimit the period of each year when most tropical cyclones form in the Atlantic basin.  However, the first tropical cyclone developed on June 13, while the final system was absorbed by a cold front on December 1.  There were 10 tropical storms; 5 of them attained hurricane status, while two became major hurricanes, which are Category 3 or higher on the modern day Saffir–Simpson scale.  Operationally, the third tropical storm was considered two separate tropical cyclones, resulting in the storm receiving two names.  The eighth tropical storm went undetected and was not listed in HURDAT until 2014.
+
+1965 Atlantic hurricane season: The 1965 Atlantic hurricane season was the first to use the modern-day bounds for an Atlantic hurricane season, which are June 1 to November 30.  These dates conventionally delimit the period of each year when most tropical cyclones form in the Atlantic basin.  It was one of the least active seasons on record, with only 6 tropical cyclones developing and reaching tropical storm intensity.  Four of the storms strengthened into hurricanes.  One system reached major hurricane intensity – Category 3 or higher on the Saffir–Simpson hurricane scale.  The first system, an unnamed tropical storm, developed during the month of June in the Pacific Ocean, while located south of Guatemala.  The storm moved northward across Central America, but caused no known impact in the region.  It struck the Florida Panhandle and caused minor impact across much of the Southern United States.  Tropical cyclogenesis halted for over two months, until Anna formed on August 21.  The storm remained well away from land in the far North Atlantic Ocean and caused no impact.
+
+1977 Atlantic hurricane season: The 1977 Atlantic hurricane season had the fewest tropical storms since the 1965 season.  The season officially began on June 1, and lasted until November 30.  These dates conventionally delimit the period of each year when most tropical cyclones form in the Atlantic basin.  The first tropical depression of the season developed on June 13, 12 days after the start of the season, in the western Caribbean Sea.  After a succession of three other tropical depressions, the first tropical storm of the season, Hurricane Anita, finally became a named storm on August 29 – the latest date since the satellite era began in the 1960s.  Anita struck Mexico as a Category 5 hurricane on the Saffir–Simpson hurricane wind scale, bringing strong winds and heavy rainfall.  At least 25,000 people were left homeless and 11 fatalities were reported.
+
+2003 Atlantic hurricane season: The 2003 Atlantic hurricane season was an active Atlantic hurricane season with tropical activity before and after the official bounds of the season – the first such occurrence in 49 years.  The season produced 21 tropical cyclones, of which 16 developed into named storms; seven cyclones attained hurricane status, of which three reached major hurricane status.  With sixteen storms, the season was tied for the sixth most active Atlantic hurricane season on record.  The strongest hurricane of the season was Hurricane Isabel, which reached Category 5 status on the Saffir-Simpson Hurricane Scale northeast of the Lesser Antilles; Isabel later struck North Carolina as a Category 2 hurricane, causing $3.6 billion in damage (2003 USD, $  USD) and a total of 51 deaths across the Mid-Atlantic region of the United States.
+
+Question:  The 1977 Atlantic hurricane season, had the fewest tropical storms, since the the 1965 Atlantic hurricane season was the first to use the modern-day bounds for an Atlantic hurricane season, which are June 1 to 30 of ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "season_year": {
+      "type": "integer",
+      "description": "The year of the Atlantic hurricane season being referenced for its bounds."
+    },
+    "season_bounds": {
+      "type": "object",
+      "properties": {
+        "start_month": {
+          "type": "string",
+          "description": "The start month of the modern-day Atlantic hurricane season bounds."
+        },
+        "start_day": {
+          "type": "integer",
+          "description": "The start day of the modern-day Atlantic hurricane season bounds."
+        },
+        "end_month": {
+          "type": "string",
+          "description": "The end month of the modern-day Atlantic hurricane season bounds."
+        },
+        "end_day": {
+          "type": "integer",
+          "description": "The end day of the modern-day Atlantic hurricane season bounds."
+        }
+      },
+      "required": [
+        "start_month",
+        "start_day",
+        "end_month",
+        "end_day"
+      ],
+      "additionalProperties": false
+    },
+    "question_answer": {
+      "type": "string",
+      "description": "The specific month that answers the question about the end of the season bounds."
+    }
+  },
+  "required": [
+    "season_year",
+    "season_bounds",
+    "question_answer"
+  ],
+  "additionalProperties": false
+}

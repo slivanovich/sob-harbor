@@ -1,0 +1,17 @@
+{
+  "person_name": "Michael Alford",
+  "role": "official War Artist",
+  "military_unit": {
+    "name": "1st Battalion Grenadier Guards",
+    "affiliation": "International Security Assistance Force (ISAF)"
+  },
+  "location_of_service": {
+    "province": "Helmand",
+    "country": "Afghanistan",
+    "attributes": [
+      "Taliban stronghold",
+      "center of opium production"
+    ]
+  },
+  "year_of_service": 2010
+}

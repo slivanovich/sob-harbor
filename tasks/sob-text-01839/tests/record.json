@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "record_id": "c9b3f1e2ceeee1913ad840095e3c43b06bb3d89a1fc4ae48b42ca8387516a78f",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ade172f55429939a52fe80a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1978",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Victor Buono: Victor Charles Buono (February 3, 1938January 1, 1982) was an American actor and comic and briefly a recording artist.  He was most famous for playing the villain King Tut on the television series \"Batman\" (1966-1968) and musician Edwin Flagg in \"What Ever Happened to Baby Jane? \" (1962), the latter of which earned him Academy Award and Golden Globe Award nominations.  He was a busy actor from his late teens until his death at age 43, and with his large size and sonorous voice, he made a career of playing men much older than himself.\n\nGus Trikonis: Gus Trikonis (born November 21, 1937) is an American actor, dancer and director.\n\nSupercock: Supercock (also known as Bet to Kill and A Fistful of Feathers) is a 1975 comedy film directed by Gus Trikonis and starring Ross Hagen, both of whom were involved in the 1969 cult film \"The Sidehackers\".  The film also stars '60s sex symbol Nancy Kwan.  The plot involves an American cowboy who gets caught up in an illegal cockfighting ring in the Philippines.\n\nJeepers Creepers 2: Jeepers Creepers 2 is a 2003 American horror film written and directed by Victor Salva, produced by American Zoetrope, Capitol Films, Myriad Pictures and distributed by United Artists, a Metro-Goldwyn-Mayer division.  The film is a sequel to the 2001 horror film \"Jeepers Creepers\".  Francis Ford Coppola executive produced the film.\n\nEvil Dead II: Evil Dead II (also known in publicity materials as Evil Dead 2: Dead by Dawn) is a 1987 American horror comedy film directed by Sam Raimi and a parody sequel to the 1981 horror film \"The Evil Dead\".  The film was written by Raimi and Scott Spiegel, produced by Robert Tapert, and stars Bruce Campbell as Ash Williams.\n\nTake This Job and Shove It (film): Take This Job and Shove It is a 1981 American comedy film starring Robert Hays, Barbara Hershey, Art Carney, and David Keith, and directed by Gus Trikonis.\n\nCastle of Evil: Castle of Evil is a 1966 American horror film directed by Francis D. Lyon and written by Charles A. Wallace.  The film stars Scott Brady, Virginia Mayo, David Brian, Lisa Gaye, Hugh Marlowe and William Thourlby.  The film was released by World Entertainment Corp. in November 1966.\n\nDobaara: See Your Evil: Dobaara: See Your Evil is a 2017 Bollywood supernatural horror film written and directed by Prawaal Raman.  It is an official adaptation of the 2013 American horror film \"Oculus\"; the original film's director and co-writer, Mike Flanagan, serves as executive producer.\n\nThe Evil (1978 film): The Evil is a 1978 American horror film directed by Gus Trikonis and starring Richard Crenna, Joanna Pettet, Andrew Prine and Victor Buono.  It is also known as \"House of Evil\".\n\nMiss All-American Beauty: Miss All-American Beauty is a 1982 American television film directed by Gus Trikonis and starring Diane Lane.",
+    "question": "The Evil is an American horror film, released in which year, and directed by Gus Trikonis and includes Victor Charles Buono, an American actor and comic and briefly a recording artist?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the film."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The year the film was released."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The genre of the film."
+            }
+          },
+          "required": [
+            "title",
+            "release_year",
+            "genre"
+          ],
+          "additionalProperties": false
+        },
+        "director_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the film's director."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "featured_actor": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the featured actor."
+            },
+            "description": {
+              "type": "string",
+              "description": "A brief description of the actor's professions."
+            }
+          },
+          "required": [
+            "name",
+            "description"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "film_details",
+        "director_details",
+        "featured_actor"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_details": {
+        "title": "The Evil",
+        "release_year": 1978,
+        "genre": "horror"
+      },
+      "director_details": {
+        "name": "Gus Trikonis"
+      },
+      "featured_actor": {
+        "name": "Victor Buono",
+        "description": "American actor and comic and briefly a recording artist"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

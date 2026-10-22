@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "f614ea98c2077ff4f0a171d32c67db800cf69c91867f584f8b6752815530186f",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a8abcb15542992d82986f68",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Prime Time Players",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Mr. Destiny: Mr. Destiny is a 1990 fantasy comedy film starring James Belushi.  Other actors in this film included Linda Hamilton, Michael Caine, Jon Lovitz, Courteney Cox, and Rene Russo.\n\nMy Stepmother Is an Alien: My Stepmother Is an Alien is a 1988 American comedy science fiction film produced by the Weintraub Entertainment Group for release through Columbia Pictures, directed by Richard Benjamin and starring Dan Aykroyd and Kim Basinger, with featured performances by Jon Lovitz and Alyson Hannigan.\n\nJon Lovitz: Jonathan Michael Lovitz (born July 21, 1957) is an American comedian, actor and singer, best known as a cast member of \"Saturday Night Live\" from 1985 to 1990.  He starred as Jay Sherman in \"The Critic\" and has appeared in numerous other television series and films.\n\nThe Critic: The Critic is an American prime time animated series revolving around the life of New York film critic Jay Sherman, voiced by actor Jon Lovitz.  It was created by writing partners Al Jean and Mike Reiss, who had previously worked as writers and showrunners (seasons 3 and 4) on \"The Simpsons\".  \"The Critic\" had 23 episodes produced, first broadcast on ABC in 1994, and finishing its original run on Fox in 1995.  According to PopMatters, \"the creators [said] they intended the series as their 'love letter to New York.'\"\n\nSaturday Night Live cast members: The following is a list of \"Saturday Night Live\" cast members, past and present.  The cast members of \"Saturday Night Live\" were originally referred to as the \"Not Ready For Prime Time Players.\"\n\nToquegua: Toquegua may be the name of a group of people, and a language, spoken along the Atlantic coast of Guatemala and Honduras from the area around the mouth of the Golfo Dulce to the Ulua river in Honduras.  It is also an elite indigenous family surname in colonial Honduras, and a place name in the Motagua river valley in 1536.  Feldman (1975), largely based on unpublished notes of Nicholas Helmuth conserved in the American Philosophical Society, concludes that Toquegua is a Ch'ol Mayan-related language.  Sheptak (2007) contests that identification and concludes the people referred to as the Toquegua were multi-lingual, speaking Yucatec, Ch'ol, Nahuatl, and Lenca.\n\nRat Race (film): Rat Race is a 2001 American ensemble comedy film directed by Jerry Zucker, written by Andy Breckman, and starring Rowan Atkinson, Whoopi Goldberg, Cuba Gooding Jr., Jon Lovitz, Kathy Najimy, Lanai Chapman, Breckin Meyer, Amy Smart, Seth Green, Vince Vieluf, Wayne Knight, John Cleese, Dave Thomas, Dean Cain, and Kathy Bates.  The film has a plot similar to the films \"It's a Mad, Mad, Mad, Mad World\" and \"Scavenger Hunt\".  Its main plot revolves around six teams of people who are given the task of racing 563 miles from a Las Vegas casino to a Silver City, New Mexico train station, where a storage locker contains a duffel bag filled with $2 million; the first person to reach the locker wins and gets to keep the money.\n\nBula Quo!: Bula Quo!  is a 2013 British adventure comedy film directed by Stuart St Paul, starring Jon Lovitz, Craig Fairbrass, Laura Aikman and Status Quo musicians Francis Rossi and Rick Parfitt.\n\nCarpenter, Colorado: Carpenter is a ghost town in Mesa County, Colorado, United States, twelve miles northeast of Grand Junction at the end of an extension to 27¼ Road.  The settlement was established by William Thomas Carpenter early in 1890 to provide the miners who worked in his two Book Cliff mines with a place to live.  He began building shacks to house his single miners and later erected small houses for the employees with families.  As a result of the town's rapid growth, a request to the U.S. post office to establish a branch there in June 1890 was quickly obliged and the community was officially dubbed Carpenter.  However, the town never attained a population of over 50, and the post office closed its doors after only a year.  After the closure of its post office, Carpenter built a company store and a combination boarding house/restaurant.  Book Cliff company stone cutters and masons constructed several buildings and many foundations at Carpenter, using stone from the company quarry near the cliffs.  One of the finest examples of a building made of Book Cliff sandstone is the Fruita, Colorado Catholic church.  Several years of prosperity followed the arrival of the Little Book Cliff Railway at the townsite in 1892.  Carpenter began to formulate big plans for his village.  He envisioned it as a tourist resort complete with hotel, dance pavilion, picnic areas, and even a lake that was to be fed by a spring located near his Book Cliff mines.  Carpenter renamed the camp \"Poland Spring\" after a noted resort of that name in Maine.  It was variously referred to as Polen, Pollen, and Polan Springs, despite the fact that Carpenter’s intended name was evidenced by his having it emblazoned on the side of one of his railroad excursion cars.  The resort plans were never completed because Carpenter went broke shortly after the Panic of 1893.  Isaac Chauncey Wyman, a wealthy Massachusetts investor, became the next owner of the Book Cliff company.  The town continued to enjoy an active existence because he did much to improve the mines and thus created a need for additional employees.  The old eating house, referred to as the \"Hotel de Carpenter\" on occasion, was converted into a school and church for the camp’s inhabitants, and many company structures were rebuilt and improved during Wyman’s tenure as owner.  The new name \"Book Cliff\" was applied to the town but did not adhere any better than did Poland Springs.  Usually people referred to the place as the “Book Cliff Mines.”  The town reached its zenith and then began a gradual decline following Wyman’s death in 1910.  In his will Wyman left the town, railroad, and mines to Princeton University.  Princeton managed everything for 15 years then decided to abandon it all in 1925.  By the end of that summer nearly everything had been sold, dismantled, and hauled away.\n\nTau Taa Wana: The Tau Taa Wana (sometimes Tau Ta'a Wana or Tao Taa Wana) is a sub-group of the numerous people who speak variants of the Ta'a or Pamona language of Eastern Central Sulawesi, Indonesia.  The Tau Taa Wana people referred to themselves as Tao Taa, as in \"tao\" means \"people\" and \"taa\" means \"not\".  But most outsiders refers them as To Wana which means \"people in the forest\" because of their social image as a community residing in forests.",
+    "question": "What were this group of people referred to as (\"Not Ready For what?) that Jon Lovitz was a member of from 1985 to 1990?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "The name of the person in question."
+        },
+        "group_name": {
+          "type": "string",
+          "description": "The name of the group the person was a member of."
+        },
+        "membership_period": {
+          "type": "object",
+          "properties": {
+            "start_year": {
+              "type": "integer",
+              "description": "The start year of the person's membership in the group."
+            },
+            "end_year": {
+              "type": "integer",
+              "description": "The end year of the person's membership in the group."
+            }
+          },
+          "required": [
+            "start_year",
+            "end_year"
+          ],
+          "additionalProperties": false
+        },
+        "group_member_designation": {
+          "type": "string",
+          "description": "The full designation given to the group members."
+        },
+        "missing_designation_part": {
+          "type": "string",
+          "description": "The specific part of the designation that completes 'Not Ready For what?'"
+        }
+      },
+      "required": [
+        "person_name",
+        "group_name",
+        "membership_period",
+        "group_member_designation",
+        "missing_designation_part"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_name": "Jon Lovitz",
+      "group_name": "Saturday Night Live",
+      "membership_period": {
+        "start_year": 1985,
+        "end_year": 1990
+      },
+      "group_member_designation": "Not Ready For Prime Time Players",
+      "missing_designation_part": "Prime Time Players"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

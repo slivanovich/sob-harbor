@@ -1,0 +1,24 @@
+{
+  "relationship_summary": "Dwayne Provo is a cousin to Evander Kane.",
+  "person_a": {
+    "name": "Dwayne Provo",
+    "roles": [
+      "athlete",
+      "school administrator",
+      "politician"
+    ],
+    "sports_involved_in": [
+      "Canadian football"
+    ]
+  },
+  "person_b": {
+    "name": "Evander Kane",
+    "roles": [
+      "professional ice hockey player"
+    ],
+    "sports_involved_in": [
+      "ice hockey"
+    ]
+  },
+  "relationship_type": "cousin"
+}

@@ -1,0 +1,18 @@
+{
+  "southernmost_airport_name": "Vero Beach Regional Airport",
+  "airports_compared": [
+    {
+      "airport_name": "Vero Beach Regional Airport",
+      "iata_code": "VRB",
+      "location_state": "Florida",
+      "location_county": "Indian River County"
+    },
+    {
+      "airport_name": "Yampa Valley Airport",
+      "iata_code": "KHDN",
+      "location_state": "Colorado",
+      "location_county": "Routt County"
+    }
+  ],
+  "comparison_reasoning": "Vero Beach Regional Airport is located in Florida, which is geographically south of Colorado, where Yampa Valley Airport is located."
+}

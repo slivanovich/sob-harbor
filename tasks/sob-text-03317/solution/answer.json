@@ -1,0 +1,13 @@
+{
+  "team_name": "France national football team",
+  "represented_country": "France",
+  "team_attributes": {
+    "colloquial_name": "Les Bleus",
+    "symbol": "coq gaulois",
+    "colors": [
+      "blue",
+      "white",
+      "red"
+    ]
+  }
+}

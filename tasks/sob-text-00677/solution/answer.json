@@ -1,0 +1,11 @@
+{
+  "county_name": "Merrimack County",
+  "city_name": "Franklin",
+  "development_period": {
+    "start_century": 19,
+    "start_period_description": "second half",
+    "end_century": 20,
+    "end_period_description": "first decades"
+  },
+  "is_historic_district": true
+}

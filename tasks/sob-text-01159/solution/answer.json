@@ -1,0 +1,14 @@
+{
+  "constitutional_amendment_name": "Fourteenth Amendment",
+  "constitutional_amendment_number": 14,
+  "cases_of_application": [
+    {
+      "case_name": "Harper v. Virginia State Board of Elections",
+      "specific_clause_applied": "equal protection clause"
+    },
+    {
+      "case_name": "Everson v. Board of Education",
+      "specific_clause_applied": "Due Process Clause"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "record_id": "cc5f9d4c0c4c6013324ead4e9d2e69dd8c1f1b61a981f4accf1246c941c746d1",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab83a5355429919ba4e2274",
+    "source_dataset": "hotpotqa",
+    "source_answer": "William Shakespeare",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Christopher Marlowe: Christopher Marlowe, also known as Kit Marlowe (baptised 26 February 156430 May 1593), was an English playwright, poet and translator of the Elizabethan era.  Marlowe was the foremost Elizabethan tragedian of his day.  He greatly influenced William Shakespeare, who was born in the same year as Marlowe and who rose to become the pre-eminent Elizabethan playwright after Marlowe's mysterious early death.  Marlowe's plays are known for the use of blank verse and their overreaching protagonists.\n\nShadowland (Arnold novel): \"Shadowland: Search for Frances Farmer\" is a 1978 biographical novel by William Arnold, ostensibly about the life of actress Frances Farmer.  The book is a fictionalized account which was further distorted when adapted as the film \"Frances\" in 1982.  Arnold sued for copyright infringement, claiming the film's screenplay writers appropriated several of his \"fictionalized\" elements, but eventually lost.\n\nCharles de Batz de Castelmore d'Artagnan: Charles Ogier de Batz de Castelmore, Comte d'Artagnan (] ) ( 1611 – 25 June 1673) served Louis XIV as captain of the Musketeers of the Guard and died at the Siege of Maastricht in the Franco-Dutch War.  A fictionalized account of his life by Gatien de Courtilz de Sandras formed the basis for the d'Artagnan Romances of Alexandre Dumas, most famously including \"The Three Musketeers\" (1844).  The heavily fictionalized version of d'Artagnan featured in Dumas' works and their subsequent screen adaptations is now far more widely known than the real historical figure.\n\nToo Close to the Sun: Too Close to the Sun is a musical with a book by Roberto Trippini and music and lyrics by Trippini and John Robinson, based on a play by Ron Read.  The musical is a fictionalized account of the last days in the life of Ernest Hemingway.\n\nJammers Minde: Jammers Minde (literally A Memory of Lament), translated into English as Memoirs of Leonora Christina, is an autobiography completed in 1674 by Leonora Christina, daughter of Christian IV of Denmark and Kirsten Munk.  The work, first published in 1869, is included in the Danish Culture Canon.  It is considered to be the finest piece of prose work written in 17th-century Denmark.  It relates a partly fictionalized account of Christina's time during captivity, with a detailed personal account of prison life, often drawing upon biblical references and black humour, and contrasting the comical with the macabre.  Radical for its period in its personal account, it is considered an existential religious writing.\n\nThe Invention of Everything Else: The Invention of Everything Else is a novel written by American author Samantha Hunt, published in 2008.  The novel presents a fictionalized account of the last days in the life of Nikola Tesla, the Serbian-American electrical engineer.  Other fictionalized versions of historical characters include Thomas Edison (a rival), George Westinghouse, and Mark Twain.  Tesla is the novel's protagonist along with a chambermaid named Louisa with whom he shares some common interests including science and pigeons.  Much of the book takes place in the New Yorker Hotel.  The book also includes elements of science fiction, namely time travel.\n\nMy Life in Crime: My Life in Crime is a 1984 novel by Kenyan author John Kiriamiti.  It is a fictionalized account of Kiriamiti's criminality in Kenya during the 1960s and 1970s.  The novel details Kiriamiti's crimes under the alias Jack Zollo that led to his imprisonment.  It is the first novel in Kiriamiti's \"My Life...\" trilogy, which is currently being made into a film.\n\nThe Wave (novel): The Wave is a 1981 young adult novel by Todd Strasser under the pen name Morton Rhue (though it has been reprinted under Todd Strasser's real name).  It is a novelization of a teleplay by Johnny Dawkins for the movie \"The Wave\", a fictionalized account of the \"Third Wave\" teaching experiment by Ron Jones that took place in a Ellwood P. Cubberley High School history class in Palo Alto, California.  The novel by Strasser won the 1981 Massachusetts Book Award for Children's/Young Adult literature.\n\nMarlowe (musical): Marlowe is a 1981 musical with a book by Leo Rost, lyrics by Rost and Jimmy Horowitz, and music by Horowitz.  Despite a claim in the \"Playbill\" that \"the story of this drama is essentially true and accurate,\" much of it is a fictionalized account of the life of Elizabethan playwright Christopher Marlowe.\n\nThe Unsinkable Molly Brown (film): The Unsinkable Molly Brown is a 1964 American musical film directed by Charles Walters and starring Debbie Reynolds.  The screenplay by Helen Deutsch is based on the book of the 1960 musical \"The Unsinkable Molly Brown\" by Richard Morris.  The song score was composed by Meredith Willson.  The plot is a fictionalized account of the life of Margaret Brown, who survived the 1912 sinking of the  .  Debbie Reynolds was nominated for the Academy Award for Best Actress for her portrayal of Brown.",
+    "question": "Who was born in the same year as the playwright who had a musical fictionalized account of his life made in 1981?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "target_playwright": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the playwright whose life was fictionalized."
+            },
+            "era": {
+              "type": "string",
+              "description": "The historical era the playwright belonged to."
+            }
+          },
+          "required": [
+            "name",
+            "era"
+          ],
+          "additionalProperties": false
+        },
+        "fictionalized_musical": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the musical that fictionalized the playwright's life."
+            },
+            "year_released": {
+              "type": "integer",
+              "description": "The year the musical was released."
+            }
+          },
+          "required": [
+            "title",
+            "year_released"
+          ],
+          "additionalProperties": false
+        },
+        "person_born_in_same_year": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the person born in the same year as the target playwright."
+            },
+            "relationship_detail": {
+              "type": "string",
+              "description": "A description of the relationship to the playwright regarding birth year."
+            }
+          },
+          "required": [
+            "name",
+            "relationship_detail"
+          ],
+          "additionalProperties": false
+        },
+        "final_answer": {
+          "type": "string",
+          "description": "The name of the person who was born in the same year as the playwright."
+        }
+      },
+      "required": [
+        "target_playwright",
+        "fictionalized_musical",
+        "person_born_in_same_year",
+        "final_answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "target_playwright": {
+        "name": "Christopher Marlowe",
+        "era": "Elizabethan"
+      },
+      "fictionalized_musical": {
+        "title": "Marlowe",
+        "year_released": 1981
+      },
+      "person_born_in_same_year": {
+        "name": "William Shakespeare",
+        "relationship_detail": "born in the same year as Marlowe"
+      },
+      "final_answer": "William Shakespeare"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

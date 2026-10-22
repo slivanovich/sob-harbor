@@ -1,0 +1,11 @@
+{
+  "park_name": "Kings Dominion",
+  "park_location": "Doswell",
+  "state": "Virginia",
+  "featured_ride": {
+    "ride_name": "WindSeeker",
+    "ride_type": "swing ride",
+    "height_ft": 301,
+    "opening_year_at_park": 2012
+  }
+}

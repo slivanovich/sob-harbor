@@ -1,0 +1,13 @@
+{
+  "movie_title": "Insidious",
+  "actor_name": "Rose Byrne",
+  "movie_details": {
+    "genre": "supernatural horror film",
+    "director": "James Wan",
+    "release_year": 2010,
+    "other_stars": [
+      "Patrick Wilson",
+      "Barbara Hershey"
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Gwen Harwood: Gwen Harwood AO (8 June 19204 December 1995), née Gwendoline Nessie Foster, was an Australian poet and librettist.  Gwen Harwood is regarded as one of Australia's finest poets, publishing over 420 works, including 386 poems and 13 librettos.  She won numerous poetry awards and prizes, and one of Australia's most significant poetry prizes, the Gwen Harwood Poetry Prize is named for her.  Her work is commonly studied in schools and university courses.
+
+Gwen Harwood Poetry Prize: The Gwen Harwood Poetry Prize (also known as the Gwen Harwood Memorial Poetry Prize) was created in 1996 in memory of the Tasmanian poet, Gwen Harwood.  The prize is run by "Island Magazine" and is awarded to a single poem or a linked suite of poems not longer than 80 lines.  It has a first prize of A$2,000, and the judges may award two minor prizes.
+
+Poetry and People International Poetry Prize: The Poetry and People International Poetry Prize is an annual international lifetime achievement award given to poets around the world by the poetry magazine Poetry and People and its founder Huang Lihai.  The first “Poetry and People Poet Prize” was awarded in 2005 to Eugénio de Andrade, before it changed its name to “Poetry and People International Poetry Prize”.  Recipients since have included Derek Walcott, Lan Lan, Xi Chuan and Rita Dove.  The prize was given to Tomas Tranströmer in April 2011, six months before it was announced that he was to be awarded the Nobel Prize for Literature.
+
+Australian dollar: The Australian dollar (sign: $; code: AUD) is the currency of the Commonwealth of Australia, including its external territories Christmas Island, Cocos (Keeling) Islands, and Norfolk Island, as well as the independent Pacific Island states of Kiribati, Nauru, Papua New Guinea, Tonga, Tuvalu and Vanuatu.  Within Australia, it is almost always abbreviated with the dollar sign ($), with A$ or AU$ sometimes used to distinguish it from other dollar-denominated currencies.  It is subdivided into 100 cents.
+
+Anthony Lawrence (poet): Anthony Lawrence (born 1957) is a contemporary Australian poet and novelist.  Lawrence has received a number of Australia Council for the Arts Literature Board Grants, including a Fellowship, and has won many awards for his poetry, including the inaugural Judith Wright Calanthe Award, the Gwen Harwood Memorial Prize, and the Newcastle Poetry Prize (three times).  His most recent collection is "Headwaters" (Pitt Street Poetry).
+
+Puncher &amp; Wattmann: Puncher & Wattmann is an independent Australian publishing house founded by David Musgrave in 2005.  It specialises in publishing Australian poetry and literary fiction.  Launched by David Malouf, its first title, "James Stinks (and so does Chuck)" by Nick Riemer (2005) was placed third in the Mary Gilmore Award in 2006.  Subsequent poetry titles have included: Simon West's "First Names" (2006), shortlisted for the 2006 Kenneth Slessor Award and awarded the William Baylebridge Prize in 2007, as well as being commended in the Anne Elder Award; Peter Kirkpatrick's "Westering" (2006), shortlisted for the 2008 Kenneth Slessor Award and awarded the William Baylebridge Prize in 2007; John Watson's "Montale: An Autobiographical Anthology" (2006), shortlisted for the 2007 C J Dennis Poetry Prize and Adelaide Festival Award for Innovation; Phyllis Perlstone's "The Edge of Everything", shortlisted for the 2008 Kenneth Slessor Award; Carol Jenkins's Fishing in the Devonian, shortlisted for the 2008 C J Dennis Poetry Prize; M T C Cronin's "Squeezing Desire Through a Sieve" Micro-Essays on Law and Poetry", shortlisted for the 2010 Adelaide Festival Award for Innovation; Martin Langford's The Human Project: New & Selected Poems, shortlisted for the 2010 John Bray Poetry Prize; Ken Bolton's Sly Mongoose, shortlisted for the Age Book of the Year Poetry Prize; Mark Tredinnick's Fire Diary, awarded the WA Premier's Prize for Poetry.
+
+Russell Thornton (writer): Russell Thornton is a Canadian poet.  His book "House Built of Rain" (2003) was a shortlisted nominee for the 2004 Dorothy Livesay Poetry Prize and the 2004 ReLit Award.  His collection "Birds, Metals, Stones and Rain" (2013) was a shortlisted nominee for the Governor General's Award for English-language poetry at the 2013 Governor General's Awards, the 2014 Raymond Souster Award and the 2014 Dorothy Livesay Poetry Prize.  His collection "The Hundred Lives" (2014) was a shortlisted nominee for the 2015 Griffin Poetry Prize.
+
+Angela Malone: Angela Malone (born in 1971) is the author of "Lucia's Measure", the story of a giantess.  It was shortlisted for the 2001 Christina Stead Fiction Prize, NSW Premier's Award.  In 2008 she was awarded the Gwen Harwood Poetry Prize.
+
+The Moth (magazine): The Moth is an international arts and literature magazine featuring poetry, short fiction, art and interviews.  It was established in 2010 by Rebecca O'Connor and Will Govan and is produced four times a year.  They also publish a junior version, called "The Caterpillar" (for 7-11 year olds).  Prizes run by The Moth include The Moth International Poetry Prize, The Moth Short Story Prize, The Caterpillar Poetry Prize, The Caterpillar Short Story Prize and The Moth Art Prize.
+
+Blake Poetry Prize: The Blake Poetry Prize is an Australian poetry prize, presented annually by the Blake Society and the New South Wales Writers' Centre.  Established in 2008 the prize offers a $5,000 prize for a new poem that best explores the religious or spiritual.  The prize is non-sectarian and encourages poets to engage in the dialogue between religion, spirituality and poetry.
+
+Question: What is the currency code for the prize for the Gwen Harwood Poetry Prize?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "prize_name": {
+      "type": "string",
+      "description": "The name of the poetry prize."
+    },
+    "currency_details": {
+      "type": "object",
+      "properties": {
+        "currency_name": {
+          "type": "string",
+          "description": "The full name of the currency."
+        },
+        "currency_code": {
+          "type": "string",
+          "description": "The three-letter currency code."
+        },
+        "currency_sign": {
+          "type": "string",
+          "description": "The symbol used for the currency."
+        }
+      },
+      "required": [
+        "currency_name",
+        "currency_code",
+        "currency_sign"
+      ],
+      "additionalProperties": false
+    },
+    "prize_amount": {
+      "type": "number",
+      "description": "The first prize amount in the specified currency."
+    }
+  },
+  "required": [
+    "prize_name",
+    "currency_details",
+    "prize_amount"
+  ],
+  "additionalProperties": false
+}

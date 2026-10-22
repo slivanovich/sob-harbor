@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+United Nations Security Council Resolution 49: United Nations Security Council Resolution 49, adopted on May 22, 1948, considering that the previous resolutions of the Security Council in respect to Palestine have not been complied with and that military operations were still taking place in Palestine, the resolution called upon all governments and authorities to abstain from any further hostile military action in Palestine and to that end issue a cease-fire order to their military and paramilitary forces to come into effect at noon, May 24, 1948, New York City local time.  The resolution further ordered the Truce Commission for Palestine set up in United Nations Security Council Resolution 48 to report to the Council on the compliance of the concern parties with the resolution.
+
+United Nations Security Council Resolution 635: United Nations Security Council resolution 635, adopted unanimously on 14 June 1989, after taking note of an International Civil Aviation Organization (ICAO) resolution on 16 February 1989, and expressing its concern regarding incidents of terrorism on international air travel, the Council condemned all acts of "unlawful interference" against the security of civil aviation, calling on all Member States to co-operate in devising and implementing ways to combat terrorism.
+
+United Nations Security Council Resolution 1067: United Nations Security Council resolution 1067, adopted on 26 July 1996, after noting various statements and resolutions by the President of the Security Council and International Civil Aviation Organization (ICAO) deploring the shooting down of two civilian aircraft by the Cuban Air Force on 24 February 1996, the Council called on Cuba to comply with international obligations relating to aviation, particularly the Convention on International Civil Aviation.
+
+United Nations Security Council Resolution 1441: United Nations Security Council Resolution 1441 is a United Nations Security Council resolution adopted unanimously by the United Nations Security Council on 8 November 2002, offering Iraq under Saddam Hussein "a final opportunity to comply with its disarmament obligations" that had been set out in several previous resolutions (Resolutions 660, 661, 678, 686, 687, 688, 707, 715, 986, and 1284).
+
+International Civil Aviation Organization: The International Civil Aviation Organization (ICAO) (pronounced ; French: "Organisation de l'aviation civile internationale" , OACI), is a specialized agency of the United Nations.  It codifies the principles and techniques of international air navigation and fosters the planning and development of international air transport to ensure safe and orderly growth.  Its headquarters are located in the "Quartier International" of Montreal, Quebec, Canada.
+
+United Nations Security Council Resolution 240: United Nations Security Council Resolution 240, adopted on October 25, 1967, condemned the violations of the cease-fire worked out in past resolutions (primarily United Nations Security Council Resolution 234) and expressed its regrets at the casualties and loss of property that resulted from the violations.  The Council reaffirmed the necessity of the strict observance of the cease-fire resolutions and demanded that the member states concerned cease immediately all prohibited military activities in the area and co-operate fully and promptly with the United Nations Truce Supervision Organization.
+
+Chapter VI of the United Nations Charter: Chapter VI of the United Nations Charter deals with peaceful settlement of disputes.  It requires countries with disputes that could lead to war to first of all try to seek solutions through peaceful methods such as "negotiation, enquiry, mediation, conciliation, arbitration, judicial settlement, resort to regional agencies or arrangements, or other peaceful means of their own choice."  If these methods of alternative dispute resolution fail, then they must refer it to the UN Security Council.  Under Article 35, any country is allowed to bring a dispute to the attention of the UN Security Council or the General Assembly.  This chapter authorizes the Security Council to issue recommendations but does not give it power to make binding resolutions; those provisions are contained Chapter VII.  Chapter VI is analogous to Articles 13-15 of the Covenant of the League of Nations which provide for arbitration and for submission of matters to the Council that are not submitted to arbitration.  United Nations Security Council Resolution 47 and United Nations Security Council Resolution 242 are two examples of Chapter VI resolutions which remain unimplemented.
+
+United Nations Security Council Resolution 2110: United Nations Security Council Resolution 2110 is a United Nations Security Council resolution adopted unanimously by the United Nations Security Council on 24 July, 2013, extending the United Nations Assistance Mission for Iraq until 31 July, 2014 as stipulated in several previous resolutions (Resolution 1550 (2003), Resolution 1546 (2004), Resolution 1557 (2004), Resolution 1619 (2005), Resolution 1700 (2006), Resolution 1770 (2007), Resolution 1830 (2008), Resolution 1883 (2009), Resolution 1936 (2010), Resolution 2001 (2011), Resolution 2061 (2012) and Resolution 2107 (2013).)  The resolution signaled its intention to review the original mandate, as stipulated in UNSC resolution 2061 within twelve months.
+
+United Nations Security Council Resolution 51: United Nations Security Council Resolution 51, adopted on June 3, 1948, reaffirmed previous Council resolutions on the India-Pakistan conflict, directed the Commission established in United Nations Security Council Resolution 39 to move to the areas of dispute and accomplish the duties assigned to it in United Nations Security Council Resolution 47 as soon as possible.  The resolution also instructed the Commission to address a letter that was sent to the Council by the Foreign Minister of Pakistan.
+
+United Nations Security Council Resolution 85: United Nations Security Council Resolution 85, adopted on July 31, 1950, was the United Nations Security Council resolution which authorised the United Nations Command under General Douglas MacArthur to support the Korean civilian population, and requested that specialized agencies, appropriate subsidiary bodies of the UN and appropriate non-governmental organizations support the UN Command in doing so.  It was adopted at the 479th meeting after United Nations Security Council Resolution 84 was passed creating the unified command under General MacArthur.
+
+Question: What year was the United Nations Security Council resolution 1067 adopted after noting various resolutions by the International Civil Aviation Organization?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "resolution_number": {
+      "type": "integer",
+      "description": "The number of the United Nations Security Council Resolution."
+    },
+    "adoption_year": {
+      "type": "integer",
+      "description": "The year the resolution was adopted."
+    },
+    "noting_organization": {
+      "type": "string",
+      "description": "The organization whose resolutions were noted by the Security Council."
+    }
+  },
+  "required": [
+    "resolution_number",
+    "adoption_year",
+    "noting_organization"
+  ],
+  "additionalProperties": false
+}

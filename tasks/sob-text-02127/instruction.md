@@ -1,0 +1,87 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Dennis Powell (boxer): Dennis Powell (12 December 1924 - 27 May 1993) was a Welsh boxer who fought between 1946 and 1954.  Powell became Welsh area champion in both light heavyweight and heavyweight divisions in 1949, holding onto the heavyweight title until beaten by Tommy Farr in 1951.  He remained Welsh light heavyweight champion throughout his career and in 1953 he challenged for the British light heavyweight title vacated by Randolph Turpin, taking the belt after defeating George Walker.
+
+Neil Simpson (boxer): Neil "Simmo" Simpson ( (1974--) 23 1974 (age (2017)-(1974)-((11)<(01)or(11)==(01)and(30)<(23)) ) ) born in London, now based in Coventry, is an English professional light heavy/cruiser/heavyweight boxer of the 1990s and 2000s, who won the British Boxing Board of Control (BBBofC) Midlands Area light heavyweight title, BBBofC British light heavyweight title, British Masters Cruiserweight title, and Commonwealth light heavyweight title, and was a challenger for the International Boxing Organization (IBO) Inter-Continental light heavyweight title against Darren Corbett, European Boxing Union (EBU) light heavyweight title against Yawe Davis, World Boxing Union (WBU) light heavyweight title against Tony Oakey, and BBBofC British light heavyweight title against Peter Oboh, his professional fighting weight varied from 169 lb , i.e. light heavyweight to 216 lb , i.e. heavyweight.
+
+Randolph Turpin: Randolph Adolphus Turpin (7 June 1928 – 17 May 1966), better known as Randolph Turpin, and in the United States also as Randy Turpin, was an English boxer who was considered by some to be Europe's best middleweight boxer of the 1940s and 1950s.  In 1951 he became world middleweight champion when he defeated Sugar Ray Robinson.  Turpin was inducted into the International Boxing Hall Of Fame in 2001.
+
+Luke Blackledge: Luke 'Robbo' Blackledge ( (1990--) 6 1990 (age 27 ) ), born in Clitheroe, is an English professional super middleweight, and light heavyweight boxer who has won the British Masters light-heavyweight title, World Boxing Council (WBC) International Silver super middleweight title, and Commonwealth super middleweight title, and has been a challenger for the World Boxing Council (WBC) Youth World light heavyweight title, and World Boxing Organization (WBO) Youth Intercontinental light heavyweight title a defeat by Erik Skoglund, British Boxing Board of Control (BBBofC) Central (England) Area super middleweight title a draw with Alistair Warren, and Commonwealth (British Empire) super middleweight title a defeat by Rocky Fielding.
+
+Guy Waters: Guy "Arc Angel" Waters ( (1964--) 25 1964 (age (2017)-(1964)-((11)<(01)or(11)==(01)and(30)<(25)) ) ) is an Australian professional welter/light middle/middle/super middle/light heavy/cruiserweight boxer of the 1980s, 1990s and 2000s who won the New South Wales State (Australia) light heavyweight title, Australian light heavyweight title, Oriental and Pacific Boxing Federation (OPBF) light heavyweight title, Australasian Light Heavyweight Title, World Boxing Federation (WBF) light heavyweight title, International Boxing Federation (IBF) Pan Pacific super middleweight title, Oriental and Pacific Boxing Federation (OPBF) super middleweight title, and Commonwealth light heavyweight title, and was a challenger for the WBC light heavyweight title against Dennis Andries, World Boxing Association (WBA) World light heavyweight title against Virgil Hill, World Boxing Council (WBC) cruiserweight title against Juan Carlos Gómez, and Commonwealth super middleweight title against David Starie, his professional fighting weight varied from 167+1/2 lb , i.e. super middleweight to 185+1/4 lb , i.e. cruiserweight.
+
+Garry Delaney: Gary Delaney ( (1970--) 12 1970 (age (2017)-(1970)-((11)<(08)or(11)==(08)and(30)<(12)) ) ) born in Newham is an English professional light heavy/cruiser/heavyweight boxer of the 1990s and 2000s.  He won the British Boxing Board of Control (BBBofC) Southern Area light heavyweight title, World Boxing Board (WBB) light heavyweight title, World Boxing Organization (WBO) Inter-Continental light heavyweight title, BBBofC Southern Area cruiserweight title, and Commonwealth light heavyweight title (twice), and was a challenger for the BBBofC British heavyweight title, and Commonwealth heavyweight title against Julius Francis, World Boxing Organization (WBO) Inter-Continental cruiserweight title against John Keeton, and Jesper Kristiansen, BBBofC British cruiserweight title, and Commonwealth (British Empire) cruiserweight title against Bruce Scott, and World Boxing Union cruiserweight title against Sebastiaan Rothmann, and Enzo Maccarinelli, his professional fighting weight varied from 174 lb , i.e. light heavyweight to 231 lb , i.e. heavyweight.
+
+Crawford Ashley: Crawford "Chilling" Ashley (born Gary Crawford, 20 May 1964 in Leeds is an English professional super middle/light heavy/cruiser/heavyweight boxer of the 1980s, '90s and 2000s, who won the British Boxing Board of Control (BBBofC) Central Area light heavyweight title, BBBofC British light heavyweight title, European Boxing Union (EBU) light heavyweight title (twice), and Commonwealth light heavyweight title (twice), drew with Yawe Davis for the vacant European Boxing Union (EBU) light heavyweight title, and was a challenger for the European Boxing Union (EBU) light heavyweight title against Graciano Rocchigiani, World Boxing Association (WBA) World super middleweight title against Michael Nunn, World Boxing Association (WBA) World light heavyweight title against Virgil Hill, and World Boxing Union (WBU) cruiserweight title against Sebastiaan Rothmann, his professional fighting weight varied from 163 lb , i.e. super middleweight to 211 lb , i.e. heavyweight.
+
+Peter Oboh: Peter Oboh ( (1968--) 06 1968 (age (2017)-(1968)-((11)<(09)or(11)==(09)and(30)<(06)) ) ) born in Lagos is a Nigerian/British professional light heavy/cruiser/heavyweight boxer of the 1990s and 2000s who won the British Boxing Board of Control (BBBofC) British light heavyweight title, World Boxing Association (WBA) Inter-Continental light heavyweight title, and Commonwealth light heavyweight title, his professional fighting weight varied from 171+3/4 lb , i.e. light heavyweight to 196 lb , i.e. heavyweight.
+
+Dean Francis: Dean "Star" Francis ( (1974--) 23 1974 (age (2017)-(1974)-((11)<(01)or(11)==(01)and(30)<(23)) ) ) is an English professional super middle/light heavy/cruiserweight boxer of the 1990s, 2000s and 2010s who has won the British Boxing Board of Control (BBBofC) British super middleweight, BBBofC English cruiserweight title, European Boxing Union (EBU) super middleweight title, World Boxing Organization (WBO) Inter-Continental super middleweight title, International Boxing Organization (IBO) Inter-Continental light heavyweight title, BBBofC British light heavyweight title, British Masters light-heavy title, and Commonwealth super middleweight title, and was a challenger for the World Boxing Council (WBC) International super middleweight title against Jaffa Ballogou, BBBofC British super middleweight title against Matthew Barney, his professional fighting weight has varied from 167 lb , i.e. super middleweight to 181 lb , i.e. cruiserweight.
+
+George Gardiner (boxer): George Gardner (born March 17, 1877 – July 8, 1954), was a famous Irish-born American boxer who was the first undisputed World Light Heavyweight Champion.  He held claims to both the World Middleweight Title as well as the World Heavyweight Title.  He was the second man in history to hold the World's Light Heavyweight title, defeating the first Light Heavyweight Champion, Jack Root by KO after 12 rounds.
+
+Question: Who did the fighter, who had vacated the British light heavyweight title that Dennis Powell won, defeat to become world middleweight champion ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "vacating_boxer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the boxer who vacated the title."
+        },
+        "title_vacated": {
+          "type": "string",
+          "description": "The specific title that was vacated."
+        }
+      },
+      "required": [
+        "name",
+        "title_vacated"
+      ],
+      "additionalProperties": false
+    },
+    "world_middleweight_championship": {
+      "type": "object",
+      "properties": {
+        "opponent_defeated": {
+          "type": "string",
+          "description": "The opponent defeated to become world middleweight champion."
+        },
+        "year_won": {
+          "type": "integer",
+          "description": "The year the world middleweight championship was won."
+        }
+      },
+      "required": [
+        "opponent_defeated",
+        "year_won"
+      ],
+      "additionalProperties": false
+    },
+    "final_answer": {
+      "type": "string",
+      "description": "The name of the boxer defeated by the vacating boxer to become world middleweight champion."
+    }
+  },
+  "required": [
+    "vacating_boxer",
+    "world_middleweight_championship",
+    "final_answer"
+  ],
+  "additionalProperties": false
+}

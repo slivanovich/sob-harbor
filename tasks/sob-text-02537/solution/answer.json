@@ -1,0 +1,14 @@
+{
+  "unit_name": "Naval Mobile Construction Battalion 25",
+  "unit_type": "Navy Reserve Seabee unit",
+  "headquarters_location": "Port Hueneme, CA",
+  "nickname": "Seabees",
+  "nickname_origin": {
+    "source_type": "first initials",
+    "initials": "C.B.",
+    "full_words": [
+      "Construction",
+      "Battalion"
+    ]
+  }
+}

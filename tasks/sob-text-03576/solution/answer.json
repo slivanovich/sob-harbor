@@ -1,0 +1,16 @@
+{
+  "artist_name": "Robbie Williams",
+  "album_title": "Swing When You're Winning",
+  "album_type": "swing cover album",
+  "pop_group_name": "Take That",
+  "group_membership_periods": [
+    {
+      "start_year": 1990,
+      "end_year": 1995
+    },
+    {
+      "start_year": 2009,
+      "end_year": 2012
+    }
+  ]
+}

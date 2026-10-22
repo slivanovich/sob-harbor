@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "record_id": "116518157652886c87af308f3c985982dfb01db14114b86a2dc31bf8a2180f89",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae69be95542996d980e7c58",
+    "source_dataset": "hotpotqa",
+    "source_answer": "20 June 1925",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "John E. Butts: John Edward Butts (August 4, 1922-June 23, 1944) was an American combat soldier who received the Medal of Honor posthumously for his actions in the Normandy Campaign during World War II.  Butts was one of five brothers to serve in the war and the only one to be killed in action.\n\nGeorge T. Sakato: George Taro \"Joe\" Sakato (February 19, 1921 – December 2, 2015) was an American combat soldier of World War II who received the Medal of Honor, the nation's highest military award for valor.\n\nNeville Brand: Neville Brand (born Lawrence Neville Brand; August 13, 1920 – April 16, 1992) was an American television and film actor.  He was also a highly decorated World War II American combat soldier.\n\nList of songs written by Audie Murphy: Audie Murphy (1925–1971) was born into a poor family in Texas and became a highly decorated American soldier who served with the United States Army in nine campaigns in Europe from 1942 to 1945.  He was the recipient of the Medal of Honor for his combat heroism in World War II and received every American combat award for valor available from the Army at the time of his service.  At the onset of the Korean War, he was commissioned as an officer in the Texas National Guard and served with the Guard for sixteen years before retiring from military service.  His home state posthumously awarded him the Texas Legislative Medal of Honor for his combined service in the Army and the Guard.\n\nLouis Stevens (writer): Louis Stevens (December 25, 1896 – September 29, 1963) was an American screenwriter of the silent and sound film eras.  Born on Christmas Day 1896 in Riga, Latvia, Stevens entered the film industry in 1920 when he co-wrote the silent film \"A World of Folly\", with Jane Grogan.  In his over 30-year career he worked on over 40 screenplays, as well as several film shorts and two television series.  Among his more notable films were: contributing to the script of the 1931 version of \"Dracula\", starring Bela Lugosi; co-writing the story for What Price Hollywood?  (1932); the screenplay for the 1940 western, \"Colorado\", directed by Joseph Kane, and starring Roy Rogers; the story for \"Streets of Laredo\" (1949), starring William Holden, Macdonald Carey and William Bendix; 1951's \"The Cimarron Kid\", starring Audie Murphy; and \"Horizons West\" (1952), starring Robert Ryan, Julie Adams, and Rock Hudson.  Stevens' final screenplay was for \"Flaming Frontier\" in 1958, although he did some work on additional dialogue for the 1959 film, \"Desert Desperadoes\".  Stevens also wrote several television episodes, one for \"Cheyenne\", and two for \"Hawkeye and the Last of the Mohicans\", all in 1957.\n\nHarry Patch: Henry John Patch (17 June 1898 – 25 July 2009), dubbed in his later years \"the Last Fighting Tommy\", was a British supercentenarian, briefly the oldest man in Europe and the last surviving combat soldier of the First World War from any country.  He is known to have fought in the trenches of the Western Front.  Patch was the longest surviving combat soldier of World War I, but he was the fifth longest surviving veteran of any sort from World War I, behind British veterans Claude Choules and Florence Green, Frank Buckles of the United States and John Babcock of Canada.  At the time of his death, aged 111 years, 1 month, 1 week and 1 day, Patch was the third-oldest man in the world and the oldest man in Europe.\n\nAnthony T. Kahoʻohanohano: Anthony Thomas Kahoʻ ohanohano (1930 – September 1, 1951) was an American combat soldier who was killed in action on September 1, 1951 during the Korean War.  He became a recipient of the United States military's highest decoration for valor, the Medal of Honor.\n\nWilliam L. Nelson (Medal of Honor): William Lloyd Nelson (February 22, 1918–April 24, 1943) was an American combat soldier who was posthumously awarded the Medal of Honor, the nation's highest decoration for valor, for his actions on April 24, 1943, during World War II.\n\nAudie Murphy: Audie Leon Murphy (20 June 1925 – 28 May 1971) was one of the most decorated American combat soldiers of World War II, receiving every military combat award for valor available from the U.S. Army, as well as French and Belgian awards for heroism.  Murphy received the Medal of Honor for valor demonstrated at the age of 19 for single-handedly holding off an entire company of German soldiers for an hour at the Colmar Pocket in France in January 1945, then leading a successful counterattack while wounded and out of ammunition.\n\nNelson V. Brittin: Nelson Vogel Brittin (October 31, 1920 – March 7, 1951) was an American combat soldier who was killed in action during the Korean War.  He was posthumously awarded the Medal of Honor for his actions in Yonggong-ni, Korea, on March 7, 1951.",
+    "question": "What is the birthdate of this decorated American combat soldier of WWII, receiving the Meadl of Honor for valor and who starred in The Cimarron Kid?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "soldier_name": {
+          "type": "string",
+          "description": "The full name of the decorated American combat soldier."
+        },
+        "birth_date": {
+          "type": "string",
+          "description": "The birth date of the soldier in 'Day Month Year' format."
+        },
+        "military_service_details": {
+          "type": "object",
+          "properties": {
+            "conflict": {
+              "type": "string",
+              "description": "The military conflict in which the soldier served."
+            },
+            "medal_of_honor_recipient": {
+              "type": "boolean",
+              "description": "Indicates if the soldier received the Medal of Honor."
+            },
+            "other_awards_mentioned": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Other significant military awards or recognitions mentioned in the context."
+            }
+          },
+          "required": [
+            "conflict",
+            "medal_of_honor_recipient"
+          ],
+          "additionalProperties": false
+        },
+        "acting_career_details": {
+          "type": "object",
+          "properties": {
+            "film_title": {
+              "type": "string",
+              "description": "The title of the film the soldier starred in, as mentioned in the question."
+            }
+          },
+          "required": [
+            "film_title"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "soldier_name",
+        "birth_date",
+        "military_service_details",
+        "acting_career_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "soldier_name": "Audie Murphy",
+      "birth_date": "20 June 1925",
+      "military_service_details": {
+        "conflict": "World War II",
+        "medal_of_honor_recipient": true,
+        "other_awards_mentioned": [
+          "every military combat award for valor available from the U.S. Army",
+          "French and Belgian awards for heroism"
+        ]
+      },
+      "acting_career_details": {
+        "film_title": "The Cimarron Kid"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

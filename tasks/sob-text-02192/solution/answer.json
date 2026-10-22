@@ -1,0 +1,20 @@
+{
+  "common_occupation": "musician",
+  "individuals": [
+    {
+      "name": "Jon Fratelli",
+      "occupations": [
+        "musician",
+        "songwriter"
+      ]
+    },
+    {
+      "name": "Morten Harket",
+      "occupations": [
+        "musician",
+        "lead singer"
+      ]
+    }
+  ],
+  "reasoning": "Both Jon Fratelli and Morten Harket are explicitly described as 'musician' in their respective biographical sections."
+}

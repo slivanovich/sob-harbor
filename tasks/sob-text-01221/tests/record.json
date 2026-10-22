@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "record_id": "801a73a65996cd34d063f885bb50ba34cf510f4d590d3f0a2bdb3f153676c4d7",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5abd7d5955429924427fd012",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Galanthus",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Galanthus elwesii: Galanthus elwesii (Elwes's snowdrop, greater snowdrop) is one of a number of species of the genus \"Galanthus\", herbaceous, perennial, bulbous plants belonging to the family Amaryllidaceae.  It is a native of the Caucasus.\n\nGalanthus nivalis: Galanthus nivalis, the snowdrop or common snowdrop, is the best-known and most widespread of the 20 species in its genus, \"Galanthus\".  Snowdrops are among the first bulbs to bloom in spring and can form impressive carpets of white in areas where they are native or have been naturalised.  They should not be confused with the snowflakes, in the genera \"Leucojum\" and \"Acis\".\n\nGalanthus: Galanthus (snowdrop; Greek \"gála\" \"milk\", \"ánthos\" \"flower\") is a small genus of about 20 species of bulbous perennial herbaceous plants in the family Amaryllidaceae.  The plants have two linear leaves and a single small white drooping bell shaped flower with six petal-like (petaloid) tepals in two circles (whorls).  The smaller inner petals have green markings.\n\nRhodanthemum: Rhodanthemum syn.  \"Chrysanthemopsis\", \"Pyrethropsis\" (Moroccan daisy), is a genus of flowering plants in the family Asteraceae, mostly native to exposed rocky places in Northern Africa (Morocco and Algeria).  Formerly included in either \"Chrysanthemum\" or \"Leucanthemum\", the 10 or 15 species of \"Rhodanthemum\" display many similarities to their former parents, with composite daisy-like flowers.  They are mat-forming, prostrate perennials or subshrubs, and some are cultivated as ornamental plants.",
+    "question": "Which genus has more species, Galanthus or Rhodanthemum?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "genus_comparison": {
+          "type": "object",
+          "properties": {
+            "first_genus": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "species_count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "species_count"
+              ],
+              "additionalProperties": false
+            },
+            "second_genus": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "species_count_description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "species_count_description"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "first_genus",
+            "second_genus"
+          ],
+          "additionalProperties": false
+        },
+        "genus_with_more_species": {
+          "type": "string"
+        },
+        "comparison_summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "genus_comparison",
+        "genus_with_more_species",
+        "comparison_summary"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "genus_comparison": {
+        "first_genus": {
+          "name": "Galanthus",
+          "species_count": 20
+        },
+        "second_genus": {
+          "name": "Rhodanthemum",
+          "species_count_description": "10 or 15"
+        }
+      },
+      "genus_with_more_species": "Galanthus",
+      "comparison_summary": "Galanthus has about 20 species, while Rhodanthemum has 10 or 15 species, making Galanthus the genus with more species."
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

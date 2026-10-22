@@ -1,0 +1,31 @@
+{
+  "tv_show_details": {
+    "name": "Comedy Club Russia",
+    "broadcasting_channel": "TNT"
+  },
+  "key_personalities": [
+    {
+      "name": "Pavel Alekseevich Volya",
+      "roles": [
+        "TV host",
+        "actor",
+        "singer",
+        "resident"
+      ],
+      "is_former_kvn_player": true
+    },
+    {
+      "name": "Garik Martirosyan",
+      "roles": [
+        "entertainer",
+        "comedian",
+        "TV host",
+        "actor",
+        "singer",
+        "co-producer",
+        "host"
+      ]
+    }
+  ],
+  "answer_channel": "TNT"
+}

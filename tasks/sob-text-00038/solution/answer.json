@@ -1,0 +1,21 @@
+{
+  "canals_in_united_states": true,
+  "canal_evaluation": [
+    {
+      "canal_name": "Beardstown and Sangamon Canal",
+      "is_located_in_united_states": true,
+      "us_locations": [
+        "Illinois"
+      ]
+    },
+    {
+      "canal_name": "Alexandria Canal",
+      "is_located_in_united_states": true,
+      "us_locations": [
+        "Virginia",
+        "District of Columbia"
+      ]
+    }
+  ],
+  "total_canals_evaluated": 2
+}

@@ -1,0 +1,18 @@
+{
+  "comparison_result": "Battle of Leyte",
+  "battle_durations": [
+    {
+      "battle_name": "Battle of Tarawa",
+      "start_date": "1943-11-20",
+      "end_date": "1943-11-23",
+      "duration_days": 4
+    },
+    {
+      "battle_name": "Battle of Leyte",
+      "start_date": "1944-10-17",
+      "end_date": "1944-12-26",
+      "duration_days": 71
+    }
+  ],
+  "longer_battle_duration_days": 71
+}

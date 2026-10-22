@@ -1,0 +1,9 @@
+{
+  "airline_name": "Finnair",
+  "airline_country_of_origin": "Finland",
+  "airline_alliance": {
+    "name": "Oneworld",
+    "founding_date": "1999-02-01",
+    "relationship_to_alliance": "member"
+  }
+}

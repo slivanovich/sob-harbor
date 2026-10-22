@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Kids (MGMT song): "Kids" is a song by the American rock band MGMT, released as the third and final single from their debut studio album "Oracular Spectacular" (2007) on October 13, 2008.  The version of the song that appears on "Oracular Spectacular" is updated from earlier versions that appear on the band's EPs "Time to Pretend" (2005) and "We (Don't) Care" (2004).  A track entitled "Kids (Afterschool Dance Megamix)" appears on the album "Climbing to New Lows" (2005).  On December 1, 2009, the track was announced as a nominee at the 52nd Grammy Awards in the category Best Pop Performance by a Duo or Group with Vocals.
+
+The Hunger (band): The Hunger is an industrial rock band from Houston, Texas formed by brothers Jeff and Thomas Wilson along with Brian Albritton.  During the initial year of putting the band together and working on new material the band wrote and independently released the single, "Shock" in 1991 which rose to the top of the dance charts.  Industrial dance music ruled the charts in Europe along with strong ties to Chicago, Wax Trax Records, and Houston.  Subsequent releases of "Cut the Skin" and "Shoot to Kill" gained national exposure on the dance charts and club scene.  "Never Again" was self-released as a radio single and quickly rose to the top of Houston Radio Station's 93Q and 96.5 attracting the attention of independent record label Alpha International.  Stephen Bogle produced the single of "Never Again".  The band wrote and produced the album "Leave Me Alone" but due to the bankruptcy of Alpha International the record sat idle.  It was released but there were no marketing efforts behind it.  After the release of the album, the band sought out drummer Max Schuldberg and they played their first concert as a foursome opening for Peter Murphy at Southern Star Amphitheater.  They played concerts in Texas as a foursome for two years.  Along with the three founders and newest member Max Schuldberg, the band added producer Stephen Bogle as guitarist to complete the line up.  The band recorded and produced "Grip" under their own start up label, Gut Records.  "Grip" went on to sell 15,000 units with the help of a crafty rework of Bad Company's "Feel like Makin Love".  Universal Records, at the time a brand new start up label, heard of the success of "Grip" and signed the band as their second artist ever.  "Devil Thumbs a Ride", the 3rd album, had already been recorded and mastered and was about to be manufactured for another self-release when Universal stepped in to sign the band and release the album as-is.  The Hunger had a hit song in 1996, "Vanishing Cream", from the "Devil Thumbs a Ride" CD, which received heavy airplay on rock stations and reached No. 4 on the Mainstream Rock charts.  After two years of constant touring, the band finally stopped to record their second release with Universal Records, "Cinematic Superthug".  After only moderate success with the single, "Moderation", the band asked to be and was granted a release from their contract from Universal Records.  Two songs, "Shoot to Kill", also from "Devil Thumbs a Ride", and "If", from "Grip", reached No. 42 on Billboard's Dance/Club Play chart.  The band has released six albums: two on Universal Records and four on independent labels. Former original drummer (1991-2003) Max Schuldberg (voted 2002's Best Drummer by the Houston Press Music Awards) parted with the band after the five albums in 2003 and moved to Los Angeles.  Former guitarist and two time Grammy Award nominee (remixer, for his work with D.J. Cubanito) Stephen Bogle now Produces artists in the Metal, Electronic, and Pop genres.  In late 2005 Stephen Bogle parted ways with the band, and Tim Huston was quickly picked up.  With having only a few practices with the band they headed on tour with Ten Years.  Tim Huston Stayed with the band from late '05 til 2013.  "The lifestyle was just getting to overwhelming for me to handle".  "If I would have stayed, who knows what would have happened to me.  There was just no off button".  In 2013, guitarist Raf Rivera joined the lineup, and the band is currently in the process of recording their first new material in over 8 years.
+
+The Flying Hendersons: The Flying Hendersons were an English indie rock band that formed in Hyde Park, Leeds in 1986, prior to this they were for a short time known as Budda Budda and played one live gig under this name at Leeds University, supporting the Snap Dragons on 17 October 1987 with the Sex Gods and The Ramones headlining in the Riley Smith hall.  By early 1987 despite achieving some success and a small cult following as Budda Budda, the band changed their name to 'The Flying Hendersons'.  They performed only a handful of live concerts, spending most of their time in the studio.  In early 1988, they played their last gig at the Infamous Assylum Club, Manchester and then disbanded.  Their only recording that survived from the Nyrex studio sessions in Manchester was the non released single Scam Man/Electric Hands which to this date has never been officially released into the public domain.  in 1989 Jules and Steve linked up with Leeds band The Kennedy Pill.  After a nationwide tour they released their only single, Beside the Sea, before disappearing into obscurity.  Jules then went on to complete his degree, whilst Steve continued to concentrate and develop his career as an industry respected sound engineer and formed the band Klammer.  Bill moved to Manchester and then later, left the UK to live overseas in Russia and the Middle East.  Meanwhile, Graham went and pursued a teaching career.  The band's influences were extremely varied however there was some leaning towards the Leeds Gothic rock scene at the time, with such bands as The Sisters of Mercy, The March Violets and The Mission providing a source of inspiration for the lyrics and style especially in the early days of the band.  The Flying Hendersons are contemplating a comeback gig in 2017 to mark their 30th anniversary.
+
+Time to Pretend (EP): Time to Pretend is the second EP by the American rock band MGMT, released on August 30, 2005 by Cantora Records and made available on iTunes.  New versions of the tracks "Time to Pretend" and "Kids" were later released on MGMT's debut album "Oracular Spectacular" (2007–2008).  At the time this was recorded they were still known as "The Management".
+
+We (Don't) Care: We (Don't) Care is the first release by the American rock band The Management (now known as MGMT).  Newer versions of the tracks "Love Always Remains" and "Kids" were later released on MGMT's Cantora Records release "Time to Pretend" EP (2005) and additional versions of "Kids" appear on both their major-label debut "Oracular Spectacular" (2007–2008) and their demo album "Climbing to New Lows" (2005) recorded shortly after this EP.  Additionally, "We Care", "We Don't Care" and "Grutu (Just Becuz)" were also included on "Climbing to New Lows".
+
+Oracular Spectacular: Oracular Spectacular is the debut album by American psychedelic rock band MGMT, released on October 2, 2007 by RED Ink and physically on January 22, 2008 by Columbia.  It was produced by Dave Fridmann and is the band's first release of new content, being recorded from March to April 2007.  The album was promoted with three singles: "Time to Pretend", "Electric Feel" and "Kids".  Both "Time to Pretend" and "Kids" were re-recorded for the album songs from the band's previous release "Time to Pretend" (2005), with the opening track serving as a "mission statement" and the theme continued through the album's subsequent tracks.
+
+MGMT: MGMT is an American psychedelic rock band formed in 2002 at Wesleyan University.  It currently consists of Andrew VanWyngarden (lead vocals, guitar, keyboards, bass guitar, drums, percussion) and Ben Goldwasser (vocals, keyboards, guitar, percussion).  In the live lineup it consists of VanWyngarden, Goldwasser, Will Berman (drums, percussion, harmonica, backing vocals), Matt Asti (bass guitar, backing vocals), James Richardson (lead guitar, keyboards, backing vocals) and Hank Sullivant (guitar, keyboards).
+
+Invisible Tape: Invisible Tape is the second full-length album by Greg Connors, released on August 25, 2000 on Atlanta independent record label, Scared Records.  It features Greg's band at the time, The Curb, which included Mark Perkins on bass and Andrew Brown on drums.  The album features ten original songs written by Greg and a cover of "Pretend" which was written by Benjamin Smoke.
+
+Time to Pretend: "Time to Pretend" is a song by the American indie band MGMT, released as the lead single from their debut studio album "Oracular Spectacular" (2007) on March 3, 2008.  An earlier version had been released on their "Time to Pretend" EP.  The single was released as a 7" and CD single featuring the B-sides "Weekend Wars" (BBC Radio 1 Session) and "Metanoia", respectively.  In early 2009, the song was re-released in the UK.  The song was ranked at number 493 on "Rolling Stone"' s list of The 500 Greatest Songs of All Time.  The song was ranked at number 90 on "NME"' s list of The 500 Greatest Songs of All Time.
+
+MGMT discography: The discography of MGMT, a Connecticut-based indie rock group, consists of three studio albums, one compilation album, four extended plays, eleven singles (including one as a featured artist) and fourteen music videos. Originally known under the name The Management, the group was founded in 2002 by Andrew VanWyngarden and Ben Goldwasser during their freshman year as art students at Wesleyan University in Middletown, Connecticut.  After graduating and changing the band's name to MGMT, they released an EP titled "Time to Pretend" in 2005 on the independent record label Cantora Records; music videos were recorded for two of the EP's songs, "Boogie Down" and "Destrokk".  The critical success of the EP and extensive touring brought the group to the attention of Columbia Records, which signed them in 2006.
+
+Question: When was the band that released "Time to Pretend" formed?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band."
+    },
+    "formation_year": {
+      "type": "integer",
+      "description": "The year the band was formed."
+    },
+    "origin_location": {
+      "type": "string",
+      "description": "The location where the band was formed."
+    },
+    "founding_members": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The names of the founding members of the band."
+    }
+  },
+  "required": [
+    "band_name",
+    "formation_year",
+    "origin_location",
+    "founding_members"
+  ],
+  "additionalProperties": false
+}

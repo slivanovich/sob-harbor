@@ -1,0 +1,14 @@
+{
+  "source_film_title": "Secret Admirer",
+  "source_film_year": 1985,
+  "source_film_genre": "teen romantic comedy film",
+  "starring_actress": {
+    "name": "Kelly Preston",
+    "nationality": "American"
+  },
+  "actress_husband_name": "John Travolta",
+  "collaborative_film": {
+    "title": "Battlefield Earth",
+    "genre": "fantasy"
+  }
+}

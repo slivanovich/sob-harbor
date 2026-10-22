@@ -1,0 +1,10 @@
+{
+  "city_name": "Easton",
+  "state": "Pennsylvania",
+  "rivers_at_confluence": [
+    "Delaware River",
+    "Lehigh River"
+  ],
+  "is_county_seat": true,
+  "county_name": "Northampton County"
+}

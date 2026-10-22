@@ -1,0 +1,18 @@
+{
+  "question_asked": "Are both ConocoPhillips and Cablevision headquartered in New York City?",
+  "companies_checked": [
+    {
+      "company_name": "ConocoPhillips",
+      "headquarters_location_mentioned": true,
+      "is_headquartered_in_new_york_city": false,
+      "actual_headquarters_city": "Houston",
+      "actual_headquarters_state": "Texas"
+    },
+    {
+      "company_name": "Cablevision",
+      "headquarters_location_mentioned": false,
+      "is_headquartered_in_new_york_city": false
+    }
+  ],
+  "both_companies_headquartered_in_new_york_city": false
+}

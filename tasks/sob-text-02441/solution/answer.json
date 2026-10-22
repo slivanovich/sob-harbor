@@ -1,0 +1,12 @@
+{
+  "are_from_same_country": false,
+  "person_1": {
+    "name": "Les McKeown",
+    "country_of_origin": "Scotland"
+  },
+  "person_2": {
+    "name": "Takahiro Moriuchi",
+    "country_of_origin": "Japan"
+  },
+  "reasoning": "Les McKeown is a Scottish pop singer, while Takahiro Moriuchi was born in Tokyo, Japan."
+}

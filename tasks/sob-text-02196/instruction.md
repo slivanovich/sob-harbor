@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of songs recorded by Chris Cornell: Chris Cornell was an American rock musician from Seattle, Washington.  He began his career in 1984 when he formed grunge band Soundgarden with guitarist Kim Thayil and bassist Hiro Yamamoto, originally playing drums in addition to vocals before Scott Sundquist took over the former the following year.  The group contributed three songs to the C/Z Records compilation "Deep Six" in 1986, before Sundquist was replaced by Matt Cameron.  After two extended plays (EPs), Soundgarden released its debut full-length album "Ultramega OK" in 1988, on which Cornell was credited for songwriting on all but one of the eleven original songs. " Louder Than Love" followed in 1989, on which Cornell was credited solely for writing seven of the album's twelve songs (and co-credited on four of the other five).
+
+Pentagram (Indian band): Pentagram is a four-piece Indian rock/electronica band started in 1994 in Mumbai, India.  Regarded as one of the pioneers of original Indian independent music, the band has received major recognition.
+
+It's OK, It's All Good: It's OK, It's All Good is an album by the Mumbai-based band Pentagram.
+
+Kid Confucius: Kid Confucius were an eight-piece Australian band from Sydney, Australia.  They formed in 2001 and have since played well over 400 live shows around the country, including major festivals as well as their own headline shows at venues such as The Annandale Hotel and The Metro Theatre.  In 2005 the band released a self-titled album and two singles "Words" and "Skintight."  The album, a mish-mash of soul, hip-hop, pop and funk, received great critical acclaim, most notably from Rolling Stone who hailed the album as one of the standout local releases of the year.  "Words" also enjoyed some solid months of radio and TV play.  The band released its second album Stripes in 2007 with three singles "Closer", "Last Straw" and "Moment".  Stripes was the band's attempt at making a Detroit-era Motown soul album and it was quick to earn rave reviews from press around the country as well as a publishing deal with Mushroom.  "Moment" has enjoyed good radio play on triple j. Kid Confucius is set to release its third album in October 2008.  The first single from this album, "Good Luck", is out now.
+
+Kid A: Kid A is the fourth studio album by the English rock band Radiohead, released on 2 October 2000 by Parlophone.  On the verge of a breakdown after promoting Radiohead's 1997 album "OK Computer", songwriter Thom Yorke envisioned a radical change in direction.  Radiohead replaced their rock sound with synthesisers, drum machines, the ondes Martenot, string orchestras and brass instruments.  They incorporated influences from genres such as electronic music, krautrock, jazz, and 20th-century classical music.  They recorded "Kid A" with "OK Computer" producer Nigel Godrich in Paris, Copenhagen, Gloucestershire and their hometown Oxford, England.  The sessions produced over 20 tracks, and Radiohead split the work in two albums: "Kid A" and "Amnesiac".  The latter was released the following year.
+
+OK (The Fall of Troy album): OK is the fifth studio album by American rock band The Fall of Troy, released on April 20, 2016.  The album was self-released for free on the band's website, and the first release since their 2009 album, "In the Unlikely Event", and the first since their reunion in 2013.  In May the same year released "OK#2", an alternative and more raw mix of "OK", which was also released for free.  Two further versions, "OK#3.1" and "OK#3.2", instrumental versions of both OK and OK#2, respectively, were released for free on their website.
+
+Twelve Days of OK Go: Twelve Days of OK Go is a compilation album by American rock band OK Go.  It was released on December 31, 2012.  OK Go started releasing the songs on December 10, with one song released each weekday.  The last song, a cover of "Any Time at All", was released on Christmas.  A bonus track, a cover of "This Will Be Our Year," was released on New Year's Eve.
+
+It's OK! (Atomic Kitten song): "It's OK!"  is a song by British girl band Atomic Kitten.  It was written by Hallgeir Rustan along with Mikkel Storleer Eriksen and Tor Erik Hermansen from Stargate and recorded for the band's second album "Feels So Good" (2002).  The song was released by Virgin Records as the lead single from the album in May 2002 and became a worldwide commercial success.
+
+It's OK! (band): It's OK!  is a musical group formed by Redd Kross members Robert Hecker (guitar, vocals) and Victor Indrizzo (drums), along with bassist Abby Travis and the late Greg White on vocals.  This initial line up of the band released the self-titled debut album "It's OK!" .
+
+Heralding – The Fireblade: Heralding – The Fireblade is the fourth studio album by the German Viking metal band "Falkenbach".  This record is made up of songs originally intended to be the band's debut album "Fireblade", which was shelved in 1995.  For the 15-year anniversary of the band, the tracks were finally re-recorded (using the same session musicians as on "Ok nefna tysvar Ty") and released.  The LP version limited to 1000 copies was released in 2006 by "No Colours Records" with the first 300 in transparent clear vinyl.
+
+Question: It's OK, It's All Good is an album by a band that formed in which year ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album in question."
+    },
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band that released the album."
+    },
+    "band_formation_year": {
+      "type": "integer",
+      "description": "The year the band was formed."
+    }
+  },
+  "required": [
+    "album_title",
+    "band_name",
+    "band_formation_year"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "24b415f04897014a5a51881174da44268e695529113c2e0b2e16025031f397c3",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a80569a5542995d8a8ddf6b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The CW",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "IZombie (TV series): iZombie (stylized as iZOMBiE) is an American television series developed by Rob Thomas and Diane Ruggiero-Wright for The CW.  It is a loose adaptation of the comic book series of the same name created by Chris Roberson and Michael Allred, and published by DC Comics under their Vertigo imprint.  The series premiered on March 17, 2015.\n\nVeronica Mars: Veronica Mars is an American teen noir mystery drama television series created by screenwriter Rob Thomas.  The series is set in the fictional town of Neptune, California, and stars Kristen Bell as the eponymous character.  The series premiered on September 22, 2004, during television network UPN's final two years, and ended on May 22, 2007, after a season on UPN's successor, The CW, airing for three seasons total.  \"Veronica Mars\" was produced by Warner Bros.  Television, Silver Pictures Television, Stu Segall Productions, and Rob Thomas Productions.  Joel Silver and Rob Thomas were executive producers for the entire run of the series, while Diane Ruggiero was promoted in the third season.\n\nVeronica Mars (season 3): The third and final season of \"Veronica Mars\", an American drama television series created by Rob Thomas, began airing on The CW in the United States on October 3, 2006.  The season was produced by Warner Bros.  Television, Silver Pictures Television, Stu Segall Productions, Inc and Rob Thomas Productions, and Joel Silver, Diane Ruggiero and Thomas served as executive producers.  The third season comprises 20 episodes and concluded its initial airing on May 22, 2007.\n\nList of iZombie episodes: \"iZombie\" (stylized as \"iZOMBiE\") is an American television series developed by Rob Thomas and Diane Ruggiero-Wright for The CW, and is a loose adaptation of the comic book series of the same name created by Chris Roberson and Michael Allred, and published by DC Comics under their Vertigo imprint.  The series was officially picked up on May 8, 2014, for the 2014–15 season and premiered on March 17, 2015.\n\nList of iZombie characters: \"iZombie\" (stylized as \"iZOMBiE\") is an American television series developed by Rob Thomas and Diane Ruggiero-Wright for The CW.  It is a loose adaptation of the comic book series of the same name created by Chris Roberson and Michael Allred, and published by DC Comics under their Vertigo imprint.  The series premiered on March 17, 2015.\n\nMercy Malick: Mercy Malick is an American actor, singer/songwriter, writer, director, choreographer and aerialist.  She is best known for Mission Control, Major Crimes, Circle, and iZombie.\n\nVeronica Mars (season 2): The second season of \"Veronica Mars\", an American drama television series created by Rob Thomas, premiered on UPN in the United States on September 28, 2005.  The series was produced by Warner Bros.  Television, Silver Pictures Television and Rob Thomas Productions, and Joel Silver and Thomas served as the executive producers.\n\nDiane Ruggiero: Diane Ruggiero-Wright is an American television writer and producer.  Her credits include \"That's Life\", \"Veronica Mars\", \"Free Agents\", \"Dirty Sexy Money\", \"Big Shots\", the \"Mythological X\" remake \"The Ex List\" and \"iZombie\", which she co-created with Rob Thomas.  With Thomas, she also co-wrote the script for the \"Veronica Mars\" film.\n\nVeronica Mars (character): Veronica Mars is the fictional protagonist, occasional narrator (through voiceovers), and antiheroine of the American television series \"Veronica Mars\", which aired on UPN from 2004 to 2006 and on The CW from 2006 to 2007.  The character was portrayed by Kristen Bell through the duration of the series.  Following the show's cancellation, Bell reprised the role in the 2014 film continuation.  The character, created by Rob Thomas, was originally male and the protagonist of his unproduced novel \"Untitled Rob Thomas Teen Detective Novel\", which eventually became the basis of the series.  After the work's transition from novel to television series, Thomas changed the character's gender from male to female as he believed a noir piece told from a female point of view would be more interesting.\n\nCircle (2015 film): Circle is a 2015 American psychological thriller film written and directed by Aaron Hann and Mario Miscione.  It stars an ensemble cast that includes Carter Jenkins, Lawrence Kao, Allegra Masters, Michael Nardelli, Julie Benz, Mercy Malick, Lisa Pelikan, and Cesar Garcia.  It was inspired by the 1957 drama \"12 Angry Men\" and was shot in 2014.  It premiered at the Seattle International Film Festival on May 28, 2015, before being released to video-on-demand on October 16, 2015.  In the film, fifty people wake up in a darkened room, only to find that one of them is killed every two minutes or when they attempt to leave.  When they realize that they can control which person is selected to die, blocs emerge based on personal values.",
+    "question": " Mercy Malick is best known for Mission Control, Major Crimes, Circle, and iZombie, an American television series developed by Rob Thomas and Diane Ruggiero-Wright for what television network?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "series_title": {
+          "type": "string",
+          "description": "The title of the television series."
+        },
+        "developers": {
+          "type": "array",
+          "description": "A list of individuals who developed the series.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "television_network": {
+          "type": "string",
+          "description": "The television network for which the series was developed."
+        }
+      },
+      "required": [
+        "series_title",
+        "developers",
+        "television_network"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "series_title": "iZombie",
+      "developers": [
+        "Rob Thomas",
+        "Diane Ruggiero-Wright"
+      ],
+      "television_network": "The CW"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

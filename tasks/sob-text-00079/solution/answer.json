@@ -1,0 +1,17 @@
+{
+  "defunct_country_name": "Netherlands Antilles",
+  "event_description": "dissolved",
+  "dissolution_date": "10 October 2010",
+  "country_type_before_dissolution": "autonomous Caribbean country",
+  "kingdom_affiliation": "Kingdom of the Netherlands",
+  "post_dissolution_entities": [
+    {
+      "entity_name": "Curaçao",
+      "entity_status": "country within the Kingdom of the Netherlands"
+    },
+    {
+      "entity_name": "Prime Minister of Curaçao",
+      "entity_status": "head of government"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "recommended_destination": {
+    "name": "Boğaziçi University",
+    "location": {
+      "city": "Istanbul",
+      "country": "Turkey"
+    },
+    "type": "university",
+    "description_points": [
+      "major research university",
+      "located on the European side of the Bosphorus strait in Istanbul, Turkey",
+      "language of instruction is English"
+    ]
+  },
+  "alternative_destination": {
+    "name": "Endem TV Tower",
+    "location": {
+      "city": "Istanbul",
+      "country": "Turkey"
+    },
+    "type": "TV tower",
+    "description_points": [
+      "TV tower in Beylikdüzü, Istanbul, Turkey",
+      "has a now closed revolving restaurant 154 m above ground",
+      "has an observation deck at 160 m"
+    ]
+  },
+  "recommendation_summary": "Boğaziçi University is recommended for a visit due to its status as a major research university and its scenic location on the European side of the Bosphorus strait, offering a broader experience. The Endem TV Tower's revolving restaurant, a key attraction, is now closed, leaving only an observation deck."
+}

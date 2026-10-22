@@ -1,0 +1,16 @@
+{
+  "film_franchise_name": "Cars",
+  "spin_off_film_name": "Planes",
+  "common_denominator_person": {
+    "name": "John Lasseter",
+    "roles_in_cars": [
+      "creator",
+      "director"
+    ],
+    "roles_in_planes": [
+      "co-writer",
+      "executive producer"
+    ]
+  },
+  "relationship_description": "Common denominator for both Disney films"
+}

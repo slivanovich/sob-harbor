@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Los del Mar: Los del Mar (Spanish for "those from the sea", referring to Marbella) was a short-lived Spanish music duo, best known for their hit single, a 1995 cover version of the Los del Río song, "Macarena", which was included on the album, "Macarena: The Hit Album".  The main member, Pedro Castaño, is still touring with this song.  Although it just missed the Top 40 in the UK Singles Chart (peaking at #43 while the Los Del Rio version reached number 2) it was included on the million selling compilation album, "Now That's What I Call Music!  34", as well as the compilation album "Ultimate Dance Party 1997", and even the game Samba de Amigo.
+
+In the End (Black Veil Brides song): "In the End" is a song by American rock band Black Veil Brides, from their third studio album, "".  The song was released on October 31, 2012 as the first single from "Wretched and Divine", and is Black Veil Brides' sixth single.  It was released on the same date as the availability for pre-order purchases for the entire album.  The song peaked at number 39 on the "Billboard" Rock Songs chart and remained on the charts for two weeks.  "In the End" was featured as a bonus track on the compilation album "Now That's What I Call Music!  45".  It was also one of the two themes for the 2012 WWE "Hell in a Cell" pay-per-view event.  The song also appears in the video games "Guitar Hero Live" and "NHL 14".  The band received "Revolver"'s 2013 Golden Gods Award for Best New Song for "In the End."  The song was written after the death of Black Veil Brides' lead vocalist Andy Biersack's grandfather.
+
+Now That's What I Call Music! 38 (U.S. series): Now That's What I Call Music!  38 was released on May 3, 2011.  The album is the 38th edition of the "Now! " series in the United States.  The album features six tracks that reached number one on the "Billboard" Hot 100: "Born This Way", "S&M", "Hold It Against Me", "Grenade", "E.T." and "Rolling in the Deep".
+
+The Call (Backstreet Boys song): "The Call" is a song by American boy band Backstreet Boys.  It was released on February 6, 2001 as the second single from their album "Black & Blue" (2000).  It is set in the key of B-flat minor, with a modulation a whole step up to C minor after the drum break.  The Neptunes' remix of the song was featured on the 2001 compilation album "Now That's What I Call Music!  7".
+
+Holidae In: "Holidae In" is a song by American rapper Chingy.  It's the second single off his debut album "Jackpot" (2003).  The song features rappers Ludacris and Snoop Dogg.  The song peaked at number 3 on the "Billboard" Hot 100, Chingy's second consecutive top 5 hit on that chart.  It also reached number 2 on both the Hot R&B/Hip-Hop Songs and Hot Rap Songs charts and reached the top 40 in Australia, New Zealand, Canada and the UK.  Jeremy Rall created a music video for the single, featuring all three artists at a motel, that was inspired by Tupac Shakur's 1995 single "Temptations".  The radio version of the song was featured on the 2004 compilation album "Now That's What I Call Music!  15".
+
+Strong Again: "Strong Again" is a song by British hip hop trio, N-Dubz.  It is the sixth single from their debut album "Uncle B" and was produced by Kano and Fraser T Smith.  The song was featured on the album advert before it was confirmed to be a single.  This song features on the UK compilation album "Now That's What I Call Music!  72".  This is the first N-Dubz song to make a "Now!"  album.  It was later the B-side to "We Dance On", which would eventually be the first single from their third studio album, "Love.Live.Life".  Both songs were included on the "StreetDance" Soundtrack.  On 28 January 2009, the song was added to Radio 1's A-List, becoming their first single to do so.  The single was released as a digital download on 9 February 2009.  The song "Wouldn't You" was originally intended to be the sixth single, however, it was later released as the seventh single instead.
+
+Now That's What I Call Music! 38: Now That's What I Call Music!  38 or Now 38 may refer to several "Now That's What I Call Music! " series albums, including
+
+All I Have to Give: "All I Have to Give" is a song by American pop group the Backstreet Boys, produced and written by Full Force, and released as the third and final single from their second album "Backstreet's Back" and the sixth and final single from their U.S. debut album.  The single debuted at number 2 on the UK Singles Chart and peaked at number 5 on the US "Billboard" Hot 100, this song became 1999 US "Billboard" 's 29th hottest single.  At the 1999 Teen Choice Awards, the song won Choice Music: Video of the Year.  The song was also featured on the 1999 compilation album "Now That's What I Call Music!  3"
+
+One Call Away (Chingy song): "One Call Away" is a song by American rapper Chingy.  It's the third and final single off his debut album "Jackpot" (2003).  It features singer J-Weav singing the chorus.  The song was kept from being number one by Usher's "Yeah! " for five consecutive weeks, peaking at number two on the US "Billboard" Hot 100.  It became a number one hit on the Hot Rap Songs chart for three weeks and peaked at numbers 3 and 6 on the Hot R&B/Hip-Hop Songs and Mainstream Top 40 charts respectively.  It also reached the top 40 in countries like Australia, Ireland, New Zealand and the UK.  A video for the single (directed by Erik White) was released that featured actress Keisha Knight-Pulliam and streetball player Philip "Hot Sauce" Champion.  The radio version of the song was featured on the 2004 compilation album "Now That's What I Call Music!  16".
+
+S&amp;M (song): "S&M" is a song by Barbadian singer Rihanna from her fifth studio album, "Loud" (2010).  The song was released on January 21, 2011, as the fourth single from the album.  The American songwriter Ester Dean wrote "S&M" in collaboration with the producers Stargate and Sandy Vee.  Backed by bass beats, a keyboard and guitars, it is an uptempo hi-NRG-Eurodance track with lyrics that revolve around sexual intercourse, sadomasochism, bondage, and fetishes.
+
+Question: What song by Rhianna is on the compilation album Now That's What I Call Music! 38?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "compilation_album": {
+      "type": "string",
+      "description": "The name of the compilation album."
+    },
+    "artist": {
+      "type": "string",
+      "description": "The artist of the song."
+    },
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song by the artist featured on the album."
+    },
+    "album_release_year": {
+      "type": "integer",
+      "description": "The year the compilation album was released."
+    }
+  },
+  "required": [
+    "compilation_album",
+    "artist",
+    "song_title",
+    "album_release_year"
+  ],
+  "additionalProperties": false
+}

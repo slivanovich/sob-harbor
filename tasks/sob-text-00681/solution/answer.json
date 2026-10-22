@@ -1,0 +1,23 @@
+{
+  "co_occurrence_possible": true,
+  "entity_details": [
+    {
+      "name": "Pachypodium",
+      "known_locations": [
+        "Madagascar",
+        "Africa"
+      ]
+    },
+    {
+      "name": "Eragrostis",
+      "known_locations": [
+        "many countries on all inhabited continents",
+        "many islands"
+      ]
+    }
+  ],
+  "shared_locations_identified": [
+    "Africa"
+  ],
+  "reasoning_for_co_occurrence": "Pachypodium is native to Africa, and Eragrostis is a widespread genus found on all inhabited continents, which includes Africa. Therefore, they can be found together in Africa."
+}

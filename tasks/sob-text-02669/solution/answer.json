@@ -1,0 +1,12 @@
+{
+  "person_a": {
+    "name": "Godfrey Reggio",
+    "birth_year": 1940
+  },
+  "person_b": {
+    "name": "Leslie Pearce",
+    "birth_year": 1887
+  },
+  "earliest_born_person_name": "Leslie Pearce",
+  "comparison_summary": "Leslie Pearce was born in 1887, which is before Godfrey Reggio who was born in 1940."
+}

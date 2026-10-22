@@ -1,0 +1,25 @@
+{
+  "game_with_canadian_origin": "GridIron Master",
+  "games_information": [
+    {
+      "game_name": "GridIron Master",
+      "origin_country": "Canada",
+      "designers": [
+        "Brett Proud",
+        "Craig Proud",
+        "Paul Morin",
+        "Jordan Sampson"
+      ],
+      "publisher": "PHI Sports Games"
+    },
+    {
+      "game_name": "Modern Art",
+      "origin_country": "Germany",
+      "designers": [
+        "Reiner Knizia"
+      ],
+      "publisher": "Hans im Glück"
+    }
+  ],
+  "comparison_summary": "GridIron Master was invented by a group of individuals and first published by a Canadian company, PHI Sports Games. Modern Art was designed by Reiner Knizia and first published in Germany by Hans im Glück. Therefore, GridIron Master is of Canadian origin."
+}

@@ -1,0 +1,13 @@
+{
+  "named_feature": "Marina Point",
+  "named_after_person": {
+    "person_name": "Princess Marina",
+    "person_title": "Princess of Greece and Denmark",
+    "father_name": "Nicholas",
+    "father_title": "Prince of Greece and Denmark"
+  },
+  "naming_event": {
+    "expedition_name": "British Graham Land Expedition",
+    "survey_year": 1935
+  }
+}

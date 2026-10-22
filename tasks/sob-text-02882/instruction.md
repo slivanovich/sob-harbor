@@ -1,0 +1,99 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Future Sound of London: The Future Sound of London (often abbreviated to FSOL) is a British electronic music group composed of Garry Cobain (sometimes stylised as "Gaz" Cobain) and Brian Dougans.  The duo are often credited with pushing the boundaries of electronic music experimentation and of pioneering a new era of dance music.  Although often associated with ambient music, Cobain and Dougans usually resist being typecast into any one particular genre.  Their work covers many areas of electronic music, such as ambient techno, house music, trip hop, ambient dub, acid techno.  In addition to music composition, their interests have covered a number of areas including film and video, 2D and 3D computer graphics, animation in making almost all their own videos for their singles, radio broadcasting and creating their own electronic devices for sound making.  They have released works under numerous aliases.
+
+Brian Eno: Brian Peter George St John le Baptiste de la Salle Eno, RDI ( ; born 15 May 1948 and originally christened Brian Peter George Eno) is an English musician, composer, record producer, singer, writer, and visual artist.  He is best known for his pioneering work in rock, ambient, pop, and electronic music.  A self-described "non-musician", Eno has helped to introduce a variety of unique conceptual approaches and recording techniques into contemporary music, advocating a methodology of "theory over practice" throughout his career.  He has been described as one of popular music's most influential and innovative figures.
+
+Michael Turvey: Michael T. Turvey is the Board of Trustees' Distinguished Professor of Experimental Psychology at the University of Connecticut and a Senior Scientist at Haskins Laboratories in New Haven, Connecticut.  He is best known for his pioneering work in ecological psychology and in applying dynamic systems approach for the study of motor behavior.  He is the founder of the "Center for the Ecological Study of Perception and Action".  His research spans a number of areas including: dynamic touch and haptics, interlimb coordination, visual perception and optic flow, postural stability, visual word recognition and speech perception.  Along with William Mace  and Robert Shaw , he has been one of the leading explicators of the ecological psychology of J. J. Gibson.  His pioneering work with J. A. Scott Kelso and Peter N. Kugler introduced the physical language of complex systems to the understanding of perception and action.  He also helped to introduce the ideas of Russian motor control theorist, Nikolai Bernstein , and his colleagues to a larger audience.  Working with Georgije Lukatela  and other colleagues at Haskins Laboratories, he has exploited the dual nature of the Serbo-Croatian orthography to help understand word recognition.
+
+Biosphere (musician): Biosphere is the main recording name of Geir Jenssen (born 30 May 1962), a Norwegian musician who has released a notable catalogue of ambient electronic music.  He is well known for his works on ambient techno and arctic themed pieces, his use of music loops, and peculiar samples from sci-fi sources.  His 1997 album "Substrata" was voted by the users of the Hyperreal website in 2001 as the best all-time classic ambient album.
+
+Delia Derbyshire: Delia Ann Derbyshire (5 May 1937 – 3 July 2001) was an English musician and composer of electronic music and musique concrète.  She is best known for "creating a howling masterpiece" in her electronic music arrangement of Ron Grainer's written theme music to the British science fiction television series "Doctor Who" and for her pioneering work with the BBC Radiophonic Workshop.
+
+Alpha Wave Movement: Alpha Wave Movement (established 1992 in Miami, Florida) is the electronic music project of Gregory T. Kyryluk.  Alpha Wave Movement's musical style can be considered ambient, new-age, some space rock, the classic 1970s period German style electronic music otherwise known as Berlin school as well as the ambient aesthetics of Brian Eno, and Steve Roach.  Releases such "A Distant Signal" and "Terra" have more ambient space elements than other Alpha Wave Movement releases.  "Beyond Silence" has more space rock elements and has a more rhythmic feel in their overall music compositions.  In 2007 Alpha Wave Movement released "The Mystic & The Machine", a musical exploration of 1970's era romantic progressive rock performed on synthesizers with the addition of UK musician Steve Hillman on electric guitar.  The influences of Genesis, Ozric Tentacles (1980s era), and Camel are quite obvious and intended and shows yet another side of Alpha Wave Movement's composition.  Alpha Wave Movement's music is semi electronic-based, utilizing digital synthesizers and MIDI to create its sonic explorations.
+
+Wheeler J. North: Wheeler James North (January 2, 1922 – December 20, 2002), born in San Francisco, California, was a marine biologist and environmental scientist at the Scripps Institution of Oceanography and the California Institute of Technology.  He is best known for his pioneering work to understand the ecology of California’s coastal kelp forests, and pioneering work in biomass fuels and the sequestration of atmospheric carbon dioxide.
+
+The Orb: The Orb are an English electronic music group known for being the pioneers of ambient house.  Founded in 1988 by Alex Paterson and The KLF member Jimmy Cauty, the Orb began as ambient and dub DJs in London.  Their early performances were inspired by ambient and electronic artists of the 1970s and 1980s, most notably Brian Eno and Kraftwerk.  Because of their trippy sound, the Orb developed a cult following among clubbers "coming down" from drug-induced highs.  The Orb has maintained their drug-related and science fiction themes despite personnel changes, including the departure of Cauty and other Orb members Kris Weston, Andy Falconer, Simon Phillips, Nick Burton and Andy Hughes.  Paterson has been the only permanent member, continuing to work as the Orb with the Swiss-German producer Thomas Fehlmann and, later, with Martin "Youth" Glover, bass player with Killing Joke.
+
+Machine Music: Machine Music is a 1978 album by John White and Gavin Bryars.  The album was the eighth release on Brian Eno's Obscure Records.
+
+Beaver &amp; Krause: Beaver & Krause were a musical duo made up of Paul Beaver and Bernie Krause.  Their 1967 album "The Nonesuch Guide to Electronic Music" was a pioneering work in the electronic music genre.
+
+Question: Who wrote the album that was the eighth release on an English musician best known for his pioneering work in rock, ambient, pop, and electronic music?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_title": {
+      "type": "string",
+      "description": "The title of the album."
+    },
+    "album_release_year": {
+      "type": "integer",
+      "description": "The year the album was released."
+    },
+    "album_release_number": {
+      "type": "integer",
+      "description": "The sequential release number of the album on the record label."
+    },
+    "record_label": {
+      "type": "string",
+      "description": "The name of the record label."
+    },
+    "record_label_owner": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the record label owner."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the record label owner."
+        },
+        "known_for_genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Genres the record label owner is known for."
+        }
+      },
+      "required": [
+        "name",
+        "nationality",
+        "known_for_genres"
+      ],
+      "additionalProperties": false
+    },
+    "album_authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The authors or composers of the album."
+    }
+  },
+  "required": [
+    "album_title",
+    "album_release_year",
+    "album_release_number",
+    "record_label",
+    "record_label_owner",
+    "album_authors"
+  ],
+  "additionalProperties": false
+}

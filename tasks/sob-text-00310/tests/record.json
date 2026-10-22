@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "record_id": "e8649b75bbf09cedfbd5b2ecf53203c7f9b0bda1204b9f3bbec573227b18d6bb",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7a29945542996a35c17112",
+    "source_dataset": "hotpotqa",
+    "source_answer": "4 May 1927",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Edoardo Agnelli Islamic Association: Edoardo Agnelli Islamic Association (Anjoman-e Eslami-ye shahid Edoardo Agnelli) is an Islamic association established in Iran and named after Edoardo Agnelli the Italian convert and the oldest son of Gianni Agnelli.\n\nEdoardo Agnelli (industrialist): Edoardo Agnelli (2 January 1892 – 14 July 1935) was an Italian industrialist and principal family shareholder of the Italian car company Fiat.\n\nTurin-Aeritalia Airport: Turin-Aeritalia Airport (Italian: \"Aeroporto di Torino-Aeritalia\" , ICAO: LIMA ) also known as Edoardo Agnelli Airport, built in 1916, is the historical airport of Turin in the Piedmont region of northern Italy.  It is located off Corso Marche, some 5 km from the city centre.\n\nEdoardo Agnelli (1831-1871): Edoardo Agnelli (Turin, 18 July 1831 – 7 November 1871) was an Italian entrepreneur and politician.\n\nGiovanni Agnelli: The son of Edoardo Agnelli and Aniceta Frisetti, he was born in 1866 in Villar Perosa, a small town near Pinerolo, Piedmont, still the main home and burial place of the Agnelli family.  His father, mayor of Villar Perosa, died at age 40, when Giovanni was just five.  He studied at the Collegio San Giuseppe in Turin; then embarked on a military career until 1893 when he returned to Villar Perosa, where he followed in his father's footsteps and became mayor in 1895 which he held until his death.  Agnelli heard about the invention of the (then) new horseless carriage and immediately saw an opportunity for using his engineering and entrepreneurial skills.  In 1898, he met Count Emanuele Cacherano of Bricherasio, who was looking for investors for his horseless carriage project; Agnelli sensed the opportunity.\n\nAniceta Frisetti: Aniceta Frisetti (Turin, 1846 – Turin, 28 October 1920) was an Italian philanthropist.  She became a member of the Agnelli family as she got married with Edoardo Agnelli.\n\nEdoardo Agnelli: Edoardo Agnelli (9 June 1954 – 15 November 2000) was the eldest child and only son of Marella Agnelli (born Donna Marella Caracciolo di Castagneto) and Gianni Agnelli, the industrialist patriarch of Fiat.  His body was found dead under mysterious circumstances under a bridge on the outskirts of Turin.\n\nUmberto Agnelli: Umberto Agnelli (1 November 1934 – 27 May 2004) was an Italian industrialist and politician.  He was the third son of Virginia Agnelli (born Donna Virginia Bourbon del Monte) and of Edoardo Agnelli, and the youngest brother of Gianni Agnelli.\n\nMarella Agnelli: Marella Agnelli, born Donna Marella Caracciolo di Castagneto (born 4 May 1927) is an Italian noblewoman, art collector, socialite, style icon and widow of former Fiat chairman Gianni Agnelli.  She has often appeared in the fashion magazine \"Vogue.\"  She was named to the International Best Dressed List Hall of Fame in 1963.\n\nVirginia Bourbon del Monte: \"Donna\" Virginia Bourbon del Monte (Rome, 24 May 1899 – Pisa, 30 November 1945) was the wife of Edoardo Agnelli and the mother of Gianni Agnelli.",
+    "question": "When was Edoardo Agnelli's mother born?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_of_interest": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the Edoardo Agnelli whose mother's birth date is being queried."
+            },
+            "birth_date": {
+              "type": "string",
+              "description": "The birth date of this specific Edoardo Agnelli."
+            },
+            "death_date": {
+              "type": "string",
+              "description": "The death date of this specific Edoardo Agnelli."
+            },
+            "relationship_to_gianni_agnelli": {
+              "type": "string",
+              "description": "The relationship of this Edoardo Agnelli to Gianni Agnelli."
+            }
+          },
+          "required": [
+            "name",
+            "birth_date",
+            "death_date",
+            "relationship_to_gianni_agnelli"
+          ],
+          "additionalProperties": false
+        },
+        "mother_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of Edoardo Agnelli's mother."
+            },
+            "birth_date": {
+              "type": "string",
+              "description": "The birth date of Edoardo Agnelli's mother."
+            },
+            "other_roles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Other notable roles or descriptions of the mother."
+            }
+          },
+          "required": [
+            "name",
+            "birth_date",
+            "other_roles"
+          ],
+          "additionalProperties": false
+        },
+        "query_resolved": {
+          "type": "boolean",
+          "description": "Indicates if the query about the mother's birth date was successfully resolved."
+        }
+      },
+      "required": [
+        "person_of_interest",
+        "mother_details",
+        "query_resolved"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_of_interest": {
+        "name": "Edoardo Agnelli",
+        "birth_date": "9 June 1954",
+        "death_date": "15 November 2000",
+        "relationship_to_gianni_agnelli": "eldest child and only son"
+      },
+      "mother_details": {
+        "name": "Marella Agnelli",
+        "birth_date": "4 May 1927",
+        "other_roles": [
+          "Italian noblewoman",
+          "art collector",
+          "socialite",
+          "style icon",
+          "widow of former Fiat chairman Gianni Agnelli"
+        ]
+      },
+      "query_resolved": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

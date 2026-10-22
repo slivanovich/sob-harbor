@@ -1,0 +1,14 @@
+{
+  "manufacturer_name": "STMicroelectronics",
+  "manufacturer_details": {
+    "nationality": "French-Italian",
+    "headquarters_city": "Geneva",
+    "headquarters_country": "Switzerland",
+    "industry_type": "electronics and semiconductor"
+  },
+  "joint_venture_participation": {
+    "joint_venture_name": "ST-Ericsson",
+    "partner_company_name": "Ericsson",
+    "joint_venture_role": "partner"
+  }
+}

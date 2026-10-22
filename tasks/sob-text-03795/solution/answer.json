@@ -1,0 +1,11 @@
+{
+  "student_composer": {
+    "name": "Clifford O. Taylor"
+  },
+  "teacher_composer": {
+    "name": "Walter Piston",
+    "role": "professor of music",
+    "university_affiliation": "Harvard University"
+  },
+  "relationship_type": "studied with"
+}

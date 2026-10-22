@@ -1,0 +1,11 @@
+{
+  "matching_director": {
+    "name": "Ray Enright",
+    "films_directed_count": 73,
+    "direction_period": "1927--53"
+  },
+  "non_matching_director_names": [
+    "Harun Farocki"
+  ],
+  "criteria_summary": "Directed 73 films between 1927 and 1953."
+}

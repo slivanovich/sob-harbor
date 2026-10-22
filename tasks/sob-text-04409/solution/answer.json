@@ -1,0 +1,15 @@
+{
+  "event_name": "raid of the Po Valley",
+  "event_year": 203,
+  "commander": "Mago",
+  "war_name": "Second Punic War",
+  "opposing_factions": [
+    "Rome",
+    "Carthage"
+  ],
+  "target_location_details": {
+    "name": "Carthage",
+    "type": "Phoenician city-state",
+    "period_as_city_state": "7th to 3rd centuries BC"
+  }
+}

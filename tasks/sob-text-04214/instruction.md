@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Frank Black 93–03: Frank Black 93–03 is a compilation by Frank Black.  It highlights the 10 years of his solo career after disbanding the influential alternative rock band, the Pixies in 1993, as well as songs from the many albums he created with backing band "the Catholics".  Included also is material from his next solo album, "Bluefinger", in the form of a hidden track, "Threshold Apprehension".  Each release comes with a second disc of live recordings, which varies depending on the region the album was released in.
+
+Steve Chapin: Stephen Chapin (born 30 Dec 1946) is an American singer/songwriter.  He is best known as the youngest of the four Chapin brothers, which include Harry Chapin and Tom Chapin and is son of drummer Jim Chapin and Elspeth Burke Chapin Hart, editor, artist and matriarch of the Burke, Leacock, Chapin clan.  He is the father of Christina Chapin, Frankie Chapin, and Jonathan Chapin.  He is the uncle of Jen Chapin and The Chapin Sisters.  He has toured nationally and Internationally, with his own band; The Harry Chapin Band; and with his late brother Harry Chapin as his band leader, musical director, arranger, producer, piano player/multi instrumentalist and singer.  He continues to perform concerts all over the world with his band The Harry Chapin Band which includes the original members of the band: Steve Chapin, Big John Wallace, and Howard Fields, and new members since 2005, Clark Wallace (Big John's son) and Jonathan Chapin (Steve's son).  Steve has also produced many albums including "The Chapin Family Christmas album", and has worked as a teacher, arranger, recording artist, commercial producer, performer, singer, and songwriter.  He has appeared on all Harry Chapin albums, and arranged and produced most of them.  Most notably, Harry Chapin's "Greatest Stories Live" album which includes his performance of one of his songs "Let Time Go Lightly".
+
+Jimmy McCulloch: James McCulloch (4 June 1953 – 27 September 1979) was a Scottish musician and songwriter best known for playing lead guitar and bass, as a member of Paul McCartney's band Wings from 1974 to 1977.  McCulloch was a member of the Glasgow psychedelic band One in a Million (formerly known as the Jaygars), Thunderclap Newman, and Stone the Crows.  He also made appearances on many albums, including John Entwistle's "Whistle Rymes" in 1972, as lead guitarist playing alongside Peter Frampton on "Apron Strings" and "I Feel Better"; and on Roy Harper's album, "Bullinamingvase", and Ricci Martin's album, "Bleached", both in 1977.  McCulloch also played guitar on Roger Daltrey's album "One of the Boys" which was released in 1977.  McCulloch was a friend of the Who and a member of the band Thunderclap Newman, which was created and produced by his mentor Pete Townshend.  At age 11, he was also a protégé of the Shadows' Hank Marvin.  His brother is drummer Jack McCulloch.
+
+Boogie (album): Boogie is a compilation album of both previously released and unreleased tracks by American band The Jackson 5.  It was released after the release of the Jacksons studio album "Destiny" in 1979.  "Boogie" is considered the rarest of all Jackson 5 or Jacksons releases, as not many albums were pressed and fewer were sold at the time.
+
+Made in the Dark: Made in the Dark is the third studio album by English indietronica band Hot Chip.  The album, comprising 13 songs, was released on 4 February 2008 on the EMI label.  It peaked at number four on the UK Album Chart, number 25 on the Australian album charts, and entered at number 109 on the U.S. "Billboard" 200.  Several singles have been released from the album, including "Shake a Fist", "Ready for the Floor", which reached number six on the UK Singles Chart, and "One Pure Thought".
+
+M.O.T.O.: M.O.T.O. (Masters of the Obvious) is a garage punk band currently based in New Hampshire.  Formed in New Orleans in 1981 by Paul Caporino, the lineup of the band has seen many changes over the years, with Caporino being the only consistent member.  The band has recorded many albums, singles and CDs, including several albums for the Chicago-based record label Criminal IQ Records.
+
+Dill Records: Dill Records was a small punk rock/ska record label based out of Monte Sereno, California, that put out CDs/records from 1989-1998.  The name is an allusion to initially the label's only band, Skankin' Pickle.  It was started by Mike Park, a.k.a. Bruce Lee of Skankin' Pickle.  The first other band with a release on Dill Records was the Tantra Monsters (Dill 006) in 1994.  After the breakup of Skankin' Pickle, Mike Park continued releasing records, beginning the label Asian Man Records in 1996.  Asian Man and Dill Records coexisted until 1998.  Asian Man re-released many albums originally released by Dill Records, as all releases are now out of print and Dill Records is no longer in operation.
+
+Let's Talk About It: Let's Talk About It is the second album by R&B singer, Carl Thomas, released on March 23, 2004.  Originally scheduled for a late 2003 release, the album was delayed several months due to Bad Boy Records entering into a new distribution deal with Universal Records.  "Let's Talk About It" was not a commercial success due to a couple factors.  The first of which was Thomas' extended time between albums.  Also, the promotion of the album was cut short due to Thomas' brother being gunned down several months after the album's release.  Despite three singles being released- "She Is", "Make It Alright" and "My First Love"- the album was met with a lukewarm reception.  It was one of many albums released on Bad Boy Records that underperformed under the Universal distribution deal.  As a result, Carl Thomas left the label in 2005, while Bad Boy left Universal for a distribution deal with Atlantic Records in the same year.
+
+Hot Chip: Hot Chip are an English indietronica band formed in London, in 2000.  They have released six studio albums: "Coming on Strong" (2004), "The Warning" (2006), "Made in the Dark" (2008), "One Life Stand" (2010), "In Our Heads" (2012), and "Why Make Sense? " (2015).  The group has also been nominated for the Mercury Prize.
+
+The Beach Boys bootleg recordings: The Beach Boys' bootleg recordings are recordings of performances by the Beach Boys that attained some level of public circulation without being available as a legal release.  Many albums by the band were fully assembled or near completion before being shelved, rejected, or revised as an entirely new project.  In recent years, new rarities compilations and reissues of studio albums have been released with studio outtakes included as bonus tracks.
+
+Question: How many albums in total did the band who released Made in the Dark release?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "band_name": {
+      "type": "string",
+      "description": "The name of the band that released the album 'Made in the Dark'."
+    },
+    "album_of_interest": {
+      "type": "string",
+      "description": "The specific album mentioned in the question."
+    },
+    "total_albums_released": {
+      "type": "integer",
+      "description": "The total number of studio albums released by the band."
+    },
+    "album_list": {
+      "type": "array",
+      "description": "A list of all studio albums released by the band.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "band_name",
+    "album_of_interest",
+    "total_albums_released",
+    "album_list"
+  ],
+  "additionalProperties": false
+}

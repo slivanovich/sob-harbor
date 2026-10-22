@@ -1,0 +1,10 @@
+{
+  "dinosaur_genus": "Palaeoscincus",
+  "geological_formation": "Judith River Formation",
+  "formation_location": "Montana",
+  "formation_period": "Upper Cretaceous",
+  "formation_age_range_mya": {
+    "start_mya": 80,
+    "end_mya": 75
+  }
+}

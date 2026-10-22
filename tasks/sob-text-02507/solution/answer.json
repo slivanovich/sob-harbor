@@ -1,0 +1,9 @@
+{
+  "school_name": "Windermere Preparatory School",
+  "location_details": {
+    "county": "Orange County",
+    "state": "Florida",
+    "is_in_proximity_to_town": true
+  },
+  "town_of_interest": "Windermere"
+}

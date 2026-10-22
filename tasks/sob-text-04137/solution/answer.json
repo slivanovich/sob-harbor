@@ -1,0 +1,25 @@
+{
+  "umpire_info": {
+    "name": "Thomas Bartley",
+    "birth_year": 1908,
+    "death_year": 1964,
+    "test_matches_officiated_count": 6,
+    "test_match_opponents_officiated_against": [
+      "Pakistan",
+      "South Africa",
+      "Australia"
+    ]
+  },
+  "pakistan_team_info": {
+    "team_full_name": "Pakistan national cricket team",
+    "popular_names": [
+      "Shaheens",
+      "Men in Green",
+      "Cornered Tigers"
+    ],
+    "icc_membership_status": "Full member"
+  },
+  "answer": {
+    "primary_popular_name": "Shaheens"
+  }
+}

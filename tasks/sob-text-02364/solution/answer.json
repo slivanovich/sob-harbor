@@ -1,0 +1,9 @@
+{
+  "cocktail_name": "Mint julep",
+  "primary_spirit_ingredient": "Bourbon whiskey",
+  "spirit_nationality": "American",
+  "spirit_characteristics": [
+    "barrel-aged",
+    "made primarily from corn"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "question_focus_entity": "Welwyn Garden City",
+  "historical_period_of_inquiry": "Anglo-Saxon England",
+  "entity_existed_during_period": false,
+  "founding_details_of_entity": {
+    "founding_year": 1920,
+    "founding_description": "second garden city in England"
+  },
+  "related_ancient_settlement_information": {
+    "settlement_name": "Welwyn",
+    "tribe_associated": "Tewingas",
+    "possible_deity_worshipped_by_tribe": "the God Tew"
+  },
+  "most_likely_deity_for_related_area_in_period": "the God Tew"
+}

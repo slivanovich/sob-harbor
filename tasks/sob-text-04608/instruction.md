@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Michael Vick: Michael Dwayne Vick (born June 26, 1980) is a former American football quarterback who played 13 seasons in the National Football League, primarily with the Atlanta Falcons and the Philadelphia Eagles.  He played college football at Virginia Tech and was selected by the Falcons as the first overall pick in the 2001 NFL Draft.  During his six years with the Falcons, Vick was regarded as having transformed the quarterback position with his rushing abilities and was named to three Pro Bowls.  He holds the record for the most career rushing yards by a quarterback (6,109) and the most rushing yards by a quarterback in a season (1,039).
+
+1979 Atlanta Falcons season: The 1979 Atlanta Falcons season was the Falcons' 14th season.  The Falcons were trying to improve upon their 9–7 record in 1978 and make it to the playoffs for the second time in team history, their first appearance being the year before.  Rookie fullback William Andrews rushed for 167 yards in a 40–34 overtime win over the Saints in the season opener in New Orleans.  Andrews set a club record with 1,023 yards, while quarterback Steve Bartkowski became the first Falcon to surpass the 2,000-yard mark with 2,505.  However, the Falcons' defense allowed 388 points in a 6–10 start.
+
+Richard Walton (American football): Richard Wade Walton is a former American football quarterback.  He was the starting quarterback of the Texas Longhorns in early 1998.  He was the backup quarterback for James Brown for three years before winning the starting job as a 5th year Senior.  He started for the first two games in 1998 but broke his hand against UCLA and as a result lost his starting job to Major Applewhite.
+
+1986 Atlanta Falcons season: The 1986 Atlanta Falcons season was the franchise's 21st season in the National Football League (NFL).  It began with moderate expectations.  Head coach Dan Henning was going into his fourth year having failed to post a record above .500 in any of his first three seasons.  Local media, including the Atlanta Journal-Constitution, saw it as Henning's last chance to save his head coaching job.  Atlanta entered the season led by, among others, Gerald Riggs, Scott Case, Bill Fralic and Jeff VanNote.  David Archer was the starting quarterback heading into the season.
+
+Scott Woerner: Scott Allison Woerner (born December 18, 1958 in Baytown, Texas) is a former American football safety in the National Football League for the Atlanta Falcons and the New Orleans Saints.  He played college football for the University of Georgia Bulldogs.  In the 1981 Sugar Bowl, Woerner intercepted a pass by the Notre Dame quarterback in the closing minutes of the game which sealed Georgia's national championship for that year.  He still holds several return records at the University of Georgia.  He had the most kickoff return yards (190) in a single game (vs. Kentucky, 1977).  He also holds the most punt return yards (488) in a season (1980).  Woerner was drafted in the third round of the 1981 NFL Draft by the Falcons.  He played for the Atlanta Falcons during that 1981 season.  In 1983,1984,and 1985 he played safety for the Philadelphia Stars of the short-lived United States Football League.  The Philadelphia Stars won 2 of the 3 USFL championships.  The "Sporting News" selected him as a USFL All-League player both of those seasons.
+
+Trevor Knight: Trevor Knight (born October 3, 1993) is an American football quarterback for the Atlanta Falcons of the National Football League (NFL).  He played college football for the Oklahoma Sooners and Texas A&M Aggies.  After leading Oklahoma to an 8–5 record in the 2014 season, he lost the starting job in an open quarterback competition to Texas Tech transfer Baker Mayfield prior to the 2015 season.  On January 4, 2016, it was announced that Knight would transfer to Texas A&M University.
+
+Baker Mayfield: Baker Reagan Mayfield (born April 14, 1995) is a college American football quarterback for the Oklahoma Sooners.  Mayfield began his college football career as a walk-on player for the Texas Tech Red Raiders.  He is notable for being the first walk-on true freshman quarterback to start a season opener at a BCS school.  Mayfield transferred from Texas Tech to Oklahoma following alleged scholarship issues and a lack of communication with coaches.  After sitting out the 2014 season due to NCAA transfer rules, Mayfield won the starting quarterback job in 2015 over Cody Thomas and incumbent starter Trevor Knight.
+
+Atlanta Falcons Cheerleaders: The Atlanta Falcons Cheerleaders are the cheerleading squad of the Atlanta Falcons.  The group performs a variety of moves during the Falcons home games at Mercedes-Benz Stadium.  The squad debuted in 1969 as "The Falconettes".  The squad currently has 40 cheerleaders.  The tryouts for the squad are held annually at the Georgia World Congress Center in April, as well as the Arthur Blank Family Office.  Like many other squads, the squad also makes various appearances at events throughout Atlanta.  Other than the squad, fans could also hire Falcons mascot Freddie Falcon for appearances.  The squad also has a "Junior Cheerleader" Program for the squad's child counterparts.  The squad also releases an annual swimsuit calendar.
+
+Kyle Orton: Kyle Raymond Orton (born November 14, 1982) is a former American football quarterback.  He played college football for Purdue, where he started four straight bowl games.  He was drafted by the Chicago Bears in the fourth round of the 2005 NFL Draft.  After an injury to Bears starter Rex Grossman, Orton was pressed into service as the starting quarterback during his rookie year, starting the first 14 games of the 2005 season, but was replaced by Grossman for the playoffs that year.  Orton did not play at all in 2006, and sparingly in 2007.  Orton regained his starting job from Grossman in 2008, but the team finished a disappointing 9–7 and out of the playoffs.  In the offseason of that year, he was traded to the Denver Broncos.
+
+1980 Atlanta Falcons season: The 1980 Atlanta Falcons season was the Falcons 15th season.  It was the first season division title in franchise history.  After a 3-3 start the Falcons went on a nine-game winning streak as Quarterback Steve Bartkowski has a career season passing for 3,544 yards while connecting on 31 Touchdown passes, as the Falcons won their first ever division Championship.  The Falcons, would earn home field throughout the playoffs.  Playing before 60,022 fans at Fulton County Stadium the Falcons lead the Dallas Cowboys 24-10 in the 4th Quarter.  However, the Cowboys would score 20 points to stun the Falcons 30-27.
+
+Question: What quarterback for the Atlanta Falcons did Baker Mayfield win the starting job at Oklahoma over?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "quarterback_name": {
+      "type": "string",
+      "description": "The name of the quarterback who lost the starting job."
+    },
+    "nfl_team_played_for": {
+      "type": "string",
+      "description": "The NFL team the quarterback played for."
+    },
+    "college_team_where_job_was_lost": {
+      "type": "string",
+      "description": "The college team where the quarterback lost the starting job."
+    },
+    "year_lost_starting_job": {
+      "type": "integer",
+      "description": "The year the quarterback lost the starting job."
+    }
+  },
+  "required": [
+    "quarterback_name",
+    "nfl_team_played_for",
+    "college_team_where_job_was_lost",
+    "year_lost_starting_job"
+  ],
+  "additionalProperties": false
+}

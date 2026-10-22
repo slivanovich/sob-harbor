@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "f8abe56bd34662710b1a4afe439d8dbedc13a363cbec1999afe3e83b8b088790",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5ae37dc05542992f92d822dd",
+    "source_dataset": "hotpotqa",
+    "source_answer": "actor and film director",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Dance Goes On: The Dance Goes On (German: Der Tanz geht weiter) is a 1930 American crime film directed by William Dieterle and starring Dieterle, Lissy Arna and Anton Pointner.  It was made by Warner Brothers as the German-language version of their film \"Those Who Dance\".\n\nMan by the Wayside: Man by the Wayside (German: Der Mensch am Wege) is a 1923 German silent drama film directed by William Dieterle and starring Alexander Granach, Emilia Unda and Dieterle.\n\nBehind the Altar: Behind the Altar or The Secret of Abbe X (German: Das Geheimnis des Abbe X) is a 1927 German silent drama film directed by Julius Brandt and William Dieterle and starring Dieterle, Marcella Albani and Alfred Gerasch.\n\nThe Saint and Her Fool: The Saint and Her Fool (German:Die Heilige und ihr Narr) is a 1928 German silent drama film directed by William Dieterle and starring Dieterle, Lien Deyers and Gina Manès.  It was based on a novel by and premiered at the Capital am Zoo in Berlin.  Art direction was by Andrej Andrejew.  For a long time, the movie was considered lost.  Although never released in the US, a nitrate copy was discovered in Jack Warner's personal vault.  In 2008 it was given to the UCLA in Los Angeles and restored.\n\nColeman Francis: Coleman C. Francis (January 24, 1919 – January 15, 1973) was an American actor, writer, producer, and director.  He was best known for his film trilogy consisting of \"The Beast of Yucca Flats\" (1961), \"The Skydivers\" (1963), \"Red Zone Cuba\" (1966), all three of which were filmed in the general Santa Clarita, California area and used preoccupation with light aircraft and parachuting, coffee or cigarettes serving as a prop or a center of conversation, and a vigilante-style gunning down of suspects without a trial to conclude the film as frequent motifs.\n\nMistress of the World: Mistress of the World (German: \"Die Herrin der Welt\" , French: \"Les mystères d'Angkor\" , Italian: \"Il mistero dei tre continenti\" ) is a 1960 German-French-Italian science fiction-spy film directed by William Dieterle and starring Martha Hyer and Carlos Thompson.  It marked the comeback in his native country of the director William Dieterle after several decades spent in Hollywood.  In West Germany it was released in a longer version split in two parts (\"Die Herrin der Welt - Teil I\" and \"Die Herrin der Welt - Teil II\").\n\nKismet (1944 film): Kismet is a 1944 Metro-Goldwyn-Mayer film in Technicolor starring Ronald Colman, Marlene Dietrich, Joy Page, and Florence Bates.  James Craig played the young Caliph of Baghdad, and Edward Arnold was the treacherous Grand Vizier.  It was directed by William Dieterle, but was not a success at the box office.  Dieterle had directed Marlene two decades prior in the German silent film \"Man by the Wayside\", which was both the first role in which Dietrich was cast competitively and Dieterle's directorial debut.\n\nRustle of Spring (film): Rustle of Spring (German: Frühlingsrauschen) is a 1929 German silent romance film directed by William Dieterle and starring Dieterle, Lien Deyers and Julius Brandt.\n\nQuick, Let's Get Married: Quick, Let's Get Married (also known as The Confession) is a 1964 American comedy film directed by William Dieterle and starring Ginger Rogers, Ray Milland and Barbara Eden.  It was produced by Rogers' husband William Marshall in an attempt to revive her screen career.  The film had a troubled production, with original director Victor Stoloff being replaced by Dieterle.  It sat on the shelf for several years and did not get a full release until 1971.\n\nWilliam Dieterle: William Dieterle (July 15, 1893 – December 9, 1972) was a German actor and film director, who worked in Hollywood for much of his career.  His best known films include \"The Devil and Daniel Webster\", \"The Story of Louis Pasteur\" and \"The Hunchback of Notre Dame\".  His 1937 film \"The Life of Emile Zola\" won the Academy Award for Best Picture.",
+    "question": "Coleman Francis and William Dieterle, have which occupations in common?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Names of the individuals being compared."
+        },
+        "common_occupations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of occupations shared by both individuals."
+        },
+        "number_of_common_occupations": {
+          "type": "integer",
+          "description": "The count of occupations shared by both individuals."
+        }
+      },
+      "required": [
+        "person_names",
+        "common_occupations",
+        "number_of_common_occupations"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_names": [
+        "Coleman Francis",
+        "William Dieterle"
+      ],
+      "common_occupations": [
+        "actor",
+        "director"
+      ],
+      "number_of_common_occupations": 2
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

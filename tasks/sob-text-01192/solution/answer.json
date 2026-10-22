@@ -1,0 +1,14 @@
+{
+  "mountains_compared": [
+    {
+      "mountain_name": "Skil Brum",
+      "country": "Pakistan"
+    },
+    {
+      "mountain_name": "Mount Gongga",
+      "country": "China"
+    }
+  ],
+  "are_in_same_country": false,
+  "reasoning": "Skil Brum is located in Pakistan, while Mount Gongga is located in China. Since they are in different countries, the answer is no."
+}

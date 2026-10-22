@@ -1,0 +1,22 @@
+{
+  "lynching_event": {
+    "victim_name": "Jesse Washington",
+    "year": 1916,
+    "location": {
+      "city": "Waco",
+      "state": "Texas"
+    },
+    "spectator_count": 10000
+  },
+  "prompting_event": {
+    "event_name": "Silent Parade",
+    "year": 1917,
+    "participant_count": 10000,
+    "location_details": {
+      "street": "Fifth Avenue",
+      "start_street_number": 57,
+      "city": "New York City"
+    }
+  },
+  "final_answer_state": "Texas"
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mesoplanet: The term was coined in Asimov's essay "What's in a Name? ", which first appeared in The "Los Angeles Times" in the late 1980s and was reprinted in his 1990 book "Frontiers"; the term was later revisited in his essay, "The Incredible Shrinking Planet" which appeared first in "The Magazine of Fantasy and Science Fiction" and then in the anthology "The Relativity of Wrong" (1988).
+
+The Shrinking Man: The Shrinking Man is a novel by Richard Matheson published in 1956.  It has been adapted into a motion picture twice, called "The Incredible Shrinking Man" in 1957 and "The Incredible Shrinking Woman" in 1981, both by Universal Pictures.  Another adaptation of the story has been proposed, which has been pushed back several times from 2001 to the current day.  The novel was retitled "The Incredible Shrinking Man" in some later editions.  In 2012 it was included (under the original title) in the Library of America two-volume boxed set "American Science Fiction: Nine Classic Novels of the 1950s", edited by Gary K. Wolfe.
+
+Suzanne Ciani: Suzanne Ciani (born June 4, 1946) is an Italian American pianist, composer and sound designer who found early success with innovative electronic music.
+
+The Incredible Shrinking Man: The Incredible Shrinking Man is a 1957 American black-and-white science fiction film from Universal-International, produced by Albert Zugsmith, directed by Jack Arnold, that stars Grant Williams and Randy Stuart.  The film was adapted for the screen by Richard Matheson from his novel "The Shrinking Man".  The opening credits music theme (uncredited) is by Irving Gertz, with a trumpet solo performed by Ray Anthony.
+
+Linda November: Linda Ellen November (born October 16, 1944) is an American singer who has sung tens of thousands of commercial jingles.  She was the voice of the singing cat in the Meow Mix commercials, sang the jingle "Galaxy Glue" in the 1981 film "The Incredible Shrinking Woman", the "Coke and a Smile" jingle in the classic Mean Joe Greene Super Bowl commercial, and has won many Clio Awards for her work on television and radio.  Her voice can also be heard on many pop songs, as she was a regular backup singer for artists such as Frankie Valli, Burt Bacharach, Engelbert Humperdinck, and Neil Diamond.  In the 1970s, she was one of the main singers in the disco group Wing and a Prayer Fife and Drum Corps, which charted with the Top 40 hit "Baby Face" in 1976.  In the 1980s and 1990s she was a regular performer in Atlantic City at The Grand and Harrah's, with her husband, composer and arranger Artie Schroeck.  As of 2011, she works as a piano accompanist in Las Vegas, Nevada.
+
+Shirley Walker: Shirley Anne Walker (née Rogers, April 10, 1945 – November 30, 2006) was an American film and television composer and conductor.  She was one of the few female film score composers working in Hollywood.  Walker was one of the first female composers to earn a solo score credit on a major Hollywood motion picture (preceded by Suzanne Ciani, who wrote the complete score to the film "The Incredible Shrinking Woman" in 1980, released January 1981) and according to the "Los Angeles Times", will be remembered as a pioneer for women in the film industry.
+
+Mark Blankfield: Mark Blankfield (born May 8, 1950) is an American comedic actor from Pasadena, Texas, who is perhaps best known as a regular cast member of the television variety series "Fridays".  Other work includes roles in "Jekyll and Hyde...Together Again", "The Incredible Shrinking Woman", "", "", and "The Jerk, Too", a TV-movie sequel to "The Jerk".
+
+Peter Hannan (producer): Peter Hannan (born August 13, 1954) is an American animator, singer-songwriter, author, illustrator, producer, artist, and entrepreneur.  Hannan is the creator, executive producer, and show runner of the Nickelodeon series "CatDog".  He also wrote and sang the "CatDog" theme song.  He has created and developed properties for numerous studios.  He works as a character designer and writes for various other animated shows.  He created a web series called "Really Freaking Embarrassing," single-panel cartoons called "The Adventures of a Huge Mouth" that ran in independent newspapers throughout the U.S., and writes and illustrates books, including "Petlandia, My Big Mouth: 10 Songs I Wrote That Almost Got Me Killed, The Greatest Snowman in the World," "Super Goofballs, Sillyville or Bust," "Escape from Camp Wannabarf," "School After Dark: Lessons in Lunacy," and "The Battle of Sillyville: Live Silly or Die!"  He has written and illustrated newspaper and magazine pieces with titles like "The Incredible Shrinking Christmas" and "The Good, the Bad, and the Irish."  He co-founded the company "FutureVision", which produced a TV concert series featuring blues legends Muddy Waters, Albert King, Buddy Guy & Junior Wells, Bobby Bland, Otis Rush, Blind John Davis, and others.  He has taught, lectured, and led art, writing, animation, and creativity workshops for pre-school through college students.  He has worked as a graphic designer and art director and done illustrations for magazines, newspapers, and advertising.  He exhibits paintings, illustrations, and cartoons.
+
+The Incredible Shrinking Woman: The Incredible Shrinking Woman is a 1981 American science fiction comedy film directed by Joel Schumacher (in his directing debut), written by Jane Wagner and starring Lily Tomlin, Charles Grodin, Ned Beatty, John Glover and Elizabeth Wilson.  This film is a take-off on the 1957 science fiction classic film "The Incredible Shrinking Man", and credited as based on Richard Matheson's 1956 novel, "The Shrinking Man".  The original music score was composed by Suzanne Ciani.
+
+Betty McGuire: Betty McGuire is an American television and film actor.  She has appeared in such TV shows as "ER", "", "MacGyver", Matlock, "Murder One", "Murphy Brown", "", "Growing Pains", "Falcon Crest" and "Hill Street Blues".  Her film credits include "Switchblade Sisters" (1975), "Chesty Anderson, USN" (1976), "Heroes" (1977), "Coma" (1978), "Up in Smoke" (1978), "The Incredible Shrinking Woman" (1981) and "Wishmaster" (1997).
+
+Question: What type of music did the pianist who wrote the original music score to The Incredible Shrinking Woman find early success with?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "pianist_name": {
+      "type": "string",
+      "description": "The name of the pianist who composed the film's score."
+    },
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film for which the music score was composed."
+    },
+    "role_in_film": {
+      "type": "string",
+      "description": "The role of the person in the film production."
+    },
+    "early_success_music_type": {
+      "type": "string",
+      "description": "The type of music the pianist found early success with."
+    }
+  },
+  "required": [
+    "pianist_name",
+    "film_title",
+    "role_in_film",
+    "early_success_music_type"
+  ],
+  "additionalProperties": false
+}

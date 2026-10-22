@@ -1,0 +1,18 @@
+{
+  "illustrator": {
+    "name": "George Wylie Hutchinson",
+    "nationality": "Canadian",
+    "profession": "painter and illustrator"
+  },
+  "illustrated_author": {
+    "name": "Joseph Rudyard Kipling",
+    "nationality": "English",
+    "professions": [
+      "journalist",
+      "short-story writer",
+      "poet",
+      "novelist"
+    ]
+  },
+  "relationship_type": "illustrated the works of"
+}

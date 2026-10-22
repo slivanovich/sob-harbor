@@ -1,0 +1,15 @@
+{
+  "squadron_details": {
+    "name": "VAQ-131",
+    "nickname": "Lancers",
+    "callsign": "Skybolt"
+  },
+  "base_details": {
+    "name": "Naval Air Station Whidbey Island",
+    "location": {
+      "county": "Island County",
+      "state": "Washington"
+    }
+  },
+  "final_answer_state": "Washington"
+}

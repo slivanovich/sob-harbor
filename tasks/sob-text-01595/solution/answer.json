@@ -1,0 +1,31 @@
+{
+  "album_info": {
+    "title": "Romeoland",
+    "artist": "Lil' Romeo",
+    "album_type": "studio album",
+    "release_order": 3
+  },
+  "artist_biography": {
+    "stage_names": [
+      "Lil' Romeo",
+      "Romeo",
+      "Maserati Rome",
+      "Rome",
+      "Romeo Miller"
+    ],
+    "occupations": [
+      "rapper",
+      "actor",
+      "basketball player",
+      "entrepreneur",
+      "model"
+    ]
+  },
+  "father_info": {
+    "name": "Master P",
+    "roles": [
+      "rap mogul",
+      "record producer"
+    ]
+  }
+}

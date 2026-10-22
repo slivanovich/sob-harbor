@@ -1,0 +1,16 @@
+{
+  "comparison_summary": "Polystichum contains more species than Stenotus.",
+  "genera_details": [
+    {
+      "genus_name": "Polystichum",
+      "species_count": 260
+    },
+    {
+      "genus_name": "Stenotus",
+      "species_count": 4
+    }
+  ],
+  "genus_with_most_species": "Polystichum",
+  "species_count_of_most_species_genus": 260,
+  "species_count_difference": 256
+}

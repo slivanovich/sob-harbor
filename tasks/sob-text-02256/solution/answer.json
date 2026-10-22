@@ -1,0 +1,21 @@
+{
+  "sampled_song": {
+    "title": "Te Amo",
+    "artist": "Rihanna",
+    "release_date": "2010-06-08",
+    "album": "Rated R",
+    "producers": [
+      "Stargate"
+    ]
+  },
+  "sampling_song_details": {
+    "title": "Letting Go (Dutty Love)",
+    "artist": "Sean Kingston",
+    "featured_artist": "Nicki Minaj",
+    "producer": "Stargate",
+    "original_album": "Back 2 Life",
+    "album_status": "taken off for unknown reasons",
+    "us_sales_copies": 1100000
+  },
+  "final_answer_song_title": "Te Amo"
+}

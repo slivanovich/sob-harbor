@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "record_id": "11ab162d0f49088328e84723f7f07b527753b744ff898f16a7648233c5de4119",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ab4296e55429942dd415ea0",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Billardiera: Billardiera is a genus of small vines and shrubs which is endemic to Australia.  The genus was first formally described in 1793 by botanist James Edward Smith who named it in honour of Jacques Labillardière, a French botanist.\n\nCalothamnus: Calothamnus is a genus of shrubs in the family Myrtaceae and is endemic to the south-west of Western Australia.  The common names one-sided bottlebrush or claw flower are given to some species due to their having the flowers clustered on one side of the stem or because of the claw-like appearance of their flowers.  \"Calothamnus\" species are generally medium to tall woody shrubs with crowded leaves.  In most species the leaves are crowded and linear in shape, and the flowers are usually arranged in dense clusters.  The petals are small and fall off the flower soon after it opens but the stamens are long, numerous and usually bright red.",
+    "question": "Are Billardiera and Calothamnus both types of genuses?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_topic": {
+          "type": "string",
+          "description": "The general topic of the question."
+        },
+        "entity_1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the first entity mentioned."
+            },
+            "is_genus": {
+              "type": "boolean",
+              "description": "Indicates if the entity is described as a genus."
+            },
+            "type_description": {
+              "type": "string",
+              "description": "A brief description of what the entity is (e.g., 'small vines and shrubs')."
+            }
+          },
+          "required": [
+            "name",
+            "is_genus",
+            "type_description"
+          ],
+          "additionalProperties": false
+        },
+        "entity_2": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the second entity mentioned."
+            },
+            "is_genus": {
+              "type": "boolean",
+              "description": "Indicates if the entity is described as a genus."
+            },
+            "type_description": {
+              "type": "string",
+              "description": "A brief description of what the entity is (e.g., 'shrubs')."
+            }
+          },
+          "required": [
+            "name",
+            "is_genus",
+            "type_description"
+          ],
+          "additionalProperties": false
+        },
+        "both_are_genuses": {
+          "type": "boolean",
+          "description": "The final answer to whether both entities are genuses."
+        }
+      },
+      "required": [
+        "question_topic",
+        "entity_1",
+        "entity_2",
+        "both_are_genuses"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_topic": "botanical classification",
+      "entity_1": {
+        "name": "Billardiera",
+        "is_genus": true,
+        "type_description": "small vines and shrubs"
+      },
+      "entity_2": {
+        "name": "Calothamnus",
+        "is_genus": true,
+        "type_description": "shrubs"
+      },
+      "both_are_genuses": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

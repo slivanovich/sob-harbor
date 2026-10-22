@@ -1,0 +1,25 @@
+{
+  "admirer": {
+    "name": "Christoph Hegendorff",
+    "origin": "Leipzig",
+    "professions": [
+      "Protestant theological scholar",
+      "expert of law",
+      "educator"
+    ]
+  },
+  "admired_humanist": {
+    "name": "Erasmus",
+    "nationality": "Dutch",
+    "key_roles": [
+      "Renaissance humanist"
+    ]
+  },
+  "admiration_details": {
+    "type": "great, public admirer",
+    "quotes": [
+      "optimarum literarum princeps",
+      "theologorum nostri temporis columen"
+    ]
+  }
+}

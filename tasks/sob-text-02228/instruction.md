@@ -1,0 +1,95 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+List of awards and nominations received by Lost: Lost is an American drama series that aired on ABC from September 22, 2004 until May 23, 2010.  It has been nominated for a variety of different awards, including 54 Primetime Emmy Awards (eleven wins), 48 Saturn Awards (thirteen wins), 33 Teen Choice Awards, 17 Television Critics Association Awards (four wins), 12 Golden Reel Awards (five wins), eight Satellite Awards (one win), seven Golden Globe Awards (one win), six Producers Guild of America Awards (one win), six Writers Guild of America Awards (one win), five Directors Guild of America Awards, two NAACP Image Awards (one win), two Screen Actors Guild Awards (one win), and one BAFTA Award.  Amongst the wins for the series are a Primetime Emmy Award for Outstanding Drama Series, a Golden Globe Award for Best Television Series – Drama, a Screen Actors Guild Award for Outstanding Performance by an Ensemble in a Drama Series, and a Peabody Award.
+
+Sam Waterston: Samuel Atkinson Waterston (born November 15, 1940) is an American actor, producer and director.  Among other roles, he is noted for his portrayal of Sydney Schanberg in "The Killing Fields" (1984), for which he received an Academy Award nomination, and his starring role as Jack McCoy on the long-running NBC television series "Law & Order" (1994–2010), which brought him Golden Globe and Screen Actors Guild Awards.  He has been nominated for multiple Golden Globe, Screen Actors Guild, BAFTA and Emmy awards, having starred in over eighty film and television productions during his fifty-year career.  He has also starred in numerous stage productions.  AllMovie historian Hal Erickson characterized Waterston as having "cultivated a loyal following with his quietly charismatic, unfailingly solid performances."
+
+Ellen Page: Ellen Grace Philpotts-Page (born February 21, 1987), known professionally as Ellen Page, is a Canadian actress.  Her career began with roles in Canadian television shows including "Pit Pony", "Trailer Park Boys", and "ReGenesis".  Page starred in the 2005 drama "Hard Candy", for which she won the Austin Film Critics Association's Award for Best Actress.  Her breakthrough role was the title character in Jason Reitman's comedy film "Juno" (2007), for which she received nominations for Academy Award, BAFTA, Golden Globe and Screen Actors Guild Award for Best Actress, and won awards including the Independent Spirit Award, MTV Movie Award and Teen Choice Award for Best Actress Comedy.
+
+Christoph Waltz: Christoph Waltz (] ; born 4 October 1956 in Vienna) is an Austrian-German actor.  Waltz is widely known for his works with American filmmaker Quentin Tarantino, he received acclaim for portraying SS-Standartenführer Hans Landa in "Inglourious Basterds" (2009) and bounty hunter Dr. King Schultz in "Django Unchained" (2012).  For both performances, he earned an Academy Award, BAFTA Award and Golden Globe Award for Best Supporting Actor.  Waltz also received the Best Actor Award at the Cannes Film Festival and a Screen Actors Guild Award for his portrayal of Landa.
+
+Benicio del Toro: Benicio Monserrate Rafael del Toro Sánchez (born February 19, 1967) is a Puerto Rican actor.  He won an Academy Award, BAFTA Award, Golden Globe Award and Screen Actors Guild Award for his portrayal of the jaded but morally upright police officer Javier Rodriguez in the film "Traffic" (2000).  Del Toro's performance as ex-con turned religious fanatic in despair, Jack Jordan, in Alejandro González Iñárritu's "21 Grams" (2003) earned him a second Academy Award nomination for Best Supporting Actor, as well as a second Screen Actors Guild Awards nomination and a BAFTA Awards nomination for Best Actor in a Leading Role.
+
+Geoffrey Rush: Geoffrey Roy Rush {'1': ", '2': ", '3': ", '4': "} (born 6 July 1951) is an Australian actor and film producer.  Rush is the youngest amongst the few people who have won the "Triple Crown of Acting": the Academy Award, the Primetime Emmy Award, and the Tony Award.  He has won one Academy Award for acting (from four nominations), three British Academy Film Awards (from five nominations), two Golden Globe Awards and four Screen Actors Guild Awards. Rush is the founding President of the Australian Academy of Cinema and Television Arts and was named the 2012 Australian of the Year.  He is also the first actor to win the Academy Award, BAFTA Award, Critics' Choice Movie Award, Golden Globe Award, and Screen Actors Guild Award for a single performance in film for his performance in "Shine" (1996).
+
+The Way of the Gun: The Way of the Gun is a 2000 American crime-thriller film written and directed by Christopher McQuarrie, his directorial debut, and stars Ryan Phillippe and Benicio del Toro, with Juliette Lewis, Taye Diggs, Nicky Katt, Scott Wilson, and James Caan in supporting roles.
+
+Cate Blanchett: Catherine Elise Blanchett, {'1': ", '2': ", '3': ", '4': "} ( ; born 14 May 1969) is an Australian actress and theatre director.  She has received international acclaim and many accolades, including two Academy Awards, three Golden Globe Awards, three BAFTA Awards, six AACTA Awards, and three Screen Actors Guild Awards. Blanchett came to international attention for her role as Elizabeth I of England in Shekhar Kapur's 1998 film "Elizabeth", for which she won the BAFTA Award for Best Actress, the Golden Globe Award, and earned her first Academy Award for Best Actress nomination.  Her portrayal of Katharine Hepburn in Martin Scorsese's 2004 film "The Aviator" brought her critical acclaim and many accolades, including the Academy Award for Best Actress in a Supporting Role, making her the only actor to win an Oscar for portraying another Oscar-winning actor.  In 2013, she starred as Jasmine Francis in Woody Allen's "Blue Jasmine", for which she won numerous accolades including the Academy Award for Best Actress.
+
+Emma Stone: Emily Jean Stone (born November 6, 1988) is an American actress.  The highest-paid actress in the world, she has received such accolades as an Academy Award, a BAFTA Award, a Golden Globe Award, and three Screen Actors Guild Awards. Stone appeared in "Forbes" Celebrity 100 in 2013 and the "Time" 100 in 2017, and is often described by the media as one of the most talented actresses of her generation.
+
+Kevin Bacon: Kevin Norwood Bacon (born July 8, 1958) is an American actor and musician.  His notable films include musical-drama film "Footloose" (1984), the controversial historical conspiracy legal thriller "JFK" (1991), the legal drama "A Few Good Men" (1992), the historical docudrama "Apollo 13" (1995), and the mystery drama "Mystic River" (2003).  Bacon is also known for taking on darker roles such as that of a sadistic guard in "Sleepers" (1996) and troubled former child abuser in a critically acclaimed performance in "The Woodsman" (2004).  He is equally prolific on television, having starred in the Fox drama series "The Following" (2013–2015).  For the HBO original film "Taking Chance" (2009), Bacon won a Golden Globe Award and a Screen Actors Guild Award, also receiving a Primetime Emmy Award nomination. " The Guardian" named him one of the best actors never to have received an Academy Award nomination.  In 2003, Bacon received a star on the Hollywood Walk of Fame for his contributions to the motion pictures industry.
+
+Question: The Way of the Gun starred the Puerto Rican actor who won an Academy Award, BAFTA Award, Golden Globe Award and Screen Actors Guild Award for which 2000 film?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the actor."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the actor."
+        }
+      },
+      "required": [
+        "name",
+        "nationality"
+      ],
+      "additionalProperties": false
+    },
+    "film_in_question": {
+      "type": "string",
+      "description": "The title of the film mentioned in the question that the actor starred in."
+    },
+    "award_winning_film_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the film for which the actor won the specified awards."
+        },
+        "release_year": {
+          "type": "integer",
+          "description": "The release year of the award-winning film."
+        },
+        "awards_received": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of major awards received for the performance in this film."
+        }
+      },
+      "required": [
+        "title",
+        "release_year",
+        "awards_received"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actor_details",
+    "film_in_question",
+    "award_winning_film_details"
+  ],
+  "additionalProperties": false
+}

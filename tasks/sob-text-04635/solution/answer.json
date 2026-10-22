@@ -1,0 +1,14 @@
+{
+  "sport_name": "tennis",
+  "players": [
+    {
+      "player_name": "Mary Joe Fernández",
+      "is_professional": true
+    },
+    {
+      "player_name": "Daniel Nestor",
+      "is_professional": true
+    }
+  ],
+  "context_confirms_many_titles": true
+}

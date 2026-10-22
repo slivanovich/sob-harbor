@@ -1,0 +1,20 @@
+{
+  "question_asked": "Are the two bands Magic Dirt and The Nearly Deads both American rock bands?",
+  "are_both_american_rock_bands": false,
+  "bands_information": [
+    {
+      "band_name": "Magic Dirt",
+      "is_american": false,
+      "nationality": "Australian",
+      "genre": "rock band",
+      "formed_year": 1991
+    },
+    {
+      "band_name": "The Nearly Deads",
+      "is_american": true,
+      "nationality": "American",
+      "genre": "alternative rock band",
+      "formed_year": 2010
+    }
+  ]
+}

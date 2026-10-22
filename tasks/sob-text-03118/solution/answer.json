@@ -1,0 +1,15 @@
+{
+  "song_title": "T-Shirt",
+  "artist_details": {
+    "name": "Migos"
+  },
+  "album_details": {
+    "title": "Culture",
+    "studio_album_number": 2,
+    "release_year": 2017
+  },
+  "chart_performance": {
+    "ranking_description": "second highest-charting song of their career",
+    "peak_chart_position_us_billboard_hot_100": "top 20"
+  }
+}

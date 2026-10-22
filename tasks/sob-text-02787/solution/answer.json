@@ -1,0 +1,15 @@
+{
+  "novel_title": "Undercover Cat",
+  "authors": [
+    "Gordon Gordon",
+    "Mildred Gordon"
+  ],
+  "film_adaptation": {
+    "film_title": "That Darn Cat!",
+    "release_year": 1965,
+    "character_portrayed": {
+      "character_name": "Agent Zeke Kelso",
+      "actor_name": "Dean Jones"
+    }
+  }
+}

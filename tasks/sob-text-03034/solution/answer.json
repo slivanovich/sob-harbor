@@ -1,0 +1,12 @@
+{
+  "model_name": "Teyana Taylor",
+  "song_details": {
+    "title": "Dark Fantasy",
+    "artist": "Kanye West",
+    "contribution_to_hook": "contribute to the song's hook and provide background vocals"
+  },
+  "model_career_attributes": {
+    "is_runway_model": true,
+    "has_appeared_on_fashion_week_runways": true
+  }
+}

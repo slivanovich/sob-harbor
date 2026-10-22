@@ -1,0 +1,12 @@
+{
+  "town_name": "Sanbornton",
+  "state": "New Hampshire",
+  "villages_included": [
+    "North Sanbornton",
+    "Gaza"
+  ],
+  "meeting_house_details": {
+    "name": "Bay Meeting House and Vestry",
+    "description": "historic church complex"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "opera_details": [
+    {
+      "title": "Andrea Chénier",
+      "first_performance_date": "28 March 1896",
+      "first_performance_year": 1896,
+      "first_performance_location": "La Scala, Milan"
+    },
+    {
+      "title": "Prince Igor",
+      "first_performance_date": "1890",
+      "first_performance_year": 1890,
+      "first_performance_location": "St. Petersburg, Russia"
+    }
+  ],
+  "earlier_performed_opera_title": "Prince Igor",
+  "earlier_performance_year": 1890,
+  "later_performed_opera_title": "Andrea Chénier",
+  "later_performance_year": 1896,
+  "comparison_summary": "Prince Igor was performed earlier than Andrea Chénier."
+}

@@ -1,0 +1,14 @@
+{
+  "concept_name": "Voronoi diagram",
+  "defined_by": {
+    "full_name": "Georgy Feodosevich Voronoy",
+    "nationality": "Russian and Ukrainian",
+    "birth_date": "28 April 1868",
+    "death_date": "20 November 1908"
+  },
+  "other_person_considered": {
+    "full_name": "Yuri Vladimirovich Linnik",
+    "field_of_work": "number theory, probability theory and mathematical statistics",
+    "defined_concept": false
+  }
+}

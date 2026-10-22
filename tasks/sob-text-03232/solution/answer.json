@@ -1,0 +1,11 @@
+{
+  "common_animal_type": "dog",
+  "animal_breeds": [
+    "Akita",
+    "Galgo Español"
+  ],
+  "breed_origins": [
+    "Japan",
+    "Spain"
+  ]
+}

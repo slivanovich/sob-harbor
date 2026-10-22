@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "86042b557ef1f7f0c5c7dff8273cc1cd183c99c4c982872c95c8ca9a86d16dde",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ae001be55429942ec259bd6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "United States",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "New York (state): New York is a state in the northeastern United States.  New York was one of the original thirteen colonies that formed the United States.  With an estimated 19.8 million residents in 2015, it is the fourth most populous state in the United States.  To differentiate from its city with the same name, it is sometimes called New York State.\n\nElectro Morocco: Electro Morocco is an Israeli American electronic music band from Brooklyn, New York.  Formed in 2007 by members of Nanuchka, they have released two EPs, \"Electro Morocco\" (2008) and \"Low Ride\" (2010) and were featured on the Shemspeed compilation album \"Sephardic Music Festival Vol.  1\" (2010).  They have remixed and produced songs for Y-Love, DeScribe, and Eprhyme.  They are noted for their unusual blend of electronic, rock, and Middle Eastern music.\n\nThe Death Set: The Death Set (also typeset as TheDeathSet or The DeathSet) is an experimental music band with roots in punk rock, sometimes referred to as art punk.  The band formed in 2005 in Sydney, Australia.  Six months after its inception, the band moved to the East Coast of the United States, living in Baltimore, Philadelphia and Brooklyn respectively, where the band found an audience for its style of experimental, cross genre, punk rock.  Moving after less than two years in each city the band has been nomadic, yet thrived in each base.  All members now currently live in Brooklyn, New York.  The band fuses punk rock sound and energy, electronic music production and hip hop sampling into their recordings.  Their live shows are high energy events, inciting crowd chaos and sometimes played at crowd level with the audience surrounding the band.\n\nShlomi Lavie: Shlomi Lavie is an Israeli-born American-based drummer, best known as the drummer for Marcy Playground.  He had also been playing with various other bands, including Nanuchka and Electro Morocco in New York City, and formerly with The Magical Mystery Tour, a Beatles tribute group, and Habiluim in Tel Aviv.\n\nEliot Lipp: Eliot Lipp is an American electronic music artist from Brooklyn, New York.  He made a name for himself in the genre of electro when his work was picked up by Scott Herren of Prefuse 73 (Warp Records).  Through Herren, Lipp was able to release his debut studio album \"S/T\" through the Eastern Developments Music label in November 2004.\n\nJonas Reinhardt: Jonas Reinhardt is an American electronic music group from Brooklyn, New York with releases on Kranky, Not Not Fun, and others.  The group's sound is influenced by electronic music of the 1970s,'80s, '90s and even 2000s, particularly in the use of analog synthesizers and keyboards.  A debut full-length was released in 2008, with a follow-up issued in 2010 called \"Powers of Audition\".  The next full-length, \"Music for the Tactile Dome\", came out in May 2011.  In 2012, Jonas Reinhardt collaborated with visual artist Abyss of Fathomless light for a cassette-only full length on VCO cassettes.  In April 2013, the fourth full-length album, \"Mask of the Maker\", was released on Not Not Fun.\n\nPretty Lights: Derek Vincent Smith (born November 25, 1981), known by his stage name Pretty Lights, is an American electronic music producer.  Pretty Lights was originally a music project consisting of him and Michal Menert, who left after the release of their first album.  Rick Rubin once described Pretty Lights as \"the face and voice of the new American electronic music scene\".\n\nTongues (song): \"Tongues\" is a song by American indie rock band Joywave and American electronic music band KOPPS.  The song was released through Cultco Music and Hollywood Records on February 9, 2014, was featured on the band's second extended play \"How Do You Feel?\" , and appeared on the band's debut studio album \"How Do You Feel Now? \".  The official music video for the song was uploaded on May 27, 2014 to the band's Vevo channel on YouTube.  The song has been remixed by several artists, including Giorgio Moroder and Big Data.  The song was featured on the soundtrack for the video game \"FIFA 15\" and appears in a Nexus 6P advertisement.\n\nEra Extraña: Era Extraña is the second studio album by American electronic music band Neon Indian, released on September 7, 2011 by Static Tongues and Mom + Pop Music.  It was recorded between the winter of 2010 and 2011 during frontman Alan Palomo's visit to Finland.  Containing influences and elements of psychedelic pop, shoegaze and new wave, the album has the same summery sound as the band's debut studio album, \"Psychic Chasms\", but with a darker and more serious tone.\n\nSkylar Spence: Ryan DeRobertis (born February 2, 1993, known by his stage name Skylar Spence and formerly known as Saint Pepsi) is an American electronic musician and singer who grew up in Farmingville, New York and attended Boston College for two years studying music.  His electronic music project Saint Pepsi began in December 2012.  As Saint Pepsi, he released his eighth studio album \"Hit Vibes\" in May 2013.  He is a current resident of Brooklyn, New York.",
+    "question": "Electro Morocco is an Israeli American electronic music band from Brooklyn, New York, a state in the northeastern region, of which country?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "band_name": {
+          "type": "string",
+          "description": "The name of the electronic music band."
+        },
+        "band_origin_city": {
+          "type": "string",
+          "description": "The city where the band is from."
+        },
+        "band_origin_state": {
+          "type": "string",
+          "description": "The state where the band's origin city is located."
+        },
+        "state_region": {
+          "type": "string",
+          "description": "The region of the state."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country to which the state belongs."
+        }
+      },
+      "required": [
+        "band_name",
+        "band_origin_city",
+        "band_origin_state",
+        "state_region",
+        "country"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "band_name": "Electro Morocco",
+      "band_origin_city": "Brooklyn",
+      "band_origin_state": "New York",
+      "state_region": "northeastern",
+      "country": "United States"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

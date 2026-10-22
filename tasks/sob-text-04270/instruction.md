@@ -1,0 +1,100 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Marcus A. Smith: Marcus Aurelius "Mark" Smith (January 24, 1851 – April 7, 1924) was an American attorney and politician who served eight terms as Arizona Territorial Delegate to Congress and as one of the first two Senators from Arizona.  As a Delegate he was a leader in the effort to gain statehood for Arizona.  His non-voting status however minimized his influence with only 35 of the 277 bills he introduced into the House of Representatives being signed into law.  Lack of a voice in the United States Senate further weakened his efforts as he managed to get Arizona statehood bills passed by the House only to see the legislation blocked in the Senate.  Beyond his efforts for statehood, Smith worked to have government buildings constructed and to provide relief to his constituents affected by either man-made or natural misfortunes.  His efforts to provide relief to the citizens of Arizona did not however extend to the indigenous population for whom Smith expressed great animosity.
+
+Linton Wells II: Linton Wells II (born 1946) is an American public servant who served a total of 51 years in government service.  He served 26 years in the United States Navy as an officer, and then was appointed by the White House as the Principal Deputy Assistant Secretary of Defense, serving through two administrations of both parties, both the Democrat Bill Clinton and the Republican George W. Bush.  He wrote many books, articles, and white papers on matters of national security, including important texts related to the use of American military capabilities in global humanitarian operations.  His expertise focused on the strategic impacts of technological change and on building resilience to natural and man-made disasters as issues of US national security.  He shaped, over five decades of public service, current US Department of Defense directives that link policy and technology with public-private cooperation.  His writings significantly altered U.S. and international approaches to civil-military engagement, US policy in global humanitarian assistance, and global public-private partnerships in disaster relief.  He has also made fundamental contributions to technical areas that have defined network-enabled military capabilities and cyberspace operations.  After retiring from public service, he continued to contribute to the international STAR-TIDES [4] network that he had founded in 2007.  the international STAR-TIDES network, a consortium of some 5,000 global nodes comprising agencies, organizations, institutions and individuals in 40+ countries that promote the free exchange of research results on global issues of human security.  He was listed by "Fortune" magazine in 2016 as one of the top 16 "Players of Tech".
+
+Overseas Territories Police Medal: The Overseas Territories Police Medal, known as the Colonial Police Medal (CPM) until April 2012, is a medal awarded for gallantry or distinguished service to police officers in British Overseas Territories and formerly in Crown Colonies and British Dependent Territories.  Officers from these areas can also be awarded the Queen's Police Medal, which is considered to be a higher award.  The CPM was first awarded in 1938.
+
+Cabinet Manual: The Cabinet Manual is a government document in the United Kingdom which sets out the main laws, rules and conventions affecting the conduct and operation of the Government of the United Kingdom.  It was written by Her Majesty's Civil Service, led by Cabinet Secretary Sir Gus O'Donnell, and was published by the Cabinet Office on 14 December 2010.  The Manual gives an overview of the UK's system of government, reflecting the importance of Parliament, Cabinet government and the democratic nature of the UK’s constitutional arrangements by explaining the powers of the Executive, Sovereign, Parliament, international institutions (most notably the European Union), the Crown Dependencies, British Overseas Territories and the devolved administrations in Northern Ireland, Scotland and Wales.  The Manual was written as a guide for members of Cabinet, other ministers and civil servants in the execution of government business, but also serves to consolidate many of the previously unwritten constructional conventions through which the British government operates.
+
+Operation RUMAN: Operation Ruman is the British government's combined military and humanitarian operations in September 2017 to provide relief to the British Overseas Territories in the Caribbean affected by Hurricane Irma.
+
+Hurricane Irma: Hurricane Irma was an extremely powerful and catastrophic Cape Verde-type hurricane, the strongest observed in the Atlantic since Wilma in 2005 in terms of maximum sustained winds.  It was the first Category 5 hurricane to strike the Leeward Islands on record, followed by Hurricane Maria only two weeks later.  It was also the most intense Atlantic hurricane to strike the United States since Katrina in 2005, and the first major hurricane to make landfall in Florida since Wilma in 2005.  The ninth named storm, fourth hurricane, and second major hurricane of the 2017 Atlantic hurricane season, Irma caused widespread and catastrophic damage throughout its long lifetime, particularly in parts of the northeastern Caribbean and the Florida Keys.
+
+Community of Latin American and Caribbean States: The Community of Latin American and Caribbean States (Spanish: "Comunidad de Estados Latinoamericanos y Caribeños, CELAC" ; Portuguese: "Comunidade de Estados Latino-Americanos e Caribenhos" ; French: "Communauté des États Latino-Américains et Caribéens" ; Dutch: "Gemeenschap van Latijns-Amerikaanse en Caraïbische Staten" ) is a regional bloc of Latin American and Caribbean states thought out on February 23, 2010, at the Rio Group–Caribbean Community "Unity Summit", and created on December 3, 2011, in Caracas, Venezuela, with the signature of The Declaration of Caracas.  It consists of 33 sovereign countries in the Americas representing roughly 600 million people.  Due to the focus of the organization on Latin American and Caribbean countries, other countries and territories in the Americas, Canada and the United States, as well as the overseas territories in the Americas of France (Overseas departments and territories of France), the Netherlands (Dutch Caribbean), Denmark (Greenland) and the United Kingdom (British Overseas Territories) are not included.
+
+British Overseas Territories Act 2002: The British Overseas Territories Act 2002 (c.8) is an Act of Parliament in the UK, which superseded parts of the British Nationality Act 1981.  It makes provision for the renaming of the "British Dependent Territories" as British Overseas Territories, and the renaming of associated citizenship.
+
+Falklands War: The Falklands War (Spanish: "Guerra de las Malvinas" ), also known as the Falklands Conflict, Falklands Crisis, South Atlantic Conflict, and the "Guerra del Atlántico Sur" (Spanish for "South Atlantic War"), was a ten-week war between Argentina and the United Kingdom over two British overseas territories in the South Atlantic: the Falkland Islands, and South Georgia and the South Sandwich Islands.  It began on Friday, 2 April 1982, when Argentina invaded and occupied the Falkland Islands (and, the following day, South Georgia and the South Sandwich Islands) in an attempt to establish the sovereignty it had claimed over them.  On 5 April, the British government dispatched a naval task force to engage the Argentine Navy and Air Force before making an amphibious assault on the islands.  The conflict lasted 74 days and ended with the Argentine surrender on 14 June 1982, returning the islands to British control.  In total, 649 Argentine military personnel, 255 British military personnel, and three Falkland Islanders died during the hostilities.
+
+Politics of Gibraltar: The politics of Gibraltar takes place within a framework of a parliamentary representative democratic British Overseas Territory, whereby the Monarch of the United Kingdom is the constitutional head of state represented by the Governor of Gibraltar.  The Chief Minister of Gibraltar is the head of Government.  As a British Overseas Territory, the Government of Gibraltar is not subordinate to the Government of the United Kingdom.  The British Government, however, is responsible for defence and external affairs but Gibraltar has full internal self-government under its 2006 Constitution.  Gibraltar is represented in the European Union, having been the only British Overseas Territory to have joined the European Economic Community under the British Treaty of Accession (1973).
+
+Question: Operation Ruman is the British government's combined military and humanitarian operations in September 2017 to provide relief to the British Overseas Territories in the Caribbean affected by which natural disaster?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "operation_name": {
+      "type": "string",
+      "description": "The name of the British government's operation."
+    },
+    "operation_type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The types of operations conducted (e.g., military, humanitarian)."
+    },
+    "target_locations": {
+      "type": "object",
+      "properties": {
+        "territory_type": {
+          "type": "string",
+          "description": "The type of territories that received relief."
+        },
+        "region": {
+          "type": "string",
+          "description": "The geographical region where the territories are located."
+        }
+      },
+      "required": [
+        "territory_type",
+        "region"
+      ],
+      "additionalProperties": false
+    },
+    "natural_disaster": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the natural disaster."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the natural disaster (e.g., hurricane)."
+        }
+      },
+      "required": [
+        "name",
+        "category"
+      ],
+      "additionalProperties": false
+    },
+    "operation_year": {
+      "type": "integer",
+      "description": "The year the operation took place."
+    }
+  },
+  "required": [
+    "operation_name",
+    "operation_type",
+    "target_locations",
+    "natural_disaster",
+    "operation_year"
+  ],
+  "additionalProperties": false
+}

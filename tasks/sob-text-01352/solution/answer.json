@@ -1,0 +1,10 @@
+{
+  "operation_name": "Operativo Independencia",
+  "start_year": 1975,
+  "target_group": {
+    "name": "People's Revolutionary Army",
+    "abbreviation": "ERP",
+    "ideology": "Guevarist"
+  },
+  "location": "Tucumán Province"
+}

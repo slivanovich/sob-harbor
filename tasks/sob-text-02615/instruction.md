@@ -1,0 +1,80 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Curtin Village: Curtin Village, also known as Eagle Ironworks, is a national historic district located at Boggs Township, Centre County, Pennsylvania.  The district includes 18 contributing buildings and 3 contributing structures in Curtin.  The district includes buildings and structures related to an ironworks dating back to 1810, when founded by Roland Curtin, Sr., father of Andrew Gregg Curtin, and Miles Boggs.  The district includes the iron master's mansion (1830), a late-19th century Victorian style dwelling, the Eagle Furnace stack (1847), the remains of a grist mill, a number of worker's houses, and an overgrown canal basin.  The Eagle Ironworks closed in 1921.  The area has been preserved and is operated as the Curtin Village at Eagle Ironworks Historical Site.  The historical site is owned by the Pennsylvania Historical and Museum Commission and managed by the Roland Curtin Foundation.
+
+Viscount of Stormont: Viscount of Stormont is a title in the Peerage of Scotland.  It was created in 1621 by James VI for his friend and helper Sir David Murray who had saved him from the attack of Earl Gowrie in 1600.  Murray had already been created Lord Scone, also in the Peerage of Scotland in 1605.  The peerages were created with remainder to 1) Sir Mungo Murray, fourth son of John Murray, 1st Earl of Tullibardine, failing which to 2) John Murray, who was created Earl of Annandale in 1625, and failing which to 3) Sir Andrew Murray, who was created Lord Balvaird in 1641.  Lord Stormont died childless and was succeeded according to the special remainder by the aforementioned Mungo Murray, the second Viscount.  He died without male issue and was succeeded according to the special remainder by James Murray, 2nd Earl of Annandale, who now also became the third Viscount Stormont.  He was the son of the aforementioned John Murray, 1st Earl of Annandale.  He was also childless and on his death in 1658 the earldom became extinct.
+
+Eagle Gate College: Eagle Gate College is a for-profit college that specializes in career education.  The College is accredited by the Accrediting Council for Independent Colleges and Schools (ACICS).  Eagle Gate College offers Bachelor's, associates, certificates, and diplomas in fields such as Medical Assisting, Nursing, Business Administration, and Criminal Justice.  The Bachelor of Science in Nursing degree is accredited by the Commission on Collegiate Nursing Education, One Dupont Circle, NW, Suite 530, Washington, DC 20036, 202-887-6791.  More at www.ccneaccreditation.org.  The college is located in Utah with campus locations in Murray and Layton.  In addition to the campus locations, Eagle Gate College also offers programs online.
+
+Isaac Lester: Isaac "Ike" Lester was mayor of Murray, Utah from 1923–1929.  He was Murray's first mayor to serve three terms.  Lester defeated incumbent Charles Anderson.  Lester's term was noted for improving a lighting system for the city and offering a contract through Utah Power and Light Company for the service.  He was a member of the fraternal order Woodmen of the World.  Prior to his election, he was a Sergeant in 4th Regimental Cavalry in the Spanish–American War and was a chief in the Murray fire department.
+
+Fred Hopkins: Fred Hopkins (October 10, 1947 – January 7, 1999) was a Chicago double bassist who played a major role in the development of the avant-garde jazz movement.  He was a member of the avant garde jazz trio Air (with Henry Threadgill and Steve McCall) and David Murray's Low Class Conspiracy; he frequently worked with the cellist Diedre Murray.  Hopkins played with a wide variety of musicians including Muhal Richard Abrams, Don Pullen, Hamiet Bluiett, Andrew Cyrille, Kalaparusha Maurice McIntyre, Sunny Murray, Kahil El'Zabar, Malachi Thompson, McCoy Tyner, Elvin Jones, David Murray, Anthony Braxton and Marion Brown.
+
+The Green Sheet: The American Eagle, later known also as Murray Eagle and The Green Sheet, was a newspaper that covered central Salt Lake Valley, especially the city of Murray, Utah.  The beginnings of "The American Eagle" of Murray, Utah, are shrouded in mystery.  The newspaper may have been published as early as 1891 as the "American".  Other sources list 1896 as the beginning publication date, before Murray was incorporated in 1903.  The first known editor was Martin A. Willumsen.  The "Murray Eagle" and "Midvale Journal" started out as the "American Eagle".  By 1908 the newspaper was named the "Murray Eagle".
+
+Andrew Murray (Guyanese boxer): Andrew "The Eagle" Murray (1 July 1971 — 26 January 2002 (aged 30)) born in Georgetown was a Guyanese professional welter/light middle/middleweight boxer of the 1990s and 2000s who won the World Boxing Council (WBC) FECARBOX welterweight title, World Boxing Association (WBA) Fedelatin welterweight title, and Commonwealth welterweight title, and was a challenger for the World Boxing Association (WBA) World welterweight title against Ike Quartey, World Boxing Union (WBU) welterweight title against Michele Piccirillo, and World Boxing Organization (WBO) North American Boxing Organization (NABO) light middleweight title against Fathi Missaoui, his professional fighting weight varied from 145 lb , i.e. welterweight to 156 lb , i.e. middleweight.  Andrew Murray was trained by Emanuel Steward, and was the Vice-President of the Guyana Amateur Boxing Board and was training several young boxers, and he had coached Hugo Lewis to the Guyanese super featherweight title on 26 December 2001.  Andrew Murray died in a traffic collision on the Soesdyke-Linden Highway early in the morning of Sunday 27 January 2002, he had been in Linden promoting a fight card and was on his way back to Georgetown.
+
+The Farmer and the Cowman: "The Farmer and the Cowman" is a song composed by Richard Rodgers and with lyrics by Oscar Hammerstein II for their musical "Oklahoma! ".  It is sung primarily by Andrew Carnes, Aunt Eller, and Ike Skidmore.  In various versions of "Oklahoma!" , the singing parts for Ike, Andrew, and Aunt Eller have been swapped.  Lines for Will Parker, Ado Annie, and Curly McLain are also included.  Repetition of the refrain is sung by the entire company.
+
+Machiavelli and the Four Seasons: Machiavelli and the Four Seasons is a 1995 album by the Australian rock group TISM (This Is Serious Mum).  It is TISM's most famous release and the one with which they received the most critical success and fame.  The album was certified Gold by the ARIA Awards and won the ARIA Award for Best Independent Release.  The award was accepted in person by Les Murray, the subject of the song "What Nationality is Les Murray?"' , who read a seemingly insulting acceptance speech in his native Hungarian.  Three of its songs reached Triple J's Hottest 100, two of them in the top 10.  This was also TISM's highest charting album, reaching number 8 in the Aria Charts.
+
+Ike Quartey: Isufu "Ike" Quartey (born 27 November 1969) is a Ghanaian former professional boxer who competed from 1988 to 2006.  He held the WBA welterweight title from 1994 to 1998, and challenged once for IBF junior-middleweight title in 2000.
+
+Question: What is the nationality of Ike Quartey and Andrew "The Eagle Murray"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "individuals": {
+      "type": "array",
+      "description": "List of individuals mentioned in the question and their identified nationalities.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the individual."
+          },
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the individual."
+          }
+        },
+        "required": [
+          "name",
+          "nationality"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "total_individuals_identified": {
+      "type": "integer",
+      "description": "The total number of individuals whose nationality was identified."
+    },
+    "all_nationalities": {
+      "type": "array",
+      "description": "A list of all unique nationalities identified for the individuals.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "individuals",
+    "total_individuals_identified",
+    "all_nationalities"
+  ],
+  "additionalProperties": false
+}

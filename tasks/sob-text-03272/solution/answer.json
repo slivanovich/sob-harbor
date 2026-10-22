@@ -1,0 +1,11 @@
+{
+  "game_name": "Scan Command: Jurassic Park",
+  "unique_device_name": "Scan Command",
+  "device_category": "barcode reader",
+  "device_components": [
+    "light source",
+    "lens",
+    "light sensor"
+  ],
+  "device_primary_function": "translating optical impulses into electrical ones"
+}

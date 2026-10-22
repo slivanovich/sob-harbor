@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+John William Whittaker: John William Whittaker (c. 1790 – 3 August 1854) was an English Anglican clergyman.  He was born in Manchester, and studied at Bradford Grammar School before going to St John's College, Cambridge.  Here he graduated B.A. in 1814, and proceeded to M.A. in 1817, B.D. in 1824, and D.D. in 1830.  He was appointed as examining chaplain to Charles Manners-Sutton, Archbishop of Canterbury, who granted him the living of Blackburn, Lancashire in 1822.  When Whittaker arrived in Blackburn Anglicanism was in a poor state.  There were only three churches in the town, and these were poorly attended.  Whittaker embarked on a programme of church building.  He also developed education in the town by creating Sunday Schools, and became involved in local politics.  One of the churches instigated by Whittaker was Holy Trinity Church, a Commissioners' church designed by his cousin, Edmund Sharpe, who was then at an early stage in his architectural career.  It was the largest of the 40 churches that Sharpe designed, and the only one to have transepts. Sharpe's biographer, John Hughes, suggests that the transepts were included at Whittaker's insistence.  Hughes describes this church as Sharpe's "pièce de résistance".  During the time that Whittaker was vicar of Blackburn, the parish church was rebuilt, and twelve new churches were built in and around to town.
+
+James Harrison (architect): James Harrison (1814–66) was an English architect who practised in Chester, Cheshire, England.  He is considered to be a pioneer of the Black-and-white Revival, an example of which is 51–53, Bridge Street, Chester, built in 1858.  In 1862 he rebuilt the medieval timber-framed God's Providence House in Chester, which has been described as "the first conservation case in the modern sense".  He designed new churches in Gothic Revival style, some of which have been designated as listed buildings, including Holy Ascension Church, Upton by Chester, Holy Trinity Church, Capenhurst, St Luke's Church, Dunham on the Hill, and Holy Trinity Church, Chester.  Harrison also made alterations to other churches, including the virtual rebuilding of St Michael's Church, Chester, rebuilding the nave of All Saints Church, Handley, and working on the tower of the Church of St Mary-on-the Hill, Chester.  He designed the Trustee Savings Bank in Chester, and converted the medieval St Nicholas' Chapel in Chester into a concert hall.  Harrison worked for Robert Balfour, building farms on his Bolesworth estate, and at Tattenhall Hall.
+
+Edmund Sharpe: Edmund Sharpe (31 October 1809 – 8 May 1877) was an English architect, architectural historian, railway engineer, and sanitary reformer.  Born in Knutsford, Cheshire, he was educated first by his parents and then at schools locally and in Runcorn, Greenwich and Sedbergh.  Following his graduation from Cambridge University he was awarded a travelling scholarship, enabling him to study architecture in Germany and southern France.  In 1835 he established an architectural practice in Lancaster, initially working on his own.  In 1845 he entered into partnership with Edward Paley, one of his pupils.  Sharpe's main focus was on churches, and he was a pioneer in the use of terracotta as a structural material in church building, designing what were known as "pot" churches, the first of which was St Stephen and All Martyrs' Church, Lever Bridge.
+
+Holy Trinity Church, Leeds: Holy Trinity Church (also known as "Church of the Holy Trinity", or "Holy Trinity, Boar Lane"), in Leeds, West Yorkshire, is a Church of England Parish Church in the "Parish of Leeds City" in the Diocese of Leeds.  It was built in 1722–7, but the steeple dates from 1839.  It is a Grade I Listed building.
+
+Holy Trinity Platt Church: Holy Trinity Platt Church (also known as Holy Trinity Church, Rusholme), is in Platt Fields Park in Rusholme, Manchester, England.  It is an active Anglican parish church in the deanery of Hulme, the archdeaconry of Manchester, and the diocese of Manchester.  The church is recorded in the National Heritage List for England as a designated Grade II* listed building.  It is the second "pot church" designed by Edmund Sharpe, so-called because the main building material used in the construction of the church is terracotta.
+
+Holy Trinity Church Rectory and Convent: The Holy Trinity Church Rectory and Convent in Bloomington, Illinois, USA, has been listed on the National Register of Historic Places since 1983.  The Rectory and Convent Building is situated behind the art deco church on the site of the 1869 Holy Trinity Church, which was destroyed by a tornado before it was completed.  A fire completely obliterated the church in 1932, but the church was financed, and recovery was quick.  The finished Art-Deco building was completed in 1933 and opened in 1934.  It still stands today.
+
+Holy Trinity Church, Thorpe Thewles: Holy Trinity Church was in the village of Thorpe Thewles, County Durham, England.  It was built in 1848–49 to replace an isolated church on a different site.  This church had been dedicated to Thomas à Becket.  It is now in ruins and is recorded in the National Heritage List for England as a designated Grade I listed building.  It is also a scheduled monument.  Holy Trinity Church was designed by the Lancaster architects Sharpe and Paley at an estimated cost of £600, and could seat 175 people.  It measured 68 ft by 23 ft .  By the 1880s it was suffering from decay and damp, and was demolished.  It was replaced in 1886–87 by another church, which is dedicated to St James, on the same site.  This church is a Grade II listed building.
+
+Holy Trinity Episcopal Church (Swanton, Vermont): Holy Trinity Episcopal Church also known as Holy Trinity Memorial Church is an historic Episcopal church building located at 38 Grand Avenue in the village of Swanton, Franklin County, Vermont.  Built in 1876 and expanded in 1909-10, the church facilities include a fine example of the Carpenter Gothic in the older section (now the parish hall), and the Late Victorian Gothic Revival in the newer section.  The church was listed on the National Register of Historic Places as the Parish of the Holy Trinity in 2001.  The church is an active parish in the Episcopal Diocese of Vermont; its current rector is the Rev. Reid D. Farrell.
+
+Holy Trinity Church, Horwich: Holy Trinity Church, commonly known as Horwich Parish Church, is a Grade II listed building in Horwich, Greater Manchester, England.  It is an active Church of England parish church and part of the Deane deanery in the archdeaconry of Bolton, diocese of Manchester.  Holy Trinity Church is now part of the United Benefice of Horwich and Rivington, which includes the other two Anglican churches in Horwich, St Catherine's Church and St Elizabeth's Church, and Rivington Anglican Church.
+
+Holy Trinity Church (Nashville): Holy Trinity Church (also known as Church of the Holy Trinity) is a historic Episcopal church at 615 6th Avenue South in Nashville, Tennessee, currently a parish of the Episcopal Diocese of Tennessee.  The congregation was formed in 1849 as a mission of the nearby Christ Church Episcopal, attained parish status in 1851, and grew to around fifty members per service by the beginning of the American Civil War.  During the war, the church was occupied by Federal troops and was badly damaged.  After repairs, services continued and a new mission was opened on Wharf Avenue, which catered to the African American population of Nashville and soon overtook Holy Trinity in membership.  After Holy Trinity lost parish status in 1895, the two missions merged and continued to serve the African American community of Nashville.  Its congregation was largely made up of faculty and students from nearby Fisk University and other educational institutions.  The mission reattained parish status in 1962, and the current rector is Bill Dennler.
+
+Question: The designer of the Holy Trinity Church pioneered the use of what material in church building?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "church_name": {
+      "type": "string",
+      "description": "The name of the church mentioned in the question."
+    },
+    "designer_name": {
+      "type": "string",
+      "description": "The name of the architect who designed the church."
+    },
+    "pioneered_material": {
+      "type": "string",
+      "description": "The material that the designer pioneered the use of."
+    },
+    "material_application": {
+      "type": "string",
+      "description": "The specific application of the pioneered material."
+    },
+    "associated_church_type": {
+      "type": "string",
+      "description": "The type of churches known for using this material, designed by the architect."
+    }
+  },
+  "required": [
+    "church_name",
+    "designer_name",
+    "pioneered_material",
+    "material_application",
+    "associated_church_type"
+  ],
+  "additionalProperties": false
+}

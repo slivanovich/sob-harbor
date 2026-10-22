@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "8f3e9b474e31d8c069111e38168ff9920fd175b084e29c43314a730c96362196",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5a7ca9675542990527d554f6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Paul King",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Paul King (chief executive): Paul King (born May 26, 1984) is a technology innovator and entrepreneur.  He is the founder and chief executive officer of Hercules Networks, as well as a member of the board.  Prior to Hercules Networks, King was a founding partner at G.C. Media, Inc.  Earlier in his career he was the founder and C.E.O. of International Sales Team Realty.  King expanded International Sales Team Realty by developing Chase Mortgage Center and New Wave Title Company.\n\nWale Adebanwi: Professor Wale Adebanwi, (born 1969), is a Nigerian - born first Black African Rhodes Professor at Oxford University\n\nList of Lab Rats characters: \"Lab Rats\", also known as \"Lab Rats: Bionic Island\" for its fourth season, is an American television sitcom that premiered on February 27, 2012, on Disney XD.  It focuses on the life of teenager Leo Dooley, whose mother, Tasha, marries billionaire genius Donald Davenport.  He meets Adam, Bree, and Chase, three bionic superhumans, with whom he develops an immediate friendship.  It should be noted that the names of the Lab Rats imply that they were originally known as subjects A, B, C and D. Adam was born first, then Bree, then Chase, and finally Daniel.\n\nLiar (Fake Shark – Real Zombie! album): Liar is the third album by Vancouver indie band Fake Shark – Real Zombie! .  It was released on February 14, 2013.  The album is a bit of direction change for the band, and the first with label, Light Organ Records.  Guests include Care Failure of the band Die Mannequin, Jimmy Urine of Mindless Self Indulgence, Steve Bays of Hot Hot Heat, and Henry Rollins.\n\nJimmy Urine: James Euringer (born September 7, 1969), known professionally as Jimmy Urine, is an American singer, songwriter, and musician.  He is best known as the lead singer and programmer of electropunk band Mindless Self Indulgence.\n\nDespoina: In Greek mythology, Despoina, Despoena or Despoine, was the daughter of Demeter and Poseidon and sister of Arion.  She was the goddess of mysteries of Arcadian cults worshipped under the title \"Despoina\", \"the mistress\" alongside her mother Demeter, one of the goddesses of the Eleusinian mysteries.  Her real name could not be revealed to anyone except those initiated to her mysteries.  Pausanias spoke of Demeter as having two daughters; Kore being born first, then later Despoina.  With Zeus being the father of Kore, and Poseidon as the father of Despoina.  Pausanias made it clear that Kore is Persephone, though he wouldn't reveal Despoina's proper name.\n\nThe Left Rights (album): The Left Rights is the self-titled debut album by the Mindless Self Indulgence side project featuring members Little Jimmy Urine and Steve, Righ? .  The album also contains a video of Mindless Self Indulgence performing \"Panty Shot\" live at CBGBs in New York City.\n\nPaddington (film): Paddington is a 2014 comedy film directed by Paul King, written by King and Hamish McColl and produced by David Heyman.  Based on \"Paddington Bear\" by Michael Bond, the film stars Ben Whishaw as the voice of the title character, along with Hugh Bonneville, Sally Hawkins, Julie Walters, Jim Broadbent, Peter Capaldi and Nicole Kidman in live-action roles.  The film was co-produced by the French company StudioCanal and the British company Heyday Films.  It was released in the United Kingdom on 28 November 2014 and grossed $265.3 million worldwide on a €38.5 million budget.  Among several honours, King was nominated for the BAFTA Award for Best Adapted Screenplay and both he and Heyman were nominated for the BAFTA Award for Best British Film.  A sequel, \"Paddington 2\", is scheduled to be released in 2017.\n\nAugustine of Canterbury: Augustine of Canterbury (born first third of the 6th century – died probably 26 May 604) was a Catholic Benedictine monk who became the first Archbishop of Canterbury in the year 597.  He is considered the \"Apostle to the English\" and a founder of the Catholic Church in England.\n\nPaul King (VJ): Paul King (born 20 November 1960) is a British-Irish singer, musician, VJ and TV presenter.",
+    "question": "Who was born first, Paul King or Jimmy Urine?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_1_name": {
+          "type": "string",
+          "description": "The name of the first person being compared."
+        },
+        "person_1_birth_date": {
+          "type": "string",
+          "description": "The birth date of the first person."
+        },
+        "person_2_name": {
+          "type": "string",
+          "description": "The name of the second person being compared."
+        },
+        "person_2_birth_date": {
+          "type": "string",
+          "description": "The birth date of the second person."
+        },
+        "earlier_born_person_name": {
+          "type": "string",
+          "description": "The name of the person who was born first."
+        },
+        "earlier_born_person_birth_date": {
+          "type": "string",
+          "description": "The birth date of the person who was born first."
+        }
+      },
+      "required": [
+        "person_1_name",
+        "person_1_birth_date",
+        "person_2_name",
+        "person_2_birth_date",
+        "earlier_born_person_name",
+        "earlier_born_person_birth_date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_1_name": "Paul King",
+      "person_1_birth_date": "20 November 1960",
+      "person_2_name": "Jimmy Urine",
+      "person_2_birth_date": "September 7, 1969",
+      "earlier_born_person_name": "Paul King",
+      "earlier_born_person_birth_date": "20 November 1960"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

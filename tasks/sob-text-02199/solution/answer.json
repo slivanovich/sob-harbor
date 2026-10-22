@@ -1,0 +1,14 @@
+{
+  "sport": "tennis",
+  "player_comparison": [
+    {
+      "player_name": "Marc Rosset",
+      "olympic_gold_medals": 1
+    },
+    {
+      "player_name": "Tony Roche",
+      "olympic_gold_medals": 0
+    }
+  ],
+  "player_with_more_gold_medals": "Marc Rosset"
+}

@@ -1,0 +1,19 @@
+{
+  "longest_running_publication_name": "Signs of the Times",
+  "comparison_conclusion": "Signs of the Times is described in the present tense as a 'monthly magazine', implying it is either still ongoing or had a very long, unspecified run, which is longer than Space Science Fiction's clearly defined run of 1 year and 5 months.",
+  "publications_details": [
+    {
+      "name": "Signs of the Times",
+      "publication_type": "monthly magazine",
+      "publication_duration_description": "monthly magazine, implied ongoing"
+    },
+    {
+      "name": "Space Science Fiction",
+      "publication_type": "science fiction magazine",
+      "publication_duration_description": "ran for eight issues from May 1952 to September 1953",
+      "start_year": 1952,
+      "end_year": 1953,
+      "number_of_issues": 8
+    }
+  ]
+}

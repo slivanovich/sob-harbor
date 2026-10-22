@@ -1,0 +1,14 @@
+{
+  "hospital_comparison": [
+    {
+      "hospital_name": "Providence Hospital",
+      "number_of_beds": 408
+    },
+    {
+      "hospital_name": "Psychiatric Institute of Washington",
+      "number_of_beds": 104
+    }
+  ],
+  "hospital_with_more_beds": "Providence Hospital",
+  "bed_difference": 304
+}

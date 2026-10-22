@@ -1,0 +1,16 @@
+{
+  "media_types": [
+    "printing",
+    "broadcasting",
+    "digital"
+  ],
+  "official_languages": [
+    "Dari",
+    "Pashto"
+  ],
+  "language_details": {
+    "language_name": "Pashto",
+    "base_dialect": "Ghilji dialect",
+    "dialect_region": "central Ghilji region"
+  }
+}

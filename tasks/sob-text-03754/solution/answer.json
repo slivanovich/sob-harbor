@@ -1,0 +1,17 @@
+{
+  "question_focus": "plant native region",
+  "plants_evaluated": [
+    {
+      "plant_name": "Rosemary",
+      "is_native_to_mediterranean": true,
+      "native_region_description": "native to the Mediterranean region"
+    },
+    {
+      "plant_name": "Quesnelia",
+      "is_native_to_mediterranean": false,
+      "native_region_description": "Endemic to eastern Brazil"
+    }
+  ],
+  "mediterranean_native_plant_count": 1,
+  "answer_statement": "Rosemary is native to the Mediterranean region."
+}

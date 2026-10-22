@@ -1,0 +1,14 @@
+{
+  "actor_name": "Molly Ringwald",
+  "role_in_strike_it_rich": {
+    "film_title": "Strike It Rich",
+    "role_type": "starring_role",
+    "release_year": 1990
+  },
+  "role_in_the_facts_of_life": {
+    "series_title": "The Facts of Life",
+    "role_type": "cast_member",
+    "character_name": "Molly",
+    "years_active": "1979–80"
+  }
+}

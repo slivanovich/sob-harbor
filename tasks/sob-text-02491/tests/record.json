@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "record_id": "aaa61d34dd0c810e006e58e3da3d9f762518143041899282b78e2ea570db3832",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ae5569255429908b63265e4",
+    "source_dataset": "hotpotqa",
+    "source_answer": "yes",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Onoclea: Onoclea is a genus of plants in the Onocleaceae family, native to moist habitats in eastern Asia and eastern North America.  They are deciduous ferns with sterile fronds arising from creeping rhizomes in spring, dying down at first frost.  Fertile fronds appear in late summer.  Depending on the authority, the genus contains one to five species.\n\nBunchosia: Bunchosia is a genus in the Malpighiaceae, a family of about 75 genera of flowering plants in the order Malpighiales.  It contains roughly 75 species of trees and shrubs, which are native to dry woodlands, savannas, and wet forests.  Their range extends from Mexico and the Caribbean to southeastern Brazil and adjacent Argentina.  \"Bunchosia\" is one of three arborescent genera of Malpighiaceae with fleshy, bird-dispersed fruits.",
+    "question": "Are both Bunchosia and Onoclea genus of plants?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "question_context": {
+          "type": "string",
+          "description": "Describes the main subject of the question."
+        },
+        "onoclea_classification": {
+          "type": "object",
+          "properties": {
+            "is_genus": {
+              "type": "boolean",
+              "description": "Indicates if Onoclea is classified as a genus."
+            },
+            "is_plant": {
+              "type": "boolean",
+              "description": "Indicates if Onoclea is a genus of plants."
+            },
+            "family": {
+              "type": "string",
+              "description": "The botanical family Onoclea belongs to."
+            }
+          },
+          "required": [
+            "is_genus",
+            "is_plant",
+            "family"
+          ],
+          "additionalProperties": false
+        },
+        "bunchosia_classification": {
+          "type": "object",
+          "properties": {
+            "is_genus": {
+              "type": "boolean",
+              "description": "Indicates if Bunchosia is classified as a genus."
+            },
+            "is_plant": {
+              "type": "boolean",
+              "description": "Indicates if Bunchosia is a genus of plants."
+            },
+            "family": {
+              "type": "string",
+              "description": "The botanical family Bunchosia belongs to."
+            }
+          },
+          "required": [
+            "is_genus",
+            "is_plant",
+            "family"
+          ],
+          "additionalProperties": false
+        },
+        "both_are_plant_genera": {
+          "type": "boolean",
+          "description": "The final answer to whether both Onoclea and Bunchosia are genera of plants."
+        }
+      },
+      "required": [
+        "question_context",
+        "onoclea_classification",
+        "bunchosia_classification",
+        "both_are_plant_genera"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "question_context": "classification of biological genera",
+      "onoclea_classification": {
+        "is_genus": true,
+        "is_plant": true,
+        "family": "Onocleaceae"
+      },
+      "bunchosia_classification": {
+        "is_genus": true,
+        "is_plant": true,
+        "family": "Malpighiaceae"
+      },
+      "both_are_plant_genera": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

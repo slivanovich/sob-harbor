@@ -1,0 +1,18 @@
+{
+  "comparison_details": [
+    {
+      "city_name": "Hengshui",
+      "administrative_level": "prefecture-level city",
+      "population": 522147,
+      "population_type": "built-up area"
+    },
+    {
+      "city_name": "Fengcheng, Jiangxi",
+      "administrative_level": "county-level city",
+      "population": 1370000,
+      "population_type": "total county-level city population"
+    }
+  ],
+  "entity_with_more_people": "Fengcheng, Jiangxi",
+  "population_difference": 847853
+}

@@ -1,0 +1,77 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+1977 Japan Open Tennis Championships: The 1977 Japan Open Tennis Championships was a men's tennis tournament played on hard courts and part of the 1977 Colgate-Palmolive Grand Prix and took place in Tokyo, Japan.  The tournament was held from October 31 through November 6, 1977.  Manuel Orantes won the singles title.
+
+1979 Romika Cup: The 1979 Romika Cup was a men's Grand Prix Tennis Circuit tennis tournament held at the MTTC Iphitos in Munich, West Germany.  It was the 63rd edition of the tournament which was held from 22 May through 27 May 1979.  First-seeded Manuel Orantes won the singles title.
+
+Hank Pfister: Hank Pfister (born October 9, 1953) is a former tennis player from the United States, who won two singles titles (1981, Maui and 1982, Newport) during his professional career.  The right-hander reached his highest individual ranking on the ATP Tour on May 2, 1983, when he became World No. 19.
+
+1976 Bavarian Tennis Championships: The 1976 Bavarian Tennis Championships (also known by its sponsored name Romika Cup) was a men's tennis tournament that was part of the Two Star category of the 1976 Grand Prix tennis circuit.  The tournament was held at the MTTC Iphitos in Munich, Germany and ran from May 4 through May 9, 1976.  Manuel Orantes won the singles title.
+
+Magnus Tideman: Magnus Tideman (born 9 April 1963), is a former professional tennis player from Sweden.  He enjoyed most of his tennis success while playing doubles, winning 1 doubles title and achieved a career-high of World No. 43 in 1988.  In singles, he reached the quarterfinals of Toulouse in 1982 (defeating Thierry Tulasne en route) and achieved a career-high ranking of World No. 100 in 1983.  Tideman also defeated Manuel Orantes en route to the third round of the 1983 French Open.
+
+1978 U.S. Pro Tennis Championships: The 1978 U.S. Pro Tennis Championships was a men's tennis tournament played on outdoor green clay courts (Har-Tru) at the Longwood Cricket Club in Boston, USA.  The event was part of the 1978 Grand Prix circuit.  It was the 51st edition of the tournament and was held from August 21 through August 28, 1978.  Despite pressure to switch to a hard court surface from the Association of Tennis Professionals (ATP) and some leading players, in line with the surface change made that year by the US Open which directly followed the Boston event, the tournament organization elected to remain a clay court tournament in 1978.  Several top players including Björn Borg, Guillermo Vilas and Jimmy Connors elected not to play the tournament.  Fourth-seeded and defending champion Manuel Orantes won the singles title and the accompanying $32,000 first-prize money.  The final was delayed until Tuesday, August 29 due to rain.
+
+1975 Monte Carlo WCT: The 1975 Monte Carlo WCT, also known by its sponsored name Marlboro Classic, was a men's tennis tournament played on outdoor clay courts at the Monte Carlo Country Club in Monte Carlo, Monaco.  The tournament was part of the Green Group of the 1975 World Championship Tennis circuit.  It was the 70th edition of the event and was held from 23 March through 30 March 1975.  Manuel Orantes won the singles title.
+
+Manuel Orantes: Manuel Orantes Corral (] ; born 6 February 1949) is a former tennis player who was active in the 1970s and 1980s.  He won the US Open men's singles in 1975, beating defending champion Jimmy Connors in the final.  Orantes reached a career-high singles ranking of World No. 2.
+
+1971 Torneo Godó: The 1971 Torneo Godó or Trofeo Conde de Godó was a men's tennis tournament that took place on outdoor clay courts in Barcelona, Spain.  It was the 18th edition of the event and was part of the 1971 World Championship Tennis circuit, although it was also open to non-WCT players.  It was held from October 18 through October 24, 1971.  Manuel Orantes, an independent pro, won the singles title.
+
+1973 Louisville Open: The 1973 Louisville Open, also known as the First National Tennis Classic, was a men's tennis tournament played on outdoor clay courts at the Louisville Tennis Center in Louisville, Kentucky, USA.  It was the fourth edition of the tournament and was held from 30 July through 5 August 1973.  The tournament was part of the Grand Prix tennis circuit and categorized in Group A.  The singles final was won by fourth-seeded Manuel Orantes who earned 80 Grand Prix points.
+
+Question: Are Manuel Orantes and Hank Pfister both former tennis players ?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "are_both_former_players": {
+      "type": "boolean",
+      "description": "Indicates whether both specified individuals are former tennis players based on the context."
+    },
+    "player_details": {
+      "type": "array",
+      "description": "Details for each player mentioned in the question.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "player_name": {
+            "type": "string",
+            "description": "The name of the tennis player."
+          },
+          "status_in_context": {
+            "type": "string",
+            "description": "The description of the player's status as found in the context (e.g., 'former tennis player')."
+          }
+        },
+        "required": [
+          "player_name",
+          "status_in_context"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "A brief explanation for the answer based on the context."
+    }
+  },
+  "required": [
+    "are_both_former_players",
+    "player_details",
+    "reasoning"
+  ],
+  "additionalProperties": false
+}

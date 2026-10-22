@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "record_id": "acbe285aed450c6ba352ed90506a84df618d01660d0fbd321b3d3bfd251bf9b9",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab9821955429970cfb8eb2b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Angelica \"Cookie\" Spione",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Still at Large: Still at Large is the third and final album released by Crime Boss.  Following the release of his successful second album, \"Conflicts & Confusion\", Crime Boss left Suave House Records and formed his own independent label called Crime Lab Records and released \"Still at Large\" through it.  Though his previous two albums were produced by Suave House's T-Mix, Crime Boss himself handled a majority of the album's production. '\n\nEye for an eye: \"Only one eye for one eye\" , also known as \"An eye for an eye\", or the law of retaliation, is the principle that a person who has injured another person is to be penalized to a similar degree, or in softer interpretations, the victim receives the [estimated] value of the injury in compensation.  The intent behind the principle was to \"restrict\" compensation to the value of the loss.\n\nAl Capone: Alphonse Gabriel Capone ( ; ] ; January 17, 1899 – January 25, 1947), sometimes known by the nickname Scarface, was an American mobster, crime boss and businessman who attained fame during the Prohibition era as the co-founder and boss of the Chicago Outfit.  His seven-year reign as crime boss ended when he was 33 years old.\n\nOne Eye Peak: One Eye Peak is a mountain located at Princess Louisa Inlet.  One Eye Peak is part of the Pacific Ranges of the Coast Mountains in southwestern British Columbia, Canada.  When Thomas F. Hamilton build his resort called the Malibu Club at the entrance of Princess Louisa Inlet he named the mountain after himself - Mt. Hamilton.  The mountain is typically referred to by its English title of a Sechelt First Nation translation \"TUHK-OHSS\" referring to \"Old One Eye\" and is the protector of the inlet.\n\nFrank DeSimone: Frank A. DeSimone (July 17, 1909 – August 4, 1967) was the Boss of the Los Angeles crime family from 1956 to 1967.  DeSimone was the son of former don Rosario DeSimone.  He was sometime referred to as \"One Eye\" because one of his eyes drooped.  Frank DeSimone's well-known nephew, Thomas DeSimone, was an enforcer for the Lucchese crime family.  He was also related to Simone Scozzari and Joseph Civello.\n\nThomas DeSimone: Thomas Anthony DeSimone (May 24, 1950 – disappeared January 14, 1979), also known as Two-Gun Tommy, Animal or Tommy D, was a Sicilian-American gangster and associate of the Lucchese crime family in New York City, one of the Five Families of the American Mafia.  DeSimone was a grandson and nephew of Los Angeles mob bosses Rosario and Frank DeSimone, respectively.  He was married to Angelica \"Cookie\" Spione, but had many mistresses, including Theresa Ferrara.  He is best known as the basis for Joe Pesci's character Tommy DeVito in Martin Scorsese's 1990 film \"Goodfellas\".\n\nEpiretinal membrane: Epiretinal membrane is a disease of the eye in response to changes in the vitreous humor or more rarely, diabetes.  It is also called macular pucker.  Sometimes, as a result of immune system response to protect the retina, cells converge in the macular area as the vitreous ages and pulls away in posterior vitreous detachment (PVD).  PVD can create minor damage to the retina, stimulating exudate, inflammation, and leucocyte response.  These cells can form a transparent layer gradually and, like all scar tissue, tighten to create tension on the retina which may bulge and pucker (e.g., macular pucker), or even cause swelling or macular edema.  Often this results in distortions of vision that are clearly visible as bowing ←→ when looking at lines on chart paper (or an Amsler grid) within the macular area, or central 1.0 degree of visual arc.  Usually it occurs in one eye first, and may cause binocular diplopia or double vision if the image from one eye is too different from the image of the other eye.  The distortions can make objects look different in size (usually larger = macropsia), especially in the central portion of the visual field, creating a localized or field dependent aniseikonia that cannot be fully corrected optically with glasses.  Partial correction often improves the binocular vision considerably though.  In the young (under 50 years of age), these cells occasionally pull free and disintegrate on their own; but in the majority of sufferers (over 60 years of age) the condition is permanent.  The underlying photoreceptor cells, rod cells and cone cells, are usually not damaged unless the membrane becomes quite thick and hard; so usually there is no macular degeneration.\n\nEtt öga rött: Ett öga rött (\"One Eye Red\") is the debut novel of Jonas Hassen Khemiri.  It was published in 2003, received positive reviews and sold over 200.000 copies in Sweden which made it the best-selling paperback of any category in 2004.  For \"One Eye Red\", Khemiri received the Borås Tidning Award for best literary debut, Sweden's most important award for a first book.  The novel has been published in Norway, Finland, Denmark, Germany, the Netherlands and Serbia & Montenegro.  In 2007 a film based on \"One Eye Red\" opened in Swedish cinemas.\n\nHeterophoria: Heterophoria is an eye condition in which the directions that the eyes are pointing at rest position, when \"not\" performing binocular fusion, are not the same as each other, or, \"not straight\".  There can be esophoria, where the eyes tend to cross inward in the absence of fusion; exophoria, in which they diverge; or hyperphoria, in which one eye points up or down relative to the other.  Phorias are known as 'latent squint' because the tendency of the eyes to deviate is kept latent by fusion.  A person with two normal eyes has single vision (usually) because of the combined use of the sensory and motor systems.  The motor system acts to point both eyes at the target of interest; any offset is detected visually (and the motor system corrects it).  Heterophoria only occurs during dissociation of the left eye and right eye, when fusion of the eyes is absent.  If you cover one eye (e.g. with your hand) you remove the sensory information about the eye's position in the orbit.  Without this, there is no stimulus to binocular fusion, and the eye will move to a position of \"rest\".  The difference between this position, and where it would be were the eye uncovered, is the heterophoria.  The opposite of heterophoria, where the eyes are straight when relaxed and not fusing, is called orthophoria.\n\nCollimator sight: A collimator sight is a type of optical sight that allows the user looking into it to see an illuminated aiming point aligned with the device the sight is attached-to regardless of eye position (with little parallax).  Collimator sights are 'blind' sights; that is, they are used with both eyes open while one looks into the sight, with one eye open and moving the head to alternately see the sight and then at the target, or using one eye to partially see the sight and target at the same time.  Collimator sights are a relatively old idea, being used in many forms for almost 100 years.  They are also referred to as collimating sights or \"occluded eye gunsight\" (OEG).",
+    "question": "Who did the nephew of the crime boss who was reffered to as \"One Eye\" marry?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "crime_boss_name": {
+          "type": "string",
+          "description": "The full name of the crime boss referred to as 'One Eye'."
+        },
+        "crime_boss_nickname": {
+          "type": "string",
+          "description": "The nickname of the crime boss."
+        },
+        "nephew_name": {
+          "type": "string",
+          "description": "The full name of the nephew of the crime boss."
+        },
+        "spouse_name": {
+          "type": "string",
+          "description": "The full name of the person the nephew married."
+        },
+        "spouse_aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Any known aliases or nicknames for the spouse."
+        }
+      },
+      "required": [
+        "crime_boss_name",
+        "crime_boss_nickname",
+        "nephew_name",
+        "spouse_name",
+        "spouse_aliases"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "crime_boss_name": "Frank A. DeSimone",
+      "crime_boss_nickname": "One Eye",
+      "nephew_name": "Thomas Anthony DeSimone",
+      "spouse_name": "Angelica Spione",
+      "spouse_aliases": [
+        "Cookie"
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

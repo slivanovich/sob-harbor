@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "943bcb896d37e27d8633e2f8200913224cc7bae3e00edab6715a8b23a012131d",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ab861135542990e739ec8d5",
+    "source_dataset": "hotpotqa",
+    "source_answer": "United States",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Steven Franse: Steven Franse (October 13, 1902 – June 18, 1953) was a New York mobster with the Genovese crime family who was a close associate of mob bosses Charles \"Lucky\" Luciano and Vito Genovese.\n\nRichard J. Schneiderhan: Richard Joseph Schneiderhan (c. 1934 – September 16, 2015) was a former Massachusetts State Police Lieutenant in the Attorney General's Organized Crime Unit.  He was convicted of conspiracy and obstruction of justice stemming from his relationship with gangster Stephen Flemmi and the Winter Hill Gang.  Schneiderhan had warned an associate of fugitive mob boss James \"Whitey\" Bulger that Bulger's brothers' phones were being monitored by the FBI.\n\nAngelina Veneziano: Angelina Veneziano is a fictional character from the American CBS soap opera \"The Young and the Restless\".  She is portrayed by Diana DeGarmo, who is famed for being runner-up on the third season of the reality television competition \"American Idol\".  She was introduced by former executive producer and head writer Maria Arena Bell on October 31, 2011, as the daughter of mob boss Angelo Veneziano (Mike Starr).  Angelina was described as a mob boss daughter and aspiring singer by Zap2it.  DeGarmo described her as an over-the-top \"jersey girl\", and noted her flamboyant costumes and voice.  The show's executive producer and head writer Maria Arena Bell offered DeGarmo the role of Veneziano after seeing her performance of Penny Pingleton in the musical production of \"Hairspray\".\n\nJoseph Glimco: Joseph Paul Glimco (January 14, 1909 – April 28, 1991) was an Italian American labor leader and well-known organized crime figure based in Chicago, Illinois.  He was considered \"Chicago's top labor racketeer\" in the 1950s.  One high-ranking Chicago Teamsters leader noted in 1954, \"He is the mob.  When he opens his mouth, it's the syndicate talking.\"  Glimco was active in the International Brotherhood of Teamsters (IBT) and a close associate of Teamsters president Jimmy Hoffa.  He was a capo in the Chicago Outfit, an organized crime syndicate, and oversaw the syndicate's labor racketeering efforts.  He worked closely with Tony \"Joe Batters\" Accardo, who led the Chicago Outfit from 1943 to 1957, and Sam \"Momo\" Giancana, who led the syndicate from 1957 to 1966.  A United States Senate committee once claimed that Glimco ran \"the nation's most corrupt union.\"\n\nJack Tocco: Giacomo \"Jack\" William Tocco (  1927 – July 14, 2014) was an Italian-American mobster long-time leader and mob boss of organized crime organization known as the Detroit Partnership, based in Detroit, Michigan.  Of Sicilian ancestry, he had numerous legitimate business holdings.\n\nLucky Luciano: Charles \"Lucky\" Luciano ( ; born Salvatore Lucania November 24, 1897 – January 26, 1962) was an Italian-American mobster and crime boss.  Luciano is considered the father of modern organized crime in the United States for the establishment of the first Commission.  He was also the first official boss of the modern Genovese crime family.  He was, along with his associates, instrumental in the development of the National Crime Syndicate.\n\nLouis Fratto: Louis Thomas Fratto (July 17, 1907 – November 24, 1967), born Luigi Tommaso Giuseppe Fratto, also known as \"Lew Farrell\" and \"Cock-eyed\", was a labor racketeer and organized crime figure in Chicago, Illinois and Des Moines, Iowa from the 1930s to 1967.  In 1939, Fratto replaced Charles \"Cherry Nose\" Gioe as the Mob Boss of Iowa, making his headquarters in Des Moines.  He was later implicated in the murder of Gioe, who went back to Chicago, but who later tried to reclaim his control over the rackets in Iowa.  Among other things, Fratto became the Iowa distributor of \"Canadian Ace Beer\" which was a Capone Family enterprise.\n\nFrank Ragano: Frank Ragano (January 25, 1923 – May 13, 1998) was a self-styled \"mob lawyer\" from Florida, who made his name representing organized crime figures such as Santo Trafficante, Jr. and Carlos Marcello, and also served as lawyer for Teamsters leader Jimmy Hoffa.  In his 1994 autobiography \"Mob Lawyer\", Ragano recounted his career in defending members of organized crime, and made the controversial allegation that Florida mob boss Santo Trafficante, Jr. confessed to him shortly before he died in 1987 that he and Carlos Marcello had arranged for the assassination of President John F. Kennedy in 1963.  These Kennedy assassination conspiracy theories have been called into serious question by others.\n\nMurder, Inc.: Murder, Inc. (or Murder Incorporated) was the name the news media gave to organized crime groups in the 1930s and 40s that acted as the enforcement arm of the Italian-American Mafia, Jewish mob, and connected organized crime groups in New York and elsewhere.  The groups were largely composed of Italian-American and Jewish gangsters from the Brooklyn neighborhoods of Brownsville, East New York, and Ocean Hill.  Originally headed by Louis \"Lepke\" Buchalter, and later by Albert \"The Mad Hatter\" Anastasia, Murder, Inc. was believed to be responsible for between 400 and 1,000 contract killings, until the group was exposed in the early 1940s by former group member Abe \"Kid Twist\" Reles.  In the trials that followed, many members were convicted and executed, and Abe Reles himself died after \"falling out of a window\".  Thomas E. Dewey first came to prominence as a prosecutor of Murder, Inc. and other organized crime cases.\n\nSt. John Cemetery (Queens): St. John Cemetery is an official Roman Catholic burial ground located in Middle Village in the Queens borough of New York City.  It is one of nine official Roman Catholic burial grounds in the New York Metropolitan Area.  St. John, along with St. Charles/Resurrection Cemeteries in Farmingdale, Long Island, is among the largest cemeteries in New York State.  Since its opening, St. John has been the resting place of various famous and infamous people in New York City society, such as Mario Cuomo (1932–2015), Governor of the state of New York from 1983–1995, John F. Hylan (1868–1936), mayor of the city of New York from 1918–1925, Geraldine Ferraro (1935–2011), the first female Vice Presidential candidate representing a major American political party, Lucky Luciano (1897–1962), considered the father of modern organized crime in the United States, and John J. Gotti (1940–2002), the head of the New York City based Gambino crime family from 1985–2002.",
+    "question": "Steven Franse was a close associate of a mob boss cosidered the father of modern organized crime where?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "associate_name": {
+          "type": "string",
+          "description": "The name of the individual who was an associate."
+        },
+        "mob_boss_name": {
+          "type": "string",
+          "description": "The name of the mob boss associated with the individual."
+        },
+        "mob_boss_title": {
+          "type": "string",
+          "description": "The title or description attributed to the mob boss."
+        },
+        "location_of_title": {
+          "type": "string",
+          "description": "The geographical location where the mob boss held the specified title."
+        }
+      },
+      "required": [
+        "associate_name",
+        "mob_boss_name",
+        "mob_boss_title",
+        "location_of_title"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "associate_name": "Steven Franse",
+      "mob_boss_name": "Charles \"Lucky\" Luciano",
+      "mob_boss_title": "father of modern organized crime",
+      "location_of_title": "United States"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "player_name": "Gerald Bernard Huth",
+  "player_position": "guard",
+  "sports_organization": "National Football League",
+  "teams_played_for": [
+    {
+      "team_name": "New York Giants"
+    },
+    {
+      "team_name": "Philadelphia Eagles"
+    },
+    {
+      "team_name": "Minnesota Vikings",
+      "team_city": "Minneapolis"
+    }
+  ]
+}

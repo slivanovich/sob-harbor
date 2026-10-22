@@ -1,0 +1,14 @@
+{
+  "person_of_interest": {
+    "name": "Brian McGilloway"
+  },
+  "current_teaching_institution": {
+    "name": "Holy Cross College",
+    "location_details": {
+      "town": "Strabane",
+      "region": "West Tyrone",
+      "country": "Northern Ireland"
+    }
+  },
+  "final_answer_location": "West Tyrone"
+}

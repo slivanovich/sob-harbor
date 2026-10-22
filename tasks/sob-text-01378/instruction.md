@@ -1,0 +1,61 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+American Way (magazine): American Way is a free, inflight magazine available across the entire American Airlines fleet and Admirals Clubs premium lounges.  The magazine was first published in 1966.  It is published on a monthly basis and reaches over 16 million passengers every month.
+
+Nocona, Texas: Nocona is a city along U.S. Highway 82 and State Highway 175 in Montague County, Texas, United States.  The population was 3,033 at the 2010 census.  The city, its lake, and its resurgence as a regional travel destination were featured in the June 2012 edition of Texas Highways magazine.
+
+Texas Highways: Texas Highways is a monthly magazine put out by the Texas Department of Transportation that, according to the agency, "promotes travel and tourism to Texas through articles and photography."
+
+Don't Mess with Texas: Don't Mess with Texas was a slogan used on a campaign to reduce littering on Texas roadways by the Texas Department of Transportation, which supports a web page for the Don't Mess With Texas campaign and archive of ads and events.  The phrase "Don't Mess with Texas" was prominently shown on road signs on major highways, television, radio and in print advertisements.  The campaign is credited with reducing litter on Texas highways roughly 72% between 1986 and 1990.  The campaign's target market was 18- to 35-year-old males, which was statistically shown to be the most likely to litter.  While the slogan was not originally intended to become a statewide cultural icon, it did.
+
+Robb Walsh: Robb Walsh is an American food writer, cookbook author, and restaurant owner, based in Galveston, Texas.  He is a former commentator on National Public Radio’s Weekend Edition, Sunday; former restaurant critic at the Houston Press (2000 until 2010); former editor-in-chief of Chile Pepper Magazine (1999 to 2000); former food columnist for Natural History magazine, and three time winner of the James Beard Award.  He currently writes about food for magazines such as Houstonia and Texas Highways, and websites such as First We Feast.  He is a partner and co-founder of El Real Tex-Mex Cafe in Houston’s Montrose neighborhood.
+
+Jon Christopher Davis: Jon Christopher Davis (born June 27, 1968) is an American singer-songwriter, musician and record producer whose musical style encompasses country, rock and folk.  He’s shared the concert stage with Train, Daughtry, The Roots (Jimmy Fallon’s house band), Michael McDonald, Eddie Money, Lyle Lovett, Rodney Crowell, Radney Foster, Jack Ingram, Hal Ketchum, Poco, Pure Prairie League, Restless Heart, Uncle Kracker, Kansas and REO Speedwagon.  Davis has also performed twice for the President of the United States.  His music has been featured on/in ABC, CBS, FOX, CMT, the Style Network, Pentagon Network, CW Network, Oxygen Channel, USA Today, Billboard Magazine, Texas Highways, the Washington Post and Huffington Post.
+
+West Columbia, Texas: West Columbia is a city in Brazoria County in the U.S. state of Texas.  The city is centered on the intersection of Texas Highways 35 & 36, 55 mi southwest of downtown Houston.  The population was 3,905 at the 2010 census.
+
+Texas elections, 2014: The 2014 general election was held in the U.S. state of Texas on November 4, 2014.  All of Texas' executive officers were up for election as well as a United States Senate seat, and all of Texas' thirty-six seats in the United States House of Representatives.  Primary elections were held on March 4, 2014.  Primary runoffs, required if no candidate wins a majority of the vote, were held on May 27, 2014.  Elections were also held for the Texas legislature and proposition 1, seeking funds for Texas highways (which passed).
+
+American way: The American way of life or simply the American way is the unique lifestyle of the people of the United States of America.  It refers to a nationalist ethos that adheres to the principle of life, liberty and the pursuit of happiness.  At the center of the American way is the American Dream that upward mobility is achievable by any American through hard work.  This concept is intertwined with the concept of American exceptionalism, the belief in the unique culture of the nation.
+
+The Grove (Jefferson, Texas): The Grove (also known as the Stilley-Young House), located in Jefferson, Texas, is an 1861 historic home that is listed on the National Register of Historic Places, and is a Recorded Texas Historic Landmark.  The house has also been called the most haunted place in Texas.  The Grove’s history dates back to the 19th century, when the property was purchased and the house that became known as “The Grove” was built.  The Grove has been featured in the television series "If Walls Could Talk" on cable channel HGTV and was chosen “as one of the top twelve most haunted houses in America” by "This Old House".  The Grove was also named as one of the "eight scariest places in Texas" by "Texas Monthly" magazine.  The house was also shown in William Shatner's "Weird or What? " in 2012.  Additionally, The Grove was featured on "" "Texas Highways" magazine has featured The Grove several times, including in articles "Haunted Places in Texas" from October 1997 and "Haunted Jefferson" from October 2008.
+
+Question: What type of publication does American Way and Texas Highways have in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "publication_type": {
+      "type": "string",
+      "description": "The common type of publication shared by American Way and Texas Highways."
+    },
+    "publications_mentioned": {
+      "type": "array",
+      "description": "List of publications sharing the common type.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_monthly_publication": {
+      "type": "boolean",
+      "description": "Indicates if both publications are published monthly."
+    }
+  },
+  "required": [
+    "publication_type",
+    "publications_mentioned"
+  ],
+  "additionalProperties": false
+}

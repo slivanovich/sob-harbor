@@ -1,0 +1,24 @@
+{
+  "australian_singer_name": "Dave Evans",
+  "identified_person_details": {
+    "name": "Dave Evans",
+    "nationality": "Australian",
+    "professions": [
+      "singer"
+    ],
+    "associated_bands": [
+      "AC/DC",
+      "Rabbit"
+    ]
+  },
+  "other_person_details": {
+    "name": "Kenny Greene",
+    "nationality": "American",
+    "professions": [
+      "singer-songwriter"
+    ],
+    "associated_bands": [
+      "Intro"
+    ]
+  }
+}

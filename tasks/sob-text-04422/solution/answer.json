@@ -1,0 +1,16 @@
+{
+  "bands_involved": [
+    {
+      "band_name": "Freeze the Atlantic",
+      "country_of_origin": "England",
+      "specific_genre": "alternative rock"
+    },
+    {
+      "band_name": "She Wants Revenge",
+      "country_of_origin": "America",
+      "specific_genre": "rock"
+    }
+  ],
+  "common_music_genre": "rock",
+  "genre_comparison_notes": "Freeze the Atlantic plays alternative rock, and She Wants Revenge plays rock. Alternative rock is a subgenre of rock, making rock the common overarching genre."
+}

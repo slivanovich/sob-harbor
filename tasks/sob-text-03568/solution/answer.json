@@ -1,0 +1,15 @@
+{
+  "rock_group_name": "Starsailor",
+  "album": {
+    "title": "Silence Is Easy",
+    "release_year": 2003
+  },
+  "producer": {
+    "name": "Phil Spector",
+    "notable_event": "conviction for murder",
+    "produced_tracks_on_album": [
+      "Silence Is Easy",
+      "White Dove"
+    ]
+  }
+}

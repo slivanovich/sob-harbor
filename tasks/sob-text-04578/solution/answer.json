@@ -1,0 +1,21 @@
+{
+  "player_name": "Charles Jones",
+  "teams_played_for": [
+    {
+      "team_name": "Phoenix Suns",
+      "entered_league_as_expansion_in_1970": false
+    },
+    {
+      "team_name": "Portland Trail Blazers",
+      "entered_league_as_expansion_in_1970": true
+    },
+    {
+      "team_name": "Washington Bullets",
+      "entered_league_as_expansion_in_1970": false
+    }
+  ],
+  "matching_team": {
+    "team_name": "Portland Trail Blazers",
+    "expansion_year": 1970
+  }
+}

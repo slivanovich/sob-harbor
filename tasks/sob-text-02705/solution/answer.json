@@ -1,0 +1,9 @@
+{
+  "museum_name": "The British Museum",
+  "location": "Bloomsbury, London",
+  "dedication": "human history, art and culture",
+  "roman_silver_dish": {
+    "dish_name": "Corbridge Lanx",
+    "discovery_year": 1735
+  }
+}

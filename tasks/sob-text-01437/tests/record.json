@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "record_id": "73aae50e4e32dd18657ba491cfa4cbeb32c3b62424c42f86f02bea13e86f7715",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae2239e5542996483e64900",
+    "source_dataset": "hotpotqa",
+    "source_answer": "John Constantine",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Stephen R. Bissette: Stephen R. \"Steve\" Bissette (born March 14, 1955) is an American comics artist, editor, and publisher with a focus on the horror genre.  He is known for working with writer Alan Moore and inker John Totleben on the DC comic book \"Swamp Thing\" in the 1980s.\n\nJohn Constantine: John Constantine ( ) is a fictional antihero, appearing in comic books published by DC Comics and its alternative imprint Vertigo.  The character first appeared in \"Swamp Thing\" Vol.  2 No. 25 (June 1984), and was created by Alan Moore, Steve Bissette and John Totleben.  He serves as the lead character of the comic books \"Hellblazer\" (1988–2013), \"Constantine\" (2013–15), \"Constantine: The Hellblazer\" (2015–16), and \"The Hellblazer\" (2016–).\n\nHellblazer: Hellblazer (also known as John Constantine, Hellblazer) is an American contemporary horror comic book series, originally published by DC Comics, and subsequently by the Vertigo imprint since March 1993 when the imprint was introduced.  Its central character is the streetwise magician John Constantine, who was created by Alan Moore and Stephen R. Bissette, and first appeared as a supporting character in \"The Saga of the Swamp Thing\" #37 (June 1985), during that creative team's run on that title.  \"Hellblazer\" had been published continuously since January 1988, and was Vertigo's longest running title, the only remaining publication from the imprint's launch.  In 2013, the series concluded with issue 300, and has been replaced by a DC Universe title, \"Constantine\".  It was then relaunched in 2016 with the title \"The Hellblazer\" as part of \"DC Universe Rebirth\", restoring the character to his original cast, tone and setting.  Well known for its political and social commentary, the series has spawned a film adaptation, television show, novels, and multiple spin-offs and crossovers.\n\nHell (DC Comics): Hell (a.k.a. Gehenna, Hades, Hel, Jahannam, Sheol and Tartarus) is a fictional location, an infernal Underworld utilized in titles published by DC Comics.  It is the locational antithesis of the Silver City.  The DC Comics location known as Hell is based heavily on its depiction in Abrahamic mythology.  Aside from a brief appearance in \"DC Special Series\" #8 (1978) that was never referred to or even mentioned again, the DC Comics concept of Hell was first mentioned in \"The Saga of the Swamp Thing\" (vol.  2) #25-27 (June-August 1984), described by Alan Moore and was first seen in \"Swamp Thing Annual\" #2 (1985), both of which were written by Moore and depicted by Stephen Bissette and John Totleben.\n\nSuicide Squad: The Suicide Squad is the name of two fictional antihero teams appearing in American comic books published by DC Comics.  The first version of the Suicide Squad debuted in \"The Brave and the Bold\" #25 (Sept.  1959), and the second and modern version, created by John Ostrander, debuted in \"Legends\" #3 (Jan.  1987).  One of the two teams saves the world from an threatening race of savages.\n\nChas Chandler (comics): Frank William \"Chas\" Chandler is a fictional character in the \"Hellblazer\" series published by DC Comics and its Vertigo imprint.  Chas is John Constantine's closest and longest surviving friend, who acts as his sidekick and cab driver.  He first appeared in \"Hellblazer #1\".\n\nHarley Quinn: Harley Quinn (Harleen Frances Quinzel) is a fictional supervillain and occasionally antihero appearing in American comic books published by DC Comics.  The character was created by Paul Dini and Bruce Timm, and first appeared in \"\" in September 1992.  She later appeared in DC Comics' Batman comic books, with the character's first comic book appearance in \"The Batman Adventures\" #12 (Sept. 1993).\n\n1963 (comics): 1963 is an American six-issue comic book limited series written by Alan Moore in 1993, with art by his frequent collaborators Steve Bissette, John Totleben, and Rick Veitch.  Dave Gibbons, Don Simpson, and Jim Valentino also contributed art.  Image Comics published the series.\n\nSwamp Thing (comic book): The fictional character Swamp Thing has appeared in five American comic book series to date, including several specials, and has crossed over into other DC Comics titles.  The series found immense popularity upon its 1970s debut and during the mid-late 1980s under Alan Moore, Steve Bissette, and John Totleben.  These eras were met with high critical praise and numerous awards.  However, over the years, Swamp Thing comics have suffered from low sales which have resulted in numerous series cancellations and revivals.\n\nDC Universe: The Stories of Alan Moore: DC Universe: The Stories of Alan Moore (ISBN  ) is a 2006 trade paperback collection of comic books written by Alan Moore for DC Comics from 1985 to 1988, published by Titan Books.  This collection is a replacement for the earlier Across the Universe: The Stories of Alan Moore which contained all of the same stories except for \"Whatever Happened to the Man of Tomorrow?\"  and \"\".",
+    "question": "What fictional antihero from comic books published by DC Comics, who sometimes acts as a cab driver, was created by Alan Moore, Steve Bissette, and John Totleben?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "antihero_name": {
+          "type": "string",
+          "description": "The name of the fictional antihero."
+        },
+        "publisher": {
+          "type": "string",
+          "description": "The comic book publisher of the antihero."
+        },
+        "creators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The creators of the antihero character."
+        },
+        "is_antihero": {
+          "type": "boolean",
+          "description": "Indicates if the character is an antihero."
+        },
+        "has_cab_driver_associate": {
+          "type": "boolean",
+          "description": "Indicates if the antihero has an associate who acts as a cab driver."
+        },
+        "cab_driver_associate_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the cab driver associate."
+            },
+            "role": {
+              "type": "string",
+              "description": "The role of the cab driver associate relative to the antihero."
+            }
+          },
+          "required": [
+            "name",
+            "role"
+          ],
+          "additionalProperties": false,
+          "description": "Details about the antihero's cab driver associate."
+        }
+      },
+      "required": [
+        "antihero_name",
+        "publisher",
+        "creators",
+        "is_antihero",
+        "has_cab_driver_associate"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "antihero_name": "John Constantine",
+      "publisher": "DC Comics",
+      "creators": [
+        "Alan Moore",
+        "Steve Bissette",
+        "John Totleben"
+      ],
+      "is_antihero": true,
+      "has_cab_driver_associate": true,
+      "cab_driver_associate_details": {
+        "name": "Chas Chandler",
+        "role": "sidekick and cab driver"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

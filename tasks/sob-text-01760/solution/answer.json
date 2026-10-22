@@ -1,0 +1,15 @@
+{
+  "actress_name": "Deborah Van Valkenburgh",
+  "productions_acted_in": [
+    {
+      "production_title": "Too Close for Comfort",
+      "production_type": "television situation comedy",
+      "role_played": "Jackie Rush"
+    },
+    {
+      "production_title": "Mean Guns",
+      "production_type": "action film"
+    }
+  ],
+  "total_productions_matched": 2
+}

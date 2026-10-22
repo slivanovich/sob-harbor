@@ -1,0 +1,9 @@
+{
+  "main_road_name": "Kingsland Road",
+  "part_of_major_road": "A10",
+  "major_road_terminus": {
+    "end_type": "Bridge",
+    "name": "London Bridge",
+    "location_borough": "London Borough of Southwark"
+  }
+}

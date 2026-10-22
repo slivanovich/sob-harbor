@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Ron Wyden: Ronald Lee Wyden (born May 3, 1949) is the senior United States Senator for Oregon, serving since 1996, and a member of the Democratic Party.  He previously served in the United States House of Representatives from 1981 to 1996.  He is the current dean of Oregon's Congressional Delegation.
+
+Healthcare Quality Improvement Act: The Healthcare Quality Improvement Act of 1986 (HCQIA) was introduced by Congressman Ron Wyden from Oregon.  (Title 42 of the United States Code, Sections 11101 - 11152)
+
+Physician Quality Reporting System: The Physician Quality Reporting System (PQRS), formerly known as the Physician Quality Reporting Initiative (PQRI), is a health care quality improvement incentive program initiated by the Centers for Medicare and Medicaid Services (CMS) in the United States in 2006.  It is an example of a "pay for performance" program which rewards providers financially for reporting healthcare quality data to CMS.
+
+United States Grain Standards Act of 1916: The United States Grain Standards Act (USGSA) of 1916(P.L. 64-190), as amended (7 U.S.C. 71 et seq.), authorizes the Grain Inspection, Packers and Stockyards Administration to establish official marketing standards (not health and safety standards) for grains and oilseeds, and requires that exported grains and oilseeds be officially weighed and inspected.  Domestically marketed grain and oilseeds may be, but are not required to be, officially inspected.  Export inspections are carried out by federal inspectors or by federally supervised state inspection agencies, called delegated official inspection agencies.  Official inspections of domestically traded grain is done by federally supervised state agencies and private companies, called designated official inspection agencies.  Typically, marketing standards describe the physical characteristics (such as weight, damaged kernels, foreign material, shrunken and broken kernels, and defects) of the commodity and serve as contract language to facilitate marketing.  Official weighing and inspection is paid for on a fee-for service basis, not with federal funds.  Major changes to the law were adopted in the USGSA Amendments of 1968, the USGSA of 1976 (P.L. 94-582), and the Grain Quality Improvement Act of 1986 (P.L. 99-641).
+
+Environmental Quality Improvement Act: The Environmental Quality Improvement Act of 1970 is a United States environmental law which was passed to work in conjunction with the National Environmental Policy Act of 1969 (NEPA).  One of the two major purposes of the Act was to authorize the creation of an Office of Environmental Quality to provide the professional and administrative staff needed for the Council on Environmental Quality.  The second major purpose was to "assure that each Federal department and agency conducting or supporting public works activities which affect the environment shall implement the policies under existing law".  To accomplish these purposes, the act gave more responsibilities to the Chairman of the Council on Environmental Quality in his new role as Director of the Office of Environmental Quality.
+
+Healthcare Quality Improvement Partnership: The Healthcare Quality Improvement Partnership (HQIP) was established in April 2008 to promote quality in UK health services, by increasing the impact that clinical audit has on healthcare quality in England and Wales.  It is led by a consortium of the Academy of Medical Royal Colleges, Royal College of Nursing and National Voices.
+
+Clinical nurse leader: Clinical Nurse Leader (CNL) is a relatively new nursing role that was developed in the United States to prepare highly skilled nurses focused on the improvement of quality and safety outcomes for patients or patient populations.  The CNL is a registered nurse, with a Master of Science in Nursing who has completed advanced nursing coursework, including classes in pathophysiology, clinical assessment, finance management, epidemiology, healthcare systems leadership, clinical informatics, and pharmacology.  CNLs are healthcare systems specialists that oversee patient care coordination, assess health risks, develop quality improvement strategies, facilitate team communication, and implement evidence-based solutions at the unit (microsystem) level.  CNLs often work with clinical nurse specialists to help plan and coordinate complex patient care.
+
+National Quality Forum: National Quality Forum (NQF) is a United States-based non-profit membership organization that promotes patient protections and healthcare quality through measurement and public reporting.  It was established in 1999 based on recommendations by the President's Advisory Commission on Consumer Protection and Quality in the Health Care Industry.  NQF’s membership comprises over 400 organizations, representing consumers, health plans, medical professionals, employers, government and other public health agencies, pharmaceutical and medical device companies, and other quality improvement organizations.NQF has helped develop guidelines on palliative care.
+
+Patient Safety and Quality Improvement Act: The Patient Safety and Quality Improvement Act of 2005 (PSQIA): Pub.L.  109–41 , 42 U.S.C. ch.  6A subch.  VII part C, established a system of patient safety organizations and a national patient safety database.  To encourage reporting and broad discussion of adverse events, near misses, and dangerous conditions, it also established privilege and confidentiality protections for Patient Safety Work Product (as defined in the act).  The PSQIA was introduced by Sen. Jim Jeffords [I-VT].  It passed in the Senate July 21, 2005 by unanimous consent, and passed the House of Representatives on July 27, 2005 with 428 Ayes, 3 Nays, and 2 Present/Not Voting.
+
+Journal for Healthcare Quality: The Journal for Healthcare Quality is a bimonthly peer-reviewed healthcare journal published by Wiley-Blackwell on behalf of the National Association for Healthcare Quality.
+
+Question: In what year was the man who introduced the Healthcare Quality Improvement Act of 1986 born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the person who introduced the act."
+    },
+    "act_name": {
+      "type": "string",
+      "description": "The name of the act introduced."
+    },
+    "act_year": {
+      "type": "integer",
+      "description": "The year the act was introduced or passed."
+    },
+    "person_birth_year": {
+      "type": "integer",
+      "description": "The birth year of the person."
+    },
+    "person_role_at_introduction": {
+      "type": "string",
+      "description": "The role of the person when they introduced the act."
+    }
+  },
+  "required": [
+    "person_name",
+    "act_name",
+    "act_year",
+    "person_birth_year",
+    "person_role_at_introduction"
+  ],
+  "additionalProperties": false
+}

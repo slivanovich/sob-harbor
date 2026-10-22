@@ -1,0 +1,59 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Iron Giant: The Iron Giant is a 1999 American animated science-fiction comedy-drama action film using both traditional animation and computer animation, produced by and directed by Brad Bird in his directorial debut.  It is based on the 1968 novel "The Iron Man" by Ted Hughes (which was published in the United States as "The Iron Giant") and was scripted by Tim McCanlies from a story treatment by Bird.  The film stars the voices of Eli Marienthal, Christopher McDonald, Jennifer Aniston, Harry Connick, Jr., John Mahoney, and Vin Diesel.  Set during the Cold War in 1957, the film is about a young boy named Hogarth Hughes, who discovers a giant metallic robot who fell from space.  With the help of beatnik artist Dean McCoppin, they attempt to prevent the U.S. military and Kent Mansley, a paranoid federal agent, from finding and destroying the Giant.
+
+Ted Hughes: Edward James Hughes, {'1': ", '2': ", '3': ", '4': "} (17 August 1930 – 28 October 1998) was an English poet and children's writer.  Critics frequently rank him as one of the best poets of his generation, and one of the twentieth century's greatest writers.  He served as Poet Laureate from 1984 until his death.  In 2008 "The Times" ranked Hughes fourth on their list of "The 50 greatest British writers since 1945".
+
+Paul Bettany: Paul Bettany (born 27 May 1971) is an English actor.  He is known for his voice role as J.A.R.V.I.S. and the Vision in the Marvel Cinematic Universe, specifically the films "Iron Man" (2008), "Iron Man 2" (2010), "The Avengers" (2012), "Iron Man 3" (2013), "" (2015) and "" (2016), for which he garnered praise.  He first came to the attention of mainstream audiences when he appeared in the British film "Gangster No. 1" (2000), and director Brian Helgeland's film "A Knight's Tale" (2001).  He has gone on to appear in a wide variety of films, including "A Beautiful Mind" (2001), "" (2003), "Dogville" (2003), "Wimbledon" (2004), and the adaptation of the novel "The Da Vinci Code" (2006).
+
+Iron Man: Armored Adventures: Iron Man: Armored Adventures (also known in early promotional materials as Iron Man: The Animated Series) is a 3D CGI cartoon series loosely based on the Marvel Comics superhero Iron Man.  It debuted in the USA on the Nicktoons on April 24, 2009, and it aired on Canadian network Teletoon.  The series is story edited by showrunner Christopher Yost, who also worked on "Wolverine and the X-Men", and numerous other Marvel Animation projects.  The television show is not related to the 2007 animated film "The Invincible Iron Man"; it has a different voice cast, but some story elements are similar and the show uses the same musical score as the film in some instances.  It is the first Iron Man television series since "Iron Man" from 1994–1996, and started airing after the success of the live action "Iron Man" film.
+
+Iron Man 2: Iron Man 2 is a 2010 American superhero film based on the Marvel Comics character Iron Man, produced by Marvel Studios and distributed by Paramount Pictures.  It is the sequel to 2008's "Iron Man", and is the third film in the Marvel Cinematic Universe.  Directed by Jon Favreau and written by Justin Theroux, the film stars Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Scarlett Johansson, Sam Rockwell, Mickey Rourke, and Samuel L. Jackson.  Six months after the events of "Iron Man", Tony Stark is resisting calls by the United States government to hand over the Iron Man technology while also combating his declining health from the arc reactor in his chest.  Meanwhile, rogue Russian scientist Ivan Vanko has developed the same technology and built weapons of his own in order to pursue a vendetta against the Stark family, in the process joining forces with Stark's business rival, Justin Hammer.
+
+Iron Man (TV series): Iron Man, also known as Iron Man: The Animated Series, is an American animated television series based on Marvel Comics' superhero Iron Man.  The series aired from 1994 to 1996 in syndication as part of "The Marvel Action Hour", which packaged "Iron Man" with another animated series based on Marvel properties, the "Fantastic Four", with one half-hour episode from each series airing back-to-back.  The show was backed by a toy line that featured many armor variants.
+
+Iron Man (vol. 4): Iron Man" (vol.  4) was an ongoing comic book series published for four years from January 2005 to January 2009 by Marvel Comics, starring the superhero Iron Man.  It was the fourth series with this title to be published, following series that ran from 1968–1996, 1996–1997, and 1998-2004.  Over the course of its run, it was published under the different titles: The Invincible Iron Man (#1-12), and Iron Man: Director of S.H.I.E.L.D." (#15-35), with the change in indicia occurring after the events of Marvel's Civil War.
+
+The Invincible Iron Man: The Invincible Iron Man is an Eisner Award-winning comic book series written by Matt Fraction with art by Salvador Larroca, published by Marvel Comics and starring the superhero Iron Man.  After issue #33 The Invincible Iron Man returned to its original numbering with issue #500.  It concluded with issue 527, succeeded by the "Marvel NOW!" -imprinted "Iron Man" series.
+
+Iron Man 3: Iron Man 3 (stylized onscreen as Iron Man Three) is a 2013 American superhero film based on the Marvel Comics character Iron Man, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is the sequel to 2008's "Iron Man" and 2010's "Iron Man 2", and the seventh film in the Marvel Cinematic Universe.  Shane Black directed a screenplay he co-wrote with Drew Pearce, which uses concepts from the "Extremis" story arc by Warren Ellis.  The film stars Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Guy Pearce, Rebecca Hall, Stephanie Szostak, James Badge Dale, Jon Favreau, and Ben Kingsley.  In "Iron Man 3", Tony Stark deals with posttraumatic stress disorder caused by the events of "The Avengers", while investigating the reemergence of the Ten Rings, led by the mysterious Mandarin and comes into a conflict with an old enemy: Aldrich Killian.
+
+Ultimate Iron Man (character): Ultimate Iron Man (Antonio "Tony" Stark) is a fictional character appearing in American comic books published by Marvel Comics.  The character is the Ultimate Marvel version of the fictional superhero Iron Man that first appeared in the fourth issue of "Ultimate Marvel Team-Up", written by Brian Michael Bendis and drawn by Mike Allred.  He later appeared in the Ultimates and often appears in the same titles they do.  In the Ultimate Universe, the character is a wealthy business tycoon and inventor who created the Iron Man power armor.  Like his mainstream counterpart, he has a drinking problem and life-threatening affliction; in this case an inoperable brain tumor.  With a life expectancy anywhere between six months and five years, he chose to become a philanthropist and superhero.
+
+Question: What year did the writer of the 1968 novel "The Iron Man" become Poet Laurete?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "author_name": {
+      "type": "string",
+      "description": "The name of the author of the novel."
+    },
+    "novel_title": {
+      "type": "string",
+      "description": "The title of the novel mentioned in the question."
+    },
+    "poet_laureate_year": {
+      "type": "integer",
+      "description": "The year the author became Poet Laureate."
+    }
+  },
+  "required": [
+    "author_name",
+    "novel_title",
+    "poet_laureate_year"
+  ],
+  "additionalProperties": false
+}

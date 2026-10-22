@@ -1,0 +1,18 @@
+{
+  "battle_name": "Battle of Richmond",
+  "date_string": "August 29–30, 1862",
+  "outcome": "stunning Confederate victory",
+  "confederate_commander": {
+    "name": "Edmund Kirby Smith",
+    "rank": "Major General"
+  },
+  "union_commander": {
+    "name": "William \"Bull\" Nelson",
+    "rank": "major general"
+  },
+  "location": {
+    "city": "Richmond",
+    "state": "Kentucky"
+  },
+  "campaign_significance": "first major battle in the Kentucky Campaign"
+}

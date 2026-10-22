@@ -1,0 +1,83 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Jeff Briggs: Dr. Jeffery L. Briggs (born March 10, 1957, in Florence, Alabama) is founder and former President and CEO of Firaxis Games, a video game developer based in Hunt Valley, Maryland, United States.  He was previously a game designer at MicroProse but left that company in 1996 along with Sid Meier and Brian Reynolds to form Firaxis Games.
+
+Liquid Assets Paint &amp; Pigment Company: Liquid Assets Paint & Pigment Company is an artist supply company based in Buenos Aires, Argentina that manufactures acrylic paints and pigments created with real currency, such as Euro, US Dollar, Argentine Peso, and Romanian Leu.  The Company's slogan "The Price of Art" refers to the company's assertion that its products allow fine artists to quantify the precise and actual value of a work of art created using Liquid Assets products.  The company was started in 2007 by a group of Buenos Aires based professional artists and presently operates a manufacturing plant in Buenos Aires, as well as a retail store in the Palermo Soho neighborhood.  In September 2010, Liquid Assets opened a temporary pop up store in New York City's Tribeca neighborhood in conjunction with the Swervewolf Experience marketing and design firm.  Although artists have used valuable commodities such as gold leaf to create works of art for centuries, such as gilding, Liquid Assets Paint & Pigment Company is the world's only known manufacturer of artist paint and pigment created with actual currency.
+
+Mary Brown's: Mary Brown's is a Canadian fast-food restaurant chain known for its Big Mary sandwich, chicken and 'taters' or potato wedges.  Its process involves marinating chicken for up to 48 hours prior to cooking.  The company has over 120 locations in Canada: 40 in Newfoundland and Labrador, 37 in Ontario, 32 in Alberta, 5 in British Columbia, 2 in Saskatchewan, 5 in Nova Scotia, 5 in New Brunswick, 1 in Prince Edward Island, and 2 in Manitoba.  There is 1 US Location in Englewood, Florida.  The company also operates one location in Istanbul, Turkey.  It advertises using the slogans "Honest to Goodness" and "Famous chicken & taters!" .
+
+Zemaitis Guitars: Zemaitis Guitars is a guitar-manufacturing company based in Tokyo, Japan.  The company's guitars are based on designs by the Lithuanian luthier Tony Zemaitis.  Zemaitis produces both electric and acoustic guitars.  In 2016 a US location in Corona, CA opened to handle distribution for the United States, Canada, and Mexico.  Zemaitis is known for its unique metal front guitars.  The brand's slogan is "Art With Strings".
+
+Knapp, Stout &amp; Co.: Knapp, Stout & Co. was a lumber company based in Menomonie, Wisconsin in the 19th and early 20th centuries.  The company was established in 1846, when John Holly Knapp and William Wilson purchased half of interest in a lumber mill on the Red Cedar River from David Black; it was originally known as Black & Knapp.  Later Andrew Tainter acquired a quarter-interest, and the company has become Knapp-Tainter Lumber Company.  Henry Stout bought a quarter interest in the company in 1853, and its name became Knapp, Stout & Company.  The company's location allowed it to control the lumber industry in the region, and by 1870 it controlled the logging industry in the Red Cedar River valley.  In 1878, the company incorporated, and its official name became the Knapp, Stout & Co., Company.  The company employed over 2,000 workers in the Menomonie area and produced 85 million board feet of lumber on average yearly from 1871 to 1896; its output made it the largest lumber company in the world.  In the 1880s, the company expanded to sites along the Mississippi River, opening offices in Dubuque, Iowa, Read's Landing, Minnesota, and St. Louis.  By the 1900s, the company had largely depleted its lumber supply; it closed many of its camps and dissolved early in the 20th century.  The company sent out its last shipment of lumber on August 12, 1901.
+
+Firaxis Games: Firaxis Games, Inc. is an American video game developer founded in 1996 by Sid Meier, Jeff Briggs, and Brian Reynolds upon leaving MicroProse.  Now a wholly owned subsidiary of Take-Two Interactive, the company is best known for its "Civilization" series of games, though it has had notable success with other titles as well.  Firaxis is based in Sparks, Maryland; Sid Meier continues to lead creative efforts there.  The focus of the company has been on strategy and simulation games.
+
+85C Bakery Cafe: 85 °C Bakery Cafe () is a Taiwanese chain of coffee shops and self-serve bakeries operated by Gourmet Master Co., Ltd.  The company was founded in 2003 by tea shop owner Wu Cheng-Hsueh and has an estimated yearly revenue of NT$22.047 billion.  It has 1000 locations worldwide in Taiwan, China (including Hong Kong), Australia, and the United States.  Known as the "Starbucks of Taiwan", the company opened its first US location in Irvine, California in 2009.
+
+Shankar Narayanan: Shankar Narayanan is an Indian born American entrepreneur based out of United States of America and India, he is an ex-Chairman, founder and CEO of Spime Inc, a Location Technology Company acquired by Trimble, a world leader in location technology products.  Narayanan co-founded Nexus Inc, a networking solutions company based out of Fremont, California.  Nexus got acquired in the year 2000.  Following Nexus acquisition, he co-founded Emuzed Inc, a mobile multimedia company in 2000.  Following its acquisition by Flextronics in 2005, he became the Vice President and General Manager of Flextronics Mobile Software Division.  He left Flextronics to start Spime Inc, a location technology product company in 2006.  He was the charter secretary of MCRT 99 of Round Table India, he was an active member and held various responsible roles at MCRT 99 of Round Table India, also he was a member of Madras Cricket Club (MCC), Chennai, India and member of Kodaikanal English Club and Kodai Golf Club.
+
+Skyhook Wireless: Skyhook is a mobile location services company based in Boston, MA that specializes in location positioning, context and intelligence.  Founded in 2003, Skyhook originally began by geolocating Wi-Fi access points and evolved with the idea that hybrid positioning technology, which incorporates Wi-Fi, GPS, cell towers, IP address and device sensors, could improve device location.  Skyhook expanded their product set in 2015 to deliver advertising segments and behavioral insights; emphasizing data privatization and security for their advertising technology and mobile app customers.  In 2016, Skyhook engineered Precision Location to power Wearables and the Internet of Things, and launched products Personas and Context Accelerator to help brands reach out to mobile consumers.
+
+Humana: Humana Inc. is a for-profit American health insurance company based in Louisville, Kentucky.  s of 2014 Humana has had over 13 million customers in the U.S., reported a 2013 revenue of US$41.3 billion, and has had 51,600 employees.  In 2013, the company ranked 73 on the Fortune 500 list, which made it the highest ranked (by revenues) company based in Kentucky.  It has been the third largest health insurance in the nation.
+
+Question: "Civilization" was created by a company based out of what US location?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "The name of the company that created the game series."
+    },
+    "game_series_name": {
+      "type": "string",
+      "description": "The name of the game series in question."
+    },
+    "company_location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city where the company is based."
+        },
+        "state": {
+          "type": "string",
+          "description": "The state where the company is based."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country where the company is based."
+        }
+      },
+      "required": [
+        "city",
+        "state",
+        "country"
+      ],
+      "additionalProperties": false
+    },
+    "is_us_based": {
+      "type": "boolean",
+      "description": "Indicates if the company is based in the United States."
+    }
+  },
+  "required": [
+    "company_name",
+    "game_series_name",
+    "company_location",
+    "is_us_based"
+  ],
+  "additionalProperties": false
+}

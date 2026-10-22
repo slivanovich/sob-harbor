@@ -1,0 +1,22 @@
+{
+  "identified_computer_scientist_name": "Leonid Levin",
+  "people_compared": [
+    {
+      "name": "Anatoly Karatsuba",
+      "is_computer_scientist": false,
+      "professions": [
+        "mathematician"
+      ]
+    },
+    {
+      "name": "Leonid Levin",
+      "is_computer_scientist": true,
+      "professions": [
+        "computer scientist"
+      ],
+      "nationality": "Soviet-American",
+      "birth_year": 1948
+    }
+  ],
+  "total_people_in_question": 2
+}

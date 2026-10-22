@@ -1,0 +1,9 @@
+{
+  "theatre_name": "Gerald Schoenfeld Theatre",
+  "theatre_location_borough": "Manhattan",
+  "bounding_rivers": [
+    "Hudson",
+    "East",
+    "Harlem"
+  ]
+}

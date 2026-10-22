@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "53e9b4b21e88bcc07708073b14642d82714619368e80cf9190f75544778baaf3",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5abe4ba85542991f6610612b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Souten",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Thomas G:son: Thomas Gustafsson (born 25 February 1968) is a Swedish composer and musician from Skövde, Västergötland, Sweden, north-east of Gothenburg.  However, he is much more known nationally and internationally simply as Thomas G:son, his artistic name.  Since 1998, Thomas has worked full-time as a songwriter for the company G:songs.  In addition to writing and composing songs in many different musical genres for a living, he plays the guitar in the hard rock band, Masquerade.  Thomas G:son is best known for the sixty-nine songs he has written for national finals of twelve different countries for the Eurovision Song Contest (ESC): thirty-nine for Sweden, eleven for Spain, six for Norway, five for Denmark, four for Finland, three for Georgia, two for Poland, and one each for Cyprus, Latvia, Romania, Belgium, and Malta.  He has also reached the Eurovision Song Contest twelve times, three times each for Sweden, Spain, and Georgia, and once each for Norway, Denmark, and Cyprus.  In 2012, G:son achieved his first victory as a winning composer at the Eurovision Song Contest with the entry \"Euphoria\".\n\nAlex Jacke: Alex Jacke was born and raised in the Los Feliz neighborhood of Los Angeles, CA.  The singer and songwriter realized his passion for music as a child when he fell in love with 90's R&B and Hip Hop.  Jacke's music influences also include soul, funk, gospel, rock, and pop music.  Self-taught on the piano, he began composing songs by middle school.  By the time he started his freshman year at Morehouse College, he knew music was his future and he focused his energy on songwriting, & performing at school events and venues around Atlanta.  During his sophomore year, he appeared on the highly popular MTV series \"My Super Sweet 16,\" as the special guest performer for DJ Spinderella and former NBA player, Kenny Anderson's daughter, Christy.  His performance caught the attention of music executive and producer, Laney Stewart, who invited Jacke to work with him over the summer.  Jacke jumped at the opportunity to pursue his dream, and left Morehouse College at the end of his junior year to return to Los Angeles.  Like others before him, most notably Tricky Stewart and The-Dream.  Laney Stewart took Alex Jacke under his wing which led Jacke to land a worldwide publishing deal with Music Gallery/Universal Music Publishing Group in 2011.  Along with Stewart and his production team The Sharpshootaz, Alex Jacke spent most of the first half of 2012 perfecting his debut EP, D.F.M. (Dorm Fuckin Music) released on July 9, 2012.  On Valentine's Day 2013, Alex released a \"Deluxe\" version of his D.F.M. release, simply titled \"D.F.M. Deluxe.\"\n\nSaajan Bina Suhagan: Saajan Bina Suhagan (meaning 'bride without bridegroom') is a 1978 Hindi drama film produced and directed by Saawan Kumar Tak.  The film stars Rajendra Kumar, Nutan, Vinod Mehra, Padmini Kohlapure and Shreeram Lagoo, the films music is by Usha Khanna.  It has a popular song \"Madhuban Khushboo Deta Hai\" sung by Yesudas, Anuradha Paudwal and Hemlata.  The film was remade in Tamil as \"Mangalanayaki\".\n\nBlue Skied an' Clear: Blue Skied An' Clear is a two-disc compilation, featuring various artists from Morr Music covering songs from the shoegazer band Slowdive on the first disc and composing songs \"inspired\" by Slowdive on the second disc.  It was released in 2002 by Morr Music, and was the label's 30th release.  In addition to serving as a showcase of the Morr Music roster, this release serves as a testament to the resurgence or revival of the shoegazing sound in this particular realm of electronica or IDM.  Whereas the initial wave of shoegazer rock had fuzzed out guitars (via distortion from effects pedals) as a central characteristic, the artists on this release combine that with (or abandon it for) glitchy beats, synth tones, and digital signal processing effects.  On this release, and with this indietronica style of music in general, musicians composing with software housed in laptop computers often replace the conventional rock band formula.  Being composed of Slowdive covers, the first disc has substantially more vocals than the second disc, which is more in line with the modus operandi of electronica or indietronica artists, generally speaking.\n\nTsiliva: Tsiliva, born Christophe Tsiliva Diddiot, is a Malagasy musician who performs \"kilalaka\", a traditional genre of music from the southwestern interior of Madagascar.  The son of a pastor, he was born on 25 July 1982 and raised in the western coastal town of Ambovombe Androy, near Morondava.  As a child he enjoyed playing music and composing songs.  Upon reaching secondary school, he formed or joined many local groups, including Cabalero Music, Tsirangoty, Diddiot Pro, Calypso, Mentalis Music and Fouad music, with whom he both performed and composed music.  After graduating high school and earning his \"baccalaureat\" in management and communications, he played bass for the group Dadah de Fort Dauphin, later joining the groups Terana and Terakaly as a percussionist.  With Terakaly, he performed for the first time at a major music festival, the Donia music festival at Nosy Be.\n\nVinayakan: Vinayakan is an Indian film actor who stars in Malayalam, Tamil, Telugu and Hindi films.  He won the 2016 Kerala State Film Award for Best Actor for portraying the character Ganga/Gangadharan in the film \"Kammatipaadam\".  He also ventured into composing songs by composing for \"Kammatipaadam\".\n\nAtif Afzal: Atif Afzal (born Syed Atif Afzal on 17 May 1985) is an Indian composer.  He debuted as a film composer in 2013 by composing songs and film score for the movie Pune 52.  After Pune 52, he scored music for a psycho-thriller Prague (2013 film), starring Chandan Roy Sanyal and Elena Kazan, followed by a Marathi superhero movie Baji (film) starring Shreyas Talpade.  He has also worked on international films namely Gift and Then a Hero Comes Along.\n\nTabu filmography: Indian actress Tabu, also credited as Tabbu, has appeared in Hindi, Telugu, English, Tamil, Malayalam and Bengali films.  Tabu's first credited role came as a teenager in Dev Anand's \"Hum Naujawan\" (1985), and her first major role was in the Telugu film \"Coolie No. 1\" (1991).  In 1994, she starred in two Hindi filmsthe romance \"Pehla Pehla Pyar\" and the action drama \"Vijaypath\"and received the Filmfare Award for Best Female Debut for the latter.  After appearing in a series of poorly received films, including \"Prem\" and \"Saajan Ki Baahon Mein\" (both 1995), the year 1996 was key for Tabu.  Her performance as a young woman affected by the Punjab insurgency in Gulzar's \"Maachis\" (1996) proved to be a breakthrough for her, and won her the National Film Award for Best Actress.  Also that year, Tabu won the Filmfare Award for Best Actress – Telugu for the romance \"Ninne Pelladata\", and featured alongside Govinda and Karisma Kapoor in the commercially successful comedy film \"Saajan Chale Sasural\".\n\nUsha Khanna: Usha Khanna (Hindi: उषा खन्ना ; born 7 October 1941) is an Indian music director in Hindi cinema.  She is the third female music director to enter the Indian film industry, after Jaddan Bai and Saraswati Devi and is one of the most commercially successful music directors in the male dominated music industry.  She is most known for songs like \"Chodo kal ki baatein\", \"Shaayad meri shaadi ka khayal\", \"Zindagi pyaar ka geet hai\" and \"Aap to aise na the\".  She remained active for more than 3 decades from 1960s to 1980s.  She is still active making some music for some movies and television-serials, more than 40 years after her debut as music director in Dil Deke Dekho (1959).  She received a Filmfare Award nomination for composing the songs for the huge hit film \"Souten \"(1983).  She was married to director, producer, lyricist, Sawan Kumar Tak, from whom she separated later on.\n\nTika Bhandari: Tika Bhandari (Nepali: टीका भण्डारी ) is a prominent music composer and singer of Nepali music.  He has composed music for over 300 Nepali modern songs and has released a total of 23 music albums.  He is best known for composing songs like Goli Sishako, Khusi Ta Kahan (Deep Shrestha), Kina Dukcha Timro Man (Prem Dhoj Pradhan), Yo Maya Bhanne Chij (Anju Panta) Gaule, Jo Desh Lai (Kiran Pradhan), Ma Sabda Charera (Deepak Kharel), Chanchale Timra (Rabin Sharma), Chiso Chiso Sun Koshi (Kumar Kancha), Hamro Prem ko Katha (Karna Das), Harka Jeet (Tika Bhandari, Rajesh Payal Rai), Chhati Bhitra Dhuk Dhuki (Tika Bhandari), Qatar Gaye Suadi Gaye (Dekendra Thapa), Aadha Bato (Swarup Raj), Barsat ma uni rujhda (Ram Krishna Dhakal), Sagarmatha Roi Rahechha(Ram Krishna Dhakal), Gangalal ko Jasto mutu (Shiva Pariyar), Timro Man Bata (Pramod Kharel), Ma ta hajur van ko driver (Udit Narayan Jha), Jhilimili Gaun Gharai Ramailo (Deepa Narayan Jha), Ko Sanga Chaina Afno Simana (Mohammed Aziz) etc.  Most of the Nepalese singers have sung his compositions.  He received Nepal Bidhya Bhusan in 2003 for being faculty topper in M.A. in Political Science from Tribhuvan University.  He is also the Deputy Director of Radio Nepal.",
+    "question": "The music to the film \"Saajan Bina Suhagan\" was written by a woman that received a Filmfare Aware for composing songs for what film?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "composer_name": {
+          "type": "string",
+          "description": "The name of the music composer."
+        },
+        "film_composed_for": {
+          "type": "string",
+          "description": "The film for which the composer wrote music, as mentioned in the question."
+        },
+        "award_details": {
+          "type": "object",
+          "properties": {
+            "award_type": {
+              "type": "string",
+              "description": "The type of award or nomination received by the composer."
+            },
+            "nominated_film": {
+              "type": "string",
+              "description": "The title of the film for which the composer received the award or nomination."
+            },
+            "nominated_film_year": {
+              "type": "integer",
+              "description": "The release year of the film for which the composer received the award or nomination."
+            }
+          },
+          "required": [
+            "award_type",
+            "nominated_film",
+            "nominated_film_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "composer_name",
+        "film_composed_for",
+        "award_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "composer_name": "Usha Khanna",
+      "film_composed_for": "Saajan Bina Suhagan",
+      "award_details": {
+        "award_type": "Filmfare Award nomination",
+        "nominated_film": "Souten",
+        "nominated_film_year": 1983
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

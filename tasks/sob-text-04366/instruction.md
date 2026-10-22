@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Adam Freeland: Adam Freeland (born 7 August 1973) is an English record producer and DJ.  He is also the owner and creative director of the record label Marine Parade, which has released material by artists including Evil Nine, ILS, Alex Metric and Jape.  Born in Welwyn Garden City, Hertfordshire, he first began DJing in 1991, originally mixing deep house and later drum and bass.  After becoming an in-demand DJ around Britain, he released his first mix album "Coastal Breaks" (1996) and formed the electronic music duo Tsunami One with Kevin Beber.  From 1999 to 2001 Adam hosted a show on Friday night on London's Kiss 100 FM.  In 2000, he released his debut studio album, "Now & Them".
+
+Jagz Kooner: Jagz Kooner is an English producer who has worked with Radio 4, Manic Street Preachers, Primal Scream for whom he co-produced their cover version of the song 'Some Velvet Morning' sung this time by the model Kate Moss, Garbage and Infadels.  He has created remixes for Massive Attack "Butterfly Caught" with additional vocals from the well known UK dance music vocalist Tara McDonald.  His remix "My Beautiful Friend" for UK Indie band The Charlatans was so groundbreaking that it inspired Eddy Temple-Morris, a DJ at the XFM radio station to form a show dedicated to remixes.  Kooner also worked with Rammstein, Siobhan Fahey, Ladytron, Adam Freeland, dEUS, Kasabian and more recently Reverend and the Makers.  His remix of 'Swastika Eyes', for Primal Scream appears as one of two remixes of the track on the "Xtrmntr" album.  He has also remixed two songs from the Oasis album, "Dig Out Your Soul".  On the bonus CD available only as part of the Deluxe Edition, Jagz Kooner has remixed first single 'The Shock Of The Lightning', as well as, the album track 'The Turning'.  He has also been keenly involved in the UK mash-up scene.
+
+Ingrid Michaelson: Ingrid Ellen Michaelson (born December 8, 1979) is an American singer and songwriter.  Her first album, "Slow the Rain," was released in 2005, and she has since released six more albums, "Girls and Boys," "Be OK," "Everybody," "Human Again," "Lights Out," and her most recent, "It Doesn't Have to Make Sense."  Her two highest-charting singles are "The Way I Am" and "Girls Chase Boys," at No. 37 and No. 52 on the "Billboard" Hot 100, respectively.  She played the role of Sonya Rostova temporarily in the musical, Natasha, Pierre & The Great Comet of 1812 from July 3rd to August 13th while actress Brittain Ashford was on leave.
+
+Manni Sandhu: Manni Sandhu is a UK-based music director.  He is most known for working with a number of Punjabi singers such as Manak-E, The Late Kaka Bhaniawala, Bakshi Billa, Prabh Gill, Lehmber Hussainpuri and many more.  He released his debut album "My Time" in February 2012 which included his No. 1 single with Bakshi Billa "Sona", and smash hit song with Manak-E "Door Ni Kulne", as well as 6 further tracks that charted in the official UK Asian Music Download Chart.  Since releasing his first album, he's worked with a number of singers such as Prabh Gill, and later released his second album which is titled "Against All Odds" in 2015.
+
+Singers (album): Singers (styled SINGERS) is an album by Phil Elverum.  The album is often credited to Elverum's musical project Mount Eerie (and includes several songs which re-appear on other Mount Eerie releases), although the sleevenotes offer the following declaration: "THIS NEW BAND CALLED "SINGERS" IS BORN.  THIS IS THE FIRST ALBUM BY SINGERS."  The album was pressed on white vinyl and is now out-of-print.
+
+Bianca Ryan: Bianca Taylor Ryan (born September 1, 1994) is an American singer, songwriter, musician and actress from Philadelphia, Pennsylvania.  Ryan was the first winner of NBC's "America's Got Talent" at the age of eleven.  She auditioned for "Talent" in 2006 and amazed the judges with her big voice.  Singing two Broadway show tunes along the way, Ryan was announced as the winner of season one on August 17.  Her self-titled first album was released later in 2006, followed by two Christmas albums.  Two singles followed in 2007 and 2010; also in 2010, she made an acting appearance in a music video by The Wrecking.  The video for her first new release in four years, a cover of the John Legend song "All of Me", was posted to her YouTube channel in March 2014.  Her original song "Alice" was self-released in May 2015.
+
+Ryan Shupe &amp; the RubberBand: Ryan Shupe & the RubberBand is an American Rock / Bluegrass group founded in the mid-1990s in Ogden, UT.  The band's current lineup comprises Ryan Shupe (fiddle, guitar, ukulele, mandolin, lead vocals), Roger Archibald (guitar, vocals), Craig Miner (banjo, bouzouki, mandolin, guitar, vocals), Josh Larsen (bass guitar, string bass, vocals), and Nate Young (drums, vocals).  After recording four studio albums on their own independent record label, Ryan Shupe & The RubberBand were signed to Capitol Records in 2005.  Their first album for Capitol, 2005's "Dream Big", produced a Top 40 hit on the U.S. "Billboard" Hot Country Songs charts in its title track.  The second single from the album, however, failed to chart, and the band was dropped from Capitol.  In 2008, the band signed to Montage Music Group and released the album Last Man Standing.  After this, the band continued to tour nationally and promote their unique brand of music.  In 2010, the band released the album "Brand New Shoes" on their own independent label.  This album has many crowd favorites and highlights the cross-genre, acousti-jam sound they have become known for.  The band is currently promoting their new album "We Rode On" which leans more into the Rock side of their musical arsenal and have released three videos to promote the upcoming release.  These videos are for the songs The Sun Will Shine Again, We Rode On, and Just Say Yes.
+
+Ryan Freeland: Ryan Freeland is an American music producer, engineer and mixer based in Los Angeles, California.  Freeland is a four-time Grammy award winner and is best known for his work with Bonnie Raitt, Ray LaMontagne, Aimee Mann, Joe Henry, Grant-Lee Phillips, Hugh Laurie, Ingrid Michaelson, Loudon Wainwright III, Rodney Crowell, Alana Davis, and Jonatha Brooke.  He is represented exclusively by Global Positioning Services Management in Santa Monica.
+
+Endlessly (album): Endlessly is the second studio album by Welsh singer Duffy.  It was released in the United Kingdom on 26 November 2010 by A&M Records (under Polydor) and in the United States on 7 December 2010 by Mercury Records.  Duffy worked almost exclusively with Albert Hammond Snr.  on the album, with all but one of the album's songs being written by Hammond and Duffy.  Four of the songs received additional or co-production by Stuart Price.  Music is also provided by The Roots and Questlove.  Musically, the album follows the soul stylings of her first album "Rockferry" (2008), although Duffy drew inspiration from a variety of other genres, including disco and soft rock, and was compared to pop singers such as Kylie Minogue.  It has been said that Duffy wrote the album in three weeks, although recording sessions lasted between 2009 and 2010.
+
+Sentimental Journey (Emmy Rossum album): Sentimental Journey is the second album by singer-actress Emmy Rossum and her first album in six years.  Unlike her first album, in which she co-wrote every song but one, "Sentimental Journey" is a cover album and includes song from the 1920s through the 1960s.  "Sentimental Journey" features many of the same people who worked on her first album, including producer Stuart Brawley and musician Joe Corcoran.  "Pretty Paper" was the first single from the album and was released as a digital single on November 27, 2012.  Rather than traditional music videos, "vignettes" were filmed and released to promote the album and feature Rossum in early 1900s clothing and setting with songs from the album playing in the background.
+
+Question: What was the first album of the one of the singers which has worked with Ryan Freeland?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "producer_name": {
+      "type": "string",
+      "description": "The name of the music producer mentioned in the question."
+    },
+    "collaborating_singer": {
+      "type": "object",
+      "description": "Details about the singer who collaborated with the producer.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the singer."
+        },
+        "first_album_title": {
+          "type": "string",
+          "description": "The title of the singer's first album."
+        },
+        "first_album_release_year": {
+          "type": "integer",
+          "description": "The year the singer's first album was released."
+        }
+      },
+      "required": [
+        "name",
+        "first_album_title",
+        "first_album_release_year"
+      ],
+      "additionalProperties": false
+    },
+    "answer_album_title": {
+      "type": "string",
+      "description": "The title of the first album of the singer who worked with Ryan Freeland."
+    }
+  },
+  "required": [
+    "producer_name",
+    "collaborating_singer",
+    "answer_album_title"
+  ],
+  "additionalProperties": false
+}

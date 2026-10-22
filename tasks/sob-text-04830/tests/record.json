@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "record_id": "5f8dca3348dd670ddfeb4f5149c5d170e9474a405ba82e1124a4ec5b19c587e9",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a79e88a5542994f819ef102",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1970",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Laura Marano: Laura Marie Marano (born November 29, 1995) is an American actress and singer.  She starred in the Disney Channel series \"Austin & Ally\" as Ally Dawson.  Marano was one of the five original classmates in \"Are You Smarter than a 5th Grader? \".  She starred in \"Without a Trace\" for three seasons and also \"Back to You\", in both instances playing the daughter of the main characters.  Marano starred in the indie film \"A Sort of Homecoming\".  Marano also starred in the 2015 Disney Channel Original Movie \"Bad Hair Day\" along with \"Good Luck Charlie\" actress Leigh-Allyn Baker.  In 2015, she signed with Big Machine Records and released her debut single \"Boombox\" on March 11, 2016.  At the end of 2016, Big Machine Records made the decision to drop all of their pop artists.  Marano then signed to Warner Bros.  Records in 2017 and plans to release her debut album with the label.  She is also the younger sister of actress Vanessa Marano who starred in Freeform's \"Switched at Birth\".\n\nCyrina Fiallo: Cyrina Fiallo (born December 29, 1991) is an American actress.  She is perhaps best known for her recurring role as Vonnie on the Disney Channel sitcom \"Good Luck Charlie\".  She also has guest starred on \"Everybody Hates Chris\", \"Community\", \"Gigantic\", \"Glee\", \"Switched at Birth\", \"Girl Meets World\" and \"Supernatural\".  She also starred in the internet television series \"My Alibi\" and \"The Subpranos\", the latter of which she co-wrote, co-directed and co-produced with fellow actress Chrissie Fit.\n\nAlexandra Barreto: Alexandra Barreto (born October 16, 1975) is an American actress who starred in the 2006 television series \"Pepper Dennis\" with her future husband Rider Strong and Rebecca Romijn and in the horror film \"Tooth and Nail\", a part of the annual After Dark Horrorfest in 2007.  Since 2013, she has appeared in the recurring role of Ana Gutierrez, birth mother to two of the main characters on \"The Fosters\".\n\nUma Thurman: Uma Karuna Thurman (born April 29, 1970) is an American actress and model.  She has performed in a variety of films, ranging from romantic comedies and dramas to science fiction and action movies.  Following her appearances on the December 1985 and May 1986 covers of British \"Vogue\", she starred in \"Dangerous Liaisons\" (1988).  Thurman rose to international prominence with her performance in Quentin Tarantino's \"Pulp Fiction\" (1994), for which she was nominated for the Academy Award, the BAFTA Award, and the Golden Globe Award for Best Supporting Actress.  She starred in several more films throughout the 1990s such as \"Batman & Robin\" (1997), \"Gattaca\" (1997), and \"Les Misérables\" (1998).\n\nJennifer Rubin (actress): Jennifer Collene Rubin (born April 3, 1962) is an American actress and former model.  A competitive swimmer during her youth, Rubin was discovered by the Ford Modeling Agency and went on to model for Calvin Klein and became Ford International Model of the Year in 1984.  She made her film debut as Taryn White in the 1987 horror film \"\" and has since starred in a variety of films including Andrew Fleming's \"Bad Dreams\" (1988), Oliver Stone's \"The Doors\" (1991), Alan Shapiro's \"The Crush\" (1993), Louis Venosta's \"The Coriolis Effect\" (1994) and Christian Duguay's \"Screamers\" (1995).  Outside of film, Rubin has guest starred on a variety of television series such as \"The Twilight Zone\" (1987) and \"Tales from the Crypt\" (1992).  In 2010, Rubin appeared as herself in the documentary \"\".\n\nEri Imai: Eri Imai (今井 恵理 , Imai Eri , born January 26, 1971 in Yawata, Kyoto) is a Japanese actress and model.  In April 1994, she won the \"Shape Up Girl Audition\" Grand Prix, and made appearances with three other models under the \"Shape Up Girl\" name.  She made numerous appearances on television, film, v-cinema, photobooks and on stage during the 1990s.  She and her husband, actor Yūjin Nomura, announced the birth of their first child, a son, in October 2009.  At the end of that year Imai appeared in the \"Shape-Up Girl\" calendar with her fellow alumni of that group.  She returned for this calendar the following year.\n\nGeena Davis: Virginia Elizabeth \"Geena\" Davis (born January 21, 1956) is an American actress, film producer, writer, voice actress, former fashion model, and former archer.  She is known for her roles in \"The Fly\" (1986), \"Beetlejuice\" (1988), \"Thelma & Louise\" (1991), \"A League of Their Own\" (1992), \"The Long Kiss Goodnight\" (1996), \"Stuart Little\" (1999), and \"The Accidental Tourist\", for which she won the 1988 Academy Award for Best Supporting Actress.\n\nPhyllis Brooks: Phyllis Brooks (July 18, 1915 – August 1, 1995) was an American actress and model.  She was born in Boise, Idaho.  Some sources have also inaccurately cited 1914 as her year of birth, but 1915 is the correct year according to Social Security records.\n\nThe Accidental Husband: The Accidental Husband is a 2008 American romantic comedy film directed by Griffin Dunne, and starring Uma Thurman, Jeffrey Dean Morgan, Colin Firth, Isabella Rossellini, and Sam Shepard.  The film was written by Mimi Hare, Clare Naylor and Bonnie Sikowitz, and is produced by Jennifer Todd, Jason Blum, and Uma Thurman.  It was theatrically released in the UK in 2008, but was released direct-to-DVD in the United States.\n\nAmy Wright: Amy Wright (born April 15, 1950 in Chicago) is an American actress and former model.  She has appeared in such films as \"The Deer Hunter\", \"Breaking Away\", \"The Amityville Horror\", \"Heartland\", \"Wise Blood\", \"Stardust Memories\", \"The Accidental Tourist\", \"Hard Promises\", \"Crossing Delancey\" and \"Miss Firecracker\".",
+    "question": "What was the year of birth of the American actress and model who starred in The Accidental Husband?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "actress_name": {
+          "type": "string",
+          "description": "The name of the actress who starred in the film."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the actress."
+        },
+        "professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of professions of the actress."
+        },
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film mentioned in the question."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The year of birth of the actress."
+        }
+      },
+      "required": [
+        "actress_name",
+        "nationality",
+        "professions",
+        "film_title",
+        "birth_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "actress_name": "Uma Thurman",
+      "nationality": "American",
+      "professions": [
+        "actress",
+        "model"
+      ],
+      "film_title": "The Accidental Husband",
+      "birth_year": 1970
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "novel_title": "The Phantom of the Opera",
+  "author_name": "Gaston Leroux",
+  "featured_character": "Meg Giry",
+  "publication_details": {
+    "first_published_as_serialization": true,
+    "serialization_newspaper": "Le Gaulois",
+    "serialization_start_date": "23 September 1909",
+    "serialization_end_date": "8 January 1910"
+  }
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Phillips Graduate Institute: Phillips Graduate University is a graduate school based in Chatsworth, Los Angeles, California.  It provides graduate education in family therapy, art therapy, and human relations.  In the 1950s its founders, Clinton E. Phillips, Ph.D., and David Jansen, D.Min., had pioneered the application of family systems theory and the initiation of family therapy at the American Institute of Family Relations.  In 1971 they founded the California Family Study Center which, in 1992, was renamed in Dr. Phillips' honor.  In 2016, Phillips Graduate Institute changed its name to Phillips Graduate University.
+
+Sarah Palin email hack: The Sarah Palin email hack occurred on September 16, 2008, during the 2008 United States presidential election campaign when the Yahoo! personal email account of vice presidential candidate Sarah Palin was subjected to unauthorized access.  The hacker, David Kernell, had obtained access to Palin's account by looking up biographical details such as her high school and birthdate and using Yahoo!'s account recovery for forgotten passwords.  Kernell then posted several pages of Palin's email on 4chan's /b/ board.  Kernell, who at the time of the offense was a 20-year-old college student, is the son of longtime Democratic state representative Mike Kernell of Memphis.
+
+Dave Wyatt: David "Dave" Wyatt (birthdate unknown) was a Negro Leagues infielder and manager for several years before the founding of the first Negro National League.  He attended Indiana State University.
+
+David J. Impastato: David John Impastato, M.D. – born January 8, 1903 (Mazara del Vallo, Sicily), died February 28, 1986 (Pasadena, California) – was a neuropsychiatrist who pioneered the use of electroconvulsive therapy (ECT) in the United States.  A treatment for mental illness initially called "electroshock," ECT was developed in 1937 by Drs Ugo Cerletti and Lucio Bini, working in Rome.  Impastato has been credited with the earliest documented use of the revolutionary method in North America, administered in early 1940 to a schizophrenic female in New York City.  Soon after, he and colleague Dr. Renato Almansi completed the first case study of ECT to appear in a U.S. publication.  Impastato spent the next four decades refining the technique, gaining recognition as one of its most authoritative spokesmen.  He taught, lectured widely and published over fifty articles on his work.  He called on ECT practitioners to observe the strictest protocols of patient safety, countered resistance to ECT from both the medical and cultural establishments, and met later challenges to electroconvulsive therapy from developments in psychopharmacology.  Impastato would live to see ECT recommended by the American Psychiatric Association for a distinct core of intractable mental disorders.  Though still not free of controversy, electroconvulsive therapy is the treatment of choice for an estimated 100,000 patients a year in the United States.
+
+David Gussak: David E. Gussak, Ph.D., ATR-BC is chairperson for the Florida State University’s Department of Art Education and professor of its art therapy program.  He is the author of Art on Trial: Art Therapy in Capital Murder Cases, co-editor of the 84- chapter The Wiley Handbook of Art Therapy with his colleague, Dr. Marcia Rosal, and has developed and writes a blog for Psychology Today, “Art on Trial: Confessions of a Serial Art Therapist”.  He has, through his research, national and international presentations and publications, become one of the leading authorities on art therapy in forensic and correctional settings.
+
+David Epston: David Epston (born 30 August 1944) is a New Zealand therapist, co-director of the Family Therapy Centre in Auckland, New Zealand, Visiting Professor at the John F. Kennedy University, an honorary clinical lecturer in the Department of Social Work, University of Melbourne, and an affiliate faculty member in the Ph.D program in Couple and Family Therapy at North Dakota State University.  Epston and his late friend and colleague Michael White are known as originators of narrative therapy.
+
+Narrative therapy: Narrative therapy is a form of psychotherapy that seeks to help people identify their values and the skills and knowledge they have to live these values, so they can effectively confront whatever problems they face.  The therapist seeks to help the person co-author a new narrative about themselves by investigating the history of those qualities.  Narrative therapy claims to be a social justice approach to therapeutic conversations, seeking to challenge dominant discourses that it claims shape people's lives in destructive ways.  The approach was developed during the 1970s and 1980s, largely by Australian social worker Michael White and David Epston of New Zealand.
+
+Michael White (psychotherapist): Michael White (29 December 1948 – 4 April 2008) was an Australian social worker and family therapist.  He is known as the founder of narrative therapy, and for his significant contribution to psychotherapy and family therapy, which have been a source of techniques adopted by other approaches.
+
+David F. Levine: David F. Levine is a physical therapy professor, holding the Walter Cline Chair of Excellence in Physical Therapy at the University of Tennessee at Chattanooga.  His research and publication contributions focus on gait analysis, the use of modalities such as electrical stimulation and therapeutic ultrasound, clinical infectious disease research, and veterinary rehabilitation and physical therapy, including canine physical therapy.
+
+The Tumor (short story): "The Tumor" is a short story by John Grisham, telling about the focused ultrasound process through the case of a fictional character named Paul.  This story was not released through Grisham's usual publisher, but instead was published for a free eBook on the website of the Focused Ultrasound Foundation, on whose board Grisham serves.  Grisham's purpose in writing this short story was to increase awareness about the promising new medical therapy.  The use of focused ultrasound is not yet approved for use on brain tumors, but "The Tumor" takes place in a time when the therapy is in regular use.  Unlike most short stories, the story is as much informational as narrative, and includes medical illustrations and brain scan images.  The book's cover includes the subtitle "A Non-Legal Thriller". On Grisham's website, in a letter introducing "The Tumor", Grisham states "It's the most important book I've ever written."
+
+Question: What is the birthdate of the colleague of David Epston who orrigated narrative therapy with him?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the colleague."
+    },
+    "relationship_to_david_epston": {
+      "type": "string",
+      "description": "The relationship of the person to David Epston."
+    },
+    "therapy_originated": {
+      "type": "string",
+      "description": "The name of the therapy they co-originated."
+    },
+    "birthdate": {
+      "type": "string",
+      "description": "The birthdate of the colleague in 'DD Month YYYY' format."
+    }
+  },
+  "required": [
+    "person_name",
+    "relationship_to_david_epston",
+    "therapy_originated",
+    "birthdate"
+  ],
+  "additionalProperties": false
+}

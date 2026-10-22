@@ -1,0 +1,15 @@
+{
+  "commissioner": {
+    "name": "John Charles Groome",
+    "role": "first commissioner"
+  },
+  "former_institution": {
+    "name": "Eastern State Penitentiary",
+    "type": "prison",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    }
+  },
+  "answer_city": "Philadelphia"
+}

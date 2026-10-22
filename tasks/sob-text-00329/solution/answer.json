@@ -1,0 +1,10 @@
+{
+  "cocktail_name": "Sea Breeze",
+  "main_ingredients": [
+    "vodka",
+    "cranberry juice",
+    "grapefruit juice"
+  ],
+  "is_iba_official_cocktail": true,
+  "typical_consumption_period": "summer months"
+}

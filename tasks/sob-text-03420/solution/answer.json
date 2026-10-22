@@ -1,0 +1,13 @@
+{
+  "actress_name": "Maia Mitchell",
+  "actress_nationality": "Australian",
+  "actress_birth_year": 1993,
+  "tv_series_details": {
+    "title": "The Fosters",
+    "premiere_year": 2013,
+    "actress_character_name": "Callie Jacob",
+    "foster_parent_actress_name": "Teri Polo",
+    "foster_parent_character_name": "Stef Foster",
+    "relationship_type": "foster child"
+  }
+}

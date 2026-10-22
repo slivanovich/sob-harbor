@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "record_id": "3b239d30bae14ec65b6d0545867e4e86c9ed003cc5ea9d9657c5dba9c900d42c",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae615175542996de7b71b37",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Valérian and Laureline",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Heroes of the Equinox: Heroes of the Equinox is volume eight in the French comic book (or \"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.\n\nEmpire of a Thousand Planets: Empire of a Thousand Planets is volume two in the French comic book (or \"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.\n\nWorld Without Stars: World Without Stars is volume three in the French graphic novel (\"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.\n\nSur les Terres Truquées: Sur les Terres Truquées (English: On The False Earths ) is volume seven in the French comic book (or \"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.\n\nWelcome to Alflolol: Welcome to Alflolol is volume four in the French comic book (or \"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.\n\nBirds of the Master: Birds of the Master is volume five in the French comic book (or \"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.\n\nL'OuvreTemps: L'OuvreTemps (English: The Time Opener ) is volume twenty-one in the French comic book (or \"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.  It continues the story begun in \"At the Edge of the Great Void\" and continued in \"The Order of the Stones\".  It was released in January 2010.  It is the last volume in the series.\n\nAmbassador of the Shadows: Ambassador of the Shadows is volume six in the French comic (or \"bande dessinée\") science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.\n\nValérian and Laureline: Valérian and Laureline (French: \"Valérian et Laureline\" ), also known as Valérian: Spatio-Temporal Agent (French: \"Valérian, agent spatio-temporel\" ) or just Valérian, is a French science fiction comics series, created by writer Pierre Christin and artist Jean-Claude Mézières.  First published in \"Pilote\" magazine in 1967, the final installment was published in 2010.  All of the \"Valérian\" stories have been collected in comic album format, comprising some twenty-one volumes plus a short story collection and an encyclopaedia.  \"Valérian\" is one of the top five biggest selling Franco-Belgian comics titles of its publisher, Dargaud.\n\nThe City of Shifting Waters: The City of Shifting Waters is the first volume in the French comic book science fiction series \"Valérian and Laureline\" created by writer Pierre Christin and artist Jean-Claude Mézières.",
+    "question": "Heroes of the Equinox is a volume in which science fiction series created by Pierre Christin?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "volume_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the specific volume."
+            },
+            "volume_number": {
+              "type": "integer",
+              "description": "The volume number in the series."
+            }
+          },
+          "required": [
+            "title",
+            "volume_number"
+          ],
+          "additionalProperties": false
+        },
+        "series_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the science fiction series."
+            },
+            "genre": {
+              "type": "string",
+              "description": "The genre of the series."
+            }
+          },
+          "required": [
+            "name",
+            "genre"
+          ],
+          "additionalProperties": false
+        },
+        "creator_details": {
+          "type": "object",
+          "properties": {
+            "writer": {
+              "type": "string",
+              "description": "The name of the writer who created the series."
+            }
+          },
+          "required": [
+            "writer"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "volume_details",
+        "series_details",
+        "creator_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "volume_details": {
+        "title": "Heroes of the Equinox",
+        "volume_number": 8
+      },
+      "series_details": {
+        "name": "Valérian and Laureline",
+        "genre": "science fiction"
+      },
+      "creator_details": {
+        "writer": "Pierre Christin"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

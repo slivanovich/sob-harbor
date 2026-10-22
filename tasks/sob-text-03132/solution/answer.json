@@ -1,0 +1,9 @@
+{
+  "mall_name": "Rosedale Center",
+  "annual_visitors": 12000000,
+  "served_by_a_line": true,
+  "location": {
+    "city": "Roseville",
+    "state": "Minnesota"
+  }
+}

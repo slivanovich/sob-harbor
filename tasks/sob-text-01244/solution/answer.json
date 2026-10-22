@@ -1,0 +1,37 @@
+{
+  "film_title": "The Karate Kid",
+  "release_year": 2010,
+  "director": {
+    "name": "Harald Zwart"
+  },
+  "lead_actors": [
+    "Jaden Smith",
+    "Jackie Chan",
+    "Taraji P. Henson"
+  ],
+  "producers": [
+    {
+      "name": "Jerry Weintraub"
+    },
+    {
+      "name": "James Lassiter"
+    },
+    {
+      "name": "Ken Stovitz"
+    },
+    {
+      "name": "Will Smith",
+      "is_jaden_smith_parent": true
+    },
+    {
+      "name": "Jada Pinkett Smith",
+      "is_jaden_smith_parent": true,
+      "professions": [
+        "American actress",
+        "dancer",
+        "singer-songwriter",
+        "businesswoman"
+      ]
+    }
+  ]
+}

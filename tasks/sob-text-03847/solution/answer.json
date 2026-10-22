@@ -1,0 +1,14 @@
+{
+  "organization_name": "High Mountain Institute",
+  "organization_type": "non-profit educational organization",
+  "location_details": {
+    "city": "Leadville",
+    "state": "Colorado",
+    "country": "United States"
+  },
+  "city_context": {
+    "city_name": "Leadville",
+    "county_seat_of": "Lake County",
+    "is_only_incorporated_municipality_in_county": true
+  }
+}

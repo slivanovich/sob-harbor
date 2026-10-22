@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Pittsburg, New Hampshire: Pittsburg is a town in Coos County, New Hampshire, United States.  The population was 869 at the 2010 census.  It is the northernmost town in New Hampshire and the largest town by area in the state – and in New England as well – more than twice the size of the next largest town, Lincoln.  U.S. Route 3 is the only major highway in the town, although the northern terminus of New Hampshire Route 145 also lies within Pittsburg.
+
+Glendale, New Hampshire: Glendale is an unincorporated community in the town of Gilford in Belknap County, New Hampshire, United States.  Glendale is located on the southern shore of Lake Winnipesaukee east of Laconia.  Glendale is served by New Hampshire Route 11 and is near Laconia Municipal Airport.
+
+Lincoln, New Hampshire: Lincoln is a town in Grafton County, New Hampshire, United States.  It is the second-largest town by area in New Hampshire.  The population was 1,662 at the 2010 census.  The town is home to the New Hampshire Highland Games and to a portion of Franconia Notch State Park.  Set in the White Mountains, large portions of the town are within the White Mountain National Forest.  The Appalachian Trail crosses in the northeast.  Lincoln is the location of the Loon Mountain ski resort and associated recreation-centered development.
+
+Goffstown, New Hampshire: Goffstown is a town in Hillsborough County, New Hampshire, United States.  The population was 17,651 at the 2010 census.  The compact center of town, where 3,196 people resided at the 2010 census, is defined by the U.S. Census Bureau as the Goffstown census-designated place and is located at the junction of New Hampshire routes 114 and 13.  Goffstown also includes the villages of Grasmere and Pinardville.  The town is home to Saint Anselm College (and its New Hampshire Institute of Politics) and the New Hampshire State Prison for Women.
+
+List of cities and towns in New Hampshire: New Hampshire is a state located in the Northeastern United States.  This is a list of the 221 towns and 13 cities in the U.S. state of New Hampshire.  New Hampshire is organized along the New England town model, where the state is nearly completely incorporated and divided into towns, some of which the state has designated as "cities".  For each town/city, the table lists the county to which it belongs, its date of incorporation, its population according to the 2010 census, its form of government, and its principal villages.  Cities are indicated in boldface.  Cities and towns are treated identically under state law.  Cities are just towns that dropped the town meeting form of government in favor of a city form by special act of the New Hampshire General Court.  However, since 1979, changing the form of governance no longer confers city status.  Towns may drop the town meeting by local vote and adopt a new charter for a representative government, such as a council-manager form, and retain their status as a town.  Several of the higher-population towns have already done so.
+
+Bradford, New Hampshire: Bradford is a town in Merrimack County, New Hampshire, United States.  The population was 1,650 at the 2010 census.  The main village of the town, where 356 people resided at the 2010 census, is defined as the Bradford census-designated place (CDP), and is located in the northeast part of the town, west of the junction of New Hampshire routes 103 and 114.  The town also includes the villages of Bradford Center and Melvin Mills.
+
+Cambridge, New Hampshire: Cambridge is a township in Coos County in the state of New Hampshire.  In New Hampshire, locations, grants, townships (which are different from towns), and purchases are unincorporated portions of a county which are not part of any town and have limited self-government (if any, as many are uninhabited).  Most of the township is forested wilderness, but it contains the southernmost edge of Umbagog Lake, accessed via New Hampshire Route 26 from Errol or from Upton, Maine.  It contains a section of the 13-Mile Woods Scenic Area along the Androscoggin River.  New Hampshire Route 16 also crosses the northwest corner of the township.  The population was 8 at the 2010 census.  It is part of the Berlin, NH–VT Micropolitan Statistical Area.
+
+Claremont–Lebanon micropolitan area: The Claremont–Lebanon Micropolitan Statistical Area, as defined by the United States Census Bureau, is an area consisting of four counties – two in New Hampshire and two in Vermont, anchored by the cities of Lebanon, New Hampshire and Claremont, New Hampshire.  At the 2010 census, the area was defined as two separate Micropolitan Statistical Areas (μSAs), Claremont and Lebanon.  The Claremont μSA, consisting of Sullivan County, New Hampshire, had a population of 43,742, while the Lebanon μSA, comprising Grafton County, New Hampshire, and Orange and Windsor counties in Vermont, had a population of 174,724.  In 2013, the two areas were combined to form the Claremont-Lebanon μSA, and in 2015 the estimated population was 216,923.  The Claremont–Lebanon μSA is the most populous micropolitan area in the United States.
+
+Gilford, New Hampshire: Gilford is a town in Belknap County, New Hampshire, United States.  The population was 7,126 at the 2010 census.  Situated on Lake Winnipesaukee, Gilford is home to Governors Island, Ellacoya State Beach, Belknap Mountain State Forest, Gunstock Mountain Ski Resort, and Bank of New Hampshire Pavilion at Meadowbrook, a seasonal outdoor concert venue.
+
+Antrim, New Hampshire: Antrim is a town in Hillsborough County, New Hampshire, United States.  The population was 2,637 at the 2010 census.  The primary settlement in the town, where 1,397 people resided at the 2010 census, is defined as the Antrim census-designated place (CDP) and is located at the intersection of U.S. Route 202 and New Hampshire Route 31.  The town of Antrim also includes the villages of Antrim Center, North Branch, Clinton Village and South Village.
+
+Question: According to the 2010 census, what was the population of the town in which Glendale, New Hampshire is an unincorporated communmity?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "community_name": {
+      "type": "string",
+      "description": "The name of the unincorporated community."
+    },
+    "parent_town": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the town where the community is located."
+        },
+        "county": {
+          "type": "string",
+          "description": "The county of the parent town."
+        },
+        "population_2010_census": {
+          "type": "integer",
+          "description": "The population of the parent town according to the 2010 census."
+        }
+      },
+      "required": [
+        "name",
+        "county",
+        "population_2010_census"
+      ],
+      "additionalProperties": false
+    },
+    "census_year": {
+      "type": "integer",
+      "description": "The year of the census data provided."
+    }
+  },
+  "required": [
+    "community_name",
+    "parent_town",
+    "census_year"
+  ],
+  "additionalProperties": false
+}

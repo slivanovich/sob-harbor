@@ -1,0 +1,72 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Tauriel: Tauriel is a fictional character from Peter Jackson's feature film adaptation of J.R.R. Tolkien's "The Hobbit".  The character does not appear in the original book, but was created by Peter Jackson, Philippa Boyens and Fran Walsh as an expansion of material adapted from the book, and first appears in the second and third films in that trilogy, "" and "".  She is a Woodland Elf whose name has been translated as "Daughter of the forest", and is the head of the Mirkwood Elven guard.  She is played by Canadian actress Evangeline Lilly, who was nominated for several awards for her performance in "The Desolation of Smaug", with some of the stunt work performed by Australian stuntwoman Ingrid Kleinig.
+
+Fargo (season 1): The first season of the anthology black comedy–crime drama television series "Fargo", premiered on April 15, 2014, on FX.  Starring Billy Bob Thornton, Allison Tolman, Colin Hanks and Martin Freeman, the season consisted of ten episodes and concluded its initial airing on June 17, 2014.
+
+Fargo (season 3): The third season of "Fargo", an American anthology black comedy–crime drama television series created by Noah Hawley, premiered on April 19, 2017, on the basic cable network FX.  The season had ten episodes, and its initial airing concluded on June 21, 2017.  As an anthology, each "Fargo" season possesses its own self-contained narrative, following a disparate set of characters in various settings, albeit in a connected shared universe.
+
+Richard Armitage (actor): Richard Crispin Armitage (born 22 August 1971) is an English film, television, theatre and voice actor.  He received notice in the UK with his first leading role as John Thornton in the British television programme "North & South" (2004).  But it was his role as dwarf prince and leader Thorin Oakenshield in Peter Jackson's film trilogy adaptation of "The Hobbit" that first brought him international recognition.  Other notable roles include John Proctor in Yaël Farber’s stage production of Arthur Miller's "The Crucible", Francis Dolarhyde in the American TV series "Hannibal", Lucas North in the British TV drama "Spooks", John Porter in the British TV drama "Strike Back", and Guy of Gisborne in the British TV drama "Robin Hood".  He more recently voiced Trevor Belmont in the Netflix adaptation of "Castlevania".
+
+Martin Freeman: Martin John Christopher Freeman (born 8 September 1971) is an English actor, who became known for portraying Tim Canterbury in the original UK version of sitcom mockumentary "The Office", Dr. John Watson in the British crime drama "Sherlock", Bilbo Baggins in Peter Jackson's "The Hobbit" film trilogy, and Lester Nygaard in the dark comedy-crime drama TV series "Fargo".
+
+Manu Bennett: Jonathan Manu Bennett (born 10 October 1969) is a New Zealand born actor.  He is known for his portrayal as the Gallic gladiator Crixus in the Starz television series "Spartacus".  He has also appeared as the orc commander Azog the Defiler in Peter Jackson's three-part film adaptation based on "The Hobbit" by J. R. R. Tolkien, and as supervillain Slade Wilson/Deathstroke in The CW TV series "Arrow".  Since January 2016, he plays the role of Allanon in the MTV series "The Shannara Chronicles", based on the "Shannara" novel series by Terry Brooks.
+
+Sylvester McCoy: Sylvester McCoy (born Percy James Patrick Kent-Smith; 20 August 1943) is a Scottish actor, best known for playing the seventh incarnation of the Doctor in the long-running science fiction television series "Doctor Who" from 1987 to 1989—the final Doctor of the original run—and briefly returning in a television film in 1996, as well as for his role as the wizard Radagast the Brown in Peter Jackson's film adaptations of "The Hobbit".
+
+Fargo (season 2): The second season of "Fargo", an American anthology black comedy–crime drama television series created by Noah Hawley, premiered on October 12, 2015, on the basic cable network FX.  Its principal cast consists of Kirsten Dunst, Patrick Wilson, Jesse Plemons, Jean Smart, and Ted Danson.  The season had ten episodes, and its initial airing concluded on December 14, 2015.  As an anthology, each "Fargo" season possesses its own self-contained narrative, following a disparate set of characters in various settings.
+
+The Hobbit (film series): The Hobbit is a film series consisting of three high fantasy adventure films directed by Peter Jackson.  They are based on the 1937 novel "The Hobbit" by J. R. R. Tolkien, with large portions of the trilogy inspired by the appendices to "The Return of the King", which expand on the story told in "The Hobbit", as well as new material and characters written especially for the films.  Together they act as a prequel to Jackson's "The Lord of the Rings" film trilogy.  The films are subtitled "" (2012), "" (2013), and "" (2014).
+
+The Hobbit: The Desolation of Smaug: The Hobbit: The Desolation of Smaug is a 2013 epic high fantasy adventure film directed by Peter Jackson and produced by WingNut Films in collaboration with New Line Cinema and Metro-Goldwyn-Mayer.  It was distributed by Warner Bros.  Pictures and is the second installment in the three-part film series based on the novel "The Hobbit" by J. R. R. Tolkien.  The film was preceded by "" (2012) and followed by "" (2014); together they operate as a prequel to Jackson's "The Lord of the Rings" film trilogy.
+
+Question: Which member of the crime drama television series "Fargo" played Bilbo Baggins in Peter Jackson's "The Hobbit"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor who played both roles."
+    },
+    "role_in_fargo": {
+      "type": "string",
+      "description": "The character the actor played in the 'Fargo' TV series."
+    },
+    "fargo_season_appearance": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "description": "The season numbers of 'Fargo' in which the actor appeared."
+    },
+    "role_in_the_hobbit": {
+      "type": "string",
+      "description": "The character the actor played in 'The Hobbit' film series."
+    },
+    "hobbit_film_series_director": {
+      "type": "string",
+      "description": "The director of 'The Hobbit' film series."
+    }
+  },
+  "required": [
+    "actor_name",
+    "role_in_fargo",
+    "fargo_season_appearance",
+    "role_in_the_hobbit",
+    "hobbit_film_series_director"
+  ],
+  "additionalProperties": false
+}

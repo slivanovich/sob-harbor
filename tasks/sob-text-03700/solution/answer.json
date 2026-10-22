@@ -1,0 +1,15 @@
+{
+  "first_entity": {
+    "name": "Collegiate Reformed Protestant Dutch Church",
+    "type": "congregation",
+    "establishment_year": 1628
+  },
+  "second_entity": {
+    "name": "126 Madison Avenue",
+    "type": "residential skyscraper",
+    "construction_start_year": 2015,
+    "expected_completion_year": 2018
+  },
+  "older_entity_name": "Collegiate Reformed Protestant Dutch Church",
+  "is_first_entity_older": true
+}

@@ -1,0 +1,12 @@
+{
+  "person_of_interest": {
+    "name": "Eric Fletcher",
+    "political_affiliation": "Labour Party"
+  },
+  "political_party_details": {
+    "name": "Labour Party",
+    "country": "United Kingdom",
+    "ideology": "centre-left"
+  },
+  "observer_status_granted_by": "Socialist International"
+}

@@ -1,0 +1,9 @@
+{
+  "lab_name": "Bell Labs",
+  "connection_event": "Human Digital Orchestra",
+  "lab_location": {
+    "city": "Murray Hill",
+    "state": "New Jersey",
+    "country": "United States"
+  }
+}

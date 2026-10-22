@@ -1,0 +1,10 @@
+{
+  "mobster_name": "Anthony Salerno",
+  "nickname": "Fat Tony",
+  "reason_for_nickname": "due to his size",
+  "involved_in_killing": {
+    "victim_name": "Tom Kapatos",
+    "killing_year": 1977,
+    "role_in_killing": "employer of a hired assassin"
+  }
+}

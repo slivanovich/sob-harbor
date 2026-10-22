@@ -1,0 +1,13 @@
+{
+  "stone_name": "Lapis lazuli",
+  "time_period": "7th millennium BC",
+  "mining_details": {
+    "specific_mines": [
+      "Sar-i Sang mines",
+      "Shortugai"
+    ],
+    "province": "Badakhshan province",
+    "country": "Afghanistan",
+    "region": "northeast Afghanistan"
+  }
+}

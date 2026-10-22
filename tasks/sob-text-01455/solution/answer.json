@@ -1,0 +1,8 @@
+{
+  "question_asked": "Are both Heuchera and Apophyllum genus of plant native to Australia?",
+  "genus_1_name": "Heuchera",
+  "genus_1_native_to_australia": false,
+  "genus_2_name": "Apophyllum",
+  "genus_2_native_to_australia": true,
+  "both_native_to_australia": false
+}

@@ -1,0 +1,22 @@
+{
+  "film_title": "The Last Mistress",
+  "release_year": 2007,
+  "film_origin": [
+    "French",
+    "Italian"
+  ],
+  "based_on_novel": {
+    "novel_title": "Une vieille maîtresse",
+    "novel_author": "Jules Barbey d'Aurevilly"
+  },
+  "main_actress": {
+    "actress_name": "Asia Argento",
+    "actress_nationality": "Italian",
+    "actress_professions": [
+      "actress",
+      "singer",
+      "model",
+      "director"
+    ]
+  }
+}

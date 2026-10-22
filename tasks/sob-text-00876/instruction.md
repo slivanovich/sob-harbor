@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Kostyantyn Doroshenko: Kostyantyn Doroshenko (Ukrainian: Костянтин Володимирович Дорошенко ; born 29 October 1972, Kiev, Ukrainian SSR) is a Ukraine Art critic, contemporary art curator, media manager, radio host of talk radio station Radio Vesti (Ukraine).  According to «Art Ukraine» magazine he is in the top five most influential Ukrainian curators and in the top ten leading art critics of Ukraine of 2000s.
+
+Bruce Corcoran: Bruce Corcoran , often known as Corky, is a recurring fictional character from the Jeeves novels of British comic writer P. G. Wodehouse, being a New York portrait painter turned cartoonist.  In the 1990s television series "Jeeves and Wooster" he is portrayed by Greg Charles .  Bruce Corcoran ("Corky"), a New York portrait painter turned cartoonist, asks Bertie to help him ask his wealthy uncle Alexander Worple to accept his girlfriend Muriel Singer so he can marry her.  In order to get Worple's blessings and to attract the affection of Corky's wealthy uncle, Jeeves produces a plan which involves Corky's girlfriend Muriel Singer writing a book, which pleases Worple.  At the end Jeeves writes "A Children’s Book of American Birds" in Muriel's place.  Things go wrong and the uncle ends up Corky's dream marrying her.  Alexander Worple marries Muriel Singer and Corky has only to paint a portrait of their baby.  But Worple dislikes Corky's Abstract Expressionist portrait painting of the baby and cuts off Corky's allowance.  Aunt Agatha comes with NY Chronicle Art Critic Arthur Prysock, an art critic with whom she wants to start and run her own art gallery.  She is enamoured of the Abstract Expressionist portrait painting by Bruce Corcoran ("Corky"), and asks NY Chronicle Art Critic Arthur Prysock to buy it for her art gallery.
+
+Kilmorack Gallery: Kilmorack Gallery is a converted church building, in a rural location near Beauly in Inverness-shire, Scotland.  It was established as a commercial gallery in 1997 after the building was purchased by art dealer Tony Davidson, believing that inspirational art could sit in an inspirational building just as well as in a white cube.  By putting on consistently ambitious solo and mixed shows of some of the country’s finest artists and sculptors, Kilmorack Gallery has established itself as one of Scotland’s leading contemporary art galleries.  The success of non-urban, destination galleries like Kilmorack 'has made "remote" more than ever a relative term', wrote art critic Duncan Macmillan of the Scotsman.  Davidson and art critic Jan Patience featured on the The Janice Forsyth Show in May 2013, speaking about the gallery and the works on exhibition.
+
+John Ruskin: John Ruskin (8 February 1819 – 20 January 1900) was the leading English art critic of the Victorian era, as well as an art patron, draughtsman, watercolourist, a prominent social thinker and philanthropist.  He wrote on subjects as varied as geology, architecture, myth, ornithology, literature, education, botany and political economy.  His writing styles and literary forms were equally varied.  Ruskin also penned essays and treatises, poetry and lectures, travel guides and manuals, letters and even a fairy tale.  The elaborate style that characterised his earliest writing on art was later superseded by a preference for plainer language designed to communicate his ideas more effectively.  In all of his writing, he emphasised the connections between nature, art and society.  He also made detailed sketches and paintings of rocks, plants, birds, landscapes, and architectural structures and ornamentation.
+
+Brian Sewell: Brian Sewell ( ; 15 July 1931 – 19 September 2015) was an English art critic and media personality.  He wrote for the "London Evening Standard" and was noted for his acerbic view of conceptual art and the Turner Prize. " The Guardian" described him as "Britain's most famous and controversial art critic", while the "Standard" called him the "nation’s best art critic", and Artnet News called him the United Kingdom's "most famous and controversial art critic".
+
+Peter Plagens: Peter Plagens (born 1941 in Dayton, Ohio) is an American art critic, painter, and novelist.  From 1989 until 2003 Plagens was a senior writer and art critic for "Newsweek".  As a novelist, Plagens is the author of "Time for Robo" (1999, Black Heron Press, ISBN  ) and "The Art Critic", which was and is serialized online at artnet.  As a painter, he has been represented by the Nancy Hoffman Gallery, New York.
+
+Fanny Talbot: Fanny Talbot (née) Browne (1824–1917) was a landowner and philanthropist, and a friend and correspondent of the influential art critic John Ruskin.  She is noted for donating the first property—4.5 acres of land known as Cliff of Light ("Dinas Oleu" in Welsh), at Barmouth, Gwynedd—to the National Trust.
+
+Peter Frank (art critic): Peter Frank (born 1950, New York) is an American art critic, curator, and poet who lives and works in Los Angeles.  He was the Senior Curator at the Riverside Art Museum and an art critic for "Angeleno" magazine.  He is a frequent contributor to "The Huffington Post".  Until July 9, 2008, he was a long-time critic for "LA Weekly".  He was a past editor of "Visions Art Quarterly" and was an art critic for "The Village Voice" and "The SoHo Weekly News" in New York.
+
+Tyler Green (journalist): Tyler Green is an award-winning art critic and historian.  He produces and hosts The Modern Art Notes Podcast, a weekly digital audio program that features interviews with artists and art historians such as Richard Serra, Robert Irwin, Phyllida Barlow, Carl Andre, Sophie Calle, Vija Celmins, Mark Bradford, Julie Mehretu, Jo Ann Callis, and Shirin Neshat.  Pulitzer Prize-winning art critic Sebastian Smee called The MAN Podcast "one of the great archives of the art of our time."
+
+Jerry Saltz: Jerry Saltz (born February 19, 1951) is an American art critic.  Since 2006, he has been senior art critic and columnist for "New York" magazine.  Formerly the senior art critic for "The Village Voice", he has been nominated for the Pulitzer Prize in Criticism three times.  He has also contributed to "Art in America, Flash Art International, Frieze, Modern Painters", among various other art publications.  Saltz served as a visiting critic at The School of Visual Arts, Columbia University, Yale University, and The School of the Art Institute of Chicago and the New York Studio Residency Program, and was the sole advisor for the 1995 Whitney Biennial.  He lives in New York City with his wife Roberta Smith, senior art critic for the New York Times.
+
+Question: What era was the man associated with Fanny Talbot the leading art critic of?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "art_critic_name": {
+      "type": "string",
+      "description": "The name of the art critic associated with Fanny Talbot."
+    },
+    "associated_person_name": {
+      "type": "string",
+      "description": "The name of the person associated with the art critic."
+    },
+    "critic_role": {
+      "type": "string",
+      "description": "The role of the identified person (e.g., 'leading art critic')."
+    },
+    "era": {
+      "type": "string",
+      "description": "The historical era the art critic was associated with."
+    }
+  },
+  "required": [
+    "art_critic_name",
+    "associated_person_name",
+    "critic_role",
+    "era"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,79 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Mohit Marwah: Mohit Marwah is a mainstream Bollywood actor, best known for his debut feature film Fugly, produced by Akshay Kumar, and Raag Desh directed by Tigmanshu Dhulia he has appeared in Short Films such as Strangers in the Night produced by Dharma Productions and Directed by Shakun Batra, and in Love Shots produced by Yash Raj Films.
+
+Murder (film series): Murder is a series of Indian thriller films produced by Mukesh Bhatt and Mahesh Bhatt.  The first film was directed by Anurag Basu was released in 2004, second film by Mohit Suri was released in 2011, and third film by Vishesh Bhatt was released in 2013.
+
+Rough Book: Rough Book is a feature film directed by Ananth Narayan Mahadevan for Aerika Cineworks.  It features Tannishtha Chatterjee and Amaan Khan in lead roles with Joy Sengupta, Jayati Bhatia, Deepika Amin and Vinay Jain in supporting roles.  Television actor Ram Kapoor makes an appearance.  The narrative was written by Sanjay Chouhan and Ananth Mahadevan. 
+
+Aksar 2: Aksar 2 is an upcoming Indian thriller film, directed by Ananth Narayan Mahadevan.  The film is the sequel to 2006 film "Aksar".  The film stars Gautam Rode, Abhinav Shukla, Zareen Khan and Mohit Madaan in lead roles. .  The motion poster of the movie was released on 4th August 2017 on YouTube while trailer of the film was released on 28 August 2017.  The film is slated for release on 6 October 2017.
+
+Ananth Babu: Ananth Babu Punyamurthula (born Punyamurthula Ananth), known by his screen name Ananth Babu, is an Indian film actor and comedian, known for his works predominantly in Telugu cinema.  He is the brother of noted comedians Raja Babu and Chitti Babu Punyamurthula.
+
+Mohit Madaan: Mohit Madaan is a Bollywood actor, known for Love Exchange (film).  He will also be seen in Aksar 2 upcoming Indian thriller film directed by Anant Mahadevan and also stars Zareen Khan and Gautam Rode.  The film is the sequel to 2006 film Aksar.  Mohit Madaan is also credited as Mohit Madan in media.
+
+Anant Mahadevan: Anant Mahadevan, also credited as Ananth Narayan Mahadevan, is a screenwriter, actor, and director of Hindi and Marathi films and television serials in India.  Having been an integral part of the Indian television serials and Hindi movies since the 1980s, he is also involved in the professional English and Hindi theatre.  Ananth along with Sanjay Pawar received the National Award (2010) for the Best Screenplay and Dialogues for the successful Marathi movie "Mee Sindhutai Sapkal".  The film also fetched him the special jury award at the National Film awards 2010.
+
+Mohit Sehgal: Mohit Sehgal is an Indian television actor.  He is best known for his role of Samrat Shergil in the Indian television series, "Miley Jab Hum Tum" on STAR One.  He then bagged the role of Siddharth in "Mujhse Kuch Kethi Yeh Khamoshiyaan" on Star Plus in 2012 and in 2013 as Haider in "Qubool Hai" and 2015 as Somendra in Sarojini on Zee TV.  Mohit has also participated in "Nach Baliye Season 8" with Sanaya in 2017 and they made it to the Finale.  Mohit is currently seen as Ayaan Mehta in Love Ka Hai Intezaar on Star Plus.
+
+Ek Paheli Leela: Ek Paheli Leela (Hindi: एक पहेली लीला , translation: "Leela: A Mystery") is a 2015 Indian thriller drama film, written and directed by Bobby Khan and produced by Bhushan Kumar and Krishan Kumar.  It stars Sunny Leone in the titular lead role with Jay Bhanushali, Rajneesh Duggal, Jas Arora, Mohit Ahlawat and Rahul Dev in pivotal roles.  Choreography is done by Ahmed Khan and Jojo Khan.  The music for the film is composed by Meet Bros Anjjan and Amaal Mallik.  Principal photography of the film began in Jodhpur, India.
+
+I Am Sindhutai Sakpal: I Am Sindhutai Sapkal (Marathi: मी सिंधुताई सपकाळ ; "Mee Sindhutai Sapkal") is an Indian Marathi film.  The film was directed by Ananth Narayan Mahadevan.  The film stars Tejaswini Pandit, Jyoti Chandekar, Upendra Limaye, Neena Kulkarni in leading roles.
+
+Question: Mohit Madaan is a Bollywood actor, known for Love Exchange (film), he will also be seen in which Indian thriller film sequel, directed by Ananth Narayan Mahadevan?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film Mohit Madaan will be seen in."
+    },
+    "director_name": {
+      "type": "string",
+      "description": "The name of the director of the film."
+    },
+    "actor_name": {
+      "type": "string",
+      "description": "The name of the actor mentioned in the question."
+    },
+    "film_genre": {
+      "type": "string",
+      "description": "The genre of the film."
+    },
+    "is_sequel": {
+      "type": "boolean",
+      "description": "Indicates if the film is a sequel."
+    },
+    "original_film_title": {
+      "type": "string",
+      "description": "The title of the original film this is a sequel to."
+    },
+    "original_film_release_year": {
+      "type": "integer",
+      "description": "The release year of the original film."
+    }
+  },
+  "required": [
+    "film_title",
+    "director_name",
+    "actor_name",
+    "film_genre",
+    "is_sequel",
+    "original_film_title",
+    "original_film_release_year"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "common_occupation": "author",
+  "individuals_sharing_occupation": [
+    {
+      "name": "William Howard Gass",
+      "nationality": "American",
+      "listed_occupations": [
+        "novelist",
+        "short-story writer",
+        "essayist",
+        "critic",
+        "philosophy professor"
+      ]
+    },
+    {
+      "name": "James Redfield",
+      "nationality": "American",
+      "listed_occupations": [
+        "author",
+        "lecturer",
+        "screenwriter",
+        "film producer"
+      ]
+    }
+  ],
+  "number_of_individuals": 2
+}

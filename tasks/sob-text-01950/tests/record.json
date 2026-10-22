@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "5245c3a31ec8d95341d7ce65d3792566f6072890f445b52dc4253c7e0eea69a1",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5adf68f35542993344016c7c",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Istanbul Aviation Museum: The Istanbul Aviation Museum, a.k.a. Turkish Air Force Museum, (Turkish: \"Havacılık Müzesi or Hava Kuvvetleri Müzesi\" ) is a military-based museum for aviation, owned and operated by the Turkish Air Force.  The museum is located in Yeşilköy neighborhood of Bakırköy district in Istanbul, Turkey.  The area of the museum is 65000 m2\n\nJune 2016 Istanbul bombing: On 7 June 2016, at around 08:40 (UTC+3), a bombing occurred in central Istanbul, Turkey, killing 12 people and injuring 51 others, three of them seriously.  The attack targeted a bus carrying policemen as the vehicle passed through the Vezneciler district near the Şehzade Mosque and the Vezneciler Metro station.\n\nBournemouth Aviation Museum: The Bournemouth Aviation Museum is an aviation museum located next to Bournemouth International Airport, near the village of Hurn in Christchurch.  It houses a number of aircraft, aero engines, cockpits and a double-decker bus.  Unusually for such a museum, its policy is to have open cockpits and visitors are encouraged to climb into the cockpits and press knobs, turn dials, pull levers, flick switches, etc.  Cockpits open in this manner include the Vulcan, Lightning and Canberra.  It has a flight simulator which is free to use, operated from a mock up cockpit.  The museum has recently restored a Boeing 737-200 named 'The Spirit of Peter Bath' and has created an exhibition about Sir Peter Bath and his company 'Bath Travel' inside the fuselage.  It is believed that Bournemouth Aviation Museum is the only museum in Europe to include a 737-200 in its collection.  Even more recently the museum has taken ownership of the forward fuselage of an ex Empire Test Pilots School BAC 1-11, quite apt considering the aircraft was built only a few hundred metres from where it rests now.\n\nAnkara Aviation Museum: Ankara Aviation Museum (Turkish: \"Ankara Hava Müzesi\" ) is a military-based museum for aviation, owned and operated by the Turkish Air Force.  The museum is located in Etimesgut district of Ankara, Turkey.  The area of the museum is 64321 m2 .\n\nFinnish Airforce Museum: The Finnish Airforce Museum (Finnish: \"Suomen Ilmavoimamuseo\" ), formerly the Aviation Museum of Central Finland (Finnish: \"Keski-Suomen ilmailumuseo\" ), is an aviation museum located near Jyväskylä Airport in Tikkakoski, Jyväskylä, Finland.  The museum exhibits the aviation history of Finland, from the early 1900s until today.  The museum is owned by the Foundation of Aviation Museum of Central Finland (Finnish: \"Keski-Suomen Ilmailumuseosäätiö\" ).\n\nVezneciler (Istanbul Metro): Vezneciler is a station on the M2 line of the Istanbul Metro.  The station is located under Şehzadebaşı Street and 16 Mart Şehitleri Street in the historical Fatih district of Istanbul.  Opened on 16 March 2014, Vezneciler is the most recently opened station on the M2 line.  At 30m below ground level, it is the deepest station of the Istanbul Metro.  During the inauguration the station was dedicated to Ottoman police officers who were killed during a conflict with British forces during the Occupation of Constantinople in 1920.  Istanbul University's main campus, Beyazıt Square and the Şehzade Mosque are a few landmarks in the vicinity of the station.  On 7 June 2016, a bomb reportedly targeting a police bus struck around this station.\n\nŞehzade Mosque: The Şehzade Mosque (Turkish: \"Şehzade Camii\" , from the original Persian شاهزاده \"Šāhzādeh\", meaning \"prince\") is a 16th-century Ottoman imperial mosque located in the district of Fatih, on the third hill of Istanbul, Turkey.  It was commissioned by Suleiman the Magnificent as a memorial to his son Şehzade Mehmed who died in 1543.  It is sometimes referred to as the \"Prince's Mosque\" in English.  In a June 2016 attack, the windows of the mosque were shattered.\n\nRobert L. Rasmussen: Robert L. “Bob” Rasmussen (born May 26, 1930 in Rio Vista, California), is a noted military artist; a retired Captain of the United States Navy; a former career naval aviator, primarily in the F-8 Crusader; a former member of the U.S. Navy Flight Demonstration Squadron, the Blue Angels, and Director of the National Naval Aviation Museum at NAS Pensacola, Florida.  His Vietnam war experiences, including surviving the fire aboard USS \"Oriskany\" , have been documented in several books.  A prolific artist, Rasmussen has created hundreds of Naval Aviation paintings in watercolor, oil and acrylic.  His bronze sculptures include the design of the Spirit of Naval Aviation, displayed at the front entrance of the National Museum of Naval Aviation, Pensacola, Florida, the Alan Shepard memorial heroic figure at the Astronaut Hall of Fame, and the World War II and Korean War memorials in Pensacola, Florida.  His works have been displayed around the country, including the National Air and Space Museum in Washington, D.C., the National Naval Aviation Museum in Pensacola, Florida, and the NASA Museum at Cape Canaveral, Florida.  Rasmussen is the recipient of the R.G. Smith Award for Excellence in Naval Aviation Art, was inducted into the Naval Aviation Hall of Honor in 2008, and was awarded the Navy Superior Civilian Service Award on 24 September 2009.\n\nRoyal Aviation Museum of Western Canada: The Royal Aviation Museum of Western Canada (formerly the Western Canada Aviation Museum) is a museum in Winnipeg, Manitoba, Canada.  It is the second largest aviation museum in Canada.  The collection is housed in an original Trans-Canada Air Lines (today operating as Air Canada) hangar dating from the 1930s.\n\nChinese Aviation Museum: The Chinese Aviation Museum (), sometimes referred to as the China Aviation Museum and the Datangshan Aviation Museum (due to its location adjacent to the mountain of the same name), is an aviation museum close to Beijing in China.  The museum was first opened to the public on 11 November 1989, to celebrate the 40th anniversary of the founding of the People's Liberation Army Air Force.",
+    "question": "Are the Istanbul Aviation Museum and Şehzade Mosque both military-based edifices?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "istanbul_aviation_museum_name": {
+          "type": "string",
+          "description": "The name of the first edifice mentioned in the question."
+        },
+        "is_istanbul_aviation_museum_military_based": {
+          "type": "boolean",
+          "description": "Indicates if the Istanbul Aviation Museum is military-based."
+        },
+        "sehzade_mosque_name": {
+          "type": "string",
+          "description": "The name of the second edifice mentioned in the question."
+        },
+        "is_sehzade_mosque_military_based": {
+          "type": "boolean",
+          "description": "Indicates if the Şehzade Mosque is military-based."
+        },
+        "both_are_military_based": {
+          "type": "boolean",
+          "description": "True if both edifices are military-based, false otherwise."
+        }
+      },
+      "required": [
+        "istanbul_aviation_museum_name",
+        "is_istanbul_aviation_museum_military_based",
+        "sehzade_mosque_name",
+        "is_sehzade_mosque_military_based",
+        "both_are_military_based"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "istanbul_aviation_museum_name": "Istanbul Aviation Museum",
+      "is_istanbul_aviation_museum_military_based": true,
+      "sehzade_mosque_name": "Şehzade Mosque",
+      "is_sehzade_mosque_military_based": false,
+      "both_are_military_based": false
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

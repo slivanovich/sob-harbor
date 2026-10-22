@@ -1,0 +1,14 @@
+{
+  "sport_name": "football",
+  "players_involved": [
+    {
+      "name": "Tijani Babangida",
+      "role": "winger"
+    },
+    {
+      "name": "Marc Overmars",
+      "role": "winger"
+    }
+  ],
+  "common_attribute": "pace"
+}

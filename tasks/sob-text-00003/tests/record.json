@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "34fe4cba4dd4d346330043ed94e043f6c69e3e622282d6df3844c6a4c53e1287",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a887345554299206df2b275",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1791",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Richard Austin (punchcutter): Richard Austin (1756–1832) was an English punchcutter.  He was the original cutter of the typefaces now known as \"Bell\", \"Scotch Roman\", and \"Porson.\"  Born in London 4 August 1756 and christened at St Luke's Old Street, he studied seal, die and copper-plate engraving as an apprentice to John Phillips near Finsbury Square.  He married Phillips' daughter Sarah and set up on his own about 1786.  He was hired by John Bell's British Letter Foundry in 1788 as a punch-cutter, to imitate Didot's 1782 types \"de la troisième manière,\" cut by Pierre Vafflard to F-A Didot's designs.  Bell sold his interest in the foundry to S & C Stephenson.  When the foundry closed in 1797, Austin bought in his own punches and sold strikes to Fry & Steele, Figgins, and Caslon.  Strikes were even sold in North America.  Austin cut Greek types for Cambridge University Press in 1806-8, following designs provided by the famous drunken master Richard Porson.  He probably also cut the Sarcophagus Greek that preceded it.  Austin then provided strikes to William Miller's foundry in Edinburgh & Alexander Wilson's Sons' foundry in Glasgow, creating the types now known as Scotch, before founding his own Imperial Letter Foundry in London in 1815, with his son George (who had been his apprentice until 1805).  The first Miller Specimen of 1809 is now lost (The University of Vermont holds the 1811 Specimen).  Wilson's earliest specimen showing the improved types is dated 1812.  Richard Austin died circa 20 August 1832, leaving the foundry to his son George, whom many credited with the innovations in type designs manifest in the Scotch types.  Austin's other sons were John Phillips Austin, a music engraver, and Richard Turner Austin (1781-1842), a painter (member of the Royal Academy) and commercial wood engraver.\n\nEduard Drach: Eduard Drach (Ukrainian: Едуард Драч ) born 1965 in Kryvyi Rih, in Dnipropetrovsk Oblast, in the Ukrainian SSR of the Soviet Union – in present-day Ukraine) is а prominent and influential composer, singer-songwriter, kobzar and bandurist.  He is an active member in the Kiev Kobzar Guild.  The author of numerous songs in a variety of styles, Drach is noted in particular for his original psalms in Ukrainian historical folk style.\n\nWolfgang Amadeus Mozart: Wolfgang Amadeus Mozart ( ; ; ] ; 27 January 1756 – 5 December 1791), baptised as Johannes Chrysostomus Wolfgangus Theophilus Mozart, was a prolific and influential composer of the Classical era.\n\nGiuseppe Maria Nelvi: Giuseppe Maria Nelvi (1698–1756) was an Italian composer of sacred music, opera, and oratorio.  He was born in Bologna, where he also received his musical education, studying under Angelo Bertalotti, Floriano Aresti, Giovanni Antonio Ricieri, and Angelo Predieri.  In 1718, at the age of 20, he was appointed \"maestro di cappella\" at the Confraternity of Santa Maria della Morte and in 1722 became a member of the Accademia Filarmonica di Bologna.  In 1727 he went to Poland to serve as the music director for General Wacław Rzewuski, a post previously held by Giovanni Antonio Ricieri.  He returned to Italy in 1730 where he remained for a year before going to Germany.  There he worked in Frankfurt and Hamburg and was the composer to the Thurn und Taxis court in Regensberg, a post which he held until 1734.  On his return to Bologna he was made a \"Principe\" (Prince) of the Accademia Filarmonica.  From 1738 until his death he was \"maestro di cappella\" of the Cathedral of Orvieto.\n\nJohn Bacon (judge): Bacon is first mentioned as acting in the capacity of attorney to Queen Eleanor in 1278-9, and is described in certain indentures of the exchequer, dated 1288, as 'clericus Regis' and 'custos rotulorum et brevium de Banco' and 'Regis thesauriarius et camerarius,' his business being to keep a list of the cases argued in the common pleas, and to transmit records thereof, and also 'pedes chirographorum,' i.e. memoranda of fines levied throughout the country, to the treasurers and chamberlains of the exchequer, of the receipt of which the indentures already mentioned were acknowledgments.  The 'chirographa,' or fines in question, were fictitious suits, by means of which it was the custom to bar entails and convey the landed property of married women.  Bacon seems to have held this post as late as 1309.  In 1291 he was entrusted with the charge of Leeds Castle in Kent (a royal residence).  In 1313 he was appointed to a justiceship of the common pleas, and in the same year we read of his being retained in London to advise the king upon some important matters.  In 1314 he was made one of the commissioners of oyer and terminer for the counties of Norfolk and Suffolk, to try certain assessors and collectors of the revenue charged with breach of trust.  In 1315 William de Beresford, the chief justice of the common pleas, being suddenly summoned to the king, the business of the court devolved upon Thrikingham and Bacon exclusively.  We may conjecture that it was not very promptly or efficiently despatched, for it was but a short time since he had been enjoined to pay a more diligent attention to duty.  In 1317 he was summoned with the rest of the judges to parliament at Lincoln, but the invasion of the Scots in that year caused the postponement of the parliament sine die.  In 1320 he was placed on a commission to try certain persons charged with debasing and counterfeiting the coinage in the counties of Essex, Norfolk, and Suffolk, and in 1321 upon another directed to inquire into offences committed by sheriffs and other legal functionaries under colour of their official duties in the counties of Norfolk, Suffolk, Cambridge, and Huntingdon.  He appears to have died in this year, Stonore being appointed justice of the common pleas in his place.  He had landed property in Reston, Hemingston, Cleydon, and Akenham, places all of them in the county of Suffolk, and also in Essex, and at Shouldham in Norfolk.\n\nTaman Ismail Marzuki: Taman Ismail Marzuki or popularly known as TIM, or sometimes in English as the Jakarta Cultural Centre, is an art, cultural, and science center located in Central Jakarta, Indonesia.  The complex of Taman Ismail Marzuki comprises numerous facilities including six performing arts theatres, cinemas, an exhibition hall, a gallery and an archive building.  Also within this complex stood Jakarta Art Institute and Jakarta Planetarium.  It was named after Ismail Marzuki, one of Indonesian most influential composer.\n\nRobert Bremner: Robert Bremner or Brymer (c.  1713–1789) was a Scottish music publisher.  Evidence suggests that he may have born on 9 September 1713 in Edinburgh to John Brymer and Margaret Urie, and had a younger brother named James, but little else is known about his early life.  Bremner established his printing enterprise in Edinburgh in mid-1754 \"at the Golden Harp, opposite the head of Blackfriars Wynd\".  Business was brisk from the start, and by the next year, he was publishing music on behalf of the Edinburgh Musical Society.  Bremner later became an agent for the Society, traveling to London and Dublin to search for singers and musicians to feature at its concerts.  In 1756, he printed his own \"The Rudiments of Music\", commissioned by the Edinburgh town council as an instruction book for spreading the ideas of the \"Monymusk Revival\", which was revolutionizing psalm-singing in the Church of Scotland at the time.  The third edition of his treatise was published in London in 1763, and was described in the influential \"Monthly Review\" of Ralph Griffiths as providing church-goers an easy way to \"considerably improve their psalmody, by attending to the very plain and practical rules contained in this judicious tract\".\n\nMozart's starling: For about three years the composer Wolfgang Amadeus Mozart kept a pet starling.  The first record of the starling is the entry Mozart made in his expense book when he bought it on 27 May 1784:\n\nRegina Fryxell: Regina Fryxell, born Regina Holmén (November 24, 1899 – September 19, 1993) was an American educator and musician.  She was most known as a popular and influential composer of Lutheran choir anthems, hymns and liturgical pieces.\n\nChime Tenpai Nyima: Jetsunma Chime Tenpai Nyima (born 1756) was a Tibetan Buddhist master, the only female master of the Sakya Vajrayoginī lineage.  She is also considered a great siddha and an emanation of Vajrayoginī.  She was born in Tibet and originally had the name Chime Butri.  She was part of the prominent Sakya Khon family, which established itself by the 11th century in Sakya, Tibet.  She studied with her uncle Kunga Lodro, who had had a vision prophesying, among other things, that she would be one of the closest disciples who would carry on his teachings.  He transmitted to her the core Sakya Lamdre and the Vajrayogini teachings, among others.  In 1782, she took novice vows from the twenty-fifth abbot of the Sakya Lhakhang Chenmo, Jampa Chokyi Tashi, who gave her the ordination name by which she has come to be known, Chime Tenpai Nyima.",
+    "question": "In what year did a certain influential composer, born 1756 and known to keep a pet starling, die?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "composer_name": {
+          "type": "string",
+          "description": "The name of the influential composer."
+        },
+        "birth_year": {
+          "type": "integer",
+          "description": "The birth year of the composer."
+        },
+        "death_year": {
+          "type": "integer",
+          "description": "The death year of the composer."
+        },
+        "notable_fact": {
+          "type": "string",
+          "description": "A notable fact about the composer mentioned in the context, related to the question."
+        }
+      },
+      "required": [
+        "composer_name",
+        "birth_year",
+        "death_year",
+        "notable_fact"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "composer_name": "Wolfgang Amadeus Mozart",
+      "birth_year": 1756,
+      "death_year": 1791,
+      "notable_fact": "kept a pet starling"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

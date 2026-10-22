@@ -1,0 +1,85 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+...To Be Loved: The Best of Papa Roach: ...To Be Loved: The Best of Papa Roach is the first compilation album by Californian rock band Papa Roach.  It was released on June 29, 2010.  It was the band's final album with Geffen Records, after the band left for Eleven Seven Music.  The album omits one of the band's biggest singles, "Between Angels and Insects", which was a top 20 hit in the UK.  The band members themselves asked their fans not to buy this CD (as well as expressed their resentment towards Geffen Records) because they do not endorse this release, nor would they receive royalties for its sales.
+
+Nelson (band): Nelson is an American rock band founded by singer/songwriters Matthew and Gunnar Nelson (twin sons of Ricky Nelson and Kristin Nelson).  The band achieved success during the early 1990s with their double platinum debut album "After the Rain", which featured the number-one hit "(Can't Live Without Your) Love and Affection".
+
+After the Rain (Nelson album): After the Rain is the debut album of the American rock group Nelson, released by Geffen Records in 1990.  The album was a commercial success, peaking at #17 on "Billboard" 200 and spending 64 weeks on the charts.  It contained the #1 hit, "(Can't Live Without Your) Love and Affection" and the follow-up single, "After the Rain", which reached #6 in February 1991.  The album was eventually certified double platinum by RIAA.
+
+Two Angels and a Dream: Two Angels and a Dream is the debut album by the Californian-based rock group Depswa.  The album was released on June 3, 2003 via Geffen Records.  Album sales were disappointing, selling just under 10,000 copies in the United States, almost three months into its release.  Consequently, the band's Ozzfest tour support was halted, and shortly after the band was dropped by Geffen.  The track "This Time" was featured in the game "NASCAR Thunder 2004" and the track "From the Inside" was featured in the games "MLB 2005", "MVP Baseball 2004" and "MX Unleashed".  The track "Two Angels and a Dream" was featured in "NHL Rivals 2004".
+
+Saturation (Urge Overkill album): Saturation is the fourth album by American alternative rock group Urge Overkill, released in 1993 and produced by the Butcher Bros. "Saturation" was Urge Overkill's debut on Geffen Records, and a deliberate attempt at a hit record.  The label released "Sister Havana" and "Positive Bleeding" as singles in the U.S. and Europe.  "Sister Havana" charted highly on both the modern rock and mainstream rock charts, peaking at #6 and #10, respectively, while "Positive Bleeding" became a minor rock radio hit.
+
+Doctor's Advocate: Doctor's Advocate is the second studio album by American hip hop recording artist The Game, released on November 14, 2006 through Geffen Records.  The album is his second major-label release, following 2005's "The Documentary", which was released on Aftermath/G-Unit.  Due to his disputes with 50 Cent, Game left Aftermath/G-Unit and signed with Geffen Records, another label under Universal Music Group's Interscope-Geffen-A&M division to terminate his contractual obligations with G-Unit, in the summer of 2006.
+
+Rather Ripped: Rather Ripped is the 14th studio album by the American experimental rock band Sonic Youth.  It was released on June 13, 2006, by Geffen Records.  The record was the band's first album after the departure of multi-instrumentalist Jim O'Rourke, who joined the group as a fifth member in 1999.  Unlike its immediate predecessors, "Rather Ripped" was produced by John Agnello and recorded at Sear Sound in New York City, the same studio where the band's 1994 album "Experimental Jet Set, Trash and No Star" was recorded.  It also completed Sonic Youth's contract with Geffen, which released the band's previous eight records.
+
+Because They Can: Because They Can is the second album from American rock group Nelson, released by Geffen Records in 1995.
+
+Twice Removed: Twice Removed is the second album by Canadian rock band Sloan, released on Geffen Records in 1994.  The album took seven weeks and cost $120,000 to record.  It is considered to be one of the band's best albums, as well as one of the greatest Canadian albums of all time.  More melodic than their previous album, "Smeared", Geffen gave the record little promotion because it defied the label's commercially dominant grunge rock style of the time.  Furthermore, the band was dropped from Geffen after "Twice Removed"'s release.  After the band's trouble with the label, they took time off from touring and writing, and were rumoured to have broken up.
+
+Suretone Records: Suretone Records is an American record label established in 2006 as a joint venture by Jordan Schur, former CEO of Geffen Records, and Interscope Records, to release alternative rock music.  Several high-profile bands such as Weezer, The Cure, Rooney, New Found Glory and Angels and Airwaves, the new band put together by Tom DeLonge (blink-182) will remain on Geffen and will carry the Suretone imprint.  The Pink Spiders (which will be released through Geffen), Headway, Eastern Conference Champions and all newly signed acts, such as Shwayze, will be on Suretone Records and released by Interscope.
+
+Question: Which rock group released an album through Geffen Records and was founded by Matthew and Gunnar Nelson?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "rock_group_name": {
+      "type": "string",
+      "description": "The name of the rock group."
+    },
+    "founders": {
+      "type": "array",
+      "description": "The names of the individuals who founded the rock group.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "record_label": {
+      "type": "string",
+      "description": "The record label through which the album was released."
+    },
+    "albums_released_on_label": {
+      "type": "array",
+      "description": "A list of albums released by the group on the specified record label.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "album_title": {
+            "type": "string",
+            "description": "The title of the album."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The year the album was released."
+          }
+        },
+        "required": [
+          "album_title",
+          "release_year"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "rock_group_name",
+    "founders",
+    "record_label",
+    "albums_released_on_label"
+  ],
+  "additionalProperties": false
+}

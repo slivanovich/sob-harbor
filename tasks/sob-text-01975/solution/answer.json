@@ -1,0 +1,16 @@
+{
+  "river_details": {
+    "name": "Truckee River",
+    "length_miles": 121,
+    "states": [
+      "California",
+      "Nevada"
+    ]
+  },
+  "lake_details": {
+    "name": "Pyramid Lake",
+    "distance_from_reno_miles": 40,
+    "direction_from_reno": "northeast"
+  },
+  "answer_distance_miles": 40
+}

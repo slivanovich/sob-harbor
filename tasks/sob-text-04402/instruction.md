@@ -1,0 +1,86 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+The Discovery of France: On April 28, 2008, the book was awarded the £10,000 Ondaatje Prize by the Royal Society of Literature in London.  It also won the 2007 Duff Cooper Prize.
+
+Gulag: A History: Gulag: A History, also published as Gulag: A History of the Soviet Camps, is a non-fiction book covering the history of the Soviet Gulag system.  It was written by American author Anne Applebaum and published in 2003 by Doubleday.  "Gulag" won the 2004 Pulitzer Prize for General Non-Fiction and the 2004 Duff Cooper Prize.  It was also nominated for the National Book Critics Circle prize and for the National Book Award.
+
+Bitter Lemons: Bitter Lemons is an autobiographical work by writer Lawrence Durrell, describing the three years (1953–1956) he spent on the island of Cyprus.  The book was awarded the Duff Cooper Prize for 1957, the second year the prize was awarded.
+
+J. Robert Oppenheimer: Julius Robert Oppenheimer (April 22, 1904 – February 18, 1967) was an American theoretical physicist and professor of physics at the University of California, Berkeley.  Oppenheimer was the wartime head of the Los Alamos Laboratory and is among those who are credited with being the "father of the atomic bomb" for their role in the Manhattan Project, the World War II undertaking that developed the first nuclear weapons used in the atomic bombings of Hiroshima and Nagasaki.  The first atomic bomb was detonated on July 16, 1945, in the Trinity test in New Mexico; Oppenheimer later remarked that it brought to mind words from the "Bhagavad Gita": "Now I am become Death, the destroyer of worlds."
+
+J. A. Baker: John Alec Baker was an English author best known for "The Peregrine," which won the Duff Cooper Prize in 1967.  Robert Macfarlane deemed it to be "a masterpiece of twentieth-century non-fiction" in his introduction to the New York Review Books edition of the book.  On the back jacket cover of the same edition, James Dickey states that the book "transcends any 'nature writing' of our time," while Barry Lopez declares the book to be "one of the most beautifully written, carefully observed and evocative wildlife accounts I have ever read."  Werner Herzog called it the "one book I would ask you to read if you want to make films," and said elsewhere "... it has prose of the caliber that we have not seen since Joseph Conrad."
+
+Christopher de Hamel: Christopher de Hamel FSA FRHistS is a Fellow of Corpus Christi College, Cambridge, and Fellow Librarian of the Parker Library.  He is one of the world’s leading experts on mediaeval manuscripts. His book "Meetings with Remarkable Manuscripts" is the winner of the Duff Cooper Prize for 2016 and the Wolfson History Prize for 2017.
+
+American Prometheus: American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer is a biography of J. Robert Oppenheimer by Kai Bird and Martin J. Sherwin published by Alfred A. Knopf in 2005.  Twenty-five years in the making, the book was awarded the 2006 Pulitzer Prize for Biography or Autobiography.  It also won the 2008 Duff Cooper Prize, Chicago Tribune Best Book of the Year, and "Discover Magazine" Best Science Book of the Year.
+
+Ann Thwaite: Ann Thwaite (born 4 October 1932) is a British writer who is the author of five major biographies.  "AA Milne: His Life" was the Whitbread Biography of the Year, 1990.  "Edmund Gosse: A Literary Landscape" (Duff Cooper Prize,1985) was described by John Carey as "magnificent - one of the finest literary biographies of our time".  "Glimpses of the Wonderful" about the life of Edmund's father, Philip Henry Gosse, was picked out by DJ Taylor in the Independent as one of the "Ten Best Biographies" ever.  Frances Hodgson Burnett was originally published (1974) as "Waiting for the Party" and reissued in 2007 with the sub-title "Beyond the Secret Garden".  "Emily Tennyson, The Poet's Wife" (1996) was reissued by Faber Finds for the Tennyson bicentenary in 2009.
+
+David Gross: David Jonathan Gross ( ; born February 19, 1941) is an American theoretical physicist and string theorist.  Along with Frank Wilczek and David Politzer, he was awarded the 2004 Nobel Prize in Physics for their discovery of asymptotic freedom.  David Gross is the Chancellor’s Chair Professor of Theoretical Physics at the Kavli Institute for Theoretical Physics of the University of California, Santa Barbara, and was formerly the KITP director and holder of their Frederick W. Gluck Chair in Theoretical Physics .  He is also a faculty member in the UC Santa Barbara Physics Department and is currently affiliated with the Institute for Quantum Studies at Chapman University in California.  He is a foreign member of the Chinese Academy of Sciences.
+
+Duff Cooper Prize: The Duff Cooper Prize is a literary prize awarded annually for the best work of history, biography, political science or (very occasionally) poetry, published in English or French.  The prize was established in honour of Duff Cooper, a British diplomat, Cabinet member and author.  The prize was first awarded in 1956 to Alan Moorehead for his "Gallipoli".  At present, the winner receives a first edition copy of Duff Cooper's autobiography "Old Men Forget" and a cheque for £5,000.
+
+Question: Who was an American theoretical physicist and professor of physics at the University of California, Berkeley and whose 2005 biography won the 2008 Duff Cooper Prize, Chicago Tribune Best Book of the Year, and "Discover Magazine" Best Science Book of the Year?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the theoretical physicist."
+    },
+    "profession": {
+      "type": "string",
+      "description": "The primary profession of the person."
+    },
+    "affiliation": {
+      "type": "string",
+      "description": "The university where the person was a professor."
+    },
+    "biography_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the biography."
+        },
+        "publication_year": {
+          "type": "integer",
+          "description": "The year the biography was published."
+        },
+        "awards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of awards won by the biography."
+        }
+      },
+      "required": [
+        "title",
+        "publication_year",
+        "awards"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "profession",
+    "affiliation",
+    "biography_details"
+  ],
+  "additionalProperties": false
+}

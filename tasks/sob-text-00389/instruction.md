@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Gideon's Way: Gideon's Way is a British television crime series made by ITC Entertainment and broadcast for ITV in 1965/66, based on the novels by John Creasey (as "J. J. Marric").  The series was made at Elstree Studios in twin production with "The Saint" television series, which likewise was produced by Robert S. Baker.  It stars John Gregson in the title role as Commander George Gideon of Scotland Yard, with Alexander Davion as his assistant, Detective Chief Inspector David Keen, Reginald Jessup as Det. Superintendent LeMaitre (nicknamed Lemmy), Ian Rossiter as Detective Chief Superintendent Joe Bell and Basil Dignam as Commissioner Scott-Marle.  The show did not acknowledge any help from Scotland Yard or any other police force or advisor.
+
+Drea de Matteo: Andrea "Drea" Donna de Matteo ( ; born January 19, 1972) is an American actress, known for her roles as Angie Bolen on ABC's "Desperate Housewives", Joey Tribbiani's sister Gina on the NBC sitcom "Joey", Wendy Case on FX series "Sons of Anarchy", and Adriana La Cerva on the HBO TV series "The Sopranos", a role for which she won a Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series.  She currently stars as Det. Tess Nazario in NBC's "Shades of Blue".
+
+Shari Headley: Shari Headley (born July 15, 1964) is an American actress and former model.  Headley is best known for her role as Lisa McDowell in the 1988 box-office hit romantic comedy film, "Coming to America".  Headley also has appeared in films "The Preacher's Wife" (1996) and "Johnson Family Vacation" (2004).  On television, Headley starred as Det. Mimi Reed in the ABC daytime soap opera, "All My Children" on regular basic from 1991 to 1994.  As lead actress, she starred in the Fox short-lived drama series, "413 Hope St." (1997-1998), for which she received NAACP Image Award for Outstanding Actress in a Drama Series nomination.  In 2014, Headley began starring as villainous Jennifer Sallison in the Oprah Winfrey Network primetime soap opera, "The Haves and the Have Nots".
+
+Brooke Burns: Brooke Elizabeth Burns ( ; born March 16, 1978 ) is an American fashion model, actress and television personality.  Burns began her television career in 1995, portraying the supporting character Peg, in the Spanish-American teen sitcom "Out of the Blue" (1995–96), appearing in all episodes but gaining little notoriety.  However, Burns won recognition in 1998, when she joined the cast of the action drama series "Baywatch" alongside David Hasselhoff, Pamela Anderson and Carmen Electra, in her breakthrough role portraying the character Jessie Owens.  Burns subsequently starred in "Baywatch's" second rendition, "Baywatch: Hawaii", alongside Simmone Jade Mackinnon, Stacy Kamano and again David Hasselhoff, until she left the show due to her first pregnancy.  She appeared in 46 episodes.
+
+Michael Whaley: Michael Whaley is an American film and television actor.  He graduated from Culver City High school in 1980.  Some of his most known characters are Dr. Wesley 'Wes' Hayes on "Sisters", Det. Nathan Brubaker on "Profiler", Detective Paul Armstrong on "Early Edition", and Detective Carlton on "".
+
+Nero Wolfe (film): Nero Wolfe is a 1977 TV film adaptation of Rex Stout's Nero Wolfe novel "The Doorbell Rang".  Thayer David stars as Nero Wolfe, gourmet, connoisseur and detective genius.  Tom Mason costars as Archie Goodwin, Wolfe's assistant.  Written and directed by Frank D. Gilroy, the made-for-TV movie was produced by Paramount Television as a pilot for an ABC television series, but the movie was shelved by the network for more than two years before finally being broadcast December 19, 1979.
+
+List of Law &amp; Order characters: The American television police procedural and legal drama "Law & Order" (1990–2010) follows the cases of a group of police detectives and prosecutors who represent the public interest in the criminal justice system.  Known for its revolving cast, most of the original stars had left the show within the first five seasons; though Dann Florek reprised his role of Capt. Donald Cragen on the spin-off series "" from 1999 to 2014, and Chris Noth reprised his role of Det. Mike Logan on "" from 2005 to 2008.  The longest-serving main cast members of the original series include Steven Hill as D.A. Adam Schiff (1990–2000), Jerry Orbach as Det. Lennie Briscoe (1992–2004), S. Epatha Merkerson as Lt. Anita Van Buren (1993–2010), Sam Waterston as EADA/DA Jack McCoy (1994–2010) and Jesse L. Martin as Det. Ed Green (1999–2008).  Long-running recurring cast members on the series include John Fiore as Det. Tony Profaci (1990–1998), Carolyn McCormick as Dr. Elizabeth Olivet (1991–2009), Leslie Hendrix as Dr. Elizabeth Rodgers (1992–2010) and J.K. Simmons as Dr. Emil Skoda (1997–2010).
+
+Bombaiyer Bombete (film): Bombaiyer Bombete (Bengali: বোম্বাইয়ের বোম্বে ) is a 2003 Indian Bengali thriller film directed by Sandip Ray based on the story of the same name by Satyajit Ray.  It was the third big screen adaptation of the fictional detective character Feluda after 25 years of the second Feluda movie "Joi Baba Felunath" (1979), directed by his (Sandip Ray) father Satyajit Ray.  It was the first big screen adaptation of the Feluda new film series (Continuation of the original series) though Sabyasachi played Feluda in all the ten TV films of Feluda TV film series (1996-2000) directed by Sandip Ray.  The movie was a sequel to the Feluda TV film series (1996-2000) which was a sequel to the Satyajit Ray's Feluda film series (1974-1979).  Previously Feluda was played by Soumitra Chatterjee in two films "Sonar Kella" (1974) and "Joi Baba Felunath" (1979), directed by Satyajit Ray.  First of the Feluda TV film series, "Baksho Rahashya" (1996) in which Sabyasachi Chakrabarty starred as Feluda for the first time, was released in theaters before releasing this movie in 2001.  "Bombaiyer Bombete" was the eleventh film of Sabyasachi Chakrabarty as Feluda.  After the huge success of "Bombaiyer Bombete" four sequels have been made till 2011.  They are "Kailashey Kelenkari" (2007), "Tintorettor Jishu" (2008), "Gorosthaney Sabdhan" (2010) and "Royal Bengal Rohosso" (2011).  A fifth sequel is announced by Sandip Ray where Sabyasachi Chakrabarty will return as the Bengali sleuth Feluda after five years and the film is named "Double Feluda" which is heading to release in 2016.
+
+Gourmet Detective: Gourmet Detective is an American/Canadian mystery film series starring  Dylan Neal as Henry Ross, a chef turned culinary sleuth and Brooke Burns as Det. Maggie Price.  It airs on Hallmark Movies & Mysteries in the US.
+
+Renie Riano: Renie Riano (7 August 1899 – 3 July 1971) was a British-born American actress who had minor roles in 1940s-1950s films.  She was the daughter of British stage actress Irene Riano (1871-1940).  She starred with Joe Yule in Monogram Pictures' "Jiggs and Maggie" film series.
+
+Question: What American actress stars as Det. Maggie Price in the film series Gourmet Detective?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actress_name": {
+      "type": "string",
+      "description": "The name of the actress."
+    },
+    "character_name": {
+      "type": "string",
+      "description": "The name of the character played by the actress."
+    },
+    "film_series_name": {
+      "type": "string",
+      "description": "The name of the film series."
+    },
+    "nationality": {
+      "type": "string",
+      "description": "The nationality of the actress."
+    }
+  },
+  "required": [
+    "actress_name",
+    "character_name",
+    "film_series_name",
+    "nationality"
+  ],
+  "additionalProperties": false
+}

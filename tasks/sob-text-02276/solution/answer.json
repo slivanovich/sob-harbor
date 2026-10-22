@@ -1,0 +1,18 @@
+{
+  "question_asked": "Were both Bryan Singer and Stuart Paton actors and directors?",
+  "answer": true,
+  "individuals_roles": [
+    {
+      "name": "Bryan Singer",
+      "is_director": true,
+      "is_actor": true
+    },
+    {
+      "name": "Stuart Paton",
+      "is_director": true,
+      "is_actor": true
+    }
+  ],
+  "all_individuals_were_directors": true,
+  "all_individuals_were_actors": true
+}

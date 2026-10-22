@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "55e9eab67ec4cdacce839b296daf1c50ca37b6a7ba0c944d015af4da75100b81",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a77693c5542993735360264",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Andre Kirk Agassi",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "1996 ATP Tour World Championships: The 1996 ATP Tour World Championships and the Phoenix ATP Tour World Doubles Championships were tennis tournaments played on indoor carpet courts.  It was the 27th edition of the year-end singles championships, the 23rd edition of the year-end doubles championships and both were part of the 1996 ATP Tour.  The singles tournament took place at the EXPO 2000 Tennis Dome in Hanover in Germany from November 19 through November 24, 1996, while the doubles tournament took place at the Hartford Civic Center in Hartford, Connecticut, in the United States from November 13 through November 17, 1996.\n\n1998 ATP Tour World Championships: The 1998 ATP Tour World Championships (also known for the doubles event as the \"Phoenix ATP Tour World Doubles Championship\" for sponsorship reasons) was a tennis tournament played on indoor carpet courts.  The surface was called \"GreenSet On Wood\" which had a wood base coated in synthetic material and provided a medium-pace surface.  It was the 29th edition of the year-end singles championships, the 25th edition of the year-end doubles championships, and both were part of the 1998 ATP Tour.  The singles event took place at the EXPO 2000 Tennis Dome in Hanover, Germany, from 24 November through 29 November 1998, and the doubles event at the Hartford Civic Center in Hartford, Connecticut, United States, from 18 November through 22 November 1998.\n\n1999 ATP Tour World Championships: The 1999 ATP Tour World Championships (also known for the doubles event as the \"Phoenix ATP Tour World Doubles Championship\" for sponsorship reasons) was a tennis tournament played on indoor carpet courts.  The surface was called \"GreenSet On Wood\" which had a wood base coated in synthetic material and provided a medium-pace surface.  It was the 30th edition of the year-end singles championships, the 26th edition of the year-end doubles championships, and both were part of the 1999 ATP Tour.  The singles event took place at the EXPO 2000 Tennis Dome in Hanover, Germany, from November 23 through November 28, 1999, and the doubles event at the Hartford Civic Center in Hartford, Connecticut, United States, from November 17 through November 21, 1999.\n\n1990 ATP Tour World Championships: The 1990 ATP Tour World Championships (also known as the 1990 IBM ATP Tour World Championships for sponsorship reasons) were held in Frankfurt, Germany between November 13 and November 18, 1990.\n\n1990 ATP Tour World Championships – Doubles: The 1990 ATP Tour World Championships was a doubles event held in Gold Coast, Australia between November 19 and November 25, 1990.  Guy Forget and Jakob Hlasek won the doubles title at the 1990 ATP Tour World Championships tennis tournament, defeating Sergio Casal and Emilio Sánchez in the final 6–4, 7–6, 5–7, 6–4.\n\n1991 ATP Tour World Championships – Singles: Andre Agassi was the defending champion, but Jim Courier defeated him in the semifinal.\n\n1990 ATP Tour: The 1990 IBM ATP Tour was the first season of the ATP Tour, the newly formed tennis circuit which came in to replace the Grand Prix and WCT tournaments.  It was the elite tour for professional tennis organized by the Association of Tennis Professionals.  In 1990 the IBM ATP Tour included the four Grand Slam tournaments, the ATP Tour World Championships, the ATP Championship Series, Single-Week, the ATP Championship Series and the ATP World Series.  The World Team Cup and Davis Cup are included in this calendar but did not count towards the Tour.\n\n1997 ATP Tour World Championships: The 1997 ATP Tour World Championships (also known for the doubles event as the \"Phoenix ATP Tour World Doubles Championship\" for sponsorship reasons) were tennis tournaments played on indoor hard courts for the singles event, and indoor carpet courts for the doubles event.  It was the 28th edition of the year-end singles championships, the 24th edition of the year-end doubles championships, and both were part of the 1997 ATP Tour.  The singles event took place at the EXPO 2000 Tennis Dome in Hanover, Germany, from November 11 through November 16, 1997, and the doubles event at the Hartford Civic Center in Hartford, Connecticut, United States, from November 17 through November 23, 1997.\n\nAndre Agassi: Andre Kirk Agassi ( ; born April 29, 1970) is an American retired professional tennis player and former World No. 1 who was one of the sport's most dominant players from the early 1990s to the mid-2000s.  Generally considered by critics and fellow players to be one of the greatest tennis players of all time, Agassi has been called the greatest service returner in the history of the game.  Described by the BBC upon his retirement as \"perhaps the biggest worldwide star in the sport's history\", Agassi compiled performances that, along with his unorthodox apparel and attitude, saw him cited as one of the most charismatic players in history.  As a result, he is credited for helping to revive the popularity of tennis during the 1990s.\n\n1991 ATP Tour World Championships: The 1991 ATP Tour World Championships (The singles event was also known as the 1991 IBM ATP Tour World Championships whilst the doubles event was also known as the 1991 Standard Bank ATP Tour World Doubles Final for sponsorship reasons) was held in Frankfurt, Germany between November 12 and November 17, 1991.",
+    "question": "What 1970 American born tennis player won the 1990 ATP Tour World Championships – Singles?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The full name of the tennis player."
+        },
+        "player_nationality": {
+          "type": "string",
+          "description": "The nationality of the tennis player."
+        },
+        "player_birth_year": {
+          "type": "integer",
+          "description": "The birth year of the tennis player."
+        },
+        "tournament_won": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the tournament won."
+            },
+            "year": {
+              "type": "integer",
+              "description": "The year the tournament was held."
+            },
+            "event_type": {
+              "type": "string",
+              "description": "The specific event type (e.g., Singles, Doubles)."
+            }
+          },
+          "required": [
+            "name",
+            "year",
+            "event_type"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "player_name",
+        "player_nationality",
+        "player_birth_year",
+        "tournament_won"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Andre Kirk Agassi",
+      "player_nationality": "American",
+      "player_birth_year": 1970,
+      "tournament_won": {
+        "name": "ATP Tour World Championships",
+        "year": 1990,
+        "event_type": "Singles"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

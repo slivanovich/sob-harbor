@@ -1,0 +1,15 @@
+{
+  "recruited_athlete": {
+    "name": "Bart Conner",
+    "sport": "gymnastics"
+  },
+  "recruiting_coach": {
+    "name": "Paul Ziert",
+    "university": "University of Oklahoma"
+  },
+  "medal_achievement": {
+    "year": 1984,
+    "event_type": "Summer Olympic Games",
+    "gold_medals_count": 2
+  }
+}

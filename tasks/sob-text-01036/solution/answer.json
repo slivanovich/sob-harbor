@@ -1,0 +1,9 @@
+{
+  "entity_name": "Girondins",
+  "entity_type": "political faction",
+  "active_period": {
+    "start_year": 1791,
+    "end_year": 1793
+  },
+  "historical_event_context": "French Revolution"
+}

@@ -1,0 +1,23 @@
+{
+  "question_type": "band_genre_identification",
+  "bands_evaluated": [
+    {
+      "band_name": "Nerf Herder",
+      "genres_mentioned": [
+        "rock band",
+        "geek rock",
+        "punk-style",
+        "pop punk band"
+      ]
+    },
+    {
+      "band_name": "Voxtrot",
+      "genres_mentioned": [
+        "indie pop band"
+      ]
+    }
+  ],
+  "identified_pop_band": "Voxtrot",
+  "is_nerf_herder_pop_band": false,
+  "is_voxtrot_pop_band": true
+}

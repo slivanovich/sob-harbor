@@ -1,0 +1,13 @@
+{
+  "target_village": {
+    "name": "Auburn",
+    "county": "Somerset",
+    "river_name": "Isis River"
+  },
+  "reference_city": {
+    "name": "Hobart",
+    "population": 225000
+  },
+  "distance_between_village_and_city_miles": 75,
+  "final_answer_county": "Somerset"
+}

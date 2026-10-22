@@ -1,0 +1,12 @@
+{
+  "physicist_details": {
+    "name": "Alain Aspect",
+    "nationality": "French",
+    "birth_year": 1947
+  },
+  "prize_details": {
+    "name": "John Stewart Bell Prize",
+    "establishment_year": 2009
+  },
+  "experimental_work_focus": "quantum entanglement"
+}

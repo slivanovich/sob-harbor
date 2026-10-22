@@ -1,0 +1,87 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Cal Poly Pomona College of Environmental Design: The Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona).  The college houses over 1,600 students; making it one of largest environmental design programs in the United States.  The college offers bachelor's degrees in five departments, as well as three master's degree programs.  It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as "The Nobel Prize in Architecture").
+
+Cyrus G. Baldwin: Cyrus Grandson Baldwin (1852–1931) was a reverend of the Congregational Church and the first official president of Pomona College.  He was born in New York.  Baldwin graduated from Oberlin College in 1873 and completed his seminary degree from Andover Theological Seminary.  He was hired shortly at Ripon College as a professor of Latin.  Then, he was elected president of Pomona College in 1890.
+
+Associated Kyoto Program: The Associated Kyoto Program (AKP) is an independent study abroad program for undergraduate students located in Kyoto, Japan on the Doshisha University campus.  It is a non-profit organization that is sponsored by 15 schools: Amherst College, Bates College, Bucknell University, Carleton College, Colby College, Connecticut College, Middlebury College, Mount Holyoke College, Oberlin College, Pomona College, Smith College, Wellesley College, Wesleyan University, Williams College, and Whitman College.  Program of study includes Japanese Language courses and electives focused on Japan’s cultural history.
+
+David W. Oxtoby: David William Oxtoby is an American academic who served as the ninth president of Pomona College.  He has held this position since July 1, 2003 and stepped down on July 1, 2017.  A theoretical chemist, he received his bachelor's degree in chemistry and physics at Harvard University ("summa cum laude") and his Ph.D. in chemistry in 1975 from the University of California, Berkeley.  Prior to his appointment at Pomona College, he was the dean of physical sciences at the University of Chicago.
+
+John McLaughry: John Jackson McLaughry (April 8, 1917 – November 28, 2007) was an American football player and coach.  He attended Brown University, graduating in 1940 and earning All-American honors as a player.  In 1940, he played one season with the New York Giants.  After serving in the Pacific theater during World War II he returned to football, becoming an assistant coach at the University of Connecticut.  He then served as a head coach at Union College (1947–1949), Amherst College (1950–1958), and Brown University (1959–1966).  While his career at his first two coaching jobs was highly successful, his time at Brown was considered a disappointment as he posted just one winning season in eight years.  After his coaching career he became Director of Summer and Special Projects at Brown University and spent a great deal of his time painting before dying on November 28, 2007.
+
+Cal Poly Pomona College of Engineering: The Cal Poly Pomona College of Engineering is the engineering college at California State Polytechnic University, Pomona (Cal Poly Pomona or Cal Poly) located in Pomona, California, United States.  Well known for its "learn by doing" philosophy, the college's motto is: ""making imagination real"".  Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States.  In the 2017 "U.S. News & World Report" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and "has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California."
+
+Claremont Graduate University: Claremont Graduate University (CGU) is a private, all-graduate research university located in Claremont, California, a city 35 mi east of downtown Los Angeles.  Founded in 1925, CGU is a member of the Claremont Colleges which includes five undergraduate (Pomona College, Claremont McKenna College, Harvey Mudd College, Scripps College, Pitzer College) and two graduate (CGU and Keck Graduate Institute of Applied Life Sciences) institutions of higher education.  Adjoining and within walking distance of one another, design was based on that of Oxford University and Cambridge University.
+
+Brown University: Brown University is a private Ivy League research university in Providence, Rhode Island, United States.  Founded in 1764 as the College in the English Colony of Rhode Island and Providence Plantations, Brown is the seventh-oldest institution of higher education in the United States and one of the nine colonial colleges chartered before the American Revolution.
+
+Pomona College: Pomona College is a private, nonsectarian, coeducational, liberal arts college in Claremont, California, United States.  Established in 1887, it is the founding member of the Claremont Colleges consortium.  Pomona is a four-year undergraduate institution, and enrolled approximately 1,700 students representing 49 states and 63 countries in Fall 2017.  The college maintains 48 majors and 600 courses, though students have access to nearly 2000 additional courses at the other Claremont Colleges.
+
+G. Gabrielle Starr: G. Gabrielle Starr is the 10th and current president of Pomona College in Claremont, CA.  She is a literary scholar known for her work on eighteenth-century British literature and the neuroscience of aesthetics.  She is the recipient of a Guggenheim Fellowship, an NSF ADVANCE award (joint with Nava Rubin), and a New Directions Fellowship from the Mellon Foundation.  In 2017, she became the first woman and first African-American President of Pomona College.
+
+Question: Which was founded first, Pomona College or Brown University?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "comparison_entity_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "founding_year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "founding_year"
+      ],
+      "additionalProperties": false
+    },
+    "comparison_entity_2": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "founding_year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "founding_year"
+      ],
+      "additionalProperties": false
+    },
+    "earlier_founded_entity_name": {
+      "type": "string"
+    },
+    "founding_year_difference": {
+      "type": "integer",
+      "description": "The difference in years between the founding dates of the two entities."
+    }
+  },
+  "required": [
+    "comparison_entity_1",
+    "comparison_entity_2",
+    "earlier_founded_entity_name",
+    "founding_year_difference"
+  ],
+  "additionalProperties": false
+}

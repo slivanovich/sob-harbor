@@ -1,0 +1,16 @@
+{
+  "artist_details": {
+    "name": "John Maus",
+    "acceptance_status": "more widely accepted as an outsider artist"
+  },
+  "album_details": {
+    "title": "We Must Become the Pitiless Censors of Ourselves",
+    "release_year": 2011,
+    "critical_reception": "positive"
+  },
+  "title_derivation_source": {
+    "philosopher_name": "Alain Badiou",
+    "source_work_title": "Fifteen Theses on Contemporary Art"
+  },
+  "final_answer": "Alain Badiou"
+}

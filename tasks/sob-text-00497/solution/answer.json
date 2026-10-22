@@ -1,0 +1,19 @@
+{
+  "actor_name": "Donald Corren",
+  "actor_nationality": "American",
+  "actor_professions": [
+    "Broadway actor",
+    "film actor",
+    "screenwriter"
+  ],
+  "production_details": {
+    "title": "Souvenir",
+    "year": 2005,
+    "type": "Broadway production"
+  },
+  "role_created": "Cosmé McMoon",
+  "co_star_details": {
+    "name": "Judy Kaye",
+    "role_played": "Florence Foster Jenkins"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "football_club": {
+    "name": "Hemel Hempstead Town F.C.",
+    "home_stadium": "Vauxhall Road",
+    "league_tier": "National League South, the sixth tier of English football",
+    "affiliation": "Hertfordshire County Football Association"
+  },
+  "player": {
+    "name": "Jordan Parkes",
+    "position": "attacking midfielder"
+  },
+  "answer": "Vauxhall Road"
+}

@@ -1,0 +1,16 @@
+{
+  "comparison_summary": "Brigham Young University has more students than York College of Pennsylvania.",
+  "universities": [
+    {
+      "name": "Brigham Young University",
+      "student_count": 33363,
+      "student_count_description": "on-campus students, excluding online students"
+    },
+    {
+      "name": "York College of Pennsylvania",
+      "student_count": 4600,
+      "student_count_description": "full-time undergraduate students"
+    }
+  ],
+  "university_with_more_students": "Brigham Young University"
+}

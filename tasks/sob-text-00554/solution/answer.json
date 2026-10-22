@@ -1,0 +1,27 @@
+{
+  "overall_answer": true,
+  "individuals_checked": [
+    {
+      "name": "Phil Rosen",
+      "is_american": true,
+      "is_film_director": true,
+      "nationality": "American",
+      "professions": [
+        "film director",
+        "cinematographer"
+      ]
+    },
+    {
+      "name": "Paul Bogart",
+      "is_american": true,
+      "is_film_director": true,
+      "nationality": "American",
+      "professions": [
+        "television director",
+        "film director",
+        "producer"
+      ]
+    }
+  ],
+  "number_of_individuals_found": 2
+}

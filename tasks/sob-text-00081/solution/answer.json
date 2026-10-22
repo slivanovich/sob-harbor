@@ -1,0 +1,13 @@
+{
+  "opponent_name": "Ricardo Lamas",
+  "opponent_nationality": "American",
+  "opponent_current_organization": "Ultimate Fighting Championship",
+  "opponent_current_weight_class": "Featherweight",
+  "match_details": {
+    "event_name": "WEC 47",
+    "event_date": "2010-03-06",
+    "casimir_result": "loss",
+    "method_of_loss": "knockout",
+    "round_of_loss": "first-round"
+  }
+}

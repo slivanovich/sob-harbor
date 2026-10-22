@@ -1,0 +1,31 @@
+{
+  "question_asked": "Are both Olearia and Breynia found in New Zealand?",
+  "genus_names": [
+    "Olearia",
+    "Breynia"
+  ],
+  "genus_location_details": [
+    {
+      "genus_name": "Olearia",
+      "is_found_in_new_zealand": true,
+      "known_native_regions": [
+        "Australia",
+        "New Guinea",
+        "New Zealand"
+      ]
+    },
+    {
+      "genus_name": "Breynia",
+      "is_found_in_new_zealand": false,
+      "known_native_regions": [
+        "Southeast Asia",
+        "China",
+        "Indian Subcontinent",
+        "Papuasia",
+        "Australia",
+        "Réunion"
+      ]
+    }
+  ],
+  "both_found_in_new_zealand": false
+}

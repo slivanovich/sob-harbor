@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Anymore (Goldfrapp song): "Anymore" is a song performed by English group Goldfrapp from their seventh studio album "Silver Eye" (2017).  It was released as a CD single and digital download on 23 January 2017 through Mute Records.  The song was written and produced by Alison Goldfrapp and William Owen Gregory, with additional production coming from The Haxan Cloak and John Congleton.  The song incorporates several genres, including dance-pop, electronica and synth-pop, and takes influence from disco and glitch music.  Critics noticed similarities between "Anymore" and the music from their 2003 album "Black Cherry".  Lyrically, Goldfrapp sings in robotic vocals about romance, which one critic felt referenced their 2005 single "Ooh La La".
+
+Devamı Var: Devamı Var is the sixth studio album by the Turkish pop singer Mustafa Sandal.  The original release date for this album was December 2006 but was later pushed to April 23, May 19, and June 8, 2007.  Two weeks before the release, an instrumental version of the song "Çoban" ("Shepard") was available on Mustafa Sandal's official website.  The official release date for the album was June 13, 2007.  The album also features two brilliant musicians, Turkish pop singer İzel, in the song "Dayan" ("Survive"), and guitarist Ayberay, on ("Zaten").  "Melek Yüzlüm" ("My angel face") has been confirmed to be the song in which Emina Jahovic was in tears.  The song "Kim Bilir Kim Var Yanında?"  ("Who is going to know beside?")  was originally released in an early album of Turkish pop singer Ayten Alpman.  The song "Farketmez" ("It doesn't matter") is a remake of the 2005 World Music Award winning hit "Bastanak" by Lebanese pop singer Elissa.  "Herkes Mecbur" ("Necessary to everyone") is a remake of the song "Fatet Sineen" by Elissa.  Devamı Var was released onto the iTunes Store on July 11, 2007.  By the end of 2007 more than 2.000.000 copies was sold just in Turkey.
+
+This Time of Year EP: This Time of Year EP is the second EP released by Orange County-based rock band Project 86.  The release was first announced on September 23, 2008 through the band's official MySpace blog.  Nine days later, the band released a further update naming the new release as This Time of Year, and specifying the release date as November 18, 2008.  The release date was then changed to November 25, 2008.  The EP contains four new songs, as well as a cover of the song, This Time of The Year, which was created for the Christmas season of 2007.  The instrumental song "What Child?"  uses elements from the traditional English folk song Greensleeves.
+
+Gabrielle Aplin discography: The discography of British singer-songwriter Gabrielle Aplin, consists of two studio albums, four extended plays, three live albums and five singles.  Her first release was the 5-track "Acoustic EP" which was released on the iTunes Store on 13 September 2010.  Her second EP "Never Fade" was released on 9 May 2011 and saw Aplin expand her sound, showcasing a more folk rock sound and playing all instruments herself.  In April 2011, Aplin was invited to perform for "BBC Introducing" at Maida Vale Studios, where she played 3 tracks from "Never Fade" and a cover of the Coldplay song "Fix You".  Aplin released her third EP, "Home", on 9 January 2012.  On 29 February 2012, Aplin announced that she had signed to Parlophone.  Aplin was confirmed as the soundtrack to the John Lewis 2012 Christmas television advertisement, covering Frankie Goes to Hollywood's "The Power of Love", the song reached number one on the UK Singles Chart.  On 12 December 2012, Aplin announced that the title of her debut album would be "English Rain".  In addition, she also unveiled its artwork and release date of 29 April 2013.  However, the album's release date was later confirmed as 13 May 2013.  Aplin announced live on 17 February Radio 1 Chart Show that her third single would be "Panic Cord".  The song originally featured on her Never Fade EP and it was released on 5 May 2013, charting at number 19 on the UK Singles Chart.  "English Rain" charted at number 2 on both the UK Albums Chart and Scottish Albums Chart, while reaching number on the Irish Albums Chart.  In 2014, Aplin released her "English Rain EP" in the United States.  The EP was released on the 6th of May and features 5 songs from her debut album, as well as a cover of Canadian singer Joni Mitchell's "A Case of You".  In 2015, Aplin released her second studio album entitled "Light Up the Dark".  "Light Up the Dark" debuted at number 14 on the UK Albums Chart.
+
+Die (album): Die!  is the sixth album by the rapper Necro.  "Die!"  was initially alluded to on Necro's MySpace profile as a "brand new solo album coming September 2009"; however, on August 13, the page's header was updated with an announcement of the album's title and its release date, which was put back to May 2010.  "Die!"  was Necro's first album since "Death Rap" in 2007 and was released by Psycho+Logical-Records.  The album's release date was finalised when the album cover was released on March 25, 2010.
+
+Silver Eye: Silver Eye is the seventh studio album by English electronic music duo Goldfrapp, released on 31 March 2017 by Mute Records.  The album's first single, "Anymore", was released to digital music retailers on 23 January 2017 after its premiere on Lauren Laverne's BBC Radio 6 show.
+
+III (Eths album): III is the third studio album from the French metal band Eths, released on April 6, 2012.  The release date was delayed from its initially intended release date of March 2 (Europe) and March 12 (North America).  The album features a move towards more clean singing from frontwoman Candice Clot as well as versions of songs with either French or English lyrics, plus the return of drummer Guillaume Dupré.  A music video for the song Adonaï was released on March 12 in both French and English versions.  It is the last album to feature vocalist Candice Clot, who announced her departure from the group in September 2012.  3 videos have been released from this album: "Adonaï" (for both English and French versions), "Sidus" (with live vocalists Virginie Goncalves and Nelly Wood-Hasselhoff) and "Harmaguedon" (with new vocalist Rachel Aspe).
+
+Batteries Not Included (album): Batteries Not Included is the fourth and final album of all-new material released by UK band After the Fire.  The official release date is March 19, 1982, however some sources on the Internet claim a late 1981 release date (the first two singles from this album, "Dancing In The Shadows" and "Frozen Rivers", were released in 1981).  "Dancing in the Shadows" would later become a minor U.S. hit, after it was featured on the band's lone American album release, "ATF" (which was released as "Der Kommissar" outside of the U.S.).
+
+America Underwater: America Underwater, by LoveHateHero, is the follow-up to their second album "White Lies".  The album was originally titled "Fight or Flight", with a spring release date.  The release date was moved to Sept. 29 and later, the album was entitled "Cash Banning America Underwater".  The title track was released on Vans Warped Tour 2009 compilation CD.  The song "Echoes" was released on their Myspace early June.
+
+This Is the New Shit: "This Is the New Shit" is the second single of Marilyn Manson's album "The Golden Age of Grotesque".  It has several new industrial beats that Tim Sköld added when he joined the band as the bassist in 2002.  It was the most successful song from "The Golden Age of Grotesque" following "mOBSCENE".  The UK release features the band's cover of the Geto Boys' "Mind of a Lunatic."  British band Goldfrapp created a remix of the song in 2003 called Marilyn Manson vs Goldfrapp.  This featured as the second track on the UK release of "This Is the New Shit", the CD also contained the video for the single.
+
+Question: What was the release date of the Goldfrapp album that included the song "Anymore"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "album_name": {
+      "type": "string",
+      "description": "The name of the album."
+    },
+    "artist_name": {
+      "type": "string",
+      "description": "The artist or group who released the album."
+    },
+    "release_date": {
+      "type": "string",
+      "description": "The official release date of the album."
+    },
+    "included_song": {
+      "type": "string",
+      "description": "The song from the album that was mentioned in the question."
+    }
+  },
+  "required": [
+    "album_name",
+    "artist_name",
+    "release_date",
+    "included_song"
+  ],
+  "additionalProperties": false
+}

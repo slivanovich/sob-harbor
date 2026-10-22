@@ -1,0 +1,69 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Le Dernier Combat: Le Dernier Combat (] , English: "The Last Battle" ) is a 1983 post-apocalyptic French film.  It was the first feature-film to be directed by Luc Besson, and also features Jean Reno's first prominent role.  Music for the film was composed by Éric Serra.  The film was the first of many collaborations between Besson, Reno and Serra.  A dark vision of post-apocalyptic survival, the film was shot in black and white and contains only two words of dialogue.  It depicts a world where people have been rendered mute by some unknown incident.
+
+Valerian and the City of a Thousand Planets: Valerian and the City of a Thousand Planets (French: "Valérian et la Cité des mille planètes" ) is a 2017 English-language French 3D science fiction adventure film written and directed by Luc Besson, and co-produced by Besson and his wife, Virginie Besson-Silla.  The film is based on the French science fiction comics series "Valérian and Laureline", written by Pierre Christin and illustrated by Jean-Claude Mézières.  It stars Dane DeHaan as Valerian and Cara Delevingne as Laureline, with Clive Owen, Rihanna, Ethan Hawke, Herbie Hancock, Kris Wu and Rutger Hauer in supporting roles.  Besson independently crowd-sourced and personally funded "Valerian" and, with a production budget of around $180 million, it is both the most expensive European and independent film ever made.
+
+Jean-Jacques Beineix: Jean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the "cinéma du look".  Critic Ginette Vincendeau defined the films made by Beineix and others as "youth-oriented films with high production values...The "look" of the "cinéma du look" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects.  Their spectacular (studio based) and technically brilliant "mise-en-scène" is usually put to the service of romantic plots."  The "cinéma du look" included the films of Luc Besson and Léos Carax.  Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired.  In late 2006, Beineix published a first volume of his autobiography, "Les Chantiers de la gloire" (in French only).  The title alluded to the French title of Stanley Kubrick's film, "Les Sentiers de la gloire" ("Paths of Glory").
+
+Shanna Besson: Shanna Besson (born Shanna Leila Besson) is a French actress and photographer who is the only child of French directors Maïwenn and Luc Besson.
+
+No Limit (TV series): No Limit is a French television action-adventure series created by filmmaker Luc Besson with Franck Philippon through Besson's EuropaCorp company.  Along with "", it represents one of Besson's first forays into television, although this time as a writer as well as a producer.
+
+Dane DeHaan: Dane William DeHaan ( ; born February 6, 1986) is an American actor.  His roles include Jesse on the HBO series "In Treatment", Andrew Detmer in "Chronicle" (2012), Jason Kancam in Derek Cianfrance's "The Place Beyond the Pines" (2012), Lucien Carr in "Kill Your Darlings" (2013), Harry Osborn in "The Amazing Spider-Man 2" (2014), James Dean in Anton Corbijn's "Life" (2015), Lockhart in Gore Verbinski's "A Cure for Wellness" (2016) and the title character in Luc Besson's "Valerian and the City of a Thousand Planets" (2017).  He has also appeared in several advertisements for Prada.
+
+Arthur 3: The War of the Two Worlds: Arthur 3: The War of the Two Worlds (French: Arthur et la guerre des deux mondes, also known in North America as Arthur and the Invisibles 3 or simply Arthur 3) is a 2010 English-language French animated/live-action feature film co-written, co-produced and directed by Luc Besson, based on his novel of the same title and starring Freddie Highmore and the other actors that reprise for the movie.  EuropaCorp produced the film, which is the third and final installment in Besson's Arthur series, following "Arthur and the Invisibles" and continuing "Arthur and the Revenge of Maltazard".
+
+Lucy (2014 film): Lucy is a 2014 English-language French science fiction action film written and directed by Luc Besson and produced by his wife Virginie Besson-Silla for his company Europacorp.  The film was shot in Taipei, Paris and New York City.  It stars Scarlett Johansson, Morgan Freeman, Choi Min-sik and Amr Waked.  Johansson portrays the title character, a woman who gains psychokinetic abilities when a nootropic drug is absorbed into her bloodstream.
+
+Arthur and the Revenge of Maltazard: Arthur and the Revenge of Maltazard (French: Arthur et la vengeance de Maltazard, also known in North America as Arthur and the Invisibles 2 or simply Arthur 2) is a 2009 English-language French animated/live-action feature film co-written, co-produced and directed by Luc Besson, based on his novel of the same title and starring Freddie Highmore and Mia Farrow.  EuropaCorp produced the film, which is the second in Besson's Arthur series, following "Arthur and the Invisibles".  The film received generally negative reviews by critics.  It was a success in France but, due to its predecessor's failure at the American box office, was released direct-to-video in the United States.  It performed disappointingly in the rest of the world.  As a result, the film and its sequel, "", generated huge money losses for EuropaCorp.
+
+Luc Besson: Luc Besson (] ; born 18 March 1959) is a French film director, screenwriter, and producer.  He directed or produced the films "Subway" (1985), "The Big Blue" (1988), and "Nikita" (1990).  Besson is known for his distinctive filmmaking style and is associated with the movement critics call "Cinéma du look".  He has been nominated for a César Award for Best Director and Best Picture for his films "" and "".  He won Best Director and Best French Director for his sci-fi action film "The Fifth Element" (1997).  He wrote and directed the 2014 sci-fi thriller film "Lucy".
+
+Question: What type of film was Luc Besson's film (2017) in which Dane William DeHaan had title character?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "film_title": {
+      "type": "string",
+      "description": "The title of the film."
+    },
+    "release_year": {
+      "type": "integer",
+      "description": "The release year of the film."
+    },
+    "director": {
+      "type": "string",
+      "description": "The director of the film."
+    },
+    "lead_actor": {
+      "type": "string",
+      "description": "The actor who played the title character in the film."
+    },
+    "film_type": {
+      "type": "string",
+      "description": "The genre or type of the film."
+    }
+  },
+  "required": [
+    "film_title",
+    "release_year",
+    "director",
+    "lead_actor",
+    "film_type"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,111 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Transformers: Prime: Transformers: Prime is an American computer-animated television series based on the "Transformers" toy franchise by Hasbro that aired on Hub Network from November 29, 2010 to July 26, 2013.  The series was followed by a TV movie, "", which premiered on October 4, 2013 and concluded the show's story.  "Transformers: Prime" focuses on the heroic Autobots that make up "Team Prime", which consists of Optimus Prime, Ratchet, Arcee, Bumblebee and Bulkhead.  Throughout their battles, the Autobots are aided by three human children and with their help attempt to protect the Earth from the villainous Decepticons and their leader Megatron.
+
+John Paesano: John Paesano is a film composer who won an Annie Award for "Dragons: Riders of Berk".  He is also known for composing the film "The Maze Runner", its sequel, "", "Daredevil" and "The Defenders".
+
+Beware the Batman: Beware the Batman is an American computer-animated television series based on the DC Comics superhero Batman.  The series premiered in the United States on Cartoon Network on July 13, 2013, as part of their DC Nation block, replacing "".  The series was produced by Warner Bros.  Animation and DC Entertainment.
+
+Monsters vs. Aliens (TV series): Monsters vs. Aliens is an American computer-animated television series based on the 2009 film of the same name.  After being first announced in 2009, the series premiered on Nickelodeon on March 23, 2013, after the Nickelodeon Kids' Choice Awards, then began airing in its regular timeslot on April 6, 2013.  A total of 26 episodes consisting of 52 segments were released, with the last episode airing on February 8, 2014.
+
+Green Lantern: The Animated Series: Green Lantern: The Animated Series is an American computer-animated television series based on the DC Comics superhero Green Lantern.  The series aired on Cartoon Network, as part of their "DC Nation" television block.  A one-hour sneak peek aired on November 11, 2011, it ran from March 3, 2012, until March 16, 2013, with a preview special airing on November 11, 2011.  A special screening of the first episode was shown at New York Comic Con 2011 on October 15, 2011.  This was the first Green Lantern television series and the first CGI DC/WB series.  The series was cancelled after one season due to poor toy sales from the live-action movie.
+
+Voltron: The Third Dimension: Voltron: The Third Dimension is an American computer-animated television series, done in the same animation style as "" and "Reboot".  It departed from the original Lion Voltron's animated look, as well as some character changes, such as the physical appearance of Prince Lotor (now voiced by Tim Curry, taking over the role originally voiced by Lennie Weinrib).  It served as a sequel to the "Lion Force Voltron" series, set five years after the end of the series (ignoring events from episodes 53 to 72), and among the tools used to bridge the gap was an official starmap as designed by writer Shannon Muir, and finalized in partnership with World Events Productions.  The show was animated by Netter Digital Entertainment, inc. and Mike Young Productions.
+
+How to Train Your Dragon (franchise): How to Train Your Dragon franchise (also referred to as simply HTTYD) from DreamWorks Animation consists of two feature films "How to Train Your Dragon" (2010) and "How to Train Your Dragon 2" (2014), with a third and final planned for a 2019 release.  The franchise is loosely based on the British book series by Cressida Cowell.  The franchise also consists of four short films: "Legend of the Boneknapper Dragon" (2010), "Book of Dragons" (2011), "Gift of the Night Fury" (2011) and "Dawn of the Dragon Racers" (2014).  A television series following the events of the first film, "", began airing on Cartoon Network in September 2012.  Its second season was renamed "Dragons: Defenders of Berk".  Set several years later, and as a more immediate prequel to the second film, a new television series, titled "Dragons: Race to the Edge", aired on Netflix in June 2015.  The second season of the show was added to Netflix in January 2016 and a third season in June 2016.  A fourth season aired on Netflix in February 2017 and a fifth season in August 2017.
+
+Kung Fu Panda: Legends of Awesomeness: Kung Fu Panda: Legends of Awesomeness is an American computer-animated television series spun off from the "Kung Fu Panda" films.  It takes place after the first film, showing Po's training to becoming a successful Dragon Warrior, where the second film is, according to the series' executive producer Peter Hastings, "not unlike a very long, super-deluxe 3-D version of one of our episodes".
+
+DreamWorks Dragons: DreamWorks Dragons is an American computer-animated television series based on the 2010 film "How to Train Your Dragon".  The series serves as a bridge between the first film and its 2014 sequel.
+
+List of Beware the Batman episodes: "Beware the Batman" is an American computer-animated television series based on the DC Comics superhero Batman.  The series premiered in the United States on Cartoon Network on July 13, 2013, as part of their DC Nation block.  It is the replacement for "".  "Beware the Batman" is produced by Warner Bros.  Animation.
+
+Question: Which of the movie on which John Paesano win an award is an American computer-animated television series based on the 2010 film "How to Train Your Dragon"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "answer_tv_series_name": {
+      "type": "string",
+      "description": "The name of the American computer-animated television series that is the answer to the question."
+    },
+    "series_origin_and_type": {
+      "type": "object",
+      "properties": {
+        "country_of_origin": {
+          "type": "string",
+          "description": "The country of origin for the television series."
+        },
+        "animation_style": {
+          "type": "string",
+          "description": "The animation style of the television series."
+        }
+      },
+      "required": [
+        "country_of_origin",
+        "animation_style"
+      ],
+      "additionalProperties": false
+    },
+    "series_source_film": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film on which the television series is based."
+        },
+        "film_release_year": {
+          "type": "integer",
+          "description": "The release year of the source film."
+        }
+      },
+      "required": [
+        "film_title",
+        "film_release_year"
+      ],
+      "additionalProperties": false
+    },
+    "award_winner_info": {
+      "type": "object",
+      "properties": {
+        "winner_name": {
+          "type": "string",
+          "description": "The name of the person who won an award."
+        },
+        "award_winning_work": {
+          "type": "string",
+          "description": "The specific work for which the award was won, related to the TV series."
+        },
+        "award_type": {
+          "type": "string",
+          "description": "The type of award won."
+        }
+      },
+      "required": [
+        "winner_name",
+        "award_winning_work",
+        "award_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "answer_tv_series_name",
+    "series_origin_and_type",
+    "series_source_film",
+    "award_winner_info"
+  ],
+  "additionalProperties": false
+}

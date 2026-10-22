@@ -1,0 +1,16 @@
+{
+  "label_name": "Light In The Attic Records",
+  "established_year": 2002,
+  "established_city": "Seattle",
+  "established_state": "Washington",
+  "is_reissue_label": true,
+  "reissued_artist_info": {
+    "artist_name": "Jim Sullivan",
+    "artist_occupations": [
+      "singer-songwriter",
+      "guitarist"
+    ],
+    "albums_released_before_disappearance": 2,
+    "disappearance_location": "New Mexico"
+  }
+}

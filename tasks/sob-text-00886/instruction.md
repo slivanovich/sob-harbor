@@ -1,0 +1,81 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Matt Kinzer: Matthew Roy Kinzer, (born June 17, 1963 in Indianapolis), is a former NFL punter and MLB pitcher.  He was drafted by the St. Louis Cardinals in the 2nd round of the 1984 amateur draft.  During 1987 NFL strike, he served one game as a punter for the Detroit Lions.  He recorded seven punts for a 34.0 yard average.  Kinzer begin his pro baseball career in the minor leagues playing from 1984 to 1989, He played for the Arkansas Travelers of the double A Texas League in 1984.  After stops in Springfield with the Cardinals of the class A Mid West League in 1985 and the St. Petersburg Cardinals of the class A Florida State League in 1986, he returned to the Arkansas Travelers in 1987 and 1988.  But in 1988 Kinzer also saw playing time in the Major Leagues with the St. Louis Cardinals.  In 1989 Kinzer played for triple A Louisville Cardinals of the American Association and also saw time with the St. Louis Cardinals.
+
+List of St. Louis Cardinals seasons: The St. Louis Cardinals, a professional baseball franchise based in St. Louis, Missouri, compete in the National League (NL) of Major League Baseball (MLB).  Founded in 1882 as a charter member of the American Association (AA), the team was originally named the Brown Stockings before it was shortened to Browns the next season.  The team moved to the National League in 1892 when the AA folded.  The club changed its name to the Perfectos for one season in 1899 and adopted the Cardinals name in 1900.  The St. Louis Cardinals are tied with the Cincinnati Reds and Pittsburgh Pirates as the third-oldest continuously-operated baseball team.  In that time, the team has won 19 National League pennants and 11 World Series championships (most in the National League and second only to the New York Yankees, who have won 27).  They also won four American Association pennants and one pre-World Series championship that Major League Baseball does not consider official.
+
+Hamilton Redbirds: The Hamilton Redbirds were a minor league baseball team that played in the New York–Penn League from 1988 to 1992.  They were affiliated with the St. Louis Cardinals and played their home games at Bernie Arbour Memorial Stadium in Hamilton, Ontario.  The Redbirds were founded in 1988, but the franchise itself was founded in 1958 as the Auburn Yankees.  It moved to Erie, Pennsylvania for the 1981 season, beginning its longtime affiliation with the St. Louis Cardinals.  The Erie Cardinals played at Ainsworth Field in Erie, Pennsylvania from 1981 to 1987.  The Erie Cardinals then relocated to Hamilton, Ontario to become the Hamilton Redbirds.  The Hamilton Redbirds set the all-time record for winning percentage by a St. Louis Cardinals minor league team at .651 in 1992, with a record of 56-20.  Future Major League players Keith Johns and Mike Gulan lead the offensive attack along with unsung centerfielder Brad Owens.  Lefty David Orlein and righty T.J. Mathews (en route to an MLB career) both posted a 10-1 mark, and closer Jamie Cochrane set a NY-Penn League saves record with 40.
+
+St. Louis Cardinals: The St. Louis Cardinals are an American professional baseball team based in St. Louis, Missouri.  The Cardinals compete in Major League Baseball (MLB) as a member club of the National League (NL) Central division.  Busch Stadium has been their home ballpark since 2006.  With origins as one of the early professional baseball clubs in St. Louis, entrepreneur Chris von der Ahe purchased a barnstorming club in 1881, then known as the Brown Stockings, and established them as charter members of the American Association (AA) the following season.  Upon the discontinuation of the AA, St. Louis joined the NL in 1892; at that time, they were called the Browns and the Perfectos before they were officially renamed as the Cardinals in 1900.
+
+Jim Edmonds: James Patrick Edmonds (born June 27, 1970) is an American former center fielder in Major League Baseball and a current broadcaster for Fox Sports Midwest.  He played for the California/Anaheim Angels, St. Louis Cardinals, San Diego Padres, Chicago Cubs, Milwaukee Brewers, and Cincinnati Reds.  Known for his defensive abilities – particularly his catches – Edmonds also was a prolific hitter, batting .284 with 393 home runs and an on-base plus slugging percentage (OPS) of .903.  He is affectionately known by Cardinal fans as "Jimmy Baseball" and "Jimmy Ballgame".
+
+2006 St. Louis Cardinals season: The St. Louis Cardinals 2006 season was the team's 125th season in St. Louis, Missouri and the 115th season in the National League.  The season started out with a bang, as the team raced out to a 31-16 record by late May.  Momentum would be slowed by injuries, as starting pitcher Mark Mulder was lost for the year, while center fielder Jim Edmonds and shortstop David Eckstein missed large amounts of playing time in the second half.  Poor performance from several key players also hampered the team: starting pitcher Jason Marquis compiled a 6.02 ERA, starting pitcher Sidney Ponson was cut due to ineffectiveness, closer Jason Isringhausen blew ten saves before undergoing season-ending hip surgery in September, and catcher Yadier Molina had a poor offensive year, batting .216.
+
+Ray Yochim: Raymond Austin Aloysius Yochim (July 19, 1922 – January 26, 2002) was a professional baseball pitcher.  He played parts of two seasons in Major League Baseball with the St. Louis Cardinals.  He pitched one game during the 1948 St. Louis Cardinals season and three games during the 1949 St. Louis Cardinals season.
+
+Lou Brock: Louis Clark Brock (born June 18, 1939) is an American former professional baseball player.  He began his 19-year Major League Baseball (MLB) career playing in 1961 for the Chicago Cubs, and spent the majority of his career playing as a left fielder for the St. Louis Cardinals.  He was inducted into the National Baseball Hall of Fame in 1985 and the St. Louis Cardinals Hall of Fame in 2014.  He is currently a special instructor coach for the St. Louis Cardinals.
+
+History of the St. Louis Cardinals (1875–1919): The St. Louis Cardinals, a professional baseball franchise based in St. Louis, Missouri, compete in the National League (NL) of Major League Baseball (MLB).  As the game of baseball garnered interest in the United States in the 19th century, professional baseball in St. Louis became rooted chiefly in one disestablished Major League club – named the Brown Stockings, the same as the Cardinals' earliest name – which is loosely connected, but does not fall within the scope of, today's Cardinals.  The Brown Stockings became St. Louis' first fully professional baseball club when they gained accession in the National Association (NA) in 1875.  However, the NA folded after that season.  That winter, with five other former NA teams, St. Louis established a new, eight-team league called the National League (NL) and began play the next season.  Despite early success, Brown Stocking players were found to be connected to game fixing scandals, which forced bankruptcy and the club's expulsion from the NL.  This scandal also abrogated their professional status but some members maintained play as a semi-professional team, primarily operated by outfielder Ned Cuthbert, until 1881.
+
+List of St. Louis Cardinals no-hitters: The St. Louis Cardinals are a Major League Baseball franchise based in St. Louis Missouri.  They play in the National League Central division.  Also known in their early years as the "St. Louis Brown Stockings" (1882), "St. Louis Browns" (1883–98), and "St. Louis Perfectos" (1899), pitchers for the Cardinals have thrown 10 no-hitters in franchise history.  A no-hitter is officially recognized by Major League Baseball only “when a pitcher (or pitchers) retires each batter on the opposing team during the entire course of a game, which consists of at least nine innings”.  No-hitters of less than nine complete innings were previously recognized by the league as official; however, several rule alterations in 1991 changed the rule to its current form.  A no-hitter is rare enough that one team in Major League Baseball has never had a pitcher accomplish the feat.  A perfect game, a special subcategory of no-hitter, has yet to be thrown in Cardinals history.  As defined by Major League Baseball, “in a perfect game, no batter reaches any base during the course of the game.”
+
+Question: Which player in the St. Louis Cardinals 2006 has the nicknames "Jimmy Baseball" and "Jimmy Ballgame"?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "description": "The full name of the player."
+    },
+    "nicknames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of nicknames associated with the player."
+    },
+    "team_details": {
+      "type": "object",
+      "properties": {
+        "team_name": {
+          "type": "string",
+          "description": "The name of the team the player was associated with."
+        },
+        "season": {
+          "type": "integer",
+          "description": "The specific season the player played for the team."
+        },
+        "position": {
+          "type": "string",
+          "description": "The player's primary position for the team."
+        }
+      },
+      "required": [
+        "team_name",
+        "season",
+        "position"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "player_name",
+    "nicknames",
+    "team_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "song_title": "Change",
+  "writing_details": {
+    "written_by_swift_alone": true,
+    "writing_year": 2008
+  },
+  "production_details": {
+    "main_producer": "Nathan Chapman",
+    "co_producers": [
+      "Taylor Swift"
+    ]
+  },
+  "has_music_video": true,
+  "release_information": {
+    "release_date": "August 8, 2008",
+    "album_inclusions": [
+      {
+        "album_title": "AT&T Team USA Soundtrack",
+        "album_release_year": 2008
+      },
+      {
+        "album_title": "Fearless",
+        "album_release_year": 2008
+      }
+    ]
+  }
+}

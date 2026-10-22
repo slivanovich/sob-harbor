@@ -1,0 +1,32 @@
+{
+  "film_title": "Bedknobs and Broomsticks",
+  "production_details": {
+    "producer": "Walt Disney Productions",
+    "origin_countries": [
+      "British",
+      "American"
+    ],
+    "genre": [
+      "musical",
+      "fantasy"
+    ],
+    "release_year": 1971
+  },
+  "source_material": {
+    "book_title": "The Magic Bedknob; or, How to Become a Witch in Ten Easy Lessons",
+    "author": "Mary Norton"
+  },
+  "featured_character": {
+    "character_name": "Professor Emelius Browne",
+    "actor_details": {
+      "actor_name": "David Tomlinson",
+      "nationality": "English",
+      "professions": [
+        "stage actor",
+        "film actor",
+        "television actor",
+        "comedian"
+      ]
+    }
+  }
+}

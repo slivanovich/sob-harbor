@@ -1,0 +1,70 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Emmanuel Mudiay: Emmanuel Kabeya Mudiay (born March 5, 1996) is a Congolese professional basketball player for the Denver Nuggets of the National Basketball Association (NBA).  He played high school basketball for Grace Preparatory Academy and Prime Prep Academy in Texas, where he gained much of the media's attention.  He committed to play for the SMU Mustangs men's basketball team on August 24, 2013 but later made the decision to forgo college and joined the Guangdong Southern Tigers in China.  After an injury-riddled season in China, he was selected with the seventh overall pick in the 2015 NBA draft by the Denver Nuggets.
+
+Terry Shea: Terence William Shea (born June 12, 1946) is an American football coach and former player.  Currently, Shea does quarterback consulting work for future NFL draft prospects.  Most recently he worked with Robert Griffin III "RG3" (2nd overall pick 2012), Blaine Gabbert (10th overall pick 2011), Sam Bradford (1st overall pick 2010), Matthew Stafford (1st overall pick 2009), and Josh Freeman (17th overall pick 2009.  whom Shea later brought to the Bolts in 2015).  Shea also trained and developed current college quarterbacks Collin Klein (Kansas State) and Tommy Rees (Notre Dame).
+
+List of Green Bay Packers first-round draft picks: The Green Bay Packers joined the National Football League (NFL) in 1921, two years after their original founding by Curly Lambeau.  They participated in the first ever NFL draft in 1936 and selected Russ Letlow, a guard from the University of San Francisco.  The team's most recent first round selection was Kenny Clark, a defensive tackle from UCLA in the 2016 NFL Draft.  The Packers have selected the number one overall pick in the draft twice, choosing future Hall of Fame halfback Paul Hornung in 1957 and quarterback Randy Duncan in 1959.  They have also selected the second overall pick three times and the third overall pick once.  The team's eight selections from the University of Minnesota are the most chosen by the Packers from one university.
+
+1976 NBA draft: The 1976 NBA draft was the 30th annual draft of the National Basketball Association (NBA).  The draft was held on June 8, 1976, before the 1976–77 season.  In this draft, 18 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Atlanta Hawks won the coin flip and were awarded the first overall pick, while the Chicago Bulls were awarded the second pick.  The Hawks then traded the first pick to the Houston Rockets before the draft.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  The New York Knicks forfeited their first-round draft pick due to their illegal signing of George McGinnis whose rights were held by the Philadelphia 76ers.  The 76ers, the Golden State Warriors and the Buffalo Braves also forfeited their second, third and fourth-round pick respectively due to their participation in 1975 supplementary draft American Basketball Association (ABA) players who had never been drafted in the NBA.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 26 college underclassmen were declared eligible for selection under the "hardship" rule.  13 of them withdrew before the draft, leaving only 13 early entry candidates eligible for selection.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 10 rounds comprising the selection of 173 players.  On August 8, 1976, the league also hosted a Dispersal draft for ABA players from the Kentucky Colonels and Spirits of St. Louis, who were not included in the ABA–NBA merger.
+
+1967 NBA draft: The 1967 NBA draft was the 21st annual draft of the National Basketball Association (NBA).  The draft was held on May 3 and 4, 1967 before the 1967–68 season.  In this draft, 12 NBA teams took turns selecting amateur U.S. college basketball players.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  The first two picks in the draft belonged to the teams that finished last in each division, with the order determined by a coin flip.  The Detroit Pistons won the coin flip and were awarded the first overall pick, while the Baltimore Bullets were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Five teams that had the best records in previous season were not awarded second round draft picks.  Two expansion franchises, the Seattle SuperSonics and the San Diego Rockets, took part in the NBA Draft for the first time and were assigned the sixth and seventh pick in the first round, along with the last two picks of each subsequent round.  The draft consisted of 20 rounds comprising 162 players selected.
+
+List of Tennessee Titans first-round draft picks: The Tennessee Titans are a National Football League (NFL) franchise that began play as the Houston Oilers in 1960, a charter member of the American Football League.  The Oilers relocated to Nashville, Tennessee in 1997, playing as the Tennessee Oilers before changing their name to the Tennessee Titans in 1999.  The Titans' first draft selection was Billy Cannon, a halfback from Louisiana State University.  The team's most recent first round selection was Marcus Mariota, a quarterback from the University of Oregon.  The Titans have selected the number one overall pick in the draft twice.  They have also selected the second overall pick thrice and the third overall pick six times.  The team's five selections from the University of Texas are the most chosen by the Titans from one university.
+
+1970 NBA draft: The 1970 NBA draft was the 24th annual draft of the National Basketball Association (NBA).  The draft was held on March 23, 1970, before the 1970–71 season.  In this draft, 17 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  The first two picks in the draft belonged to the teams that finished last in each division, with the order determined by a coin flip.  The Detroit Pistons won the coin flip and were awarded the first overall pick, while the San Diego Rockets were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Three expansion franchises, the Buffalo Braves, the Cleveland Cavaliers and the Portland Trail Blazers, took part in the NBA Draft for the first time and were assigned the seventh, the eighth and the ninth pick in each round.  In the first round, the Cavaliers had the seventh pick, while the Blazers and the Braves had the eighth and the ninth pick respectively.  In the subsequent rounds, the Cavaliers and the Braves exchanged their order of selection, while the Blazers had the eighth pick throughout the draft.  The draft consisted of 19 rounds comprising the selection of 239 players; it holds the record for the most prospects selected in any NBA draft.
+
+NBA high school draftees: The NBA high school draftees are players who have been drafted to the National Basketball Association (NBA) straight out of high school without playing basketball at the collegiate level.  The process of jumping directly from high school to the professional level is also known as going prep-to-pro.  Since 2006, the practice of drafting high school players has been prohibited by the new collective bargaining agreement, which requires that players who entered the draft be 19 years of age and at least one year removed from high school.  Contrary to popular belief, the player does not have to play at least a year in college basketball, as the player can choose to instead play in another professional league (especially overseas) like Brandon Jennings or Emmanuel Mudiay in Italy and China respectively, simply take the year off, such as the case with Satnam Singh Bhamara, or even hold themselves back a year in high school before declaring for the draft, such as the case with Thon Maker.
+
+2015 NBA draft: The 2015 NBA draft was held on June 25, 2015, at Barclays Center in Brooklyn.  It was televised nationally in the U.S. by ESPN.  National Basketball Association (NBA) teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The draft lottery took place on May 19, 2015.
+
+1968 NBA draft: The 1968 NBA draft was the 22nd annual draft of the National Basketball Association (NBA).  The draft was held on April 3, 1968, and May 8 and 10, 1968 before the 1968–69 season.  In this draft, 14 NBA teams took turns selecting amateur U.S. college basketball players.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  The first two picks in the draft belonged to the teams that finished last in each division, with the order determined by a coin flip.  The San Diego Rockets won the coin flip and were awarded the first overall pick, while the Baltimore Bullets were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Six teams that had the best records in previous season were not awarded second round draft picks.  Two expansion franchises, the Milwaukee Bucks and the Phoenix Suns, took part in the NBA Draft for the first time and were assigned the seventh and eighth pick in the first round, along with the last two picks of each subsequent round.  The St. Louis Hawks relocated to Atlanta and became the Atlanta Hawks prior to the start of the season.  The draft consisted of 21 rounds comprising 214 players selected.
+
+Question: The draft in which Emmanuel Mudiay was selected with the seventh overall pick in was held on what date?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "draft_year": {
+      "type": "integer",
+      "description": "The year the draft took place."
+    },
+    "draft_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The specific date the draft was held."
+    },
+    "player_name": {
+      "type": "string",
+      "description": "The name of the player who was drafted."
+    },
+    "overall_pick_number": {
+      "type": "integer",
+      "description": "The overall pick number at which the player was selected."
+    },
+    "team_selected_by": {
+      "type": "string",
+      "description": "The team that selected the player."
+    }
+  },
+  "required": [
+    "draft_year",
+    "draft_date",
+    "player_name",
+    "overall_pick_number",
+    "team_selected_by"
+  ],
+  "additionalProperties": false
+}

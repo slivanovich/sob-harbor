@@ -1,0 +1,18 @@
+{
+  "target_novelist": {
+    "name": "Don DeLillo",
+    "nationality": "American",
+    "birth_year": 1936
+  },
+  "comparison_details": {
+    "compared_to_author_of_novel": "Propinquity",
+    "compared_to_author_name": "John Macgregor",
+    "comparison_source": "critics"
+  },
+  "other_authors_in_comparison": [
+    "PG Wodehouse",
+    "Julian Barnes",
+    "Umberto Eco",
+    "Patrick White"
+  ]
+}

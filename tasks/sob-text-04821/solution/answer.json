@@ -1,0 +1,12 @@
+{
+  "artist_1": {
+    "name": "Tori Amos",
+    "nationality": "American"
+  },
+  "artist_2": {
+    "name": "Eric Clapton",
+    "nationality": "English"
+  },
+  "are_from_same_country": false,
+  "reasoning": "Tori Amos is American, while Eric Clapton is English. These are different nationalities, indicating they are not from the same country."
+}

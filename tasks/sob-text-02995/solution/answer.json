@@ -1,0 +1,23 @@
+{
+  "film_details": {
+    "title": "Mary Shelley's Frankenstein",
+    "release_year": 1994,
+    "genre": "horror drama",
+    "director": "Kenneth Branagh",
+    "starring_actors": [
+      "Robert De Niro",
+      "Kenneth Branagh",
+      "Tom Hulce",
+      "Helena Bonham Carter",
+      "Ian Holm",
+      "John Cleese",
+      "Aidan Quinn"
+    ]
+  },
+  "actor_from_animal_house": {
+    "name": "Tom Hulce",
+    "role_in_animal_house": "Larry \"Pinto\" Kroger",
+    "also_stars_in_target_film": true
+  },
+  "final_answer": "Kenneth Branagh"
+}

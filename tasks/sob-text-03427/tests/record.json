@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "4a5a060eae296a96e6eba082f1b71f3a04cbc1753e11ec1fa3929f357dee2fb8",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae18fae554299234fd04292",
+    "source_dataset": "hotpotqa",
+    "source_answer": "The Container Store",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Storables: Storables is a specialty retail chain that carries a variety of products aimed at helping consumers organize their homes and work spaces in the West Coast of the United States.  Its products are categorized into departments including Audio, Baskets, Bath, Closets, Furniture, Kids, Kitchen, Laundry, Novelty, Office, and Utility.  The company's motto is \"Make Room for Living.\"\n\nThe Container Store: The Container Store Group, Inc. is an American specialty retail chain company that operates The Container Store, which offers storage and organization products.\n\nHold Everything (store): Hold Everything was a specialty retail chain in the United States that sold home organization and storage solutions.  Its parent company, Williams-Sonoma, closed the chain's 11 existing stores in 2006.\n\nOrganized Living: Organized Living, formerly known as Schulte Corp., is a company that manufactures storage and organization products for the home, sold through independent dealers in the United States and Canada.  Prior to 2007, Organized Living was a specialty retail chain in the United States that sold storage solutions for home and office.\n\nThe Collection at RiverPark: The Collection at RiverPark is an outdoor lifestyle center located east of the 101 Freeway in Oxnard, California.  The shopping center held its grand opening on November 15, 2012; and is anchored by Target, Whole Foods Market, REI, The Container Store, and a sixteen-screen Cinemark cinema.  Originally meant to open in 2008, The Collection was delayed over several years due to the Great Recession.\n\nDeb Shops: Deb Shops is a catalog and online retailer, formerly a specialty retail chain store in the United States that sold women's clothing and accessories under its own private labels as well as other labels.  The company was based in Philadelphia, Pennsylvania and principally served junior and plus-sized women in their early teens through their late twenties.  At its peak, Deb Shops operated 337 stores across 42 states.  They have moved to become exclusively a plus-size store.\n\nChain store: Chain store(s) or retail chain are retail outlets that share a brand and central management, and usually have standardized business methods and practices.  In retail, dining, and many service categories, chain businesses have come to dominate the market in many parts of the world.  A franchise retail establishment is one form of chain store.  In 2004, the world's largest retail chain, Wal-Mart, became the world's largest corporation based on gross sales.\n\nHachette Distribution Services: Hachette Distribution Services is the distribution arm of French media group Hachette.  In Canada and the United States, they operate a specialty retail chain under the name HDS Retail.  HDS Retail chains are found in airports, hotels, and malls across North America.  HDS is a wholly owned subsidiary of Lagardere Services, which is the largest travel retailer, with over 1,600 stores in 18 countries covering 4 continents.\n\nSchurman Retail Group: Schurman Retail Group is an American stationery, greeting card, gifts, and paper products company based in Fairfield, California.  The company operates brands and retail stores under the names PAPYRUS, NIQUEA.D, and Paper Destiny.  It also sells the American Greetings brand and manages its subsidiaries, including Carlton Cards (in Canada and the U.S.) and Clintons (in the U.K.).  Schurman Retail Group now operates over 450 retail stores across the United States and Canada and manages an additional 400 in the U.K.  It is currently the second-largest American specialty retailer in the greeting card industry.\n\nTank blanketing: Tank blanketing, also referred to as tank padding, is the process of applying a gas to the empty space in a storage container.  The term storage container here refers to any container that is used to store products, regardless of its size.  Though tank blanketing is used for a variety of reasons, it typically involves using a buffer gas to protect products inside the storage container.  A few of the benefits of blanketing include a longer life of the product in the container, reduced hazards, and longer equipment life cycles.",
+    "question": "Which of those that anchored \"The Collection at RiverPark\" is an American specialty retail chain company that operates The Container Store, which offers storage and organization products?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "retail_chain_name": {
+          "type": "string",
+          "description": "The name of the specialty retail chain."
+        },
+        "operating_company": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the company that operates the retail chain."
+            },
+            "is_american": {
+              "type": "boolean",
+              "description": "Indicates if the operating company is American."
+            }
+          },
+          "required": [
+            "name",
+            "is_american"
+          ],
+          "additionalProperties": false
+        },
+        "product_offerings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of product categories offered by the retail chain."
+        },
+        "anchors_collection_at_riverpark": {
+          "type": "boolean",
+          "description": "Indicates if the retail chain anchors The Collection at RiverPark."
+        }
+      },
+      "required": [
+        "retail_chain_name",
+        "operating_company",
+        "product_offerings",
+        "anchors_collection_at_riverpark"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "retail_chain_name": "The Container Store",
+      "operating_company": {
+        "name": "The Container Store Group, Inc.",
+        "is_american": true
+      },
+      "product_offerings": [
+        "storage products",
+        "organization products"
+      ],
+      "anchors_collection_at_riverpark": true
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

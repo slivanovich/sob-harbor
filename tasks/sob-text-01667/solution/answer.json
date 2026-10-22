@@ -1,0 +1,15 @@
+{
+  "genus_comparison_summary": "Brownea has more species than Ecballium.",
+  "genera_details": [
+    {
+      "genus_name": "Ecballium",
+      "species_count": 1
+    },
+    {
+      "genus_name": "Brownea",
+      "species_count": 30
+    }
+  ],
+  "genus_with_more_species": "Brownea",
+  "species_count_difference": 29
+}

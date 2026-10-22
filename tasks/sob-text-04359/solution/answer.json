@@ -1,0 +1,19 @@
+{
+  "character_name": "Catherine Willows",
+  "actor_name": "Marg Helgenberger",
+  "drama_details": {
+    "title": "CSI: Crime Scene Investigation",
+    "network": "CBS",
+    "genre": "police procedural drama"
+  },
+  "award_nominations": [
+    {
+      "award_type": "Primetime Emmy Award",
+      "count": 2
+    },
+    {
+      "award_type": "Golden Globe Award",
+      "count": 2
+    }
+  ]
+}

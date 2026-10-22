@@ -1,0 +1,25 @@
+{
+  "person_1": {
+    "name": "Shirley Manson",
+    "roles": [
+      "singer",
+      "songwriter",
+      "actress",
+      "lead vocalist",
+      "solo artist"
+    ]
+  },
+  "person_2": {
+    "name": "Mark Slaughter",
+    "roles": [
+      "singer",
+      "musician",
+      "lead vocalist",
+      "rhythm guitarist",
+      "voice actor",
+      "composer",
+      "founder"
+    ]
+  },
+  "mutual_occupation": "singer"
+}

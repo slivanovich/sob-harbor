@@ -1,0 +1,10 @@
+{
+  "movie_comparison": {
+    "question_movie_1": "Pollyanna",
+    "question_movie_1_release_year": 1960,
+    "question_movie_2": "The Tigger Movie",
+    "question_movie_2_release_year": 2000
+  },
+  "movie_premiered_in_2000": "The Tigger Movie",
+  "answer_found": true
+}

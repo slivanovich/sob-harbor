@@ -1,0 +1,9 @@
+{
+  "companion_magazine": {
+    "name": "Awake!",
+    "is_religious": true,
+    "publication_frequency": "every second month"
+  },
+  "target_magazine": "The Watchtower",
+  "is_companion_found": true
+}

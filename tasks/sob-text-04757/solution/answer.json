@@ -1,0 +1,14 @@
+{
+  "country_of_origin": "India",
+  "associated_entities": [
+    {
+      "entity_name": "Priyanka Chopra",
+      "entity_type": "person"
+    },
+    {
+      "entity_name": "Don",
+      "entity_type": "film"
+    }
+  ],
+  "reasoning_summary": "Priyanka Chopra is an Indian actress, and 'Don' is a Hindi film whose soundtrack was released and sold in India, and Priyanka Chopra starred in the film."
+}

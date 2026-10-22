@@ -1,0 +1,14 @@
+{
+  "pioneer_name": "Auguste Piccard",
+  "pioneer_nationality": "Swiss",
+  "pioneer_role": "stratosphere pioneer",
+  "studied_fields": [
+    "Earth's upper atmosphere",
+    "cosmic rays"
+  ],
+  "notable_achievement": {
+    "description": "record-breaking hot air balloon flights",
+    "max_height_km": 18,
+    "year": 1931
+  }
+}

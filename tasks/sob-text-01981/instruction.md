@@ -1,0 +1,81 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Dom DeLuise: Dominick DeLuise (August 1, 1933 – May 4, 2009) was an American actor, voice actor, comedian, director, producer, chef and author.  He was the husband of actress Carol Arthur and the father of actor, director, pianist, and writer Peter DeLuise, actor David DeLuise, and actor Michael DeLuise.  He starred in a number of movies directed by Mel Brooks, in a series of films with career-long best friend Burt Reynolds, and as a voice actor in various animated films by Don Bluth.
+
+Mike Henry (voice actor): Michael Henry (born March 25, 1964) is an American actor, voice actor, writer, producer, comedian, and singer, best known for his work on "Family Guy", where he is a writer, producer, and voice actor.  He provides the voices for many characters including Cleveland Brown, Herbert, Bruce, and Consuela.  Starting with the series' 5th season, Henry had received billing as a main cast member.  In 2009, Henry, Richard Appel, and Seth MacFarlane created a spin-off of "Family Guy" called "The Cleveland Show", to focus on Cleveland and his new family, which aired on FOX until the show's final new episode (due to cancellation) on May 19th, 2013.  Reruns of the show later aired on Cartoon Network's Adult Swim.
+
+Hank Azaria: Henry Albert "Hank" Azaria ( ; born April 25, 1964) is an American actor, voice actor, comedian and producer.  He is known for starring in the animated television sitcom "The Simpsons" (1989–present), voicing Moe Szyslak, Apu Nahasapeemapetilon, Chief Wiggum, Comic Book Guy, Carl Carlson and numerous others.  After attending Tufts University, Azaria joined the series with little voice acting experience, but became a part of the crew in its second season, with many of his performances on the show being based on famous actors and characters.
+
+Mick Wingert: Mick Wingert (born July 4, 1974) is an American voice actor, comedian and voice-over coach.  He is known for his voice over work in video games, movies and TV shows, as well as the new voice of Master Po and Zeng in "", taking over the roles from actors Jack Black and Dan Fogler.  Wingert has been praised by fans of the "Kung Fu Panda" franchise for his Po voice impression sounding exactly like Jack Black's voice.  He also does additional voice over work in "Kung Fu Panda", "Mass Effect 2", "", "The Technomancer" and "The Princess and the Frog".  He is not related to fellow voice actor Wally Wingert.
+
+Bartok the Magnificent: Bartok the Magnificent, directed by Don Bluth and Gary Goldman, is a 1999 direct-to-video spin-off and sequel to the 1997 film "Anastasia", which features Hank Azaria as the voice of Bartok, Kelsey Grammer as the voice of Zozi, and Jennifer Tilly as Piloff.  It is a "family adventure...animated comedy" film, according to Fort Oglethorpe Press.
+
+Nozomu Sasaki: Nozomu Sasaki (佐々木 望 , Sasaki Nozomu , born January 25, 1967) is a Japanese voice actor.  He is represented by the voice actor management firm, 81 Produce, and was previously represented by Arts Vision.  In 1988, he voiced the character Tetsuo Shima in the movie "Akira", which was adapted from the manga of the same name.  He also performed the role of Yusuke Urameshi in the anime adaptation of the manga "YuYu Hakusho" and returned to that role in video games for that franchise.  He is sometimes mistaken for fellow voice actress Nozomi Sasaki, whose name is written the same way.  Sasaki has emerged the victor of the Seiyū Grand Prix (in which votes were collected to compile a top ten list of voice actors) more times than any other voice actor.
+
+Tom McGrath (animator): Thomas "Tom" McGrath (born August 7, 1964) is an American film director, animator, and voice actor known for co-directing (with Eric Darnell) the 2005 comedy "Madagascar" and its sequels, "" in 2008 and "" in 2012, also providing the voice of Skipper in all films, short films and "The Penguins of Madagascar" television series.  He has portrayed Skipper in every "Madagascar" installment, being the only voice actor to do so.  He has also worked as a voice actor on other DreamWorks animated features like "Flushed Away" in 2006 and "Shrek the Third" in 2007.  He also stepped in on "Flushed Away" to help make improvements prior to its release.  He has also directed other DreamWorks Feature Films such as Megamind and The Boss Baby.
+
+Matthew Géczy: Matthew Géczy (born August 23, 1964 in the state of Georgia) is an American movie and television actor, voice actor and voice director based in Paris, France.  He has acted in several films for television and cinema, with directors such as Brian De Palma and Thomas Vinterberg.  He has been a voice actor in advertising campaigns, documentaries, video games, internet media and in the field of animation.  He has provided voices for productions such as "Code Lyoko", "Casper's Scare School", "Ratatouille", and "Persepolis".  He played a voice acting role in video games such as "Rayman 2", "", "XIII" and "Amy".  He has also worked as the voice director for numerous animated television series including the Children's BAFTA-nominated series "Eliot Kid" (BBC, ABC Australia, Cartoon Network), "Mouk" (Disney Junior), "I.N.K. Invisible Network of Kids" (Pop, ABC Australia), Season 2 of "Casper's Scare School", and is currently in production for Season 2 of "The Mysterious Cities of Gold" and "The New Adventures of Lassie" for DreamWorks Classics.
+
+William DeVizia: William DeVizia is an American director, screenwriter, producer, cinematographer, and voice actor.  He directed the 1996 film "Almost Famous", the 1997 film "Lesser Prophets", and produced the 1998 TV movie "FashionKingdom".  He also was credited in the 2006 video game Bully as the voice over director as well as the voice actor for one of the greaser characters Vance Medici and an Asylum Inmate.  He was also the voice over director for the video game Manhunt 2 and a production team member for Rockstar NYC for Grand Theft Auto IV and an additional voice actor.
+
+Christopher Lloyd: Christopher Allen Lloyd (born October 22, 1938) is an American actor, voice actor and comedian best known for his roles as Emmett "Doc" Brown in the "Back to the Future" trilogy, Judge Doom in "Who Framed Roger Rabbit" (1988), Merlock the Magician in "" (1990), Uncle Fester in "The Addams Family" (1991) and its sequel "Addams Family Values" (1993), and Grigori Rasputin in "Anastasia" (1997).
+
+Question: What is the name of this American actor, voice actor, comedian, and producer, born in 1964, who was the voice of Bartok in Anastasia?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "actor_name": {
+      "type": "string",
+      "description": "The full name of the actor."
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "The birth year of the actor."
+    },
+    "professions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of professions held by the actor."
+    },
+    "notable_voice_role": {
+      "type": "object",
+      "properties": {
+        "character_name": {
+          "type": "string",
+          "description": "The name of the character voiced."
+        },
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film where the character was voiced."
+        }
+      },
+      "required": [
+        "character_name",
+        "film_title"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "actor_name",
+    "birth_year",
+    "professions",
+    "notable_voice_role"
+  ],
+  "additionalProperties": false
+}

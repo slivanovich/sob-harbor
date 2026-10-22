@@ -1,0 +1,9 @@
+{
+  "village_name": "Roughlee",
+  "hill_name": "Pendle Hill",
+  "summit_elevation": {
+    "value": 557,
+    "unit": "m"
+  },
+  "location_relationship": "at the foot of"
+}

@@ -1,0 +1,10 @@
+{
+  "player_name": "Zach Ville",
+  "team_name": "Missouri Tigers",
+  "team_nickname_origin": {
+    "origin_entity_name": "Fighting Tigers of Columbia",
+    "origin_entity_type": "band of armed guards",
+    "origin_event_year": 1864,
+    "origin_event_description": "protected Columbia from guerrillas during the Civil War"
+  }
+}

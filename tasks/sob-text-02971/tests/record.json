@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "aecaceccee93a88601dfa73bbeccbf5c5618a8aeb836f19a02641ed027fcbdd6",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae0808555429945ae95938b",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Wooden Leg",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "George Bent: George Bent, also named Ho—my-ike in Cheyenne (Cheyenne people, 1843 – May 19, 1918), was a Cheyenne who became a Confederate soldier during the American Civil War and waged war against Americans as a Cheyenne warrior afterward.  He was the mixed-race son of Owl Woman, daughter of a Cheyenne chief, and the American William Bent, founder of the trading post named Bent's Fort and a trading partnership with his brothers and Ceran St. Vrain.  Bent was born near present-day La Junta, Colorado, and was reared among both his mother's people, his father and other European Americans at the fort, and other whites from the age of 10 while attending boarding school in St. Louis, Missouri.  He identified as Cheyenne.\n\nWooden Leg: A Warrior Who Fought Custer: Wooden Leg: A Warrior Who Fought Custer is a book by Thomas Bailey Marquis about the life of a Northern Cheyenne Indian, Wooden Leg, who fought in several historic battles between United States forces and the Plains Indians, including the Battle of the Little Bighorn, where he faced the troops of George Armstrong Custer.  The book is of great value to historians, not only for its eye-witness accounts of battles, but also for its detailed description of the way of life of 19th-century Plains Indians.\n\nNorthern Cheyenne Indian Reservation: The Northern Cheyenne Indian Reservation (Tsėhéstáno in Cheyenne, formerly named the Tongue River Indian Reservation) is home of the federally recognized Northern Cheyenne Tribe.  Located in southeastern Montana, the reservation is approximately 444,000 acres in size and home to approximately 5,000 Cheyenne people.  The tribal and government headquarters are in Lame Deer, which is also the home of the annual Northern Cheyenne Pow wow.  The reservation is bounded on the east by the Tongue River and on the west by the Crow Reservation.  There are small parcels of non-contiguous off-reservation trust lands in Meade County, South Dakota, northeast of the city of Sturgis.  Its timbered ridges that extend into northwestern South Dakota are part of Custer National Forest and it is approximately 40 mi east of the site of the 1876 Battle of the Greasy Grass (known to most Americans as the Battle of the Little Bighorn).\n\nBuffalo Calf Road Woman: Buffalo Calf Road Woman, or Brave Woman (c. 1850s?  – 1879), was a Northern Cheyenne woman who saved her wounded warrior brother, Chief Comes in Sight, in the Battle of the Rosebud (as it was named by the United States) in 1876.  Her rescue helped rally the Cheyenne warriors to win the battle.  She fought next to her husband in the Battle of the Little Bighorn that same year.  In 2005 Northern Cheyenne storytellers broke more than 100 years of silence about the battle, and they credited Buffalo Calf Road Woman with striking the blow that knocked Lieutenant Colonel George Armstrong Custer off his horse before he died.\n\nLittle Wolf: Little Wolf (\"Cheyenne\": Ó'kôhómôxháahketa, sometimes transcribed \"Ohcumgache\" or \"Ohkomhakit\", more correctly translated Little Coyote, 18201904) was a Northern Só'taeo'o Chief and Sweet Medicine Chief of the Northern Cheyenne.  He was known as a great military tactician and led a dramatic escape from confinement in Oklahoma back to the Northern Cheyenne homeland in 1878, known as the Northern Cheyenne Exodus.\n\nRed Armed Panther: Red Armed Panther, or Red Sleeve (also known as Red Around the Mouth, Red Arm, and Bloody Arm), was a Northern Cheyenne Scout at Fort Keogh during the late 1870s.  He was brought into the Chiefs Council of Forty-four during the summer of 1864.  He actively participated during Chief Little Wolf’s trail back to the homeland, which is now the Northern Cheyenne Reservation located in the south eastern part of Montana.  He put his life on the line to save his comrade, Black Horse, during a horse stealing raid.  He had a large family growing up, with six sisters and a brother.  He had two children, Shell Woman and “Man Bear,” known as John Red Sleeve.  The exact date of his death is uncertain, but he died in his home of electrical shock in the Muddy Cluster district on the Northern Cheyenne Reservation.\n\nCheyenne: The Cheyenne ( ) are one of the Indigenous peoples of the Great Plains and their language is of the Algonquian language family.  The Cheyenne comprise two Native American tribes, the Só'taeo'o or Só'taétaneo'o (more commonly spelled as Suhtai or Sutaio) and the Tsétsêhéstâhese (also spelled Tsitsistas).  These tribes merged in the early 19th century.  Today, the Cheyenne people are split into two federally recognized Nations: the Southern Cheyenne, who are enrolled in the Cheyenne and Arapaho Tribes in Oklahoma, and the Northern Cheyenne, who are enrolled in the Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation in Montana.\n\nHalf Yellow Face: Half Yellow Face (or Ischu Shi Dish in the Crow language), (1830?  to 1879?)  was the leader of the six Crow Scouts for George Armstrong Custer's 7th Cavalry during the 1876 campaign against the Sioux and Northern Cheyenne.  Half Yellow Face led the six Crow scouts as Custer advanced up the Rosebud valley and crossed the divide to the Little Bighorn valley, and then as Custer made the fateful decision to attack the large Sioux-Cheyenne camp which precipitated the Battle of the Little Bighorn on June 25, 1876.  At this time, the other Crow Scouts witnessed a conversation between Custer and Half Yellow Face.  Half Yellow Face made a statement to Custer (speaking through the interpreter, Mitch Boyer) that was poetically prophetic, at least for Custer: \"You and I are going home today by a road we do not know\".\n\nThomas Bailey Marquis: Thomas Bailey Marquis (December 19, 1869 – March 22, 1935) was an American self-taught historian and ethnographer who wrote about the Plains Indians and other subjects of the American frontier.  He had a special interest in the destruction of George Armstrong Custer's battalion at the Battle of the Little Bighorn, which became his lifelong obsession.  Marquis' body of work is valued by historians for his recording of the life stories of several Plains Indians and his writing on their way of life, particularly those involved in the Custer fight, notably Wooden Leg in \"A Warrior Who Fought Custer\".  Marquis carried out this research at a time when few were interested in the Indian version of events, even though no American soldiers survived the Custer fight.  Marquis' work is thus both unique and unrepeatable.\n\nWooden Leg: Wooden Leg (Cheyenne \"Kâhamâxéveóhtáhe\") (1858–1940) was a Northern Cheyenne warrior who fought against Custer at the Battle of the Little Big Horn.",
+    "question": "Who is the Northern Cheyenne warrior who fought against Custer?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "warrior_name": {
+          "type": "string",
+          "description": "The name of the Northern Cheyenne warrior."
+        },
+        "tribe_affiliation": {
+          "type": "string",
+          "description": "The tribal affiliation of the warrior."
+        },
+        "opponent_commander": {
+          "type": "string",
+          "description": "The commander the warrior fought against."
+        },
+        "battle_information": {
+          "type": "object",
+          "properties": {
+            "battle_name": {
+              "type": "string",
+              "description": "The name of the battle where the warrior fought the commander."
+            },
+            "role": {
+              "type": "string",
+              "description": "A description of the warrior's role in the battle."
+            }
+          },
+          "required": [
+            "battle_name",
+            "role"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "warrior_name",
+        "tribe_affiliation",
+        "opponent_commander",
+        "battle_information"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "warrior_name": "Wooden Leg",
+      "tribe_affiliation": "Northern Cheyenne",
+      "opponent_commander": "George Armstrong Custer",
+      "battle_information": {
+        "battle_name": "Battle of the Little Bighorn",
+        "role": "fought against Custer's troops"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,62 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+All That You Are (Goo Goo Dolls song): "All That You Are" is a song recorded by American alternative rock band the Goo Goo Dolls included in the "" , which was released on June 14, 2011.  "All That You Are" was released to the Apple iTunes Store on June 14, 2011, the same day the soundtrack was released.  Also Linkin Park and Paramore released their singles for the film, "Iridescent" and "Monster" respectively.  This is the second song the Goo Goo Dolls have made for a "Transformers" movie with the first being "Before It's Too Late (Sam and Mikaela's Theme), which was made for "Transformers".
+
+Waiting for the Rest of It: Waiting for the Rest of It is an EP released by the Goo Goo Dolls in 2010 for Warner Bros.  Records.  It was made available to all ticket holders for the Something for the Rest of Us Tour, from July 17 onward.  The EP was used to promote the Goo Goo Dolls' pending album, "Something for the Rest of Us".
+
+Live in Buffalo: July 4th, 2004: Live in Buffalo: July 4th, 2004 is a live album by the American rock band Goo Goo Dolls.  It includes a CD and a DVD, showing their concert in Buffalo, New York from July 4, 2004.  The concert included performances of all their major hits, including "Iris", "Name", and "Slide".  There are nineteen (19) songs on the DVD total, plus a studio version of their Supertramp cover, "Give A Little Bit" on the CD.  The concert was shot and recorded in downtown Buffalo on Niagara Square in front of Buffalo City Hall.  As for the concert itself, the performance was enigmatic; garnering comparisons to the Talking Heads' "Stop Making Sense" from members of the band's crew.  Over 60,000 fans attended the performance, braving a torrential downpour.  The rain cleared in time for the Goo Goo Dolls to start the show, but during their performance of "January Friend", the rain began pouring down again, harder than before.  The band played on, finishing the set, despite being pulled off stage briefly for a safety precaution and skipping three songs* that were on the original set list.
+
+Something for the Rest of Us: Something for the Rest of Us is the ninth studio album by American rock band Goo Goo Dolls.  It was released on August 28, 2010 in Australia and on August 31 in North America through Warner Bros.  Records.  The recording process took place during the spring to fall of 2009 in the GCR Audio studio in Buffalo and Paramount Studios as well as "the Ark" in Los Angeles, with producer Tim Palmer.  A single had been originally slated to be released in November 2009 with an album release in February 2010, but the band went back into the studio in January 2010.  According to lead singer and guitarist John Rzeznik, this was done to make further improvements on what they had previously thought had been a finished record.  Several producers were brought in to assist on the production process, including Butch Vig, John Fields, Paul David Hager and Rob Cavallo.  "Something for the Rest of Us" is the third Goo Goo Dolls studio album that Cavallo has produced ("Dizzy Up the Girl" and "Gutterflower").  When asked about the length of time between albums, Rzeznik admitted it was a mix of songwriting issues as well as taking time out for personal reasons; "I wanted to really dig deep and there are a million songs I threw away, like, “Nah, it's not good enough.  I wanna do something different.  I wanna do something better, go deeper.  I also wanted to have a life with my girlfriend for a while.  I owed it to her to spend some time with her and be normal and be in one place.  That was kind of important."  In one of the Ustream sessions, Robby revealed that the album would have twelve songs and "Real" is not among them.  In late May, John announced that "Home" would be the first single and was released onto radio and iTunes stores on June 8, 2010.
+
+Vol.2 (Goo Goo Dolls album): Vol.2 is a compilation album by American rock band Goo Goo Dolls, serving as the second volume to "".  It consists of two discs: one, a CD with previously unreleased tracks, b-sides, rarities, new covers, fan favorites and live performances; the other, a DVD with 23 music videos and videos from live performances.  A limited edition of the album with the entire Red Rocks concert on the DVD is available on the Goo Goo Dolls website.
+
+ITunes Originals – Goo Goo Dolls: iTunes Originals – Goo Goo Dolls is an iTunes Originals album by the Goo Goo Dolls, released digitally by iTunes on August 1, 2006 (see 2006 in music).  It includes interviews and new versions of pre-existing songs not released on any other CD.
+
+Army of Anyone: Army of Anyone was a rock supergroup formed by Filter frontman Richard Patrick with two members of rock band Stone Temple Pilots.  In addition to Patrick on vocals, the band featured brothers Dean DeLeo and Robert DeLeo on guitar and bass respectively, and Ray Luzier, formerly of David Lee Roth's band, on drums.  The band released one self-titled album in November 2006, which was well-received, but sold well short of the member's multi-platinum selling releases of their other bands.  After touring in support of the album, the band went into hiatus in mid-2007, with members returning to their respective bands, except Luzier, who joined Korn.  Despite being relatively inactive since 2007, all members have stayed in contact, and have independently shown interest in working on a second album if the logistics and scheduling of their commitments to other bands ever aligned.
+
+Notbroken: "Notbroken" is a song by the Goo Goo Dolls.  It is the second single from their ninth studio album, "Something for the Rest of Us", which was released on August 31, 2010.  It was announced on Goo Goo Dolls' official website that "Notbroken" would be the second single from the new album.
+
+Hold Me Up: Hold Me Up is the third studio album by American rock band Goo Goo Dolls, released by Metal Blade Records in 1990.  This is considered the band's true major-label debut, as previous albums were organized by the band themselves.  It features their first single, "There You Are," which became their first music video as well.  Some consider this album the Goo Goo Dolls' last true "garage rock" album.  Also, this marks the beginning of John Rzeznik's emergence as the band's principal lead vocalist.
+
+Goo Goo Dolls: The Goo Goo Dolls are an American rock band formed in 1985 in Buffalo, New York, by vocalist and guitarist John Rzeznik, vocalist and bassist Robby Takac, and drummer George Tutuska.  Mike Malinin was the band's drummer from January 1995 until December 27, 2013 (but not made an official member until 1998).  Although renowned for their commercially successful 1998 single "Iris", they have had several other notable and popular singles including "Name" and "Naked" from 1995's "A Boy Named Goo". " Slide", "Black Balloon", "Dizzy", and "Broadway" from 1998's "Dizzy Up the Girl", "Here Is Gone" from 2002's "Gutterflower", "Better Days", "Give a Little Bit", and "Stay with You" from 2006's "Let Love In" (although "Give A Little Bit" was originally released on the 2004 live CD/DVD album ""), and "Home" from 2010's "Something for the Rest of Us".  The Goo Goo Dolls have had 19 top ten singles on various charts, and have sold more than 12 million albums worldwide.
+
+Question: Army of Anyone and the Goo Goo Dolls played what genre of Music?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "genre": {
+      "type": "string",
+      "description": "The common music genre played by the listed bands."
+    },
+    "bands": {
+      "type": "array",
+      "description": "A list of bands that play the specified genre.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "genre_source_context": {
+      "type": "string",
+      "description": "A snippet from the context confirming the genre for the bands."
+    }
+  },
+  "required": [
+    "genre",
+    "bands",
+    "genre_source_context"
+  ],
+  "additionalProperties": false
+}

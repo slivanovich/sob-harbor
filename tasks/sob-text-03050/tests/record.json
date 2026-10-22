@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "record_id": "e5c01e1f62a1461ab122c17e7f9aabbc4422a0c85cbbaf42615faf1a6684796e",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5ac3eefd55429919431738cb",
+    "source_dataset": "hotpotqa",
+    "source_answer": "greatest tight ends in the league's history",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Green Bay Bombers: The Green Bay Bombers was an indoor football team that played in the Professional Indoor Football League (PIFL) in 1998, and in the Indoor Football League (IFL) in 1999 and 2000.  The Bombers franchise was owned by Keary Ecklund.  The team office was based in Neenah, Wisconsin, and played their games at the Brown County Veterans Memorial Arena.  The Bombers were coached by Mario Russo for the 1998 PIFL season and part of the 1999 IFL season and by Bud Keyes for the remainder of the 1999 and 2000 IFL seasons.\n\nList of sovereign states in the 1840s: This is a list of sovereign states in the 1840s, giving an overview of states around the world during the period between 1 January 1840 and 31 December 1849.  It contains entries, arranged alphabetically, with information on the status and recognition of their sovereignty.  It includes widely recognized sovereign states, entities which were \"de facto\" sovereign but which were not widely recognized by other states.\n\n2012 Indoor Football League season: The 2012 Indoor Football League season was the fourth season of the Indoor Football League (IFL).  The league lost nine teams but gained back three teams.  The three new teams were the Cedar Rapids Titans, New Mexico Stars and the Everett Raptors.  The season kicked off on February 19, 2012, when the Chicago Slaughter beat the Bloomington Edge 50–34.  For the 2012 season, the IFL switched to a two-conference format with no divisions, due, in large part, to the loss of all the Texas-based teams (except the Allen Wranglers) to the newly formed Lone Star Football League.  The Wranglers brought attention to the league for offering a US$500,000 contract to unemployed wide receiver Terrell Owens to become the team's part-owner and wide receiver.  Owens accepted the contract.  ESPN3 carried Owens's debut game against the Wichita Wild.  The front office of the league saw changes as well, as Commissioner Tommy Benizio resigned.  The league appointed assistant commissioner Robert Loving as the interim Commissioner.\n\nList of sovereign states in the 1830s: This is a list of sovereign states in the 1830s, giving an overview of states around the world during the period between 1 January 1830 and 31 December 1839.  It contains entries, arranged alphabetically, with information on the status and recognition of their sovereignty.  It includes widely recognized sovereign states, entities which were \"de facto\" sovereign but which were not widely recognized by other states.\n\nList of welterweight boxing champions: Beginning with Mysterious Billy Smith to Harry Lewis, the welterweight world champions listed below are more widely recognized in the United States and are not as widely sanctioned as the boxers that follow.  Beginning with boxer Pat Bradley, is a chronological widely recognized List of World Welterweight Boxing Champions, as recognized by four of the better-known sanctioning organizations:\n\nList of sovereign states in the 1930s: This is a list of sovereign states in the 1930s, giving an overview of states around the world during the period between 1 January 1930 and 31 December 1939.  It contains entries, arranged alphabetically, with information on the status and recognition of their sovereignty.  It includes widely recognized sovereign states, entities which were \"de facto\" sovereign but which were not widely recognized by other states, and 1 state which was initially unrecognized but then gained full recognition later in the decade.\n\nIndoor Football League (1999–2000): The Indoor Football League (IFL) began in 1999 as an offshoot of the troubled Professional Indoor Football League.  Keary Ecklund, the owner of the Green Bay Bombers and Madison Mad Dogs, left the PIFL after its first, financially troubled, season to start his own league.  Unlike the PIFL, the IFL was an \"entity league\"; teams were owned by the league and franchised out to management groups.  NFL Hall-of-Famer Kellen Winslow was brought in as commissioner.  The league was successful enough for a major expansion in 2000.  Expansion was done regionally to cut down on travel expenses.  Hence, the majority of the teams were in the Midwest.\n\nList of sovereign states in the 1940s: This is a list of sovereign states in the 1940s, giving an overview of states around the world during the period between 1 January 1940 and 31 December 1949.  It contains 106 entries, arranged alphabetically, with information on the status and recognition of their sovereignty.  It includes 99 widely recognized sovereign states, six entities which were \"de facto\" sovereign but which were not widely recognized by other states, and one state which was initially unrecognized but then gained full recognition later in the decade.\n\nList of sovereign states in the 1990s: This is a list of sovereign states in the 1990s, giving an overview of states around the world during the period between 1 January 1990 and 31 December 1999.  It contains 234 entries, arranged alphabetically, with information on the status and recognition of their sovereignty.  It includes 196 widely recognized sovereign states, 19 entities which claim an effective sovereignty but are considered \"de facto\" dependencies of other powers by the general international community, 18 states which were initially unrecognized but then gained full recognition later in the decade, and 1 state which was initially widely recognized but then lost full recognition later in the decade.\n\nKellen Winslow: Kellen Boswell Winslow Sr. (born November 5, 1957) is a former American football player in the National Football League (NFL).  A member of the Pro Football Hall of Fame (1995), he is widely recognized as one of the greatest tight ends in the league's history.  Winslow played his entire NFL career from 1979 to 1987 with the San Diego Chargers after being selected in the first round of the 1979 NFL Draft.  He played college football for the University of Missouri, where he was a consensus All-American.  He was also inducted into the College Football Hall of Fame (2002).",
+    "question": "The 1999 commissioner of the IFL was widely recognized as the greatest what?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "commissioner_name": {
+          "type": "string",
+          "description": "The name of the commissioner."
+        },
+        "league_name": {
+          "type": "string",
+          "description": "The name of the league."
+        },
+        "commissioner_year": {
+          "type": "integer",
+          "description": "The year the individual served as commissioner."
+        },
+        "recognition_category": {
+          "type": "string",
+          "description": "The category for which the commissioner was widely recognized."
+        }
+      },
+      "required": [
+        "commissioner_name",
+        "league_name",
+        "commissioner_year",
+        "recognition_category"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "commissioner_name": "Kellen Winslow",
+      "league_name": "Indoor Football League",
+      "commissioner_year": 1999,
+      "recognition_category": "greatest tight ends in the league's history"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

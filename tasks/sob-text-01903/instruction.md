@@ -1,0 +1,73 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Water wheel: A water wheel is a machine for converting the energy of flowing or falling water into useful forms of power, often in a watermill.  A water wheel consists of a wheel (usually constructed from wood or metal), with a number of blades or buckets arranged on the outside rim forming the driving surface.  Most commonly, the wheel is mounted vertically on a horizontal axle, but can also be mounted horizontally on a vertical shaft, for example the tub or Norse.  Vertical wheels can transmit power either through the axle or via a ring gear and typically drive belts or gears; horizontal wheels usually directly drive their load.
+
+Dirt road: A dirt road or track is a type of unpaved road made from the native material of the land surface through which it passes, known to highway engineers as subgrade material.  Dirt roads are suitable for vehicles; a narrower path for pedestrians, animals, and possibly small vehicles would be called a dirt track—the distinction is not well-defined.  Unpaved roads with a harder surface made by the addition of material such as gravel and aggregate (stones), might be referred to as dirt roads in common usage but are distinguished as improved roads by highway engineers.  (Improved unpaved roads include gravel roads, laterite roads, murram roads and macadamized roads.)
+
+Electric vehicle warning sounds: Electric vehicle warning sounds are a series of sounds designed to alert pedestrians to the presence of electric drive vehicles such as hybrid electric vehicles (HEVs), plug-in hybrid electric vehicles (PHEVs), and all-electric vehicles (EVs) travelling at low speeds.  Warning sound devices were deemed necessary by some government regulators because vehicles operating in all-electric mode produce less noise than traditional combustion engine vehicles and can make it more difficult for pedestrians, the blind, cyclists, and others, to be aware of their presence.  Warning sounds may be driver triggered (as in a horn but less urgent) or automatic at low speeds; in type, they vary from clearly artificial (beeps, chimes) to those that mimic engine sounds and those of tires moving over gravel.
+
+Stockton Beach: Stockton Beach is located north of the Hunter River in New South Wales, Australia.  It is 32 km long and stretches from Stockton, to Anna Bay.  Over many years Stockton Beach has been the site of numerous shipwrecks and aircraft crash sites.  In World War II it was fortified against a possible attack by Imperial Japanese forces.  During that time it served as a bombing and gunnery range as well as a dumping area for unused bombs by aircraft returning from training sorties.  The length of the beach, its generally hard surface and numerous items of interest along the beach make it popular with four-wheel drive (4WD) enthusiasts.  Four-wheel drive vehicles are permitted to drive on Stockton Beach provided the vehicles are in possession of valid permits.  The beach is also popular with fishermen and several different varieties of fish may be caught.
+
+Turbofan: The turbofan or fanjet is a type of airbreathing jet engine that is widely used in aircraft propulsion.  The word "turbofan" is a portmanteau of "turbine" and "fan": the "turbo" portion refers to a gas turbine engine which achieves mechanical energy from combustion, and the "fan", a ducted fan that uses the mechanical energy from the gas turbine to accelerate air rearwards.  Thus, whereas all the air taken in by a turbojet passes through the turbine (through the combustion chamber), in a turbofan some of that air bypasses the turbine.  A turbofan thus can be thought of as a turbojet being used to drive a ducted fan, with both of those contributing to the thrust.  The ratio of the mass-flow of air bypassing the engine core compared to the mass-flow of air passing through the core is referred to as the bypass ratio.  The engine produces thrust through a combination of these two portions working together; engines that use more jet thrust relative to fan thrust are known as "low-bypass turbofans", conversely those that have considerably more fan thrust than jet thrust are known as "high-bypass".  Most commercial aviation jet engines in use today are of the high-bypass type, and most modern military fighter engines are low-bypass.  Afterburners are not used on high-bypass turbofan engines but may be used on either low-bypass turbofan or turbojet engines.
+
+Desert riparian: Desert riparian is a North American desert vegetation type (or biome) occurring in the bottoms of canyons and drainages that have water at or near the surface most of the year.  It is contrasted with the desert dry wash vegetation type in which water at or near the surface is lacking most of the year.  The visual character is of large, lush green trees surrounded by dry desert vegetation and soil coloration.  The area may be in a patch surrounding a spring (oasis), or in a strand following the course of water flow.  Over 80% of known desert wildlife species use desert riparian areas.  Common dominant species include Fremont cottonwood ("Populus fremontii"), Arizona ash ("Fraxinus velutina"), arroyo willow ("Salix lasiolepis"), Goodding's willow ("Salix gooddingii"), red willow ("Salix laevigata"), California fan palm ("Washingtonia filifera"), and invasive species such as salt cedar ("Tamarix ramosissima"), giant reed ("Arundo donax"), and Russian olive ("Elaeagnus angustifolia").  Salt cedar is particularly causing problems for this ecosystem because it is able to extract water more efficiently than cottonwoods and willows.  Many noninvasive non-native species may also be found because springs and surface water areas in the desert often were old homesites where such species were intentionally planted, such as elm, black locust, and assorted fruit trees.
+
+Paddle tire: Paddle tires are mainly used on off road vehicles, specifically designed for use in sand and mud.  They consist of a smooth tire core which has a series of large rubber cups (or paddles) attached to it.  The volume inside of a paddle is much larger than the void of a knobby tire, so it is unlikely to clog up with sand/mud.  A street legal mud tire is a more or less normal tire, but with extra large gaps or "voids" between each tread block (called "lugs") to allow centrifugal force to "self-clean" or fling the mud out of the gap.  Smaller gaps trap the mud in between the tire lugs, which turns the tire into something resembling a "slick" with no tread at all, which will have no traction in mud.  A paddle tire is an even more extreme version of this, optimized for mud or sand.  The paddle provides superior traction in the sand, in part, because the paddles dig into the sand and push off from the buried sand, not just the surface, and in mud, the gigantic "voids" give no place for mud to stick.  They work something like a paddle wheel on a paddle-steamer.  Street legal mud tires are a compromise between large voids and a smooth rolling shape for on-road use.  The more "extreme" a mud tire (such as a "Super Swamper") is, the harsher and louder it is on a hard surface.  A "tractor tire" on a farm tractor is a somewhat more mild version of a paddle tire, only the voids are smaller to allow for limited use on hard surfaces, and the "lugs" are angled to give lateral traction.  A paddle tire is so optimized for mud that the shape is of no use on anything other than a soft surface, since the vibration and lack of control of the tire would render a vehicle almost unusable.  One other way the paddle tire is a specialized-application-only is that it gives only forward/rearward traction.  This means that it is used on a wheel that drives a vehicle to push it forward, but gives little "lateral" (side-to-side) traction.  For that reason, the tires of the vehicle that steer it are generally more "normal" tires, since a paddle tire on a steering wheel will just slide sideways rather than pulling the vehicle with it.  So many 4WD vehicles will use paddle tires only on the rear, although the front wheels are powered as well.  On a 2WD or a motorbike, the rear wheel is the only drive wheel, and so putting a paddle tire on the front wheels is useless or worse, since steering performance will be negatively impacted.
+
+Driving in Singapore: In Singapore, cars and other vehicles drive on the left side of the road, as in neighbouring Malaysia, due to its British colonial history (which led to British driving rules being adopted in India, Australia, New Zealand, and Hong Kong as well).  As a result, most vehicles are right-hand drive.  However, exemptions have been made to allow foreign vehicles and construction machineries to utilise the roadspace of Singapore.  As such, vehicles with left hand drive configurations are required to either be driven with a sign indicating "LEFT-HAND-DRIVE" or towed.
+
+Neoprene: Neoprene or polychloroprene is a family of synthetic rubbers that are produced by polymerization of chloroprene.  Neoprene exhibits good chemical stability and maintains flexibility over a wide temperature range.  Neoprene is sold either as solid rubber or in latex form, and is used in a wide variety of applications, such as laptop sleeves, orthopedic braces (wrist, knee, etc.), electrical insulation, liquid and sheet applied elastomeric membranes or flashings, and automotive fan belts.
+
+Motor vehicle: A motor vehicle is a self-propelled road vehicle or off-road vehicle, commonly wheeled, that does not operate on rails, such as trains or trams and used for the transportation of passengers, or passengers and property.
+
+Question: What type of surface is the vehicles neoprene fan belts are made for supposed to drive in?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "component_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the vehicle component."
+        },
+        "material": {
+          "type": "string",
+          "description": "The material the component is made from."
+        }
+      },
+      "required": [
+        "name",
+        "material"
+      ],
+      "additionalProperties": false
+    },
+    "vehicle_category_implied": {
+      "type": "string",
+      "description": "The category of vehicle implied by the component's usage."
+    },
+    "primary_driving_surface": {
+      "type": "string",
+      "description": "The primary type of surface the associated vehicles are intended to drive on."
+    }
+  },
+  "required": [
+    "component_details",
+    "vehicle_category_implied",
+    "primary_driving_surface"
+  ],
+  "additionalProperties": false
+}

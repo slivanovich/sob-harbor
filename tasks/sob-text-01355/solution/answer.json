@@ -1,0 +1,11 @@
+{
+  "film_title": "Le Jaguar",
+  "film_year": 1996,
+  "actor_name": "Patrick Bruel",
+  "actor_professions": [
+    "singer",
+    "actor",
+    "professional poker player"
+  ],
+  "missing_profession": "poker player"
+}

@@ -1,0 +1,13 @@
+{
+  "coach_name": "George Karras",
+  "university_info": {
+    "name": "Wichita State University",
+    "governing_body": "Kansas Board of Regents",
+    "size_description": "third-largest university"
+  },
+  "coaching_details": {
+    "role": "head football coach",
+    "start_year": 1965,
+    "end_year": 1966
+  }
+}

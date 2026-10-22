@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "record_id": "3fdc8cb125f8e34b4cee48132ca7c834a0c73d77ed86cca81c1a8956eef27fb3",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab2d996554299545a2cfac7",
+    "source_dataset": "hotpotqa",
+    "source_answer": "1865",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Willie Fritz: Willie Fritz (born April 2, 1960) is an American football coach and former player.  He is the current head coach at Tulane University.  From 2014 to 2015, he was head coach at Georgia Southern University.  From 2010 to 2013, he was the head football coach at Sam Houston State University.  From 1997 to 2009, Fritz served as the head football coach at the University of Central Missouri.  From 1993 to 1996, he was the head football coach at Blinn College, a junior college in Brenham, Texas.\n\nErnest T. Jones: Ernest T. Jones (born January 18, 1970) is the current head coach at ASA Miami, a two-year college starting its first football season in 2015.  He was briefly running backs coach for the University of Connecticut Huskies football team.  He was head football coach at Alcorn State University.  He was named the head football coach after the 2007 season and served as head coach in 2008.  He was controversially fired from this position in December 2008.  He returned to the University of Cincinnati as the Director of Player Services in 2009.  For the 2010 he will be an assistant coach at the University at Buffalo under former University of Cincinnati assistant coach and now UB head football Coach Jeff Quinn.\n\nTed Karras Jr.: Theodore George \"Ted\" Karras Jr. (born December 10, 1964) is an American football coach and former player.  He was most recently head football coach at Walsh University, a position he held from December 2012 to November 2016.  Previously, Karras served as the first head football coach at Marian University in Indianapolis, Indiana.  He held that position from the program's inception in 2007 through the 2012 season in which Marian won the NAIA Football National Championship.  Karras played college football as a defensive tackle at Northwestern University from 1983 to 1986 and for one year (1987) in the National Football League (NFL) with the Washington Redskins.  From 2003 to 2005, he served as the head football coach at Rose-Hulman Institute of Technology.  His father, Ted Karras Sr., played for the Chicago Bears in the 1960s.  His uncles also played in the NFL: Alex Karras for the Detroit Lions and Lou Karras for the Washington Redskins.\n\nWesley Englehorn: Wesley Theodore \"Moose\" Englehorn (January 21, 1890 – September 3, 1993) was an American football player and coach.  Born in Helena, Montana, Englehorn first gained fame as a football player for Spokane High School.  While he was a junior in high school, he was reportedly recruited by Princeton University to come east to play football for the school.  A newspaper account in 1907 reported: \"It is expected that Wesley Englehorn, the giant left tackle of the high school team, will also enter the Eastern college.  If this materializes the Spokane high school will be weakened next year by the loss of two of its greatest players.  ... Englehorn is also a strong basket ball player and track athlete.\"  Englehorn did not enroll at Princeton and instead played for two years on the All Star Pacific Northwest football and basketball teams.  He began his collegiate career at Washington State College.  After playing one year of football at Washington State, Englehorn enrolled at Dartmouth College, where he played two years at the tackle position.  He was elected team captain for the 1913 season, but he was declared ineligible under \"the so-called three-year rule\" because of his year at Washington State.  Though ineligible to play, Englehorn served as the team's assistant coach in 1913 and was elected class president.  He was selected as a first-team All-American in 1912.  He graduated from Dartmouth in 1914 and worked as a football coach for several years thereafter.  From 1914 to 1916, he was the football coach at Case School of Applied Science in Cleveland, Ohio.  In 1917, he was hired as the line coach and first assistant football coach at Colgate University.  In 1920, he was an assistant coach under Frank Cavanaugh at Boston College.  In 1921, he was hired as the head football coach at Amherst College.  In January 1922, Englehorn announced his retirement from coaching.  Shortly before his death at age 103, Englehorn said, \"It's the football I remember best ... the teammates . .  the teamwork.\"  Prior to his death in 1993, he was living at Stapeley Hall, a home for the elderly in the Germantown section of Philadelphia, Pennsylvania, and was the oldest living All-American football player.\n\nFred Brice: Fred Mansfield Brice (December 6, 1887 – January 10, 1967) was an American football, basketball, and baseball coach.  He served as the head football coach at the University of Maine from 1921 to 1940, compiling a record of 79–58–9 and winning 10 Maine Intercollegiate Athletic Association championships.  Brice was also the head basketball coach at Maine from 1925 to 1929, tallying a mark of 14–31, and the school's head baseball coach from 1926 to 1935, amassing a record of 67–60.  Brice died at the age of 79 on January 10, 1967 at his home in Pittsfield, New Hampshire.  He was born in Lawrence, Massachusetts.\n\nUniversity of Maine: The University of Maine (also referred to as UMaine, Maine or UMO) is a public research university in Orono, Maine, United States.  The university was established in 1865 as a land grant college and is the flagship university of the University of Maine System.  The University of Maine is one of only nine land, sea and space grant institutions in the nation.\n\nRobert P. Wilson: Robert P. \"Bert\" Wilson was an American football player and coach.  He played football for Wesleyan University and was captain of the school's football team in 1896.  After graduating, he served as Wesleyan's first head football coach from 1898 to 1902.  In five years as Wesleyan's coach, Wilson compiled a record of 25–21–2.  In his first two years as the coach, Wesleyan compiled records of 7–3 and 7–2.  In the 17 years before Wilson took over as the coach, Wesleyan's football team had never won seven games in a single season.  In 1903, Wilson became the head football coach at New York University (NYU).  He served the sixth head football coach at NYU and held that position for one season, in 1903, leading the NYU Violets to a record of 2–5.\n\nMark Raymond: Mark Raymond is an American football coach, currently serving as the head football coach at Williams College.  Raymond served as the head football coach at St. Lawrence University from 2010 to 2015, winning two conference titles and compiling an overall record of 31–30.  Raymond was named Liberty League Coach of the Year following the conclusion of both the 2010 and 2015 seasons at St. Lawrence.  Raymond was named head football coach at Williams College on February 24, 2016.\n\nTom Keele: Tom Keele (born c. 1933) is a former American football coach.  He served as the head football coach at California State University, Northridge from 1979 to 1985, compiling a record of 31–42–1.  Keele graduated from Jefferson High School in Portland Oregon in 1951.  He attended the University of Oregon, where he played football for the Oregon Webfoots as a tackle from 1957 to 1959.  Keele began his coaching career in 1960 at North Eugene High School in Eugene, Oregon, working two years as an assistant football coach and sophomore basketball coach.  He moved to Oregon City High School in Oregon City, Oregon in 1962, serving as head football coach and leading his team to a 9–1–1 record.  The following year, he was hired as head football coach at the newly-formed Sheldon High School in Eugene.\n\nK. C. Keeler: Kurt Charles \"K. C.\" Keeler (born July 26, 1959) is an American football coach and former player.  He is currently the head football coach at Sam Houston State University.  He was the head football coach at the University of Delaware from 2002 to 2012.  Keeler served as the head football coach at Rowan University from 1993 to 2001.  His 2003 Delaware Fightin' Blue Hens squad won the NCAA Division I-AA Football Championship, and returned to the Division I Championship game in 2007 and 2010.",
+    "question": "The place where Fred Brice served as the head football coach at from 1921 to 1940 was established in what year?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "coach_name": {
+          "type": "string",
+          "description": "The name of the football coach."
+        },
+        "institution_name": {
+          "type": "string",
+          "description": "The name of the institution where the coach served."
+        },
+        "coaching_period": {
+          "type": "object",
+          "properties": {
+            "start_year": {
+              "type": "integer",
+              "description": "The start year of the coaching tenure."
+            },
+            "end_year": {
+              "type": "integer",
+              "description": "The end year of the coaching tenure."
+            }
+          },
+          "required": [
+            "start_year",
+            "end_year"
+          ],
+          "additionalProperties": false
+        },
+        "institution_established_year": {
+          "type": "integer",
+          "description": "The year the institution was established."
+        }
+      },
+      "required": [
+        "coach_name",
+        "institution_name",
+        "coaching_period",
+        "institution_established_year"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "coach_name": "Fred Brice",
+      "institution_name": "University of Maine",
+      "coaching_period": {
+        "start_year": 1921,
+        "end_year": 1940
+      },
+      "institution_established_year": 1865
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "film_details": {
+    "title": "Roommates",
+    "release_year": 1995,
+    "genre": "comedy-drama"
+  },
+  "actress_details": {
+    "name": "Julianne Moore",
+    "nationality": "American",
+    "active_period_start": "early 1990s"
+  },
+  "role_type": "starred"
+}

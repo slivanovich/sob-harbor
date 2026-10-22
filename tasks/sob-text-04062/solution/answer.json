@@ -1,0 +1,15 @@
+{
+  "refuser_of_grant": {
+    "name": "Conrad III",
+    "title": "King of Germany",
+    "father": {
+      "name": "Duke Frederick I",
+      "title": "Duke of Swabia"
+    }
+  },
+  "recipient_of_refusal": {
+    "name": "Henry II",
+    "title": "Duke of Limburg"
+  },
+  "refused_territory": "Lower Lorraine"
+}

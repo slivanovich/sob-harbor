@@ -1,0 +1,88 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Robert Stanjek: Robert Stanjek (born 7 May 1981 in Rüdersdorf, Brandenburg) is a German sailor, who specialized in two-person keelboat (Star) class.  He represented Germany, along with his partner Frithjof Kleen in the Star class at the 2012 Summer Olympics, and also captured a silver medal at the 2011 ISAF Sailing World Championships in Perth, Australia.  Stanjek has also been training throughout most of his sporting career for the North German Sailing Regatta (German: "Norddeutscher Regatta Verein" ) in Hamburg under his personal coach Alan Smith.  As of November 2014, Stanjek is ranked eighth in the world for the two-person keelboat by the International Sailing Federation, following his first-place effort at the ISAF World Cup Series and Star World Championships in Malcesine, Italy.
+
+Yavanarajya inscription: The Yavanarajya inscription, also called the Maghera inscription, was discovered in Mathura, India in 1988.  The inscription, carved on a block of red sandstone, is dated to the 1st century BCE, and is currently located at the Mathura Museum in Mathura.  The inscription was published and analysed by French indologist Gérard Fussman in 1993.  The inscription is important in that the Mathura sculptors mention the date of their dedication as "The last day of year 116 of Yavana hegemony ("Yavanarajya")".  It is considered that this inscription is attesting the control of the Indo-Greeks in the 2nd and 1st centuries BCE in Mathura, a fact that is also confirmed by numismatic and literary evidence.
+
+Verein Deutscher Studenten: The Verband der Vereine Deutscher Studenten (VVDSt), also known as the Kyffhäuserverband is an umbrella organization of 38 German fraternities called Verein Deutscher Studenten (VDSt)).
+
+Austrian Cricket Association: The Austrian Cricket Association (Österreichischer Cricket Verband) is the national governing body of cricket in Austria.  It was founded in 1981 by Kerry Tattersall as the Austrian Cricketers Association, following the re-introduction of cricket to Austria in 1975 with the founding of Vienna Cricket Club – as "1.  Vienna Cricket Verein".  Cricket was recorded as being played in Vienna as far back as the 1890s, traditionally by gardeners of mercantile families.  During the post-war occupation of Austria, cricket was also played by allied forces members.  Since 1992, the Austrian Cricket Association has been an affiliate member of the International Cricket Council, and it is one of the founding members of the European Cricket Council.  The European Cricket Council, now known as ICC Europe, is responsible for the administration of the ICC's European Development Program.
+
+Swiss association: A Swiss association ("Verein" in German, "association" in French, "associazione" in Italian) is a legal structure in Swiss law, defined in the civil code (Part one, title two, chapter two).  It is similar to the Anglo-American voluntary association.  Unlike in Germany, a Swiss association does not need to be registered in order to have a separate legal personality.  It must be registered if it "conducts a commercial operation".  An association can serve as a non-profit organization (NPO) or non-governmental organization (NGO) and this form is used by several Swiss sections of international NGOs such as Amnesty International, and the World Wildlife Fund, by business firms (see below) or by international organizations such as the Fédération Internationale de Football Association (FIFA).  The form can also be used by political parties and alliances, such as trade unions.
+
+German Sports Badge: The German Sports Badge (German: "Deutsches Sportabzeichen" (DSA)) is a decoration of the German Olympic Sports Federation DOSB, of the Federal Republic of Germany.  The German Sports Badge test is carried out primarily in Germany, and in other 39 countries abroad.  In 1993 the DOSB opened an international office called "Ausland" which allows non-Germans to organize, participate and obtain the DSA outside Germany, but only under supervision of an authorized "Verein" (sport organisation) and authorized "Pruefer" (judge); the decoration can be awarded to any person participating in the test.
+
+Caller ID: Caller ID (caller identification, CID), also called calling line identification (CLID), calling number delivery (CND), calling number identification (CNID), calling line identification presentation (CLIP), or call display, is a telephone service, available in analog and digital telephone systems, including VoIP, that transmits a caller's telephone number to the called party's telephone equipment when the call is being set up.  The caller ID service may include the transmission of a name associated with the calling telephone number, in a service called CNAM.  Also, the called party's telephone may associate the call ID number with a person's name and other personal information from some contact list or some online server.  Caller ID allows the called party to decide whether to accept or decline the call.
+
+International Numismatic Council: The International Numismatic Council (INC) is the international co-ordinating body set up to aid cooperation between numismatists and institutions within the field of numismatics, or related areas.  It is since 2015 officially registered as an association and has its headquarters in Winterthur, Switzerland, co-located with the Münzkabinett und Antikensammlung der Stadt Winterthur.
+
+International Numismatic Congress: The International Numismatic Congress (INC) is the largest international conference for numismatists.  It is organised every six years by the International Numismatic Council.  Since the 7th INC in Copenhagen, the conference has also marked the launch of the "Survey of Numismatic Literature", in which specialist numismatists review research and publications since the previous Congress.  A special medal is created for each Congress.  The Congress has, from the 6th INC in Rome forward, met at six-year intervals with the only slight disturbance being that the 10th INC in London convened seven years after the previous Congress and saw a slightly shortened span of five years following the London INC.
+
+Sylloge Nummorum Graecorum: Sylloge Nummorum Graecorum (SNG) is a project to publish ancient Greek coinage, founded in Great Britain by the British Academy in 1930.  It was originally intended to catalogue both public and private Greek coin collections in the UK.  It has gradually spread to other countries, and has now published more than 120 volumes.  In 1972 the project was adopted by the Union Académique Internationale.  Volumes are now published under the patronage of the International Numismatic Council.  The British project has also established an online database, which includes over 25,000 coins in British collections.  Though not necessarily comprehensive, it is considered a useful resource for researched Greek and Greek Imperial coinage for numismatists and historians alike at both specialist and undergraduate level.
+
+Question: What do you call the International Numismatic Council, which is also called "Verein" in German?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "entity_name": {
+      "type": "string",
+      "description": "The name of the entity being described."
+    },
+    "legal_structure_details": {
+      "type": "object",
+      "properties": {
+        "english_term": {
+          "type": "string",
+          "description": "The English term for the legal structure of the entity."
+        },
+        "german_term": {
+          "type": "string",
+          "description": "The German term for the legal structure of the entity."
+        },
+        "registration_year": {
+          "type": "integer",
+          "description": "The year the entity was officially registered under this legal structure."
+        },
+        "headquarters_city": {
+          "type": "string",
+          "description": "The city where the entity's headquarters are located."
+        },
+        "headquarters_country": {
+          "type": "string",
+          "description": "The country where the entity's headquarters are located."
+        }
+      },
+      "required": [
+        "english_term",
+        "german_term",
+        "registration_year",
+        "headquarters_city",
+        "headquarters_country"
+      ],
+      "additionalProperties": false
+    },
+    "answer": {
+      "type": "string",
+      "description": "The direct answer to the question."
+    }
+  },
+  "required": [
+    "entity_name",
+    "legal_structure_details",
+    "answer"
+  ],
+  "additionalProperties": false
+}

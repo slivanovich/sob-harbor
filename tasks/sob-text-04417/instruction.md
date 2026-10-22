@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Battle of Berlin: The Battle of Berlin, designated the Berlin Strategic Offensive Operation by the Soviet Union, was the final major offensive of the European theatre of World War II.
+
+76th Guards Air Assault Division: The 76th Guards Air Assault Division is a division of the Russian Airborne Troops based in Pskov.  The division traces its lineage back to the 76th Guards Rifle Division, formed in March 1943 from the 157th Rifle Division for that division's actions during the Battle of Stalingrad.  The division fought in the Battle of Kursk, the Battle of the Dnieper, Operation Bagration, the East Pomeranian Offensive, and the Berlin Offensive.  Postwar, it was converted into an airborne division.  The division moved to Pskov, its current base, in 1949.  The division was involved in Black January and the January Events in Lithuania.  After the Dissolution of the Soviet Union the division became part of the Russian Airborne Troops.  The division fought in the First Chechen War, Second Chechen War and the Russo-Georgian War.  The division became an air assault division in 2006.  It was involved in the Annexation of Crimea and the War in Donbass.
+
+343rd Rifle Division (Soviet Union): The 343rd Rifle Division was first formed in late August, 1941, as a standard Red Army rifle division, at Stavropol, in the Caucasus region.  Its first major operation was in the liberation of Rostov in December, 1941.  Following this, it was nearly caught up in the debacle near Kharkov in May, 1942, but managed to evade the German spearheads during Operation Blue to join the forces defending the Stalingrad region during the summer and fall.  Following the German surrender at Stalingrad, on May 4, 1943, it was re-designated as the 97th Guards Rifle Division.  Over a year later, a new 343rd Rifle Division was formed, based on the personnel and equipment of a Fortified Region, just after the start of Operation Bagration, the destruction of German Army Group Center.  This new division went on to distinguish itself by helping to liberate the Polish city of Białystok, and ended the war in East Prussia, near Königsberg.
+
+18th Guards Motor Rifle Division: The 18th Guards Motor Rifle Division was formed originally as 133rd Rifle Division at Novosibirsk or Biysk in 1939.  The division was part of 1st Shock Army on 1 December 1941 during the Battle of Moscow.  It was redesignated as the 18th Guards Rifle Division in March 1942 with the 51, 53, 58 Guards Rifle Regiments and 52 Guards Artillery Regiment.  The division fought in the East Prussian Offensive.  The unit became 30th Guards Mechanised Division in 1945 as part of the 11th Guards Army.  In 1965 it was renumbered as 18th Guards MRD.  It seems to have been stationed in the Kaliningrad enclave with 11th Guards Army before entering Czechoslovakia in 1968, joining the Central Group of Forces.
+
+293rd Rifle Division (Soviet Union): The 293rd Rifle Division began service as a standard Red Army rifle division shortly after the German invasion.  It served in the defense of Kiev, and managed to escape encirclement, spending the winter along the front near Kursk.  In the early summer of 1942 the division fought along the Don River against the German offensive, and after rebuilding in the Battle of Stalingrad, where it played a leading role in the encirclement and destruction of German Sixth Army, for which it was raised to Guards status as the 66th Guards Rifle Division as the battle was still ongoing.  A second 293rd was raised a few months later and fought briefly against the Japanese in Manchuria in August 1945.
+
+95th Rifle Division: The 95th Rifle Division (Russian: 95-я стрелковая дивизия 95-y strelkovaya diviziya ) was a Red Army Rifle Division during World War II, formed thrice.  The division was first formed in November 1923 with the 6th Rifle Corps.  It fought in the Winter War and the Soviet occupation of Bessarabia and Northern Bukovina.  After Operation Barbarossa, the division fought in the retreat from Moldova and fought in the Siege of Odessa and the Siege of Sevastopol.  It was destroyed during the Siege of Sevastopol and was disbanded in late July 1942.  The division was reformed in August 1942 from the 13th Motor Rifle Division NKVD and fought at the Battle of Stalingrad.  For its actions during the battle, the division became the 75th Guards Rifle Division in March 1943.  In April 1943, the division was formed a third time at Kaluga from the 121st Rifle Brigade.  It fought in Operation Bagration.
+
+33rd Kuban Rifle Division: The 33rd Kuban Rifle Division was an infantry division of the Red Army during the Russian Civil War and the Polish–Soviet War.  The division was first formed as the 33rd Rifle Division in March 1919 on the Southern Front and became the 33rd Kuban Rifle Division in December 1919.  From June 1920 the division fought in the Polish–Soviet War.  In September 1920, the units from the 33rd and other divisions became part of the new Kuban Cavalry Division, which soon became the 5th Kuban Cavalry Division.
+
+20th Rifle Division (Soviet Union): The 20th Rifle Division was an infantry division of the Soviet Red Army, formed three times.  The first formation of the division lasted from 1919 to 1921 and fought during the Russian Civil War before its downsizing into a brigade.  The brigade became the 3rd Rifle Division, the Caucasian Mountain Rifle Division, and the 20th Mountain Rifle Division during the interwar years.  In 1944 the 20th became the 20th Rifle Division again.  It was disbanded after the end of the war.  The division briefly reformed between 1955 and 1957 from the 188th Rifle Division and was converted into a motor rifle division.
+
+5th Rifle Division (Soviet Union): Just more than a week later, the 5th Rifle Division was reformed from a rifle brigade in the Moscow Military District.  In February 1943, the division fought in offensives in the Mtsensk and Tver areas.  In July, it fought in Operation Kutuzov and was awarded the honorific "Orel" after it captured the city on 4 August.  Between September and October, it fought in the Bryansk Offensive.  It continued to advance and participated in the Gomel-Rechitsa Offensive and reached the Dnieper before it went on the defensive in early December.  In February 1944, the division fought in the Rogachev-Zhlobin Offensive and was awarded the Order of the Red Banner for its actions.  From June 1944, the division fought in Operation Bagration, It was awarded the Order of Suvorov 2nd class for breaking through German defenses on the Drut River.  It the fought in the Minsk Offensive and Belostock Offensive.  For its capture of Vawkavysk on 14 July, the division received the Order of Kutuzov 2nd class.  The division continued its advance and reached the Narew in August.  From then until November, it fought in the battle for the Narew bridgeheads.  In 1945, the division fought in the Mlawa-Elbing Offensive and the Berlin Offensive.  It was awarded the Order of Lenin for its actions.  The division was disbanded in June 1946.
+
+283rd Rifle Division: The 283rd Rifle Division (Russian: 283-я стрелковая дивизия ) was an infantry division of the Soviet Union's Red Army during World War II.  Formed in the summer of 1941, the division fought in the Battle of Moscow, the Battle of Kursk, the Battle of Smolensk and the Battle of Berlin.  The 283rd was disbanded in 1946, after the end of the war.
+
+Question: The 283rd Rifle Division fought the Battle of Berlin which was categorized as what?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "division_name": {
+      "type": "string",
+      "description": "The name of the military division."
+    },
+    "battle_name": {
+      "type": "string",
+      "description": "The name of the battle."
+    },
+    "division_involved_in_battle": {
+      "type": "boolean",
+      "description": "Indicates whether the division fought in the specified battle."
+    },
+    "battle_category": {
+      "type": "string",
+      "description": "The categorization or description of the battle."
+    }
+  },
+  "required": [
+    "division_name",
+    "battle_name",
+    "division_involved_in_battle",
+    "battle_category"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+{
+  "entity_founded": "Florence",
+  "founding_year": 1818,
+  "location_state": "Alabama",
+  "associated_corporation": {
+    "name": "Tennessee Valley Authority",
+    "creation_year": 1933,
+    "senator_who_pushed_for_creation": {
+      "name": "George W. Norris",
+      "state_represented": "Nebraska"
+    }
+  }
+}

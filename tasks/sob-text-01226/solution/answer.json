@@ -1,0 +1,15 @@
+{
+  "colleges_compared": [
+    {
+      "name": "Bowdoin College",
+      "founding_year": 1794
+    },
+    {
+      "name": "Swarthmore College",
+      "founding_year": 1864
+    }
+  ],
+  "older_college_name": "Bowdoin College",
+  "older_college_founding_year": 1794,
+  "age_difference_years": 70
+}

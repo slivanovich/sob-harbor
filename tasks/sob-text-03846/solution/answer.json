@@ -1,0 +1,12 @@
+{
+  "race_event": {
+    "year": 1990,
+    "name": "1990 FIA European Formula Three Cup"
+  },
+  "disqualified_driver": {
+    "name": "Michael Schumacher",
+    "nationality": "German",
+    "birth_year": 1969
+  },
+  "answer_birth_year": 1969
+}

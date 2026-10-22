@@ -1,0 +1,25 @@
+{
+  "film_title": "The Twinkle in God's Eye",
+  "film_type": "Western film",
+  "release_year": 1955,
+  "actors": [
+    {
+      "actor_name": "Mickey Rooney"
+    },
+    {
+      "actor_name": "Coleen Gray"
+    },
+    {
+      "actor_name": "Hugh O'Brian"
+    },
+    {
+      "actor_name": "Joey Forman"
+    },
+    {
+      "actor_name": "Don \"Red\" Barry"
+    },
+    {
+      "actor_name": "Mike Connors"
+    }
+  ]
+}

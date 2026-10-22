@@ -1,0 +1,13 @@
+{
+  "city_name": "St. Louis",
+  "state_name": "Missouri",
+  "park_details": {
+    "park_name": "Malcolm W. Martin Memorial Park",
+    "geyser_name": "Gateway Geyser",
+    "geyser_water_height_ft": 630
+  },
+  "monument_details": {
+    "monument_name": "Gateway Arch",
+    "monument_height_ft": 630
+  }
+}

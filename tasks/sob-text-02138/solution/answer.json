@@ -1,0 +1,14 @@
+{
+  "bands_queried": [
+    {
+      "band_name": "Ultra Vivid Scene",
+      "specific_genre": "alternative rock"
+    },
+    {
+      "band_name": "Warpaint",
+      "specific_genre": "indie rock"
+    }
+  ],
+  "number_of_bands": 2,
+  "common_genre_category": "rock"
+}

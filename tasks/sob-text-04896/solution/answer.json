@@ -1,0 +1,11 @@
+{
+  "group_name": "Linux Users' Group of Davis",
+  "associated_university": {
+    "name": "University of California, Davis",
+    "uc_system_enrollment_rank": 3
+  },
+  "member_composition": [
+    "students",
+    "faculty"
+  ]
+}

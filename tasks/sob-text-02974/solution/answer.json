@@ -1,0 +1,14 @@
+{
+  "common_music_genre": "rock",
+  "artists": [
+    {
+      "name": "Christina Booth",
+      "specific_genre_mentioned": "progressive rock"
+    },
+    {
+      "name": "Corey Glover",
+      "specific_genre_mentioned": "rock"
+    }
+  ],
+  "genre_category": "rock"
+}

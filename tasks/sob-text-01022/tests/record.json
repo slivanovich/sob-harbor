@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "record_id": "9ae9380308ce9447ee8af0abee7bc3af8e642d86afcfd5835aea8a964e7c412a",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "medium",
+    "source_id": "5a7351875542994cef4bc53a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Pachuca",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "F.C. Lixa: Futebol Clube da Lixa known as FC Lixa is a Portuguese football club from Porto which was founded in 1934.  They currently play in the Portuguese Second Division Serie A and last season they finished 14th place 2007/08.  They currently play their home games in Senhor do Amparo with a capacity of 6,000.  Their current chairman is Manuel Carvalho and their manager is Zeca Lopes.\n\nGuadalupe Pérez Rojas: Guadalupe Pérez Rojas (born 19 August 1994 in San Pedro de Jujuy) is an Argentine tennis player.\n\nA.D. Camacha: Associação Desportiva da Camacha known as A.D.Camacha is a Portuguese football club from Santa Cruz, Madeira founded in 1978.  They currently play in the Campeonato de Portugal.  They currently play their home games in Campo Municipal da Nogueira with a capacity of 3,300.  Their current chairman is Celso Almeida e Silva and their manager is José Barros.\n\nYosgart Gutiérrez: Yosgart Ernesto Gutiérrez Serna (born March 15, 1981 in Ruiz Cortines) a.k.a. \"El Pájaro Loco\" is a Mexican goalkeeper.  He currently plays for Necaxa in the Liga MX.  He is known for his \"chicken hair\", but even more for taking Óscar Pérez's spot in Cruz Azul, after a game Cruz Azul lost against Rayados de Monterrey.\n\nÓscar Pérez Rojas: Óscar Pérez Rojas (born 1 February 1973 in Mexico City) is a Mexican football goalkeeper who plays for Pachuca on loan from Cruz Azul.  His nickname \"El Conejo\" is Spanish for \"The Rabbit\".  At 44 years old, he is currently the oldest active player in Liga MX.\n\nCésar Lozano: César Amado Lozano Figueroa (born 31 May 1977) is a retired Mexican football goalkeeper.  He Debuted with Toluca on March 4, 2007, Lozano be the first soccer player debut with 29 years old and has usually been the substitute goalie, but during the Apertura 2006 and Clausura 2007 season in the Mexican league, he was frequently the starting goalie due to Toluca using first-string goalie Hernán Cristante in the international competitions Copa Sudamericana and Copa Libertadores, and in the 2010-11 season with San Luis FC until the arrive of Óscar Pérez to San Luis for the 2011-12 season.\n\nÓscar Bóveda: Óscar Adán Bóveda Rojas (born January 16, 1989 in Asunción, Paraguay) is a Paraguayan footballer currently playing for Magallanes of the Primera B Chilena.\n\nLookphorkhun United F.C.: Lookphorkhun Football Club (Thai ลูกพ่อขุน ยูไนเต็ด) is a Thai new semi professional football.  They currently play in Regional League Division 2 Bangkok & field Region in 2016.  They currently play in Regional League Division 2 Bangkok region from Derby match province project.\n\nÓscar Pérez Solís: Óscar Pérez Solís (24 August 1882 – 26 October 1951) was a Spanish artillery officer, engineer, journalist and politician.\n\nÓscar Pérez Bovela: Óscar Pérez Bovela (born 27 August 1981) is a Spanish professional footballer who plays for Marino de Luanco as a midfielder (right or central).",
+    "question": "Who does Óscar Pérez Rojas currently play for?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "player_name": {
+          "type": "string",
+          "description": "The full name of the player."
+        },
+        "sport": {
+          "type": "string",
+          "description": "The sport the player participates in."
+        },
+        "current_team": {
+          "type": "string",
+          "description": "The name of the team the player currently plays for."
+        },
+        "player_position": {
+          "type": "string",
+          "description": "The position the player plays on the team."
+        },
+        "team_status": {
+          "type": "string",
+          "description": "The status of the player's tenure with the current team (e.g., 'on loan')."
+        }
+      },
+      "required": [
+        "player_name",
+        "sport",
+        "current_team",
+        "player_position",
+        "team_status"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "player_name": "Óscar Pérez Rojas",
+      "sport": "football",
+      "current_team": "Pachuca",
+      "player_position": "goalkeeper",
+      "team_status": "on loan"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

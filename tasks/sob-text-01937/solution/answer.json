@@ -1,0 +1,14 @@
+{
+  "team_name": "Newcastle Jets FC",
+  "alternative_team_name": "Newcastle Jets Women",
+  "founding_year": 2008,
+  "player_associated": {
+    "name": "Gema Simon",
+    "date_of_birth": "1990-07-19",
+    "nationality": "Australian"
+  },
+  "competition_details": {
+    "league_name": "W-League",
+    "governing_body": "Football Federation Australia"
+  }
+}

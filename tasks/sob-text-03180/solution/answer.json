@@ -1,0 +1,16 @@
+{
+  "band_name": "Black Sabbath",
+  "ep_details": {
+    "ep_name": "The End",
+    "release_date": "January 20, 2016",
+    "availability_condition": "only available at dates on their final tour The End"
+  },
+  "final_tour_details": {
+    "tour_name": "The End Tour",
+    "final_show_date": "February 4, 2017",
+    "final_show_location": {
+      "city": "Birmingham",
+      "country": "UK"
+    }
+  }
+}

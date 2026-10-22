@@ -1,0 +1,15 @@
+{
+  "show_name": "Metalocalypse",
+  "show_type": "American adult animated television series",
+  "production_studio": {
+    "name": "Titmouse, Inc."
+  },
+  "cultural_commentary": {
+    "description": "widely heralded as both a parody and a pastiche",
+    "target_culture": "heavy metal culture",
+    "commentary_types": [
+      "parody",
+      "pastiche"
+    ]
+  }
+}

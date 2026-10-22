@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "7f18f1a9a917f9aa9bef7c63fa99eff5acdd0dc32a6f384890da9a603c621052",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac14c4355429964131be1a6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Beatrix",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Wisseloord Studios: The Wisseloord Studio is a recording studio in Hilversum, Netherlands.  It was officially opened on 19 January 1978 by Prince Claus.  The studios were founded by electronics company Philips, to enable their PolyGram artists to record in a professional environment.  Initially there were three studios, nowadays there are five.\n\nMansoob Murshed: Mansoob Murshed is a Professor of International Industrial Economics at the University of Birmingham whose research interests are development, globalisation and conflict / post-conflict reconstruction.  Alongside his post at Birmingham he also holds a Professorship at the Institute of Social Studies (ISS) The Hague, on the Economies of Conflict and Peace.  He holds an honorary fellowship at the Peace Research Institute (PRIO) Oslo and his having been the first to be awarded the \"Prince Claus rotating Chair in Development and Equity\" (established in memory of Prince Claus, a Prince Consort of the Netherlands).\n\nDrakensteyn Castle: Drakensteyn Castle (Dutch: \"Drakensteyn\", sometimes \"Drakesteijn\" or \"Drakestein\") is a small castle at 8 Slotlaan in the hamlet of Lage Vuursche, in the municipality of Baarn, Netherlands.  It is owned by Princess Beatrix of the Netherlands, the country's former Queen who abdicated in 2013.  Beatrix bought the castle in 1959, when she was the heir to the Dutch throne, and took up residence in 1963.  After her marriage in 1966 she continued to live there with her husband, Prince Claus and later their three sons as well.  After Beatrix succeeded her mother Juliana as Queen of the Netherlands in 1980, the family moved to The Hague in 1981.\n\nLu Guang (photographer): Lu Guang (卢广) (born in 1961) is a Chinese photojournalist.  His work is focused on social, environmental, and economic issues.  He has received an award from World Press Photo, the Henri Nannen Prize from Gruner + Jahr, the W. Eugene Smith Grant, a photography grant from National Geographic and the Prince Claus Award.\n\nPrince Claus Conservatoire: The Prince Claus Conservatoire (Dutch: \"Prins Claus Conservatorium\" ) is one of the nine conservatoires in the Netherlands.  It is a constituent of the Hanze University of Applied Sciences in Groningen.\n\nJumoke Oduwole: Olajumoke Omoniyi Oduwole is a Nigerian jurist and academic.  She was appointed the Prince Claus Chair holder from 2013–2015.\n\nPrince Claus of the Netherlands: Prince Claus of the Netherlands, Jonkheer van Amsberg (né \"Klaus-Georg Wilhelm Otto Friedrich Gerd von Amsberg\"; 6 September 1926 – 6 October 2002), was the husband of Queen Beatrix, and the Prince Consort of the Netherlands from Beatrix's ascension in 1980 until his death in 2002.\n\nMen Who Save the World: Men Who Save the World (Malay: Lelaki Harapan Dunia ) is a 2014 internationally co-produced comedy film written and directed by Liew Seng Tat.  It is produced by Sharon Gan and is a co-production project between Everything Films Sdn.  Bhd. (Malaysia) and Volya Films (The Netherlands), Flying Moon Filmproduktion (Germany) and Mandra Films (France) with support from Ministry of Information, Communication and Culture (Malaysia), Torino Film Lab (Italy), Hubert Bals Fund (The Netherlands), Netherlands Film Fund, World Cinema Fund (Germany), Visions Sud Est (Switzerland), Fondation Groupama Gan pour le Cinéma - Cinefondation (France), Prince Claus (The Netherlands), Sundance Institute Mahindra Global Filmmaking Award, Sundance Institute Feature Film Program dan the Doris Duke Foundation (USA).\n\nBaroness Gösta von dem Bussche-Haddenhausen: Baroness Gösta von dem Bussche-Haddenhausen (German: \"Freiin Gösta Julie Adelheid Marion Marie von dem Bussche-Haddenhausen\" ; 26 January 1902 – 13 June 1996) was the mother of Prince Claus of the Netherlands, who was the Prince Consort of Queen Beatrix of the Netherlands, thus making her the mother-in-law of the former Dutch Queen.  She is also the paternal grandmother of King Willem-Alexander of the Netherlands, who is the current Dutch King.\n\nPrince Claus Fund: The Prince Claus Fund was established in 1996, named in honor of Prince Claus of the Netherlands.  It receives an annual subsidy from the Dutch Ministry of Foreign Affairs.",
+    "question": "The Prince Claus Fund, established in 1996, was named after the husband of what Queen?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "queen_name": {
+          "type": "string",
+          "description": "The name of the Queen who was married to Prince Claus."
+        },
+        "prince_consort_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the Prince Consort."
+            },
+            "role": {
+              "type": "string",
+              "description": "The role held by the Prince Consort."
+            }
+          },
+          "required": [
+            "name",
+            "role"
+          ],
+          "additionalProperties": false
+        },
+        "fund_details": {
+          "type": "object",
+          "properties": {
+            "fund_name": {
+              "type": "string",
+              "description": "The name of the fund established in honor of the Prince."
+            },
+            "establishment_year": {
+              "type": "integer",
+              "description": "The year the fund was established."
+            }
+          },
+          "required": [
+            "fund_name",
+            "establishment_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "queen_name",
+        "prince_consort_details",
+        "fund_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "queen_name": "Beatrix",
+      "prince_consort_details": {
+        "name": "Prince Claus of the Netherlands",
+        "role": "Prince Consort of the Netherlands"
+      },
+      "fund_details": {
+        "fund_name": "Prince Claus Fund",
+        "establishment_year": 1996
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,90 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Israelite Church of God in Jesus Christ: The Israelite Church of God in Jesus Christ (ICGJC, also Israelite Church-God & Jesus), formerly known as the Israeli Church of Universal Practical Knowledge, is an organization of Black Hebrew Israelites (i.e. they believe that African Americans and not the people known to the world today as Jews are the real descendants of the Hebrews of the Bible and God's chosen people).  The Southern Poverty Law Center has designated the ICGJC as an active hate group.
+
+Casey Sanchez: Casey Sanchez is an American journalist who writes about race and poverty issues.  He is a staff writer for the Southern Poverty Law Center's monthly newsletter, the "Intelligence Report".  His articles appear in national magazines which cover racism, including "The American Prospect", "The Chicago Reporter" and the "Village Voice".
+
+Alabama Memorial Preservation Act: The Alabama Memorial Preservation Act of 2017 (AL Act 2017-354, Senate Bill 60) is an act of law in the U.S. state of Alabama which prohibits local governments from moving or renaming historically significant buildings and monuments that date back to 40 years or longer.  It was co-sponsored by Republican Representative Mack Butler and Republican Senator Gerald Allen in March-April 2017, and signed into law by Governor Kay Ivey on May 25, 2017.  The law created the Alabama Monument Protection Committee, a group of 11 members who will decide whether historic buildings and monuments may be moved or renamed.  The act was accused of being an attempt to make it harder to remove Confederate monuments in Alabama by the Southern Poverty Law Center, although the co-sponsors have denied it.  African-American lawmakers like Juandalynn Givan, Napoleon Bracy Jr. and Hank Sanders were opposed to it.
+
+Louis Beam: Louis Ray Beam, Jr. (born 1946) is an American white nationalist.  After high-school, he served as a helicopter door-gunner in Vietnam.  He was awarded the Distinguished Flying Cross.  Back in the U.S. he became a Klansman, leading a maritime Louisiana KKK element against government help to Vietnamese immigrant fishermen.  He was Grand Dragon of the KKK and leader of the Texas Emergency Reserve, a militia that was disbanded by the courts in 1982 as a result of a lawsuit filed under Texas anti-militia law by the Southern Poverty Law Center.  The lawsuit was brought by SPLC after the militia harassed Vietnamese fishermen during the 1981 fishing season.  Beam was using Camp Puller near Houston to train militia in 1980, including children as young as 8 years old, in armed guerrilla tactics; the camp was shut down after publicity led to protests, and parents complaining that they were not aware of the children's activities at the camp.  The Boy Scouts Council of Houston rejected a charter request from the troop at Camp Puller.  Videotape shown during the shrimper hearing had Beam saying, "We're going to assume authority in this country."  He was later acquitted in a separate case of conspiring to overthrow the government.  He moved to Idaho afterwards.  He became active with Aryan Nations in the early 1980s.  He is considered to be the first important proponent of the strategy of leaderless resistance.  In recent years, Beam has maintained a significantly lower profile.
+
+Israelite School of Universal Practical Knowledge: Israelite School of Universal Practical Knowledge (ISUPK) is a non-profit organization based in Upper Darby, Pennsylvania, United States.  The group is part of the Hebrew Israelism movement, which regards American blacks as descendants of the Twelve Tribes of Israel.  The Southern Poverty Law Center has designated the ISUPK a hate group, citing its "extremist" ideology and black supremacist rhetoric.
+
+Black supremacy: Black supremacy or black supremacism is a racial supremacist belief that black people are superior to people of other races.  The term has been used by the Southern Poverty Law Center (SPLC), an American legal advocacy organisation, to describe several fringe religious groups in the United States.
+
+Morris Dees: Morris Seligman Dees Jr. (born December 16, 1936) is the co-founder and chief trial counsel for the Southern Poverty Law Center (SPLC), and a former market engineer for book publishing.  Along with his law partner, Joseph J. Levin Jr., Dees founded the SPLC in 1971.  Dees and his colleagues at the Southern Poverty Law Center have been credited with devising innovative ways to cripple hate groups such as the Ku Klux Klan.
+
+Willie Ray Lampley: Reverend Willie Ray Lampley rose to national attention in the United States of America as a self-proclaimed prophet, the head of the Universal Church of God (Yahweh) based in Vernon, Oklahoma which was part of the Christian Identity movement.  Lampley was also the leader of a small far right paramilitary group called the Oklahoma Constitutional Militia.  In November 1995 he (aged 65) and his wife Cecilia (aged 47), along with John Dare Baird (aged 53), and Larry Wayne Crow (aged 56) were arrested under charges of conspiracy to manufacture and possess a destructive device.  According to the FBI their plan was to bomb abortion clinics, gay bars, federal buildings (including welfare offices of the Department of Human Services), the office of the Anti-Defamation League in Houston, Texas and the office of the Southern Poverty Law Center in Montgomery, Alabama.  According to court documents, Lampley intended to use a destructive device consisting of 'homemade C-4' made of ammonium nitrate, nitromethane, aluminum powder and a detonation device (made from toaster parts).  Lampley's plans were interrupted when FBI informant, Richard Schrum alerted authorities that the homemade bomb was about to be tested at Elohim City.  The FBI held that their foiling the plot "saved as many lives as what was lost in Oklahoma City".
+
+Jocelyn Benson: Jocelyn Benson is the CEO of the Ross Initiative in Sports for Equality (RISE) and the former Dean of Wayne State University Law School in Detroit, Michigan.  She is a co-founder of the Military Spouses of Michigan and a board member of the Southern Poverty Law Center.  She was the Democratic Party's nominee for Michigan Secretary of State in the November 2010 election and is the author of "State Secretaries of State: Guardians of the Democratic Process."  Crain's named her one of Michigan's "Most Influential Women" in 2016 and in October 2015 she became one of the youngest women in the state's history to be inducted into the Michigan Women's Hall of Fame, second only to Serena Williams.
+
+Nation of Yahweh: The Nation of Yahweh is a predominantly African American group that is the most controversial offshoot of the Black Hebrew Israelites religious movement.  It has often been labeled a hate group and was founded in 1979 in Miami by Hulon Mitchell Jr., who went by the name Yahweh ben Yahweh.  Its goal is to move African Americans, whom they see as the original Israelites, to Israel.  The group departs from mainstream Christianity and Judaism by accepting Yahweh ben Yahweh as the Son of God.  In this way, its beliefs are unique and distinct from that of other known Black Hebrew Israelite groups.  The group has engendered controversy due to legal issues surrounding its founder and has also faced accusations of being a black supremacist cult by the Southern Poverty Law Center and "The Miami Herald".
+
+Question:  Israelite School of Universal Practical Knowledge and Southern Poverty Law Center are both located in what country?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "organization_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "location_city_state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "location_city_state"
+      ],
+      "additionalProperties": false
+    },
+    "organization_2": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "location_city_state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "location_city_state"
+      ],
+      "additionalProperties": false
+    },
+    "common_country": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "organization_1",
+    "organization_2",
+    "common_country"
+  ],
+  "additionalProperties": false
+}

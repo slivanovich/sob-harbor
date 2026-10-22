@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "record_id": "3abac36fb1ab6fb4be4179453b032b3f6cd1ff57f8341162544748272c7b16c7",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab8b56555429919ba4e2361",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Mozambique",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "2007 All-Africa Games: The 9th All-Africa Games took place between 11 and 23 July 2007 in Algiers, the capital city of Algeria.  Algiers is the first city to hold All-Africa Games for a second time.  The 1978 All-Africa Games were held there.  Besides Algeria, only Nigeria has hosted the event twice, but with different host cities.  4793 athletes took part to these games.\n\nCecilia Offiong: Cecilia Otu Offiong (born June 13, 1986 in Calabar, Cross River) is a Nigerian table tennis player.  She won two gold medals, along with her partner Offiong Edem, in the women's doubles at the 2007 All-Africa Games in Algiers, Algeria, and at the 2011 All-Africa Games in Maputo, Mozambique.  As of February 2013, Offiong is ranked no. 452 in the world by the International Table Tennis Federation (ITTF).  She is a member of the table tennis team for Calabar Sports Club, and is coached and trained by Obisanya Babatunde.  Offiong is also right-handed, and uses the shakehand grip.\n\nKahina Saidi: Kahina Saidi (Arabic: كهينة سعيدي‎ ‎ ; born March 17, 1984) is an Algerian judoka, who played for the half-middleweight category.  She is a four-time medalist at the African Judo Championships, and a bronze medalist at the 2009 Mediterranean Games in Pescara, Italy.  She also won two medals in the same division at the 2007 All-Africa Games in Algiers, and at the 2011 All-Africa Games in Maputo, Mozambique.\n\nZimbabwe at the 2011 All-Africa Games: In mid-August 2011, Zimbabwe's Chef de Mission for the 2011 All-Africa Games, Custom Kachambwa, announced that the country would send 170 athletes in 17 disciplines to the 10th All-Africa Games in Maputo, Mozambique, September 3–18, 2011.\n\nNesria Jelassi: Nesria Al-Jelassi (also Nesria Jelassi, Arabic: نسرية الجلاصي‎ ‎ ; born 19 August 1989) is a Tunisian judoka, who played for the lightweight category.  She is a two-time Tunisian judo champion, and a four-time medalist for the 57 and 63 kg classes at the African Judo Championships.  She also won a gold medal at the 2011 All-Africa Games in Maputo, Mozambique, and silver at the 2007 All-Africa Games in Algiers, Algeria.\n\nSandrine Ilendou: Sandrine Ilendou (born November 19, 1983) is a Gabonese judoka, who played for the extra-lightweight category.  She won the bronze medal for her category at the 2007 All-Africa Games in Algiers, Algeria, and silver at the 2011 All-Africa Games in Maputo, Mozambique, losing out to Tunisia's Amani Khalfaoui.\n\n2011 All-Africa Games: The 10th All-Africa Games took place between September 3–18, 2011 in Maputo, Mozambique.  Maputo's hosting marked the third time the Games was held in the southern part of the continent.\n\nChouaib Bouloudinat: Chouaib Bouloudinat or \"Bouloudinats\" (born January 8, 1987 in Constantine) is an Algerian boxer who won the 2011 All-Africa Games and fought at the 2012 Olympics.\n\nMaria Muchavo: Maria Elisa Muchavo (born 26 July 1992 in Maputo) is a disabled track and field athlete from Mozambique who won a silver medal at the 2014 Commonwealth Games in the T12 100 metres event.  She was her country's first woman to compete at the Summer Paralympics, doing so in 2012.  She was a 200 metres bronze medallist at the 2011 All-Africa Games.\n\nSamir Brahimi: Samir Brahimi is an Algerian boxer born on 17 May 1990.  His amateur career was marked by a bronze medal at the African Championships of Vacoas in 2009 and another in Yaounde in 2011, and a silver medal at the All Africa Games in Maputo in 2011, flyweight category.",
+    "question": "Samir Brahimi is an Algerian boxer born on 17 May 1990, he won a silver medal at the 2011 All-Africa Games, the 10th All-Africa Games took place between September 3–18, 2011 in Maputo, in which country?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "athlete": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "birth_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "sport": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "birth_date",
+            "sport"
+          ],
+          "additionalProperties": false
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "edition": {
+              "type": "string"
+            },
+            "host_city": {
+              "type": "string"
+            },
+            "host_country": {
+              "type": "string"
+            },
+            "start_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": [
+            "name",
+            "year",
+            "edition",
+            "host_city",
+            "host_country",
+            "start_date",
+            "end_date"
+          ],
+          "additionalProperties": false
+        },
+        "athlete_achievement": {
+          "type": "object",
+          "properties": {
+            "medal_type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "medal_type"
+          ],
+          "additionalProperties": false
+        },
+        "answer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "athlete",
+        "event",
+        "athlete_achievement",
+        "answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "athlete": {
+        "name": "Samir Brahimi",
+        "nationality": "Algerian",
+        "birth_date": "1990-05-17",
+        "sport": "boxing"
+      },
+      "event": {
+        "name": "All-Africa Games",
+        "year": 2011,
+        "edition": "10th",
+        "host_city": "Maputo",
+        "host_country": "Mozambique",
+        "start_date": "2011-09-03",
+        "end_date": "2011-09-18"
+      },
+      "athlete_achievement": {
+        "medal_type": "silver"
+      },
+      "answer": "Mozambique"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

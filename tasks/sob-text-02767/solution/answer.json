@@ -1,0 +1,22 @@
+{
+  "person_identified": {
+    "name": "Carl Edward Sagan",
+    "professions": [
+      "American astronomer",
+      "cosmologist",
+      "astrophysicist",
+      "astrobiologist",
+      "author",
+      "science popularizer",
+      "science communicator"
+    ],
+    "book_contribution": {
+      "book_title": "The Space Gods Revealed: A Close Look At The Theories of Erich von Däniken",
+      "contribution_type": "introduction"
+    }
+  },
+  "death_details": {
+    "death_date": "1996-12-20"
+  },
+  "final_answer": "December 20, 1996"
+}

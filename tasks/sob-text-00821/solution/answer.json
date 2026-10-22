@@ -1,0 +1,11 @@
+{
+  "cocktail_name": "Rusty Nail",
+  "main_ingredients": [
+    "Drambuie",
+    "Scotch whisky"
+  ],
+  "comparison_cocktail": {
+    "name": "Singapore Sling",
+    "base_spirit": "gin"
+  }
+}

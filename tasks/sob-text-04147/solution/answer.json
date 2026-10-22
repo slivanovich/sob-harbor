@@ -1,0 +1,16 @@
+{
+  "film_details": {
+    "title": "The Fountain",
+    "year": 2006,
+    "genres": [
+      "epic",
+      "magical realism",
+      "romantic drama"
+    ]
+  },
+  "female_star": {
+    "name": "Rachel Weisz",
+    "nationality": "British"
+  },
+  "answer_nationality": "British"
+}

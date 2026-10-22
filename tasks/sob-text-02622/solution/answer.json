@@ -1,0 +1,14 @@
+{
+  "inspired_person": {
+    "name": "Hans Peter Dengel",
+    "role": "chief engineer",
+    "u_boat_served_on": "U-96"
+  },
+  "inspired_movie": {
+    "title": "Das Boot",
+    "release_year": 1981,
+    "inspired_character_name": "the Chief",
+    "actor_portraying_character": "Klaus Wennemann"
+  },
+  "inspiration_details": "Hans Peter Dengel was the inspiration for the character of \"the Chief\" in the film \"Das Boot\"."
+}

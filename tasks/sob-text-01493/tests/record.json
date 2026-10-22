@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "912b4cf310002ed1ac2ea17a26b7ac4e232bd291fa0a45a2c351852b9e55039b",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a769950554299373536010e",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Kirkham in Lancashire",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "HM Prison Pentonville: HM Prison Pentonville (informally \"The Ville\") is an English Category B/C men's prison, operated by Her Majesty's Prison Service.  Pentonville Prison is not in Pentonville, but is located further north, on the Caledonian Road in the Barnsbury area of the London Borough of Islington, north London.\n\nHM Prison Rye Hill: HM Prison Rye Hill is a Category B men's private prison, operated by G4S.  Rye Hill has exclusively housed sex offenders since 2014.  The prison is situated next to HMP Onley, in the parish of Barby, Northamptonshire, England.  However, the postal address of the prison is Willoughby, Warwickshire; therefore, most sources list the prison as in Willoughby, Warwickshire.\n\nHM Prison Bure: Her Majesty's Prison Bure, more commonly known as HM Prison Bure, and often abbreviated to HMP Bure, is a Category C men's prison, located in the parish of Scottow in Norfolk, England.  The prison is operated by Her Majesty's Prison Service, and became operational in November 2009.\n\nHM Prison Wormwood Scrubs: HM Prison Wormwood Scrubs (informally \"The Scrubs\") is a Category B men's prison, located in the Wormwood Scrubs area of the London Borough of Hammersmith and Fulham, in inner west London, England.  The prison is operated by Her Majesty's Prison Service.\n\nKirkham, Lancashire: Kirkham (originally Kirkam-in-Amounderness) is a small town and civil parish in the Borough of Fylde in Lancashire, England, midway between Blackpool and Preston (11 miles west of Preston) and adjacent to the smaller town of Wesham.  It owes its existence to Carr Hill upon which it was built and which was the location of a Roman fort.  It has a population of 7,127, increasing to 7,194 at the Census 2011.\n\nHM Prison Kirkham: HM Prison Kirkham is a Category D men's prison, located southwest of Kirkham in Lancashire, England.  The prison is operated by Her Majesty's Prison Service.\n\nHM Prison Acklington: HM Prison Acklington was a Category C men's prison, located near the village of Acklington a few miles from Amble), in Northumberland, England.  Acklington Prison was operated by Her Majesty's Prison Service.  In 2011 Acklington was merged into the newly named HM Prison Northumberland.\n\nHM Prison Isis: HM Prison Isis is a Category C male Young Offenders Institution, located in the Thamesmead area of the Royal Borough of Greenwich, in south-east London, England.  Isis Prison is operated by Her Majesty's Prison Service, and is situated next to Belmarsh Prison and Thameside Prison.\n\nHM Prison Moorland: HM Prison Moorland (formerly HM Prison Moorland Closed) is a Category C men's prison and Young Offenders Institution, near Hatfield Woodhouse in South Yorkshire, England.  The prison is operated by Her Majesty's Prison Service, and is jointly managed with the nearby Hatfield Prison.\n\nHM Prison Kennet: HM Prison Kennet is a Category C men's prison, located in Parkbourn, Maghull, in the Metropolitan Borough of Sefton in Merseyside, England.  The prison is operated by Her Majesty's Prison Service.  The prison is due to close in 2017.",
+    "question": "HM Prison Kirkham is a Category D men's prison, located southwest of which small town, and civil parish in the Borough of Fylde?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "prison_name": {
+          "type": "string",
+          "description": "The name of the prison."
+        },
+        "prison_category": {
+          "type": "string",
+          "description": "The category of the prison (e.g., Category D)."
+        },
+        "located_relative_to": {
+          "type": "string",
+          "description": "Description of the prison's location relative to the town."
+        },
+        "town_details": {
+          "type": "object",
+          "properties": {
+            "town_name": {
+              "type": "string",
+              "description": "The name of the small town."
+            },
+            "is_civil_parish": {
+              "type": "boolean",
+              "description": "Indicates if the town is also a civil parish."
+            },
+            "borough": {
+              "type": "string",
+              "description": "The borough the town is located in."
+            },
+            "county": {
+              "type": "string",
+              "description": "The county the town is located in."
+            }
+          },
+          "required": [
+            "town_name",
+            "is_civil_parish",
+            "borough",
+            "county"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "prison_name",
+        "prison_category",
+        "located_relative_to",
+        "town_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "prison_name": "HM Prison Kirkham",
+      "prison_category": "Category D",
+      "located_relative_to": "southwest of",
+      "town_details": {
+        "town_name": "Kirkham",
+        "is_civil_parish": true,
+        "borough": "Borough of Fylde",
+        "county": "Lancashire"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

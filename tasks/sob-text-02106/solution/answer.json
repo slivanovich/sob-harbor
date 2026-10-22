@@ -1,0 +1,12 @@
+{
+  "player_name": "Mandy Edwards",
+  "school_attended": {
+    "name": "Westminster School",
+    "location": "Marion, South Australia"
+  },
+  "team_played_for": {
+    "name": "Adelaide Thunderbirds",
+    "championship": "ANZ Championship",
+    "year_signed": 2008
+  }
+}

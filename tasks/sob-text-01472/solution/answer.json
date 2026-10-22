@@ -1,0 +1,20 @@
+{
+  "actor_name": "Liam Hemsworth",
+  "actor_nationality": "Australian",
+  "roles": [
+    {
+      "character_name": "Josh Taylor",
+      "production_title": "Neighbours",
+      "production_type": "soap opera",
+      "first_appearance_year": 2007
+    },
+    {
+      "character_name": "Gale Hawthorne",
+      "production_title": "The Hunger Games",
+      "production_type": "film",
+      "first_appearance_year": 2012,
+      "genre": "dystopian science fiction adventure",
+      "setting_description": "dystopian post-apocalyptic future in the nation of Panem"
+    }
+  ]
+}

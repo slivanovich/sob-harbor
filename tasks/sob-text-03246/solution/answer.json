@@ -1,0 +1,28 @@
+{
+  "question_topic": "plant genera comparison",
+  "genera_information": [
+    {
+      "genus_name": "Ammobium",
+      "is_flower_genus": true,
+      "botanical_family": "Asteraceae",
+      "life_cycle": [
+        "perennial"
+      ]
+    },
+    {
+      "genus_name": "Sidalcea",
+      "is_flower_genus": true,
+      "botanical_family": "Malvaceae",
+      "life_cycle": [
+        "annuals",
+        "perennials"
+      ],
+      "common_names": [
+        "checkerblooms",
+        "checkermallows",
+        "prairie mallows"
+      ]
+    }
+  ],
+  "overall_answer": true
+}

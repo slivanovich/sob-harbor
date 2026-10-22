@@ -1,0 +1,9 @@
+{
+  "community_name": "Glendale",
+  "parent_town": {
+    "name": "Gilford",
+    "county": "Belknap County",
+    "population_2010_census": 7126
+  },
+  "census_year": 2010
+}

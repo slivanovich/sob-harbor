@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "ad06c51a02032fa261d457ed80ae778a6767fd5c58851ad2981b78463da28946",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac4f1de5542996feb3fe994",
+    "source_dataset": "hotpotqa",
+    "source_answer": "July 5, 1991",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Jake Spanner, Private Eye: Jake Spanner, Private Eye is a 1989 American television crime film written and directed by Lee H. Katzin and starring Robert Mitchum and Ernest Borgnine.\n\nDebbie Burton: Debbie Burton was an American singer.  She is best known for dubbing the singing voice of the young Baby Jane Hudson (played by child actress Julie Allred) in the 1962 film \"What Ever Happened to Baby Jane? \", singing the song \"I've Written a Letter to Daddy\".  Burton also sang a duet with Bette Davis, the rock and roll song \"What Ever Happened to Baby Jane?\" , written by Frank DeVol and Lukas Heller.  It was released as a promotional single, with Burton's rendition of \"I've Written a Letter to Daddy\" on the flipside.  An instrumental version of \"What Ever Happened to Baby Jane?\"  can be heard in the movie.\n\nThe Shopping Bag Lady: The Shopping Bag Lady is a 1975 American short film directed by Bert Salzman and starring Mildred Dunnock.\n\nRestraining Order (film): Restraining Order is a 1999 crime thriller film directed by Lee H. Katzin and starring Eric Roberts and Hannes Jaenicke.\n\nWhat Ever Happened to Aunt Alice?: What Ever Happened to Aunt Alice?  is a 1969 American thriller film directed by Lee H. Katzin with Bernard Girard (uncredited), and starring Geraldine Page, Ruth Gordon, Rosemary Forsyth, Robert Fuller and Mildred Dunnock.  The screenplay by Theodore Apstein, based on the novel \"The Forbidden Garden\" by Ursula Curtiss, focuses on an aging Arizona widow who hires elderly female housekeepers and cons them out of their money before murdering them.\n\nWhat Ever Happened to...: What Ever Happened to... is a 1991 American made-for-television thriller drama film directed by David Greene and adapted for the small screen by Brian Taggert, based on the novel \"What Ever Happened to Baby Jane? \" by Henry Farrell and the 1962 theatrical film of the same name.  It stars real-life sisters Lynn Redgrave as Baby Jane Hudson and Vanessa Redgrave as Blanche Hudson, in the roles previously played by Bette Davis and Joan Crawford in the 1962 adaptation.\n\nHeaven with a Gun: Heaven with a Gun is a 1969 American western film starring Glenn Ford.  directed by Lee H. Katzin.\n\nMildred Dunnock: Mildred Dorothy Dunnock (January 25, 1901 – July 5, 1991) was an American theater, film and television actress.\n\nThe Salzburg Connection: The Salzburg Connection is a 1972 American DeLuxe Color thriller film directed by Lee H. Katzin, starring Barry Newman and Anna Karina in Panavision.  It is based on a novel by Helen MacInnes.\n\nThe Party Crashers: The Party Crashers is a 1958 American drama film directed by Bernard Girard and written by Bernard Girard and Dan Lundberg.  The film stars Mark Damon, Bobby Driscoll, Connie Stevens, Frances Farmer (in her last feature film role), Doris Dowling, and Gary Gray.  The film was released in September 1958, by Paramount Pictures.",
+    "question": "What Ever Happened to Aunt Alice?, is a 1969 American thriller film directed by Lee H. Katzin with Bernard Girard, and starring Mildred Dorothy Dunnock, was an American theater, film and television actress, and passed away on which date?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film mentioned in the question."
+        },
+        "film_year": {
+          "type": "integer",
+          "description": "The release year of the film."
+        },
+        "director_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Names of the directors of the film."
+        },
+        "actress_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The full name of the actress."
+            },
+            "profession": {
+              "type": "string",
+              "description": "The profession of the actress."
+            },
+            "death_date": {
+              "type": "string",
+              "description": "The date the actress passed away, in YYYY-MM-DD format."
+            }
+          },
+          "required": [
+            "name",
+            "profession",
+            "death_date"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "film_title",
+        "film_year",
+        "director_names",
+        "actress_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "What Ever Happened to Aunt Alice?",
+      "film_year": 1969,
+      "director_names": [
+        "Lee H. Katzin",
+        "Bernard Girard"
+      ],
+      "actress_details": {
+        "name": "Mildred Dorothy Dunnock",
+        "profession": "American theater, film and television actress",
+        "death_date": "1991-07-05"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

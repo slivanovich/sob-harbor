@@ -1,0 +1,10 @@
+{
+  "season_year": 1965,
+  "season_bounds": {
+    "start_month": "June",
+    "start_day": 1,
+    "end_month": "November",
+    "end_day": 30
+  },
+  "question_answer": "November"
+}

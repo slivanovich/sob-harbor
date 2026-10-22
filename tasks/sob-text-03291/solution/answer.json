@@ -1,0 +1,11 @@
+{
+  "song_title": "Our First President's Quickstep",
+  "celebrated_president": {
+    "name": "Jefferson Davis",
+    "role": "President of the Confederate States",
+    "term_start_year": 1861,
+    "term_end_year": 1865
+  },
+  "song_publication_year": 1861,
+  "celebration_period_description": "1861 to 1865"
+}

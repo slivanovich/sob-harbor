@@ -1,0 +1,13 @@
+{
+  "country_name": "Mauritania",
+  "capital_city": {
+    "name": "Nouakchott",
+    "description": "one of the largest cities in the Sahara"
+  },
+  "world_heritage_sites": [
+    {
+      "site_name": "Banc d'Arguin National Park",
+      "location_description": "lies in Western Africa on the west coast of Mauritania between Nouakchott and Nouadhibou"
+    }
+  ]
+}

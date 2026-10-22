@@ -1,0 +1,19 @@
+{
+  "question_entities": [
+    "Piptanthus",
+    "Rice"
+  ],
+  "entity_classifications": [
+    {
+      "entity_name": "Piptanthus",
+      "is_legume": true,
+      "classification_source": "legume family, Fabaceae"
+    },
+    {
+      "entity_name": "Rice",
+      "is_legume": false,
+      "classification_source": "seed of the grass species"
+    }
+  ],
+  "is_both_legumes": false
+}

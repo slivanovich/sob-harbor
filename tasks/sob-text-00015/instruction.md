@@ -1,0 +1,67 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+In This Life (Collin Raye song): "In This Life" is a song written by Mike Reid and Allen Shamblin, and recorded by American country music singer Collin Raye that reached the top of the "Billboard" Hot Country Singles & Tracks chart.  It was released in July 1992 as the first single and title track from his CD "In This Life. "
+
+Meredith Averill: Meredith Averill is an American television writer and producer.  Born in Pottsville, Pennsylvania, Averill graduated from New York University with a degree in screenwriting.  She began her career as an assistant to TV writer/producers André Nemec and Josh Appelbaum, then became a writer for the ABC Family mini-series "Samurai Girl", ABC's "Life on Mars" and ABC's "Happy Town".  Averill then spent three years on CBS's "The Good Wife" as a writer and producer.  In May 2013 she signed an overall deal with CBS Television Studios, where she was the creator and executive producer of The CW science fiction teen drama "Star-Crossed".
+
+Mike Reid (singer): Michael Barry "Mike" Reid (born May 24, 1947) is an American country music artist, composer, and former American football player.
+
+Charles Henry Caffin: Charles Henry Caffin (June 4, 1854 – January 14, 1918) was an Anglo-American writer and art critic, born in Sittingbourne, Kent, England.  After graduating from Magdalen College, Oxford, in 1876, with a broad background in culture and aesthetics, he engaged in scholastic and theatrical work.  In 1888, he married Caroline Scurfield, a British actress and writer.  They had two children, daughters Donna and Freda Caffin.  In 1892, he moved to the United States.  He worked in the decoration department of the Chicago Exposition, and after moving to New York City in 1897, he was the art critic of "Harper's Weekly", the New York "Evening Post", the New York "Sun" (1901–04), the "International Studio", and the "New York American".  His publications are of a popular rather than a scholarly character, but he was an important early if equivocal advocate of modern art in America.  His writings were suggestive and stimulating to laymen and encouraged interest in many fields of art.  One of his last books, "Art for Life's Sake" (1913), described his philosophy, which argued that the arts must be seen as "an integral part of life...[not] an orchid-like parasite on life" or a specialized or elite indulgence.  He also argued strenuously for art education in American elementary schools and high schools and was a frequent lecturer.
+
+Scott Baker (writer): Scott Baker (born 1947 in Chicago) is an American science fiction, fantasy, and horror writer.  (Though his middle initial is M., he should not be confused with the horror writer who publishes under the name Scott M. Baker.)  Baker grew up in Wheaton, Illinois, once a stop on the Underground Railroad, but more recently a bastion of evangelical fundamentalism and political conservativism, resistance to which has been one of the dominant influences on his life and writing.  After graduating from New College in Florida, co-owning a leather shop in Provincetown, Massachusetts, and then dropping out of the doctoral program at the UC Irvine, he spent a number of years as a hippy, camping near Tassajarra Zen Center in the Los Padres National Forest and passing much of the rest of his time in various bars.  Forced to the realization that he was not having enough fun as a would-be hedonist to justify the lifestyle, he decided to become a full-time writer.  On the way there he became what may be the only person to hold a Masters of Arts degree in Speculative Fiction (Goddard College).  After 20 years in Paris, where he worked as a publisher's reader for several French publishers and, less artistically, as a financial translator for French brokerage houses, he now lives in Pacific Grove, California.  His first novel, "Symbiote's Crown" ("l'Idiot-roi") received the French "Prix Apollo" award.  This novel was science fiction.  He won a World Fantasy Award for Best Short Fiction in 1985 for "Still Life with Scorpion", and has been nominated for the award three other times.  Baker was co-author of the screenplay for the French film LITAN, which won the "Prix de la Critique" (Critic's Prize) at the Avoriaz Fantastic Film Festival in 1982, and has worked on a number of other French films.  He wrote some of the websites for WHO KILLED EVAN CHANG? , the web tie-in for Steven Spielberg’s film, AI (Warner Brothers, 2001).  He has been a judge for the World Fantasy Award and the Philip K. Dick Award.  Now in semi-retirement, he devotes most of his time to playing tennis, at which he is tenacious but not particularly gifted.
+
+Yoon Sung-hee: Yoon Sung-hee (born 1973) is a South Korean writer.  Some writers believe that the goal of human life can be found in history.  Some writers believe that the meaning of life is in intense moments that leave life in chaos.  However, Yoon looks at life from a different perspective.  She would say that the meaning of life is in the moments.  In other words, the true important purpose of life is in the feeling of the present, and the diverse emotions from it such as pain, sympathy, pity, and beauty.  One literary critic has stated the characteristic of Yoon's fiction as following.  "The reality depicted by Yoon Sung-hee in her stories draws readers in with its colorfulness of a sensual present.  Readers do not draw the story to the their own historical lives, but they choose to climb into the reality inside the story, and live along with the characters."  It can be said that Yoon's literary aim is to create a reading experience that breathes with the rhythm of life, using fiction as the subject.
+
+Tayfour bathaii: Tayfour Bathaii(born March 8, 1947), writer, film director, activist, was born in Sanandaj, Iran.  After finishing high school in Sanandaj, he started his 2-year mandatory military services as a teacher.  From 1969 to 1972, he attended the Tehran School of Television and Cinema to become a TV cameraman.  In the 70's, due to his leftist tendencies and alleged affiliation with the "Group of 12" accused of plotting to kidnap Farah Pahlavi, the Queen of Iran, and the crown prince, he was tried and sentenced to life in prison.  During the revolution of 1979 in Iran, along with other political prisoners, he was released and returned to Sanandaj, a Provence of Kurdistan, Iran.  He joined the Democratic Party of Kurdistan and was a member of this party until 1985.  He has continued his life in Sweden since then as a political activist, writer, sculptor, and film director.  He also teaches cinema and documentary cinematography.
+
+Lasse Strömstedt: Folke Lars-Olov Strömstedt, (23 May 1935, Gävle - 4 July 2009), better known as Lasse Strömstedt, was a Swedish writer who wrote of and about his own life in prison and drug abuse.  Strömstedt was born in Gävle in 1935.  He was a casual laborer whose working life was frequently disrupted by imprisonment.  After 1971 he changed his life and became a writer, debater and actor.  In 1974, Strömsted published his first novel, "Grundbulten" (The Cornerstone), written together with reporter Christer Dahl under the pseudonym "Kenneth Ahl".  Strömstedt was married to Swedish singer and writer Ann-Christine Bärnsten.  He died aged 74 of natural causes in Gränna on 4 July 2009.
+
+Bill Barich: Bill Barich (born 1943 in Winona, Minnesota) is an American writer.  He grew up on Long Island and graduated from Colgate University in 1965.  Subsequently, he served in the U.S. Peace Corps in eastern Nigeria (Biafra), then settled in northern California where many of his books are set.  He published "Laughing in the Hills", his first book, a classic account of racetrack life, in 1980.  William Shawn, editor of "The New Yorker", ran a two-part excerpt from the book and appointed Barich a staff writer.  His contributions over the next fifteen years fall into three categories: travel and the sporting life; reportage; and short fiction.  "Traveling Light", his account of a sojourn abroad in Italy and England, appeared in 1984, after which he won a Guggenheim Fellowship in Fiction.  His other books include "Hard to Be Good" (stories); "Big Dreams: Into the Heart of California" (travel); "Carson Valley" (novel); "Crazy for Rivers" (angling/autobiography); and "A Fine Place to Daydream" (travel/racing).  Barich's work has been included in "Best American Short Stories" and many other anthologies.  In addition to "The New Yorker", he has contributed to "Esquire", "Sports Illustrated", "American Poetry Review", "Salon", "Narrative", and other magazines and journals, and he is a Literary Laureate of the San Francisco Public Library.  He travels between Santa Monica, California and Dublin, Ireland.  He has also written a book entitled "A Pint of Plain," an account of his setting out to find a traditional authentic Irish pub.  It is a lament of sorts as he is seeking the famous Pat Cohen-type pub of the John Wayne film "The Quiet Man."  In 2010, Barich published Long Way Home: On the Trail of Steinbeck's America," his account of a 5,943-mile cross-country trip undertaken in the autumn of 2008 just prior to the presidential election.  He assesses the state of the nation in much the same way John Steinbeck did almost fifty years ago in "Travels With Charley."  From 2010 through 2012 he worked as the lead writer on the HBO series Luck about horses and racing created by David Milch and starring Dustin Hoffman and Nick Nolte.
+
+Frederick Buechner: Carl Frederick Buechner (born July 11, 1926) is an American writer and theologian.  He is an ordained Presbyterian minister and the author of more than thirty published books.  His work encompasses different genres, including fiction, autobiography, essays and sermons, and his career has spanned six decades.  Buechner's books have been translated into many languages for publication around the world.  He is best known for his works "A Long Day's Dying" (his first work, published in 1950); "The Book of Bebb", a tetralogy based on the character Leo Bebb published in 1979; "Godric", a first person narrative of the life of the medieval saint, and a finalist for the Pulitzer Prize in 1981; "Brendan", a second novel narrating a saint's life, published in 1987; "Listening to Your Life: Daily Meditations with Frederick Buechner" (1992); and his autobiographical works "The Sacred Journey" (1982), "Now and Then" (1983), "Telling Secrets" (1991), and "The Eyes of the Heart: Memoirs of the Lost and Found" (1999).  He has been called "Major talent" and "...a very good writer indeed" by "the New York Times", and "one of our most original storytellers" by USA Today.  Annie Dillard (Pulitzer Prize-winning author of "Pilgrim at Tinker Creek") says: "Frederick Buechner is one of our finest writers."
+
+Question: When was the writer of "In This Life" born?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "The title of the song."
+    },
+    "writer_name": {
+      "type": "string",
+      "description": "The name of the writer of the song."
+    },
+    "writer_birth_date": {
+      "type": "string",
+      "description": "The birth date of the writer in 'Month Day, Year' format."
+    },
+    "writer_occupations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of occupations of the writer."
+    }
+  },
+  "required": [
+    "song_title",
+    "writer_name",
+    "writer_birth_date",
+    "writer_occupations"
+  ],
+  "additionalProperties": false
+}

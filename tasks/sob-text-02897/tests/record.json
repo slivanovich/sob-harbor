@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "record_id": "b20f1f56a6b9873c393dc2b61ad8f041b6c6d723f8ea13eddfe2cdb9e4cd9820",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ac2fe7155429921a00ab0c6",
+    "source_dataset": "hotpotqa",
+    "source_answer": "\"Good To Me\"",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Shutter (2008 film): Shutter is a 2008 American supernatural horror film directed by Masayuki Ochiai and starring Joshua Jackson, Rachael Taylor, and Megumi Okina.  The film is a remake of the 2004 Thai horror film of the same name and was released on March 21, 2008.  Despite a generally negative reaction, the film was a box office success grossing nearly 6 times its budget.\n\nG-Force (film): G-Force is a 2009 American family comedy adventure film produced by Walt Disney Pictures and Jerry Bruckheimer Films.  Written by Cormac Wibberley and Marianne Wibberley and directed by Hoyt Yeatman, the film is the directorial debut of Hoyt Yeatman, whose earlier work includes contributions in the area of visual effects.  It was released in the United States on July 24, 2009.  \"G-Force\" is based on a story also by Hoyt Yeatman.  The film was shown in competing 3-D technologies like Dolby 3D.  This is also Jerry Bruckheimer's first 3-D film.  The movie stars Zach Galifianakis, Bill Nighy, and Will Arnett and it features the voices of Sam Rockwell, Tracy Morgan, Penélope Cruz, Nicolas Cage, Steve Buscemi, and Jon Favreau.  The film received generally negative reviews, with critics praising its action, but criticizing its plot and character development and it earned $292.8 million on a $150 million budget.\n\nDavid and Goliath (book): David and Goliath: Underdogs, Misfits, and the Art of Battling Giants is a non-fiction book written by Malcolm Gladwell and published by Little, Brown and Company on October 1, 2013.  The book focuses on the probability of improbable events occurring in situations where one outcome is greatly favored over the other.  The book contains many different stories of these underdogs who wind up beating the odds, the most famous being the story of David and Goliath.  Despite generally negative reviews, the book was a bestseller, rising to #4 on \"The New York Times\" Hardcover Non-fiction chart, and #5 on \"USA Today\"'s Best-Selling Books.\n\nBoo! A Madea Halloween: Boo!  A Madea Halloween is a 2016 American comedy horror film directed, written, starring and co-produced by Tyler Perry.  The idea for the film originated from a fictitious Madea Halloween movie that was mentioned in Chris Rock's 2014 film \"Top Five\".  It is the ninth in the \"Madea\" series, and it is the second \"Madea\" film (the first being \"Madea's Witness Protection\") to not be adapted from a stage play.  The film was released on October 21, 2016 by Lionsgate, received generally negative reviews and grossed $74 million, making it the second-highest film of the \"Madea\" series.  A sequel, titled \"Boo 2!  A Madea Halloween\", is set to be released October 20, 2017.\n\nJust Married: Just Married is a 2003 American romantic comedy film directed by Shawn Levy, and was written by Sam Harper, and starring Ashton Kutcher and Brittany Murphy.  Produced by Robert Simonds, the film was successful at the box office despite generally negative critical reviews.\n\nJennifer Lopez filmography: American entertainer Jennifer Lopez has appeared in many motion pictures and television programs.  She is one of the highest paid actresses in Hollywood and is the highest paid actress of Latin descent, making up to US$15 million per film role.  She is also the richest actress in Hollywood, with an estimated net worth of $320 million (as of 2014).  Lopez made her acting debut at age 16 with a small role in the 1986 film \"My Little Girl\".  From there, she received her first high-profile job in 1991 as a Fly Girl dancer on the television comedy program \"In Living Color\".  Following her departure from the show in 1993, Lopez made several guest appearances in the television series \"South Central\", appeared in the made-for-television movie \"Lost in the Wild\" (1993) and starred as Melinda Lopez in the television series \"Second Chances\" (1993) and its spin-off \"Hotel Malibu\" (1994).  \"Second Chances\" and \"Hotel Malibu\" ran for only a brief period, receiving negative reviews.  Lopez's first major film role came in the 1995 motion picture \"Money Train\", alongside Wesley Snipes and Woody Harrelson.  The film faced negative reviews and is considered to be a box office bomb.  Her next two film roles in \"Jack\" (1996) and \"Blood and Wine\" (1997) were received similarly; however, critics were divided by the latter.  Lopez received her first leading role in the Selena biopic of the same name in 1997.  The film was a commercial and critical success and is often cited by critics as her breakout role.  Later that year, Lopez starred as Terri Flores in the film \"Anaconda\", which garnered negative reviews by critics despite being a box office success.  In 1998, Lopez starred alongside George Clooney in the crime film \"Out of Sight\" (1998).  The film met with positive reviews and was a box office success.  In the same year, she also lent her voice to the animated film \"Antz\".\n\nSeventh Son (film): Seventh Son is a 2014 American 3D epic fantasy action film directed by Sergei Bodrov and starring Ben Barnes, Jeff Bridges, Alicia Vikander and Julianne Moore.  It is loosely based on the novel \"The Spook's Apprentice\" (titled \"The Last Apprentice: Revenge of the Witch\" in the US) by Joseph Delaney.  The story centers on Thomas Ward, a seventh son of a seventh son, and his adventures as the apprentice of the Spook.  After having its release date shifted numerous times, the film was released in France on December 17, 2014, and in Canada and the United States on February 6, 2015, by Universal Pictures.  \"Seventh Son\" received generally negative reviews from film critics and it earned $114 million on a $95 million budget.\n\nLisbeth Scott: Lisbeth Scott is a vocalist/songwriter who was featured on the soundtracks for the films \"AVATAR\", \"Concussion\", \"The Big Wedding\" (co-wrote \"Wonderful Life\" with Nathan Barr), \"\", \"\" and \"Munich\".  In addition she is featured in \"Iron Man2\", Disney's \"Wings of Life\", \"Spiderman\" and many more.  She co-wrote and performed the songs \"Where\", and \"One Breath\" for Narnia.  She also co-wrote and performed \"Good To Me\" in the movie\" Shutter\", \"Edge of Heaven\" with Joel Douek for the film \"The Wildest Dream\", \"Real Love\" (for Macy Grey) for the film \"Domino\" (with Harry Gregson Williams) and countless others.  Her songs and vocals have been featured in literally hundreds of Hollywood blockbusters, many of them Oscar and Grammy winners and nominees.  She is of Armenian origin.\n\nBedtime Stories (film): Bedtime Stories is a 2008 American family-fantasy-comedy film directed by Adam Shankman, written by Matt Lopez and Tim Herlihy and produced by Andrew Gunn and Jack Giarraputo.  It stars Adam Sandler in his first appearance in a family-oriented film alongside Keri Russell, Jonathan Morgan Heit, Laura Ann Kesling, Guy Pearce, Aisha Tyler, Russell Brand, Richard Griffiths, Teresa Palmer, Lucy Lawless and Courteney Cox.  Sandler's production company Happy Madison and Andrew Gunn's company Gunn Films co-produced the film with Walt Disney Pictures.  The film was theatrically released on December 25, 2008 by Walt Disney Pictures.  Despite receiving generally negative reviews from critics, it was a box office success after earning $212.9 million against a $80 million budget.\n\nAbandon (film): Abandon is a 2002 American psychological thriller drama film written and directed by Stephen Gaghan, starring Katie Holmes as a college student whose boyfriend (Charlie Hunnam) disappeared two years previously.  Despite being set at an American university, much of the movie was filmed in Canada at McGill University's McConnell Hall.  It is based on the book \"Adams Fall\" by Sean Desmond.  The book was re-titled \"Abandon\" for the movie tie-in paperback printing.  The film co-stars Zooey Deschanel and Gabrielle Union, with Benjamin Bratt playing the detective investigating the boyfriend's disappearance.  It received generally negative reviews.",
+    "question": "What song did Lisbeth Scott co-write and perform for a movie which grossed nearly 6 times its budget despite generally negative reviews?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "song_title": {
+          "type": "string",
+          "description": "The title of the song co-written and performed by Lisbeth Scott."
+        },
+        "artist_role": {
+          "type": "string",
+          "description": "Lisbeth Scott's role in the song's creation and performance for the movie."
+        },
+        "movie_details": {
+          "type": "object",
+          "properties": {
+            "movie_title": {
+              "type": "string",
+              "description": "The title of the film for which the song was created."
+            },
+            "director": {
+              "type": "string",
+              "description": "The director of the film."
+            },
+            "critical_reception": {
+              "type": "string",
+              "description": "A summary of the film's critical reception."
+            },
+            "box_office_performance": {
+              "type": "string",
+              "description": "A description of the film's box office success relative to its budget."
+            }
+          },
+          "required": [
+            "movie_title",
+            "director",
+            "critical_reception",
+            "box_office_performance"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "song_title",
+        "artist_role",
+        "movie_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "song_title": "Good To Me",
+      "artist_role": "co-wrote and performed",
+      "movie_details": {
+        "movie_title": "Shutter",
+        "director": "Masayuki Ochiai",
+        "critical_reception": "generally negative reaction",
+        "box_office_performance": "grossing nearly 6 times its budget"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "shared_job_titles": [
+    "film director",
+    "film producer"
+  ],
+  "individuals_details": [
+    {
+      "name": "Antoine Fuqua",
+      "all_job_titles": [
+        "film director",
+        "producer",
+        "music video director"
+      ]
+    },
+    {
+      "name": "Duncan Jones",
+      "all_job_titles": [
+        "film director",
+        "film producer",
+        "screenwriter"
+      ]
+    }
+  ],
+  "number_of_shared_job_titles": 2
+}

@@ -1,0 +1,23 @@
+{
+  "film_title": "The Count of Monte Cristo",
+  "release_year": 2002,
+  "genre": "adventure drama film",
+  "actor_details": {
+    "actor_name": "Jim Caviezel",
+    "role_played": "Edmond Dantès"
+  },
+  "producer_details": [
+    {
+      "producer_name": "Roger Birnbaum"
+    },
+    {
+      "producer_name": "Gary Barber"
+    },
+    {
+      "producer_name": "Jonathan Glickman"
+    }
+  ],
+  "is_adaptation": true,
+  "source_novel_title": "The Count of Monte Cristo",
+  "source_novel_author": "Alexandre Dumas, père"
+}

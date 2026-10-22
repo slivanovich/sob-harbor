@@ -1,0 +1,9 @@
+{
+  "university_name": "University of California, Los Angeles",
+  "professor_name": "Richard Hatem",
+  "application_year": 2016,
+  "number_of_applicants": 119000,
+  "applicant_details": {
+    "includes_transfer_applicants": true
+  }
+}

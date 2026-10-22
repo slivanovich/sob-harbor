@@ -1,0 +1,9 @@
+{
+  "film_title": "Second String",
+  "character_name": "Chuck Dichter",
+  "actor_details": {
+    "actor_name": "Jon Voight",
+    "birth_date": "1938-12-29",
+    "nationality": "American"
+  }
+}

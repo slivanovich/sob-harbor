@@ -1,0 +1,12 @@
+{
+  "dam_name": "Fontana Dam",
+  "dam_height_feet": 480,
+  "location": {
+    "state": "North Carolina",
+    "counties": [
+      "Swain",
+      "Graham"
+    ]
+  },
+  "tva_rank": "tallest"
+}

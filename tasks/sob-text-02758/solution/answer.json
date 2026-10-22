@@ -1,0 +1,10 @@
+{
+  "digital_library_name": "INSPIRE-HEP",
+  "field_of_study": "high energy physics (HEP)",
+  "predecessor_system": {
+    "system_name": "Stanford Physics Information Retrieval System (SPIRES)",
+    "system_type": "database management system",
+    "first_website_context": "The first website in North America was created to allow remote users access to its database.",
+    "continent_of_first_website": "North America"
+  }
+}

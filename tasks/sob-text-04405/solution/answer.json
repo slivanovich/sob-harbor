@@ -1,0 +1,14 @@
+{
+  "person_a": {
+    "name": "Stephen E. Ambrose",
+    "birth_date": "1936-01-10",
+    "birth_year": 1936
+  },
+  "person_b": {
+    "name": "Günter Grass",
+    "birth_date": "1927-10-16",
+    "birth_year": 1927
+  },
+  "born_first": "Günter Grass",
+  "comparison_result": "Günter Grass was born in 1927, which is earlier than Stephen E. Ambrose who was born in 1936."
+}

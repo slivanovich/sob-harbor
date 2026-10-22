@@ -1,0 +1,126 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Georgia Gold Rush: The Georgia Gold Rush was the second significant gold rush in the United States and the first in Georgia, and overshadowed the previous rush in North Carolina.  It started in 1829 in present-day Lumpkin County near the county seat, Dahlonega, and soon spread through the North Georgia mountains, following the Georgia Gold Belt.  By the early 1840s, gold became difficult to find.  Many Georgia miners moved west when gold was found in the Sierra Nevada in 1848, starting the California Gold Rush.
+
+Battle Branch Mine: The Battle Branch Mine, sometimes referred to as the Battle Creek Mine, was located near the town of Auraria in Lumpkin County, Georgia.  During the Georgia Gold Rush, before the Gold Lottery of 1832, men from several different states were all working in the same stream when a dispute over the possession of the place ended in a fight in which a number of men were seriously wounded, providing the name for the mine ultimately located there.  After the American Civil War, William John Turner Hutcheson, who served with the Blue Ridge Rifles, a Confederate fighting unit from Dahlonega, Georgia, became superintendent of the Battle Branch gold mine.  The mine continued producing gold well into the 1900s, producing 661.28 ounces (20.568 kg) of gold in 1935.
+
+Free Jim Mine: The Free Jim Mine (location: ) was a Georgia Gold Rush gold mine located in the town of Dahlonega in Lumpkin County, Georgia, USA.  The mine was started by a free African American named James Boisclair, who arrived in the area in the 1830s from Augusta, Georgia.  Apparently, Boisclair discovered gold on a tract of land but, under state law, could not purchase the land since he was black, except through a guardian.  A local resident, Joseph J. Singleton became his guardian, thus allowing Boisclair to purchase the land and start what would become known as the Free Jim Mine.  The mine was operated by Bosclair for many years.  Today, the Free Jim Mine lies underneath the present-day Pine Tree Mfg. plant and other nearby businesses within the city limits of Dahlonega.
+
+North Georgia mountains: The Georgia Mountains Region or North Georgia mountains or Northeast Georgia is an area that starts in the northeast corner of Georgia, United States, and spreads in a westerly direction.  The mountains in this region are in the Blue Ridge mountain chain that ends in Georgia.  At over 1 billion years of age, the Blue Ridge mountains are among the oldest mountains in the United States and sometimes mistaken to be the oldest mountains in the world (they are only about one third of the age of South Africa's 3.6 billion year old Barberton greenstone belt.) .  The mountains in this region are also a part of the vast system of North American mountains known as the Appalachian Mountains that spans most of the United States longitudally along the eastern areas of the nation and terminates in Alabama.
+
+Gold Lottery of 1832: The Gold Lottery of 1832 was the seventh lottery in the Georgia Land Lottery, a lottery system used by the State of Georgia between the years 1805 and 1832 to distribute land.  It was authorized by the Georgia General Assembly by an act of December 24, 1831 a few years after the start of the Georgia Gold Rush.  The act specified that approximately one third of the 160 acre land districts to be distributed by lottery under the act of December 21, 1830 (the sixth land lottery), be designated as gold districts of 40 acre each and to be distributed in a separate lottery.  The drawings for the Gold Lottery of 1832 occurred between October 22, 1832 and May 1, 1833 and applied to land that had been owned by the Cherokee Indians.
+
+Calhoun Mine: The Calhoun Mine is perhaps the oldest and best-known mine in Lumpkin County, Georgia.  When gold was discovered in Lumpkin County in 1828, which led to the Georgia Gold Rush in 1829, it was discovered on 239 acre owned by Robert Obar.  After at least two intermediary sales, the land was purchased by Senator John C. Calhoun of South Carolina, who was also the 7th Vice President of the United States.  Calhoun started a mining company to mine the land and later allowed his son-in-law Thomas Green Clemson, the founder of Clemson University, to manage it.  The ore deposit was a very rich deposit and, according to an 1856 letter from Clemson to his brother-in-law, was still producing significant quantities of gold nearly 30 years after its initial discovery on the land.  This mine - along with the Consolidated Mine and the Loud Mine - were some of the most productive mines in the Georgia Gold Belt.
+
+Allatoona, Georgia: Allatoona was a town located in extreme southeastern Bartow County, Georgia.  The population is estimated to have been approximately 1,000.  Built along Allatoona Creek, it was a gold mining area later in the first U.S. gold rush, which took place in Georgia and North Carolina.  Reaching its height in the 1840s, the Georgia Gold Rush continued into the 1850s even while the second gold rush was occurring in California.  (Gold was also mined in nearby Woodstock.)
+
+Crisson Mine: Crisson Mine was a gold mine in Lumpkin County, Georgia, USA, located just east of Dahlonega.  Like many mines in the area, the property probably started as a placer mine during the Georgia Gold Rush.  Once the placer deposits had been exhausted, an open pit gold mine was established in 1847 and commercial operations continued until the early 1980s.  A small stamp mill was also established here.  Much of the gold used for the gold leaf dome of the Georgia State Capitol was mined at this mine, which was among the most productive mine in the Georgia Gold Belt.  The mine is located just north of the site of the Consolidated Mine, which is itself north of and the Calhoun Mine.
+
+Lapland gold rush: The Lapland gold rush, also known as the Ivalo Gold Rush, was a gold rush that occurred in Lapland, Grand Duchy of Finland, during the 1870s.  The Lapland gold rush started in the valley of the Ivalojoki river in 1870 and lasted for a few years.  Although the scale of the Lapland gold rush is not comparable to the major 19th century gold rushes, the Lapland gold rush has great local significance in Lapland and across Finland.
+
+Similkameen Gold Rush: The Similkameen Gold Rush, also known as the Blackfoot Gold Rush, was a minor gold rush in the Similkameen Country of the Southern Interior of British Columbia, Canada, in 1860.  The Similkameen Rush was one of a flurry of small rushes peripheral to the Fraser Canyon Gold Rush, which had drawn tens of thousands of prospectors to the new colony in 1858-1859, among the others being Rock Creek Gold Rush and Big Bend.
+
+Question: What is the age of these mountains that start in the northeast corner of Georgia and had the Georgia Gold Rush spread throughout it in 1829?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "mountain_details": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The specific name of the mountain chain where the gold rush spread."
+        },
+        "location_description": {
+          "type": "string",
+          "description": "The general regional description of the mountains."
+        },
+        "age_in_years": {
+          "type": "integer",
+          "description": "The estimated age of the mountains in years."
+        },
+        "age_qualifier": {
+          "type": "string",
+          "description": "A qualifier for the age, e.g., 'over'."
+        },
+        "age_comparison": {
+          "type": "string",
+          "description": "A statement comparing the age of these mountains to others."
+        },
+        "part_of_larger_system": {
+          "type": "string",
+          "description": "The name of the larger mountain system these mountains belong to."
+        }
+      },
+      "required": [
+        "name",
+        "location_description",
+        "age_in_years",
+        "age_qualifier",
+        "age_comparison",
+        "part_of_larger_system"
+      ],
+      "additionalProperties": false
+    },
+    "associated_gold_rush": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the gold rush associated with these mountains."
+        },
+        "start_year": {
+          "type": "integer",
+          "description": "The starting year of the gold rush."
+        },
+        "spread_location": {
+          "type": "string",
+          "description": "The area through which the gold rush spread."
+        }
+      },
+      "required": [
+        "name",
+        "start_year",
+        "spread_location"
+      ],
+      "additionalProperties": false
+    },
+    "answer": {
+      "type": "object",
+      "properties": {
+        "age_description": {
+          "type": "string",
+          "description": "The direct answer to the question about the mountain's age as a descriptive string."
+        },
+        "age_value_in_years": {
+          "type": "integer",
+          "description": "The numerical value of the mountain's age in years."
+        }
+      },
+      "required": [
+        "age_description",
+        "age_value_in_years"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "mountain_details",
+    "associated_gold_rush",
+    "answer"
+  ],
+  "additionalProperties": false
+}

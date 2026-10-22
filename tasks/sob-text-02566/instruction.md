@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Che' Jones: Che' Jones (born April 11, 1971, Columbus, Ohio) is a long time Las Vegas resident who played college basketball at the Ohio State University-Newark, where he ended his career as the second all-time leading scorer in Ohio State-Newark history scoring 1,693 points.  Jones finished his career at Ohio State-Newark second in assists and notched the highest free-throw percentage for a season in the 1999-2000 season with 91.9%.  He is also the all-time leader in three-point field goals made, as well as steals.  The University retired his jersey (#5) on February 26, 2001.  Jones also played professional basketball in Cyprus.  He is currently an assistant coach at Phoenix College in Phoenix, Arizona.  On March 22, 2014 the Phoenix College Bears defeated Essex College for the NJCAA DII National Championship.  Prior to coaching at Phoenix College he coached at Northern Arizona University, where he also earned his Master's degree in Higher Education.  He was also the associate head coach at Glen Oaks Community College in Centreville, Michigan.  Prior to Glen Oaks Community College he was the associate head coach at Albion College, a NCAA division III college in Albion, Michigan.  During the 2007-2008 season he was the head assistant coach at Casper College, a junior college in Casper, Wyoming.  He just recently was the head basketball coach of the Las Vegas Venom of the American Basketball Association (ABA) and an assistant coach to George Tarkanian son of famed coach Jerry Tarkanian, with the Las Vegas Stars of the IBL (International Basketball League).  Che' also coached at Urbana University in Urbana, Ohio and also at Columbus State University where his team was ranked number one in the country for the entire season and ended their season at 29-2 after losing to the eventual National Champion in the NJCAA Regional Championship game.
+
+1997–98 Golden State Warriors season: The 1997–98 NBA season was the Warriors' 52nd season in the National Basketball Association, and 36th in the San Francisco Bay Area.  The Warriors got a new logo, new uniforms, and moved into their new arena known as The Arena in Oakland.  During the offseason, the Warriors acquired second-year center Erick Dampier from the Indiana Pacers, and Brian Shaw from the Orlando Magic.  Early into the season, they traded B.J. Armstrong to the Charlotte Hornets for Muggsy Bogues and Tony Delk.  However, the Warriors struggled losing 13 of their first 14 games of the season.  Things would get worse in December as Latrell Sprewell choked new head coach P.J. Carlesimo during practice, and was suspended for the rest of the season, which was 68 games.  Without Sprewell, the Warriors then suffered a 14-game losing streak as the season progressed.
+
+Garry St. Jean: Garry St. Jean (born February 10, 1950 in Chicopee, Massachusetts) is an American former professional basketball coach and executive.  St. Jean was head coach of the Sacramento Kings from 1992 through 1997.  He later became the general manager of the Golden State Warriors, and in 1999–2000 he doubled as a head coach after P.J. Carlesimo was fired.  St. Jean was a pro scout for the New Jersey Nets in the 2010–11 season.  He has been an in-studio analyst for Golden State Warriors coverage on Comcast SportsNet Bay Area since the start of the 2011-2012 season.
+
+Pete Tillotson: Peter S. Tillotson (born March 23, 1936) is an American former basketball player.  He grew up in Ludington, Michigan, and played basketball for Ludington High School from 1951 to 1954.  In three years at Ludington High, he scored 1,176 points -- 179 points as a sophomore, 433 points as a junior and 564 points as a senior.  During the 1953–54 season, he averaged 25.6 points per game.  He led Ludington to a 21–2 record and the state finals in 1952 and an 18–4 record in 1953.  As a student at the University of Michigan, he played center for the Michigan Wolverines men's basketball team from 1955 to 1958.  He was the captain, most valuable player, and leading scorer on the 1957–58 Michigan Wolverines men's basketball team.  He scored 415 points during the 1957–58 season (an average of 18.8 points per game), the second highest point total in Michigan's history to that point.  Tillotson was drafted by the Syracuse Nationals in the fifth round (53rd overall pick) of the 1958 NBA draft.  He was injured during the pre-season training camp for Syracuse and spent the 1958–59 season playing for the Milan Simmenthal in the Italian Amateur League.  He led Milan to a second-place finish for the European championship while averaging 18 points and 11 rebounds.  He played for Syracuse in 1960, but his playing career ended after he sustained a knee injury.  After retiring from basketball, Tillotson worked for nearly 40 years for Ford Motor Company, Paine Webber, Goldman Sachs and General Electric.  He retired in 2001.  He was included in the inaugural class of seven athletes inducted into the Mason County Sports Hall of Fame in 2005.
+
+P. J. Carlesimo: Peter John "P. J." Carlesimo (born May 30, 1949) is an American basketball coach, who coached in both the NBA and college basketball for nearly 40 years.  He is also a television broadcaster, having worked with "ESPN, The NBA on TNT, Westwood One, Fox Sports Southwest" and "CSN New England".
+
+William Perigo: William J. "Bill" Perigo (September 17, 1911 – February 7, 1990) was an American basketball player and coach.  He played college basketball for Western Michigan University from 1931 to 1934 and professional basketball for the Indianapolis Kautskys from 1934 to 1936.  Perigo also worked as a basketball coach for more than 25 years.  He was the basketball coach at Benton Harbor High School for 13 years and led the team to the Michigan Class A state championship in 1941.  He was the head basketball coach at Western Michigan University (1949–1952) and the University of Michigan (1952–1960).  In 1983, he was inducted into the Indiana Basketball Hall of Fame.
+
+Ron Rothstein: Ronald L. "Ron" Rothstein (born December 27, 1942) is an American former professional basketball coach and college basketball player, who has led many different NBA teams.  He served as the first head coach for the Miami Heat, and later coached the Detroit Pistons.  He has also coached in the Women's National Basketball Association (WNBA).  In 2007-08, he also filled in for Pat Riley as an interim coach for the Heat.
+
+Latrell Sprewell: Latrell Fontaine Sprewell (born September 8, 1970) is an American former professional basketball player; he played for the Golden State Warriors, the New York Knicks, and the Minnesota Timberwolves.  During his time as a professional, Sprewell was named to the yearly NBA All-Star game four times; he also helped the Knicks reach the NBA Finals and the Timberwolves the Western Conference finals.  Despite his accomplishments, his career was overshadowed by a 1997 incident in which he choked coach P. J. Carlesimo during a practice, which ultimately resulted in a 68-game suspension.
+
+1999–2000 Golden State Warriors season: The 1999–2000 NBA season was the Warriors' 59th season in the National Basketball Association, and 38th in the San Francisco Bay Area.  The city of Oakland hosted the 2000 NBA All-Star Game.  During the offseason, the Warriors acquired Mookie Blaylock from the Atlanta Hawks.  The Warriors struggled losing 16 of their first 18 games as head coach P. J. Carlesimo was fired after a 6–21 start, and was replaced with General Manager Garry St. Jean, where the team then suffered a 12-game losing streak.  Second-year star Antawn Jamison, who led the Warriors with 19.6 points per game was invited to the Slam Dunk Contest, but did not participate due to a knee injury after 43 games.  At midseason, the Warriors traded John Starks to the Chicago Bulls, and acquired second-year guard Larry Hughes, and former Warriors forward Billy Owens from the Philadelphia 76ers in a three-team trade.
+
+Lavor Postell: Andre Lavor Postell (born February 26, 1978) is an American former professional basketball player.  Following a college career at St. John's University, he was selected by the New York Knicks in the second round of the 2000 NBA Draft.  He played three seasons with the Knicks showing promise when Allan Houston and Latrell Sprewell were sidelined by injuries.  At the age of 35, he enlisted in the US Army.  
+
+Question: Latrell Fontaine Sprewell, is an American former professional basketball player; despite his accomplishments, his career was overshadowed by a 1997 incident in which he choked coach P. J. Carlesimo during a practice, which ultimately resulted in a 68-game suspension, Peter John "P. J." Carlesimo, is an American basketball coach, who coached in both which organization, and college basketball for nearly 40 years?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "coach_name": {
+      "type": "string",
+      "description": "The full name of the coach involved in the incident."
+    },
+    "player_involved": {
+      "type": "string",
+      "description": "The full name of the player involved in the incident."
+    },
+    "incident_details": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year the incident occurred."
+        },
+        "suspension_games": {
+          "type": "integer",
+          "description": "The number of games the player was suspended for the incident."
+        }
+      },
+      "required": [
+        "year",
+        "suspension_games"
+      ],
+      "additionalProperties": false
+    },
+    "coaching_organization": {
+      "type": "string",
+      "description": "The professional basketball organization where P. J. Carlesimo coached, besides college basketball."
+    }
+  },
+  "required": [
+    "coach_name",
+    "player_involved",
+    "incident_details",
+    "coaching_organization"
+  ],
+  "additionalProperties": false
+}

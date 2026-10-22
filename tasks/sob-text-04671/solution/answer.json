@@ -1,0 +1,16 @@
+{
+  "common_industry": "film",
+  "entities_involved": [
+    {
+      "name": "Dana Ivey",
+      "type": "person",
+      "role_or_status": "actress"
+    },
+    {
+      "name": "Rush Hour 3",
+      "type": "film",
+      "role_or_status": "third and final film in the series"
+    }
+  ],
+  "connection_detail": "Dana Ivey had film appearances, including in the film 'Rush Hour 3'."
+}

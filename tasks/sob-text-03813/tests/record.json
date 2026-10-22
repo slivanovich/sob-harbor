@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "record_id": "92fea76b451be951090679f2098b180d4a842afb3630a5ab74b2b5e1d772af50",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5addec4c5542995b365fab89",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Ari Behn",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Gjernes: Gjernes is a contemporary style of fine art; sculptural and decorative.  It is a spreading popular style of art, especially in Scandinavia, because the Norwegian Government's wedding gift to Princess Märtha Louise of Norway and her husband Ari Behn was two pieces of furniture work by Liv Mildrid Gjernes.\n\nWorld Fantasy Award—Short Fiction: The World Fantasy Awards are given each year by the World Fantasy Convention for the best fantasy fiction published in English during the previous calendar year.  The awards have been described by book critics such as \"The Guardian\" as a \"prestigious fantasy prize\", and one of the three most prestigious speculative fiction awards, along with the Hugo and Nebula Awards (which cover both fantasy and science fiction).  The World Fantasy Award—Short Fiction is given each year for fantasy short stories published in English.  A work of fiction is defined by the organization as short fiction if it is 10,000 words or less in length; awards are also given out for longer pieces in the Novel and Long Fiction categories.  The Short Fiction category has been awarded annually since 1975, though before 1982—when the category was instated—it was named \"Best Short Fiction\" and covered works of up to 40,000 words.  It was then renamed \"Best Short Story\" until 2016, when it was renamed to the \"Short Fiction\" category.\n\nNine Tomorrows: Nine Tomorrows is a collection of nine short stories and two pieces of comic verse by Isaac Asimov.  The pieces were all originally published in magazines between 1956 and 1958, with the exception of the closing poem, \"Rejection Slips\", which was original to the collection.  The book was first published in the United States in 1959 and in the UK in 1963.  It includes two of Asimov's favorite stories, \"The Last Question\" and \"The Ugly Little Boy\".\n\nMa Sandar: Ma Sandar (Burmese: မစန္ဒာ ; born 4 November 1947) is a well known Burmese writer.  With a clear and engaging style, her works reflect the daily struggles of the people living in Myanmar.  Her novella, \"Life's Dream, Flower's Dream\" won the 1994 Myanmar National Literature Award for novella.  Her short stories collection, \"Short Stories Collection 3\" won the 1999 Myanmar National Literature Award for Collected Short Stories.  Another novella, \"Hexagon\" won the 2002 National Literature Award for novella.  10 of her novels have been made into movies.\n\nNagen Saikia: Nagen Saikia () (born on 11 February 1939) is an Indian writer.  He was formerly a professor of Dibrugarh University.  Saikia had also been a member of the Rajya Sabha from 1986-1992 and was the vice-chairman of the Upper House from 1990-1992.  Saikia started his career as a teacher and went on to serve in different reputed institutions in various categories.  He also delivered lectures on various topics about Assamese literature, including in the US and England.  He has published numerous literary essays, short stories, novels, books and articles, to his credit.  Saikia was conferred with the Sahitya Akademi award in 1997 for his short stories collection \"Andharat Nizar Mukh\" and was honoured by the Mohan Chandra Sahitya Sabha in 1980 for \"Chinta aru Charcha\".\n\nAri Behn: Ari Mikael Behn (né Bjørshol, born 30 September 1972) is a Norwegian author.  He has written three novels, two collections of short stories and a book about his wedding.  His 1999 short stories collection \"Trist som faen\" (\"Sad as hell\") sold in about 100 000 copies and received several favourable reviews.  His books have been translated into Swedish, Danish, German, Hungarian, and Icelandic as well as French.  In the spring of 2011, Ari Behn made his debut as a playwright with \"Treningstimen\", directed by Kim Sørensen and staged at Rogaland Teater.\n\nWide-Eyed and Legless: Wide-Eyed and Legless (also known as The Wedding Gift) is a 1993 made-for-TV British drama film directed by Richard Loncraine.  It is known in the US as \"The Wedding Gift\".\n\nLiv Mildrid Gjernes: Liv Mildrid Gjernes (born 2 June 1954 in Lunde, in Telemark, Norway) is a Norwegian artist and has given name to the contemporary style of decoration, sculpture, and furniture design known as Gjernes style.  She lives and has her atelier in Eidsfoss, in Vestfold in Norway.  She studied in Bergen high-school of art and design and at the Institute for Furniture and Room.\n\nYoung Lover, New Lover: ‘\"Young Lover, New Lover\"' is a 2012 Short stories collection by Muhammad Aladdin, and has been published by Merit Publishing House in Egypt.  It is his third short stories collection followed by the novel A Well-Trained Stray in 2014.\n\nShot welding: Shot welding is a specific type of spot welding used to join two pieces of metal together.  This is accomplished by clamping the two pieces together and then passing a large electric current through them for a short period of time.  Assuming the right amount of current for the right time, this will weld the two pieces of metal together.  Shot welding was invented by Earl J. Ragsdale, a mechanical engineer at the Budd Company, in 1932 for the purposes of welding stainless steel.  This welding method was used to construct the \"Pioneer Zephyr\".",
+    "question": "Who wrote the 1999 short stories collection, \"Trist som faen,\" and was also given two pieces of furniture by Liv Mildrid Gjernes to as a wedding gift from the Norwegian government?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "author_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "nationality"
+          ],
+          "additionalProperties": false
+        },
+        "authored_work": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "publication_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "type",
+            "title",
+            "publication_year"
+          ],
+          "additionalProperties": false
+        },
+        "wedding_gift_information": {
+          "type": "object",
+          "properties": {
+            "gift_item_type": {
+              "type": "string"
+            },
+            "number_of_pieces": {
+              "type": "integer"
+            },
+            "artist_name": {
+              "type": "string"
+            },
+            "gift_giver": {
+              "type": "string"
+            },
+            "recipient_relationship_to_author": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "gift_item_type",
+            "number_of_pieces",
+            "artist_name",
+            "gift_giver"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "author_details",
+        "authored_work",
+        "wedding_gift_information"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "author_details": {
+        "name": "Ari Behn",
+        "nationality": "Norwegian"
+      },
+      "authored_work": {
+        "type": "short stories collection",
+        "title": "Trist som faen",
+        "publication_year": 1999
+      },
+      "wedding_gift_information": {
+        "gift_item_type": "furniture work",
+        "number_of_pieces": 2,
+        "artist_name": "Liv Mildrid Gjernes",
+        "gift_giver": "Norwegian Government",
+        "recipient_relationship_to_author": "husband"
+      }
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

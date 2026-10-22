@@ -1,0 +1,119 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Sloe Fair: The Sloe Fair is a travelling funfair that is held annually on 20 October at Northgate carpark in Chichester, West Sussex.  The fair was first held in 1107 or 1108 after King Henry I of the Kingdom of England granted Ralph de Luffa, Bishop of Chichester, the right to hold a fair for a period of eight days from a date of de Luffa's choosing.  The fair was originally chosen to coincide with the Feast of Saint Faith the Virgin on 6 October, a Gallo-Romano saint with a strong following in the area, but in 1207 a license was awarded for the fair to be held several days later, on the Vigil of the Feast of the Holy Trinity and the eight days thereafter.  It is, however, unclear whether the date of the fair was actually changed, and according to records held in the library of Chichester Cathedral, as late as the 18th Century the Court of Piepowders that was held on the occasion of the fair took place between the Feast of Saint Faith and the Eve of Saint Edward the Confessor, on 12 October.  The name "Sloe Fair" is believed to be a reference to a sloe tree that grew on the original site of the fair, in a field just outside Chichester's North Gate.
+
+Organs and organists of Chichester Cathedral: The organs of Chichester Cathedral are the major source of instrumental music at the cathedral, being played for daily services and accompanying the choir, as well as being used for concerts and recitals.  There has been organ music at Chichester Cathedral almost continuously since the medieval period, with a break in the mid-17th century during the Commonwealth period.
+
+Chichester Cathedral: Chichester Cathedral, formally known as the Cathedral Church of the Holy Trinity, is the seat of the Anglican Bishop of Chichester.  It is located in Chichester, in Sussex, England.  It was founded as a cathedral in 1075, when the seat of the bishop was moved from Selsey.
+
+Francis Poulenc: Francis Jean Marcel Poulenc (] ; 7 January 189930 January 1963) was a French composer and pianist.  His compositions include "mélodies", solo piano works, chamber music, choral pieces, operas, ballets, and orchestral concert music.  Among the best-known are the piano suite "Trois mouvements perpétuels" (1919), the ballet "Les biches" (1923), the "Concert champêtre" (1928) for harpsichord and orchestra, the Organ Concerto (1938), the opera "Dialogues des Carmélites" (1957), and the "Gloria" (1959) for soprano, choir and orchestra.
+
+Anne Maddocks: Anne Maddocks (23 October 1911 in Heyshott, West Sussex – October 2006) was an English musician.  Maddocks' parents were enthusiastic amateur musicians and, by the age of 14, Anne was playing the organ for services at two village churches.  In 1942 she was appointed Assistant Organist at Chichester Cathedral by Horace Hawkins (a pupil of Widor) who was the cathedral's Organist & Master of the Choristers.  She was the first woman in Great Britain to hold such a post in the cathedral.  She had perfect pitch and as Hawkins put it, she played Widor's music "with the master's interpretation".  She gave the first British performance of Poulenc's Organ Concerto in Chichester Cathedral in 1943.
+
+Jeremy Suter: Jeremy Suter (born in London) is an English organist and choral director.  He was a chorister under Sir William McKie at Westminster Abbey.  He attended Harrow and later spent two years at the Royal College of Music before going to Oxford as Organ Scholar of Magdalen College under Bernard Rose.  Following a year at the University of Pennsylvania, Jeremy was invited to return to Magdalen College, Oxford, in order to direct the Chapel Choir whilst Bernard Rose took a sabbatical. In 1975 he was appointed Organist of the Civic Church of All Saints', Northampton and Director of Music at All Saints' Middle School.  Between 1981 and 1991 he was Assistant Organist at Chichester Cathedral and Director of Music at the Prebendal School.  He featured on many broadcasts and recordings made by the Choir of Chichester Cathedral.
+
+Diocese of Chichester: The Diocese of Chichester is a Church of England diocese based in Chichester, covering Sussex.  It was founded in 681 as the ancient Diocese of Selsey, which was based at Selsey Abbey, until the See was translated to Chichester in 1075.  The cathedral is Chichester Cathedral and the diocesan bishop is the Bishop of Chichester.  The diocese is in the Province of Canterbury.
+
+Organ Concerto (Leifs): The Organ Concerto, Op. 7 is an organ concerto by Icelandic composer Jón Leifs.  Its origins go back to 1917, when Leifs was just 18, and was completed in 1930.  It is an uncompromisingly dark work somewhat linked to medieval music, with influences from the tvísöngur tradition in a dissonant triadic context.  It lasts about 21 minutes, and contains three movements, with a short introduction and finale framing a much longer Passacaglia consisting in thirty variations.  Its theme comprises the total chromatic, critic Alex Ross described as "Bach walking in the tundra".
+
+Bishop of Chichester: The Bishop of Chichester is the ordinary of the Church of England Diocese of Chichester in the Province of Canterbury.  The diocese covers the counties of East and West Sussex.  The see is based in the City of Chichester where the bishop's seat is located at the Cathedral Church of the Holy Trinity.  On 3 May 2012 the appointment was announced of Martin Warner, Bishop of Whitby, as the next Bishop of Chichester.  His enthronement took place on 25 November 2012 in Chichester Cathedral.
+
+Organ concerto: An organ concerto is a piece of music, an instrumental concerto for a pipe organ soloist with an orchestra.  The form first evolves in the 18th century, when composers including Antonio Vivaldi, Johann Sebastian Bach and George Frideric Handel wrote organ concertos with small orchestras, and with solo parts which rarely call for the organ pedal board.  During the Classical period the organ concerto became popular in many places, especially in Bavaria, Austria and Bohemia (whether called there a concerto, pastorella, or sonata), reaching a position of being almost an integral part of the church music tradition of "jubilus" character.  From the Romantic era fewer works are known.  Finally, there are some 20th- and 21st-century examples, of which the concerto by Francis Poulenc has entered the basic repertoire, and is quite frequently played.
+
+Question: What French composer and pianist had the first British performance of their Organ Concerto in Chichester Cathedral in 1943?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "composer_details": {
+      "type": "object",
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "description": "The full name of the composer."
+        },
+        "nationality": {
+          "type": "string",
+          "description": "The nationality of the composer."
+        },
+        "occupations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of the composer's occupations."
+        }
+      },
+      "required": [
+        "full_name",
+        "nationality",
+        "occupations"
+      ],
+      "additionalProperties": false
+    },
+    "composition_details": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the musical composition."
+        },
+        "year_composed": {
+          "type": "integer",
+          "description": "The year the composition was created."
+        }
+      },
+      "required": [
+        "title",
+        "year_composed"
+      ],
+      "additionalProperties": false
+    },
+    "performance_details": {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "type": "string",
+          "description": "Description of the performance event."
+        },
+        "location": {
+          "type": "string",
+          "description": "The location where the performance took place."
+        },
+        "year": {
+          "type": "integer",
+          "description": "The year of the performance."
+        },
+        "performer_name": {
+          "type": "string",
+          "description": "The name of the musician who gave the performance."
+        }
+      },
+      "required": [
+        "event_type",
+        "location",
+        "year",
+        "performer_name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "composer_details",
+    "composition_details",
+    "performance_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+{
+  "arena_name": "T-Mobile Arena",
+  "location": "Las Vegas Strip",
+  "occupies_dunes_golf_course": true,
+  "dunes_hotel_details": {
+    "hotel_name": "The Dunes Hotel",
+    "opening_rank_on_strip": 10,
+    "operated_from_year": 1955,
+    "operated_to_year": 1993
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "program_name": "Posh Nosh",
+  "program_type": "parody television programme",
+  "referenced_individuals": [
+    {
+      "name": "Neil Hamilton",
+      "role_in_reference": "pitched cooking show pilot"
+    },
+    {
+      "name": "Mary Christine Hamilton",
+      "role_in_reference": "pitched cooking show pilot",
+      "description": "English media personality and author",
+      "birth_date": "10 November 1949"
+    }
+  ]
+}

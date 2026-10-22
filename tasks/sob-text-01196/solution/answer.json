@@ -1,0 +1,8 @@
+{
+  "fighter_name": "JJ Aldrich",
+  "division_name": "Strawweight",
+  "weight_limits": {
+    "lower_bound_lb": 106,
+    "upper_bound_lb": 115
+  }
+}

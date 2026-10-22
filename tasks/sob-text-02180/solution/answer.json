@@ -1,0 +1,10 @@
+{
+  "university_name": "Fordham University",
+  "founding_year": 1841,
+  "is_catholic_institution": true,
+  "associated_radio_station": {
+    "station_call_sign": "WFUV",
+    "frequency_fm": "90.7 FM",
+    "antenna_location_description": "atop nearby Montefiore Medical Center"
+  }
+}

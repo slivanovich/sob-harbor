@@ -1,0 +1,20 @@
+{
+  "cathedrals_compared": [
+    "Derby Cathedral",
+    "Carlisle Cathedral"
+  ],
+  "location_details": [
+    {
+      "cathedral_name": "Derby Cathedral",
+      "country": "England",
+      "region": "Derbyshire"
+    },
+    {
+      "cathedral_name": "Carlisle Cathedral",
+      "country": "England",
+      "region": "Cumbria, North West England"
+    }
+  ],
+  "are_in_same_country": true,
+  "common_country": "England"
+}

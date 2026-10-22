@@ -1,0 +1,13 @@
+{
+  "film_title": "Physical Evidence",
+  "director": {
+    "name": "Michael Crichton",
+    "genres_known_for": [
+      "science fiction",
+      "medical fiction",
+      "thriller"
+    ]
+  },
+  "actor_starring": "Burt Reynolds",
+  "director_specific_role": "final film as a director"
+}

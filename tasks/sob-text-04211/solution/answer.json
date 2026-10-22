@@ -1,0 +1,11 @@
+{
+  "comparison_result": false,
+  "entity_1": {
+    "name": "Miracle",
+    "release_year": 2004
+  },
+  "entity_2": {
+    "name": "Dinosaur",
+    "release_year": 2000
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "olympics_name": "2018 Summer Youth Olympics",
+  "edition_number": 3,
+  "host_city": "Buenos Aires",
+  "host_country": "Argentina",
+  "start_date": "2018-10-06",
+  "end_date": "2018-10-18",
+  "venues_with_access_from_cecilia_grierson": [
+    {
+      "venue_name": "Predio Ferial Olímpico",
+      "venue_type": "Exhibition and Convention Centre"
+    },
+    {
+      "venue_name": "Youth Olympic Village",
+      "venue_type": "Olympic Village"
+    }
+  ]
+}

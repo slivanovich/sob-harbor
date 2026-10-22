@@ -1,0 +1,19 @@
+{
+  "entity_names": [
+    "Catatonia",
+    "Nine Lashes"
+  ],
+  "shared_category": "rock band",
+  "entity_details": [
+    {
+      "name": "Catatonia",
+      "genre": "alternative rock",
+      "origin": "Wales"
+    },
+    {
+      "name": "Nine Lashes",
+      "genre": "Christian rock",
+      "origin": "American"
+    }
+  ]
+}

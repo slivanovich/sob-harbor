@@ -1,0 +1,11 @@
+{
+  "gate_name": "Ishtar Gate",
+  "original_city": "Babylon",
+  "gate_number": 8,
+  "current_museum_location": "Pergamon Museum, Berlin",
+  "original_construction_details": {
+    "construction_year_bce": 575,
+    "builder_king": "Nebuchadnezzar II",
+    "original_side_of_city": "north"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "gangster_name": "Adelard Cunin",
+  "alias": "George 'Bugs' Moran",
+  "era": "Prohibition-era",
+  "incarceration_details": {
+    "number_of_incarcerations": 3,
+    "age_before_which_incarcerated": 21
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "aircraft_model_name": "Horten Ho 229",
+  "aircraft_key_feature": "world's first jet-powered flying wing",
+  "designers": [
+    {
+      "name": "Reimar Horten"
+    },
+    {
+      "name": "Walter Horten"
+    }
+  ],
+  "related_aircraft_model": "Horten H.XVIII",
+  "designers_are_same": true
+}

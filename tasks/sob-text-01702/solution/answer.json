@@ -1,0 +1,13 @@
+{
+  "airline_details": {
+    "name": "Kenya Airways",
+    "founding_year": 1977,
+    "is_flag_carrier": true,
+    "country_of_origin": "Kenya"
+  },
+  "businesswoman_client_relationship": {
+    "businesswoman_name": "Gina Din",
+    "is_client": true
+  },
+  "final_answer": "Kenya Airways"
+}

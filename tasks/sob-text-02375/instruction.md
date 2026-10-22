@@ -1,0 +1,89 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+2007 Atlantic hurricane season: The 2007 Atlantic hurricane season was an active Atlantic hurricane season, although most of the storms were weak and short-lived.  However, the 2007 season was the first season to feature more than one Category 5 landfalling hurricane, a feat that would not be matched until 2017.  It produced 17 tropical cyclones, 15 tropical storms, six hurricanes, and two major hurricanes.  It officially started on June 1 and ended on November 30, dates which conventionally delimit the period during which most tropical cyclones form in the Atlantic Ocean.  The first tropical cyclone, Subtropical Storm Andrea, developed on May 9, while the last storm, Tropical Storm Olga, dissipated on December 13.  The most intense hurricane, Dean, is tied for the eighth most intense Atlantic hurricane ever recorded as well as the third most intense Atlantic hurricane at landfall.  The season was one of only six on record for the Atlantic with more than one Category 5 hurricane.  It was the second on record in which an Atlantic hurricane, Felix, and an eastern Pacific hurricane, Henriette, made landfall on the same day.  September had a record-tying eight storms, although the strengths and durations of most of the storms were low.  Aside from hurricanes Dean and Felix, none of the storms in the season exceeded Category 1 intensity.
+
+1994 Atlantic hurricane season: The 1994 Atlantic hurricane season produced seven named tropical cyclones and three hurricanes, a total below the Atlantic hurricane season average.  It officially started on June 1 and ended on November 30, dates which conventionally limit the period during which most tropical cyclones form in the Atlantic Ocean.  The first tropical cyclone, Tropical Storm Alberto, developed on June 30, while the last storm, Hurricane Gordon, dissipated on November 21.  The season was unusual in that it produced no major hurricanes, which are those of Category 3 status or higher on the Saffir–Simpson hurricane scale.  The most intense hurricane, Hurricane Florence, peaked as a Category 2 storm with winds of 110 mph .  Aside from Chris, Florence, and Gordon, none of the storms exceeded tropical storm intensity.
+
+Hurricane Olga: Hurricane Olga was a late season Category 1 North Atlantic hurricane that formed during the 2001 Atlantic hurricane season.  The fifteenth named storm, ninth and final hurricane of the 2001 season, Olga formed as a subtropical cyclone on November 24.  After acquiring tropical characteristics later that day, Olga meandered westward, and eventually reached hurricane status on November 26.  Olga’s winds peaked at 90 mph (150 km/h) before the storm turned southwestward and weakening back into a tropical storm.  On November 30 it deteriorated further to a tropical depression, although it re-intensified two days later to tropical storm intensity.  Olga then dissipated as a tropical cyclone on December 4 east of the Bahamas.  Its damaging effects were limited to ships at sea.  The cyclone's remnants produced heavy rainfall across the Bahamas and Florida.  It was a relatively rare storm to exist in December, which is outside of the normal Atlantic hurricane season.
+
+Tropical Storm Alberto (1994): Tropical Storm Alberto was the costliest storm of the 1994 Atlantic hurricane season.  The storm was the first named storm of the season.  It hit Florida across the Southeast United States in July, causing a massive flooding disaster while stalling over Georgia and Alabama.  Alberto caused $1 billion in damage (1994 USD) and 30 deaths.
+
+Timeline of the 1994 Atlantic hurricane season: The 1994 Atlantic hurricane season was a below-average Atlantic hurricane season that produced seven named tropical cyclones.  The season officially began on June 1 and ended on November 30, dates which conventionally limit the period of each year when tropical cyclones tend to form in the Atlantic.  The first named storm, Tropical Storm Alberto, formed on June 30.  The last storm of the season, Hurricane Gordon, dissipated on November 21.  This timeline documents tropical cyclone formations, strengthening, weakening, landfalls, extratropical transitions, as well as dissipation during the season.  The timeline also includes information which was not operationally released, such as post-storm reviews by the National Hurricane Center.
+
+Hurricane Agnes: Hurricane Agnes was, at the time, the costliest hurricane to hit the United States in recorded history.  The second tropical cyclone and first named storm of the 1972 Atlantic hurricane season, Agnes developed on June 14 from the interaction of a polar front and an upper trough over the Yucatán Peninsula.  Initially forming as a tropical depression, the storm headed slowly eastward and emerged into the western Caribbean Sea on June 15.  Once in the Caribbean, the depression began to strengthen, and by the following day, it became Tropical Storm Agnes.  Thereafter, Agnes slowly curved northward and passed just west of Cuba on June 17.  Early on June 18, the storm intensified enough to be upgraded to Hurricane Agnes.  Heading northward, the hurricane eventually made landfall near Panama City, Florida late on June 19.  After moving inland, Agnes rapidly weakened and was only a tropical depression when it entered Georgia.  The weakening trend halted as the storm crossed over Georgia and into South Carolina.  While over eastern North Carolina, Agnes re-strengthened into a tropical storm on June 21, as a result of baroclinic activity.  Early the following day, the storm emerged into the Atlantic Ocean before re-curving northwestward and making landfall near New York City as a strong tropical storm.  Agnes quickly became an extratropical cyclone on June 23, and tracked to the northwest of Great Britain before becoming absorbed by another cyclone on July 6.
+
+Hurricane Keith: Hurricane Keith was an Atlantic hurricane in October 2000 that caused extensive damage in Central America, especially in Mexico and Belize.  It was the fifteenth tropical cyclone, eleventh named storm, and seventh hurricane of the that year's Atlantic hurricane season.  Keith developed as a tropical depression from a tropical wave in the western Caribbean Sea on September 28.  The depression gradually strengthened, and became Tropical Storm Keith on the following day.  As the storm tracked westward, it continued to intensify and was upgraded to a hurricane on September 30.  Shortly thereafter, Keith began to rapidly deepen, and peaked as a Category 4 hurricane less than 24 hours later.  Keith then began to meander erratically offshore of Belize, which significantly weakened the storm due to land interaction.  By late on October 2, Keith made landfall in Ambergris Caye, Belize as a minimal hurricane.  It quickly weakened to a tropical storm, before another landfall occurred near Belize City early on the following day.  While moving inland over the Yucatán Peninsula, Keith weakened further, and was downgraded to a tropical depression before emerging into the Gulf of Mexico on October 4.  Once in the Gulf of Mexico, Keith began to re-strengthen and was upgraded to a tropical storm later that day, and a hurricane on the following day.  By late on October 5, Keith made its third and final landfall near Tampico, Tamaulipas, Mexico as a moderately strong Category 1 hurricane.  The storm quickly weakened inland and dissipated as a tropical cyclone by 24 hours after landfall.
+
+1998 Atlantic hurricane season: The 1998 Atlantic hurricane season was one of the deadliest and costliest Atlantic hurricane seasons on record, featuring the highest number of storm-related fatalities in over 200 years.  It officially began on June 1 and ended on November 30, dates which conventionally delimit the period during which most tropical cyclones form in the Atlantic Ocean.  The first tropical cyclone, Tropical Storm Alex, developed on July 27, and the season's final storm, Hurricane Nicole, became extratropical on December 1.  The strongest storm, Mitch, was tied with Hurricane Dean for the seventh most intense Atlantic hurricane ever recorded.  Mitch is also the second deadliest Atlantic hurricane in recorded history.  The system dropped tremendous amounts of rainfall in Central America, causing 19,000 confirmed deaths and at least $6.2 billion (1998 USD) in damage.  The season was the first since Hurricane Andrew in the 1992 season to feature a Category 5 hurricane on the Saffir–Simpson hurricane wind scale.
+
+1935 Cuba hurricane: The 1935 Cuba hurricane was an intense and deadly tropical cyclone which caused devastation across many areas of the western Atlantic, particularly Cuba and The Bahamas, in September and October 1935.  The fifth tropical storm and third hurricane of the 1935 Atlantic hurricane season, the storm formed from a tropical depression in the central Caribbean Sea on September 23.  The disturbance gradually organized as it moved to the west, and strengthened to tropical storm intensity less than a day after formation and further to a hurricane by September 25.  Subsequently, the hurricane curved northward from its initial westward motion.  On September 27, the storm reached major hurricane intensity before making landfall near Cienfuegos, Cuba as a modern-day Category 3 hurricane the next day.  After passing the island, the hurricane reintensified, and reached a peak intensity with a minimum barometric pressure of at least 945 mbar (hPa; 27.91 inHg) and maximum sustained winds of 140 mph (220 km/h), making it a modern-day Category 4 hurricane.  At the same time, the tropical cyclone passed over the Bahamian island of Bimini before moving out to sea.  As it progressed northeastward, the hurricane gradually weakened before transitioning into an extratropical storm by October 2.  The extratropical remnants made landfall on Newfoundland shortly after before dissipating late that day.
+
+Tropical Storm Franklin (2005): Tropical Storm Franklin was a strong tropical storm over the western Atlantic Ocean during July of the 2005 Atlantic hurricane season.  It was the sixth named storm of the season and twice approached hurricane strength.  The storm formed over the Bahamas on July 21 then moved north erratically, approaching Bermuda on July 26.  Franklin eventually became extratropical near Newfoundland on July 30, before being absorbed by a larger system.  The National Hurricane Center struggled to predict Tropical Storm Franklin mainly due to difficulties in predicting the effects of wind shear.  There were only minor effects on land from Tropical Storm Franklin and no damages were caused.  The name Franklin was used for the first time because of Hurricane Floyd which was retired in the 1999 season.
+
+Question: Which 1994 tropical storm formed on June 30 and proved to be the costliest of that Atlantic hurricane season?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "storm_name": {
+      "type": "string",
+      "description": "The name of the tropical storm."
+    },
+    "season_year": {
+      "type": "integer",
+      "description": "The year of the Atlantic hurricane season."
+    },
+    "formation_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the tropical storm formed."
+    },
+    "costliest_of_season": {
+      "type": "boolean",
+      "description": "Indicates if the storm was the costliest of its respective season."
+    },
+    "damage_details": {
+      "type": "object",
+      "properties": {
+        "cost_usd": {
+          "type": "integer",
+          "description": "The monetary damage caused by the storm in USD."
+        },
+        "cost_year_usd": {
+          "type": "integer",
+          "description": "The year the damage cost is denominated in."
+        },
+        "deaths": {
+          "type": "integer",
+          "description": "The number of deaths caused by the storm."
+        }
+      },
+      "required": [
+        "cost_usd",
+        "cost_year_usd",
+        "deaths"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "storm_name",
+    "season_year",
+    "formation_date",
+    "costliest_of_season",
+    "damage_details"
+  ],
+  "additionalProperties": false
+}

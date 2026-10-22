@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "record_id": "33c71904c44db519ffe0f5f757c51ea74f5b5db933b98dd112a70389090249f0",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ab506b655429942dd415fd3",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Nassau County",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Carle Place, New York: Carle Place is a hamlet and census-designated place (CDP) in the Town of North Hempstead in Nassau County, New York, United States.  The CDP's population was 4,981 at the 2010 census.\n\nGarden City Park, New York: Garden City Park is a hamlet and census-designated place (CDP) located in the Town of North Hempstead in Nassau County on Long Island in the U.S. state of New York.  The population was 7,806 at the 2010 census.  From about 1787 until about 1874, when the area was known as Clowesville, the county seat of Queens County was located here, along with the county courthouse and jail.\n\nEast Garden City, New York: East Garden City is a hamlet and census-designated place (CDP) in the northeast part of the Town of Hempstead, in the central part of Nassau County, New York, along the Hempstead/North Hempstead town line.  The population was 6,028 at the 2010 census.  East Garden City is a hamlet (an unincorporated area) and a mostly commercial and industrial area.  Part of Hofstra University's north campus is located in East Garden City.\n\nSingwango Secondary School: Singwango Secondary School is located in Filabusi, Matabeleland South Province, Zimbabwe.  It had a sister school in Carle Place, New York, United States, although Carle Place High School still donates sports equipment and clothes.\n\nManhasset Hills, New York: Manhasset Hills is a hamlet and census-designated place (CDP) in Nassau County, New York, United States.  The population was 3,592 at the 2010 census.  Manhasset Hills is an unincorporated area of the Town of North Hempstead.  Neighboring communities include Herricks, North New Hyde Park, and Lake Success.\n\nToll Gate House: The Roslyn East Gate Toll House is located within the \"Roslyn Cemetery\" on Route 25A (Northern Boulevard) in Greenvale in the Town of North Hempstead, Nassau County, New York It was built in 1864 and is the last remaining toll house for the North Hempstead Turnpike.  It is frequently but incorrectly assumed to be a toll house for the \"Vanderbilt Motor Parkway\" which ran considerably south of this location.\n\nWinslow Township High School: Winslow Township High School (WTHS) is a four-year comprehensive public high school in Winslow Township, in Camden County, New Jersey, United States, that serves students in ninth through twelfth grades as the lone secondary school of the Winslow Township School District.  Until 2000, the facility that is now Winslow Township High School was part of the Lower Camden County Regional School District and was known as Edgewood Regional High School, which was the sister school of Overbook Regional Senior High School in Pine Hill (now known as Overbrook High School).\n\nManhasset, New York: Manhasset is a hamlet and census-designated place (CDP) in Nassau County, New York, on the North Shore of Long Island.  As of the 2010 United States Census, the population was 8,080.  As with other unincorporated communities in New York, its local affairs are administered by the town in which it is located, the Town of North Hempstead, New York.\n\nGlen Cove Road: Glen Cove Road is a major north–south thoroughfare through north-central Nassau County on Long Island, New York, in the United States.  It is the main road leading to the communities on the east shore of Hempstead Harbor.  The portion south of the North Hempstead–Oyster Bay town line is the unsigned County Route 1 (CR 1), while the portion north of the town line until its intersection with NY 107 is designated as New York State Route 900B (NY 900B), an unsigned reference route, New York State Route 107 (NY 107), and County Route 243 (CR 243), an unsigned county route.\n\nGarden City, New York: Garden City is an incorporated village in the town of Hempstead, in central Nassau County, New York, in the United States.  It was founded by multi-millionaire Alexander Turney Stewart in 1869, and is on Long Island, to the east of New York City, 18.5 miles (29.8 km) from midtown Manhattan.  The village is located mostly in the Town of Hempstead with a small portion in the Town of North Hempstead.",
+    "question": "Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "school_name": {
+          "type": "string",
+          "description": "The name of the school that had a sister school."
+        },
+        "sister_school_details": {
+          "type": "object",
+          "properties": {
+            "place_name": {
+              "type": "string",
+              "description": "The name of the census-designated place where the sister school is located."
+            },
+            "place_type": {
+              "type": "string",
+              "description": "The type of the place (e.g., CDP, hamlet)."
+            },
+            "town_name": {
+              "type": "string",
+              "description": "The town where the place is located."
+            },
+            "county_name": {
+              "type": "string",
+              "description": "The county where the place is located."
+            },
+            "state_name": {
+              "type": "string",
+              "description": "The state where the place is located."
+            }
+          },
+          "required": [
+            "place_name",
+            "place_type",
+            "town_name",
+            "county_name",
+            "state_name"
+          ],
+          "additionalProperties": false
+        },
+        "answer_county": {
+          "type": "string",
+          "description": "The name of the county in New York where the sister school's CDP is located."
+        }
+      },
+      "required": [
+        "school_name",
+        "sister_school_details",
+        "answer_county"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "school_name": "Singwango Secondary School",
+      "sister_school_details": {
+        "place_name": "Carle Place",
+        "place_type": "CDP",
+        "town_name": "North Hempstead",
+        "county_name": "Nassau County",
+        "state_name": "New York"
+      },
+      "answer_county": "Nassau County"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

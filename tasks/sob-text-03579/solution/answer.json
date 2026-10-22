@@ -1,0 +1,10 @@
+{
+  "album_name": "Concrete and Gold",
+  "band_name": "Foo Fighters",
+  "album_number": 9,
+  "first_single": {
+    "single_name": "Run",
+    "release_date": "June 1, 2017"
+  },
+  "album_release_date": "September 15, 2017"
+}

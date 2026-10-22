@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "record_id": "dbd740c13412cbcf5c85637146223a06e779d96c70eac775028b571648e7e28c",
+    "difficulty": "hard",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "medium",
+    "source_id": "5ae3271d55429928c4239637",
+    "source_dataset": "hotpotqa",
+    "source_answer": "no",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Lars Frederiksen: Lars Erik Frederiksen (born Lars Everett Dapello 30 August 1971) is a Danish-American musician, singer, songwriter and record producer best known as the guitarist and vocalist for the punk rock band Rancid, as well as the frontman of Lars Frederiksen and the Bastards and The Old Firm Casuals.  In addition, he currently plays guitar in Oxley's Midnight Runners and Stomper 98.  He was also briefly a member of the UK Subs in 1991.  He joined Rancid in 1993 after the band was searching for a second guitar player and was present on their second album \"Let's Go\".  He has produced albums for bands such as Dropkick Murphys, Agnostic Front, The Business, Swingin Utters, Marky Ramone and the Intruders, Anti-Heros, Pressure Point, The Forgotten among others.  He recently mixed Charged GBH's new album entitled \"Perfume and Piss\", as well as Cock Sparrer's album \"Here We Stand\" both alongside Michael Rosen.\n\nHonor Is All We Know: ...Honor Is All We Know is the eighth studio album by the American punk rock band Rancid, released on October 27, 2014.  It is the band's first studio album since \"Let the Dominoes Fall\" (2009), and their second one to be recorded under its current incarnation (Tim Armstrong, Lars Frederiksen, Matt Freeman and Branden Steineckert).  Work on \"...Honor Is All We Know\" began in 2011 and it was originally planned for a 2012 release, but was repeatedly delayed while the band continued touring and writing new material, and its members were busy with their own projects.  After three years of writing and recording, the album was finished in 2014. \" ...Honor is all We Know\" is Rancid's shortest studio album; at under 33 minutes, it is a-minute-and-a-half shorter than their 1993 self-titled debut album.  This is also the first Rancid album to be released on Epitaph Records since 1998's \"Life Won't Wait\".\n\nDevils Brigade (album): Devils Brigade is the eponymous debut album by the rock band Devils Brigade, a side project by Matt Freeman of Rancid.  The band, which performs a mix of punk rock and psychobilly, features Freeman on lead vocals and double bass in contrast to the backing vocals and electric bass guitar he typically performs in Rancid.  Originally envisioned as a concept album about the construction of the Golden Gate Bridge, \"Devils Brigade\" was co-written by Freeman and his longtime bandmate Tim Armstrong, who also played guitar on the album and served as record producer alongside Ryan Foltz.  The album also features X drummer DJ Bonebrake and contributions from Rancid's Lars Frederiksen, and was released August 31, 2010 through Armstrong's label Hellcat Records.\n\nLars Frederiksen and the Bastards: Lars Frederiksen and the Bastards was an American street punk band formed to release the songs that Lars had written.  Their songs include subject matter consisting of drinking, fighting, drugs, sex, prostitutes, gangs, and street life.  They are the side project band of Lars Frederiksen from Rancid.\n\nJosh Franceschi: Josh Franceschi is an English singer and songwriter.  He is the frontman and lead vocalist in the band You Me at Six.\n\nLars Frederiksen and the Bastards (album): Lars Frederiksen and the Bastards is the eponymous debut album by the American punk rock band Lars Frederiksen and the Bastards.  All of the songs were written by lead singer/guitarist Lars Frederiksen and his Rancid bandmate, Tim Armstrong, with the exception of two covers, Billy Bragg's \"To Have and to Have Not\" and Eddie Holland's \"Leavin Here\".\n\nRoger Miret and The Disasters: Roger Miret and the Disasters are a street punk group formed by Agnostic Front frontman Roger Miret.  The band started when Miret was writing songs that were not a style suitable for Lady Luck (a band fronted by his wife Denise) or Agnostic Front, so he starting recording them on his own on a Boss recorder.  Johnny Rioux had previously mentioned he would like to work with him, so Rioux helped Miret on what originally started as a solo project.  Then Miret met Rhys Kill, who liked the material and joined in on the project.  The band then recorded a demo tape, with Miret and Kill on guitar, Rioux on bass and Matt Kelly from the Dropkick Murphys on drums.  That six-song demo found reviewed by Lars Frederiksen, who passed it off to his Rancid bandmate Tim Armstrong.  He asked Miret to put his project out on Hellcat Records.  As Kelly could not continue with Miret due to his commitments with Dropkick Murphys, Miret asked Johnny Kray of The Krays and New York Rel-X to join on drums.  After a couple rehearsals, they decided to make it a band.\n\nGordy Carbone: Gordy Carbone a.k.a. Gordy Forgotten a.k.a. Gordon Carbone is an American entertainer from California.  Carbone plays in the punk bands The Forgotten and Lars Frederiksen & the Bastards.  He also has an online cooking show named \"Eat Me!\"  and has appeared on the Food Network grilling with Iron Chef Bobby Flay on Bobby's show, \"Grill It! , with Bobby Flay\".  Carbone was a show host for XM Satellite for several years, co-hosting Rancid Radio with Rancid's Lars Frederiksen.\n\nLet's Go (Rancid album): Let's Go is the second studio album by the American punk rock band Rancid.  It was released on June 21, 1994, through Epitaph Records and was the band's first album to feature Lars Frederiksen on guitar.  The album initially achieved little mainstream success, though it appealed to the band's fanbase.  However, the surprise success of punk rock bands such as The Offspring, Green Day and Bad Religion in the mid-1990s brought forth more mainstream interest in \"Let's Go\", and it peaked at number 97 on the \"Billboard\" 200.\n\nRunnin' Riot (band): Runnin' Riot are a punk rock band from Belfast, noted for their streetpunk, Oi!  sound.  The band's name was inspired by Cock Sparrer's first single release.  Original vocalist Colin McQuillan died in August 2014 when the band were on tour with Lars Frederiksen's Old Firm Casuals.",
+    "question": "Are Josh Franceschi and Lars Frederiksen in the same band?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "person_1_name": {
+          "type": "string",
+          "description": "The name of the first person."
+        },
+        "person_2_name": {
+          "type": "string",
+          "description": "The name of the second person."
+        },
+        "are_in_same_band": {
+          "type": "boolean",
+          "description": "True if both persons are members of at least one common band, false otherwise."
+        },
+        "person_1_bands": {
+          "type": "array",
+          "description": "A list of bands the first person is known to be a member of.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "person_2_bands": {
+          "type": "array",
+          "description": "A list of bands the second person is known to be a member of.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "common_bands": {
+          "type": "array",
+          "description": "A list of bands that both persons are members of.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "person_1_name",
+        "person_2_name",
+        "are_in_same_band",
+        "person_1_bands",
+        "person_2_bands",
+        "common_bands"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "person_1_name": "Josh Franceschi",
+      "person_2_name": "Lars Frederiksen",
+      "are_in_same_band": false,
+      "person_1_bands": [
+        "You Me at Six"
+      ],
+      "person_2_bands": [
+        "Rancid",
+        "Lars Frederiksen and the Bastards",
+        "The Old Firm Casuals",
+        "Oxley's Midnight Runners",
+        "Stomper 98",
+        "UK Subs"
+      ],
+      "common_bands": []
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

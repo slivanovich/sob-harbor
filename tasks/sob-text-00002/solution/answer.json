@@ -1,0 +1,10 @@
+{
+  "coach_name": "Lionel Hollins",
+  "previous_team": "Memphis Grizzlies",
+  "subsequent_team": "Brooklyn Nets",
+  "subsequent_team_details": {
+    "league": "National Basketball Association",
+    "coaching_role": "head coach",
+    "firing_date_from_subsequent_team": "January 2016"
+  }
+}

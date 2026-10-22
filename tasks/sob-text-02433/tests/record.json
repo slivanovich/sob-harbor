@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "record_id": "f2f2e5469f60cfe096d8fc66a64ae659e69cd37cfe3e17239598dce1b31be0f5",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5a7e6eb45542991319bc94af",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Lee Marvin",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "The Dirty Dozen: The Dirty Dozen is a 1967 American war film directed by Robert Aldrich, released by MGM, and starring Lee Marvin.  The picture was filmed in the United Kingdom and features an ensemble supporting cast including Ernest Borgnine, Charles Bronson, Jim Brown, John Cassavetes, Telly Savalas, Robert Webber, and Donald Sutherland.  The film is based on E. M. Nathanson's novel of the same name that was inspired by a real-life group called the \"Filthy Thirteen\".  In 2001, the American Film Institute placed the film at number 65 on their 100 Years... 100 Thrills list.\n\nThe Inglorious Bastards: The Inglorious Bastards (Italian: \"Quel maledetto treno blindato\" , literally: \"That damned armored train\") is a 1978 Italian action/war film directed by Enzo G. Castellari, written by Sandro Continenza, Sergio Grieco, Franco Marotta, Romano Migliorini, and Laura Toscano, and starring Bo Svenson, Peter Hooten, Fred Williamson, Michael Pergolani, and Jackie Basehart.  The film score was written by Francesco De Masi.  The film—which concerns a group of prisoners who are drafted into a special war mission in 1944—is a loose remake of the 1967 American film, \"The Dirty Dozen\".\n\nCalvin A. Johnson Jr.: Calvin A. Johnson Jr. (born November 21, 1985) is an American saxophonist, bandleader, composer, producer, and actor from New Orleans, Louisiana, United States.  A multi-instrumentalist, he is best known as a tenor and soprano saxophone player but also performs and records on alto and baritone saxophones, clarinet, and flute.  Johnson has worked with many of the biggest names in New Orleans music, including Aaron Neville, Harry Connick, Jr., the Dirty Dozen Brass Band, Mystikal, Irvin Mayfield, Mannie Fresh, and others.  Johnson is the nephew of New Orleans clarinetist Ralph Johnson, a longtime member of the Preservation Hall Jazz Band.  Johnson began playing saxophone at the age of seven, and since 2008 has been playing with his own band, Calvin Johnson & Native Son.  In 2015, he started a new band with Dirty Dozen Brass Band founding member and sousaphone player, Kirk Joseph, called Chapter:SOUL.\n\nThe Dirty Dozen: Next Mission: The Dirty Dozen: Next Mission is a made-for-TV film and sequel to the original \"Dirty Dozen\", directed by Andrew V. McLaglen and reuniting Lee Marvin, Ernest Borgnine and Richard Jaeckel 18 years after the original hit war film.  Marvin returns to lead an all-new dirty dozen on a mission to assassinate an SS General played by Wolf Kahler.\n\nThe Secret Invasion: The Secret Invasion is a 1964 American war film directed by Roger Corman.  It stars Stewart Granger, Raf Vallone, Mickey Rooney, Edd Byrnes, Henry Silva, Spela Rozin and William Campbell.  Appearing three years before \"The Dirty Dozen\" (1967), the film features a similar World War II mission where convicts are recruited by the Allies for an extremely hazardous operation behind enemy lines.\n\nLee Marvin: Lee Marvin (February 19, 1924 – August 29, 1987) was an American film and television actor.  Known for his distinctive voice and prematurely white hair, Marvin initially appeared in supporting roles, mostly villains, soldiers, and other hardboiled characters.  A prominent television role was that of Detective Lieutenant Frank Ballinger in the NBC crime series \"M Squad\" (1957–1960).\n\nDirty Dozen: The Dirty Dozen is a 1967 American war film.  Dirty Dozen may also refer to:\n\nDeadly Dozen: Deadly Dozen is a 2001 World War II oriented squad-based first-person shooter video game developed by nFusion Interactive.  The title refers to the famous World War II movie \"The Dirty Dozen\".  As in the movie, the main protagonists are military misfits sentenced to death or long term imprisonment who are given a chance to redeem themselves by going on dangerous missions.  The game was followed by a sequel titled \"\".\n\nThe Dirty Dozen: The Deadly Mission: The Dirty Dozen: The Deadly Mission is a 1987 made-for-TV film and is the second sequel to the original \"The Dirty Dozen\".  It features an all-new 'dirty dozen,' this time under the leadership of Major Wright (Telly Savalas), playing a different role than in the 1967 film.\n\nThe Dirty Dozen: The Fatal Mission: The Dirty Dozen: The Fatal Mission is a 1988 made-for-TV film directed by Lee H. Katzin, and is the third sequel to \"The Dirty Dozen\".  It features an all-new 'dirty dozen,' with the exception of the returning Joe Stern, under the leadership of Major Wright (performed by Telly Savalas in his final film appearance).",
+    "question": "The Dirty Dozen: Next Mission is a made-for-TV film and sequel to the original \"Dirty Dozen\", directed by Andrew V. McLaglen and reuniting which American film and television actor, with Ernest Borgnine and Richard Jaeckel 18 years after the original hit war film?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "film_title": {
+          "type": "string",
+          "description": "The title of the film being discussed."
+        },
+        "film_type": {
+          "type": "string",
+          "description": "Description of the film's nature (e.g., made-for-TV, sequel)."
+        },
+        "director": {
+          "type": "string",
+          "description": "The director of the film."
+        },
+        "reunited_actor": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the American film and television actor reunited."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the actor."
+            },
+            "profession": {
+              "type": "string",
+              "description": "The profession of the actor."
+            }
+          },
+          "required": [
+            "name",
+            "nationality",
+            "profession"
+          ],
+          "additionalProperties": false
+        },
+        "other_reunited_cast_members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other cast members reunited for the film."
+        },
+        "years_since_original_film": {
+          "type": "integer",
+          "description": "Number of years since the original film for the reunion."
+        }
+      },
+      "required": [
+        "film_title",
+        "film_type",
+        "director",
+        "reunited_actor",
+        "other_reunited_cast_members",
+        "years_since_original_film"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "film_title": "The Dirty Dozen: Next Mission",
+      "film_type": "made-for-TV film and sequel",
+      "director": "Andrew V. McLaglen",
+      "reunited_actor": {
+        "name": "Lee Marvin",
+        "nationality": "American",
+        "profession": "film and television actor"
+      },
+      "other_reunited_cast_members": [
+        "Ernest Borgnine",
+        "Richard Jaeckel"
+      ],
+      "years_since_original_film": 18
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

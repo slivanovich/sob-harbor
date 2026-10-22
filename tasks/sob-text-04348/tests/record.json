@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "record_id": "36c7960299070df2a40debb947e34d62fda190332da435cef914178c7eef49bb",
+    "difficulty": "medium",
+    "model_id": "harbor-agent",
+    "question_type": "bridge",
+    "schema_complexity": "hard",
+    "source_id": "5ae55f425542992663a4f1eb",
+    "source_dataset": "hotpotqa",
+    "source_answer": "Cincinnati, Ohio",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "WBQC-LD: WBQC-LD, virtual channel 25 (UHF digital channel 47; branded as WKRP-TV), is a low-power television station with multiple affiliations that is licensed to Cincinnati, Ohio, United States.  The station is owned by Block Broadcasting, which also owns WOTH-CD.  WBQC's transmitter is located along Symmes Street, just south of East McMillan Street in Cincinnati (shared with WCPO-TV, channel 9).\n\nWCPO-TV: WCPO-TV, virtual channel 9 (UHF digital channel 22), is an ABC-affiliated television station licensed to Cincinnati, Ohio, United States.  WCPO-TV is one of two flagship television properties of the Cincinnati-based E. W. Scripps Company (the other being WEWS-TV in Cleveland), which has owned the station since its inception, and maintains studio and office facilities in the Mount Adams neighborhood of Cincinnati.  The station's transmitter is located in the Mount Auburn section of the city.\n\nWOTH-CD: WOTH-CD is a digital, Class A low-power television station in Cincinnati, Ohio, United States, broadcasting locally on UHF channel 20 (virtual channel 20).  WOTH transmits from WCPO-TV's (channel 9) tower located along Symmes Street, just south of East McMillan Street in Cincinnati.  Elliott B. Block's Block Broadcasting has owned WOTH since its inception in 1990, along with sister station WBQC-LD.",
+    "question": "What city are WBQC-LD and WCPO-TV are located in?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "station_locations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "station_call_sign": {
+                "type": "string",
+                "description": "The call sign of the television station."
+              },
+              "city": {
+                "type": "string",
+                "description": "The city where the station is licensed."
+              },
+              "state": {
+                "type": "string",
+                "description": "The state where the station is licensed."
+              }
+            },
+            "required": [
+              "station_call_sign",
+              "city",
+              "state"
+            ],
+            "additionalProperties": false
+          },
+          "description": "A list of television stations and their licensed locations."
+        },
+        "common_location_city": {
+          "type": "string",
+          "description": "The city common to all listed stations."
+        },
+        "common_location_state": {
+          "type": "string",
+          "description": "The state common to all listed stations."
+        }
+      },
+      "required": [
+        "station_locations",
+        "common_location_city",
+        "common_location_state"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "station_locations": [
+        {
+          "station_call_sign": "WBQC-LD",
+          "city": "Cincinnati",
+          "state": "Ohio"
+        },
+        {
+          "station_call_sign": "WCPO-TV",
+          "city": "Cincinnati",
+          "state": "Ohio"
+        }
+      ],
+      "common_location_city": "Cincinnati",
+      "common_location_state": "Ohio"
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

@@ -1,0 +1,64 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Australia at the 2010 Winter Paralympics: At the 2010 Winter paralympics in Vancouver, British Columbia, Canada Australia sent ever of 11 competitors to compete against 42 other nations with a total of 502 competitors making these olympics the largest ever with only 39 countries competing at Torino in 2006.  Of these other nations, 2010 was the first winter paralympics for Argentina, Bosnia & Herzegovina, Romania, Russian Federation, and Serbia.  The delegation also consisted of 3 sighted guides and 17 support staff.  This was the largest delegation Australia had sent to a Winter Paralympics.  Australia has competed at every winter Paralympics, with a history of five athletes that are known to have participated in both the Summer and Winter Paralympic Games between 1960 and 2010: Peter Richards (athletics, snooker, and cross-country skiing), Kyrra Grunnsund, Anthony Bonaccurso, Michael Milton and Dominic Monypenny.  Of these athletes, Dominic Monypenny was the only one to compete at the 2010 games.  Nine out of the 11 athletes prior to the 2010 winter Paralympics had recorded top 10 finishes in Paralympic, world cup or world championship competition in their class, in the lead-up to the games.
+
+Great Britain at the 2010 Winter Olympics: The United Kingdom of Great Britain and Northern Ireland competed as Great Britain in the 2010 Winter Olympics held in Vancouver, British Columbia, Canada.  The United Kingdom was represented by the British Olympic Association (BOA), and the team of selected athletes was officially known as Team GB.  The team was made up of athletes from the whole United Kingdom including Northern Ireland, whose athletes may elect to hold Irish citizenship, allowing them to represent either Great Britain or Ireland.  Additionally some British overseas territories compete separately from Britain in Olympic competition.
+
+Great Britain at the 2006 Winter Paralympics: Great Britain competed at the 2006 Winter Paralympics in Turin, Italy.  The team was able to be made up of athletes from the whole United Kingdom; athletes from Northern Ireland, who elected to hold Irish citizenship under the pre-1999 article 2 of the Irish constitution, were eligible to represent either Great Britain or Ireland at the Paralympics.  However no Northern Irish athletes took part in the Winter Paralympics for either team until 2010 in Vancouver.  All competitors had disabilities that were organised into one of five Paralympic categories for the Games.
+
+Great Britain at the 2010 Winter Paralympics: Great Britain competed at the 2010 Winter Paralympics held in Vancouver, British Columbia, Canada.  The team was made up of athletes from the whole United Kingdom; athletes from Northern Ireland, who may elect to hold Irish citizenship under the pre-1999 article 2 of the Irish constitution, are able to be selected to represent either Great Britain or Ireland at the Paralympics.  Kelly Gallagher became the first Northern Irish athlete to compete in the Winter Paralympics by taking part in the alpine skiing discipline.  Additionally some British overseas territories compete separately from Britain in Paralympic competition.  In order to be eligible to take part in the Games athletes had to have a disability that fell into one of the five Paralympics disability categories.
+
+Great Britain at the 2008 Summer Olympics: The United Kingdom of Great Britain and Northern Ireland competed as Great Britain at the 2008 Summer Olympics in Beijing, China.  The United Kingdom was represented by the British Olympic Association (BOA), and the team of selected athletes was officially known as Team GB.  Britain is one of only five NOCs to have competed in every modern Summer Olympic Games since 1896.  The delegation of 547 people included 311 competitors – 168 men, 143 women – and 236 officials.  The team was made up of athletes from the whole United Kingdom including Northern Ireland (whose people may elect to hold Irish citizenship and are able to be selected to represent either Great Britain or Ireland at the Olympics).  Additionally some British overseas territories compete separately from Britain in Olympic competition.
+
+Great Britain at the 2002 Winter Paralympics: Great Britain competed at the 2002 Winter Paralympics held in Salt Lake City, Utah, United States, from 7 to 16 March 2002.  The team was able to be made up of athletes from the whole United Kingdom; athletes from Northern Ireland, who elected to hold Irish citizenship under the pre-1999 article 2 of the Irish constitution, were eligible to represent either Great Britain or Ireland at the Paralympics.  However no Northern Irish athletes took part in the Winter Paralympics until 2010 in Vancouver.  In order to be eligible to take part in the Games athletes had to have a disability that fell into one of the six Paralympics disability categories.
+
+Great Britain at the 1976 Winter Paralympics: Great Britain competed at the inaugural Winter Paralympic Games in 1976 in Örnsköldsvik, Sweden.  The team was made up of athletes from the whole United Kingdom; athletes from Northern Ireland, who could later elect to hold Irish citizenship under the pre-1999 article 2 of the Irish constitution, were only eligible to represent Great Britain at this time.  However no Northern Irish athletes took part in the Winter Paralympics until 2010 in Vancouver.  Events were held for amputees and visually impaired athletes.
+
+Great Britain at the 2008 Summer Paralympics: Great Britain competed at the 2008 Summer Paralympics in Beijing, People's Republic of China.  Great Britain sent a delegation of around 400, of which 212 were athletes, to compete in eighteen sports at the Games.  The team was made up of athletes from the whole United Kingdom; athletes from Northern Ireland, who may elect to hold Irish citizenship under the pre-1999 article 2 of the Irish constitution, are able to be selected to represent either Great Britain or Ireland at the Paralympics.  Additionally some British overseas territories compete separately from Britain in Paralympic competition.
+
+Constitution of Ireland: The Constitution of Ireland (Irish: "Bunreacht na hÉireann" , ] ) is the fundamental law of the Republic of Ireland.  It asserts the national sovereignty of the Irish people.  The constitution falls broadly within the tradition of liberal democracy being based on a system of representative democracy.  It guarantees certain fundamental rights, along with a popularly elected non-executive president, a bicameral parliament based on the Westminster system, a separation of powers and judicial review.
+
+Great Britain at the 2014 Winter Olympics: Great Britain, represented by the British Olympic Association (BOA), competed at the 2014 Winter Olympics in Sochi, Russia, from 7 to 23 February 2014.  The British team was made up of athletes from the whole United Kingdom including Northern Ireland, whose athletes may have elected to hold Irish citizenship, allowing them to represent either Great Britain or Ireland.  Additionally some British overseas territories competed separately from Britain in Olympic competition.  A total of 56 athletes competed in 11 sports making it the biggest contingent that Great Britain had sent to a Winter Olympic Games for twenty-six years.
+
+Question: What fundamental law of the Republic of Ireland allowed athletes who participated with Great Britain in the 1976 Winter Paralympics to later elect to hold Irish citizenship?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "fundamental_law_name": {
+      "type": "string",
+      "description": "The name of the fundamental law."
+    },
+    "country_of_law": {
+      "type": "string",
+      "description": "The country to which the fundamental law belongs."
+    },
+    "relevant_article": {
+      "type": "string",
+      "description": "The specific article or part of the law relevant to the question."
+    },
+    "citizenship_provision_details": {
+      "type": "string",
+      "description": "Details about the citizenship provision mentioned in the context."
+    }
+  },
+  "required": [
+    "fundamental_law_name",
+    "country_of_law",
+    "relevant_article",
+    "citizenship_provision_details"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,78 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Peter Kagwanja: Peter Kagwanja (born August 8, 1963 in Murang’a County, Central Kenya) is a Kenyan intellectual, adviser, reform strategist and policy thinker on governance, security and African affairs.  From the early 1990s, Kagwanja was associated with Kenya's pro-democracy movement through his research and writings in the media, and was one of the founders of the University Academic Staff Union (UASU).  As an emigre in South Africa (2003-2008), he was in the team of experts that provided technical backing to the intense policy processes that led to the creation of the African Union (AU) and its peace and security architecture.  When Kenya’s opposition ascended to power, Kagwanja became part of the technical team that re-engineered and realigned the country’s foreign policy and strategy to the challenges of the 21st century.  He became government adviser on the post-2008 reform agenda and strategy; managed its successful campaign for the New Constitution of Kenya and provided strategic thinking towards the transition to the post-Kibaki order.  Kagwanja is a public intellectual who has authored many articles and books, including "Kenya's Uncertain Democracy: The Electoral Crisis of 2008" "London: Routledge (2010)."
+
+Kevin Hassett: Kevin Allen Hassett is an American economist and the Chair of the Council of Economic Advisers.  He is known for his work on tax policy and for coauthoring the book "Dow 36,000", published in 1999.  Prior to becoming Chair of the Council of Economic Advisers, Hassett was the State Farm James Q. Wilson Chair in American Politics and Culture and Director of Research for Domestic Policy at the American Enterprise Institute, a conservative think tank.  He was John McCain's chief economic adviser in the 2000 presidential primaries and an economic adviser to the campaigns of George W. Bush in the 2004 presidential election and McCain in the presidential election of 2008.  He was among Mitt Romney's economic advisers for the 2012 presidential campaign.
+
+Samuel H. Clovis Jr.: Samuel H. Clovis Jr. (born September 18, 1949) is a United States Air Force veteran, radio host, and academic who is currently serving as the senior White House adviser to the United States Department of Agriculture.  He was national co-chair of the Trump-Pence campaign in the 2016 presidential election.  In January 2017, President Donald Trump made Clovis a senior White House adviser to the USDA until a permanent USDA director would be approved.  In September 2017, Trump nominated Clovis as Under Secretary of Agriculture for Research, Education, and Economics in the United States Department of Agriculture.
+
+Leonardo Álvarez Romo: Leonardo Álvarez Romo (born 7 October 1972) is a Mexican politician affiliated with the Ecologist Green Party of Mexico.  Former Mexican congressman in two occasions, he started his political career in 1994 at the campaign of the presidential candidate Luis Donaldo Colosio Murrieta, along with the actual Mexican Senator, Armando Ríos Peter.  After the assassination of Colosio, he worked in the environmental NGO that he founded and called CAMBIOS (Changes) and continued his studies in Political Sciences and Public Administration.  Later on, he was the personal assistance of the famous politician Manuel Camacho Solis, in the Center Democratic Party from 1997 to 2000.  Then in November 2000 he affiliate to the Green Party of Mexico.  From 2000 to 2003 he was the political adviser of the green legislators in the Mexican Senate, and then adviser of the President of the Green party of Mexico.  Later on, he was postulated by his Party as Deputy of the LIX Legislature of the Mexican Congress as a plurinominal representative from 2003 to 2006.  There as a congressman, he was President of the Special Commission for the Reform of the State, member of the Commissions of National Defense, Indigenous Affairs, Environmental Affairs, and Fishing Affairs.  He reformed the Environmental Law to make the Army and the Navy of Mexico participate in the protection of the environment, also he left a profound study of the necessities of a Political Reform for Mexico.  Then, from 2006 to 2009, he was Deputy of the House of Representatives of Mexico City.  There he was Leader of the Greens, President of the Commission of Environmental Affairs, and in several occasions Chairman and Vice-chairman of the House of Representatives of Mexico City.  He reformed the Law to create the Environmental Police, to prohibit the use of plastic bags in supermarkets and stores, and to create the Forest Firefighters.  From 2004 to 2012 he was the Secretary of Foreign Affairs of the Green Party of Mexico.  He was elected in Santiago, Chile, President of the Federation of Green Parties in the Americas for the term 2009-2011.  At the moment he works in the Federal Government, at the Ministry of Environment and Natural Resources, with the position of General Director in matters of Indigenous, Legislative and NGO´s Affairs.
+
+Shomwa Shamapande: Shomwa "Shom" Shamapande is a political and business consultant and strategist, who has worked in government affairs, media/communications and Democratic politics.  In 1998, he served as an adviser to the South African Center for Human Rights in Pretoria.  Shomwa was a Senior Adviser to Bill Lynch, former deputy mayor of New York City and Vice Chairman of the Democratic National Party and as a legislative fellow for Congressman Charles B. Rangel of Manhattan.  Shomwa has also served as a senior communications and government affairs adviser for the Campaign for Better Schools, the corporate public relations firm of Robinson, Lerer & Montgomery, the Democratic National Committee, Former US Secretary of State Madeleine Albright's United Nations Commission for the Legal Empowerment of the Poor and several global corporations including MasterCard and Pfizer Pharmaceuticals.  And in 2011, Shomwa was hired as Global Communications and Media Director for Africare, a major NGO ($60 million) focused on humanitarian and development assistance for Africa.
+
+Verrit: The website's slogan says it is "media for the 65.8 million," referring to the number of votes Hillary Clinton won in the 2016 presidential election.  Daou, an adviser to Clinton's 2008 presidential campaign, and prior chief executive of Shareblue told "Business Insider" that he intended the website to "reflect the worldview" of those who voted for Clinton and described the site as an "online hub for Clinton backers so that they can find easy-to-share facts, stats and other information you can take out to social media when you’re having debates on key issues people are discussing".  Daou also said the website had no financial ties to Clinton.
+
+Peter Daou: Peter Daou is the creator of Verrit, the prior chief executive of Shareblue, and a member of the band The Daou.
+
+Cole Finegan: Cole Finegan is an American lawyer who served as Denver’s City Attorney and Chief of Staff to then Mayor John Hickenlooper from 2003 through 2006.  He is now the Regional Managing Partner of the Americas for Hogan Lovells and Managing Partner of the global legal giant's Denver office.  Finegan also acts as an adviser to Governor Hickenlooper and U.S. Senator Michael Bennet, and serves as Finance Chair for Senator Bennet’s 2016 re-election campaign and was a Co-Chair of Governor Hickenlooper’s re-election campaign.  He was one of only four Colorado Finance Co-Chairs for President Obama’s 2012 re-election campaign.  Finegan was selected as a "Lawyer of the Decade" by "Law Week Colorado"; as Lawyer of the Year 2013; and was also named one of the most influential people in Denver by "5280" magazine ("The 5280 Fifty”).
+
+Joe Rospars: Joe Rospars is the founder of Blue State Digital.  Rospars was the New Media Director of Barack Obama's presidential campaign and for both the 2008 and 2012 presidential campaigns.  Rospars also was Barack Obama's principal digital strategist and adviser.  He managed the digital integration of fundraising, communications, and mobilization of grassroots effort.  Prior to Obama's campaign, he worked with Governor Howard Dean at the Democratic National Committee, Dean's campaign for party chairman, and at Democracy for America, and on Howard Dean's 2004 presidential campaign.
+
+Dan Senor: Daniel Samuel "Dan" Senor (/ˈsiːnər/; born November 6, 1971) is an American columnist, writer, and political adviser.  He was chief spokesman for the Coalition Provisional Authority in Iraq and senior foreign policy adviser to U.S. presidential candidate Mitt Romney during the 2012 election campaign.  A frequent commentator on Fox News and contributor to "The Wall Street Journal", he is co-author of the book "" (2009).  He is married to television news personality Campbell Brown.
+
+Question: Which campaign was the creator of Verrit an adviser to?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "description": "The name of the individual."
+    },
+    "person_primary_role": {
+      "type": "string",
+      "description": "The primary role of the person mentioned in the context."
+    },
+    "advised_campaign_details": {
+      "type": "object",
+      "properties": {
+        "candidate_name": {
+          "type": "string",
+          "description": "The name of the candidate for the campaign advised."
+        },
+        "election_year": {
+          "type": "integer",
+          "description": "The year of the election for the advised campaign."
+        },
+        "advisory_capacity": {
+          "type": "string",
+          "description": "The specific advisory role held by the person for the campaign."
+        }
+      },
+      "required": [
+        "candidate_name",
+        "election_year",
+        "advisory_capacity"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "person_name",
+    "person_primary_role",
+    "advised_campaign_details"
+  ],
+  "additionalProperties": false
+}

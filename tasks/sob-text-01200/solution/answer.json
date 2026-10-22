@@ -1,0 +1,12 @@
+{
+  "production_designer": {
+    "name": "Tony Burrough",
+    "role": "production designer"
+  },
+  "film_details": {
+    "title": "Richard III",
+    "award_category_nominated_for": "Best Art Direction",
+    "setting_description": "fictional fascist version of 1930s Britain"
+  },
+  "setting_era": "1930s Britain"
+}

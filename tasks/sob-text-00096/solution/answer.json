@@ -1,0 +1,17 @@
+{
+  "person_a_details": {
+    "name": "Stephan Elliott",
+    "birth_year": 1964,
+    "birth_month": "August",
+    "birth_day": 27
+  },
+  "person_b_details": {
+    "name": "Philippe Garrel",
+    "birth_year": 1948,
+    "birth_month": "April",
+    "birth_day": 6
+  },
+  "earlier_born_person_name": "Philippe Garrel",
+  "earlier_born_person_birth_year": 1948,
+  "comparison_summary": "Philippe Garrel was born earlier than Stephan Elliott."
+}

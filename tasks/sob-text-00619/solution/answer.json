@@ -1,0 +1,26 @@
+{
+  "district_name": "Northwest Montana Wetland Management District",
+  "location_state": "Montana",
+  "primary_purpose": "protect areas for waterfowl",
+  "administered_by": "U.S. Fish and Wildlife Service",
+  "land_holdings": [
+    {
+      "type": "Waterfowl Production Areas",
+      "count": 14,
+      "total_acreage": 8452
+    },
+    {
+      "type": "conservation easement",
+      "count": 1,
+      "total_acreage": 6300,
+      "description": "along the north shores of Flathead Lake"
+    }
+  ],
+  "associated_complex": {
+    "complex_name": "National Bison Range Complex",
+    "other_integral_parts": [
+      "National Bison Range",
+      "four other wildlife refuges"
+    ]
+  }
+}

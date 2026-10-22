@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "record_id": "8fb4bb8fcc03c77b856eb340090cce814173b7ebdcb473e93ffb077d26615239",
+    "difficulty": "easy",
+    "model_id": "harbor-agent",
+    "question_type": "comparison",
+    "schema_complexity": "hard",
+    "source_id": "5ab3fe4055429976abd1bd1a",
+    "source_dataset": "hotpotqa",
+    "source_answer": "People's Republic of China",
+    "pipeline_version": "0.1.1"
+  },
+  "input": {
+    "context": "Mingguang: Mingguang (), formerly Jiashan County (), is a county-level city of Anhui Province, China.  It is under the administration of Chuzhou city.\n\nXiaogan: Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.  According to the 2010 census, its population totaled 4,814,542, of whom 908,266 lived in the built-up (\"or metro\") area of Xiaonan District.",
+    "question": "Xiaogan and Mingguang, are located in which country?",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "country_name": {
+          "type": "string",
+          "description": "The common name of the country where the cities are located."
+        },
+        "country_full_name": {
+          "type": "string",
+          "description": "The full official name of the country where the cities are located."
+        },
+        "cities_details": {
+          "type": "array",
+          "description": "Details about each city mentioned in the question.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "city_name": {
+                "type": "string",
+                "description": "The name of the city."
+              },
+              "administrative_level": {
+                "type": "string",
+                "description": "The administrative classification of the city (e.g., county-level, prefecture-level)."
+              },
+              "province": {
+                "type": "string",
+                "description": "The province where the city is located."
+              },
+              "parent_administration": {
+                "type": "string",
+                "description": "The larger administrative entity that the city is under, if specified."
+              }
+            },
+            "required": [
+              "city_name",
+              "administrative_level",
+              "province"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "country_name",
+        "country_full_name",
+        "cities_details"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "candidate_response": null,
+    "ground_truth": {
+      "country_name": "China",
+      "country_full_name": "People's Republic of China",
+      "cities_details": [
+        {
+          "city_name": "Mingguang",
+          "administrative_level": "county-level city",
+          "province": "Anhui Province",
+          "parent_administration": "Chuzhou city"
+        },
+        {
+          "city_name": "Xiaogan",
+          "administrative_level": "prefecture-level city",
+          "province": "Hubei province"
+        }
+      ]
+    }
+  },
+  "eval_info": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "avg_time_per_record": 0
+  }
+}

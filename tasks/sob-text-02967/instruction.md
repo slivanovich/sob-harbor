@@ -1,0 +1,62 @@
+Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
+
+Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
+
+Rules:
+- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
+- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
+- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
+- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
+- Include all required fields: Every field listed as required in the schema must appear in the JSON.
+- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
+
+Context:
+Caesareum of Alexandria: The Caesareum of Alexandria is an ancient temple in Alexandria, Egypt.  It was conceived by Cleopatra VII of the Ptolemaic kingdom, the last pharaoh of Ancient Egypt, to honour her dead lover Marc Antony.  The edifice was finished by the Roman Emperor Augustus, after he defeated Mark Antony and Cleopatra.  He destroyed all traces of Antony in Alexandria, and apparently dedicated the temple to his own cult.
+
+Augustus (Williams novel): Born Gaius Octavius Thurinus, the young future-emperor was adopted by his great-uncle, Julius Caesar, after demonstrating promising wit and skill.  After his great-uncle's assassination, Augustus (at this time known as Gaius Julius Caesar Octavianus) took vengeance upon Caesar's murderers, and through tactical political moves, became one of Rome's three “Triumvirs" alongside Marc Antony and Marcus Aemilius Lepidus.  After defeating the other two triumvirs, and obtaining sole power over the Roman State, Augustus (known as "Imperator" Caesar Divi Filius), began taking measures to secure and increase his power.  As a result, Augustus gave orders to exterminate Cleopatra's teenaged son, allegedly commenting, "too many Caesars is no good thing."  (As it was the common belief that her son was of Julius Caesar's bloodline.)  In light of such orders, Cleopatra and Marc Antony—lovers at the time—committed suicide.
+
+Feed the Kitty: Feed the Kitty is a "Merrie Melodies" cartoon directed by Chuck Jones and written by Michael Maltese, in which bulldog Marc Antony (referred to as "Marc Anthony " in this cartoon) adopts a small cat, Pussyfoot (not officially named in this cartoon), and tries to hide it from his owner.  The cartoon was released theatrically on February 2, 1952, and in 1994 was voted #36 of the 50 Greatest Cartoons of all time by members of the animation field.
+
+Marcus Antonius Antyllus: Marcus Antonius Antyllus (47 BC – August 23, 30 BC) was known as Marcus Antonius Minor to distinguish him from his famous father, the Roman Triumvir Marc Antony (Marcus Antonius Major).  He was also called Antyllus, a nickname given to him by his father meaning "the Archer".  Despite his three children by Cleopatra, Marc Antony designated Antyllus as his official heir, a requirement under Roman law and a designation that probably contributed to his execution at age 17 by Octavian (later the Emperor Augustus).
+
+Cleopatra’s Second Husband: Cleopatra's Second Husband is a 1998 psychological drama written, produced and directed by Jon Reiss.  Paul Hipp (The Funeral) and Bitty Schram (Kissing a Fool) play Robert and Hallie Marrs, a young LA couple, who go on vacation, leaving their house in the hands of strangers.  They return to find their fish as dead as the plants, everything in disarray, and housesitters, clad in the couple's clothes, refusing to leave.  Zack (Boyd Kestner) and Sophie (Radha Mitchell), the charismatic house sitting couple, soon infuse the repressed Robert with their erotically perverse irresponsibility.  Robert, browbeaten and seemingly devoid of personality (with even his sex life regulated by his domineering wife's ovulation cycle), is easily seduced by the sexy Sophie.  When Hallie discovers the dalliance and leaves, Robert literally becomes the couples slave.  He gives them control of his home, his credit cards, practically his entire identity, until one day, driven to the darkest edge of his psyche, he snaps.  Partially inspired by a true incident, this gripping thriller is equal parts black comedy and psychological power play.  The films title "Cleopatra's Second Husband," derives from Hallie and Robert's relationship which is a parallel to that of Cleopatra and Marc Antony.
+
+Cheese Chasers: Cheese Chasers is a 1951 "Merrie Melodies" cartoon directed by Chuck Jones, and starring Hubie and Bertie in their final appearances of the Classic era.  Also starring are Claude Cat and first appearance of Marc Antony.  Mel Blanc plays Claude, Hubie, and Marc Antony, while Stan Freberg plays Bertie.
+
+Mark Antony: Marcus Antonius (Latin: ; January 14, 83 BC – August 1, 30 BC), commonly known in English as Mark or Marc Antony, was a Roman politician and general who played a critical role in the transformation of the Roman Republic from an oligarchy into the autocratic Roman Empire.
+
+Marc Antony and Pussyfoot: Marc Antony (referred to as "Marc Anthony" on his food dish in "Feed the Kitty") and Pussyfoot (sometimes called "Kitty" or "Cleo" in some of the WB animation history books) are animated characters in the Warner Bros. "Looney Tunes" and "Merrie Melodies" series of five shorts, including "Feed the Kitty", "Feline Frame-Up", and "Kiss Me Cat".  Marc Antony is a burly bulldog that is usually brown with a tan belly and black ears, though his coloration varies in some shorts.  He bears a close resemblance to Hector the Bulldog, but with thinner back legs and minus the outer fangs.  Pussyfoot/Cleo, in contrast, is an extremely cute, blue-eyed black-and-white Tuxedo cat to whom Marc Antony is utterly devoted with motherly passion.  The characters seem to be named as an allusion to Marc Antony and Cleopatra, who were lovers detailed in Plutarch's "Parallel Lives".  Chuck Jones, the creator, has discussed the efforts to maximize the kitten's sheer adorableness.  All head and eyes, it is black with a white face and belly and a white tip on its fluffy tail.  Fans frequently confuse Marc Antony for Hector, but by right they are not the same.
+
+Reka Devnia Hoard: The Reka Devnia Hoard was the most prolific find of Roman silver coins of the period from 64 to 238 AD to have ever been published.  It was found near the town of Devnya, north-eastern Bulgaria.  The hoard consisted of 81,044 denarii found in 1929.  The earliest coins were those of Marc Antony of which twenty-nine were found, and the latest being one example of Herennius Etruscus.  The hoard was broken into two, with 68,783 coins sent to the museum of Sofia, and 12,261 to Varna.
+
+Hipkiss (artist): Hipkiss (formerly known as 'Chris Hipkiss') is a British artist known for figurative compositions, ranging in size from miniatures to lengthy panoramas, created using a mixed media technique that combines pencil, silver ink and metal leaf.  The name is a pseudonym of Chris and Alpha Mason, born "Christopher Payen" and "Alpha Mason".  Payen changed his name to Mason on their marriage in 1986.
+
+Question: What type of media technique does Feed the Kitty and Marc Antony and Pussyfoot have in common?
+
+Respond with JSON matching this schema:
+{
+  "type": "object",
+  "properties": {
+    "media_technique": {
+      "type": "string",
+      "description": "The common media technique shared by the entities."
+    },
+    "entities_involved": {
+      "type": "array",
+      "description": "A list of the entities that share the common media technique.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "media_type_description": {
+      "type": "string",
+      "description": "A description of the type of media these entities represent."
+    }
+  },
+  "required": [
+    "media_technique",
+    "entities_involved",
+    "media_type_description"
+  ],
+  "additionalProperties": false
+}

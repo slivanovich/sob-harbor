@@ -1,0 +1,20 @@
+{
+  "physician_name": "William Stark",
+  "death_details": {
+    "cause": "Experimenting on himself with fatal consequences while investigating scurvy",
+    "duration_on_final_diet_months": 8,
+    "final_diet_components": [
+      "honey puddings",
+      "Cheshire cheese"
+    ]
+  },
+  "cheese_consumed": {
+    "name": "Cheshire cheese",
+    "characteristics": [
+      "dense",
+      "crumbly"
+    ],
+    "origin_county": "Cheshire"
+  },
+  "number_of_diets_devised": 24
+}

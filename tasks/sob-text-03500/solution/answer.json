@@ -1,0 +1,17 @@
+{
+  "director": {
+    "name": "Lee Gae-byok",
+    "nationality": "South Korean",
+    "roles": [
+      "film director",
+      "screenwriter"
+    ]
+  },
+  "debut_film": {
+    "title": "The Beast and the Beauty",
+    "year": 2005,
+    "genre": "romantic comedy",
+    "is_romantic_comedy": true
+  },
+  "question_answered": true
+}

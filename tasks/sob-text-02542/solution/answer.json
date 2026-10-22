@@ -1,0 +1,18 @@
+{
+  "is_both_county_level_cities": true,
+  "cities_information": [
+    {
+      "city_name": "Linxia City",
+      "is_county_level": true,
+      "administrative_level_description": "county-level city",
+      "province": "Gansu"
+    },
+    {
+      "city_name": "Bazhou City",
+      "is_county_level": true,
+      "administrative_level_description": "county-level city",
+      "province": "Hebei"
+    }
+  ],
+  "conclusion_reasoning": "The context explicitly states that both Linxia City and Bazhou City are 'county-level cities'."
+}

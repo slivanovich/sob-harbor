@@ -1,0 +1,16 @@
+{
+  "magazines": [
+    {
+      "name": "Down East",
+      "is_us_based": true,
+      "location": "Camden, Maine, USA"
+    },
+    {
+      "name": "Hinduism Today",
+      "is_us_based": true,
+      "location": "Kapaʻa, Hawaiʻi, USA"
+    }
+  ],
+  "all_us_based": true,
+  "comparison_summary": "Both Down East and Hinduism Today magazines are based in the USA."
+}

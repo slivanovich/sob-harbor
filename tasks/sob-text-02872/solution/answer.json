@@ -1,0 +1,13 @@
+{
+  "hotel_name": "Ilikai Hotel & Luxury Suites",
+  "location_district": "Waikiki",
+  "number_of_beaches_in_district": 6,
+  "beach_names": [
+    "Waikīkī Beach",
+    "Queen's Beach",
+    "Kuhio Beach",
+    "Gray's Beach",
+    "Fort DeRussy Beach",
+    "Kahanamoku Beach"
+  ]
+}

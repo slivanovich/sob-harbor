@@ -1,0 +1,19 @@
+{
+  "school_name": "Aditya Birla World Academy",
+  "school_location": {
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India"
+  },
+  "builder_entity": {
+    "name": "Aditya Birla Group",
+    "entity_type": "Indian multinational conglomerate",
+    "headquarters": {
+      "city": "Worli, Mumbai",
+      "country": "India"
+    },
+    "founder": "Seth Shiv Narayan Birla",
+    "founding_year": 1857
+  },
+  "final_answer": "Aditya Birla Group"
+}

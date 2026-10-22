@@ -1,0 +1,20 @@
+{
+  "question_topic": "band_origin_location",
+  "bands_compared": [
+    {
+      "name": "Twenty One Pilots",
+      "origin_city": "Columbus",
+      "origin_country": "United States",
+      "founding_year": 2009
+    },
+    {
+      "name": "Chvrches",
+      "origin_city": "Glasgow",
+      "origin_country": "Scotland",
+      "founding_year": 2011
+    }
+  ],
+  "answer": {
+    "band_founded_in_glasgow": "Chvrches"
+  }
+}

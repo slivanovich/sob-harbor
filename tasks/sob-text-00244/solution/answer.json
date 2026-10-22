@@ -1,0 +1,26 @@
+{
+  "question_asked": "Can the Astragalus and the Onion be eaten?",
+  "overall_edibility_conclusion": "Based on the provided context, onions are explicitly described as edible vegetables used in dishes. However, the context does not state that Astragalus (the plant genus) is edible for human consumption; some common names like 'locoweed' even imply toxicity for certain species.",
+  "items_analyzed": [
+    {
+      "item_name": "Astragalus",
+      "item_type": "plant genus",
+      "common_names": [
+        "milkvetch",
+        "locoweed",
+        "goat's-thorn"
+      ],
+      "edibility_notes": "Astragalus is a large genus of about 3,000 species of herbs and small shrubs. While common names include 'milkvetch', 'locoweed' (for some species) implies toxicity. The context does not provide information on its edibility for human consumption."
+    },
+    {
+      "item_name": "Onion",
+      "item_type": "vegetable",
+      "common_names": [
+        "bulb onion",
+        "common onion"
+      ],
+      "is_edible_for_humans_from_context": true,
+      "edibility_notes": "The onion is a vegetable and is the most widely cultivated species of the genus Allium. It is commonly found in dishes such as onion rings (appetizer/side dish) and blooming onions (appetizer). Scallions, a type of onion, are also described as vegetables."
+    }
+  ]
+}

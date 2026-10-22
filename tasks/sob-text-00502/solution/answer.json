@@ -1,0 +1,12 @@
+{
+  "actor": {
+    "name": "Gabe Kaplan",
+    "birth_year": 1945
+  },
+  "film": {
+    "title": "Tulips",
+    "release_year": 1981,
+    "genre": "comedy-drama"
+  },
+  "role_description": "starred in"
+}

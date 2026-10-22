@@ -1,0 +1,11 @@
+{
+  "serial_killer_name": "Jack Unterweger",
+  "killer_nationality": "Austrian",
+  "first_conviction_year": 1974,
+  "film_about_killer": {
+    "title": "Jack",
+    "release_year": 2015,
+    "genre": "thriller"
+  },
+  "victim_type": "prostitutes"
+}

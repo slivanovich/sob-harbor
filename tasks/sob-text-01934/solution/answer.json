@@ -1,0 +1,16 @@
+{
+  "match_name": "2009 FIFA Confederations Cup Final",
+  "match_year": 2009,
+  "teams_contested": [
+    "United States",
+    "Brazil"
+  ],
+  "winning_team": "Brazil",
+  "final_score": "3–2",
+  "winning_goal_scorer_details": {
+    "player_name": "Lúcio",
+    "nationality": "Brazilian",
+    "last_club": "FC Goa",
+    "position": "central defender"
+  }
+}

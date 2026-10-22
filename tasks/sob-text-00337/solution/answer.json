@@ -1,0 +1,12 @@
+{
+  "magazine_name": "New York",
+  "established_as_cradle_of_new_journalism": true,
+  "related_journalism_movement": "New Journalism",
+  "founding_details": {
+    "founders": [
+      "Milton Glaser",
+      "Clay Felker"
+    ],
+    "founding_year": 1968
+  }
+}

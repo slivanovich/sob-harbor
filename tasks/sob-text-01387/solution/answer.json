@@ -1,0 +1,13 @@
+{
+  "person_who_committed_suicide": {
+    "name": "Sylvia Plath",
+    "profession": "American poet, novelist, and short story writer",
+    "suicide_year": 1963
+  },
+  "other_person_status": {
+    "name": "David Malouf",
+    "is_alive_in_context": true,
+    "death_details_available": false
+  },
+  "question_answered": true
+}

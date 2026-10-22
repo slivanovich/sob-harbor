@@ -1,0 +1,24 @@
+{
+  "is_national_level_election": true,
+  "election_type": "general election",
+  "location": "Macau",
+  "legislature_details": {
+    "legislature_name": "Legislative Assembly",
+    "total_seats": 33,
+    "seat_allocation_methods": [
+      {
+        "method": "directly elected by universal suffrage under the highest averages method",
+        "number_of_seats": 14
+      },
+      {
+        "method": "voted on from the Functional constituency",
+        "number_of_seats": 12
+      },
+      {
+        "method": "nomination by the Chief Executive",
+        "number_of_seats": 7
+      }
+    ]
+  },
+  "source_of_national_level_information": "Elections in Macau"
+}

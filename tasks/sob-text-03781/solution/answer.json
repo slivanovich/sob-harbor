@@ -1,0 +1,13 @@
+{
+  "acquired_entity_name": "Stewart's Fountain Classics",
+  "acquiring_company_name": "Cadbury Schweppes PLC",
+  "acquisition_year": 2000,
+  "acquisition_details": {
+    "acquisition_amount_usd": 1450000000,
+    "other_acquired_brands": [
+      "Snapple",
+      "Mistic Brands"
+    ]
+  },
+  "acquisition_confirmed": true
+}
